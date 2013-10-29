@@ -1,3 +1,4 @@
+django.log
 *.pyc
 project/settings_dev.py
 chef/cookbooks/palewire/files/default/id_rsa
