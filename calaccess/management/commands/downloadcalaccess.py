@@ -2,6 +2,7 @@ import os
 import requests
 from hurry.filesize import size
 from django.conf import settings
+from optparse import make_option
 from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.template.defaultfilters import date as dateformat
@@ -18,9 +19,19 @@ Do you want to download the file to %s
 
 Type 'yes' to do it, or 'no' to back out: """
 
+custom_options = (
+    make_option(
+        "--skip-download",
+        action="store_false",
+        dest="download",
+        default=True,
+        help="Skip downloading of the ZIP archive"
+    ),
+)
 
 class Command(BaseCommand):
     help = 'Download the latest snapshot of the CalAccess database'
+    option_list = BaseCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
@@ -37,11 +48,18 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.set_options(*args, **options)
-        confirm = input(self.prompt)
-        if confirm != 'yes':
-            raise CommandError("Download cancelled.")
-        else:
-            self.download()
+        if options['download']:
+            confirm = input(self.prompt)
+            if confirm != 'yes':
+                print "Download cancelled."
+            else:
+                self.download()
+
+    def unzip(self):
+        """
+        Unzip the snapshot file.
+        """
+        
 
     def download(self):
         """
