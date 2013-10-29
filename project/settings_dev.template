@@ -3,12 +3,12 @@ DEVELOPMENT, PRODUCTION = True, False
 DEBUG_TOOLBAR = True
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'calaccess',
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
 CACHES = {
