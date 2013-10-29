@@ -9,6 +9,7 @@ csvkit==0.6.1
 dbf==0.95.004
 distribute==0.6.34
 django-debug-toolbar==0.9.4
+hurry.filesize==0.9
 openpyxl==1.6.2
 paramiko==1.11.0
 psycopg2==2.4.6
