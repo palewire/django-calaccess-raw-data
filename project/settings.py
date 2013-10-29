@@ -20,6 +20,7 @@ ROOT_DIR = os.path.join(
         os.path.join(SETTINGS_DIR, os.path.pardir),
     ),
 )
+CALACCESS_DOWNLOAD_DIR = os.path.join(ROOT_DIR, 'calaccess', 'data')
 
 TEMPLATE_DEBUG = DEBUG
 

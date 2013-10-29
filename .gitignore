@@ -1,5 +1,6 @@
 django.log
 *.pyc
+calaccess/data/
 project/settings_dev.py
 chef/cookbooks/palewire/files/default/id_rsa
 chef/cookbooks/palewire/files/default/id_rsa.pub
