@@ -1,4 +1,5 @@
 import os
+import zipfile
 import requests
 from hurry.filesize import size
 from django.conf import settings
@@ -27,6 +28,13 @@ custom_options = (
         default=True,
         help="Skip downloading of the ZIP archive"
     ),
+    make_option(
+        "--skip-unzip",
+        action="store_false",
+        dest="unzip",
+        default=True,
+        help="Skip unzipping of the archive"
+    ),
 )
 
 class Command(BaseCommand):
@@ -54,12 +62,24 @@ class Command(BaseCommand):
                 print "Download cancelled."
             else:
                 self.download()
+        if options['unzip']:
+            self.unzip()
 
     def unzip(self):
         """
         Unzip the snapshot file.
         """
-        
+        print "Unzipping archive"
+        with zipfile.ZipFile(self.zip_path) as zf:
+            for member in zf.infolist():
+                words = member.filename.split('/')
+                path = self.data_dir
+                for word in words[:-1]:
+                    drive, word = os.path.splitdrive(word)
+                    head, word = os.path.split(word)
+                    if word in (os.curdir, os.pardir, ''): continue
+                    path = os.path.join(path, word)
+                zf.extract(member, path)
 
     def download(self):
         """
