@@ -1,2 +1,12 @@
 csvkit
 MySQL-python
+Django==1.5
+Fabric==1.7.0
+South==0.8.1
+argparse==1.2.1
+boto==2.9.8
+django-debug-toolbar==0.9.4
+paramiko==1.11.0
+pycrypto==2.6
+python-memcached==1.48
+wsgiref==0.1.2
