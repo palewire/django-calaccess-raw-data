@@ -1,4 +1,5 @@
 import os
+import shutil
 import zipfile
 import requests
 from hurry.filesize import size
@@ -35,6 +36,13 @@ custom_options = (
         default=True,
         help="Skip unzipping of the archive"
     ),
+    make_option(
+        "--skip-prep",
+        action="store_false",
+        dest="prep",
+        default=True,
+        help="Skip prepping of the unzipped archive"
+    ),
 )
 
 class Command(BaseCommand):
@@ -65,6 +73,30 @@ class Command(BaseCommand):
                 self.download()
         if options['unzip']:
             self.unzip()
+        if options['prep']:
+            self.prep()
+
+    def prep(self):
+        """
+        Rearrange the unzipped files and get rid of the stuff we don't want.
+        """
+        print "Prepping unzipped data"
+        # Move the deep down directory we want out
+        shutil.move(
+            os.path.join(
+                self.data_dir,
+                'CalAccess/DATA/CalAccess/DATA/'
+            ),
+            self.data_dir
+        )
+        # Rename it
+        shutil.move(
+            os.path.join(self.data_dir, "DATA/"),
+            os.path.join(self.data_dir, "tsv/"),
+        )
+        # Delete the other stuff
+        shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
+        os.remove(os.path.join(self.data_dir, 'calaccess.zip'))
 
     def unzip(self):
         """
