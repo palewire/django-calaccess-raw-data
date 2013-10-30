@@ -60,6 +60,7 @@ class Command(BaseCommand):
             confirm = input(self.prompt)
             if confirm != 'yes':
                 print "Download cancelled."
+                return False
             else:
                 self.download()
         if options['unzip']:
