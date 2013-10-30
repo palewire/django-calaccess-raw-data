@@ -1,9 +1,0 @@
-#!/usr/bin/env python
-
-db_user_name = ''
-db_password = ''
-data_root_dir = ''
-clean_data_dir = ''
-db_name = ''
-
-

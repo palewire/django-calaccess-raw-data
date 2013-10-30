@@ -21,6 +21,7 @@ Do you want to download the file to %s
 
 Type 'yes' to do it, or 'no' to back out: """
 
+
 custom_options = (
     make_option(
         "--skip-download",
@@ -58,6 +59,7 @@ custom_options = (
         help="Download the ZIP archive without asking permission"
     ),
 )
+
 
 class Command(BaseCommand):
     help = 'Download the latest snapshot of the CalAccess database'

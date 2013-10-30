@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 from env_settings import clean_data_dir, data_root_dir, db_name, db_password, db_user_name
-try:
-    from csvkit import CSVKitReader, CSVKitWriter
-except:
-    print 'need to install csvkit for this script to work'
+from csvkit import CSVKitReader, CSVKitWriter
 from cStringIO import StringIO
 import csv
 import os
