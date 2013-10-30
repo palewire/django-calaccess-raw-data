@@ -43,6 +43,20 @@ custom_options = (
         default=True,
         help="Skip prepping of the unzipped archive"
     ),
+    make_option(
+        "--skip-clear",
+        action="store_false",
+        dest="clear",
+        default=True,
+        help="Skip clearing out ZIP archive and extra files"
+    ),
+    make_option(
+        "--noinput",
+        action="store_true",
+        dest="noinput",
+        default=False,
+        help="Download the ZIP archive without asking permission"
+    ),
 )
 
 class Command(BaseCommand):
@@ -53,6 +67,7 @@ class Command(BaseCommand):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.data_dir = settings.CALACCESS_DOWNLOAD_DIR
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
+        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.metadata = self.get_metadata()
         self.prompt = PROMPT % (
             dateformat(self.metadata['last-modified'], 'N j, Y'),
@@ -65,16 +80,28 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.set_options(*args, **options)
         if options['download']:
-            confirm = input(self.prompt)
-            if confirm != 'yes':
-                print "Download cancelled."
-                return False
+            if options['noinput']:
+                self.download()
             else:
+                confirm = input(self.prompt)
+                if confirm != 'yes':
+                    print "Download cancelled."
+                    return False
                 self.download()
         if options['unzip']:
             self.unzip()
         if options['prep']:
             self.prep()
+        if options['clear']:
+            self.clear()
+
+    def clear(self):
+        """
+        Delete ZIP archive and files we don't need.
+        """
+        print "Clearing out unneeded files"
+        shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
+        os.remove(self.zip_path)
 
     def prep(self):
         """
@@ -89,14 +116,14 @@ class Command(BaseCommand):
             ),
             self.data_dir
         )
-        # Rename it
+        # Clear out target if it exists
+        if os.path.exists(self.tsv_dir):
+            shutil.rmtree(self.tsv_dir)
+        # Rename it to the target
         shutil.move(
             os.path.join(self.data_dir, "DATA/"),
-            os.path.join(self.data_dir, "tsv/"),
+            self.tsv_dir,
         )
-        # Delete the other stuff
-        shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
-        os.remove(os.path.join(self.data_dir, 'calaccess.zip'))
 
     def unzip(self):
         """
