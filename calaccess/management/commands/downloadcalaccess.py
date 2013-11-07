@@ -1,11 +1,14 @@
 import os
+import csv
 import shutil
 import zipfile
 import requests
+from cStringIO import StringIO
 from hurry.filesize import size
 from django.conf import settings
 from optparse import make_option
 from django.utils.six.moves import input
+from csvkit import CSVKitReader, CSVKitWriter
 from dateutil.parser import parse as dateparse
 from django.template.defaultfilters import date as dateformat
 from django.core.management.base import BaseCommand, CommandError
@@ -52,6 +55,13 @@ custom_options = (
         help="Skip clearing out ZIP archive and extra files"
     ),
     make_option(
+        "--skip-clean",
+        action="store_false",
+        dest="clean",
+        default=True,
+        help="Skip cleaning up the raw data files"
+    ),
+    make_option(
         "--noinput",
         action="store_true",
         dest="noinput",
@@ -70,40 +80,76 @@ class Command(BaseCommand):
         self.data_dir = settings.CALACCESS_DOWNLOAD_DIR
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-        self.metadata = self.get_metadata()
-        self.prompt = PROMPT % (
-            dateformat(self.metadata['last-modified'], 'N j, Y'),
-            dateformat(self.metadata['last-modified'], 'P'),
-            naturaltime(self.metadata['last-modified']),
-            self.metadata['content-length'],
-            self.data_dir,
-        )
+        self.csv_dir = os.path.join(self.data_dir, "csv/")
+        os.path.exists(self.csv_dir) or os.mkdir(self.csv_dir)
+        self.metadata = {} #self.get_metadata()
+#        self.prompt = PROMPT % (
+#            dateformat(self.metadata['last-modified'], 'N j, Y'),
+#            dateformat(self.metadata['last-modified'], 'P'),
+#            naturaltime(self.metadata['last-modified']),
+#            self.metadata['content-length'],
+#            self.data_dir,
+#        )
 
     def handle(self, *args, **options):
         self.set_options(*args, **options)
-        if options['download']:
-            if options['noinput']:
-                self.download()
-            else:
-                confirm = input(self.prompt)
-                if confirm != 'yes':
-                    print "Download cancelled."
-                    return False
-                self.download()
-        if options['unzip']:
-            self.unzip()
-        if options['prep']:
-            self.prep()
-        if options['clear']:
-            self.clear()
+#        if options['download']:
+#            if options['noinput']:
+#                self.download()
+#            else:
+#                confirm = input(self.prompt)
+#                if confirm != 'yes':
+#                    print "Download cancelled."
+#                    return False
+#                self.download()
+#        if options['unzip']:
+#            self.unzip()
+#        if options['prep']:
+#            self.prep()
+#        if options['clear']:
+#            self.clear()
+        if options['clean']:
+            self.clean()
 
-    def clear(self):
+    def get_metadata(self):
         """
-        Delete ZIP archive and files we don't need.
+        Returns basic metadata about the current CalAccess snapshot,
+        like its size and the last time it was updated, while stopping
+        of short of actually downloading it.
         """
-        print "Clearing out unneeded files"
-        shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
-        os.remove(self.zip_path)
+        request = requests.head(self.url)
+        return {
+            'content-length': size(int(request.headers['content-length'])),
+            'last-modified': dateparse(request.headers['last-modified'])
+        }
+
+    def download(self):
+        """
+        Download the ZIP file in pieces.
+        """
+        print "Downloading ZIP file"
+        r = requests.get(self.url, stream=True)
+        with open(self.zip_path, 'wb') as f:
+            for chunk in r.iter_content(chunk_size=1024): 
+                if chunk: # filter out keep-alive new chunks
+                    f.write(chunk)
+                    f.flush()
+
+    def unzip(self):
+        """
+        Unzip the snapshot file.
+        """
+        print "Unzipping archive"
+        with zipfile.ZipFile(self.zip_path) as zf:
+            for member in zf.infolist():
+                words = member.filename.split('/')
+                path = self.data_dir
+                for word in words[:-1]:
+                    drive, word = os.path.splitdrive(word)
+                    head, word = os.path.split(word)
+                    if word in (os.curdir, os.pardir, ''): continue
+                    path = os.path.join(path, word)
+                zf.extract(member, path)
 
     def prep(self):
         """
@@ -127,42 +173,54 @@ class Command(BaseCommand):
             self.tsv_dir,
         )
 
-    def unzip(self):
+    def clear(self):
         """
-        Unzip the snapshot file.
+        Delete ZIP archive and files we don't need.
         """
-        print "Unzipping archive"
-        with zipfile.ZipFile(self.zip_path) as zf:
-            for member in zf.infolist():
-                words = member.filename.split('/')
-                path = self.data_dir
-                for word in words[:-1]:
-                    drive, word = os.path.splitdrive(word)
-                    head, word = os.path.split(word)
-                    if word in (os.curdir, os.pardir, ''): continue
-                    path = os.path.join(path, word)
-                zf.extract(member, path)
+        print "Clearing out unneeded files"
+        shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
+        os.remove(self.zip_path)
 
-    def download(self):
+    def clean(self):
         """
-        Download the ZIP file in pieces.
+        Clean up the raw data files from the state so they are
+        ready to get loaded in the database.
         """
-        print "Downloading ZIP file"
-        r = requests.get(self.url, stream=True)
-        with open(self.zip_path, 'wb') as f:
-            for chunk in r.iter_content(chunk_size=1024): 
-                if chunk: # filter out keep-alive new chunks
-                    f.write(chunk)
-                    f.flush()
+        print "Cleaning data files"
+        csv.field_size_limit(1000000000)  # Up the CSV data limit
 
-    def get_metadata(self):
-        """
-        Returns basic metadata about the current CalAccess snapshot,
-        like its size and the last time it was updated, while stopping
-        of short of actually downloading it.
-        """
-        request = requests.head(self.url)
-        return {
-            'content-length': size(int(request.headers['content-length'])),
-            'last-modified': dateparse(request.headers['last-modified'])
-        }
+        # Loop through all the files in the source directory
+        for name in os.listdir(self.tsv_dir):
+            print "- %s" % name
+
+            # Pull the data into memory
+            tsv_path = os.path.join(self.tsv_dir, name)
+            tsv_data = open(tsv_path, 'rb').read()
+
+            # Nuke any null bytes
+            null_bytes = tsv_data.count('\x00')
+            if null_bytes:
+                tsv_data = tsv_data.replace('\x00', ' ')
+
+            # Convert the file to a CSV line by line.
+            csv_path = os.path.join(
+                self.csv_dir,
+                name.lower().replace("tsv", "csv")
+            )
+            csv_file = open(csv_path, 'wb')
+            csv_writer = CSVKitWriter(csv_file, quoting=csv.QUOTE_ALL)
+            tsv_reader = StringIO(tsv_data)
+            for tsv_line in tsv_reader:
+                # Goofing around with the encoding while we're in there.
+                tsv_line = tsv_line.decode("ascii", "replace").encode('utf-8')
+                csv_line = CSVKitReader(StringIO(tsv_line), delimiter='\t')
+                csv_writer.writerow(csv_line.next())
+
+            # Shut it down
+            tsv_reader.close()
+            csv_file.close()
+
+
+#"DATE"
+#"DT"
+#"EFF"
