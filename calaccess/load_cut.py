@@ -1145,13 +1145,13 @@ SET lk_current_filings.FORM_ID = FILER_FILINGS_CD.FORM_ID
 mysql.execute('''
     UPDATE lk_current_filings INNER JOIN SMRY_CD ON lk_current_filings.FILING_ID = SMRY_CD.FILING_ID AND lk_current_filings.amend_id = SMRY_CD.AMEND_ID
     SET lk_current_filings.total_raised = SMRY_CD.AMOUNT_A
-    WHERE lk_current_filings.FORM_ID='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='5'
+    WHERE SMRY_CD.FORM_TYPE='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='5'
 ''')
 
 mysql.execute('''
     UPDATE lk_current_filings INNER JOIN SMRY_CD ON lk_current_filings.FILING_ID = SMRY_CD.FILING_ID AND lk_current_filings.amend_id = SMRY_CD.AMEND_ID
     SET lk_current_filings.total_spent = SMRY_CD.AMOUNT_A
-    WHERE lk_current_filings.FORM_ID='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='11'
+    WHERE SMRY_CD.FORM_TYPE='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='11'
 ''')
 
 
