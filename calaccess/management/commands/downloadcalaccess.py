@@ -82,32 +82,32 @@ class Command(BaseCommand):
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.mkdir(self.csv_dir)
-        self.metadata = {} #self.get_metadata()
-#        self.prompt = PROMPT % (
-#            dateformat(self.metadata['last-modified'], 'N j, Y'),
-#            dateformat(self.metadata['last-modified'], 'P'),
-#            naturaltime(self.metadata['last-modified']),
-#            self.metadata['content-length'],
-#            self.data_dir,
-#        )
+        self.metadata = self.get_metadata()
+        self.prompt = PROMPT % (
+            dateformat(self.metadata['last-modified'], 'N j, Y'),
+            dateformat(self.metadata['last-modified'], 'P'),
+            naturaltime(self.metadata['last-modified']),
+            self.metadata['content-length'],
+            self.data_dir,
+        )
 
     def handle(self, *args, **options):
         self.set_options(*args, **options)
-#        if options['download']:
-#            if options['noinput']:
-#                self.download()
-#            else:
-#                confirm = input(self.prompt)
-#                if confirm != 'yes':
-#                    print "Download cancelled."
-#                    return False
-#                self.download()
-#        if options['unzip']:
-#            self.unzip()
-#        if options['prep']:
-#            self.prep()
-#        if options['clear']:
-#            self.clear()
+        if options['download']:
+            if options['noinput']:
+                self.download()
+            else:
+                confirm = input(self.prompt)
+                if confirm != 'yes':
+                    print "Download cancelled."
+                    return False
+                self.download()
+        if options['unzip']:
+            self.unzip()
+        if options['prep']:
+            self.prep()
+        if options['clear']:
+            self.clear()
         if options['clean']:
             self.clean()
 
