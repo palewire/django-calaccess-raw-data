@@ -351,7 +351,7 @@ class Command(BaseCommand):
             # Shut it down
             tsv_reader.close()
             csv_file.close()
-        
+    
     def load(self):
         for name in os.listdir(self.csv_dir):
             print "- %s" % name
@@ -367,7 +367,11 @@ class Command(BaseCommand):
             for table in table_list:
                 if table ==  name.replace('.csv', '').upper():
                     table_dict[name] = table
-            
+            try:
+                table_name = table_dict[name]
+            except:
+                print 'No database table for table %s' % name
+                continue
             load_path = os.path.abspath(csv_path)
             bulk_sql_load_part_1 = '''
                 LOAD DATA LOCAL INFILE '%s'
@@ -376,7 +380,7 @@ class Command(BaseCommand):
                 OPTIONALLY ENCLOSED BY '"'
                 IGNORE 1 LINES
                 (
-            ''' % (load_path, table_dict[name])
+            ''' % (load_path, table_name)
             infile = open(csv_path)
             csv_reader = CSVKitReader(infile)
             headers = csv_reader.next()
@@ -384,7 +388,8 @@ class Command(BaseCommand):
             sql_fields = ['`%s`' % h for h in headers]
             bulk_sql_load =  bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
             
-            cursor.execute('DELETE FROM %s' % table_dict[name])
+            cursor.execute('DELETE FROM %s' % table_name)
+            
             cursor.execute(bulk_sql_load)
 
 
