@@ -391,8 +391,3 @@ class Command(BaseCommand):
             cursor.execute('DELETE FROM %s' % table_name)
             
             cursor.execute(bulk_sql_load)
-
-
-#"DATE"
-#"DT"
-#"EFF"
