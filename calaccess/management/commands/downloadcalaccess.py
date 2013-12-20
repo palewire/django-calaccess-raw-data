@@ -63,6 +63,13 @@ custom_options = (
         help="Skip cleaning up the raw data files"
     ),
     make_option(
+        "--skip-load",
+        action="store_false",
+        dest="load",
+        default=True,
+        help="Skip loading up the raw data files"
+    ),
+    make_option(
         "--noinput",
         action="store_true",
         dest="noinput",
@@ -70,19 +77,6 @@ custom_options = (
         help="Download the ZIP archive without asking permission"
     ),
 )
-
-
-def date_clean_csv_line(field_list):
-    csv_line_clean_dates = []
-    for csv_field in field_list:
-        if csv_field != '':
-            try:
-                csv_line_clean_dates.append(dateformat(dateparse(csv_field), 'Y-m-d'))
-            except:
-                csv_line_clean_dates.append(csv_field)
-        else:
-            csv_line_clean_dates.append(csv_field)
-    return csv_line_clean_dates
     
 
 class Command(BaseCommand):
@@ -124,6 +118,8 @@ class Command(BaseCommand):
             self.clear()
         if options['clean']:
             self.clean()
+        if options['load']:
+            self.load()
 
     def get_metadata(self):
         """
@@ -306,7 +302,11 @@ class Command(BaseCommand):
             )
             csv_file = open(csv_path, 'wb')
             csv_writer = CSVKitWriter(csv_file, quoting=csv.QUOTE_ALL)
-            tsv_reader = StringIO(tsv_data)
+            if tsv_data == '':
+                print 'no data in %s' % name
+                continue
+            else:
+                tsv_reader = StringIO(tsv_data)
             
             headers = tsv_reader.next()
             headers = headers.decode("ascii", "replace").encode('utf-8')
@@ -314,6 +314,7 @@ class Command(BaseCommand):
             headers_list = headers_csv.next()
             csv_writer.writerow(headers_list)
             
+            line_number = 1
             for tsv_line in tsv_reader:
                 # Goofing around with the encoding while we're in there.
                 tsv_line = tsv_line.decode("ascii", "replace").encode('utf-8')
@@ -332,56 +333,59 @@ class Command(BaseCommand):
                     #csv_writer.writerow(csv_line_date_cleaned)
                     csv_field_list = csv_line.next()
                 
-                if name.replace('.TSV', '') in date_field_dict:
-                    date_field_list = date_field_dict[name.replace('.TSV', '')]
-                    for f in date_field_list:
-                        if csv_field_list[headers_list.index(f)] != '':
-                            try:
-                                csv_field_list[headers_list.index(f)] = dateformat(dateparse(csv_field_list[headers_list.index(f)]), 'Y-m-d')
-                            except:
-                                print '- INVALID DATE: %s\t%s\t%s' % (name, f, csv_field_list[headers_list.index(f)])
-                                csv_field_list[headers_list.index(f)] = ''
+                if len(csv_field_list) == len(headers_list):
+                    if name.replace('.TSV', '') in date_field_dict:
+                        date_field_list = date_field_dict[name.replace('.TSV', '')]
+                        for f in date_field_list:
+                            if csv_field_list[headers_list.index(f)] != '':
+                                try:
+                                    csv_field_list[headers_list.index(f)] = dateformat(dateparse(csv_field_list[headers_list.index(f)]), 'Y-m-d')
+                                except:
+                                    print '+++++++++++ INVALID DATE: %s\t%s\t%s' % (name, f, csv_field_list[headers_list.index(f)])
+                                    csv_field_list[headers_list.index(f)] = ''
+                else:
+                    print '+++++ %s bad parse of line %s headers=%s & this line=%s' % (name, line_number, len(headers_list), len(csv_field_list))
                 csv_writer.writerow(csv_field_list) 
-                
+                line_number += 1
                 
             # Shut it down
             tsv_reader.close()
             csv_file.close()
         
-        def load(self):
-            for name in os.listdir(self.csv_dir):
-                print "- %s" % name
-                csv_path = os.path.join(
-                    self.csv_dir,
-                    name
-                )
-                
-                cursor = connection.cursor()
-                cursor.execute('SHOW TABLES')
-                table_list = [t[0] for t in cursor.fetchall()]
-                table_dict = {}
-                for table in table_list:
-                    if table ==  name.replace('.csv', '').upper():
-                        table_dict[name] = table
-                
-                load_path = os.path.abspath(csv_path)
-                bulk_sql_load_part_1 = '''
-                    LOAD DATA LOCAL INFILE '%s'
-                    INTO TABLE %s
-                    FIELDS TERMINATED BY ','
-                    OPTIONALLY ENCLOSED BY '"'
-                    IGNORE 1 LINES
-                    (
-                ''' % (load_path, table_dict[name])
-                infile = open(csv_path)
-                csv_reader = CSVKitReader(infile)
-                headers = csv_reader.next()
-                infile.close()
-                sql_fields = ['`%s`' % h for h in headers]
-                bulk_sql_load =  bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
-                
-                cursor.execute('DELETE FROM %s' % table_dict[name])
-                cursor.execute(bulk_sql_load)
+    def load(self):
+        for name in os.listdir(self.csv_dir):
+            print "- %s" % name
+            csv_path = os.path.join(
+                self.csv_dir,
+                name
+            )
+            
+            cursor = connection.cursor()
+            cursor.execute('SHOW TABLES')
+            table_list = [t[0] for t in cursor.fetchall()]
+            table_dict = {}
+            for table in table_list:
+                if table ==  name.replace('.csv', '').upper():
+                    table_dict[name] = table
+            
+            load_path = os.path.abspath(csv_path)
+            bulk_sql_load_part_1 = '''
+                LOAD DATA LOCAL INFILE '%s'
+                INTO TABLE %s
+                FIELDS TERMINATED BY ','
+                OPTIONALLY ENCLOSED BY '"'
+                IGNORE 1 LINES
+                (
+            ''' % (load_path, table_dict[name])
+            infile = open(csv_path)
+            csv_reader = CSVKitReader(infile)
+            headers = csv_reader.next()
+            infile.close()
+            sql_fields = ['`%s`' % h for h in headers]
+            bulk_sql_load =  bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
+            
+            cursor.execute('DELETE FROM %s' % table_dict[name])
+            cursor.execute(bulk_sql_load)
 
 
 #"DATE"
