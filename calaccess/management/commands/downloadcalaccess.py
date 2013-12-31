@@ -3,6 +3,7 @@ import csv
 import shutil
 import zipfile
 import requests
+import progressbar
 from cStringIO import StringIO
 from hurry.filesize import size
 from django.conf import settings
@@ -77,7 +78,6 @@ custom_options = (
         help="Download the ZIP archive without asking permission"
     ),
 )
-    
 
 class Command(BaseCommand):
     help = 'Download the latest snapshot of the CalAccess database'
@@ -95,8 +95,19 @@ class Command(BaseCommand):
             dateformat(self.metadata['last-modified'], 'N j, Y'),
             dateformat(self.metadata['last-modified'], 'P'),
             naturaltime(self.metadata['last-modified']),
-            self.metadata['content-length'],
+            size(self.metadata['content-length']),
             self.data_dir,
+        )
+        self.pbar = progressbar.ProgressBar(
+            widgets=[
+                progressbar.Percentage(),
+                progressbar.Bar(),
+                ' ',
+                progressbar.ETA(),
+                ' ',
+                progressbar.FileTransferSpeed()
+            ],
+            maxval=self.metadata['content-length']
         )
 
     def handle(self, *args, **options):
@@ -129,7 +140,7 @@ class Command(BaseCommand):
         """
         request = requests.head(self.url)
         return {
-            'content-length': size(int(request.headers['content-length'])),
+            'content-length': int(request.headers['content-length']),
             'last-modified': dateparse(request.headers['last-modified'])
         }
 
@@ -139,11 +150,16 @@ class Command(BaseCommand):
         """
         print "Downloading ZIP file"
         r = requests.get(self.url, stream=True)
+        bytes = 0
+        self.pbar.start()
         with open(self.zip_path, 'wb') as f:
             for chunk in r.iter_content(chunk_size=1024): 
                 if chunk: # filter out keep-alive new chunks
                     f.write(chunk)
+                    bytes += len(chunk)
+                    self.pbar.update(bytes)
                     f.flush()
+        self.pbar.finish()
 
     def unzip(self):
         """
