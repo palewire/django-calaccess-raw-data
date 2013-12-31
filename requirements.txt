@@ -12,6 +12,7 @@ django-debug-toolbar==0.9.4
 hurry.filesize==0.9
 openpyxl==1.6.2
 paramiko==1.11.0
+progressbar==2.3
 psycopg2==2.4.6
 pycrypto==2.6
 python-dateutil==2.1
