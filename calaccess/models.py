@@ -66,6 +66,7 @@ class CvrCampaignDisclosureCd(models.Model):
     bus_inter = models.CharField(max_length=40L, db_column='BUS_INTER', blank=True) # Field name made lowercase.
     bus_name = models.CharField(max_length=200L, db_column='BUS_NAME', blank=True) # Field name made lowercase.
     bus_st = models.CharField(max_length=2L, db_column='BUS_ST', blank=True) # Field name made lowercase.
+    bus_zip4 = models.CharField(max_length=10, db_column='BUS_ZIP4', blank=True) # Field name made lowercase
     busact_cb = models.CharField(max_length=10L, db_column='BUSACT_CB', blank=True) # Field name made lowercase.
     busactvity = models.CharField(max_length=90L, db_column='BUSACTVITY', blank=True) # Field name made lowercase.
     cand_adr1 = models.CharField(max_length=55L, db_column='CAND_ADR1', blank=True) # Field name made lowercase.
