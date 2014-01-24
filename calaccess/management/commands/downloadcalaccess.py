@@ -8,7 +8,7 @@ from cStringIO import StringIO
 from hurry.filesize import size
 from django.conf import settings
 from optparse import make_option
-from django.db import connection
+from django.db import connection, transaction
 from django.utils.six.moves import input
 from csvkit import CSVKitReader, CSVKitWriter
 from dateutil.parser import parse as dateparse
@@ -369,26 +369,38 @@ class Command(BaseCommand):
             csv_file.close()
     
     def load(self):
+        '''
+            Loads the cleaned up csv files into the database
+            Checks record count against csv line count
+            Makes a few lookup tables to help segregate out the current filings
+        '''
+        ## get a list of tables in the database
+        c = connection.cursor()
+        c.execute('SHOW TABLES')
+        table_list = [t[0] for t in c.fetchall()]
+        
+        ### build a dictionary of tables and the paths to the csvs for loading
+        table_dict = {}
         for name in os.listdir(self.csv_dir):
-            print "- %s" % name
+            
             csv_path = os.path.join(
                 self.csv_dir,
                 name
             )
             
-            cursor = connection.cursor()
-            cursor.execute('SHOW TABLES')
-            table_list = [t[0] for t in cursor.fetchall()]
-            table_dict = {}
             for table in table_list:
                 if table ==  name.replace('.csv', '').upper():
-                    table_dict[name] = table
-            try:
-                table_name = table_dict[name]
-            except:
-                print 'No database table for table %s' % name
-                continue
-            load_path = os.path.abspath(csv_path)
+                    table_dict[name] = {'table_name': table, 'csv_path': csv_path}
+        
+        ## load up the data
+        for csv_name, query_dict in table_dict.items():
+            #print 'working on %s' % csv_name
+            table_name = query_dict['table_name']
+            csv_path = query_dict['csv_path']
+            
+            c.execute('DELETE FROM %s' % table_name)
+            #print 'deleted records from %s' % table_name
+            
             bulk_sql_load_part_1 = '''
                 LOAD DATA LOCAL INFILE '%s'
                 INTO TABLE %s
@@ -396,14 +408,101 @@ class Command(BaseCommand):
                 OPTIONALLY ENCLOSED BY '"'
                 IGNORE 1 LINES
                 (
-            ''' % (load_path, table_name)
+            ''' % (csv_path, table_name)
             infile = open(csv_path)
             csv_reader = CSVKitReader(infile)
             headers = csv_reader.next()
+            
             infile.close()
+            infile = open(csv_path)
+            csv_record_cnt = len(infile.readlines()) - 1
+            infile.close()
+            
             sql_fields = ['`%s`' % h for h in headers]
             bulk_sql_load =  bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
+            cnt = c.execute(bulk_sql_load)
+            transaction.commit_unless_managed()
             
-            cursor.execute('DELETE FROM %s' % table_name)
-            
-            cursor.execute(bulk_sql_load)
+            # check load, make sure record count matches 
+            if cnt == csv_record_cnt:
+                print "record counts match\t\t\t\t%s" % csv_name
+            else:
+                print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (cnt, csv_record_cnt, csv_name)
+        
+        
+        ###  DATA IS LOADED UP NOW GET IT READY FOR ANALYSIS
+        
+        ## Smash together a filer lookup that's easier to comprehend
+        c.execute('DROP TABLE IF EXISTS lk_filers')
+        c.execute('''
+        CREATE TABLE `lk_filers` (
+          `FILER_ID` int(11) NOT NULL,
+          `filername_name` varchar(255),
+          `type` varchar(255),
+          `prik` int(11) NOT NULL AUTO_INCREMENT,
+          PRIMARY KEY (`prik`),
+          KEY `1` (`FILER_ID`)
+        ) 
+        ''')
+        c.execute('''
+        INSERT INTO lk_filers(FILER_ID, filername_name, type)
+        SELECT FILERNAME_CD.FILER_ID, CONCAT(
+                FILERNAME_CD.NAML, ' ',
+                FILERNAME_CD.NAMF, ' ', 
+                FILERNAME_CD.NAMT,  ' ',
+                FILERNAME_CD.NAMS
+        ) AS name,
+        FILERNAME_CD.FILER_TYPE
+        FROM FILER_FILINGS_CD INNER JOIN FILERNAME_CD ON FILERNAME_CD.FILER_ID = FILER_FILINGS_CD.FILER_ID
+        WHERE FILERNAME_CD.FILER_ID<>0
+        GROUP BY 1, 2
+        ''')
+        
+        
+        ## Smash together a list of current filings. Forget the rest
+        c.execute('DROP TABLE IF EXISTS lk_current_filings')
+        c.execute('''
+        CREATE TABLE `lk_current_filings` (
+          `FILER_ID` int(11) NOT NULL,
+          `FILING_ID` int(11) NOT NULL,
+          `amend_id` int(11),
+          `SESSION_ID` int(11) NOT NULL,
+          `FORM_ID` varchar(50),
+          `total_raised` Decimal(16,2),
+          `total_spent` Decimal(16,2),
+          KEY `1` (`FILER_ID`),
+          KEY `2` (`FILING_ID`),
+          KEY `3` (`amend_id`)
+        )
+        ''')
+        ## I'm taking the MIN(SESSION_ID) since it seems that's the session the form belongs too even if an amendment is filed in a later session.
+        ## Obviously we take the newer amendment, but don't lump the form's disclosure data with whatever session the latest amendment appears in.
+        c.execute('''
+        INSERT INTO lk_current_filings (FILER_ID, FILING_ID, amend_id, SESSION_ID)
+        SELECT 
+                FILER_FILINGS_CD.FILER_ID, 
+                FILER_FILINGS_CD.FILING_ID,
+                MAX(FILER_FILINGS_CD.FILING_SEQUENCE) AS AMEND_ID, 
+                MIN(FILER_FILINGS_CD.SESSION_ID)
+        FROM FILER_FILINGS_CD
+        GROUP BY 1,2
+        ''')
+        ## now take whatever form ID goes with the latest amendment.
+        c.execute('''
+        UPDATE lk_current_filings INNER JOIN FILER_FILINGS_CD ON FILER_FILINGS_CD.FILER_ID = lk_current_filings.FILER_ID AND
+                                                                 FILER_FILINGS_CD.FILING_ID = lk_current_filings.FILING_ID AND
+                                                                 FILER_FILINGS_CD.FILING_SEQUENCE = lk_current_filings.AMEND_ID
+        SET lk_current_filings.FORM_ID = FILER_FILINGS_CD.FORM_ID
+        ''')
+        c.execute('''
+            UPDATE lk_current_filings INNER JOIN SMRY_CD ON lk_current_filings.FILING_ID = SMRY_CD.FILING_ID AND lk_current_filings.amend_id = SMRY_CD.AMEND_ID
+            SET lk_current_filings.total_raised = SMRY_CD.AMOUNT_A
+            WHERE SMRY_CD.FORM_TYPE='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='5'
+        ''')
+        
+        c.execute('''
+            UPDATE lk_current_filings INNER JOIN SMRY_CD ON lk_current_filings.FILING_ID = SMRY_CD.FILING_ID AND lk_current_filings.amend_id = SMRY_CD.AMEND_ID
+            SET lk_current_filings.total_spent = SMRY_CD.AMOUNT_A
+            WHERE SMRY_CD.FORM_TYPE='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='11'
+        ''')
+        transaction.commit_unless_managed()

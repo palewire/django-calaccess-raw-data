@@ -527,6 +527,19 @@ class FilingPeriodCd(models.Model):
     class Meta:
         db_table = 'FILING_PERIOD_CD'
 
+class HdrCd(models.Model):
+    amend_id = models.IntegerField(db_column='AMEND_ID')
+    cal_ver = models.DecimalField(max_digits=3, decimal_places=2, db_column='CAL_VER', blank=True)
+    ef_type = models.DecimalField(max_digits=3, decimal_places=2, db_column='EF_TYPE', blank=True)
+    filing_id = models.IntegerField(db_column='FILING_ID')
+    hdr_comment = models.CharField(max_length=200L, db_column='HDRCOMMENT', blank=True)
+    rec_type = models.CharField(max_length=3L, db_column='REC_TYPE', blank=True)
+    soft_name = models.CharField(max_length=90L, db_column='SOFT_NAME', blank=True)
+    soft_ver = models.CharField(max_length=16L, db_column='SOFT_VER', blank=True)
+    state_cd = models.CharField(max_length=2L, db_column='STATE_CD', blank=True)
+    class Meta:
+        db_table = 'HDR_CD'
+
 class LempCd(models.Model):
     agencylist = models.CharField(max_length=200L, db_column='AGENCYLIST', blank=True) # Field name made lowercase.
     amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
