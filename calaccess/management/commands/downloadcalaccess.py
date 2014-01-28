@@ -269,6 +269,13 @@ class Command(BaseCommand):
                 'END_DATE',
                 'DEADLINE'
             ],
+            'LATT_CD': [
+                'CUMBEG_DT',
+                'PMT_DATE',
+            ],
+            'LCCM_CD': [
+              'CTRIB_DATE',  
+            ],
            'LEMP_CD': [
                 'EFF_DATE'
             ],
@@ -372,7 +379,6 @@ class Command(BaseCommand):
         '''
             Loads the cleaned up csv files into the database
             Checks record count against csv line count
-            Makes a few lookup tables to help segregate out the current filings
         '''
         ## get a list of tables in the database
         c = connection.cursor()
@@ -428,81 +434,3 @@ class Command(BaseCommand):
                 print "record counts match\t\t\t\t%s" % csv_name
             else:
                 print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (cnt, csv_record_cnt, csv_name)
-        
-        
-        ###  DATA IS LOADED UP NOW GET IT READY FOR ANALYSIS
-        
-        ## Smash together a filer lookup that's easier to comprehend
-        c.execute('DROP TABLE IF EXISTS lk_filers')
-        c.execute('''
-        CREATE TABLE `lk_filers` (
-          `FILER_ID` int(11) NOT NULL,
-          `filername_name` varchar(255),
-          `type` varchar(255),
-          `prik` int(11) NOT NULL AUTO_INCREMENT,
-          PRIMARY KEY (`prik`),
-          KEY `1` (`FILER_ID`)
-        ) 
-        ''')
-        c.execute('''
-        INSERT INTO lk_filers(FILER_ID, filername_name, type)
-        SELECT FILERNAME_CD.FILER_ID, CONCAT(
-                FILERNAME_CD.NAML, ' ',
-                FILERNAME_CD.NAMF, ' ', 
-                FILERNAME_CD.NAMT,  ' ',
-                FILERNAME_CD.NAMS
-        ) AS name,
-        FILERNAME_CD.FILER_TYPE
-        FROM FILER_FILINGS_CD INNER JOIN FILERNAME_CD ON FILERNAME_CD.FILER_ID = FILER_FILINGS_CD.FILER_ID
-        WHERE FILERNAME_CD.FILER_ID<>0
-        GROUP BY 1, 2
-        ''')
-        
-        
-        ## Smash together a list of current filings. Forget the rest
-        c.execute('DROP TABLE IF EXISTS lk_current_filings')
-        c.execute('''
-        CREATE TABLE `lk_current_filings` (
-          `FILER_ID` int(11) NOT NULL,
-          `FILING_ID` int(11) NOT NULL,
-          `amend_id` int(11),
-          `SESSION_ID` int(11) NOT NULL,
-          `FORM_ID` varchar(50),
-          `total_raised` Decimal(16,2),
-          `total_spent` Decimal(16,2),
-          KEY `1` (`FILER_ID`),
-          KEY `2` (`FILING_ID`),
-          KEY `3` (`amend_id`)
-        )
-        ''')
-        ## I'm taking the MIN(SESSION_ID) since it seems that's the session the form belongs too even if an amendment is filed in a later session.
-        ## Obviously we take the newer amendment, but don't lump the form's disclosure data with whatever session the latest amendment appears in.
-        c.execute('''
-        INSERT INTO lk_current_filings (FILER_ID, FILING_ID, amend_id, SESSION_ID)
-        SELECT 
-                FILER_FILINGS_CD.FILER_ID, 
-                FILER_FILINGS_CD.FILING_ID,
-                MAX(FILER_FILINGS_CD.FILING_SEQUENCE) AS AMEND_ID, 
-                MIN(FILER_FILINGS_CD.SESSION_ID)
-        FROM FILER_FILINGS_CD
-        GROUP BY 1,2
-        ''')
-        ## now take whatever form ID goes with the latest amendment.
-        c.execute('''
-        UPDATE lk_current_filings INNER JOIN FILER_FILINGS_CD ON FILER_FILINGS_CD.FILER_ID = lk_current_filings.FILER_ID AND
-                                                                 FILER_FILINGS_CD.FILING_ID = lk_current_filings.FILING_ID AND
-                                                                 FILER_FILINGS_CD.FILING_SEQUENCE = lk_current_filings.AMEND_ID
-        SET lk_current_filings.FORM_ID = FILER_FILINGS_CD.FORM_ID
-        ''')
-        c.execute('''
-            UPDATE lk_current_filings INNER JOIN SMRY_CD ON lk_current_filings.FILING_ID = SMRY_CD.FILING_ID AND lk_current_filings.amend_id = SMRY_CD.AMEND_ID
-            SET lk_current_filings.total_raised = SMRY_CD.AMOUNT_A
-            WHERE SMRY_CD.FORM_TYPE='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='5'
-        ''')
-        
-        c.execute('''
-            UPDATE lk_current_filings INNER JOIN SMRY_CD ON lk_current_filings.FILING_ID = SMRY_CD.FILING_ID AND lk_current_filings.amend_id = SMRY_CD.AMEND_ID
-            SET lk_current_filings.total_spent = SMRY_CD.AMOUNT_A
-            WHERE SMRY_CD.FORM_TYPE='F460' AND SMRY_CD.REC_TYPE = 'SMRY' AND SMRY_CD.LINE_ITEM='11'
-        ''')
-        transaction.commit_unless_managed()
