@@ -303,6 +303,18 @@ class Command(BaseCommand):
            'SMRY_CD': [
                 'ELEC_DT'
             ],
+            'S496_CD': [
+                'EXP_DATE',
+                'DATE_THRU',
+            ],
+            'S497_CD': [
+                'ELEC_DATE',
+                'CTRIB_DATE',
+                'DATE_THRU',
+            ],
+            'S498_CD': [
+                'DATE_RCVD',
+            ],
         }
         
         # Loop through all the files in the source directory

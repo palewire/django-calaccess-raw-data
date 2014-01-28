@@ -49,7 +49,7 @@ class Cvr2CampaignDisclosureCd(models.Model):
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
 class CvrCampaignDisclosureCd(models.Model):
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True) # Field name made lowercase.
     amendexp_1 = models.CharField(max_length=100L, db_column='AMENDEXP_1', blank=True) # Field name made lowercase.
     amendexp_2 = models.CharField(max_length=100L, db_column='AMENDEXP_2', blank=True) # Field name made lowercase.
     amendexp_3 = models.CharField(max_length=100L, db_column='AMENDEXP_3', blank=True) # Field name made lowercase.
@@ -95,7 +95,7 @@ class CvrCampaignDisclosureCd(models.Model):
     filer_adr2 = models.CharField(max_length=55L, db_column='FILER_ADR2', blank=True) # Field name made lowercase.
     filer_city = models.CharField(max_length=30L, db_column='FILER_CITY', blank=True) # Field name made lowercase.
     filer_fax = models.CharField(max_length=20L, db_column='FILER_FAX', blank=True) # Field name made lowercase.
-    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True) # Field name made lowercase.
     filer_namf = models.CharField(max_length=45L, db_column='FILER_NAMF', blank=True) # Field name made lowercase.
     filer_naml = models.CharField(max_length=200L, db_column='FILER_NAML') # Field name made lowercase.
     filer_nams = models.CharField(max_length=10L, db_column='FILER_NAMS', blank=True) # Field name made lowercase.
@@ -103,7 +103,7 @@ class CvrCampaignDisclosureCd(models.Model):
     filer_phon = models.CharField(max_length=20L, db_column='FILER_PHON', blank=True) # Field name made lowercase.
     filer_st = models.CharField(max_length=4L, db_column='FILER_ST', blank=True) # Field name made lowercase.
     filer_zip4 = models.CharField(max_length=10L, db_column='FILER_ZIP4', blank=True) # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
     form_type = models.CharField(max_length=4L, db_column='FORM_TYPE') # Field name made lowercase.
     from_date = models.DateField(null=True, db_column='FROM_DATE', blank=True) # Field name made lowercase.
     juris_cd = models.CharField(max_length=3L, db_column='JURIS_CD', blank=True) # Field name made lowercase.
@@ -292,7 +292,7 @@ class CvrRegistrationCd(models.Model):
         db_table = 'CVR_REGISTRATION_CD'
 
 class DebtCd(models.Model):
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True) # Field name made lowercase.
     amt_incur = models.DecimalField(decimal_places=2, max_digits=14, db_column='AMT_INCUR') # Field name made lowercase.
     amt_paid = models.DecimalField(decimal_places=2, max_digits=14, db_column='AMT_PAID') # Field name made lowercase.
     bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True) # Field name made lowercase.
@@ -302,7 +302,7 @@ class DebtCd(models.Model):
     entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True) # Field name made lowercase.
     expn_code = models.CharField(max_length=3L, db_column='EXPN_CODE', blank=True) # Field name made lowercase.
     expn_dscr = models.CharField(max_length=400L, db_column='EXPN_DSCR', blank=True) # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
     form_type = models.CharField(max_length=1L, db_column='FORM_TYPE') # Field name made lowercase.
     line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
     memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True) # Field name made lowercase.
@@ -337,7 +337,7 @@ class ExpnCd(models.Model):
     agent_naml = models.CharField(max_length=200L, db_column='AGENT_NAML', blank=True) # Field name made lowercase.
     agent_nams = models.CharField(max_length=10L, db_column='AGENT_NAMS', blank=True) # Field name made lowercase.
     agent_namt = models.CharField(max_length=10L, db_column='AGENT_NAMT', blank=True) # Field name made lowercase.
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True) # Field name made lowercase.
     amount = models.DecimalField(decimal_places=2, max_digits=14, db_column='AMOUNT') # Field name made lowercase.
     bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True) # Field name made lowercase.
     bal_juris = models.CharField(max_length=40L, db_column='BAL_JURIS', blank=True) # Field name made lowercase.
@@ -356,7 +356,7 @@ class ExpnCd(models.Model):
     expn_code = models.CharField(max_length=3L, db_column='EXPN_CODE', blank=True) # Field name made lowercase.
     expn_date = models.DateField(null=True, db_column='EXPN_DATE', blank=True) # Field name made lowercase.
     expn_dscr = models.CharField(max_length=400L, db_column='EXPN_DSCR', blank=True) # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
     form_type = models.CharField(max_length=6L, db_column='FORM_TYPE') # Field name made lowercase.
     g_from_e_f = models.CharField(max_length=1L, db_column='G_FROM_E_F', blank=True) # Field name made lowercase.
     juris_cd = models.CharField(max_length=3L, db_column='JURIS_CD', blank=True) # Field name made lowercase.
@@ -395,8 +395,8 @@ class ExpnCd(models.Model):
         db_table = 'EXPN_CD'
 
 class FilernameCd(models.Model):
-    xref_filer_id = models.CharField(max_length=7L, db_column='XREF_FILER_ID') # Field name made lowercase.
-    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    xref_filer_id = models.CharField(max_length=7L, db_column='XREF_FILER_ID', db_index=True) # Field name made lowercase.
+    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True) # Field name made lowercase.
     filer_type = models.CharField(max_length=45L, db_column='FILER_TYPE') # Field name made lowercase.
     status = models.CharField(max_length=10L, db_column='STATUS') # Field name made lowercase.
     effect_dt = models.DateField(db_column='EFFECT_DT') # Field name made lowercase.
@@ -416,7 +416,7 @@ class FilernameCd(models.Model):
         db_table = 'FILERNAME_CD'
 
 class FilersCd(models.Model):
-    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True) # Field name made lowercase.
     class Meta:
         db_table = 'FILERS_CD'
 
@@ -427,11 +427,11 @@ class FilerAcronymsCd(models.Model):
         db_table = 'FILER_ACRONYMS_CD'
 
 class FilerFilingsCd(models.Model):
-    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True) # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
     period_id = models.IntegerField(null=True, db_column='PERIOD_ID', blank=True) # Field name made lowercase.
     form_id = models.CharField(max_length=7L, db_column='FORM_ID') # Field name made lowercase.
-    filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE') # Field name made lowercase.
+    filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE', db_index=True) # Field name made lowercase.
     filing_date = models.DateField(db_column='FILING_DATE') # Field name made lowercase.
     stmnt_type = models.IntegerField(db_column='STMNT_TYPE') # Field name made lowercase.
     stmnt_status = models.IntegerField(db_column='STMNT_STATUS') # Field name made lowercase.
@@ -511,7 +511,7 @@ class FilerXrefCd(models.Model):
         db_table = 'FILER_XREF_CD'
 
 class Filings(models.Model):
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
     filing_type = models.IntegerField(db_column='FILING_TYPE') # Field name made lowercase.
     class Meta:
         db_table = 'FILINGS'
@@ -838,7 +838,7 @@ class Names(models.Model):
         db_table = 'NAMES'
 
 class RcptCd(models.Model):
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True) # Field name made lowercase.
     amount = models.DecimalField(decimal_places=2, max_digits=14, db_column='AMOUNT') # Field name made lowercase.
     bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True) # Field name made lowercase.
     bal_juris = models.CharField(max_length=40L, db_column='BAL_JURIS', blank=True) # Field name made lowercase.
@@ -867,7 +867,7 @@ class RcptCd(models.Model):
     date_thru = models.DateField(null=True, db_column='DATE_THRU', blank=True) # Field name made lowercase.
     dist_no = models.CharField(max_length=3L, db_column='DIST_NO', blank=True) # Field name made lowercase.
     entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True) # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
     form_type = models.CharField(max_length=9L, db_column='FORM_TYPE') # Field name made lowercase.
     int_rate = models.CharField(max_length=9L, db_column='INT_RATE', blank=True) # Field name made lowercase.
     intr_adr1 = models.CharField(max_length=55L, db_column='INTR_ADR1', blank=True) # Field name made lowercase.
@@ -911,8 +911,8 @@ class RcptCd(models.Model):
         db_table = 'RCPT_CD'
 
 class SmryCd(models.Model):
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True) # Field name made lowercase.
     line_item = models.CharField(max_length=8L, db_column='LINE_ITEM') # Field name made lowercase.
     rec_type = models.CharField(max_length=4L, db_column='REC_TYPE') # Field name made lowercase.
     form_type = models.CharField(max_length=8L, db_column='FORM_TYPE') # Field name made lowercase.
@@ -936,137 +936,151 @@ class SpltCd(models.Model):
     class Meta:
         db_table = 'SPLT_CD'
 
-class CurrentExpn(models.Model):
-    agent_namf = models.CharField(max_length=45L, db_column='AGENT_NAMF', blank=True) # Field name made lowercase.
-    agent_naml = models.CharField(max_length=200L, db_column='AGENT_NAML', blank=True) # Field name made lowercase.
-    agent_nams = models.CharField(max_length=10L, db_column='AGENT_NAMS', blank=True) # Field name made lowercase.
-    agent_namt = models.CharField(max_length=10L, db_column='AGENT_NAMT', blank=True) # Field name made lowercase.
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
-    amount = models.DecimalField(decimal_places=2, max_digits=14, db_column='AMOUNT') # Field name made lowercase.
-    bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True) # Field name made lowercase.
-    bal_juris = models.CharField(max_length=40L, db_column='BAL_JURIS', blank=True) # Field name made lowercase.
-    bal_name = models.CharField(max_length=200L, db_column='BAL_NAME', blank=True) # Field name made lowercase.
-    bal_num = models.CharField(max_length=7L, db_column='BAL_NUM', blank=True) # Field name made lowercase.
-    cand_namf = models.CharField(max_length=45L, db_column='CAND_NAMF', blank=True) # Field name made lowercase.
-    cand_naml = models.CharField(max_length=200L, db_column='CAND_NAML', blank=True) # Field name made lowercase.
-    cand_nams = models.CharField(max_length=10L, db_column='CAND_NAMS', blank=True) # Field name made lowercase.
-    cand_namt = models.CharField(max_length=10L, db_column='CAND_NAMT', blank=True) # Field name made lowercase.
-    cmte_id = models.CharField(max_length=9L, db_column='CMTE_ID', blank=True) # Field name made lowercase.
-    cum_oth = models.DecimalField(decimal_places=2, null=True, max_digits=14, db_column='CUM_OTH', blank=True) # Field name made lowercase.
-    cum_ytd = models.DecimalField(decimal_places=2, null=True, max_digits=14, db_column='CUM_YTD', blank=True) # Field name made lowercase.
-    dist_no = models.CharField(max_length=3L, db_column='DIST_NO', blank=True) # Field name made lowercase.
-    entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True) # Field name made lowercase.
-    expn_chkno = models.CharField(max_length=20L, db_column='EXPN_CHKNO', blank=True) # Field name made lowercase.
-    expn_code = models.CharField(max_length=3L, db_column='EXPN_CODE', blank=True) # Field name made lowercase.
-    expn_date = models.DateField(null=True, db_column='EXPN_DATE', blank=True) # Field name made lowercase.
-    expn_dscr = models.CharField(max_length=400L, db_column='EXPN_DSCR', blank=True) # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
-    form_type = models.CharField(max_length=6L, db_column='FORM_TYPE') # Field name made lowercase.
-    g_from_e_f = models.CharField(max_length=1L, db_column='G_FROM_E_F', blank=True) # Field name made lowercase.
-    juris_cd = models.CharField(max_length=3L, db_column='JURIS_CD', blank=True) # Field name made lowercase.
-    juris_dscr = models.CharField(max_length=40L, db_column='JURIS_DSCR', blank=True) # Field name made lowercase.
-    line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
-    memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True) # Field name made lowercase.
-    memo_refno = models.CharField(max_length=20L, db_column='MEMO_REFNO', blank=True) # Field name made lowercase.
-    off_s_h_cd = models.CharField(max_length=1L, db_column='OFF_S_H_CD', blank=True) # Field name made lowercase.
-    offic_dscr = models.CharField(max_length=40L, db_column='OFFIC_DSCR', blank=True) # Field name made lowercase.
-    office_cd = models.CharField(max_length=3L, db_column='OFFICE_CD', blank=True) # Field name made lowercase.
-    payee_adr1 = models.CharField(max_length=55L, db_column='PAYEE_ADR1', blank=True) # Field name made lowercase.
-    payee_adr2 = models.CharField(max_length=55L, db_column='PAYEE_ADR2', blank=True) # Field name made lowercase.
-    payee_city = models.CharField(max_length=30L, db_column='PAYEE_CITY', blank=True) # Field name made lowercase.
-    payee_namf = models.CharField(max_length=45L, db_column='PAYEE_NAMF', blank=True) # Field name made lowercase.
-    payee_naml = models.CharField(max_length=200L, db_column='PAYEE_NAML', blank=True) # Field name made lowercase.
-    payee_nams = models.CharField(max_length=10L, db_column='PAYEE_NAMS', blank=True) # Field name made lowercase.
-    payee_namt = models.CharField(max_length=10L, db_column='PAYEE_NAMT', blank=True) # Field name made lowercase.
-    payee_st = models.CharField(max_length=2L, db_column='PAYEE_ST', blank=True) # Field name made lowercase.
-    payee_zip4 = models.CharField(max_length=10L, db_column='PAYEE_ZIP4', blank=True) # Field name made lowercase.
-    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE') # Field name made lowercase.
-    sup_opp_cd = models.CharField(max_length=1L, db_column='SUP_OPP_CD', blank=True) # Field name made lowercase.
-    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID') # Field name made lowercase.
-    tres_adr1 = models.CharField(max_length=55L, db_column='TRES_ADR1', blank=True) # Field name made lowercase.
-    tres_adr2 = models.CharField(max_length=55L, db_column='TRES_ADR2', blank=True) # Field name made lowercase.
-    tres_city = models.CharField(max_length=30L, db_column='TRES_CITY', blank=True) # Field name made lowercase.
-    tres_namf = models.CharField(max_length=45L, db_column='TRES_NAMF', blank=True) # Field name made lowercase.
-    tres_naml = models.CharField(max_length=200L, db_column='TRES_NAML', blank=True) # Field name made lowercase.
-    tres_nams = models.CharField(max_length=10L, db_column='TRES_NAMS', blank=True) # Field name made lowercase.
-    tres_namt = models.CharField(max_length=10L, db_column='TRES_NAMT', blank=True) # Field name made lowercase.
-    tres_st = models.CharField(max_length=2L, db_column='TRES_ST', blank=True) # Field name made lowercase.
-    tres_zip4 = models.CharField(max_length=10L, db_column='TRES_ZIP4', blank=True) # Field name made lowercase.
-    xref_match = models.CharField(max_length=1L, db_column='XREF_MATCH', blank=True) # Field name made lowercase.
-    xref_schnm = models.CharField(max_length=2L, db_column='XREF_SCHNM', blank=True) # Field name made lowercase.
-    current_filing = models.CharField(max_length=1L, blank=True)
+class S401Cd(models.Model):
+    filing_id = models.IntegerField(db_column='FILING_ID')
+    amend_id = models.IntegerField(db_column='AMEND_ID')
+    line_item = models.IntegerField(db_column='LINE_ITEM')
+    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE', blank=True)
+    form_type = models.CharField(max_length=7L, db_column='FORM_TYPE', blank=True)
+    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
+    agent_naml = models.CharField(max_length=200l, db_column='AGENT_NAML', blank=True)
+    agent_namf = models.CharField(max_length=45L, db_column='AGENT_NAMF', blank=True)
+    agent_namt = models.CharField(max_length=200L, db_column='AGENT_NAMT', blank=True)
+    agent_nams = models.CharField(max_length=10L, db_column='AGENT_NAMS', blank=True)
+    payee_naml = models.CharField(max_length=200L, db_column='PAYEE_NAML', blank=True)
+    payee_namf = models.CharField(max_length=45L, db_column='PAYEE_NAMF', blank=True)
+    payee_namt = models.CharField(max_length=10L, db_column='PAYEE_NAMT', blank=True)
+    payee_nams = models.CharField(max_length=10L, db_column='PAYEE_NAMS', blank=True)
+    payee_city = models.CharField(max_length=30L, db_column='PAYEE_CITY', blank=True)
+    #payee_adr1 = models.CharField(max_length=55L, db_column='PAYEE_ADR1', blank=True) # fields in documentation but not csv file
+    #payee_adr2 = models.CharField(max_length=55L, db_column='PAYEE_ADR2', blank=True) # fields in documentation but not csv file
+    payee_st = models.CharField(max_length=2L, db_column='PAYEE_ST', blank=True)
+    payee_zip4 = models.CharField(max_length=10L, db_column='PAYEE_ZIP4', blank=True)
+    amount = models.DecimalField(max_digits=16L, decimal_places=2,db_column='AMOUNT')
+    aggregate = models.DecimalField(max_digits=16L, decimal_places=2, db_column='AGGREGATE')
+    expn_dscr = models.CharField(max_length=90L, db_column='EXPN_DSCR', blank=True)
+    cand_naml = models.CharField(max_length=200L, db_column='CAND_NAML', blank=True)
+    cand_namf = models.CharField(max_length=45L, db_column='CAND_NAMF', blank=True)
+    cand_namt = models.CharField(max_length=10L, db_column='CAND_NAMT', blank=True)
+    cand_nams = models.CharField(max_length=10L, db_column='CAND_NAMS', blank=True)
+    office_cd = models.CharField(max_length=3L, db_column='OFFICE_CD', blank=True)
+    offic_dscr = models.CharField(max_length=40L, db_column='OFFIC_DSCR', blank=True)
+    juris_cd = models.CharField(max_length=3L, db_column='JURIS_CD', blank=True)
+    juris_dscr = models.CharField(max_length=40L, db_column='JURIS_DSCR', blank=True)
+    dist_no = models.CharField(max_length=3L, db_column='DIST_NO', blank=True)
+    off_s_h_cd = models.CharField(max_length=1L, db_column='OFF_S_H_CD', blank=True)
+    bal_name = models.CharField(max_length=200L, db_column='BAL_NAME', blank=True)
+    bal_num = models.CharField(max_length=7L, db_column='BAL_NUM', blank=True)
+    bal_juris = models.CharField(max_length=40L, db_column='BAL_JURIS', blank=True)
+    sup_opp_cd = models.CharField(max_length=1L, db_column='SUP_OPP_CD', blank=True)
+    memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True)
+    memo_refno = models.CharField(max_length=20L, db_column='MEMO_REFNO', blank=True)
+    bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True)
     class Meta:
-        db_table = 'current_expn'
+        db_table = 'S401_CD'
 
-class CurrentRcpt(models.Model):
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
-    amount = models.DecimalField(decimal_places=2, max_digits=14, db_column='AMOUNT') # Field name made lowercase.
-    bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True) # Field name made lowercase.
-    bal_juris = models.CharField(max_length=40L, db_column='BAL_JURIS', blank=True) # Field name made lowercase.
-    bal_name = models.CharField(max_length=200L, db_column='BAL_NAME', blank=True) # Field name made lowercase.
-    bal_num = models.CharField(max_length=7L, db_column='BAL_NUM', blank=True) # Field name made lowercase.
-    cand_namf = models.CharField(max_length=45L, db_column='CAND_NAMF', blank=True) # Field name made lowercase.
-    cand_naml = models.CharField(max_length=200L, db_column='CAND_NAML', blank=True) # Field name made lowercase.
-    cand_nams = models.CharField(max_length=10L, db_column='CAND_NAMS', blank=True) # Field name made lowercase.
-    cand_namt = models.CharField(max_length=10L, db_column='CAND_NAMT', blank=True) # Field name made lowercase.
-    cmte_id = models.CharField(max_length=9L, db_column='CMTE_ID', blank=True) # Field name made lowercase.
-    ctrib_adr1 = models.CharField(max_length=55L, db_column='CTRIB_ADR1', blank=True) # Field name made lowercase.
-    ctrib_adr2 = models.CharField(max_length=55L, db_column='CTRIB_ADR2', blank=True) # Field name made lowercase.
-    ctrib_city = models.CharField(max_length=30L, db_column='CTRIB_CITY', blank=True) # Field name made lowercase.
-    ctrib_dscr = models.CharField(max_length=90L, db_column='CTRIB_DSCR', blank=True) # Field name made lowercase.
-    ctrib_emp = models.CharField(max_length=200L, db_column='CTRIB_EMP', blank=True) # Field name made lowercase.
-    ctrib_namf = models.CharField(max_length=45L, db_column='CTRIB_NAMF', blank=True) # Field name made lowercase.
-    ctrib_naml = models.CharField(max_length=200L, db_column='CTRIB_NAML') # Field name made lowercase.
-    ctrib_nams = models.CharField(max_length=10L, db_column='CTRIB_NAMS', blank=True) # Field name made lowercase.
-    ctrib_namt = models.CharField(max_length=10L, db_column='CTRIB_NAMT', blank=True) # Field name made lowercase.
-    ctrib_occ = models.CharField(max_length=60L, db_column='CTRIB_OCC', blank=True) # Field name made lowercase.
-    ctrib_self = models.CharField(max_length=1L, db_column='CTRIB_SELF', blank=True) # Field name made lowercase.
-    ctrib_st = models.CharField(max_length=2L, db_column='CTRIB_ST', blank=True) # Field name made lowercase.
-    ctrib_zip4 = models.CharField(max_length=10L, db_column='CTRIB_ZIP4', blank=True) # Field name made lowercase.
-    cum_oth = models.DecimalField(decimal_places=2, null=True, max_digits=14, db_column='CUM_OTH', blank=True) # Field name made lowercase.
-    cum_ytd = models.DecimalField(decimal_places=2, null=True, max_digits=14, db_column='CUM_YTD', blank=True) # Field name made lowercase.
-    date_thru = models.DateField(null=True, db_column='DATE_THRU', blank=True) # Field name made lowercase.
-    dist_no = models.CharField(max_length=3L, db_column='DIST_NO', blank=True) # Field name made lowercase.
-    entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True) # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
-    form_type = models.CharField(max_length=9L, db_column='FORM_TYPE') # Field name made lowercase.
-    int_rate = models.CharField(max_length=9L, db_column='INT_RATE', blank=True) # Field name made lowercase.
-    intr_adr1 = models.CharField(max_length=55L, db_column='INTR_ADR1', blank=True) # Field name made lowercase.
-    intr_adr2 = models.CharField(max_length=55L, db_column='INTR_ADR2', blank=True) # Field name made lowercase.
-    intr_city = models.CharField(max_length=30L, db_column='INTR_CITY', blank=True) # Field name made lowercase.
-    intr_cmteid = models.CharField(max_length=9L, db_column='INTR_CMTEID', blank=True) # Field name made lowercase.
-    intr_emp = models.CharField(max_length=200L, db_column='INTR_EMP', blank=True) # Field name made lowercase.
-    intr_namf = models.CharField(max_length=45L, db_column='INTR_NAMF', blank=True) # Field name made lowercase.
-    intr_naml = models.CharField(max_length=200L, db_column='INTR_NAML', blank=True) # Field name made lowercase.
-    intr_nams = models.CharField(max_length=10L, db_column='INTR_NAMS', blank=True) # Field name made lowercase.
-    intr_namt = models.CharField(max_length=10L, db_column='INTR_NAMT', blank=True) # Field name made lowercase.
-    intr_occ = models.CharField(max_length=60L, db_column='INTR_OCC', blank=True) # Field name made lowercase.
-    intr_self = models.CharField(max_length=1L, db_column='INTR_SELF', blank=True) # Field name made lowercase.
-    intr_st = models.CharField(max_length=2L, db_column='INTR_ST', blank=True) # Field name made lowercase.
-    intr_zip4 = models.CharField(max_length=10L, db_column='INTR_ZIP4', blank=True) # Field name made lowercase.
-    juris_cd = models.CharField(max_length=3L, db_column='JURIS_CD', blank=True) # Field name made lowercase.
-    juris_dscr = models.CharField(max_length=40L, db_column='JURIS_DSCR', blank=True) # Field name made lowercase.
-    line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
-    memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True) # Field name made lowercase.
-    memo_refno = models.CharField(max_length=20L, db_column='MEMO_REFNO', blank=True) # Field name made lowercase.
-    off_s_h_cd = models.CharField(max_length=1L, db_column='OFF_S_H_CD', blank=True) # Field name made lowercase.
-    offic_dscr = models.CharField(max_length=40L, db_column='OFFIC_DSCR', blank=True) # Field name made lowercase.
-    office_cd = models.CharField(max_length=3L, db_column='OFFICE_CD', blank=True) # Field name made lowercase.
-    rcpt_date = models.DateField(db_column='RCPT_DATE') # Field name made lowercase.
-    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE') # Field name made lowercase.
-    sup_opp_cd = models.CharField(max_length=1L, db_column='SUP_OPP_CD', blank=True) # Field name made lowercase.
-    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID') # Field name made lowercase.
-    tran_type = models.CharField(max_length=1L, db_column='TRAN_TYPE', blank=True) # Field name made lowercase.
-    tres_adr1 = models.CharField(max_length=55L, db_column='TRES_ADR1', blank=True) # Field name made lowercase.
-    tres_adr2 = models.CharField(max_length=55L, db_column='TRES_ADR2', blank=True) # Field name made lowercase.
-    tres_city = models.CharField(max_length=30L, db_column='TRES_CITY', blank=True) # Field name made lowercase.
-    tres_namf = models.CharField(max_length=45L, db_column='TRES_NAMF', blank=True) # Field name made lowercase.
-    tres_naml = models.CharField(max_length=200L, db_column='TRES_NAML', blank=True) # Field name made lowercase.
-    tres_nams = models.CharField(max_length=10L, db_column='TRES_NAMS', blank=True) # Field name made lowercase.
-    tres_namt = models.CharField(max_length=10L, db_column='TRES_NAMT', blank=True) # Field name made lowercase.
-    tres_st = models.CharField(max_length=2L, db_column='TRES_ST', blank=True) # Field name made lowercase.
-    tres_zip4 = models.IntegerField(null=True, db_column='TRES_ZIP4', blank=True) # Field name made lowercase.
-    xref_match = models.CharField(max_length=1L, db_column='XREF_MATCH', blank=True) # Field name made lowercase.
-    xref_schnm = models.CharField(max_length=2L, db_column='XREF_SCHNM', blank=True) # Field name made lowercase.
+class S496Cd(models.Model):
+    filing_id = models.IntegerField(db_column='FILING_ID')
+    amend_id = models.IntegerField(db_column='AMEND_ID')
+    line_item = models.IntegerField(db_column='LINE_ITEM')
+    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE', blank=True)
+    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE', blank=True)
+    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
+    amount = models.DecimalField(max_digits=16, decimal_places=2, db_column='AMOUNT')
+    exp_date = models.DateField(db_column='EXP_DATE')
+    expn_dscr = models.CharField(max_length=90L, db_column='EXPN_DSCR', blank=True)
+    memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True)
+    memo_refno = models.CharField(max_length=20L, db_column='MEMO_REFNO', blank=True)
+    date_thru = models.DateField(db_column='DATE_THRU')
     class Meta:
-        db_table = 'current_rcpt'
+        db_table = 'S496_CD'
+
+class S497Cd(models.Model):
+    filing_id = models.IntegerField(db_column='FILING_ID')
+    amend_id = models.IntegerField(db_column='AMEND_ID')
+    line_item = models.IntegerField(db_column='LINE_ITEM')
+    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE', blank=True)
+    form_type = models.CharField(max_length=6L, db_column='FORM_TYPE', blank=True)
+    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
+    entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True)
+    enty_naml = models.CharField(max_length=200L, db_column='ENTY_NAML', blank=True)
+    enty_namf = models.CharField(max_length=45L, db_column='ENTY_NAMF', blank=True)
+    enty_namt = models.CharField(max_length=10L, db_column='ENTY_NAMT', blank=True)
+    enty_nams = models.CharField(max_length=10L, db_column='ENTY_NAMS', blank=True)
+    #enty_adr1 = models.CharField(max_length=55L, db_column='ENTY_ADR1', blank=True) # in documentation but not in csv file
+    #enty_adr2 = models.CharField(max_length=55L, db_column='ENTY_ADR2', blank=True) # in documentation but not in csv file
+    enty_city = models.CharField(max_length=30L, db_column='ENTY_CITY', blank=True)
+    enty_st = models.CharField(max_length=2L, db_column='ENTY_ST', blank=True)
+    enty_zip4 = models.CharField(max_length=10L, db_column='ENTY_ZIP4', blank=True)
+    ctrib_emp = models.CharField(max_length=200L, db_column='CTRIB_EMP', blank=True)
+    ctrib_occ = models.CharField(max_length=60L, db_column='CTRIB_OCC', blank=True)
+    ctrib_self = models.CharField(max_length=1L, db_column='CTRIB_SELF', blank=True)
+    elec_date = models.DateField(db_column='ELEC_DATE')
+    ctrib_date = models.DateField(db_column='CTRIB_DATE')
+    date_thru = models.DateField(db_column='DATE_THRU')
+    amount = models.DecimalField(max_digits=16, decimal_places=2, db_column='AMOUNT')
+    cmte_id = models.CharField(max_length=9L, db_column='CMTE_ID', blank=True)
+    cand_naml = models.CharField(max_length=200L, db_column='CAND_NAML', blank=True)
+    cand_namf = models.CharField(max_length=45L, db_column='CAND_NAMF', blank=True)
+    cand_namt = models.CharField(max_length=10L, db_column='CAND_NAMT', blank=True)
+    cand_nams = models.CharField(max_length=10L, db_column='CAND_NAMS', blank=True)
+    office_cd = models.CharField(max_length=3L, db_column='OFFICE_CD', blank=True)
+    offic_dscr = models.CharField(max_length=40L, db_column='OFFIC_DSCR', blank=True)
+    juris_cd = models.CharField(max_length=3L, db_column='JURIS_CD', blank=True)
+    juris_dscr = models.CharField(max_length=40L, db_column='JURIS_DSCR', blank=True)
+    dist_no = models.CharField(max_length=3L, db_column='DIST_NO', blank=True)
+    off_s_h_cd = models.CharField(max_length=1L, db_column='OFF_S_H_CD', blank=True)
+    bal_name = models.CharField(max_length=200L, db_column='BAL_NAME', blank=True)
+    bal_num = models.CharField(max_length=7L, db_column='BAL_NUM', blank=True)
+    bal_juris = models.CharField(max_length=40L, db_column='BAL_JURIS', blank=True)
+    memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True)
+    memo_refno = models.CharField(max_length=20L, db_column='MEMO_REFNO', blank=True)
+    bal_id = models.CharField(max_length=9L, db_column='BAL_ID', blank=True)
+    cand_id = models.CharField(max_length=9L, db_column='CAND_ID', blank=True)
+    sup_off_cd = models.CharField(max_length=1L, db_column='SUP_OFF_CD', blank=True)
+    sup_opp_cd = models.CharField(max_length=1L, db_column='SUP_OPP_CD', blank=True)
+    class Meta:
+        db_table = 'S497_CD'
+
+class S498Cd(models.Model):
+    filing_id = models.IntegerField(db_column='FILING_ID')
+    amend_id = models.IntegerField(db_column='AMEND_ID')
+    line_item = models.IntegerField(db_column='LINE_ITEM')
+    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE', blank=True)
+    form_type = models.CharField(max_length=9L, db_column='FORM_TYPE', blank=True)
+    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
+    entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True)
+    cmte_id = models.CharField(max_length=9L, db_column='CMTE_ID', blank=True)
+    payor_naml = models.CharField(max_length=200L, db_column='PAYOR_NAML', blank=True)
+    payor_namf = models.CharField(max_length=45L, db_column='PAYOR_NAMF', blank=True)
+    payor_namt = models.CharField(max_length=10L, db_column='PAYOR_NAMT', blank=True)
+    payor_nams = models.CharField(max_length=10L, db_column='PAYOR_NAMS', blank=True)
+    #payor_adr1 = models.CharField(max_length='', db_column='PAYOR_ADR1', blank=True)
+    #payor_adr2 = models.CharField(max_length='', db_column='PAYOR_ADR2', blank=True)
+    payor_city = models.CharField(max_length=30L, db_column='PAYOR_CITY', blank=True)
+    payor_st = models.CharField(max_length=2L, db_column='PAYOR_ST', blank=True)
+    payor_zip4 = models.CharField(max_length=10L, db_column='PAYOR_ZIP4', blank=True)
+    date_rcvd = models.DateField(db_column='DATE_RCVD')
+    amt_rcvd = models.DecimalField(max_digits=16, decimal_places=2, db_column='AMT_RCVD')
+    cand_naml = models.CharField(max_length=200L, db_column='CAND_NAML', blank=True)
+    cand_namf = models.CharField(max_length=45L, db_column='CAND_NAMF', blank=True)
+    cand_namt = models.CharField(max_length=10L, db_column='CAND_NAMT', blank=True)
+    cand_nams = models.CharField(max_length=10L, db_column='CAND_NAMS', blank=True)
+    office_cd = models.CharField(max_length=3L, db_column='OFFICE_CD', blank=True)
+    offic_dscr = models.CharField(max_length=40L, db_column='OFFIC_DSCR', blank=True)
+    juris_cd = models.CharField(max_length=3L, db_column='JURIS_CD', blank=True)
+    juris_dscr = models.CharField(max_length=40L, db_column='JURIS_DSCR', blank=True)
+    dist_no = models.CharField(max_length=3L, db_column='DIST_NO', blank=True)
+    off_s_h_cd = models.CharField(max_length=1L, db_column='OFF_S_H_CD', blank=True)
+    bal_name = models.CharField(max_length=200L, db_column='BAL_NAME', blank=True)
+    bal_num = models.CharField(max_length=7L, db_column='BAL_NUM', blank=True)
+    bal_juris = models.CharField(max_length=40L, db_column='BAL_JURIS', blank=True)
+    sup_opp_cd = models.CharField(max_length=1L, db_column='SUP_OPP_CD', blank=True)
+    amt_attrib = models.DecimalField(max_digits=16, decimal_places=2, db_column='AMT_ATTRIB')
+    memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True)
+    memo_refno = models.CharField(max_length=20L, db_column='MEMO_REFNO', blank=True)
+    employer = models.CharField(max_length=200L, db_column='EMPLOYER', blank=True)
+    occupation = models.CharField(max_length=60L, db_column='OCCUPATION', blank=True)
+    selfemp_cb = models.CharField(max_length=1L, db_column='SELFEMP_CB', blank=True)
+    class Meta:
+        db_table = 'S498_CD'
