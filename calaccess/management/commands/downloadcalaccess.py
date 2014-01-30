@@ -329,7 +329,12 @@ class Command(BaseCommand):
             null_bytes = tsv_data.count('\x00')
             if null_bytes:
                 tsv_data = tsv_data.replace('\x00', ' ')
-
+             
+            # Nuke ASCII 26 char, the "substitute character" or chr(26) in python
+            sub_char = tsv_data.count('\x1a')
+            if sub_char:
+                tsv_data = tsv_data.replace('\x1a', '')
+            
             # Convert the file to a CSV line by line.
             csv_path = os.path.join(
                 self.csv_dir,
