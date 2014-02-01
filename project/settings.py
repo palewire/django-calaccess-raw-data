@@ -90,6 +90,7 @@ INSTALLED_APPS = (
     'south',
     'toolbox',
     'calaccess',
+    'campaign_finance',
 )
 
 # Logging
