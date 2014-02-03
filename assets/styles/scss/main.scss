@@ -1,0 +1,18 @@
+// CSS Framework
+@import '../../bower_components/sass-bootstrap/lib/bootstrap';
+
+// Font Awesome Icons
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import '../../bower_components/font-awesome/scss/font-awesome';
+
+// Header
+@import 'header-comp2';
+// Defaults
+@import 'defaults';
+
+// ==================
+// ** Project SCSS **
+// ==================
+
+// Add your code here or create a _*.scss file and import it
+// e.g., @import 'project'

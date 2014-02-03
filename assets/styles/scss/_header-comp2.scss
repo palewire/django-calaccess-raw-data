@@ -1,0 +1,84 @@
+// Typekit classes
+$metaserif: "ff-meta-serif-web-pro", Georgia, serif;
+$proxima-nova: "proxima-nova-condensed", sans-serif;
+
+// CIR HEADER
+.header-comp2 {
+  background-color: #fff;
+
+  // Logo
+  .logo {
+    display: inline-block;
+    width: 144px;
+    margin-top: -10px;
+    float: left;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // nav
+  .header-container {
+    background: rgb(0, 0, 0) url(http://article.cironline.org/images/header-bg-bottom.png) 6px bottom repeat-x;
+    //position: relative;
+    margin-left: 10.63636em;
+    margin-bottom: 0.68182em;
+    height: 3.68182em;
+    //margin-left: 8em;
+    &:before {
+      background-image: url(http://article.cironline.org/images/header-bg-left.png);
+      background-repeat: no-repeat;
+      display: block;
+      width: 1.18182em;
+      height: 3.59091em;
+      content: "";
+      float: left;
+      margin-left: -0.68182em;
+    }
+
+    .headline {
+      display: inline-block;
+      color: #fff;
+      float: left;
+
+      h1 {
+        font-family: $metaserif;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 18px 0;
+      }
+    }
+
+    .share {
+      margin: 10px 10px 0 0;
+      float: right;
+      display: inline-block;
+      color: #fff;
+
+      p {
+        font-family: $proxima-nova;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 10px 15px 10px 0;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+
+    .menu {
+      float: right;
+      //display: inline-block;
+      color: #fff;
+      margin: 15px 25px 0 8px;
+
+      .fa-bars {
+        font-size: 22px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

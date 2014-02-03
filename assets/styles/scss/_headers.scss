@@ -1,0 +1,160 @@
+// Mediaquery presets
+@import '../../bower_components/sass-mediaqueries/media-queries';
+
+// ==================
+// ** HEADERS **
+// ==================
+
+// Typekit classes
+$metaserif: "ff-meta-serif-web-pro", Georgia, serif;
+$proxima-nova: "proxima-nova-condensed", sans-serif;
+
+// CIR HEADER
+.header {
+  position: relative;
+
+  img {
+    float: left;
+    margin: 0.36364em 1.13636em 0 0.90909em;
+  }
+}
+
+.project-name {
+  display: inline-block;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 2em;
+  position: relative;
+  top: 0.5em;
+  margin: 0 0 0 0.7em;
+}
+
+.nav {
+  background: rgb(0, 0, 0) url(http://article.cironline.org/images/header-bg-bottom.png) 6px bottom repeat-x;
+  position: relative;
+  margin-left: 17.63636em;
+  margin-bottom: 0.68182em;
+  height: 4.68182em;
+  //margin-left: 8em;
+  &:before {
+    background-image: url(http://article.cironline.org/images/header-bg-left.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 1.18182em;
+    height: 4.59091em;
+    content: "";
+    float: left;
+    margin-left: -0.68182em;
+  }
+
+  .nav-items {
+    display: inline-block;
+    position: relative;
+    top: 0.6em;
+
+    li {
+      display: inline-block;
+      margin-right: 2em;
+      font-size: 17px;
+
+      a {
+        color: rgb(255, 255, 255);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .social {
+    float: right;
+    
+    @include screen(0px, 890px) {
+      top: -26px;
+    }
+
+    li {
+      display: block;
+    }
+
+    .fa {
+      font-size: 1.3em;
+      margin-bottom: 0.3em;
+    } 
+  }
+}
+
+
+// SLIM HEADER
+.header-slim {
+  background: rgb(0, 0, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  height: 41px;
+
+  .header-container {
+    height: inherit;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 77px;
+    margin-left: 10%;
+    position: relative;
+    top: -10px;
+    @include max-screen(568px) {
+      margin-left: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .headline {
+    position: relative;
+    top: -7px;
+
+    h1 {
+      color: white;
+      display: inline-block;
+      font-family: $metaserif;
+      font-size: 1.15em;
+      text-transform: uppercase;
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
+      padding-left: 20px;
+      @include max-screen(450px) {
+        padding-left: 7px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social {
+    list-style-type: none;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    @include max-screen(536px) {
+      display: none;
+    }
+
+    li {
+      margin-right: 10px;
+      display: inline-block;
+      @include max-screen(670px) {
+        margin-right: 6px;
+      }
+    }
+
+    .fa {
+      color: white;
+      font-size: 1.25em;
+      @include max-screen(670px) {
+        font-size: 1em;
+      }
+    }
+  }
+}
