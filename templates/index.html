@@ -39,19 +39,26 @@
                 <h2>Explore California Campagin Finance</h2>
                 <p>Type in the name a candidate or committee to explore their contributions</p>
             </header>
-            <select name="" id="" class="form-control">
-                <option value="Choose">Select search option</option>
-                <option value=""></option>
-                <option value="Candidate">Candidate</option>
-                <option value="Committee">Committee</option>
-                <option value="Other">Other</option>
-            </select>
             <div class="input-group">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" placeholder="Type the name of a candidate or committee">
                 <span class="input-group-btn">
                     <button class="btn btn-danger" type="button">Search</button>
                 </span>
             </div><!-- /input-group -->
+            <div class="filters">
+                <span class="label label-info">Filters:</span>
+                <form role="form">
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="inlineRadio1" value="option1"> Candidate
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="inlineRadio2" value="option2"> Committee
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="inlineRadio3" value="option3"> Other
+                    </label>
+                </form>
+            </div>
             <img id="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1000px-Flag_of_California.svg.png" alt="California state flag">
         </div>
       </div>

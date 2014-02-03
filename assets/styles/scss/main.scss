@@ -18,3 +18,11 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 #flag {
   width: 100%;
 }
+
+.filters {
+  margin-top: 10px;
+  
+  form {
+    display: inline-block;
+  }
+}
