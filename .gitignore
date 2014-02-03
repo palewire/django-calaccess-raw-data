@@ -5,3 +5,6 @@ project/settings_dev.py
 chef/cookbooks/palewire/files/default/id_rsa
 chef/cookbooks/palewire/files/default/id_rsa.pub
 chef/cookbooks/palewire/files/default/authorized_keys
+
+node_modules
+assets
