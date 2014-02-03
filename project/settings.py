@@ -44,7 +44,7 @@ USE_TZ = True
 
 # Media and static files
 MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
-STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
+STATIC_ROOT = os.path.join(ROOT_DIR, 'assets') # normally static. Changed to use template builder
 STATICFILES_DIRS = (
     os.path.join(ROOT_DIR, 'templates', 'static'),
 )

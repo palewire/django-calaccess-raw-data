@@ -3,10 +3,12 @@ from django.conf.urls import patterns, include, url
 from django.views.static import serve as static_serve
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import admin
+from django.views.generic import TemplateView
 admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
 )
 
 if settings.DEBUG:
