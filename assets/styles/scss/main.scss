@@ -5,8 +5,6 @@
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../../bower_components/font-awesome/scss/font-awesome';
 
-// Header
-@import 'header-comp2';
 // Defaults
 @import 'defaults';
 
@@ -16,3 +14,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 // Add your code here or create a _*.scss file and import it
 // e.g., @import 'project'
+
+#flag {
+  width: 100%;
+}

@@ -35,26 +35,24 @@
     <div class="main container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-          <div class="banner">
-            <h1>django calaccess parser</h1>
-            <p>Boom! Welcome to your news app. It features:</p>
-          </div>
-          <ul>
-            <li>Bootstrap CSS Framework and JS</li>
-            
-            <li>jQuery <span id="jquery-version"></span></li>
-            <li>Modernizr</li>
-            <li>Leaflet.js</li>
-            <li>Moment.js</li>
-            <li>D3.js</li>
-            <li>jQuery UI</li>
-            
-            <li>Backbone.js (and Underscore.js)</li>
-            
-            <li> ... and is setup to work with Django!</li>
-          </ul>
-
-          <p class="message">Go forth and save journalism!</p>
+            <header class="page-header">
+                <h2>Explore California Campagin Finance</h2>
+                <p>Type in the name a candidate or committee to explore their contributions</p>
+            </header>
+            <select name="" id="" class="form-control">
+                <option value="Choose">Select search option</option>
+                <option value=""></option>
+                <option value="Candidate">Candidate</option>
+                <option value="Committee">Committee</option>
+                <option value="Other">Other</option>
+            </select>
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button">Search</button>
+                </span>
+            </div><!-- /input-group -->
+            <img id="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1000px-Flag_of_California.svg.png" alt="California state flag">
         </div>
       </div>
     </div>
