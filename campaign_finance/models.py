@@ -19,7 +19,8 @@ class Committee(models.Model):
         ('cc', 'Candidate Committee'),
     )
     filer = models.ForeignKey(Filer)
-    name = models.CharField(max_length=255)
+    filer_id_raw = models.IntegerField()
+    name = models.CharField(max_length=255, blank=True)
     committee_type = models.CharField(max_length=4, choices=CMTE_TYPE_OPTIONS)
 
 class CandidateCommittee(models.Model):
