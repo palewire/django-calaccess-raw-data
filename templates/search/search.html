@@ -3,41 +3,53 @@
 {% block content %}
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2">
-    <h2>Search</h2>
-
-    <form method="get" action=".">
-        <table>
-            {{ form.as_table }}
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <input type="submit" value="Search">
-                </td>
-            </tr>
-        </table>
-
+      <header class="page-header">
+          <h2>Explore California Campagin Finance</h2>
+          <p>Type in the name a candidate or committee to explore their contributions</p>
+      </header>
+      <form action="/search/" method="get">
+        <div class="form-group">
+          <input type="text" name="q" class="form-control" placeholder="Search the name of Campaign or a Lobby and press enter">
+        </div>
+      </form>
         {% if query %}
-            <h3>Results</h3>
-
-            {% for result in page.object_list %}
-                <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
-                </p>
+          <header class="page-header">
+            <h3>Results for "{{ query }}"</h3>
+            <p>{{ page.paginator.count }} results</p>
+          </header>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Filer</th>
+                <td>Type</td>
+              </tr>
+            </thead>
+            <tbody>
+            {% for results in page.object_list %}
+                <tr>
+                  <td>
+                    <a href="{{results.object.get_absolute_url}}">{{ results.object.name }}</a>
+                  </td>
+                  <td>{{ results.object.filer_type }}</td>
+                </tr>
             {% empty %}
-                <p>No results found.</p>
+                <tr>
+                  <td>No results</td>
+                </tr>
             {% endfor %}
-
-            {% if page.has_previous or page.has_next %}
-                <div>
-                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
-                    |
-                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
-                </div>
-            {% endif %}
-        {% else %}
-            {# Show some example queries to run, maybe query syntax, something else? #}
+            </tbody>
+          </table>
+          <ul class="pager">
+              {% if page.has_previous %}
+              <li><a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">&#xAB;</a></li>
+              {% endif %}
+              <li>Page {{ page.number }} of {{ page.paginator.num_pages }}</li>
+              {% if page.has_next %}
+              <li><a href="?q={{ query }}&amp;page={{ page.next_page_number }}">&#xBB;</a></li>
+              {% endif %}
+          </ul>
         {% endif %}
-    </form>
+
   </div>
 </div>
 {% endblock %}

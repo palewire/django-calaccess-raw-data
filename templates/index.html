@@ -7,12 +7,11 @@
           <h2>Explore California Campagin Finance</h2>
           <p>Type in the name a candidate or committee to explore their contributions</p>
       </header>
-      <div class="input-group">
-          <input type="text" class="form-control" placeholder="Type the name of a candidate or committee">
-          <span class="input-group-btn">
-              <button class="btn btn-danger" type="button">Search</button>
-          </span>
-      </div><!-- /input-group -->
+      <form action="/search/" method="get">
+        <div class="form-group">
+          <input type="text" name="q" class="form-control" placeholder="Search for a candidate or committee">
+        </div>
+      </form>
       <div class="filters">
           <span class="label label-info">Filters:</span>
           <form role="form">
