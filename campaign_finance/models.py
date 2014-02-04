@@ -12,6 +12,10 @@ class Filer(models.Model):
     filer_type = models.CharField(max_length=10L, choices=FILER_TYPE_OPTIONS)
 
 class Committee(models.Model):
+    '''
+        If a Candidate controls the committee, the filer is associated with the Candidate Filer record, not the committee Filer record
+        But the committee Filer record can be accessed using filer_id_raw
+    '''
     CMTE_TYPE_OPTIONS = (
         ('mdid', 'Major Donor / Independent Expenditure'),
         ('sm', 'Slate Mailer'),
@@ -22,13 +26,6 @@ class Committee(models.Model):
     filer_id_raw = models.IntegerField()
     name = models.CharField(max_length=255, blank=True)
     committee_type = models.CharField(max_length=4, choices=CMTE_TYPE_OPTIONS)
-
-class CandidateCommittee(models.Model):
-    committee = models.ForeignKey(Committee)
-    filer = models.ForeignKey(Filer)
-    filer_id_raw = models.IntegerField()
-    xref_filer_id_raw = models.CharField(max_length=32L)
-    name = models.CharField(max_length=255)
 
 class Cycle(models.Model):
     name = models.IntegerField()

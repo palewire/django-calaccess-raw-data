@@ -2,7 +2,7 @@ try:
     from calaccess.models import FilernameCd, FilerLinksCd
 except:
     print 'you need to load the raw calaccess data app in order to populate this one'
-from campaign_finance.models import Filer, CandidateCommittee, Committee
+from campaign_finance.models import Filer, Committee
 
 def filer_id_to_name(filer_id):
     from calaccess.models import FilernameCd, FilerLinksCd
@@ -51,13 +51,7 @@ def load():
                 insert_cc_cmte.committee_type = 'cc'
                 insert_cc_cmte.save()
                 print '%s' % insert_cc_cmte.name
-                
-                insert_cc = CandidateCommittee()
-                insert_cc.committee = insert_cc_cmte
-                insert_cc.filer = insert_filer_cand
-                insert_cc.filer_id_raw = q.filer_id_b
-                insert_cc.name = insert_cc_cmte.name
-                insert_cc.save()
+            
         else:
             insert_filer_pac = Filer()
             insert_filer_pac.xref_filer_id = f[1]
