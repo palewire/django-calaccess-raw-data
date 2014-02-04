@@ -88,9 +88,14 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
     'django.contrib.sitemaps',
+
+    # external apps
     'south',
     'toolbox',
     'compressor',
+    'haystack',
+
+    # project apps
     'calaccess',
     'campaign_finance',
 )

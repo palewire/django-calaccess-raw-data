@@ -10,7 +10,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
-    url(r'^filers/(?P<pk>\d+)/$', views.FilerView.as_view(template_name='filer/detail.html')),
+    url(r'^filers/(?P<pk>\d+)/$', views.FilerView.as_view(template_name='filer/detail.html'), name='filer_detail'),
+    url(r'^search/', include('haystack.urls'), name='search'),
 )
 
 if settings.DEBUG:

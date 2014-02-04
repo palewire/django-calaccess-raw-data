@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Filer(models.Model):
@@ -17,6 +18,9 @@ class Filer(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('filer_detail', args=[str(self.pk)])
 
 class Committee(models.Model):
     '''
