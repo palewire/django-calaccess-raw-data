@@ -1,94 +1,33 @@
-{% load staticfiles %}
-{% load compress %}
-<!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>django calaccess parser</title>
-    <!-- Typekit and Google Fonts -->
-    <script type="text/javascript" src="//use.typekit.net/quu2bck.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/x-icon" href="http://cironline.org/sites/all/themes/cir/favicon.ico">
+{% extends 'base.html' %}
 
-    {% compress css %}
-    <!-- JS lib css -->
-    <link rel="stylesheet" href="{% static "bower_components/leaflet-dist/leaflet.css" %}">
-    <link rel="stylesheet" href="{% static "bower_components/jquery-ui/themes/base/minified/jquery.ui.theme.min.css" %}">
-    <!-- App CSS -->
-    <link rel="stylesheet" href="{% static "styles/main.css" %}">
-    {% endcompress %}
-
-    <!-- Modernizr -->
-    <script src="{% static "bower_components/modernizr/modernizr.js" %}"></script>
-  </head>
-  <body>
-  <!-- Header -->
-
-    {% include '_header-bootstrap.html' %}
-    
-
-    <div class="main container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <header class="page-header">
-                <h2>Explore California Campagin Finance</h2>
-                <p>Type in the name a candidate or committee to explore their contributions</p>
-            </header>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Type the name of a candidate or committee">
-                <span class="input-group-btn">
-                    <button class="btn btn-danger" type="button">Search</button>
-                </span>
-            </div><!-- /input-group -->
-            <div class="filters">
-                <span class="label label-info">Filters:</span>
-                <form role="form">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineRadio1" value="option1"> Candidate
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineRadio2" value="option2"> Committee
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineRadio3" value="option3"> Other
-                    </label>
-                </form>
-            </div>
-            <img id="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1000px-Flag_of_California.svg.png" alt="California state flag">
-        </div>
+{% block content %}
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2">
+      <header class="page-header">
+          <h2>Explore California Campagin Finance</h2>
+          <p>Type in the name a candidate or committee to explore their contributions</p>
+      </header>
+      <div class="input-group">
+          <input type="text" class="form-control" placeholder="Type the name of a candidate or committee">
+          <span class="input-group-btn">
+              <button class="btn btn-danger" type="button">Search</button>
+          </span>
+      </div><!-- /input-group -->
+      <div class="filters">
+          <span class="label label-info">Filters:</span>
+          <form role="form">
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineRadio1" value="option1"> Candidate
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineRadio2" value="option2"> Committee
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineRadio3" value="option3"> Other
+              </label>
+          </form>
       </div>
-    </div>
-    <!-- JavaScript -->
-
-    {% compress js %}
-    <!-- bower:js -->
-    <script src="{% static "bower_components/jquery/jquery.js" %}"></script>
-    <!-- Other Includes -->
-    <script src="{% static "bower_components/leaflet-dist/leaflet.js" %}"></script>
-    <script src="{% static "bower_components/moment/min/moment.min.js" %}"></script>
-    <script src="{% static "bower_components/d3/d3.min.js" %}"></script>
-    <script src="{% static "bower_components/jquery-ui/ui/minified/jquery-ui.min.js" %}"></script>
-    
-    <script src="{% static "bower_components/underscore/underscore.js" %}"></script>
-    <script src="{% static "bower_components/backbone/backbone.js" %}"></script>
-    
-    <!-- CSS Framework JS -->
-    <script src="{% static "bower_components/sass-bootstrap/dist/js/bootstrap.min.js" %}"></script>
-    
-    <!-- endbower -->
-    <script src="{% static "scripts/main.js" %}"></script>
-    {% endcompress %}
-
-    <!-- livereload -->
-    <!-- REMOVE IN PRODUCTION -->
-    <script>document.write('<script src="http://'
-        + location.host.split(':')[0]
-        + ':35729/livereload.js"></'
-        + 'script>')</script>
-  </body>
-</html>
+      <img id="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1000px-Flag_of_California.svg.png" alt="California state flag">
+  </div>
+</div>
+{% endblock %}
