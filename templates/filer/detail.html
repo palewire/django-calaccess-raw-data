@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Hello Django</h1>
+<div class="row">
+  <div class="col-md-4">
+    <div class="page-header">
+      <h4>{{ filer.name }} ({{ filer.filer_id }})</h4>
+      <small>Type: <span class="label label-info">{{ filer.filer_type }}</span></small>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Committee</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for committee in filer.committee_set.all %}
+        <tr>
+           <td>{{ committee.name }}</td>
+           <td>{{ committee.committee_type }}</td>
+         </tr>
+         {% endfor %}
+      </tbody>
+
+    </table>
+  </div>
+</div>
 {% endblock %}
