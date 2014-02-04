@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         tasks: ['sass'],
       },
       src: {
-        files: ['templates/*.html', 'assets/scripts/*.js', 'assets/scripts/**/*.js', 'Gruntfile.js'],
+        files: ['templates/**/*.html', 'assets/scripts/**/*.js', 'Gruntfile.js'],
         
       }
     }, // watch
