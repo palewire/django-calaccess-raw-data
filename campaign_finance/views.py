@@ -16,3 +16,6 @@ class IndexView(generic.ListView):
 class CommitteeView(generic.DetailView):
   model = Committee
   template = 'templates/campaign_finance/committee.html'
+
+class FilerView(generic.DetailView):
+  model = Filer
