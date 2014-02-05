@@ -2,13 +2,11 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-md-4">
-    <div class="page-header">
-      <h4>{{ filer.name }} ({{ filer.filer_id }})</h4>
-      <small>Type: <span class="label label-info">{{ filer.filer_type }}</span></small>
+  <div class="col-lg-8 col-lg-offset-2">
+    <div class="jumbotron jumbotron-calaccess">
+      <h2>{{ filer.name }} ({{ filer.filer_id }})</h2>
+      <p id="filer-type">Type: <span class="label label-info">{{ filer.filer_type }}</span></p>
     </div>
-  </div>
-  <div class="col-md-8">
     <table class="table">
       <thead>
         <tr>
@@ -24,7 +22,6 @@
          </tr>
          {% endfor %}
       </tbody>
-
     </table>
   </div>
 </div>

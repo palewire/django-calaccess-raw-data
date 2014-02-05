@@ -32,6 +32,15 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 .jumbotron-calaccess {
   background: transparent;
+
+  h2 {
+    text-transform: lowercase;
+    text-align: center;
+  }
+
+  #filer-type {
+    text-align: center;
+  }
 }
 
 
