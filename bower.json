@@ -4,7 +4,7 @@
   "dependencies": {
     "leaflet-dist": "~0.7.0",
     "moment": "~2.4.0",
-    "d3": "~3.3.10",
+    "d3": "~3.4.0",
     "jquery-ui": "~1.10.3",
     "sass-bootstrap": "~3.0.0",
     "backbone": "~1.0.0",
