@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
+{% block navbar %}
+<form action="/search/" method="get" class="navbar-form navbar-left hidden-xs" role="search">
+  <div class="form-group">
+    <input type="text" name="q" class="search-input" placeholder="Search">
+  </div>
+  <button class="btn btn-default"><span class="fa fa-search"></span></button>
+</form>
+{% endblock %}
+
 {% block content %}
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2">

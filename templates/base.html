@@ -28,9 +28,17 @@
   </head>
   <body>
   <!-- Header -->
-
-    {% include '_header-bootstrap.html' %}
-    
+    <nav class="navbar navbar-calaccess" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      {% block navbar %}
+      {% endblock %}
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img src="{% static "images/ccdc-logo.png" %}" alt="">
+        </a>
+      </div>
+    </nav>
+        
 
     <div class="main container">
     {% block content %}

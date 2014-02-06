@@ -31,6 +31,15 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
       display: inline-block;
     }
   }
+
+  .navbar-form {
+    width: 300px;
+    margin-top: 3em;
+
+    .form-group { 
+      display: inline-block;
+    }
+  }
 }
 
 .jumbotron-calaccess {
@@ -47,17 +56,19 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 }
 
 
-form {
-  padding: 10px;
-  //margin-top: 100px;
-  background: aliceblue;
+.main {
+  form {
+    padding: 10px;
+    //margin-top: 100px;
+    background: aliceblue;
 
-  .search-text {
-    display: inline-block;
+    .search-text {
+      display: inline-block;
+    }
   }
 }
 
-input {
+.search-input {
   //width: 500px;
   font-weight: 200;
   color: $red;
