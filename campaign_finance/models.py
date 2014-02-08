@@ -6,10 +6,14 @@ class Filer(models.Model):
         ('pac', 'Political Action Committee'),
         ('cand', 'Candidate'),
     )
+    # straight out of the filer tables.
     filer_id = models.IntegerField()
-    xref_filer_id = models.CharField(max_length=32L)
-    name = models.CharField(max_length=255L, null=True)
+    status = models.CharField(max_length=255)
     filer_type = models.CharField(max_length=10L, choices=FILER_TYPE_OPTIONS)
+    
+    ## fields updated by other tables
+    xref_filer_id = models.CharField(max_length=32L, null=True)
+    name = models.CharField(max_length=255L, null=True)
 
 class Committee(models.Model):
     '''
@@ -20,7 +24,8 @@ class Committee(models.Model):
         ('mdid', 'Major Donor / Independent Expenditure'),
         ('sm', 'Slate Mailer'),
         ('bi', 'Ballot Initiative'),
-        ('cc', 'Candidate Committee'),
+        ('ccrc', 'Candidate Controlled Recipient Committee'),
+        ('ncrc', 'Non-Candidate Controlled Recipient Committee'),
     )
     filer = models.ForeignKey(Filer)
     filer_id_raw = models.IntegerField()
@@ -30,12 +35,36 @@ class Committee(models.Model):
 class Cycle(models.Model):
     name = models.IntegerField()
 
-class Summary(models.Model):
+class Filing(models.Model):
     cycle = models.ForeignKey(Cycle)
     committee = models.ForeignKey(Committee)
+    filing_id = models.IntegerField()
+    amend_id = models.IntegerField()
+    form_id = models.CharField(max_length=7)
+    start_date = models.DateField(null=True)
+    end_date = models.DateField(null=True)
+
+class Summary(models.Model):
+    FORM_TYPE_CHOICES = (
+        ('F460', 'Recipient Committee Campaign Statement'),
+        ('F450', 'Recipient Committee Campaign Statement -- Short Form'),
+    )
+    cycle = models.ForeignKey(Cycle)
+    committee = models.ForeignKey(Committee)
+    filing = models.ForeignKey(Filing)
+    form_type = models.CharField(max_length=10, choices=FORM_TYPE_CHOICES)
+    itemized_monetary_contribs = models.DecimalField(max_digits=16, decimal_places=2)
+    unitemized_expenditures = models.DecimalField(max_digits=16, decimal_places=2)
+    total_expenditures = models.DecimalField(max_digits=16, decimal_places=2)
+    total_monetary_contribs = models.DecimalField(max_digits=16, decimal_places=2)
+    unitemized_monetary_contribs = models.DecimalField(max_digits=16, decimal_places=2)
+    non_monetary_contribs = models.DecimalField(max_digits=16, decimal_places=2)
+    itemized_expenditures = models.DecimalField(max_digits=16, decimal_places=2)
+    total_contribs = models.DecimalField(max_digits=16, decimal_places=2)
+    outstanding_debts = models.DecimalField(max_digits=16, decimal_places=2)
+    ending_cash_balance = models.DecimalField(max_digits=16, decimal_places=2)
     
-
-
+    
 class Expenditure(models.Model):
     '''
     This is a condensed version of the Raw CAL-ACCESS EXPN_CD table

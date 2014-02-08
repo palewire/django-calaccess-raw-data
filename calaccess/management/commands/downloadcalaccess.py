@@ -216,6 +216,10 @@ class Command(BaseCommand):
         csv.field_size_limit(1000000000)  # Up the CSV data limit
         
         date_field_dict =  {
+            'CVR_SO': [
+                'ACCT_OPENDT',
+                'QUALFY_DT',
+            ],
             'CVR_CAMPAIGN_DISCLOSURE_CD': [
                 'ELECT_DATE',
                 'FROM_DATE',
