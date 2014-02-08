@@ -2,7 +2,7 @@ try:
     from calaccess.models import FilernameCd,  FilerFilingsCd, FilerLinksCd, ExpnCd, RcptCd, SmryCd
 except:
     print 'you need to load the raw calaccess data app in order to populate this one'
-from campaign_finance.models import Cycle, Filer, Filing, Committee, Summary
+from campaign_finance.models import  Committee, Contribution, Cycle, Expenditure, Filer, Filing, Summary
 from django.db import connection, transaction
 from django.db.models import Q
 import csv
@@ -170,10 +170,98 @@ def load_summary():
 def load_expenditures():
     for f in Filing.objects.all():
         qs = ExpnCd.objects.filter(filing_id=f.filing_id, amend_id=f.amend_id)
+        for q in qs:
+            insert = Expenditure()
+            insert.cycle = f.cycle
+            insert.committee = f.committee
+            insert.line_item = q.line_item
+            insert.payee_nams = q.payee_nams
+            insert.payee_namt = q.payee_namt
+            insert.amend_id = q.amend_id
+            insert.expn_dscr = q.expn_dscr
+            insert.payee_zip4 = q.payee_zip4
+            insert.g_from_e_f = q.g_from_e_f
+            insert.payee_city = q.payee_city
+            insert.amount = q.amount
+            insert.memo_refno = q.memo_refno
+            insert.expn_code = q.expn_code
+            insert.memo_code = q.memo_code
+            insert.payee_namf = q.payee_namf
+            insert.entity_cd = q.entity_cd
+            insert.filing_id = q.filing_id
+            insert.bakref_tid = q.bakref_tid
+            insert.payee_adr1 = q.payee_adr1
+            insert.payee_adr2 = q.payee_adr2
+            insert.expn_chkno = q.expn_chkno
+            insert.form_type = q.form_type
+            insert.cmte_id = q.cmte_id
+            insert.xref_schnm = q.xref_schnm
+            insert.xref_match = q.xref_match
+            if q.expn_date:
+                insert.expn_date = q.expn_date.isoformat()
+            insert.cum_ytd = q.cum_ytd
+            insert.payee_nams = q.payee_nams
+            insert.tran_id = q.tran_id
+            insert.payee_naml = q.payee_naml
+            insert.name = (q.payee_namt + ' ' + q.payee_namf + ' ' + q.payee_naml + ' ' + q.payee_nams).strip()
+            insert.save()
+        
 
 def load_contributions():
     for f in Filing.objects.all():
-        qs = RcptCd.objects.filer(filing_id=f.filing_id, amend_id=f.amend_id)
+        qs = RcptCd.objects.filter(filing_id=f.filing_id, amend_id=f.amend_id)
+        for q in qs:
+            insert = Contribution()
+            insert.cycle = f.cycle
+            insert.committee = f.committee
+            insert.ctrib_namt = q.ctrib_namt
+            insert.ctrib_occ = q.ctrib_occ
+            insert.ctrib_nams = q.ctrib_nams
+            insert.line_item = q.line_item
+            insert.amend_id = q.amend_id
+            insert.rec_type = q.rec_type
+            insert.ctrib_namf = q.ctrib_namf
+            insert.date_thru = q.date_thru
+            insert.ctrib_naml = q.ctrib_naml
+            insert.ctrib_self = q.ctrib_self
+            if q.rcpt_date:
+                insert.rcpt_date = q.rcpt_date
+            insert.ctrib_zip4 = q.ctrib_zip4
+            insert.ctrib_st = q.ctrib_st
+            insert.filing_id = q.filing_id
+            insert.ctrib_adr1 = q.ctrib_adr1
+            insert.ctrib_adr2 = q.ctrib_adr2
+            insert.memo_refno = q.memo_refno
+            insert.intr_st = q.intr_st
+            insert.memo_code = q.memo_code
+            insert.intr_self = q.intr_self
+            insert.intr_occ = q.intr_occ
+            insert.intr_emp = q.intr_emp
+            insert.entity_cd = q.entity_cd
+            insert.intr_cmteid = q.intr_cmteid
+            insert.ctrib_city = q.ctrib_city
+            insert.bakref_tid = q.bakref_tid
+            insert.tran_type = q.tran_type
+            insert.intr_adr2 = q.intr_adr2
+            insert.cum_ytd = q.cum_ytd
+            insert.intr_adr1 = q.intr_adr1
+            insert.form_type = q.form_type
+            insert.intr_city = q.intr_city
+            insert.cmte_id = q.cmte_id
+            insert.xref_schnm = q.xref_schnm
+            insert.ctrib_emp = q.ctrib_emp
+            insert.xref_match = q.xref_match
+            insert.cum_oth = q.cum_oth
+            insert.ctrib_dscr = q.ctrib_dscr
+            insert.intr_namt = q.intr_namt
+            insert.intr_nams = q.intr_nams
+            insert.amount = q.amount
+            insert.intr_naml = q.intr_naml
+            insert.intr_zip4 = q.intr_zip4
+            insert.intr_namf = q.intr_namf
+            insert.tran_id = q.tran_id
+            insert.name = (q.ctrib_namt + ' '+ q.ctrib_namf + ' ' + q.ctrib_naml + ' ' + q.ctrib_nams).strip()
+            insert.save()
 
 
   

@@ -82,12 +82,11 @@ class Expenditure(models.Model):
     amount = models.DecimalField(max_digits=16, decimal_places=2)
     bakref_tid = models.CharField(max_length=10L, blank=True)
     cmte_id = models.CharField(max_length=9L, blank=True)
-    cum_other = models.DecimalField(max_digits=16, decimal_places=2)
-    cum_ytd = models.DecimalField(max_digits=16, decimal_places=2)
+    cum_ytd = models.DecimalField(max_digits=16, decimal_places=2, null=True)
     entity_cd = models.CharField(max_length=5L, blank=True)
     expn_chkno = models.CharField(max_length=20L, blank=True)
     expn_code = models.CharField(max_length=3L, blank=True)
-    expn_date = models.DateField()
+    expn_date = models.DateField(null=True)
     expn_dscr = models.CharField(max_length=400L, blank=True)
     filing_id = models.IntegerField()
     form_type = models.CharField(max_length=6L, blank=True)
@@ -102,7 +101,7 @@ class Expenditure(models.Model):
     payee_naml = models.CharField(max_length=200L, blank=True)
     payee_nams = models.CharField(max_length=10L, blank=True)
     payee_namt = models.CharField(max_length=10L, blank=True)
-    payee_namst = models.CharField(max_length=2L, blank=True)
+    payee_nams = models.CharField(max_length=2L, blank=True)
     payee_zip4 = models.CharField(max_length=10L, blank=True)
     tran_id = models.CharField(max_length=20L, blank=True)
     xref_match = models.CharField(max_length=1L, blank=True) # a related item on other schedule has the same transaction identifier. "X" indicates this condition is true
@@ -167,7 +166,7 @@ class Contribution(models.Model):
     line_item = models.IntegerField()
     memo_code = models.CharField(max_length=1L, blank=True)
     memo_refno = models.CharField(max_length=20L, blank=True)
-    rcpt_date = models.DateField()
+    rcpt_date = models.DateField(null=True)
     rec_type = models.CharField(max_length=4L)
     tran_id = models.CharField(max_length=20L)
     tran_type = models.CharField(max_length=1L, blank=True)
@@ -177,8 +176,8 @@ class Contribution(models.Model):
     ## Derived fields
     name = models.CharField(max_length=255) # derive like so (r.ctrib_namt + ' '+ r.ctrib_namf + ' ' + r.ctrib_naml + ' ' + r.ctrib_nams).strip()
     status = models.BooleanField(default=True) # False meanse they are duplicated, additional disclosure that shouldn't be used for summing up but provide addtional info on the transaction
-    org_id = models.IntegerField(default=None, null=True)
-    individual_id = models.IntegerField(default=None, null=True)
+    org_id = models.IntegerField(null=True)
+    individual_id = models.IntegerField(null=True)
     
     def raw(self):
         try:
