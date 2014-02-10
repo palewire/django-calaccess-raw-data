@@ -16,7 +16,7 @@ def load():
     except:
         print 'FAILED on load_candidates'
     try:
-        load_filings()
+        load_candidate_filings()
         print 'load_filings done'
     except:
         print 'FAILED on load_filings'
@@ -40,7 +40,11 @@ def load():
         print 'load_candidate_stats done'
     except:
         print 'FAILED on load_candidate_stats'
-
+    try:
+        load_committee_stats()
+        print 'committee_stats done'
+    except:
+        print 'FAILED on load_committee_stats'
 
 def load_candidates():
     sql_candidate_filers = '''
@@ -71,7 +75,7 @@ def load_candidates():
             f.xref_filer_id = obj.xref_filer_id
             f.save()
         except:
-            'CANDIDATE NAME INFO NOT IN FilernameCd for %s' % f.filer_id
+            'CANDIDATE NAME INFO NOT IN FilernameCd for %sload_committee_stats()' % f.filer_id
             candidate_name_errors.append(f.filer_id)
         
         
@@ -119,7 +123,8 @@ def load_candidates():
         # I should add something here that looks at the Statement of Organization or some other filing to get party affiliation and office sought that cycle
     return candidate_name_errors
 
-def load_filings():
+
+def load_candidate_filings():
     for f in Filer.objects.all():
         for c in f.committee_set.all():
             # filer_id_raw preserves the CAL-ACCESS committee filer_id
@@ -313,3 +318,20 @@ def load_candidate_stats():
                 insert.str_year_span = '%s - %s' % (start_year.year, end_year.year)
                 insert.amount = qs.aggregate(tot=Sum(stat[0]))['tot']
                 insert.save()
+
+def load_committee_stats():
+    for f in Filer.objects.filter(filer_type='cand'):
+        for c in f.committee_set.all():
+            qs = Summary.objects.filter(committee=c)
+            if qs.count() > 0:
+                for stat in Stats.STAT_TYPE_CHOICES:
+                    start_year = qs.order_by('filing__start_date')[0].filing.start_date
+                    end_year = qs.order_by('-filing__start_date')[0].filing.start_date
+                    insert = Stats()
+                    insert.stat_type = stat[0]
+                    insert.filer = f # keeping the filer linked to as the candidate filer
+                    insert.filer_type = 'cand'
+                    insert.int_year_span =  relativedelta(end_year, start_year).years
+                    insert.str_year_span = '%s - %s' % (start_year.year, end_year.year)
+                    insert.amount = qs.aggregate(tot=Sum(stat[0]))['tot']
+                    insert.save()

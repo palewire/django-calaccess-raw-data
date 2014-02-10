@@ -18,7 +18,9 @@ class Filer(models.Model):
 class Committee(models.Model):
     '''
         If a Candidate controls the committee, the filer is associated with the Candidate Filer record, not the committee Filer record
-        But the committee Filer record can be accessed using filer_id_raw
+        But the committee Filer record can still be accessed using filer_id_raw
+        So candidate filers potentially link to multiple committes, and committee filers that are not candidate controlled link back to one, committee filer
+        If there's a better way I'm open to suggestions
     '''
     CMTE_TYPE_OPTIONS = (
         ('mdid', 'Major Donor / Independent Expenditure'),
@@ -194,6 +196,7 @@ class Stats(models.Model):
         Should be able to add any stat you like for a filer_type in the options list
         And record any notes about how it was calculated and why
         Should allow for speedier display of aggregate data
+        If it end up not working, we can blow it up and try something else
     '''
     FILER_TYPE_CHOICES = (
         ('cand', 'Candidate'),
