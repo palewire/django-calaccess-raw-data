@@ -2,10 +2,45 @@ try:
     from calaccess.models import FilernameCd,  FilerFilingsCd, FilerLinksCd, ExpnCd, RcptCd, SmryCd
 except:
     print 'you need to load the raw calaccess data app in order to populate this one'
-from campaign_finance.models import  Committee, Contribution, Cycle, Expenditure, Filer, Filing, Summary
+from campaign_finance.models import  Committee, Contribution, Cycle, Expenditure, Filer, Filing, Stats, Summary
 from django.db import connection, transaction
+from dateutil.relativedelta import relativedelta
+from django.db.models import Sum
 from django.db.models import Q
 import csv
+
+def load():
+    try:
+        load_candidates()
+        print 'load_candidates done'
+    except:
+        print 'FAILED on load_candidates'
+    try:
+        load_filings()
+        print 'load_filings done'
+    except:
+        print 'FAILED on load_filings'
+    try:
+        load_summary()
+        print 'load_summary done'
+    except:
+        print 'FAILED on load_summary'
+    try:
+        load_expenditures()
+        print 'load_expenditures done'
+    except:
+        print 'FAILED on load_expenditures'
+    try:
+        load_contributions()
+        print 'load_contributions done'
+    except:
+        print 'FAILED on load_contributions'
+    try:
+        load_candidate_stats()
+        print 'load_candidate_stats done'
+    except:
+        print 'FAILED on load_candidate_stats'
+
 
 def load_candidates():
     sql_candidate_filers = '''
@@ -201,7 +236,7 @@ def load_expenditures():
                 insert.expn_date = q.expn_date.isoformat()
             insert.cum_ytd = q.cum_ytd
             insert.payee_nams = q.payee_nams
-            insert.tran_id = q.tran_id
+            insert.tran_id = q.tran_idconn = MySQLdb.connect(host='localhost', db='scratch', user='django', passwd='tr@ing')
             insert.payee_naml = q.payee_naml
             insert.name = (q.payee_namt + ' ' + q.payee_namf + ' ' + q.payee_naml + ' ' + q.payee_nams).strip()
             insert.save()
@@ -263,5 +298,18 @@ def load_contributions():
             insert.name = (q.ctrib_namt + ' '+ q.ctrib_namf + ' ' + q.ctrib_naml + ' ' + q.ctrib_nams).strip()
             insert.save()
 
-
-  
+def load_candidate_stats():
+    for f in Filer.objects.filter(filer_type='cand'):
+        qs = Summary.objects.filter(committee__filer=f)
+        if qs.count() > 0:
+            for stat in Stats.STAT_TYPE_CHOICES:
+                start_year = qs.order_by('filing__start_date')[0].filing.start_date
+                end_year = qs.order_by('-filing__start_date')[0].filing.start_date
+                insert = Stats()
+                insert.stat_type = stat[0]
+                insert.filer = f
+                insert.filer_type = 'cand'
+                insert.int_year_span =  relativedelta(end_year, start_year).years
+                insert.str_year_span = '%s - %s' % (start_year.year, end_year.year)
+                insert.amount = qs.aggregate(tot=Sum(stat[0]))['tot']
+                insert.save()

@@ -187,4 +187,35 @@ class Contribution(models.Model):
             print 'Raw data not available. Install calaccess app to process and house raw data.'
             obj = None
         return obj
+
+class Stats(models.Model):
+    '''
+        Flexible model for housing aggregate stats
+        Should be able to add any stat you like for a filer_type in the options list
+        And record any notes about how it was calculated and why
+        Should allow for speedier display of aggregate data
+    '''
+    FILER_TYPE_CHOICES = (
+        ('cand', 'Candidate'),
+        ('pac', 'Political Action Committee'),
+    )
+    STAT_TYPE_CHOICES = (
+        ('itemized_monetary_contribs', 'Itemized Monetary Contributions'),
+        ('unitemized_monetary_contribs', 'Unitemized Monetary Contributions'),
+        ('total_contribs', 'Total Contributions'),
+        ('total_expenditures', 'Total Expenditures'),
+        ('outstanding_debts', 'Outstanding Debt'),
+        
+    )
+    filer_type = models.CharField(max_length=10, choices=FILER_TYPE_CHOICES)
+    filer = models.ForeignKey(Filer)
+    stat_type = models.CharField(max_length=50, choices=STAT_TYPE_CHOICES)
+    notes = models.TextField(null=True, blank=True)
+    int_year_span = models.IntegerField() # years in operation eg. 10
+    str_year_span = models.CharField(max_length=100) # string description eg. 2000 - 2010
+    amount = models.DecimalField(max_digits=16, decimal_places=2)
+    
+    def __unicode__(self):
+        name_str = '%s-%s' % (self.filer_type, self.stat_type)
+        return name_str
     
