@@ -241,7 +241,7 @@ def load_expenditures():
                 insert.expn_date = q.expn_date.isoformat()
             insert.cum_ytd = q.cum_ytd
             insert.payee_nams = q.payee_nams
-            insert.tran_id = q.tran_idconn = MySQLdb.connect(host='localhost', db='scratch', user='django', passwd='tr@ing')
+            insert.tran_id = q.tran_idconn
             insert.payee_naml = q.payee_naml
             insert.name = (q.payee_namt + ' ' + q.payee_namf + ' ' + q.payee_naml + ' ' + q.payee_nams).strip()
             insert.save()
