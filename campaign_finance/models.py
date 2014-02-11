@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils.text import slugify
 
 # Create your models here.
 class Filer(models.Model):
@@ -20,7 +21,13 @@ class Filer(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('filer_detail', args=[str(self.pk)])
+        return reverse('filer_detail', args=[str(self.slug), str(self.pk)])
+
+    def _create_slug(self):
+        return slugify(self.name)
+
+    slug = property(_create_slug)
+
 
 class Committee(models.Model):
     '''
