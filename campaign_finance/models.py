@@ -1,4 +1,7 @@
 from django.db import models
+from django.core.urlresolvers import reverse
+from django.utils.text import slugify
+from django.db.models import Sum
 
 # Create your models here.
 class Filer(models.Model):
@@ -15,6 +18,26 @@ class Filer(models.Model):
     xref_filer_id = models.CharField(max_length=32L, null=True)
     name = models.CharField(max_length=255L, null=True)
 
+    def __unicode__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('filer_detail', args=[str(self.slug), str(self.pk)])
+
+    def _create_slug(self):
+        return slugify(self.name)
+
+    slug = property(_create_slug)
+
+    def _total_contributions(self):
+
+        qs = Filing.objects.filter(committee__filer=self)
+        total = Summary.objects.filter(filing__in=qs).aggregate(tot=Sum('total_contribs'))['tot']
+        return total
+
+    total_contributions = property(_total_contributions) 
+
+
 class Committee(models.Model):
     '''
         If a Candidate controls the committee, the filer is associated with the Candidate Filer record, not the committee Filer record
@@ -30,6 +53,20 @@ class Committee(models.Model):
     filer_id_raw = models.IntegerField()
     name = models.CharField(max_length=255, null=True)
     committee_type = models.CharField(max_length=4, choices=CMTE_TYPE_OPTIONS)
+
+    def __unicode__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('committee_detail', args=[str(self.pk)])
+
+    def _total_contributions(self):
+        qs = Filing.objects.filter(committee=self)
+        total = Summary.objects.filter(filing__in=qs).aggregate(tot=Sum('total_contribs'))['tot']
+        return total
+
+    total_contributions = property(_total_contributions) 
+
 
 class Cycle(models.Model):
     name = models.IntegerField()
@@ -63,7 +100,7 @@ class Summary(models.Model):
     outstanding_debts = models.DecimalField(max_digits=16, decimal_places=2)
     ending_cash_balance = models.DecimalField(max_digits=16, decimal_places=2)
     
-    
+
 class Expenditure(models.Model):
     '''
     This is a condensed version of the Raw CAL-ACCESS EXPN_CD table

@@ -44,13 +44,14 @@ USE_TZ = True
 
 # Media and static files
 MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
-STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
+STATIC_ROOT = os.path.join(ROOT_DIR, 'assets') # normally static. Changed to use template builder
 STATICFILES_DIRS = (
     os.path.join(ROOT_DIR, 'templates', 'static'),
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 # Templates
@@ -87,8 +88,14 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
     'django.contrib.sitemaps',
+
+    # external apps
     'south',
     'toolbox',
+    'compressor',
+    'haystack',
+
+    # project apps
     'calaccess',
     'campaign_finance',
 )

@@ -1,6 +1,9 @@
 DEBUG = False
 DEVELOPMENT, PRODUCTION = False, True
 DEBUG_TOOLBAR = False
+# Django Compressor
+# it defaults to the opposite of debug
+COMPRESS_ENABLED = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',

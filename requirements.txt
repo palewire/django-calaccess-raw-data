@@ -8,8 +8,12 @@ boto==2.9.8
 csvkit==0.6.1
 dbf==0.95.004
 distribute==0.6.34
+django-appconf==0.6
+django-compressor==1.3
 django-debug-toolbar==0.9.4
+django-haystack==2.1.0
 hurry.filesize==0.9
+ipython==1.1.0
 openpyxl==1.6.2
 paramiko==1.11.0
 progressbar==2.3

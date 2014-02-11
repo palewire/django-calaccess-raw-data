@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+<form action="/search/" method="get" class="navbar-form navbar-left hidden-xs" role="search">
+  <div class="form-group">
+    <input type="text" name="q" class="search-input" placeholder="Search">
+  </div>
+  <button class="btn btn-default"><span class="fa fa-search"></span></button>
+</form>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2">
+    <div class="jumbotron jumbotron-calaccess">
+      <h2>{{ filer.name }} ({{ filer.filer_id }})</h2>
+      <p id="filer-type">Type: <span class="label label-info">{{ filer.filer_type }}</span></p>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Committee</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for committee in filer.committee_set.all %}
+        <tr>
+           <td>{{ committee.name }}</td>
+           <td>{{ committee.committee_type }}</td>
+         </tr>
+         {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
