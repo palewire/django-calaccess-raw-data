@@ -15,6 +15,9 @@ class Filer(models.Model):
     xref_filer_id = models.CharField(max_length=32L, null=True)
     name = models.CharField(max_length=255L, null=True)
 
+    def __unicode__(self):
+        return self.name
+
 class Committee(models.Model):
     '''
         If a Candidate controls the committee, the filer is associated with the Candidate Filer record, not the committee Filer record
@@ -30,6 +33,9 @@ class Committee(models.Model):
     filer_id_raw = models.IntegerField()
     name = models.CharField(max_length=255, null=True)
     committee_type = models.CharField(max_length=4, choices=CMTE_TYPE_OPTIONS)
+
+    def __unicode__(self):
+        return self.name
 
 class Cycle(models.Model):
     name = models.IntegerField()
