@@ -13,9 +13,6 @@ class IndexView(generic.ListView):
   def get_queryset(self):
     return Committee.objects.order_by('-name')[:5]
 
-class CommitteeView(generic.DetailView):
-  model = Committee
-  template = 'templates/campaign_finance/committee.html'
-
 class FilerView(generic.DetailView):
   model = Filer
+  template = 'templates/campaign_finance/committee.html'
