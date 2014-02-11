@@ -21,6 +21,11 @@ def load():
     except:
         print 'FAILED on load_filings'
     try:
+        load_non_candidate_committees()
+        print 'load_non_candidate_committees done'
+    except:
+        print 'FAILED on load_non_candidate_committees'
+    try:
         load_summary()
         print 'load_summary done'
     except:
@@ -62,7 +67,6 @@ def load_candidates():
     for r in rows:
         insert = Filer()
         insert.filer_id = r[0]
-        insert.status = r[1]
         insert.filer_type = 'cand'
         insert.save()
     
@@ -123,7 +127,6 @@ def load_candidates():
         # I should add something here that looks at the Statement of Organization or some other filing to get party affiliation and office sought that cycle
     return candidate_name_errors
 
-
 def load_candidate_filings():
     for f in Filer.objects.all():
         for c in f.committee_set.all():
@@ -156,6 +159,77 @@ def load_candidate_filings():
                     if current_filing.rpt_end:
                         insert.end_date = current_filing.rpt_end.isoformat()
                     insert.save()
+
+def load_non_candidate_committees():
+    '''
+    You MUST run this after load_candidates
+    Or else you'll get all the committees culled out in that process
+    Committees that never filed Form 460 or
+    '''
+    sql_query = '''
+        SELECT
+        FILERS_CD.FILER_ID,
+        FILER_TYPES_CD.DESCRIPTION
+        FROM FILERS_CD INNER JOIN FILER_TO_FILER_TYPE_CD ON FILERS_CD.FILER_ID = FILER_TO_FILER_TYPE_CD.FILER_ID
+                        INNER JOIN FILER_TYPES_CD ON FILER_TO_FILER_TYPE_CD.FILER_TYPE = FILER_TYPES_CD.FILER_TYPE
+        WHERE FILER_TYPES_CD.FILER_TYPE='16'
+        GROUP BY 1,2
+    '''
+    c = connection.cursor()
+    c.execute(sql_query)
+    rows = c.fetchall()
+    candidate_committees = {}
+    for cmte in Committee.objects.values_list('filer_id_raw', flat=True):
+        candidate_committees[cmte] = ''
+    for r in rows:
+        if r[0] not in candidate_committees:
+            # check if committee ever filed a F450 or F460. If it hasn't, forget about it
+            qs_filings = FilerFilingsCd.objects.filter(Q(form_id='F460') | Q(form_id='F450'), filer_id=r[0])
+            if qs_filings.count() > 0:
+                insert = Filer()
+                insert.filer_id = r[0]
+                insert.filer_type = 'pac'
+                try:
+                    obj = FilernameCd.objects.filter(filer_id=r[0])[0]
+                    insert.name = (obj.namt + ' ' + obj.namf + ' ' + obj.naml + ' ' + obj.nams).strip()
+                    insert.xref_filer_id = obj.xref_filer_id
+                except:
+                    'CANDIDATE NAME INFO NOT IN FilernameCd for %s' % insert.filer_id
+                insert.save()
+                
+                insert_committee = Committee()
+                insert_committee.filer = insert
+                insert_committee.filer_id_raw = r[0]
+                insert_committee.name = insert.name
+                insert_committee.committee_type = 'ncrc'
+                insert_committee.save()
+                
+                for filing in qs_filings:
+                    qs_amends = qs_filings.filter(filing_id=filing.filing_id)
+                    if qs_amends.count() > 1:
+                        current_filing = qs_amends.order_by('-filing_sequence')[0]
+                        qs_check = Filing.objects.filter(committee=c, filing_id=current_filing.filing_id, amend_id=current_filing.filing_sequence)
+                        if qs_check == 1:
+                            print 'already accounted for filing'
+                            continue
+                    else:
+                        current_filing = filing
+                        insert = Filing()
+                        if current_filing.session_id % 2 == 0:
+                            cycle_year = current_filing.session_id
+                        else:
+                            cycle_year = current_filing.session_id + 1
+                        insert.cycle, created = Cycle.objects.get_or_create(name=cycle_year)
+                        insert.committee = c
+                        insert.filing_id = current_filing.filing_id
+                        insert.amend_id = current_filing.filing_sequence
+                        insert.form_id = current_filing.form_id
+                        if current_filing.rpt_start:
+                            insert.start_date = current_filing.rpt_start.isoformat()
+                        if current_filing.rpt_end:
+                            insert.end_date = current_filing.rpt_end.isoformat()
+                        insert.save()
+
 
 def load_summary():
     '''

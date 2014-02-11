@@ -8,7 +8,7 @@ class Filer(models.Model):
     )
     # straight out of the filer tables.
     filer_id = models.IntegerField()
-    status = models.CharField(max_length=255)
+    status = models.CharField(max_length=255, null=True)
     filer_type = models.CharField(max_length=10L, choices=FILER_TYPE_OPTIONS)
     
     ## fields updated by other tables
@@ -23,15 +23,12 @@ class Committee(models.Model):
         If there's a better way I'm open to suggestions
     '''
     CMTE_TYPE_OPTIONS = (
-        ('mdid', 'Major Donor / Independent Expenditure'),
-        ('sm', 'Slate Mailer'),
-        ('bi', 'Ballot Initiative'),
         ('ccrc', 'Candidate Controlled Recipient Committee'),
         ('ncrc', 'Non-Candidate Controlled Recipient Committee'),
     )
     filer = models.ForeignKey(Filer)
     filer_id_raw = models.IntegerField()
-    name = models.CharField(max_length=255, blank=True)
+    name = models.CharField(max_length=255, null=True)
     committee_type = models.CharField(max_length=4, choices=CMTE_TYPE_OPTIONS)
 
 class Cycle(models.Model):
