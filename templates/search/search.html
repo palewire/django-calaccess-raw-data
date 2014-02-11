@@ -1,55 +1,43 @@
-{% extends 'base.html' %}
+{% extends 'index.html' %}
 
-{% block content %}
-<div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
-      <header class="page-header">
-          <h2>Explore California Campagin Finance</h2>
-          <p>Type in the name a candidate or committee to explore their contributions</p>
-      </header>
-      <form action="/search/" method="get">
-        <div class="form-group">
-          <input type="text" name="q" class="form-control" placeholder="Search the name of Campaign or a Lobby and press enter">
-        </div>
-      </form>
-        {% if query %}
-          <header class="page-header">
-            <h3>Results for "{{ query }}"</h3>
-            <p>{{ page.paginator.count }} results</p>
-          </header>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Filer</th>
-                <td>Type</td>
-              </tr>
-            </thead>
-            <tbody>
-            {% for results in page.object_list %}
-                <tr>
-                  <td>
-                    <a href="{{results.object.get_absolute_url}}">{{ results.object.name }}</a>
-                  </td>
-                  <td>{{ results.object.filer_type }}</td>
-                </tr>
-            {% empty %}
-                <tr>
-                  <td>No results</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-          </table>
-          <ul class="pager">
-              {% if page.has_previous %}
-              <li><a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">&#xAB;</a></li>
-              {% endif %}
-              <li>Page {{ page.number }} of {{ page.paginator.num_pages }}</li>
-              {% if page.has_next %}
-              <li><a href="?q={{ query }}&amp;page={{ page.next_page_number }}">&#xBB;</a></li>
-              {% endif %}
-          </ul>
-        {% endif %}
-
-  </div>
+{% block search %}
+{% if query %}
+<div class="search-results">
+  <header class="page-header">
+    <h3>Results for "{{ query }}"</h3>
+    <p>{{ page.paginator.count }} results</p>
+  </header>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Filer</th>
+        <td>Type</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for results in page.object_list %}
+        <tr>
+          <td>
+            <a href="{{results.object.get_absolute_url}}">{{ results.object.name }}</a>
+          </td>
+          <td>{{ results.object.filer_type }}</td>
+        </tr>
+    {% empty %}
+        <tr>
+          <td>No results</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <ul class="pager">
+      {% if page.has_previous %}
+      <li><a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">&#xAB;</a></li>
+      {% endif %}
+      <li>Page {{ page.number }} of {{ page.paginator.num_pages }}</li>
+      {% if page.has_next %}
+      <li><a href="?q={{ query }}&amp;page={{ page.next_page_number }}">&#xBB;</a></li>
+      {% endif %}
+  </ul>
 </div>
+{% endif %}
 {% endblock %}

@@ -3,15 +3,18 @@
 {% block content %}
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2">
-      <header class="page-header">
-          <h2>Explore California Campagin Finance</h2>
-          <p>Type in the name a candidate or committee to explore their contributions</p>
-      </header>
+    <div class="jumbotron jumbotron-calaccess">
+      <h1>California campaign finance search</h1>
+      <p>without the headache.</p>
       <form action="/search/" method="get">
-        <div class="form-group">
-          <input type="text" name="q" class="form-control" placeholder="Search for a candidate or committee">
-        </div>
+        <p class="search-text">tell more more about </p>
+        <input type="text" name="q" class="search" placeholder=" a candidate or committee">
+        <button class="btn btn-default"><span class="fa fa-search"></span></button>
       </form>
+    </div>
+
+    {% block search %}
+    {% endblock %}
   </div>
 </div>
 {% endblock %}
