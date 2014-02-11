@@ -26,7 +26,6 @@ module.exports = function (grunt) {
       },
       src: {
         files: ['templates/**/*.html', 'assets/scripts/**/*.js', 'Gruntfile.js'],
-        
       }
     }, // watch
 
