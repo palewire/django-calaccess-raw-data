@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils.text import slugify
+from django.db.models import Sum
 
 # Create your models here.
 class Filer(models.Model):
@@ -28,6 +29,14 @@ class Filer(models.Model):
 
     slug = property(_create_slug)
 
+    def _total_contributions(self):
+
+        qs = Filing.objects.filter(committee__filer=self)
+        total = Summary.objects.filter(filing__in=qs).aggregate(tot=Sum('total_contribs'))['tot']
+        return total
+
+    total_contributions = property(_total_contributions) 
+
 
 class Committee(models.Model):
     '''
@@ -50,6 +59,14 @@ class Committee(models.Model):
 
     def get_absolute_url(self):
         return reverse('committee_detail', args=[str(self.pk)])
+
+    def _total_contributions(self):
+        qs = Filing.objects.filter(committee=self)
+        total = Summary.objects.filter(filing__in=qs).aggregate(tot=Sum('total_contribs'))['tot']
+        return total
+
+    total_contributions = property(_total_contributions) 
+
 
 class Cycle(models.Model):
     name = models.IntegerField()
