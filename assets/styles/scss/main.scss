@@ -15,6 +15,22 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // Add your code here or create a _*.scss file and import it
 // e.g., @import 'project'
 
+.navbar-calaccess {
+  @extend .navbar-default;
+  background: white;
+
+  .navbar-header {
+    margin: 0 auto;
+    width: 250px;
+    float: none;
+
+    .navbar-brand {
+      color: $red;
+    }
+  }
+
+}
+
 .filters {
   margin-top: 10px;
   
