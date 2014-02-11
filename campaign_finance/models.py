@@ -41,6 +41,9 @@ class Committee(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('committee_detail', args=[str(self.pk)])
+
 class Cycle(models.Model):
     name = models.IntegerField()
 
@@ -73,7 +76,7 @@ class Summary(models.Model):
     outstanding_debts = models.DecimalField(max_digits=16, decimal_places=2)
     ending_cash_balance = models.DecimalField(max_digits=16, decimal_places=2)
     
-    
+
 class Expenditure(models.Model):
     '''
     This is a condensed version of the Raw CAL-ACCESS EXPN_CD table
