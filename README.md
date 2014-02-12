@@ -44,6 +44,8 @@ $ python manage.py downloadaccess
 
 ### Setting up the Campaign Finance app
 
+The campaign finance app tracks the spending and cashflow candidates, PACs, and organizations. The app frontend build is handled by Grunt, a JavaScript tasks manager for Node.js. Make sure you have the requirements listed at the top of the README installed before loading this app up. 
+
 Now, hop into the python shell and load up the models for the `campaign_finance` app
 ```bash
 $ python manage.py shell
@@ -55,9 +57,12 @@ load.load()
 ```
 :warning: This'll take a while. Go grab *another* coffee or do something else productive with your life.
 
-Everything should be good now (Go ahead and set `DEBUG` to `True` in `settings_dev.py`). Let's fire up the server and get our Grunt tasks running.
+Everything should be good now (Go ahead and set `DEBUG` to `True` in `settings_dev.py`). Let's install the required Grunt tasks and JavaScript libraries. 
+```bash
+$ npm install && bower install
+```
 
-Start the server
+Then, let's fire up the server and get our Grunt tasks running.
 ```bash 
 fab rs
 ```
