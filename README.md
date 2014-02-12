@@ -14,8 +14,6 @@ Currently tied to MySQL just to get it in and look at it. Need to figure out how
 
 * check_load.py -- make sure rows imported matches the number of lines in the csv file.
 
-## Campaign Finance App
-
 ### Requirements
 - Python 2.7
 - MySQL 5.5
@@ -69,11 +67,6 @@ In a new terminal window, start Grunt tasks from the project root
 grunt
 ```
 Now browse to [http://127.0.0.1:8000](http://127.0.0.1:8000) to see the app in action
-
-### About
-This is a joint effort between The Center for Investigative Reporting and the Los Angeles Times. 
-
-### Contribution
 
 ### License
 Django Calaccess Parser - Explore and analyze California campaign finance data without the headache
