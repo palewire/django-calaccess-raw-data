@@ -62,7 +62,9 @@ Everything should be good now (Go ahead and set `DEBUG` to `True` in `settings_d
 $ npm install && bower install
 ```
 
-Then, let's fire up the server and get our Grunt tasks running.
+### Running the Campaign Finance app
+
+Fire up the server and get our Grunt tasks running.
 ```bash 
 fab rs
 ```
