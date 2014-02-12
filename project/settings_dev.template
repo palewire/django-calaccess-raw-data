@@ -27,3 +27,4 @@ CACHES = {
     }
 }
 STATIC_URL = '/static/'
+SECRET_KEY = 'my-secret-key' # generate with `fab generate_secret`

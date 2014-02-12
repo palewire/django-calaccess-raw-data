@@ -32,7 +32,7 @@ $ cp project/settings_dev.template project/settings_dev.py
 ```
 Clone the repo, `cd` inside of it and then create a local `settings_dev.py` file. If you haven't already, create a MySQL database to store the CAL Access data and add it to `settings_dev.py`.
 
-:rotating_light: *HEADS UP*: Ensure that `DEBUG` is set to `False` and `local_infile=1` is add to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
+:rotating_light: __HEADS UP__: Ensure that `DEBUG` is set to `False` and `local_infile=1` is add to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
 
 Next, sync the database, create a Django admin user, and run the management command to the load the CAL Access data 
 ```bash
