@@ -94,11 +94,15 @@ INSTALLED_APPS = (
     'toolbox',
     'compressor',
     'haystack',
+    'django_extensions',
 
     # project apps
     'calaccess',
     'campaign_finance',
 )
+
+# Shell plus config
+SHELL_PLUS_DONT_LOAD = ['calaccess', 'south']
 
 # Logging
 MUNIN_ROOT = '/var/cache/munin/www/'
