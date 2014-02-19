@@ -1,4 +1,4 @@
-# Django Calaccess Parser
+# Django Calaccess Parser *(in active development)*
 
 Download, extract and load the [CAL-ACCESS](http://www.sos.ca.gov/prd/cal-access/) campaign finance and lobbying activity database.
 
@@ -14,7 +14,7 @@ Currently tied to MySQL just to get it in and look at it. Need to figure out how
 
 * check_load.py -- make sure rows imported matches the number of lines in the csv file.
 
-### Requirements
+## Requirements
 - Python 2.7
 - MySQL 5.5
 
@@ -24,15 +24,46 @@ Currently tied to MySQL just to get it in and look at it. Need to figure out how
 - grunt-cli
 - bower
 
-### Installation
+The project is structured using the Datadesk [django project template](https://github.com/datadesk/django-project-template). Check out that codebase to understand how this project is setup.
+
+## Installation
+First, setup a virtual environment for the project.
+
+__With virtualenv__
+```bash
+$ cd my-virtual-envs
+$ virtualenv --no-site-packages calaccess
+$ cd calaccess
+$ . bin/activate
+```
+
+__With [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/)__
+```bash
+$ mkvirtualenv calaccess
+```
+
+Clone the repo, install the dependecies, and configure the project 
 ```bash
 $ git clone git@github.com:california-civic-data-coalition/django-calaccess-parser.git
 $ cd django-calaccess-parser
+$ pip install -r requirements.txt
 $ cp project/settings_dev.template project/settings_dev.py
 ```
-Clone the repo, `cd` inside of it and then create a local `settings_dev.py` file. If you haven't already, create a MySQL database to store the CAL Access data and add it to `settings_dev.py`.
+### Database setup
+If you haven't already, create a MySQL user and database to store the CAL Access data and add it to `settings_dev.py`. This should look something like:
+```bash
+$ mysql -uroot
+```
+```sql
+CREATE DATABASE local_calaccess_db;
+CREATE USER 'calaccessuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* To 'calaccessuser'@'localhost' IDENTIFIED BY 'password';
 
-:rotating_light: __HEADS UP__: Ensure that `DEBUG` is set to `False` and `local_infile=1` is add to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
+```
+
+:rotating_light: __HEADS UP__: Ensure that `DEBUG` is set to `False` and `local_infile=1` is added to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
+
+### Loading the data
 
 Next, sync the database, create a Django admin user, and run the management command to the load the CAL Access data 
 ```bash
@@ -42,9 +73,9 @@ $ python manage.py downloadaccess
 
 :warning: This'll take a while. Go grab some coffee or do something else productive with your life.
 
-### Setting up the Campaign Finance app
+## Setting up the Campaign Finance app
 
-The campaign finance app tracks the spending and cashflow candidates, PACs, and organizations. The app frontend build is handled by Grunt, a JavaScript tasks manager for Node.js. Make sure you have the requirements listed at the top of the README installed before loading this app up. 
+The campaign finance app tracks the spending and cashflow candidates, PACs, and organizations. The app frontend build is handled by [Grunt](http://gruntjs.com/), a JavaScript tasks manager for Node.js. Make sure you have the requirements listed at the top of the README installed before loading this app up. 
 
 Now, hop into the python shell and load up the models for the `campaign_finance` app
 ```bash
