@@ -329,7 +329,7 @@ def sh():
     
     """
     rmpyc()
-    local("python manage.py shell", capture=False)
+    local("python manage.py shell_plus", capture=False)
 
 
 def tabnanny():
