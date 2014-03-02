@@ -41,21 +41,21 @@ def check_load():
 
 
 def load():
-    #try:
-    #    load_filers()
-    #    print 'load_filers done'
-    #except:
-    #    print 'FAILED on load_filers'
-    #try:
-    #    load_filings()
-    #    print 'load_filings done'
-    #except:
-    #    print 'FAILED on load_filings'
-    #try:
-    #    load_summary()
-    #    print 'load_summary done'
-    #except:
-    #    print 'FAILED on load_summary'
+    try:
+        load_filers()
+        print 'load_filers done'
+    except:
+        print 'FAILED on load_filers'
+    try:
+        load_filings()
+        print 'load_filings done'
+    except:
+        print 'FAILED on load_filings'
+    try:
+        load_summary()
+        print 'load_summary done'
+    except:
+        print 'FAILED on load_summary'
     try:
         load_expenditures()
         print 'load_expenditures done'
