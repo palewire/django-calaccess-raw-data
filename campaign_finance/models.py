@@ -46,13 +46,14 @@ class Committee(models.Model):
         If there's a better way I'm open to suggestions
     '''
     CMTE_TYPE_OPTIONS = (
-        ('ccrc', 'Candidate Controlled Recipient Committee'),
-        ('ncrc', 'Non-Candidate Controlled Recipient Committee'),
+        ('cand', 'Candidate Committee'),
+        ('pac', 'Non-Candidate Committee'),
+        ('linked-pac', 'Non-Candidate Committee, linked to other committees'),
     )
     filer = models.ForeignKey(Filer)
     filer_id_raw = models.IntegerField()
     name = models.CharField(max_length=255, null=True)
-    committee_type = models.CharField(max_length=4, choices=CMTE_TYPE_OPTIONS)
+    committee_type = models.CharField(max_length=50, choices=CMTE_TYPE_OPTIONS)
 
     def __unicode__(self):
         return self.name
@@ -116,7 +117,7 @@ class Expenditure(models.Model):
     ## Raw data fields
     amend_id = models.IntegerField()
     amount = models.DecimalField(max_digits=16, decimal_places=2)
-    bakref_tid = models.CharField(max_length=10L, blank=True)
+    bakref_tid = models.CharField(max_length=50L, blank=True)
     cmte_id = models.CharField(max_length=9L, blank=True)
     cum_ytd = models.DecimalField(max_digits=16, decimal_places=2, null=True)
     entity_cd = models.CharField(max_length=5L, blank=True)
@@ -133,11 +134,11 @@ class Expenditure(models.Model):
     payee_adr1 = models.CharField(max_length=55L, blank=True)
     payee_adr2 = models.CharField(max_length=55L, blank=True)
     payee_city = models.CharField(max_length=30L, blank=True)
-    payee_namf = models.CharField(max_length=5L, blank=True)
+    payee_namf = models.CharField(max_length=255L, blank=True)
     payee_naml = models.CharField(max_length=200L, blank=True)
     payee_nams = models.CharField(max_length=10L, blank=True)
     payee_namt = models.CharField(max_length=10L, blank=True)
-    payee_nams = models.CharField(max_length=2L, blank=True)
+    payee_st = models.CharField(max_length=2L, blank=True)
     payee_zip4 = models.CharField(max_length=10L, blank=True)
     tran_id = models.CharField(max_length=20L, blank=True)
     xref_match = models.CharField(max_length=1L, blank=True) # a related item on other schedule has the same transaction identifier. "X" indicates this condition is true
@@ -146,8 +147,8 @@ class Expenditure(models.Model):
     ## Derived fields
     name = models.CharField(max_length=255) # derive like so (e.payee_namt + ' '+ e.payee_namf + ' ' + e.payee_naml + ' ' + e.payee_nams).strip()
     status = models.BooleanField(default=True) # False meanse they are duplicated, additional disclosure that shouldn't be used for summing up but provide addtional info on the transaction
-    org_id = models.IntegerField(default=None, null=True)
-    individual_id = models.IntegerField(default=None, null=True)
+    org_id = models.IntegerField(null=True)
+    individual_id = models.IntegerField(null=True)
     
     def raw(self):
         try:
@@ -172,7 +173,7 @@ class Contribution(models.Model):
     ctrib_city = models.CharField(max_length=30L, blank=True)
     ctrib_dscr = models.CharField(max_length=90L, blank=True)
     ctrib_emp = models.CharField(max_length=200L, blank=True)
-    ctrib_namf = models.CharField(max_length=45L, blank=True)
+    ctrib_namf = models.CharField(max_length=255L, blank=True)
     ctrib_naml = models.CharField(max_length=200L, )
     ctrib_nams = models.CharField(max_length=10L, blank=True)
     ctrib_namt = models.CharField(max_length=10L, blank=True)
@@ -191,7 +192,7 @@ class Contribution(models.Model):
     intr_city = models.CharField(max_length=30L, blank=True)
     intr_cmteid = models.CharField(max_length=9L, blank=True)
     intr_emp = models.CharField(max_length=200L, blank=True)
-    intr_namf = models.CharField(max_length=45L, blank=True)
+    intr_namf = models.CharField(max_length=255L, blank=True)
     intr_naml = models.CharField(max_length=200L, blank=True)
     intr_nams = models.CharField(max_length=10L, blank=True)
     intr_namt = models.CharField(max_length=10L, blank=True)
