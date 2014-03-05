@@ -61,7 +61,7 @@ GRANT ALL PRIVILEGES ON *.* To 'calaccessuser'@'localhost' IDENTIFIED BY 'passwo
 
 ```
 
-:rotating_light: __HEADS UP__: Ensure that `DEBUG` is set to `False` and `local_infile=1` is added to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
+:rotating_light: __HEADS UP__: Ensure that `DEBUG` is set to `False` and `local_infile:1` is added to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
 
 ### Loading the data
 

@@ -1,12 +1,12 @@
-DEBUG = True # Set this to false when running load scripts for MySQL
+DEBUG = True # Set this to False when running load scripts for MySQL
 DEVELOPMENT, PRODUCTION = True, False
 DEBUG_TOOLBAR = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'calaccess',
-        'USER': '',
-        'PASSWORD': '',
+        'NAME': 'local_calaccess_db',
+        'USER': 'calaccessuser',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
