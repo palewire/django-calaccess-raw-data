@@ -88,6 +88,12 @@ load.load()
 ```
 :warning: This'll take a while. Go grab *another* coffee or do something else productive with your life.
 
+### Setup search
+Search isn't really wired up yet but we can use [Haystack's](http://django-haystack.readthedocs.org/en/latest/toc.html) dummy search for now. Go ahead and build the index to search against.
+```bash
+$ python manage.py rebuild_index
+```
+
 Everything should be good now (Go ahead and set `DEBUG` to `True` in `settings_dev.py`). Let's install the required Grunt tasks and JavaScript libraries. 
 ```bash
 $ npm install && bower install
