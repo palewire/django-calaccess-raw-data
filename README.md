@@ -103,7 +103,7 @@ $ fab install_node
 $ fab get_node_libs
 ```
 
-With that installed, let's get out frontend built:
+With that installed, let's download our frontend dependencies:
 ```bash
 $ npm install && bower install
 ```
