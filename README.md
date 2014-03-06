@@ -95,6 +95,14 @@ $ python manage.py rebuild_index
 ```
 
 Everything should be good now (Go ahead and set `DEBUG` to `True` in `settings_dev.py`). Let's install the required Grunt tasks and JavaScript libraries. 
+
+If you don't have node.js installed, go ahead and run the following fab commands:
+```bash
+$ fab install_node
+$ fab get_node_libs
+```
+
+With that installed, let's get out frontend built:
 ```bash
 $ npm install && bower install
 ```
