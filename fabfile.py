@@ -43,9 +43,9 @@ def create_server(region='us-west-2',
     block_gb_size=12):
     """
     Spin up a new server on Amazon EC2.
-    
+
     Returns the id and public address.
-    
+
     By default, we use Ubuntu 12.04 LTS
     """
     print("Warming up...")
@@ -197,18 +197,18 @@ def deploy():
 def load():
     """
     Prints the current load values.
-    
+
     Example usage:
-    
+
         $ fab stage load
         $ fab prod load
-        
+
     """
     def _set_color(load):
         """
-        Sets the terminal color for an load average value depending on how 
+        Sets the terminal color for an load average value depending on how
         high it is.
-        
+
         Accepts a string formatted floating point.
 
         Returns a formatted string you can print.
@@ -224,7 +224,7 @@ def load():
         else:
             # Return red
             return template % (31, value)
-    
+
     with hide('everything'):
         # Fetch the data
         uptime = run("uptime")
@@ -272,7 +272,7 @@ def ps(process='all'):
 def update_templates(template_path='./templates'):
     """
     Download the latest template release and load it into your system.
-    
+
     It will unzip to "./templates" where you run it.
     """
     with lcd(template_path):
@@ -309,10 +309,10 @@ def rs(port=8000):
     Fire up the Django test server, after cleaning out any .pyc files.
 
     Example usage:
-    
+
         $ fab rs
         $ fab rs:port=9000
-    
+
     """
     with settings(warn_only=True):
         rmpyc()
@@ -324,9 +324,9 @@ def sh():
     Fire up the Django shell, after cleaning out any .pyc files.
 
     Example usage:
-    
+
         $ fab sh
-    
+
     """
     rmpyc()
     local("python manage.py shell_plus", capture=False)
@@ -335,11 +335,11 @@ def sh():
 def tabnanny():
     """
     Checks whether any of your files have improper tabs
-    
+
     Example usage:
-    
+
         $ fab tabnanny
-    
+
     """
     print("Running tabnanny")
     with hide('everything'):
@@ -378,11 +378,11 @@ def pep8():
 def big_files(min_size='20000k'):
     """
     List all files in this directory over the provided size, 20MB by default.
-    
+
     Example usage:
-    
+
         $ fab big_files
-    
+
     """
     with hide('everything'):
         list_ = local("""find ./ -type f -size +%s -exec ls -lh {} \; | awk '{ print $NF ": " $5 }'""" % min_size)
@@ -391,3 +391,52 @@ def big_files(min_size='20000k'):
         print(list_)
     else:
         print("No files over %s" % min_size)
+
+def get_node_libs():
+    """Install Node.js for Mac OS X or Ubuntu Linux"""
+    local('npm install -g yo grunt-cli bower')
+
+def install_node():
+    """
+    Install node.js for Mac OS X or Ubuntu Linux
+    """
+    print ("Installing Node, eh? Mac or Linux? <answer 'Mac' or 'Linux'>")
+
+    answer = raw_input("> ")
+    if (answer.upper() == 'MAC'):
+        print ("Installing Node with Homebrew. Is Homebrew installed? <answer 'Y' or 'N'>")
+        while True:
+            answer = raw_input("> ")
+            if (answer.upper() == 'Y'):
+                local("brew install node")
+                break
+
+            elif (answer.upper() == 'N'):
+                local('ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"')
+                local("brew install node")
+                break
+
+            else:
+                print ("You did not answer 'Y' or 'N'.")
+
+        elif (answer.upper() == 'LINUX'):
+            local('wget http://nodejs.org/dist/v0.10.25/node-v0.10.25.tar.gz')
+            local('tar -xvzf node-v0.10.25.tar.gz')
+            local('cd node-v0.10.25')
+            local('mkdir ~/.node')
+            local('./configure --prefix=~/.node')
+            local('make')
+            local('make install')
+            local('echo "export PATH=~/.node/bin:${PATH}" >> ~/.zshrc')
+            local('echo "export PATH=~/.node/bin:${PATH}" >> ~/.bashrc')
+            # this may happen automatically so check first
+            local('echo "export NODE_PATH=$NODE_PATH:/$HOME/.node/lib/node_modules" >> ~/.zshrc && source ~/.zshrc')
+            local('echo "export NODE_PATH=$NODE_PATH:/$HOME/.node/lib/node_modules" >> ~/.bashrc && source ~/.bashrc')
+            local('cd ..')
+            local('rm -rf node-v0.10.25')
+            local('rm node-v0.10.25.tar.gz')
+            print "Node.js installed"
+
+        else:
+            print("You didn't answer Mac or Linux")
+            install_node()
