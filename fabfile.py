@@ -404,7 +404,7 @@ def install_node():
 
     answer = raw_input("> ")
     if (answer.upper() == 'MAC'):
-        print ("Installing Node with Homebrew. Is Homebrew installed?")
+        print ("Installing Node with Homebrew. Is Homebrew installed? <answer 'Y' or 'N'>")
         while True:
             answer = raw_input("> ")
             if (answer.upper() == 'Y'):
