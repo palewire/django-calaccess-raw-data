@@ -94,6 +94,7 @@ Search isn't really wired up yet but we can use [Haystack's](http://django-hayst
 $ python manage.py rebuild_index
 ```
 
+### Setup Node, Npm, Grunt and Bower 
 Everything should be good now (Go ahead and set `DEBUG` to `True` in `settings_dev.py`). Let's install the required Grunt tasks and JavaScript libraries. 
 
 If you don't have node.js installed, go ahead and run the following fab commands:
