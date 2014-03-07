@@ -61,7 +61,7 @@ GRANT ALL PRIVILEGES ON *.* To 'calaccessuser'@'localhost' IDENTIFIED BY 'passwo
 
 ```
 
-:rotating_light: __HEADS UP__: Ensure that `DEBUG` is set to `False` and `local_infile=1` is added to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
+:rotating_light: __HEADS UP__: Ensure that `DEBUG` is set to `False` and `local_infile:1` is added to the database tuple in your `settings_dev.py` file __BEFORE__ you run the load commands (See [settings_dev.template](https://github.com/california-civic-data-coalition/django-calaccess-parser/blob/master/project/settings_dev.template) for an example). Otherwise, when MySQL throws a warning or error, the Django ORM will stop the data load. Be sure to return `DEBUG` to `True` later when doing active development on the application.
 
 ### Loading the data
 
@@ -88,7 +88,22 @@ load.load()
 ```
 :warning: This'll take a while. Go grab *another* coffee or do something else productive with your life.
 
+### Setup search
+Search isn't really wired up yet but we can use [Haystack's](http://django-haystack.readthedocs.org/en/latest/toc.html) dummy search for now. Go ahead and build the index to search against.
+```bash
+$ python manage.py rebuild_index
+```
+
+### Setup Node, Npm, Grunt and Bower 
 Everything should be good now (Go ahead and set `DEBUG` to `True` in `settings_dev.py`). Let's install the required Grunt tasks and JavaScript libraries. 
+
+If you don't have node.js installed, go ahead and run the following fab commands:
+```bash
+$ fab install_node
+$ fab get_node_libs
+```
+
+With that installed, let's download our frontend dependencies:
 ```bash
 $ npm install && bower install
 ```
