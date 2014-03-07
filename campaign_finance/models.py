@@ -75,7 +75,7 @@ class Cycle(models.Model):
 class Filing(models.Model):
     cycle = models.ForeignKey(Cycle)
     committee = models.ForeignKey(Committee)
-    filing_id = models.IntegerField()
+    filing_id_raw = models.IntegerField()
     amend_id = models.IntegerField()
     form_id = models.CharField(max_length=7)
     start_date = models.DateField(null=True)
@@ -113,9 +113,9 @@ class Expenditure(models.Model):
     '''
     cycle = models.ForeignKey(Cycle)
     committee = models.ForeignKey(Committee)
+    filing = models.ForeignKey(Filing)
     
     ## Raw data fields
-    amend_id = models.IntegerField()
     amount = models.DecimalField(max_digits=16, decimal_places=2)
     bakref_tid = models.CharField(max_length=50L, blank=True)
     cmte_id = models.CharField(max_length=9L, blank=True)
@@ -125,7 +125,6 @@ class Expenditure(models.Model):
     expn_code = models.CharField(max_length=3L, blank=True)
     expn_date = models.DateField(null=True)
     expn_dscr = models.CharField(max_length=400L, blank=True)
-    filing_id = models.IntegerField()
     form_type = models.CharField(max_length=6L, blank=True)
     g_from_e_f = models.CharField(max_length=1L, blank=True) # back reference from Form 460 Schedule G to Schedule E or F
     line_item = models.IntegerField()
@@ -162,9 +161,9 @@ class Expenditure(models.Model):
 class Contribution(models.Model):
     cycle = models.ForeignKey(Cycle)
     committee = models.ForeignKey(Committee)
+    filing = models.ForeignKey(Filing)
     
     ## Raw data fields
-    amend_id = models.IntegerField()
     amount = models.DecimalField(decimal_places=2, max_digits=14, db_column='AMOUNT')
     bakref_tid = models.CharField(max_length=20L, blank=True)
     cmte_id = models.CharField(max_length=9L, blank=True)
@@ -185,7 +184,6 @@ class Contribution(models.Model):
     cum_ytd = models.DecimalField(decimal_places=2, null=True, max_digits=14, blank=True)
     date_thru = models.DateField(null=True, blank=True)
     entity_cd = models.CharField(max_length=3L)
-    filing_id = models.IntegerField()
     form_type = models.CharField(max_length=9L)
     intr_adr1 = models.CharField(max_length=55L, blank=True)
     intr_adr2 = models.CharField(max_length=55L, blank=True)
