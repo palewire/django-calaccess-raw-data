@@ -83,7 +83,7 @@ class Command(BaseCommand):
                 insert_pac.filer_id = filer_id
                 insert_pac.filer_type = filer_id_type
                 try:
-                    filer_name_obj = FilernameCd.objects.filter(filer_id=filer_id)[0]
+                    filer_name_obj = FilernameCd.objects.filter(filer_id=filer_id).exclude(naml='')[0]
                     insert_pac.name = (filer_name_obj.namt + ' ' + filer_name_obj.namf + ' ' + filer_name_obj.naml + ' ' + filer_name_obj.nams).strip()
                     insert_pac.xref_filer_id = filer_name_obj.xref_filer_id
                 except:
@@ -285,6 +285,7 @@ class Command(BaseCommand):
                 if len(insert_obj_list) == 10000:
                     Expenditure.objects.bulk_create(insert_obj_list)
                     insert_obj_list = []
+                
         if len(insert_obj_list) > 0:
             Expenditure.objects.bulk_create(insert_obj_list)
         
