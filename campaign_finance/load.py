@@ -77,6 +77,14 @@ def load():
     #except:
     #    print 'FAILED on load_committee_stats'
 
+def explore_links(qs_links):
+    for q in qs:
+        q_name_a = FilernameCd.objects.filter(filer_id=q.filer_id_a).exclude(naml='')[0]
+        name_a = (q_name_a.namt + ' ' + q_name_a.namf + ' ' + q_name_a.naml + ' ' + q_name_a.nams).strip()
+        q_name_b = FilernameCd.objects.filter(filer_id=q.filer_id_b).exclude(naml='')[0]
+        name_b = (q_name_b.namt + ' ' + q_name_b.namf + ' ' + q_name_b.naml + ' ' + q_name_b.nams).strip()
+        print '%s\t%s' % (name_a, name_b)
+
 def insert_cmte(filer_obj, filer_id_raw):
     insert_cmtee = Committee()
     insert_cmtee.filer = filer_obj # tie all candidate committees to the CAL-ACCESS candidate filer

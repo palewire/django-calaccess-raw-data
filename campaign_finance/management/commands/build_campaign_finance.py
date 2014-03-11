@@ -110,7 +110,7 @@ class Command(BaseCommand):
                         name = name,
                         xref_filer_id = xref_filer_id,
                     )
-                    insert_cmte(filer_obj, filer_cand_id)
+                    insert_cmte(filer_obj, filer_id)
                 else:
                     print 'filer_id %s might not be a candidate, take a look' % filer_id
                     break
@@ -129,13 +129,12 @@ class Command(BaseCommand):
                         insert_pac_linked.name = None
                         insert_pac_linked.xref_filer_id = None
                     insert_pac_linked.save()
-                    insert_cmte(insert_pac_linked, linked_pac_id)
+                    insert_cmte(insert_pac_linked, filer_id)
                 else:
                     print 'linked pac filer_id_b not unique for filer_id %s' % filer_id
                     break
         print 'loaded filers'
-    
-    
+
     def load_filings(self):
         insert_obj_list = []
         
@@ -159,12 +158,13 @@ class Command(BaseCommand):
                 if current_filing.rpt_end:
                     insert.end_date = current_filing.rpt_end.isoformat()
                 insert_obj_list.append(insert)
-            if len(insert_obj_list) == 10000:
-                Filing.objects.bulk_create(insert_obj_list)
-                insert_obj_list = []
+                if len(insert_obj_list) == 10000:
+                    Filing.objects.bulk_create(insert_obj_list)
+                    insert_obj_list = []
         
         if len(insert_obj_list) > 0:
             Filing.objects.bulk_create(insert_obj_list)
+            insert_obj_list = []
         
         print 'loaded filings'
     
@@ -200,12 +200,17 @@ class Command(BaseCommand):
                 'outstanding_debts': None,
             }
         }
+        insert_stats = {}
         insert_obj_list = []
         for f in Filing.objects.all():
             qs = SmryCd.objects.filter(filing_id=f.filing_id_raw, amend_id=f.amend_id)
-            if qs.count() == 0:
-                print 'no SmryCd data for Committee %s Filing %s Amend %s' % (f.committee.filer_id, f.filing_id_raw, f.amend_id)
-            else:
+            f_id = '%s-%s' % (f.filing_id_raw, f.amend_id)
+            insert_stats[f_id] = qs.count()
+            #if qs.count() == 0:
+            #    #print 'no SmryCd data for Committee %s Filing %s Amend %s' % (f.committee.filer_id, f.filing_id_raw, f.amend_id)
+            #    pass
+            #else:
+            if qs.count() > 0:
                 query_dict = summary_form_dict[f.form_id]
                 insert = Summary()
                 insert.committee = f.committee
@@ -218,14 +223,30 @@ class Command(BaseCommand):
                     except:
                         insert.__dict__[k] = 0
                 insert_obj_list.append(insert)
-            if len(insert_obj_list) == 10000:
-                Summary.objects.bulk_create(insert_obj_list)
-                insert_obj_list = []
+                if len(insert_obj_list) == 10000:
+                    Summary.objects.bulk_create(insert_obj_list)
+                    insert_obj_list = []
         
-        if len(insert_obj_list) == 10000:
+        if len(insert_obj_list)> 0:
             Summary.objects.bulk_create(insert_obj_list)
+            insert_obj_list = []
         
         print 'loaded summary'
+        
+        filings_no_data_cnt = 0
+        filings_with_data_cnt = 0
+        for v in insert_stats.values():
+            if v == 0:
+                filings_no_data_cnt += 1
+            elif v > 0:
+                filings_with_data_cnt += 1
+        
+        total_filing_cnt = Filing.objects.count()
+        pct_filings_have_data = (filings_with_data_cnt / float(filings_no_data_cnt))*100
+        print '%s total filings processed, %s percent have data' % (total_filing_cnt, pct_filings_have_data)
+        if Summary.objects.count() == filings_with_data_cnt:
+            print 'All filings with data represented in Summary table'
+        
     
     def load_expenditures(self):
         insert_stats = {}
@@ -288,13 +309,15 @@ class Command(BaseCommand):
                 
         if len(insert_obj_list) > 0:
             Expenditure.objects.bulk_create(insert_obj_list)
+            insert_obj_list = []
         
         cnt = Expenditure.objects.count()
         if sum(insert_stats.values()) == cnt:
             print 'loaded %s expenditures' % cnt
         else:
             print 'loaded %s expenditures but %s records queried' % (cnt, sum(insert_stats.values()))
-    
+        insert_stats = {}
+        
     def load_contributions(self):
         insert_stats = {}
         insert_obj_list = []
@@ -359,9 +382,12 @@ class Command(BaseCommand):
                     insert_obj_list = []
         if len(insert_obj_list) > 0:
             Contribution.objects.bulk_create(insert_obj_list)
+            insert_obj_list = []
         
         cnt = Contribution.objects.count()
         if sum(insert_stats.values()) == cnt:
             print 'loaded %s contributions' % cnt
         else:
             print 'loaded %s contributions but %s records queried' % (cnt, sum(insert_stats.values()))
+        
+        insert_stats = {}
