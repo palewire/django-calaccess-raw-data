@@ -2,7 +2,7 @@
 *.swp
 .DS_Store
 build
-django_calaccess_browser.egg-info
+django_calaccess_parser.egg-info
 reference
 dist
 data

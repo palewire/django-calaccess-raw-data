@@ -17,7 +17,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-calaccess-parser',
     version='0.1',
-    packages=['campaign_finance'],
+    packages=['calaccess'],
     include_package_data=True,
     license='MIT License',  # example license
     description='A simple Django app download and parse California campaign finance data from Cal-Access.',
