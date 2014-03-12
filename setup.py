@@ -52,5 +52,7 @@ setup(
         'MySQL-python==1.2.4',
         'argparse==1.2.1',
         'requests==2.2.1',
+        'progressbar==2.3',
+        'hurry.filesize==0.9',
     ],
 )
