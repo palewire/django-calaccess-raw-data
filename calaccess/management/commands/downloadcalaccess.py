@@ -86,6 +86,7 @@ class Command(BaseCommand):
     def set_options(self, *args, **kwargs):
         # Check for the user-defined data dir
         # otherwise put the data in the data dir under the project root
+
         data_dir = getattr(settings, 'CALACCESS_DOWNLOAD_DIR', os.path.join(settings.BASE_DIR, 'data'))
 
 
@@ -116,26 +117,30 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        self.set_options(*args, **options)
-        if options['download']:
-            if options['noinput']:
-                self.download()
-            else:
-                confirm = input(self.prompt)
-                if confirm != 'yes':
-                    print "Download cancelled."
-                    return False
-                self.download()
-        if options['unzip']:
-            self.unzip()
-        if options['prep']:
-            self.prep()
-        if options['clear']:
-            self.clear()
-        if options['clean']:
-            self.clean()
-        if options['load']:
-            self.load()
+        # execute the commands if DEBUG is set to False
+        if not settings.DEBUG:
+            self.set_options(*args, **options)
+            if options['download']:
+                if options['noinput']:
+                    self.download()
+                else:
+                    confirm = input(self.prompt.encode('utf-8'))
+                    if confirm != 'yes':
+                        print "Download cancelled."
+                        return False
+                    self.download()
+            if options['unzip']:
+                self.unzip()
+            if options['prep']:
+                self.prep()
+            if options['clear']:
+                self.clear()
+            if options['clean']:
+                self.clean()
+            if options['load']:
+                self.load()
+        else:
+            print "DEBUG is not set to False. Please change before running `downloadcalaccess`"
 
     def get_metadata(self):
         """
