@@ -7,22 +7,22 @@ Detailed documentation is in the "docs" directory.
 
 Quick start
 -----------
+1. pip install https://github.com/california-civic-data-coalition/django-calaccess-parser/archive/0.1-alpha.tar.gz
 
-1. Add "calaccess-browser" to your INSTALLED_APPS setting like this::
+2. Add "calaccess-browser" to your INSTALLED_APPS setting like this::
 
       INSTALLED_APPS = (
           ...
           'calaccess-browser',
       )
-2. Include the campaign finance URLconf in your project urls.py like this::
 
-	url(r'^finance/', include('campaign_finance.urls')),
+3. Set `settings.CALACCESS_DOWNLOAD_DIR` to where you want the data loaded
 
-3. Run `python manage.py syncdb` to create the campaign finance models.
+4. Run `python manage.py syncdb` to create the campaign finance models.
 
-4. Run `python manage.py build_campaign_finance` to load campaign finance models.
+5. Include the campaign finance URLconf in your project urls.py like this::
 
-5. Start the development server and visit http://127.0.0.1:8000/admin/
+    url(r'^finance/', include('campaign_finance.urls')),
+
+6. Start the development server and visit http://127.0.0.1:8000/admin/
    to inspect candidates and committee info (you'll need the Admin app enabled).
-
-6. Visit http://127.0.0.1:8000/browser/ to browse the data.
