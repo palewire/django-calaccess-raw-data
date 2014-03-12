@@ -84,8 +84,14 @@ class Command(BaseCommand):
     option_list = BaseCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):
+        # Check for the user-defined data dir
+        # otherwise put the data in the data dir under the project root
+
+        data_dir = getattr(settings, 'CALACCESS_DOWNLOAD_DIR', os.path.join(settings.BASE_DIR, 'data'))
+
+
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
-        self.data_dir = settings.CALACCESS_DOWNLOAD_DIR
+        self.data_dir = data_dir
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
@@ -111,26 +117,30 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        self.set_options(*args, **options)
-        if options['download']:
-            if options['noinput']:
-                self.download()
-            else:
-                confirm = input(self.prompt)
-                if confirm != 'yes':
-                    print "Download cancelled."
-                    return False
-                self.download()
-        if options['unzip']:
-            self.unzip()
-        if options['prep']:
-            self.prep()
-        if options['clear']:
-            self.clear()
-        if options['clean']:
-            self.clean()
-        if options['load']:
-            self.load()
+        # execute the commands if DEBUG is set to False
+        if not settings.DEBUG:
+            self.set_options(*args, **options)
+            if options['download']:
+                if options['noinput']:
+                    self.download()
+                else:
+                    confirm = input(self.prompt.encode('utf-8'))
+                    if confirm != 'yes':
+                        print "Download cancelled."
+                        return False
+                    self.download()
+            if options['unzip']:
+                self.unzip()
+            if options['prep']:
+                self.prep()
+            if options['clear']:
+                self.clear()
+            if options['clean']:
+                self.clean()
+            if options['load']:
+                self.load()
+        else:
+            print "DEBUG is not set to False. Please change before running `downloadcalaccess`"
 
     def get_metadata(self):
         """
@@ -153,7 +163,7 @@ class Command(BaseCommand):
         bytes = 0
         self.pbar.start()
         with open(self.zip_path, 'wb') as f:
-            for chunk in r.iter_content(chunk_size=1024): 
+            for chunk in r.iter_content(chunk_size=1024):
                 if chunk: # filter out keep-alive new chunks
                     f.write(chunk)
                     bytes += len(chunk)
@@ -214,7 +224,7 @@ class Command(BaseCommand):
         """
         print "Cleaning data files"
         csv.field_size_limit(1000000000)  # Up the CSV data limit
-        
+
         date_field_dict =  {
             'CVR_SO': [
                 'ACCT_OPENDT',
@@ -278,7 +288,7 @@ class Command(BaseCommand):
                 'PMT_DATE',
             ],
             'LCCM_CD': [
-              'CTRIB_DATE',  
+              'CTRIB_DATE',
             ],
            'LEMP_CD': [
                 'EFF_DATE'
@@ -320,7 +330,7 @@ class Command(BaseCommand):
                 'DATE_RCVD',
             ],
         }
-        
+
         # Loop through all the files in the source directory
         for name in os.listdir(self.tsv_dir):
             print "- %s" % name
@@ -333,12 +343,12 @@ class Command(BaseCommand):
             null_bytes = tsv_data.count('\x00')
             if null_bytes:
                 tsv_data = tsv_data.replace('\x00', ' ')
-             
+
             # Nuke ASCII 26 char, the "substitute character" or chr(26) in python
             sub_char = tsv_data.count('\x1a')
             if sub_char:
                 tsv_data = tsv_data.replace('\x1a', '')
-            
+
             # Convert the file to a CSV line by line.
             csv_path = os.path.join(
                 self.csv_dir,
@@ -351,13 +361,13 @@ class Command(BaseCommand):
                 continue
             else:
                 tsv_reader = StringIO(tsv_data)
-            
+
             headers = tsv_reader.next()
             headers = headers.decode("ascii", "replace").encode('utf-8')
             headers_csv = CSVKitReader(StringIO(headers), delimiter='\t')
             headers_list = headers_csv.next()
             csv_writer.writerow(headers_list)
-            
+
             line_number = 1
             for tsv_line in tsv_reader:
                 # Goofing around with the encoding while we're in there.
@@ -376,7 +386,7 @@ class Command(BaseCommand):
                     #csv_line_date_cleaned = date_clean_csv_line(csv_line.next())
                     #csv_writer.writerow(csv_line_date_cleaned)
                     csv_field_list = csv_line.next()
-                
+
                 if len(csv_field_list) == len(headers_list):
                     if name.replace('.TSV', '') in date_field_dict:
                         date_field_list = date_field_dict[name.replace('.TSV', '')]
@@ -389,13 +399,13 @@ class Command(BaseCommand):
                                     csv_field_list[headers_list.index(f)] = ''
                 else:
                     print '+++++ %s bad parse of line %s headers=%s & this line=%s' % (name, line_number, len(headers_list), len(csv_field_list))
-                csv_writer.writerow(csv_field_list) 
+                csv_writer.writerow(csv_field_list)
                 line_number += 1
-                
+
             # Shut it down
             tsv_reader.close()
             csv_file.close()
-    
+
     def load(self):
         '''
             Loads the cleaned up csv files into the database
@@ -405,29 +415,29 @@ class Command(BaseCommand):
         c = connection.cursor()
         c.execute('SHOW TABLES')
         table_list = [t[0] for t in c.fetchall()]
-        
+
         ### build a dictionary of tables and the paths to the csvs for loading
         table_dict = {}
         for name in os.listdir(self.csv_dir):
-            
+
             csv_path = os.path.join(
                 self.csv_dir,
                 name
             )
-            
+
             for table in table_list:
                 if table ==  name.replace('.csv', '').upper():
                     table_dict[name] = {'table_name': table, 'csv_path': csv_path}
-        
+
         ## load up the data
         for csv_name, query_dict in table_dict.items():
             #print 'working on %s' % csv_name
             table_name = query_dict['table_name']
             csv_path = query_dict['csv_path']
-            
+
             c.execute('DELETE FROM %s' % table_name)
             #print 'deleted records from %s' % table_name
-            
+
             bulk_sql_load_part_1 = '''
                 LOAD DATA LOCAL INFILE '%s'
                 INTO TABLE %s
@@ -439,18 +449,18 @@ class Command(BaseCommand):
             infile = open(csv_path)
             csv_reader = CSVKitReader(infile)
             headers = csv_reader.next()
-            
+
             infile.close()
             infile = open(csv_path)
             csv_record_cnt = len(infile.readlines()) - 1
             infile.close()
-            
+
             sql_fields = ['`%s`' % h for h in headers]
             bulk_sql_load =  bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
             cnt = c.execute(bulk_sql_load)
             transaction.commit_unless_managed()
-            
-            # check load, make sure record count matches 
+
+            # check load, make sure record count matches
             if cnt == csv_record_cnt:
                 print "record counts match\t\t\t\t%s" % csv_name
             else:
