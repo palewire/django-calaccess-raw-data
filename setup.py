@@ -7,6 +7,12 @@ except ImportError:
     use_setuptools()
     from setuptools import setup
 
+try:
+   import pypandoc
+   description = pypandoc.convert('README.md', 'rst')
+except (IOError, ImportError):
+   description = open('README.md').read()
+
 import os
 
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
@@ -28,7 +34,7 @@ setup(
     include_package_data=True,
     license='MIT License',  # example license
     description='A simple Django app download and parse California campaign finance data from Cal-Access.',
-    long_description=README,
+    long_description=description,
     url='https://github.com/california-civic-data-coalition',
     author='Agustin Armendariz, Aaron Williams, Ben Welsh',
     author_email='ben.welsh@latimes.com',
@@ -54,5 +60,6 @@ setup(
         'requests==2.2.1',
         'progressbar==2.3',
         'hurry.filesize==0.9',
+        'pypandoc==0.8.0',
     ],
 )
