@@ -5,7 +5,10 @@
 Detailed documentation is in the "docs" directory.
 
 ## Quick start
-1. ```bash $ pip install https://github.com/california-civic-data-coalition/django-calaccess-parser/archive/0.1-alpha.tar.gz```
+1. Install django-calaccess-parser with pip
+```bash
+$ pip install https://github.com/california-civic-data-coalition/django-calaccess-parser/archive/0.1-alpha.tar.gz
+```
 
 2. Add "calaccess-browser" to your INSTALLED_APPS setting like this:
 ```python
