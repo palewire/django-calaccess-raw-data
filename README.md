@@ -15,6 +15,24 @@ Detailed documentation is in the "docs" directory. *(coming soon)*
 $ pip install https://github.com/california-civic-data-coalition/django-calaccess-parser/archive/0.1-alpha.tar.gz
 ```
 
+- Configure the `DATABASE` dictionary in `settings.py`
+```python
+DEBUG = False
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'local_calaccess_db',
+        'USER': 'calaccessuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'local_infile': 1,
+        }
+    }
+}
+```
+
 - Add `calaccess` to your INSTALLED_APPS setting like this:
 ```python
 INSTALLED_APPS = (
