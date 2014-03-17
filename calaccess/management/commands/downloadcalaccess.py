@@ -87,7 +87,7 @@ class Command(BaseCommand):
         # Check for the user-defined data dir
         # otherwise put the data in the data dir under the project root
 
-        data_dir = getattr(settings, 'CALACCESS_DOWNLOAD_DIR', os.path.join(settings.BASE_DIR, 'data'))
+        data_dir = getattr(settings, 'CALACCESS_DOWNLOAD_DIR', os.path.join(settings.ROOT_DIR, 'data'))
 
 
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
