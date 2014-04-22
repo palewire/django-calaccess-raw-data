@@ -822,6 +822,13 @@ class LobbyAmendmentsCd(models.Model):
     class Meta:
         db_table = 'LOBBY_AMENDMENTS_CD'
 
+class LookupCode(models.Model):
+    code_type = models.IntegerField()
+    code_id = models.IntegerField()
+    code_desc = models.CharField(max_length=100)
+    class Meta:
+        db_table = 'LOOKUP_CODES_CD'
+
 class LothCd(models.Model):
     amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
     amount = models.DecimalField(decimal_places=2, null=True, max_digits=14, db_column='AMOUNT', blank=True) # Field name made lowercase.

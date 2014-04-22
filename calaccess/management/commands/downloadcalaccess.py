@@ -1,5 +1,6 @@
 import os
 import csv
+import pdb
 import shutil
 import zipfile
 import requests
@@ -15,7 +16,6 @@ from dateutil.parser import parse as dateparse
 from django.template.defaultfilters import date as dateformat
 from django.core.management.base import BaseCommand, CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
-
 
 PROMPT = """
 The CalAccess snapshot was last updated %s at %s, %s.
@@ -215,8 +215,8 @@ class Command(BaseCommand):
         """
         print "Clearing out unneeded files"
         shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
-        os.remove(self.zip_path)
-
+        os.remove(self.zip_path) 
+    
     def clean(self):
         """
         Clean up the raw data files from the state so they are
