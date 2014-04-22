@@ -12,7 +12,7 @@ Detailed documentation is in the "docs" directory. *(coming soon)*
 ## Installation
 - Install django-calaccess-parser with pip
 ```bash
-$ pip install https://github.com/california-civic-data-coalition/django-calaccess-parser/archive/0.2.1-alpha.zip
+$ pip install https://github.com/california-civic-data-coalition/django-calaccess-parser/archive/0.2.4-wip.zip
 ```
 
 - Configure the `DATABASE` dictionary in `settings.py`
