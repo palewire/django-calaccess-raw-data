@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import os
 try:
     from setuptools import setup
 except ImportError:
@@ -13,8 +14,6 @@ try:
    README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 except (IOError, ImportError):
    description = open('README.md').read()
-
-import os
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
