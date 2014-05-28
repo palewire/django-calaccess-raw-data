@@ -117,6 +117,11 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
+        '''
+        If DEBUG is not set to false Django imports will fail on MySQL errors.
+        This data comes with a bunch of encoding issues and malformed TSV files.
+        The import will not be perfect. But the errors should only constitute a minority of the total informations.
+        '''
         # execute the commands if DEBUG is set to False
         if not settings.DEBUG:
             self.set_options(*args, **options)
@@ -146,7 +151,7 @@ class Command(BaseCommand):
         """
         Returns basic metadata about the current CalAccess snapshot,
         like its size and the last time it was updated, while stopping
-        of short of actually downloading it.
+        short of actually downloading it.
         """
         request = requests.head(self.url)
         return {
@@ -220,7 +225,9 @@ class Command(BaseCommand):
     def clean(self):
         """
         Clean up the raw data files from the state so they are
-        ready to get loaded in the database.
+        ready to get loaded into the database.
+        Keep track of the date fields manually in the date_field_dict
+        so we can parse them into a format that works for import.
         """
         print "Cleaning data files"
         csv.field_size_limit(1000000000)  # Up the CSV data limit
@@ -410,6 +417,9 @@ class Command(BaseCommand):
         '''
             Loads the cleaned up csv files into the database
             Checks record count against csv line count
+            A new release of CSVKit has come out and it may
+            deal with the encoding issues better.
+            You might want to modify the code to use the new CSVKit release
         '''
         ## get a list of tables in the database
         c = connection.cursor()
