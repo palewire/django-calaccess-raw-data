@@ -53,7 +53,7 @@ setup(
     install_requires=[
         'csvkit==0.6.1',
         'python-dateutil==2.1',
-        'MySQL-python==1.2.4',
+        'MySQL-python==1.2.5',
         'argparse==1.2.1',
         'requests==2.2.1',
         'progressbar==2.3',
