@@ -371,7 +371,7 @@ class Cvr2RegistrationCd(models.Model):
     line_item = models.CharField(max_length=9L, db_column='LINE_ITEM', blank=True)
     rec_type = models.CharField(max_length=4L, db_column='REC_TYPE', blank=True)
     form_type = models.CharField(max_length=10L, db_column='FORM_TYPE', blank=True)
-    tran_id = models.CharField(max_length=20L, db_column='TR4AN_ID', blank=True)
+    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
     entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True)
     entity_id = models.CharField(max_length=9L, db_column='ENTITY_ID', blank=True)
     enty_naml = models.CharField(max_length=200L, db_column='ENTY_NAML', blank=True)
