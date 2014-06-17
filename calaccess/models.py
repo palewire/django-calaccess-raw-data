@@ -265,6 +265,23 @@ class CvrLobbyDisclosureCd(models.Model):
     class Meta:
         db_table = 'CVR_LOBBY_DISCLOSURE_CD'
 
+class Cvr2LobbyDisclosureCd(models.Model):
+    amend_id = models.IntegerField(db_column='AMEND_ID')
+    entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True)
+    entity_id = models.CharField(max_length=9L, db_column='ENTITY_ID', blank=True)
+    enty_namf = models.CharField(max_length=45L, db_column='ENTY_NAMF', blank=True)
+    enty_naml = models.CharField(max_length=200L, db_column='ENTY_NAML', blank=True)
+    enty_nams = models.CharField(max_length=10L, db_column='ENTY_NAMS', blank=True)
+    enty_namt = models.CharField(max_length=10L, db_column='ENTY_NAMT', blank=True)
+    enty_title = models.CharField(max_length=45L, db_column='ENTY_TITLE', blank=True)
+    filing_id = models.IntegerField(db_column='FILING_ID')
+    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE', blank=True)
+    line_item = models.IntegerField(db_column='LINE_ITEM')
+    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE', blank=True)
+    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
+    class Meta:
+        db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
+    
 class CvrRegistrationCd(models.Model):
     a_b_adr1 = models.CharField(max_length=55L, db_column='A_B_ADR1', blank=True) # Field name made lowercase.
     a_b_adr2 = models.CharField(max_length=55L, db_column='A_B_ADR2', blank=True) # Field name made lowercase.
@@ -347,6 +364,22 @@ class CvrRegistrationCd(models.Model):
     trade_cb = models.CharField(max_length=1L, db_column='TRADE_CB', blank=True) # Field name made lowercase.
     class Meta:
         db_table = 'CVR_REGISTRATION_CD'
+
+class Cvr2RegistrationCd(models.Model):
+    filing_id = models.IntegerField(db_column='FILING_ID')
+    amend_id = models.IntegerField(db_column='AMEND_ID')
+    line_item = models.CharField(max_length=9L, db_column='LINE_ITEM', blank=True)
+    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE', blank=True)
+    form_type = models.CharField(max_length=10L, db_column='FORM_TYPE', blank=True)
+    tran_id = models.CharField(max_length=20L, db_column='TR4AN_ID', blank=True)
+    entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD', blank=True)
+    entity_id = models.CharField(max_length=9L, db_column='ENTITY_ID', blank=True)
+    enty_naml = models.CharField(max_length=200L, db_column='ENTY_NAML', blank=True)
+    enty_namf = models.CharField(max_length=45L, db_column='ENTY_NAMF', blank=True)
+    enty_namt = models.CharField(max_length=10L, db_column='ENTY_NAMT', blank=True)
+    enty_nams = models.CharField(max_length=10L, db_column='ENTY_NAMS', blank=True)
+    class Meta:
+        db_table = 'CVR2_REGISTRATION_CD'
 
 class DebtCd(models.Model):
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True) # Field name made lowercase.
@@ -512,8 +545,8 @@ class FilerInterestsCd(models.Model):
         db_table = 'FILER_INTERESTS_CD'
 
 class FilerLinksCd(models.Model):
-    filer_id_a = models.IntegerField(db_column='FILER_ID_A') # Field name made lowercase.
-    filer_id_b = models.IntegerField(db_column='FILER_ID_B') # Field name made lowercase.
+    filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True) # Field name made lowercase.
+    filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True) # Field name made lowercase.
     active_flg = models.CharField(max_length=1L, db_column='ACTIVE_FLG') # Field name made lowercase.
     session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
     link_type = models.IntegerField(db_column='LINK_TYPE') # Field name made lowercase.
@@ -625,7 +658,7 @@ class LattCd(models.Model):
 
 class LccmCd(models.Model):
     acct_name = models.CharField(max_length=90L, db_column='ACCT_NAME', blank=True)
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amount = models.DecimalField(max_digits=16, decimal_places=2, db_column='AMOUNT')
     bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True)
     ctrib_date = models.DateField(db_column='CTRIB_DATE')
@@ -634,7 +667,7 @@ class LccmCd(models.Model):
     ctrib_nams = models.CharField(max_length=10L, db_column='CTRIB_NAMS', blank=True)
     ctrib_namt = models.CharField(max_length=10L, db_column='CTRIB_NAMT', blank=True)
     entity_cd = models.CharField(max_length=3, db_column='ENTITY_CD', blank=True)
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     form_type = models.CharField(max_length=7L, db_column='FORM_TYPE', blank=True)
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True)
@@ -687,7 +720,7 @@ class LempCd(models.Model):
         db_table = 'LEMP_CD'
 
 class LexpCd(models.Model):
-    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True) # Field name made lowercase.
     amount = models.DecimalField(decimal_places=2, null=True, max_digits=14, db_column='AMOUNT', blank=True) # Field name made lowercase.
     bakref_tid = models.CharField(max_length=20L, db_column='BAKREF_TID', blank=True) # Field name made lowercase.
     bene_amt = models.CharField(max_length=12L, db_column='BENE_AMT', blank=True) # Field name made lowercase.
@@ -697,7 +730,7 @@ class LexpCd(models.Model):
     entity_cd = models.CharField(max_length=3L, db_column='ENTITY_CD') # Field name made lowercase.
     expn_date = models.DateField(null=True, db_column='EXPN_DATE', blank=True) # Field name made lowercase.
     expn_dscr = models.CharField(max_length=90L, db_column='EXPN_DSCR', blank=True) # Field name made lowercase.
-    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True) # Field name made lowercase.
     form_type = models.CharField(max_length=7L, db_column='FORM_TYPE') # Field name made lowercase.
     line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
     memo_code = models.CharField(max_length=1L, db_column='MEMO_CODE', blank=True) # Field name made lowercase.
