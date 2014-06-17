@@ -51,6 +51,7 @@ setup(
 
     # dependencies
     install_requires=[
+        'django>=1.6',
         'csvkit==0.6.1',
         'python-dateutil==2.1',
         'MySQL-python==1.2.5',
