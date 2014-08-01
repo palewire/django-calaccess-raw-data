@@ -66,33 +66,3 @@ This'll take a while. Go grab some coffee or do something else productive with y
 
 Start the development server and visit [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
    to inspect the Cal-access data (you'll need the Admin app enabled).
-
-## Available flags for `downloadcalaccess`
-```
-Usage: manage.py downloadcalaccess [options] 
-
-Download the latest snapshot of the CalAccess database
-
-Options:
-  -v VERBOSITY, --verbosity=VERBOSITY
-                        Verbosity level; 0=minimal output, 1=normal output,
-                        2=verbose output, 3=very verbose output
-  --settings=SETTINGS   The Python path to a settings module, e.g.
-                        "myproject.settings.main". If this isn't provided, the
-                        DJANGO_SETTINGS_MODULE environment variable will be
-                        used.
-  --pythonpath=PYTHONPATH
-                        A directory to add to the Python path, e.g.
-                        "/home/djangoprojects/myproject".
-  --traceback           Raise on exception
-  --skip-download       Skip downloading of the ZIP archive
-  --skip-unzip          Skip unzipping of the archive
-  --skip-prep           Skip prepping of the unzipped archive
-  --skip-clear          Skip clearing out ZIP archive and extra files
-  --skip-clean          Skip cleaning up the raw data files
-  --skip-load           Skip loading up the raw data files
-  --noinput             Download the ZIP archive without asking permission
-  --version             show program's version number and exit
-  -h, --help            show this help message and exit
-
-```

@@ -1,22 +1,15 @@
-.. django-calaccess-parser documentation master file, created by
-   sphinx-quickstart on Thu Jul 31 17:37:49 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+django-calaccess-parser
+=======================
 
-Welcome to django-calaccess-parser's documentation!
-===================================================
+A simple Django app to download, extract and load the 
+`CAL-ACCESS <http://www.sos.ca.gov/prd/cal-access/>`_ campaign finance and lobbying activity database.
 
-Contents:
+Documentation
+-------------
 
 .. toctree::
    :maxdepth: 2
 
+   managementcommands
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
