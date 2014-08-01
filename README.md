@@ -1,4 +1,4 @@
-# Django Cal-Access parser
+# django-calaccess-parser
 
 A simple Django app to download, extract and load the [CAL-ACCESS](http://www.sos.ca.gov/prd/cal-access/) campaign finance and lobbying activity database into MySQL.
 
