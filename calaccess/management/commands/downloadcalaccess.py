@@ -79,6 +79,7 @@ custom_options = (
     ),
 )
 
+
 class Command(BaseCommand):
     help = 'Download the latest snapshot of the CalAccess database'
     option_list = BaseCommand.option_list + custom_options
@@ -86,9 +87,11 @@ class Command(BaseCommand):
     def set_options(self, *args, **kwargs):
         # Check for the user-defined data dir
         # otherwise put the data in the data dir under the project root
-
-        data_dir = getattr(settings, 'CALACCESS_DOWNLOAD_DIR', os.path.join(settings.ROOT_DIR, 'data'))
-
+        data_dir = getattr(
+            settings,
+            'CALACCESS_DOWNLOAD_DIR',
+            os.path.join(settings.ROOT_DIR, 'data')
+        )
 
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.data_dir = data_dir
@@ -117,11 +120,14 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        '''
+        """
         If DEBUG is not set to false Django imports will fail on MySQL errors.
-        This data comes with a bunch of encoding issues and malformed TSV files.
-        The import will not be perfect. But the errors should only constitute a minority of the total informations.
-        '''
+        This data comes with a bunch of encoding issues and malformed
+        TSV files.
+
+        The import will not be perfect. But the errors should only constitute
+        a minority of the total informations.
+        """
         # execute the commands if DEBUG is set to False
         if not settings.DEBUG:
             self.set_options(*args, **options)
@@ -145,7 +151,8 @@ class Command(BaseCommand):
             if options['load']:
                 self.load()
         else:
-            print "DEBUG is not set to False. Please change before running `downloadcalaccess`"
+            print "DEBUG is not set to False. Please change before running \
+`downloadcalaccess`"
 
     def get_metadata(self):
         """
@@ -169,7 +176,7 @@ class Command(BaseCommand):
         self.pbar.start()
         with open(self.zip_path, 'wb') as f:
             for chunk in r.iter_content(chunk_size=1024):
-                if chunk: # filter out keep-alive new chunks
+                if chunk:  # filter out keep-alive new chunks
                     f.write(chunk)
                     bytes += len(chunk)
                     self.pbar.update(bytes)
@@ -188,7 +195,8 @@ class Command(BaseCommand):
                 for word in words[:-1]:
                     drive, word = os.path.splitdrive(word)
                     head, word = os.path.split(word)
-                    if word in (os.curdir, os.pardir, ''): continue
+                    if word in (os.curdir, os.pardir, ''):
+                        continue
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
@@ -220,8 +228,8 @@ class Command(BaseCommand):
         """
         print "Clearing out unneeded files"
         shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
-        os.remove(self.zip_path) 
-    
+        os.remove(self.zip_path)
+
     def clean(self):
         """
         Clean up the raw data files from the state so they are
@@ -232,7 +240,7 @@ class Command(BaseCommand):
         print "Cleaning data files"
         csv.field_size_limit(1000000000)  # Up the CSV data limit
 
-        date_field_dict =  {
+        date_field_dict = {
             'CVR_SO': [
                 'ACCT_OPENDT',
                 'QUALFY_DT',
@@ -245,47 +253,47 @@ class Command(BaseCommand):
                 'RPTTHRUDT',
                 'THRU_DATE'
             ],
-           'CVR_LOBBY_DISCLOSURE_CD': [
+            'CVR_LOBBY_DISCLOSURE_CD': [
                 'CUM_BEG_DT',
                 'FROM_DATE',
                 'RPT_DATE',
                 'SIG_DATE',
                 'THRU_DATE'
             ],
-           'CVR_REGISTRATION_CD': [
+            'CVR_REGISTRATION_CD': [
                 'COMPLET_DT',
                 'EFF_DATE',
                 'QUAL_DATE',
                 'RPT_DATE',
                 'SIG_DATE'
             ],
-           'EXPN_CD': [
+            'EXPN_CD': [
                 'EXPN_DATE'
             ],
-           'FILERNAME_CD': [
+            'FILERNAME_CD': [
                 'EFFECT_DT'
             ],
-           'FILER_FILINGS_CD': [
+            'FILER_FILINGS_CD': [
                 'FILING_DATE',
                 'RPT_START',
                 'RPT_END',
                 'RPT_DATE'
             ],
-           'FILER_INTERESTS_CD': [
+            'FILER_INTERESTS_CD': [
                 'EFFECT_DATE'
             ],
-           'FILER_LINKS_CD': [
+            'FILER_LINKS_CD': [
                 'EFFECT_DT',
                 'TERMINATION_DT'
             ],
-           'FILER_TO_FILER_TYPE_CD': [
+            'FILER_TO_FILER_TYPE_CD': [
                 'EFFECT_DT',
                 'NYQ_DT'
             ],
-           'FILER_XREF_CD': [
+            'FILER_XREF_CD': [
                 'EFFECT_DT'
             ],
-           'FILING_PERIOD_CD': [
+            'FILING_PERIOD_CD': [
                 'START_DATE',
                 'END_DATE',
                 'DEADLINE'
@@ -295,33 +303,33 @@ class Command(BaseCommand):
                 'PMT_DATE',
             ],
             'LCCM_CD': [
-              'CTRIB_DATE',
+                'CTRIB_DATE',
             ],
-           'LEMP_CD': [
+            'LEMP_CD': [
                 'EFF_DATE'
             ],
-           'LEXP_CD': [
+            'LEXP_CD': [
                 'EXPN_DATE'
             ],
-           'LOAN_CD': [
+            'LOAN_CD': [
                 'LOAN_DATE1',
                 'LOAN_DATE2'
             ],
-           'LOBBY_AMENDMENTS_CD': [
+            'LOBBY_AMENDMENTS_CD': [
                 'ADD_L_EFF',
                 'ADD_LE_EFF',
                 'ADD_LF_EFF',
                 'DEL_LF_EFF',
                 'OTHER_EFF'
             ],
-           'LOTH_CD': [
+            'LOTH_CD': [
                 'PMT_DATE',
             ],
-           'RCPT_CD': [
+            'RCPT_CD': [
                 'DATE_THRU',
                 'RCPT_DATE'
             ],
-           'SMRY_CD': [
+            'SMRY_CD': [
                 'ELEC_DT'
             ],
             'S496_CD': [
@@ -351,7 +359,8 @@ class Command(BaseCommand):
             if null_bytes:
                 tsv_data = tsv_data.replace('\x00', ' ')
 
-            # Nuke ASCII 26 char, the "substitute character" or chr(26) in python
+            # Nuke ASCII 26 char, the "substitute character"
+            # or chr(26) in python
             sub_char = tsv_data.count('\x1a')
             if sub_char:
                 tsv_data = tsv_data.replace('\x1a', '')
@@ -380,32 +389,54 @@ class Command(BaseCommand):
                 # Goofing around with the encoding while we're in there.
                 tsv_line = tsv_line.decode("ascii", "replace").encode('utf-8')
                 # choking on fields with bad quoting again
-                # eg.  '"HEIGHT AIN\'T RIGHT DOWNTOWN\' (DOWNTOWN HEIGHTS LIMIT INITIATIVE)',
+                # eg. '"HEIGHT AIN\'T RIGHT DOWNTOWN\'',
                 # quotes aren't closed
                 try:
                     csv_line = CSVKitReader(StringIO(tsv_line), delimiter='\t')
-                    #csv_line_date_cleaned = date_clean_csv_line(csv_line.next())
-                    #csv_writer.writerow(csv_line_date_cleaned)
+                    # csv_line_date_cleaned = date_clean_csv_line(
+                    #    csv_line.next()
+                    # )
+                    # csv_writer.writerow(csv_line_date_cleaned)
                     csv_field_list = csv_line.next()
                 except:
-                    tsv_clean_line = ''.join(c for c in tsv_line if c not in ('"', "'")) # so strip all quotes for now
-                    csv_line = CSVKitReader(StringIO(tsv_clean_line), delimiter='\t')
-                    #csv_line_date_cleaned = date_clean_csv_line(csv_line.next())
-                    #csv_writer.writerow(csv_line_date_cleaned)
+                    tsv_clean_line = ''.join(
+                        c for c in tsv_line if c not in ('"', "'")
+                    )  # so strip all quotes for now
+                    csv_line = CSVKitReader(
+                        StringIO(tsv_clean_line),
+                        delimiter='\t'
+                    )
+                    # csv_line_date_cleaned = date_clean_csv_line(
+                    #     csv_line.next()
+                    # )
+                    # csv_writer.writerow(csv_line_date_cleaned)
                     csv_field_list = csv_line.next()
 
                 if len(csv_field_list) == len(headers_list):
                     if name.replace('.TSV', '') in date_field_dict:
-                        date_field_list = date_field_dict[name.replace('.TSV', '')]
+                        date_field_list = date_field_dict[name.replace(
+                            '.TSV', ''
+                        )]
                         for f in date_field_list:
                             if csv_field_list[headers_list.index(f)] != '':
                                 try:
-                                    csv_field_list[headers_list.index(f)] = dateformat(dateparse(csv_field_list[headers_list.index(f)]), 'Y-m-d')
+                                    k = headers_list.index(f)
+                                    csv_field_list[k] = dateformat(
+                                        dateparse(csv_field_list[k]), 'Y-m-d')
                                 except:
-                                    print '+++++++++++ INVALID DATE: %s\t%s\t%s' % (name, f, csv_field_list[headers_list.index(f)])
+                                    print '+ INVALID DATE: %s\t%s\t%s' % (
+                                        name,
+                                        f,
+                                        csv_field_list[headers_list.index(f)]
+                                    )
                                     csv_field_list[headers_list.index(f)] = ''
                 else:
-                    print '+++++ %s bad parse of line %s headers=%s & this line=%s' % (name, line_number, len(headers_list), len(csv_field_list))
+                    print '+ %s bad parse of %s headers=%s & line=%s' % (
+                        name,
+                        line_number,
+                        len(headers_list),
+                        len(csv_field_list)
+                    )
                 csv_writer.writerow(csv_field_list)
                 line_number += 1
 
@@ -414,39 +445,41 @@ class Command(BaseCommand):
             csv_file.close()
 
     def load(self):
-        '''
-            Loads the cleaned up csv files into the database
-            Checks record count against csv line count
-            A new release of CSVKit has come out and it may
-            deal with the encoding issues better.
-            You might want to modify the code to use the new CSVKit release
-        '''
-        ## get a list of tables in the database
+        """
+        Loads the cleaned up csv files into the database
+        Checks record count against csv line count
+        A new release of CSVKit has come out and it may
+        deal with the encoding issues better.
+        You might want to modify the code to use the new CSVKit release
+        """
+        # get a list of tables in the database
         c = connection.cursor()
         c.execute('SHOW TABLES')
         table_list = [t[0] for t in c.fetchall()]
 
-        ### build a dictionary of tables and the paths to the csvs for loading
+        # build a dictionary of tables and the paths to the csvs for loading
         table_dict = {}
         for name in os.listdir(self.csv_dir):
-
             csv_path = os.path.join(
                 self.csv_dir,
                 name
             )
 
             for table in table_list:
-                if table ==  name.replace('.csv', '').upper():
-                    table_dict[name] = {'table_name': table, 'csv_path': csv_path}
+                if table == name.replace('.csv', '').upper():
+                    table_dict[name] = {
+                        'table_name': table,
+                        'csv_path': csv_path
+                    }
 
-        ## load up the data
+        # load up the data
         for csv_name, query_dict in table_dict.items():
-            #print 'working on %s' % csv_name
+            # print 'working on %s' % csv_name
             table_name = query_dict['table_name']
             csv_path = query_dict['csv_path']
 
             c.execute('DELETE FROM %s' % table_name)
-            #print 'deleted records from %s' % table_name
+            # print 'deleted records from %s' % table_name
 
             bulk_sql_load_part_1 = '''
                 LOAD DATA LOCAL INFILE '%s'
@@ -466,7 +499,7 @@ class Command(BaseCommand):
             infile.close()
 
             sql_fields = ['`%s`' % h for h in headers]
-            bulk_sql_load =  bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
+            bulk_sql_load = bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
             cnt = c.execute(bulk_sql_load)
             transaction.commit_unless_managed()
 
@@ -474,4 +507,8 @@ class Command(BaseCommand):
             if cnt == csv_record_cnt:
                 print "record counts match\t\t\t\t%s" % csv_name
             else:
-                print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (cnt, csv_record_cnt, csv_name)
+                print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (
+                    cnt,
+                    csv_record_cnt,
+                    csv_name
+                )
