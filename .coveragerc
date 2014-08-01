@@ -1,0 +1,12 @@
+[run]
+include =
+    calaccess/views.py
+    calaccess/models.py
+    calaccess/admin.py
+    calaccess/views.py
+    calaccess/management/commands/downloadcalaccess.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    add_introspection_rules
