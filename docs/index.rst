@@ -11,5 +11,3 @@ Documentation
    :maxdepth: 2
 
    managementcommands
-
-
