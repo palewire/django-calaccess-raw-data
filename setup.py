@@ -1,22 +1,32 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os
-try:
-    from setuptools import setup
-except ImportError:
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup
+from setuptools import setup
+from distutils.core import Command
 
-try:
-   import pypandoc
-   description = pypandoc.convert('README.md', 'rst')
-   README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-except (IOError, ImportError):
-   description = open('README.md').read()
 
-# allow setup.py to be run from any path
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+class TestCommand(Command):
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        from django.conf import settings
+        settings.configure(
+            DATABASES={
+                'default': {
+                    'NAME': ':memory:',
+                    'ENGINE': 'django.db.backends.sqlite3'
+                }
+            },
+            INSTALLED_APPS=('calaccess',)
+        )
+        from django.core.management import call_command
+        call_command('test', 'calaccess')
+
 
 setup(
     name='django-calaccess-parser',
@@ -25,32 +35,26 @@ setup(
         'calaccess',
         'calaccess.management',
         'calaccess.management.commands',
-        'calaccess.toolbox',
-        'calaccess.toolbox.management',
-        'calaccess.toolbox.management.commands',
     ],
     include_package_data=True,
-    license='MIT License',  # example license
-    description='A simple Django app download and parse California campaign finance data from Cal-Access.',
-    long_description=description,
+    license='MIT',
+    description='A simple Django app to download, extract and load the [CAL-ACCESS](http://www.sos.ca.gov/prd/cal-access/) campaign finance and lobbying activity database.',
     url='https://github.com/california-civic-data-coalition',
-    author='Agustin Armendariz, Aaron Williams, Ben Welsh',
+    author='California Civic Data Coalition',
     author_email='ben.welsh@latimes.com',
-    classifiers=[
+    classifiers=(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License', # example license
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-    ],
-
-    # dependencies
-    install_requires=[
+    ),
+    install_requires=(
         'django>=1.6',
         'csvkit==0.6.1',
         'python-dateutil==2.1',
@@ -60,5 +64,6 @@ setup(
         'progressbar>=2.2',
         'hurry.filesize==0.9',
         'pypandoc==0.8.0',
-    ],
+    ),
+    cmdclass={'test': TestCommand}
 )
