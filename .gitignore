@@ -11,4 +11,3 @@ docs/_build
 .coverage
 .tox
 cover
-*.rst
