@@ -1,16 +1,17 @@
 # Django Cal-Access parser
 
-**django-calacces-parser** is a simple Django app to download, extract and load the [CAL-ACCESS](http://www.sos.ca.gov/prd/cal-access/) campaign finance and lobbying activity database into MySQL.
-
-Detailed documentation is in the "docs" directory. *(coming soon)*
+A simple Django app to download, extract and load the [CAL-ACCESS](http://www.sos.ca.gov/prd/cal-access/) campaign finance and lobbying activity database into MySQL.
 
 ## Requirements
+
 - Django 1.6
 - MySQL 5.5
 - Patience
 
 ## Installation
+
 - Install django-calaccess-parser with pip
+
 ```bash
 $ pip install https://github.com/california-civic-data-coalition/django-calaccess-parser/archive/master.zip
 ```
@@ -42,13 +43,19 @@ INSTALLED_APPS = (
 ```
 
 ## Loading the data
+
 - Set `settings.CALACCESS_DOWNLOAD_DIR` environment variable to your preferred path to store the data
 - Next, sync the database, create a Django admin user, and run the management command to the load the CAL Access data 
 ```bash
 $ python manage.py syncdb
 $ python manage.py downloadaccess
 ```
-:warning: This'll take a while. Go grab some coffee or do something else productive with your life.
+This'll take a while. Go grab some coffee or do something else productive with your life.
+
+## Explore data
+
+Start the development server and visit [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+   to inspect the Cal-access data (you'll need the Admin app enabled).
 
 ## Available flags for `downloadcalaccess`
 ```
@@ -79,12 +86,3 @@ Options:
   -h, --help            show this help message and exit
 
 ```
-## Explore data
-
-Start the development server and visit [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
-   to inspect the Cal-access data (you'll need the Admin app enabled).
-   
-## Authors
-- [Agustin Armendariz](https://github.com/armendariz)
-- [Ben Welsh](https://github.com/palewire)
-- [Aaron Williams](https://github.com/aboutaaron)
