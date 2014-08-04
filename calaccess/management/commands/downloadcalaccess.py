@@ -1,6 +1,5 @@
 import os
 import csv
-import pdb
 import shutil
 import zipfile
 import requests
@@ -14,7 +13,7 @@ from django.utils.six.moves import input
 from csvkit import CSVKitReader, CSVKitWriter
 from dateutil.parser import parse as dateparse
 from django.template.defaultfilters import date as dateformat
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 PROMPT = """
