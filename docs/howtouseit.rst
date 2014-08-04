@@ -71,8 +71,8 @@ and load it in the database. This'll take a while. Go grab some coffee.
 Exploring the data
 ------------------
 
-Start the development server and visit [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
-   to inspect the Cal-access data (you'll need Django's Admin app enabled).
+Start the development server and visit `http://localhost:8000/admin/ <http://127.0.0.1:8000/admin/>`_
+to inspect the CAL-ACESS data in your Django administration panel.
 
 .. code-block:: bash
 
