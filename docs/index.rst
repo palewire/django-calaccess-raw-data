@@ -10,4 +10,5 @@ Documentation
 .. toctree::
    :maxdepth: 2
 
+   howtouseit
    managementcommands
