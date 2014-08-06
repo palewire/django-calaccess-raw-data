@@ -118,6 +118,7 @@ class Command(BaseCommand):
             ],
             maxval=self.metadata['content-length']
         )
+        self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
         """
@@ -170,7 +171,8 @@ class Command(BaseCommand):
         """
         Download the ZIP file in pieces.
         """
-        print "Downloading ZIP file"
+        if self.verbosity:
+            print "Downloading ZIP file"
         r = requests.get(self.url, stream=True)
         bytes = 0
         self.pbar.start()
@@ -187,7 +189,8 @@ class Command(BaseCommand):
         """
         Unzip the snapshot file.
         """
-        print "Unzipping archive"
+        if self.verbosity:
+            print "Unzipping archive"
         with zipfile.ZipFile(self.zip_path) as zf:
             for member in zf.infolist():
                 words = member.filename.split('/')
@@ -204,7 +207,8 @@ class Command(BaseCommand):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
-        print "Prepping unzipped data"
+        if self.verbosity:
+            print "Prepping unzipped data"
         # Move the deep down directory we want out
         shutil.move(
             os.path.join(
@@ -226,7 +230,8 @@ class Command(BaseCommand):
         """
         Delete ZIP archive and files we don't need.
         """
-        print "Clearing out unneeded files"
+        if self.verbosity:
+            print "Clearing out unneeded files"
         shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
         os.remove(self.zip_path)
 
@@ -237,7 +242,8 @@ class Command(BaseCommand):
         Keep track of the date fields manually in the date_field_dict
         so we can parse them into a format that works for import.
         """
-        print "Cleaning data files"
+        if self.verbosity:
+            print "Cleaning data files"
         csv.field_size_limit(1000000000)  # Up the CSV data limit
 
         date_field_dict = {
@@ -348,7 +354,8 @@ class Command(BaseCommand):
 
         # Loop through all the files in the source directory
         for name in os.listdir(self.tsv_dir):
-            print "- %s" % name
+            if self.verbosity:
+                print "- %s" % name
 
             # Pull the data into memory
             tsv_path = os.path.join(self.tsv_dir, name)
@@ -373,7 +380,8 @@ class Command(BaseCommand):
             csv_file = open(csv_path, 'wb')
             csv_writer = CSVKitWriter(csv_file, quoting=csv.QUOTE_ALL)
             if tsv_data == '':
-                print 'no data in %s' % name
+                if self.verbosity:
+                    print 'no data in %s' % name
                 continue
             else:
                 tsv_reader = StringIO(tsv_data)
@@ -424,19 +432,21 @@ class Command(BaseCommand):
                                     csv_field_list[k] = dateformat(
                                         dateparse(csv_field_list[k]), 'Y-m-d')
                                 except:
-                                    print '+ INVALID DATE: %s\t%s\t%s' % (
-                                        name,
-                                        f,
-                                        csv_field_list[headers_list.index(f)]
-                                    )
-                                    csv_field_list[headers_list.index(f)] = ''
+                                    if self.verbosity:
+                                        print '+ INVALID DATE: %s\t%s\t%s' % (
+                                            name,
+                                            f,
+                                            csv_field_list[k]
+                                        )
+                                        csv_field_list[k] = ''
                 else:
-                    print '+ %s bad parse of %s headers=%s & line=%s' % (
-                        name,
-                        line_number,
-                        len(headers_list),
-                        len(csv_field_list)
-                    )
+                    if self.verbosity:
+                        print '+ %s bad parse of %s headers=%s & line=%s' % (
+                            name,
+                            line_number,
+                            len(headers_list),
+                            len(csv_field_list)
+                        )
                 csv_writer.writerow(csv_field_list)
                 line_number += 1
 
@@ -504,11 +514,12 @@ class Command(BaseCommand):
             transaction.commit_unless_managed()
 
             # check load, make sure record count matches
-            if cnt == csv_record_cnt:
-                print "record counts match\t\t\t\t%s" % csv_name
-            else:
-                print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (
-                    cnt,
-                    csv_record_cnt,
-                    csv_name
-                )
+            if self.verbosity:
+                if cnt == csv_record_cnt:
+                    print "record counts match\t\t\t\t%s" % csv_name
+                else:
+                    print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (
+                        cnt,
+                        csv_record_cnt,
+                        csv_name
+                    )
