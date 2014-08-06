@@ -1,7 +1,7 @@
 How to contribute
 =================
 
-This walkthrough will guide your through to install the source of this application
+This walkthrough will show you how to install the source code of this application
 to fix bugs and develop new features.
 
 First create a new virtualenv.
