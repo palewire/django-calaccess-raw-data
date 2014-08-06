@@ -12,6 +12,7 @@ Documentation
 
    howtouseit
    managementcommands
+   models 
    howtocontribute
 
 Other resources

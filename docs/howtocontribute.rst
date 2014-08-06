@@ -30,7 +30,10 @@ Move into it and install the Python dependencies.
     $ cd repo
     $ pip install -r requirements_dev.txt
 
-Make sure you have a MySQL database installed. If you don't, now is the time to hit Google and figure out how.
+Make sure you have a MySQL database installed. If you don't, now is the time to hit Google and figure out how. If
+you're having trouble with Apple's OSX operating system, posts like `this <http://benjsicam.me/blog/how-to-install-mysql-on-mac-os-x-using-homebrew-tutorial/>`_
+ or `this <http://stackoverflow.com/questions/4359131/brew-install-mysql-on-mac-os/6378429#6378429>`_ might help.
+
 Then create a new database named ``calaccess``.
 
 .. code-block:: bash
