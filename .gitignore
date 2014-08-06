@@ -12,3 +12,4 @@ docs/_build
 .tox
 example/data
 example/project/settings_local.py
+example/.static/
