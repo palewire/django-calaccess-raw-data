@@ -12,9 +12,10 @@ Documentation
 
    howtouseit
    managementcommands
+   howtocontribute
 
-Contributing
-------------
+Other resources
+---------------
 
 * Code repository: `https://github.com/california-civic-data-coalition/django-calaccess-parser <https://github.com/california-civic-data-coalition/django-calaccess-parser>`_
 * Issues: `https://github.com/california-civic-data-coalition/django-calaccess-parser/issues <https://github.com/california-civic-data-coalition/django-calaccess-parser/issues>`_

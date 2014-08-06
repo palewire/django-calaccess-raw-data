@@ -11,4 +11,4 @@ docs/_build
 .coverage
 .tox
 example/data
-example/settings_local.py
+example/project/settings_local.py
