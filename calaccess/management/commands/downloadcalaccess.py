@@ -89,11 +89,12 @@ class Command(BaseCommand):
         data_dir = getattr(
             settings,
             'CALACCESS_DOWNLOAD_DIR',
-            os.path.join(settings.ROOT_DIR, 'data')
+            os.path.join(settings.BASE_DIR, 'data')
         )
 
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.data_dir = data_dir
+        os.path.exists(self.data_dir) or os.mkdir(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")

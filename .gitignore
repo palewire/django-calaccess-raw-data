@@ -10,4 +10,5 @@ data
 docs/_build
 .coverage
 .tox
-cover
+example/data
+example/settings_local.py
