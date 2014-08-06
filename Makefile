@@ -1,15 +1,15 @@
-.PHONY: db docs example runserver test
+.PHONY: bootstrap docs runserver test
 
-db:
+bootstrap:
 	mysqladmin -h localhost -u root -pmysql drop calaccess
 	mysqladmin -h localhost -u root -pmysql create calaccess
+	python example/manage.py syncdb
+	python example/manage.py downloadcalaccess
+	python example/manage.py collectstatic --noinput
+	python example/manage.py runserver
 
 docs:
 	cd docs && make livehtml
-
-example:
-	python example/manage.py syncdb
-	python example/manage.py downloadcalaccess
 
 runserver:
 	python example/manage.py runserver
