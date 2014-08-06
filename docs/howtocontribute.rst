@@ -66,4 +66,4 @@ You might start by loading the data dump from the web.
 
 .. code-block:: bash
 
-    $ python example/manage.py downloadaccess
+    $ python example/manage.py downloadcalaccess
