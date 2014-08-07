@@ -30,18 +30,19 @@ Move into it and install the Python dependencies.
     $ cd repo
     $ pip install -r requirements_dev.txt
 
-Make sure you have a MySQL database installed. If you don't, now is the time to hit Google and figure out how. If
-you're having trouble with Apple's OSX operating system, posts like `this <http://benjsicam.me/blog/how-to-install-mysql-on-mac-os-x-using-homebrew-tutorial/>`_
- or `this <http://stackoverflow.com/questions/4359131/brew-install-mysql-on-mac-os/6378429#6378429>`_ might help.
+Make sure you have MySQL installed. If you don't, now is the time to hit Google and figure out how. If
+you're using Apple's OSX operating system, you can `install via Homebrew <http://benjsicam.me/blog/how-to-install-mysql-on-mac-os-x-using-homebrew-tutorial/>`_. If you need to clean up after a previous MySQL installation, `this might help <http://stackoverflow.com/questions/4359131/brew-install-mysql-on-mac-os/6378429#6378429>`_.
 
 Then create a new database named ``calaccess``.
 
 .. code-block:: bash
 
-    mysqladmin -h localhost -u root -pmysql create calaccess
+    mysqladmin -h localhost -u root -p create calaccess
 
-If you have a different username or password substitute it above. And then create a file at ``example/project/settings_local.py``
-where you where you save your custom database credentials. That might look something like this.
+If you have a different username, substitute it above. You'll be prompted for that user's mysql password.
+
+Then create a file at ``example/project/settings_local.py`` to save your custom database credentials. That 
+might look something like this.
 
 .. code-block:: python
 
