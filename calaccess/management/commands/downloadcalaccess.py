@@ -9,6 +9,7 @@ from hurry.filesize import size
 from django.conf import settings
 from optparse import make_option
 from django.utils.six.moves import input
+from calaccess import get_download_directory
 from csvkit import CSVKitReader, CSVKitWriter
 from django.db import connection, transaction
 from dateutil.parser import parse as dateparse
@@ -85,16 +86,8 @@ class Command(BaseCommand):
     option_list = BaseCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):
-        # Check for the user-defined data dir
-        # otherwise put the data in the data dir under the project root
-        data_dir = getattr(
-            settings,
-            'CALACCESS_DOWNLOAD_DIR',
-            os.path.join(settings.BASE_DIR, 'data')
-        )
-
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
-        self.data_dir = data_dir
+        self.data_dir = get_download_directory()
         os.path.exists(self.data_dir) or os.mkdir(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
