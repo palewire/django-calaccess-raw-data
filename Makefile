@@ -1,4 +1,4 @@
-.PHONY: bootstrap docs load runserver test
+.PHONY: bootstrap docs load runserver shell test
 
 bootstrap:
 	mysqladmin -h localhost -u root -pmysql drop calaccess
@@ -12,10 +12,13 @@ docs:
 	cd docs && make livehtml
 
 load:
-	python example/manage.py --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
+	python example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
 
 runserver:
 	python example/manage.py runserver
+
+shell:
+	python example/manage.py shell
 
 test:
 	coverage run setup.py test

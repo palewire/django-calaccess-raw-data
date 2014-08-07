@@ -1,8 +1,25 @@
 from __future__ import unicode_literals
 from django.db import models
+from calaccess import managers
 
 
-class CvrSo(models.Model):
+class CalAccessBaseModel(models.Model):
+    """
+    An abstract model with some tricks we'll reuse below.
+    """
+    objects = managers.CalAccessManager()
+
+    def get_csv_name(self):
+        return self.__class__.get_csv_name()
+
+    def get_csv_path(self):
+        return self.__class__.get_csv_path()
+
+    class Meta:
+        abstract = True
+
+
+class CvrSo(CalAccessBaseModel):
     acct_opendt = models.DateField(db_column="ACCT_OPENDT")
     actvty_lvl = models.CharField(
         max_length=2L, db_column="ACTVTY_LVL", blank=True
@@ -146,7 +163,7 @@ class CvrSo(models.Model):
         db_table = "CVR_SO_CD"
 
 
-class Cvr2CampaignDisclosureCd(models.Model):
+class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bal_juris = models.CharField(
         max_length=40L, db_column='BAL_JURIS', blank=True
@@ -256,7 +273,7 @@ class Cvr2CampaignDisclosureCd(models.Model):
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
 
-class CvrCampaignDisclosureCd(models.Model):
+class CvrCampaignDisclosureCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amendexp_1 = models.CharField(
         max_length=100L, db_column='AMENDEXP_1', blank=True
@@ -526,7 +543,7 @@ class CvrCampaignDisclosureCd(models.Model):
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
 
 
-class CvrLobbyDisclosureCd(models.Model):
+class CvrLobbyDisclosureCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     ctrib_n_cb = models.CharField(
         max_length=1L, db_column='CTRIB_N_CB', blank=True
@@ -670,7 +687,7 @@ class CvrLobbyDisclosureCd(models.Model):
         db_table = 'CVR_LOBBY_DISCLOSURE_CD'
 
 
-class Cvr2LobbyDisclosureCd(models.Model):
+class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     entity_cd = models.CharField(
         max_length=3L, db_column='ENTITY_CD', blank=True
@@ -709,7 +726,7 @@ class Cvr2LobbyDisclosureCd(models.Model):
         db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
 
 
-class CvrRegistrationCd(models.Model):
+class CvrRegistrationCd(CalAccessBaseModel):
     a_b_adr1 = models.CharField(
         max_length=55L, db_column='A_B_ADR1', blank=True
     )
@@ -922,7 +939,7 @@ class CvrRegistrationCd(models.Model):
         db_table = 'CVR_REGISTRATION_CD'
 
 
-class Cvr2RegistrationCd(models.Model):
+class Cvr2RegistrationCd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.CharField(
@@ -960,7 +977,7 @@ class Cvr2RegistrationCd(models.Model):
         db_table = 'CVR2_REGISTRATION_CD'
 
 
-class DebtCd(models.Model):
+class DebtCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amt_incur = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMT_INCUR'
@@ -1061,7 +1078,7 @@ class DebtCd(models.Model):
         db_table = 'DEBT_CD'
 
 
-class ExpnCd(models.Model):
+class ExpnCd(CalAccessBaseModel):
     agent_namf = models.CharField(
         max_length=45L, db_column='AGENT_NAMF', blank=True
     )
@@ -1221,7 +1238,7 @@ class ExpnCd(models.Model):
         db_table = 'EXPN_CD'
 
 
-class FilernameCd(models.Model):
+class FilernameCd(CalAccessBaseModel):
     xref_filer_id = models.CharField(
         max_length=7L, db_column='XREF_FILER_ID', db_index=True
     )
@@ -1246,14 +1263,14 @@ class FilernameCd(models.Model):
         db_table = 'FILERNAME_CD'
 
 
-class FilersCd(models.Model):
+class FilersCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
 
     class Meta:
         db_table = 'FILERS_CD'
 
 
-class FilerAcronymsCd(models.Model):
+class FilerAcronymsCd(CalAccessBaseModel):
     acronym = models.CharField(max_length=32L)
     filer_id = models.IntegerField()
 
@@ -1261,7 +1278,7 @@ class FilerAcronymsCd(models.Model):
         db_table = 'FILER_ACRONYMS_CD'
 
 
-class FilerFilingsCd(models.Model):
+class FilerFilingsCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     period_id = models.IntegerField(
@@ -1293,7 +1310,7 @@ class FilerFilingsCd(models.Model):
         db_table = 'FILER_FILINGS_CD'
 
 
-class FilerInterestsCd(models.Model):
+class FilerInterestsCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     interest_cd = models.IntegerField(db_column='INTEREST_CD')
@@ -1303,7 +1320,7 @@ class FilerInterestsCd(models.Model):
         db_table = 'FILER_INTERESTS_CD'
 
 
-class FilerLinksCd(models.Model):
+class FilerLinksCd(CalAccessBaseModel):
     filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True)
     filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True)
     active_flg = models.CharField(max_length=1L, db_column='ACTIVE_FLG')
@@ -1324,7 +1341,7 @@ class FilerLinksCd(models.Model):
         db_table = 'FILER_LINKS_CD'
 
 
-class FilerStatusTypesCd(models.Model):
+class FilerStatusTypesCd(CalAccessBaseModel):
     status_type = models.CharField(max_length=11L, db_column='STATUS_TYPE')
     status_desc = models.CharField(max_length=11L, db_column='STATUS_DESC')
 
@@ -1332,7 +1349,7 @@ class FilerStatusTypesCd(models.Model):
         db_table = 'FILER_STATUS_TYPES_CD'
 
 
-class FilerToFilerTypeCd(models.Model):
+class FilerToFilerTypeCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     filer_type = models.IntegerField(db_column='FILER_TYPE')
     active = models.CharField(max_length=1L, db_column='ACTIVE')
@@ -1372,7 +1389,7 @@ class FilerToFilerTypeCd(models.Model):
         db_table = 'FILER_TO_FILER_TYPE_CD'
 
 
-class FilerTypesCd(models.Model):
+class FilerTypesCd(CalAccessBaseModel):
     filer_type = models.IntegerField(db_column='FILER_TYPE')
     description = models.CharField(max_length=255L, db_column='DESCRIPTION')
     grp_type = models.IntegerField(null=True, db_column='GRP_TYPE', blank=True)
@@ -1387,7 +1404,7 @@ class FilerTypesCd(models.Model):
         db_table = 'FILER_TYPES_CD'
 
 
-class FilerXrefCd(models.Model):
+class FilerXrefCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     xref_id = models.CharField(max_length=32L, db_column='XREF_ID')
     effect_dt = models.DateField(db_column='EFFECT_DT')
@@ -1399,7 +1416,7 @@ class FilerXrefCd(models.Model):
         db_table = 'FILER_XREF_CD'
 
 
-class Filings(models.Model):
+class Filings(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     filing_type = models.IntegerField(db_column='FILING_TYPE')
 
@@ -1407,7 +1424,7 @@ class Filings(models.Model):
         db_table = 'FILINGS'
 
 
-class FilingPeriodCd(models.Model):
+class FilingPeriodCd(CalAccessBaseModel):
     period_id = models.IntegerField(db_column='PERIOD_ID')
     start_date = models.DateField(db_column='START_DATE')
     end_date = models.DateField(db_column='END_DATE')
@@ -1420,7 +1437,7 @@ class FilingPeriodCd(models.Model):
         db_table = 'FILING_PERIOD_CD'
 
 
-class HdrCd(models.Model):
+class HdrCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     cal_ver = models.CharField(max_length=4L, db_column='CAL_VER', blank=True)
     ef_type = models.CharField(max_length=3L, db_column='EF_TYPE', blank=True)
@@ -1445,7 +1462,7 @@ class HdrCd(models.Model):
         db_table = 'HDR_CD'
 
 
-class LattCd(models.Model):
+class LattCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
@@ -1505,7 +1522,7 @@ class LattCd(models.Model):
         db_table = 'LATT_CD'
 
 
-class LccmCd(models.Model):
+class LccmCd(CalAccessBaseModel):
     acct_name = models.CharField(
         max_length=90L, db_column='ACCT_NAME', blank=True
     )
@@ -1582,7 +1599,7 @@ class LccmCd(models.Model):
         db_table = 'LCCM_CD'
 
 
-class LempCd(models.Model):
+class LempCd(CalAccessBaseModel):
     agencylist = models.CharField(
         max_length=200L, db_column='AGENCYLIST', blank=True
     )
@@ -1650,7 +1667,7 @@ class LempCd(models.Model):
         db_table = 'LEMP_CD'
 
 
-class LexpCd(models.Model):
+class LexpCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amount = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
@@ -1720,7 +1737,7 @@ class LexpCd(models.Model):
         db_table = 'LEXP_CD'
 
 
-class LoanCd(models.Model):
+class LoanCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bakref_tid = models.CharField(
         max_length=20L, db_column='BAKREF_TID', blank=True
@@ -1879,7 +1896,7 @@ class LoanCd(models.Model):
         db_table = 'LOAN_CD'
 
 
-class LobbyAmendmentsCd(models.Model):
+class LobbyAmendmentsCd(CalAccessBaseModel):
     filing_id = models.CharField(max_length=9L, db_column='FILING_ID')
     amend_id = models.CharField(max_length=8L, db_column='AMEND_ID')
     rec_type = models.CharField(max_length=8L, db_column='REC_TYPE')
@@ -1995,7 +2012,7 @@ class LobbyAmendmentsCd(models.Model):
         db_table = 'LOBBY_AMENDMENTS_CD'
 
 
-class LookupCode(models.Model):
+class LookupCode(CalAccessBaseModel):
     code_type = models.IntegerField()
     code_id = models.IntegerField()
     code_desc = models.CharField(max_length=100)
@@ -2004,7 +2021,7 @@ class LookupCode(models.Model):
         db_table = 'LOOKUP_CODES_CD'
 
 
-class LothCd(models.Model):
+class LothCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     amount = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
@@ -2068,7 +2085,7 @@ class LothCd(models.Model):
         db_table = 'LOTH_CD'
 
 
-class LpayCd(models.Model):
+class LpayCd(CalAccessBaseModel):
     advan_amt = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='ADVAN_AMT', blank=True
@@ -2147,7 +2164,7 @@ class LpayCd(models.Model):
         db_table = 'LPAY_CD'
 
 
-class Names(models.Model):
+class Names(CalAccessBaseModel):
     namid = models.IntegerField(db_column='NAMID')
     naml = models.CharField(max_length=200L, db_column='NAML')
     namf = models.CharField(max_length=50L, db_column='NAMF')
@@ -2165,7 +2182,7 @@ class Names(models.Model):
         db_table = 'NAMES'
 
 
-class RcptCd(models.Model):
+class RcptCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amount = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMOUNT'
@@ -2356,7 +2373,7 @@ class RcptCd(models.Model):
         db_table = 'RCPT_CD'
 
 
-class SmryCd(models.Model):
+class SmryCd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     line_item = models.CharField(max_length=8L, db_column='LINE_ITEM')
@@ -2381,7 +2398,7 @@ class SmryCd(models.Model):
         db_table = 'SMRY_CD'
 
 
-class SpltCd(models.Model):
+class SpltCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     elec_amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
@@ -2403,7 +2420,7 @@ class SpltCd(models.Model):
         db_table = 'SPLT_CD'
 
 
-class S401Cd(models.Model):
+class S401Cd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -2514,7 +2531,7 @@ class S401Cd(models.Model):
         db_table = 'S401_CD'
 
 
-class S496Cd(models.Model):
+class S496Cd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -2544,7 +2561,7 @@ class S496Cd(models.Model):
         db_table = 'S496_CD'
 
 
-class S497Cd(models.Model):
+class S497Cd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -2653,7 +2670,7 @@ class S497Cd(models.Model):
         db_table = 'S497_CD'
 
 
-class S498Cd(models.Model):
+class S498Cd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
