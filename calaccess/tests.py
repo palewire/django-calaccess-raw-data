@@ -1,10 +1,14 @@
+import os
 from django.test import TestCase
+from django.test.utils import override_settings
+from django.db.models import get_app, get_models
 
 
-class SimpleTest(TestCase):
+class CalAccessTest(TestCase):
 
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+    @override_settings(BASE_DIR='example/')
+    def test_csv_gettrs(self):
+        model_list = get_models(get_app("calaccess"))
+        for m in model_list:
+            self.assertEqual(m.objects.get_csv_name(), m().get_csv_name())
+            self.assertEqual(m.objects.get_csv_path(), m().get_csv_path())

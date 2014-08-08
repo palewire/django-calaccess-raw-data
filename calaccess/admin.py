@@ -82,7 +82,7 @@ class FilerXrefCdAdmin(BaseAdmin):
     pass
 
 
-class FilingsAdmin(BaseAdmin):
+class FilingsCdAdmin(BaseAdmin):
     pass
 
 
@@ -130,7 +130,7 @@ class LpayCdAdmin(BaseAdmin):
     pass
 
 
-class NamesAdmin(BaseAdmin):
+class NamesCdAdmin(BaseAdmin):
     pass
 
 
@@ -187,7 +187,7 @@ admin.site.register(models.FilerStatusTypesCd, FilerStatusTypesCdAdmin)
 admin.site.register(models.FilerToFilerTypeCd, FilerToFilerTypeCdAdmin)
 admin.site.register(models.FilerTypesCd, FilerTypesCdAdmin)
 admin.site.register(models.FilerXrefCd, FilerXrefCdAdmin)
-admin.site.register(models.Filings, FilingsAdmin)
+admin.site.register(models.FilingsCd, FilingsCdAdmin)
 admin.site.register(models.FilingPeriodCd, FilingPeriodCdAdmin)
 admin.site.register(models.HdrCd, HdrCdAdmin)
 admin.site.register(models.LattCd, LattCdAdmin)
@@ -199,7 +199,7 @@ admin.site.register(models.LobbyAmendmentsCd, LobbyAmendmentsCdAdmin)
 admin.site.register(models.LookupCode, LookupCodeAdmin)
 admin.site.register(models.LothCd, LothCdAdmin)
 admin.site.register(models.LpayCd, LpayCdAdmin)
-admin.site.register(models.Names, NamesAdmin)
+admin.site.register(models.NamesCd, NamesCdAdmin)
 admin.site.register(models.RcptCd, RcptCdAdmin)
 admin.site.register(models.SmryCd, SmryCdAdmin)
 admin.site.register(models.SpltCd, SpltCdAdmin)

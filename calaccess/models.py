@@ -10,10 +10,10 @@ class CalAccessBaseModel(models.Model):
     objects = managers.CalAccessManager()
 
     def get_csv_name(self):
-        return self.__class__.get_csv_name()
+        return self.__class__.objects.get_csv_name()
 
     def get_csv_path(self):
-        return self.__class__.get_csv_path()
+        return self.__class__.objects.get_csv_path()
 
     class Meta:
         abstract = True
@@ -1416,12 +1416,12 @@ class FilerXrefCd(CalAccessBaseModel):
         db_table = 'FILER_XREF_CD'
 
 
-class Filings(CalAccessBaseModel):
+class FilingsCd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     filing_type = models.IntegerField(db_column='FILING_TYPE')
 
     class Meta:
-        db_table = 'FILINGS'
+        db_table = 'FILINGS_CD'
 
 
 class FilingPeriodCd(CalAccessBaseModel):
@@ -2164,7 +2164,7 @@ class LpayCd(CalAccessBaseModel):
         db_table = 'LPAY_CD'
 
 
-class Names(CalAccessBaseModel):
+class NamesCd(CalAccessBaseModel):
     namid = models.IntegerField(db_column='NAMID')
     naml = models.CharField(max_length=200L, db_column='NAML')
     namf = models.CharField(max_length=50L, db_column='NAMF')
@@ -2179,7 +2179,7 @@ class Names(CalAccessBaseModel):
     naml_search = models.CharField(max_length=200L, db_column='NAML_SEARCH')
 
     class Meta:
-        db_table = 'NAMES'
+        db_table = 'NAMES_CD'
 
 
 class RcptCd(CalAccessBaseModel):

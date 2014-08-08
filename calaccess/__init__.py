@@ -10,5 +10,5 @@ def get_download_directory():
         return getattr(settings, 'CALACCESS_DOWNLOAD_DIR')
     elif hasattr(settings, 'BASE_DIR'):
         return os.path.join(getattr(settings, 'BASE_DIR'), 'data')
-    raise ValuError("CalAccess download directory not configured. Set either \
+    raise ValueError("CalAccess download directory not configured. Set either \
 CALACCESS_DOWNLOAD_DIR or BASE_DIR in settings.py")
