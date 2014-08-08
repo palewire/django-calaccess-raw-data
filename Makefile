@@ -21,5 +21,7 @@ shell:
 	python example/manage.py shell
 
 test:
+	pep8 calaccess
+	pyflakes calaccess
 	coverage run setup.py test
 	coverage report -m

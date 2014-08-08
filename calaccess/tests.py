@@ -1,4 +1,3 @@
-import os
 from django.test import TestCase
 from django.test.utils import override_settings
 from django.db.models import get_app, get_models
