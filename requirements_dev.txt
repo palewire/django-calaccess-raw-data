@@ -31,5 +31,4 @@ tornado==3.1.1
 tox==1.7.2
 virtualenv==1.11.6
 watchdog==0.6.0
-wsgiref==0.1.2
 xlrd==0.9.3
