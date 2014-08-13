@@ -1,8 +1,7 @@
 django-calaccess-parser
 =======================
 
-A simple Django app to download, extract and load the 
-`CAL-ACCESS <http://www.sos.ca.gov/prd/cal-access/>`_ campaign finance and lobbying activity database.
+A Django app to download, extract and load campaign finance and lobbying activity data from the California Secretary of State's `CAL-ACCESS <http://www.sos.ca.gov/prd/cal-access/>`_  database
 
 Documentation
 -------------

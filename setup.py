@@ -38,8 +38,9 @@ setup(
     ],
     include_package_data=True,
     license='MIT',
-    description='A simple Django app to download, extract and load the \
-CAL-ACCESS campaign finance and lobbying activity database.',
+    description='A Django app to download, extract and load campaign \
+finance and lobbying activity data from the California \
+Secretary of State\'s CAL-ACCESS database',
     url='https://github.com/california-civic-data-coalition',
     author='California Civic Data Coalition',
     author_email='ben.welsh@latimes.com',
