@@ -1276,6 +1276,10 @@ class FilerAcronymsCd(CalAccessBaseModel):
 
     class Meta:
         db_table = 'FILER_ACRONYMS_CD'
+        ordering = ("id",)
+
+    def __unicode__(self):
+        return self.acronym
 
 
 class FilerFilingsCd(CalAccessBaseModel):

@@ -1,4 +1,4 @@
-.PHONY: bootstrap clean docs load runserver shell test
+.PHONY: bootstrap clean cleanfile docs load loadtable runserver shell test
 
 bootstrap:
 	mysqladmin -h localhost -u root -pmysql drop calaccess
@@ -11,11 +11,17 @@ bootstrap:
 clean:
 	python -m cProfile example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-load > speed.txt
 
+cleanfile:
+	python -m cProfile example/manage.py cleancalaccessfile CVR_SO_CD.TSV > speed.txt
+
 docs:
 	cd docs && make livehtml
 
 load:
 	python example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
+
+loadtable:
+	python example/manage.py loadcalaccessfile FilerAcronymsCd
 
 runserver:
 	python example/manage.py runserver
