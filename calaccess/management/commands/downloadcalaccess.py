@@ -15,7 +15,7 @@ from django.db import connection, transaction
 from dateutil.parser import parse as dateparse
 from django.db.models import get_models, get_app
 from django.template.defaultfilters import date as dateformat
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 PROMPT = """
@@ -123,31 +123,34 @@ class Command(BaseCommand):
         The import will not be perfect. But the errors should only constitute
         a minority of the total informations.
         """
-        # execute the commands if DEBUG is set to False
-        if not settings.DEBUG:
-            self.set_options(*args, **options)
-            if options['download']:
-                if options['noinput']:
-                    self.download()
-                else:
-                    confirm = input(self.prompt.encode('utf-8'))
-                    if confirm != 'yes':
-                        print "Download cancelled."
-                        return False
-                    self.download()
-            if options['unzip']:
-                self.unzip()
-            if options['prep']:
-                self.prep()
-            if options['clear']:
-                self.clear()
-            if options['clean']:
-                self.clean()
-            if options['load']:
-                self.load()
-        else:
-            print "DEBUG is not set to False. Please change before running \
-`downloadcalaccess`"
+        # Execute the commands only if DEBUG is set to False
+        if settings.DEBUG:
+            raise CommandError("DEBUG is not set to False. Please change \
+before running `downloadcalaccess`")
+
+        # Set the options
+        self.set_options(*args, **options)
+
+        # Get to work
+        if options['download']:
+            if options['noinput']:
+                self.download()
+            else:
+                confirm = input(self.prompt.encode('utf-8'))
+                if confirm != 'yes':
+                    print "Download cancelled."
+                    return False
+                self.download()
+        if options['unzip']:
+            self.unzip()
+        if options['prep']:
+            self.prep()
+        if options['clear']:
+            self.clear()
+        if options['clean']:
+            self.clean()
+        if options['load']:
+            self.load()
 
     def get_metadata(self):
         """
