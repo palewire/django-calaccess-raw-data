@@ -9,7 +9,7 @@ bootstrap:
 	python example/manage.py runserver
 
 clean:
-	python example/manage.py cleancalaccessfile ACRONYMS_CD.TSV
+	python -m cProfile example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-load > speed.txt
 
 docs:
 	cd docs && make livehtml
