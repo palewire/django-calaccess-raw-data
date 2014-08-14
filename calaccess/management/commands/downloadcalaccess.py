@@ -235,8 +235,6 @@ before running `downloadcalaccess`")
         """
         Clean up the raw data files from the state so they are
         ready to get loaded into the database.
-        Keep track of the date fields manually in the date_field_dict
-        so we can parse them into a format that works for import.
         """
         if self.verbosity:
             print "Cleaning data files"
@@ -248,52 +246,7 @@ before running `downloadcalaccess`")
     def load(self):
         """
         Loads the cleaned up csv files into the database
-        Checks record count against csv line count
-        A new release of CSVKit has come out and it may
-        deal with the encoding issues better.
-        You might want to modify the code to use the new CSVKit release
         """
-        # Get a list of tables in the database
-        table_list = get_models(get_app("calaccess"))
-
-        # load up the data
-        c = connection.cursor()
-        for table in table_list:
-            csv_name = table.objects.get_csv_name()
-            csv_path = table.objects.get_csv_path()
-
-            c.execute('DELETE FROM %s' % table._meta.db_table)
-
-            bulk_sql_load_part_1 = '''
-                LOAD DATA LOCAL INFILE '%s'
-                INTO TABLE %s
-                FIELDS TERMINATED BY ','
-                OPTIONALLY ENCLOSED BY '"'
-                IGNORE 1 LINES
-                (
-            ''' % (csv_path, table._meta.db_table)
-
-            infile = open(csv_path)
-            csv_reader = CSVKitReader(infile)
-            headers = csv_reader.next()
-            infile.close()
-
-            infile = open(csv_path)
-            csv_record_cnt = len(infile.readlines()) - 1
-            infile.close()
-
-            sql_fields = ['`%s`' % h for h in headers]
-            bulk_sql_load = bulk_sql_load_part_1 + ','.join(sql_fields) + ')'
-            cnt = c.execute(bulk_sql_load)
-            transaction.commit_unless_managed()
-
-            # check load, make sure record count matches
-            if self.verbosity:
-                if cnt == csv_record_cnt:
-                    print "record counts match\t\t\t\t%s" % csv_name
-                else:
-                    print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (
-                        cnt,
-                        csv_record_cnt,
-                        csv_name
-                    )
+        model_list = get_models(get_app("calaccess"))
+        for model in model_list:
+            call_command("loadcalaccessfile", model.__name__)

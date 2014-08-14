@@ -56,16 +56,13 @@ class Command(LabelCommand):
         for h in headers:
             if h in model.DATE_FIELDS:
                 header_sql_list.append('@`%s`' % h)
-                date_set_list.append("`%s` = DATE_FORMAT(str_to_date(@`%s`, \
-'%%c/%%e/%%Y'), '%%Y-%%m-%%d')" % (h, h))
+                date_set_list.append("`%s` = DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')" % (h, h))
             else:
                 header_sql_list.append('`%s`' % h)
 
         bulk_sql_load = bulk_sql_load_part_1 + ','.join(header_sql_list) + ')'
         if date_set_list:
             bulk_sql_load += " set %s" % ",".join(date_set_list)
-
-        print bulk_sql_load
 
         cnt = c.execute(bulk_sql_load)
         transaction.commit_unless_managed()
@@ -80,5 +77,3 @@ class Command(LabelCommand):
                     csv_record_cnt,
                     csv_name
                 )
-
-# "8/5/2014 12:00:00 AM",  "7/30/2014 12:00:00 AM"
