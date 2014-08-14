@@ -2,10 +2,8 @@ import os
 import csv
 from cStringIO import StringIO
 from calaccess import get_download_directory
-from csvkit import CSVKitReader, CSVKitWriter
-from dateutil.parser import parse as dateparse
+from csvkit import CSVKitReader
 from django.core.management.base import LabelCommand
-from django.template.defaultfilters import date as dateformat
 
 
 class Command(LabelCommand):
@@ -78,7 +76,7 @@ class Command(LabelCommand):
             tsv_line = tsv_line.decode("ascii", "replace").encode('utf-8')
 
             # Split on tabs so we can later spit it back out as CSV
-            csv_field_list = tsv_line.split("\t")
+            csv_field_list = tsv_line.replace("\r\n", "").split("\t")
 
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems

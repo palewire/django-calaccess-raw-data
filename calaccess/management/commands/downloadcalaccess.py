@@ -1,16 +1,14 @@
 import os
-import csv
 import shutil
 import zipfile
 import requests
 import progressbar
-from cStringIO import StringIO
 from hurry.filesize import size
 from django.conf import settings
 from optparse import make_option
 from django.utils.six.moves import input
 from calaccess import get_download_directory
-from csvkit import CSVKitReader, CSVKitWriter
+from csvkit import CSVKitReader
 from django.db import connection, transaction
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
