@@ -22,6 +22,9 @@ class Command(LabelCommand):
         deal with the encoding issues better.
         You might want to modify the code to use the new CSVKit release
         """
+        if self.verbosity:
+            print "- Loading %s" % model_name
+
         model = get_model("calaccess", model_name)
 
         # load up the data
@@ -70,10 +73,9 @@ class Command(LabelCommand):
         # check load, make sure record count matches
         if self.verbosity:
             if cnt == csv_record_cnt:
-                print "record counts match\t\t\t\t%s" % csv_name
+                print "-- record counts match"
             else:
-                print 'table_cnt: %s\tcsv_lines: %s\t\t%s' % (
+                print '-- Records don\'t match. Table: %s\tCSV: %s' % (
                     cnt,
                     csv_record_cnt,
-                    csv_name
                 )
