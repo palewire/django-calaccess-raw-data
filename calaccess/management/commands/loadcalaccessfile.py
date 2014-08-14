@@ -1,8 +1,6 @@
-import os
 import csv
 from django.db import connection, transaction
 from django.db.models.loading import get_model
-from calaccess import get_download_directory
 from django.core.management.base import LabelCommand
 
 
@@ -58,7 +56,8 @@ class Command(LabelCommand):
         for h in headers:
             if h in model.DATE_FIELDS:
                 header_sql_list.append('@`%s`' % h)
-                date_set_list.append("`%s` = DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')" % (h, h))
+                date_set_list.append("`%s` = DATE_FORMAT(str_to_date(@`%s`, \
+'%%c/%%e/%%Y'), '%%Y-%%m-%%d')" % (h, h))
             else:
                 header_sql_list.append('`%s`' % h)
 

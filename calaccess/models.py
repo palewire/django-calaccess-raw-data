@@ -1106,7 +1106,7 @@ class DebtCd(CalAccessBaseModel):
 
 
 class ExpnCd(CalAccessBaseModel):
-    DATE_FIELDS = ['EXPN_DATE',]
+    DATE_FIELDS = ['EXPN_DATE', ]
     agent_namf = models.CharField(
         max_length=45L, db_column='AGENT_NAMF', blank=True
     )
@@ -1267,7 +1267,7 @@ class ExpnCd(CalAccessBaseModel):
 
 
 class FilernameCd(CalAccessBaseModel):
-    DATE_FIELDS = ['EFFECT_DT',]
+    DATE_FIELDS = ['EFFECT_DT', ]
     xref_filer_id = models.CharField(
         max_length=7L, db_column='XREF_FILER_ID', db_index=True
     )
