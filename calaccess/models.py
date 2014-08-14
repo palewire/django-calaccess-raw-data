@@ -7,6 +7,7 @@ class CalAccessBaseModel(models.Model):
     """
     An abstract model with some tricks we'll reuse below.
     """
+    DATE_FIELDS = []
     objects = managers.CalAccessManager()
 
     def get_csv_name(self):
@@ -20,6 +21,10 @@ class CalAccessBaseModel(models.Model):
 
 
 class CvrSo(CalAccessBaseModel):
+    DATE_FIELDS = [
+        'ACCT_OPENDT',
+        'QUALFY_DT',
+    ]
     acct_opendt = models.DateField(db_column="ACCT_OPENDT")
     actvty_lvl = models.CharField(
         max_length=2L, db_column="ACTVTY_LVL", blank=True

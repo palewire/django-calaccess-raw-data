@@ -21,7 +21,7 @@ load:
 	python example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
 
 loadtable:
-	python example/manage.py loadcalaccessfile FilerAcronymsCd
+	python example/manage.py loadcalaccessfile CvrSo
 
 runserver:
 	python example/manage.py runserver
