@@ -18,7 +18,7 @@ livereload==2.0.0
 openpyxl==2.0.4
 pathtools==0.1.2
 pep8==1.5.7
-progressbar==2.3
+#progressbar==2.3
 py==1.4.22
 pyflakes==0.8.1
 python-coveralls==2.4.2
