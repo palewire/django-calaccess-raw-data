@@ -1,4 +1,4 @@
-.PHONY: bootstrap docs load runserver shell test
+.PHONY: bootstrap clean docs load runserver shell test
 
 bootstrap:
 	mysqladmin -h localhost -u root -pmysql drop calaccess
@@ -7,6 +7,9 @@ bootstrap:
 	python example/manage.py downloadcalaccess
 	python example/manage.py collectstatic --noinput
 	python example/manage.py runserver
+
+clean:
+	python example/manage.py cleancalaccessfile ACRONYMS_CD.TSV
 
 docs:
 	cd docs && make livehtml
