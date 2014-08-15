@@ -128,7 +128,7 @@ before running `downloadcalaccess`")
                 confirm = input(self.prompt.encode('utf-8'))
                 if confirm != 'yes':
                     print "Download cancelled."
-                    return False
+                    return
                 self.download()
         if options['unzip']:
             self.unzip()
