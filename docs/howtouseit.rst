@@ -8,7 +8,7 @@ The latest official release of the application can be installed from the Python 
 
 .. code-block:: bash
 
-    $ pip install django-calaccess-parser
+    $ pip install django-calaccess-raw-data
 
 The app needs to be added to the ``INSTALLED_APPS`` in your Django project's settings.
 
@@ -16,7 +16,7 @@ The app needs to be added to the ``INSTALLED_APPS`` in your Django project's set
 
     INSTALLED_APPS = (
         # ... other apps up here ...
-        'calaccess',
+        'calaccess_raw',
     )
 
 Also in the Django settings, configure a database connection. Currently this application only supports MySQL backends.

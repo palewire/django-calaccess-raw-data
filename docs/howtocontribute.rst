@@ -8,20 +8,20 @@ First create a new virtualenv.
 
 .. code-block:: bash
 
-    $ virtualenv django-calaccess-parser
+    $ virtualenv django-calaccess-raw-data
 
 Jump in.
 
 .. code-block:: bash
 
-    $ cd django-calaccess-parser
+    $ cd django-calaccess-raw-data
     $ . bin/activate
 
-Clone the repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-parser>`_.
+Clone the repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_.
 
 .. code-block:: bash
 
-    $ git clone https://github.com/california-civic-data-coalition/django-calaccess-parser.git repo
+    $ git clone https://github.com/california-civic-data-coalition/django-calaccess-raw-data.git repo
 
 Move into it and install the Python dependencies.
 
@@ -37,7 +37,7 @@ Then create a new database named ``calaccess``.
 
 .. code-block:: bash
 
-    mysqladmin -h localhost -u root -p create calaccess
+    mysqladmin -h localhost -u root -p create calaccess_raw
 
 If you have a different username, substitute it above. You'll be prompted for that user's mysql password.
 
@@ -49,7 +49,7 @@ might look something like this.
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'calaccess',
+            'NAME': 'calaccess_raw',
             'USER': 'yourusername', # <-- This
             'PASSWORD': 'yourpassword', # <-- And this
             'HOST': 'localhost',
