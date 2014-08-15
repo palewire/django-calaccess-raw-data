@@ -633,6 +633,7 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     )
 
     class Meta:
+        app_label = 'calaccess'
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
 
