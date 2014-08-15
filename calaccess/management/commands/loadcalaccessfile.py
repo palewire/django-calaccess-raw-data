@@ -31,7 +31,6 @@ class Command(LabelCommand):
         # load up the data
         c = connection.cursor()
 
-        csv_name = model.objects.get_csv_name()
         csv_path = model.objects.get_csv_path()
 
         c.execute('DELETE FROM %s' % model._meta.db_table)
