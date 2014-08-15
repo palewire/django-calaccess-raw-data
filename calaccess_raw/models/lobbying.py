@@ -16,13 +16,13 @@ class CvrRegistrationCd(CalAccessBaseModel):
         F607 -- Notice of Withdrawl
     
     '''
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'COMPLET_DT',
         'EFF_DATE',
         'QUAL_DATE',
         'RPT_DATE',
         'SIG_DATE'
-    ]
+    )
     a_b_adr1 = models.CharField(
         max_length=55L, db_column='A_B_ADR1', blank=True
     )
@@ -234,6 +234,8 @@ class CvrRegistrationCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR_REGISTRATION_CD'
+        verbose_name = 'CVR_REGISTRATION_CD'
+        verbose_name_plural = 'CVR_REGISTRATION_CD'
 
 
 class Cvr2RegistrationCd(CalAccessBaseModel):
@@ -285,6 +287,8 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR2_REGISTRATION_CD'
+        verbose_name = 'CVR2_REGISTRATION_CD'
+        verbose_name_plural = 'CVR2_REGISTRATION_CD'
 
 
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
@@ -447,6 +451,8 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     class Meta:
         app_label = "calaccess_raw"
         db_table = 'CVR_LOBBY_DISCLOSURE_CD'
+        verbose_name = 'CVR_LOBBY_DISCLOSURE_CD'
+        verbose_name_plural = 'CVR_LOBBY_DISCLOSURE_CD'
 
 
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
@@ -497,6 +503,8 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
+        verbose_name = 'CVR2_LOBBY_DISCLOSURE_CD'
+        verbose_name_plural = 'CVR2_LOBBY_DISCLOSURE_CD'
 
 
 class LobbyAmendmentsCd(CalAccessBaseModel):
@@ -628,6 +636,8 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBY_AMENDMENTS_CD'
+        verbose_name = 'LOBBY_AMENDMENTS_CD'
+        verbose_name_plural = 'LOBBY_AMENDMENTS_CD'
 
 
 class F690P2Cd(CalAccessBaseModel):
@@ -664,6 +674,8 @@ class F690P2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'F690P2_CD'
+        verbose_name = 'F690P2_CD'
+        verbose_name_plural = 'F690P2_CD'
 
 
 class LattCd(CalAccessBaseModel):
@@ -676,10 +688,10 @@ class LattCd(CalAccessBaseModel):
         F640 -- Government Agencies Reporting of "Other Payments to Influence Legislative or Administrative Action" (Attatchment)
     
     '''
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'CUMBEG_DT',
         'PMT_DATE',
-    ]
+    )
     amend_id = models.IntegerField(db_column='AMEND_ID')
     amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
@@ -738,6 +750,8 @@ class LattCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LATT_CD'
+        verbose_name = 'LATT_CD'
+        verbose_name_plural = 'LATT_CD'
 
 
 class LexpCd(CalAccessBaseModel):
@@ -752,9 +766,9 @@ class LexpCd(CalAccessBaseModel):
         F645 Part 2A
     
     '''
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'EXPN_DATE',
-    ]
+    )
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amount = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
@@ -823,6 +837,8 @@ class LexpCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LEXP_CD'
+        verbose_name = 'LEXP_CD'
+        verbose_name_plural = 'LEXP_CD'
 
 
 class LccmCd(CalAccessBaseModel):
@@ -836,9 +852,9 @@ class LccmCd(CalAccessBaseModel):
         F645 Part 3B
     
     '''
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'CTRIB_DATE',
-    ]
+    )
     acct_name = models.CharField(
         max_length=90L, db_column='ACCT_NAME', blank=True
     )
@@ -914,6 +930,8 @@ class LccmCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LCCM_CD'
+        verbose_name = 'LCCM_CD'
+        verbose_name_plural = 'LCCM_CD'
 
 
 class LothCd(CalAccessBaseModel):
@@ -989,6 +1007,8 @@ class LothCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOTH_CD'
+        verbose_name = 'LOTH_CD'
+        verbose_name_plural = 'LOTH_CD'
 
 
 class LempCd(CalAccessBaseModel):
@@ -1071,6 +1091,8 @@ class LempCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LEMP_CD'
+        verbose_name = 'LEMP_CD'
+        verbose_name_plural = 'LEMP_CD'
 
 
 class LpayCd(CalAccessBaseModel):
@@ -1159,3 +1181,5 @@ class LpayCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LPAY_CD'
+        verbose_name = 'LPAY_CD'
+        verbose_name_plural = 'LPAY_CD'
