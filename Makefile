@@ -15,7 +15,7 @@ cleanfile:
 	python -m cProfile example/manage.py cleancalaccessfile CVR_SO_CD.TSV > speed.txt
 
 csv2db:
-	csvsql -i mysql --table LOBBYING_CHG_LOG_CD example/data/csv/lobbying_chg_log_cd.csv
+	head -n 500 example/data/csv/efs_filing_log_cd.csv | csvsql -i mysql --table EFS_FILING_LOG_CD
 
 docs:
 	cd docs && make livehtml
@@ -24,7 +24,7 @@ load:
 	python -m cProfile example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
 
 loadtable:
-	python example/manage.py loadcalaccessfile CvrSo
+	python example/manage.py loadcalaccessfile BallotMeasuresCd
 
 runserver:
 	python example/manage.py runserver

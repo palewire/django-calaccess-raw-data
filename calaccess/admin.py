@@ -14,6 +14,10 @@ class AddressCdAdmin(BaseAdmin):
     pass
 
 
+class BallotMeasuresCdAdmin(BaseAdmin):
+    pass
+
+
 class CvrSoAdmin(BaseAdmin):
     pass
 
@@ -176,6 +180,7 @@ class S498CdAdmin(BaseAdmin):
 
 admin.site.register(models.AcronymsCd, AcronymsCdAdmin)
 admin.site.register(models.AddressCd, AddressCdAdmin)
+admin.site.register(models.BallotMeasuresCd, BallotMeasuresCdAdmin)
 admin.site.register(models.CvrSo, CvrSoAdmin)
 admin.site.register(
     models.Cvr2CampaignDisclosureCd,

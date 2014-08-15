@@ -46,6 +46,19 @@ class AddressCd(CalAccessBaseModel):
         db_table = "ADDRESS_CD"
 
 
+class BallotMeasuresCd(CalAccessBaseModel):
+    election_date = models.DateField(db_column='ELECTION_DATE')
+    filer_id = models.IntegerField(db_column='FILER_ID')
+    measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
+    measure_name = models.CharField(db_column='MEASURE_NAME', max_length=163)
+    measure_short_name = models.CharField(db_column='MEASURE_SHORT_NAME',
+        max_length=50, blank=True)
+    jurisdiction = models.CharField(db_column='JURISDICTION', max_length=9)
+
+    class Meta:
+        db_table = 'BALLOT_MEASURES_CD'
+
+
 class CvrSo(CalAccessBaseModel):
     DATE_FIELDS = [
         'ACCT_OPENDT',
