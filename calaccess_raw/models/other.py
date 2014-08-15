@@ -14,9 +14,9 @@ class AcronymsCd(CalAccessBaseModel):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = "ACRONYMS_CD"
-        verbose_name = 'AcronymsCd'
-        verbose_name_plural = 'AcronymsCd'
+        db_table = 'ACRONYMS_CD'
+        verbose_name = 'ADDRESS_CD'
+        verbose_name_plural = 'ADDRESS_CD'
 
 
 class AddressCd(CalAccessBaseModel):
@@ -30,9 +30,9 @@ class AddressCd(CalAccessBaseModel):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = "ADDRESS_CD"
-        verbose_name = 'AddressCd'
-        verbose_name_plural = 'AddressCd'
+        db_table = 'ADDRESS_CD'
+        verbose_name = 'ADDRESS_CD'
+        verbose_name_plural = 'ADDRESS_CD'
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
@@ -52,8 +52,8 @@ class BallotMeasuresCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'BALLOT_MEASURES_CD'
-        verbose_name = 'BallotMeasuresCd'
-        verbose_name_plural = 'BallotMeasuresCd'
+        verbose_name = 'BALLOT_MEASURES_CD'
+        verbose_name_plural = 'BALLOT_MEASURES_CD'
 
 
 class EfsFilingLogCd(CalAccessBaseModel):
@@ -67,8 +67,8 @@ class EfsFilingLogCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'EFS_FILING_LOG_CD'
-        verbose_name = 'EfsFilingLogCd'
-        verbose_name_plural = 'EfsFilingLogCd'
+        verbose_name = 'EFS_FILING_LOG_CD'
+        verbose_name_plural = 'EFS_FILING_LOG_CD'
 
 
 class FilernameCd(CalAccessBaseModel):
@@ -98,8 +98,8 @@ class FilernameCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILERNAME_CD'
-        verbose_name = 'FilernameCd'
-        verbose_name_plural = 'FilernameCd'
+        verbose_name = 'FILERNAME_CD'
+        verbose_name_plural = 'FILERNAME_CD'
 
 
 class FilersCd(CalAccessBaseModel):
@@ -108,8 +108,8 @@ class FilersCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILERS_CD'
-        verbose_name = 'FilersCd'
-        verbose_name_plural = 'FilersCd'
+        verbose_name = 'FILERS_CD'
+        verbose_name_plural = 'FILERS_CD'
 
 
 class FilerAcronymsCd(CalAccessBaseModel):
@@ -119,9 +119,9 @@ class FilerAcronymsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_ACRONYMS_CD'
+        verbose_name = 'FILER_ACRONYMS_CD'
+        verbose_name_plural = 'FILER_ACRONYMS_CD'
         ordering = ("id",)
-        verbose_name = 'FilerAcronymsCd'
-        verbose_name_plural = 'FilerAcronymsCd'
 
     def __unicode__(self):
         return self.acronym
@@ -141,8 +141,8 @@ class FilerAddressCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_ADDRESS_CD'
-        verbose_name = 'FilerAddressCd'
-        verbose_name_plural = 'FilerAddressCd'
+        verbose_name = 'FILER_ADDRESS_CD'
+        verbose_name_plural = 'FILER_ADDRESS_CD'
 
 
 class FilerEthicsClassCd(CalAccessBaseModel):
@@ -153,8 +153,8 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_ETHICS_CLASS_CD'
-        verbose_name = 'FilerEthicsClassCd'
-        verbose_name = 'FilerEthicsClassCd'
+        verbose_name = 'FILER_ETHICS_CLASS_CD'
+        verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
 
 
 class FilerInterestsCd(CalAccessBaseModel):
@@ -169,8 +169,8 @@ class FilerInterestsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_INTERESTS_CD'
-        verbose_name = 'FilerInterestsCd'
-        verbose_name_plural = 'FilerInterestsCd'
+        verbose_name = 'FILER_INTERESTS_CD'
+        verbose_name_plural = 'FILER_INTERESTS_CD'
 
 
 class FilerLinksCd(CalAccessBaseModel):
@@ -197,8 +197,8 @@ class FilerLinksCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_LINKS_CD'
-        verbose_name = 'FilerLinksCd'
-        verbose_name_plural = 'FilerLinksCd'
+        verbose_name = 'FILER_LINKS_CD'
+        verbose_name_plural = 'FILER_LINKS_CD'
 
 
 class FilerStatusTypesCd(CalAccessBaseModel):
@@ -208,8 +208,8 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_STATUS_TYPES_CD'
-        verbose_name = 'FilerStatusTypesCd'
-        verbose_name_plural = 'FilerStatusTypesCd'
+        verbose_name = 'FILER_STATUS_TYPES_CD'
+        verbose_name_plural = 'FILER_STATUS_TYPES_CD'
 
 
 class FilerToFilerTypeCd(CalAccessBaseModel):
@@ -255,6 +255,8 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_TO_FILER_TYPE_CD'
+        verbose_name = 'FILER_TO_FILER_TYPE_CD'
+        verbose_name_plural = 'FILER_TO_FILER_TYPE_CD'
 
 
 class FilerTypesCd(CalAccessBaseModel):
@@ -271,6 +273,8 @@ class FilerTypesCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_TYPES_CD'
+        verbose_name = 'FILER_TYPES_CD'
+        verbose_name_plural = 'FILER_TYPES_CD'
 
 
 class FilerXrefCd(CalAccessBaseModel):
@@ -287,6 +291,8 @@ class FilerXrefCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_XREF_CD'
+        verbose_name = 'FILER_XREF_CD'
+        verbose_name_plural = 'FILER_XREF_CD'
 
 
 class FilingPeriodCd(CalAccessBaseModel):
@@ -306,6 +312,8 @@ class FilingPeriodCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILING_PERIOD_CD'
+        verbose_name = 'FILING_PERIOD_CD'
+        verbose_name_plural = 'FILING_PERIOD_CD'
 
 
 class GroupTypesCd(CalAccessBaseModel):
@@ -320,6 +328,8 @@ class GroupTypesCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'GROUP_TYPES_CD'
+        verbose_name = 'GROUP_TYPES_CD'
+        verbose_name_plural = 'GROUP_TYPES_CD'
 
 
 class HeaderCd(CalAccessBaseModel):
@@ -345,6 +355,8 @@ class HeaderCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'HEADER_CD'
+        verbose_name = 'HEADER_CD'
+        verbose_name_plural = 'HEADER_CD'
 
 
 class HdrCd(CalAccessBaseModel):
@@ -371,6 +383,8 @@ class HdrCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'HDR_CD'
+        verbose_name = 'HDR_CD'
+        verbose_name_plural = 'HDR_CD'
 
 
 class ImageLinksCd(CalAccessBaseModel):
@@ -386,6 +400,8 @@ class ImageLinksCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'IMAGE_LINKS_CD'
+        verbose_name = 'IMAGE_LINKS_CD'
+        verbose_name_plural = 'IMAGE_LINKS_CD'
 
 
 class LegislativeSessionsCd(CalAccessBaseModel):
@@ -400,6 +416,8 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LEGISLATIVE_SESSIONS_CD'
+        verbose_name = 'LEGISLATIVE_SESSIONS_CD'
+        verbose_name_plural = 'LEGISLATIVE_SESSIONS_CD'
 
 
 class LobbyingChgLogCd(CalAccessBaseModel):
@@ -447,6 +465,8 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYING_CHG_LOG_CD'
+        verbose_name = 'LOBBYING_CHG_LOG_CD'
+        verbose_name_plural = 'LOBBYING_CHG_LOG_CD'
 
 
 class LobbyistContributions1Cd(CalAccessBaseModel):
@@ -473,6 +493,8 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_CONTRIBUTIONS1_CD'
+        verbose_name = 'LOBBYIST_CONTRIBUTIONS1_CD'
+        verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS1_CD'
 
 
 class LobbyistContributions2Cd(CalAccessBaseModel):
@@ -501,6 +523,8 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_CONTRIBUTIONS2_CD'
+        verbose_name = 'LOBBYIST_CONTRIBUTIONS2_CD'
+        verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS2_CD'
 
 
 class LobbyistContributions3Cd(CalAccessBaseModel):
@@ -529,6 +553,8 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_CONTRIBUTIONS3_CD'
+        verbose_name = 'LOBBYIST_CONTRIBUTIONS3_CD'
+        verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS3_CD'
 
 
 class LobbyistEmployer1Cd(CalAccessBaseModel):
@@ -562,6 +588,8 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER1_CD'
+        verbose_name = 'LOBBYIST_EMPLOYER1_CD'
+        verbose_name_plural = 'LOBBYIST_EMPLOYER1_CD'
 
 
 class LobbyistEmployer2Cd(CalAccessBaseModel):
@@ -595,6 +623,8 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER2_CD'
+        verbose_name = 'LOBBYIST_EMPLOYER2_CD'
+        verbose_name_plural = 'LOBBYIST_EMPLOYER2_CD'
 
 
 class LobbyistEmployer3Cd(CalAccessBaseModel):
@@ -628,6 +658,8 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER3_CD'
+        verbose_name = 'LOBBYIST_EMPLOYER3_CD'
+        verbose_name_plural = 'LOBBYIST_EMPLOYER3_CD'
 
 
 class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
@@ -642,6 +674,8 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
+        verbose_name = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
+        verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
 
 
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
@@ -656,6 +690,8 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
+        verbose_name = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
+        verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
 
 
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
@@ -673,6 +709,8 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMP_LOBBYIST1_CD'
+        verbose_name = 'LOBBYIST_EMP_LOBBYIST1_CD'
+        verbose_name_plural = 'LOBBYIST_EMP_LOBBYIST1_CD'
 
 
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
@@ -690,6 +728,8 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMP_LOBBYIST2_CD'
+        verbose_name = 'LOBBYIST_EMP_LOBBYIST2_CD'
+        verbose_name_plural = 'LOBBYIST_EMP_LOBBYIST2_CD'
 
 
 class LobbyistFirm1Cd(CalAccessBaseModel):
@@ -717,6 +757,8 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM1_CD'
+        verbose_name = 'LOBBYIST_FIRM1_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM1_CD'
 
 
 class LobbyistFirm2Cd(CalAccessBaseModel):
@@ -744,6 +786,8 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM2_CD'
+        verbose_name = 'LOBBYIST_FIRM2_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM2_CD'
 
 
 class LobbyistFirm3Cd(CalAccessBaseModel):
@@ -771,6 +815,8 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM3_CD'
+        verbose_name = 'LOBBYIST_FIRM3_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM3_CD'
 
 
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
@@ -797,6 +843,8 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
+        verbose_name = 'LOBBYIST_FIRM_EMPLOYER1_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER1_CD'
 
 
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
@@ -823,6 +871,8 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
+        verbose_name = 'LOBBYIST_FIRM_EMPLOYER2_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER2_CD'
 
 
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
@@ -840,6 +890,8 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_LOBBYIST1_CD'
+        verbose_name = 'LOBBYIST_FIRM_LOBBYIST1_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST1_CD'
 
 
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
@@ -857,6 +909,8 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
+        verbose_name = 'LOBBYIST_FIRM_LOBBYIST2_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST2_CD'
 
 
 class LookupCode(CalAccessBaseModel):
@@ -867,6 +921,8 @@ class LookupCode(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOOKUP_CODES_CD'
+        verbose_name = 'LOOKUP_CODES_CD'
+        verbose_name_plural = 'LOOKUP_CODES_CD'
 
 
 class NamesCd(CalAccessBaseModel):
@@ -886,6 +942,8 @@ class NamesCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'NAMES_CD'
+        verbose_name = 'NAMES_CD'
+        verbose_name_plural = 'NAMES_CD'
 
 
 class ReceivedFilingsCd(CalAccessBaseModel):
@@ -911,6 +969,8 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'RECEIVED_FILINGS_CD'
+        verbose_name = 'RECEIVED_FILINGS_CD'
+        verbose_name_plural = 'RECEIVED_FILINGS_CD'
 
 
 class ReportsCd(CalAccessBaseModel):
@@ -929,3 +989,5 @@ class ReportsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'REPORTS_CD'
+        verbose_name = 'REPORTS_CD'
+        verbose_name_plural = 'REPORTS_CD'
