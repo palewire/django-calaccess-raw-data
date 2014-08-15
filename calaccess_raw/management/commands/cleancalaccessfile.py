@@ -85,7 +85,7 @@ class Command(LabelCommand):
                 ).next()
                 if not len(csv_field_list) == headers_count:
                     if self.verbosity:
-                        print '+ %s bad parse of %s headers=%s & line=%s' % (
+                        print '-- %s bad parse of %s headers=%s & line=%s' % (
                             name,
                             line_number,
                             len(headers_list),

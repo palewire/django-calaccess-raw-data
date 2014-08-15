@@ -1,14 +1,43 @@
 Management commands
 ===================
 
+cleancalaccessfile
+------------------
+
+Clean a source CalAccess file and reformat it as a CSV
+
+.. code-block:: bash
+
+    Usage: manage.py cleancalaccessfile [options] <file path>
+
+    Clean a source CalAccess file and reformat it as a CSV
+
+    Options:
+      -v VERBOSITY, --verbosity=VERBOSITY
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings=SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath=PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on exception
+      --version             show program's version number and exit
+      -h, --help            show this help message and exit
+
+
 downloadcalaccess
 ------------------
+
+Download, unzip, clean and load the latest snapshot of the CalAccess database
 
 .. code-block:: bash
 
     Usage: manage.py downloadcalaccess [options] 
 
-    Download the latest snapshot of the CalAccess database
+    Download, unzip, clean and load the latest snapshot of the CalAccess database
 
     Options:
       -v VERBOSITY, --verbosity=VERBOSITY
@@ -29,5 +58,59 @@ downloadcalaccess
       --skip-clean          Skip cleaning up the raw data files
       --skip-load           Skip loading up the raw data files
       --noinput             Download the ZIP archive without asking permission
+      --version             show program's version number and exit
+      -h, --help            show this help message and exit
+
+
+loadcalaccessfile
+-----------------
+
+Load a cleaned CalAccess file into the database
+
+.. code-block:: bash
+
+    Usage: manage.py loadcalaccessfile [options] <file path>
+
+    Load a cleaned CalAccess file into the database
+
+    Options:
+      -v VERBOSITY, --verbosity=VERBOSITY
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings=SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath=PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on exception
+      --version             show program's version number and exit
+      -h, --help            show this help message and exit
+
+
+totalcalaccessdata
+------------------
+
+Print out the total of CAL-ACCESS tables and rows in the database
+
+.. code-block:: bash
+
+    Usage: manage.py totalcalaccessdata [options] 
+
+    Print out the total of CAL-ACCESS tables and rows in the database
+
+    Options:
+      -v VERBOSITY, --verbosity=VERBOSITY
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings=SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath=PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on exception
       --version             show program's version number and exit
       -h, --help            show this help message and exit
