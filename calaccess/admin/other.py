@@ -167,6 +167,14 @@ class NamesCdAdmin(BaseAdmin):
     pass
 
 
+class ReceivedFilingsCdAdmin(BaseAdmin):
+    pass
+
+
+class ReportsCdAdmin(BaseAdmin):
+    pass
+
+
 admin.site.register(models.AcronymsCd, AcronymsCdAdmin)
 admin.site.register(models.AddressCd, AddressCdAdmin)
 admin.site.register(models.BallotMeasuresCd, BallotMeasuresCdAdmin)
@@ -241,3 +249,5 @@ admin.site.register(
 )
 admin.site.register(models.LookupCode, LookupCodeAdmin)
 admin.site.register(models.NamesCd, NamesCdAdmin)
+admin.site.register(models.ReceivedFilingsCd, ReceivedFilingsCdAdmin)
+admin.site.register(models.ReportsCd, ReportsCdAdmin)

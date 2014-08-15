@@ -862,3 +862,46 @@ class NamesCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess'
         db_table = 'NAMES_CD'
+
+
+class ReceivedFilingsCd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        'RECEIVED_DATE',
+    )
+    filer_id = models.IntegerField(db_column='FILER_ID')
+    filing_file_name = models.CharField(
+        db_column='FILING_FILE_NAME', max_length=14
+    )
+    received_date = models.DateField(db_column='RECEIVED_DATE')
+    filing_directory = models.CharField(
+        db_column='FILING_DIRECTORY', max_length=45
+    )
+    filing_id = models.IntegerField(
+        db_column='FILING_ID', blank=True, null=True
+    )
+    form_id = models.CharField(db_column='FORM_ID', max_length=4, blank=True)
+    receive_comment = models.CharField(
+        db_column='RECEIVE_COMMENT', max_length=51
+    )
+
+    class Meta:
+        app_label = 'calaccess'
+        db_table = 'RECEIVED_FILINGS_CD'
+
+
+class ReportsCd(CalAccessBaseModel):
+    rpt_id = models.IntegerField(db_column='RPT_ID')
+    rpt_name = models.CharField(db_column='RPT_NAME', max_length=74)
+    rpt_desc_field = models.CharField(
+        db_column='RPT_DESC_', max_length=32, blank=True)
+    path = models.CharField(db_column='PATH', max_length=32, blank=True)
+    data_object = models.CharField(db_column='DATA_OBJECT', max_length=38)
+    parms_flg_y_n = models.IntegerField(
+        db_column='PARMS_FLG_Y_N', blank=True, null=True
+    )
+    rpt_type = models.IntegerField(db_column='RPT_TYPE')
+    parm_definition = models.IntegerField(db_column='PARM_DEFINITION')
+
+    class Meta:
+        app_label = 'calaccess'
+        db_table = 'REPORTS_CD'
