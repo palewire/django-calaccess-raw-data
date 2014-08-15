@@ -676,10 +676,10 @@ class RcptCd(CalAccessBaseModel):
     Also Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
     
     '''
-    DATE_FIELDS = (
+    DATE_FIELDS = [
         'DATE_THRU',
         'RCPT_DATE'
-    )
+    ]
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amount = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMOUNT'
@@ -888,9 +888,9 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
     
     '''
 
-    DATE_FIELDS = (
+    DATE_FIELDS = [
         'SIG_DATE',
-    )
+    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1211,9 +1211,9 @@ class ExpnCd(CalAccessBaseModel):
         Form 465 (Supplemental Independent Expenditure Report) Part 3
     
     '''
-    DATE_FIELDS = (
+    DATE_FIELDS = [
         'EXPN_DATE',
-    )
+    ]
     agent_namf = models.CharField(
         max_length=45L, db_column='AGENT_NAMF', blank=True
     )
@@ -1393,10 +1393,10 @@ class F495P2Cd(CalAccessBaseModel):
         contributions received and expenditures made since
         its last report.
 
-    '''s
-    DATE_FIELDS = (
+    '''
+    DATE_FIELDS = [
         'ELECT_DATE',
-    )
+    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1569,9 +1569,9 @@ class SpltCd(CalAccessBaseModel):
         F460 (A-B1-B2-C-D-H)
     
     '''
-    DATE_FIELDS = (
+    DATE_FIELDS = [
         'ELEC_DATE',
-    )
+    ]
     amend_id = models.IntegerField(db_column='AMEND_ID')
     elec_amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
@@ -1600,11 +1600,11 @@ class S497Cd(CalAccessBaseModel):
         Form 497 Late Contributions Received/Made
     
     '''
-    DATE_FIELDS = (
+    DATE_FIELDS = [
         'ELEC_DATE',
         'CTRIB_DATE',
         'DATE_THRU',
-    )
+    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1722,11 +1722,11 @@ class F501502Cd(models.Model):
         F502
     
     '''
-    DATE_FIELDS = (
+    DATE_FIELDS = [
         'ACCT_OP_DT',
         'DID_EXCEED_DT',
         'CNTRB_PRSNL_FNDS_DT'
-    )
+    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
@@ -1937,9 +1937,9 @@ class S498Cd(CalAccessBaseModel):
         Form 498 Slate Mailer Late Independent Expenditures Made
     
     '''
-    DATE_FIELDS = (
+    DATE_FIELDS = [
         'DATE_RCVD',
-    )
+    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
