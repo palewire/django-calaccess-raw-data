@@ -13,7 +13,7 @@ class AcronymsCd(CalAccessBaseModel):
     a_desc = models.CharField(max_length=25, db_column="A_DESC")
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = "ACRONYMS_CD"
 
 
@@ -27,7 +27,7 @@ class AddressCd(CalAccessBaseModel):
     email = models.CharField(max_length=500, db_column="EMAIL")
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = "ADDRESS_CD"
 
 
@@ -46,7 +46,7 @@ class BallotMeasuresCd(CalAccessBaseModel):
     jurisdiction = models.CharField(db_column='JURISDICTION', max_length=9)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'BALLOT_MEASURES_CD'
 
 
@@ -59,7 +59,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
     error_no = models.CharField(db_column='ERROR_NO', max_length=250)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'EFS_FILING_LOG_CD'
 
 
@@ -88,7 +88,7 @@ class FilernameCd(CalAccessBaseModel):
     email = models.CharField(max_length=60L, db_column='EMAIL', blank=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILERNAME_CD'
 
 
@@ -96,7 +96,7 @@ class FilersCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILERS_CD'
 
 
@@ -105,7 +105,7 @@ class FilerAcronymsCd(CalAccessBaseModel):
     filer_id = models.IntegerField()
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_ACRONYMS_CD'
         ordering = ("id",)
 
@@ -125,7 +125,7 @@ class FilerAddressCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_ADDRESS_CD'
 
 
@@ -135,7 +135,7 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     ethics_date = models.DateTimeField(db_column='ETHICS_DATE')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_ETHICS_CLASS_CD'
 
 
@@ -149,7 +149,7 @@ class FilerInterestsCd(CalAccessBaseModel):
     effect_date = models.DateTimeField(db_column='EFFECT_DATE')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_INTERESTS_CD'
 
 
@@ -175,7 +175,7 @@ class FilerLinksCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_LINKS_CD'
 
 
@@ -184,7 +184,7 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     status_desc = models.CharField(max_length=11L, db_column='STATUS_DESC')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_STATUS_TYPES_CD'
 
 
@@ -229,7 +229,7 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_TO_FILER_TYPE_CD'
 
 
@@ -245,7 +245,7 @@ class FilerTypesCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_TYPES_CD'
 
 
@@ -261,7 +261,7 @@ class FilerXrefCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_XREF_CD'
 
 
@@ -280,7 +280,7 @@ class FilingPeriodCd(CalAccessBaseModel):
     deadline = models.DateField(db_column='DEADLINE')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILING_PERIOD_CD'
 
 
@@ -294,7 +294,7 @@ class GroupTypesCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'GROUP_TYPES_CD'
 
 
@@ -319,7 +319,7 @@ class HeaderCd(CalAccessBaseModel):
     show_b = models.IntegerField(db_column='SHOW_B', blank=True, null=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'HEADER_CD'
 
 
@@ -345,7 +345,7 @@ class HdrCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'HDR_CD'
 
 
@@ -360,7 +360,7 @@ class ImageLinksCd(CalAccessBaseModel):
     img_dt = models.DateField(db_column='IMG_DT')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'IMAGE_LINKS_CD'
 
 
@@ -374,7 +374,7 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     end_date = models.DateField(db_column='END_DATE')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LEGISLATIVE_SESSIONS_CD'
 
 
@@ -421,7 +421,7 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     effect_dt = models.DateField(db_column="EFFECT_DT")
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYING_CHG_LOG_CD'
 
 
@@ -447,7 +447,7 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     amount = models.FloatField(db_column='AMOUNT', blank=True, null=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_CONTRIBUTIONS1_CD'
 
 
@@ -475,7 +475,7 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     amount = models.FloatField(db_column='AMOUNT', blank=True, null=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_CONTRIBUTIONS2_CD'
 
 
@@ -503,7 +503,7 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     amount = models.FloatField(db_column='AMOUNT', blank=True, null=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_CONTRIBUTIONS3_CD'
 
 
@@ -536,7 +536,7 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     qtr_8 = models.FloatField(db_column='QTR_8')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER1_CD'
 
 
@@ -569,7 +569,7 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     qtr_8 = models.FloatField(db_column='QTR_8')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER2_CD'
 
 
@@ -602,7 +602,7 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     qtr_8 = models.FloatField(db_column='QTR_8')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER3_CD'
 
 
@@ -616,7 +616,7 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
 
 
@@ -630,7 +630,7 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
 
 
@@ -647,7 +647,7 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     session_id = models.IntegerField(db_column='SESSION_ID')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMP_LOBBYIST1_CD'
 
 
@@ -664,7 +664,7 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     session_id = models.IntegerField(db_column='SESSION_ID')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_EMP_LOBBYIST2_CD'
 
 
@@ -691,7 +691,7 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
     qtr_8 = models.FloatField(db_column='QTR_8')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM1_CD'
 
 
@@ -718,7 +718,7 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     qtr_8 = models.FloatField(db_column='QTR_8')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM2_CD'
 
 
@@ -745,7 +745,7 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     qtr_8 = models.FloatField(db_column='QTR_8')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM3_CD'
 
 
@@ -771,7 +771,7 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
 
 
@@ -797,7 +797,7 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
 
 
@@ -814,7 +814,7 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     session_id = models.IntegerField(db_column='SESSION_ID')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_LOBBYIST1_CD'
 
 
@@ -831,7 +831,7 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     session_id = models.IntegerField(db_column='SESSION_ID')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
 
 
@@ -841,7 +841,7 @@ class LookupCode(CalAccessBaseModel):
     code_desc = models.CharField(max_length=100)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOOKUP_CODES_CD'
 
 
@@ -860,7 +860,7 @@ class NamesCd(CalAccessBaseModel):
     naml_search = models.CharField(max_length=200L, db_column='NAML_SEARCH')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'NAMES_CD'
 
 
@@ -885,7 +885,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'RECEIVED_FILINGS_CD'
 
 
@@ -903,5 +903,5 @@ class ReportsCd(CalAccessBaseModel):
     parm_definition = models.IntegerField(db_column='PARM_DEFINITION')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'REPORTS_CD'

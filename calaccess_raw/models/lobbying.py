@@ -232,7 +232,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'CVR_REGISTRATION_CD'
 
 
@@ -283,7 +283,7 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'CVR2_REGISTRATION_CD'
 
 
@@ -445,7 +445,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     thru_date = models.DateField(db_column='THRU_DATE')
 
     class Meta:
-        app_label = "calaccess"
+        app_label = "calaccess_raw"
         db_table = 'CVR_LOBBY_DISCLOSURE_CD'
 
 
@@ -495,7 +495,7 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
 
 
@@ -626,7 +626,7 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOBBY_AMENDMENTS_CD'
 
 
@@ -662,7 +662,7 @@ class F690P2Cd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'F690P2_CD'
 
 
@@ -736,7 +736,7 @@ class LattCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LATT_CD'
 
 
@@ -821,7 +821,7 @@ class LexpCd(CalAccessBaseModel):
     tran_id = models.CharField(max_length=20L, db_column='TRAN_ID')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LEXP_CD'
 
 
@@ -912,7 +912,7 @@ class LccmCd(CalAccessBaseModel):
     tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LCCM_CD'
 
 
@@ -987,7 +987,7 @@ class LothCd(CalAccessBaseModel):
     tran_id = models.CharField(max_length=20L, db_column='TRAN_ID')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LOTH_CD'
 
 
@@ -1069,7 +1069,7 @@ class LempCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LEMP_CD'
 
 
@@ -1157,5 +1157,5 @@ class LpayCd(CalAccessBaseModel):
     tran_id = models.CharField(max_length=20L, db_column='TRAN_ID')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'LPAY_CD'

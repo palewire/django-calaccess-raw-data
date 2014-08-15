@@ -38,7 +38,7 @@ class FilerFilingsCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILER_FILINGS_CD'
 
 
@@ -47,7 +47,7 @@ class FilingsCd(CalAccessBaseModel):
     filing_type = models.IntegerField(db_column='FILING_TYPE')
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'FILINGS_CD'
 
 
@@ -76,7 +76,7 @@ class SmryCd(CalAccessBaseModel):
     current_filing = models.CharField(max_length=1L, blank=True)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'SMRY_CD'
 
 
@@ -143,7 +143,7 @@ class CvrE530Cd(CalAccessBaseModel):
     other_desc = models.CharField(db_column='OTHER_DESC', max_length=49)
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'CVR_E530_CD'
 
 
@@ -160,5 +160,5 @@ class TextMemoCd(CalAccessBaseModel):
     )
 
     class Meta:
-        app_label = 'calaccess'
+        app_label = 'calaccess_raw'
         db_table = 'TEXT_MEMO_CD'
