@@ -160,6 +160,8 @@ class CvrSoCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = "CVR_SO_CD"
+        verbose_name = 'CvrSoCd'
+        verbose_name_plural = 'CvrSoCd'
 
 
 class Cvr2SoCd(CalAccessBaseModel):
@@ -245,7 +247,8 @@ class Cvr2SoCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR2_SO_CD'
-
+        verbose_name = 'Cvr2SoCd'
+        verbose_name_plural = 'Cvr2SoCd'
 
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     '''
@@ -540,7 +543,8 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
-
+        verbose_name = 'CvrCampaignDisclosureCd'
+        verbose_name_plural = 'CvrCampaignDisclosureCd'
 
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     '''
@@ -667,7 +671,8 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
-
+        verbose_name = 'CvrCampaignDisclosureCd'
+        verbose_name_plural = 'CvrCampaignDisclosureCd'
 
 class RcptCd(CalAccessBaseModel):
     '''
@@ -869,6 +874,8 @@ class RcptCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'RCPT_CD'
+        verbose_name = 'RcptCd'
+        verbose_name_plural = 'RcptCd'
 
 
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
@@ -916,7 +923,8 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR3_VERIFICATION_INFO_CD'
-
+        verbose_name = 'Cvr3VerificationInfoCd'
+        verbose_name_plural = 'Cvr3VerificationInfoCd'
 
 class LoanCd(CalAccessBaseModel):
     DATE_FIELDS = [
@@ -1080,6 +1088,8 @@ class LoanCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'LOAN_CD'
+        verbose_name = 'LoanCd'
+        verbose_name_plural = 'LoanCd'
 
 
 class S401Cd(CalAccessBaseModel):
@@ -1199,6 +1209,8 @@ class S401Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'S401_CD'
+        verbose_name = 'S401Cd'
+        verbose_name_plural = 'S401Cd'
 
 
 class ExpnCd(CalAccessBaseModel):
@@ -1372,6 +1384,8 @@ class ExpnCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'EXPN_CD'
+        verbose_name = 'ExpnCd'
+        verbose_name_plural = 'ExpnCd'
 
 
 class F495P2Cd(CalAccessBaseModel):
@@ -1411,7 +1425,8 @@ class F495P2Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'F495P2_CD'
-
+        verbose_name = 'F495P2Cd'
+        verbose_name_plural = 'F495P2Cd'
 
 class DebtCd(CalAccessBaseModel):
     '''
@@ -1518,6 +1533,8 @@ class DebtCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'DEBT_CD'
+        verbose_name = 'DebtCd'
+        verbose_name_plural = 'DebtCd'
 
 
 class S496Cd(CalAccessBaseModel):
@@ -1558,6 +1575,8 @@ class S496Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'S496_CD'
+        verbose_name = 'S496Cd'
+        verbose_name_plural = 'S496Cd'
 
 
 class SpltCd(CalAccessBaseModel):
@@ -1592,6 +1611,8 @@ class SpltCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'SPLT_CD'
+        verbose_name = 'SpltCd'
+        verbose_name_plural = 'SpltCd'
 
 
 class S497Cd(CalAccessBaseModel):
@@ -1712,6 +1733,8 @@ class S497Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'S497_CD'
+        verbose_name = 'S497Cd'
+        verbose_name_plural = 'S497Cd'
 
 
 class F501502Cd(CalAccessBaseModel):
@@ -1875,6 +1898,8 @@ class F501502Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'F501_502_CD'
+        verbose_name = 'F501502Cd'
+        verbose_name_plural = 'F501502Cd'
 
 
 class S498Cd(CalAccessBaseModel):
@@ -1995,3 +2020,5 @@ class S498Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'S498_CD'
+        verbose_name = 'S498Cd'
+        verbose_name_plural = 'S498Cd'

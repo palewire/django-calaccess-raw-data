@@ -15,6 +15,8 @@ class AcronymsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = "ACRONYMS_CD"
+        verbose_name = 'AcronymsCd'
+        verbose_name_plural = 'AcronymsCd'
 
 
 class AddressCd(CalAccessBaseModel):
@@ -29,6 +31,8 @@ class AddressCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = "ADDRESS_CD"
+        verbose_name = 'AddressCd'
+        verbose_name_plural = 'AddressCd'
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
@@ -48,6 +52,8 @@ class BallotMeasuresCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'BALLOT_MEASURES_CD'
+        verbose_name = 'BallotMeasuresCd'
+        verbose_name_plural = 'BallotMeasuresCd'
 
 
 class EfsFilingLogCd(CalAccessBaseModel):
@@ -61,6 +67,8 @@ class EfsFilingLogCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'EFS_FILING_LOG_CD'
+        verbose_name = 'EfsFilingLogCd'
+        verbose_name_plural = 'EfsFilingLogCd'
 
 
 class FilernameCd(CalAccessBaseModel):
@@ -90,6 +98,8 @@ class FilernameCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILERNAME_CD'
+        verbose_name = 'FilernameCd'
+        verbose_name_plural = 'FilernameCd'
 
 
 class FilersCd(CalAccessBaseModel):
@@ -98,6 +108,8 @@ class FilersCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILERS_CD'
+        verbose_name = 'FilersCd'
+        verbose_name_plural = 'FilersCd'
 
 
 class FilerAcronymsCd(CalAccessBaseModel):
@@ -108,6 +120,8 @@ class FilerAcronymsCd(CalAccessBaseModel):
         app_label = 'calaccess_raw'
         db_table = 'FILER_ACRONYMS_CD'
         ordering = ("id",)
+        verbose_name = 'FilerAcronymsCd'
+        verbose_name_plural = 'FilerAcronymsCd'
 
     def __unicode__(self):
         return self.acronym
@@ -127,6 +141,8 @@ class FilerAddressCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_ADDRESS_CD'
+        verbose_name = 'FilerAddressCd'
+        verbose_name_plural = 'FilerAddressCd'
 
 
 class FilerEthicsClassCd(CalAccessBaseModel):
@@ -137,6 +153,8 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_ETHICS_CLASS_CD'
+        verbose_name = 'FilerEthicsClassCd'
+        verbose_name = 'FilerEthicsClassCd'
 
 
 class FilerInterestsCd(CalAccessBaseModel):
@@ -151,6 +169,8 @@ class FilerInterestsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_INTERESTS_CD'
+        verbose_name = 'FilerInterestsCd'
+        verbose_name_plural = 'FilerInterestsCd'
 
 
 class FilerLinksCd(CalAccessBaseModel):
@@ -177,6 +197,8 @@ class FilerLinksCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_LINKS_CD'
+        verbose_name = 'FilerLinksCd'
+        verbose_name_plural = 'FilerLinksCd'
 
 
 class FilerStatusTypesCd(CalAccessBaseModel):
@@ -186,6 +208,8 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_STATUS_TYPES_CD'
+        verbose_name = 'FilerStatusTypesCd'
+        verbose_name_plural = 'FilerStatusTypesCd'
 
 
 class FilerToFilerTypeCd(CalAccessBaseModel):
