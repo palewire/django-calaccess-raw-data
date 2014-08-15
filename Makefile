@@ -21,7 +21,7 @@ docs:
 	cd docs && make livehtml
 
 load:
-	python -m cProfile example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
+	python  example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
 
 loadtable:
 	python example/manage.py loadcalaccessfile AcronymsCd

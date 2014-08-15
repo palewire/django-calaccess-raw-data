@@ -580,6 +580,11 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
 
 
 class F690P2Cd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        "EXEC_DATE",
+        "FROM_DATE",
+        "THRU_DATE",
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -824,9 +829,9 @@ class LccmCd(CalAccessBaseModel):
 
 
 class LothCd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'PMT_DATE',
-    ]
+    )
     amend_id = models.IntegerField(db_column='AMEND_ID')
     amount = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
@@ -892,9 +897,9 @@ class LothCd(CalAccessBaseModel):
 
 
 class LempCd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'EFF_DATE',
-    ]
+    )
     agencylist = models.CharField(
         max_length=200L, db_column='AGENCYLIST', blank=True
     )

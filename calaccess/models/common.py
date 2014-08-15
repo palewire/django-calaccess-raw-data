@@ -81,6 +81,10 @@ class SmryCd(CalAccessBaseModel):
 
 
 class CvrE530Cd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        "RPT_DATE",
+        "PMNT_DT",
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)

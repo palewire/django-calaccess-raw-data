@@ -3,7 +3,7 @@ from calaccess import models
 from .base import BaseAdmin
 
 
-class CvrSoAdmin(BaseAdmin):
+class CvrSoCdAdmin(BaseAdmin):
     pass
 
 
@@ -55,7 +55,7 @@ class F501502CdAdmin(BaseAdmin):
     pass
 
 
-admin.site.register(models.CvrSo, CvrSoAdmin)
+admin.site.register(models.CvrSoCd, CvrSoAdmin)
 admin.site.register(models.Cvr2SoCd, BaseAdmin)
 admin.site.register(models.Cvr3VerificationInfoCd, BaseAdmin)
 admin.site.register(
