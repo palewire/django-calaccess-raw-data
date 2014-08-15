@@ -1714,7 +1714,7 @@ class S497Cd(CalAccessBaseModel):
         db_table = 'S497_CD'
 
 
-class F501502Cd(models.Model):
+class F501502Cd(CalAccessBaseModel):
     '''
         Candidate Intention Statement
     
