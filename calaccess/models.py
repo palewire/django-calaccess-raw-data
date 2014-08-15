@@ -2120,6 +2120,48 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         db_table = 'LOBBY_AMENDMENTS_CD'
 
 
+class LobbyingChgLogCd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        "LOG_DT",
+        "ETHICS_DT",
+        "EFFECT_DT",
+    )
+    filer_id = models.IntegerField(db_column='FILER_ID')
+    change_no = models.IntegerField(db_column='CHANGE_NO')
+    session_id = models.IntegerField(db_column='SESSION_ID')
+    log_dt = models.DateField(db_column="LOG_DT")
+    filer_type = models.IntegerField(db_column='FILER_TYPE')
+    correction_flag = models.CharField(max_length=200,
+        db_column="CORRECTION_FLG")
+    action = models.CharField(max_length=200, db_column="ACTION")
+    attribute_changed = models.CharField(max_length=200,
+        db_column="ATTRIBUTE_CHANGED")
+    ethics_dt = models.DateField(db_column="ETHICS_DT")
+    interests = models.CharField(max_length=200, db_column="INTERESTS")
+    filer_full_name = models.CharField(
+        max_length=200,
+        db_column="FILER_FULL_NAME"
+    )
+    filer_city = models.CharField(max_length=200, db_column="FILER_CITY")
+    filer_st = models.CharField(max_length=200, db_column="FILER_ST")
+    filer_zip = models.IntegerField(db_column="FILER_ZIP")
+    filer_phone = models.IntegerField(db_column="FILER_PHONE")
+    entity_type = models.IntegerField(db_column="ENTITY_TYPE")
+    entity_name = models.CharField(max_length=500, db_column="ENTITY_NAME")
+    entity_city = models.CharField(max_length=500, db_column="ENTITY_CITY")
+    entity_st = models.CharField(max_length=500, db_column="ENTITY_ST")
+    entity_zip = models.IntegerField(db_column="ENTITY_ZIP")
+    entity_phone = models.IntegerField(db_column="ENTITY_PHONE")
+    entity_id = models.IntegerField(db_column="ENTITY_ID")
+    responsible_officer = models.CharField(
+        max_length=500, db_column="RESPONSIBLE_OFFICER"
+    )
+    effect_dt = models.DateField(db_column="EFFECT_DT")
+
+    class Meta:
+        db_table = 'LOBBYING_CHG_LOG_CD'
+
+
 class LookupCode(CalAccessBaseModel):
     code_type = models.IntegerField()
     code_id = models.IntegerField()

@@ -15,7 +15,7 @@ cleanfile:
 	python -m cProfile example/manage.py cleancalaccessfile CVR_SO_CD.TSV > speed.txt
 
 csv2db:
-	csvsql -i mysql --table ADDRESS_CD example/data/csv/address_cd.csv
+	csvsql -i mysql --table LOBBYING_CHG_LOG_CD example/data/csv/lobbying_chg_log_cd.csv
 
 docs:
 	cd docs && make livehtml

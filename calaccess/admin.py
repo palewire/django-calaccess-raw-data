@@ -126,6 +126,10 @@ class LobbyAmendmentsCdAdmin(BaseAdmin):
     pass
 
 
+class LobbyingChgLogCdAdmin(BaseAdmin):
+    pass
+
+
 class LookupCodeAdmin(BaseAdmin):
     pass
 
@@ -206,6 +210,7 @@ admin.site.register(models.LempCd, LempCdAdmin)
 admin.site.register(models.LexpCd, LexpCdAdmin)
 admin.site.register(models.LoanCd, LoanCdAdmin)
 admin.site.register(models.LobbyAmendmentsCd, LobbyAmendmentsCdAdmin)
+admin.site.register(models.LobbyingChgLogCd, LobbyingChgLogCdAdmin)
 admin.site.register(models.LookupCode, LookupCodeAdmin)
 admin.site.register(models.LothCd, LothCdAdmin)
 admin.site.register(models.LpayCd, LpayCdAdmin)
