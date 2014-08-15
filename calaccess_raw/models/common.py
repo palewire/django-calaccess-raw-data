@@ -40,6 +40,8 @@ class FilerFilingsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILER_FILINGS_CD'
+        verbose_name = 'FILER_FILINGS_CD'
+        verbose_name_plural = 'FILER_FILINGS_CD'
 
 
 class FilingsCd(CalAccessBaseModel):
@@ -49,6 +51,8 @@ class FilingsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILINGS_CD'
+        verbose_name = 'FILINGS_CD'
+        verbose_name_plural = 'FILINGS_CD'
 
 
 class SmryCd(CalAccessBaseModel):
@@ -78,6 +82,8 @@ class SmryCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'SMRY_CD'
+        verbose_name = 'SMRY_CD'
+        verbose_name_plural = 'SMRY_CD'
 
 
 class CvrE530Cd(CalAccessBaseModel):
@@ -145,6 +151,8 @@ class CvrE530Cd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'CVR_E530_CD'
+        verbose_name = 'CVR_E530_CD'
+        verbose_name_plural = 'CVR_E530_CD'
 
 
 class TextMemoCd(CalAccessBaseModel):
@@ -162,3 +170,5 @@ class TextMemoCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'TEXT_MEMO_CD'
+        verbose_name = 'TEXT_MEMO_CD'
+        verbose_name_plural = 'TEXT_MEMO_CD'
