@@ -30,7 +30,7 @@ class TestCommand(Command):
 
 setup(
     name='django-calaccess-parser',
-    version='0.4',
+    version='0.5',
     packages=[
         'calaccess',
         'calaccess.management',
