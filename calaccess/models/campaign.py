@@ -14,6 +14,9 @@ class CvrSo(CalAccessBaseModel):
     DATE_FIELDS = [
         'ACCT_OPENDT',
         'QUALFY_DT',
+        "RPT_DATE",
+        "SMCONT_QUALDT",
+        "TERM_DATE"
     ]
     acct_opendt = models.DateField(db_column="ACCT_OPENDT")
     actvty_lvl = models.CharField(
@@ -830,6 +833,9 @@ class RcptCd(CalAccessBaseModel):
 
 
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        'SIG_DATE',
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1134,7 +1140,9 @@ class S401Cd(CalAccessBaseModel):
 
 
 class ExpnCd(CalAccessBaseModel):
-    DATE_FIELDS = ['EXPN_DATE', ]
+    DATE_FIELDS = (
+        'EXPN_DATE',
+    )
     agent_namf = models.CharField(
         max_length=45L, db_column='AGENT_NAMF', blank=True
     )
@@ -1296,6 +1304,9 @@ class ExpnCd(CalAccessBaseModel):
 
 
 class F495P2Cd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        'ELECT_DATE',
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1450,6 +1461,9 @@ class S496Cd(CalAccessBaseModel):
 
 
 class SpltCd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        'ELEC_DATE',
+    )
     amend_id = models.IntegerField(db_column='AMEND_ID')
     elec_amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
@@ -1473,11 +1487,11 @@ class SpltCd(CalAccessBaseModel):
 
 
 class S497Cd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'ELEC_DATE',
         'CTRIB_DATE',
         'DATE_THRU',
-    ]
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1588,6 +1602,11 @@ class S497Cd(CalAccessBaseModel):
 
 
 class F501502Cd(models.Model):
+    DATE_FIELDS = (
+        'ACCT_OP_DT',
+        'DID_EXCEED_DT',
+        'CNTRB_PRSNL_FNDS_DT'
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)

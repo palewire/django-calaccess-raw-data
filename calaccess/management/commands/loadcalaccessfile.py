@@ -71,7 +71,7 @@ class Command(LabelCommand):
         # Report back on how we did
         if self.verbosity:
             if cnt == csv_record_cnt:
-                print "-- record counts match"
+                print "-- Record counts match"
             else:
                 print '-- Records don\'t match. Table: %s\tCSV: %s' % (
                     cnt,
