@@ -3,7 +3,7 @@ from django.db import models
 from .base import CalAccessBaseModel
 
 
-class CvrSo(CalAccessBaseModel):
+class CvrSoCd(CalAccessBaseModel):
     '''
         Cover page for statement of organization
 
