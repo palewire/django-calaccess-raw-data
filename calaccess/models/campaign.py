@@ -245,6 +245,22 @@ class Cvr2SoCd(CalAccessBaseModel):
 
 
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
+    '''
+        Cover page information for the campaign disclosure forms below.
+        This data comes from the electronic filing.
+        The data contained herin is "as filed" by the entity making the filing.
+    
+        F401 -- Slate Mailer Organization Campaign Statement
+        F425 -- Semi-Annual Statement of No Activity
+        F450 -- Recipient Committee Campaign Statement (Short Form)
+        F460 -- Recipient Committee Campaign Statement
+        F461 -- Independent Expenditure and Major Donor Committee Campaign Statement
+        F465 -- Supplemental Independent Expenditure Report
+        F496 -- Late Independent Expenditure Report
+        F497 - Late Contribution Report
+        F498 -- Slate Mailer Late Payment Report
+        
+    '''
     DATE_FIELDS = [
         'ELECT_DATE',
         'FROM_DATE',
@@ -524,6 +540,22 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
 
 
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
+    '''
+    
+        Record used to carry additional names for the campaign
+        disclosure forms below.
+        
+        F401
+        F450
+        F460
+        F461
+        F425
+        F465
+        F496
+        F497
+        F498
+    
+    '''
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bal_juris = models.CharField(
         max_length=40L, db_column='BAL_JURIS', blank=True
@@ -634,6 +666,12 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
 
 
 class RcptCd(CalAccessBaseModel):
+    '''
+    
+    Receipts schedules for the Form 460 (Recipient Committee Campaign Statement) Schedules A, C, I, nd A-1.
+    Also Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
+    
+    '''
     DATE_FIELDS = (
         'DATE_THRU',
         'RCPT_DATE'
@@ -830,6 +868,21 @@ class RcptCd(CalAccessBaseModel):
 
 
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
+    '''
+    
+        Cover Page Verification Information for the Campaign Forms below.
+    
+        F400
+        F402
+        F410
+        F425
+        F450
+        F460
+        F461
+        F465
+        F470
+    
+    '''
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1022,6 +1075,13 @@ class LoanCd(CalAccessBaseModel):
 
 
 class S401Cd(CalAccessBaseModel):
+    '''
+    
+        This table contains Form 401 (Slate Mailer Organization) payment and other
+        disclosure schedule (F401B, F401B-1, F401C, F401D) information.
+    
+    '''
+    
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1134,6 +1194,15 @@ class S401Cd(CalAccessBaseModel):
 
 
 class ExpnCd(CalAccessBaseModel):
+    '''
+    
+        This table contains expenditure records
+        for the Form 460 (Recpient Committee Campaign Statement) Schedules D, E, and G
+        Form 450 (Recpient Committee Campaign Statement Short Form) Part 5
+        Form 461 (Independent Expenditure and Major Donor Committee Campaign Statement) Part 5
+        Form 465 (Supplemental Independent Expenditure Report) Part 3
+    
+    '''
     DATE_FIELDS = ['EXPN_DATE', ]
     agent_namf = models.CharField(
         max_length=45L, db_column='AGENT_NAMF', blank=True
@@ -1296,6 +1365,25 @@ class ExpnCd(CalAccessBaseModel):
 
 
 class F495P2Cd(CalAccessBaseModel):
+    '''
+        F495 Supplemental Preelection Campaign Statement
+        
+        It's attatchment to the forms below
+        
+        F450 Recipient Committee Campaign Statement Short Form
+        F460 Recipient Committee Campaign Statement
+    
+        Form 495 is for use by a recipient committee that
+        makes contributions totaling $10,000 or more in
+        connection with an election for which the committee
+        is not required to file regular preelection reports.
+        Form 495 is filed as an attachment to a campaign
+        disclosure statement (Form 450 or 460). On the
+        Form 450 or 460, the committee will report all
+        contributions received and expenditures made since
+        its last report.
+
+    '''
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1313,6 +1401,11 @@ class F495P2Cd(CalAccessBaseModel):
 
 
 class DebtCd(CalAccessBaseModel):
+    '''
+    
+        Form 460 (Recipient Committee Campaign Statement) Schedule (F) Accrued Expenses (Unpaid Bills) records.
+    
+    '''
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amt_incur = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMT_INCUR'
@@ -1415,6 +1508,11 @@ class DebtCd(CalAccessBaseModel):
 
 
 class S496Cd(CalAccessBaseModel):
+    '''
+    
+        Form 496 Late Independent Expenditures
+    
+    '''
     DATE_FIELDS = [
         'EXP_DATE',
         'DATE_THRU',
@@ -1450,6 +1548,14 @@ class S496Cd(CalAccessBaseModel):
 
 
 class SpltCd(CalAccessBaseModel):
+    '''
+    
+        Split Records
+        
+        F450P5
+        F460 (A-B1-B2-C-D-H)
+    
+    '''
     amend_id = models.IntegerField(db_column='AMEND_ID')
     elec_amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
@@ -1473,6 +1579,11 @@ class SpltCd(CalAccessBaseModel):
 
 
 class S497Cd(CalAccessBaseModel):
+    '''
+    
+        Form 497 Late Contributions Received/Made
+    
+    '''
     DATE_FIELDS = [
         'ELEC_DATE',
         'CTRIB_DATE',
@@ -1588,6 +1699,15 @@ class S497Cd(CalAccessBaseModel):
 
 
 class F501502Cd(models.Model):
+    
+    '''
+        Candidate Intention Statement
+    
+        F501 
+        F502
+    
+    '''
+
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
@@ -1732,6 +1852,60 @@ class F501502Cd(models.Model):
     cntrb_prsnl_fnds_dt = models.DateField(
         db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True
     )
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=3) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=4) # Field name made lowercase.
+    filer_id = models.CharField(db_column='FILER_ID', max_length=8, blank=True) # Field name made lowercase.
+    committee_id = models.CharField(db_column='COMMITTEE_ID', max_length=8, blank=True) # Field name made lowercase.
+    entity_cd = models.IntegerField(db_column='ENTITY_CD', blank=True, null=True) # Field name made lowercase.
+    report_num = models.IntegerField(db_column='REPORT_NUM', blank=True, null=True) # Field name made lowercase.
+    rpt_date = models.DateTimeField(db_column='RPT_DATE', blank=True, null=True) # Field name made lowercase.
+    stmt_type = models.IntegerField(db_column='STMT_TYPE') # Field name made lowercase.
+    from_date = models.CharField(db_column='FROM_DATE', max_length=32, blank=True) # Field name made lowercase.
+    thru_date = models.CharField(db_column='THRU_DATE', max_length=32, blank=True) # Field name made lowercase.
+    elect_date = models.CharField(db_column='ELECT_DATE', max_length=32, blank=True) # Field name made lowercase.
+    cand_naml = models.CharField(db_column='CAND_NAML', max_length=81, blank=True) # Field name made lowercase.
+    cand_namf = models.CharField(db_column='CAND_NAMF', max_length=25, blank=True) # Field name made lowercase.
+    can_namm = models.CharField(db_column='CAN_NAMM', max_length=10, blank=True) # Field name made lowercase.
+    cand_namt = models.CharField(db_column='CAND_NAMT', max_length=7, blank=True) # Field name made lowercase.
+    cand_nams = models.CharField(db_column='CAND_NAMS', max_length=7, blank=True) # Field name made lowercase.
+    moniker_pos = models.CharField(db_column='MONIKER_POS', max_length=32, blank=True) # Field name made lowercase.
+    moniker = models.CharField(db_column='MONIKER', max_length=4, blank=True) # Field name made lowercase.
+    cand_city = models.CharField(db_column='CAND_CITY', max_length=22, blank=True) # Field name made lowercase.
+    cand_st = models.CharField(db_column='CAND_ST', max_length=4, blank=True) # Field name made lowercase.
+    cand_zip4 = models.CharField(db_column='CAND_ZIP4', max_length=10, blank=True) # Field name made lowercase.
+    cand_phon = models.CharField(db_column='CAND_PHON', max_length=14, blank=True) # Field name made lowercase.
+    cand_fax = models.CharField(db_column='CAND_FAX', max_length=14, blank=True) # Field name made lowercase.
+    cand_email = models.CharField(db_column='CAND_EMAIL', max_length=37, blank=True) # Field name made lowercase.
+    fin_naml = models.CharField(db_column='FIN_NAML', max_length=53, blank=True) # Field name made lowercase.
+    fin_namf = models.CharField(db_column='FIN_NAMF', max_length=32, blank=True) # Field name made lowercase.
+    fin_namt = models.CharField(db_column='FIN_NAMT', max_length=32, blank=True) # Field name made lowercase.
+    fin_nams = models.CharField(db_column='FIN_NAMS', max_length=32, blank=True) # Field name made lowercase.
+    fin_city = models.CharField(db_column='FIN_CITY', max_length=20, blank=True) # Field name made lowercase.
+    fin_st = models.CharField(db_column='FIN_ST', max_length=4, blank=True) # Field name made lowercase.
+    fin_zip4 = models.CharField(db_column='FIN_ZIP4', max_length=9, blank=True) # Field name made lowercase.
+    fin_phon = models.CharField(db_column='FIN_PHON', max_length=14, blank=True) # Field name made lowercase.
+    fin_fax = models.CharField(db_column='FIN_FAX', max_length=10, blank=True) # Field name made lowercase.
+    fin_email = models.CharField(db_column='FIN_EMAIL', max_length=15, blank=True) # Field name made lowercase.
+    office_cd = models.IntegerField(db_column='OFFICE_CD') # Field name made lowercase.
+    offic_dscr = models.CharField(db_column='OFFIC_DSCR', max_length=50, blank=True) # Field name made lowercase.
+    agency_nam = models.CharField(db_column='AGENCY_NAM', max_length=63, blank=True) # Field name made lowercase.
+    juris_cd = models.IntegerField(db_column='JURIS_CD', blank=True, null=True) # Field name made lowercase.
+    juris_dscr = models.CharField(db_column='JURIS_DSCR', max_length=14, blank=True) # Field name made lowercase.
+    dist_no = models.CharField(db_column='DIST_NO', max_length=4, blank=True) # Field name made lowercase.
+    party = models.CharField(db_column='PARTY', max_length=20, blank=True) # Field name made lowercase.
+    yr_of_elec = models.IntegerField(db_column='YR_OF_ELEC', blank=True, null=True) # Field name made lowercase.
+    elec_type = models.IntegerField(db_column='ELEC_TYPE', blank=True, null=True) # Field name made lowercase.
+    execute_dt = models.DateTimeField(db_column='EXECUTE_DT', blank=True, null=True) # Field name made lowercase.
+    can_sig = models.CharField(db_column='CAN_SIG', max_length=13, blank=True) # Field name made lowercase.
+    account_no = models.CharField(db_column='ACCOUNT_NO', max_length=22, blank=True) # Field name made lowercase.
+    acct_op_dt = models.DateField(db_column='ACCT_OP_DT', blank=True, null=True) # Field name made lowercase.
+    party_cd = models.IntegerField(db_column='PARTY_CD', blank=True, null=True) # Field name made lowercase.
+    district_cd = models.IntegerField(db_column='DISTRICT_CD', blank=True, null=True) # Field name made lowercase.
+    accept_limit_yn = models.IntegerField(db_column='ACCEPT_LIMIT_YN', blank=True, null=True) # Field name made lowercase.
+    did_exceed_dt = models.DateField(db_column='DID_EXCEED_DT', blank=True, null=True) # Field name made lowercase.
+    cntrb_prsnl_fnds_dt = models.DateField(db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True) # Field name made lowercase.
 
     class Meta:
         app_label = 'calaccess'
@@ -1739,6 +1913,11 @@ class F501502Cd(models.Model):
 
 
 class S498Cd(CalAccessBaseModel):
+    '''
+    
+        Form 498 Slate Mailer Late Independent Expenditures Made
+    
+    '''
     DATE_FIELDS = (
         'DATE_RCVD',
     )
