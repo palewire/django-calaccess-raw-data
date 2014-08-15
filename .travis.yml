@@ -10,8 +10,8 @@ install:
  - pip install -q Django==$DJANGO_VERSION
  - python setup.py install
 script:
- - pep8 calaccess
- - pyflakes calaccess
+ - pep8 calaccess_raw
+ - pyflakes calaccess_raw
  - coverage run setup.py test
 after_success:
  - coveralls
