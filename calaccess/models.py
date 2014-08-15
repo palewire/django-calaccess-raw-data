@@ -207,6 +207,64 @@ class CvrSo(CalAccessBaseModel):
         db_table = "CVR_SO_CD"
 
 
+class Cvr2SoCd(CalAccessBaseModel):
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=4) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=4) # Field name made lowercase.
+    tran_id = models.CharField(db_column='TRAN_ID', max_length=19) # Field name made lowercase.
+    entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3) # Field name made lowercase.
+    enty_naml = models.CharField(db_column='ENTY_NAML', max_length=194, blank=True) # Field name made lowercase.
+    enty_namf = models.CharField(db_column='ENTY_NAMF', max_length=34, blank=True) # Field name made lowercase.
+    enty_namt = models.CharField(db_column='ENTY_NAMT', max_length=9, blank=True) # Field name made lowercase.
+    enty_nams = models.CharField(db_column='ENTY_NAMS', max_length=10, blank=True) # Field name made lowercase.
+    item_cd = models.CharField(db_column='ITEM_CD', max_length=4, blank=True) # Field name made lowercase.
+    mail_city = models.CharField(db_column='MAIL_CITY', max_length=25, blank=True) # Field name made lowercase.
+    mail_st = models.CharField(db_column='MAIL_ST', max_length=4, blank=True) # Field name made lowercase.
+    mail_zip4 = models.CharField(db_column='MAIL_ZIP4', max_length=10, blank=True) # Field name made lowercase.
+    day_phone = models.CharField(db_column='DAY_PHONE', max_length=20, blank=True) # Field name made lowercase.
+    fax_phone = models.CharField(db_column='FAX_PHONE', max_length=20, blank=True) # Field name made lowercase.
+    email_adr = models.CharField(db_column='EMAIL_ADR', max_length=40, blank=True) # Field name made lowercase.
+    cmte_id = models.IntegerField(db_column='CMTE_ID', blank=True, null=True) # Field name made lowercase.
+    ind_group = models.CharField(db_column='IND_GROUP', max_length=87, blank=True) # Field name made lowercase.
+    office_cd = models.CharField(db_column='OFFICE_CD', max_length=4, blank=True) # Field name made lowercase.
+    offic_dscr = models.CharField(db_column='OFFIC_DSCR', max_length=40, blank=True) # Field name made lowercase.
+    juris_cd = models.CharField(db_column='JURIS_CD', max_length=4, blank=True) # Field name made lowercase.
+    juris_dscr = models.CharField(db_column='JURIS_DSCR', max_length=40, blank=True) # Field name made lowercase.
+    dist_no = models.CharField(db_column='DIST_NO', max_length=4, blank=True) # Field name made lowercase.
+    off_s_h_cd = models.CharField(db_column='OFF_S_H_CD', max_length=4, blank=True) # Field name made lowercase.
+    non_pty_cb = models.CharField(db_column='NON_PTY_CB', max_length=4, blank=True) # Field name made lowercase.
+    party_name = models.CharField(db_column='PARTY_NAME', max_length=63, blank=True) # Field name made lowercase.
+    bal_num = models.CharField(db_column='BAL_NUM', max_length=7, blank=True) # Field name made lowercase.
+    bal_juris = models.CharField(db_column='BAL_JURIS', max_length=40, blank=True) # Field name made lowercase.
+    sup_opp_cd = models.CharField(db_column='SUP_OPP_CD', max_length=4, blank=True) # Field name made lowercase.
+    year_elect = models.CharField(db_column='YEAR_ELECT', max_length=4, blank=True) # Field name made lowercase.
+    pof_title = models.CharField(db_column='POF_TITLE', max_length=44, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'CVR2_SO_CD'
+
+
+class Cvr3VerificationInfoCd(CalAccessBaseModel):
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=4) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=4) # Field name made lowercase.
+    tran_id = models.CharField(db_column='TRAN_ID', max_length=20) # Field name made lowercase.
+    entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3) # Field name made lowercase.
+    sig_date = models.DateField(db_column='SIG_DATE', blank=True, null=True) # Field name made lowercase.
+    sig_loc = models.CharField(db_column='SIG_LOC', max_length=39, blank=True) # Field name made lowercase.
+    sig_naml = models.CharField(db_column='SIG_NAML', max_length=56, blank=True) # Field name made lowercase.
+    sig_namf = models.CharField(db_column='SIG_NAMF', max_length=45, blank=True) # Field name made lowercase.
+    sig_namt = models.CharField(db_column='SIG_NAMT', max_length=10, blank=True) # Field name made lowercase.
+    sig_nams = models.CharField(db_column='SIG_NAMS', max_length=8, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'CVR3_VERIFICATION_INFO_CD'
+
+
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bal_juris = models.CharField(
@@ -593,6 +651,44 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
 
     class Meta:
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
+
+
+class CvrE530Cd(CalAccessBaseModel):
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=3) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=4) # Field name made lowercase.
+    entity_cd = models.CharField(db_column='ENTITY_CD', max_length=32, blank=True) # Field name made lowercase.
+    filer_naml = models.CharField(db_column='FILER_NAML', max_length=200) # Field name made lowercase.
+    filer_namf = models.CharField(db_column='FILER_NAMF', max_length=4, blank=True) # Field name made lowercase.
+    filer_namt = models.CharField(db_column='FILER_NAMT', max_length=32, blank=True) # Field name made lowercase.
+    filer_nams = models.CharField(db_column='FILER_NAMS', max_length=32, blank=True) # Field name made lowercase.
+    report_num = models.CharField(db_column='REPORT_NUM', max_length=32, blank=True) # Field name made lowercase.
+    rpt_date = models.DateField(db_column='RPT_DATE') # Field name made lowercase.
+    filer_city = models.CharField(db_column='FILER_CITY', max_length=16, blank=True) # Field name made lowercase.
+    filer_st = models.CharField(db_column='FILER_ST', max_length=4, blank=True) # Field name made lowercase.
+    filer_zip4 = models.CharField(db_column='FILER_ZIP4', max_length=10, blank=True) # Field name made lowercase.
+    occupation = models.CharField(db_column='OCCUPATION', max_length=15, blank=True) # Field name made lowercase.
+    employer = models.CharField(db_column='EMPLOYER', max_length=13, blank=True) # Field name made lowercase.
+    cand_naml = models.CharField(db_column='CAND_NAML', max_length=46) # Field name made lowercase.
+    cand_namf = models.CharField(db_column='CAND_NAMF', max_length=21, blank=True) # Field name made lowercase.
+    cand_namt = models.CharField(db_column='CAND_NAMT', max_length=32, blank=True) # Field name made lowercase.
+    cand_nams = models.CharField(db_column='CAND_NAMS', max_length=32, blank=True) # Field name made lowercase.
+    district_cd = models.IntegerField(db_column='DISTRICT_CD') # Field name made lowercase.
+    office_cd = models.IntegerField(db_column='OFFICE_CD') # Field name made lowercase.
+    pmnt_dt = models.DateField(db_column='PMNT_DT') # Field name made lowercase.
+    pmnt_amount = models.FloatField(db_column='PMNT_AMOUNT') # Field name made lowercase.
+    type_literature = models.IntegerField(db_column='TYPE_LITERATURE') # Field name made lowercase.
+    type_printads = models.IntegerField(db_column='TYPE_PRINTADS') # Field name made lowercase.
+    type_radio = models.IntegerField(db_column='TYPE_RADIO') # Field name made lowercase.
+    type_tv = models.IntegerField(db_column='TYPE_TV') # Field name made lowercase.
+    type_it = models.IntegerField(db_column='TYPE_IT') # Field name made lowercase.
+    type_billboards = models.IntegerField(db_column='TYPE_BILLBOARDS') # Field name made lowercase.
+    type_other = models.IntegerField(db_column='TYPE_OTHER') # Field name made lowercase.
+    other_desc = models.CharField(db_column='OTHER_DESC', max_length=49) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'CVR_E530_CD'
 
 
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
@@ -1144,6 +1240,18 @@ class DebtCd(CalAccessBaseModel):
         db_table = 'DEBT_CD'
 
 
+class EfsFilingLogCd(CalAccessBaseModel):
+    filing_date = models.DateTimeField(db_column='FILING_DATE') # Field name made lowercase.
+    filingstatus = models.IntegerField(db_column='FILINGSTATUS') # Field name made lowercase.
+    vendor = models.CharField(db_column='VENDOR', max_length=250) # Field name made lowercase.
+    filer_id = models.CharField(db_column='FILER_ID', max_length=250) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=250) # Field name made lowercase.
+    error_no = models.CharField(db_column='ERROR_NO', max_length=250) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'EFS_FILING_LOG_CD'
+
+
 class ExpnCd(CalAccessBaseModel):
     DATE_FIELDS = ['EXPN_DATE', ]
     agent_namf = models.CharField(
@@ -1305,6 +1413,37 @@ class ExpnCd(CalAccessBaseModel):
         db_table = 'EXPN_CD'
 
 
+class F495P2Cd(CalAccessBaseModel):
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=4) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=4) # Field name made lowercase.
+    elect_date = models.DateField(db_column='ELECT_DATE', blank=True, null=True) # Field name made lowercase.
+    electjuris = models.CharField(db_column='ELECTJURIS', max_length=40) # Field name made lowercase.
+    contribamt = models.FloatField(db_column='CONTRIBAMT') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'F495P2_CD'
+
+
+class F690P2Cd(CalAccessBaseModel):
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=4) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=4) # Field name made lowercase.
+    exec_date = models.DateField(db_column='EXEC_DATE') # Field name made lowercase.
+    from_date = models.DateField(db_column='FROM_DATE') # Field name made lowercase.
+    thru_date = models.DateField(db_column='THRU_DATE') # Field name made lowercase.
+    chg_parts = models.CharField(db_column='CHG_PARTS', max_length=100, blank=True) # Field name made lowercase.
+    chg_sects = models.CharField(db_column='CHG_SECTS', max_length=100, blank=True) # Field name made lowercase.
+    amend_txt1 = models.CharField(db_column='AMEND_TXT1', max_length=330, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'F690P2_CD'
+
+
 class FilernameCd(CalAccessBaseModel):
     DATE_FIELDS = ['EFFECT_DT', ]
     xref_filer_id = models.CharField(
@@ -1348,6 +1487,26 @@ class FilerAcronymsCd(CalAccessBaseModel):
 
     def __unicode__(self):
         return self.acronym
+
+
+class FilerAddressCd(CalAccessBaseModel):
+    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    adrid = models.IntegerField(db_column='ADRID') # Field name made lowercase.
+    effect_dt = models.DateTimeField(db_column='EFFECT_DT', blank=True, null=True) # Field name made lowercase.
+    add_type = models.IntegerField(db_column='ADD_TYPE', blank=True, null=True) # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID', blank=True, null=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'FILER_ADDRESS_CD'
+
+
+class FilerEthicsClassCd(CalAccessBaseModel):
+    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    ethics_date = models.DateTimeField(db_column='ETHICS_DATE') # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'FILER_ETHICS_CLASS_CD'
 
 
 class FilerFilingsCd(CalAccessBaseModel):
@@ -1534,6 +1693,33 @@ class FilingPeriodCd(CalAccessBaseModel):
         db_table = 'FILING_PERIOD_CD'
 
 
+class GroupTypesCd(CalAccessBaseModel):
+    grp_id = models.IntegerField(db_column='GRP_ID') # Field name made lowercase.
+    grp_name = models.CharField(db_column='GRP_NAME', max_length=28, blank=True) # Field name made lowercase.
+    grp_desc = models.CharField(db_column='GRP_DESC', max_length=32, blank=True) # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'GROUP_TYPES_CD'
+
+
+class HeaderCd(CalAccessBaseModel):
+    line_number = models.IntegerField(db_column='LINE_NUMBER') # Field name made lowercase.
+    form_id = models.CharField(db_column='FORM_ID', max_length=5) # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=11) # Field name made lowercase.
+    section_label = models.CharField(db_column='SECTION_LABEL', max_length=58, blank=True) # Field name made lowercase.
+    comments1 = models.CharField(db_column='COMMENTS1', max_length=48, blank=True) # Field name made lowercase.
+    comments2 = models.CharField(db_column='COMMENTS2', max_length=48, blank=True) # Field name made lowercase.
+    label = models.CharField(db_column='LABEL', max_length=98) # Field name made lowercase.
+    column_a = models.IntegerField(db_column='COLUMN_A', blank=True, null=True) # Field name made lowercase.
+    column_b = models.IntegerField(db_column='COLUMN_B', blank=True, null=True) # Field name made lowercase.
+    column_c = models.IntegerField(db_column='COLUMN_C', blank=True, null=True) # Field name made lowercase.
+    show_c = models.IntegerField(db_column='SHOW_C', blank=True, null=True) # Field name made lowercase.
+    show_b = models.IntegerField(db_column='SHOW_B', blank=True, null=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'HEADER_CD'
+
+
 class HdrCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     cal_ver = models.CharField(max_length=4L, db_column='CAL_VER', blank=True)
@@ -1557,6 +1743,17 @@ class HdrCd(CalAccessBaseModel):
 
     class Meta:
         db_table = 'HDR_CD'
+
+
+class ImageLinksCd(CalAccessBaseModel):
+    img_link_id = models.IntegerField(db_column='IMG_LINK_ID') # Field name made lowercase.
+    img_link_type = models.IntegerField(db_column='IMG_LINK_TYPE') # Field name made lowercase.
+    img_id = models.IntegerField(db_column='IMG_ID') # Field name made lowercase.
+    img_type = models.IntegerField(db_column='IMG_TYPE') # Field name made lowercase.
+    img_dt = models.DateField(db_column='IMG_DT') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'IMAGE_LINKS_CD'
 
 
 class LattCd(CalAccessBaseModel):
@@ -1621,6 +1818,46 @@ class LattCd(CalAccessBaseModel):
 
     class Meta:
         db_table = 'LATT_CD'
+
+
+class LobbyingChgLogCd(CalAccessBaseModel):
+    id = models.IntegerField(primary_key=True)
+    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    change_no = models.IntegerField(db_column='CHANGE_NO') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    log_dt = models.DateField(db_column='LOG_DT') # Field name made lowercase.
+    filer_type = models.IntegerField(db_column='FILER_TYPE') # Field name made lowercase.
+    correction_flg = models.CharField(db_column='CORRECTION_FLG', max_length=200) # Field name made lowercase.
+    action = models.CharField(db_column='ACTION', max_length=200) # Field name made lowercase.
+    attribute_changed = models.CharField(db_column='ATTRIBUTE_CHANGED', max_length=200) # Field name made lowercase.
+    ethics_dt = models.DateField(db_column='ETHICS_DT') # Field name made lowercase.
+    interests = models.CharField(db_column='INTERESTS', max_length=200) # Field name made lowercase.
+    filer_full_name = models.CharField(db_column='FILER_FULL_NAME', max_length=200) # Field name made lowercase.
+    filer_city = models.CharField(db_column='FILER_CITY', max_length=200) # Field name made lowercase.
+    filer_st = models.CharField(db_column='FILER_ST', max_length=200) # Field name made lowercase.
+    filer_zip = models.IntegerField(db_column='FILER_ZIP') # Field name made lowercase.
+    filer_phone = models.IntegerField(db_column='FILER_PHONE') # Field name made lowercase.
+    entity_type = models.IntegerField(db_column='ENTITY_TYPE') # Field name made lowercase.
+    entity_name = models.CharField(db_column='ENTITY_NAME', max_length=500) # Field name made lowercase.
+    entity_city = models.CharField(db_column='ENTITY_CITY', max_length=500) # Field name made lowercase.
+    entity_st = models.CharField(db_column='ENTITY_ST', max_length=500) # Field name made lowercase.
+    entity_zip = models.IntegerField(db_column='ENTITY_ZIP') # Field name made lowercase.
+    entity_phone = models.IntegerField(db_column='ENTITY_PHONE') # Field name made lowercase.
+    entity_id = models.IntegerField(db_column='ENTITY_ID') # Field name made lowercase.
+    responsible_officer = models.CharField(db_column='RESPONSIBLE_OFFICER', max_length=500) # Field name made lowercase.
+    effect_dt = models.DateField(db_column='EFFECT_DT') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYING_CHG_LOG_CD'
+
+
+class LegislativeSessionsCd(CalAccessBaseModel):
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    begin_date = models.DateField(db_column='BEGIN_DATE') # Field name made lowercase.
+    end_date = models.DateField(db_column='END_DATE') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LEGISLATIVE_SESSIONS_CD'
 
 
 class LccmCd(CalAccessBaseModel):
@@ -2175,6 +2412,300 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         db_table = 'LOBBYING_CHG_LOG_CD'
 
 
+class LobbyistContributions1Cd(CalAccessBaseModel):
+    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    filing_period_start_dt = models.DateField(db_column='FILING_PERIOD_START_DT') # Field name made lowercase.
+    filing_period_end_dt = models.DateField(db_column='FILING_PERIOD_END_DT') # Field name made lowercase.
+    contribution_dt = models.CharField(db_column='CONTRIBUTION_DT', max_length=32, blank=True) # Field name made lowercase.
+    recipient_name = models.CharField(db_column='RECIPIENT_NAME', max_length=106, blank=True) # Field name made lowercase.
+    recipient_id = models.IntegerField(db_column='RECIPIENT_ID', blank=True, null=True) # Field name made lowercase.
+    amount = models.FloatField(db_column='AMOUNT', blank=True, null=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_CONTRIBUTIONS1_CD'
+
+
+class LobbyistContributions2Cd(CalAccessBaseModel):
+    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    filing_period_start_dt = models.DateField(db_column='FILING_PERIOD_START_DT') # Field name made lowercase.
+    filing_period_end_dt = models.DateField(db_column='FILING_PERIOD_END_DT') # Field name made lowercase.
+    contribution_dt = models.CharField(db_column='CONTRIBUTION_DT', max_length=32, blank=True) # Field name made lowercase.
+    recipient_name = models.CharField(db_column='RECIPIENT_NAME', max_length=106, blank=True) # Field name made lowercase.
+    recipient_id = models.IntegerField(db_column='RECIPIENT_ID', blank=True, null=True) # Field name made lowercase.
+    amount = models.FloatField(db_column='AMOUNT', blank=True, null=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_CONTRIBUTIONS2_CD'
+
+
+class LobbyistContributions3Cd(CalAccessBaseModel):
+    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    filing_period_start_dt = models.DateField(db_column='FILING_PERIOD_START_DT') # Field name made lowercase.
+    filing_period_end_dt = models.DateField(db_column='FILING_PERIOD_END_DT') # Field name made lowercase.
+    contribution_dt = models.CharField(db_column='CONTRIBUTION_DT', max_length=32, blank=True) # Field name made lowercase.
+    recipient_name = models.CharField(db_column='RECIPIENT_NAME', max_length=106, blank=True) # Field name made lowercase.
+    recipient_id = models.IntegerField(db_column='RECIPIENT_ID', blank=True, null=True) # Field name made lowercase.
+    amount = models.FloatField(db_column='AMOUNT', blank=True, null=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_CONTRIBUTIONS3_CD'
+
+
+class LobbyistEmployer1Cd(CalAccessBaseModel):
+    employer_id = models.IntegerField(db_column='EMPLOYER_ID') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162) # Field name made lowercase.
+    current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT') # Field name made lowercase.
+    session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT') # Field name made lowercase.
+    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True) # Field name made lowercase.
+    interest_cd = models.IntegerField(db_column='INTEREST_CD', blank=True, null=True) # Field name made lowercase.
+    interest_name = models.CharField(db_column='INTEREST_NAME', max_length=24, blank=True) # Field name made lowercase.
+    session_yr_1 = models.IntegerField(db_column='SESSION_YR_1') # Field name made lowercase.
+    session_yr_2 = models.IntegerField(db_column='SESSION_YR_2') # Field name made lowercase.
+    yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT') # Field name made lowercase.
+    yr_2_ytd_amt = models.FloatField(db_column='YR_2_YTD_AMT') # Field name made lowercase.
+    qtr_1 = models.FloatField(db_column='QTR_1') # Field name made lowercase.
+    qtr_2 = models.FloatField(db_column='QTR_2') # Field name made lowercase.
+    qtr_3 = models.FloatField(db_column='QTR_3') # Field name made lowercase.
+    qtr_4 = models.FloatField(db_column='QTR_4') # Field name made lowercase.
+    qtr_5 = models.FloatField(db_column='QTR_5') # Field name made lowercase.
+    qtr_6 = models.FloatField(db_column='QTR_6') # Field name made lowercase.
+    qtr_7 = models.FloatField(db_column='QTR_7') # Field name made lowercase.
+    qtr_8 = models.FloatField(db_column='QTR_8') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_EMPLOYER1_CD'
+
+
+class LobbyistEmployer2Cd(CalAccessBaseModel):
+    employer_id = models.IntegerField(db_column='EMPLOYER_ID') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162) # Field name made lowercase.
+    current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT') # Field name made lowercase.
+    session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT') # Field name made lowercase.
+    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True) # Field name made lowercase.
+    interest_cd = models.IntegerField(db_column='INTEREST_CD', blank=True, null=True) # Field name made lowercase.
+    interest_name = models.CharField(db_column='INTEREST_NAME', max_length=24, blank=True) # Field name made lowercase.
+    session_yr_1 = models.IntegerField(db_column='SESSION_YR_1') # Field name made lowercase.
+    session_yr_2 = models.IntegerField(db_column='SESSION_YR_2') # Field name made lowercase.
+    yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT') # Field name made lowercase.
+    yr_2_ytd_amt = models.FloatField(db_column='YR_2_YTD_AMT') # Field name made lowercase.
+    qtr_1 = models.FloatField(db_column='QTR_1') # Field name made lowercase.
+    qtr_2 = models.FloatField(db_column='QTR_2') # Field name made lowercase.
+    qtr_3 = models.FloatField(db_column='QTR_3') # Field name made lowercase.
+    qtr_4 = models.FloatField(db_column='QTR_4') # Field name made lowercase.
+    qtr_5 = models.FloatField(db_column='QTR_5') # Field name made lowercase.
+    qtr_6 = models.FloatField(db_column='QTR_6') # Field name made lowercase.
+    qtr_7 = models.FloatField(db_column='QTR_7') # Field name made lowercase.
+    qtr_8 = models.FloatField(db_column='QTR_8') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_EMPLOYER2_CD'
+
+
+class LobbyistEmployer3Cd(CalAccessBaseModel):
+    employer_id = models.IntegerField(db_column='EMPLOYER_ID') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162) # Field name made lowercase.
+    current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT') # Field name made lowercase.
+    session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT') # Field name made lowercase.
+    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True) # Field name made lowercase.
+    interest_cd = models.IntegerField(db_column='INTEREST_CD', blank=True, null=True) # Field name made lowercase.
+    interest_name = models.CharField(db_column='INTEREST_NAME', max_length=24, blank=True) # Field name made lowercase.
+    session_yr_1 = models.IntegerField(db_column='SESSION_YR_1') # Field name made lowercase.
+    session_yr_2 = models.IntegerField(db_column='SESSION_YR_2') # Field name made lowercase.
+    yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT') # Field name made lowercase.
+    yr_2_ytd_amt = models.FloatField(db_column='YR_2_YTD_AMT') # Field name made lowercase.
+    qtr_1 = models.FloatField(db_column='QTR_1') # Field name made lowercase.
+    qtr_2 = models.FloatField(db_column='QTR_2') # Field name made lowercase.
+    qtr_3 = models.FloatField(db_column='QTR_3') # Field name made lowercase.
+    qtr_4 = models.FloatField(db_column='QTR_4') # Field name made lowercase.
+    qtr_5 = models.FloatField(db_column='QTR_5') # Field name made lowercase.
+    qtr_6 = models.FloatField(db_column='QTR_6') # Field name made lowercase.
+    qtr_7 = models.FloatField(db_column='QTR_7') # Field name made lowercase.
+    qtr_8 = models.FloatField(db_column='QTR_8') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_EMPLOYER3_CD'
+
+
+class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
+    employer_id = models.IntegerField(db_column='EMPLOYER_ID') # Field name made lowercase.
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=117) # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    termination_dt = models.CharField(db_column='TERMINATION_DT', max_length=32, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
+
+
+class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
+    employer_id = models.IntegerField(db_column='EMPLOYER_ID') # Field name made lowercase.
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=117) # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    termination_dt = models.CharField(db_column='TERMINATION_DT', max_length=32, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
+
+
+class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
+    lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID') # Field name made lowercase.
+    employer_id = models.IntegerField(db_column='EMPLOYER_ID') # Field name made lowercase.
+    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=17) # Field name made lowercase.
+    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17) # Field name made lowercase.
+    employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=117) # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_EMP_LOBBYIST1_CD'
+
+
+class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
+    lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID') # Field name made lowercase.
+    employer_id = models.IntegerField(db_column='EMPLOYER_ID') # Field name made lowercase.
+    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=17) # Field name made lowercase.
+    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17) # Field name made lowercase.
+    employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=117) # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_EMP_LOBBYIST2_CD'
+
+
+class LobbyistFirm1Cd(CalAccessBaseModel):
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=60) # Field name made lowercase.
+    current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT') # Field name made lowercase.
+    session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT') # Field name made lowercase.
+    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True) # Field name made lowercase.
+    session_yr_1 = models.IntegerField(db_column='SESSION_YR_1') # Field name made lowercase.
+    session_yr_2 = models.IntegerField(db_column='SESSION_YR_2') # Field name made lowercase.
+    yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT') # Field name made lowercase.
+    yr_2_ytd_amt = models.FloatField(db_column='YR_2_YTD_AMT') # Field name made lowercase.
+    qtr_1 = models.FloatField(db_column='QTR_1') # Field name made lowercase.
+    qtr_2 = models.FloatField(db_column='QTR_2') # Field name made lowercase.
+    qtr_3 = models.FloatField(db_column='QTR_3') # Field name made lowercase.
+    qtr_4 = models.FloatField(db_column='QTR_4') # Field name made lowercase.
+    qtr_5 = models.FloatField(db_column='QTR_5') # Field name made lowercase.
+    qtr_6 = models.FloatField(db_column='QTR_6') # Field name made lowercase.
+    qtr_7 = models.FloatField(db_column='QTR_7') # Field name made lowercase.
+    qtr_8 = models.FloatField(db_column='QTR_8') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_FIRM1_CD'
+
+
+class LobbyistFirm2Cd(CalAccessBaseModel):
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=60) # Field name made lowercase.
+    current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT') # Field name made lowercase.
+    session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT') # Field name made lowercase.
+    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True) # Field name made lowercase.
+    session_yr_1 = models.IntegerField(db_column='SESSION_YR_1') # Field name made lowercase.
+    session_yr_2 = models.IntegerField(db_column='SESSION_YR_2') # Field name made lowercase.
+    yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT') # Field name made lowercase.
+    yr_2_ytd_amt = models.FloatField(db_column='YR_2_YTD_AMT') # Field name made lowercase.
+    qtr_1 = models.FloatField(db_column='QTR_1') # Field name made lowercase.
+    qtr_2 = models.FloatField(db_column='QTR_2') # Field name made lowercase.
+    qtr_3 = models.FloatField(db_column='QTR_3') # Field name made lowercase.
+    qtr_4 = models.FloatField(db_column='QTR_4') # Field name made lowercase.
+    qtr_5 = models.FloatField(db_column='QTR_5') # Field name made lowercase.
+    qtr_6 = models.FloatField(db_column='QTR_6') # Field name made lowercase.
+    qtr_7 = models.FloatField(db_column='QTR_7') # Field name made lowercase.
+    qtr_8 = models.FloatField(db_column='QTR_8') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_FIRM2_CD'
+
+
+class LobbyistFirm3Cd(CalAccessBaseModel):
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=60) # Field name made lowercase.
+    current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT') # Field name made lowercase.
+    session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT') # Field name made lowercase.
+    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True) # Field name made lowercase.
+    session_yr_1 = models.IntegerField(db_column='SESSION_YR_1') # Field name made lowercase.
+    session_yr_2 = models.IntegerField(db_column='SESSION_YR_2') # Field name made lowercase.
+    yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT') # Field name made lowercase.
+    yr_2_ytd_amt = models.FloatField(db_column='YR_2_YTD_AMT') # Field name made lowercase.
+    qtr_1 = models.FloatField(db_column='QTR_1') # Field name made lowercase.
+    qtr_2 = models.FloatField(db_column='QTR_2') # Field name made lowercase.
+    qtr_3 = models.FloatField(db_column='QTR_3') # Field name made lowercase.
+    qtr_4 = models.FloatField(db_column='QTR_4') # Field name made lowercase.
+    qtr_5 = models.FloatField(db_column='QTR_5') # Field name made lowercase.
+    qtr_6 = models.FloatField(db_column='QTR_6') # Field name made lowercase.
+    qtr_7 = models.FloatField(db_column='QTR_7') # Field name made lowercase.
+    qtr_8 = models.FloatField(db_column='QTR_8') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_FIRM3_CD'
+
+
+class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE') # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=58) # Field name made lowercase.
+    employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=75) # Field name made lowercase.
+    rpt_start = models.DateField(db_column='RPT_START') # Field name made lowercase.
+    rpt_end = models.DateField(db_column='RPT_END') # Field name made lowercase.
+    per_total = models.FloatField(db_column='PER_TOTAL') # Field name made lowercase.
+    cum_total = models.FloatField(db_column='CUM_TOTAL') # Field name made lowercase.
+    lby_actvty = models.CharField(db_column='LBY_ACTVTY', max_length=182, blank=True) # Field name made lowercase.
+    ext_lby_actvty = models.CharField(db_column='EXT_LBY_ACTVTY', max_length=32, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
+
+
+class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE') # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=58) # Field name made lowercase.
+    employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=75) # Field name made lowercase.
+    rpt_start = models.DateField(db_column='RPT_START') # Field name made lowercase.
+    rpt_end = models.DateField(db_column='RPT_END') # Field name made lowercase.
+    per_total = models.FloatField(db_column='PER_TOTAL') # Field name made lowercase.
+    cum_total = models.FloatField(db_column='CUM_TOTAL') # Field name made lowercase.
+    lby_actvty = models.CharField(db_column='LBY_ACTVTY', max_length=182, blank=True) # Field name made lowercase.
+    ext_lby_actvty = models.CharField(db_column='EXT_LBY_ACTVTY', max_length=32, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
+
+
+class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
+    lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID') # Field name made lowercase.
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=15) # Field name made lowercase.
+    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17) # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=60) # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_FIRM_LOBBYIST1_CD'
+
+
+class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
+    lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID') # Field name made lowercase.
+    firm_id = models.IntegerField(db_column='FIRM_ID') # Field name made lowercase.
+    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=15) # Field name made lowercase.
+    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17) # Field name made lowercase.
+    firm_name = models.CharField(db_column='FIRM_NAME', max_length=60) # Field name made lowercase.
+    session_id = models.IntegerField(db_column='SESSION_ID') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
+
+######
+
 class LookupCode(CalAccessBaseModel):
     code_type = models.IntegerField()
     code_id = models.IntegerField()
@@ -2541,6 +3072,33 @@ class RcptCd(CalAccessBaseModel):
 
     class Meta:
         db_table = 'RCPT_CD'
+
+
+class ReceivedFilingsCd(CalAccessBaseModel):
+    filer_id = models.IntegerField(db_column='FILER_ID') # Field name made lowercase.
+    filing_file_name = models.CharField(db_column='FILING_FILE_NAME', max_length=14) # Field name made lowercase.
+    received_date = models.DateTimeField(db_column='RECEIVED_DATE') # Field name made lowercase.
+    filing_directory = models.CharField(db_column='FILING_DIRECTORY', max_length=45) # Field name made lowercase.
+    filing_id = models.IntegerField(db_column='FILING_ID', blank=True, null=True) # Field name made lowercase.
+    form_id = models.CharField(db_column='FORM_ID', max_length=4, blank=True) # Field name made lowercase.
+    receive_comment = models.CharField(db_column='RECEIVE_COMMENT', max_length=51) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'RECEIVED_FILINGS_CD'
+
+
+class ReportsCd(CalAccessBaseModel):
+    rpt_id = models.IntegerField(db_column='RPT_ID') # Field name made lowercase.
+    rpt_name = models.CharField(db_column='RPT_NAME', max_length=74) # Field name made lowercase.
+    rpt_desc_field = models.CharField(db_column='RPT_DESC_', max_length=32, blank=True) # Field name made lowercase. Field renamed because it ended with '_'.
+    path = models.CharField(db_column='PATH', max_length=32, blank=True) # Field name made lowercase.
+    data_object = models.CharField(db_column='DATA_OBJECT', max_length=38) # Field name made lowercase.
+    parms_flg_y_n = models.IntegerField(db_column='PARMS_FLG_Y_N', blank=True, null=True) # Field name made lowercase.
+    rpt_type = models.IntegerField(db_column='RPT_TYPE') # Field name made lowercase.
+    parm_definition = models.IntegerField(db_column='PARM_DEFINITION') # Field name made lowercase.
+
+    class Meta:
+        db_table = 'REPORTS_CD'
 
 
 class SmryCd(CalAccessBaseModel):
@@ -2964,3 +3522,17 @@ class S498Cd(CalAccessBaseModel):
 
     class Meta:
         db_table = 'S498_CD'
+
+
+class TextMemoCd(CalAccessBaseModel):
+    filing_id = models.IntegerField(db_column='FILING_ID') # Field name made lowercase.
+    amend_id = models.IntegerField(db_column='AMEND_ID') # Field name made lowercase.
+    line_item = models.IntegerField(db_column='LINE_ITEM') # Field name made lowercase.
+    rec_type = models.CharField(db_column='REC_TYPE', max_length=4) # Field name made lowercase.
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=8) # Field name made lowercase.
+    ref_no = models.CharField(db_column='REF_NO', max_length=20, blank=True) # Field name made lowercase.
+    text4000 = models.CharField(db_column='TEXT4000', max_length=4000, blank=True) # Field name made lowercase.
+
+    class Meta:
+        db_table = 'TEXT_MEMO_CD'
+

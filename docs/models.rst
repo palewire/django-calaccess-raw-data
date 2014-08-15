@@ -16,13 +16,13 @@ Models
 +------------------------------+--------------------------+
 | CVR2_REGISTRATION_CD         | Cvr2RegistrationCd       |
 +------------------------------+--------------------------+
-| CVR2_SO_CD                   |                          |
+| CVR2_SO_CD                   | Cvr2SoCd                 |
 +------------------------------+--------------------------+
-| CVR3_VERIFICATION_INFO_CD    |                          |
+| CVR3_VERIFICATION_INFO_CD    | Cvr3VerificationInfoCd   |
 +------------------------------+--------------------------+
 | CVR_CAMPAIGN_DISCLOSURE_CD   | CvrCampaignDisclosureCd  |
 +------------------------------+--------------------------+
-| CVR_E530_CD                  |                          |
+| CVR_E530_CD                  | CvrE530Cd                |
 +------------------------------+--------------------------+
 | CVR_F470_CD                  |                          |
 +------------------------------+--------------------------+
@@ -34,23 +34,23 @@ Models
 +------------------------------+--------------------------+
 | DEBT_CD                      | DebtCd                   |
 +------------------------------+--------------------------+
-| EFS_FILING_LOG_CD            |                          |
+| EFS_FILING_LOG_CD            | EfsFilingLogCd           |
 +------------------------------+--------------------------+
 | EXPN_CD                      | ExpnCd                   |
 +------------------------------+--------------------------+
-| F495P2_CD                    |                          |
+| F495P2_CD                    | F495P2Cd                 |
 +------------------------------+--------------------------+
 | F501_502_CD                  |                          |
 +------------------------------+--------------------------+
-| F690P2_CD                    |                          |
+| F690P2_CD                    | F690P2Cd                 |
 +------------------------------+--------------------------+
 | FILERNAME_CD                 | FilernameCd              |
 +------------------------------+--------------------------+
 | FILER_ACRONYMS_CD            | FilerAcronymsCd          |
 +------------------------------+--------------------------+
-| FILER_ADDRESS_CD             |                          |
+| FILER_ADDRESS_CD             | FilerAddressCd           |
 +------------------------------+--------------------------+
-| FILER_ETHICS_CLASS_CD        |                          |
+| FILER_ETHICS_CLASS_CD        | FilerEthicsClassCd       |
 +------------------------------+--------------------------+
 | FILERS_CD                    | FilersCd                 |
 +------------------------------+--------------------------+
@@ -74,19 +74,19 @@ Models
 +------------------------------+--------------------------+
 | FILINGS_CD                   | FilingsCd                |
 +------------------------------+--------------------------+
-| GROUP_TYPES_CD               |                          |
+| GROUP_TYPES_CD               | GroupTypesCd             |
 +------------------------------+--------------------------+
 | HDR_CD                       | HdrCd                    |
 +------------------------------+--------------------------+
-| HEADER_CD                    |                          |
+| HEADER_CD                    | HeaderCd                 |
 +------------------------------+--------------------------+
-| IMAGE_LINKS_CD               |                          |
+| IMAGE_LINKS_CD               | ImageLinksCd             |
 +------------------------------+--------------------------+
 | LATT_CD                      | LattCd                   |
 +------------------------------+--------------------------+
 | LCCM_CD                      | LccmCd                   |
 +------------------------------+--------------------------+
-| LEGISLATIVE_SESSIONS_CD      |                          |
+| LEGISLATIVE_SESSIONS_CD      | LegislativeSessionsCd    |
 +------------------------------+--------------------------+
 | LEMP_CD                      | LempCd                   |
 +------------------------------+--------------------------+
@@ -96,45 +96,45 @@ Models
 +------------------------------+--------------------------+
 | LOBBY_AMENDMENTS_CD          | LobbyAmendmentsCd        |
 +------------------------------+--------------------------+
-| LOBBYING_CHG_LOG_CD          |                          |
+| LOBBYING_CHG_LOG_CD          | LobbyingChgLogCd         |
 +------------------------------+--------------------------+
-| LOBBYIST_CONTRIBUTIONS1_CD   |                          |
+| LOBBYIST_CONTRIBUTIONS1_CD   | LobbyistContributions1Cd |
 +------------------------------+--------------------------+
-| LOBBYIST_CONTRIBUTIONS2_CD   |                          |
+| LOBBYIST_CONTRIBUTIONS2_CD   | LobbyistContributions2Cd |
 +------------------------------+--------------------------+
-| LOBBYIST_CONTRIBUTIONS3_CD   |                          |
+| LOBBYIST_CONTRIBUTIONS3_CD   | LobbyistContributions3Cd |
 +------------------------------+--------------------------+
-| LOBBYIST_EMP_LOBBYIST1_CD    |                          |
+| LOBBYIST_EMP_LOBBYIST1_CD    | LobbyistEmpLobbyist1Cd   |
 +------------------------------+--------------------------+
-| LOBBYIST_EMP_LOBBYIST2_CD    |                          |
+| LOBBYIST_EMP_LOBBYIST2_CD    | LobbyistEmpLobbyist2Cd   |
 +------------------------------+--------------------------+
-| LOBBYIST_EMPLOYER1_CD        |                          |
+| LOBBYIST_EMPLOYER1_CD        | LobbyistEmployer1Cd      |
 +------------------------------+--------------------------+
-| LOBBYIST_EMPLOYER2_CD        |                          |
+| LOBBYIST_EMPLOYER2_CD        | LobbyistEmployer2Cd      |
 +------------------------------+--------------------------+
-| LOBBYIST_EMPLOYER3_CD        |                          |
+| LOBBYIST_EMPLOYER3_CD        | LobbyistEmployer3Cd      |
 +------------------------------+--------------------------+
-| LOBBYIST_EMPLOYER_FIRMS1_CD  |                          |
+| LOBBYIST_EMPLOYER_FIRMS1_CD  | LobbyistEmployerFirms1Cd |
 +------------------------------+--------------------------+
-| LOBBYIST_EMPLOYER_FIRMS2_CD  |                          |
+| LOBBYIST_EMPLOYER_FIRMS2_CD  | LobbyistEmployerFirms2Cd |
 +------------------------------+--------------------------+
 | LOBBYIST_EMPLOYER_HISTORY_CD |                          |
 +------------------------------+--------------------------+
-| LOBBYIST_FIRM1_CD            |                          |
+| LOBBYIST_FIRM1_CD            | LobbyistFirm1Cd          |
 +------------------------------+--------------------------+
-| LOBBYIST_FIRM2_CD            |                          |
+| LOBBYIST_FIRM2_CD            | LobbyistFirm2Cd          |
 +------------------------------+--------------------------+
-| LOBBYIST_FIRM3_CD            |                          |
+| LOBBYIST_FIRM3_CD            | LobbyistFirm3Cd          |
 +------------------------------+--------------------------+
-| LOBBYIST_FIRM_EMPLOYER1_CD   |                          |
+| LOBBYIST_FIRM_EMPLOYER1_CD   | LobbyistFirmEmployer1Cd  |
 +------------------------------+--------------------------+
-| LOBBYIST_FIRM_EMPLOYER2_CD   |                          |
+| LOBBYIST_FIRM_EMPLOYER2_CD   | LobbyistFirmEmployer2Cd  |
 +------------------------------+--------------------------+
 | LOBBYIST_FIRM_HISTORY_CD     |                          |
 +------------------------------+--------------------------+
-| LOBBYIST_FIRM_LOBBYIST1_CD   |                          |
+| LOBBYIST_FIRM_LOBBYIST1_CD   | LobbyistFirmLobbyist1Cd  |
 +------------------------------+--------------------------+
-| LOBBYIST_FIRM_LOBBYIST2_CD   |                          |
+| LOBBYIST_FIRM_LOBBYIST2_CD   | LobbyistFirmLobbyist2Cd  |
 +------------------------------+--------------------------+
 | LOOKUP_CODES_CD              | LookupCode               |
 +------------------------------+--------------------------+
@@ -146,9 +146,9 @@ Models
 +------------------------------+--------------------------+
 | RCPT_CD                      | RcptCd                   |
 +------------------------------+--------------------------+
-| RECEIVED_FILINGS_CD          |                          |
+| RECEIVED_FILINGS_CD          | ReceivedFilingsCd        |
 +------------------------------+--------------------------+
-| REPORTS_CD                   |                          |
+| REPORTS_CD                   | ReportsCd                |
 +------------------------------+--------------------------+
 | S401_CD                      | S401Cd                   |
 +------------------------------+--------------------------+
@@ -162,5 +162,5 @@ Models
 +------------------------------+--------------------------+
 | SPLT_CD                      | SpltCd                   |
 +------------------------------+--------------------------+
-| TEXT_MEMO_CD                 |                          |
+| TEXT_MEMO_CD                 | TextMemoCd               |
 +------------------------------+--------------------------+

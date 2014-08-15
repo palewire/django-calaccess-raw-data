@@ -24,7 +24,7 @@ load:
 	python -m cProfile example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
 
 loadtable:
-	python example/manage.py loadcalaccessfile BallotMeasuresCd
+	python example/manage.py loadcalaccessfile TextMemoCd
 
 runserver:
 	python example/manage.py runserver
@@ -36,4 +36,4 @@ test:
 	pep8 calaccess
 	pyflakes calaccess
 	coverage run setup.py test
-	coverage report -m
+	coverage report -mLobbyistFirmEmployer1Cd
