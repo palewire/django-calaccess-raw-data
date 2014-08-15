@@ -1,5 +1,5 @@
 from django.contrib import admin
-from calaccess import models
+from calaccess_raw import models
 from .base import BaseAdmin
 
 

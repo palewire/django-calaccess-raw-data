@@ -22,19 +22,19 @@ class TestCommand(Command):
                     'ENGINE': 'django.db.backends.sqlite3'
                 }
             },
-            INSTALLED_APPS=('calaccess',)
+            INSTALLED_APPS=('calaccess_raw',)
         )
         from django.core.management import call_command
-        call_command('test', 'calaccess')
+        call_command('test', 'calaccess_raw')
 
 
 setup(
     name='django-calaccess-raw-data',
     version='0.5',
     packages=[
-        'calaccess',
-        'calaccess.management',
-        'calaccess.management.commands',
+        'calaccess_raw',
+        'calaccess_raw.management',
+        'calaccess_raw.management.commands',
     ],
     include_package_data=True,
     license='MIT',

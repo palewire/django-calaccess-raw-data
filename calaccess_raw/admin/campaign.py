@@ -1,5 +1,5 @@
 from django.contrib import admin
-from calaccess import models
+from calaccess_raw import models
 from .base import BaseAdmin
 
 
@@ -55,7 +55,7 @@ class F501502CdAdmin(BaseAdmin):
     pass
 
 
-admin.site.register(models.CvrSoCd, CvrSoAdmin)
+admin.site.register(models.CvrSoCd, CvrSoCdAdmin)
 admin.site.register(models.Cvr2SoCd, BaseAdmin)
 admin.site.register(models.Cvr3VerificationInfoCd, BaseAdmin)
 admin.site.register(

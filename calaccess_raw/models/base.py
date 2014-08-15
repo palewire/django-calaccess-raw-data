@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
-from calaccess import managers
+from calaccess_raw import managers
 
 
 class CalAccessBaseModel(models.Model):

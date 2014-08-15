@@ -1,6 +1,6 @@
 import os
 from django.db import models
-from calaccess import get_download_directory
+from calaccess_raw import get_download_directory
 
 
 class CalAccessManager(models.Manager):

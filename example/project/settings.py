@@ -16,7 +16,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'calaccess',
+    'calaccess_raw',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -34,7 +34,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'calaccess',
+        'NAME': 'calaccess_raw',
         'USER': 'root',
         'PASSWORD': 'mysql',
         'HOST': 'localhost',

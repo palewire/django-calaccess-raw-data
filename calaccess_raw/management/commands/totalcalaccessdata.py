@@ -6,7 +6,7 @@ from django.contrib.humanize.templatetags.humanize import intcomma
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
-        model_list = get_models(get_app("calaccess"))
+        model_list = get_models(get_app("calaccess_raw"))
         print "%s total database tables" % len(model_list)
         record_count = 0
         for m in model_list:

@@ -22,7 +22,7 @@ class Command(LabelCommand):
         if self.verbosity:
             print "- Loading %s" % model_name
 
-        model = get_model("calaccess", model_name)
+        model = get_model("calaccess_raw", model_name)
         csv_path = model.objects.get_csv_path()
 
         # Flush
