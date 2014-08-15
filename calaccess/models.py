@@ -1916,45 +1916,6 @@ class LattCd(CalAccessBaseModel):
         db_table = 'LATT_CD'
 
 
-class LobbyingChgLogCd(CalAccessBaseModel):
-    id = models.IntegerField(primary_key=True)
-    filer_id = models.IntegerField(db_column='FILER_ID')
-    change_no = models.IntegerField(db_column='CHANGE_NO')
-    session_id = models.IntegerField(db_column='SESSION_ID')
-    log_dt = models.DateField(db_column='LOG_DT')
-    filer_type = models.IntegerField(db_column='FILER_TYPE')
-    correction_flg = models.CharField(
-        db_column='CORRECTION_FLG', max_length=200
-    )
-    action = models.CharField(db_column='ACTION', max_length=200)
-    attribute_changed = models.CharField(
-        db_column='ATTRIBUTE_CHANGED', max_length=200
-    )
-    ethics_dt = models.DateField(db_column='ETHICS_DT')
-    interests = models.CharField(db_column='INTERESTS', max_length=200)
-    filer_full_name = models.CharField(
-        db_column='FILER_FULL_NAME', max_length=200
-    )
-    filer_city = models.CharField(db_column='FILER_CITY', max_length=200)
-    filer_st = models.CharField(db_column='FILER_ST', max_length=200)
-    filer_zip = models.IntegerField(db_column='FILER_ZIP')
-    filer_phone = models.IntegerField(db_column='FILER_PHONE')
-    entity_type = models.IntegerField(db_column='ENTITY_TYPE')
-    entity_name = models.CharField(db_column='ENTITY_NAME', max_length=500)
-    entity_city = models.CharField(db_column='ENTITY_CITY', max_length=500)
-    entity_st = models.CharField(db_column='ENTITY_ST', max_length=500)
-    entity_zip = models.IntegerField(db_column='ENTITY_ZIP')
-    entity_phone = models.IntegerField(db_column='ENTITY_PHONE')
-    entity_id = models.IntegerField(db_column='ENTITY_ID')
-    responsible_officer = models.CharField(
-        db_column='RESPONSIBLE_OFFICER', max_length=500
-    )
-    effect_dt = models.DateField(db_column='EFFECT_DT')
-
-    class Meta:
-        db_table = 'LOBBYING_CHG_LOG_CD'
-
-
 class LegislativeSessionsCd(CalAccessBaseModel):
     session_id = models.IntegerField(db_column='SESSION_ID')
     begin_date = models.DateField(db_column='BEGIN_DATE')
