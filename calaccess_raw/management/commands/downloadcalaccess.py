@@ -79,7 +79,8 @@ custom_options = (
 
 
 class Command(BaseCommand):
-    help = 'Download the latest snapshot of the CalAccess database'
+    help = 'Download, unzip, clean and load the latest snapshot of the \
+CalAccess database'
     option_list = BaseCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):

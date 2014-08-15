@@ -4,6 +4,8 @@ Management commands
 cleancalaccessfile
 ------------------
 
+Clean a source CalAccess file and reformat it as a CSV
+
 .. code-block:: bash
 
     Usage: manage.py cleancalaccessfile [options] <file path>
@@ -29,11 +31,13 @@ cleancalaccessfile
 downloadcalaccess
 ------------------
 
+Download, unzip, clean and load the latest snapshot of the CalAccess database
+
 .. code-block:: bash
 
     Usage: manage.py downloadcalaccess [options] 
 
-    Download the latest snapshot of the CalAccess database
+    Download, unzip, clean and load the latest snapshot of the CalAccess database
 
     Options:
       -v VERBOSITY, --verbosity=VERBOSITY
@@ -88,9 +92,13 @@ Load a cleaned CalAccess file into the database
 totalcalaccessdata
 ------------------
 
+Print out the total of CAL-ACCESS tables and rows in the database
+
 .. code-block:: bash
 
     Usage: manage.py totalcalaccessdata [options] 
+
+    Print out the total of CAL-ACCESS tables and rows in the database
 
     Options:
       -v VERBOSITY, --verbosity=VERBOSITY

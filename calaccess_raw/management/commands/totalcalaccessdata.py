@@ -4,6 +4,7 @@ from django.contrib.humanize.templatetags.humanize import intcomma
 
 
 class Command(BaseCommand):
+    help = "Print out the total of CAL-ACCESS tables and rows in the database"
 
     def handle(self, *args, **kwargs):
         model_list = get_models(get_app("calaccess_raw"))
