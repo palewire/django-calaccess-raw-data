@@ -29,7 +29,7 @@ class TestCommand(Command):
 
 
 setup(
-    name='django-calaccess-parser',
+    name='django-calaccess-raw-data',
     version='0.5',
     packages=[
         'calaccess',
