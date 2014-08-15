@@ -6,6 +6,14 @@ class BaseAdmin(admin.ModelAdmin):
     save_on_top = True
 
 
+class AcronymsCdAdmin(BaseAdmin):
+    pass
+
+
+class AddressCdAdmin(BaseAdmin):
+    pass
+
+
 class CvrSoAdmin(BaseAdmin):
     pass
 
@@ -162,6 +170,8 @@ class S498CdAdmin(BaseAdmin):
     pass
 
 
+admin.site.register(models.AcronymsCd, AcronymsCdAdmin)
+admin.site.register(models.AddressCd, AddressCdAdmin)
 admin.site.register(models.CvrSo, CvrSoAdmin)
 admin.site.register(
     models.Cvr2CampaignDisclosureCd,

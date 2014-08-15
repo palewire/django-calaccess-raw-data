@@ -33,6 +33,19 @@ class AcronymsCd(CalAccessBaseModel):
         db_table = "ACRONYMS_CD"
 
 
+class AddressCd(CalAccessBaseModel):
+    adrid = models.IntegerField(db_column="ADRID")
+    city = models.CharField(max_length=500, db_column="CITY")
+    st = models.CharField(max_length=500, db_column="ST")
+    zip4 = models.IntegerField(db_column="ZIP4")
+    phon = models.IntegerField(db_column="PHON")
+    fax = models.IntegerField(db_column="FAX")
+    email = models.CharField(max_length=500, db_column="EMAIL")
+
+    class Meta:
+        db_table = "ADDRESS_CD"
+
+
 class CvrSo(CalAccessBaseModel):
     DATE_FIELDS = [
         'ACCT_OPENDT',
