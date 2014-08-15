@@ -50,10 +50,6 @@ class FilerAcronymsCdAdmin(BaseAdmin):
     pass
 
 
-class FilerFilingsCdAdmin(BaseAdmin):
-    pass
-
-
 class FilerInterestsCdAdmin(BaseAdmin):
     pass
 
@@ -75,10 +71,6 @@ class FilerTypesCdAdmin(BaseAdmin):
 
 
 class FilerXrefCdAdmin(BaseAdmin):
-    pass
-
-
-class FilingsCdAdmin(BaseAdmin):
     pass
 
 
@@ -107,10 +99,6 @@ class NamesCdAdmin(BaseAdmin):
 
 
 class RcptCdAdmin(BaseAdmin):
-    pass
-
-
-class SmryCdAdmin(BaseAdmin):
     pass
 
 
@@ -148,8 +136,6 @@ admin.site.register(
     models.CvrCampaignDisclosureCd,
     CvrCampaignDisclosureCdAdmin
 )
-
-admin.site.register(models.CvrE530Cd, BaseAdmin)
 admin.site.register(models.DebtCd, DebtCdAdmin)
 admin.site.register(models.ExpnCd, ExpnCdAdmin)
 admin.site.register(models.EfsFilingLogCd, BaseAdmin)
@@ -159,14 +145,12 @@ admin.site.register(models.FilersCd, FilersCdAdmin)
 admin.site.register(models.FilerAcronymsCd, FilerAcronymsCdAdmin)
 admin.site.register(models.FilerAddressCd, BaseAdmin)
 admin.site.register(models.FilerEthicsClassCd, BaseAdmin)
-admin.site.register(models.FilerFilingsCd, FilerFilingsCdAdmin)
 admin.site.register(models.FilerInterestsCd, FilerInterestsCdAdmin)
 admin.site.register(models.FilerLinksCd, FilerLinksCdAdmin)
 admin.site.register(models.FilerStatusTypesCd, FilerStatusTypesCdAdmin)
 admin.site.register(models.FilerToFilerTypeCd, FilerToFilerTypeCdAdmin)
 admin.site.register(models.FilerTypesCd, FilerTypesCdAdmin)
 admin.site.register(models.FilerXrefCd, FilerXrefCdAdmin)
-admin.site.register(models.FilingsCd, FilingsCdAdmin)
 admin.site.register(models.FilingPeriodCd, FilingPeriodCdAdmin)
 admin.site.register(models.GroupTypesCd, BaseAdmin)
 admin.site.register(models.HeaderCd, BaseAdmin)
@@ -179,7 +163,6 @@ admin.site.register(models.LobbyingChgLogCd, LobbyingChgLogCdAdmin)
 admin.site.register(models.LookupCode, LookupCodeAdmin)
 admin.site.register(models.NamesCd, NamesCdAdmin)
 admin.site.register(models.RcptCd, RcptCdAdmin)
-admin.site.register(models.SmryCd, SmryCdAdmin)
 admin.site.register(models.SpltCd, SpltCdAdmin)
 admin.site.register(models.S401Cd, S401CdAdmin)
 admin.site.register(models.S496Cd, S496CdAdmin)
