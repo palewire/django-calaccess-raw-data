@@ -6,11 +6,10 @@ from .base import CalAccessBaseModel
 class CvrSo(CalAccessBaseModel):
     '''
         Cover page for statement of organization
-        
+
         F400 -- Statement of Organization (Slate Mailer Organization)
         F402 -- Statement of Termination (Slate Mailer Organization)
         F410 -- Statement of Organization (Recipient Committee)
-    
     '''
     DATE_FIELDS = [
         'ACCT_OPENDT',
@@ -163,10 +162,8 @@ class CvrSo(CalAccessBaseModel):
 class Cvr2SoCd(CalAccessBaseModel):
     '''
         Additional Names / Committees information for the forms 400 & 410
-        
         F400
         F410
-        
     '''
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
@@ -636,12 +633,11 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
 
-
 class RcptCd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'DATE_THRU',
         'RCPT_DATE'
-    ]
+    )
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amount = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMOUNT'
@@ -1597,55 +1593,145 @@ class F501502Cd(models.Model):
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
     filer_id = models.CharField(db_column='FILER_ID', max_length=8, blank=True)
-    committee_id = models.CharField(db_column='COMMITTEE_ID', max_length=8, blank=True)
-    entity_cd = models.IntegerField(db_column='ENTITY_CD', blank=True, null=True)
-    report_num = models.IntegerField(db_column='REPORT_NUM', blank=True, null=True)
-    rpt_date = models.DateTimeField(db_column='RPT_DATE', blank=True, null=True)
+    committee_id = models.CharField(
+        db_column='COMMITTEE_ID', max_length=8, blank=True
+    )
+    entity_cd = models.IntegerField(
+        db_column='ENTITY_CD', blank=True, null=True
+    )
+    report_num = models.IntegerField(
+        db_column='REPORT_NUM', blank=True, null=True
+    )
+    rpt_date = models.DateTimeField(
+        db_column='RPT_DATE', blank=True, null=True
+    )
     stmt_type = models.IntegerField(db_column='STMT_TYPE')
-    from_date = models.CharField(db_column='FROM_DATE', max_length=32, blank=True)
-    thru_date = models.CharField(db_column='THRU_DATE', max_length=32, blank=True)
-    elect_date = models.CharField(db_column='ELECT_DATE', max_length=32, blank=True)
-    cand_naml = models.CharField(db_column='CAND_NAML', max_length=81, blank=True)
-    cand_namf = models.CharField(db_column='CAND_NAMF', max_length=25, blank=True)
-    can_namm = models.CharField(db_column='CAN_NAMM', max_length=10, blank=True)
-    cand_namt = models.CharField(db_column='CAND_NAMT', max_length=7, blank=True)
-    cand_nams = models.CharField(db_column='CAND_NAMS', max_length=7, blank=True)
-    moniker_pos = models.CharField(db_column='MONIKER_POS', max_length=32, blank=True)
-    moniker = models.CharField(db_column='MONIKER', max_length=4, blank=True)
-    cand_city = models.CharField(db_column='CAND_CITY', max_length=22, blank=True)
-    cand_st = models.CharField(db_column='CAND_ST', max_length=4, blank=True)
-    cand_zip4 = models.CharField(db_column='CAND_ZIP4', max_length=10, blank=True)
-    cand_phon = models.CharField(db_column='CAND_PHON', max_length=14, blank=True)
-    cand_fax = models.CharField(db_column='CAND_FAX', max_length=14, blank=True)
-    cand_email = models.CharField(db_column='CAND_EMAIL', max_length=37, blank=True)
-    fin_naml = models.CharField(db_column='FIN_NAML', max_length=53, blank=True)
-    fin_namf = models.CharField(db_column='FIN_NAMF', max_length=32, blank=True)
-    fin_namt = models.CharField(db_column='FIN_NAMT', max_length=32, blank=True)
-    fin_nams = models.CharField(db_column='FIN_NAMS', max_length=32, blank=True)
-    fin_city = models.CharField(db_column='FIN_CITY', max_length=20, blank=True)
-    fin_st = models.CharField(db_column='FIN_ST', max_length=4, blank=True)
-    fin_zip4 = models.CharField(db_column='FIN_ZIP4', max_length=9, blank=True)
-    fin_phon = models.CharField(db_column='FIN_PHON', max_length=14, blank=True)
-    fin_fax = models.CharField(db_column='FIN_FAX', max_length=10, blank=True)
-    fin_email = models.CharField(db_column='FIN_EMAIL', max_length=15, blank=True)
+    from_date = models.CharField(
+        db_column='FROM_DATE', max_length=32, blank=True
+    )
+    thru_date = models.CharField(
+        db_column='THRU_DATE', max_length=32, blank=True
+    )
+    elect_date = models.CharField(
+        db_column='ELECT_DATE', max_length=32, blank=True
+    )
+    cand_naml = models.CharField(
+        db_column='CAND_NAML', max_length=81, blank=True
+    )
+    cand_namf = models.CharField(
+        db_column='CAND_NAMF', max_length=25, blank=True
+    )
+    can_namm = models.CharField(
+        db_column='CAN_NAMM', max_length=10, blank=True
+    )
+    cand_namt = models.CharField(
+        db_column='CAND_NAMT', max_length=7, blank=True
+    )
+    cand_nams = models.CharField(
+        db_column='CAND_NAMS', max_length=7, blank=True
+    )
+    moniker_pos = models.CharField(
+        db_column='MONIKER_POS', max_length=32, blank=True
+    )
+    moniker = models.CharField(
+        db_column='MONIKER', max_length=4, blank=True
+    )
+    cand_city = models.CharField(
+        db_column='CAND_CITY', max_length=22, blank=True
+    )
+    cand_st = models.CharField(
+        db_column='CAND_ST', max_length=4, blank=True
+    )
+    cand_zip4 = models.CharField(
+        db_column='CAND_ZIP4', max_length=10, blank=True
+    )
+    cand_phon = models.CharField(
+        db_column='CAND_PHON', max_length=14, blank=True
+    )
+    cand_fax = models.CharField(
+        db_column='CAND_FAX', max_length=14, blank=True
+    )
+    cand_email = models.CharField(
+        db_column='CAND_EMAIL', max_length=37, blank=True
+    )
+    fin_naml = models.CharField(
+        db_column='FIN_NAML', max_length=53, blank=True
+    )
+    fin_namf = models.CharField(
+        db_column='FIN_NAMF', max_length=32, blank=True
+    )
+    fin_namt = models.CharField(
+        db_column='FIN_NAMT', max_length=32, blank=True
+    )
+    fin_nams = models.CharField(
+        db_column='FIN_NAMS', max_length=32, blank=True
+    )
+    fin_city = models.CharField(
+        db_column='FIN_CITY', max_length=20, blank=True
+    )
+    fin_st = models.CharField(
+        db_column='FIN_ST', max_length=4, blank=True
+    )
+    fin_zip4 = models.CharField(
+        db_column='FIN_ZIP4', max_length=9, blank=True
+    )
+    fin_phon = models.CharField(
+        db_column='FIN_PHON', max_length=14, blank=True
+    )
+    fin_fax = models.CharField(
+        db_column='FIN_FAX', max_length=10, blank=True
+    )
+    fin_email = models.CharField(
+        db_column='FIN_EMAIL', max_length=15, blank=True
+    )
     office_cd = models.IntegerField(db_column='OFFICE_CD')
-    offic_dscr = models.CharField(db_column='OFFIC_DSCR', max_length=50, blank=True)
-    agency_nam = models.CharField(db_column='AGENCY_NAM', max_length=63, blank=True)
-    juris_cd = models.IntegerField(db_column='JURIS_CD', blank=True, null=True)
-    juris_dscr = models.CharField(db_column='JURIS_DSCR', max_length=14, blank=True)
+    offic_dscr = models.CharField(
+        db_column='OFFIC_DSCR', max_length=50, blank=True
+    )
+    agency_nam = models.CharField(
+        db_column='AGENCY_NAM', max_length=63, blank=True
+    )
+    juris_cd = models.IntegerField(
+        db_column='JURIS_CD', blank=True, null=True
+    )
+    juris_dscr = models.CharField(
+        db_column='JURIS_DSCR', max_length=14, blank=True
+    )
     dist_no = models.CharField(db_column='DIST_NO', max_length=4, blank=True)
     party = models.CharField(db_column='PARTY', max_length=20, blank=True)
-    yr_of_elec = models.IntegerField(db_column='YR_OF_ELEC', blank=True, null=True)
-    elec_type = models.IntegerField(db_column='ELEC_TYPE', blank=True, null=True)
-    execute_dt = models.DateTimeField(db_column='EXECUTE_DT', blank=True, null=True)
-    can_sig = models.CharField(db_column='CAN_SIG', max_length=13, blank=True)
-    account_no = models.CharField(db_column='ACCOUNT_NO', max_length=22, blank=True)
-    acct_op_dt = models.DateField(db_column='ACCT_OP_DT', blank=True, null=True)
-    party_cd = models.IntegerField(db_column='PARTY_CD', blank=True, null=True)
-    district_cd = models.IntegerField(db_column='DISTRICT_CD', blank=True, null=True)
-    accept_limit_yn = models.IntegerField(db_column='ACCEPT_LIMIT_YN', blank=True, null=True)
-    did_exceed_dt = models.DateField(db_column='DID_EXCEED_DT', blank=True, null=True)
-    cntrb_prsnl_fnds_dt = models.DateField(db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True)
+    yr_of_elec = models.IntegerField(
+        db_column='YR_OF_ELEC', blank=True, null=True
+    )
+    elec_type = models.IntegerField(
+        db_column='ELEC_TYPE', blank=True, null=True
+    )
+    execute_dt = models.DateTimeField(
+        db_column='EXECUTE_DT', blank=True, null=True
+    )
+    can_sig = models.CharField(
+        db_column='CAN_SIG', max_length=13, blank=True
+    )
+    account_no = models.CharField(
+        db_column='ACCOUNT_NO', max_length=22, blank=True
+    )
+    acct_op_dt = models.DateField(
+        db_column='ACCT_OP_DT', blank=True, null=True
+    )
+    party_cd = models.IntegerField(
+        db_column='PARTY_CD', blank=True, null=True
+    )
+    district_cd = models.IntegerField(
+        db_column='DISTRICT_CD', blank=True, null=True
+    )
+    accept_limit_yn = models.IntegerField(
+        db_column='ACCEPT_LIMIT_YN', blank=True, null=True
+    )
+    did_exceed_dt = models.DateField(
+        db_column='DID_EXCEED_DT', blank=True, null=True
+    )
+    cntrb_prsnl_fnds_dt = models.DateField(
+        db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True
+    )
 
     class Meta:
         app_label = 'calaccess'
