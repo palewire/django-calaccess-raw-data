@@ -30,22 +30,6 @@ class CvrCampaignDisclosureCdAdmin(BaseAdmin):
     pass
 
 
-class CvrLobbyDisclosureCdAdmin(BaseAdmin):
-    pass
-
-
-class Cvr2LobbyDisclosureCdAdmin(BaseAdmin):
-    pass
-
-
-class CvrRegistrationCdAdmin(BaseAdmin):
-    pass
-
-
-class Cvr2RegistrationCdAdmin(BaseAdmin):
-    pass
-
-
 class DebtCdAdmin(BaseAdmin):
     pass
 
@@ -106,27 +90,7 @@ class HdrCdAdmin(BaseAdmin):
     pass
 
 
-class LattCdAdmin(BaseAdmin):
-    pass
-
-
-class LccmCdAdmin(BaseAdmin):
-    pass
-
-
-class LempCdAdmin(BaseAdmin):
-    pass
-
-
-class LexpCdAdmin(BaseAdmin):
-    pass
-
-
 class LoanCdAdmin(BaseAdmin):
-    pass
-
-
-class LobbyAmendmentsCdAdmin(BaseAdmin):
     pass
 
 
@@ -135,14 +99,6 @@ class LobbyingChgLogCdAdmin(BaseAdmin):
 
 
 class LookupCodeAdmin(BaseAdmin):
-    pass
-
-
-class LothCdAdmin(BaseAdmin):
-    pass
-
-
-class LpayCdAdmin(BaseAdmin):
     pass
 
 
@@ -192,16 +148,12 @@ admin.site.register(
     models.CvrCampaignDisclosureCd,
     CvrCampaignDisclosureCdAdmin
 )
-admin.site.register(models.CvrLobbyDisclosureCd, CvrLobbyDisclosureCdAdmin)
+
 admin.site.register(models.CvrE530Cd, BaseAdmin)
-admin.site.register(models.Cvr2LobbyDisclosureCd, Cvr2LobbyDisclosureCdAdmin)
-admin.site.register(models.CvrRegistrationCd, CvrRegistrationCdAdmin)
-admin.site.register(models.Cvr2RegistrationCd, Cvr2RegistrationCdAdmin)
 admin.site.register(models.DebtCd, DebtCdAdmin)
 admin.site.register(models.ExpnCd, ExpnCdAdmin)
 admin.site.register(models.EfsFilingLogCd, BaseAdmin)
 admin.site.register(models.F495P2Cd, BaseAdmin)
-admin.site.register(models.F690P2Cd, BaseAdmin)
 admin.site.register(models.FilernameCd, FilernameCdAdmin)
 admin.site.register(models.FilersCd, FilersCdAdmin)
 admin.site.register(models.FilerAcronymsCd, FilerAcronymsCdAdmin)
@@ -220,18 +172,11 @@ admin.site.register(models.GroupTypesCd, BaseAdmin)
 admin.site.register(models.HeaderCd, BaseAdmin)
 admin.site.register(models.HdrCd, HdrCdAdmin)
 admin.site.register(models.ImageLinksCd, BaseAdmin)
-admin.site.register(models.LattCd, LattCdAdmin)
 admin.site.register(models.LegislativeSessionsCd, BaseAdmin)
-admin.site.register(models.LccmCd, LccmCdAdmin)
-admin.site.register(models.LempCd, LempCdAdmin)
-admin.site.register(models.LexpCd, LexpCdAdmin)
 admin.site.register(models.LobbyingChgLogCd, BaseAdmin)
 admin.site.register(models.LoanCd, LoanCdAdmin)
-admin.site.register(models.LobbyAmendmentsCd, LobbyAmendmentsCdAdmin)
 admin.site.register(models.LobbyingChgLogCd, LobbyingChgLogCdAdmin)
 admin.site.register(models.LookupCode, LookupCodeAdmin)
-admin.site.register(models.LothCd, LothCdAdmin)
-admin.site.register(models.LpayCd, LpayCdAdmin)
 admin.site.register(models.NamesCd, NamesCdAdmin)
 admin.site.register(models.RcptCd, RcptCdAdmin)
 admin.site.register(models.SmryCd, SmryCdAdmin)
