@@ -1,3 +1,4 @@
+from django.contrib import admin
 from calaccess import models
 from .base import BaseAdmin
 
@@ -7,10 +8,6 @@ class FilerFilingsCdAdmin(BaseAdmin):
 
 
 class FilingsCdAdmin(BaseAdmin):
-    pass
-
-
-class SmryCdAdmin(BaseAdmin):
     pass
 
 
