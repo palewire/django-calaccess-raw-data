@@ -51,8 +51,10 @@ class BallotMeasuresCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
     measure_name = models.CharField(db_column='MEASURE_NAME', max_length=163)
-    measure_short_name = models.CharField(db_column='MEASURE_SHORT_NAME',
-        max_length=50, blank=True)
+    measure_short_name = models.CharField(
+        db_column='MEASURE_SHORT_NAME',
+        max_length=50, blank=True
+    )
     jurisdiction = models.CharField(db_column='JURISDICTION', max_length=9)
 
     class Meta:
@@ -215,32 +217,72 @@ class Cvr2SoCd(CalAccessBaseModel):
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
     entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
-    enty_naml = models.CharField(db_column='ENTY_NAML', max_length=194, blank=True)
-    enty_namf = models.CharField(db_column='ENTY_NAMF', max_length=34, blank=True)
-    enty_namt = models.CharField(db_column='ENTY_NAMT', max_length=9, blank=True)
-    enty_nams = models.CharField(db_column='ENTY_NAMS', max_length=10, blank=True)
+    enty_naml = models.CharField(
+        db_column='ENTY_NAML', max_length=194, blank=True
+    )
+    enty_namf = models.CharField(
+        db_column='ENTY_NAMF', max_length=34, blank=True
+    )
+    enty_namt = models.CharField(
+        db_column='ENTY_NAMT', max_length=9, blank=True
+    )
+    enty_nams = models.CharField(
+        db_column='ENTY_NAMS', max_length=10, blank=True
+    )
     item_cd = models.CharField(db_column='ITEM_CD', max_length=4, blank=True)
-    mail_city = models.CharField(db_column='MAIL_CITY', max_length=25, blank=True)
+    mail_city = models.CharField(
+        db_column='MAIL_CITY', max_length=25, blank=True
+    )
     mail_st = models.CharField(db_column='MAIL_ST', max_length=4, blank=True)
-    mail_zip4 = models.CharField(db_column='MAIL_ZIP4', max_length=10, blank=True)
-    day_phone = models.CharField(db_column='DAY_PHONE', max_length=20, blank=True)
-    fax_phone = models.CharField(db_column='FAX_PHONE', max_length=20, blank=True)
-    email_adr = models.CharField(db_column='EMAIL_ADR', max_length=40, blank=True)
+    mail_zip4 = models.CharField(
+        db_column='MAIL_ZIP4', max_length=10, blank=True
+    )
+    day_phone = models.CharField(
+        db_column='DAY_PHONE', max_length=20, blank=True
+    )
+    fax_phone = models.CharField(
+        db_column='FAX_PHONE', max_length=20, blank=True
+    )
+    email_adr = models.CharField(
+        db_column='EMAIL_ADR', max_length=40, blank=True
+    )
     cmte_id = models.IntegerField(db_column='CMTE_ID', blank=True, null=True)
-    ind_group = models.CharField(db_column='IND_GROUP', max_length=87, blank=True)
-    office_cd = models.CharField(db_column='OFFICE_CD', max_length=4, blank=True)
-    offic_dscr = models.CharField(db_column='OFFIC_DSCR', max_length=40, blank=True)
+    ind_group = models.CharField(
+        db_column='IND_GROUP', max_length=87, blank=True
+    )
+    office_cd = models.CharField(
+        db_column='OFFICE_CD', max_length=4, blank=True
+    )
+    offic_dscr = models.CharField(
+        db_column='OFFIC_DSCR', max_length=40, blank=True
+    )
     juris_cd = models.CharField(db_column='JURIS_CD', max_length=4, blank=True)
-    juris_dscr = models.CharField(db_column='JURIS_DSCR', max_length=40, blank=True)
+    juris_dscr = models.CharField(
+        db_column='JURIS_DSCR', max_length=40, blank=True
+    )
     dist_no = models.CharField(db_column='DIST_NO', max_length=4, blank=True)
-    off_s_h_cd = models.CharField(db_column='OFF_S_H_CD', max_length=4, blank=True)
-    non_pty_cb = models.CharField(db_column='NON_PTY_CB', max_length=4, blank=True)
-    party_name = models.CharField(db_column='PARTY_NAME', max_length=63, blank=True)
+    off_s_h_cd = models.CharField(
+        db_column='OFF_S_H_CD', max_length=4, blank=True
+    )
+    non_pty_cb = models.CharField(
+        db_column='NON_PTY_CB', max_length=4, blank=True
+    )
+    party_name = models.CharField(
+        db_column='PARTY_NAME', max_length=63, blank=True
+    )
     bal_num = models.CharField(db_column='BAL_NUM', max_length=7, blank=True)
-    bal_juris = models.CharField(db_column='BAL_JURIS', max_length=40, blank=True)
-    sup_opp_cd = models.CharField(db_column='SUP_OPP_CD', max_length=4, blank=True)
-    year_elect = models.CharField(db_column='YEAR_ELECT', max_length=4, blank=True)
-    pof_title = models.CharField(db_column='POF_TITLE', max_length=44, blank=True)
+    bal_juris = models.CharField(
+        db_column='BAL_JURIS', max_length=40, blank=True
+    )
+    sup_opp_cd = models.CharField(
+        db_column='SUP_OPP_CD', max_length=4, blank=True
+    )
+    year_elect = models.CharField(
+        db_column='YEAR_ELECT', max_length=4, blank=True
+    )
+    pof_title = models.CharField(
+        db_column='POF_TITLE', max_length=44, blank=True
+    )
 
     class Meta:
         db_table = 'CVR2_SO_CD'
@@ -256,10 +298,18 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
     entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
     sig_date = models.DateField(db_column='SIG_DATE', blank=True, null=True)
     sig_loc = models.CharField(db_column='SIG_LOC', max_length=39, blank=True)
-    sig_naml = models.CharField(db_column='SIG_NAML', max_length=56, blank=True)
-    sig_namf = models.CharField(db_column='SIG_NAMF', max_length=45, blank=True)
-    sig_namt = models.CharField(db_column='SIG_NAMT', max_length=10, blank=True)
-    sig_nams = models.CharField(db_column='SIG_NAMS', max_length=8, blank=True)
+    sig_naml = models.CharField(
+        db_column='SIG_NAML', max_length=56, blank=True
+    )
+    sig_namf = models.CharField(
+        db_column='SIG_NAMF', max_length=45, blank=True
+    )
+    sig_namt = models.CharField(
+        db_column='SIG_NAMT', max_length=10, blank=True
+    )
+    sig_nams = models.CharField(
+        db_column='SIG_NAMS', max_length=8, blank=True
+    )
 
     class Meta:
         db_table = 'CVR3_VERIFICATION_INFO_CD'
@@ -658,22 +708,46 @@ class CvrE530Cd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
-    entity_cd = models.CharField(db_column='ENTITY_CD', max_length=32, blank=True)
+    entity_cd = models.CharField(
+        db_column='ENTITY_CD', max_length=32, blank=True
+    )
     filer_naml = models.CharField(db_column='FILER_NAML', max_length=200)
-    filer_namf = models.CharField(db_column='FILER_NAMF', max_length=4, blank=True)
-    filer_namt = models.CharField(db_column='FILER_NAMT', max_length=32, blank=True)
-    filer_nams = models.CharField(db_column='FILER_NAMS', max_length=32, blank=True)
-    report_num = models.CharField(db_column='REPORT_NUM', max_length=32, blank=True)
+    filer_namf = models.CharField(
+        db_column='FILER_NAMF', max_length=4, blank=True
+    )
+    filer_namt = models.CharField(
+        db_column='FILER_NAMT', max_length=32, blank=True
+    )
+    filer_nams = models.CharField(
+        db_column='FILER_NAMS', max_length=32, blank=True
+    )
+    report_num = models.CharField(
+        db_column='REPORT_NUM', max_length=32, blank=True
+    )
     rpt_date = models.DateField(db_column='RPT_DATE')
-    filer_city = models.CharField(db_column='FILER_CITY', max_length=16, blank=True)
+    filer_city = models.CharField(
+        db_column='FILER_CITY', max_length=16, blank=True
+    )
     filer_st = models.CharField(db_column='FILER_ST', max_length=4, blank=True)
-    filer_zip4 = models.CharField(db_column='FILER_ZIP4', max_length=10, blank=True)
-    occupation = models.CharField(db_column='OCCUPATION', max_length=15, blank=True)
-    employer = models.CharField(db_column='EMPLOYER', max_length=13, blank=True)
+    filer_zip4 = models.CharField(
+        db_column='FILER_ZIP4', max_length=10, blank=True
+    )
+    occupation = models.CharField(
+        db_column='OCCUPATION', max_length=15, blank=True
+    )
+    employer = models.CharField(
+        db_column='EMPLOYER', max_length=13, blank=True
+    )
     cand_naml = models.CharField(db_column='CAND_NAML', max_length=46)
-    cand_namf = models.CharField(db_column='CAND_NAMF', max_length=21, blank=True)
-    cand_namt = models.CharField(db_column='CAND_NAMT', max_length=32, blank=True)
-    cand_nams = models.CharField(db_column='CAND_NAMS', max_length=32, blank=True)
+    cand_namf = models.CharField(
+        db_column='CAND_NAMF', max_length=21, blank=True
+    )
+    cand_namt = models.CharField(
+        db_column='CAND_NAMT', max_length=32, blank=True
+    )
+    cand_nams = models.CharField(
+        db_column='CAND_NAMS', max_length=32, blank=True
+    )
     district_cd = models.IntegerField(db_column='DISTRICT_CD')
     office_cd = models.IntegerField(db_column='OFFICE_CD')
     pmnt_dt = models.DateField(db_column='PMNT_DT')
@@ -1419,7 +1493,9 @@ class F495P2Cd(CalAccessBaseModel):
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
-    elect_date = models.DateField(db_column='ELECT_DATE', blank=True, null=True)
+    elect_date = models.DateField(
+        db_column='ELECT_DATE', blank=True, null=True
+    )
     electjuris = models.CharField(db_column='ELECTJURIS', max_length=40)
     contribamt = models.FloatField(db_column='CONTRIBAMT')
 
@@ -1436,9 +1512,15 @@ class F690P2Cd(CalAccessBaseModel):
     exec_date = models.DateField(db_column='EXEC_DATE')
     from_date = models.DateField(db_column='FROM_DATE')
     thru_date = models.DateField(db_column='THRU_DATE')
-    chg_parts = models.CharField(db_column='CHG_PARTS', max_length=100, blank=True)
-    chg_sects = models.CharField(db_column='CHG_SECTS', max_length=100, blank=True)
-    amend_txt1 = models.CharField(db_column='AMEND_TXT1', max_length=330, blank=True)
+    chg_parts = models.CharField(
+        db_column='CHG_PARTS', max_length=100, blank=True
+    )
+    chg_sects = models.CharField(
+        db_column='CHG_SECTS', max_length=100, blank=True
+    )
+    amend_txt1 = models.CharField(
+        db_column='AMEND_TXT1', max_length=330, blank=True
+    )
 
     class Meta:
         db_table = 'F690P2_CD'
@@ -1492,9 +1574,13 @@ class FilerAcronymsCd(CalAccessBaseModel):
 class FilerAddressCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     adrid = models.IntegerField(db_column='ADRID')
-    effect_dt = models.DateTimeField(db_column='EFFECT_DT', blank=True, null=True)
+    effect_dt = models.DateTimeField(
+        db_column='EFFECT_DT', blank=True, null=True
+    )
     add_type = models.IntegerField(db_column='ADD_TYPE', blank=True, null=True)
-    session_id = models.IntegerField(db_column='SESSION_ID', blank=True, null=True)
+    session_id = models.IntegerField(
+        db_column='SESSION_ID', blank=True, null=True
+    )
 
     class Meta:
         db_table = 'FILER_ADDRESS_CD'
@@ -1504,8 +1590,8 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     ethics_date = models.DateTimeField(db_column='ETHICS_DATE')
+
     class Meta:
-        managed = False
         db_table = 'FILER_ETHICS_CLASS_CD'
 
 
@@ -1695,10 +1781,14 @@ class FilingPeriodCd(CalAccessBaseModel):
 
 class GroupTypesCd(CalAccessBaseModel):
     grp_id = models.IntegerField(db_column='GRP_ID')
-    grp_name = models.CharField(db_column='GRP_NAME', max_length=28, blank=True)
-    grp_desc = models.CharField(db_column='GRP_DESC', max_length=32, blank=True)
+    grp_name = models.CharField(
+        db_column='GRP_NAME', max_length=28, blank=True
+    )
+    grp_desc = models.CharField(
+        db_column='GRP_DESC', max_length=32, blank=True
+    )
+
     class Meta:
-        managed = False
         db_table = 'GROUP_TYPES_CD'
 
 
@@ -1706,9 +1796,15 @@ class HeaderCd(CalAccessBaseModel):
     line_number = models.IntegerField(db_column='LINE_NUMBER')
     form_id = models.CharField(db_column='FORM_ID', max_length=5)
     rec_type = models.CharField(db_column='REC_TYPE', max_length=11)
-    section_label = models.CharField(db_column='SECTION_LABEL', max_length=58, blank=True)
-    comments1 = models.CharField(db_column='COMMENTS1', max_length=48, blank=True)
-    comments2 = models.CharField(db_column='COMMENTS2', max_length=48, blank=True)
+    section_label = models.CharField(
+        db_column='SECTION_LABEL', max_length=58, blank=True
+    )
+    comments1 = models.CharField(
+        db_column='COMMENTS1', max_length=48, blank=True
+    )
+    comments2 = models.CharField(
+        db_column='COMMENTS2', max_length=48, blank=True
+    )
     label = models.CharField(db_column='LABEL', max_length=98)
     column_a = models.IntegerField(db_column='COLUMN_A', blank=True, null=True)
     column_b = models.IntegerField(db_column='COLUMN_B', blank=True, null=True)
@@ -1827,12 +1923,18 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     session_id = models.IntegerField(db_column='SESSION_ID')
     log_dt = models.DateField(db_column='LOG_DT')
     filer_type = models.IntegerField(db_column='FILER_TYPE')
-    correction_flg = models.CharField(db_column='CORRECTION_FLG', max_length=200)
+    correction_flg = models.CharField(
+        db_column='CORRECTION_FLG', max_length=200
+    )
     action = models.CharField(db_column='ACTION', max_length=200)
-    attribute_changed = models.CharField(db_column='ATTRIBUTE_CHANGED', max_length=200)
+    attribute_changed = models.CharField(
+        db_column='ATTRIBUTE_CHANGED', max_length=200
+    )
     ethics_dt = models.DateField(db_column='ETHICS_DT')
     interests = models.CharField(db_column='INTERESTS', max_length=200)
-    filer_full_name = models.CharField(db_column='FILER_FULL_NAME', max_length=200)
+    filer_full_name = models.CharField(
+        db_column='FILER_FULL_NAME', max_length=200
+    )
     filer_city = models.CharField(db_column='FILER_CITY', max_length=200)
     filer_st = models.CharField(db_column='FILER_ST', max_length=200)
     filer_zip = models.IntegerField(db_column='FILER_ZIP')
@@ -1844,7 +1946,9 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     entity_zip = models.IntegerField(db_column='ENTITY_ZIP')
     entity_phone = models.IntegerField(db_column='ENTITY_PHONE')
     entity_id = models.IntegerField(db_column='ENTITY_ID')
-    responsible_officer = models.CharField(db_column='RESPONSIBLE_OFFICER', max_length=500)
+    responsible_officer = models.CharField(
+        db_column='RESPONSIBLE_OFFICER', max_length=500
+    )
     effect_dt = models.DateField(db_column='EFFECT_DT')
 
     class Meta:
@@ -2381,11 +2485,15 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     session_id = models.IntegerField(db_column='SESSION_ID')
     log_dt = models.DateField(db_column="LOG_DT")
     filer_type = models.IntegerField(db_column='FILER_TYPE')
-    correction_flag = models.CharField(max_length=200,
-        db_column="CORRECTION_FLG")
+    correction_flag = models.CharField(
+        max_length=200,
+        db_column="CORRECTION_FLG"
+    )
     action = models.CharField(max_length=200, db_column="ACTION")
-    attribute_changed = models.CharField(max_length=200,
-        db_column="ATTRIBUTE_CHANGED")
+    attribute_changed = models.CharField(
+        max_length=200,
+        db_column="ATTRIBUTE_CHANGED"
+    )
     ethics_dt = models.DateField(db_column="ETHICS_DT")
     interests = models.CharField(max_length=200, db_column="INTERESTS")
     filer_full_name = models.CharField(
@@ -2414,11 +2522,19 @@ class LobbyingChgLogCd(CalAccessBaseModel):
 
 class LobbyistContributions1Cd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
-    filing_period_start_dt = models.DateField(db_column='FILING_PERIOD_START_DT')
+    filing_period_start_dt = models.DateField(
+        db_column='FILING_PERIOD_START_DT'
+    )
     filing_period_end_dt = models.DateField(db_column='FILING_PERIOD_END_DT')
-    contribution_dt = models.CharField(db_column='CONTRIBUTION_DT', max_length=32, blank=True)
-    recipient_name = models.CharField(db_column='RECIPIENT_NAME', max_length=106, blank=True)
-    recipient_id = models.IntegerField(db_column='RECIPIENT_ID', blank=True, null=True)
+    contribution_dt = models.CharField(
+        db_column='CONTRIBUTION_DT', max_length=32, blank=True
+    )
+    recipient_name = models.CharField(
+        db_column='RECIPIENT_NAME', max_length=106, blank=True
+    )
+    recipient_id = models.IntegerField(
+        db_column='RECIPIENT_ID', blank=True, null=True
+    )
     amount = models.FloatField(db_column='AMOUNT', blank=True, null=True)
 
     class Meta:
@@ -2427,11 +2543,21 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 
 class LobbyistContributions2Cd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
-    filing_period_start_dt = models.DateField(db_column='FILING_PERIOD_START_DT')
-    filing_period_end_dt = models.DateField(db_column='FILING_PERIOD_END_DT')
-    contribution_dt = models.CharField(db_column='CONTRIBUTION_DT', max_length=32, blank=True)
-    recipient_name = models.CharField(db_column='RECIPIENT_NAME', max_length=106, blank=True)
-    recipient_id = models.IntegerField(db_column='RECIPIENT_ID', blank=True, null=True)
+    filing_period_start_dt = models.DateField(
+        db_column='FILING_PERIOD_START_DT'
+    )
+    filing_period_end_dt = models.DateField(
+        db_column='FILING_PERIOD_END_DT'
+    )
+    contribution_dt = models.CharField(
+        db_column='CONTRIBUTION_DT', max_length=32, blank=True
+    )
+    recipient_name = models.CharField(
+        db_column='RECIPIENT_NAME', max_length=106, blank=True
+    )
+    recipient_id = models.IntegerField(
+        db_column='RECIPIENT_ID', blank=True, null=True
+    )
     amount = models.FloatField(db_column='AMOUNT', blank=True, null=True)
 
     class Meta:
@@ -2440,11 +2566,21 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 
 class LobbyistContributions3Cd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
-    filing_period_start_dt = models.DateField(db_column='FILING_PERIOD_START_DT')
-    filing_period_end_dt = models.DateField(db_column='FILING_PERIOD_END_DT')
-    contribution_dt = models.CharField(db_column='CONTRIBUTION_DT', max_length=32, blank=True)
-    recipient_name = models.CharField(db_column='RECIPIENT_NAME', max_length=106, blank=True)
-    recipient_id = models.IntegerField(db_column='RECIPIENT_ID', blank=True, null=True)
+    filing_period_start_dt = models.DateField(
+        db_column='FILING_PERIOD_START_DT'
+    )
+    filing_period_end_dt = models.DateField(
+        db_column='FILING_PERIOD_END_DT'
+    )
+    contribution_dt = models.CharField(
+        db_column='CONTRIBUTION_DT', max_length=32, blank=True
+    )
+    recipient_name = models.CharField(
+        db_column='RECIPIENT_NAME', max_length=106, blank=True
+    )
+    recipient_id = models.IntegerField(
+        db_column='RECIPIENT_ID', blank=True, null=True
+    )
     amount = models.FloatField(db_column='AMOUNT', blank=True, null=True)
 
     class Meta:
@@ -2457,9 +2593,15 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
     current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT')
-    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True)
-    interest_cd = models.IntegerField(db_column='INTEREST_CD', blank=True, null=True)
-    interest_name = models.CharField(db_column='INTEREST_NAME', max_length=24, blank=True)
+    contributor_id = models.IntegerField(
+        db_column='CONTRIBUTOR_ID', blank=True, null=True
+    )
+    interest_cd = models.IntegerField(
+        db_column='INTEREST_CD', blank=True, null=True
+    )
+    interest_name = models.CharField(
+        db_column='INTEREST_NAME', max_length=24, blank=True
+    )
     session_yr_1 = models.IntegerField(db_column='SESSION_YR_1')
     session_yr_2 = models.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT')
@@ -2483,9 +2625,15 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
     current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT')
-    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True)
-    interest_cd = models.IntegerField(db_column='INTEREST_CD', blank=True, null=True)
-    interest_name = models.CharField(db_column='INTEREST_NAME', max_length=24, blank=True)
+    contributor_id = models.IntegerField(
+        db_column='CONTRIBUTOR_ID', blank=True, null=True
+    )
+    interest_cd = models.IntegerField(
+        db_column='INTEREST_CD', blank=True, null=True
+    )
+    interest_name = models.CharField(
+        db_column='INTEREST_NAME', max_length=24, blank=True
+    )
     session_yr_1 = models.IntegerField(db_column='SESSION_YR_1')
     session_yr_2 = models.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT')
@@ -2509,9 +2657,15 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
     current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT')
-    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True)
-    interest_cd = models.IntegerField(db_column='INTEREST_CD', blank=True, null=True)
-    interest_name = models.CharField(db_column='INTEREST_NAME', max_length=24, blank=True)
+    contributor_id = models.IntegerField(
+        db_column='CONTRIBUTOR_ID', blank=True, null=True
+    )
+    interest_cd = models.IntegerField(
+        db_column='INTEREST_CD', blank=True, null=True
+    )
+    interest_name = models.CharField(
+        db_column='INTEREST_NAME', max_length=24, blank=True
+    )
     session_yr_1 = models.IntegerField(db_column='SESSION_YR_1')
     session_yr_2 = models.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT')
@@ -2534,7 +2688,9 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     firm_id = models.IntegerField(db_column='FIRM_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=117)
     session_id = models.IntegerField(db_column='SESSION_ID')
-    termination_dt = models.CharField(db_column='TERMINATION_DT', max_length=32, blank=True)
+    termination_dt = models.CharField(
+        db_column='TERMINATION_DT', max_length=32, blank=True
+    )
 
     class Meta:
         db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
@@ -2545,7 +2701,9 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     firm_id = models.IntegerField(db_column='FIRM_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=117)
     session_id = models.IntegerField(db_column='SESSION_ID')
-    termination_dt = models.CharField(db_column='TERMINATION_DT', max_length=32, blank=True)
+    termination_dt = models.CharField(
+        db_column='TERMINATION_DT', max_length=32, blank=True
+    )
 
     class Meta:
         db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
@@ -2554,8 +2712,12 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
-    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=17)
-    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17)
+    lobbyist_last_name = models.CharField(
+        db_column='LOBBYIST_LAST_NAME', max_length=17
+    )
+    lobbyist_first_name = models.CharField(
+        db_column='LOBBYIST_FIRST_NAME', max_length=17
+    )
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=117)
     session_id = models.IntegerField(db_column='SESSION_ID')
 
@@ -2566,8 +2728,12 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
-    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=17)
-    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17)
+    lobbyist_last_name = models.CharField(
+        db_column='LOBBYIST_LAST_NAME', max_length=17
+    )
+    lobbyist_first_name = models.CharField(
+        db_column='LOBBYIST_FIRST_NAME', max_length=17
+    )
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=117)
     session_id = models.IntegerField(db_column='SESSION_ID')
 
@@ -2581,7 +2747,9 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
     current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT')
-    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True)
+    contributor_id = models.IntegerField(
+        db_column='CONTRIBUTOR_ID', blank=True, null=True
+    )
     session_yr_1 = models.IntegerField(db_column='SESSION_YR_1')
     session_yr_2 = models.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT')
@@ -2605,7 +2773,9 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
     current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT')
-    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True)
+    contributor_id = models.IntegerField(
+        db_column='CONTRIBUTOR_ID', blank=True, null=True
+    )
     session_yr_1 = models.IntegerField(db_column='SESSION_YR_1')
     session_yr_2 = models.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT')
@@ -2629,7 +2799,9 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
     current_qtr_amt = models.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = models.FloatField(db_column='SESSION_TOTAL_AMT')
-    contributor_id = models.IntegerField(db_column='CONTRIBUTOR_ID', blank=True, null=True)
+    contributor_id = models.IntegerField(
+        db_column='CONTRIBUTOR_ID', blank=True, null=True
+    )
     session_yr_1 = models.IntegerField(db_column='SESSION_YR_1')
     session_yr_2 = models.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = models.FloatField(db_column='YR_1_YTD_AMT')
@@ -2657,8 +2829,12 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     rpt_end = models.DateField(db_column='RPT_END')
     per_total = models.FloatField(db_column='PER_TOTAL')
     cum_total = models.FloatField(db_column='CUM_TOTAL')
-    lby_actvty = models.CharField(db_column='LBY_ACTVTY', max_length=182, blank=True)
-    ext_lby_actvty = models.CharField(db_column='EXT_LBY_ACTVTY', max_length=32, blank=True)
+    lby_actvty = models.CharField(
+        db_column='LBY_ACTVTY', max_length=182, blank=True
+    )
+    ext_lby_actvty = models.CharField(
+        db_column='EXT_LBY_ACTVTY', max_length=32, blank=True
+    )
 
     class Meta:
         db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
@@ -2674,8 +2850,12 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     rpt_end = models.DateField(db_column='RPT_END')
     per_total = models.FloatField(db_column='PER_TOTAL')
     cum_total = models.FloatField(db_column='CUM_TOTAL')
-    lby_actvty = models.CharField(db_column='LBY_ACTVTY', max_length=182, blank=True)
-    ext_lby_actvty = models.CharField(db_column='EXT_LBY_ACTVTY', max_length=32, blank=True)
+    lby_actvty = models.CharField(
+        db_column='LBY_ACTVTY', max_length=182, blank=True
+    )
+    ext_lby_actvty = models.CharField(
+        db_column='EXT_LBY_ACTVTY', max_length=32, blank=True
+    )
 
     class Meta:
         db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
@@ -2684,8 +2864,12 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
-    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=15)
-    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17)
+    lobbyist_last_name = models.CharField(
+        db_column='LOBBYIST_LAST_NAME', max_length=15
+    )
+    lobbyist_first_name = models.CharField(
+        db_column='LOBBYIST_FIRST_NAME', max_length=17
+    )
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
     session_id = models.IntegerField(db_column='SESSION_ID')
 
@@ -2696,15 +2880,18 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
-    lobbyist_last_name = models.CharField(db_column='LOBBYIST_LAST_NAME', max_length=15)
-    lobbyist_first_name = models.CharField(db_column='LOBBYIST_FIRST_NAME', max_length=17)
+    lobbyist_last_name = models.CharField(
+        db_column='LOBBYIST_LAST_NAME', max_length=15
+    )
+    lobbyist_first_name = models.CharField(
+        db_column='LOBBYIST_FIRST_NAME', max_length=17
+    )
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
     session_id = models.IntegerField(db_column='SESSION_ID')
 
     class Meta:
         db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
 
-######
 
 class LookupCode(CalAccessBaseModel):
     code_type = models.IntegerField()
@@ -3076,12 +3263,20 @@ class RcptCd(CalAccessBaseModel):
 
 class ReceivedFilingsCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
-    filing_file_name = models.CharField(db_column='FILING_FILE_NAME', max_length=14)
+    filing_file_name = models.CharField(
+        db_column='FILING_FILE_NAME', max_length=14
+    )
     received_date = models.DateTimeField(db_column='RECEIVED_DATE')
-    filing_directory = models.CharField(db_column='FILING_DIRECTORY', max_length=45)
-    filing_id = models.IntegerField(db_column='FILING_ID', blank=True, null=True)
+    filing_directory = models.CharField(
+        db_column='FILING_DIRECTORY', max_length=45
+    )
+    filing_id = models.IntegerField(
+        db_column='FILING_ID', blank=True, null=True
+    )
     form_id = models.CharField(db_column='FORM_ID', max_length=4, blank=True)
-    receive_comment = models.CharField(db_column='RECEIVE_COMMENT', max_length=51)
+    receive_comment = models.CharField(
+        db_column='RECEIVE_COMMENT', max_length=51
+    )
 
     class Meta:
         db_table = 'RECEIVED_FILINGS_CD'
@@ -3090,10 +3285,13 @@ class ReceivedFilingsCd(CalAccessBaseModel):
 class ReportsCd(CalAccessBaseModel):
     rpt_id = models.IntegerField(db_column='RPT_ID')
     rpt_name = models.CharField(db_column='RPT_NAME', max_length=74)
-    rpt_desc_field = models.CharField(db_column='RPT_DESC_', max_length=32, blank=True) Field renamed because it ended with '_'.
+    rpt_desc_field = models.CharField(
+        db_column='RPT_DESC_', max_length=32, blank=True)
     path = models.CharField(db_column='PATH', max_length=32, blank=True)
     data_object = models.CharField(db_column='DATA_OBJECT', max_length=38)
-    parms_flg_y_n = models.IntegerField(db_column='PARMS_FLG_Y_N', blank=True, null=True)
+    parms_flg_y_n = models.IntegerField(
+        db_column='PARMS_FLG_Y_N', blank=True, null=True
+    )
     rpt_type = models.IntegerField(db_column='RPT_TYPE')
     parm_definition = models.IntegerField(db_column='PARM_DEFINITION')
 
@@ -3531,8 +3729,10 @@ class TextMemoCd(CalAccessBaseModel):
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=8)
     ref_no = models.CharField(db_column='REF_NO', max_length=20, blank=True)
-    text4000 = models.CharField(db_column='TEXT4000', max_length=4000, blank=True)
+    text4000 = models.CharField(
+        db_column='TEXT4000',
+        max_length=4000, blank=True
+    )
 
     class Meta:
         db_table = 'TEXT_MEMO_CD'
-

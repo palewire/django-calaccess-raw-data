@@ -7,6 +7,7 @@ from django.core.management.base import LabelCommand
 class Command(LabelCommand):
     help = 'Load a cleaned CalAccess file into the database'
     args = '<file path>'
+    date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
 
     def handle_label(self, label, **options):
         # Set options
@@ -57,11 +58,13 @@ class Command(LabelCommand):
         header_sql_list = []
         date_set_list = []
         for h in headers:
+            header_sql_list.append('@`%s`' % h)
+            # If it is a date field, we need to reformat the data
+            # so that MySQL will properly parse it on the way in.
             if h in model.DATE_FIELDS:
-                header_sql_list.append('@`%s`' % h)
-                date_set_list.append("`%s` = DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')" % (h, h))
-            else:
-                header_sql_list.append('`%s`' % h)
+                date_set_list.append(
+                    "`%s` =  %s" % (h, self.date_sql % h)
+                )
 
         bulk_sql_load = bulk_sql_load_part_1 + ','.join(header_sql_list) + ')'
         if date_set_list:

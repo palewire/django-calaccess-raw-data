@@ -24,7 +24,7 @@ load:
 	python -m cProfile example/manage.py downloadcalaccess --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
 
 loadtable:
-	python example/manage.py loadcalaccessfile TextMemoCd
+	python example/manage.py loadcalaccessfile AcronymsCd
 
 runserver:
 	python example/manage.py runserver
