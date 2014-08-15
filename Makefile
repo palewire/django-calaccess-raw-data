@@ -1,4 +1,4 @@
-.PHONY: bootstrap clean cleanfile docs load loadtable runserver shell test
+.PHONY: bootstrap clean cleanfile csv2db docs load loadtable runserver shell test
 
 bootstrap:
 	mysqladmin -h localhost -u root -pmysql drop calaccess
@@ -13,6 +13,9 @@ clean:
 
 cleanfile:
 	python -m cProfile example/manage.py cleancalaccessfile CVR_SO_CD.TSV > speed.txt
+
+csv2db:
+	csvsql -i mysql --table ADDRESS_CD example/data/csv/address_cd.csv
 
 docs:
 	cd docs && make livehtml

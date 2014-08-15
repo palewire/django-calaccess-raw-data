@@ -20,6 +20,19 @@ class CalAccessBaseModel(models.Model):
         abstract = True
 
 
+class AcronymsCd(CalAccessBaseModel):
+    DATE_FIELDS = (
+        "EFFECT_DT",
+    )
+    acronym = models.CharField(max_length=25, db_column="ACRONYM")
+    stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
+    effect_dt = models.DateField(db_column="EFFECT_DT")
+    a_desc = models.CharField(max_length=25, db_column="A_DESC")
+
+    class Meta:
+        db_table = "ACRONYMS_CD"
+
+
 class CvrSo(CalAccessBaseModel):
     DATE_FIELDS = [
         'ACCT_OPENDT',
