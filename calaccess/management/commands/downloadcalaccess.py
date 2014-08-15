@@ -112,14 +112,6 @@ class Command(BaseCommand):
         self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
-        """
-        If DEBUG is not set to false Django imports will fail on MySQL errors.
-        This data comes with a bunch of encoding issues and malformed
-        TSV files.
-
-        The import will not be perfect. But the errors should only constitute
-        a minority of the total informations.
-        """
         # Execute the commands only if DEBUG is set to False
         if settings.DEBUG:
             raise CommandError("DEBUG is not set to False. Please change \
@@ -152,7 +144,7 @@ before running `downloadcalaccess`")
     def get_metadata(self):
         """
         Returns basic metadata about the current CalAccess snapshot,
-        like its size and the last time it was updated, while stopping
+        like its size and the last time it was updated while stopping
         short of actually downloading it.
         """
         request = requests.head(self.url)

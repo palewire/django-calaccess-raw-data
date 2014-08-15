@@ -7,34 +7,29 @@ from django.core.management.base import LabelCommand
 class Command(LabelCommand):
     help = 'Load a cleaned CalAccess file into the database'
     args = '<file path>'
+    # Trick for reformating date strings in source data so that they can
+    # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
 
     def handle_label(self, label, **options):
-        # Set options
         self.verbosity = options.get("verbosity")
-        # Do it
         self.load(label)
 
     def load(self, model_name):
         """
-        Loads the cleaned up csv files into the database
-        Checks record count against csv line count
-        A new release of CSVKit has come out and it may
-        deal with the encoding issues better.
-        You might want to modify the code to use the new CSVKit release
+        Loads the source CSV for the provided model.
         """
         if self.verbosity:
             print "- Loading %s" % model_name
 
         model = get_model("calaccess", model_name)
-
-        # load up the data
-        c = connection.cursor()
-
         csv_path = model.objects.get_csv_path()
 
+        # Flush
+        c = connection.cursor()
         c.execute('DELETE FROM %s' % model._meta.db_table)
 
+        # Build the MySQL LOAD DATA INFILE command
         bulk_sql_load_part_1 = '''
             LOAD DATA LOCAL INFILE '%s'
             INTO TABLE %s
@@ -69,10 +64,11 @@ class Command(LabelCommand):
         if date_set_list:
             bulk_sql_load += " set %s" % ",".join(date_set_list)
 
+        # Run the query
         cnt = c.execute(bulk_sql_load)
         transaction.commit_unless_managed()
 
-        # check load, make sure record count matches
+        # Report back on how we did
         if self.verbosity:
             if cnt == csv_record_cnt:
                 print "-- record counts match"

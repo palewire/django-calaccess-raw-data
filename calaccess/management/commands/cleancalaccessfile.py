@@ -21,10 +21,7 @@ class Command(LabelCommand):
 
     def clean(self, name):
         """
-        Clean up the raw data files from the state so they are
-        ready to get loaded into the database.
-        Keep track of the date fields manually in the date_field_dict
-        so we can parse them into a format that works for import.
+        Cleans the provided source TSV file and writes it out in CSV format
         """
         if self.verbosity:
             print "- Cleaning %s" % name
@@ -76,6 +73,7 @@ class Command(LabelCommand):
             tsv_line = tsv_line.decode("ascii", "replace").encode('utf-8')
 
             # Split on tabs so we can later spit it back out as CSV
+            # and remove extra newlines while we are there.
             csv_field_list = tsv_line.replace("\r\n", "").split("\t")
 
             # Check if our values line up with our headers
