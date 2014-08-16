@@ -65,13 +65,13 @@ Download, unzip, clean and load the latest snapshot of the CalAccess database
 loadcalaccessfile
 -----------------
 
-Load a cleaned CalAccess file into the database
+Load a cleaned CalAccess file for a model into the database
 
 .. code-block:: bash
 
-    Usage: manage.py loadcalaccessfile [options] <file path>
+    Usage: manage.py loadcalaccessfile [options] <model name>
 
-    Load a cleaned CalAccess file into the database
+    Load a cleaned CalAccess file for a model into the database
 
     Options:
       -v VERBOSITY, --verbosity=VERBOSITY
@@ -114,3 +114,31 @@ Print out the total of CAL-ACCESS tables and rows in the database
       --traceback           Raise on exception
       --version             show program's version number and exit
       -h, --help            show this help message and exit
+
+
+verifycalaccessfile
+-------------------
+
+Compare the number of records in a model against its source CSV
+
+.. code-block: bash
+
+    Usage: example/manage.py verifycalaccessfile [options] <model name>
+
+    Compare the number of records in a model against its source CSV
+
+    Options:
+      -v VERBOSITY, --verbosity=VERBOSITY
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings=SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath=PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on exception
+      --version             show program's version number and exit
+      -h, --help            show this help message and exit
+

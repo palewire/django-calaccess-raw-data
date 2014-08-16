@@ -5,8 +5,8 @@ from django.core.management.base import LabelCommand
 
 
 class Command(LabelCommand):
-    help = 'Load a cleaned CalAccess file into the database'
-    args = '<file path>'
+    help = 'Load a cleaned CalAccess file for a model into the database'
+    args = '<model name>'
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
