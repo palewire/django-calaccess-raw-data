@@ -44,7 +44,7 @@ Now you're ready to sync the database tables.
 
     $ python manage.py syncdb
 
-A final setting, ``CALACCESS_DOWNLOAD_DIR``, tels our application where to store the large files it's going to download.
+A final setting, ``CALACCESS_DOWNLOAD_DIR``, tells our application where to store the large files it's going to download.
 You can put it anywhere you want.
 
 .. code-block:: python
