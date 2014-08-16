@@ -30,11 +30,13 @@ class TestCommand(Command):
 
 setup(
     name='django-calaccess-raw-data',
-    version='0.5',
+    version='0.0.2',
     packages=[
         'calaccess_raw',
+        'calaccess_raw.admin',
         'calaccess_raw.management',
         'calaccess_raw.management.commands',
+        'calaccess_raw.models',
     ],
     include_package_data=True,
     license='MIT',
@@ -53,7 +55,6 @@ Secretary of State\'s CAL-ACCESS database',
         'requests==2.2.1',
         'progressbar>=2.2',
         'hurry.filesize==0.9',
-        'pypandoc==0.8.0',
     ),
     cmdclass={'test': TestCommand}
 )
