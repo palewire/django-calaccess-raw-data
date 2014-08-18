@@ -4,13 +4,13 @@ from .base import CalAccessBaseModel
 
 
 class CvrSoCd(CalAccessBaseModel):
-    '''
-        Cover page for statement of organization
+    """
+    Cover page for statement of organization
 
         F400 -- Statement of Organization (Slate Mailer Organization)
         F402 -- Statement of Termination (Slate Mailer Organization)
         F410 -- Statement of Organization (Recipient Committee)
-    '''
+    """
     DATE_FIELDS = [
         'ACCT_OPENDT',
         'QUALFY_DT',
@@ -165,11 +165,11 @@ class CvrSoCd(CalAccessBaseModel):
 
 
 class Cvr2SoCd(CalAccessBaseModel):
-    '''
-        Additional Names / Committees information for the forms 400 & 410
+    """
+    Additional Names / Committees information for the forms 400 & 410
         F400
         F410
-    '''
+    """
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -250,23 +250,24 @@ class Cvr2SoCd(CalAccessBaseModel):
         verbose_name = 'CVR2_SO_CD'
         verbose_name_plural = 'CVR2_SO_CD'
 
+
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
-    '''
-        Cover page information for the campaign disclosure forms below.
-        This data comes from the electronic filing.
-        The data contained herin is "as filed" by the entity making the filing.
-    
+    """
+    Cover page information for the campaign disclosure forms below.
+    This data comes from the electronic filing.
+    The data contained herin is "as filed" by the entity making the filing.
+
         F401 -- Slate Mailer Organization Campaign Statement
         F425 -- Semi-Annual Statement of No Activity
         F450 -- Recipient Committee Campaign Statement (Short Form)
         F460 -- Recipient Committee Campaign Statement
-        F461 -- Independent Expenditure and Major Donor Committee Campaign Statement
+        F461 -- Independent Expenditure and Major Donor Committee
+                Campaign Statement
         F465 -- Supplemental Independent Expenditure Report
         F496 -- Late Independent Expenditure Report
-        F497 - Late Contribution Report
+        F497 -- Late Contribution Report
         F498 -- Slate Mailer Late Payment Report
-        
-    '''
+    """
     DATE_FIELDS = [
         'ELECT_DATE',
         'FROM_DATE',
@@ -546,12 +547,12 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
 
+
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
-    '''
-    
-        Record used to carry additional names for the campaign
-        disclosure forms below.
-        
+    """
+    Record used to carry additional names for the campaign
+    disclosure forms below.
+
         F401
         F450
         F460
@@ -561,8 +562,7 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         F496
         F497
         F498
-    
-    '''
+    """
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bal_juris = models.CharField(
         max_length=40L, db_column='BAL_JURIS', blank=True
@@ -674,13 +674,16 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
+
 class RcptCd(CalAccessBaseModel):
-    '''
-    
-    Receipts schedules for the Form 460 (Recipient Committee Campaign Statement) Schedules A, C, I, nd A-1.
-    Also Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
-    
-    '''
+    """
+    Receipts schedules for the following forms.
+
+        Form 460 (Recipient Committee Campaign Statement)
+        Schedules A, C, I, nd A-1.
+
+        Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
+    """
     DATE_FIELDS = [
         'DATE_THRU',
         'RCPT_DATE'
@@ -879,10 +882,9 @@ class RcptCd(CalAccessBaseModel):
 
 
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
-    '''
-    
-        Cover Page Verification Information for the Campaign Forms below.
-    
+    """
+    Cover Page Verification Information for the Campaign Forms below.
+
         F400
         F402
         F410
@@ -892,12 +894,10 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         F461
         F465
         F470
-    
-    '''
-
-    DATE_FIELDS = [
+    """
+    DATE_FIELDS = (
         'SIG_DATE',
-    ]
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -928,10 +928,10 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
 
 
 class LoanCd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'LOAN_DATE1',
         'LOAN_DATE2'
-    ]
+    )
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bakref_tid = models.CharField(
         max_length=20L, db_column='BAKREF_TID', blank=True
@@ -1094,13 +1094,10 @@ class LoanCd(CalAccessBaseModel):
 
 
 class S401Cd(CalAccessBaseModel):
-    '''
-    
-        This table contains Form 401 (Slate Mailer Organization) payment and other
-        disclosure schedule (F401B, F401B-1, F401C, F401D) information.
-    
-    '''
-    
+    """
+    This table contains Form 401 (Slate Mailer Organization) payment and other
+    disclosure schedule (F401B, F401B-1, F401C, F401D) information.
+    """
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1138,12 +1135,6 @@ class S401Cd(CalAccessBaseModel):
     payee_city = models.CharField(
         max_length=30L, db_column='PAYEE_CITY', blank=True
     )
-    # payee_adr1 = models.CharField(
-    #   max_length=55L, db_column='PAYEE_ADR1', blank=True
-    # )
-    # payee_adr2 = models.CharField(
-    #   max_length=55L, db_column='PAYEE_ADR2', blank=True
-    # )
     payee_st = models.CharField(
         max_length=2L, db_column='PAYEE_ST', blank=True
     )
@@ -1215,15 +1206,16 @@ class S401Cd(CalAccessBaseModel):
 
 
 class ExpnCd(CalAccessBaseModel):
-    '''
-    
-        This table contains expenditure records
-        for the Form 460 (Recpient Committee Campaign Statement) Schedules D, E, and G
-        Form 450 (Recpient Committee Campaign Statement Short Form) Part 5
-        Form 461 (Independent Expenditure and Major Donor Committee Campaign Statement) Part 5
-        Form 465 (Supplemental Independent Expenditure Report) Part 3
-    
-    '''
+    """
+    This table contains expenditure records for the following forms.
+
+        -- Form 460 (Recpient Committee Campaign Statement)
+           Schedules D, E, and G
+        -- Form 450 (Recipient Committee Campaign Statement Short Form) Part 5
+        -- Form 461 (Independent Expenditure and Major Donor Committee
+                     Campaign Statement) Part 5
+        -- Form 465 (Supplemental Independent Expenditure Report) Part 3
+    """
     DATE_FIELDS = [
         'EXPN_DATE',
     ]
@@ -1390,28 +1382,27 @@ class ExpnCd(CalAccessBaseModel):
 
 
 class F495P2Cd(CalAccessBaseModel):
-    '''
-        F495 Supplemental Preelection Campaign Statement
-        
-        It's attatchment to the forms below
-        
+    """
+    F495 Supplemental Preelection Campaign Statement
+
+    It's attatchment to the forms below
+
         F450 Recipient Committee Campaign Statement Short Form
         F460 Recipient Committee Campaign Statement
-    
-        Form 495 is for use by a recipient committee that
-        makes contributions totaling $10,000 or more in
-        connection with an election for which the committee
-        is not required to file regular preelection reports.
-        Form 495 is filed as an attachment to a campaign
-        disclosure statement (Form 450 or 460). On the
-        Form 450 or 460, the committee will report all
-        contributions received and expenditures made since
-        its last report.
 
-    '''
-    DATE_FIELDS = [
+    Form 495 is for use by a recipient committee that
+    makes contributions totaling $10,000 or more in
+    connection with an election for which the committee
+    is not required to file regular preelection reports.
+    Form 495 is filed as an attachment to a campaign
+    disclosure statement (Form 450 or 460). On the
+    Form 450 or 460, the committee will report all
+    contributions received and expenditures made since
+    its last report.
+    """
+    DATE_FIELDS = (
         'ELECT_DATE',
-    ]
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1429,12 +1420,12 @@ class F495P2Cd(CalAccessBaseModel):
         verbose_name = 'F495P2_CD'
         verbose_name_plural = 'F495P2_CD'
 
+
 class DebtCd(CalAccessBaseModel):
-    '''
-    
-        Form 460 (Recipient Committee Campaign Statement) Schedule (F) Accrued Expenses (Unpaid Bills) records.
-    
-    '''
+    """
+    Form 460 (Recipient Committee Campaign Statement)
+    Schedule (F) Accrued Expenses (Unpaid Bills) records
+    """
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amt_incur = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMT_INCUR'
@@ -1539,11 +1530,9 @@ class DebtCd(CalAccessBaseModel):
 
 
 class S496Cd(CalAccessBaseModel):
-    '''
-    
-        Form 496 Late Independent Expenditures
-    
-    '''
+    """
+    Form 496 Late Independent Expenditures
+    """
     DATE_FIELDS = [
         'EXP_DATE',
         'DATE_THRU',
@@ -1581,14 +1570,12 @@ class S496Cd(CalAccessBaseModel):
 
 
 class SpltCd(CalAccessBaseModel):
-    '''
-    
-        Split Records
-        
-        F450P5
-        F460 (A-B1-B2-C-D-H)
-    
-    '''
+    """
+    Split Records
+
+        -- F450P5
+        -- F460 (A-B1-B2-C-D-H)
+    """
     DATE_FIELDS = [
         'ELEC_DATE',
     ]
@@ -1617,11 +1604,9 @@ class SpltCd(CalAccessBaseModel):
 
 
 class S497Cd(CalAccessBaseModel):
-    '''
-    
-        Form 497 Late Contributions Received/Made
-    
-    '''
+    """
+    Form 497 Late Contributions Received/Made
+    """
     DATE_FIELDS = [
         'ELEC_DATE',
         'CTRIB_DATE',
@@ -1652,12 +1637,6 @@ class S497Cd(CalAccessBaseModel):
     enty_nams = models.CharField(
         max_length=10L, db_column='ENTY_NAMS', blank=True
     )
-    # enty_adr1 = models.CharField(
-    #   max_length=55L, db_column='ENTY_ADR1', blank=True
-    # )
-    # enty_adr2 = models.CharField(
-    #    max_length=55L, db_column='ENTY_ADR2', blank=True
-    # )
     enty_city = models.CharField(
         max_length=30L, db_column='ENTY_CITY', blank=True
     )
@@ -1739,18 +1718,17 @@ class S497Cd(CalAccessBaseModel):
 
 
 class F501502Cd(CalAccessBaseModel):
-    '''
-        Candidate Intention Statement
-    
-        F501 
-        F502
-    
-    '''
-    DATE_FIELDS = [
+    """
+    Candidate Intention Statement
+
+        -- F501
+        -- F502
+    """
+    DATE_FIELDS = (
         'ACCT_OP_DT',
         'DID_EXCEED_DT',
         'CNTRB_PRSNL_FNDS_DT'
-    ]
+    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
@@ -1904,11 +1882,9 @@ class F501502Cd(CalAccessBaseModel):
 
 
 class S498Cd(CalAccessBaseModel):
-    '''
-    
-        Form 498 Slate Mailer Late Independent Expenditures Made
-    
-    '''
+    """
+    Form 498 Slate Mailer Late Independent Expenditures Made
+    """
     DATE_FIELDS = [
         'DATE_RCVD',
     ]
@@ -1942,12 +1918,6 @@ class S498Cd(CalAccessBaseModel):
     payor_nams = models.CharField(
         max_length=10L, db_column='PAYOR_NAMS', blank=True
     )
-    # payor_adr1 = models.CharField(
-    #    max_length='', db_column='PAYOR_ADR1', blank=True
-    # )
-    # payor_adr2 = models.CharField(
-    #    max_length='', db_column='PAYOR_ADR2', blank=True
-    # )
     payor_city = models.CharField(
         max_length=30L, db_column='PAYOR_CITY', blank=True
     )

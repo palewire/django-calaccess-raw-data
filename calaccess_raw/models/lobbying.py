@@ -4,18 +4,16 @@ from .base import CalAccessBaseModel
 
 
 class CvrRegistrationCd(CalAccessBaseModel):
-    '''
-    
-        Cover page information for the lobbying registration forms below.
-        
+    """
+    Cover page information for the lobbying registration forms below.
+
         F601 -- Lobbying Firm Registration Statement
         F602 -- Lobbying Firm Activity Authorization
         F603 -- Lobbyist Employer / Lobbying Coalition Registration Statement
         F604 -- Lobbyist Certificaiton Statement
         F606 -- Notice of Termination
         F607 -- Notice of Withdrawl
-    
-    '''
+    """
     DATE_FIELDS = (
         'COMPLET_DT',
         'EFF_DATE',
@@ -239,18 +237,16 @@ class CvrRegistrationCd(CalAccessBaseModel):
 
 
 class Cvr2RegistrationCd(CalAccessBaseModel):
-    '''
-    
-        Additional names layout for
-        
+    """
+     Additional names layout for
+
         F601 -- Lobbying Firm Registration Statement
         F602 -- Lobbying Firm Activity Authorization
         F603 -- Lobbyist Employer / Lobbying Coalition Registration Statement
         F604 -- Lobbyist Certificaiton Statement
         F606 -- Notice of Termination
         F607 -- Notice of Withdrawl
-    
-    '''
+    """
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.CharField(
@@ -292,16 +288,15 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
 
 
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
-    '''
-    
-        Cover page information for the lobbying disclosure forms
-        
+    """
+    Cover page information for the lobbying disclosure forms
+
         F615 -- Lobbyist Report
         F625 -- Report of Lobbying Firm
         F635 -- Report of Lobbyist Employer and Report of Lobbying Coalition
-        F645 -- Report of Person Spending $5,000 or more to influence Legislative or administrative action
-    
-    '''
+        F645 -- Report of Person Spending $5,000 or more to influence
+                Legislative or administrative action
+    """
     DATE_FIELDS = [
         'CUM_BEG_DT',
         'FROM_DATE',
@@ -456,16 +451,15 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
 
 
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
-    '''
-    
-        Additional names data for the lobbyist disclosure forms
-        
+    """
+    Additional names data for the lobbyist disclosure forms
+
         F615 -- Lobbyist Report
         F625 -- Report of Lobbying Firm
         F635 -- Report of Lobbyist Employer and Report of Lobbying Coalition
-        F645 -- Report of Person Spending $5,000 or more to influence Legislative or administrative action
-    
-    '''
+        F645 -- Report of Person Spending $5,000 or more to influence
+                Legislative or administrative action
+    """
     amend_id = models.IntegerField(db_column='AMEND_ID')
     entity_cd = models.CharField(
         max_length=3L, db_column='ENTITY_CD', blank=True
@@ -508,20 +502,18 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
 
 
 class LobbyAmendmentsCd(CalAccessBaseModel):
-    '''
-    
-        Lobbyist registration amendment information
-        
+    """
+    Lobbyist registration amendment information
+
         Form 605 Part I
-    
-    '''
-    DATE_FIELDS = [
+    """
+    DATE_FIELDS = (
         'ADD_L_EFF',
         'ADD_LE_EFF',
         'ADD_LF_EFF',
         'DEL_LF_EFF',
         'OTHER_EFF'
-    ]
+    )
     filing_id = models.CharField(max_length=9L, db_column='FILING_ID')
     amend_id = models.CharField(max_length=8L, db_column='AMEND_ID')
     rec_type = models.CharField(max_length=8L, db_column='REC_TYPE')
@@ -641,13 +633,11 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
 
 
 class F690P2Cd(CalAccessBaseModel):
-    '''
-        
+    """
+    Amends lobbying disclosure filings
+
         F690 Amendment to Lobbying Disclosure Report
-        
-        Amends lobbying disclosure filings
-    
-    '''
+    """
     DATE_FIELDS = (
         "EXEC_DATE",
         "FROM_DATE",
@@ -679,15 +669,13 @@ class F690P2Cd(CalAccessBaseModel):
 
 
 class LattCd(CalAccessBaseModel):
-    '''
-    
-        Lobbyist disclosure attachment schedules for payments
-        
+    """
+    Lobbyist disclosure attachment schedules for payments
         F630 -- Payments made to Lobbying Coalitions (Attatchment)
         F635C -- Payments received by Lobbying Coalitions (Attatchment)
-        F640 -- Government Agencies Reporting of "Other Payments to Influence Legislative or Administrative Action" (Attatchment)
-    
-    '''
+        F640 -- Government Agencies Reporting of "Other Payments to Influence
+                Legislative or Administrative Action" (Attatchment)
+    """
     DATE_FIELDS = (
         'CUMBEG_DT',
         'PMT_DATE',
@@ -755,17 +743,15 @@ class LattCd(CalAccessBaseModel):
 
 
 class LexpCd(CalAccessBaseModel):
-    '''
-    
-        Lobbying Activity Expenditure Schedule information (Gifts)
-        Reported in filings of the forms
-        
+    """
+    Lobbying Activity Expenditure Schedule information (Gifts)
+    Reported in filings of the forms
+
         F615 Part 1
         F625 Part 3A
         F635 Part 3C
         F645 Part 2A
-    
-    '''
+    """
     DATE_FIELDS = (
         'EXPN_DATE',
     )
@@ -842,16 +828,14 @@ class LexpCd(CalAccessBaseModel):
 
 
 class LccmCd(CalAccessBaseModel):
-    '''
-    
-        Lobbying Campaign Contributions reported on forms
-        
+    """
+    Lobbying Campaign Contributions reported on forms
+
         F615 Part 2
         F625 Part 4B
         F635 Part 4B
         F645 Part 3B
-    
-    '''
+    """
     DATE_FIELDS = (
         'CTRIB_DATE',
     )
@@ -935,13 +919,11 @@ class LccmCd(CalAccessBaseModel):
 
 
 class LothCd(CalAccessBaseModel):
-    '''
-    
-        Payment to other lobbying firms reported on form
-        
+    """
+    Payment to other lobbying firms reported on form
+
         F625 Part 3B
-    
-    '''
+    """
     DATE_FIELDS = [
         'PMT_DATE',
     ]
@@ -1012,19 +994,16 @@ class LothCd(CalAccessBaseModel):
 
 
 class LempCd(CalAccessBaseModel):
-    '''
-    
-        Lobbyist Employers/Subcontracted Clients data from
-        
+    """
+    Lobbyist Employers/Subcontracted Clients data from
+
         F601 -- Lobbying Firm Registration Statement
-        
         F601 Part 2 A
         F601 Part 2 B
-    
-    '''
-    DATE_FIELDS = [
+    """
+    DATE_FIELDS = (
         'EFF_DATE',
-    ]
+    )
     agencylist = models.CharField(
         max_length=200L, db_column='AGENCYLIST', blank=True
     )
@@ -1096,14 +1075,12 @@ class LempCd(CalAccessBaseModel):
 
 
 class LpayCd(CalAccessBaseModel):
-    '''
-    
-        Payments made/received to/from Lobbying Firms reported on forms
-        
+    """
+    Payments made/received to/from Lobbying Firms reported on forms
+
         F625 Part 2
         F635 Part 3B
-    
-    '''
+    """
     advan_amt = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='ADVAN_AMT', blank=True

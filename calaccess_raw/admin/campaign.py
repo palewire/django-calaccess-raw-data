@@ -7,11 +7,19 @@ class CvrSoCdAdmin(BaseAdmin):
     pass
 
 
+class Cvr2SoCdAdmin(BaseAdmin):
+    pass
+
+
 class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
     pass
 
 
 class CvrCampaignDisclosureCdAdmin(BaseAdmin):
+    pass
+
+
+class Cvr3VerificationInfoCdAdmin(BaseAdmin):
     pass
 
 
@@ -28,6 +36,10 @@ class LoanCdAdmin(BaseAdmin):
 
 
 class RcptCdAdmin(BaseAdmin):
+    pass
+
+
+class F495P2CdAdmin(BaseAdmin):
     pass
 
 
@@ -56,8 +68,8 @@ class F501502CdAdmin(BaseAdmin):
 
 
 admin.site.register(models.CvrSoCd, CvrSoCdAdmin)
-admin.site.register(models.Cvr2SoCd, BaseAdmin)
-admin.site.register(models.Cvr3VerificationInfoCd, BaseAdmin)
+admin.site.register(models.Cvr2SoCd, Cvr2SoCdAdmin)
+admin.site.register(models.Cvr3VerificationInfoCd, Cvr3VerificationInfoCdAdmin)
 admin.site.register(
     models.CvrCampaignDisclosureCd,
     CvrCampaignDisclosureCdAdmin
@@ -68,7 +80,7 @@ admin.site.register(
 )
 admin.site.register(models.DebtCd, DebtCdAdmin)
 admin.site.register(models.ExpnCd, ExpnCdAdmin)
-admin.site.register(models.F495P2Cd, BaseAdmin)
+admin.site.register(models.F495P2Cd, F495P2CdAdmin)
 admin.site.register(models.LoanCd, LoanCdAdmin)
 admin.site.register(models.RcptCd, RcptCdAdmin)
 admin.site.register(models.SpltCd, SpltCdAdmin)
