@@ -87,11 +87,10 @@ class FilernameCd(CalAccessBaseModel):
     fields in conjunction.
     """
     DATE_FIELDS = ('EFFECT_DT',)
-    xref_filer_id = models.IntegerField(
-        #max_length=7L,
+    xref_filer_id = models.CharField(
+        max_length=7L,
         db_column='XREF_FILER_ID',
-        null=True,
-        #db_index=True,
+        db_index=True,
         help_text="The external filer id saved in the forms tables"
     )
     filer_id = models.IntegerField(
