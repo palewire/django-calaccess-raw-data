@@ -30,7 +30,7 @@ class TestCommand(Command):
 
 setup(
     name='django-calaccess-raw-data',
-    version='0.0.2',
+    version='0.0.3',
     packages=[
         'calaccess_raw',
         'calaccess_raw.admin',

@@ -20,7 +20,17 @@ class EfsFilingLogCdAdmin(BaseAdmin):
 
 
 class FilernameCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "id",
+        "xref_filer_id",
+        "filer_id",
+        "naml",
+        "namf",
+        "filer_type",
+        "status",
+        "effect_dt",
+    )
+    list_filter = ("filer_type",)
 
 
 class FilersCdAdmin(BaseAdmin):

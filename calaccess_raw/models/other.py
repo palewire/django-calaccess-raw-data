@@ -4,9 +4,7 @@ from .base import CalAccessBaseModel
 
 
 class AcronymsCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        "EFFECT_DT",
-    )
+    DATE_FIELDS = ("EFFECT_DT",)
     acronym = models.CharField(max_length=25, db_column="ACRONYM")
     stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
     effect_dt = models.DateField(db_column="EFFECT_DT")
@@ -15,8 +13,8 @@ class AcronymsCd(CalAccessBaseModel):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'ACRONYMS_CD'
-        verbose_name = 'ADDRESS_CD'
-        verbose_name_plural = 'ADDRESS_CD'
+        verbose_name = 'ACRONYMS_CD'
+        verbose_name_plural = 'ACRONYMS_CD'
 
 
 class AddressCd(CalAccessBaseModel):
@@ -72,20 +70,58 @@ class EfsFilingLogCd(CalAccessBaseModel):
 
 
 class FilernameCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'EFFECT_DT',
+    """
+    A combination of Cal-Access tables to provide the analyst with
+    filer information.
+
+    Note: Name last can also be the full name of the filer
+    (for both Campaign and lobbying filing entities).
+
+    Full name of all pacs, firms, and employers are always in this last
+    name field.
+
+    Major donors can be split between first and last name fields, but usually
+    are contained in the last name field only. Individual names of lobbyists,
+    candidates/officeholders, treasurers/responsible officers, and major donors
+    (when they are only an individual's name) use both the first and last name
+    fields in conjunction.
+    """
+    DATE_FIELDS = ('EFFECT_DT',)
+    xref_filer_id = models.IntegerField(
+        #max_length=7L,
+        db_column='XREF_FILER_ID',
+        null=True,
+        #db_index=True,
+        help_text="The external filer id saved in the forms tables"
     )
-    xref_filer_id = models.CharField(
-        max_length=7L, db_column='XREF_FILER_ID', db_index=True
+    filer_id = models.IntegerField(
+        db_column='FILER_ID',
+        db_index=True,
+        null=True,
+        help_text="The internal filer id saved in Cal-Access"
     )
-    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
     filer_type = models.CharField(max_length=45L, db_column='FILER_TYPE')
     status = models.CharField(max_length=10L, db_column='STATUS')
-    effect_dt = models.DateField(db_column='EFFECT_DT')
-    naml = models.CharField(max_length=200L, db_column='NAML')
-    namf = models.CharField(max_length=55L, db_column='NAMF', blank=True)
-    namt = models.CharField(max_length=28L, db_column='NAMT', blank=True)
-    nams = models.CharField(max_length=32L, db_column='NAMS', blank=True)
+    effect_dt = models.DateField(
+        db_column='EFFECT_DT',
+        help_text="Effective date for status",
+    )
+    naml = models.CharField(
+        max_length=200L, db_column='NAML',
+        help_text="Last name, (though sometimes the full name)"
+    )
+    namf = models.CharField(
+        max_length=55L, db_column='NAMF', blank=True,
+        help_text="First name"
+    )
+    namt = models.CharField(
+        max_length=28L, db_column='NAMT', blank=True,
+        help_text="Name prefix or title"
+    )
+    nams = models.CharField(
+        max_length=32L, db_column='NAMS', blank=True,
+        help_text="Name suffix"
+    )
     adr1 = models.CharField(max_length=200L, db_column='ADR1', blank=True)
     adr2 = models.CharField(max_length=200L, db_column='ADR2', blank=True)
     city = models.CharField(max_length=55L, db_column='CITY', blank=True)
@@ -100,6 +136,10 @@ class FilernameCd(CalAccessBaseModel):
         db_table = 'FILERNAME_CD'
         verbose_name = 'FILERNAME_CD'
         verbose_name_plural = 'FILERNAME_CD'
+        ordering = ("naml", "namf",)
+
+    def __unicode__(self):
+        return unicode(self.filer_id)
 
 
 class FilersCd(CalAccessBaseModel):
