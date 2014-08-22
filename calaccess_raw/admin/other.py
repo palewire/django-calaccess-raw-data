@@ -19,20 +19,6 @@ class EfsFilingLogCdAdmin(BaseAdmin):
     pass
 
 
-class FilernameCdAdmin(BaseAdmin):
-    list_display = (
-        "id",
-        "xref_filer_id",
-        "filer_id",
-        "naml",
-        "namf",
-        "filer_type",
-        "status",
-        "effect_dt",
-    )
-    list_filter = ("filer_type",)
-
-
 class FilersCdAdmin(BaseAdmin):
     pass
 
@@ -189,7 +175,6 @@ admin.site.register(models.AcronymsCd, AcronymsCdAdmin)
 admin.site.register(models.AddressCd, AddressCdAdmin)
 admin.site.register(models.BallotMeasuresCd, BallotMeasuresCdAdmin)
 admin.site.register(models.EfsFilingLogCd, BaseAdmin)
-admin.site.register(models.FilernameCd, FilernameCdAdmin)
 admin.site.register(models.FilersCd, FilersCdAdmin)
 admin.site.register(models.FilerAcronymsCd, FilerAcronymsCdAdmin)
 admin.site.register(models.FilerAddressCd, FilerAddressCdAdmin)

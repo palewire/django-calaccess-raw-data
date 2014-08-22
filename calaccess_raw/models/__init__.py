@@ -112,6 +112,7 @@ from lobbying import (
     LpayCd,
 )
 from common import (
+    FilernameCd,
     FilerFilingsCd,
     FilingsCd,
     SmryCd,
@@ -123,7 +124,6 @@ from other import (
     AddressCd,
     BallotMeasuresCd,
     EfsFilingLogCd,
-    FilernameCd,
     FilersCd,
     FilerAcronymsCd,
     FilerAddressCd,

@@ -1,5 +1,5 @@
 import csv
-from django.db import connection, transaction
+from django.db import connection
 from django.db.models.loading import get_model
 from django.core.management.base import LabelCommand
 
