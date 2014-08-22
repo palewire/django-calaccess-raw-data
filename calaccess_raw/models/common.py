@@ -33,7 +33,11 @@ class FilernameCd(CalAccessBaseModel):
         null=True,
         help_text="The internal filer id saved in Cal-Access"
     )
-    filer_type = models.CharField(max_length=45L, db_column='FILER_TYPE')
+    filer_type = models.CharField(
+        max_length=45L,
+        db_column='FILER_TYPE',
+        db_index=True,
+    )
     status = models.CharField(max_length=10L, db_column='STATUS')
     effect_dt = models.DateField(
         db_column='EFFECT_DT',
