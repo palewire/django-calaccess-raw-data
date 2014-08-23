@@ -132,11 +132,17 @@ class FilingsCd(CalAccessBaseModel):
 
 
 class SmryCd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'ELEC_DT'
-    ]
-    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
-    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
+    )
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True
+    )
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True
+    )
     line_item = models.CharField(
         max_length=8L,
         db_column='LINE_ITEM',
@@ -153,19 +159,27 @@ class SmryCd(CalAccessBaseModel):
         db_index=True
     )
     amount_a = models.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='AMOUNT_A', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='AMOUNT_A',
+        blank=True
     )
     amount_b = models.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='AMOUNT_B', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='AMOUNT_B',
+        blank=True
     )
     amount_c = models.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='AMOUNT_C', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='AMOUNT_C',
+        blank=True
     )
     elec_dt = models.DateField(null=True, db_column='ELEC_DT', blank=True)
-    current_filing = models.CharField(max_length=1L, blank=True)
 
     class Meta:
         app_label = 'calaccess_raw'
