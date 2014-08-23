@@ -132,9 +132,7 @@ class FilingsCd(CalAccessBaseModel):
 
 
 class SmryCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'ELEC_DT'
-    )
+    DATE_FIELDS = ('ELEC_DT',)
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True
