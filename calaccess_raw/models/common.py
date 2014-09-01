@@ -86,31 +86,83 @@ class FilerFilingsCd(CalAccessBaseModel):
         'RPT_END',
         'RPT_DATE'
     ]
-    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
-    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
+    filer_id = models.IntegerField(
+        db_column='FILER_ID',
+        db_index=True,
+        help_text="Filer's unique identification number"
+    )
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        help_text="Unique filing identification number"
+    )
     period_id = models.IntegerField(
-        null=True, db_column='PERIOD_ID', blank=True
+        null=True,
+        db_column='PERIOD_ID',
+        blank=True,
+        help_text="Identifies the period when the filing was recieved."
     )
     form_id = models.CharField(max_length=7L, db_column='FORM_ID')
     filing_sequence = models.IntegerField(
-        db_column='FILING_SEQUENCE', db_index=True
+        db_column='FILING_SEQUENCE',
+        db_index=True,
+        help_text="Amendment number where 0 is an original filing and 1 to \
+999 are amendments"
     )
-    filing_date = models.DateField(db_column='FILING_DATE')
-    stmnt_type = models.IntegerField(db_column='STMNT_TYPE')
-    stmnt_status = models.IntegerField(db_column='STMNT_STATUS')
-    session_id = models.IntegerField(db_column='SESSION_ID')
+    filing_date = models.DateField(
+        db_column='FILING_DATE',
+        help_text="Date the filing was entered into the system"
+    )
+    stmnt_type = models.IntegerField(
+        db_column='STMNT_TYPE',
+        help_text="Type of statement. (Logged paper, electronic or KDE \
+filing"
+    )
+    stmnt_status = models.IntegerField(
+        db_column='STMNT_STATUS',
+        help_text="The status of the statement. If the filing has been \
+reviewed or not reviewed."
+    )
+    session_id = models.IntegerField(
+        db_column='SESSION_ID',
+        help_text="Legislatitive session that the filing applies to"
+    )
     user_id = models.CharField(max_length=12L, db_column='USER_ID')
     special_audit = models.IntegerField(
-        null=True, db_column='SPECIAL_AUDIT', blank=True
+        null=True,
+        db_column='SPECIAL_AUDIT',
+        blank=True,
+        help_text="Denotes whether the filing has been audited for money \
+laundering or other special condition."
     )
     fine_audit = models.IntegerField(
-        null=True, db_column='FINE_AUDIT', blank=True
+        null=True,
+        db_column='FINE_AUDIT',
+        blank=True,
+        help_text="Indicates whether a filing has been audited for a fine"
     )
-    rpt_start = models.DateField(null=True, db_column='RPT_START', blank=True)
-    rpt_end = models.DateField(null=True, db_column='RPT_END', blank=True)
-    rpt_date = models.DateField(null=True, db_column='RPT_DATE', blank=True)
+    rpt_start = models.DateField(
+        null=True,
+        db_column='RPT_START',
+        blank=True,
+        help_text="Starting date for the period the filing represents"
+    )
+    rpt_end = models.DateField(
+        null=True,
+        db_column='RPT_END',
+        blank=True,
+        help_text="Ending date for the period the filing represents"
+    )
+    rpt_date = models.DateField(
+        null=True,
+        db_column='RPT_DATE',
+        blank=True,
+        help_text="When SOS recieved the filing"
+    )
     filing_type = models.IntegerField(
-        null=True, db_column='FILING_TYPE', blank=True
+        null=True,
+        db_column='FILING_TYPE',
+        blank=True
     )
 
     class Meta:
