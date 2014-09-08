@@ -232,7 +232,7 @@ before running `downloadcalaccess`")
 
         # Loop through all the files in the source directory
         for name in os.listdir(self.tsv_dir):
-            call_command("cleancalaccessfile", name)
+            call_command("cleancalaccessrawfile", name)
 
     def load(self):
         """
@@ -240,4 +240,4 @@ before running `downloadcalaccess`")
         """
         model_list = get_models(get_app("calaccess_raw"))
         for model in model_list:
-            call_command("loadcalaccessfile", model.__name__)
+            call_command("loadcalaccessrawfile", model.__name__)
