@@ -1,8 +1,8 @@
 import os
 import csv
 from cStringIO import StringIO
-from calaccess_raw import get_download_directory
 from csvkit import CSVKitReader
+from calaccess_raw import get_download_directory
 from django.core.management.base import LabelCommand
 
 

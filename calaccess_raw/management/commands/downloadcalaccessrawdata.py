@@ -7,11 +7,10 @@ from hurry.filesize import size
 from django.conf import settings
 from optparse import make_option
 from django.utils.six.moves import input
-from calaccess_raw import get_download_directory
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
-from django.db.models import get_models, get_app
 from django.template.defaultfilters import date as dateformat
+from calaccess_raw import get_download_directory, get_model_list
 from django.core.management.base import BaseCommand, CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
@@ -238,6 +237,5 @@ before running `downloadcalaccess`")
         """
         Loads the cleaned up csv files into the database
         """
-        model_list = get_models(get_app("calaccess_raw"))
-        for model in model_list:
+        for model in get_model_list():
             call_command("loadcalaccessrawfile", model.__name__)
