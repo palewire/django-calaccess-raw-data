@@ -1,14 +1,14 @@
 Management commands
 ===================
 
-cleancalaccessfile
-------------------
+cleancalaccessrawfile
+---------------------
 
 Clean a source CalAccess file and reformat it as a CSV
 
 .. code-block:: bash
 
-    Usage: manage.py cleancalaccessfile [options] <file path>
+    Usage: manage.py cleancalaccessrawfile [options] <file path>
 
     Clean a source CalAccess file and reformat it as a CSV
 
@@ -28,14 +28,14 @@ Clean a source CalAccess file and reformat it as a CSV
       -h, --help            show this help message and exit
 
 
-downloadcalaccess
-------------------
+downloadcalaccessrawdata
+------------------------
 
 Download, unzip, clean and load the latest snapshot of the CalAccess database
 
 .. code-block:: bash
 
-    Usage: manage.py downloadcalaccess [options] 
+    Usage: manage.py downloadcalaccessrawdata [options] 
 
     Download, unzip, clean and load the latest snapshot of the CalAccess database
 
@@ -62,14 +62,14 @@ Download, unzip, clean and load the latest snapshot of the CalAccess database
       -h, --help            show this help message and exit
 
 
-loadcalaccessfile
------------------
+loadcalaccessrawfile
+--------------------
 
 Load a cleaned CalAccess file for a model into the database
 
 .. code-block:: bash
 
-    Usage: manage.py loadcalaccessfile [options] <model name>
+    Usage: manage.py loadcalaccessrawfile [options] <model name>
 
     Load a cleaned CalAccess file for a model into the database
 
@@ -89,14 +89,14 @@ Load a cleaned CalAccess file for a model into the database
       -h, --help            show this help message and exit
 
 
-totalcalaccessdata
-------------------
+totalcalaccessrawdata
+---------------------
 
 Print out the total of CAL-ACCESS tables and rows in the database
 
 .. code-block:: bash
 
-    Usage: manage.py totalcalaccessdata [options] 
+    Usage: manage.py totalcalaccessrawdata [options] 
 
     Print out the total of CAL-ACCESS tables and rows in the database
 
@@ -116,14 +116,14 @@ Print out the total of CAL-ACCESS tables and rows in the database
       -h, --help            show this help message and exit
 
 
-verifycalaccessfile
--------------------
+verifycalaccessrawfile
+----------------------
 
 Compare the number of records in a model against its source CSV
 
 .. code-block: bash
 
-    Usage: example/manage.py verifycalaccessfile [options] <model name>
+    Usage: example/manage.py verifycalaccessrawfile [options] <model name>
 
     Compare the number of records in a model against its source CSV
 

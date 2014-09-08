@@ -66,7 +66,7 @@ and load it in the database. This'll take a while. Go grab some coffee.
 
 .. code-block:: bash
 
-    $ python manage.py downloadaccess
+    $ python manage.py downloadaccessrawdata
 
 Exploring the data
 ------------------
