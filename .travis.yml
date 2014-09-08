@@ -8,7 +8,7 @@ env:
 install:
  - pip install pep8 pyflakes coverage python-coveralls
  - python setup.py install
- - pip uninstall Django
+ - pip uninstall -y Django
  - pip install -q Django==$DJANGO_VERSION
 script:
  - pep8 calaccess_raw
