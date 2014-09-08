@@ -3,34 +3,6 @@
 from setuptools import setup
 from distutils.core import Command
 
-
-class TestCommand(Command):
-    user_options = []
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
-        import django
-        if hasattr(django, 'setup'):
-            django.setup()
-        from django.conf import settings
-        settings.configure(
-            DATABASES={
-                'default': {
-                    'NAME': ':memory:',
-                    'ENGINE': 'django.db.backends.sqlite3'
-                }
-            },
-            INSTALLED_APPS=('calaccess_raw',)
-        )
-        from django.core.management import call_command
-        call_command('test', 'calaccess_raw')
-
-
 setup(
     name='django-calaccess-raw-data',
     version='0.0.7',
@@ -59,5 +31,4 @@ Secretary of State\'s CAL-ACCESS database',
         'progressbar>=2.2',
         'hurry.filesize==0.9',
     ),
-    cmdclass={'test': TestCommand}
 )
