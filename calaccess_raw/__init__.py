@@ -1,6 +1,7 @@
 import os
 from django.conf import settings
 from django.db.models.loading import get_models, get_app
+default_app_config = 'calaccess_raw.apps.CalAccessRawConfig'
 
 
 def get_download_directory():

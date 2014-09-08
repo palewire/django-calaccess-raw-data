@@ -14,6 +14,9 @@ class TestCommand(Command):
         pass
 
     def run(self):
+        import django
+        if hasattr(django, 'setup'):
+            django.setup()
         from django.conf import settings
         settings.configure(
             DATABASES={
