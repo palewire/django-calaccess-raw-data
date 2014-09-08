@@ -11,6 +11,8 @@ install:
  - pip install -r requirements_dev.txt
  - pip uninstall -y Django
  - pip install -q Django==$DJANGO_VERSION
+before_script:
+  - mysql -e 'create database calaccess_raw;'
 script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw
