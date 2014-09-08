@@ -14,6 +14,6 @@ install:
 script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw
- - coverage run example/manage.py test calaccess_raw
+ - coverage run example/test.py test calaccess_raw
 after_success:
  - coveralls
