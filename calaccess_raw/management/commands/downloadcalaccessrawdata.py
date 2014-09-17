@@ -115,7 +115,7 @@ CalAccess database'
         # Execute the commands only if DEBUG is set to False
         if settings.DEBUG:
             raise CommandError("DEBUG is not set to False. Please change \
-before running `downloadcalaccess`")
+before running `downloadcalaccessrawdata`")
 
         # Set the options
         self.set_options(*args, **options)
