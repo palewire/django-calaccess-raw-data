@@ -18,7 +18,7 @@ setup(
     description='A Django app to download, extract and load campaign \
 finance and lobbying activity data from the California \
 Secretary of State\'s CAL-ACCESS database',
-    url='https://github.com/california-civic-data-coalition',
+    url='http://django-calaccess-raw-data.californiacivicdata.org/',
     author='California Civic Data Coalition',
     author_email='ben.welsh@latimes.com',
     install_requires=(
