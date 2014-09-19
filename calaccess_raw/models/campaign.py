@@ -740,6 +740,7 @@ Schedule A"
         blank=True,
         help_text="Candidate/officeholder's last name. Used on the Form \
 401 Schedule A"
+    )
     cand_nams = models.CharField(
         max_length=10L,
         db_column='CAND_NAMS',
@@ -1000,7 +1001,7 @@ list of legal values. Used on Form 401 Schedule A"
         db_column='OFF_S_H_CD',
         blank=True,
         help_text="Office Sought/Held Code. Used on the Form 401 \
-Schedule A. Legal values are "S" for sought and "H" for \
+Schedule A. Legal values are 'S' for sought and 'H' for \
 held"
     )
     offic_dscr = models.CharField(
@@ -1030,8 +1031,8 @@ Form 401 Schedule A)"
         max_length=1L,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text="Support/oppose code. Legal values are "S" for support \
-or "O" for oppose. Used on Form 401 Sechedule A. \
+        help_text="Support/oppose code. Legal values are 'S' for support \
+or 'O' for oppose. Used on Form 401 Sechedule A. \
 Transaction identifier - permanent value unique to this item"
     )
     tran_id = models.CharField(
