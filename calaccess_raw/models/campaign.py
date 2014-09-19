@@ -867,11 +867,24 @@ and Form 401 Schedule A, A-1)"
         blank=True,
         help_text="Office District Number (used on F401A)"
     )
+    ENTITY_CODE_CHOICES = (
+        ("", "None"),
+        ("0", "0"),
+        ("BNM", "BNM"),
+        ("COM", "COM"),
+        ("IND", "IND"),
+        ("OFF", "OFF"),
+        ("OTH", "OTH"),
+        ("PTY", "PTY"),
+        ("RCP", "RCP"),
+        ("SCC", "SCC"),
+    )
     entity_cd = models.CharField(
         max_length=3L,
         db_column='ENTITY_CD',
         blank=True,
-        help_text="Entity code: Values [CMO|RCP|IND|OTH]"
+        help_text="Entity code: Values [CMO|RCP|IND|OTH]",
+        choices=ENTITY_CODE_CHOICES
     )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
@@ -929,7 +942,7 @@ and Form 401 Schedule A, A-1)"
         max_length=200L,
         db_column='INTR_NAML',
         blank=True,
-        help_text="ntermediary's Last Name"
+        help_text="Intermediary's Last Name"
     )
     intr_nams = models.CharField(
         max_length=10L,
