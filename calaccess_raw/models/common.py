@@ -102,7 +102,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         blank=True,
         help_text="Identifies the period when the filing was recieved."
     )
-    form_id = models.CharField(max_length=7L, db_column='FORM_ID')
+    form_id = models.CharField(max_length=7, db_column='FORM_ID')
     filing_sequence = models.IntegerField(
         db_column='FILING_SEQUENCE',
         db_index=True,
@@ -160,6 +160,7 @@ laundering or other special condition."
         help_text="When SOS recieved the filing"
     )
     FILING_TYPE_CHOICES = (
+        (None, 'None'),
         ('22000', 'Filing type'),
         ('22001', 'Electronic'),
         ('22002', 'Key data entry'),
@@ -168,9 +169,9 @@ laundering or other special condition."
         ('22005', 'AMS'),
         ('22006', 'Cal Online'),
     )
-    filing_type = models.CharField(
-        max_length=5
+    filing_type = models.IntegerField(
         db_column='FILING_TYPE',
+        null=True,
         blank=True,
         choices=FILING_TYPE_CHOICES
     )

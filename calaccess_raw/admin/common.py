@@ -18,7 +18,11 @@ class FilernameCdAdmin(BaseAdmin):
 
 
 class FilerFilingsCdAdmin(BaseAdmin):
-    pass
+    search_fields = ("filing_id", "filer_id")
+    list_display = (
+        "id", "filer_id", "form_id",
+        "filing_id", "filing_sequence"
+    )
 
 
 class FilingsCdAdmin(BaseAdmin):
