@@ -125,7 +125,7 @@ reviewed or not reviewed."
     )
     session_id = models.IntegerField(
         db_column='SESSION_ID',
-        help_text="Legislatitive session that the filing applies to"
+        help_text="Legislative session that the filing applies to"
     )
     user_id = models.CharField(max_length=12L, db_column='USER_ID')
     special_audit = models.IntegerField(
@@ -159,10 +159,20 @@ laundering or other special condition."
         blank=True,
         help_text="When SOS recieved the filing"
     )
-    filing_type = models.IntegerField(
-        null=True,
+    FILING_TYPE_CHOICES = (
+        ('22000', 'Filing type'),
+        ('22001', 'Electronic'),
+        ('22002', 'Key data entry'),
+        ('22003', 'Historical lobby'),
+        ('22004', 'Historical campaign'),
+        ('22005', 'AMS'),
+        ('22006', 'Cal Online'),
+    )
+    filing_type = models.CharField(
+        max_length=5
         db_column='FILING_TYPE',
-        blank=True
+        blank=True,
+        choices=FILING_TYPE_CHOICES
     )
 
     class Meta:
