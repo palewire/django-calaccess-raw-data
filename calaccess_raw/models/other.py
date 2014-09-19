@@ -263,24 +263,46 @@ class FilerXrefCd(CalAccessBaseModel):
 
 
 class FilingPeriodCd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATE_FIELDS = (
         'START_DATE',
         'END_DATE',
         'DEADLINE'
-    ]
-    period_id = models.IntegerField(db_column='PERIOD_ID')
-    start_date = models.DateField(db_column='START_DATE')
-    end_date = models.DateField(db_column='END_DATE')
-    period_type = models.IntegerField(db_column='PERIOD_TYPE')
-    per_grp_type = models.IntegerField(db_column='PER_GRP_TYPE')
-    period_desc = models.CharField(max_length=255L, db_column='PERIOD_DESC')
-    deadline = models.DateField(db_column='DEADLINE')
+    )
+    period_id = models.IntegerField(
+        db_column='PERIOD_ID',
+        help_text="Unique period identification number"
+    )
+    start_date = models.DateField(
+        db_column='START_DATE',
+        help_text="Starting date for period"
+    )
+    end_date = models.DateField(
+        db_column='END_DATE',
+        help_text="Ending date of period"
+    )
+    period_type = models.IntegerField(
+        db_column='PERIOD_TYPE',
+    )
+    per_grp_type = models.IntegerField(
+        db_column='PER_GRP_TYPE',
+        help_text="Period group type"
+    )
+    period_desc = models.CharField(
+        max_length=255,
+        db_column='PERIOD_DESC',
+        help_text="Period description"
+    )
+    deadline = models.DateField(
+        db_column='DEADLINE',
+        help_text="Deadline date"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'FILING_PERIOD_CD'
         verbose_name = 'FILING_PERIOD_CD'
         verbose_name_plural = 'FILING_PERIOD_CD'
+        ordering = ("-end_date",)
 
 
 class GroupTypesCd(CalAccessBaseModel):

@@ -60,7 +60,12 @@ class FilerXrefCdAdmin(BaseAdmin):
 
 
 class FilingPeriodCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "period_id", "start_date", "end_date", "period_desc",
+    )
+    search_fields = (
+        "period_id",
+    )
 
 
 class GroupTypesCdAdmin(BaseAdmin):
