@@ -871,13 +871,13 @@ and Form 401 Schedule A, A-1)"
         ("", "None"),
         ("0", "0"),
         ("BNM", "BNM"),
-        ("COM", "COM"),
-        ("IND", "IND"),
+        ("COM", "Recipient committee"),
+        ("IND", "Individual"),
         ("OFF", "OFF"),
-        ("OTH", "OTH"),
-        ("PTY", "PTY"),
+        ("OTH", "Other"),
+        ("PTY", "Political party"),
         ("RCP", "RCP"),
-        ("SCC", "SCC"),
+        ("SCC", "Small contributor committee"),
     )
     entity_cd = models.CharField(
         max_length=3L,
@@ -899,8 +899,7 @@ and Form 401 Schedule A, A-1)"
     int_rate = models.CharField(
         max_length=9L,
         db_column='INT_RATE',
-        blank=True,
-        help_text=""
+        blank=True
     )
     intr_adr1 = models.CharField(
         max_length=55L,
