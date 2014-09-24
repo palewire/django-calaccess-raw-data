@@ -22,3 +22,10 @@ Other resources
 * Packaging: `https://pypi.python.org/pypi/django-calaccess-raw-data <https://pypi.python.org/pypi/django-calaccess-raw-data>`_
 * Testing: `https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data <https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data>`_
 * Coverage: `https://coveralls.io/r/california-civic-data-coalition/django-calaccess-raw-data <https://coveralls.io/r/california-civic-data-coalition/django-calaccess-raw-data>`_
+
+Sponsor
+-------
+
+.. image:: /_static/opennews-logo.png
+
+`Released for OpenNews Code Convening, August 2014 <http://opennews.org/code.html>`_
