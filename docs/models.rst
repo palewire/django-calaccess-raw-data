@@ -1,6 +1,9 @@
 Models
 ======
 
+A crosswalk between the tables published by California's Secretary of State
+and the models in this Django application.
+
 Common filings
 --------------
 
