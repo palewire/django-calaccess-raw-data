@@ -15,7 +15,9 @@ Overview
       DV.load("//www.documentcloud.org/documents/1308002-cal-access-about.js", {
       container: "#DV-viewer-1308002-cal-access-about",
       width: 680,
-      height: 680
+      height: 850,
+      sidebar: false,
+      zoom: 550
       });
     </script>
       <noscript>
@@ -36,7 +38,9 @@ Forms
       width: 660,
         container: "#DV-viewer-1308004-cal-access-forms",
       width: 680,
-      height: 680
+      height: 850,
+      sidebar: false,
+      zoom: 550
       });
     </script>
       <noscript>
@@ -57,7 +61,9 @@ California file .CAL format
       width: 660,
         container: "#DV-viewer-1308003-cal-access-cal-format",
       width: 680,
-      height: 680
+      height: 850,
+      sidebar: false,
+      zoom: 550
       });
     </script>
       <noscript>
