@@ -9,13 +9,13 @@ Overview
 
 .. raw:: html
 
-    <div style="position:relative; display:block; clear:both;">
     <div id="DV-viewer-1308002-cal-access-about" class="DV-container"></div>
-    </div>
     <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
     <script>
       DV.load("//www.documentcloud.org/documents/1308002-cal-access-about.js", {
-      container: "#DV-viewer-1308002-cal-access-about"
+      container: "#DV-viewer-1308002-cal-access-about",
+      width: 680,
+      height: 680
       });
     </script>
       <noscript>
@@ -34,7 +34,9 @@ Forms
     <script>
       DV.load("//www.documentcloud.org/documents/1308004-cal-access-forms.js", {
       width: 660,
-        container: "#DV-viewer-1308004-cal-access-forms"
+        container: "#DV-viewer-1308004-cal-access-forms",
+      width: 680,
+      height: 680
       });
     </script>
       <noscript>
@@ -53,7 +55,9 @@ California file .CAL format
     <script>
       DV.load("//www.documentcloud.org/documents/1308003-cal-access-cal-format.js", {
       width: 660,
-        container: "#DV-viewer-1308003-cal-access-cal-format"
+        container: "#DV-viewer-1308003-cal-access-cal-format",
+      width: 680,
+      height: 680
       });
     </script>
       <noscript>
