@@ -1,8 +1,8 @@
 Official documentation
 ======================
 
-Here are the official CAL-ACCESS documentation, as published by the California's
-Secretary of State.
+The official CAL-ACCESS documentation, `as published by the California's
+Secretary of State <http://www.sos.ca.gov/prd/cal-access/>`_.
 
 Overview
 --------
