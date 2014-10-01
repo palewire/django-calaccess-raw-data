@@ -1,7 +1,7 @@
 Official documentation
 ======================
 
-The official CAL-ACCESS documentation, `as published by the California's
+The official CAL-ACCESS documentation, `as published by California's
 Secretary of State <http://www.sos.ca.gov/prd/cal-access/>`_.
 
 Overview
