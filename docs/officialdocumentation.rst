@@ -55,7 +55,7 @@ California file .CAL format
  
 .. raw:: html
 
-    <div id="DV-viewer-1308003-cal-access-cal-format" class="DV-container"></div>
+    <div style="margin-bottom:35px;" id="DV-viewer-1308003-cal-access-cal-format" class="DV-container"></div>
     <script>
       DV.load("//www.documentcloud.org/documents/1308003-cal-access-cal-format.js", {
       width: 660,
