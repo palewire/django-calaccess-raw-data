@@ -765,6 +765,7 @@ the Form 401 Schedule A"
         max_length=55L,
         db_column='CTRIB_ADR1',
         blank=True,
+        default="",
         help_text="First line of the contributor's street address"
     )
     ctrib_adr2 = models.CharField(
@@ -1631,7 +1632,6 @@ class ExpnCd(CalAccessBaseModel):
     xref_schnm = models.CharField(
         max_length=2L, db_column='XREF_SCHNM', blank=True
     )
-    current_filing = models.CharField(max_length=1L, blank=True)
 
     class Meta:
         app_label = 'calaccess_raw'

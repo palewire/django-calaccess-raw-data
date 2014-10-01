@@ -5,7 +5,7 @@ from .base import CalAccessBaseModel
 
 class FilernameCd(CalAccessBaseModel):
     """
-    A combination of Cal-Access tables to provide the analyst with
+    A combination of CAL-ACCESS tables to provide the analyst with
     filer information.
 
     Note: Name last can also be the full name of the filer
