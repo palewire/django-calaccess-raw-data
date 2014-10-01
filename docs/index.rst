@@ -11,8 +11,9 @@ Documentation
 
    howtouseit
    managementcommands
-   models 
+   models
    howtocontribute
+   officialdocumentation
 
 Other resources
 ---------------
