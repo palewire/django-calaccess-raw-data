@@ -445,19 +445,29 @@ class HdrCd(CalAccessBaseModel):
     ef_type = models.CharField(max_length=3L, db_column='EF_TYPE', blank=True)
     filing_id = models.IntegerField(db_column='FILING_ID')
     hdr_comment = models.CharField(
-        max_length=200L, db_column='HDRCOMMENT', blank=True
+        max_length=200L,
+        db_column='HDRCOMMENT',
+        blank=True
     )
     rec_type = models.CharField(
-        max_length=3L, db_column='REC_TYPE', blank=True
+        max_length=3L,
+        db_column='REC_TYPE',
+        blank=True
     )
     soft_name = models.CharField(
-        max_length=90L, db_column='SOFT_NAME', blank=True
+        max_length=90L,
+        db_column='SOFT_NAME',
+        blank=True
     )
     soft_ver = models.CharField(
-        max_length=16L, db_column='SOFT_VER', blank=True
+        max_length=16L,
+        db_column='SOFT_VER',
+        blank=True
     )
     state_cd = models.CharField(
-        max_length=2L, db_column='STATE_CD', blank=True
+        max_length=2L,
+        db_column='STATE_CD',
+        blank=True
     )
 
     class Meta:
