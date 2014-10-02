@@ -4,9 +4,10 @@ from cStringIO import StringIO
 from csvkit import CSVKitReader
 from calaccess_raw import get_download_directory
 from django.core.management.base import LabelCommand
+from calaccess_raw.management.commands import CalAccessCommand
 
 
-class Command(LabelCommand):
+class Command(CalAccessCommand, LabelCommand):
     help = 'Clean a source CalAccess file and reformat it as a CSV'
     args = '<file path>'
 
@@ -24,7 +25,7 @@ class Command(LabelCommand):
         Cleans the provided source TSV file and writes it out in CSV format
         """
         if self.verbosity:
-            print "- Cleaning %s" % name
+            self.log("Cleaning %s" % name)
 
         # Up the CSV data limit
         csv.field_size_limit(1000000000)
@@ -85,12 +86,11 @@ class Command(LabelCommand):
                 ).next()
                 if not len(csv_field_list) == headers_count:
                     if self.verbosity:
-                        print '-- %s bad parse of %s headers=%s & line=%s' % (
-                            name,
+                        self.failure('-- Bad parse of line %s (%s headers, %s values)' % (
                             line_number,
                             len(headers_list),
                             len(csv_field_list)
-                        )
+                        ))
                         continue
 
             # Write out the row

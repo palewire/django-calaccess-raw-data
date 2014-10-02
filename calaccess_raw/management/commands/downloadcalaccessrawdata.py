@@ -11,6 +11,7 @@ from dateutil.parser import parse as dateparse
 from django.core.management import call_command
 from django.template.defaultfilters import date as dateformat
 from calaccess_raw import get_download_directory, get_model_list
+from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import BaseCommand, CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
@@ -53,6 +54,20 @@ custom_options = (
         default=True,
         help="Skip clearing out ZIP archive and extra files"
     ),
+     make_option(
+        "--skip-clean",
+        action="store_false",
+        dest="clean",
+        default=True,
+        help="Skip cleaning up the raw data files"
+    ),
+    make_option(
+        "--skip-load",
+        action="store_false",
+        dest="load",
+        default=True,
+        help="Skip loading up the raw data files"
+    ),
     make_option(
         "--noinput",
         action="store_true",
@@ -63,7 +78,7 @@ custom_options = (
 )
 
 
-class Command(BaseCommand):
+class Command(CalAccessCommand):
     help = 'Download, unzip, clean and load the latest snapshot of the \
 CalAccess database'
     option_list = BaseCommand.option_list + custom_options
@@ -113,7 +128,7 @@ before running `downloadcalaccessrawdata`")
             else:
                 confirm = input(self.prompt.encode('utf-8'))
                 if confirm != 'yes':
-                    print "Download cancelled."
+                    self.failure("Download cancelled")
                     return
                 self.download()
         if options['unzip']:
@@ -126,6 +141,7 @@ before running `downloadcalaccessrawdata`")
             self.clean()
         if options['load']:
             self.load()
+        self.success("Done!")
 
     def get_metadata(self):
         """
@@ -144,7 +160,7 @@ before running `downloadcalaccessrawdata`")
         Download the ZIP file in pieces.
         """
         if self.verbosity:
-            print "Downloading ZIP file"
+            self.header("Downloading ZIP file")
         r = requests.get(self.url, stream=True)
         bytes = 0
         self.pbar.start()
@@ -162,7 +178,7 @@ before running `downloadcalaccessrawdata`")
         Unzip the snapshot file.
         """
         if self.verbosity:
-            print "Unzipping archive"
+            self.log("Unzipping archive")
         with zipfile.ZipFile(self.zip_path) as zf:
             for member in zf.infolist():
                 words = member.filename.split('/')
@@ -180,7 +196,7 @@ before running `downloadcalaccessrawdata`")
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
         if self.verbosity:
-            print "Prepping unzipped data"
+            self.log("Prepping unzipped data")
         # Move the deep down directory we want out
         shutil.move(
             os.path.join(
@@ -203,7 +219,7 @@ before running `downloadcalaccessrawdata`")
         Delete ZIP archive and files we don't need.
         """
         if self.verbosity:
-            print "Clearing out unneeded files"
+            self.log("Clearing out unneeded files")
         shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
         os.remove(self.zip_path)
 
@@ -213,7 +229,7 @@ before running `downloadcalaccessrawdata`")
         ready to get loaded into the database.
         """
         if self.verbosity:
-            print "Cleaning data files"
+            self.header("Cleaning data files")
 
         # Loop through all the files in the source directory
         for name in os.listdir(self.tsv_dir):
@@ -223,5 +239,8 @@ before running `downloadcalaccessrawdata`")
         """
         Loads the cleaned up csv files into the database
         """
+        if self.verbosity:
+            self.header("Loading data files")
+
         for model in get_model_list():
             call_command("loadcalaccessrawfile", model.__name__)
