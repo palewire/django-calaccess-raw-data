@@ -4,7 +4,8 @@ from django.contrib.humanize.templatetags.humanize import intcomma
 
 
 class Command(CalAccessCommand):
-    help = "Print out the total of CAL-ACCESS tables and rows in the database"
+    help = "Print out the total count tables and rows in the CAL-ACCESS \
+raw database"
 
     def handle(self, *args, **kwargs):
         self.header("Totaling CAL-ACCESS tables and rows")
