@@ -177,6 +177,10 @@ class FilerStatusTypesCd(CalAccessBaseModel):
         db_table = 'FILER_STATUS_TYPES_CD'
         verbose_name = 'FILER_STATUS_TYPES_CD'
         verbose_name_plural = 'FILER_STATUS_TYPES_CD'
+        ordering = ("status_type",)
+
+    def __unicode__(self):
+        return self.status_type
 
 
 class FilerToFilerTypeCd(CalAccessBaseModel):

@@ -44,7 +44,10 @@ class FilerLinksCdAdmin(BaseAdmin):
 
 
 class FilerStatusTypesCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "status_type",
+        "status_desc"
+    )
 
 
 class FilerToFilerTypeCdAdmin(BaseAdmin):
