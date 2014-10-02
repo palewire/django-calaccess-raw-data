@@ -74,7 +74,13 @@ class FilerToFilerTypeCdAdmin(BaseAdmin):
 
 
 class FilerTypesCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_type",
+        "description",
+        "grp_type",
+        "calc_use",
+        "grace_period",
+    )
 
 
 class FilerXrefCdAdmin(BaseAdmin):

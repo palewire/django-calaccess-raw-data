@@ -304,6 +304,10 @@ class FilerTypesCd(CalAccessBaseModel):
         db_table = 'FILER_TYPES_CD'
         verbose_name = 'FILER_TYPES_CD'
         verbose_name_plural = 'FILER_TYPES_CD'
+        ordering = ("filer_type",)
+
+    def __unicode__(self):
+        return unicode(self.filer_type)
 
 
 class FilerXrefCd(CalAccessBaseModel):
