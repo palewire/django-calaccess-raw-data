@@ -1,13 +1,14 @@
 from django.db.models.loading import get_model
 from django.core.management.base import LabelCommand
+from calaccess_raw.management.commands import CalAccessCommand
 
 
-class Command(LabelCommand):
+class Command(CalAccessCommand, LabelCommand):
     help = 'Compare the number of records in a model against its source CSV'
     args = '<model name>'
 
     def handle_label(self, label, **options):
-        print "- Verifying %s" % label
+        self.log("Verifying %s" % label)
 
         # Get the model
         model = get_model("calaccess_raw", label)
@@ -23,9 +24,9 @@ class Command(LabelCommand):
 
         # Report back on how we did
         if cnt == csv_record_cnt:
-            print "-- Record counts match"
+            self.success("-- Table record count matches CSV")
         else:
-            print '-- Records don\'t match. Table: %s\tCSV: %s' % (
+            self.failure('-- Table Record count doesn\'t match CSV. Table: %s\tCSV: %s' % (
                 cnt,
                 csv_record_cnt,
-            )
+            ))
