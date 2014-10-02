@@ -169,8 +169,14 @@ class FilerLinksCd(CalAccessBaseModel):
 
 
 class FilerStatusTypesCd(CalAccessBaseModel):
-    status_type = models.CharField(max_length=11L, db_column='STATUS_TYPE')
-    status_desc = models.CharField(max_length=11L, db_column='STATUS_DESC')
+    status_type = models.CharField(
+        max_length=11L,
+        db_column='STATUS_TYPE',
+    )
+    status_desc = models.CharField(
+        max_length=11L,
+        db_column='STATUS_DESC'
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
