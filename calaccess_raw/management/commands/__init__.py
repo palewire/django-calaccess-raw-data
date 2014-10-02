@@ -16,10 +16,10 @@ class CalAccessCommand(BaseCommand):
 
     def success(self, string):
         self.stdout.write(
-            colorize(string, fg="green", opts=("bold",))
+            colorize(string, fg="green")
         )
 
     def failure(self, string):
         self.stdout.write(
-            colorize(string, fg="red", opts=("bold",))
+            colorize(string, fg="red")
         )

@@ -54,20 +54,6 @@ custom_options = (
         help="Skip clearing out ZIP archive and extra files"
     ),
     make_option(
-        "--skip-clean",
-        action="store_false",
-        dest="clean",
-        default=True,
-        help="Skip cleaning up the raw data files"
-    ),
-    make_option(
-        "--skip-load",
-        action="store_false",
-        dest="load",
-        default=True,
-        help="Skip loading up the raw data files"
-    ),
-    make_option(
         "--noinput",
         action="store_true",
         dest="noinput",
