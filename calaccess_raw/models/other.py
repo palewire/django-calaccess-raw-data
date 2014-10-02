@@ -289,14 +289,29 @@ Populated for Senate, Assembly or Board of Equalization races"
 
 
 class FilerTypesCd(CalAccessBaseModel):
-    filer_type = models.IntegerField(db_column='FILER_TYPE')
-    description = models.CharField(max_length=255L, db_column='DESCRIPTION')
-    grp_type = models.IntegerField(null=True, db_column='GRP_TYPE', blank=True)
+    filer_type = models.IntegerField(
+        db_column='FILER_TYPE',
+        help_text="Filer type identification number"
+    )
+    description = models.CharField(
+        max_length=255,
+        db_column='DESCRIPTION',
+        help_text="Description of the filer type"
+    )
+    grp_type = models.IntegerField(
+        null=True,
+        db_column='GRP_TYPE',
+        blank=True,
+        help_text="Group type assocated with the filer type"
+    )
     calc_use = models.CharField(
-        max_length=1L, db_column='CALC_USE', blank=True
+        max_length=1,
+        db_column='CALC_USE',
+        blank=True,
+        help_text="Use checkbox flag"
     )
     grace_period = models.CharField(
-        max_length=12L, db_column='GRACE_PERIOD', blank=True
+        max_length=12, db_column='GRACE_PERIOD', blank=True
     )
 
     class Meta:
