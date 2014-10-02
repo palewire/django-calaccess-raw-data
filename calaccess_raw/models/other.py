@@ -184,39 +184,98 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         'EFFECT_DT',
         'NYQ_DT'
     )
-    filer_id = models.IntegerField(db_column='FILER_ID')
-    filer_type = models.IntegerField(db_column='FILER_TYPE')
-    active = models.CharField(max_length=1L, db_column='ACTIVE')
-    race = models.IntegerField(null=True, db_column='RACE', blank=True)
-    session_id = models.IntegerField(db_column='SESSION_ID')
+    filer_id = models.IntegerField(
+        db_column='FILER_ID',
+        help_text="Filer's unique identification number"
+    )
+    filer_type = models.IntegerField(
+        db_column='FILER_TYPE',
+        help_text="Filer type identification number"
+    )
+    active = models.CharField(
+        max_length=1L,
+        db_column='ACTIVE',
+        help_text="Indicates if the filer is currently active"
+    )
+    race = models.IntegerField(
+        null=True,
+        db_column='RACE',
+        blank=True,
+        help_text="If applicable indicates the race in which the filer is \
+running"
+    )
+    session_id = models.IntegerField(
+        db_column='SESSION_ID',
+        help_text="Legislative session identification number"
+    )
     category = models.IntegerField(
-        null=True, db_column='CATEGORY', blank=True
+        null=True,
+        db_column='CATEGORY',
+        blank=True,
+        help_text="Defines the filer's category such as controlled, jointly \
+controlled, etc. (subset of filer's type)"
     )
     category_type = models.IntegerField(
-        null=True, db_column='CATEGORY_TYPE', blank=True
+        null=True,
+        db_column='CATEGORY_TYPE',
+        blank=True,
+        help_text="When applicable, the category type specifies additional \
+information about the category. (e.g. state, local, etc.)"
     )
     sub_category = models.IntegerField(
-        null=True, db_column='SUB_CATEGORY', blank=True
+        null=True,
+        db_column='SUB_CATEGORY',
+        blank=True,
+        help_text="When applicable specifies general purpose, primarily \
+formed, etc."
     )
-    effect_dt = models.DateField(db_column='EFFECT_DT')
+    effect_dt = models.DateField(
+        db_column='EFFECT_DT',
+        help_text="The date the filer assumed the current class or type"
+    )
     sub_category_type = models.IntegerField(
-        null=True, db_column='SUB_CATEGORY_TYPE', blank=True
+        null=True,
+        db_column='SUB_CATEGORY_TYPE',
+        blank=True,
+        help_text="When applicable specifies broad based or small contributor"
     )
     election_type = models.IntegerField(
-        null=True, db_column='ELECTION_TYPE', blank=True
+        null=True,
+        db_column='ELECTION_TYPE',
+        blank=True,
+        help_text="Indicates type of election (general, primary, special)"
     )
     sub_category_a = models.CharField(
-        max_length=1L, db_column='SUB_CATEGORY_A', blank=True
+        max_length=1L,
+        db_column='SUB_CATEGORY_A',
+        blank=True,
+        help_text="Indicates if sponsored or not"
     )
-    nyq_dt = models.DateField(null=True, db_column='NYQ_DT', blank=True)
+    nyq_dt = models.DateField(
+        null=True,
+        db_column='NYQ_DT',
+        blank=True,
+        help_text="Indicates the date when a committee reached its qualifying \
+level of activity"
+    )
     party_cd = models.IntegerField(
-        null=True, db_column='PARTY_CD', blank=True
+        null=True,
+        db_column='PARTY_CD',
+        blank=True,
+        help_text="Filer's political party"
     )
     county_cd = models.IntegerField(
-        null=True, db_column='COUNTY_CD', blank=True
+        null=True,
+        db_column='COUNTY_CD',
+        blank=True,
+        help_text="Filer's county code"
     )
     district_cd = models.IntegerField(
-        null=True, db_column='DISTRICT_CD', blank=True
+        null=True,
+        db_column='DISTRICT_CD',
+        blank=True,
+        help_text="Filer's district number for the office being sought. \
+Populated for Senate, Assembly or Board of Equalization races"
     )
 
     class Meta:
