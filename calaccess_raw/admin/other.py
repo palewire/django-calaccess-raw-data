@@ -192,7 +192,19 @@ class LobbyistFirmLobbyist2CdAdmin(BaseAdmin):
 
 
 class LookupCodeAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "code_type",
+        "code_id",
+        "code_desc",
+    )
+    list_filter = (
+        "code_type",
+    )
+    search_fields = (
+        "code_type",
+        "code_id",
+        "code_desc",
+    )
 
 
 class NamesCdAdmin(BaseAdmin):
