@@ -48,7 +48,29 @@ class FilerStatusTypesCdAdmin(BaseAdmin):
 
 
 class FilerToFilerTypeCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id",
+        "filer_type",
+        "effect_dt",
+        "active",
+        "session_id",
+        "race",
+        "district_cd",
+        "party_cd"
+    )
+    list_filter = (
+        "active",
+        "filer_type",
+        "category",
+        "sub_category",
+        "category_type",
+        "party_cd",
+        "session_id"
+    )
+    date_hierarchy = "effect_dt"
+    search_fields = (
+        "filer_id",
+    )
 
 
 class FilerTypesCdAdmin(BaseAdmin):

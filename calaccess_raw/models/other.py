@@ -284,6 +284,9 @@ Populated for Senate, Assembly or Board of Equalization races"
         verbose_name = 'FILER_TO_FILER_TYPE_CD'
         verbose_name_plural = 'FILER_TO_FILER_TYPE_CD'
 
+    def __unicode__(self):
+        return unicode(self.filer_id)
+
 
 class FilerTypesCd(CalAccessBaseModel):
     filer_type = models.IntegerField(db_column='FILER_TYPE')
