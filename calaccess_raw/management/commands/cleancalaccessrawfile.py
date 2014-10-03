@@ -25,7 +25,7 @@ class Command(CalAccessCommand, LabelCommand):
         Cleans the provided source TSV file and writes it out in CSV format
         """
         if self.verbosity:
-            self.log("Cleaning %s" % name)
+            self.log(" Cleaning %s" % name)
 
         # Up the CSV data limit
         csv.field_size_limit(1000000000)

@@ -11,7 +11,7 @@ class CalAccessCommand(BaseCommand):
 
     def log(self, string):
         self.stdout.write(
-            colorize("- %s" % string, fg="white")
+            colorize("%s" % string, fg="white")
         )
 
     def success(self, string):

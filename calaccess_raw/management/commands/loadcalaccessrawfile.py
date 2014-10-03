@@ -21,7 +21,7 @@ class Command(CalAccessCommand, LabelCommand):
         Loads the source CSV for the provided model.
         """
         if self.verbosity:
-            self.log("Loading %s" % model_name)
+            self.log(" Loading %s" % model_name)
 
         model = get_model("calaccess_raw", model_name)
         csv_path = model.objects.get_csv_path()

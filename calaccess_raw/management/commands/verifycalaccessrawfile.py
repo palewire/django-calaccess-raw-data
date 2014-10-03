@@ -8,7 +8,7 @@ class Command(CalAccessCommand, LabelCommand):
     args = '<model name>'
 
     def handle_label(self, label, **options):
-        self.log("Verifying %s" % label)
+        self.log(" Verifying %s" % label)
 
         # Get the model
         model = get_model("calaccess_raw", label)
@@ -24,9 +24,10 @@ class Command(CalAccessCommand, LabelCommand):
 
         # Report back on how we did
         if cnt == csv_record_cnt:
-            self.success("-- Table record count matches CSV")
+            self.success("  Table record count matches CSV")
         else:
-            self.failure('-- Table Record count doesn\'t match CSV. Table: %s\tCSV: %s' % (
+            self.failure('  Table Record count doesn\'t match CSV. \
+Table: %s\tCSV: %s' % (
                 cnt,
                 csv_record_cnt,
             ))

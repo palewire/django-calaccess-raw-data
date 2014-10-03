@@ -10,8 +10,8 @@ raw database"
     def handle(self, *args, **kwargs):
         self.header("Totaling CAL-ACCESS tables and rows")
         model_list = get_model_list()
-        self.log("%s total tables" % len(model_list))
+        self.log(" %s total tables" % len(model_list))
         record_count = 0
         for m in model_list:
             record_count += m.objects.count()
-        self.log("%s total records" % intcomma(record_count))
+        self.log( "%s total records" % intcomma(record_count))

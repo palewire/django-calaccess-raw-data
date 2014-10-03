@@ -178,7 +178,7 @@ before running `downloadcalaccessrawdata`")
         Unzip the snapshot file.
         """
         if self.verbosity:
-            self.log("Unzipping archive")
+            self.log(" Unzipping archive")
         with zipfile.ZipFile(self.zip_path) as zf:
             for member in zf.infolist():
                 words = member.filename.split('/')
@@ -196,7 +196,7 @@ before running `downloadcalaccessrawdata`")
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
         if self.verbosity:
-            self.log("Prepping unzipped data")
+            self.log(" Prepping unzipped data")
         # Move the deep down directory we want out
         shutil.move(
             os.path.join(
@@ -219,7 +219,7 @@ before running `downloadcalaccessrawdata`")
         Delete ZIP archive and files we don't need.
         """
         if self.verbosity:
-            self.log("Clearing out unneeded files")
+            self.log(" Clearing out unneeded files")
         shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
         os.remove(self.zip_path)
 
