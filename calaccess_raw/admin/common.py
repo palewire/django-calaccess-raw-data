@@ -14,7 +14,14 @@ class FilernameCdAdmin(BaseAdmin):
         "status",
         "effect_dt",
     )
-    list_filter = ("filer_type",)
+    list_filter = ("filer_type", "status")
+    search_fields = (
+        "xref_filer_id",
+        "filer_id",
+        "naml",
+        "namf",
+    )
+    date_hierarchy = "effect_dt"
 
 
 class FilerFilingsCdAdmin(BaseAdmin):
