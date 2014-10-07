@@ -91,25 +91,26 @@ CalAccess database'
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.mkdir(self.csv_dir)
-        self.metadata = self.get_metadata()
-        self.prompt = PROMPT % (
-            dateformat(self.metadata['last-modified'], 'N j, Y'),
-            dateformat(self.metadata['last-modified'], 'P'),
-            naturaltime(self.metadata['last-modified']),
-            size(self.metadata['content-length']),
-            self.data_dir,
-        )
-        self.pbar = progressbar.ProgressBar(
-            widgets=[
-                progressbar.Percentage(),
-                progressbar.Bar(),
-                ' ',
-                progressbar.ETA(),
-                ' ',
-                progressbar.FileTransferSpeed()
-            ],
-            maxval=self.metadata['content-length']
-        )
+        if kwargs['download']:
+            self.metadata = self.get_metadata()
+            self.prompt = PROMPT % (
+                dateformat(self.metadata['last-modified'], 'N j, Y'),
+                dateformat(self.metadata['last-modified'], 'P'),
+                naturaltime(self.metadata['last-modified']),
+                size(self.metadata['content-length']),
+                self.data_dir,
+            )
+            self.pbar = progressbar.ProgressBar(
+                widgets=[
+                    progressbar.Percentage(),
+                    progressbar.Bar(),
+                    ' ',
+                    progressbar.ETA(),
+                    ' ',
+                    progressbar.FileTransferSpeed()
+                ],
+                maxval=self.metadata['content-length']
+            )
         self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
