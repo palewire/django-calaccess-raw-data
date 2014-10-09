@@ -169,7 +169,6 @@ before running `downloadcalaccessrawdata`")
         it returns an appropriate message notifying the user there is no
         available information.
         """
-        download_dir = get_download_directory()
         dl_metadata = os.path.join(self.data_dir, 'download_metadata.txt')
         if os.path.isfile(dl_metadata):
             with open(dl_metadata) as f:
