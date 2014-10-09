@@ -10,9 +10,9 @@ from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
 from django.template.loader import render_to_string
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_download_directory, get_model_list
-from django.core.management.base import BaseCommand, CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
@@ -72,7 +72,7 @@ custom_options = (
 class Command(CalAccessCommand):
     help = 'Download, unzip, clean and load the latest snapshot of the \
 CalAccess database'
-    option_list = BaseCommand.option_list + custom_options
+    option_list = CalAccessCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
