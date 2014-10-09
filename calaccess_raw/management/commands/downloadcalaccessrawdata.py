@@ -9,20 +9,11 @@ from optparse import make_option
 from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
-from django.template.defaultfilters import date as dateformat
-from calaccess_raw import get_download_directory, get_model_list
+from django.template.loader import render_to_string
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from django.core.management.base import BaseCommand, CommandError
+from calaccess_raw import get_download_directory, get_model_list
 from django.contrib.humanize.templatetags.humanize import naturaltime
-
-PROMPT = """
-The CalAccess snapshot was last updated %s at %s, %s.
-
-It is %s in size.
-
-Do you want to download the file to %s
-
-Type 'yes' to do it, or 'no' to back out: """
 
 
 custom_options = (
@@ -81,7 +72,7 @@ custom_options = (
 class Command(CalAccessCommand):
     help = 'Download, unzip, clean and load the latest snapshot of the \
 CalAccess database'
-    option_list = BaseCommand.option_list + custom_options
+    option_list = CalAccessCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
@@ -92,13 +83,18 @@ CalAccess database'
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.mkdir(self.csv_dir)
         if kwargs['download']:
-            self.metadata = self.get_metadata()
-            self.prompt = PROMPT % (
-                dateformat(self.metadata['last-modified'], 'N j, Y'),
-                dateformat(self.metadata['last-modified'], 'P'),
-                naturaltime(self.metadata['last-modified']),
-                size(self.metadata['content-length']),
-                self.data_dir,
+            self.download_metadata = self.get_download_metadata()
+            self.local_metadata = self.get_local_metadata()
+            prompt_context = dict(
+                last_updated=self.download_metadata['last-modified'],
+                time_ago=naturaltime(self.download_metadata['last-modified']),
+                size=size(self.download_metadata['content-length']),
+                last_download=self.local_metadata['last-download'],
+                download_dir=self.data_dir,
+            )
+            self.prompt = render_to_string(
+                'calaccess_raw/downloadcalaccessrawdata.txt',
+                prompt_context,
             )
             self.pbar = progressbar.ProgressBar(
                 widgets=[
@@ -109,7 +105,7 @@ CalAccess database'
                     ' ',
                     progressbar.FileTransferSpeed()
                 ],
-                maxval=self.metadata['content-length']
+                maxval=self.download_metadata['content-length']
             )
         self.verbosity = int(kwargs['verbosity'])
 
@@ -121,7 +117,6 @@ before running `downloadcalaccessrawdata`")
 
         # Set the options
         self.set_options(*args, **options)
-
         # Get to work
         if options['download']:
             if options['noinput']:
@@ -144,9 +139,9 @@ before running `downloadcalaccessrawdata`")
             self.load()
         self.success("Done!")
 
-    def get_metadata(self):
+    def get_download_metadata(self):
         """
-        Returns basic metadata about the current CalAccess snapshot,
+        Returns basic metadata about the current CAL-ACCESS snapshot,
         like its size and the last time it was updated while stopping
         short of actually downloading it.
         """
@@ -155,6 +150,32 @@ before running `downloadcalaccessrawdata`")
             'content-length': int(request.headers['content-length']),
             'last-modified': dateparse(request.headers['last-modified'])
         }
+
+    def get_local_metadata(self):
+        """
+        Retrieves a local file that records past downloads and returns
+        a dictionary that includes a timestamp with a timestamp marking
+        the last update.
+
+        If no file exists it returns the dictionary with null values.
+        """
+        file_path = os.path.join(self.data_dir, 'download_metadata.txt')
+        metadata = {
+            'last-download': None
+        }
+        if os.path.isfile(file_path):
+            with open(file_path) as f:
+                metadata['last-download'] = dateparse(f.readline())
+        return metadata
+
+    def set_local_metadata(self):
+        """
+        Creates a file that stories the date and time vintage of the last
+        CAL-ACCESS archive download.
+        """
+        file_path = os.path.join(self.data_dir, 'download_metadata.txt')
+        with open(file_path, 'wb') as f:
+            f.write(str(self.download_metadata['last-modified']))
 
     def download(self):
         """
@@ -173,6 +194,7 @@ before running `downloadcalaccessrawdata`")
                     self.pbar.update(bytes)
                     f.flush()
         self.pbar.finish()
+        self.set_local_metadata()
 
     def unzip(self):
         """
