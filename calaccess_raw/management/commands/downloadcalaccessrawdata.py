@@ -10,9 +10,8 @@ from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
 from django.template.loader import render_to_string
-from django.template.defaultfilters import date as dateformat
-from calaccess_raw import get_download_directory, get_model_list
 from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw import get_download_directory, get_model_list
 from django.core.management.base import BaseCommand, CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
