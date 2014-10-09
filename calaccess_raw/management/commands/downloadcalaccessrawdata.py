@@ -58,7 +58,7 @@ custom_options = (
         default=True,
         help="Skip clearing out ZIP archive and extra files"
     ),
-     make_option(
+    make_option(
         "--skip-clean",
         action="store_false",
         dest="clean",
@@ -164,7 +164,7 @@ before running `downloadcalaccessrawdata`")
 
     def get_local_metadata(self):
         """
-        Gets local metadata if it exists and adds in that  
+        Gets local metadata if it exists and adds in that
         information to the initial download prompt. If no file exists
         it returns an appropriate message notifying the user there is no
         available information.
@@ -175,19 +175,18 @@ before running `downloadcalaccessrawdata`")
                 dl_datetime = dateparse(f.readline())
             message = "The CalAccess snapshot you have dowloaded \
 was last updated %s at %s, %s." % (
-                dateformat(dl_datetime, 'N j, Y'), 
+                dateformat(dl_datetime, 'N j, Y'),
                 dateformat(dl_datetime, 'P'),
                 naturaltime(dl_datetime),
                 )
         else:
             message = "We couldn't find any information about \
 your previously downloaded CalAccess data."
-            
         return message
 
     def set_local_metadata(self):
         """
-        Sets the datatime at which the download of CalAccess data 
+        Sets the datatime at which the download of CalAccess data
         is complete. Allows the user to keep track of when they
         last updated their data.
         """
