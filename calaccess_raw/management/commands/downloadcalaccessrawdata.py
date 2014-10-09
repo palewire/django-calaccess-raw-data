@@ -54,7 +54,7 @@ custom_options = (
         default=True,
         help="Skip clearing out ZIP archive and extra files"
     ),
-     make_option(
+    make_option(
         "--skip-clean",
         action="store_false",
         dest="clean",

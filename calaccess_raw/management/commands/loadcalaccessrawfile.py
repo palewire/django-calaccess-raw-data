@@ -75,7 +75,9 @@ class Command(CalAccessCommand, LabelCommand):
             if cnt == csv_record_cnt:
                 self.success("  Table record count matches CSV")
             else:
-                self.failure('  Table Record count doesn\'t match CSV. Table: %s\tCSV: %s' % (
+                msg = '  Table Record count doesn\'t match CSV. \
+Table: %s\tCSV: %s'
+                self.failure(msg % (
                     cnt,
                     csv_record_cnt,
                 ))
