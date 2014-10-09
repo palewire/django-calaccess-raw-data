@@ -14,4 +14,4 @@ raw database"
         record_count = 0
         for m in model_list:
             record_count += m.objects.count()
-        self.log( "%s total records" % intcomma(record_count))
+        self.log(" %s total records" % intcomma(record_count))
