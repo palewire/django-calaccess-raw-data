@@ -89,7 +89,7 @@ CalAccess database'
                 last_updated=self.download_metadata['last-modified'],
                 time_ago=naturaltime(self.download_metadata['last-modified']),
                 size=size(self.download_metadata['content-length']),
-                last_download=self.local_metadata['last-download'],
+                last_download=self.local_metadata,
                 download_dir=self.data_dir,
             )
             self.prompt = render_to_string(
@@ -160,6 +160,7 @@ before running `downloadcalaccessrawdata`")
         available information.
         """
         dl_metadata = os.path.join(self.data_dir, 'download_metadata.txt')
+        print dl_metadata
         if os.path.isfile(dl_metadata):
             with open(dl_metadata) as f:
                 dl_datetime = dateparse(f.readline())
@@ -170,8 +171,7 @@ was last updated %s at %s, %s." % (
                 naturaltime(dl_datetime),
                 )
         else:
-            message = "We couldn't find any information about \
-your previously downloaded CalAccess data."
+            message = ""
         return message
 
     def set_local_metadata(self):
