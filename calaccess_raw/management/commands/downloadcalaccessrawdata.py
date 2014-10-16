@@ -153,33 +153,6 @@ before running `downloadcalaccessrawdata`")
 
     def get_local_metadata(self):
         """
-<<<<<<< HEAD
-        Gets local metadata if it exists and adds in that
-        information to the initial download prompt. If no file exists
-        it returns an appropriate message notifying the user there is no
-        available information.
-        """
-        dl_metadata = os.path.join(self.data_dir, 'download_metadata.txt')
-        if os.path.isfile(dl_metadata):
-            with open(dl_metadata) as f:
-                dl_datetime = dateparse(f.readline())
-            message = "The CalAccess snapshot you have dowloaded \
-was last updated %s at %s, %s." % (
-                dateformat(dl_datetime, 'N j, Y'),
-                dateformat(dl_datetime, 'P'),
-                naturaltime(dl_datetime),
-                )
-        else:
-            message = "We couldn't find any information about \
-your previously downloaded CalAccess data."
-        return message
-
-    def set_local_metadata(self):
-        """
-        Sets the datatime at which the download of CalAccess data
-        is complete. Allows the user to keep track of when they
-        last updated their data.
-=======
         Retrieves a local file that records past downloads and returns
         a dictionary that includes a timestamp with a timestamp marking
         the last update.
@@ -199,7 +172,6 @@ your previously downloaded CalAccess data."
         """
         Creates a file that stories the date and time vintage of the last
         CAL-ACCESS archive download.
->>>>>>> upstream/master
         """
         file_path = os.path.join(self.data_dir, 'download_metadata.txt')
         with open(file_path, 'wb') as f:
