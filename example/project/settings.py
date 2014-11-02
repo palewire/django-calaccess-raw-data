@@ -33,10 +33,15 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'calaccess_raw',
-        'USER': 'root',
         'PASSWORD': '',
+        ## Postgres Settings
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'USER': '',
+        # 'HOST': 'localhost',
+        # 'PORT': '5432'
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
