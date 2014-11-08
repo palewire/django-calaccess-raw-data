@@ -20,6 +20,10 @@ class Command(CalAccessCommand, LabelCommand):
         self.load(label)
 
     def _make_date_case(self, _col):
+        """
+        This method takes in a column name and generates a 
+        PostgreSQL "case" for correct insertion into the table.
+        """
         return """
         ,CASE
             WHEN "%s" IS NOT NULL AND "%s" != ''
@@ -39,6 +43,26 @@ class Command(CalAccessCommand, LabelCommand):
                 THEN "%s"::int
         END AS "%s"\n""" % (_col, _col, _col, _col, _col)
 
+    def _make_numeric_case(self, _col):
+        return """
+        ,CASE
+            WHEN "%s" = ''
+                THEN 0.0
+            WHEN "%s" IS NULL
+                THEN 0.0
+            WHEN "%s" IS NOT NULL
+                THEN "%s"::numeric
+        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+
+    def _make_timestamp_case(self, _col):
+        return """
+        ,CASE
+            WHEN "%s" IS NOT NULL AND "%s" != ''
+                THEN to_timestamp("%s", 'MM/DD/YYYY HH12:MI:SS AM')
+            WHEN "%s" = ''
+                THEN to_timestamp('01/01/1900 1:00:00 AM', 'MM/DD/YYYY HH12:MI:SS AM')
+        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+# "7/9/2014 12:00:00 AM"
     def load_postgresql(self, model, csv_path):
         c = connection.cursor()
         try:
@@ -60,23 +84,28 @@ class Command(CalAccessCommand, LabelCommand):
 
         # break out special case column types
         int_columns = []
+        numeric_columns = []
         date_columns = []
+        time_columns = []
         regular_columns = []
 
         #fill in those column types
         for col in model._meta.fields:
             if col.db_type(connection).startswith('integer'):
                 int_columns.append(col.db_column)
+            elif col.db_type(connection).startswith('numeric'):
+                numeric_columns.append(col.db_column)
             elif col.db_type(connection).startswith('date'):
                 date_columns.append(col.db_column)
+            elif col.db_type(connection).startswith('timestamp'):
+                time_columns.append(col.db_column)
             else:
-                # if col.db_column is not None and col.db_column in headers:
-                if col.db_column is not None:
+                if col.db_column is not None and col.db_column in headers:
                     regular_columns.append(col.db_column)
 
         col_w_types = []  # column with its types
         for col in headers:
-            if col not in int_columns and col not in date_columns:
+            if col in regular_columns:
                 col_w_types.append("\"" + col + "\"\t" + name_to_type_map[col])
             else:
                 col_w_types.append("\"" + col + "\"\ttext")
@@ -90,11 +119,19 @@ class Command(CalAccessCommand, LabelCommand):
             CSV
             HEADER;""" % (csv_path)
 
+        # print col_w_types 
+        # print date_columns 
+        # print int_columns 
+        # print time_columns
+        # print numeric_columns
+
         c.execute(temp_insert)  # insert everything into the temp table
 
         # build our insert statement
         insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
-        r_d_i = "\", \"".join(regular_columns + date_columns + int_columns)
+        r_d_i = "\", \"".join(
+            regular_columns + date_columns + int_columns + numeric_columns + time_columns
+        )
         insert_statement += r_d_i
         insert_statement += "\")\n"
         # add in the select part for table migration
@@ -106,6 +143,10 @@ class Command(CalAccessCommand, LabelCommand):
             select_statement += self._make_date_case(dcol)
         for icol in int_columns:
             select_statement += self._make_int_case(icol)
+        for ncol in numeric_columns:
+            select_statement += self._make_numeric_case(ncol)
+        for tcol in time_columns:
+            select_statement += self._make_timestamp_case(tcol)
         # finalize from statement
         select_statement += "FROM temporary_table;"
 
