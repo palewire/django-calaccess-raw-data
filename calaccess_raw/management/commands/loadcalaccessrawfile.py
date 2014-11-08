@@ -2,7 +2,7 @@ import csv
 from django.db import connection
 from django.conf import settings
 from django.utils import dateparse
-from django.db import IntegrityError, DataError
+from django.db import IntegrityError, DataError, ProgrammingError
 from django.db.models.loading import get_model
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
@@ -18,6 +18,122 @@ class Command(CalAccessCommand, LabelCommand):
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
         self.load(label)
+
+    def _make_date_case(self, _col):
+        return """
+        ,CASE
+            WHEN "%s" IS NOT NULL AND "%s" != ''
+                THEN to_date(substring("%s" from 1 for 10), 'MM/DD/YYYY')
+            WHEN "%s" = ''
+                THEN to_date('01/01/1900', 'MM/DD/YYYY')
+        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+
+    def _make_int_case(self, _col):
+        return """
+        ,CASE
+            WHEN "%s" = ''
+                THEN 0
+            WHEN "%s" IS NULL
+                THEN 0
+            WHEN "%s" IS NOT NULL
+                THEN "%s"::int
+        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+
+    def load_postgresql(self, model, csv_path):
+        c = connection.cursor()
+        try:
+            c.execute('DROP TABLE temporary_table;')
+        except ProgrammingError:
+            pass
+        # clear our table
+        c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
+
+        # get header names + future length
+        with open(csv_path) as infile:
+            reader = csv.reader(infile)
+            headers = reader.next()
+            csv_count = sum([1 for row in reader])
+
+        #map column name (csv) to column name (table)
+        name_to_type_map = dict([(col.db_column, col.db_type(connection))
+                                for col in model._meta.fields])
+
+        # break out special case column types
+        int_columns = []
+        date_columns = []
+        regular_columns = []
+
+        #fill in those column types
+        for col in model._meta.fields:
+            if col.db_type(connection).startswith('integer'):
+                int_columns.append(col.db_column)
+            elif col.db_type(connection).startswith('date'):
+                date_columns.append(col.db_column)
+            else:
+                # if col.db_column is not None and col.db_column in headers:
+                if col.db_column is not None:
+                    regular_columns.append(col.db_column)
+
+        col_w_types = []  # column with its types
+        for col in headers:
+            if col not in int_columns and col not in date_columns:
+                col_w_types.append("\"" + col + "\"\t" + name_to_type_map[col])
+            else:
+                col_w_types.append("\"" + col + "\"\ttext")
+
+        # create the temp table w/ columns with types
+        c.execute("CREATE TABLE \"temporary_table\" (%s);"
+                  % ',\n'.join(col_w_types))
+
+        temp_insert = """COPY "temporary_table"
+            FROM '%s'
+            CSV
+            HEADER;""" % (csv_path)
+
+        c.execute(temp_insert)  # insert everything into the temp table
+
+        # build our insert statement
+        insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
+        r_d_i = "\", \"".join(regular_columns + date_columns + int_columns)
+        insert_statement += r_d_i
+        insert_statement += "\")\n"
+        # add in the select part for table migration
+        select_statement = "SELECT \""
+        select_statement += "\", \"".join(regular_columns)
+        select_statement += "\"\n"
+        # add in special formatting
+        for dcol in date_columns:
+            select_statement += self._make_date_case(dcol)
+        for icol in int_columns:
+            select_statement += self._make_int_case(icol)
+        # finalize from statement
+        select_statement += "FROM temporary_table;"
+
+        try:
+            c.execute(insert_statement + select_statement)
+        except DataError as e:
+            # print insert_statement + select_statement
+            # print int_columns
+            print "dataerror error, ", e
+        except ProgrammingError as e:
+            # print insert_statement + select_statement
+            # print int_columns
+            print "programming error, ", e
+        except IntegrityError as e:
+            # print insert_statement + select_statement
+            # print int_columns
+            print "IntegrityError error, ", e
+
+        c.execute('DROP TABLE temporary_table;')
+        if self.verbosity:
+            model_count = model.objects.count()
+            if model_count == csv_count:
+                self.success("  Table record count matches CSV")
+            else:
+                msg = '  Table Record count doesn\'t match CSV. \
+Table: %s\tCSV: %s'
+                self.failure(msg % (model_count, csv_count))
+
 
     def load_mysql(self, model, csv_path):
         c = connection.cursor()
@@ -75,70 +191,6 @@ Table: %s\tCSV: %s'
                     csv_record_cnt,
                 ))
 
-    def load_postgresql(self, model, csv_path):
-        c = connection.cursor()
-        c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
-
-        headers = []
-
-        infile = open(csv_path)
-        reader = csv.reader(infile)
-        headers = reader.next()
-        header_enum = dict(enumerate(headers))
-
-        date_fields = dict([(count, h) for count, h 
-            in enumerate(headers)
-            if h in model.DATE_FIELDS])
-
-        integer_fields = [col.db_column for col 
-            in model._meta.fields 
-            if col.db_type(connection).startswith("integer")]
-            
-        field_col_name_map = dict([(col.db_column, col.name) for col 
-            in model._meta.fields
-            if col.db_column != None])
-
-        error_reports = {
-            "d":0,
-            "v":0,
-            "i":0
-        }
-        ds = []
-        vs = []
-        iss = []
-        for row in reader:
-            for z in date_fields.keys():# Take care of Date Fields
-                dt = dateparse.parse_date(row[z])
-                if dt:
-                    row[z] = dt.strftime("%Y-%m-%d")
-                else:
-                    row[z] = None
-            insert = {} # Get our insert dictionary ready
-            for index, index_name in header_enum.items(): 
-                if index_name in integer_fields:
-                    try:
-                        insert[field_col_name_map[index_name]] = int(row[index])
-                    except ValueError as v:
-                        vs.append(v.message.split('\n')[0])
-                        error_reports["v"] += 1
-                else:
-                    insert[field_col_name_map[index_name]] = row[index]
-            try: # try making the model...
-                model.objects.create(**insert)
-            except DataError as d:
-                ds.append(d.message.split('\n')[0])
-                error_reports["d"] += 1
-            except ValueError as v:
-                vs.append(v.message.split('\n')[0])
-                error_reports["v"] += 1
-            except IntegrityError as i:
-                iss.append(i.message.split('\n')[0])
-                error_reports["i"] += 1
-
-        print set(ds), set(vs), set(iss)
-        self.failure("Integrity Errors: %d, Data Errors: %d, Value Errors: %d" % (error_reports["i"],error_reports["d"],error_reports["v"]) )
-
-
     def load(self, model_name):
         """
         Loads the source CSV for the provided model.
@@ -150,10 +202,10 @@ Table: %s\tCSV: %s'
         csv_path = model.objects.get_csv_path()
 
         # Flush
-        if settings.DATABASES['default']['ENGINE'] == 'django.db.backends.mysql':
+        engine = settings.DATABASES['default']['ENGINE']
+        if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
-        elif settings.DATABASES['default']['ENGINE'] == 'django.db.backends.postgresql_psycopg2':
+        elif engine == 'django.db.backends.postgresql_psycopg2':
             self.load_postgresql(model, csv_path)
-            # self.load_mysql(model, csv_path)
         else:
             self.failure("Sorry that database is not supported")
