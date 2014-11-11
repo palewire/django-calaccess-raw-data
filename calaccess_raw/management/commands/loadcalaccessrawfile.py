@@ -36,12 +36,14 @@ class Command(CalAccessCommand, LabelCommand):
         return """
         ,CASE
             WHEN "%s" = ''
-                THEN 0
-            WHEN "%s" IS NULL
+                THEN NULL
+            WHEN "%s" = 'Y'
+                THEN 1
+            WHEN "%s" = 'N'
                 THEN 0
             WHEN "%s" IS NOT NULL
                 THEN "%s"::int
-        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+        END AS "%s"\n""" % (_col, _col, _col, _col, _col, _col)
 
     def _make_numeric_case(self, _col):
         return """
@@ -55,6 +57,7 @@ class Command(CalAccessCommand, LabelCommand):
         END AS "%s"\n""" % (_col, _col, _col, _col, _col)
 
     def _make_timestamp_case(self, _col):
+        # "7/9/2014 12:00:00 AM"
         return """
         ,CASE
             WHEN "%s" IS NOT NULL AND "%s" != ''
@@ -62,7 +65,15 @@ class Command(CalAccessCommand, LabelCommand):
             WHEN "%s" = ''
                 THEN to_timestamp('01/01/1900 1:00:00 AM', 'MM/DD/YYYY HH12:MI:SS AM')
         END AS "%s"\n""" % (_col, _col, _col, _col, _col)
-# "7/9/2014 12:00:00 AM"
+
+    def _make_special_not_null_case(self, _col):
+        return """
+        ,CASE
+            WHEN "%s" IS NULL
+                THEN ''
+        END AS "%s"\n""" % (_col, _col)
+
+
     def load_postgresql(self, model, csv_path):
         c = connection.cursor()
         try:
@@ -74,11 +85,13 @@ class Command(CalAccessCommand, LabelCommand):
 
         # get header names + future length
         with open(csv_path) as infile:
-            reader = csv.reader(infile)
-            headers = reader.next()
-            csv_count = sum([1 for row in reader])
+            csv_reader = csv.reader(infile)
+            headers = csv_reader.next()
 
-        #map column name (csv) to column name (table)
+        with open(csv_path) as infile:
+            csv_count = len(infile.readlines()) - 1
+
+        #map column names to column types
         name_to_type_map = dict([(col.db_column, col.db_type(connection))
                                 for col in model._meta.fields])
 
@@ -103,36 +116,44 @@ class Command(CalAccessCommand, LabelCommand):
                 if col.db_column is not None and col.db_column in headers:
                     regular_columns.append(col.db_column)
 
-        col_w_types = []  # column with its types
+        file_cols_types = []  # column with its types
         for col in headers:
             if col in regular_columns:
-                col_w_types.append("\"" + col + "\"\t" + name_to_type_map[col])
+                file_cols_types.append("\"" + col + "\"\t" + name_to_type_map[col])
             else:
-                col_w_types.append("\"" + col + "\"\ttext")
+                file_cols_types.append("\"" + col + "\"\ttext")
+
+        extra_cols = set([col.db_column for col in model._meta.fields]).difference(set(headers))
+        empty_cols = []
+        for col in extra_cols:
+            if col != None:
+                empty_cols.append(col)
+                # file_cols_types.append("\"" + col + "\"\t" + name_to_type_map[col])
+
 
         # create the temp table w/ columns with types
         c.execute("CREATE TABLE \"temporary_table\" (%s);"
-                  % ',\n'.join(col_w_types))
+                  % ',\n'.join(file_cols_types))
 
         temp_insert = """COPY "temporary_table"
             FROM '%s'
             CSV
             HEADER;""" % (csv_path)
 
-        # print col_w_types 
-        # print date_columns 
-        # print int_columns 
-        # print time_columns
-        # print numeric_columns
+        try:
+            c.execute(temp_insert)  # insert everything into the temp table
+        except DataError as e:
+            print "initial insert dataerror error, ", e
 
-        c.execute(temp_insert)  # insert everything into the temp table
+        for col in empty_cols:
+            c.execute("ALTER TABLE temporary_table ADD COLUMN \"%s\" text" % col)
 
         # build our insert statement
         insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
-        r_d_i = "\", \"".join(
-            regular_columns + date_columns + int_columns + numeric_columns + time_columns
+        insert_col_list = "\", \"".join(
+            regular_columns + date_columns + int_columns + numeric_columns + time_columns + empty_cols
         )
-        insert_statement += r_d_i
+        insert_statement += insert_col_list
         insert_statement += "\")\n"
         # add in the select part for table migration
         select_statement = "SELECT \""
@@ -147,9 +168,11 @@ class Command(CalAccessCommand, LabelCommand):
             select_statement += self._make_numeric_case(ncol)
         for tcol in time_columns:
             select_statement += self._make_timestamp_case(tcol)
+        for ecol in empty_cols:
+            select_statement += self._make_special_not_null_case(ecol)
         # finalize from statement
         select_statement += "FROM temporary_table;"
-
+        print select_statement
         try:
             c.execute(insert_statement + select_statement)
         except DataError as e:
