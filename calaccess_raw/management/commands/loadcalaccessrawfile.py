@@ -19,7 +19,7 @@ class Command(CalAccessCommand, LabelCommand):
         self.verbosity = options.get("verbosity")
         self.load(label)
 
-    def get_headers_count(self, csv_path):
+    def get_hdrs_and_cnt(self, csv_path):
         """
         Get the headers and the line count
         from a specified csv file
@@ -53,11 +53,15 @@ class Command(CalAccessCommand, LabelCommand):
                 THEN NULL
             WHEN "%s" = 'Y'
                 THEN 1
+            WHEN "%s" = 'y'
+                THEN 1
             WHEN "%s" = 'N'
+                THEN 0
+            WHEN "%s" = 'n'
                 THEN 0
             WHEN "%s" IS NOT NULL
                 THEN "%s"::int
-        END AS "%s"\n""" % (_col, _col, _col, _col, _col, _col)
+        END AS "%s"\n""" % (_col, _col, _col, _col, _col, _col, _col, _col)
 
     def _make_numeric_case(self, _col):
         return """
@@ -97,7 +101,7 @@ class Command(CalAccessCommand, LabelCommand):
         # clear our table
         c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
 
-        headers, csv_count = self.get_headers_count(csv_path)
+        headers, csv_count = self.get_hdrs_and_cnt(csv_path)
 
         #map column names to column types
         name_to_type_map = dict([(col.db_column, col.db_type(connection))
@@ -194,7 +198,7 @@ class Command(CalAccessCommand, LabelCommand):
         try:
             c.execute(insert_statement + select_statement)
         except DataError as e:
-            # print insert_statement + select_statement
+            print insert_statement + select_statement
             # print int_columns
             print "dataerror error, ", e
         except ProgrammingError as e:
@@ -207,7 +211,8 @@ class Command(CalAccessCommand, LabelCommand):
             print "IntegrityError error, ", e
 
         c.execute('DROP TABLE temporary_table;')
-        c.execute("ALTER TABLE \"%s\" DROP COLUMN \"%s\"" % (model._meta.db_table, "DUMMY_COLUMN"))
+        if not regular_columns:
+            c.execute("ALTER TABLE \"%s\" DROP COLUMN \"%s\"" % (model._meta.db_table, "DUMMY_COLUMN"))
         if self.verbosity:
             model_count = model.objects.count()
             if model_count == csv_count:
@@ -221,7 +226,7 @@ Table: %s\tCSV: %s'
     def load_mysql(self, model, csv_path):
         c = connection.cursor()
         # flush
-        c.execute('TRUNCATE TABLE %s' % model._meta.db_table)
+        # c.execute('TRUNCATE TABLE %s' % model._meta.db_table)
 
         # Build the MySQL LOAD DATA INFILE command
         bulk_sql_load_part_1 = '''
@@ -261,8 +266,9 @@ Table: %s\tCSV: %s'
             bulk_sql_load += " set %s" % ",".join(date_set_list)
 
         # Run the query
-        cnt = c.execute(bulk_sql_load)
+        # cnt = c.execute(bulk_sql_load)
         # Report back on how we did
+        print bulk_sql_load
         if self.verbosity:
             if cnt == csv_record_cnt:
                 self.success("  Table record count matches CSV")
@@ -289,6 +295,7 @@ Table: %s\tCSV: %s'
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
         elif engine == 'django.db.backends.postgresql_psycopg2':
+            # self.load_mysql(model, csv_path)
             self.load_postgresql(model, csv_path)
         else:
             self.failure("Sorry that database is not supported")
