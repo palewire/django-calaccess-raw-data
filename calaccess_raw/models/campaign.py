@@ -406,7 +406,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     filer_fax = models.CharField(
         max_length=20L, db_column='FILER_FAX', blank=True
     )
-    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
+    filer_id = models.CharField(db_column='FILER_ID', db_index=True)
     filer_namf = models.CharField(
         max_length=45L, db_column='FILER_NAMF', blank=True
     )
@@ -1113,7 +1113,7 @@ street address"
         help_text="State portion of the treasurer or responsible officer's \
 address"
     )
-    tres_zip4 = models.IntegerField(
+    tres_zip4 = models.CharField(
         null=True,
         db_column='TRES_ZIP4',
         blank=True,
