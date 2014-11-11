@@ -22,7 +22,7 @@ class FilernameCd(CalAccessBaseModel):
     """
     DATE_FIELDS = ('EFFECT_DT',)
     xref_filer_id = models.CharField(
-        max_length=7L,
+        max_length=15L,
         db_column='XREF_FILER_ID',
         db_index=True,
         help_text="The external filer id saved in the forms tables"
@@ -52,7 +52,7 @@ class FilernameCd(CalAccessBaseModel):
         help_text="First name"
     )
     namt = models.CharField(
-        max_length=28L, db_column='NAMT', blank=True,
+        max_length=70L, db_column='NAMT', blank=True,
         help_text="Name prefix or title"
     )
     nams = models.CharField(
