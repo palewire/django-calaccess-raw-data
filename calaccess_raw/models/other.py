@@ -23,7 +23,7 @@ class AddressCd(CalAccessBaseModel):
     st = models.CharField(max_length=500, db_column="ST")
     zip4 = models.IntegerField(db_column="ZIP4")
     phon = models.IntegerField(db_column="PHON")
-    fax = models.IntegerField(db_column="FAX")
+    fax = models.IntegerField(db_column="FAX", null=True)
     email = models.CharField(max_length=500, db_column="EMAIL")
 
     class Meta:
