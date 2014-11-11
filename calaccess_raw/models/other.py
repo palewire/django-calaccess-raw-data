@@ -5,10 +5,10 @@ from .base import CalAccessBaseModel
 
 class AcronymsCd(CalAccessBaseModel):
     DATE_FIELDS = ("EFFECT_DT",)
-    acronym = models.CharField(max_length=25, db_column="ACRONYM")
+    acronym = models.CharField(max_length=40, db_column="ACRONYM")
     stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
     effect_dt = models.DateField(db_column="EFFECT_DT")
-    a_desc = models.CharField(max_length=25, db_column="A_DESC")
+    a_desc = models.CharField(max_length=50, db_column="A_DESC")
 
     class Meta:
         app_label = 'calaccess_raw'
