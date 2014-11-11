@@ -55,6 +55,8 @@ class Command(CalAccessCommand, LabelCommand):
                 THEN 1
             WHEN "%s" = 'y'
                 THEN 1
+            WHEN "%s" = 'X'
+                THEN 1
             WHEN "%s" = 'N'
                 THEN 0
             WHEN "%s" = 'n'
