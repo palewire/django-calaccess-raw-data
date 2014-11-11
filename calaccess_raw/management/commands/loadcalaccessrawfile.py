@@ -19,6 +19,20 @@ class Command(CalAccessCommand, LabelCommand):
         self.verbosity = options.get("verbosity")
         self.load(label)
 
+    def get_headers_count(self, csv_path):
+        """
+        Get the headers and the line count
+        from a specified csv file
+        """
+        with open(csv_path) as infile:
+            csv_reader = csv.reader(infile)
+            headers = csv_reader.next()
+
+        with open(csv_path) as infile:
+            csv_count = len(infile.readlines()) - 1
+
+        return headers, csv_count
+
     def _make_date_case(self, _col):
         """
         This method takes in a column name and generates a 
@@ -83,13 +97,7 @@ class Command(CalAccessCommand, LabelCommand):
         # clear our table
         c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
 
-        # get header names + future length
-        with open(csv_path) as infile:
-            csv_reader = csv.reader(infile)
-            headers = csv_reader.next()
-
-        with open(csv_path) as infile:
-            csv_count = len(infile.readlines()) - 1
+        headers, csv_count = self.get_headers_count(csv_path)
 
         #map column names to column types
         name_to_type_map = dict([(col.db_column, col.db_type(connection))
@@ -147,17 +155,27 @@ class Command(CalAccessCommand, LabelCommand):
 
         for col in empty_cols:
             c.execute("ALTER TABLE temporary_table ADD COLUMN \"%s\" text" % col)
-
         # build our insert statement
         insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
-        insert_col_list = "\", \"".join(
-            regular_columns + date_columns + int_columns + numeric_columns + time_columns + empty_cols
-        )
+        if not regular_columns:
+            c.execute("ALTER TABLE temporary_table ADD COLUMN \"%s\" text" % "DUMMY_COLUMN")
+            c.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text" % (model._meta.db_table, "DUMMY_COLUMN"))
+            insert_col_list = "\", \"".join(
+                ["DUMMY_COLUMN"] + date_columns + int_columns + numeric_columns + time_columns + empty_cols
+            )
+        else:
+            insert_col_list = "\", \"".join(
+                regular_columns + date_columns + int_columns + numeric_columns + time_columns + empty_cols
+            )
+            
         insert_statement += insert_col_list
         insert_statement += "\")\n"
         # add in the select part for table migration
         select_statement = "SELECT \""
-        select_statement += "\", \"".join(regular_columns)
+        if not regular_columns:
+            select_statement += "\", \"".join(["DUMMY_COLUMN"])
+        else:
+            select_statement += "\", \"".join(regular_columns)
         select_statement += "\"\n"
         # add in special formatting
         for dcol in date_columns:
@@ -172,7 +190,7 @@ class Command(CalAccessCommand, LabelCommand):
             select_statement += self._make_special_not_null_case(ecol)
         # finalize from statement
         select_statement += "FROM temporary_table;"
-        print select_statement
+
         try:
             c.execute(insert_statement + select_statement)
         except DataError as e:
@@ -189,6 +207,7 @@ class Command(CalAccessCommand, LabelCommand):
             print "IntegrityError error, ", e
 
         c.execute('DROP TABLE temporary_table;')
+        c.execute("ALTER TABLE \"%s\" DROP COLUMN \"%s\"" % (model._meta.db_table, "DUMMY_COLUMN"))
         if self.verbosity:
             model_count = model.objects.count()
             if model_count == csv_count:
