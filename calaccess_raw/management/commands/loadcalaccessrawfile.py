@@ -293,7 +293,6 @@ Table: %s\tCSV: %s'
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
         elif engine == 'django.db.backends.postgresql_psycopg2':
-            # self.load_mysql(model, csv_path)
             self.load_postgresql(model, csv_path)
         else:
             self.failure("Sorry that database is not supported")
