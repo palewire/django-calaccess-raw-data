@@ -406,7 +406,9 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     filer_fax = models.CharField(
         max_length=20L, db_column='FILER_FAX', blank=True
     )
-    filer_id = models.CharField(max_length=15L, db_column='FILER_ID', db_index=True)
+    filer_id = models.CharField(
+        max_length=15L, db_column='FILER_ID', db_index=True
+    )
     filer_namf = models.CharField(
         max_length=45L, db_column='FILER_NAMF', blank=True
     )
