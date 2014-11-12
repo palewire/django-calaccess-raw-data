@@ -120,7 +120,7 @@ filing"
     )
     stmnt_status = models.IntegerField(
         db_column='STMNT_STATUS',
-        null=True
+        null=True,
         help_text="The status of the statement. If the filing has been \
 reviewed or not reviewed."
     )
