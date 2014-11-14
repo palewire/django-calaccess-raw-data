@@ -406,7 +406,9 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     filer_fax = models.CharField(
         max_length=20L, db_column='FILER_FAX', blank=True
     )
-    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
+    filer_id = models.CharField(
+        max_length=15L, db_column='FILER_ID', db_index=True
+    )
     filer_namf = models.CharField(
         max_length=45L, db_column='FILER_NAMF', blank=True
     )
@@ -537,6 +539,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         max_length=20L, db_column='TRES_PHON', blank=True
     )
     tres_st = models.CharField(max_length=2L, db_column='TRES_ST', blank=True)
+
     tres_zip4 = models.CharField(
         max_length=10L, db_column='TRES_ZIP4', blank=True
     )
@@ -1113,10 +1116,11 @@ street address"
         help_text="State portion of the treasurer or responsible officer's \
 address"
     )
-    tres_zip4 = models.IntegerField(
+    tres_zip4 = models.CharField(
         null=True,
-        db_column='TRES_ZIP4',
+        max_length=10L,
         blank=True,
+        db_column='TRES_ZIP4',
         help_text="Zip code portion of the treasurer or responsible officer's \
 address"
     )

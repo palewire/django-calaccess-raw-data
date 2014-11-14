@@ -5,10 +5,10 @@ from .base import CalAccessBaseModel
 
 class AcronymsCd(CalAccessBaseModel):
     DATE_FIELDS = ("EFFECT_DT",)
-    acronym = models.CharField(max_length=25, db_column="ACRONYM")
+    acronym = models.CharField(max_length=40, db_column="ACRONYM")
     stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
     effect_dt = models.DateField(db_column="EFFECT_DT")
-    a_desc = models.CharField(max_length=25, db_column="A_DESC")
+    a_desc = models.CharField(max_length=50, db_column="A_DESC")
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -23,7 +23,7 @@ class AddressCd(CalAccessBaseModel):
     st = models.CharField(max_length=500, db_column="ST")
     zip4 = models.IntegerField(db_column="ZIP4")
     phon = models.IntegerField(db_column="PHON")
-    fax = models.IntegerField(db_column="FAX")
+    fax = models.IntegerField(db_column="FAX", null=True)
     email = models.CharField(max_length=500, db_column="EMAIL")
 
     class Meta:

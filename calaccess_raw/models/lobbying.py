@@ -586,7 +586,7 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         max_length=45L, db_column='D_LE_NAMF', blank=True
     )
     d_le_namt = models.CharField(
-        max_length=9L, db_column='D_LE_NAMT', blank=True
+        max_length=12L, db_column='D_LE_NAMT', blank=True
     )
     d_le_nams = models.CharField(
         max_length=9L, db_column='D_LE_NAMS', blank=True
@@ -854,7 +854,7 @@ class LccmCd(CalAccessBaseModel):
         max_length=45L, db_column='CTRIB_NAMF', blank=True
     )
     ctrib_naml = models.CharField(
-        max_length=45L, db_column='CTRIB_NAML', blank=True
+        max_length=120L, db_column='CTRIB_NAML', blank=True
     )
     ctrib_nams = models.CharField(
         max_length=10L, db_column='CTRIB_NAMS', blank=True
