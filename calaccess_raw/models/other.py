@@ -21,8 +21,8 @@ class AddressCd(CalAccessBaseModel):
     adrid = models.IntegerField(db_column="ADRID")
     city = models.CharField(max_length=500, db_column="CITY")
     st = models.CharField(max_length=500, db_column="ST")
-    zip4 = models.IntegerField(db_column="ZIP4")
-    phon = models.IntegerField(db_column="PHON")
+    zip4 = models.BigIntegerField(db_column="ZIP4")
+    phon = models.BigIntegerField(db_column="PHON")
     fax = models.IntegerField(db_column="FAX", null=True)
     email = models.CharField(max_length=500, db_column="EMAIL")
 
@@ -80,8 +80,8 @@ class FilersCd(CalAccessBaseModel):
 
 
 class FilerAcronymsCd(CalAccessBaseModel):
-    acronym = models.CharField(max_length=32L)
-    filer_id = models.IntegerField()
+    acronym = models.CharField(db_column='ACRONYM', max_length=32L)
+    filer_id = models.IntegerField(db_column='FILER_ID')
 
     class Meta:
         app_label = 'calaccess_raw'
