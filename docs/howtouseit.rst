@@ -19,7 +19,7 @@ The app needs to be added to the ``INSTALLED_APPS`` in your Django project's set
         'calaccess_raw',
     )
 
-Also in the Django settings, configure a database connection. You have a choice of two different databases when using this application, MySQL and PostgreSQL. You can download the `PostgreSQL app <http://postgresapp.com/>`_.
+Also in the Django settings, configure a database connection. You have a choice of two different databases when using this application, MySQL and PostgreSQL. You can download the `PostgreSQL app <http://postgresapp.com/>`_ if you intend to use that as your database.
 
 The settings below refer to using MySQL as your database.
 
