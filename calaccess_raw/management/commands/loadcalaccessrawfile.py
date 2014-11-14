@@ -63,7 +63,7 @@ class Command(CalAccessCommand, LabelCommand):
                 THEN 0
             WHEN "%s" IS NOT NULL
                 THEN "%s"::int
-        END AS "%s"\n""" % (_col, _col, _col, _col, _col, _col, _col, _col)
+        END AS "%s"\n""" % (_col, _col, _col, _col, _col, _col, _col, _col, _col)
 
     def _make_numeric_case(self, _col):
         return """
