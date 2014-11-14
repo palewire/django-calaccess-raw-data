@@ -19,7 +19,9 @@ The app needs to be added to the ``INSTALLED_APPS`` in your Django project's set
         'calaccess_raw',
     )
 
-Also in the Django settings, configure a database connection. Currently this application only supports MySQL backends.
+Also in the Django settings, configure a database connection. You have a choice of two different databases when using this application, MySQL and PostgreSQL. You can download the `PostgreSQL app <http://postgresapp.com/>`_.
+
+The settings below refer to using MySQL as your database.
 
 .. code-block:: python
 
@@ -35,6 +37,21 @@ Also in the Django settings, configure a database connection. Currently this app
             'OPTIONS': {
                 'local_infile': 1,
             }
+        }
+    }
+
+The settings below refer to using PostgreSQL as your database.
+
+.. code-block:: python
+
+    DATABASES = {
+        'default': {
+            'NAME': 'calaccess_raw',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'USER': 'username',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',
+            'PORT': '5432'
         }
     }
 
