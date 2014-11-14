@@ -142,7 +142,6 @@ class Command(CalAccessCommand, LabelCommand):
         for col in extra_cols:
             if col != None:
                 empty_cols.append(col)
-                # file_cols_types.append("\"" + col + "\"\t" + name_to_type_map[col])
 
 
         # create the temp table w/ columns with types
@@ -200,16 +199,10 @@ class Command(CalAccessCommand, LabelCommand):
         try:
             c.execute(insert_statement + select_statement)
         except DataError as e:
-            print insert_statement + select_statement
-            # print int_columns
             print "dataerror error, ", e
         except ProgrammingError as e:
-            # print insert_statement + select_statement
-            # print int_columns
             print "programming error, ", e
         except IntegrityError as e:
-            # print insert_statement + select_statement
-            # print int_columns
             print "IntegrityError error, ", e
 
         c.execute('DROP TABLE temporary_table;')
@@ -228,7 +221,7 @@ Table: %s\tCSV: %s'
     def load_mysql(self, model, csv_path):
         c = connection.cursor()
         # flush
-        # c.execute('TRUNCATE TABLE %s' % model._meta.db_table)
+        c.execute('TRUNCATE TABLE %s' % model._meta.db_table)
 
         # Build the MySQL LOAD DATA INFILE command
         bulk_sql_load_part_1 = '''
@@ -268,9 +261,8 @@ Table: %s\tCSV: %s'
             bulk_sql_load += " set %s" % ",".join(date_set_list)
 
         # Run the query
-        # cnt = c.execute(bulk_sql_load)
+        cnt = c.execute(bulk_sql_load)
         # Report back on how we did
-        print bulk_sql_load
         if self.verbosity:
             if cnt != csv_record_cnt:
                 msg = '  Table Record count doesn\'t match CSV. \
