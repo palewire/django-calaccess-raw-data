@@ -21,9 +21,9 @@ class AddressCd(CalAccessBaseModel):
     adrid = models.IntegerField(db_column="ADRID")
     city = models.CharField(max_length=500, db_column="CITY")
     st = models.CharField(max_length=500, db_column="ST")
-    zip4 = models.BigIntegerField(db_column="ZIP4")
-    phon = models.BigIntegerField(db_column="PHON")
-    fax = models.IntegerField(db_column="FAX", null=True)
+    zip4 = models.CharField(db_column="ZIP4", null=True, max_length=10L)
+    phon = models.CharField(db_column="PHON", null=True, max_length=20L)
+    fax = models.CharField(db_column="FAX", null=True, max_length=20L)
     email = models.CharField(max_length=500, db_column="EMAIL")
 
     class Meta:
