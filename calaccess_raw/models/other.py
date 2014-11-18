@@ -21,9 +21,9 @@ class AddressCd(CalAccessBaseModel):
     adrid = models.IntegerField(db_column="ADRID")
     city = models.CharField(max_length=500, db_column="CITY")
     st = models.CharField(max_length=500, db_column="ST")
-    zip4 = models.IntegerField(db_column="ZIP4")
-    phon = models.IntegerField(db_column="PHON")
-    fax = models.IntegerField(db_column="FAX", null=True)
+    zip4 = models.CharField(db_column="ZIP4", null=True, max_length=10L)
+    phon = models.CharField(db_column="PHON", null=True, max_length=20L)
+    fax = models.CharField(db_column="FAX", null=True, max_length=20L)
     email = models.CharField(max_length=500, db_column="EMAIL")
 
     class Meta:
@@ -80,8 +80,8 @@ class FilersCd(CalAccessBaseModel):
 
 
 class FilerAcronymsCd(CalAccessBaseModel):
-    acronym = models.CharField(max_length=32L)
-    filer_id = models.IntegerField()
+    acronym = models.CharField(db_column='ACRONYM', max_length=32L)
+    filer_id = models.IntegerField(db_column='FILER_ID')
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -518,7 +518,7 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     )
     filer_id = models.IntegerField(db_column='FILER_ID')
     change_no = models.IntegerField(db_column='CHANGE_NO')
-    session_id = models.IntegerField(db_column='SESSION_ID')
+    session_id = models.IntegerField(db_column='SESSION_ID', null=True)
     log_dt = models.DateField(db_column="LOG_DT")
     filer_type = models.IntegerField(db_column='FILER_TYPE')
     correction_flag = models.CharField(
@@ -538,15 +538,21 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     )
     filer_city = models.CharField(max_length=200, db_column="FILER_CITY")
     filer_st = models.CharField(max_length=200, db_column="FILER_ST")
-    filer_zip = models.IntegerField(db_column="FILER_ZIP")
-    filer_phone = models.IntegerField(db_column="FILER_PHONE")
-    entity_type = models.IntegerField(db_column="ENTITY_TYPE")
+    filer_zip = models.IntegerField(db_column="FILER_ZIP", null=True)
+    filer_phone = models.CharField(
+        db_column="FILER_PHONE", null=True, max_length=12L
+    )
+    entity_type = models.IntegerField(db_column="ENTITY_TYPE", null=True)
     entity_name = models.CharField(max_length=500, db_column="ENTITY_NAME")
     entity_city = models.CharField(max_length=500, db_column="ENTITY_CITY")
     entity_st = models.CharField(max_length=500, db_column="ENTITY_ST")
-    entity_zip = models.IntegerField(db_column="ENTITY_ZIP")
-    entity_phone = models.IntegerField(db_column="ENTITY_PHONE")
-    entity_id = models.IntegerField(db_column="ENTITY_ID")
+    entity_zip = models.CharField(
+        db_column="ENTITY_ZIP", blank=True, max_length=10L
+    )
+    entity_phone = models.CharField(
+        db_column="ENTITY_PHONE", null=True, max_length=12L
+    )
+    entity_id = models.IntegerField(db_column="ENTITY_ID", null=True)
     responsible_officer = models.CharField(
         max_length=500, db_column="RESPONSIBLE_OFFICER"
     )
@@ -1004,9 +1010,9 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 
 
 class LookupCode(CalAccessBaseModel):
-    code_type = models.IntegerField()
-    code_id = models.IntegerField()
-    code_desc = models.CharField(max_length=100)
+    code_type = models.IntegerField(db_column='CODE_TYPE')
+    code_id = models.IntegerField(db_column='CODE_ID')
+    code_desc = models.CharField(max_length=100, null=True)
 
     class Meta:
         app_label = 'calaccess_raw'

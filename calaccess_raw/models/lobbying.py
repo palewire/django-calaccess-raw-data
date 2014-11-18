@@ -145,10 +145,12 @@ class CvrRegistrationCd(CalAccessBaseModel):
     lobby_int = models.CharField(
         max_length=300L, db_column='LOBBY_INT', blank=True
     )
-    ls_beg_yr = models.IntegerField(
-        null=True, db_column='LS_BEG_YR', blank=True
+    ls_beg_yr = models.CharField(
+        null=True, db_column='LS_BEG_YR', blank=True, max_length=5L
     )
-    ls_end_yr = models.IntegerField(db_column='LS_END_YR')
+    ls_end_yr = models.CharField(
+        db_column='LS_END_YR', max_length=5L
+    )
     mail_adr1 = models.CharField(
         max_length=55L, db_column='MAIL_ADR1', blank=True
     )
