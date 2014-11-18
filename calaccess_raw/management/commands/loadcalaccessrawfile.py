@@ -35,7 +35,7 @@ class Command(CalAccessCommand, LabelCommand):
 
     def _make_date_case(self, _col):
         """
-        This method takes in a column name and generates a 
+        This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
         It cleans "date" types to be properly formatted for postgresql
         -----
@@ -53,7 +53,7 @@ class Command(CalAccessCommand, LabelCommand):
 
     def _make_int_case(self, _col):
         """
-        This method takes in a column name and generates a 
+        This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
         It cleans "int" types to be properly formatted for postgresql
         (and helps to clean up incorrectly entered data)
@@ -80,13 +80,15 @@ class Command(CalAccessCommand, LabelCommand):
                 THEN 0
             WHEN "%s" IS NOT NULL
                 THEN "%s"::int
-        END AS "%s"\n""" % (_col, _col, _col, _col, _col, _col, _col, _col, _col, _col, _col, _col)
+        END AS "%s"\n""" % (
+            _col, _col, _col, _col, _col, _col,
+            _col, _col, _col, _col, _col, _col)
 
     def _make_numeric_case(self, _col):
         """
-        This method takes in a column name and generates a 
+        This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
-        It cleans "numeric" types to be properly 
+        It cleans "numeric" types to be properly
         formatted for postgresql (and clean up incorrectly entered data)
         ----
         If the data is blank or Null 0.0 will be inserted
@@ -103,9 +105,9 @@ class Command(CalAccessCommand, LabelCommand):
 
     def _make_float_case(self, _col):
         """
-        This method takes in a column name and generates a 
+        This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
-        It cleans "numeric" types to be properly 
+        It cleans "numeric" types to be properly
         formatted for postgresql (and clean up incorrectly entered data)
         ----
         If the data is blank or Null 0.0 will be inserted
@@ -122,10 +124,10 @@ class Command(CalAccessCommand, LabelCommand):
 
     def _make_timestamp_case(self, _col):
         """
-        This method takes in a column name and generates a 
+        This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
         ---
-        It cleans "timestamp" from a form "7/9/2014 12:00:00 AM" or 
+        It cleans "timestamp" from a form "7/9/2014 12:00:00 AM" or
         enters it as '01/01/1900 1:00:00 AM' if null or empty
         """
         return """
@@ -133,12 +135,13 @@ class Command(CalAccessCommand, LabelCommand):
             WHEN "%s" IS NOT NULL AND "%s" != ''
                 THEN to_timestamp("%s", 'MM/DD/YYYY HH12:MI:SS AM')
             WHEN "%s" = ''
-                THEN to_timestamp('01/01/1900 1:00:00 AM', 'MM/DD/YYYY HH12:MI:SS AM')
+                THEN to_timestamp('01/01/1900 1:00:00 AM', \
+                    'MM/DD/YYYY HH12:MI:SS AM')
         END AS "%s"\n""" % (_col, _col, _col, _col, _col)
 
     def _make_special_not_null_case(self, _col):
         """
-        This method takes in a column name and generates a 
+        This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
         ---
         it takes it empty columns that are in the csv and formats
@@ -150,8 +153,7 @@ class Command(CalAccessCommand, LabelCommand):
                 THEN ''
         END AS "%s"\n""" % (_col, _col)
 
-
-    def _get_column_types(self, model, csv_headers, n_2_t_map):
+    def _get_col_types(self, model, csv_headers, n_2_t_map):
         """
         Get the columns postgresql will have to treate
         differently on a case by base basis on insert
@@ -164,7 +166,7 @@ class Command(CalAccessCommand, LabelCommand):
         double_cols = []
         empty_cols = []
 
-        #fill in those column types
+        # fill in those column types
         for col in model._meta.fields:
             if col.db_type(connection).startswith('integer'):
                 int_cols.append(col.db_column)
@@ -187,47 +189,96 @@ class Command(CalAccessCommand, LabelCommand):
             else:
                 csv_col_types.append("\"" + col + "\"\ttext")
 
-        extra_cols = set([col.db_column for col in model._meta.fields]).difference(set(csv_headers))
+        extra_cols = set([col.db_column for col in
+                          model._meta.fields]).difference(set(csv_headers))
 
         for col in extra_cols:
-            if col != None:
+            if col is not None:
                 empty_cols.append(col)
 
-        return csv_col_types, {"int_cols":int_cols,
-            "numeric_cols":numeric_cols,
-            "date_cols":date_cols,
-            "time_cols":time_cols,
-            "regular_cols":regular_cols,
-            "double_cols":double_cols,
-            "empty_cols":empty_cols}
+        return csv_col_types, {
+            "int_cols": int_cols,
+            "numeric_cols": numeric_cols,
+            "date_cols": date_cols,
+            "time_cols": time_cols,
+            "regular_cols": regular_cols,
+            "double_cols": double_cols,
+            "empty_cols": empty_cols
+            }
 
+    def _make_pg_select(self, regular_cols, special_cols):
+        select_statement = "SELECT \""
+        if not regular_cols:
+            select_statement += "\", \"".join(["DUMMY_COLUMN"])
+        else:
+            select_statement += "\", \"".join(regular_cols)
+        select_statement += "\"\n"
+        # add in special formatting
+
+        for col_type, ls in special_cols.items():
+            if col_type == "int_cols":
+                select_statement += '\n'.join(
+                    [self._make_int_case(col) for col in ls]
+                )
+            elif col_type == "numeric_cols":
+                select_statement += '\n'.join(
+                    [self._make_numeric_case(col) for col in ls]
+                )
+            elif col_type == "date_cols":
+                select_statement += '\n'.join(
+                    [self._make_date_case(col) for col in ls]
+                )
+            elif col_type == "time_cols":
+                select_statement += '\n'.join(
+                    [self._make_timestamp_case(col) for col in ls]
+                )
+            elif col_type == "double_cols":
+                select_statement += '\n'.join(
+                    [self._make_float_case(col) for col in ls]
+                )
+            elif col_type == "empty_cols":
+                select_statement += '\n'.join(
+                    [self._make_special_not_null_case(col) for col in ls]
+                )
+        # finalize from statement
+        select_statement += "FROM temporary_table;"
+
+        return select_statement
 
     def load_postgresql(self, model, csv_path):
+        """
+        Takes a model and a csv_path and loads it into postgresql
+        """
         c = connection.cursor()
         try:
             c.execute('DROP TABLE temporary_table;')
         except ProgrammingError:
             pass
-        # clear our table
+
         c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
 
+        # get the headers and the count
         hdrs, csv_count = self.get_hdrs_and_cnt(csv_path)
-        n_2_t_map = {}
 
+        n_2_t_map = {}  # name to type map for columns
         for col in model._meta.fields:
             n_2_t_map[col.db_column] = col.db_type(connection)
 
-
-        csv_col_types, special_cols = self._get_column_types(model, hdrs, n_2_t_map)
-        regular_cols = special_cols['regular_cols']
+        csv_col_types, special_cols = self._get_col_types(
+            model, hdrs, n_2_t_map
+        )
+        regular_cols = special_cols.pop('regular_cols')
         empty_cols = special_cols['empty_cols']
-        del(special_cols['regular_cols'])
-        # make a big flat list for later inserting into table
+
+        # make a big flat list for later insertion into the true table
         flat_special_cols = [itm for sl in special_cols.values() for itm in sl]
 
         # create the temp table w/ columns with types
-        c.execute("CREATE TABLE \"temporary_table\" (%s);"
-                  % ',\n'.join(csv_col_types))
+        try:
+            c.execute("CREATE TABLE \"temporary_table\" (%s);"
+                      % ',\n'.join(csv_col_types))
+        except ProgrammingError:
+            self.failure("Temporary table already exists")
 
         temp_insert = """COPY "temporary_table"
             FROM '%s'
@@ -240,13 +291,19 @@ class Command(CalAccessCommand, LabelCommand):
             print "initial insert dataerror error, ", e
 
         for col in empty_cols:
-            c.execute("ALTER TABLE temporary_table ADD COLUMN \"%s\" text" % col)
+            # for tables where we create cases for every column and
+            # we need a dummy column in order to migrate from table to table
+            c.execute("ALTER TABLE temporary_table \
+                ADD COLUMN \"%s\" text" % col)
+
         # build our insert statement
         insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
         if not regular_cols:
             try:
-                c.execute("ALTER TABLE temporary_table ADD COLUMN \"%s\" text" % "DUMMY_COLUMN")
-                c.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text" % (model._meta.db_table, "DUMMY_COLUMN"))
+                c.execute("ALTER TABLE temporary_table \
+                    ADD COLUMN \"DUMMY_COLUMN\" text")
+                c.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text"
+                          % (model._meta.db_table, "DUMMY_COLUMN"))
                 insert_col_list = "\", \"".join(
                     ["DUMMY_COLUMN"] + flat_special_cols
                 )
@@ -256,33 +313,12 @@ class Command(CalAccessCommand, LabelCommand):
             insert_col_list = "\", \"".join(
                 regular_cols + flat_special_cols
             )
-            
+
         insert_statement += insert_col_list
         insert_statement += "\")\n"
         # add in the select part for table migration
-        select_statement = "SELECT \""
-        if not regular_cols:
-            select_statement += "\", \"".join(["DUMMY_COLUMN"])
-        else:
-            select_statement += "\", \"".join(regular_cols)
-        select_statement += "\"\n"
-        # add in special formatting
 
-        for col_type, ls in special_cols.items():
-            if col_type == "int_cols":
-                select_statement += '\n'.join([self._make_int_case(col) for col in ls])
-            elif col_type == "numeric_cols":
-                select_statement += '\n'.join([self._make_numeric_case(col) for col in ls])
-            elif col_type == "date_cols":
-                select_statement += '\n'.join([self._make_date_case(col) for col in ls])
-            elif col_type == "time_cols":
-                select_statement += '\n'.join([self._make_timestamp_case(col) for col in ls])
-            elif col_type == "double_cols":
-                select_statement += '\n'.join([self._make_float_case(col) for col in ls])
-            elif col_type == "empty_cols":
-                select_statement += '\n'.join([self._make_special_not_null_case(col) for col in ls])
-        # finalize from statement
-        select_statement += "FROM temporary_table;"
+        select_statement = self._make_pg_select(regular_cols, special_cols)
 
         try:
             # print insert_statement + select_statement
@@ -306,7 +342,6 @@ class Command(CalAccessCommand, LabelCommand):
 
         model_count = model.objects.count()
         self.finish_load_message(model_count, csv_count)
-
 
     def load_mysql(self, model, csv_path):
         c = connection.cursor()
