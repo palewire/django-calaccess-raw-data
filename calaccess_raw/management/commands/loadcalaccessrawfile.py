@@ -100,18 +100,22 @@ class Command(CalAccessCommand, LabelCommand):
         hdrs = self.get_headers(csv_path)
         csv_count = self.get_row_count(csv_path)
 
-        n_2_t_map = {}  # name to type map for columns
+        name2type = {}  # name to type map for columns
         for col in model._meta.fields:
-            n_2_t_map[col.db_column] = col.db_type(connection)
+            name2type[col.db_column] = col.db_type(self.cursor)
 
         csv_col_types, special_cols = self._get_col_types(
-            model, hdrs, n_2_t_map
+            model,
+            hdrs,
+            name2type
         )
         regular_cols = special_cols.pop('regular_cols')
         empty_cols = special_cols['empty_cols']
 
         # make a big flat list for later insertion into the true table
-        flat_special_cols = [itm for sl in special_cols.values() for itm in sl]
+        flat_special_cols = [
+            itm for sl in special_cols.values() for itm in sl
+        ]
 
         # create the temp table w/ columns with types
         try:
@@ -345,7 +349,7 @@ Table: %s\tCSV: %s'
                 THEN ''
         END AS "%s"\n""" % (_col, _col)
 
-    def _get_col_types(self, model, csv_headers, n_2_t_map):
+    def _get_col_types(self, model, csv_headers, name2type):
         """
         Get the columns postgresql will have to treate
         differently on a case by base basis on insert
@@ -377,7 +381,7 @@ Table: %s\tCSV: %s'
         csv_col_types = []  # column with its types
         for col in csv_headers:
             if col in regular_cols:
-                csv_col_types.append("\"" + col + "\"\t" + n_2_t_map[col])
+                csv_col_types.append("\"" + col + "\"\t" + name2type[col])
             else:
                 csv_col_types.append("\"" + col + "\"\ttext")
 
@@ -396,7 +400,7 @@ Table: %s\tCSV: %s'
             "regular_cols": regular_cols,
             "double_cols": double_cols,
             "empty_cols": empty_cols
-            }
+        }
 
     def _make_pg_select(self, regular_cols, special_cols):
         select_statement = "SELECT \""
