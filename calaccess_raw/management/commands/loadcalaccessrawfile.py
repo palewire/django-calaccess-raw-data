@@ -8,7 +8,7 @@ from calaccess_raw.management.commands import CalAccessCommand
 
 
 class Command(CalAccessCommand, LabelCommand):
-    help = 'Load a cleaned CalAccess file for a model into the database'
+    help = 'Load clean CAL-ACCESS file into its corresponding database model'
     args = '<model name>'
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
