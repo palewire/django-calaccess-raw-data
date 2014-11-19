@@ -30,5 +30,6 @@ Secretary of State\'s CAL-ACCESS database',
         'requests==2.2.1',
         'progressbar>=2.2',
         'hurry.filesize==0.9',
+        'psycopg2==2.5.4'
     ),
 )
