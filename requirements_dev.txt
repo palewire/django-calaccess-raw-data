@@ -1,4 +1,4 @@
-Django>=1.6.5
+Django==1.7
 Jinja2==2.7.3
 MarkupSafe==0.23
 MySQL-python==1.2.5
@@ -18,7 +18,8 @@ livereload==2.0.0
 openpyxl==2.0.4
 pathtools==0.1.2
 pep8==1.5.7
-progressbar>=2.2
+progressbar==2.2
+psycopg2==2.5.4
 py==1.4.22
 pyflakes==0.8.1
 python-coveralls==2.4.2
