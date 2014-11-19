@@ -25,10 +25,9 @@ Secretary of State\'s CAL-ACCESS database',
         'django>=1.6',
         'csvkit>=0.6.1',
         'python-dateutil>=1.5',
-        'MySQL-python==1.2.5',
-        'argparse==1.2.1',
-        'requests==2.2.1',
+        'argparse>=1.2.1',
+        'requests>=2.2.1',
         'progressbar>=2.2',
-        'hurry.filesize==0.9',
+        'hurry.filesize>=0.9'
     ),
 )
