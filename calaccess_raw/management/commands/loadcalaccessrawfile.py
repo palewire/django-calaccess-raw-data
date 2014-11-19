@@ -59,12 +59,12 @@ class Command(CalAccessCommand, LabelCommand):
         """ % (csv_path, model._meta.db_table)
 
         # get the headers and the count
-        hdrs = self.get_headers(csv_path)
+        csv_headers = self.get_headers(csv_path)
         csv_record_cnt = self.get_row_count(csv_path)
 
         header_sql_list = []
         date_set_list = []
-        for h in hdrs:
+        for h in csv_headers:
             # If it is a date field, we need to reformat the data
             # so that MySQL will properly parse it on the way in.
             if h in model.DATE_FIELDS:
@@ -89,65 +89,65 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Takes a model and a csv_path and loads it into postgresql
         """
+        # Drop the temporary table if it already exists
         try:
             self.cursor.execute('DROP TABLE temporary_table;')
         except ProgrammingError:
             pass
 
+        # Drop all the records from the target model's real table
         self.cursor.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
 
-        # get the headers and the count
-        hdrs = self.get_headers(csv_path)
+        # Get the headers and the count from source CSV
+        csv_headers = self.get_headers(csv_path)
         csv_count = self.get_row_count(csv_path)
 
-        name2type = {}  # name to type map for columns
+        # Get the pg data type expected for each field on the target model
+        name2type = {}
         for col in model._meta.fields:
             name2type[col.db_column] = col.db_type(connection)
 
-        special_cols = self._get_col_types(model, hdrs)
+        # Work out what data type we're actually going to use when we
+        # ram it into the database via the temporary table
+        column_types = self._get_pg_column_types(model, csv_headers)
+        regular_cols = column_types.pop('regular_cols')
+        empty_cols = column_types['empty_cols']
 
-        csv_col_types = []  # column with its types
-        for col in hdrs:
-            if col in special_cols['regular_cols']:
-                csv_col_types.append("\"" + col + "\"\t" + name2type[col])
+        # Build pg-ready SQL field declarations to put into the
+        # CREATE TABLE statement for the temporary table
+        create_field_list = []
+        for col in csv_headers:
+            if col in regular_cols:
+                create_field_list.append("\"" + col + "\"\t" + name2type[col])
             else:
-                csv_col_types.append("\"" + col + "\"\ttext")
+                create_field_list.append("\"" + col + "\"\ttext")
+        create_field_sql = ',\n'.join(create_field_list)
 
-        print csv_col_types, special_cols
-        regular_cols = special_cols.pop('regular_cols')
-        empty_cols = special_cols['empty_cols']
+        # Create the temporary table
+        create_table_sql = "CREATE TABLE \"temporary_table\" (%s);" % (
+            create_field_sql
+        )
+        self.cursor.execute(create_table_sql)
 
-        # make a big flat list for later insertion into the true table
-        flat_special_cols = [
-            itm for sl in special_cols.values() for itm in sl
-        ]
-
-        # create the temp table w/ columns with types
-        try:
-            self.cursor.execute(
-                "CREATE TABLE \"temporary_table\" (%s);" % ',\n'.join(
-                    csv_col_types
-                )
-            )
-        except ProgrammingError:
-            self.failure("Temporary table already exists")
-
-        temp_insert = """COPY "temporary_table"
+        # Insert CSV data into the temporary table
+        temp_insert = """
+            COPY "temporary_table"
             FROM '%s'
             CSV
-            HEADER;""" % (csv_path)
-
-        try:
-            # insert everything into the temp table
-            self.cursor.execute(temp_insert)
-        except DataError as e:
-            print "initial insert dataerror error, ", e
+            HEADER;
+        """ % (csv_path)
+        self.cursor.execute(temp_insert)
 
         for col in empty_cols:
             # for tables where we create cases for every column and
             # we need a dummy column in order to migrate from table to table
             self.cursor.execute("ALTER TABLE temporary_table \
                 ADD COLUMN \"%s\" text" % col)
+
+        # make a big flat list for later insertion into the true table
+        flat_special_cols = [
+            itm for sl in column_types.values() for itm in sl
+        ]
 
         # build our insert statement
         insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
@@ -175,7 +175,7 @@ class Command(CalAccessCommand, LabelCommand):
         insert_statement += "\")\n"
         # add in the select part for table migration
 
-        select_statement = self._make_pg_select(regular_cols, special_cols)
+        select_statement = self._make_pg_select(regular_cols, column_types)
 
         try:
             # print insert_statement + select_statement
@@ -234,7 +234,7 @@ Table: %s\tCSV: %s'
                     csv_count,
                 ))
 
-    def _get_col_types(self, model, csv_headers):
+    def _get_pg_column_types(self, model, csv_headers):
         """
         Get the columns postgresql will have to treate
         differently on a case by base basis on insert
