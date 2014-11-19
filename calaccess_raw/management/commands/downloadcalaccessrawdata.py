@@ -4,13 +4,11 @@ import zipfile
 import requests
 import progressbar
 from hurry.filesize import size
-from django.conf import settings
 from optparse import make_option
 from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
 from django.template.loader import render_to_string
-from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_download_directory, get_model_list
 from django.contrib.humanize.templatetags.humanize import naturaltime

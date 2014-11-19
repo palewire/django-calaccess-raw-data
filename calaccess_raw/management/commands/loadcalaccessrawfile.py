@@ -35,7 +35,10 @@ class Command(CalAccessCommand, LabelCommand):
         engine = settings.DATABASES['default']['ENGINE']
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
-        elif engine == 'django.db.backends.postgresql_psycopg2':
+        elif engine in (
+            'django.db.backends.postgresql_psycopg2'
+            'django.contrib.gis.db.backends.postgis'
+                ):
             self.load_postgresql(model, csv_path)
         else:
             self.failure("Sorry that database is not supported")
@@ -365,10 +368,8 @@ class Command(CalAccessCommand, LabelCommand):
         self.finish_load_message(model_count, csv_count)
 
     def load_mysql(self, model, csv_path):
-        c = connection.cursor()
         # flush
-        c.execute('TRUNCATE TABLE %s' % model._meta.db_table)
->>>>>>> 5a10c8bafad55be66360673da9e9303e2e7e4683
+        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
 
         # Build the MySQL LOAD DATA INFILE command
         bulk_sql_load_part_1 = '''
