@@ -29,9 +29,6 @@ class Command(CalAccessCommand, LabelCommand):
         model = get_model("calaccess_raw", model_name)
         csv_path = model.objects.get_csv_path()
 
-        # Flush
-        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
-
         engine = settings.DATABASES['default']['ENGINE']
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
