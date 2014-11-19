@@ -48,7 +48,7 @@ class Command(CalAccessCommand, LabelCommand):
         self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
 
         # Build the MySQL LOAD DATA INFILE command
-        bulk_sql_load_part_1 = '''
+        bulk_sql_load_part_1 = """
             LOAD DATA LOCAL INFILE '%s'
             INTO TABLE %s
             FIELDS TERMINATED BY ','
@@ -56,7 +56,7 @@ class Command(CalAccessCommand, LabelCommand):
             LINES TERMINATED BY '\\r\\n'
             IGNORE 1 LINES
             (
-        ''' % (csv_path, model._meta.db_table)
+        """ % (csv_path, model._meta.db_table)
 
         infile = open(csv_path)
         csv_reader = csv.reader(infile)
