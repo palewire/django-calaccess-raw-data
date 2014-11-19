@@ -94,13 +94,12 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Takes a model and a csv_path and loads it into postgresql
         """
-        c = connection.cursor()
         try:
-            c.execute('DROP TABLE temporary_table;')
+            self.cursor.execute('DROP TABLE temporary_table;')
         except ProgrammingError:
             pass
 
-        c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
+        self.cursor.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
 
         # get the headers and the count
         hdrs, csv_count = self.get_hdrs_and_cnt(csv_path)
@@ -120,7 +119,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         # create the temp table w/ columns with types
         try:
-            c.execute("CREATE TABLE \"temporary_table\" (%s);"
+            self.cursor.execute("CREATE TABLE \"temporary_table\" (%s);"
                       % ',\n'.join(csv_col_types))
         except ProgrammingError:
             self.failure("Temporary table already exists")
@@ -131,23 +130,23 @@ class Command(CalAccessCommand, LabelCommand):
             HEADER;""" % (csv_path)
 
         try:
-            c.execute(temp_insert)  # insert everything into the temp table
+            self.cursor.execute(temp_insert)  # insert everything into the temp table
         except DataError as e:
             print "initial insert dataerror error, ", e
 
         for col in empty_cols:
             # for tables where we create cases for every column and
             # we need a dummy column in order to migrate from table to table
-            c.execute("ALTER TABLE temporary_table \
+            self.cursor.execute("ALTER TABLE temporary_table \
                 ADD COLUMN \"%s\" text" % col)
 
         # build our insert statement
         insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
         if not regular_cols:
             try:
-                c.execute("ALTER TABLE temporary_table \
+                self.cursor.execute("ALTER TABLE temporary_table \
                     ADD COLUMN \"DUMMY_COLUMN\" text")
-                c.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text"
+                self.cursor.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text"
                           % (model._meta.db_table, "DUMMY_COLUMN"))
                 insert_col_list = "\", \"".join(
                     ["DUMMY_COLUMN"] + flat_special_cols
@@ -167,7 +166,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         try:
             # print insert_statement + select_statement
-            c.execute(insert_statement + select_statement)
+            self.cursor.execute(insert_statement + select_statement)
         except DataError as e:
                 self.failure(
                     "Data Error Inserting Data Into Table: %s" % e)
@@ -180,7 +179,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         # c.execute('DROP TABLE temporary_table;')
         if not regular_cols:
-            c.execute(
+            self.cursor.execute(
                 "ALTER TABLE \"%s\" DROP COLUMN \"%s\""
                 % (model._meta.db_table, "DUMMY_COLUMN")
             )
