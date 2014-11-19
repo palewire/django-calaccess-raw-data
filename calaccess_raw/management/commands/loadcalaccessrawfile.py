@@ -1,7 +1,6 @@
 import csv
 from django.db import connection
 from django.conf import settings
-from django.utils import dateparse
 from django.db import IntegrityError, DataError, ProgrammingError
 from django.db.models.loading import get_model
 from django.core.management.base import LabelCommand
@@ -308,7 +307,7 @@ class Command(CalAccessCommand, LabelCommand):
                     ["DUMMY_COLUMN"] + flat_special_cols
                 )
             except ProgrammingError as e:
-                self.failure("Error Altering Table: %s" % s)
+                self.failure("Error Altering Table: %s" % e)
         else:
             insert_col_list = "\", \"".join(
                 regular_cols + flat_special_cols
