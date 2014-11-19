@@ -43,6 +43,151 @@ class Command(CalAccessCommand, LabelCommand):
         else:
             self.failure("Sorry that database is not supported")
 
+    def load_mysql(self, model, csv_path):
+        # flush
+        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
+
+        # Build the MySQL LOAD DATA INFILE command
+        bulk_sql_load_part_1 = '''
+            LOAD DATA LOCAL INFILE '%s'
+            INTO TABLE %s
+            FIELDS TERMINATED BY ','
+            OPTIONALLY ENCLOSED BY '"'
+            LINES TERMINATED BY '\\r\\n'
+            IGNORE 1 LINES
+            (
+        ''' % (csv_path, model._meta.db_table)
+
+        infile = open(csv_path)
+        csv_reader = csv.reader(infile)
+        hdrs = csv_reader.next()
+        infile.close()
+
+        infile = open(csv_path)
+        csv_record_cnt = len(infile.readlines()) - 1
+        infile.close()
+
+        header_sql_list = []
+        date_set_list = []
+        for h in hdrs:
+            # If it is a date field, we need to reformat the data
+            # so that MySQL will properly parse it on the way in.
+            if h in model.DATE_FIELDS:
+                header_sql_list.append('@`%s`' % h)
+                date_set_list.append(
+                    "`%s` =  %s" % (h, self.date_sql % h)
+                )
+            else:
+                header_sql_list.append('`%s`' % h)
+
+        bulk_sql_load = bulk_sql_load_part_1 + ','.join(header_sql_list) + ')'
+        if date_set_list:
+            bulk_sql_load += " set %s" % ",".join(date_set_list)
+
+        # Run the query
+        cnt = self.cursor.execute(bulk_sql_load)
+
+        # Report back on how we did
+        self.finish_load_message(cnt, csv_record_cnt)
+
+    def load_postgresql(self, model, csv_path):
+        """
+        Takes a model and a csv_path and loads it into postgresql
+        """
+        c = connection.cursor()
+        try:
+            c.execute('DROP TABLE temporary_table;')
+        except ProgrammingError:
+            pass
+
+        c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
+
+        # get the headers and the count
+        hdrs, csv_count = self.get_hdrs_and_cnt(csv_path)
+
+        n_2_t_map = {}  # name to type map for columns
+        for col in model._meta.fields:
+            n_2_t_map[col.db_column] = col.db_type(connection)
+
+        csv_col_types, special_cols = self._get_col_types(
+            model, hdrs, n_2_t_map
+        )
+        regular_cols = special_cols.pop('regular_cols')
+        empty_cols = special_cols['empty_cols']
+
+        # make a big flat list for later insertion into the true table
+        flat_special_cols = [itm for sl in special_cols.values() for itm in sl]
+
+        # create the temp table w/ columns with types
+        try:
+            c.execute("CREATE TABLE \"temporary_table\" (%s);"
+                      % ',\n'.join(csv_col_types))
+        except ProgrammingError:
+            self.failure("Temporary table already exists")
+
+        temp_insert = """COPY "temporary_table"
+            FROM '%s'
+            CSV
+            HEADER;""" % (csv_path)
+
+        try:
+            c.execute(temp_insert)  # insert everything into the temp table
+        except DataError as e:
+            print "initial insert dataerror error, ", e
+
+        for col in empty_cols:
+            # for tables where we create cases for every column and
+            # we need a dummy column in order to migrate from table to table
+            c.execute("ALTER TABLE temporary_table \
+                ADD COLUMN \"%s\" text" % col)
+
+        # build our insert statement
+        insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
+        if not regular_cols:
+            try:
+                c.execute("ALTER TABLE temporary_table \
+                    ADD COLUMN \"DUMMY_COLUMN\" text")
+                c.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text"
+                          % (model._meta.db_table, "DUMMY_COLUMN"))
+                insert_col_list = "\", \"".join(
+                    ["DUMMY_COLUMN"] + flat_special_cols
+                )
+            except ProgrammingError as e:
+                self.failure("Error Altering Table: %s" % e)
+        else:
+            insert_col_list = "\", \"".join(
+                regular_cols + flat_special_cols
+            )
+
+        insert_statement += insert_col_list
+        insert_statement += "\")\n"
+        # add in the select part for table migration
+
+        select_statement = self._make_pg_select(regular_cols, special_cols)
+
+        try:
+            # print insert_statement + select_statement
+            c.execute(insert_statement + select_statement)
+        except DataError as e:
+                self.failure(
+                    "Data Error Inserting Data Into Table: %s" % e)
+        except ProgrammingError as e:
+                self.failure(
+                    "Programming Error Inserting Data Into Table: %s" % e)
+        except IntegrityError as e:
+                self.failure(
+                    "Integrity Error Inserting Data Into Table: %s" % e)
+
+        # c.execute('DROP TABLE temporary_table;')
+        if not regular_cols:
+            c.execute(
+                "ALTER TABLE \"%s\" DROP COLUMN \"%s\""
+                % (model._meta.db_table, "DUMMY_COLUMN")
+            )
+
+        model_count = model.objects.count()
+        self.finish_load_message(model_count, csv_count)
+
     def get_hdrs_and_cnt(self, csv_path):
         """
         Get the headers and the line count
@@ -56,6 +201,20 @@ class Command(CalAccessCommand, LabelCommand):
             csv_count = len(infile.readlines()) - 1
 
         return hdrs, csv_count
+
+    def finish_load_message(self, model_count, csv_count):
+        """
+        The message displayed about whether or not a load finished
+        successfully.
+        """
+        if self.verbosity:
+            if model_count != csv_count:
+                msg = '  Table Record count doesn\'t match CSV. \
+Table: %s\tCSV: %s'
+                self.failure(msg % (
+                    model_count,
+                    csv_count,
+                ))
 
     def _make_date_case(self, _col):
         """
@@ -268,162 +427,3 @@ class Command(CalAccessCommand, LabelCommand):
         select_statement += "FROM temporary_table;"
 
         return select_statement
-
-    def load_postgresql(self, model, csv_path):
-        """
-        Takes a model and a csv_path and loads it into postgresql
-        """
-        c = connection.cursor()
-        try:
-            c.execute('DROP TABLE temporary_table;')
-        except ProgrammingError:
-            pass
-
-        c.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
-
-        # get the headers and the count
-        hdrs, csv_count = self.get_hdrs_and_cnt(csv_path)
-
-        n_2_t_map = {}  # name to type map for columns
-        for col in model._meta.fields:
-            n_2_t_map[col.db_column] = col.db_type(connection)
-
-        csv_col_types, special_cols = self._get_col_types(
-            model, hdrs, n_2_t_map
-        )
-        regular_cols = special_cols.pop('regular_cols')
-        empty_cols = special_cols['empty_cols']
-
-        # make a big flat list for later insertion into the true table
-        flat_special_cols = [itm for sl in special_cols.values() for itm in sl]
-
-        # create the temp table w/ columns with types
-        try:
-            c.execute("CREATE TABLE \"temporary_table\" (%s);"
-                      % ',\n'.join(csv_col_types))
-        except ProgrammingError:
-            self.failure("Temporary table already exists")
-
-        temp_insert = """COPY "temporary_table"
-            FROM '%s'
-            CSV
-            HEADER;""" % (csv_path)
-
-        try:
-            c.execute(temp_insert)  # insert everything into the temp table
-        except DataError as e:
-            print "initial insert dataerror error, ", e
-
-        for col in empty_cols:
-            # for tables where we create cases for every column and
-            # we need a dummy column in order to migrate from table to table
-            c.execute("ALTER TABLE temporary_table \
-                ADD COLUMN \"%s\" text" % col)
-
-        # build our insert statement
-        insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
-        if not regular_cols:
-            try:
-                c.execute("ALTER TABLE temporary_table \
-                    ADD COLUMN \"DUMMY_COLUMN\" text")
-                c.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text"
-                          % (model._meta.db_table, "DUMMY_COLUMN"))
-                insert_col_list = "\", \"".join(
-                    ["DUMMY_COLUMN"] + flat_special_cols
-                )
-            except ProgrammingError as e:
-                self.failure("Error Altering Table: %s" % e)
-        else:
-            insert_col_list = "\", \"".join(
-                regular_cols + flat_special_cols
-            )
-
-        insert_statement += insert_col_list
-        insert_statement += "\")\n"
-        # add in the select part for table migration
-
-        select_statement = self._make_pg_select(regular_cols, special_cols)
-
-        try:
-            # print insert_statement + select_statement
-            c.execute(insert_statement + select_statement)
-        except DataError as e:
-                self.failure(
-                    "Data Error Inserting Data Into Table: %s" % e)
-        except ProgrammingError as e:
-                self.failure(
-                    "Programming Error Inserting Data Into Table: %s" % e)
-        except IntegrityError as e:
-                self.failure(
-                    "Integrity Error Inserting Data Into Table: %s" % e)
-
-        # c.execute('DROP TABLE temporary_table;')
-        if not regular_cols:
-            c.execute(
-                "ALTER TABLE \"%s\" DROP COLUMN \"%s\""
-                % (model._meta.db_table, "DUMMY_COLUMN")
-            )
-
-        model_count = model.objects.count()
-        self.finish_load_message(model_count, csv_count)
-
-    def load_mysql(self, model, csv_path):
-        # flush
-        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
-
-        # Build the MySQL LOAD DATA INFILE command
-        bulk_sql_load_part_1 = '''
-            LOAD DATA LOCAL INFILE '%s'
-            INTO TABLE %s
-            FIELDS TERMINATED BY ','
-            OPTIONALLY ENCLOSED BY '"'
-            LINES TERMINATED BY '\\r\\n'
-            IGNORE 1 LINES
-            (
-        ''' % (csv_path, model._meta.db_table)
-
-        infile = open(csv_path)
-        csv_reader = csv.reader(infile)
-        hdrs = csv_reader.next()
-        infile.close()
-
-        infile = open(csv_path)
-        csv_record_cnt = len(infile.readlines()) - 1
-        infile.close()
-
-        header_sql_list = []
-        date_set_list = []
-        for h in hdrs:
-            # If it is a date field, we need to reformat the data
-            # so that MySQL will properly parse it on the way in.
-            if h in model.DATE_FIELDS:
-                header_sql_list.append('@`%s`' % h)
-                date_set_list.append(
-                    "`%s` =  %s" % (h, self.date_sql % h)
-                )
-            else:
-                header_sql_list.append('`%s`' % h)
-
-        bulk_sql_load = bulk_sql_load_part_1 + ','.join(header_sql_list) + ')'
-        if date_set_list:
-            bulk_sql_load += " set %s" % ",".join(date_set_list)
-
-        # Run the query
-        cnt = self.cursor.execute(bulk_sql_load)
-
-        # Report back on how we did
-        self.finish_load_message(cnt, csv_record_cnt)
-
-    def finish_load_message(self, model_count, csv_count):
-        """
-        The message displayed about whether or not a load finished
-        successfully.
-        """
-        if self.verbosity:
-            if model_count != csv_count:
-                msg = '  Table Record count doesn\'t match CSV. \
-Table: %s\tCSV: %s'
-                self.failure(msg % (
-                    model_count,
-                    csv_count,
-                ))
