@@ -104,11 +104,16 @@ class Command(CalAccessCommand, LabelCommand):
         for col in model._meta.fields:
             name2type[col.db_column] = col.db_type(connection)
 
-        csv_col_types, special_cols = self._get_col_types(
-            model,
-            hdrs,
-            name2type
-        )
+        special_cols = self._get_col_types(model, hdrs)
+
+        csv_col_types = []  # column with its types
+        for col in hdrs:
+            if col in special_cols['regular_cols']:
+                csv_col_types.append("\"" + col + "\"\t" + name2type[col])
+            else:
+                csv_col_types.append("\"" + col + "\"\ttext")
+
+        print csv_col_types, special_cols
         regular_cols = special_cols.pop('regular_cols')
         empty_cols = special_cols['empty_cols']
 
@@ -229,7 +234,7 @@ Table: %s\tCSV: %s'
                     csv_count,
                 ))
 
-    def _get_col_types(self, model, csv_headers, name2type):
+    def _get_col_types(self, model, csv_headers):
         """
         Get the columns postgresql will have to treate
         differently on a case by base basis on insert
@@ -258,13 +263,6 @@ Table: %s\tCSV: %s'
                 if col.db_column is not None and col.db_column in csv_headers:
                     regular_cols.append(col.db_column)
 
-        csv_col_types = []  # column with its types
-        for col in csv_headers:
-            if col in regular_cols:
-                csv_col_types.append("\"" + col + "\"\t" + name2type[col])
-            else:
-                csv_col_types.append("\"" + col + "\"\ttext")
-
         extra_cols = set([col.db_column for col in
                           model._meta.fields]).difference(set(csv_headers))
 
@@ -272,7 +270,7 @@ Table: %s\tCSV: %s'
             if col is not None:
                 empty_cols.append(col)
 
-        return csv_col_types, {
+        return {
             "int_cols": int_cols,
             "numeric_cols": numeric_cols,
             "date_cols": date_cols,
