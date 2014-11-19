@@ -102,7 +102,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         name2type = {}  # name to type map for columns
         for col in model._meta.fields:
-            name2type[col.db_column] = col.db_type(self.cursor)
+            name2type[col.db_column] = col.db_type(connection)
 
         csv_col_types, special_cols = self._get_col_types(
             model,

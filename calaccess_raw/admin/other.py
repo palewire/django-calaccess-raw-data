@@ -4,7 +4,9 @@ from .base import BaseAdmin
 
 
 class AcronymsCdAdmin(BaseAdmin):
-    pass
+    list_display = ("acronym", "stands_for", "effect_dt", "a_desc")
+    date_hierarchy = 'effect_dt'
+    search_fields = ("acronym", "a_desc")
 
 
 class AddressCdAdmin(BaseAdmin):

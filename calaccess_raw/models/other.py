@@ -15,6 +15,10 @@ class AcronymsCd(CalAccessBaseModel):
         db_table = 'ACRONYMS_CD'
         verbose_name = 'ACRONYMS_CD'
         verbose_name_plural = 'ACRONYMS_CD'
+        ordering = ("acronym",)
+
+    def __unicode__(self):
+        return self.acronym
 
 
 class AddressCd(CalAccessBaseModel):
