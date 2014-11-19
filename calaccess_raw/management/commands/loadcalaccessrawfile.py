@@ -17,11 +17,7 @@ class Command(CalAccessCommand, LabelCommand):
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
         self.cursor = connection.cursor()
-        self.cursor.execute("""SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0;""")
-        self.cursor.execute("""SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=TRADITIONAL;""")
         self.load(label)
-        self.cursor.execute("""SET SQL_NOTES=@OLD_SQL_NOTES;""")
-        self.cursor.execute("""SET SQL_MODE=@OLD_SQL_MODE;""")
 
     def get_hdrs_and_cnt(self, csv_path):
         """
