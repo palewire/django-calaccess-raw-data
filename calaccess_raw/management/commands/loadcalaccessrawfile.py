@@ -19,6 +19,27 @@ class Command(CalAccessCommand, LabelCommand):
         self.cursor = connection.cursor()
         self.load(label)
 
+    def load(self, model_name):
+        """
+        Loads the source CSV for the provided model.
+        """
+        if self.verbosity:
+            self.log(" Loading %s" % model_name)
+
+        model = get_model("calaccess_raw", model_name)
+        csv_path = model.objects.get_csv_path()
+
+        # Flush
+        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
+
+        engine = settings.DATABASES['default']['ENGINE']
+        if engine == 'django.db.backends.mysql':
+            self.load_mysql(model, csv_path)
+        elif engine == 'django.db.backends.postgresql_psycopg2':
+            self.load_postgresql(model, csv_path)
+        else:
+            self.failure("Sorry that database is not supported")
+
     def get_hdrs_and_cnt(self, csv_path):
         """
         Get the headers and the line count
@@ -405,24 +426,3 @@ Table: %s\tCSV: %s'
                     model_count,
                     csv_count,
                 ))
-
-    def load(self, model_name):
-        """
-        Loads the source CSV for the provided model.
-        """
-        if self.verbosity:
-            self.log(" Loading %s" % model_name)
-
-        model = get_model("calaccess_raw", model_name)
-        csv_path = model.objects.get_csv_path()
-
-        # Flush
-        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
-
-        engine = settings.DATABASES['default']['ENGINE']
-        if engine == 'django.db.backends.mysql':
-            self.load_mysql(model, csv_path)
-        elif engine == 'django.db.backends.postgresql_psycopg2':
-            self.load_postgresql(model, csv_path)
-        else:
-            self.failure("Sorry that database is not supported")
