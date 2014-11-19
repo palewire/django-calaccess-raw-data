@@ -14,7 +14,12 @@ class Command(CalAccessCommand, LabelCommand):
 
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
+        self.cursor = connection.cursor()
+        self.cursor.execute("""SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0;""")
+        self.cursor.execute("""SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=TRADITIONAL;""")
         self.load(label)
+        self.cursor.execute("""SET SQL_NOTES=@OLD_SQL_NOTES;""")
+        self.cursor.execute("""SET SQL_MODE=@OLD_SQL_MODE;""")
 
     def load(self, model_name):
         """
@@ -27,8 +32,7 @@ class Command(CalAccessCommand, LabelCommand):
         csv_path = model.objects.get_csv_path()
 
         # Flush
-        c = connection.cursor()
-        c.execute('TRUNCATE TABLE %s' % model._meta.db_table)
+        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
 
         # Build the MySQL LOAD DATA INFILE command
         bulk_sql_load_part_1 = '''
@@ -68,7 +72,7 @@ class Command(CalAccessCommand, LabelCommand):
             bulk_sql_load += " set %s" % ",".join(date_set_list)
 
         # Run the query
-        cnt = c.execute(bulk_sql_load)
+        cnt = self.cursor.execute(bulk_sql_load)
 
         # Report back on how we did
         if self.verbosity:

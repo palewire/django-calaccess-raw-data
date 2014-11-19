@@ -110,11 +110,6 @@ CalAccess database'
         self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
-        # Execute the commands only if DEBUG is set to False
-        if settings.DEBUG:
-            raise CommandError("DEBUG is not set to False. Please change \
-before running `downloadcalaccessrawdata`")
-
         # Set the options
         self.set_options(*args, **options)
         # Get to work
