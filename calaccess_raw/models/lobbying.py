@@ -145,10 +145,12 @@ class CvrRegistrationCd(CalAccessBaseModel):
     lobby_int = models.CharField(
         max_length=300L, db_column='LOBBY_INT', blank=True
     )
-    ls_beg_yr = models.IntegerField(
-        null=True, db_column='LS_BEG_YR', blank=True
+    ls_beg_yr = models.CharField(
+        null=True, db_column='LS_BEG_YR', blank=True, max_length=5L
     )
-    ls_end_yr = models.IntegerField(db_column='LS_END_YR')
+    ls_end_yr = models.CharField(
+        db_column='LS_END_YR', max_length=5L
+    )
     mail_adr1 = models.CharField(
         max_length=55L, db_column='MAIL_ADR1', blank=True
     )
@@ -586,7 +588,7 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         max_length=45L, db_column='D_LE_NAMF', blank=True
     )
     d_le_namt = models.CharField(
-        max_length=9L, db_column='D_LE_NAMT', blank=True
+        max_length=12L, db_column='D_LE_NAMT', blank=True
     )
     d_le_nams = models.CharField(
         max_length=9L, db_column='D_LE_NAMS', blank=True
@@ -854,7 +856,7 @@ class LccmCd(CalAccessBaseModel):
         max_length=45L, db_column='CTRIB_NAMF', blank=True
     )
     ctrib_naml = models.CharField(
-        max_length=45L, db_column='CTRIB_NAML', blank=True
+        max_length=120L, db_column='CTRIB_NAML', blank=True
     )
     ctrib_nams = models.CharField(
         max_length=10L, db_column='CTRIB_NAMS', blank=True
