@@ -119,8 +119,11 @@ class Command(CalAccessCommand, LabelCommand):
 
         # create the temp table w/ columns with types
         try:
-            self.cursor.execute("CREATE TABLE \"temporary_table\" (%s);"
-                      % ',\n'.join(csv_col_types))
+            self.cursor.execute(
+                "CREATE TABLE \"temporary_table\" (%s);" % ',\n'.join(
+                    csv_col_types
+                )
+            )
         except ProgrammingError:
             self.failure("Temporary table already exists")
 
@@ -130,7 +133,8 @@ class Command(CalAccessCommand, LabelCommand):
             HEADER;""" % (csv_path)
 
         try:
-            self.cursor.execute(temp_insert)  # insert everything into the temp table
+            # insert everything into the temp table
+            self.cursor.execute(temp_insert)
         except DataError as e:
             print "initial insert dataerror error, ", e
 
@@ -146,8 +150,12 @@ class Command(CalAccessCommand, LabelCommand):
             try:
                 self.cursor.execute("ALTER TABLE temporary_table \
                     ADD COLUMN \"DUMMY_COLUMN\" text")
-                self.cursor.execute("ALTER TABLE \"%s\" ADD COLUMN \"%s\" text"
-                          % (model._meta.db_table, "DUMMY_COLUMN"))
+                self.cursor.execute(
+                    "ALTER TABLE \"%s\" ADD COLUMN \"%s\" text" % (
+                        model._meta.db_table,
+                        "DUMMY_COLUMN"
+                    )
+                )
                 insert_col_list = "\", \"".join(
                     ["DUMMY_COLUMN"] + flat_special_cols
                 )
@@ -168,14 +176,17 @@ class Command(CalAccessCommand, LabelCommand):
             # print insert_statement + select_statement
             self.cursor.execute(insert_statement + select_statement)
         except DataError as e:
-                self.failure(
-                    "Data Error Inserting Data Into Table: %s" % e)
+            self.failure(
+                "Data Error Inserting Data Into Table: %s" % e
+            )
         except ProgrammingError as e:
-                self.failure(
-                    "Programming Error Inserting Data Into Table: %s" % e)
+            self.failure(
+                "Programming Error Inserting Data Into Table: %s" % e
+            )
         except IntegrityError as e:
-                self.failure(
-                    "Integrity Error Inserting Data Into Table: %s" % e)
+            self.failure(
+                "Integrity Error Inserting Data Into Table: %s" % e
+            )
 
         # c.execute('DROP TABLE temporary_table;')
         if not regular_cols:
