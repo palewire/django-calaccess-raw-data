@@ -58,14 +58,9 @@ class Command(CalAccessCommand, LabelCommand):
             (
         """ % (csv_path, model._meta.db_table)
 
-        infile = open(csv_path)
-        csv_reader = csv.reader(infile)
-        hdrs = csv_reader.next()
-        infile.close()
-
-        infile = open(csv_path)
-        csv_record_cnt = len(infile.readlines()) - 1
-        infile.close()
+        # get the headers and the count
+        hdrs = self.get_headers(csv_path)
+        csv_record_cnt = self.get_row_count(csv_path)
 
         header_sql_list = []
         date_set_list = []
@@ -102,7 +97,8 @@ class Command(CalAccessCommand, LabelCommand):
         self.cursor.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
 
         # get the headers and the count
-        hdrs, csv_count = self.get_hdrs_and_cnt(csv_path)
+        hdrs = self.get_headers(csv_path)
+        csv_count = self.get_row_count(csv_path)
 
         n_2_t_map = {}  # name to type map for columns
         for col in model._meta.fields:
@@ -198,19 +194,22 @@ class Command(CalAccessCommand, LabelCommand):
         model_count = model.objects.count()
         self.finish_load_message(model_count, csv_count)
 
-    def get_hdrs_and_cnt(self, csv_path):
+    def get_headers(self, csv_path):
         """
-        Get the headers and the line count
-        from a specified csv file
+        Returns the column headers from the csv as a list.
         """
         with open(csv_path) as infile:
             csv_reader = csv.reader(infile)
-            hdrs = csv_reader.next()
+            headers = csv_reader.next()
+        return headers
 
+    def get_row_count(self, csv_path):
+        """
+        Returns the number of rows in the file, not counting headers.
+        """
         with open(csv_path) as infile:
-            csv_count = len(infile.readlines()) - 1
-
-        return hdrs, csv_count
+            row_count = len(infile.readlines()) - 1
+        return row_count
 
     def finish_load_message(self, model_count, csv_count):
         """
