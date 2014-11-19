@@ -19,7 +19,7 @@ The app needs to be added to the ``INSTALLED_APPS`` in your Django project's set
         'calaccess_raw',
     )
 
-Also in the Django settings, configure a database connection. You have a choice of two different databases when using this application, MySQL and PostgreSQL. You can download the `PostgreSQL app <http://postgresapp.com/>`_ if you intend to use that as your database.
+Also in the Django settings, create a database configure Django so it can connect to it. You have a choice of two different databases when using this application, MySQL and PostgreSQL.
 
 The settings below refer to using MySQL as your database.
 
@@ -28,7 +28,7 @@ The settings below refer to using MySQL as your database.
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'my_calaccess_db',
+            'NAME': 'calaccess',
             'USER': 'username',
             'PASSWORD': 'password',
             'HOST': 'localhost',
@@ -40,13 +40,19 @@ The settings below refer to using MySQL as your database.
         }
     }
 
+This will create the MySQL database.
+
+.. code-block:: bash
+
+    $ mysqladmin -h localhost -u root -p create calaccess
+
 The settings below refer to using PostgreSQL as your database.
 
 .. code-block:: python
 
     DATABASES = {
         'default': {
-            'NAME': 'calaccess_raw',
+            'NAME': 'calaccess',
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'USER': 'username',
             'PASSWORD': 'password',
@@ -55,25 +61,17 @@ The settings below refer to using PostgreSQL as your database.
         }
     }
 
+This will create the PostgreSQL database.
+
+.. code-block:: bash
+
+    $ createdb calaccess
+
 Now you're ready to sync the database tables.
 
 .. code-block:: bash
 
-    $ python manage.py syncdb
-
-A final setting, ``CALACCESS_DOWNLOAD_DIR``, tells our application where to store the large files it's going to download.
-You can put it anywhere you want.
-
-.. code-block:: python
-
-    CALACCESS_DOWNLOAD_DIR = "/path/to/wherever/"
-
-Or you could put the files in your system's temp directory, if you felt like it
-
-.. code-block:: python
-
-    import tempfile
-    CALACCESS_DOWNLOAD_DIR = tempfile.gettempdir()
+    $ python manage.py migrate
 
 Loading the data
 ----------------
