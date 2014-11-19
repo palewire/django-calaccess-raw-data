@@ -1,10 +1,10 @@
 import csv
 from django.db import connection
 from django.conf import settings
-from django.db import IntegrityError, DataError, ProgrammingError
 from django.db.models.loading import get_model
-from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
+from django.db import IntegrityError, DataError, ProgrammingError
+from django.core.management.base import LabelCommand, CommandError
 
 
 class Command(CalAccessCommand, LabelCommand):
@@ -38,7 +38,10 @@ class Command(CalAccessCommand, LabelCommand):
                 ):
             self.load_postgresql(model, csv_path)
         else:
-            self.failure("Sorry that database is not supported")
+            self.failure("Sorry your database engine is unsupported")
+            raise CommandError(
+                "Only MySQL and PostgresSQL backends supported."
+            )
 
     def load_mysql(self, model, csv_path):
         # flush
