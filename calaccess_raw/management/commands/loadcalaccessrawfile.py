@@ -44,7 +44,7 @@ class Command(CalAccessCommand, LabelCommand):
             )
 
     def load_mysql(self, model, csv_path):
-        # flush
+        # Flush the target model
         self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
 
         # Build the MySQL LOAD DATA INFILE command
@@ -58,7 +58,7 @@ class Command(CalAccessCommand, LabelCommand):
             (
         """ % (csv_path, model._meta.db_table)
 
-        # get the headers and the count
+        # Get the headers and the row count from the source CSV
         csv_headers = self.get_headers(csv_path)
         csv_record_cnt = self.get_row_count(csv_path)
 
