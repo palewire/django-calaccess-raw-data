@@ -138,34 +138,32 @@ class Command(CalAccessCommand, LabelCommand):
         """ % (csv_path)
         self.cursor.execute(temp_insert)
 
+        # For tables where we create cases for every column and
+        # we need a dummy column in order to migrate from table to table
         for col in empty_cols:
-            # for tables where we create cases for every column and
-            # we need a dummy column in order to migrate from table to table
-            self.cursor.execute("ALTER TABLE temporary_table \
-                ADD COLUMN \"%s\" text" % col)
+            sql = "ALTER TABLE temporary_table ADD COLUMN \"%s\" text" % col
+            self.cursor.execute(sql)
 
-        # make a big flat list for later insertion into the true table
+        # Make a big flat list for insertion into target model's table
         flat_special_cols = [
             itm for sl in column_types.values() for itm in sl
         ]
 
-        # build our insert statement
+        # Build the top half of that INSERT statement
         insert_statement = "INSERT INTO \"%s\" (\"" % model._meta.db_table
+
         if not regular_cols:
-            try:
-                self.cursor.execute("ALTER TABLE temporary_table \
-                    ADD COLUMN \"DUMMY_COLUMN\" text")
-                self.cursor.execute(
-                    "ALTER TABLE \"%s\" ADD COLUMN \"%s\" text" % (
-                        model._meta.db_table,
-                        "DUMMY_COLUMN"
-                    )
+            self.cursor.execute("ALTER TABLE temporary_table \
+                 ADD COLUMN \"DUMMY_COLUMN\" text")
+            self.cursor.execute(
+                "ALTER TABLE \"%s\" ADD COLUMN \"%s\" text" % (
+                    model._meta.db_table,
+                    "DUMMY_COLUMN"
                 )
-                insert_col_list = "\", \"".join(
-                    ["DUMMY_COLUMN"] + flat_special_cols
-                )
-            except ProgrammingError as e:
-                self.failure("Error Altering Table: %s" % e)
+            )
+            insert_col_list = "\", \"".join(
+                ["DUMMY_COLUMN"] + flat_special_cols
+            )
         else:
             insert_col_list = "\", \"".join(
                 regular_cols + flat_special_cols
@@ -173,33 +171,25 @@ class Command(CalAccessCommand, LabelCommand):
 
         insert_statement += insert_col_list
         insert_statement += "\")\n"
-        # add in the select part for table migration
 
+        # Build SELECT statement for table migration that comes after
+        # the INSERT
         select_statement = self._make_pg_select(regular_cols, column_types)
 
-        try:
-            # print insert_statement + select_statement
-            self.cursor.execute(insert_statement + select_statement)
-        except DataError as e:
-            self.failure(
-                "Data Error Inserting Data Into Table: %s" % e
-            )
-        except ProgrammingError as e:
-            self.failure(
-                "Programming Error Inserting Data Into Table: %s" % e
-            )
-        except IntegrityError as e:
-            self.failure(
-                "Integrity Error Inserting Data Into Table: %s" % e
-            )
+        # Mash them together and run it
+        self.cursor.execute(insert_statement + select_statement)
 
-        # c.execute('DROP TABLE temporary_table;')
+        # Drop the temporary table
+        self.cursor.execute('DROP TABLE temporary_table;')
+
+        # Drop any dummy columns we put on the target model
         if not regular_cols:
             self.cursor.execute(
                 "ALTER TABLE \"%s\" DROP COLUMN \"%s\""
                 % (model._meta.db_table, "DUMMY_COLUMN")
             )
 
+        # Print out the results
         model_count = model.objects.count()
         self.finish_load_message(model_count, csv_count)
 
@@ -401,14 +391,18 @@ Table: %s\tCSV: %s'
         END AS "%s"\n""" % (_col, _col)
 
     def _make_pg_select(self, regular_cols, special_cols):
+        """
+        Returns a SELECT statement that will pull data from our temporary
+        table and transform data types where necessary.
+        """
         select_statement = "SELECT \""
         if not regular_cols:
             select_statement += "\", \"".join(["DUMMY_COLUMN"])
         else:
             select_statement += "\", \"".join(regular_cols)
         select_statement += "\"\n"
-        # add in special formatting
 
+        # Add in special formatting
         for col_type, ls in special_cols.items():
             if col_type == "int_cols":
                 select_statement += '\n'.join(
@@ -434,7 +428,7 @@ Table: %s\tCSV: %s'
                 select_statement += '\n'.join(
                     [self._make_special_not_null_case(col) for col in ls]
                 )
-        # finalize from statement
-        select_statement += "FROM temporary_table;"
 
+        # Finalize from statement
+        select_statement += "FROM temporary_table;"
         return select_statement
