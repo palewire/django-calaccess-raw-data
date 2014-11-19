@@ -229,6 +229,59 @@ Table: %s\tCSV: %s'
                     csv_count,
                 ))
 
+    def _get_col_types(self, model, csv_headers, name2type):
+        """
+        Get the columns postgresql will have to treate
+        differently on a case by base basis on insert
+        """
+        int_cols = []
+        numeric_cols = []
+        date_cols = []
+        time_cols = []
+        regular_cols = []
+        double_cols = []
+        empty_cols = []
+
+        # fill in those column types
+        for col in model._meta.fields:
+            if col.db_type(connection).startswith('integer'):
+                int_cols.append(col.db_column)
+            elif col.db_type(connection).startswith('numeric'):
+                numeric_cols.append(col.db_column)
+            elif col.db_type(connection).startswith('date'):
+                date_cols.append(col.db_column)
+            elif col.db_type(connection).startswith('timestamp'):
+                time_cols.append(col.db_column)
+            elif col.db_type(connection).startswith('double'):
+                double_cols.append(col.db_column)
+            else:
+                if col.db_column is not None and col.db_column in csv_headers:
+                    regular_cols.append(col.db_column)
+
+        csv_col_types = []  # column with its types
+        for col in csv_headers:
+            if col in regular_cols:
+                csv_col_types.append("\"" + col + "\"\t" + name2type[col])
+            else:
+                csv_col_types.append("\"" + col + "\"\ttext")
+
+        extra_cols = set([col.db_column for col in
+                          model._meta.fields]).difference(set(csv_headers))
+
+        for col in extra_cols:
+            if col is not None:
+                empty_cols.append(col)
+
+        return csv_col_types, {
+            "int_cols": int_cols,
+            "numeric_cols": numeric_cols,
+            "date_cols": date_cols,
+            "time_cols": time_cols,
+            "regular_cols": regular_cols,
+            "double_cols": double_cols,
+            "empty_cols": empty_cols
+        }
+
     def _make_date_case(self, _col):
         """
         This method takes in a column name and generates a
@@ -348,59 +401,6 @@ Table: %s\tCSV: %s'
             WHEN "%s" IS NULL
                 THEN ''
         END AS "%s"\n""" % (_col, _col)
-
-    def _get_col_types(self, model, csv_headers, name2type):
-        """
-        Get the columns postgresql will have to treate
-        differently on a case by base basis on insert
-        """
-        int_cols = []
-        numeric_cols = []
-        date_cols = []
-        time_cols = []
-        regular_cols = []
-        double_cols = []
-        empty_cols = []
-
-        # fill in those column types
-        for col in model._meta.fields:
-            if col.db_type(connection).startswith('integer'):
-                int_cols.append(col.db_column)
-            elif col.db_type(connection).startswith('numeric'):
-                numeric_cols.append(col.db_column)
-            elif col.db_type(connection).startswith('date'):
-                date_cols.append(col.db_column)
-            elif col.db_type(connection).startswith('timestamp'):
-                time_cols.append(col.db_column)
-            elif col.db_type(connection).startswith('double'):
-                double_cols.append(col.db_column)
-            else:
-                if col.db_column is not None and col.db_column in csv_headers:
-                    regular_cols.append(col.db_column)
-
-        csv_col_types = []  # column with its types
-        for col in csv_headers:
-            if col in regular_cols:
-                csv_col_types.append("\"" + col + "\"\t" + name2type[col])
-            else:
-                csv_col_types.append("\"" + col + "\"\ttext")
-
-        extra_cols = set([col.db_column for col in
-                          model._meta.fields]).difference(set(csv_headers))
-
-        for col in extra_cols:
-            if col is not None:
-                empty_cols.append(col)
-
-        return csv_col_types, {
-            "int_cols": int_cols,
-            "numeric_cols": numeric_cols,
-            "date_cols": date_cols,
-            "time_cols": time_cols,
-            "regular_cols": regular_cols,
-            "double_cols": double_cols,
-            "empty_cols": empty_cols
-        }
 
     def _make_pg_select(self, regular_cols, special_cols):
         select_statement = "SELECT \""
