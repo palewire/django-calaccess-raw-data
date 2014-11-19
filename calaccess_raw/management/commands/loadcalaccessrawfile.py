@@ -1,9 +1,9 @@
 import csv
 from django.db import connection
 from django.conf import settings
+from django.db import ProgrammingError
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
-from django.db import IntegrityError, DataError, ProgrammingError
 from django.core.management.base import LabelCommand, CommandError
 
 
