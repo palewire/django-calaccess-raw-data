@@ -41,7 +41,7 @@ Then create a new database named ``calaccess``.
 
 If you have a different username, substitute it above. You'll be prompted for that user's mysql password.
 
-Then create a file at ``example/project/settings_local.py`` to save your custom database credentials. That 
+Then create a file at ``example/project/settings_local.py`` to save your custom database credentials. That
 might look something like this.
 
 .. code-block:: python
@@ -64,7 +64,7 @@ Finally create your database and get to work.
 
 .. code-block:: bash
 
-    $ python example/manage.py syncdb
+    $ python example/manage.py migrate
 
 You might start by loading the data dump from the web.
 

@@ -14,6 +14,7 @@ Documentation
    models
    howtocontribute
    officialdocumentation
+   changelog
 
 Other resources
 ---------------
