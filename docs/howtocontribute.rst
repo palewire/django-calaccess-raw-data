@@ -30,16 +30,13 @@ Move into it and install the Python dependencies.
     $ cd repo
     $ pip install -r requirements_dev.txt
 
-Make sure you have MySQL installed. If you don't, now is the time to hit Google and figure out how. If
-you're using Apple's OSX operating system, you can `install via Homebrew <http://benjsicam.me/blog/how-to-install-mysql-on-mac-os-x-using-homebrew-tutorial/>`_. If you need to clean up after a previous MySQL installation, `this might help <http://stackoverflow.com/questions/4359131/brew-install-mysql-on-mac-os/6378429#6378429>`_.
+Make sure you have MySQL or PostgreSQL installed, because we don't currently support any other database backends.
 
-Then create a new database named ``calaccess``.
+If you want to use MySQL. Create a new database named ``calaccess`` like this:
 
 .. code-block:: bash
 
-    mysqladmin -h localhost -u root -p create calaccess_raw
-
-If you have a different username, substitute it above. You'll be prompted for that user's mysql password.
+    mysqladmin -h localhost -u root -p create calaccess
 
 Then create a file at ``example/project/settings_local.py`` to save your custom database credentials. That
 might look something like this.
@@ -49,7 +46,7 @@ might look something like this.
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'calaccess_raw',
+            'NAME': 'calaccess',
             'USER': 'yourusername', # <-- This
             'PASSWORD': 'yourpassword', # <-- And this
             'HOST': 'localhost',
@@ -59,6 +56,27 @@ might look something like this.
             }
         }
     }
+
+If you'd prefer to use PostgreSQL, your local settings should be more like this:
+
+.. code-block:: python
+
+    DATABASES = {
+        'default': {
+            'NAME': 'calaccess',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'USER': 'username',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',
+            'PORT': '5432'
+        }
+    }
+
+This create the database the PostgreSQL way.
+
+.. code-block:: bash
+
+    $ createdb calaccess
 
 Finally create your database and get to work.
 
