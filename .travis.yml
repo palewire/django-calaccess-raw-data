@@ -2,10 +2,14 @@ language: python
 python:
  - "2.7"
 env:
- - DJANGO_VERSION=1.4.15
- - DJANGO_VERSION=1.5.10
- - DJANGO_VERSION=1.6.7
- - DJANGO_VERSION=1.7
+ - DJANGO_VERSION=1.4.15 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.5.10 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.6.7 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.4.15 DATABASE_SETTINGS='settings_test_postgres.py'
+ - DJANGO_VERSION=1.5.10 DATABASE_SETTINGS='settings_test_postgres.py'
+ - DJANGO_VERSION=1.6.7 DATABASE_SETTINGS='settings_test_postgres.py'
+ - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_postgres.py'
 install:
  - pip install pep8 pyflakes coverage python-coveralls
  - pip install -r requirements_dev.txt
@@ -13,6 +17,8 @@ install:
  - pip install -q Django==$DJANGO_VERSION
 before_script:
   - mysql -e 'create database calaccess_raw;'
+  - psql -c 'create database calaccess_raw;' -U postgres
+  - cp example/project/$DATABASE_SETTINGS example/project/settings_local.py
 script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw

@@ -35,11 +35,6 @@ DATABASES = {
     'default': {
         'NAME': 'calaccess_raw',
         'PASSWORD': '',
-        # Postgres Settings
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'USER': '',
-        # 'HOST': 'localhost',
-        # 'PORT': '5432'
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
         'HOST': 'localhost',
