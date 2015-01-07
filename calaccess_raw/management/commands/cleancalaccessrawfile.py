@@ -86,7 +86,7 @@ class Command(CalAccessCommand, LabelCommand):
                 ).next()
                 if not len(csv_field_list) == headers_count:
                     if self.verbosity:
-                        msg = 'Bad parse of line %s (%s headers, %s values)'
+                        msg = '  Bad parse of line %s (%s headers, %s values)'
                         self.failure(msg % (
                             line_number,
                             len(headers_list),
