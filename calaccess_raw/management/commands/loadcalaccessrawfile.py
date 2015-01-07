@@ -44,6 +44,10 @@ class Command(CalAccessCommand, LabelCommand):
             )
 
     def load_mysql(self, model, csv_path):
+        import warnings
+        import MySQLdb
+        warnings.filterwarnings("ignore", category=MySQLdb.Warning)
+
         # Flush the target model
         self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
 
