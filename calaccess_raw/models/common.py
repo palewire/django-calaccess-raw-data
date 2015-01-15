@@ -20,7 +20,6 @@ class FilernameCd(CalAccessBaseModel):
     (when they are only an individual's name) use both the first and last name
     fields in conjunction.
     """
-    DATE_FIELDS = ('EFFECT_DT',)
     xref_filer_id = models.CharField(
         max_length=15L,
         db_column='XREF_FILER_ID',
@@ -80,12 +79,6 @@ class FilernameCd(CalAccessBaseModel):
 
 
 class FilerFilingsCd(CalAccessBaseModel):
-    DATE_FIELDS = [
-        'FILING_DATE',
-        'RPT_START',
-        'RPT_END',
-        'RPT_DATE'
-    ]
     filer_id = models.IntegerField(
         db_column='FILER_ID',
         db_index=True,
@@ -196,7 +189,6 @@ class FilingsCd(CalAccessBaseModel):
 
 
 class SmryCd(CalAccessBaseModel):
-    DATE_FIELDS = ('ELEC_DT',)
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True
@@ -251,10 +243,6 @@ class SmryCd(CalAccessBaseModel):
 
 
 class CvrE530Cd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        "RPT_DATE",
-        "PMNT_DT",
-    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)

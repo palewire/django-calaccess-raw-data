@@ -11,13 +11,6 @@ class CvrSoCd(CalAccessBaseModel):
         F402 -- Statement of Termination (Slate Mailer Organization)
         F410 -- Statement of Organization (Recipient Committee)
     """
-    DATETIME_FIELDS = (
-        'ACCT_OPENDT',
-        'QUALFY_DT',
-        "RPT_DATE",
-        "SMCONT_QUALDT",
-        "TERM_DATE"
-    )
     acct_opendt = models.DateTimeField(db_column="ACCT_OPENDT")
     actvty_lvl = models.CharField(
         max_length=2L, db_column="ACTVTY_LVL", blank=True
@@ -268,14 +261,6 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         F497 -- Late Contribution Report
         F498 -- Slate Mailer Late Payment Report
     """
-    DATETIME_FIELDS = (
-        'ELECT_DATE',
-        'FROM_DATE',
-        'RPT_DATE',
-        'RPTFROMDT',
-        'RPTTHRUDT',
-        'THRU_DATE'
-    )
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amendexp_1 = models.CharField(
         max_length=100L, db_column='AMENDEXP_1', blank=True
@@ -691,10 +676,6 @@ class RcptCd(CalAccessBaseModel):
 
         Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
     """
-    DATE_FIELDS = (
-        'DATE_THRU',
-        'RCPT_DATE'
-    )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
@@ -1163,9 +1144,6 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         F465
         F470
     """
-    DATE_FIELDS = (
-        'SIG_DATE',
-    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1196,10 +1174,6 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
 
 
 class LoanCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'LOAN_DATE1',
-        'LOAN_DATE2'
-    )
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bakref_tid = models.CharField(
         max_length=20L, db_column='BAKREF_TID', blank=True
@@ -1484,9 +1458,6 @@ class ExpnCd(CalAccessBaseModel):
                      Campaign Statement) Part 5
         -- Form 465 (Supplemental Independent Expenditure Report) Part 3
     """
-    DATE_FIELDS = [
-        'EXPN_DATE',
-    ]
     agent_namf = models.CharField(
         max_length=45L, db_column='AGENT_NAMF', blank=True
     )
@@ -1667,9 +1638,6 @@ class F495P2Cd(CalAccessBaseModel):
     contributions received and expenditures made since
     its last report.
     """
-    DATE_FIELDS = (
-        'ELECT_DATE',
-    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1800,10 +1768,6 @@ class S496Cd(CalAccessBaseModel):
     """
     Form 496 Late Independent Expenditures
     """
-    DATE_FIELDS = [
-        'EXP_DATE',
-        'DATE_THRU',
-    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1843,9 +1807,6 @@ class SpltCd(CalAccessBaseModel):
         -- F450P5
         -- F460 (A-B1-B2-C-D-H)
     """
-    DATE_FIELDS = [
-        'ELEC_DATE',
-    ]
     amend_id = models.IntegerField(db_column='AMEND_ID')
     elec_amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
@@ -1874,11 +1835,6 @@ class S497Cd(CalAccessBaseModel):
     """
     Form 497 Late Contributions Received/Made
     """
-    DATE_FIELDS = [
-        'ELEC_DATE',
-        'CTRIB_DATE',
-        'DATE_THRU',
-    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -1991,15 +1947,6 @@ class F501502Cd(CalAccessBaseModel):
         -- F501
         -- F502
     """
-    DATE_FIELDS = (
-        'ACCT_OP_DT',
-        'DID_EXCEED_DT',
-        'CNTRB_PRSNL_FNDS_DT'
-    )
-    DATETIME_FIELDS = (
-        "RPT_DATE",
-        "EXECUTE_DT",
-    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
@@ -2156,9 +2103,6 @@ class S498Cd(CalAccessBaseModel):
     """
     Form 498 Slate Mailer Late Independent Expenditures Made
     """
-    DATE_FIELDS = [
-        'DATE_RCVD',
-    ]
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')

@@ -61,23 +61,33 @@ class Command(CalAccessCommand, LabelCommand):
             LINES TERMINATED BY '\\r\\n'
             IGNORE 1 LINES
             (
-        """ % (csv_path, model._meta.db_table)
+        """ % (
+            csv_path,
+            model._meta.db_table
+        )
 
         # Get the headers and the row count from the source CSV
         csv_headers = self.get_headers(csv_path)
         csv_record_cnt = self.get_row_count(csv_path)
 
         header_sql_list = []
+        field_types = dict(
+            (f.db_column, f.db_type(connection))
+                for f in model._meta.fields
+        )
         date_set_list = []
+
         for h in csv_headers:
-            # If it is a date or datetime field, we need to reformat the data
+            # Pull the data type of the field
+            data_type = field_types[h]
+            # If it is a date field, we need to reformat the data
             # so that MySQL will properly parse it on the way in.
-            if h in model.DATE_FIELDS:
+            if data_type == 'date':
                 header_sql_list.append('@`%s`' % h)
                 date_set_list.append(
                     "`%s` =  %s" % (h, self.date_sql % h)
                 )
-            elif h in model.DATETIME_FIELDS:
+            elif data_type == 'datetime':
                 header_sql_list.append('@`%s`' % h)
                 date_set_list.append(
                     "`%s` =  %s" % (h, self.datetime_sql % h)

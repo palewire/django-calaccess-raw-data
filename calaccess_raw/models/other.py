@@ -4,7 +4,6 @@ from .base import CalAccessBaseModel
 
 
 class AcronymsCd(CalAccessBaseModel):
-    DATE_FIELDS = ("EFFECT_DT",)
     acronym = models.CharField(max_length=40, db_column="ACRONYM")
     stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
     effect_dt = models.DateField(db_column="EFFECT_DT")
@@ -38,9 +37,6 @@ class AddressCd(CalAccessBaseModel):
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
-    DATETIME_FIELDS = (
-        "ELECTION_DATE",
-    )
     election_date = models.DateTimeField(db_column='ELECTION_DATE')
     filer_id = models.IntegerField(db_column='FILER_ID')
     measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
@@ -65,9 +61,6 @@ class BallotMeasuresCd(CalAccessBaseModel):
 
 
 class EfsFilingLogCd(CalAccessBaseModel):
-    DATETIME_FIELDS = (
-        "FILING_DATE",
-    )
     filing_date = models.DateTimeField(db_column='FILING_DATE')
     filingstatus = models.IntegerField(db_column='FILINGSTATUS')
     vendor = models.CharField(db_column='VENDOR', max_length=250)
@@ -108,9 +101,6 @@ class FilerAcronymsCd(CalAccessBaseModel):
 
 
 class FilerAddressCd(CalAccessBaseModel):
-    DATETIME_FIELDS = (
-        "EFFECT_DT",
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     adrid = models.IntegerField(db_column='ADRID')
     effect_dt = models.DateTimeField(
@@ -129,9 +119,6 @@ class FilerAddressCd(CalAccessBaseModel):
 
 
 class FilerEthicsClassCd(CalAccessBaseModel):
-    DATETIME_FIELDS = (
-        "ETHICS_DATE",
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     ethics_date = models.DateTimeField(db_column='ETHICS_DATE')
@@ -144,9 +131,6 @@ class FilerEthicsClassCd(CalAccessBaseModel):
 
 
 class FilerInterestsCd(CalAccessBaseModel):
-    DATETIME_FIELDS = (
-        'EFFECT_DATE',
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     interest_cd = models.IntegerField(db_column='INTEREST_CD')
@@ -160,10 +144,6 @@ class FilerInterestsCd(CalAccessBaseModel):
 
 
 class FilerLinksCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'EFFECT_DT',
-        'TERMINATION_DT'
-    )
     filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True)
     filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True)
     active_flg = models.CharField(max_length=1L, db_column='ACTIVE_FLG')
@@ -209,10 +189,6 @@ class FilerStatusTypesCd(CalAccessBaseModel):
 
 
 class FilerToFilerTypeCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'EFFECT_DT',
-        'NYQ_DT'
-    )
     filer_id = models.IntegerField(
         db_column='FILER_ID',
         help_text="Filer's unique identification number"
@@ -355,9 +331,6 @@ class FilerTypesCd(CalAccessBaseModel):
 
 
 class FilerXrefCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'EFFECT_DT',
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     xref_id = models.CharField(max_length=32L, db_column='XREF_ID')
     effect_dt = models.DateField(db_column='EFFECT_DT')
@@ -373,11 +346,6 @@ class FilerXrefCd(CalAccessBaseModel):
 
 
 class FilingPeriodCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'START_DATE',
-        'END_DATE',
-        'DEADLINE'
-    )
     period_id = models.IntegerField(
         db_column='PERIOD_ID',
         help_text="Unique period identification number"
@@ -497,9 +465,6 @@ class HdrCd(CalAccessBaseModel):
 
 
 class ImageLinksCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        "IMG_DT",
-    )
     img_link_id = models.IntegerField(db_column='IMG_LINK_ID')
     img_link_type = models.IntegerField(db_column='IMG_LINK_TYPE')
     img_id = models.IntegerField(db_column='IMG_ID')
@@ -514,10 +479,6 @@ class ImageLinksCd(CalAccessBaseModel):
 
 
 class LegislativeSessionsCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        "BEGIN_DATE",
-        "END_DATE"
-    )
     session_id = models.IntegerField(db_column='SESSION_ID')
     begin_date = models.DateField(db_column='BEGIN_DATE')
     end_date = models.DateField(db_column='END_DATE')
@@ -530,11 +491,6 @@ class LegislativeSessionsCd(CalAccessBaseModel):
 
 
 class LobbyingChgLogCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        "LOG_DT",
-        "ETHICS_DT",
-        "EFFECT_DT",
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     change_no = models.IntegerField(db_column='CHANGE_NO')
     session_id = models.IntegerField(db_column='SESSION_ID', null=True)
@@ -585,10 +541,6 @@ class LobbyingChgLogCd(CalAccessBaseModel):
 
 
 class LobbyistContributions1Cd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'FILING_PERIOD_START_DT',
-        'FILING_PERIOD_END_DT'
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT'
@@ -613,10 +565,6 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 
 
 class LobbyistContributions2Cd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'FILING_PERIOD_START_DT',
-        'FILING_PERIOD_END_DT'
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT'
@@ -643,10 +591,6 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 
 
 class LobbyistContributions3Cd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'FILING_PERIOD_START_DT',
-        'FILING_PERIOD_END_DT'
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT'
@@ -935,10 +879,6 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'RPT_START',
-        'RPT_END'
-    )
     firm_id = models.IntegerField(db_column='FIRM_ID')
     filing_id = models.IntegerField(db_column='FILING_ID')
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
@@ -963,10 +903,6 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'RPT_START',
-        'RPT_END'
-    )
     firm_id = models.IntegerField(db_column='FIRM_ID')
     filing_id = models.IntegerField(db_column='FILING_ID')
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
@@ -1062,9 +998,6 @@ class NamesCd(CalAccessBaseModel):
 
 
 class ReceivedFilingsCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        'RECEIVED_DATE',
-    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_file_name = models.CharField(
         db_column='FILING_FILE_NAME', max_length=14

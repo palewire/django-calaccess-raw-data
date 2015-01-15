@@ -14,13 +14,6 @@ class CvrRegistrationCd(CalAccessBaseModel):
         F606 -- Notice of Termination
         F607 -- Notice of Withdrawl
     """
-    DATE_FIELDS = (
-        'COMPLET_DT',
-        'EFF_DATE',
-        'QUAL_DATE',
-        'RPT_DATE',
-        'SIG_DATE'
-    )
     a_b_adr1 = models.CharField(
         max_length=55L, db_column='A_B_ADR1', blank=True
     )
@@ -299,13 +292,6 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         F645 -- Report of Person Spending $5,000 or more to influence
                 Legislative or administrative action
     """
-    DATE_FIELDS = [
-        'CUM_BEG_DT',
-        'FROM_DATE',
-        'RPT_DATE',
-        'SIG_DATE',
-        'THRU_DATE'
-    ]
     amend_id = models.IntegerField(db_column='AMEND_ID')
     ctrib_n_cb = models.CharField(
         max_length=1L, db_column='CTRIB_N_CB', blank=True
@@ -509,13 +495,6 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
 
         Form 605 Part I
     """
-    DATE_FIELDS = (
-        'ADD_L_EFF',
-        'ADD_LE_EFF',
-        'ADD_LF_EFF',
-        'DEL_LF_EFF',
-        'OTHER_EFF'
-    )
     filing_id = models.CharField(max_length=9L, db_column='FILING_ID')
     amend_id = models.CharField(max_length=8L, db_column='AMEND_ID')
     rec_type = models.CharField(max_length=8L, db_column='REC_TYPE')
@@ -640,11 +619,6 @@ class F690P2Cd(CalAccessBaseModel):
 
         F690 Amendment to Lobbying Disclosure Report
     """
-    DATE_FIELDS = (
-        "EXEC_DATE",
-        "FROM_DATE",
-        "THRU_DATE",
-    )
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
@@ -678,10 +652,6 @@ class LattCd(CalAccessBaseModel):
         F640 -- Government Agencies Reporting of "Other Payments to Influence
                 Legislative or Administrative Action" (Attatchment)
     """
-    DATE_FIELDS = (
-        'CUMBEG_DT',
-        'PMT_DATE',
-    )
     amend_id = models.IntegerField(db_column='AMEND_ID')
     amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
@@ -754,9 +724,6 @@ class LexpCd(CalAccessBaseModel):
         F635 Part 3C
         F645 Part 2A
     """
-    DATE_FIELDS = (
-        'EXPN_DATE',
-    )
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amount = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
@@ -838,9 +805,6 @@ class LccmCd(CalAccessBaseModel):
         F635 Part 4B
         F645 Part 3B
     """
-    DATE_FIELDS = (
-        'CTRIB_DATE',
-    )
     acct_name = models.CharField(
         max_length=90L, db_column='ACCT_NAME', blank=True
     )
@@ -926,9 +890,6 @@ class LothCd(CalAccessBaseModel):
 
         F625 Part 3B
     """
-    DATE_FIELDS = [
-        'PMT_DATE',
-    ]
     amend_id = models.IntegerField(db_column='AMEND_ID')
     amount = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
@@ -1003,9 +964,6 @@ class LempCd(CalAccessBaseModel):
         F601 Part 2 A
         F601 Part 2 B
     """
-    DATE_FIELDS = (
-        'EFF_DATE',
-    )
     agencylist = models.CharField(
         max_length=200L, db_column='AGENCYLIST', blank=True
     )
