@@ -11,14 +11,14 @@ class CvrSoCd(CalAccessBaseModel):
         F402 -- Statement of Termination (Slate Mailer Organization)
         F410 -- Statement of Organization (Recipient Committee)
     """
-    DATE_FIELDS = [
+    DATETIME_FIELDS = (
         'ACCT_OPENDT',
         'QUALFY_DT',
         "RPT_DATE",
         "SMCONT_QUALDT",
         "TERM_DATE"
-    ]
-    acct_opendt = models.DateField(db_column="ACCT_OPENDT")
+    )
+    acct_opendt = models.DateTimeField(db_column="ACCT_OPENDT")
     actvty_lvl = models.CharField(
         max_length=2L, db_column="ACTVTY_LVL", blank=True
     )
@@ -111,7 +111,7 @@ class CvrSoCd(CalAccessBaseModel):
     primfc_cb = models.CharField(
         max_length=1L, db_column="PRIMFC_CB", blank=True
     )
-    qualfy_dt = models.DateField(db_column="QUALFY_DT")
+    qualfy_dt = models.DateTimeField(db_column="QUALFY_DT")
     qual_cb = models.CharField(max_length=1L, db_column="QUAL_CB", blank=True)
     rec_type = models.CharField(
         max_length=3L, db_column="REC_TYPE", blank=True
@@ -119,8 +119,8 @@ class CvrSoCd(CalAccessBaseModel):
     report_num = models.CharField(
         max_length=3L, db_column="REPORT_NUM", blank=True
     )
-    rpt_date = models.DateField(db_column="RPT_DATE")
-    smcont_qualdt = models.DateField(db_column="SMCONT_QUALDT")
+    rpt_date = models.DateTimeField(db_column="RPT_DATE")
+    smcont_qualdt = models.DateTimeField(db_column="SMCONT_QUALDT")
     sponsor_cb = models.CharField(
         max_length=1L, db_column="SPONSOR_CB", blank=True
     )
@@ -128,7 +128,7 @@ class CvrSoCd(CalAccessBaseModel):
     surplusdsp = models.CharField(
         max_length=90L, db_column="SURPLUSDSP", blank=True
     )
-    term_date = models.DateField(db_column="TERM_DATE")
+    term_date = models.DateTimeField(db_column="TERM_DATE")
     tres_city = models.CharField(
         max_length=30L, db_column="TRES_CITY", blank=True
     )
@@ -268,14 +268,14 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         F497 -- Late Contribution Report
         F498 -- Slate Mailer Late Payment Report
     """
-    DATE_FIELDS = [
+    DATETIME_FIELDS = (
         'ELECT_DATE',
         'FROM_DATE',
         'RPT_DATE',
         'RPTFROMDT',
         'RPTTHRUDT',
         'THRU_DATE'
-    ]
+    )
     amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
     amendexp_1 = models.CharField(
         max_length=100L, db_column='AMENDEXP_1', blank=True
@@ -379,7 +379,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     dist_no = models.CharField(
         max_length=4L, db_column='DIST_NO', blank=True
     )
-    elect_date = models.DateField(
+    elect_date = models.DateTimeField(
         null=True, db_column='ELECT_DATE', blank=True
     )
     emplbus_cb = models.CharField(
@@ -430,7 +430,11 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
-    from_date = models.DateField(null=True, db_column='FROM_DATE', blank=True)
+    from_date = models.DateTimeField(
+        null=True,
+        db_column='FROM_DATE',
+        blank=True
+    )
     juris_cd = models.CharField(
         max_length=3L, db_column='JURIS_CD', blank=True
     )
@@ -486,11 +490,11 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     rpt_att_cb = models.CharField(
         max_length=4L, db_column='RPT_ATT_CB', blank=True
     )
-    rpt_date = models.DateField(db_column='RPT_DATE')
-    rptfromdt = models.DateField(
+    rpt_date = models.DateTimeField(db_column='RPT_DATE')
+    rptfromdt = models.DateTimeField(
         null=True, db_column='RPTFROMDT', blank=True
     )
-    rptthrudt = models.DateField(
+    rptthrudt = models.DateTimeField(
         null=True, db_column='RPTTHRUDT', blank=True
     )
     selfemp_cb = models.CharField(
@@ -505,7 +509,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     sup_opp_cd = models.CharField(
         max_length=1L, db_column='SUP_OPP_CD', blank=True
     )
-    thru_date = models.DateField(
+    thru_date = models.DateTimeField(
         null=True, db_column='THRU_DATE', blank=True
     )
     tres_adr1 = models.CharField(
