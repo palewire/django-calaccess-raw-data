@@ -967,7 +967,11 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 class LookupCode(CalAccessBaseModel):
     code_type = models.IntegerField(db_column='CODE_TYPE')
     code_id = models.IntegerField(db_column='CODE_ID')
-    code_desc = models.CharField(max_length=100, null=True)
+    code_desc = models.CharField(
+        db_column='CODE_DESC',
+        max_length=100,
+        null=True
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
