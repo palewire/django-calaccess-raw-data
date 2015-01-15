@@ -41,7 +41,10 @@ class BallotMeasuresCd(CalAccessBaseModel):
     DATE_FIELDS = (
         "ELECTION_DATE",
     )
-    election_date = models.DateField(db_column='ELECTION_DATE')
+    DATETIME_FIELDS = (
+        "ELECTION_DATE",
+    )
+    election_date = models.DateTimeField(db_column='ELECTION_DATE')
     filer_id = models.IntegerField(db_column='FILER_ID')
     measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
     measure_name = models.CharField(db_column='MEASURE_NAME', max_length=163)
@@ -56,6 +59,12 @@ class BallotMeasuresCd(CalAccessBaseModel):
         db_table = 'BALLOT_MEASURES_CD'
         verbose_name = 'BALLOT_MEASURES_CD'
         verbose_name_plural = 'BALLOT_MEASURES_CD'
+        ordering = (
+            "-election_date",
+            "measure_no",
+            "measure_short_name",
+            "measure_name"
+        )
 
 
 class EfsFilingLogCd(CalAccessBaseModel):

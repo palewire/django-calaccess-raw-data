@@ -14,7 +14,9 @@ class AddressCdAdmin(BaseAdmin):
 
 
 class BallotMeasuresCdAdmin(BaseAdmin):
-    pass
+    list_display = ("measure_name", "election_date", "jurisdiction")
+    list_filter = ("jurisdiction",)
+    search_fields = ("measure_name",)
 
 
 class EfsFilingLogCdAdmin(BaseAdmin):

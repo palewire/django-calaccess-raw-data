@@ -13,6 +13,7 @@ class Command(CalAccessCommand, LabelCommand):
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
+    datetime_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y %%h:%%i:%%s %p'), '%%Y-%%m-%%d  %%h:%%i:%%s %p')"
 
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
@@ -69,12 +70,17 @@ class Command(CalAccessCommand, LabelCommand):
         header_sql_list = []
         date_set_list = []
         for h in csv_headers:
-            # If it is a date field, we need to reformat the data
+            # If it is a date or datetime field, we need to reformat the data
             # so that MySQL will properly parse it on the way in.
             if h in model.DATE_FIELDS:
                 header_sql_list.append('@`%s`' % h)
                 date_set_list.append(
                     "`%s` =  %s" % (h, self.date_sql % h)
+                )
+            elif h in model.DATETIME_FIELDS:
+                header_sql_list.append('@`%s`' % h)
+                date_set_list.append(
+                    "`%s` =  %s" % (h, self.datetime_sql % h)
                 )
             else:
                 header_sql_list.append('`%s`' % h)
