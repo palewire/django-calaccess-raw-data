@@ -20,7 +20,14 @@ class BallotMeasuresCdAdmin(BaseAdmin):
 
 
 class EfsFilingLogCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "id",
+        "filing_date",
+        "filingstatus",
+        "filer_id",
+        "vendor",
+        "form_type",
+    )
 
 
 class FilersCdAdmin(BaseAdmin):
@@ -226,7 +233,7 @@ class ReportsCdAdmin(BaseAdmin):
 admin.site.register(models.AcronymsCd, AcronymsCdAdmin)
 admin.site.register(models.AddressCd, AddressCdAdmin)
 admin.site.register(models.BallotMeasuresCd, BallotMeasuresCdAdmin)
-admin.site.register(models.EfsFilingLogCd, BaseAdmin)
+admin.site.register(models.EfsFilingLogCd, EfsFilingLogCdAdmin)
 admin.site.register(models.FilersCd, FilersCdAdmin)
 admin.site.register(models.FilerAcronymsCd, FilerAcronymsCdAdmin)
 admin.site.register(models.FilerAddressCd, FilerAddressCdAdmin)

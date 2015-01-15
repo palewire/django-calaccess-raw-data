@@ -13,7 +13,7 @@ class Command(CalAccessCommand, LabelCommand):
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
-    datetime_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y %%h:%%i:%%s %p'), '%%Y-%%m-%%d  %%h:%%i:%%s %p')"
+    datetime_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y %%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%h:%%i:%%s %%p')"
 
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")

@@ -38,9 +38,6 @@ class AddressCd(CalAccessBaseModel):
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
-    DATE_FIELDS = (
-        "ELECTION_DATE",
-    )
     DATETIME_FIELDS = (
         "ELECTION_DATE",
     )
@@ -68,6 +65,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
 
 
 class EfsFilingLogCd(CalAccessBaseModel):
+    DATETIME_FIELDS = (
+        "FILING_DATE",
+    )
     filing_date = models.DateTimeField(db_column='FILING_DATE')
     filingstatus = models.IntegerField(db_column='FILINGSTATUS')
     vendor = models.CharField(db_column='VENDOR', max_length=250)
