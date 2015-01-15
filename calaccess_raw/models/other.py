@@ -108,6 +108,9 @@ class FilerAcronymsCd(CalAccessBaseModel):
 
 
 class FilerAddressCd(CalAccessBaseModel):
+    DATETIME_FIELDS = (
+        "EFFECT_DT",
+    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     adrid = models.IntegerField(db_column='ADRID')
     effect_dt = models.DateTimeField(
@@ -126,6 +129,9 @@ class FilerAddressCd(CalAccessBaseModel):
 
 
 class FilerEthicsClassCd(CalAccessBaseModel):
+    DATETIME_FIELDS = (
+        "ETHICS_DATE",
+    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     ethics_date = models.DateTimeField(db_column='ETHICS_DATE')
@@ -138,9 +144,9 @@ class FilerEthicsClassCd(CalAccessBaseModel):
 
 
 class FilerInterestsCd(CalAccessBaseModel):
-    DATE_FIELDS = [
+    DATETIME_FIELDS = (
         'EFFECT_DATE',
-    ]
+    )
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     interest_cd = models.IntegerField(db_column='INTEREST_CD')

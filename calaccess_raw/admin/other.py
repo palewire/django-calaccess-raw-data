@@ -39,7 +39,12 @@ class FilerAcronymsCdAdmin(BaseAdmin):
 
 
 class FilerAddressCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id",
+        "adrid",
+        "effect_dt",
+        "add_type"
+    )
 
 
 class FilerEthicsClassCdAdmin(BaseAdmin):
