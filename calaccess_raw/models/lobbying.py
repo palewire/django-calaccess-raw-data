@@ -188,7 +188,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
     report_num = models.CharField(
         max_length=3L, db_column='REPORT_NUM', blank=True
     )
-    rpt_date = models.DateField(db_column='RPT_DATE')
+    rpt_date = models.DateField(db_column='RPT_DATE', null=True)
     sender_id = models.CharField(max_length=9L, db_column='SENDER_ID')
     sig_date = models.DateField(
         null=True, db_column='SIG_DATE', blank=True
@@ -338,7 +338,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         max_length=10L, db_column='FIRM_ZIP4', blank=True
     )
     form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
-    from_date = models.DateField(db_column='FROM_DATE')
+    from_date = models.DateField(db_column='FROM_DATE', null=True)
     lby_actvty = models.CharField(
         max_length=400L, db_column='LBY_ACTVTY', blank=True
     )
@@ -410,9 +410,9 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     )
     rec_type = models.CharField(max_length=3L, db_column='REC_TYPE')
     report_num = models.CharField(max_length=3L, db_column='REPORT_NUM')
-    rpt_date = models.DateField(db_column='RPT_DATE')
+    rpt_date = models.DateField(db_column='RPT_DATE', null=True)
     sender_id = models.CharField(max_length=9L, db_column='SENDER_ID')
-    sig_date = models.DateField(db_column='SIG_DATE')
+    sig_date = models.DateField(db_column='SIG_DATE', null=True)
     sig_loc = models.CharField(max_length=45L, db_column='SIG_LOC', blank=True)
     sig_namf = models.CharField(
         max_length=45L, db_column='SIG_NAMF', blank=True
@@ -429,7 +429,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     sig_title = models.CharField(
         max_length=45L, db_column='SIG_TITLE', blank=True
     )
-    thru_date = models.DateField(db_column='THRU_DATE')
+    thru_date = models.DateField(db_column='THRU_DATE', null=True)
 
     class Meta:
         app_label = "calaccess_raw"
@@ -624,9 +624,9 @@ class F690P2Cd(CalAccessBaseModel):
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
-    exec_date = models.DateField(db_column='EXEC_DATE')
-    from_date = models.DateField(db_column='FROM_DATE')
-    thru_date = models.DateField(db_column='THRU_DATE')
+    exec_date = models.DateField(db_column='EXEC_DATE', null=True)
+    from_date = models.DateField(db_column='FROM_DATE', null=True)
+    thru_date = models.DateField(db_column='THRU_DATE', null=True)
     chg_parts = models.CharField(
         db_column='CHG_PARTS', max_length=100, blank=True
     )
@@ -659,7 +659,7 @@ class LattCd(CalAccessBaseModel):
     cum_amt = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='CUM_AMT'
     )
-    cumbeg_dt = models.DateField(db_column='CUMBEG_DT')
+    cumbeg_dt = models.DateField(db_column='CUMBEG_DT', null=True)
     entity_cd = models.CharField(
         max_length=3L, db_column='ENTITY_CD', blank=True
     )
@@ -672,7 +672,7 @@ class LattCd(CalAccessBaseModel):
     memo_refno = models.CharField(
         max_length=20L, db_column='MEMO_REFNO', blank=True
     )
-    pmt_date = models.DateField(db_column='PMT_DATE')
+    pmt_date = models.DateField(db_column='PMT_DATE', null=True)
     rec_type = models.CharField(
         max_length=4L, db_column='REC_TYPE', blank=True
     )
@@ -815,7 +815,7 @@ class LccmCd(CalAccessBaseModel):
     bakref_tid = models.CharField(
         max_length=20L, db_column='BAKREF_TID', blank=True
     )
-    ctrib_date = models.DateField(db_column='CTRIB_DATE')
+    ctrib_date = models.DateField(db_column='CTRIB_DATE', null=True)
     ctrib_namf = models.CharField(
         max_length=45L, db_column='CTRIB_NAMF', blank=True
     )

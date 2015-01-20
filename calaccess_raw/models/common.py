@@ -41,6 +41,7 @@ class FilernameCd(CalAccessBaseModel):
     effect_dt = models.DateField(
         db_column='EFFECT_DT',
         help_text="Effective date for status",
+        null=True,
     )
     naml = models.CharField(
         max_length=200L, db_column='NAML',
@@ -104,7 +105,8 @@ class FilerFilingsCd(CalAccessBaseModel):
     )
     filing_date = models.DateField(
         db_column='FILING_DATE',
-        help_text="Date the filing was entered into the system"
+        help_text="Date the filing was entered into the system",
+        null=True
     )
     stmnt_type = models.IntegerField(
         db_column='STMNT_TYPE',
@@ -139,19 +141,19 @@ laundering or other special condition."
         null=True,
         db_column='RPT_START',
         blank=True,
-        help_text="Starting date for the period the filing represents"
+        help_text="Starting date for the period the filing represents",
     )
     rpt_end = models.DateField(
         null=True,
         db_column='RPT_END',
         blank=True,
-        help_text="Ending date for the period the filing represents"
+        help_text="Ending date for the period the filing represents",
     )
     rpt_date = models.DateField(
         null=True,
         db_column='RPT_DATE',
         blank=True,
-        help_text="When SOS recieved the filing"
+        help_text="When SOS recieved the filing",
     )
     FILING_TYPE_CHOICES = (
         (None, 'None'),
@@ -233,7 +235,11 @@ class SmryCd(CalAccessBaseModel):
         db_column='AMOUNT_C',
         blank=True
     )
-    elec_dt = models.DateField(null=True, db_column='ELEC_DT', blank=True)
+    elec_dt = models.DateField(
+        null=True,
+        db_column='ELEC_DT',
+        blank=True
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -263,7 +269,7 @@ class CvrE530Cd(CalAccessBaseModel):
     report_num = models.CharField(
         db_column='REPORT_NUM', max_length=32, blank=True
     )
-    rpt_date = models.DateField(db_column='RPT_DATE')
+    rpt_date = models.DateField(db_column='RPT_DATE', null=True)
     filer_city = models.CharField(
         db_column='FILER_CITY', max_length=16, blank=True
     )
@@ -289,7 +295,7 @@ class CvrE530Cd(CalAccessBaseModel):
     )
     district_cd = models.IntegerField(db_column='DISTRICT_CD')
     office_cd = models.IntegerField(db_column='OFFICE_CD')
-    pmnt_dt = models.DateField(db_column='PMNT_DT')
+    pmnt_dt = models.DateField(db_column='PMNT_DT', null=True)
     pmnt_amount = models.FloatField(db_column='PMNT_AMOUNT')
     type_literature = models.IntegerField(db_column='TYPE_LITERATURE')
     type_printads = models.IntegerField(db_column='TYPE_PRINTADS')
