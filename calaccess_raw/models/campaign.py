@@ -112,7 +112,7 @@ class CvrSoCd(CalAccessBaseModel):
     report_num = models.CharField(
         max_length=3L, db_column="REPORT_NUM", blank=True
     )
-    rpt_date = models.DateTimeField(db_column="RPT_DATE")
+    rpt_date = models.DateTimeField(db_column="RPT_DATE", null=True)
     smcont_qualdt = models.DateTimeField(db_column="SMCONT_QUALDT", null=True)
     sponsor_cb = models.CharField(
         max_length=1L, db_column="SPONSOR_CB", blank=True
@@ -475,7 +475,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     rpt_att_cb = models.CharField(
         max_length=4L, db_column='RPT_ATT_CB', blank=True
     )
-    rpt_date = models.DateTimeField(db_column='RPT_DATE')
+    rpt_date = models.DateTimeField(db_column='RPT_DATE', null=True)
     rptfromdt = models.DateTimeField(
         null=True, db_column='RPTFROMDT', blank=True
     )
@@ -1021,6 +1021,7 @@ Form 401 Schedule A)"
     )
     rcpt_date = models.DateField(
         db_column='RCPT_DATE',
+        null=True,
         help_text="Date item received"
     )
     rec_type = models.CharField(
@@ -1263,7 +1264,7 @@ class LoanCd(CalAccessBaseModel):
     loan_city = models.CharField(
         max_length=30L, db_column='LOAN_CITY', blank=True
     )
-    loan_date1 = models.DateField(db_column='LOAN_DATE1')
+    loan_date1 = models.DateField(db_column='LOAN_DATE1', null=True)
     loan_date2 = models.DateField(
         null=True, db_column='LOAN_DATE2', blank=True
     )
@@ -1781,7 +1782,7 @@ class S496Cd(CalAccessBaseModel):
     amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
     )
-    exp_date = models.DateField(db_column='EXP_DATE')
+    exp_date = models.DateField(db_column='EXP_DATE', null=True)
     expn_dscr = models.CharField(
         max_length=90L, db_column='EXPN_DSCR', blank=True
     )
@@ -1791,7 +1792,7 @@ class S496Cd(CalAccessBaseModel):
     memo_refno = models.CharField(
         max_length=20L, db_column='MEMO_REFNO', blank=True
     )
-    date_thru = models.DateField(db_column='DATE_THRU')
+    date_thru = models.DateField(db_column='DATE_THRU', null=True)
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1814,7 +1815,7 @@ class SpltCd(CalAccessBaseModel):
     elec_code = models.CharField(
         max_length=2L, db_column='ELEC_CODE', blank=True
     )
-    elec_date = models.DateField(db_column='ELEC_DATE')
+    elec_date = models.DateField(db_column='ELEC_DATE', null=True)
     filing_id = models.IntegerField(db_column='FILING_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     pform_type = models.CharField(
@@ -1876,9 +1877,9 @@ class S497Cd(CalAccessBaseModel):
     ctrib_self = models.CharField(
         max_length=1L, db_column='CTRIB_SELF', blank=True
     )
-    elec_date = models.DateField(db_column='ELEC_DATE')
-    ctrib_date = models.DateField(db_column='CTRIB_DATE')
-    date_thru = models.DateField(db_column='DATE_THRU')
+    elec_date = models.DateField(db_column='ELEC_DATE', null=True)
+    ctrib_date = models.DateField(db_column='CTRIB_DATE', null=True)
+    date_thru = models.DateField(db_column='DATE_THRU', null=True)
     amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
     )
@@ -2142,7 +2143,7 @@ class S498Cd(CalAccessBaseModel):
     payor_zip4 = models.CharField(
         max_length=10L, db_column='PAYOR_ZIP4', blank=True
     )
-    date_rcvd = models.DateField(db_column='DATE_RCVD')
+    date_rcvd = models.DateField(db_column='DATE_RCVD', null=True)
     amt_rcvd = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMT_RCVD'
     )
