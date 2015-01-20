@@ -303,11 +303,10 @@ Table: %s\tCSV: %s'
         """
         return """
         ,CASE
-            WHEN "%s" IS NOT NULL AND "%s" != ''
-                THEN to_date(substring("%s" from 1 for 10), 'MM/DD/YYYY')
-            WHEN "%s" = ''
-                THEN to_date('01/01/1900', 'MM/DD/YYYY')
-        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+            WHEN "%(col)s" IS NOT NULL AND "%(col)s" != ''
+                THEN to_date(substring("%(col)s" from 1 for 10), 'MM/DD/YYYY')
+            ELSE null
+        END AS "%(col)s"\n""" % dict(col=_col)
 
     def _make_int_case(self, _col):
         """
@@ -384,25 +383,23 @@ Table: %s\tCSV: %s'
         """
         This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
-        ---
+
         It cleans "timestamp" from a form "7/9/2014 12:00:00 AM" or
-        enters it as '01/01/1900 1:00:00 AM' if null or empty
+        enters it as null if empty
         """
         return """
         ,CASE
-            WHEN "%s" IS NOT NULL AND "%s" != ''
-                THEN to_timestamp("%s", 'MM/DD/YYYY HH12:MI:SS AM')
-            WHEN "%s" = ''
-                THEN to_timestamp('01/01/1900 1:00:00 AM', \
-                    'MM/DD/YYYY HH12:MI:SS AM')
-        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+            WHEN "%(col)s" IS NOT NULL AND "%(col)s" != ''
+                THEN to_timestamp("%(col)s", 'MM/DD/YYYY HH12:MI:SS AM')
+            ELSE null
+        END AS "%(col)s"\n""" % dict(col=_col)
 
     def _make_special_not_null_case(self, _col):
         """
         This method takes in a column name and generates a
         PostgreSQL "case" for correct insertion into the primary table.
-        ---
-        it takes it empty columns that are in the csv and formats
+
+        It takes in empty columns that are in the csv and formats
         then to be inserted correctly
         """
         return """
