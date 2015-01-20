@@ -4,13 +4,13 @@ Management commands
 cleancalaccessrawfile
 ---------------------
 
-Clean a source CalAccess file and reformat it as a CSV
+Clean a source CAL-ACCESS file and reformat it as a CSV
 
 .. code-block:: bash
 
     Usage: manage.py cleancalaccessrawfile [options] <file path>
 
-    Clean a source CalAccess file and reformat it as a CSV
+    Clean a source CAL-ACCESS file and reformat it as a CSV
 
     Options:
       -v VERBOSITY, --verbosity=VERBOSITY
@@ -31,13 +31,13 @@ Clean a source CalAccess file and reformat it as a CSV
 downloadcalaccessrawdata
 ------------------------
 
-Download, unzip, clean and load the latest snapshot of the CalAccess database
+Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
 
 .. code-block:: bash
 
     Usage: manage.py downloadcalaccessrawdata [options] 
 
-    Download, unzip, clean and load the latest snapshot of the CalAccess database
+    Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
 
     Options:
       -v VERBOSITY, --verbosity=VERBOSITY
@@ -65,13 +65,13 @@ Download, unzip, clean and load the latest snapshot of the CalAccess database
 loadcalaccessrawfile
 --------------------
 
-Load a cleaned CalAccess file for a model into the database
+Load a cleaned CAL-ACCESS file for a model into the database
 
 .. code-block:: bash
 
     Usage: manage.py loadcalaccessrawfile [options] <model name>
 
-    Load a cleaned CalAccess file for a model into the database
+    Load a cleaned CAL-ACCESS file for a model into the database
 
     Options:
       -v VERBOSITY, --verbosity=VERBOSITY

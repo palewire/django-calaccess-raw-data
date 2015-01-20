@@ -5,7 +5,7 @@ from distutils.core import Command
 
 setup(
     name='django-calaccess-raw-data',
-    version='0.1.0',
+    version='0.1.1',
     packages=[
         'calaccess_raw',
         'calaccess_raw.admin',

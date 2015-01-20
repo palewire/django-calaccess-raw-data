@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.1.1 (January 2015)
+--------------------
+
+* Datetime support for MySQL fields
+* Fixed bug that didn't allow null values in PostgreSQL datetime fields
+
 
 0.1.0 (November 2014)
 ---------------------
