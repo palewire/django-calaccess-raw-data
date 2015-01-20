@@ -11,7 +11,7 @@ class CvrSoCd(CalAccessBaseModel):
         F402 -- Statement of Termination (Slate Mailer Organization)
         F410 -- Statement of Organization (Recipient Committee)
     """
-    acct_opendt = models.DateTimeField(db_column="ACCT_OPENDT")
+    acct_opendt = models.DateTimeField(db_column="ACCT_OPENDT", null=True)
     actvty_lvl = models.CharField(
         max_length=2L, db_column="ACTVTY_LVL", blank=True
     )
@@ -104,7 +104,7 @@ class CvrSoCd(CalAccessBaseModel):
     primfc_cb = models.CharField(
         max_length=1L, db_column="PRIMFC_CB", blank=True
     )
-    qualfy_dt = models.DateTimeField(db_column="QUALFY_DT")
+    qualfy_dt = models.DateTimeField(db_column="QUALFY_DT", null=True)
     qual_cb = models.CharField(max_length=1L, db_column="QUAL_CB", blank=True)
     rec_type = models.CharField(
         max_length=3L, db_column="REC_TYPE", blank=True
@@ -113,7 +113,7 @@ class CvrSoCd(CalAccessBaseModel):
         max_length=3L, db_column="REPORT_NUM", blank=True
     )
     rpt_date = models.DateTimeField(db_column="RPT_DATE")
-    smcont_qualdt = models.DateTimeField(db_column="SMCONT_QUALDT")
+    smcont_qualdt = models.DateTimeField(db_column="SMCONT_QUALDT", null=True)
     sponsor_cb = models.CharField(
         max_length=1L, db_column="SPONSOR_CB", blank=True
     )
@@ -121,7 +121,7 @@ class CvrSoCd(CalAccessBaseModel):
     surplusdsp = models.CharField(
         max_length=90L, db_column="SURPLUSDSP", blank=True
     )
-    term_date = models.DateTimeField(db_column="TERM_DATE")
+    term_date = models.DateTimeField(db_column="TERM_DATE", null=True)
     tres_city = models.CharField(
         max_length=30L, db_column="TRES_CITY", blank=True
     )

@@ -392,10 +392,7 @@ Table: %s\tCSV: %s'
         ,CASE
             WHEN "%s" IS NOT NULL AND "%s" != ''
                 THEN to_timestamp("%s", 'MM/DD/YYYY HH12:MI:SS AM')
-            WHEN "%s" = ''
-                THEN to_timestamp('01/01/1900 1:00:00 AM', \
-                    'MM/DD/YYYY HH12:MI:SS AM')
-        END AS "%s"\n""" % (_col, _col, _col, _col, _col)
+        END AS "%s"\n""" % (_col, _col, _col, _col)
 
     def _make_special_not_null_case(self, _col):
         """
