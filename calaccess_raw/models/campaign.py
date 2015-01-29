@@ -1450,14 +1450,16 @@ class S401Cd(CalAccessBaseModel):
 
 class ExpnCd(CalAccessBaseModel):
     """
-    This table contains expenditure records for the following forms.
-
-        -- Form 460 (Recpient Committee Campaign Statement)
-           Schedules D, E, and G
-        -- Form 450 (Recipient Committee Campaign Statement Short Form) Part 5
-        -- Form 461 (Independent Expenditure and Major Donor Committee
-                     Campaign Statement) Part 5
-        -- Form 465 (Supplemental Independent Expenditure Report) Part 3
+    Expenditure records for the following forms:
+        * Form 460 (Recipient Committee Campaign Statement): Schedule D
+        * Form 460 (Recipient Committee Campaign Statement): Schedule E
+        * Form 460 (Recipient Committee Campaign Statement): Schedule G
+        * Form 450 (Recipient Committee Campaign Statement Short Form): Part 5
+        * Form 461 (Independent Expenditure and Major Donor Committee
+            Campaign Statement): Part 5
+        * Form 465 (Supplemental Independent Expenditure Report) Part 3
+        * Form 900 (Public Employee's Retirement Board Candidate
+            Campaign Statement)
     """
     agent_namf = models.CharField(
         max_length=45L, db_column='AGENT_NAMF', blank=True
@@ -1524,16 +1526,20 @@ class ExpnCd(CalAccessBaseModel):
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     FORM_TYPE_CHOICES = (
-        ('D', 'D'),
-        ('E', 'E'),
-        ('F450PS', 'F450PS'),
-        ('F461P5', 'F461P5'),
-        ('F465P3', 'F465P3'),
-        ('F900', 'F900'),
-        ('G', 'G'),
+        ('D', 'Form 460 (Recipient Committee Campaign Statement): Schedule D'),
+        ('E', 'Form 460 (Recipient Committee Campaign Statement): Schedule E'),
+        ('G', 'Form 460 (Recipient Committee Campaign Statement): Schedule G'),
+        ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
+Short Form): Part 5'),
+        ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
+Committee Campaign Statement): Part 5'),
+        ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
+Report) Part 3'),
+        ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
+Campaign Statement)'),
     )
     form_type = models.CharField(
-        choices=FORM_TYPE_CHOICES
+        choices=FORM_TYPE_CHOICES,
         max_length=6L,
         db_column='FORM_TYPE'
     )
