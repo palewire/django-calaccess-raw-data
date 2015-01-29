@@ -1523,7 +1523,20 @@ class ExpnCd(CalAccessBaseModel):
         max_length=400L, db_column='EXPN_DSCR', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
-    form_type = models.CharField(max_length=6L, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('D', 'D'),
+        ('E', 'E'),
+        ('F450PS', 'F450PS'),
+        ('F461P5', 'F461P5'),
+        ('F465P3', 'F465P3'),
+        ('F900', 'F900'),
+        ('G', 'G'),
+    )
+    form_type = models.CharField(
+        choices=FORM_TYPE_CHOICES
+        max_length=6L,
+        db_column='FORM_TYPE'
+    )
     g_from_e_f = models.CharField(
         max_length=1L, db_column='G_FROM_E_F', blank=True
     )
