@@ -2,9 +2,9 @@ import os
 import shutil
 import zipfile
 import requests
-import progressbar
 from hurry.filesize import size
 from optparse import make_option
+from clint.textui import progress
 from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
@@ -94,17 +94,6 @@ CAL-ACCESS database'
                 'calaccess_raw/downloadcalaccessrawdata.txt',
                 prompt_context,
             )
-            self.pbar = progressbar.ProgressBar(
-                widgets=[
-                    progressbar.Percentage(),
-                    progressbar.Bar(),
-                    ' ',
-                    progressbar.ETA(),
-                    ' ',
-                    progressbar.FileTransferSpeed()
-                ],
-                maxval=self.download_metadata['content-length']
-            )
         self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
@@ -176,17 +165,17 @@ CAL-ACCESS database'
         """
         if self.verbosity:
             self.header("Downloading ZIP file")
+
         r = requests.get(self.url, stream=True)
-        bytes = 0
-        self.pbar.start()
+        length = float(self.download_metadata['content-length'])
         with open(self.zip_path, 'wb') as f:
-            for chunk in r.iter_content(chunk_size=1024):
-                if chunk:  # filter out keep-alive new chunks
-                    f.write(chunk)
-                    bytes += len(chunk)
-                    self.pbar.update(bytes)
-                    f.flush()
-        self.pbar.finish()
+            for chunk in progress.bar(
+                r.iter_content(chunk_size=1024),
+                expected_size=(length/1024)+1,
+                label="Progress: "
+            ):
+                f.write(chunk)
+                f.flush()
         self.set_local_metadata()
 
     def unzip(self):
