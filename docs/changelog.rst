@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.1.2 (February 2015)
+---------------------
+
+* Substituted clint for progressbar
+* Improved choices for form type fields
+
 0.1.1 (January 2015)
 --------------------
 
