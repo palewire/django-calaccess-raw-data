@@ -6,12 +6,12 @@ env:
  - DJANGO_VERSION=1.5.10 DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.6.7 DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.8 DATABASE_SETTINGS='settings_test_mysql.py'
-   DJANGO_VERSION=1.4.15 DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=1.8b1 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.4.15 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.5.10 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.6.7 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_postgresql.py'
- - DJANGO_VERSION=1.8 DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=1.8b1 DATABASE_SETTINGS='settings_test_postgresql.py'
 
 install:
  - pip install pep8 pyflakes coverage python-coveralls
