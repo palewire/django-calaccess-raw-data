@@ -20,9 +20,9 @@ cache:
     - /home/travis/virtualenv/python2.7/lib/python2.7/site-packages
 
 install:
- - pip install -r requirements_dev.txt --download-cache $HOME/.pip-cache
+ - pip install -r requirements_dev.txt
  - pip uninstall -y Django
- - pip install -q Django==$DJANGO_VERSION --download-cache $HOME/.pip-cache
+ - pip install -q Django==$DJANGO_VERSION
 before_script:
   - mysql -e 'create database calaccess_raw;'
   - psql -c 'create database calaccess_raw;' -U postgres
