@@ -29,6 +29,7 @@ before_script:
   - mysql -e 'create database calaccess_raw;'
   - psql -c 'create database calaccess_raw;' -U postgres
   - cp example/project/$DATABASE_SETTINGS.template example/project/settings_local.py
+sudo: true
 script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw
