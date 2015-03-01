@@ -14,6 +14,7 @@ env:
  - DJANGO_VERSION=1.6.7 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.8b1 DATABASE_SETTINGS='settings_test_postgresql.py'
+
 cache:
   directories:
     - $HOME/.pip-cache/
