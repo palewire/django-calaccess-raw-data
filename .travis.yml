@@ -1,3 +1,5 @@
+sudo: false
+
 language: python
 python:
  - "2.7"
@@ -17,7 +19,7 @@ env:
 cache:
   directories:
     - $HOME/.pip-cache/
-    - /home/travis/virtualenv/python2.7/lib/python2.7/site-packages
+    - /home/travis/virtualenv/python2.7.9/lib/python2.7/site-packages
 
 install:
  - pip install -r requirements_dev.txt
