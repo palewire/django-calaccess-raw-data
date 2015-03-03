@@ -2108,7 +2108,9 @@ class F501502Cd(CalAccessBaseModel):
     dist_no = models.CharField(db_column='DIST_NO', max_length=4, blank=True)
     party = models.CharField(db_column='PARTY', max_length=20, blank=True)
     yr_of_elec = models.IntegerField(
-        db_column='YR_OF_ELEC', blank=True, null=True
+        db_column='YR_OF_ELEC',
+        blank=True,
+        null=True
     )
     elec_type = models.IntegerField(
         db_column='ELEC_TYPE', blank=True, null=True
@@ -2163,7 +2165,9 @@ class S498Cd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
-        max_length=4L, db_column='REC_TYPE', blank=True
+        max_length=4L,
+        db_column='REC_TYPE',
+        blank=True
     )
     form_type = models.CharField(
         max_length=9L,
