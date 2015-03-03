@@ -1970,7 +1970,9 @@ class F501502Cd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
+    form_type = models.CharField(
+        db_column='FORM_TYPE', max_length=4, choices=(('F501','F501 (Candidate Intention Statement)'),('F502','F502 (Campaign Bank Account Statement)'))
+    )
     filer_id = models.CharField(db_column='FILER_ID', max_length=8, blank=True)
     committee_id = models.CharField(
         db_column='COMMITTEE_ID', max_length=8, blank=True
@@ -2111,6 +2113,9 @@ class F501502Cd(CalAccessBaseModel):
     cntrb_prsnl_fnds_dt = models.DateField(
         db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True
     )
+
+    def __unicode__(self):
+        return "{} Filing {}, Amendment {}".format(self.get_form_type_display(), self.filing_id, self.amend_id)
 
     class Meta:
         app_label = 'calaccess_raw'
