@@ -1795,7 +1795,8 @@ class S496Cd(CalAccessBaseModel):
         max_length=4L, db_column='REC_TYPE', blank=True
     )
     form_type = models.CharField(
-        max_length=4L, db_column='FORM_TYPE', blank=True
+        max_length=4L, db_column='FORM_TYPE', blank=True,
+        choices=(('F496','F496 (Candidate Intention Statement)'),)
     )
     tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
     amount = models.DecimalField(
@@ -2231,6 +2232,9 @@ class S498Cd(CalAccessBaseModel):
     selfemp_cb = models.CharField(
         max_length=1L, db_column='SELFEMP_CB', blank=True
     )
+
+    def __unicode__(self):
+        return "{} Filing {}, Amendment {}".format(self.get_form_type_display(), self.filing_id, self.amend_id)
 
     class Meta:
         app_label = 'calaccess_raw'
