@@ -1795,7 +1795,8 @@ class S496Cd(CalAccessBaseModel):
         max_length=4L, db_column='REC_TYPE', blank=True
     )
     form_type = models.CharField(
-        max_length=4L, db_column='FORM_TYPE', blank=True
+        max_length=4L, db_column='FORM_TYPE', blank=True,
+        choices=(('F496', 'F496 (Candidate Intention Statement)'),)
     )
     tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
     amount = models.DecimalField(
@@ -1862,9 +1863,17 @@ class S497Cd(CalAccessBaseModel):
         max_length=4L, db_column='REC_TYPE', blank=True
     )
     form_type = models.CharField(
-        max_length=6L, db_column='FORM_TYPE', blank=True
+        max_length=6L, db_column='FORM_TYPE', blank=True,
+        choices=(
+            ('F497P1', 'F497P1 (Late Contributions Received)'),
+            ('F497P2', 'F497P2 (Late Contributions Made)')
+        )
     )
-    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
+    tran_id = models.CharField(
+        max_length=20L,
+        db_column='TRAN_ID',
+        blank=True
+    )
     entity_cd = models.CharField(
         max_length=3L, db_column='ENTITY_CD', blank=True
     )
@@ -1953,6 +1962,13 @@ class S497Cd(CalAccessBaseModel):
         max_length=1L, db_column='SUP_OPP_CD', blank=True
     )
 
+    def __unicode__(self):
+        return "{} Filing {}, Amendment {}".format(
+            self.get_form_type_display(),
+            self.filing_id,
+            self.amend_id
+        )
+
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'S497_CD'
@@ -1970,10 +1986,23 @@ class F501502Cd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
-    filer_id = models.CharField(db_column='FILER_ID', max_length=8, blank=True)
+    form_type = models.CharField(
+        db_column='FORM_TYPE',
+        max_length=4,
+        choices=(
+            ('F501', 'F501 (Candidate Intention Statement)'),
+            ('F502', 'F502 (Campaign Bank Account Statement)')
+        )
+    )
+    filer_id = models.CharField(
+        db_column='FILER_ID',
+        max_length=8,
+        blank=True
+    )
     committee_id = models.CharField(
-        db_column='COMMITTEE_ID', max_length=8, blank=True
+        db_column='COMMITTEE_ID',
+        max_length=8,
+        blank=True
     )
     entity_cd = models.IntegerField(
         db_column='ENTITY_CD', blank=True, null=True
@@ -2112,6 +2141,13 @@ class F501502Cd(CalAccessBaseModel):
         db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True
     )
 
+    def __unicode__(self):
+        return "{} Filing {}, Amendment {}".format(
+            self.get_form_type_display(),
+            self.filing_id,
+            self.amend_id
+        )
+
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'F501_502_CD'
@@ -2130,7 +2166,13 @@ class S498Cd(CalAccessBaseModel):
         max_length=4L, db_column='REC_TYPE', blank=True
     )
     form_type = models.CharField(
-        max_length=9L, db_column='FORM_TYPE', blank=True
+        max_length=9L,
+        db_column='FORM_TYPE',
+        blank=True,
+        choices=(
+            ('F498-A', 'F498-A (Late Payments Attributed To:)'),
+            ('F498-R', 'F498-R (Late Payments Received From:)')
+        )
     )
     tran_id = models.CharField(
         max_length=20L, db_column='TRAN_ID', blank=True
@@ -2222,6 +2264,13 @@ class S498Cd(CalAccessBaseModel):
     selfemp_cb = models.CharField(
         max_length=1L, db_column='SELFEMP_CB', blank=True
     )
+
+    def __unicode__(self):
+        return "{} Filing {}, Amendment {}".format(
+            self.get_form_type_display(),
+            self.filing_id,
+            self.amend_id
+        )
 
     class Meta:
         app_label = 'calaccess_raw'
