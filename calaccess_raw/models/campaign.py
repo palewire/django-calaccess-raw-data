@@ -1862,7 +1862,8 @@ class S497Cd(CalAccessBaseModel):
         max_length=4L, db_column='REC_TYPE', blank=True
     )
     form_type = models.CharField(
-        max_length=6L, db_column='FORM_TYPE', blank=True
+        max_length=6L, db_column='FORM_TYPE', blank=True, 
+        choices=(('F497P1','F497P1 (Late Contributions Received)'),('F497P2','F497P2 (Late Contributions Made)'))
     )
     tran_id = models.CharField(max_length=20L, db_column='TRAN_ID', blank=True)
     entity_cd = models.CharField(
@@ -1952,6 +1953,9 @@ class S497Cd(CalAccessBaseModel):
     sup_opp_cd = models.CharField(
         max_length=1L, db_column='SUP_OPP_CD', blank=True
     )
+
+    def __unicode__(self):
+        return "{} Filing {}, Amendment {}".format(self.get_form_type_display(), self.filing_id, self.amend_id)
 
     class Meta:
         app_label = 'calaccess_raw'
