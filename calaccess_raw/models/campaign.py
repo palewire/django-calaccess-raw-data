@@ -880,7 +880,18 @@ and Form 401 Schedule A, A-1)"
         db_index=True,
         help_text="Unique filing identification number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F900', 'Unknown'),
+        ('A-1', 'Unknown'),
+        ('E530', 'Unknown'),
+        ('F496P3', 'Contributions of $100 or More Received'),
+        ('F401A', 'Payments Received'),
+        ('I', 'Sched I / Misc. to Cash'),
+        ('C', 'Sched C / Non-monetary'),
+        ('A', 'Sched A / Monetary')
+    )
     form_type = models.CharField(
+        choices=FORM_TYPE_CHOICES,
         max_length=9L,
         db_column='FORM_TYPE',
         help_text="Schedule Name/ID: Sched A, C, I, A-1, F401A"
