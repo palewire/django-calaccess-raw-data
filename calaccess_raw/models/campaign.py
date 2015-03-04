@@ -611,7 +611,13 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         max_length=2L, db_column='F460_PART', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
-    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('F425', 'Cover Page; Part 1; Assistant Treasurer'),
+        ('F450', 'Cover Page; Part 3; Assistant Treasurer'),
+        ('F465', 'Cover Page; Part V Filing Officer Titles & Addresses'),
+        ('F460', 'Cover Page; Additional Committees, Asst. Treasurer, etc.')
+    )
+    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
     juris_cd = models.CharField(
         max_length=3L, db_column='JURIS_CD', blank=True
     )
