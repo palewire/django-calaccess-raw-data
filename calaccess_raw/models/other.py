@@ -189,6 +189,9 @@ class FilerStatusTypesCd(CalAccessBaseModel):
 
 
 class FilerToFilerTypeCd(CalAccessBaseModel):
+    """
+    This table links a filer to a set of characteristics that describe the filer. This table maintains a history of changes and allows the filer to change characteristics over time.
+    """
     filer_id = models.IntegerField(
         db_column='FILER_ID',
         help_text="Filer's unique identification number"
