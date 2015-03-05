@@ -76,6 +76,9 @@ class EfsFilingLogCd(CalAccessBaseModel):
 
 
 class FilersCd(CalAccessBaseModel):
+    """
+    This table is the parent table from which all links and associations to a filer are derived.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
 
     class Meta:
