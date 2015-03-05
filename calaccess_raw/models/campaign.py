@@ -414,7 +414,20 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         max_length=10L, db_column='FILER_ZIP4', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
-    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('F511', 'Unknown'),
+        ('F900', 'Unknown'),
+        ('F425', 'Cover Page; Semi Annual Statement of No Activity'),
+        ('F450', 'Cover Page; Recipient Committee'),
+        ('F401', 'Cover Page; Part IV; Verification Information'),
+        ('F498', 'Cover Page; Slate Mailer Late Payments Report'),
+        ('F465', 'Cover Page; Supplemental Independent Expenditure Rpt'),
+        ('F496', 'Cover Page; Late Independent Expenditure Report'),
+        ('F461', 'Cover Page; Ind Expenditure & Major Donor Committee'),
+        ('F460', 'Cover Page; Recipient Committee Campaign Statement'),
+        ('F497', 'Cover Page; Late Contribution Report')
+    )
+    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
     from_date = models.DateTimeField(
         null=True,
         db_column='FROM_DATE',
