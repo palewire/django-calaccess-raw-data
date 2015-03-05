@@ -1038,17 +1038,20 @@ class ReceivedFilingsCd(CalAccessBaseModel):
 
 
 class ReportsCd(CalAccessBaseModel):
-    rpt_id = models.IntegerField(db_column='RPT_ID')
-    rpt_name = models.CharField(db_column='RPT_NAME', max_length=74)
+    """
+    This is an undocumented model.
+    """
+    rpt_id = models.IntegerField(db_column='RPT_ID', help_text="Unique identification number")
+    rpt_name = models.CharField(db_column='RPT_NAME', max_length=74, help_text="Name of the report")
     rpt_desc_field = models.CharField(
-        db_column='RPT_DESC_', max_length=32, blank=True)
-    path = models.CharField(db_column='PATH', max_length=32, blank=True)
+        db_column='RPT_DESC_', max_length=32, blank=True, help_text="Description of the report")
+    path = models.CharField(db_column='PATH', max_length=32, blank=True, help_text="Reportpath")
     data_object = models.CharField(db_column='DATA_OBJECT', max_length=38)
     parms_flg_y_n = models.IntegerField(
-        db_column='PARMS_FLG_Y_N', blank=True, null=True
+        db_column='PARMS_FLG_Y_N', blank=True, null=True, help_text="Parameters indication flag"
     )
-    rpt_type = models.IntegerField(db_column='RPT_TYPE')
-    parm_definition = models.IntegerField(db_column='PARM_DEFINITION')
+    rpt_type = models.IntegerField(db_column='RPT_TYPE', help_text="Type of the report")
+    parm_definition = models.IntegerField(db_column='PARM_DEFINITION', help_text="Parameter definition")
 
     class Meta:
         app_label = 'calaccess_raw'
