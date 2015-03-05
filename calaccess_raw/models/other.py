@@ -388,6 +388,9 @@ class FilingPeriodCd(CalAccessBaseModel):
 
 
 class GroupTypesCd(CalAccessBaseModel):
+    """
+    This lookup table stores group type information.
+    """
     grp_id = models.IntegerField(db_column='GRP_ID')
     grp_name = models.CharField(
         db_column='GRP_NAME', max_length=28, blank=True
