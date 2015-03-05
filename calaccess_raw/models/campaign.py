@@ -1177,6 +1177,9 @@ identifier. 'X' indicates this condition is true"
         verbose_name = 'RCPT_CD'
         verbose_name_plural = 'RCPT_CD'
 
+    def __unicode__(self):
+        return self.filing_id
+
 
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
@@ -1219,6 +1222,9 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         db_table = 'CVR3_VERIFICATION_INFO_CD'
         verbose_name = 'CVR3_VERIFICATION_INFO_CD'
         verbose_name_plural = 'CVR3_VERIFICATION_INFO_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class LoanCd(CalAccessBaseModel):
@@ -1392,6 +1398,9 @@ class LoanCd(CalAccessBaseModel):
         verbose_name = 'LOAN_CD'
         verbose_name_plural = 'LOAN_CD'
 
+    def __unicode__(self):
+        return self.filing_id
+
 
 class S401Cd(CalAccessBaseModel):
     """
@@ -1503,6 +1512,9 @@ class S401Cd(CalAccessBaseModel):
         db_table = 'S401_CD'
         verbose_name = 'S401_CD'
         verbose_name_plural = 'S401_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class ExpnCd(CalAccessBaseModel):
@@ -1694,6 +1706,9 @@ Campaign Statement)'),
         db_table = 'EXPN_CD'
         verbose_name = 'EXPN_CD'
         verbose_name_plural = 'EXPN_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class F495P2Cd(CalAccessBaseModel):
@@ -1731,6 +1746,9 @@ class F495P2Cd(CalAccessBaseModel):
         db_table = 'F495P2_CD'
         verbose_name = 'F495P2_CD'
         verbose_name_plural = 'F495P2_CD'
+
+    def __unicode__(self):
+        return self.filing_id
 
 
 class DebtCd(CalAccessBaseModel):
@@ -1840,6 +1858,8 @@ class DebtCd(CalAccessBaseModel):
         verbose_name = 'DEBT_CD'
         verbose_name_plural = 'DEBT_CD'
 
+    def __unicode__(self):
+        return self.filing_id
 
 class S496Cd(CalAccessBaseModel):
     """
@@ -1883,6 +1903,9 @@ class S496Cd(CalAccessBaseModel):
         db_table = 'S496_CD'
         verbose_name = 'S496_CD'
         verbose_name_plural = 'S496_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class SpltCd(CalAccessBaseModel):
@@ -1914,7 +1937,9 @@ class SpltCd(CalAccessBaseModel):
         db_table = 'SPLT_CD'
         verbose_name = 'SPLT_CD'
         verbose_name_plural = 'SPLT_CD'
-
+    
+    def __unicode__(self):
+        return self.filing_id
 
 class S497Cd(CalAccessBaseModel):
     """
