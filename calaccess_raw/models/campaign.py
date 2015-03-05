@@ -167,7 +167,12 @@ class Cvr2SoCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
+    FORM_TYPE_CHOICES = (
+        ('F400', 'Cover Page; Stmt of Organization / Slate Mailer Org'),
+        ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org')
+        ('F410', 'Cover Page; Stmt of Organization / Recipient Committee'),
+    )
+    form_type = models.CharField(choices=FORM_TYPE_CHOICES, db_column='FORM_TYPE', max_length=4)
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
     entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
     enty_naml = models.CharField(
