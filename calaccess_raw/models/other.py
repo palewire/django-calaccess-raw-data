@@ -983,6 +983,9 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 
 
 class LookupCode(CalAccessBaseModel):
+    """
+    This table contains the description for all lookup codes used in the system
+    """
     code_type = models.IntegerField(db_column='CODE_TYPE')
     code_id = models.IntegerField(db_column='CODE_ID')
     code_desc = models.CharField(
