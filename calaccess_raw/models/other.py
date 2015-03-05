@@ -875,9 +875,6 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
 
 
 class LobbyistFirm3Cd(CalAccessBaseModel):
-    """
-    This is an undocumented model.
-    """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
@@ -931,6 +928,9 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model
+    """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     filing_id = models.IntegerField(db_column='FILING_ID')
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
