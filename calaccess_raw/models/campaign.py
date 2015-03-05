@@ -170,12 +170,7 @@ class Cvr2SoCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
-    FORM_TYPE_CHOICES = (
-        ('F400', 'Cover Page; Stmt of Organization / Slate Mailer Org'),
-        ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org')
-        ('F410', 'Cover Page; Stmt of Organization / Recipient Committee'),
-    )
-    form_type = models.CharField(choices=FORM_TYPE_CHOICES, db_column='FORM_TYPE', max_length=4)
+    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
     entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
     enty_naml = models.CharField(
@@ -425,20 +420,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         max_length=10L, db_column='FILER_ZIP4', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
-    FORM_TYPE_CHOICES = (
-        ('F511', 'Unknown'),
-        ('F900', 'Unknown'),
-        ('F425', 'Cover Page; Semi Annual Statement of No Activity'),
-        ('F450', 'Cover Page; Recipient Committee'),
-        ('F401', 'Cover Page; Part IV; Verification Information'),
-        ('F498', 'Cover Page; Slate Mailer Late Payments Report'),
-        ('F465', 'Cover Page; Supplemental Independent Expenditure Rpt'),
-        ('F496', 'Cover Page; Late Independent Expenditure Report'),
-        ('F461', 'Cover Page; Ind Expenditure & Major Donor Committee'),
-        ('F460', 'Cover Page; Recipient Committee Campaign Statement'),
-        ('F497', 'Cover Page; Late Contribution Report')
-    )
-    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
+    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
     from_date = models.DateTimeField(
         null=True,
         db_column='FROM_DATE',
@@ -562,7 +544,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
-
+        
     def __unicode__(self):
         return self.filing_id
 
@@ -638,13 +620,7 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         max_length=2L, db_column='F460_PART', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
-    FORM_TYPE_CHOICES = (
-        ('F425', 'Cover Page; Part 1; Assistant Treasurer'),
-        ('F450', 'Cover Page; Part 3; Assistant Treasurer'),
-        ('F465', 'Cover Page; Part V Filing Officer Titles & Addresses'),
-        ('F460', 'Cover Page; Additional Committees, Asst. Treasurer, etc.')
-    )
-    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
+    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
     juris_cd = models.CharField(
         max_length=3L, db_column='JURIS_CD', blank=True
     )
@@ -913,18 +889,7 @@ and Form 401 Schedule A, A-1)"
         db_index=True,
         help_text="Unique filing identification number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F900', 'Unknown'),
-        ('A-1', 'Unknown'),
-        ('E530', 'Unknown'),
-        ('F496P3', 'Contributions of $100 or More Received'),
-        ('F401A', 'Payments Received'),
-        ('I', 'Sched I / Misc. to Cash'),
-        ('C', 'Sched C / Non-monetary'),
-        ('A', 'Sched A / Monetary')
-    )
     form_type = models.CharField(
-        choices=FORM_TYPE_CHOICES,
         max_length=9L,
         db_column='FORM_TYPE',
         help_text="Schedule Name/ID: Sched A, C, I, A-1, F401A"
@@ -1880,6 +1845,9 @@ class S496Cd(CalAccessBaseModel):
         db_table = 'S496_CD'
         verbose_name = 'S496_CD'
         verbose_name_plural = 'S496_CD'
+    
+    def __unicode__(self):
+        return self.filing_id
 
 
 class SpltCd(CalAccessBaseModel):
