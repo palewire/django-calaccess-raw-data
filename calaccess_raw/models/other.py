@@ -4,9 +4,6 @@ from .base import CalAccessBaseModel
 
 
 class AcronymsCd(CalAccessBaseModel):
-    """
-    Contains acronyms and their meaning. 
-    """
     acronym = models.CharField(max_length=40, db_column="ACRONYM")
     stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
     effect_dt = models.DateField(db_column="EFFECT_DT", null=True)
@@ -945,6 +942,9 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
+    """
+    It's an undocumented model.
+    """
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
     lobbyist_last_name = models.CharField(
