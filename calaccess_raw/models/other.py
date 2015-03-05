@@ -489,6 +489,9 @@ class ImageLinksCd(CalAccessBaseModel):
 
 
 class LegislativeSessionsCd(CalAccessBaseModel):
+    """
+    Legislative session, begin and end dates look up table.
+    """
     session_id = models.IntegerField(db_column='SESSION_ID')
     begin_date = models.DateField(db_column='BEGIN_DATE', null=True)
     end_date = models.DateField(db_column='END_DATE', null=True)
