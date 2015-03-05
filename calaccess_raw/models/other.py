@@ -90,6 +90,9 @@ class FilersCd(CalAccessBaseModel):
 
 
 class FilerAcronymsCd(CalAccessBaseModel):
+    """
+    links acronyms to filers
+    """
     acronym = models.CharField(db_column='ACRONYM', max_length=32L)
     filer_id = models.IntegerField(db_column='FILER_ID')
 
