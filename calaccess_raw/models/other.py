@@ -579,6 +579,9 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 
 
 class LobbyistContributions2Cd(CalAccessBaseModel):
+    """
+    Lobbyist contribution disclosure table. Temporary table used to generate disclosure table (Lobbyist Contributions 3)
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT',
