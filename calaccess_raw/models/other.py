@@ -360,7 +360,6 @@ class FilerXrefCd(CalAccessBaseModel):
 
 
 class FilingPeriodCd(CalAccessBaseModel):
-    """List of valid periods, dates, groups and deadline dates."""
     period_id = models.IntegerField(
         db_column='PERIOD_ID',
         help_text="Unique period identification number"
@@ -1064,6 +1063,9 @@ class NamesCd(CalAccessBaseModel):
 
 
 class ReceivedFilingsCd(CalAccessBaseModel):
+    """
+    This is undocumented. J M needs to describe this table.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_file_name = models.CharField(
         db_column='FILING_FILE_NAME', max_length=14
