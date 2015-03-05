@@ -347,6 +347,7 @@ class FilerXrefCd(CalAccessBaseModel):
 
 
 class FilingPeriodCd(CalAccessBaseModel):
+    """List of valid periods, dates, groups and deadline dates."""
     period_id = models.IntegerField(
         db_column='PERIOD_ID',
         help_text="Unique period identification number"
