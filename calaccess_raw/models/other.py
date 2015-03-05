@@ -24,6 +24,10 @@ class AcronymsCd(CalAccessBaseModel):
 
 
 class AddressCd(CalAccessBaseModel):
+    """
+    This table holds all addresses for the system. This table can be used for address 
+    based searches and formes the bases for address information desplayed by the AMS.
+    """
     adrid = models.IntegerField(db_column="ADRID")
     city = models.CharField(max_length=500, db_column="CITY")
     st = models.CharField(max_length=500, db_column="ST")
