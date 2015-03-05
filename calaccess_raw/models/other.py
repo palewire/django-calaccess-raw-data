@@ -868,6 +868,9 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
 
 
 class LobbyistFirm3Cd(CalAccessBaseModel):
+    """
+    Matt needs to describe the relationship between the multiple tables. Documentation should be cloned from D Hs's documentation on these tables. Cox 5/11/2000
+    """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
