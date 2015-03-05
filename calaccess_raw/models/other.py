@@ -407,6 +407,9 @@ class GroupTypesCd(CalAccessBaseModel):
 
 
 class HeaderCd(CalAccessBaseModel):
+    """
+    Lookup table used to report form 460 information in the AMS.
+    """
     line_number = models.IntegerField(db_column='LINE_NUMBER')
     form_id = models.CharField(db_column='FORM_ID', max_length=5)
     rec_type = models.CharField(db_column='REC_TYPE', max_length=11)
