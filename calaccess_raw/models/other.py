@@ -147,6 +147,9 @@ class FilerInterestsCd(CalAccessBaseModel):
 
 
 class FilerLinksCd(CalAccessBaseModel):
+    """
+    This table links filers to other filers in the system by their type of relationship.
+    """
     filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True)
     filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True)
     active_flg = models.CharField(max_length=1L, db_column='ACTIVE_FLG')
@@ -411,6 +414,9 @@ class GroupTypesCd(CalAccessBaseModel):
 
 
 class HeaderCd(CalAccessBaseModel):
+    """
+    Lookup table used to report form 460 information in the AMS.
+    """
     line_number = models.IntegerField(db_column='LINE_NUMBER')
     form_id = models.CharField(db_column='FORM_ID', max_length=5)
     rec_type = models.CharField(db_column='REC_TYPE', max_length=11)
