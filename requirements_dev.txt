@@ -1,4 +1,5 @@
 Django
+mysqlclient
 Sphinx
 coverage
 hurry.filesize
