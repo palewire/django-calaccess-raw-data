@@ -438,6 +438,9 @@ class HeaderCd(CalAccessBaseModel):
 
 
 class HdrCd(CalAccessBaseModel):
+    """
+    Electronic filing record header data
+    """
     amend_id = models.IntegerField(db_column='AMEND_ID')
     cal_ver = models.CharField(max_length=4L, db_column='CAL_VER', blank=True)
     ef_type = models.CharField(max_length=3L, db_column='EF_TYPE', blank=True)
@@ -904,6 +907,9 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
+    '''
+    This is an undocumented model (Ask Matt)
+    '''
     firm_id = models.IntegerField(db_column='FIRM_ID')
     filing_id = models.IntegerField(db_column='FILING_ID')
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
@@ -993,9 +999,6 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 
 
 class LookupCode(CalAccessBaseModel):
-    """
-    This table contains the description for all lookup codes used in the system
-    """
     code_type = models.IntegerField(db_column='CODE_TYPE')
     code_id = models.IntegerField(db_column='CODE_ID')
     code_desc = models.CharField(
