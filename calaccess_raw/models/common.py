@@ -180,6 +180,9 @@ laundering or other special condition."
 
 
 class FilingsCd(CalAccessBaseModel):
+    """
+    This table is the parent table from which all links and association to a filing are derived.
+    """
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     filing_type = models.IntegerField(db_column='FILING_TYPE')
 
