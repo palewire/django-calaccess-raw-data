@@ -758,7 +758,7 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
    
     """ 
-    This shows the number of terminations by lobby firms.
+    This groups terminations by lobby firms.
 
     """
 
