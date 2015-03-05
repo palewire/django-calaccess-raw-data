@@ -699,6 +699,9 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
+    def __unicode__(self):
+        return self.filing_id
+
 
 class RcptCd(CalAccessBaseModel):
     """
