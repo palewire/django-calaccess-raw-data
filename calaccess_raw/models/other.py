@@ -844,7 +844,7 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
 
 class LobbyistFirm2Cd(CalAccessBaseModel):
     """
-    This class is undocumented. You have to ask Matt for a better description.
+    This is an undocumented model.
     """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
