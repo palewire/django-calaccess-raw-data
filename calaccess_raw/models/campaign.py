@@ -545,6 +545,9 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
 
+    def __unicode__(self):
+        return self.filing_id
+
 
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
@@ -1842,9 +1845,6 @@ class S496Cd(CalAccessBaseModel):
         db_table = 'S496_CD'
         verbose_name = 'S496_CD'
         verbose_name_plural = 'S496_CD'
-    
-    def __unicode__(self):
-        return self.filing_id
 
 
 class SpltCd(CalAccessBaseModel):
