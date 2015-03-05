@@ -501,6 +501,9 @@ class HdrCd(CalAccessBaseModel):
 
 
 class ImageLinksCd(CalAccessBaseModel):
+    """
+    This table links images to filers and accounts. 
+    """
     img_link_id = models.IntegerField(db_column='IMG_LINK_ID')
     img_link_type = models.IntegerField(db_column='IMG_LINK_TYPE')
     img_id = models.IntegerField(db_column='IMG_ID')
