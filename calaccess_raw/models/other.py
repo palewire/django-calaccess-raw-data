@@ -40,6 +40,7 @@ class AddressCd(CalAccessBaseModel):
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
+    """ Ballot measures dates and times """
     election_date = models.DateTimeField(db_column='ELECTION_DATE', null=True)
     filer_id = models.IntegerField(db_column='FILER_ID')
     measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
@@ -301,6 +302,9 @@ Populated for Senate, Assembly or Board of Equalization races"
 
 
 class FilerTypesCd(CalAccessBaseModel):
+    """
+    This lookup table describes filer types.
+    """
     filer_type = models.IntegerField(
         db_column='FILER_TYPE',
         help_text="Filer type identification number"
@@ -338,6 +342,9 @@ class FilerTypesCd(CalAccessBaseModel):
 
 
 class FilerXrefCd(CalAccessBaseModel):
+    """
+    This table maps legacy filer identification numbers to the systems filer identification numbers.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     xref_id = models.CharField(max_length=32L, db_column='XREF_ID')
     effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
@@ -499,6 +506,9 @@ class ImageLinksCd(CalAccessBaseModel):
 
 
 class LegislativeSessionsCd(CalAccessBaseModel):
+    """
+    Legislative session, begin and end dates look up table.
+    """
     session_id = models.IntegerField(db_column='SESSION_ID')
     begin_date = models.DateField(db_column='BEGIN_DATE', null=True)
     end_date = models.DateField(db_column='END_DATE', null=True)
@@ -589,6 +599,9 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 
 
 class LobbyistContributions2Cd(CalAccessBaseModel):
+    """
+    Lobbyist contribution disclosure table. Temporary table used to generate disclosure table (Lobbyist Contributions 3)
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT',
@@ -617,6 +630,9 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 
 
 class LobbyistContributions3Cd(CalAccessBaseModel):
+    """
+    Lobbyist contribution disclosure table.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT',
@@ -804,6 +820,9 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     lobbyist_last_name = models.CharField(
