@@ -4,6 +4,9 @@ from .base import CalAccessBaseModel
 
 
 class AcronymsCd(CalAccessBaseModel):
+    """
+    Contains acronyms and their meaning. 
+    """
     acronym = models.CharField(max_length=40, db_column="ACRONYM")
     stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
     effect_dt = models.DateField(db_column="EFFECT_DT", null=True)
@@ -548,9 +551,6 @@ class LobbyingChgLogCd(CalAccessBaseModel):
 
 
 class LobbyistContributions1Cd(CalAccessBaseModel):
-    """
-    lobbyist contribution disclosure table. Temporary table used to generate disclosure table (Lobbyist Contributions 3 )
-    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         null=True,
@@ -839,6 +839,9 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
 
 
 class LobbyistFirm2Cd(CalAccessBaseModel):
+    """
+    This class is undocumented. You have to ask Matt for a better description.
+    """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
@@ -868,6 +871,9 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
 
 
 class LobbyistFirm3Cd(CalAccessBaseModel):
+    """
+    Matt needs to describe the relationship between the multiple tables. Documentation should be cloned from D Hs's documentation on these tables. Cox 5/11/2000
+    """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
@@ -983,6 +989,9 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 
 
 class LookupCode(CalAccessBaseModel):
+    """
+    This table contains the description for all lookup codes used in the system
+    """
     code_type = models.IntegerField(db_column='CODE_TYPE')
     code_id = models.IntegerField(db_column='CODE_ID')
     code_desc = models.CharField(
