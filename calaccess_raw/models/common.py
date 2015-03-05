@@ -191,6 +191,9 @@ class FilingsCd(CalAccessBaseModel):
 
 
 class SmryCd(CalAccessBaseModel):
+    """
+    This table contains all text memos attached to electronic filings.
+    """
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True
