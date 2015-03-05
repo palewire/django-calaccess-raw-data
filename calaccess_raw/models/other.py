@@ -332,6 +332,9 @@ class FilerTypesCd(CalAccessBaseModel):
 
 
 class FilerXrefCd(CalAccessBaseModel):
+    """
+    This table maps legacy filer identification numbers to the systems filer identification numbers.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     xref_id = models.CharField(max_length=32L, db_column='XREF_ID')
     effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
