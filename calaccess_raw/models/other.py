@@ -794,6 +794,9 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     lobbyist_last_name = models.CharField(
