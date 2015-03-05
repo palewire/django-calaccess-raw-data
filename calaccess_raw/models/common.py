@@ -80,6 +80,10 @@ class FilernameCd(CalAccessBaseModel):
 
 
 class FilerFilingsCd(CalAccessBaseModel):
+    """
+    Key table that links filers to their paper, key data entry, legacy, and electronic filings.
+    This table is used as an index to locate filing information.
+    """
     filer_id = models.IntegerField(
         db_column='FILER_ID',
         db_index=True,
@@ -180,6 +184,9 @@ laundering or other special condition."
 
 
 class FilingsCd(CalAccessBaseModel):
+    """
+    This table is the parent table from which all links and association to a filing are derived.
+    """
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     filing_type = models.IntegerField(db_column='FILING_TYPE')
 
@@ -249,6 +256,9 @@ class SmryCd(CalAccessBaseModel):
 
 
 class CvrE530Cd(CalAccessBaseModel):
+    """
+    This table method is undocumented in the print docs.
+    """
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
