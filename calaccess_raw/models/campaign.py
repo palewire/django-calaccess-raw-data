@@ -155,8 +155,8 @@ class CvrSoCd(CalAccessBaseModel):
         db_table = "CVR_SO_CD"
         verbose_name = 'CVR_SO_CD'
         verbose_name_plural = 'CVR_SO_CD'
-
-    def __unicode__(self):
+        
+    def __unicode__ (self):
         return self.filing_id
 
 
