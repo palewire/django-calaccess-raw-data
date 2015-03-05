@@ -40,6 +40,7 @@ class AddressCd(CalAccessBaseModel):
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
+    """ Ballot measures dates and times """
     election_date = models.DateTimeField(db_column='ELECTION_DATE', null=True)
     filer_id = models.IntegerField(db_column='FILER_ID')
     measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
