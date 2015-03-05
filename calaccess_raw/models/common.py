@@ -314,6 +314,9 @@ class CvrE530Cd(CalAccessBaseModel):
 
 
 class TextMemoCd(CalAccessBaseModel):
+    """
+    This table contains all text memos attached to electronic filings.
+    """
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
