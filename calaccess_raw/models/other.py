@@ -101,6 +101,9 @@ class FilerAcronymsCd(CalAccessBaseModel):
 
 
 class FilerAddressCd(CalAccessBaseModel):
+    """
+    Links filers and addresses. This table maintains a history of when addresses change.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     adrid = models.IntegerField(db_column='ADRID')
     effect_dt = models.DateTimeField(
