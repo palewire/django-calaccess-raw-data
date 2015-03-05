@@ -756,6 +756,12 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
+   
+    """ 
+    This groups terminations by lobby firms.
+
+    """
+
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=117)
