@@ -119,6 +119,9 @@ class FilerAddressCd(CalAccessBaseModel):
 
 
 class FilerEthicsClassCd(CalAccessBaseModel):
+    """
+    This table stores lobbyist ethics training dates.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     ethics_date = models.DateTimeField(db_column='ETHICS_DATE', null=True)
