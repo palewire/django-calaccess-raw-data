@@ -663,6 +663,9 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployer1Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
@@ -698,6 +701,9 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployer2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
@@ -733,6 +739,9 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployer3Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
