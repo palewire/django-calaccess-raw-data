@@ -295,6 +295,9 @@ Populated for Senate, Assembly or Board of Equalization races"
 
 
 class FilerTypesCd(CalAccessBaseModel):
+    """
+    This lookup table describes filer types.
+    """
     filer_type = models.IntegerField(
         db_column='FILER_TYPE',
         help_text="Filer type identification number"
