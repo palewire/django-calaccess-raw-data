@@ -670,9 +670,6 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployer2Cd(CalAccessBaseModel):
-
-
-
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
