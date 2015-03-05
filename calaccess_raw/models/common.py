@@ -80,6 +80,10 @@ class FilernameCd(CalAccessBaseModel):
 
 
 class FilerFilingsCd(CalAccessBaseModel):
+    """
+    Key table that links filers to their paper, key data entry, legacy, and electronic filings.
+    This table is used as an index to locate filing information.
+    """
     filer_id = models.IntegerField(
         db_column='FILER_ID',
         db_index=True,
