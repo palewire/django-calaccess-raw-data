@@ -1184,7 +1184,17 @@ class LoanCd(CalAccessBaseModel):
         max_length=3L, db_column='ENTITY_CD', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
-    form_type = models.CharField(max_length=2L, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('F401B-1', 'Payments Made by Agent/Contractor on Behalf of SMO')
+        ('F401C', '"F400" Persons in SMO Receiving $1000 or more')
+        ('F401B', 'Payments Made')
+        ('F401D', 'Candidates/Measurers not on Schedule F401A')
+    )
+    form_type = models.CharField(
+        max_length=2L,
+        db_column='FORM_TYPE',
+        choices=FORM_TYPE_CHOICES
+    )
     intr_adr1 = models.CharField(
         max_length=55L, db_column='INTR_ADR1', blank=True
     )
