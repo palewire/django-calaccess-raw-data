@@ -61,6 +61,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
 
 
 class EfsFilingLogCd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     filing_date = models.DateTimeField(db_column='FILING_DATE', null=True)
     filingstatus = models.IntegerField(db_column='FILINGSTATUS')
     vendor = models.CharField(db_column='VENDOR', max_length=250)
