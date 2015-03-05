@@ -181,6 +181,9 @@ laundering or other special condition."
         db_table = 'FILER_FILINGS_CD'
         verbose_name = 'FILER_FILINGS_CD'
         verbose_name_plural = 'FILER_FILINGS_CD'
+        
+    def __unicode__(self):
+        return unicode("%s %s" % (self.filer_id, self.filing_id))
 
 
 class FilingsCd(CalAccessBaseModel):
