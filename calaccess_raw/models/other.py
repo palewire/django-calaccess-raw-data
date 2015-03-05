@@ -182,6 +182,9 @@ class FilerLinksCd(CalAccessBaseModel):
 
 
 class FilerStatusTypesCd(CalAccessBaseModel):
+    """
+    This is an undocumented model. "JM needs to describe this table. He indicates it is for future use."
+    """
     status_type = models.CharField(
         max_length=11L,
         db_column='STATUS_TYPE',
