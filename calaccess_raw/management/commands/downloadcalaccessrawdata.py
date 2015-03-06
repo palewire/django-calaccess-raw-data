@@ -120,6 +120,13 @@ CAL-ACCESS database'
 
             self.log("Using test data")
 
+            tsv_dir = os.path.join(get_test_download_directory(), "tsv/")
+
+            # if the directory doesn't exist, abort
+            if not os.path.exists(tsv_dir):
+                self.failure("Sampled data tsv directory does not exist at %s" % tsv_dir)
+                return
+
         # Set the options
         self.set_options(*args, **options)
         # Get to work
