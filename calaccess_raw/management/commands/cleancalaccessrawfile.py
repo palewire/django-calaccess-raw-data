@@ -17,6 +17,7 @@ class Command(CalAccessCommand, LabelCommand):
         self.data_dir = get_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
+        self.log_dir = os.path.join(self.data_dir, "log/")
         # Do it
         self.clean(label)
 
@@ -55,6 +56,13 @@ class Command(CalAccessCommand, LabelCommand):
         headers_count = len(headers_list)
         csv_writer.writerow(headers_list)
 
+        has_errors = False;
+        log_rows = [[
+            'Line number',
+            'Headers len',
+            'Fields len',
+            'Line value'
+        ]];
         # Loop through the rest of the data
         line_number = 1
         for tsv_line in tsv_file:
@@ -92,12 +100,43 @@ class Command(CalAccessCommand, LabelCommand):
                             len(headers_list),
                             len(csv_field_list)
                         ))
+                        log_rows.append([
+                            line_number,
+                            len(headers_list),
+                            len(csv_field_list),
+                            ','.join(csv_field_list)
+                        ])
+                        has_errors = True
                         continue
 
             # Write out the row
             csv_writer.writerow(csv_field_list)
             line_number += 1
-
+        # Log errors if there are any
+        if has_errors is True:
+            msg = '%s had %s errors'
+            self.failure(msg % (
+                name,
+                len(log_rows) - 1
+            ))
+            self.log_errors(name,log_rows)
         # Shut it down
         tsv_file.close()
         csv_file.close()
+
+    def log_errors(self, name, rows):
+        """
+        Log any errors to a csv file
+        """
+        # Log writer
+        log_path = os.path.join(
+            self.log_dir,
+            name.lower().replace("tsv", "errors.csv")
+        )
+        log_file = open(log_path, 'wb')
+        log_writer = csv.writer(log_file, quoting=csv.QUOTE_ALL)
+        for row in rows:
+            # replace non-ascii characters with ?
+            row = [unicode(x).encode('ascii','replace') for x in row]
+            log_writer.writerow(row)
+        log_file.close()

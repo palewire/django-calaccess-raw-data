@@ -156,6 +156,9 @@ class CvrSoCd(CalAccessBaseModel):
         verbose_name = 'CVR_SO_CD'
         verbose_name_plural = 'CVR_SO_CD'
 
+    def __unicode__(self):
+        return self.filing_id
+
 
 class Cvr2SoCd(CalAccessBaseModel):
     """
@@ -167,7 +170,12 @@ class Cvr2SoCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
+    FORM_TYPE_CHOICES = (
+        ('F400', 'Cover Page; Stmt of Organization / Slate Mailer Org'),
+        ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org')
+        ('F410', 'Cover Page; Stmt of Organization / Recipient Committee'),
+    )
+    form_type = models.CharField(choices=FORM_TYPE_CHOICES, db_column='FORM_TYPE', max_length=4)
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
     entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
     enty_naml = models.CharField(
@@ -242,6 +250,9 @@ class Cvr2SoCd(CalAccessBaseModel):
         db_table = 'CVR2_SO_CD'
         verbose_name = 'CVR2_SO_CD'
         verbose_name_plural = 'CVR2_SO_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
@@ -414,7 +425,20 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         max_length=10L, db_column='FILER_ZIP4', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
-    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('F511', 'Unknown'),
+        ('F900', 'Unknown'),
+        ('F425', 'Cover Page; Semi Annual Statement of No Activity'),
+        ('F450', 'Cover Page; Recipient Committee'),
+        ('F401', 'Cover Page; Part IV; Verification Information'),
+        ('F498', 'Cover Page; Slate Mailer Late Payments Report'),
+        ('F465', 'Cover Page; Supplemental Independent Expenditure Rpt'),
+        ('F496', 'Cover Page; Late Independent Expenditure Report'),
+        ('F461', 'Cover Page; Ind Expenditure & Major Donor Committee'),
+        ('F460', 'Cover Page; Recipient Committee Campaign Statement'),
+        ('F497', 'Cover Page; Late Contribution Report')
+    )
+    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
     from_date = models.DateTimeField(
         null=True,
         db_column='FROM_DATE',
@@ -539,6 +563,9 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
 
+    def __unicode__(self):
+        return self.filing_id
+
 
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
@@ -611,7 +638,13 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         max_length=2L, db_column='F460_PART', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
-    form_type = models.CharField(max_length=4L, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('F425', 'Cover Page; Part 1; Assistant Treasurer'),
+        ('F450', 'Cover Page; Part 3; Assistant Treasurer'),
+        ('F465', 'Cover Page; Part V Filing Officer Titles & Addresses'),
+        ('F460', 'Cover Page; Additional Committees, Asst. Treasurer, etc.')
+    )
+    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
     juris_cd = models.CharField(
         max_length=3L, db_column='JURIS_CD', blank=True
     )
@@ -665,6 +698,9 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
         verbose_name = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
+
+    def __unicode__(self):
+        return self.filing_id
 
 
 class RcptCd(CalAccessBaseModel):
@@ -880,7 +916,18 @@ and Form 401 Schedule A, A-1)"
         db_index=True,
         help_text="Unique filing identification number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F900', 'Unknown'),
+        ('A-1', 'Unknown'),
+        ('E530', 'Unknown'),
+        ('F496P3', 'Contributions of $100 or More Received'),
+        ('F401A', 'Payments Received'),
+        ('I', 'Sched I / Misc. to Cash'),
+        ('C', 'Sched C / Non-monetary'),
+        ('A', 'Sched A / Monetary')
+    )
     form_type = models.CharField(
+        choices=FORM_TYPE_CHOICES,
         max_length=9L,
         db_column='FORM_TYPE',
         help_text="Schedule Name/ID: Sched A, C, I, A-1, F401A"
@@ -1184,7 +1231,17 @@ class LoanCd(CalAccessBaseModel):
         max_length=3L, db_column='ENTITY_CD', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
-    form_type = models.CharField(max_length=2L, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('F401B-1', 'Payments Made by Agent/Contractor on Behalf of SMO')
+        ('F401C', '"F400" Persons in SMO Receiving $1000 or more')
+        ('F401B', 'Payments Made')
+        ('F401D', 'Candidates/Measurers not on Schedule F401A')
+    )
+    form_type = models.CharField(
+        max_length=2L,
+        db_column='FORM_TYPE',
+        choices=FORM_TYPE_CHOICES
+    )
     intr_adr1 = models.CharField(
         max_length=55L, db_column='INTR_ADR1', blank=True
     )
@@ -1813,6 +1870,13 @@ class S496Cd(CalAccessBaseModel):
         max_length=20L, db_column='MEMO_REFNO', blank=True
     )
     date_thru = models.DateField(db_column='DATE_THRU', null=True)
+
+    def __unicode__(self):
+        return "{} Filing {}, Amendment {}".format(
+            self.form_type,
+            self.filing_id,
+            self.amend_id
+        )
 
     class Meta:
         app_label = 'calaccess_raw'

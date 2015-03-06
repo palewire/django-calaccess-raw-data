@@ -4,6 +4,9 @@ from .base import CalAccessBaseModel
 
 
 class AcronymsCd(CalAccessBaseModel):
+    """
+    Contains acronyms and their meaning.
+    """
     acronym = models.CharField(max_length=40, db_column="ACRONYM")
     stands_for = models.CharField(max_length=4, db_column="STANDS_FOR")
     effect_dt = models.DateField(db_column="EFFECT_DT", null=True)
@@ -21,6 +24,10 @@ class AcronymsCd(CalAccessBaseModel):
 
 
 class AddressCd(CalAccessBaseModel):
+    """
+    This table holds all addresses for the system. This table can be used for address 
+    based searches and formes the bases for address information desplayed by the AMS.
+    """
     adrid = models.IntegerField(db_column="ADRID")
     city = models.CharField(max_length=500, db_column="CITY")
     st = models.CharField(max_length=500, db_column="ST")
@@ -37,6 +44,7 @@ class AddressCd(CalAccessBaseModel):
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
+    """ Ballot measures dates and times """
     election_date = models.DateTimeField(db_column='ELECTION_DATE', null=True)
     filer_id = models.IntegerField(db_column='FILER_ID')
     measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
@@ -86,6 +94,9 @@ class FilersCd(CalAccessBaseModel):
 
 
 class FilerAcronymsCd(CalAccessBaseModel):
+    """
+    links acronyms to filers
+    """
     acronym = models.CharField(db_column='ACRONYM', max_length=32L)
     filer_id = models.IntegerField(db_column='FILER_ID')
 
@@ -144,6 +155,9 @@ class FilerInterestsCd(CalAccessBaseModel):
 
 
 class FilerLinksCd(CalAccessBaseModel):
+    """
+    This table links filers to other filers in the system by their type of relationship.
+    """
     filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True)
     filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True)
     active_flg = models.CharField(max_length=1L, db_column='ACTIVE_FLG')
@@ -168,6 +182,9 @@ class FilerLinksCd(CalAccessBaseModel):
 
 
 class FilerStatusTypesCd(CalAccessBaseModel):
+    """
+    This is an undocumented model. "JM needs to describe this table. He indicates it is for future use."
+    """
     status_type = models.CharField(
         max_length=11L,
         db_column='STATUS_TYPE',
@@ -295,6 +312,9 @@ Populated for Senate, Assembly or Board of Equalization races"
 
 
 class FilerTypesCd(CalAccessBaseModel):
+    """
+    This lookup table describes filer types.
+    """
     filer_type = models.IntegerField(
         db_column='FILER_TYPE',
         help_text="Filer type identification number"
@@ -332,6 +352,9 @@ class FilerTypesCd(CalAccessBaseModel):
 
 
 class FilerXrefCd(CalAccessBaseModel):
+    """
+    This table maps legacy filer identification numbers to the systems filer identification numbers.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     xref_id = models.CharField(max_length=32L, db_column='XREF_ID')
     effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
@@ -407,6 +430,9 @@ class GroupTypesCd(CalAccessBaseModel):
 
 
 class HeaderCd(CalAccessBaseModel):
+    """
+    Lookup table used to report form 460 information in the AMS.
+    """
     line_number = models.IntegerField(db_column='LINE_NUMBER')
     form_id = models.CharField(db_column='FORM_ID', max_length=5)
     rec_type = models.CharField(db_column='REC_TYPE', max_length=11)
@@ -434,6 +460,9 @@ class HeaderCd(CalAccessBaseModel):
 
 
 class HdrCd(CalAccessBaseModel):
+    """
+    Electronic filing record header data
+    """
     amend_id = models.IntegerField(db_column='AMEND_ID')
     cal_ver = models.CharField(max_length=4L, db_column='CAL_VER', blank=True)
     ef_type = models.CharField(max_length=3L, db_column='EF_TYPE', blank=True)
@@ -472,6 +501,9 @@ class HdrCd(CalAccessBaseModel):
 
 
 class ImageLinksCd(CalAccessBaseModel):
+    """
+    This table links images to filers and accounts. 
+    """
     img_link_id = models.IntegerField(db_column='IMG_LINK_ID')
     img_link_type = models.IntegerField(db_column='IMG_LINK_TYPE')
     img_id = models.IntegerField(db_column='IMG_ID')
@@ -486,6 +518,9 @@ class ImageLinksCd(CalAccessBaseModel):
 
 
 class LegislativeSessionsCd(CalAccessBaseModel):
+    """
+    Legislative session, begin and end dates look up table.
+    """
     session_id = models.IntegerField(db_column='SESSION_ID')
     begin_date = models.DateField(db_column='BEGIN_DATE', null=True)
     end_date = models.DateField(db_column='END_DATE', null=True)
@@ -576,6 +611,9 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 
 
 class LobbyistContributions2Cd(CalAccessBaseModel):
+    """
+    Lobbyist contribution disclosure table. Temporary table used to generate disclosure table (Lobbyist Contributions 3)
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT',
@@ -604,6 +642,9 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 
 
 class LobbyistContributions3Cd(CalAccessBaseModel):
+    """
+    Lobbyist contribution disclosure table.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT',
@@ -632,6 +673,9 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployer1Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
@@ -667,6 +711,9 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployer2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
@@ -702,6 +749,9 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployer3Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=162)
@@ -737,6 +787,9 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=117)
@@ -753,6 +806,9 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=117)
@@ -788,6 +844,9 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     lobbyist_last_name = models.CharField(
@@ -836,6 +895,9 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
 
 
 class LobbyistFirm2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=60)
@@ -894,6 +956,9 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
+    '''
+    This is an undocumented model (Ask Matt)
+    '''
     firm_id = models.IntegerField(db_column='FIRM_ID')
     filing_id = models.IntegerField(db_column='FILING_ID')
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
@@ -918,6 +983,9 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
+    """
+    This is an undocumented model
+    """
     firm_id = models.IntegerField(db_column='FIRM_ID')
     filing_id = models.IntegerField(db_column='FILING_ID')
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
@@ -942,6 +1010,9 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
 
 
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
+    """
+    It's an undocumented model.
+    """
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
     lobbyist_last_name = models.CharField(
@@ -1017,6 +1088,9 @@ class NamesCd(CalAccessBaseModel):
 
 
 class ReceivedFilingsCd(CalAccessBaseModel):
+    """
+    This is undocumented. J M needs to describe this table.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_file_name = models.CharField(
         db_column='FILING_FILE_NAME', max_length=14
