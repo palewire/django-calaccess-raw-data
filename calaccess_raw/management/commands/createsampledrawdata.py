@@ -1,7 +1,7 @@
 import os
 import shutil
 from optparse import make_option
-from calaccess_raw import get_download_directory
+from calaccess_raw import get_download_directory, get_test_download_directory
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
 
@@ -26,12 +26,14 @@ class Command(CalAccessCommand, LabelCommand):
         self.sample_rows = int(options['samplerows'])
         self.log("sample rows is %i" % self.sample_rows)
 
-        self.data_dir = get_download_directory()
+        self.data_dir       = get_download_directory()
+        self.test_data_dir  = get_test_download_directory()
 
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-        self.sample_dir = os.path.join(self.data_dir, "sampled/")
+        self.tsv_dir        = os.path.join(self.data_dir, "tsv/")
+        self.sample_dir     = os.path.join(self.test_data_dir, "tsv/")
 
-        # make sure sample dir is empty
+        # make sure sample dir exists and is empty
+        os.path.exists(self.test_data_dir) or os.mkdir(self.test_data_dir)
         os.path.exists(self.sample_dir) and shutil.rmtree(self.sample_dir)
         os.mkdir(self.sample_dir)
 
