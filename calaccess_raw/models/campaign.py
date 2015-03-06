@@ -172,7 +172,7 @@ class Cvr2SoCd(CalAccessBaseModel):
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     FORM_TYPE_CHOICES = (
         ('F400', 'Cover Page; Stmt of Organization / Slate Mailer Org'),
-        ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org')
+        ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org'),
         ('F410', 'Cover Page; Stmt of Organization / Recipient Committee'),
     )
     form_type = models.CharField(choices=FORM_TYPE_CHOICES, db_column='FORM_TYPE', max_length=4)
@@ -1238,10 +1238,10 @@ class LoanCd(CalAccessBaseModel):
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
     FORM_TYPE_CHOICES = (
-        ('F401B-1', 'Payments Made by Agent/Contractor on Behalf of SMO')
-        ('F401C', '"F400" Persons in SMO Receiving $1000 or more')
-        ('F401B', 'Payments Made')
-        ('F401D', 'Candidates/Measurers not on Schedule F401A')
+        ('F401B-1', 'Payments Made by Agent/Contractor on Behalf of SMO'),
+        ('F401C', '"F400" Persons in SMO Receiving $1000 or more'),
+        ('F401B', 'Payments Made'),
+        ('F401D', 'Candidates/Measurers not on Schedule F401A'),
     )
     form_type = models.CharField(
         max_length=2L,
