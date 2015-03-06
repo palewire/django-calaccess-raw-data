@@ -198,6 +198,9 @@ class FilingsCd(CalAccessBaseModel):
         db_table = 'FILINGS_CD'
         verbose_name = 'FILINGS_CD'
         verbose_name_plural = 'FILINGS_CD'
+        
+    def __unicode__(self):
+        return unicode("%s %s" % (self.filing_id, self.filing_type))
 
 
 class SmryCd(CalAccessBaseModel):
