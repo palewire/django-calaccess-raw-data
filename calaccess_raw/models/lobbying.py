@@ -724,6 +724,9 @@ class LattCd(CalAccessBaseModel):
         verbose_name = 'LATT_CD'
         verbose_name_plural = 'LATT_CD'
 
+    def __unicode__(self):
+        return self.filing_id
+
 
 class LexpCd(CalAccessBaseModel):
     """
