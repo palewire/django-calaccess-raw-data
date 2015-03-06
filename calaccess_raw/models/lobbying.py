@@ -229,6 +229,9 @@ class CvrRegistrationCd(CalAccessBaseModel):
         db_table = 'CVR_REGISTRATION_CD'
         verbose_name = 'CVR_REGISTRATION_CD'
         verbose_name_plural = 'CVR_REGISTRATION_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class Cvr2RegistrationCd(CalAccessBaseModel):
@@ -280,6 +283,9 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         db_table = 'CVR2_REGISTRATION_CD'
         verbose_name = 'CVR2_REGISTRATION_CD'
         verbose_name_plural = 'CVR2_REGISTRATION_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
@@ -437,7 +443,9 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR_LOBBY_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_LOBBY_DISCLOSURE_CD'
 
-
+    def __unicode__(self):
+        return self.filing_id
+        
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
     Additional names data for the lobbyist disclosure forms
@@ -487,6 +495,9 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
         verbose_name = 'CVR2_LOBBY_DISCLOSURE_CD'
         verbose_name_plural = 'CVR2_LOBBY_DISCLOSURE_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
 
 
 class LobbyAmendmentsCd(CalAccessBaseModel):
