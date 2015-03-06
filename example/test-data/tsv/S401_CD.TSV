@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	AGENT_NAML	AGENT_NAMF	AGENT_NAMT	AGENT_NAMS	PAYEE_NAML	PAYEE_NAMF	PAYEE_NAMT	PAYEE_NAMS	PAYEE_CITY	PAYEE_ST	PAYEE_ZIP4	AMOUNT	AGGREGATE	EXPN_DSCR	CAND_NAML	CAND_NAMF	CAND_NAMT	CAND_NAMS	OFFICE_CD	OFFIC_DSCR	JURIS_CD	JURIS_DSCR	DIST_NO	OFF_S_H_CD	BAL_NAME	BAL_NUM	BAL_JURIS	SUP_OPP_CD	MEMO_CODE	MEMO_REFNO	BAKREF_TID
+667321	0	476	S401	F401D	ENT549					Woodbury	Glenn						0			Glenn Woodbury				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	VENTURA	4					S			
+675728	0	428	S401	F401D	ENT607					Thornton	Mark						0			Mark Thornton				SUP		OTH	TUOLUMNE	4					S			
+675728	0	442	S401	F401D	ENT371					Walters	Mimi						0			Mimi Walters				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	ORANGE	73					S			
+592474	1	25	S401	F401D	ENT264					Huchel	Richard						0			Richard Huchel				OTH	Central Committee	OTH	San Diego County	73					S			
+592474	1	47	S401	F401D	ENT265					Mercy	Andrew G.						0			Andrew G. Mercy				OTH	Central Committee	OTH	Yolo County	2					S			
+592474	1	63	S401	F401D	ENT219					Udinsky	Jerald						0			Jerald Udinsky				ASM		ASM		14					S			
+637960	0	8	S401	F401B	EXP208					Pacific Admail				Santa Ana	CA	92704	109506.72	0	Literature																	
+669272	0	263	S401	F401D	ENT160					Martinez	Mary						0			Mary Lou Martinez				ASM				62					S			
+669272	0	274	S401	F401D	ENT467					McNiel	Lois						0			Lois McNiel				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	SANTA BARBARA	1					S			
+669272	0	306	S401	F401D	ENT277					Naldjian	Jack						0			Jack Naldjian				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES	44					S			
+669320	0	6	S401	F401B	B15					John G. Schroeder for Judge				Cupertino	CA	95015-1507	2500		Refund of Slate Mailer Payment																	
+669365	0	3	S401	F401B	EXP225					U.S. Postmaster				San Diego	CA	92119	14.88	0																		
+676642	0	58	S401	F401D	ENT659					Runner	George						0			Geroge Runner				ASM		ASM		36	S				S			
+644239	0	51	S401	F401D	ENT317					Feinstein	Dianne						0			Dianne Feinstein				OTH	U.S. Senate								S			
+641891	0	23	S401	F401D	ENT217					Proposition 23							0													Proposition 23	23	Statewide	O			
+641899	0	7	S401	F401B	EXP39					U.S.Postal Service				Los Angeles	CA		29000	0	Postage																	
+675927	0	8	S401	F401B	EXP103					Willard H. Murray Jr. Company				Los Angeles	CA	90071	5000	0	Consulting Services																	
+676389	0	3	S401	F401B	EXP1845					Conon Corporation				Los Angeles	CA	90025	1100	0	Consulting Services																	
+676389	0	7	S401	F401B	EXP1857					Interon				Lake Forest	CA	92630	1450	0	Computer Programming																	
+676389	0	8	S401	F401B	EXP1836					Jenlax Partners Inc				Santa Monica	CA	90403	5000	0	Management Fees																	
+676389	0	12	S401	F401B	EXP1897					King	Dorla			Long Beach	CA	90803	100	0	Telephone Sales																	
+644732	0	57	S401	F401D	ENT175					Committee to Elect Melanie Howell Judge				Oroville	CA	95965	0			Melanie Howell				SCJ		OTH	Butte	3					S			
+643542	0	43	S401	F401D	ENT68					Proposition 16							0			Proposition 16													S			
+643994	0	2	S401	F401B	EXP79					All Direct Mail				North Hollywood	CA	91605	63750	0	Postage & Mailing																	
+643994	0	11	S401	F401B	EXP87					Huebscher	Fred			Hermosa Beach	CA	90254	20000	0	Consulting Fee																	
+643994	0	17	S401	F401B	EXP88					Levander	Robin			Santa Rosa	CA	95404	20000	0	Consulting Fee																	
+643994	0	37	S401	F401D	ENT122					Cox	Christopher						0			Christopher Cox				OTH	U.S. House Of Representatives			47					S			
+669272	0	105	S401	F401D	ENT427					Derry	Neil						0			Neil Derry				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	SAN BERNADIN	63					S			
+667321	0	296	S401	F401D	ENT547					Millhouse	Keith						0			Keith F. Millhouse				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	VENTURA	4					S			
+644732	0	255	S401	F401D	ENT333					Tarman	A.J.						0			A.J. Tarman				OTH	Republican Central Committee	OTH	Santa Barbara County	2					S			
+644732	0	258	S401	F401D	ENT395					Thomas	Gerti						0			Gerti Thomas				OTH	Republican Central Committee	OTH	Alameda County	14					S			
+644732	0	259	S401	F401D	ENT345					Thomas	Loretta						0			Loretta Thomas				OTH	Republican Central Committee	OTH	Santa Barbara County	5					S			
+643994	0	62	S401	F401D	ENT96					Leonard	Bill						0			Bill Leonard				ASM				63					S			
+643994	0	70	S401	F401D	ENT106					Mckeon	Howard						0			Howard McKeon				OTH	U.S. House Of Representatives			25					S			
+637960	0	84	S401	F401D	ENT297					Medina	Jose						0			Joe Medina					AD 64								S			
+644239	0	82	S401	F401D	ENT305					McHugh	Peter						0			Peter McHugh				BSU	Santa Clara			3					S			
+669272	0	329	S401	F401D	ENT402					Paniagua	Armando						0			Armando A. Paniagua				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	RIVERSIDE	3					S			
+669061	0	2	S401	F401B	EXP251					Cheetah Express				Los Angeles	CA	90010	64	0	Messenger Service																	
+669061	0	25	S401	F401C	EXP216					David L. Gould Company				Los Angeles	CA	90071	148.29	4593.63	Expenses thru 8/20/00																	
+665539	0	39	S401	F401B	EXP114					Seedborg	Jerry	Mr.		Long Beach	CA	90808	5000	0																		
+644239	0	92	S401	F401D	ENT236					Pacheco	Robert						0			Robert Pacheco				ASM				60					S			
+644280	0	16	S401	F401D	ENT201					Tuccelli	Russell A.			Citrus Hieghts	CA	95610	0																S			
+642264	0	23	S401	F401D	ENT129					Dominguez	Francisco						0			Francisco Dominguez				CSU	Ventura County			5					S			
+642264	0	27	S401	F401D	ENT119					Firebaugh	Marco Antonio						0			Marco Antonio Firebaugh				ASM				50					S			
+669600	0	48	S401	F401D	ENT59					COMMITTEE TO ELECT BARRY PASTERNACK				RAMONA	CA	92065	0			BARRY PASTERNACK				OTH	UNIFIED SCHOOL DISTRICT	OTH	CITY OF RAMONA						S			
+669152	0	34	S401	F401B	EXP1385					Postal Center				Torrance	CA	90501	90	0	Postal box rental																	
+667321	0	173	S401	F401D	ENT252					Greig	Celeste						0			Celeste Greig				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES COUNTY	38					S			
+644732	0	70	S401	F401D	ENT367					Derdivanis	Maryn						0			Maryn Derdivanis				OTH	Republican Central Committee	OTH	Monterey County	2					S			
+644732	0	107	S401	F401D	ENT403					Gunther	James						0			James Gunther				OTH	Republican Central Committee	OTH	Alameda County	20					S			
+675728	0	79	S401	F401D	ENT500					Catalano	Vincent						0			Vincent T. Catalano				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	SANTA CRUZ	4					S			
+592474	0	32	S401	F401D	ENT251					Knight	William J.						0			William J. 'Pete' Knight				SEN		SEN		17					S			
+592474	0	33	S401	F401D	ENT220					Leach	Lynne C.						0			Lynne C. Leach				ASM		ASM		15					S			
+667321	0	399	S401	F401D	ENT530					Shannon	Rick						0			Rick Shannon				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	TULARE	3					S			
+675599	0	4	S401	F401B	EXP544					Gray	Christopher			Fremont	CA	94539	1500	0	Consulting Fee																	
+644037	0	8	S401	F401B	EXP203					Jenlax Partners Inc.				Torrance	CA	90501	11000	0	Consulting services																	
+644039	0	1	S401	F401B	EXP60					All Direct Mail				North Hollywood	CA	91605	63750	0	Postage & Mailing																	
+644039	0	19	S401	F401B-1	EDT4	OTH	Robin			Costill Graphics Inc.				Santa Rosa	CA	95401	349.38	0	Artwork/graphics																	EXP68
+637960	0	115	S401	F401D	ENT296					Stotz	Scott						0			Scott Stotz					AD 63								S			
+637960	0	132	S401	F401D	ENT287					Wright	Roderick						0			Roderick Wright					AD 48								S			
+669272	0	367	S401	F401D	ENT523					Rose	James						0			James Rose				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	SHASTA	5					S			
+669272	0	373	S401	F401D	ENT338					Royce	Ed						0			Ed Royce Sr.				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	ORANGE	68					S			
+669272	0	381	S401	F401D	ENT336					Sanford	E.F.						0			E.F. Sanford				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	ORANGE	67					S			
+665539	0	72	S401	F401C	EXP128					Seedborg	Jerry	Mr.		Long Beach	CA	90808	1000	102050																		
+667321	0	6	S401	F401B	EXP130					NO NEW TAXES - A PROJECT OF HOWARD JARVIS TAXPAYER'S ASSOC.				LOS ANGELES	CA	90005	687.02	0	REFUND																	
+642264	0	60	S401	F401D	ENT90					Waters	Maxine						0			Maxine Waters				OTH	U.S. House Of Representatives			35					S			
+643056	0	27	S401	F401C	EXP394					David L. Gould Company				Los Angeles	CA	90071	217.50	9543.66	Professional Services																	
+643056	0	51	S401	F401D	ENT300					Cardoza	Dennis						0			Dennis Cardoza				ASM				26					S			
+675728	0	157	S401	F401D	ENT526					Gomez	Michael						0			Michael Gomez				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	SOLANO COUNTY	2					S			
+675728	0	167	S401	F401D	ENT249					Hall	Thomas						0			Thomas 'Randy' Hall				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES COUNTY	36					S			
+669202	0	14	S401	F401C	EXP176					Moran & Associates (Kelley Moran)				Folsom	CA	95630	5000	165000	Professional Management																	
+644732	0	160	S401	F401D	ENT477					Lopez	Lou						0			Lou Lopez				ASM		ASM		69					S			
+675728	0	209	S401	F401D	ENT282					Jett	Beatrice						0			Beatrice Jett				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES	47					S			
+675728	0	210	S401	F401D	ENT404					Johnson	Frances						0			Frances Lee Johnson				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	RIVERSIDE	3					S			
+592474	0	49	S401	F401D	ENT238					Pacheco	Robert						0			Robert Pacheco				ASM		ASM		60					S			
+669272	0	220	S401	F401D	ENT293					Katherman	Robert						0			Robert Katherman				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES	54					S			
+669272	0	231	S401	F401D	ENT383					Konrad	Janet						0			Janet Konrad				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	PLACER	3					S			
+667321	0	432	S401	F401D	ENT189					Thomas	Gerti						0			Gerti B. Thomas				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	ALAMEDA	14					S			
+675728	0	300	S401	F401D	ENT281					Morris	Kent						0			Kent Morris				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES	47					S			
+641502	0	29	S401	F401C	EXP173					Renee Nahum				Los Angeles	CA	90039	2000	22000	Consulting Fee																	
+641502	0	35	S401	F401D	ENT159					Archer	Dion Louise						0			Dion Louise Archer				SEN				14					S			
+669272	0	445	S401	F401D	ENT450					Ward	Bob						0			Bob Ward				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	SAN DIEGO	75					S			
+669272	0	446	S401	F401D	ENT527					Warning	Lois						0			Lois Warning				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	TULARE	2					S			
+644700	0	7	S401	F401B	EXP296					Nagata Design				Gardena	CA	90248	243.50	0	Art Design																	
+643056	0	78	S401	F401D	ENT307					Jackson	Hannah Beth						0			Hannah Beth Jackson				ASM				35					S			
+643056	0	113	S401	F401D	ENT281					Salazar	Treena						0			Treena Salazar				ASR									S			
+675728	0	368	S401	F401D	ENT593					Roudebush	Fran						0			Fran Roudebush				CSU		OTH	PLUMAS	1					S			
+669272	0	52	S401	F401D	ENT495					Breiling	Ludwig						0			Ludwig P. Breiling				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	SANTA CRUZ	2					S			
+669272	0	71	S401	F401D	ENT377					Campbell	Ken						0			Ken Campbell				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES	2					S			
+667321	0	275	S401	F401D	ENT254					McCubbins	Michael						0			Michael McCubbins				OTH	REPUBLICAN CENTRAL COMMITTEE	OTH	LOS ANGELES	38					S			
+644732	0	217	S401	F401D	ENT312					Richardson	Jackie						0			Jackie Richardson				OTH	Republican Central Committee	OTH	Ventura County	4					S			
+849354	0	11	S401	F401B	EXP531					Renee Nahum				Los Angeles	CA	90039	2000	0	Consulting Fee																	
+719700	0	30	S401	F401D	ENT96					Duvall Committee							0												S				S			
+736751	0	6	S401	F401C	EXP147					Nahum	Renee			Los Angeles	CA	90039	2000	4000	Consulting Fee																	
+820714	0	2	S401	F401B	EXP661					Garrett	Patricia			Newport Beach	CA	92663-2737	367.50	0	Commission																	
+850489	0	9	S401	F401B	EXP781					Huebscher	Fred			Hermosa Beach	CA	90254	2700	0	Consulting Fee																	
+850490	0	2	S401	F401B	EXP91					All Direct Mail Services				North Hollywood	CA	91605	1400	0	Mailing Services																	
+772302	0	4	S401	F401C	EXP407					Moran & Associates (Kelley Moran)				Folsom	CA	95630	10000	55000	Professional Management																	
+773454	0	1	S401	F401B	EXP304					Bagatelos & Fadem				San Francisco	CA	94108	725.32	0	Legal Fees																	
+803640	0	24	S401	F401B	EXP269					Lord-Butcher Company				La Jolla	CA	92037	2812.50	0	Consulting Fee																	
+803698	0	6	S401	F401B	EXP932					David L. Gould Company				Los Angeles	CA	90071	187.50	0	Prof. Services																	
+803698	0	12	S401	F401B	EXP933					Kaptain	Thomas			Burbank	CA	91506	2500	0	Consulting Fee																	
+706758	0	85	S401	F401D	ENT767					Joe Dutra							0			Joe Dutra					AD 20								S			
+669600	1	8	S401	F401B	EXP22					CAPITOLO	MARK			SACRAMENTO	CA	95816	1813.74	0	PAYROLL																	
+669600	1	19	S401	F401B	EXP70					EMPLOYMENT DEVELOPMENT DEPARTMENT				SACRAMENTO	CA	95814	188	0	STATE PAYROLL TAXES																	
+677806	0	33	S401	F401D	NM69D					Gallegly	Elton									Gallegly	Elton				U.S. House of Representatives								S			
+669600	2	1	S401	F401B	EXP101					BARNES MOSHER WHITEHURST & PARTNERS				SAN FRANCISCO	CA	94102	245.08	0	SEE SCHEDULE B-1																	
+677049	1	24	S401	F401D	ENT460					ALPERT FOR SENATE							0			DEDE ALPERT				OTH	Senate Dist 39 - Payment Pending								S			
+677049	1	33	S401	F401D	ENT94					BRIAN CALHOUN FOR CITY COUNCIL				FRESNO	CA	93711	0			BRIAN CALHOUN				CCM		OTH	FRESNO						S			
+677049	1	52	S401	F401D	ENT463					Chan for Assembly							0			WILMA CHAN				OTH	Assembly Dist 16 - Payment Pending								S			
+706758	0	114	S401	F401D	ENT802					Meline Hall							0			Meline Hall					AD 59								S			
+710497	0	12	S401	F401B	EXP403					Renee Nahum				Los Angeles	CA	90039	2000	0	Consulting																	
+712022	0	7	S401	F401C	EXP222					David L. Gould Company				Los Angeles	CA	90071	176.33	2849.47	Office Expenses																	
+716731	0	43	S401	F401D	ENT97					Yes On Proposition 33							0			Yes On Proposition 33													S			
+716734	0	1	S401	F401B	EXP450					Boling	C. April			San Diego	CA	92119	5000	0	Professional Services																	
+716734	0	35	S401	F401D	ENT118					Julie Dubick for School Board				San Diego	CA	92119	0			Julie Dubick				BED		OTH	San Diego Unified School Dist	A					S			
+718327	0	1	S401	F401B	EXP350					American Lithographers				Sacramento	CA	95818	37355	0	Printing Postage																	
+719004	0	79	S401	F401D	ENT273					Matheis	Mary Aileen						0			Mary Aileen Matheis				OTH	Irvine Ranch Water Board								S			
+719004	0	96	S401	F401D	ENT261					Petersen	Jon						0			Jon Petersen				BED		OTH	Escondido High School						S			
+719004	0	104	S401	F401D	ENT256					Rohrabacher	Dana						0			Dana Rohrabacher				OTH	Congress			45					S			
+721384	0	1	S401	F401B	EXP236					AMS Response				Paramount	CA	90703	84605.14	0	Production And Postage																	
+721384	0	3	S401	F401D	ENT237					Feinstein	Dianne						0			Dianne Feinstein				OTH	U.S. Senator								S			
+731617	0	10	S401	F401C	EXP764					Kaptain	Thomas			Burbank	CA	91506	3000	11000	Consulting Services (Repayment of Loan Received)																	
+733130	0	1	S401	F401B	NM34B					Clark	Sean R.			Oxnard	CA	93035	2171.32		Net Payroll																	
+733130	0	3	S401	F401B	NM74B					Casino Color Network of CA				West Hills	CA	91307	11166.69		Printing																	
+758863	0	24	S401	F401D	ENT666					Alex Padilla							0			Alex Padilla				CCM		OTH	City of Los Angeles	7					S			
+759419	0	2	S401	F401B	EXP509					Federal Express				Memphis	TN	38118	64.52	0	POS																	
+767665	0	9	S401	F401B	EXP175					Rex	Michelle			Canyon Country	CA	91351	2000	0	Conulting Fee																	
+768659	0	8	S401	F401B	EXP219					Bank Of America				Los Angeles	CA	90017	10	0	Service Charge																	
+788095	0	2	S401	F401B	EXP205					James Sills				Escondido	CA	92027	525	0	Consulting Fee																	
+788099	0	2	S401	F401B	EXP106					Bell McAndrews Hiltachk & Davidian LLP				Santa Monica	CA	90401	3035	0	Legal Fee																	
+803640	1	16	S401	F401B	EXP303					Frontier Creations, LLC				Fountain Valley	CA	92708	322.55	0	Computer Work																	
+803640	1	21	S401	F401B	EXP263					Lacy	James	Mr.		Irvine	CA	92604	1500	0	consulting fee																	
+820723	0	9	S401	F401B	EXP2551					Mary Muse For Judge				El Dorado Hills	CA	95630	800	0	Overpayment Refund																	
+669600	2	18	S401	F401B	EXP44					EMPLOYMENT DEVELOPMENT DEPARTMENT				SACRAMENTO	CA	95814	188	0	STATE PAYROLL TAXES																	
+677049	1	60	S401	F401D	ENT90					FRIENDS OF DAVID STANTON				BAKERSFIELD	CA	93312	0			DAVID STANTON				OTH	BOARD OF TRUSTEES	OTH	KERN COUNTY COMMUNITY COLLEGE						S			
+821728	0	11	S401	F401B	EXP478					Moran & Associates (Kelley Moran)				Folsom	CA	95630	25000	0	Professional Management																	
+718395	0	50	S401	F401D	ENT767					Carter	Charles 'Chuck'						0			Charles 'Chuck' Carter				ASM		ASM		27					S			
+719631	0	82	S401	F401D	ENT640					Kraft	Ronald						0			Ronald Kraft				CCB		OTH	Grossmont Cuyamaca						S			
+719631	0	94	S401	F401D	ENT589					Longville	John						0			John Longville				ASM		ASM		62					S			
+733130	0	23	S401	F401D	NM52D					Bromberg	Steve									Bromberg	Steve												S			
+822310	0	36	S401	F401D	NM136D					Bumpus	Richard									Bumpus	Richard				Sheriff-Coroner		Mendocino County						S			
+768659	0	11	S401	F401B	EXP205					Bank Of America				Los Angeles	CA	90017	15	0	Service Charge																	
+807381	0	5	S401	F401B	B34					Olson, Hagel, Waters & Fishburn, LLP				Sacramento	CA	95814	129.80		Legal & reporting services																	
+822548	0	24	S401	F401D	ENT214					Short	Spencer						0			Short Spencer				OTH	Rep. Central Committee	OTH	Placer County	2					S			
+818941	1	4	S401	F401B	S401B0000143869					US Postmaster 				Torrance	CA	90501	34438.50																			
+677049	0	34	S401	F401D	ENT118					COMMITTEE TO ELECT CORKY LARSON				PALM DESERT	CA	92255	0			CORKY LARSON				OTH	WATER BOARD	OTH	COACHELLA VALLEY						S			
+677049	0	47	S401	F401D	ENT98					FRIENDS OF MARGARET R. QUINONES				SANTA MONICA	CA	90405	0			MARGARET R. QUINONES				OTH	COMMUNITY COLLEGE BOARD	OTH	SANTA MONICA						S			
+669600	2	87	S401	F401D	ENT509					JOHNSON 2							0			TERRY JOHNSON				MAY		OTH	OCEANSIDE						S			
+669600	2	90	S401	F401D	ENT365					KENNEDY	WILLIE B.						0			WILLIE B. KENNEDY				OTH	BART BOARD								S			
+669600	2	92	S401	F401D	ENT507					KNISS 2							0			LIZ KNISS				CSU		OTH	SANTA CLARA COUNTY						S			
+677049	1	121	S401	F401D	ENT339					NANCY NADEL FOR OAKLAND CITY COUNCIL				OAKLAND	CA	94608	0			NANCY NADEL				CCM		OTH	OAKLAND						S			
+842375	0	4	S401	F401B	EXP29					California Lincoln Clubs				Glendora	CA		500	0	Membership Dues																	
+842728	0	6	S401	F401B	EXP65					AT&T Long Distance							38.23	0	Long Distance Bill																	
+716592	0	57	S401	F401D	ENT1656					Martinez	Mary Lou						0			Mary Lou Martinez				ASM		ASM		62					S			
+716592	0	60	S401	F401D	ENT1670					McPherson	Bruce						0			Bruce McPherson				SEN		SEN		15					S			
+717941	0	43	S401	F401D	ENT112					COMM. TO ELECT PAUL VINCENT AVILA				ONTARIO	CA	91762	0			PAUL VINCENT AVILA				CCM		OTH	ONTARIO						S			
+719004	0	10	S401	F401B	EXP266					Sadeghi	Emilia			Laguna Niguel	CA	92677	4550	0	Graphics																	
+848178	0	16	S401	F401D	ENT1196					Beeman	Howard						0			Howard Beeman				OTH	U.S. Congress	OTH	C. D. 3						S			
+848178	0	21	S401	F401D	ENT1095					Burton	Kim						0			Kim Burton				OTH	Public Defender	OTH	San Francisco County						S			
+848178	0	30	S401	F401D	ENT1176					Chesbro	Wesley						0			Wesley Chesbro				SEN		SEN		2					S			
+848178	0	36	S401	F401D	ENT1125					Corbett	Ellen						0			Ellen Corbett				ASM		ASM		18					S			
+848178	0	50	S401	F401D	ENT1232					Farr	Sam						0			Sam Farr				OTH	U.S. Congress	OTH	C.D. 17						S			
+716592	1	54	S401	F401D	ENT1669					Longwell	John						0			John Longwell				SEN		SEN		13					S			
+736644	0	8	S401	F401C	EXP625					Levine & Associates				Sherman Oaks	CA	91403	210000	210000	Professional Services																	
+767069	0	22	S401	F401D	ENT1675					Brulte	Jim						0			Jim Brulte				SEN		SEN		31					S			
+845748	0	7	S401	F401D	S401D0000000038															Nizich	Bob			CCM	San Pedro City Council	CIT	San Pedro	15	S				S			
+845748	0	10	S401	F401D	S401D0000000042															Barad (Los Angeles)	Jill			CCM	Los Angeles City Councilmember	CIT	City of Los Angeles	5	S				S			
+845748	0	18	S401	F401D	S401D0000000050															Soboroff For Mayor				MAY	LA City Mayor	CIT	City of Los Angeles		S				S			
+772199	0	1	S401	F401B	EXP227					Bell McAndrews Hiltachk & Davidian LLP				Sacramento	CA	95814	575.50	0	Legal and Accounting Services & Expenses																	
+803451	0	14	S401	F401B	EXP469					Smith & Kaufman				Los Angeles	CA	90017	3600	0	Legal Services																	
+803525	0	6	S401	F401B	EXP2230					James V. Lacy Attorney Client Trust Acct.				Laguna Niguel	CA	92677	2000	0	Legal Fees																	
+803525	0	14	S401	F401B	EXP2170					US Postmaster							340	0	Stamps																	
+810104	0	3	S401	F401B	EXP366					Cingular Wireless				Van Nuys	CA	91410	77.13	0	Cell Phone Bill																	
+677424	0	1	S401	F401B	EXP143					Bell McAndrews Hiltachk & Davidian LLP				Sacramento	CA	95814	814.67	0	Legal and accounting services & expenses																	
+677806	0	15	S401	F401D	NM48D					Boyles	Gary									Boyles	Gary												S			
+677806	0	16	S401	F401D	NM49D					Johnson	Terry									Johnson	Terry				Mayor		City of Oceanside						S			
+677806	0	19	S401	F401D	NM52D					Bromberg	Steve									Bromberg	Steve												S			
+669600	2	151	S401	F401D	ENT394					TISSIER							0			ADRIENNE TISSIER				CCM		OTH	DALY CITY						S			
+669600	2	173	S401	F401D	ENT489					measure e							0			MEASURE E				OTH	Peralta Cmnty Cllg Bond	OTH	Payment Pending						S			
+669600	2	178	S401	F401D	ENT491					prop o							0			PROPOSITION O				OTH	San Francisco County	OTH	Payment Pending						S			
+677049	1	184	S401	F401D	ENT487					richardson-batts							0			LAURA RICHARDSON-BATTS					Long Beach City Council	OTH	Payment Pending						S			
+698106	0	8	S401	F401D	ENT537					Davenport	W. F.						0			W. F. 'Bill' Davenport				OTH	Water District	OTH	East Orange County						S			
+717941	0	108	S401	F401D	ENT105					PROCTOR FOR CITY COUNCIL				SANTA ANA	CA	92701	0			GARY PROCTOR				CCM		OTH	SANTA ANA						S			
+719004	0	29	S401	F401D	ENT282					Breton	Robert 'Bob'						0			Robert 'Bob' Breton				OTH	Municipal Water District	OTH	Orange County	6					S			
+719004	0	75	S401	F401D	ENT333					Lott	Richard						0			Richard Lott				SEN		SEN							S			
+853716	0	1	S401	F401B	NM43B					The Western Group				Yucaipa	CA	92399	7000		Consulting																	
+853927	0	3	S401	F401B	NM11B					Quality House Direct Mail				Oakland	CA	94621	15999		mailer costs																	
+913294	0	137	S401	F401D	S401D0000000229															Ball        Helix	Harold			OTH	Helix Water Division	CIT	Helix Water Division	2	S				S			
+913294	0	145	S401	F401D	S401D0000000237															Yes On 47 For Accountability And Better Schools									S	Yes on Prop 47 Education Bond 2002	47	California	S			
+871835	0	3	S401	F401B	EXP247					Bell, McAndrews, Hiltachk & Davidian, LLP				Sacramento	CA	95814	442.03	0																		
+871846	0	1	S401	F401B	EXP467					Designer Mailing Company				Santa Ana	CA	92704	12500	0	Mailing																	
+874101	0	35	S401	F401B	EXP521					Park	Brian			Irvine	CA	92604	3000	0	Consulting Fee																	
+874101	0	55	S401	F401B	EXP503					Webtrend				Santa Ana	CA	92704	25954.33	0	Printing Deposit																	
+874101	0	56	S401	F401B	EXP549					Wenk	Shalyce			San Clemente	CA	92672	500	0	Consulting Fee																	
+904331	0	101	S401	F401D	ENT126					Redfearn	Peggy						0			Peggy Redfearn				SEN		SEN		2					S			
+887997	0	201	S401	F401D	S401D0000000302															Miller          Pacific Grove	Dan			CCM		CIT			S				S			
+887997	0	212	S401	F401D	S401D0000000313															Brandt         Upland	Brendan			CCM		CIT			S				S			
+899478	0	144	S401	F401D	ENT280					Thompson	Mike						0			Mike Thompson				OTH	C. D. 1								S			
+899478	0	149	S401	F401D	ENT497					Wallace	Doris						0			Doris Wallace				ASM		ASM		63					S			
+851148	0	10	S401	F401B	EXP167					U. S. Postal Service				Los Angeles	CA		925	0	Postage																	
+851244	0	180	S401	F401D	ENT1038					Neighbor	Wendy						0			wendy Neighbor				OTH	U.S. House Of Representatives			43					S			
+851244	0	208	S401	F401D	ENT874					Santos	Tom						0			Tom Santos				BOE		STW		2					S			
+905023	0	94	S401	F401D	ENT1332					Liu	Carol						0			Carol Liu				ASM		ASM		44					S			
+855132	0	2	S401	F401B	EXP666					FRIENDS OF DAVID GELFOUND				LOS ANGELES	CA	90012	600	0	REFUND																	
+859742	0	51	S401	F401D	ENT106					Freinds of Sheriff Len Gardner				Quincy	CA	95971	0							SHC		OTH	Plumas County		H				S			
+822178	1	38	S401	F401D	ENT1028					Jane Howard							0			Jane Howard				ASM		ASM		28					S			
+822178	1	48	S401	F401D	ENT1051					Mark Wyland							0			Mark Wyland				ASM		ASM		74					S			
+876891	0	24	S401	F401D	NM1372D					Bankhead	Don									Bankhead	Don			CCM	City Council		Fullerton						S			
+876947	0	16	S401	F401B	EXP4069					Policy Issues Institute				Irvine	CA	92604	400000	0	Direct Mail Services																	
+876947	0	21	S401	F401D	ENT3521					Bob Pphl							0			Bob Pohl				ASM		ASM		35					S			
+887997	0	7	S401	F401D	S401D0000000106															Wapner  Ontario City Council	Alan			CCM	City Council	CIT	Ontario	00	S				S			
+887997	0	32	S401	F401D	S401D0000000131															Burt   Brea Olinda School Board	Michael			OTH	School Board	CIT	Brea Olinda School Board	00	S				S			
+872047	0	6	S401	F401B	EXP810					Cingular Wireless				Van Nuys	CA	91410	167.05	0	Cell Phone Bill																	
+899796	0	127	S401	F401D	ENT1703					Romero	Gloria						0			Gloria Romero				SEN		SEN		24					S			
+904517	0	44	S401	F401D	NM52D					Measure P																				Measure P	P	City of Berkeley	O			
+904547	0	16	S401	F401D	ENT3544					Blair Knox							0			Blair Knox				SEN		SEN		16					S			
+890582	0	32	S401	F401D	ENT82												0																S			
+898593	0	1	S401	F401B	EXP13					Ascendent Solutions LLC				Sacramento	Ca	95814	78.99	0																		
+907354	0	66	S401	F401D	ENT82												0																S			
+907545	0	5	S401	F401B	NM89B					SF Department of Elections				San Francisco	CA	94102	642		Paid in error - refund requested.																	
+851167	0	16	S401	F401B	EXP337					Sadeghi	Emilia			Laguna Niguel	CA	92677	2025	0	Graphics																	
+851244	0	214	S401	F401D	ENT1079					Shen	George						0			George Shen				ASM		ASM		49					S			
+851244	0	228	S401	F401D	ENT1068					Strickland	Tony						0			Tony Strickland				ASM		ASM		37					S			
+851244	0	229	S401	F401D	ENT346					Tauscher	Ellen						0			Ellen Tauscher				OTH	U.S. House Of Representatives			10					S			
+851244	0	238	S401	F401D	ENT921					Wallace	Doris						0			Doris Wallace				ASM		ASM		63					S			
+851244	0	250	S401	F401D	ENT981					Yaroslavsky	Zev						0			Zev Yaroslavsky				BSU		OTH	Los Angeles County						S			
+906709	0	10	S401	F401D	ENT404					Moreno	Carlos						0			Carlos Moreno				OTH	Supreme Court	STW							S			
+907545	0	29	S401	F401D	NM78D					Friends of Jack O'Connell										Friends of Jack O'Connell				SUP	Sup of Pub Instruction		California						S			
+855337	0	24	S401	F401D	ENT433					Rebecca Delgado-Rottman							0			Rebecca Delgado-Rottman				OTH	Dem. Central Committee	OTH	San Francisco	13					S			
+853012	1	31	S401	F401D	NM34D					Lockyer	Bill									Lockyer	Bill			ATT	Attorney General		State of California						S			
+853012	1	39	S401	F401D	NM56D					Bierman	Sue									Bierman	Sue				Dem Cnty Cent Cmtee		San Francisco	13					S			
+853012	1	47	S401	F401D	NM70D					Prop D Bad Planning																				Prop D Bad Planning	D	San Francisco	O			
+887997	0	52	S401	F401D	S401D0000000151															Horton            Inglewood City Clerk	Yvonne			OTH	Inglewood City Clerk			00	S				S			
+822178	1	62	S401	F401D	ENT1044					Russ Bogh							0			Russ Bogh				ASM		ASM		65					S			
+852756	0	8	S401	F401D	NM7D					Prop C: Non-US Citizen Commission & Board Appeals																				Prop C: Non-US Citizen Commission & Board Appeals	C	San Francisco	O			
+911047	0	21	S401	F401D	NM41D					Re-Elect Supervisor Sophie Maxwell				San Francisco	CA	94110				Re-Elect Supervisor Sophie Maxwell				BSU	Supervisor		San Francisco	10					S			
+887997	0	104	S401	F401D	S401D0000000203															Wagner     Placentia Yorba Linda	Jan			BED		CIT			S				S			
+872131	0	4	S401	F401B	EXP6					River City Business Services				Sacramento	Ca	95841	414.78	0	Bookkeeping																	
+872148	0	7	S401	F401B-1	EDT3	River City Business Services				Netfile				Mariposa	Ca	95338	366.67	0	Reporting software																	EXP6
+872161	0	7	S401	F401B-1	PDT1	River City Business Services				Netfile				Mariposa	Ca	95338	366.67	0	Reporting software																	PAY15
+910815	0	11	S401	F401B-1	B-110	Rick Spears Graphics				U.S. Postmaster				Sacramento	CA	95814	1282		Postage																	
+902254	0	4	S401	F401B	EXP383					Levinson	Peter			Brooklyn	NY	11218	1500	0	Artwork, Layout																	
+902316	0	3	S401	F401B	EXP650					David L. Gould Company				Los Angeles	CA	90071	186.74	0	Office Expenses																	
+904549	0	41	S401	F401D	ENT1467					Keith Richman							0			Keith Richman				ASM		ASM		38					S			
+904549	0	44	S401	F401D	ENT1503					Liz Figueroa							0			Liz Figueroa				SEN		SEN	s	10					S			
+899478	0	48	S401	F401D	ENT433					Coerper	Gil						0			Gil Coerper				CCM		OTH	Huntington Beach						S			
+899478	0	52	S401	F401D	ENT294					Corvera	Jaime						0			Jaime A. Corvera				OTH	C.D.22								S			
+899478	0	67	S401	F401D	ENT518					Garamendi	John						0			John Garamendi				INS		OTH	Statewide						S			
+911072	0	41	S401	F401D	ENT238					Ridley-Thomas	Mark						0			Mark Ridley-Thomas				ASM		ASM		48					S			
+851244	0	56	S401	F401D	ENT937					Chesbro	Wes						0			Wes Chesbro				SEN		SEN		2					S			
+851301	0	49	S401	F401D	ENT138					Herger	Wally						0			Wally Herger				OTH	U.S. House Of Representatives			2					S			
+906954	0	2	S401	F401B	EXP982					Huebscher	Fred			Hermosa Beach	CA	90254	19.99	0	Misc. Reimbursement																	
+856931	0	3	S401	F401B	B44					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814	4555.52		Legal & Reporting Services																	
+871090	0	3	S401	F401B	EXP1234					Jenlax Partners Inc				Santa Monica	CA	90403	5000	0	Management Fee																	
+907354	1	42	S401	F401D	ENT31					Ed Gonzales for Long Beach Schoolboard				Long Beach	CA	90813	0			Ed Gonzales													S			
+913294	0	11	S401	F401D	S401D0000000103															Withrow   Mission Viejo City Council	Susan			CCM	City Council	CIT	Mission Viejo	00	S				S			
+876955	0	62	S401	F401D	ENT1515					Russ Bogh							0			Russ Bogh				ASM		ASM		65					S			
+876955	0	69	S401	F401D	ENT1458					Tony Vang							0			Tony Vang				OTH	School District	OTH	Fresno	4					S			
+877413	0	1	S401	F401B	EXP1336					David L. Gould Company				Los Angeles	CA	90071	402.56	0	Office Expenses																	
+877413	0	3	S401	F401B	EXP1381					Evans	Mervin			Los Angeles	CA	90016	50	0	Messenger Service																	
+873674	0	20	S401	F401D	ENT2449					Thiel	Mark						0			Mark A. Thiel				BED		OTH	San Joaquin County	2					S			
+904727	0	24	S401	F401D	ENT1226					ROSS	REUBEN						0			REUBEN ROSS				ASM		ASM		69					S			
+899478	0	83	S401	F401D	ENT281					Johnson	Mike						0			Mike Johnson				OTH	C.D.2								S			
+899478	0	93	S401	F401D	ENT496					Longville	John						0			John Longville				ASM		ASM		62					S			
+913294	0	51	S401	F401D	S401D0000000143															Esteves       Milpitas	Jose			MAY		CIT			S				S			
+851244	0	97	S401	F401D	ENT906					Fromer	Dario						0			Dario Fromer				ASM		ASM		43					S			
+851647	0	9	S401	F401B	EXP275					U.S. Postmaster				Los Angeles	CA		20000	0	Postage																	
+859742	0	4	S401	F401B	EXP139					AT&T Long Distance							18.16	0																		
+859742	0	8	S401	F401B	EXP177					Britton	Charlie			Manhattan Beach	CA	90266	970	0																		
+1020322	0	15	S401	F401D	ENT738					Bell	Jim						0			Jim Bell				MAY		OTH	San Diego City						S			
+985367	0	36	S401	F401B	EXP24					Britton	Charlie			Manhattan Beach	CA	90266	775	0																		
+985367	0	112	S401	F401B	EXP356					Political Data Inc.				Burbank	CA	91502	3871.31	0																	EXP356	
+985367	0	113	S401	F401B	EXP159					Political Data Inc.				Burbank	CA	91502	7217.67	0																		
+985367	0	125	S401	F401B	EXP169					The Monaco Group				Placentia,	CA	92870	5000	0																		
+990212	0	7	S401	F401D	NM84D					School Bond Initiative																				School Bond Initiative	A	San Francisco	S			
+1032567	0	123	S401	F401D	S401D0000000220															Saylor      Huntington Beach High School	Rosemary			OTH	Huntington Beach High School	CIT			S				S			
+941798	1	1	S401	F401D	ENT1125					WATTON FOR OTAY WATER BOARD				SPRING VALLEY	CA	91978	0							OTH	WATER BOARD	OTH	OTAY	3					S			
+1020322	0	119	S401	F401D	ENT684					Winters	David I.						0			David I. Winters				OTH	C.D. 4								S			
+1021703	0	7	S401	F401B	EXP1845					Political Data Inc.				Burbank	CA	91507	12441.18	0	Electoral Data																	
+1021703	0	17	S401	F401D	ENT1603					Baca	Joe						0			Joe Baca				OTH	C.D. 43								S			
+1021703	0	21	S401	F401D	ENT2342					Bufford	James Lex						0			James Lex Bufford				OTH	C.D. 19								S			
+1022532	0	15	S401	F401C	EXP748					David L. Gould Company				Los Angeles	CA	90071	183.11	1091.15	Misc. expenditures																	
+942777	0	19	S401	F401C	EXP318					Nahum	Renee			Los Angeles	CA	90039	2000	11800	Consulting Fee																	
+913294	0	469	S401	F401D	S401D0000000711															Wagner   (Cypress)	Valeri				Cypress School Board		Cypress School Board		S				S			
+943261	0	20	S401	F401B	EXP379					Willard H. Murray Jr., Company				Los Angeles	CA	90071	5000	0	Consulting Services																	
+943831	0	4	S401	F401B	EXP1000					Allegiance Telecom				Dallas	TX	75284	158.06	0	Phone Services																	
+943831	0	8	S401	F401B	EXP994					Bank Of America							506	0	Tax Related Bill																	
+943831	0	52	S401	F401B	EXP1013					The Monaco Group				Placentia	CA	92870	7601.96	0	Printing																	
+944727	0	1	S401	F401D	S401D0000000722																															
+1020322	0	94	S401	F401D	ENT732					Salinas Measure P							0			Salinas Measure P				OTH	Measure P	OTH	Salinas						S			
+979628	0	8	S401	F401B	EXP867					Net File				Mariposa	CA	95338	2100	0	On Line Reports																	
+990960	0	41	S401	F401D	ENT135					Committee to Elect Jud Scott to Superior Court							0			Jud Scott				SCJ		OTH	Alemeda County	5	S				S			
+1024710	0	13	S401	F401C	EXP1073					Huebscher	Fred			Hermosa Beach	CA	90254	19000	34000	Consulting Fee																	
+1024710	0	18	S401	F401D	ENT1117					Robinson	Mike						0			Mike Robinson				ASM		ASM		37					S			
+996356	0	2	S401	F401B	EXP904					Moran & Associates (Kelley Moran)				Folsom	CA	95630	10000	0	Professional Management																	
+1021605	0	29	S401	F401D	ENT226					Cohn	Rebecca						0			Rebecca Cohn				OTH	A.D. 24								S			
+1024717	0	8	S401	F401B	EXP609					Levander	Robin			Santa Rosa	CA	95404	7600	0	Consulting Fee																	
+1024815	0	16	S401	F401C	EXP495					Huebscher	Fred			Hermosa Beach	CA	90254	3500	5882.69	Consulting Fee																	
+1024815	0	22	S401	F401D	ENT476					Capps	Lois						0			Lois Capps				OTH		OTH	U.S. House Of Representatives	23					S			
+1024815	0	29	S401	F401D	ENT482					L.A. County Measure U							0			Measure U				OTH		OTH	Los Angeles County						S			
+1032567	0	139	S401	F401D	S401D0000000236															Mills        Yorba Linda	William			OTH	Water District	CIT	Water District		S				S			
+1032567	0	175	S401	F401D	S401D0000000272															McMahon     Alameda	Michael			BED		CIT			S				S			
+913295	0	35	S401	F401D	S401D0000000671															Kuske	Carol			CCM		CIT	Santee		S				S			
+983165	0	6	S401	F401B-1	DB92	Alice B. Toklas LGBT Democratic Club				Warren & Associates LLC				San Francisco	CA	94114	604.55		Accounting services																	
+987958	0	4	S401	F401B-1	DB51	Barnes Mosher Whitehurst Lauter and Partners				Commonwealth Communications				San Francisco	CA	94104	3897.86		Printing																	
+948119	0	3	S401	F401B	EXP854					Barry Wyatt Associates				Sacramento	CA	95831	10000	0	Consultant																	
+948338	0	5	S401	F401B	EXP242					C & G Graphics							800	0	Graphics																	
+948379	0	6	S401	F401B	EXP433					AT&T Long Distance							45.50	0																	EXP433	
+948338	1	2	S401	F401B	EXP249					Adcraft Business Mail				Los Angeles	CA	90003	1585.97	0	Mailing Services																	
+948338	1	12	S401	F401B	EXP245					Political Data Inc.				Burbank	CA	91507	570.87	0	Labels																	
+973310	0	26	S401	F401D	S401D0000000756															Manning	Kenneth			CCM		CIT	Hacienda Heights	n/a	S				S			
+973311	0	9	S401	F401D	S401D0000000744															Scott-Hayes	Sylvia			CCB	Community College Board	LOC	Los Angeles Community College Dist.	n/a	H				S			
+1032567	0	246	S401	F401D	S401D0000000390																															
+1032567	0	247	S401	F401D	S401D0000000391															Hampson	Teresa			BED	Olinda School Board	CIT	Olinda School Board		S				S			
+980434	0	46	S401	F401D	S401D0000000842															Hamilton	Melinda			CCM	City Council Member	CIT	Sunnyvale City Council	7	S				S			
+996695	0	9	S401	F401D	ENT121									Studio City	CA	91604	0			Zeke Zeidler				SCJ		OTH	Los Angeles County Superior Court Judge	53	S				S			
+1032567	0	196	S401	F401D	S401D0000000293															Yes On Charter Amendment 					Folsom Charter Amendment Measure		Measure P		S	Yes On P	P	Folsom	S			
+1032567	0	222	S401	F401D	S401D0000000319															Munoz        Delano	Johnny			CCM		CIT			S				S			
+1021605	0	110	S401	F401D	ENT271					Zutshi	Jeevan						0			Jeevan Zutshi				OTH	Union Sanitary Dist./Ward 3	OTH	Alamada County	3					S			
+1032533	0	7	S401	F401B	S401B0000278669					Kaptain	Thomas			Burbank	CA	91506	3000		Consulting																	
+913294	0	373	S401	F401D	S401D0000000518															Licea    (Berryessa)	Jorge				Berryessa Union School District		Berryessa Union School District		S				S			
+920872	0	8	S401	F401B	S401B0000208021					Jim Cook 				Elk Grove	CA	95758	500																			
+961219	0	3	S401	F401B	EXP1554					Postmaster							150	0	Postage																	
+941245	0	1	S401	F401B	EXP1003					Calpeek				Beverly Hills	CA	90213	175	0	Advertisement																	
+941245	0	9	S401	F401B	EXP1000					Huebscher	Fred			Hermosa Beach	CA	90254	5000	0	Consulting Fee																	
+1032567	0	363	S401	F401D	S401D0000000509															Matteucci      (Castro Valley)	Alexander			CCM	Castro Valley City Council		Castro Valley City Council		S				S			
+1032567	0	374	S401	F401D	S401D0000000520															Bailey    (San Fernando)	Glenn				San Fernando City Council #10		San Fernando City Council #10		S				S			
+948379	0	62	S401	F401D	ENT99					Donald Renetzky For Superior Court				Studio City	CA	91604	0			Donald Renetzky				SCJ		OTH	Los Angeles	2					S			
+962878	0	14	S401	F401B	EXP1053					Lord-Butcher Company				La Jolla	CA	92037	1250	0	Consulting Fee																	
+978633	0	2	S401	F401B	EXP1652					El Camino College Federation of Teachers COPE				Gardena	CA	90249	650	0	Partial Refund/El Camino CCD																	
+978720	0	3	S401	F401B	EXP1618					Nagata Design				Gardena	CA	90248	189.43	0	Art Design																	
+979030	0	4	S401	F401B	EXP137					Bank of America				Los Angeles	CA	90017-1466	12	0	Service Charge																	
+985367	0	52	S401	F401B	EXP158					California State Government				Sacramento	CA	95812-1467	240	0	Late Filing Fees																	
+985367	0	62	S401	F401B	EXP146					Dan Walker for Mayor				Torrance	CA	90505	500	0																		
+985367	0	70	S401	F401B	EXP397					Glen Becerra for Simi Valley City Council				Simi Valley	CA		250	0																		
+985367	0	78	S401	F401B	EXP368					Pacific Bell				Van Nuys	CA	91388	46.44	0	Local Phone Bill																	
+985367	0	81	S401	F401B	EXP57					Pacific Bell				Van Nuys	CA	91388	114.84	0	Local Phone Bill																	
+990960	0	99	S401	F401D	ENT215					Improvement Council of Pamona/ Marco Robles for Pamona City Council #2				Pamona	CA	91766	0			Marco Robles				CCM		OTH	Pamona	2					S			
+997411	0	23	S401	F401D	S401D0000000755															Chang	Tom			CCM		CIT	Proposed Hacienda Heights	n/a	S				S			
+997411	0	30	S401	F401D	S401D0000000812															Ryan	Mike			BSU	San Luis Obispo Supervisor		San Luis Obispo	5	S				S			
+1032567	0	407	S401	F401D	S401D0000000555															No On Recall, Committee To Support Gail Marshall					No On Santa Barbara Measure P		No On Santa Barbara Measure P		S	Recall of Gail Marshall	P	Santa Barbara	O			
+1032567	0	414	S401	F401D	S401D0000000562															Vazquez    (Greenfield)	Agapito			CCM	Greenfield City Council		Greenfield City Council		S				S			
+1021703	0	84	S401	F401D	ENT2335					Silva	David						0			David Silva				OTH	A.D. 67								S			
+1026338	0	10	S401	F401D	ENT4266					Andrew Felder							0			Andrew Felder				SEN		SEN		3					S			
+1026338	0	38	S401	F401D	ENT4225					John Munn							0			John Munn				ASM		ASM		8					S			
+913294	0	400	S401	F401D	S401D0000000547															Vitu    (Los Altos Hills)	Janet			CCM	Los Altos Hills City Council		Los Altos Hills City Council		S				S			
+913294	0	402	S401	F401D	S401D0000000549															Dotson     (Stanton)	Harry				Stanton City Council		Stanton City Council		S				S			
+913294	0	422	S401	F401D	S401D0000000569															Chavez    (Oceanside)	Rocky			CCM	Oceanside City Council		Oceanside City Council		S				S			
+941798	0	17	S401	F401D	ENT1017					Charles S. Poochigian							0			Charles S. Poochigian				SEN		SEN		14					S			
+1032573	0	34	S401	F401D	S401D0000000720															Davis	Gray			GOV		STW			S				S			
+948379	0	104	S401	F401D	ENT214					Improvement Council of Pomana/ Daniel Rodriguez for Pomana City Council District # 3				Pamona	CA	91766	0			Daniel Rodriguez				CCM		OTH	Pomona	3					S			
+972944	0	2	S401	F401B	TRAN0000001636943666					Emil Rozek Typesetting				Culver City	CA	90232	27062.50		Typesetting																	
+997411	0	57	S401	F401D	S401D0000000859															Cox	Steve			BED	School Board				S							
+1072616	0	47	S401	F401D	ENT1437					MCCLINTOCK	TOM			NEWBURY PARK	CA	91320	0			TOM MCCLINTOCK				SEN		SEN		19					S			
+1112407	0	4	S401	F401B	EXP606					David L. Gould Company				Los Angeles	CA	90071	552.92	0	Office Expenses & Reimb.for Taxes																	
+1115318	0	93	S401	F401D	ENT1478					WOREN	SANDOR						0			SANDOR WOREN				ASM		ASM		43					S			
+1112407	0	15	S401	F401B-1	EDT31	Ford Printing  And Mailing				U.S. Postal Service				Pasadena	CA		700	0	Postage																	EXP616
+1126056	0	1	S401	F401B	EXP569					David L. Gould Company				Los Angeles	CA	90071	395.35	0	Prof.Services & Misc. expenditures																	
+1112154	0	10	S401	F401C	EXP1244					David L. Gould Company				Los Angeles	CA	90071	303.75	826.89	Office Expenses & Reimb.for Taxes																	
+1288730	0	5	S401	F401B	16					Claude Parrish Stat Treasurer Committee				Palos Verdes	ca	90274	860		Campaign contribution																	
+1026338	1	25	S401	F401D	ENT4263					George Plescia							0			George Plescia				ASM		ASM		75					S			
+1026338	1	33	S401	F401D	ENT4264					Jay La Suer							0			Jay La Suer				ASM		ASM		77					S			
+1026338	1	35	S401	F401D	ENT4275					Jim Battin							0			Jim Battin				SEN		SEN		37					S			
+1026338	1	64	S401	F401D	ENT4271					Tom McClintock							0			Tom McClintock				SEN		SEN		19					S			
+1045416	0	25	S401	F401D	ENT122									Studio City	CA	91604	0			Zeke Zeidler				SCJ		OTH	Los Angeles County Superior Court Judge	53	S				S			
+1147177	0	15	S401	F401B	EXP106					Warren & Associates LLC				San Francisco	CA	94114	18.75	0	Accounting																	
+1147177	0	18	S401	F401B	EXP114					Warren & Associates LLC				San Francisco	CA	94114	215.42	0	Accounting																	
+1074317	0	31	S401	F401D	ENT564					Honda	Mike						0			Mike Honda				OTH	U.S. House Of Representatives	OTH							S			
+1045438	0	19	S401	F401D	S401D0000000738															Gutierrez	Ernest			CCM		CIT	El Monte		S				S			
+1044798	0	22	S401	F401B	EXP1457					Lacy	James	Mr.		Irvine	CA	92604	8900	0	Consulting Fee																	
+1070551	0	116	S401	F401D	ENT2344					Matthews	Cynthia						0			Cynthia Matthews				OTH	C.D. 26								S			
+1174707	0	1	S401	F401B	EXP62					B Park Consulting, Inc.				Irvine	CA	92604	1000	0	Cosulting Fee																	
+1182303	0	2	S401	F401B	EXP2810					Angelides 2006				Sacramento	CA	95814	18931.68	0	Refund																	
+1182303	0	9	S401	F401B	EXP2823					Levine & Associates				Sherman Oaks	CA	91403	109879	0	Professional Services																	
+1081300	0	16	S401	F401B	EXP1596					Dan Siwulec Communications Marketing, Inc.				Laguna Niguel	CA	90272	14940.92	0	Printing																	
+1050608	0	1	S401	F401B	EXP11					G. Strahan & Associates				Zephyr Cove	NV	89448	32000	0	Slate mailer production & printing																	
+1123868	0	15	S401	F401D	aha00080																									Civilian Jobs in the Police Department	C	San Francisco Proposition	S			
+1123869	0	3	S401	F401B-1	aha00098	Stearns Consulting				Clymer Direct				San Francisco	CA	94124	1426		Mailhouse																	
+1079408	1	29	S401	F401D	ENT5272					Emmerson	Bill						0			Bill Emmerson				ASM		ASM		63					S			
+1174644	0	3	S401	F401B	TRAN0000001464668432					Kaptain	Thomas			Burbank	CA	91506	45000		Consulting																	
+1131257	0	8	S401	F401D	ENT2					Termination of Minor's Pregnancy. Waiting Period & Parental Notification							0												S	Termination of Minor's Pregnancy.Waiting Period & Parential Notification		Preposition 73 (Statewide)	O			
+1131360	0	1	S401	F401B	EXP5870					Kirkpatrick	Tom			Wilmington	CA	90244	400	0	Telephone Sales																	
+1132036	0	4	S401	F401B	B112					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814	334.20		Legal & Reporting Services																	
+1174467	0	37	S401	F401D	ENT1424					Jim Beall							0			Jim Beall				ASM		ASM		24					S			
+1147305	0	6	S401	F401B	EXP50					Designer Mailing				Santa Ana	CA	92704	15220	0	Print																	
+1156904	0	8	S401	F401C	EXP628					David L. Gould Company				Los Angeles	CA	90071	167.45	566.56	Misc. expenditures																	
+1079381	0	29	S401	F401D	ENT36					Yes on 65							0			Yes on 65						STW							S			
+1070551	0	133	S401	F401D	ENT1599					Napolitano	Grace						0			Grace Napolitano				OTH	C.D. 38								S			
+1070551	0	134	S401	F401D	ENT1114					Nation	Joe						0			Joe Nation				OTH	A.D. 06								S			
+1070551	0	149	S401	F401D	ENT2900					Sacramento County Measure X							0			Library Upgrades				OTH	Measure X	OTH	Sacramento County						S			
+1119247	0	5	S401	F401D	ENT2					FIX THREE STRIKES - YES ON 66				SACRAMENTO	CA	95814	0													LIMITATIONS ON 3 STRIKES LAW. SEX CRIMES.	66	STATEWIDE	S			
+1045438	0	62	S401	F401D	S401D0000000890															Guerrero-Daley	Teresa			SCJ	Superior Court Judge		Santa Clara	18	S				S			
+1080391	0	7	S401	F401D	NM33D					Prop L Special interest giveaway																				Prop L Special interest giveaway	L	San Francisco	O			
+1070551	0	161	S401	F401D	ENT1590					Sherman	Brad						0			Brad Sherman				OTH	C.D. 27								S			
+1070551	0	167	S401	F401D	ENT1593					Solis	Hilda						0			Hilda Solis				OTH	C.D.32								S			
+1174330	0	11	S401	F401D	ENT117					Matt Tuchow for DCCC							0			Matt Tuchow				OTH	Democratic County Central Committee	OTH	San Francisco County						S			
+1081560	0	9	S401	F401B	EXP47					JC-Evans Communciations				Gold River	CA	95670	6675.90	0	Slate mailer production & printing																	
+1111137	0	17	S401	F401C	EXP919					David L. Gould Company				Los Angeles	CA	90071	170.01	355.93	Misc. Expenditures																	
+1123870	0	35	S401	F401D	aha00213																									Use of Hotel Tax to Preserve Movie Theaters	L	San Francisco Proposition	O			
+1079410	1	15	S401	F401D	ENT2536					Bogh	Russ						0			Russ Bogh				ASM		ASM		65					S			
+1079410	1	43	S401	F401D	ENT2552					Klehs	Johan						0			Johan Klehs				ASM		ASM		18					S			
+1049280	0	2	S401	F401B	EXP519					Coalition For Senior Citizen Security				Los Angeles	CA	90071	158	0	Transfer: Slate Mailer Payment																	
+1174498	0	5	S401	F401D	ENT3135					Alan Nakanishi							0			Alan Nakanishi				ASM		ASM		10					S			
+1182303	0	86	S401	F401D	ENT3440					Grunwald	Marilyn						0			Marilyn Grunwald				OTH	CDCC/A.D. 40								S			
+1182303	0	91	S401	F401D	ENT3359					Haze	Steven						0			Steven Haze				OTH	C.D. 21								S			
+1182303	0	102	S401	F401D	ENT3463					Kensinger	Kathy						0			Kathy Kensinger				OTH	CDCC/A.D. 43								S			
+1182303	0	129	S401	F401D	ENT3474					Mochlman	Denise						0			Denise Mochlman				OTH	CDCC/A.D. 53								S			
+1147297	0	5	S401	F401B	S401B0000368071					Citizens For Good Government 				Los Angeles	CA	90071	1000		Equipment Purchase																	
+1148795	0	11	S401	F401B	EXP572					U.S. Postmaster				Los Angeles	CA	90052	21000	0	Postage																	
+1148795	0	20	S401	F401D	ENT358					Brewster	Alicia Marie						0			Alicia Marie Brewster				BED		OTH							S			
+1147177	1	16	S401	F401B	EXP108					Warren & Associates LLC				San Francisco	CA	94114	1.40	0	Accounting																	
+1173955	0	20	S401	F401B	EXP1859					Lacy	James			Laguna Niguel	CA	92677	2000	0	CNS consulting																	
+1173955	0	22	S401	F401B	EXP1919					Landslide Communications				Irvine	CA	92604	3400	0	CNS Consulting																	
+1182303	0	171	S401	F401D	ENT3444					Santiago	Miguel						0			Miguel Santiago				OTH	CDCC/A.D. 40								S			
+1032691	0	7	S401	F401D	ENT121									Studio City	CA	91604	0			Zeke Zeidler				SCJ		OTH	Los Angeles County Superior Court Judge	53	S				S			
+1173955	0	42	S401	F401B	EXP1946					Wewer & Lacy LLP				Laguna Niguel	CA	92677	493.50	0	Rent																	
+1174112	0	4	S401	F401B	B120					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814	509.50		Legal & Reporting Services																	
+1111870	0	2	S401	F401B	EXP518					David L. Gould Company				Los Angeles	CA	90071	359.26	0	Office Expenses & Reimb.for taxes																	
+1172586	0	2	S401	F401B	EXP644					Designer Mailing Company Inc.				Santa Ana	CA	92704	8196.24	0	Mailing Services																	
+1173138	0	2	S401	F401B	EXP653					David L. Gould Company				Los Angeles	CA	90071	405.71	0	Office Expenses																	
+1173955	0	2	S401	F401B	EXP1969					Cingular Wireless				Van Nuys	CA	91410	162.50	0	cell phone																	
+1079410	1	67	S401	F401D	ENT2545					Perata	Don						0			Don Perata				SEN		SEN		9					S			
+1079410	1	68	S401	F401D	ENT2543					Plescia	George						0			George Plescia				ASM		ASM		75					S			
+1111492	0	4	S401	F401B	EXP540					David L. Gould Company				Los Angeles	CA	90071	204.20	0	Political Reporting Services & Expenses																	
+1044798	0	34	S401	F401B	EXP1454					Park	Brian			Irvine	CA	92604	142.89	0	Office Expenses																	
+1142048	0	14	S401	F401D	aha00267																									No Military Recruiters In Public Schools, Scholarships For Education and Job Training	I	San Francisco Proposition	S			
+1074317	0	48	S401	F401D	ENT621					No On Proposition 64							0			No On Proposition 64				OTH		STW							O			
+1045084	0	1	S401	F401B	EXP293					National Tax Limitation Committee				Roseville	CA	95661	1500	0	Consulting services																	
+1151196	0	5	S401	F401B	TRAN0000000234136630					No On 77				Los Angeles	CA	90048	3650		Refund																	
+1156273	0	11	S401	F401C	EXP2608					Levine & Associates				Sherman Oaks	CA	91403	1640	4740	Professional Services																	
+1078997	0	15	S401	F401B	EXP505					Rodgers & McDonald				Carson	CA	90745	11269.14	0	Printing & Mailing Services																	
+1117765	0	5	S401	F401B	EXP5					Dunn Brothers				Gardena	CA	90247	5572.71	0	Printing																	
+1222721	0	4	S401	F401B	EXP114					Postmaster				Santa Ana	CA	92704	20000	0	Postage																	
+1185217	0	22	S401	F401D	ENT503					Schwarzenegger	Arnold						0			Arnold Schwarzenegger				GOV		STW							S			
+1191875	0	23	S401	F401D	ENT993					McSweeney	Michael						0			Michael McSweeney				OTH	Republican Central Committee	OTH	San Diego County	78					S			
+1204967	0	4	S401	F401B	EXP192					Warren & Associates LLC				San Francisco	CA	94114	25.15	0																		
+1228051	1	21	S401	F401D	ENT3390					Barkan	Elliott Robert						0			Elliott Robert Barkan				OTH	A.D. 59								S			
+1237084	0	93	S401	F401D	ENT1810					Scott Carwile for Assembly #44							0			Scott Carwile				ASM		ASM		44	S				S			
+1184757	0	20	S401	F401D	ENT401					Bass	Karen						0			Karen Bass				ASM		ASM		47	H				S			
+1184757	0	54	S401	F401D	ENT173					Weisman	Ruth						0			Ruth Weisman				OTH	Member, County Central Committee	ASM		47					S			
+1204939	0	39	S401	F401C	EXP2216					Lacy	James	Mr.		Irvine	CA	92604	5600	53480	consulting																	
+1228051	0	158	S401	F401D	ENT1615					Sanchez	Linda						0			Linda Sanchez				OTH	C.D. 39								S			
+1228051	1	36	S401	F401D	ENT4041					Cabaldon	Christopher						0			Christopher Cabaldon				MAY		OTH	West Sacramento						S			
+1273177	0	14	S401	F401D	21															Thomas	Sam			OTH	Kern County High School District Trustee	LOC	Kern County						S			
+1185536	0	6	S401	F401D	ENT674					Biane	Paul						0			Paul Biane				CSU		OTH	San Bernardino County	1					S			
+1185536	0	13	S401	F401D	ENT662					Guillory	Webster						0			Webster Guillory				ASR		OTH	Orange County						S			
+1213211	0	1	S401	F401B	EXP23					Ray	Lysa			Costa Mesa	CA	92626	81.25	0																		
+1275843	0	8	S401	F401B	EXP3382					Wechsler	S.			Studio City	CA	91604	9500	0	Professional Services																	
+1275881	0	2	S401	F401B	EXP661					David L. Gould Company				Los Angeles	CA	90071	1089.23	0	Political Reporting Services & Expenses																	
+1302094	0	8	S401	F401C	EXP119					Landslide Communications				Laguna Niguel	CA	92677	1000	7900	Consulting																	
+1333387	0	7	S401	F401C	EXP686					Willard H. Murray Jr. Company				Los Angeles	CA	90071	1000	1000	Consulting Services																	
+1238967	0	9	S401	F401D	ENT1400					Corrigan	Carol						0			Carol Corrigan				OTH	Supreme Court Justice	STW							S			
+1238967	0	13	S401	F401D	ENT1058					Garamendi	John						0			John Garamendi				LTG		STW							S			
+1238967	0	19	S401	F401D	ENT1407					Maze	Bill						0			Bill Maze				ASM		ASM							S			
+1238974	0	2	S401	F401B	EXP750					David L. Gould Company				Los Angeles	CA	90071	200	0	Prof. Services																	
+1245035	1	7	S401	F401B-1	EDT4	Precise Mailing Inc.				Postmaster				San Francisco	CA	94188-0000	1140	0	Postage for slate card																	EXP77
+1311481	0	8	S401	F401B	EXP135					Russ Valiquette for City Council				Gilroy	CA	95020	360	0	Refund																	
+1237870	0	9	S401	F401B-1	EDT11	Pacific Print Resources				U.S. Postmaster				San Francisco	CA	94104	510.97	0	Postage																	EXP59
+1237870	0	16	S401	F401B-1	EDT10	Stearns Consulting				U.S. Postmaster				San Francisco	CA	94104	1841.40	0	Postage																	EXP50
+1188043	0	32	S401	F401D	S401D0000001194															Devaney	Leslie			CAT	City Attorney	CIT	City of San Diego		S				S			
+1188328	0	7	S401	F401B	EXP60					Precise Mailing Inc.				So San Francisco	CA	94080-0000	1597	0	Postage																	
+1192642	0	2	S401	F401B	TRAN000000-321140736					John Chiang for California 2006				Los Angeles	CA	90048	9000		Refund																	
+1192647	0	5	S401	F401B	TRAN0000001079022592					US Postal Service				Sherman Oaks	CA	91423	18258.29		Postage																	
+1204939	1	31	S401	F401B	EXP2117					Wewer & Lacy LLP				Laguna Niguel	CA	92677	1000	0	Rent																	
+1184515	1	21	S401	F401D	ENT77					Lockyer	Bill						0			Bill Lockyer				TRE		STW			S				S			
+1188024	0	3	S401	F401B	S401B0000274204					Winning Productions 				San Diego	CA	92120	15000																			
+1188024	0	9	S401	F401D	S401D0000001041															No On Prop B Citizens For Environmental Solutions						CIT	City of San Diego			No on Prop B	B	San Diego	S			
+1188027	0	1	S401	F401D	S401D0000000867															No On Proposition A 							San Diego			No on Prop A	A	San Diego	O			
+1212544	0	2	S401	F401B	EXP1902					FARSCCD Political Action Committee				Orange	CA	92869	3275	0	Refund of payment																	
+1236582	0	15	S401	F401D	ENT138					Anita Grier (Office Record)							0			Anita Grier				CCB		OTH	San Francisco						S			
+1228051	1	125	S401	F401D	ENT3402					Meyer	Scott						0			Scott Meyer				OTH	A.D. 75								S			
+1277095	0	5	S401	F401B	EXP1236					Renee Nahum				Los Angeles	CA	90039	3000	0	Consulting Fee																	
+1238791	0	36	S401	F401D	ENT83					YES ON PROPOSITION A LET'S REBUILD SAN FRANCISCO'S SCHOOLS							0			PROPOSITION A						OTH	SAN FRANCISCO						S			
+1228010	0	10	S401	F401B	EXP1234					Rex	Michelle			Canyon Country	CA	91351	3000	0	Consulting Fee																	
+1189582	0	16	S401	F401D	ENT28					Dave Jones							0			Dave Jones				ASM		ASM		09					S			
+1238967	1	26	S401	F401D	ENT1397					Prop 1A							0													Yes on 1A,1B,1C,1E, 83, 84,86,		Statewide	S			
+1238974	0	19	S401	F401D	ENT754					Prop 85							0													No on 85,88,89		Statewide	S			
+1302356	0	4	S401	F401B	EXP3496					Levine & Associates				Sherman Oaks	CA	91403	2500	0	Professional Services																	
+1189582	0	37	S401	F401D	ENT20					Mark Ridley-Thomas							0			Mark Ridley-Thomas				SEN		SEN		26					S			
+1189582	0	43	S401	F401D	ENT14					Pat Wiggins							0			Pat Wiggins				SEN		SEN		2					S			
+1189582	0	47	S401	F401D	ENT39					Richard Alarcon							0			Richard Alarcon				ASM		ASM		39					S			
+1203734	0	3	S401	F401D	ENT36					Citizens for a Safe El Monte				Los Angeles	CA	90071	0			Citizens for a Safe El Monte										El Monte Public Safety Funding Act of 2006	P	City of El Monte	S			
+1312202	2	3	S401	F401B	EXP60					Communications by Design				Long Beach	CA	90803	2400	0	Design & layout																	
+1237058	0	4	S401	F401B	EXP103					Landslide Communications				Laguna Niguel	CA	92677	10000	0	Consulting																	
+1237058	0	8	S401	F401B	EXP101					Ventura County Republican LVG				Laguna Niguel	CA	92677	690	0	Contribution																	
+1238915	0	46	S401	F401D	ENT458					Purluss	Dennis						0			Dennis Perluss				OTH	Appeals Court Justice	STW							S			
+1213034	0	18	S401	F401D	ENT141					PROP 1B							0													HIGHWAY SAFETY, TRAFFIC REDUCTION, AIR QUALITY, PORT SECURITY	1B	STATEWIDE	S			
+1213034	0	21	S401	F401D	ENT144					PROP 1E							0													DISASTER PREPAREDNESS AND FLOOD PREVENTION	1E	STATEWIDE	S			
+1228051	1	153	S401	F401D	ENT3983					Rodriguez	Roberto						0			Roberto Rodriguez				OTH	C.D. 25								S			
+1228051	1	159	S401	F401D	ENT1607					Sanchez	Loretta						0			Loretta Sanchez				OTH	C.D. 47								S			
+1334507	0	20	S401	F401D	20082ndsp039																									Mixed Use Development Project for Candlestick Point and Hunters Point Shipyard	G	San Francisco Proposition	S			
+1334528	0	3	S401	F401B	EXP2034					MPR Strategies, LLC				Commerce	CA	90040	480	0	Commission																	
+1334570	0	5	S401	F401B	EXP106					MBI Merchant Card Services				Alhambra	CA	91801	5.95	0	Credit Card Fee																	
+1188027	0	19	S401	F401D	S401D0000001182															Yes On L 						CIT	County of San Diego			Yes on L	L	County of San Diego	S			
+1191779	0	15	S401	F401D	ENT66					Phil Angelides							0			Mr. Phil Angelides				GOV		STW			S				S			
+1213034	1	20	S401	F401D	ENT142					PROP 1C							0													HOUSING AND EMERGENCY SHELTER TRUST FUND	1C	STATEWIDE	S			
+1277117	0	27	S401	F401D	ENT11					Gloria Negrete McLeod for State Senate 32, 2006				Chino	CA	91708	0			Gloria Negrete McLeod				SEN		SEN		32	S				S			
+1277117	0	28	S401	F401D	ENT5					Jerry Brown for Attorney General				Oakland	CA	94612	0			Jerry Brown				ATT		STW			S				S			
+1238915	0	50	S401	F401D	ENT433					Tillmon	Bobbi						0			Bobbi Tillmon				SCJ		OTH	L.A. Superior Court	104	S				S			
+1239660	0	3	S401	F401B	EXP91					OneUnited Bank				Los Angeles	CA	90008	10	0	Bank charges																	
+1228051	0	39	S401	F401D	ENT2931					Calderon	Ron						0			Ron Calderon				OTH	S.D. 30								S			
+1228051	0	70	S401	F401D	ENT3386					Farrelly	Desmond						0			Desmond Farrelly				OTH	A.D. 34								S			
+1238974	1	21	S401	F401D	ENT756					Proposition 85							0													Yes on  Prop 85		Statewide	S			
+1277179	0	3	S401	F401B	EXP104					Landslide Communications				Irvine	CA	92604	10000	0																		
+1277181	0	6	S401	F401C	EXP116					Landslide Communications				Laguna Niguel	CA	92677	1500	2500																		
+1278517	0	5	S401	F401B	EXP2361					Cingular Wireless				Van Nuys	CA	91410	179.77	0	cell phone																	
+1302419	0	10	S401	F401D	ENT39					Committee to Elect Jiles Smith							0			Jiles Smith				CCM		OTH	Town of Apple Valley		S				S			
+1236568	0	2	S401	F401B	EXP285					Holden	Nate			Los Angeles	CA	90016	1500	0	Consulting																	
+1236568	0	3	S401	F401B	EXP286					Holden	Nate			Los Angeles	CA	90016	500	0	Consulting																	
+1236568	0	18	S401	F401C	EXP296					THE ROSS GROUP				LOS ANGELES	CA	90008	3150	8150	Consulting																	
+1203055	0	14	S401	F401C	EXP778					Nahum	Renee			Los Angeles	CA	90039	2500	17500	Consulting Fee																	
+1238791	0	11	S401	F401B	EXP78					SUTTON LAW FIRM				SAN FRANCISCO	CA	94108	4847.77	0	PROFESSIONAL SERVICES																	
+1191779	0	4	S401	F401B-1	EDT3	Storefront Political Media				U.S. Postmaster				San Francisco	CA	94104	2730	0	Postage																	EXP28
+1193065	0	1	S401	F401B	EXP43					AMAC Information & Graphics				Redondo Beach	CA	90277	12795.85	0	Printing, postage & delivery																EXP43	
+1203217	0	9	S401	F401C	EXP2871					Levine & Associates				Sherman Oaks	CA	91403	45000	387178.79	Professional Services																	
+1204339	0	8	S401	F401B	EXP7003					Kirkpatrick	Tom			Wilmington	CA	90244	900	0	Telephone Sales																	
+1213605	0	18	S401	F401D	ENT46					Friends of Bea Cortes				Grand Terrace	CA	92313	0			Bea Cortes				CCM		OTH	City of Grand Terrace		H				S			
+1236623	0	4	S401	F401B	EXP1897					Kim Stephenson for School Board				Camarillo	CA	93010	150	0	Refund																	
+1185216	0	14	S401	F401D	ENT534					Garamendi	John						0			John Garamendi				LTG		STW			S				S			
+1204516	0	1	S401	F401B	B27					Blanning & Baker Associates, Inc.				Sacramento	CA	95814	5700		Professional Services																	
+1225597	0	10	S401	F401B	EXP163					Greater La Puente Valley Meals on Wheels				City of Industry	CA	91744	500	0	Civic Donations																	
+1228016	0	13	S401	F401C	EXP875					David L. Gould Company				Los Angeles	CA	90071	473.10	6946.52	Professional Services																	
+1239660	0	17	S401	F401D	ENT70					Friends of Dymally 2006				Compton	CA	90220	0			Mervyn Dymally				ASM		ASM		52	S				S			
+1238967	1	22	S401	F401D	ENT1417					Mountjoy	Richard						0			Richard Mountjoy				OTH	US Senate	STW							S			
+1228051	0	118	S401	F401D	ENT2344					Matthews	Cynthia						0			Cynthia Matthews				OTH	C.D. 26								S			
+1228051	0	138	S401	F401D	ENT4014					No on Measure O							0			Instant Run Off				OTH	Measure O	OTH	Oakland						O			
+1232698	0	3	S401	F401B-1	20062ndsa021	Stearns Consulting				Spotlight Deisign & Printing				San Francisco	CA	94107	2500		Printing																	
+1252531	0	1	S401	F401B	EXP258					Designer Mailing				Santa Ana	CA	92704	5000	0	Print																	
+1273177	0	5	S401	F401D	12															Strickland	Tony			CON		STW							S			
+1278639	0	1	S401	F401B	EXP1378					Cognetix				Santa Rosa	CA	95404	10000	0	Consulting Services																	
+1278639	0	9	S401	F401B	EXP1408					Huebscher	Fred			Hermosa Beach	CA	90254	4000	0	Consulting Services																	
+1278641	0	1	S401	F401B	EXP747					Calpeek				Beverly Hills	CA	90213	175	0	Subscription																	
+1319925	0	3	S401	F401B	EXP56					Larry Dick for Assembly				Santa Ana	CA	92705	1000	0	Refund																	
+1320000	0	4	S401	F401B	EXP80					Yes on Proposition 92, Californians for Improving Community Colleges, A Coalition of Educators & Community College Org.				Sacramento	CA	95814	25000	0																		
+1302679	0	7	S401	F401C	EXP889					David L. Gould Company				Los Angeles	CA	90071	446.13	1347.84	Office Expenses																	
+1305445	0	5	S401	F401B	EXP2475					Landslide Communications				Irvine	CA	92604	30000	0																		
+1305571	0	1	S401	F401B	B151					Gibson and Company, Inc.				Sacramento	CA	95864-2608	353.23		Tax Preparation Services																	
+1305623	0	1	S401	F401B	EXP1966					Barry Wyatt Associates				Sacramento	CA	95864	10000	0	Consultant																	
+1213034	2	7	S401	F401B-1	EDT4	Olympic Mailing				US Postmaster				San Francisco	CA	94114-9991	2536.35	0																		EXP235
+1306104	0	1	S401	F401B	EXP1					Admail West, Inc.				Sacramento	CA	95814	27855	0	Postage																	
+1320419	0	2	S401	F401B	EXP7553					Maze For Assembly '08				Visalia	CA	93277	3050	0																		
+1333372	0	5	S401	F401D	11															Shea	Bonnie			OTH	Kern County Republican Central Committee	LOC	2nd Supervisorial District						S			
+1214589	0	5	S401	F401D	ENT498					Williams	Harold			Carson	CA	90746	0			Harold Williams				CCM		OTH	Carson City Council						S			
+1444435	0	4	S401	F401B	19					MIKE HARRIS FOR CITY COUNCIL				UNK	CA	00000	311		REFUND																	
+1320359	1	9	S401	F401B-1	EDT27	Mailing Systems, Inc.				River City Print				Rancho Cordova	CA	95742	180000	0	Printing for Slate Mailer																	EXP374
+1343650	0	1	S401	F401B	EXP890					David L. Gould Company				Los Angeles	CA	90071	315.45	0	Office Expenses																	
+1343650	0	8	S401	F401B	EXP902					Rex	Michelle			Canyon Country	CA	91387	49000	0	Consulting Fee																	
+1427708	0	3	S401	F401B	48					MAILING PROS & APOLLO PRINTING	CHRIS & DAN			ANAHEIM-HUNTING BEACH	CA	92801	98374.08		PRINTING AND MAILING																	
+1363059	1	5	S401	F401B	EXP9					Kenny the Printer				Irvine	CA	92614	13500	0	mailer postage																	
+1397252	0	3	S401	F401B	EXP226					Designer Mailing Company				Costa Mesa	CA	92626	15000	0																		
+1391566	0	14	S401	F401B	EXP152					FREELOVE CONSULTING GROUP, INC.				SAN DIEGO	CA	92130	5250	0	FUNDRAISING																	
+1432744	0	7	S401	F401B	EXP175					Progressive Connections				Los Angeles	CA	90010	8000	0	Consulting Services																	
+1397259	0	1	S401	F401B	EXP95					DFS Associates, Inc.				San Jose	CA	95126	274718	0	Design, Printing, Postage, Data Lists and Mailing Services																	
+1397259	0	7	S401	F401B	EXP97					Olson, Hagel & Fishburn LLP				Sacramento	CA	95814	578.47	0	Legal & Reporting Services																	
+1347884	0	29	S401	F401D	ENT497					Goodrich	Tim						0			Tim Goodrich				CCM		OTH	City of Torrance						S			
+1444442	0	31	S401	F401B	42					AARON THOMAS AND ASSOC				CHATSWORTH	CA	91311	39107.79		MAIL PRODUCTION AND MAILING																	
+1370431	0	6	S401	F401B-1	EDT6	Precise Mailing, Inc.				U.S. Postmaster				South San Francisco	CA	94080	4983.60	0	Postage for mail piece, paid by Precise Mailing, Inc.																	EXP100
+1335706	0	3	S401	F401D	ENT27					Prop A 2008							0													School Parcel Tax	A	San Francisco	S			
+1349967	0	3	S401	F401B	EXP687					Cognetix				Santa Rosa	CA	95404	4000	0	Consulting Fee																	
+1349967	0	12	S401	F401C	EXP688					David L. Gould Company				Los Angeles	CA	90071	80.80	222.20	Prof. Services																	
+1347884	0	52	S401	F401D	ENT486					Villalobos	Michael						0			Michael Villalobos				SCJ		OTH	L.A.Superior Court	41					S			
+1347880	0	3	S401	F401B	EXP27					Committee to Protect the Political Rights of Minorities Candidate PAC				Sacramento	CA	95814	150.60	0	Transfer to Affiliated Committee																	
+1370431	0	12	S401	F401D	ENT96					2008 SF Prop O							0													Replacing the Emergency Response Fee	O	City & County of San Francisco, CA	S			
+1370431	0	25	S401	F401D	ENT109					Rebecca Kaplan (2008)							0			Rebecca Kaplan				CCM		OTH	City of Oakland, CA - At Large		S				S			
+1391566	0	42	S401	F401C	PDT54					SUTTON, OWNER, SUTTON LAW FIRM.	JAMES R.			SAN FRANCISCO	CA	94108	2269.69	13386.82																		
+1351069	1	14	S401	F401B-1	PDT14	BIEBER  COMMUNICATIONS				CALIFORNIA STATE BOARD OF EQUALIZATION				SANTA ANA	CA	92701	289.30	0	SALES TAX																	PAY9
+1363068	0	29	S401	F401B	EXP543					Friends of Bruce Kranz				Meadow Vista	CA	95722	825	0	Refund slate payment																	
+1363068	0	48	S401	F401B	EXP542					Jon Dumitru for City Council				Orange	CA	92869	1300	0	Refund slate payment																	
+1342909	0	9	S401	F401B	162					I Print n' Mail				San Francisco	CA	94124	9782.65		Postage & Handling																	
+1362210	0	8	S401	F401B	EXP42					National Tax Limitation Committee				Laguna Niguel	CA	92677	5000	0																		
+1398140	1	41	S401	F401D	ENT884					Donald E. Williamson/Cte.to Re-Elect				Highland	CA	92346	0			Donald  Williamson				OTH	A.D. 59								S			
+1347880	0	11	S401	F401B	EXP22					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814	316.54	0	Legal & Reporting Services																	
+1389139	0	11	S401	F401D	ENT153					Yes on J							0													Measure J		Orange County - Measure J	S			
+1444588	0	46	S401	F401D	70															ALDANA	MANUEL			ASM		ASM		46					S			
+1435946	0	2	S401	F401B	EXP4175					Krute	David			Reseda	CA	91335	2000	0	Professional Services																	
+1444588	0	81	S401	F401D	105															GARCIA	GASPAR			ASM		ASM		9					S			
+1149909	1	4	S401	F401C	S401C000000000368080	IND				Kaptain	Thomas			Burbank	CA	91506	15000	19000																		
+1350821	0	43	S401	F401D	ENT7487					Martin Garrick							0			Martin Garrick				ASM		ASM		74					S			
+1437300	0	3	S401	F401B	EXP2498					Moran & Associates				Folsom	CA	95630	10000	0	Professional Management																	
+1362381	0	6	S401	F401B	EXP2654					Cox Communications				Cypress	CA	90630	79	0	Internet expense																	
+1363112	0	4	S401	F401B	EXP195					Political Data,Inc.				Burbank	CA	91506	6955.85	0	Data																	
+1396902	0	8	S401	F401B	EXP136					Spotlight Design & Printing				San Francisco	CA	94107	690	0	Mail piece printing																	
+1362482	0	4	S401	F401B	EXP2192					Mailing Systems, Inc.				Rancho Cordova	CA	95741	622.98	0	Printing, Postage																	
+1363059	0	13	S401	F401B	EXP20					Trubo	Richard			Irvine	CA	92614	500	0	mailer research, writing																	
+1389140	0	6	S401	F401B	EXP2841					Cox Communications				Cypress	CA	90630	448.26	0	Telephone																	
+1389140	0	8	S401	F401B	EXP2828					DMH & Assoc.				Irvine	CA	92614	37000	0	Slate mailers																	
+1393593	0	14	S401	F401B	EXP79					Dugar	Sean			San Leandro	CA	94578	250	0	Distribution of Slate Mailer																	
+1334932	1	4	S401	F401D	ENT73					Marsh	Kermit						0			Kermit Marsh				OTH	Central Committee	OTH	County or Orange	68	S				S			
+1396902	0	20	S401	F401D	ENT99					2008 SF Prop P							0													Changing Composition of Transportation Authority Board	P	City & County of San Francisco, CA	O			
+1398140	1	148	S401	F401D	ENT2793					Solorio	Jose						0			Jose Solorio				OTH	A.D. 69								S			
+1395797	0	20	S401	F401D	ENT8386					Claudia Bermudez							0			Claudia Bermudez				SEN		SEN		9					S			
+1398886	0	5	S401	F401B	5					Political Data				Burbank	CA	91507	1366		Data																	
+1398918	0	2	S401	F401B	2					Political Data				Burbank	CA	91507	1728		Data																	
+1370709	0	27	S401	F401D	ENT289					Prop 11 2008							0													Redistricting, Initiative Constiutional Amendment and Statute	11	Statewide	O			
+1347389	0	5	S401	F401B	20081stsa010					U.S. Postmaster				San Francisco	CA	94124	7064.01		Postage																	
+1347889	0	6	S401	F401B	EXP148					Landslide Communications				Laguna Niguel	CA	92677	2400	0	Consulting																	
+1334805	0	6	S401	F401B	EXP50					CompleteCampaigns,com				San Diego	CA	92102	51.90	0	Credit card processing fee																	
+1334805	0	15	S401	F401B	EXP104					Friends of Mimi Walters				RanchoSantaMargarita	CA	92688	3565	0	Refund																	
+1438711	0	1	S401	F401B	EXP332					Bank of America				San Francisco	CA	94137	125.77	0	Bank fees																	
+1393685	0	16	S401	F401D	ENT43					Prop K							0													Say no to legalized prostitution. This measure could result in increased human- trafficking.	K	San Francisco	O			
+1423026	0	12	S401	F401B	EXP2895					James Sills				San Diego	CA	92138	750	0	Consulting																	
+1423026	0	24	S401	F401B	EXP2903					Rodegra				Berlin, Germany			3000	0	Consulting																	
+1334805	0	25	S401	F401B	EXP89					Williams	John S.			Mission Viejo	CA	92691	99	0	Refund																	
+1363068	1	54	S401	F401B	EXP565					Nancy Ayres 4 SJ School Board				San Jacinto	CA	92582	210	0	Refund slate payment																	
+1391230	0	28	S401	F401D	54																									REDISTRICTING. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE	11	Statewide	O			
+1370709	0	35	S401	F401D	ENT285					Prop 7 2008							0													Renewable Energy Generation, Intiative Statute	7	Statewide	O			
+1370713	0	9	S401	F401D	ENT15					Yes on Prop. 10							0													Alternative Fuel Vehicles and Renewable Energy	10	statewide	S			
+1396324	0	1	S401	F401B	EXP124					Croul	John V.			Corona Del Mar	CA	92625	10000	0	Return slate payment - Proposition 6																	
+1396486	0	6	S401	F401D	10															Sandoval	Gerardo			OTH	Superior Court Judge, Seat 12	OTH	City & County of San Francisco						S			
+1391544	0	15	S401	F401B-1	EDT2	MSHC PARTNERS, INC.				EAGLE PRESS				SACRAMENTO	CA	95824	1769	0	LITERATURE																	EXP4
+1433912	0	5	S401	F401B	EXP455					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814-	140.40	0	Legal & Reporting Services																	
+1436824	0	6	S401	F401B	19					Winning Directions				South San Francisco	CA	94080	11810.29		Designing, Printing & Postage																	
+1398140	1	34	S401	F401D	ENT4805					Cross	Gwen						0			Gwen Cross				OTH	Water District Director	OTH	Eastern Muni Water Dist #3	3					S			
+1438793	0	3	S401	F401B	11					Brazil	Elizabeth			San Pedro	CA	90731	4100		Consulting																	
+1438778	2	4	S401	F401B	13					Remini Services				Long Beach	CA	90814	1600		Consulting																	
+1506739	0	27	S401	F401D	ENT9005					Tiffany Leal							0			Tiffany Leal				OTH	Republican County Central Committee	OTH	San Diego #78						S			
+1502977	0	66	S401	F401D	ENT666					Williams	John						0			John Williams				OTH	Public Administrator	OTH	Orange County						S			
+1507326	1	9	S401	F401D	ENT132					Barrett	Holly						0			Holly Barrett				OTH	Republican Central Committee AD74	OTH	San Diego County						S			
+1504834	0	52	S401	F401D	ENT173					Weisman	Ruth						0			Ruth Weisman				OTH	Member, County Central Committee	ASM		47					S			
+1507326	1	38	S401	F401D	ENT157					Pepin	Brian						0			Brian Pepin				OTH	Republican Central Committee AD78	OTH	San Diego County						S			
+1464499	0	5	S401	F401B	EXP153					Visteva				Garden Grove	CA	92841	2000	0																		
+1449074	0	2	S401	F401B	EXP4257					Pomerance-Poirier	Tracey			Sherman Oaks	CA	91403	16.66	0	Reimbursement																	
+1530581	0	5	S401	F401D	ENT188					Fleischman	Jon						0			Jon Fleischman				OTH	Republican Central Committee 71st AD	OTH	Orange County						S			
+1522851	0	1	S401	F401B	EXP1619					Blair Briggs Campaign				Woodland Hills	Ca	91364	825	0	Commission																	
+1454035	0	2	S401	F401B	7					McKinnor	Tina			Lawndale	CA	90260	13		Office Expense																	
+1507588	0	11	S401	F401C	9					Seedborg	Jerry						10000	30000																		
+1507588	0	20	S401	F401D	23															Harris	Kamala D.			ATT		STW							S			
+1465230	0	1	S401	F401B	EXP470					ML Associates				West Hollywood	CA	90069	26.50	0	Accounting services																	
+1523077	0	3	S401	F401B	EXP178					Netfile				Ahwahnee	CA	93601	100	0	Web Service																	
+1490747	0	8	S401	F401B	EXP2697					QB Merchant Services				Woodland Hills	CA	91367	112.70	0	Credit Card Processing																	
+1531165	0	10	S401	F401D	ENT121					Burdick	Shawneen						0			Shawneen Burdick				OTH	Republican Central Committee AD 66	OTH	San Diego County						S			
+1464280	0	1	S401	F401B	EXP56					Bank of America				San Francisco	CA	94137	29.95	0	Bank Fees																	
+1473836	0	46	S401	F401C	EXP3019					Wewer & Lacy LLP				Laguna Niguel	CA	92677	4600	8600	Rent																	
+1502981	0	45	S401	F401D	ENT1572					Miller	Michael						0			Michael Miller				OTH	Auditor-Controller	OTH	Monterey County						S			
+1490901	0	14	S401	F401D	ENT374					McGarity	Lynne						0			Lynne McGarity				OTH	Republican Central Committee 1	OTH	Kern County	1					S			
+1506386	0	95	S401	F401D	ENT5170					Friedman	Johnathan						0			Jonathan Friedman				OTH	CDCC/AD 47								S			
+1506386	0	97	S401	F401D	ENT4826					Friends of Ryan Wright				Santa Paula	CA	93060	0			Ryan Wright				SCJ		OTH	Ventura County	1					S			
+1505169	0	247	S401	F401D	ENT5329					Kent	Don						0			Don Kent				OTH	Treasurer/Tax Collector	OTH	Riverside County						S			
+1500855	0	27	S401	F401D	ENT705					Hahn	Janice						0			Janice Hahn				LTG		STW							S			
+1489765	0	19	S401	F401C	EXP4520					Levine & Associates				Sherman Oaks	CA	91403	15000	96047.47	Professional Services																	
+1505169	0	68	S401	F401D	ENT5305					Budmark	Cheryl 'Cheri'						0			Cheryl 'Cheri' Budmark				ASR		OTH	Modoc County						S			
+1507588	0	47	S401	F401D	51															Nunes	Devin G.			OTH	US Representative	OTH	Congressional District 21						S			
+1523077	0	23	S401	F401D	ENT136					Hodges	Sherry						0			Sherry Hodges				OTH	Republican Central Committee AD74	OTH	San Diego County						S			
+1521525	0	9	S401	F401B	EXP813					Willard H. Murray Jr. Company				Los Angeles	CA	90071	1500	0	Consulting Services																	
+1531165	0	40	S401	F401D	ENT141					Rosen	Michael						0			Michael M. Rosen				OTH	Republican Central Committee AD75	OTH	San Diego County						S			
+1464319	0	7	S401	F401B	EXP247					Garcia	Barrett			San Juan Capistrano	CA	92675	270	0	Accounting services																	
+1531169	0	14	S401	F401D	ENT376					Mettler	Ken						0			Ken Mettler				OTH	Republican Central Committee 4	OTH	Kern County	4					S			
+1531173	0	10	S401	F401D	ENT40					Osborn	Mary						0			Mary Osborn				OTH	Republican Central Committee District 1	OTH	Ventura County	1					S			
+1464319	0	25	S401	F401C	EXP256					Landslide Communications				Laguna Niguel	CA	92677	3000	16000	Consulting																	
+1490034	0	26	S401	F401C	EXP55					David L. Gould Company				Los Angeles	CA	90071	2000	10000	Professional Services																	
+1474078	0	9	S401	F401B	EXP4337					Pomerance-Poirier	Tracey			Sherman Oaks	CA	91403	26.12	0	Reimbursement																	
+1474193	0	2	S401	F401B	EXP1804					COMPLETE CAMPAIGNS				San Diego	CA	92123	75	0																		
+1506208	0	8	S401	F401B	EXP76					Kreep	Gary			Ramona	CA	92065	4500	0	Consulting																	
+1506386	0	148	S401	F401D	ENT5164					Knapp	Clarice						0			Clarice Knapp				OTH	CDCC/AD 44								S			
+1490393	0	1	S401	F401B	EXP1519					David L. Gould Company				Los Angeles	CA	90071	143.66	0	Office Expenses																	
+1506216	0	3	S401	F401B	EXP368					Landslide Communications				Laguna Niguel	CA	92677	5000	0	Consulting																	
+1490377	0	2	S401	F401B	EXP1053					David L. Gould Company				Los Angeles	CA	90071	153.49	0	Office Expenses																	
+1505169	0	313	S401	F401D	ENT5418					Mierzwa	Dan						0			Dan Mierzwa				OTH	Treasurer/Tax Collector	OTH	Yuba County						S			
+1492044	1	4	S401	F401B	40					Brazil	Elizabeth			Torrance	CA	90501	2000		Consultant																	
+1508163	0	12	S401	F401D	ENT100					Gatto 2010							0			Mike Gatto				ASM		ASM		43					S			
+1502063	0	3	S401	F401B	EXP149					Visteva				Garden Grove	CA	92841	10000	0																		
+1461649	0	6	S401	F401B	EXP470					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814-	265.90	0	Legal & Reporting Services																	
+1491383	0	4	S401	F401C	EXP483					Copp	Vona			Elk Grove	CA	95624	732.75	2856.57	Treasurer services																	
+1491383	0	5	S401	F401C	EXP481					Copp	Vona			Elk Grove	CA	95624	786.24	2856.57	Treasurer services																	
+1491383	0	12	S401	F401D	ENT463					Nehring	Ron						0			Ron Nehring				OTH	Central Committee Member	OTH	San Diego County	77					S			
+1507588	0	124	S401	F401D	128															Ammiano	Tom			ASM		ASM		13					S			
+1505169	0	324	S401	F401D	ENT5265					Morton	Jim						0			Jim Morton				OTH	CDCC/AD 50								S			
+1489303	0	14	S401	F401D	21															Pelosi	Nancy			OTH	U. S. Representative	OTH	District 8						S			
+1489303	0	25	S401	F401D	32															Walker	Debra			OTH	Democratic County Central Committee	ASM		13					S			
+1489342	0	5	S401	F401B	EXP788					David L. Gould Company				Los Angeles	CA	90071	3318.75	0	Consulting Services																	
+1464346	0	24	S401	F401B	EXP2984					Lacy	James			Laguna Niguel	CA	92677	7600	0	Management Services																	
+1507588	0	147	S401	F401D	151															Shaw	Diana G.			ASM		ASM		38					S			
+1531495	0	26	S401	F401D	R401D000000000768307	COM				Friends Of Pierre Gilbert For Laguna Hills City Council 2010										Gilbert	Pierre			CCM	Council Member		Laguna Hills		S				S			
+1464346	0	52	S401	F401C	EXP2973					Lacy	James			Laguna Niguel	CA	92677	4000	53416.82	Management Services																	
+1474660	0	10	S401	F401C	EXP608					Copp	Vona			Elk Grove	CA	95624	666.16	1106.93	Treasurer fee & expenses																	
+1474668	0	3	S401	F401B	EXP190					Copp	Vona			Elk Grove	CA	95624	698.56	0	Treasurer services:  August - October 2009																	
+1506229	0	18	S401	F401D	ENT375					Lind	Bill						0			Bill Lind				OTH	Republican Central Committee 3	OTH	Kern County	3					S			
+1491143	0	1	S401	F401B	EXP610					Buhler	Roman			Mc Lean	VA	22101-5805	5000	0	Consulting fee																	
+1491143	0	7	S401	F401B	EXP534					Krasner	Alex			Studio City	CA	91604	600	0	Consulting fee																	
+1491146	0	15	S401	F401B	15					Committee to Elect Brian Koegle				Santa Clarita	CA	91321	500		refund																	
+1506386	0	218	S401	F401D	ENT4006					Pougnet	Steve						0			Steve Pougnet				OTH	C.D. 45								S			
+1501494	0	4	S401	F401B	EXP1180					Rex	Michelle			Canyon Country	CA	91387	52000	0	Consulting Fee																	
+1506386	0	6	S401	F401B	EXP200					Political Data Inc.				Burbank	CA	91507	10000	0	Electoral Data																	
+1505169	0	111	S401	F401D	ENT266					Corbett	Ellen						0			Ellen Corbett				OTH	S.D. 10								S			
+1505169	0	119	S401	F401D	ENT5114					Curtis	Clint						0			Clint Curtis				OTH	C.D. 4								S			
+1506386	0	265	S401	F401D	ENT1159					Thompson	Mike						0			Mike Thompson				OTH	C.D. 1								S			
+1508510	0	85	S401	F401D	87															Logue	Dan			ASM		ASM		3					S			
+1508510	0	108	S401	F401D	110															Grubbs	Candace			OTH	Clerk Recorder	CTY	Butte						S			
+1504834	0	28	S401	F401D	ENT409					Dear	Jim						0			Jim Dear				OTH	Member, County Central Committee	ASM		55					S			
+1505169	0	133	S401	F401D	ENT5371					Dole	Rod						0			Rod Dole				OTH	Aud/Cont/Treas/Tax Collector	OTH	Sonoma County						S			
+1505169	0	385	S401	F401D	ENT5292					Rosander	Aaron						0			Aaron Rosander				OTH	County Superintendent of Schools	OTH	Mariposa County						S			
+1521999	0	17	S401	F401B	EXP3062					QB Merchant Services				Woodland Hills	CA	91367	9.76	0	Bankcard MTOT Disc																	
+1522580	0	4	S401	F401B	EXP749					Rotto	Gary			San Diego	CA	92123	3710	0	Consulting fee																	
+1437300	1	3	S401	F401B	EXP2498					Moran & Associates				Folsom	CA	95630	10000	0	Professional Management																	
+1504595	0	8	S401	F401B	EXP156					The Sun Reporter				San Francisco	CA	94124	8030	0	Distribution of Slate Mailer																	
+1523064	0	12	S401	F401B	EXP3255					Landslide Communications				Irvine	CA	92604	4000	0	Consulting																	
+1490085	0	22	S401	F401B-1	EDT19	Ford Printing & Mailing				U.S. Postal Service				Los Angeles	CA		5247.67	0	Postage																	EXP814
+1530154	0	2	S401	F401B-1	EDT1	Winning Directions				Postmaster				South San Francisco	CA	94080-3715	62400	0	Postage																	EXP12
+1474006	0	2	S401	F401B	EXP377					Barry Wyatt Associates				Sacramento	CA	95864	3750	0	Consultant																	
+1502977	0	34	S401	F401D	ENT845					Logue	Dan						0			Dan Logue				ASM		ASM		3					S			
+1473829	0	3	S401	F401B	EXP22					Lacy	James			Laguna Niguel	Ca	92677	713.58	0	Meeting expenses																	
+1501494	0	13	S401	F401D	ENT815					Rubin	Joyce						0			Joyce Rubin				OTH	Democratic Central County Committee	ASM		42					S			
+1506386	0	18	S401	F401D	ENT5229					Atkins	David						0			David Atkins				OTH	CDCC/Vent Co Sup #1								S			
+1491386	0	6	S401	F401C	EXP624					Copp	Vona			Elk Grove	CA	95624	381.82	1488.75	Treasurer services																	
+1506386	0	277	S401	F401D	ENT5171					Welinsky	Mollie 'Lee'						0			Mollie 'Lee' Welinsky				OTH	CDCC/AD 47								S			
+1647218	0	1	S401	F401B	EXP957					Kaptain	Thomas			Burbank	CA	91506	5000	0	Consulting fee																	
+1532044	0	6	S401	F401B	EXP276					Johnson	Jo'elle N.			Inglewood	CA	90301	526.39	0	Salary																	
+1533204	0	4	S401	F401B	4					Carr	Torino			Los Angeles	CA	90047	640		Professional Services																	
+1562699	0	24	S401	F401D	ENT573					Hogue	Amy						0			Amy Hogue				SCJ		OTH	Los Angeles Superior Court	136					S			
+1562699	0	35	S401	F401D	ENT571					Proposition 25							0													Vote Requirement to Pass Budget	25	Statewide	S			
+1568787	0	11	S401	F401D	ENT391					Yes on Recall							0													Capistrano Unified School District Recall Election		Capistrano Unified School District	S			
+1568803	0	18	S401	F401D	ENT249					No on Proposition 25							0													No on Proposition 25		State	O			
+1661576	0	2	S401	F401B	EXP1317					Chramoff	Norman			West Hollywood	CA	90046	3000	0	Consulting Fee																	
+1662858	0	16	S401	F401D	17															Goh	Karen			OTH	5th District Kern County Supervisor	CTY	5th District Supervisor						S			
+1607954	0	21	S401	F401B	22					Robinson	Deborah			Los Angeles	CA	90008	100		Canvassing																	
+1567312	0	54	S401	F401D	73															La Malfa	Doug			SEN		STW							S			
+1567312	0	58	S401	F401D	77															Canella	Anthony			SEN		STW							S			
+1572754	0	66	S401	F401D	ENT124					Skinner 2010							0			Nancy Skinner				ASM		ASM		14					S			
+1572902	0	8	S401	F401B	EXP1697					Huebscher	Fred			Hermosa Beach	CA	90254	10000	0	Consulting																	
+1572902	0	12	S401	F401C	EXP1696					Huebscher	Fred			Hermosa Beach	CA	90254	5000	16897.37	Consulting																	
+1568811	0	22	S401	F401D	ENT382					Fuentes	Tom						0			Tom Fuentes				OTH	Republican Central Committee 70th AD	OTH	Orange County						S			
+1572754	0	39	S401	F401D	ENT150					Holly Mitchell for Assembly 2010							0			Holly Mitchell				ASM		ASM		47					S			
+1568818	0	6	S401	F401D	ENT79					Abel Maldonado for Lt. Governor							0			Abel Maldonado				LTG		STW							S			
+1570565	0	234	S401	F401D	247															Skinner	Nancy			ASM		ASM		14					S			
+1571083	0	4	S401	F401B	EXP180					Committee to Protect the Political Rights of Minorities Candidate PAC				Sacramento	CA	95814	558.45	0	Transfer to Affiliated Committee																	
+1568285	0	59	S401	F401D	ENT5031					Brown	Edmund G 'Jerry'						0			Edmund 'Jerry' Brown				GOV		STW							S			
+1568562	0	11	S401	F401C	EXP91					Pomerance-Poirier	Tracey			Chatsworth	CA	91311	1495	1790.56	Professional Services																	
+1568562	0	33	S401	F401D	ENT5793					Conlon	Greg						0			Greg Conlon				ASM		ASM		21					S			
+1570042	0	18	S401	F401D	ENT253					Prop. 19							0													Legalize Marijuana	19	Statewide	O			
+1602229	0	95	S401	F401D	ENT5839					Miller	Jeff						0			Jeff Miller				ASM		ASM		71					S			
+1523141	1	23	S401	F401D	ENT386					Prop 27 - 2010							0													Eliminates State Commission on Redistricting. Consolidates Authority for Redistricting with Elected Representatives.	27	Statewide	S			
+1606970	0	4	S401	F401B	EXP407					Landslide Communications				Laguna Niguel	CA	92677	500	0	Consulting																	
+1571083	0	11	S401	F401B-1	EDT12	Alice Huffman dba A.C. Public Affairs, Inc.				The Huffman Group, LLC				Cleveland	OH	44114	2961	0	Slate Mailer																	EXP175
+1571376	0	3	S401	F401B	EXP596					Copp	Vona			Elk Grove	CA	95624	527.32	0	Treasurer services																	
+1571376	0	5	S401	F401B	EXP594					Dome Printing				Sacramento	CA	95815	38890.04	0	Slate postage																	
+1602229	0	54	S401	F401D	ENT5779					Gentry	Doris						0			Doris Gentry				ASM		ASM		7					S			
+1608251	0	3	S401	F401B	EXP626					Copp	Vona			Elk Grove	CA	95624	329.43	0	Treasurer services																	
+1567276	0	2	S401	F401B	23					Advanced Image Direct				Fullerton	CA	92831	75556.12		Slate Mailer Postage																	
+1572614	0	11	S401	F401B	EXP46					American Pacific Printers College dba Kenny the Printer				Irvine	CA	92614	16304.14	0	printing																	
+1571479	0	15	S401	F401D	10															Pelosi	Nancy			OTH	Congress District 8	STW							S			
+1568146	0	42	S401	F401D	ENT217					Capps	Lois						0			Lois Capps				OTH	C.D. 23								S			
+1568285	0	88	S401	F401D	ENT5033					Curtis	Clint						0			Clint Curtis				OTH	C.D. 4								S			
+1602204	0	15	S401	F401B	EXP554					O'Hara	Marc			Simi Valley	CA	93065	2000	0	Consulting																	
+1602204	0	17	S401	F401B	EXP552					Pomerance-Poirier	Tracey			Sherman Oaks	CA	91403	387.76	0	Professional Services																	
+1602229	0	102	S401	F401D	ENT5775					Nielsen	Jim						0			Jim Nielsen				ASM		ASM		2					S			
+1602229	0	113	S401	F401D	ENT5914					Proposition  C							0													Pacific Highlands Ranch Development	C	San Diego	S			
+1569949	0	32	S401	F401D	ENT371					Prop B - 2010							0													San Francisco Pension Reform, Proposition B	B	City of San Francisco	O			
+1523141	1	38	S401	F401D	ENT139					Re-Elect Lawrence Wong for College Board				San Francisco	CA	94109	0			Lawrence Wong				CCB		OTH	San Francisco						S			
+1602229	0	10	S401	F401D	ENT5798					Berryhill	Bill						0			Bill Berryhill				ASM		ASM		26					S			
+1602229	0	12	S401	F401D	ENT5824					Bestwick	Henry J.						0			Henry J. Bestwick				ASM		ASM		56					S			
+1602229	0	27	S401	F401D	ENT5833					Cook	Paul						0			Paul Cook				ASM		ASM		65					S			
+1568824	0	55	S401	F401D	ENT193					Tani Cantil-Sakauye for Reconfirmation							0			Tani Cantil-Sakauye				OTH	Supreme Court	STW							S			
+1568827	0	4	S401	F401B	EXP123					Bank of America				San Francisco	CA	94137	14	0	Bank Charges																	
+1532143	0	11	S401	F401D	ENT366					Prop 22 - 2010							0													Prohibits the State from Borrowing or Taking Funds Used for Transportation, Redevelopment, or Local Government Projects and Services.	22	Statewide	O			
+1570565	0	160	S401	F401D	173															Sanchez	Loretta			OTH	US Representative	OTH	Congressional District 47						S			
+1602229	0	161	S401	F401D	ENT5876					Wilkerson	Charles E.						0			Charles E. Wilkerson				OTH	U.S. Congress	OTH	C.D. 30	30					S			
+1571396	0	15	S401	F401C	EXP384					Copp	Vona			Elk Grove	CA	95624	527.92	8135.41	Treasurer services																	
+1567276	0	77	S401	F401D	98															Oropeza	Jenny			SEN		STW							S			
+1602554	0	5	S401	F401B	7					Re-Elect Herb Wesson				Los Angeles	CA	90071	250		Political Contribution																	
+1567276	0	111	S401	F401D	132															Esswein	Michael			ASM		STW							S			
+1567276	0	138	S401	F401D	159															Calderon	Charles			ASM		STW							S			
+1569949	0	38	S401	F401D	ENT381					Prop J - 2010							0													San Francisco Hotel Tax Increase, Measure J	J	City of San Francisco	O			
+1570565	0	31	S401	F401D	39															Chiang	John			CON		STW							S			
+1570565	0	32	S401	F401D	40															Strickland	Tony			CON		STW							S			
+1627154	1	3	S401	F401B	EXP4949					Pomerance-Poirier	Tracey			Chatsworth	CA	91311	28.59	0	Reimbursement																	
+1627751	0	1	S401	F401B	EXP641					Computerized Political Services, Inc.				San Jose	CA	95131	749.51	0	Voter Data																	
+1627751	0	24	S401	F401D	ENT413					Ed Lee for Mayor 2011							0			Ed Lee				MAY		OTH	City and County of San Francisco						S			
+1570565	0	79	S401	F401D	87															Lungren	Dan			OTH	US Representative	OTH	Congressional District 3						S			
+1559511	0	13	S401	F401C	EXP1137					David L. Gould Company				Los Angeles	CA	90071	100.27	3035.07	Professional Services																	
+1568562	0	120	S401	F401D	ENT5897					Popaditch	Nick						0			Nick Popaditch				OTH	U.S. Congress	OTH	C.D. 51	51					S			
+1568562	0	171	S401	F401D	ENT5768					Willis	Warren						0			Warren P. Willis				SEN		SEN		30					S			
+1630532	0	1	S401	F401B	EXP427					Bank of America				San Juan Capistrano	CA	92675	16	0	Bank Fees																	
+1607767	0	20	S401	F401C	EXP3423					Landslide Communications				Irvine	CA	92604	500	27964	Consulting																	
+1571555	0	10	S401	F401D	ENT1091					Charles Calderon for Assembly 2010				Covina	CA	91722	0			Charles Calderon				ASM		ASM		58	S				S			
+1630534	0	8	S401	F401B	EXP567					Orange County Freedom Fund				Orange	CA	92868	2190	0	Refund																	
+1630535	0	16	S401	F401B	EXP3476					U.S. Postmaster				Santa Ana	CA	92799	190	0	Postage																	
+1531495	0	59	S401	F401D	R401D000000000768350	COM				Solorio For Assembly 2010				Burbank	CA	91502				Solorio	Jose			ASM	State Assembly	ASM	State Of California	69	S				S			
+1531495	0	60	S401	F401D	R401D000000000768302	COM				Sukhee Kang For Mayor 2010				Burbank	CA	91502				Kang	Sukhee			MAY	Mayor		City of Irvine		H				S			
+1531495	0	63	S401	F401D	R401D000000000768308	COM				Toni Iseman For City Council 2010				Laguna Beach	CA	92651				Iseman	Toni			CCM	Councilmember	CIT	Laguna Beach		H				S			
+1531686	0	4	S401	F401B	EXP275					Spotlight Design & Printing				San Francisco	CA	94107	15371.06	0	Printing of slate mailer																	
+1571299	0	9	S401	F401B-1	EDT38	Darren Seaton				Voter Contact Services				Campbell	CA	95008	10500	0	Voter Data																	EXP119
+1618857	0	7	S401	F401B	16					Seedborg	Joseph			las Vegas	NV	89117	420		Reimbursement: gas, food, travel																	
+1618857	0	26	S401	F401B	35					Seedborg	Jerry			Lakewood	CA	90713	500		Reimb: food for workers, office supplies																	
+1567276	0	157	S401	F401D	178															Hanson	Mark			ASM		STW							S			
+1568285	0	213	S401	F401D	ENT5838					Rivrside Co. Measure M							0													Pension Reform	M	Riverside County	O			
+1634663	0	6	S401	F401B	EXP568					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814-	56.10	0	Legal & Reporting Services																	
+1635477	0	5	S401	F401B	17					Little	James			San Francisco	CA	94122	750		slate design																	
+1635848	0	3	S401	F401C	EXP1039					Moran & Associates (Kelley Moran)				Folsom	CA	95630	20000	210000	Professional Management																	
+1636282	0	2	S401	F401B	EXP272					Visteva				Garden Grove	CA	92841	6050	0	& Lit																	
+1572754	0	19	S401	F401D	ENT155					Carl Wood for Assembly 2010							0			Carl Wood				ASM		ASM		65					S			
+1567312	0	4	S401	F401D	23															Fiorina	Carly			SEN		STW							S			
+1567312	0	19	S401	F401D	38															Neilsen	Jim			ASM		STW							S			
+1568772	0	19	S401	F401B	EXP235					Save Proposition 13				Laguna Niguel	CA	92677	1000	0	Loan																	
+1568772	0	20	S401	F401D	ENT193					No on Measure S							0													No on Measure S		Santa Barbara County	O			
+1637366	0	2	S401	F401C	EXP635					Copp	Vona			Elk Grove	CA	95624	376.80	1958.12	Treasurer services																	
+1607684	0	28	S401	F401B-1	NON1731	Ford Printing and Mailing				United States Postal Service				City of Industry	CA	91715	1453.45	0	postage																	
+1607684	0	39	S401	F401C	EXP1722					Huebscher	Fred			Hermosa Beach	CA	90254	10000	22650	Consulting Fee																	
+1607694	0	3	S401	F401B	EXP3308					Kaufman Legal Group, APC				Los Angeles	CA	90017-5432	1651.54	0	Legal Services																	
+1531686	0	18	S401	F401D	ENT230					Jared Huffman (2010)							0			Jared Huffman				ASM		ASM		6	S				S			
+1570565	0	140	S401	F401D	153															Richardson	Laura			OTH	US Representative	OTH	Congressional District 37						S			
+1562699	0	4	S401	F401B	EXP839					Croshaw Printing & Direct Mail, Inc.				Long Beach	CA	90802-1831	27051.20	0	Postage & Mailing Services																	
+1562699	0	5	S401	F401B	EXP845					David L. Gould Company				Los Angeles	CA	90071	602.52	0	Office Expenses																	
+1562699	0	7	S401	F401B	EXP846					David L. Gould Company				Los Angeles	CA	90071	1410	0	Professional Services																	
+1738852	0	147	S401	F401D	164															Eggman	Susan Talamantes			ASM		ASM		13					S			
+1738852	0	166	S401	F401D	183															Lasson	Roger F.			ASM		ASM		27					S			
+1728651	0	1	S401	F401B	EXP1376					Advanced Image Direct				Fullerton	CA	92831	9448.12	0	Printing																	
+1739955	0	5	S401	F401B	EXP233					Lesia B. Morgan dba Just My Type				Euclid	OH	44123	950	0	Design																	
+1740223	0	14	S401	F401D	ENT344					Jody London 2012							0			Jody London				BED		OTH	City of Oakland, CA: 1						S			
+1767784	1	4	S401	F401B	EXP311					David L. Gould Company				Los Angeles	CA	90010	2000	0	Professional Services																	
+1731941	0	5	S401	F401B	EXP969					Susan Black Graphic Design Services				Los Angeles	CA	90024	1000	0	GRAPHICS																	
+1733704	0	3	S401	F401B	EXP771					Jenlax Partners				Torrance	CA	90501	385598.16	0	Production & Mailing																	
+1741770	0	7	S401	F401D	15															Selby	Thea			OTH	Board of Supervisors - District 5	CTY	San Francisco						S			
+1779370	0	15	S401	F401B-1	NON1095	Landslide Communications				Automated Mailers				Lake Forest	CA	92630	9234	0	Literature & Mailings																	
+1706114	1	5	S401	F401B	35					The McKinnor Group				Redondo Beach	Ca	90278	1204.64		Treasurer																	
+1734256	0	4	S401	F401B	EXP706					Bank of America				Dana Point	CA	92629	80.24	0	Merchant Fees																	
+1734256	0	15	S401	F401B	EXP693					Rubicon Communications				Chino Hills	CA	91709	251.25	0	Consulting																	
+1734294	0	5	S401	F401B	EXP237					DMH and Associates				Irvine	CA	92614	20000	0	Postage																	
+1741770	0	31	S401	F401D	39																									Sax Treatment for Multistate Businesses. Clean Energy and Energy Efficiency Funding. Initiative Statute.	39	State	S			
+1741770	1	10	S401	F401D	18															Engardio	Joel			OTH	Board of Supervisors - District 7	CTY	San Francisco						S			
+1663194	0	10	S401	F401B	EXP716					The National Tax Limitation Committee				Roseville	CA	95661	10000	0	Donation																	
+1663462	0	9	S401	F401C	57					Seedborg	Jerry						10000	11000																		
+1734312	0	8	S401	F401B	EXP672					Landslide Communications				Laguna Niguel	CA	92677	39000	0	Consulting																	
+1736959	0	16	S401	F401D	18																									State Budget	31	Statewide	O			
+1744718	0	8	S401	F401C	EXP92					THE SUTTON LAW FIRM				SAN FRANCISCO	CA	94108	291	8888.58	LEGAL AND ACCOUNTING FEES																	
+1748600	0	1	S401	F401B	EXP1398					David L. Gould Company				Los Angeles	CA	90010	289.25	0	Office Expenses																	
+1663367	0	23	S401	F401D	30															Lauterborn	Peter			OTH	Democratic County Central Committee	CTY	San Francisco						S			
+1663941	0	1	S401	F401B	1					Grabiner Hall Design				Inglewood	CA	90301	817.50		Slate Design																	
+1663229	0	12	S401	F401D	ENT281					John Avalos for DCCC 2012							0			John Avalos				OTH	Democratic County Central Committee	ASM		17	H				S			
+1663229	0	15	S401	F401D	ENT280					Mark Leno for Senate 2012							0			Mark Leno				SEN		SEN		11	H				S			
+1663229	0	17	S401	F401D	ENT301					Peter Lauterborn for DCCC 2012							0			Peter Lauterborn				OTH	Democratic County Central Committee	ASM		19	S				S			
+1663194	1	12	S401	F401B	EXP649					Troy Edgar for Congress				Long Beach	CA	90802	900	0	Refund																	
+1663194	1	13	S401	F401B-1	EDT4	DMH & Associates				Political Data				Burbank	CA	91507	12843.19	0	Mailings Lists																	EXP711
+1672721	0	18	S401	F401D	ENT294					Ara	Charlie						0			Charlie Ara				OTH	Dem. County Central Cte	ASM		58					S			
+1680677	0	3	S401	F401B	EXP50					WINNING DIRECTIONS				SOUTH SAN FRANCISCO	CA	94080	13273.26	0	POSTAGE; SEE SCHEDULE B-1																	
+1678080	1	1	S401	F401B	EXP1232					Barry Wyatt Associates				Sacramento	CA	95864	7500	0	Consultant																	
+1673669	0	24	S401	F401D	ENT421					Huang	Peggy						0			Peggy Huang				OTH	GOP Central Committee	OTH	Orange County	55					S			
+1673490	0	3	S401	F401B	EXP191					Larry Levine & Associates				Sherman Oaks	CA	91423	15000	0	Professional Services																	
+1673490	0	11	S401	F401B-1	EDT1	Jenlax Partners				RPD Trucking				Pico Rivera	CA	90660	13884.85	0	Transportation Services																	EXP195
+1663162	0	17	S401	F401B-1	EDT20	DMH & Assoc.				Political Data				Burbank	CA	91502	10957.51	0	Lists																	EXP3640
+1663162	0	20	S401	F401C	EXP3557					Landslide Communications				Irvine	CA	92604	500	20500	Consulting																	
+1663367	0	4	S401	F401B-1	34	Stearns Consulting				Precise Mailing				South San Francisco	Ca	94080	634.99		Mailhouse																	
+1666859	0	18	S401	F401D	23																									Coit Tower Policy	B	San Francisco	S			
+1672721	0	65	S401	F401D	ENT326					Jue	Kay						0			Kay Jue				OTH	Dem. County Central Cte	ASM		66					S			
+1737937	0	1	S401	F401B	13					MAS TON CAPITAL				SAN DIEGO	CA	92101	1220		ROBO CALLS FOR GOTV																	
+1738852	0	234	S401	F401D	251															Harkey	Diane L.			ASM		ASM		73					S			
+1738852	0	245	S401	F401D	262															Hueso	Ben			ASM		ASM		80					S			
+1673490	0	51	S401	F401D	ENT307					Echols	Elizabeth						0			Elizabeth Echols				OTH	Dem. County Central Cte	ASM		15					S			
+1673490	0	62	S401	F401D	ENT247					Gasca	Enrique						0			Enrique Gasca				OTH	Dem. County Central Cte	ASM		53					S			
+1672721	0	104	S401	F401D	ENT308					Robin	Cara						0			Cara Robin				OTH	Dem. County Central Cte	ASM		62					S			
+1703728	0	3	S401	F401B	EXP183					Jenlax Partners				Torrance	CA	90501	100000	0	Production, Mailing Services & Postage																	
+1703728	0	6	S401	F401B-1	EDT8	Jenlax Partners				Coalition for Literacy				Torrance	CA	90501	3700	0	Donation																	EXP183
+1749705	0	3	S401	F401B	EXP820					Jenlax Partners				Torrance	CA	90501	20605.20	0	Postage																	
+1676386	0	3	S401	F401B	3					Chase Bank				Monterey	CA	93940	77		Office Expense																	
+1678006	0	4	S401	F401B	EXP205					Political Data, Inc.				Burbank	CA	91502	405.87	0	Mail file																	
+1678008	0	4	S401	F401D	ENT2761					Choi	Steven						0			Steven Choi				OTH	Central Committee Member	OTH	Orange County	68					S			
+1678454	0	5	S401	F401D	9															Dorsey	Matt			OTH	Democratic County Central Committee	CTY	District 17						S			
+1673490	0	110	S401	F401D	ENT259					Macedonio	Margarita						0			Margarita Macedonio				OTH	Dem. County Central Cte	ASM		57					S			
+1749872	0	19	S401	F401D	ENT10812					Guerrero	Jack						0			Jack Guerrero				ASM		ASM		63	S				S			
+1680566	0	1	S401	F401B	EXP940					Susan Black Graphic Design Services				Los Angeles	CA	90024	300	0	Graphics																	
+1680566	0	3	S401	F401B	EXP942					Tribune Direct				Irwindale	CA	91706	1200	0	Printing Services																	
+1673490	0	151	S401	F401D	ENT155					Santiago	Miguel						0			Miguel Santiago				OTH	County Central Cte	ASM		45					S			
+1673490	0	152	S401	F401D	ENT236					Sargent	Todd						0			Todd Sargent				OTH	Dem. County Central Cte	ASM		51					S			
+1673704	0	16	S401	F401B	EXP3675					Sutton Law Firm				San Francisco	CA	94108	213	0	Professional services																	
+1673704	0	17	S401	F401B	EXP3662					WCPAC				Laguna Niguel	CA	92677	1000	0	Contribution																	
+1679435	0	60	S401	F401D	53															Moreno	Jose 'Joe'			ASM		ASM		69					S			
+1695248	0	4	S401	F401D	ENT76					Absmeier	John			Simi Valley	CA	93065	0			John Absmeier				OTH	GOP Central Committee	OTH	Ventura						S			
+1750623	0	2	S401	F401B	20					Liberty Campaign Solutions, LLC				Los Angeles	CA	90009	20000		Literature																	
+1680780	0	10	S401	F401C	EXP890					Kaptain	Thomas			Burbank	CA	91506	5000	5000	Consulting fee																	
+1680782	0	4	S401	F401B	EXP1034					Printing Control				Monrovia	CA	91016	6000	0	Printing mailer																	
+1701970	0	2	S401	F401B	64					Seedborg	John			Lakewood	CA	90713	684		Professional Services																	
+1702186	0	4	S401	F401B	EXP759					Madison Street Press				Oakland	CA	94607	7857.56	0	Printing and Reproduction																	
+1702776	0	1	S401	F401B	EXP547					Copp	Vona			Elk Grove	CA	95624	578.82	0	Treasurer services																	
+1756298	1	5	S401	F401B-1	EDT18	Jenlax Partners				Coalition for Literacy				Torrance	CA	90501	3370	0	Donation																	EXP824
+1663058	1	18	S401	F401B	EXP3489					Sammarco	Stephen			Redondo Beach	CA	90278	300	0	Commission																	
+1693598	0	1	S401	F401B	EXP945					David L. Gould Company				Los Angeles	CA	90010	1000	0	Office Expenses																	
+1694187	0	11	S401	F401B	EXP3561					Blair	Todd			Torrance	CA	90503	325	0	Commission																	
+1706114	0	4	S401	F401B	33					Label Genetically Engineered Foods 2012				Oaklands	CA	94618	500		Contribution Returned																	
+1694794	0	9	S401	F401D	ENT420					Barbre	Brett						0			Brett Barbre				OTH	GOP Central Committee	OTH	Orange County	55					S			
+1736959	1	25	S401	F401D	20																									Auto Insurance	33	Statewide	S			
+1767784	0	9	S401	F401B-1	EDT6	Adcraft Business Mail				U.S. Postal Service				Los Angeles	CA	90001	15261.56	0	Postage																	EXP302
+1767786	0	7	S401	F401B	EXP11777					Towne Allpoints				Santa Ana	CA	92704	9862.79	0	Production																	
+1694835	0	4	S401	F401D	ENT322					Barbre	Brett						0			Brett Barbre				OTH	GOP Central Committee	OTH	Orange County	55					S			
+1694877	0	2	S401	F401B	EXP184					DMH and Associates				Irvine	CA	92614	2000	0	Literature & Mailings																	
+1680677	0	7	S401	F401D	ENT31					TOM AMMIANO, CALIFORNIA, 06/05/ 2012							0			TOM AMMIANO				ASM		ASM		17					S			
+1737241	0	12	S401	F401C	EXP144					JC-Evans, Inc.				Gold River	CA	95670	5000	81641.79	Design, printing & processing slate mailer																	
+1737924	0	20	S401	F401B	EXP11675					Simon and Simon				Redondo Beach	CA	90277	1180	0	Staff Time																	
+1695192	0	2	S401	F401B	EXP210					The Sacramento Observer, Inc.				Sacramento	CA	95817	18434.50	0	Purchase of Paper for Slate																	
+1680864	1	11	S401	F401B	EXP933					Tribune Direct				Irwindale	CA	91706	45500	0	Mail House/Postage																	
+1680864	1	21	S401	F401D	ENT128					Feinstein	Dianne						0			Dianne Feinstein				OTH	U.S. Senate								S			
+1737924	0	52	S401	F401D	ENT10789					No on Proposition 37							0													Proposition 37		Statewide	S			
+1738032	0	14	S401	F401B	EXP4037					Wilson	Carmen			Sacramento	CA	95818	3000	0	Bookkeeping																	
+1699346	0	19	S401	F401D	26																									State Budget	31	California	O			
+1694850	0	1	S401	F401B	EXP868					Brennan for City Council				Rancho Santa Margarita	CA	92688	520.50	0	Refund																	
+1703266	0	1	S401	F401B	EXP211					Budget Watchdogs Newsletter				Torrance	CA	90501	1000	0	Slate Placement - No on Measure E  (City of San Jose)																	
+1703644	0	4	S401	F401D	7															Valadao	David			OTH	US Representative	OTH	21st District						S			
+1738852	0	51	S401	F401D	68															Murray	Robert			OTH	Congress Member	OTH	U.S. House of Representatives CD19						S			
+1738852	0	72	S401	F401D	89															Bass	Karen R.			OTH	Congress Member	OTH	U.S. House of Representatives CD37						S			
+1674222	1	11	S401	F401B	EXP815					Save Prop 13				Laguna Niguel	CA	92677	5000	0	Final loan payment																	
+1673704	1	7	S401	F401B	EXP3658					Garcia	Barrett			San Juan Capistrano	CA	92675	475	0	Accounting																	
+1705057	0	4	S401	F401B-1	PDT1	JC Evans, Inc				MSI				Rancho Cordova	CA	95742	5202.89	0	Mailing Services																	PAY42
+1738852	0	79	S401	F401D	96															Takano	Mark			OTH	Congress Member	OTH	U.S. House of Representatives CD41						S			
+1738852	0	137	S401	F401D	154															Dickinson	Roger			ASM		ASM		7					S			
+1904327	0	12	S401	F401D	ENT411					William Walker 2014							0			William Walker				CCB		OTH	City & County of San Francisco, CA		S				S			
+1865711	0	39	S401	F401D	ENT877					Padilla	Alex						0			Alex Padilla				SOS		STW							S			
+1865711	0	45	S401	F401D	ENT95					Waters	Maxine						0			Maxine Waters				OTH	U.S. House Of Representatives	OTH	U.S. House of Representatives	43					S			
+1904687	0	45	S401	F401D	ENT133					Paul Chabot							0			Paul Chabot				OTH	House of Representitives	OTH	State of California	31	S				S			
+1904687	0	46	S401	F401D	ENT142					Sam Abed							0			Sam Abed				MAY		OTH	City of Escondido		S				S			
+1935224	0	40	S401	F401D	51															McClintock	Tom			OTH	Congress	OTH	District 4						S			
+1935224	0	76	S401	F401D	87															Alexander	Dennis			OTH	Council	CIT	Seaside						S			
+1867427	0	9	S401	F401B-1	EDT28	Jenlax Partners				Advanced Image Direct				Fullerton	CA	92831	58590.48	0	Production																	EXP1104
+1867427	0	13	S401	F401B-1	EDT27	Jenlax Partners				Towne AllPoints				Santa Ana	CA	92704	167056.05	0	Production, Mail Services																	EXP1104
+1870342	0	4	S401	F401B	EXP3358					VLC Financial Services				Elk Grove	CA	95624	1475.60	0	Treasurer Services																	
+1892225	0	16	S401	F401B	EXP4578					QB Merchant Services				Woodland Hills	CA	91367	176.16	0	Bankcard MTOT Discount																	
+1892225	0	39	S401	F401C	EXP4805					Wilson	Carmen			Sacramento	CA	95818	5000	42000	Bookkeeping																	
+1871790	0	4	S401	F401B-1	4	The Ad Edge				Anaheim BMEU				Anaheim	CA	92899	42819.14		US Post Office																	
+1871790	0	19	S401	F401D	19																									Public Records. Open Meetings	42	Statewide	O			
+1893361	0	3	S401	F401B	EXP1933					U.S. Postmaster				La Mirada	CA	90638	220	0	Postage																	
+1853623	1	20	S401	F401B	EXP83					PJF Communications				Salinas	CA	93907	3000	0	Voter Guide Consulting Services																	
+1871427	1	10	S401	F401B	EXP140					PJF Communications				Salinas	CA	93907	1000	0	Voter Guide Consulting Services																	
+1871427	1	12	S401	F401B	EXP133					Pacific Business Centers, Inc.				Sacramento	CA	95814	238	0	Virtual Office Expense																	
+1780243	0	2	S401	F401B	EXP11784					Jenlax Partners Inc				Torrance	CA	90501	53146.53	0	Management																	
+1873156	0	2	S401	F401B	EXP89					Fugatt	John			Huntington Beach	CA	92647	1000	0																		
+1867285	1	1	S401	F401D	ENT1380					Freeman Somera	Janell						0			Janell Freeman Somera-invoiced $835 but not yet paid				BED		OTH	San Joaquin County	4					S			
+1864014	1	6	S401	F401B-1	EDT8	DMH Meyer, Inc.				U.S. Postmaster				Santa Ana	CA	92799	18555.58	0	Postage																	EXP646
+1896588	0	1	S401	F401B	EXP1403					Charles Calderon for Judge 2014				Covina	CA	91722-3222	2000	0	Refund payment																	
+1898181	0	1	S401	F401B	103					Apple Store				Monterey	CA	93940	2069.13		2069.13																	
+1817232	0	7	S401	F401B	EXP4162					Joan of Art				Sacramento	CA	95816	310	0	Layout/Design																	
+1779374	0	10	S401	F401B	EXP1029					Sutton Law Firm				San Francisco	CA	94108	165	0	Legal																	
+1782375	0	2	S401	F401B	EXP1023					Black	Susan			Los Angeles	CA	90024	185	0	Graphics & Design																	
+1796998	0	3	S401	F401B	12					Committee to Elect Robert Garcia for Long Beach Mayor 2014				Newport Beach	CA	92660	250		Attend fundraiser																	
+1817232	0	18	S401	F401B	EXP4173					QB Merchant Services				Woodland Hills	CA	91367	8.30	0	Bankcard MTOT Discount																	
+1811654	0	1	S401	F401B	EXP1049					Huebscher	Fred			Hermosa Beach	CA	90254	1000	0	Consulting																	
+1815824	0	1	S401	F401B	EXP229					Garcia	Barrett			San Juan Capistrano	CA	92675	100	0	Accounting																	
+1782360	0	4	S401	F401B	EXP26					Fickas	Paul			Sacramento	CA	95864	500	0	Consulting																	
+1815842	0	4	S401	F401B	EXP3973					Landslide Communications				Irvine	CA	92604	6000	0	Consulting																	
+1832663	0	7	S401	F401B	16					The Social Media Sage				Phoenix	AZ	85009	250		Social Media																	
+1832663	0	8	S401	F401B	17					Printing Graphics				Torrance	CA	90501	205		Flyers																	
+1852947	0	2	S401	F401B	EXP193					Campaign Citadel, LLC				Gold River	CA	95670	80.61	0																		
+1857264	0	6	S401	F401B	55					Momentum Consulting				Carmel	CA	93922	9700		Consulting Fee																	
+1854091	0	1	S401	F401B	9					Pay Pal				San Jose	CA	95131	125.32		Credit card processing fees																	
+1854438	0	4	S401	F401B	126					The Monaco Group				Santa Ana	CA	92705	6874		print, process, deliver																	
+1854438	0	8	S401	F401B	130					Rahmat Khan for Torrance City Council				Torrance	CA	90503	900		refund																	
+1923700	0	1	S401	F401B	EXP106					Stearns Consulting				San Francisco	ca	94102	10000	0	Slate card																	
+1857264	0	34	S401	F401D	82															Sylva	Julianne			OTH	Superior Court Judge	CTY	Santa Clara County						S			
+1854274	1	2	S401	F401B	EXP1172					Denise Ng dba Denise Ng Consulting, Inc.				Whittier	CA	90602	6000	0	Consulting																	
+1854274	1	4	S401	F401B	EXP1184					Jerry Dominguez dba Printing Control				Monrovia	CA	 91016	1000	0	Printing mailer																	
+1854438	0	11	S401	F401B	133					Advanced Image Direct				Fullerton	CA	92831	106599		print, process, deliver																	
+1854438	0	13	S401	F401B	135					Hartnett	Conor			South Gate	CA	90280	2565		Professional Services																	
+1864008	0	1	S401	F401B	EXP924					Bank of America				Dana Point	CA	92629	20	0	Bank Fees																	
+1864008	0	6	S401	F401B	EXP919					Excellentia				Anthem	AZ	85086	34000	0	Consulting																	
+1852919	0	6	S401	F401B	10					Olmstead Instead for Sheriff 2014				Los Angeles	CA	90010	2800		Refund																	
+1852930	0	1	S401	F401B	5					Amy Howorth  for State Senate 2014				Long Beach	CA	90802	4120.72		Refund																	
+1852968	0	19	S401	F401B	EXP4444					QB Merchant Services				Woodland Hills	CA	91367	101.17	0	Bankcard MTOT Discount																	
+1852968	0	24	S401	F401C	EXP4327					Wilson	Carmen			Sacramento	CA	95818	4000	17000	Bookkeeping																	
+1863138	0	21	S401	F401D	ENT1842					Nehring	Ron						0			Ron Nehring				LTG		STW							S			
+1872330	0	46	S401	F401D	52															Eshoo	Anna G.			OTH	Congressmember	OTH	US House of Representatives CD18						S			
+1853128	0	16	S401	F401D	17															Kingsley	Carol			OTH	Superior Court Judge	CTY	San Francisco						S			
+1864021	0	1	S401	F401B	EXP397					Black Hills Silver Consultants, LLC				Madison	SD	57042	535	0	Consulting																	
+1866623	0	10	S401	F401D	14															Harris	Kamala			ATT		STW							S			
+1893651	0	6	S401	F401B	EXP20					Tsovikian	Hovanes			Van Nuys	CA	91401	973.50	0	Reimbursement																	
+1902537	0	30	S401	F401D	40																									Golden Gate Park Athletic Fields	H	San Francisco	S			
+1902537	0	31	S401	F401D	41																									Renovation of Athletic Fields	I	San Francisco	O			
+1930250	0	6	S401	F401B	EXP1471					DMH Meyer, Inc.				Newbury Park	CA	91320	72910.83	0	Postage & Delivery																	
+1853623	0	11	S401	F401B	EXP119					Californians for Better Jobs and Education Committee				Sacramento	CA	95841	1000	0	Political Contribution																	
+1853623	0	16	S401	F401B	EXP97					Michael Chupa dba Michael Chupa Studios				San Gabriel	CA	91776	1500	0	Graphic Design																	
+1853867	0	8	S401	F401C	EXP1083					Pomerance-Poirier	Tracey			Chatsworth	CA	91311	1200	7630	Professional Services																	
+1854023	0	4	S401	F401B-1	EDT23	Ford Printing & Mailing				U.S. Postal Service				Los Angeles	CA		3500	0	Postage																Postage	EXP1065
+1902947	0	2	S401	F401B	21					Liberty Campaign Soluntions. LLC				Torrance	Ca	90503	30000		Consulting																	
+1902947	0	6	S401	F401C	25					Furey	Patrick						30000	70502.16																		
+1903201	0	12	S401	F401D	ENT27					HYDRA MENDOZA							0			HYDRA MENDOZA				BED		OTH	SAN FRANCISCO						S			
+1903446	0	2	S401	F401B	EXP1508					US Postmaster				Long Beach	CA	90809	175000	0	Postage																	
+1903498	0	6	S401	F401B	EXP3651					Trinity Printing				Tustin	CA	92780	5050.89	0	Slate printing																	
+1903498	0	10	S401	F401D	ENT3637					Bass	David A.						0			David A. Bass				CCM		OTH	City of Lake Forest						S			
+1903825	0	1	S401	F401B	EXP12751					Charpentier	John			Torrance	CA	90501	585	0	Sales																	
+1931167	0	50	S401	F401D	39															FOX	RICHARD			OTH	U.S. Representative	OTH	18th District						S			
+1931167	0	90	S401	F401D	79															SAVARY	SUZANNE			OTH	U.S. Representative	OTH	48th District						S			
+1931167	0	95	S401	F401D	84															HUNTER	DUNCAN			OTH	U.S. Representative	OTH	50th District						S			
+1860246	0	4	S401	F401B	EXP15					The Henry Levy Group				Oakland	CA	94618	1599.08	0																		
+1861199	0	18	S401	F401D	ENT1021					Yes on 41							0													Veterans Bonds	41	Statewide	S			
+1872330	0	191	S401	F401D	197															Pineda	Dorothy F.			ASM		ASM		52					S			
+1903887	0	1	S401	F401B	EXP304					Garcia	Barrett			San Juan Capistrano	CA	92675	210	0	Accounting																	
+1903891	0	5	S401	F401B	EXP1391					The National Tax Limitation Committee				Roseville	CA	95661	20000	0	Contribution																	
+1931167	0	122	S401	F401D	111															NGUYEN	JANET			SEN		SEN		34					S			
+1931167	0	143	S401	F401D	132															OLSEN	KRISTIN			ASM		ASM		12					S			
+1864008	1	7	S401	F401B	EXP915					FlashReport				Newport Beach	CA	92660	240	0	Web Service																	
+1904014	0	48	S401	F401D	ENT341					Raj Salwan for Fremont City Council 2014							0			Raj Salwan				CCM		OTH	City of Fremont						S			
+1904014	0	54	S401	F401D	ENT371					Shannon Grove for Assembly 2014							0			Shannon Grove				ASM		ASM		34					S			
+1904327	0	3	S401	F401D	ENT403					Daniel Flores 2014							0			Daniel Flores				SCJ		OTH	County of San Francisco, CA	20	S				S			
+1931903	0	4	S401	F401B	EXP668					Olson, Hagel & Fishburn, LLP				Sacramento	CA	95814	70.50	0	Legal & Reporting Services																	
+1864322	0	8	S401	F401B	EXP391					Waters	Karen			Los Angeles	CA	90010	2000	0	Slate Mailer Managment Fee																	
+1936447	0	8	S401	F401D	ENT440					Chuck Vasquez Council 2014							0			Chuck Vasquez				CCM		OTH	City of Cathedral City						S			
+1936638	0	11	S401	F401B	EXP35					OC Flyer Depot				Mission Viejo	CA	92691	2000	0	CMP																	
+1937659	0	2	S401	F401B	EXP1299					Advance Image Direct				Fullerton	CA	91506	48000	0	Printing mailer																	
+1937671	0	2	S401	F401B	EXP579					Stearns Consulting				San Francisco	CA	94102	38800.49	0	Mailer																	
+1935698	0	10	S401	F401B	EXP12847					Rosino Miracco	Maria						550	0	Refund																	
+1935896	0	33	S401	F401D	ENT1895					Yes on R							0													Yes on R		Malibu	S			
+1937872	0	14	S401	F401B-1	EDT9	Stearns Consulting				River City Printing				Rancho Cordova	CA	95742	4756	0	Printing for slate mailer																	EXP47
+1937503	0	33	S401	F401B-1	EDT6	John Wilson dba Print & Mail Concepts				US Postmaster				San Jose	CA	95112	1914	0	Postage																	EXP230
+1937503	0	38	S401	F401C	EDT37					Fickas (Through California Alliance Group, LLC)	Paul			Salinas	CA	93907	1000	33100	Voter Guide Consulting Services																	
+1937803	0	17	S401	F401D	ENT19					Padilla	Alex						0			Alex Padilla				SOS		STW							S			

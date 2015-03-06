@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	ENTITY_CD	TITLE	MAIL_CITY	MAIL_ST	MAIL_ZIP4	F460_PART	CMTE_ID	ENTY_NAML	ENTY_NAMF	ENTY_NAMT	ENTY_NAMS	ENTY_CITY	ENTY_ST	ENTY_ZIP4	ENTY_PHON	ENTY_FAX	ENTY_EMAIL	TRES_NAML	TRES_NAMF	TRES_NAMT	TRES_NAMS	CONTROL_YN	OFFICE_CD	OFFIC_DSCR	JURIS_CD	JURIS_DSCR	DIST_NO	OFF_S_H_CD	BAL_NAME	BAL_NUM	BAL_JURIS	SUP_OPP_CD
+719332	0	2	CVR2	F465	FO2	POF	Los Angeles County Registrar Recorder	Norwalk	CA	90650																											
+773216	0	1	CVR2	F460	NIC2	CTL					4b	1234084	Bill Jones for Governor				Fresno	CA	93704-2503	(559) 222-9487			Stone	Terry			Y										
+773225	0	1	CVR2	F460	NIC1	CTL					4b	971925	Friends of Keith Olberg				Rancho Santa Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+773326	0	1	CVR2	F460	2	CTL					4b	970708	Friends of Bill Lockyer				Sacramento	CA	95814	(916) 442-2952			Jeronimo	Diane			Y										
+577841	0	1	CVR2	F460	1	CAO					4a		Hisserich	John			Los Angeles	CA	90039								Y	ASM		ASM		43					
+718953	0	1	CVR2	F460	NIC1	CTL					4b	971681	Committee to Elect Bob Pacheco				Riverside	CA	92507	(909)682-5611			Oldenburg	Dana			Y										
+644248	0	2	CVR2	F465	FO2	OFF	Los Angeles County Registrar Recorder	Norwalk	CA	90650																											
+591452	0	1	CVR2	F460	2	CAO					5b		Hertzberg	Robert M.														ASM		ASM		40					
+591470	0	5	CVR2	F465	FO5	OFF	Registrar of Voters Sacramento County	Sacramento	CA	95827																											
+717725	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County Registrar of Voters	Norwalk	CA	90650																											
+717726	0	3	CVR2	F465	AGENCY_3	POF	San Diego County Registrar of Voters	San Diego	CA	92123																											
+718355	0	1	CVR2	F460	NIC2	CTL					4b	983387	MCCLINTOCK FOR SENATE				NORTHRIDGE	CA	91325				BAUER	DAVID			Y										
+677790	0	1	CVR2	F460	1	CTL					4b	923543	Angelides for Treasurer				Sacramento	CA	95814	(916) 448-1998			Thomas	Tina			Y										
+669603	0	3	CVR2	F460	NIC3	CTL					4b	930697	Marilyn Lyon Election Debt Committee				Rancho Palos Verdes	c	90275	310-548-0563			Lyon	Marilyn			Y										
+578361	0	1	CVR2	F460	2	BNM					5a																							Safe Drinking Water.Clean Water.Flood Protect	13	State of California	S
+744255	0	1	CVR2	F460	F460CVR20423200126	ATR					3																										
+592225	0	1	CVR2	F460	1	CTL					4b	963098	Mike Honda for Assembly				San Jose	CA	95036	(408) 279-4208			Honda	Mike			Y										
+765484	0	1	CVR2	F460	T02	ATR					3		Paul	Barry			Northbrook	IL	60062	(   )         	(   )         																
+718765	0	4	CVR2	F465	AGENCY_4	POF	Orange County Registar of Voters	Santa Ana	CA	92705																											
+677279	1	1	CVR2	F460	NIC1	CTL					4b	980049	BAUGH FOR ASSEMBLY '98				HUNTINGTON BEACH	CA	92648				BAUER	DAVID			Y										
+686326	0	1	CVR2	F460	4310	ATR					3		Munn	Shelley Smith			Davis	CA	95616	000-000-0000																	
+645230	1	2	CVR2	F460	Y04	COM					4b	972163	Friends& Neighbors Supporting Darrell Steinberg for Assembly				Sacramento	CA	95831	(916) 319-2009			Steinberg	Darrell			Y	   				   	 				
+769378	0	1	CVR2	F460	2	CTL					4b	980058	Costa for Senate				Sacramento	CA	95814	(916) 442-2952			Costa	James M.			Y										
+588625	0	1	CVR2	F460	2.33	COM					4b	990518	Hispanic Republican Caucus PAC				Santa Monica	CA	90401				McAndrews	Colleen			Y										
+719115	0	4	CVR2	F465	FO5	OFF	Registrar of Voters Sacramento County	Sacramento	CA	95827																											
+719218	0	2	CVR2	F460	NIC2	CTL					4b	950580	Aroner for Assembly				Oakland	Ca	94610	(510) 548-1996			Jewel	Elisabeth			Y										
+716739	0	2	CVR2	F460	NIC2	CTL					4b	980058	Costa for Senate				Sacramento	CA	95814	(916) 442-2280			Eichman	J. Richard			Y										
+716880	0	3	CVR2	F465	FO3	OFF	San Francisco County Registrar Recorder	San Francisco	CA	94102-4634																											
+597582	0	3	CVR2	F465	FO3	OFF	San Francisco County Registrar Recorder	San Francisco	CA	94102-4634																											
+721646	0	2	CVR2	F460	Y02	COM					4b	990445	Simitian for State Assembly				Palo Alto	CA	94303	(650) 493-8645	(   )         		Jerome	Julie			Y	ASM		ASM		   	S				
+771536	0	1	CVR2	F460	NIC1	CTL					4b																										
+771720	0	1	CVR2	F460	T02	ATR					3							  		(   )         	(   )         																
+677299	0	2	CVR2	F465	FO2	OFF	Los Angeles County Registrar Recorder	Norwalk	CA	90650																											
+677512	0	3	CVR2	F465	CI1458		Secretary of State Political Reform Division	Sacramento	CA	95814																											
+718779	0	1	CVR2	F460	CI379	CTL					4b	950943	Brulte for Senate				Rancho Cucamonga	CA	91730	909-481-1554	909-481-1556		Mitchell	Michael			Y	SEN		SEN		31	S				S
+710509	0	2	CVR2	F460	OFC1	ATR					3		KYRIAKIS	STELLA			MILBRAE	CA	94030	(650) 697-8068	(650) 697-5844																
+821730	0	1	CVR2	F460	NIC1	COM					5b	990517	AGHAZARIAN FOR ASSEMBLY				STOCKTON	CA	95219	(209) 951-9900			WATKINS	CAROL J			Y										
+853365	0	1	CVR2	F460	NIC1	COM					5b	1241366	Committee to Re-Elect Juan Vargas 2002				San Diego	CA	92103	(619) 295-6923			Liebergot	Deanna			Y										
+857053	0	1	CVR2	F460	1	CTL					5B	1223120	Soto for Senate 2002				Burbank	CA	91504	(818) 504-0323			Durke	Kinde			Y	SEN	State Senate	SEN	Pomona	32	H				
+773422	0	1	CVR2	F460	NIC1	CTL					4b	980077	Dr. Martin Gallegos for State Assembly				El Monte	CA	91734	626-915-7635			Miranda	Yolanda			Y										
+785547	0	1	CVR2	F460	T02	ATR					3							  		(   )         	(   )         																
+804618	0	1	CVR2	F460	5553	ATR					3		Owens	Lindsay			Bakersfield	CA	93311	661-303-1939																	
+804657	0	1	CVR2	F460	T02	ATR					3		Pirayou	Ash			San Jose	CA	95113	(408) 297-3795	(   )         																
+822039	0	2	CVR2	F460	NIC3	COM					5b	1234969	MCCLINTOCK FOR CONTROLLER										SAME				Y										
+810079	0	1	CVR2	F460	NIC1	COM					5b	932219	Friends of Bill Jones				Fresno	CA	93704-2503	559-222-9488			Stone	Terry			Y										
+810117	0	1	CVR2	F460	1	CTL					5b	923543	Angelides for Treasurer				Sacramento	CA	95814	(916) 448-1998			Thomas	Tina			Y										
+822849	0	4	CVR2	F465	FO4	POF	San Francisco County Registrar Recorder	San Francisco	CA	94102																											
+823003	0	1	CVR2	F460	T02	ATR					3		Pirayou	Ash			San Jose	CA	95113	(408) 297-3795	(   )         																
+785575	1	2	CVR2	F460	Y02	COM					5b	1223120	Soto for Senate 2002				Los Angeles	CA	91504	(818) 504-0323	(   )         		Durkee	Kinde			Y	ASM		ASM		61	S				
+853488	0	1	CVR2	F460	2	CTL					5b	980058	Costa for Senate				Sacramento	CA	95814	(916) 442-2952			Costa	James M.			Y										
+809665	0	1	CVR2	F460	T02	ATR					3									(   )         	(   )         																
+809685	0	2	CVR2	F460	C2000066220020119002	COM					5b	981166	California Friends Latino PAC				Sacramento	CA	95814								N										
+804400	1	1	CVR2	F460	NIC1	COM					5b	990496	Committee to Elect Tom Harman to 67th Assembly				Huntington Beach	CA	92646	(714) 962-1746			Scott	Linda			Y										
+785680	2	1	CVR2	F460	NIC1	COM					5b	970033	JOHANNESSEN FOR SENATE - 98										SAME				Y										
+854454	0	1	CVR2	F465	FO1	POF	Secretary of State	Sacramento	CA	95814																											
+851542	1	1	CVR2	F460	T04	ATR					3		Rosauro	Garland			Alameda	CA	94502	(510) 748-7400	(   )         																
+851576	0	1	CVR2	F460	T18	ATR					3		Rosauro	Garland			Alameda	CA	94502	(510) 748-7400	(   )         																
+786289	0	1	CVR2	F460	F460CVR21010200118	COM					4b	981166	CA Friends Latino PAC				Sacramento	CA	95814	916 442-2952			Firebaugh	Marco A.			Y										
+805640	1	1	CVR2	F460	OFC2	ATR					3		LUCAS	STEVEN S.			MILL VALLEY	CA	94941	(415) 389-6800																	
+855763	0	1	CVR2	F460	Y16	COM					5b	1232019	Rod Pacheco for State Senate				Riverside	CA	92507	(909) 781-2910	(909) 788-6135		Trimble, CPA	James W.			Y	SEN		SEN	State of California		S				
+856427	0	4	CVR2	F465	AGENCY_4	POF	San Francisco Dept. of Election	San Francisco	CA	94102-4635																											
+856455	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95812-1467																											
+809902	3	1	CVR2	F460	NIC1	COM					5b	911929	AANESTAD FOR ASSEMBLY										SAME				Y										
+852752	0	1	CVR2	F460	Y06	COM					5b	1231831	Friends of Carole Migden				San Francisco	CA	94109	(   )         	(   )         		Sanders	Roger			Y	SEN		SEN		3	S				
+853041	0	2	CVR2	F465	FO2	POF	Los Angeles County Registrar Recorder	Norwalk	CA	90650																											
+856627	0	1	CVR2	F460	NIC1	COM					5b	1232255	Friends of Donna Gerber				Walnut Creek	CA	94596	510-652-1000			Levy	Henry			Y										
+856672	0	1	CVR2	F460	Y12	COM					5b	1222126	Working Families for Deborah Ortiz 2002				Sacramento	CA	95841	(916) 348-9100	(916) 348-9111		Copeland	Rita			Y	SEN		SEN	State of CA	6	S				
+785885	0	1	CVR2	F460	OFC1	ATR					3		Burns	Kimberli S.			Sacramento	CA	95814	916-442-8333	916-442-4035	kburns@norcalwater.org															
+786279	1	1	CVR2	F460	C2000109520010930001	ATR					3		Durkee	Kinde			Burbank	CA	91502	(818) 260-0669																	
+856693	0	3	CVR2	F465	AGENCY_3	POF	Los Angeles County	Norwalk	CA	90650																											
+808928	0	1	CVR2	F460	T02	ATR					3		Hitchcock	David F.			Arcata	CA	95521	(707) 822-9190	(   )         																
+942880	0	1	CVR2	F460	NIC1	COM					5b																										
+911114	0	1	CVR2	F460	T02	ATR					3		Whitehead	Michael			El Monte	CA	91733	(626) 448-6183	(   )																
+907208	0	1	CVR2	F460	T02	ATR					3									(   )	(   )																
+872312	0	2	CVR2	F460	Y02	COM					5b	1232592	WESSON FOR ASSEMBLY 2002				Marina Del Rey	CA	90292	(   )         	(   )         		Wasson	Jan			Y	OTH	CA State Assembly	STW	CA 47th District	47	H				
+854075	1	1	CVR2	F460	T02	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+877549	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95812-1467																											
+855324	1	1	CVR2	F460	T02	ATR					3									()	()																
+878673	0	2	CVR2	F460	7	CTL					5b	1237589	Firebaugh 2002				Los Angeles	CA	90022	(323) 264-6788			Sanchez	Delores			Y										
+878699	0	1	CVR2	F465	FO1	POF	Secretary of State	Sacramento	CA	95814																											
+878830	0	2	CVR2	F460	Y06	COM					5b	971222	Friends of Mark Ridley Thomas				Los Angeles	CA	90043	(323) 298-0816	(   )    -    		Yarbrough	Ida			Y	CCM		CIT	City of Los Angeles						
+899727	0	1	CVR2	F460	NIC1	COM					5b	1233423	Goldberg Assembly Committee				Studio City	CA	91604	323-877-5835			Wechsler	Shirley			Y										
+908089	0	1	CVR2	F460	CI148	RCP					5b	1251248	Friends of John J. Benoit				Riverside	CA	92507	760-360-7832			Greene	Ravelle Lyn			Y	ASM		ASM		64	H				S
+908818	0	1	CVR2	F460	OFC1	ATR					3		Oliva	Joanna M.	Ms.		Aliso Viejo	CA	92656	949-349-7146																	
+911127	0	3	CVR2	F465	AGENCY_3	POF	Registrar of Voters-County of Sacramento	Sacramento	CA	95827																											
+902957	0	1	CVR2	F460	C2000004820021231001	COM					5b	991477	Friends Of Paul Krekorian				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			N	ASM	43rd Assembly District	ASM	State of California	43	H				
+857415	0	3	CVR2	F460	C2000217420020630003	COM					5b	1234112	Tony Cardenas For Secretary Of State				San Fernando	CA	91341								Y	SOS	Secretary Of State	STW	State of California	n/a	S				
+805578	2	1	CVR2	F460	NIC1	COM					5b	990411	Edward Chavez for Assembly				La Puente	CA	91746	626-336-9397			Miranda	Yolanda			Y										
+855178	1	1	CVR2	F460	OFC1	ATR					3		Davidian	Ben	Mr.		Sacramento	CA	95843	(916) 442-7757	(916) 442-7759																
+900849	0	4	CVR2	F460	C2000250820021231004	COM					5b	962771	Friends Of Tony Cardenas				San Fernando	CA	91340				Sanchez	Norma			Y										
+878179	0	1	CVR2	F465	FO1	POF	Secretary of State, Political Reform Division	Sacramento	CA	95814																											
+878196	0	1	CVR2	F460	2	CTL					5b	1231992	Sarah Reyes for Assembly				Fresno	CA	93728	(559) 264-2488			Reyes	Sarah			Y										
+911277	0	4	CVR2	F465	46788	OFF	Dept. of Elections, City & County of San Francisco,	San Francisco	CA	94102																											
+877670	0	1	CVR2	F465	FO1	POF	Secretary of State Political Reform Division	Sacramento	CA	95814																											
+912879	0	1	CVR2	F465	FO1	POF	Secretary of State Political Reform Division	Sacramento	CA	95814																											
+877686	0	1	CVR2	F465	AGENCY_1	POF	SECRETARY OF STATE	SACRAMENTO	CA	95814																											
+877693	0	2	CVR2	F465	AGENCY_2	POF	REGISTRAR-RECORDER OF LOS ANGELES COUNTY	NORWALK	CA	90650																											
+871863	0	3	CVR2	F460	Y02	COM					5b	983414	Russ Bogh for Assembly 2000				Riverside	CA	92507	(909) 781-2910	(   )         		Trimble, C.P.A.	James W.			Y	ASM		ASM	State of California	65	S				
+925977	0	2	CVR2	F460	3	CTL					5b	1251345	Wiggins for Senate 2006				Santa Rosa	CA	95404	(707) 544-2160			Conner	Guy			Y										
+822567	3	1	CVR2	F460	OFC3	ATR					3		Strasburg	Alan M.			Los Angeles	Ca	90024																		
+871924	1	1	CVR2	F460	3	CTL					5b	1237420	Friends of Darrell Steinberg				Sacramento	CA	95814	(916) 441-6381			Steinberg	Darrell			Y										
+878304	0	1	CVR2	F460	11000	ATR					3		Lighty	Michael			Oakland	CA	94612	(510) 273-2200																	
+857028	1	1	CVR2	F465	FO1	POF	Secretary of State	Sacramento	CA	95814																											
+905850	0	1	CVR2	F460	T08	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+931404	0	1	CVR2	F460	OFC3	ATR					3		Hiltachk	Thomas W.			Sacramento	CA	95814	(916) 442-7757																	
+990912	0	3	CVR2	F460	OFC6	PRO					6b		SULLIVAN	JOHN																							
+984521	0	4	CVR2	F460	NIC4	COM					5b	1254928	CITIZENS TO END THE CAR TAX				NEWBURY PARK	CA	91320	916/446-9049			BAUER	DAVID			Y										
+948416	0	2	CVR2	F460	2	CTL					5B	1245356	Richman for Mayor				Burbank	CA	91505				Durkee	Kinde			Y	MAY	Mayor	CIT	Valley City		S				
+946563	0	1	CVR2	F460	T02	ATR					3		Duncan	Chris			Bakersfield	CA	93312	(661) 324-3424	(   )         																
+947362	0	2	CVR2	F460	Y08	COM					5b	1251219	Simon Salinas for Assembly 2004				Salinas	CA	93906	(831) 443-0954	(831) 663-0597		Sanchez	Juan			Y	ASM		ASM	State of California	28	S				
+962843	0	2	CVR2	F460	NIC2	COM					5b	1252373	DE LA FUENTE FOR CITY COUNCIL 2004				OAKLAND	CA	94611	510-238-7005			LEE	MARI E.			Y										
+963637	0	1	CVR2	F460	Y02	COM					5b	1239046	Mullin for Assembly				South San Francisco	CA	94083-5486	(415) 584-3127	(   )         		Philpott	David			Y	ASM		ASM		19	S				
+946665	1	2	CVR2	F460	OFC1	ATR					3		Waller	Terri	Ms.		Oakland	CA	94618	510-658-2110																	
+963669	0	1	CVR2	F460	C2000006520030930001	COM					5b	950985	Lou Correa For State Assembly				Burbank	CA	91502				Durkee	Kinde			Y	ASM	State Assembly	ASM	State Assembly	69	H				
+965411	0	1	CVR2	F460	Y02	COM					5b	1232592	WESSON FOR ASSEMBLY 2002				Lincoln	CA	95648	(   )         	(   )         		Wasson	Jan			Y	ASM		ASM	CA 47th District	47	H				
+978437	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+963545	0	1	CVR2	F460	OFC1	ATR					3		Levy	Henry C.	Mr.		Oakland	CA	94618	510-652-1000	510-654-2363																
+980446	0	2	CVR2	F465	7	OFF	City and County of San Francisco	San Francisco	CA	94102-4635																											
+945193	0	2	CVR2	F460	NIC2	COM					5b	1252373	DE LA FUENTE FOR CITY COUNCIL 2004				OAKLAND	CA	94611	510-238-7005			LEE	MARI E.			Y										
+946733	0	1	CVR2	F460	Y08	COM					5b	1250536	Simitian for State Senate				Palo Alto	CA	94303	(650) 401-8735	(   )         		Jerome	Julie S.			Y	SEN		SEN		11	S				
+957282	0	2	CVR2	F460	4	CTL					5b	1257244	Californians for Stability - No on the Governor's Recall				Sacramento	CA	95814	(916) 441-1175			Bustamante	Cruz M.			Y										
+944408	1	1	CVR2	F460	T02	ATR					3									(   )         	(   )         																
+979188	0	3	CVR2	F465	CI4463		Los Angeles County Registrar-recorder Campaign Reporting Unit	Norwalk	CA	90650																											
+979899	0	1	CVR2	F460	T02	ATR					3		Lawler	Kelly			Chico	CA	95973	(530) 894-6567	(   )         																
+980323	0	2	CVR2	F460	Y10	COM					5b	1239835	Committee to Elect Mark Ridley-Thomas for Assembly				Los Angeles	CA	90043	(323) 298-0816	(   )         		Yarbrough	Ida			Y	ASM		ASM		48	S				
+947065	0	1	CVR2	F460	OFC1	ATR					3		Bell	Charles H.		Jr.	Sacramento	CA	95814	916/442-7757																	
+947858	0	1	CVR2	F460	Y06	COM					5b	1231603	FRIENDS OF DAVE COGDILL				MODESTO	CA	95354	(209) 523-9365	(   )         		COGDILL, JR.	DAVID E.			Y	ASM		ASM		25	H				
+985044	0	4	CVR2	F465	FO4	POF	City & County of San Francisco, Dept. of Elections	San Francisco	CA	94102-4635																											
+963171	0	1	CVR2	F460	OFC1	ATR					3		Roberts	Toni			Sacramento	CA	95814	916-443-8421	916-443-8440																
+963776	0	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+849834	2	1	CVR2	F460	7	ATR					3		Kaufman	Stephen J.			Los Angeles	CA	90017	(213) 452-6565																	
+980370	0	3	CVR2	F465	FO3	POF	City & County of San Francisco Dept. of Elections	San Francisco	CA	94102																											
+945638	0	1	CVR2	F460	Y16	COM					5b	1232019	Rod Pacheco for State Senate				Riverside	CA	92507	(909) 781-2910	(909) 788-6135		Trimble, CPA	James W.			Y	SEN		SEN	State of California		S				
+959674	0	3	CVR2	F465	FO3	POF	Sacramento County Registrar of Voters	Sacramento	CA	95827																											
+959676	0	1	CVR2	F465	FO1	POF	Secretary of State	Sacramento	CA	95814																											
+962253	0	1	CVR2	F460	Y08	COM					5b	1252806	Bob Dutton for Assembly 2004				Rancho Cucamonga	CA	91730	(909) 987-1100	(909) 980-4134		Mitchell	Michael			Y	ASM		ASM	State of California	63	H				
+997423	0	2	CVR2	F465	AGENCY_2	POF	Registrar of Voters-Orange County	Orange	CA	92711																											
+997261	1	3	CVR2	F460	C2000502520040214003	COM					5b	1263036	Democrats For 57/58				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y							Democrats for 57/58	57	State of California	S
+1031163	0	1	CVR2	F460	NIC1	COM					5b	1253163	Committee to Re-elect Bob Margett				Arcadia	CA	91007	626/446-6630			Bauer	David			Y										
+996730	1	1	CVR2	F460	8931	ATR					3		Clark	Mark			Arroyo Grande	CA	93420	805-481-4997																	
+996417	0	1	CVR2	F460	NIC1	COM					5b	1253072	Friends of Van Tran for State Assembly				Garden Grove	CA	92840	714-496-0551			Bauer	David													
+1024862	0	1	CVR2	F465	CI4594		San Francisco Department of Elections Campaign Statements	San Francisco	CA	94102																											
+1027750	1	3	CVR2	F465	CVR2-3	OFF	Registrar of Voters City & County of San Fracisco	San Francisco	CA	94102-4635																											
+1022905	0	1	CVR2	F465	AGENCY_1	POF	Los Angeles	Norwalk	CA	90051																											
+994988	0	2	CVR2	F460	Y06	COM					5b	1252923	Friends of Kevin McCarthy for Assembly 2004				Bakersfield	CA	93309	(661) 324-3424	(   )         		Karpe	Ray			Y	ASM		ASM			H				
+1045086	0	1	CVR2	F460	OFC1	ATR					3		Bell, Jr.	Charles H.			Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+979605	1	1	CVR2	F460	NIC1	COM					5b	983308	ROGER NIELLO FOR COUNTY SUPERVISOR				FAIR OAKS	CA	95628				BAUER	DAVID			Y										
+990721	1	3	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	Ca	95841	916-348-9100	916-348-9111																
+996473	2	1	CVR2	F460	7	ATR					3		Kaufman	Stephen J.			Los Angeles	CA	90017	(213) 452-6565																	
+1031914	0	1	CVR2	F460	418000	ATR					3		Wayne	M. Howard			San Diego	CA	92110	(619) 275-5451																	
+1044477	0	1	CVR2	F460	OFC1	ATR					3		Bianco	Sal	Mr.		Napa	CA	94558-0900	707-226-0160	707-226-0153	sbianco@thedoctors.com															
+1032387	0	1	CVR2	F460	OFC1	ATR					3		Bell, Jr.	Charles H.			Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+1032409	0	1	CVR2	F460	NIC1	COM					5b	941911	Committee to Elect Alan Wapner				Ontario	CA	91761	909-988-0918			Wapner	Judith			Y										
+1045067	1	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1044699	0	2	CVR2	F460	NIC4	COM					5b	1256393	MCCLINTOCK FOR GOVERNOR										SAME				Y										
+1045036	0	1	CVR2	F460	OFC1	ATR					3		Hiltachk	Thomas W.			Sacramento	CA	95814	916/442-7757																	
+1045067	0	3	CVR2	F465	AGENCY_3	POF	Registrar of Voters-County of Sacramento	Sacramento	CA	95823																											
+1030637	0	1	CVR2	F460	9562	CTL					5B	1251745	Poochigian Campaign Committee				Fresno	CA	93747	559-255-1699			Egan	Richard M.			Y										
+1026669	0	1	CVR2	F460	2	ATR					3		Kaufman	Stephen			Los Angeles	CA	90017																		
+980084	2	1	CVR2	F460	NIC1	COM					5b	1238907	Machado for Senate 2004				Sacramento	CA	95814	(916) 442-2952			Sinnock	Stephen			Y										
+1032069	1	2	CVR2	F460	Y02	COM					5b	990057	Friends of Noreen Evans for Supervisor				Santa Rosa	CA	95404	(707) 525-8335	(   )         		Gorin	Susan K.			Y	CSU		CTY	Sonoma County	3rd	S				
+1044706	0	3	CVR2	F460	NIC3	COM					5b	1256393	MCCLINTOCK FOR GOVERNOR				NEWBURY PARK	CA	91320				BAUER	DAVIE			Y										
+990932	0	1	CVR2	F460	C2000399320031231001	COM					5b	1251909	Westly 2006				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y	CON	CON	STW	State of California	CA	H				
+995899	0	2	CVR2	F465	AGENCY_2	POF	Registrar of Voters	San Francisco	CA	94102																											
+996682	0	1	CVR2	F460	NIC1	COM					5b	1260203	Wapner for Assembly 2004				Ontario	CA	91761	909-717-1121			Presley	Betty			Y										
+1031880	1	1	CVR2	F460	356000	ATR					3		Nation	Joe			San Rafael	CA	94901	(415) 453-5086																	
+1045280	0	1	CVR2	F460	T02	ATR					3		Pirayou	Ash			San Jose	CA	95113	(408) 297-3795	(   )         																
+1080569	0	4	CVR2	F465	FO5	POF	Registrar of Voters Sacramento County	Sacramento	CA	95827																											
+1079243	0	1	CVR2	F460	NIC1	COM					5b	950521	Friends of Senator Ross Johnson				Sacramento	CA	95814	(916) 443-6927			Swatt	Susan			Y										
+1079024	0	2	CVR2	F465	AGENCY_2	POF	Registrar-Recorder of Los Angeles	Norwalk	CA	90650																											
+1079402	0	1	CVR2	F460	Y04	COM					5b	1231896	Carole Migden Leadership				San Francisco	CA	94109	(415) 775-3576	(415) 552-5214		Sanders	Roger			Y	BOE		BOE	State	1	S				
+1079402	0	2	CVR2	F460	Y02	COM					5b	962662	Re-Elect Assemblywoman Carole Migden				San Francisco	CA	94109	(415) 775-3576	(   )         		Sanders	Roger			Y				State						
+1079427	0	3	CVR2	F465	CVR2-3	OFF	Registrar-Recorder of Los Angeles County	Norwalk	CA	90650																											
+1080786	0	3	CVR2	F465	FO3	POF	San Francisco County Registrar Recorder	San Francisco	CA	94102																											
+1050780	0	3	CVR2	F465	AGENCY_3	POF	CITY & COUNTY OF SAN FRANCISCO	SAN FRANCISCO	CA	94102																											
+1051169	0	1	CVR2	F460	44000	ATR					3		Cottingham	Ron			Sacramento	CA	95834	(916) 928-3777																	
+1050215	1	1	CVR2	F460	NIC1	COM					5b	1238571	Loni Hancock For Assembly				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1045287	2	1	CVR2	F460	OFC1	ATR					3		KAUNE	JASON D.			MILL VALLEY	CA	94941	(415)389-6800																	
+1045266	1	1	CVR2	F460	C2000258220040930001	COM					5b	1234626	Garamendi Committee				Sacramento	CA	95814				Durkee	Kinde			Y	INS	Insurance Commissioner	STW	State Of California	CA	S				
+1074533	0	1	CVR2	F460	OFC1	ATR					3		KAUNE	JASON D.			MILL VALLEY	CA	94941	415-389-6800																	
+1074756	0	1	CVR2	F460	OFC3	ATR					3		JASON D. KAUNE				MILL VALLEY	CA	94941	(415) 389-6800																	
+1074779	0	1	CVR2	F460	2	CTL					5b	1271581	Friends of Fabian Nunez 2006				Sacramento	CA	95814	(916) 442-2952			Nunez	Fabian			Y										
+1079055	0	1	CVR2	F460	OFC1	ATR					3		KAUNE	JASON D.			MILL VALLEY	CA	94941	(415)389-6800																	
+1079851	0	1	CVR2	F465	AGENCY_1	POF	Los Angeles County	Norwalk	CA	90650																											
+1049815	0	1	CVR2	F460	T02	ATR					3									(   )         	(   )         																
+1079166	0	1	CVR2	F460	OFC1	ATR					3		Garcia	Barry			San Juan Capistrano	CA	92675	949 496-6363																	
+1031828	1	2	CVR2	F460	4	CTL					5b	1258284	Friends of Dario Frommer				Sacramento	CA	95814	(916) 442-2952			Garrison	James			Y										
+1081413	0	4	CVR2	F465	AGENCY_4	POF	Registrar of Voters - County of Sacramento	Sacramento	CA	95823																											
+1081805	0	1	CVR2	F460	NIC1	COM					5b	950506	Friends Of Tom Torlakson				Sacramento	CA	95841	(916)348-9100			Copeland	Rita			Y										
+1081814	0	1	CVR2	F460	T02	ATR					3		Benson	James			Tustin	CA	92805	(714) 547-9842	()																
+1095009	0	3	CVR2	F460	Y10	COM					5b	1250551	FRIENDS OF RICHARD ALARCON				LOS ANGELES	CA	90071	(213) 489-4792	(213) 489-4818		GOULD	DAVID L.			Y	ASM		ASM		39	S				
+1050983	0	2	CVR2	F465	CVR2-2	OFF	Registrar of Voters City & County of San Fracisco	San Francisco	CA	94102-4635																											
+1073638	0	1	CVR2	F460	2	ATR					3	981470	LAU	DEBBIE			SAN FRANCISCO	CA	94105	(415) 537-3254	(415) 957-1402						N										
+1045358	1	1	CVR2	F460	NIC1	COM					5b	1231660	Sally Lieber for Assembly				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1078961	0	4	CVR2	F465	AGENCY_4	POF	MARIN COUNTY	SAN RAFAEL	CA	94903																											
+1079317	0	1	CVR2	F460	Y10	COM					5b	1266700	Friends of Rebecca Cohn (Senate 2008)				Saratoga	CA	95070	(916) 925-5818	(916) 925-5803		Cohn	Rebecca			Y	SEN		SEN	State of California	15	S				
+1048836	0	1	CVR2	F460	CI122	CTL					5b	990605	Carol Liu for Assembly				Pasadena	CA	91107-2038	626 795-5255		JFuhrman@eigwc.com	Fuhrman	Jonathan			Y										
+1050493	0	2	CVR2	F460	1	CAO					6B		Angelides	Phil			Sacramento	CA	95814									TRE		STW	California	00					
+773479	2	1	CVR2	F460	C2000109520010630001	ATR					3		Durkee	Kinde			Burbank	CA	91502	(818) 260-0669																	
+1051269	0	2	CVR2	F460	F460CVR2102120042C	COM					5b	1238075	Rick Keene for Assembly				Chico	CA	95926	530-899-6942			Marshall	Walter			Y										
+1051276	0	1	CVR2	F460	Y04	COM					5b	1260497	Dean Gardner for Assembly Campaign 2004				Bakersfield	CA	93305	(661) 859-2600	(661) 859-2606		Conder	April			Y	ASM		ASM		30	S				
+1074265	0	3	CVR2	F465	CVR2-3	OFF	Registrar-Recorder of Los Angeles County	Norwalk	CA	90650																											
+1118163	0	1	CVR2	F460	OFC1	ATR					3		Carpenter	Pat			Alexandria	VA	22314	(703) 778-5550																	
+1131005	1	4	CVR2	F465	715827		Tom Porter	Sacramento	CA	95814																											
+1146353	0	1	CVR2	F460	C2000392420051231001	COM					5b	1250985	Comm To Re-Elect Gloria N. McLeod 2004				Chino	CA	91710	(909) 628-7451			McLeod	Gilbert			Y	ASM	Assemblymember	ASM	State of California	61	H				
+1095294	3	4	CVR2	F460	12	CTL					5B	1275257	Villaraigosa for Mayor 2005 -General				Los Angeles	CA	90017	(213) 452-6565			Kaufman	Stephen			Y										
+1131199	0	2	CVR2	F465	C2000631320051022002	POF	San Francisco County Registrar	San Francisco	CA	94102																											
+1133913	0	3	CVR2	F460	NIC7	COM					5b	1273222	Friends of Don Perata-Legal Defense Fund				Sacramento	CA	95814	916-442-2952			Janssen	Howard A.			Y										
+1118563	0	1	CVR2	F460	NIC1	COM					5b	1254121	DeVore in '04				Irvine	CA	92620	916/686-1815			Copp	Vona L.			Y										
+1119085	0	1	CVR2	F460	NIC1	COM					5b		 Please See Attached																								
+1126360	0	1	CVR2	F465	CI4813		Los Angeles County Registrar-recorder Campaign Reporting Unit	Norwalk	CA	90650																											
+1117740	0	1	CVR2	F460	OFC1	ATR					3		SIVESIND	JAMES A.			LOS ANGELES	CA	90071	(213) 624-6200																	
+1146394	0	2	CVR2	F465	AGENCY_2	POF	San Francisco Registrar of Voters	San Francisco	CA	94102																											
+1131405	0	1	CVR2	F460	T02	ATR					3									(   )         	(   )         																
+1131419	0	1	CVR2	F465	CI3110		Registrar of Voters City & County of San Francisco	San Francisco	CA	94102																											
+1112202	0	1	CVR2	F460	NIC1	COM					5b	1254043	Sharon Runner for Assembly-2004				Lancaster	CA	93534	661-943-4117			Burleson	Rita			Y										
+1119304	0	2	CVR2	F460	17	CTL					5B	1250526	Villaraigosa Officeholder Account				Los Angeles	CA	90017	(213) 452-6565			Kaufman	Stephen			Y										
+1079383	1	2	CVR2	F460	16	CTL					5B	1235957	Friends of Pedro Nava (reopened)				Santa Barbara	CA	93105	(805) 966-7223	(213) 452-6575		Nava	Pedro			Y	ASM	Assembly Member	ASM		35	S				
+1107051	0	3	CVR2	F460	15	CTL					5B	1250526	Villaraigosa Officeholder Account				Los Angeles	CA	90017	(213) 452-6565			Kaufman	Stephen			Y										
+1112631	0	1	CVR2	F460	T08	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1119112	0	1	CVR2	F460	NIC2	COM					5b	1248303	John Russo for City Attorney				Oakland	CA	94618	510-652-1000			Owens	Stacy E.			Y										
+1119122	0	1	CVR2	F460	OFC1	ATR					3		Garcia	Barry			San Juan Capistrano	CA	91675																		
+1130841	1	1	CVR2	F465	AGENCY_1	POF	Secretary of State, Political Reform Division	Sacramento	CA	95814																											
+1117812	0	1	CVR2	F460	NIC1	COM					5b	1222126	Working Families For Deborah Ortiz 2002				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1117952	0	1	CVR2	F460	NIC1	COM					5b	1250906	Lockyer 2006				Sacramento	CA	95814	916-444-1755			Jeronimo	Diane			Y										
+1131952	0	1	CVR2	F460	NIC2	COM					5b	1272657	Friends of Patty Berg				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1126506	0	3	CVR2	F465	FO3	POF	Sacramento County Registrar of Voters	Sacramento	CA	95823																											
+1142228	0	3	CVR2	F465	CVR2-3	OFF	Registrar Recorder of Los Angeles County	Norwalk	CA	90650																											
+1133894	1	1	CVR2	F460	PRI4	CAO					7		Marriage. Invalidati																								O
+1095315	1	4	CVR2	F460	12	CTL					5B	1230200	Villaraigosa	Friends of Antonio			Los Angeles	CA	90017-	(213) 452-6565			Kaufman	Stephen J.			Y	SEN	State Senator	SEN	Los Angeles	22	S				
+1099718	0	2	CVR2	F460	OFC1	ATR					3		Wichern	Lynn			W. Hollywood	CA	90069	323-656-0239	323-395-0519	lwichern@mlassociates.org															
+1173780	0	1	CVR2	F460	NIC1	COM					5b	1252222	Lori Saldana for State Assembly				San Diego	CA	92103	619-295-6923			Copeland	Rita			Y										
+1172914	0	2	CVR2	F465	AGENCY_2	POF	San Francisco County	San Francisco	CA	94102																											
+1147503	0	2	CVR2	F460	OFC1	ATR					3		Bell	Charles H.		Jr.	Sacramento	CA	95814	(916) 442-7757																	
+1148603	0	1	CVR2	F460	289000	ATR					3		Holderman	Reed			San Francisco	CA	94105	(415) 495-5660																	
+1147723	0	1	CVR2	F460	OFC1	ATR					3		Pearson	Chris	Mr.		San Diego	CA	92105	619-283-5411																	
+1157476	0	1	CVR2	F460	T02	ATR					3		Gould	David L.			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1148912	0	2	CVR2	F460	CVR2-5b-14	CTL					5b	1277315	Taxpayers for Maldonado				Santa Maria	CA	93458-4953	805-545-0600			Raymer	Christopher			Y										
+1173924	0	1	CVR2	F460	OFC1	ATR					3		Emede	Julie			San Jose	CA	95113	408-486-9049																	
+1174446	0	3	CVR2	F465	FO3	POF	Sacramento County, Registrar of Voters	Sacramento	CA	95827																											
+1147659	0	3	CVR2	F460	2	CTL					5B	1230095	Councilmember Alex Padilla's Officeholder Cmte.				Los Angeles	CA	90017	(213) 452-6565			Fuentes	Felipe			Y										
+1147794	0	1	CVR2	F465	FO1	POF	Secretary of State	Sacramento	CA	95814																											
+1148982	0	3	CVR2	F465	CVR2-3	OFF	Los Angeles County Registrar-Recorder	Norwalk	CA	90650																											
+1132051	1	2	CVR2	F465	FO2	POF	Alameda County Registrar of Voters	Oakland	CA	94612																											
+1165339	0	1	CVR2	F465	C2000456020040630001		Secretary of State Political Reform Division	Sacramento	CA	95814																											
+1165439	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1031606	1	1	CVR2	F460	PRI4	CAO					7		Marriage. Invalidati																								O
+1149378	0	2	CVR2	F460	Y10	COM					5b	1254526	Taxpayers for Russ Bogh				Riverside	CA	92507	(951) 781-2910	(951) 788-6135		Trimble, CPA	James W.			Y	ASM		ASM	State of California	65	H				
+1157548	0	1	CVR2	F460	Y04	COM					5b	1265422	Warren Furutani for Assembly 2006				Los Angeles	CA	90048	(323) 655-4065	(   )         		Padilla	Mary Ellen			Y	ASM		ASM		55	S				
+1155809	0	1	CVR2	F425	1	ATR																															
+1174672	0	3	CVR2	F465	AGENCY_3	POF	CITY & COUNTY OF SAN FRANCISCO	SAN FRANCISCO	CA	94102																											
+1148001	0	2	CVR2	F465	9	OFF	Registrar-Recorder of Los Angeles County	Norwalk	CA	90650																											
+1157385	2	3	CVR2	F460	NIC3	COM					5b	1256393	MCCLINTOCK FOR GOVERNOR				NEWBURY PARK	CA	91320	916/446-9049			BAUER	DAVID			Y										
+1156927	0	3	CVR2	F460	Y08	COM					5b	1269758	RUDY BERMUDEZ FOR SENATE 2006				Los Angeles	CA	90071	(213) 489-4792	(213) 489-4818		Gould	David L.			Y	SEN		SEN		30	S				
+1172417	0	1	CVR2	F465	AGENCY_1	POF	Campaign Reporting Unit	Norwalk	CA	90650																											
+1172436	0	1	CVR2	F460	T02	ATR					3		Witt	Carolyn			Encinitas	CA	92024	(760) 753-1157	(   )         																
+1174335	0	1	CVR2	F460	154000	ATR					3		Balgenorth	Robert L.			Sacramento	CA	95814	(916) 443-3302																	
+1174533	0	4	CVR2	F465	AGENCY_4	POF	Sacramento County Registrar	Sacramento	CA	95823																											
+1126390	1	2	CVR2	F460	PRI7	CAO					7		4 of 4	See Page																							O
+1157433	1	4	CVR2	F460	1	CTL					5B	1230095	Alex Padilla Officeholder Cmte.				Los Angeles	CA	90017	(213) 452-6565			Fuentes	Felipe			Y	CCM		CIT		07	H				
+1180847	0	2	CVR2	F460	CVR2-5b-14	CTL					5b	1277315	Taxpayers for Maldonado				Santa Maria	CA	93458-4953	805-545-0600			Raymer	Christopher			Y										
+1203199	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280																	
+1190155	0	2	CVR2	F460	NIC2	COM					5b		Parra For Assembly 2006				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1192042	0	3	CVR2	F465	FO3	POF	San Francisco County & City Dept. of Election	San Francisco	CA	94102																											
+1190918	0	4	CVR2	F460	Y02	COM					5b	983414	Russ Bogh for Assembly 2000				Riverside	CA	92507	(951) 781-2910	(   )         		Trimble, C.P.A.	James W.			Y	ASM		ASM	State of California	65	S				
+1190034	0	1	CVR2	F465	CVR2-1	OFF	California Secretary of State	Sacramento	CA	95814																											
+1190043	0	2	CVR2	F465	CVR2-2	OFF	Registrar-Recorder of Los Angeles County	Norwalk	CA	90650																											
+1190044	0	1	CVR2	F465	CVR2-1	OFF	California Secretary of State	Sacramento	CA	95814																											
+1188850	0	2	CVR2	F460	Y02	COM					5b	1263551	Committee to Re-Elect Brenda Salas				Los Angeles	CA	90071	(213) 489-4792	(   )         		Gould	David L			Y	CCM		CIT	Banning		S				
+1188919	0	1	CVR2	F460	1	ATR					3		Meurer	Michael			Los Angeles	CA	90048	(323) 655-8154																	
+1186259	0	2	CVR2	F465	AGENCY_2	POF	LOS ANGELES COUNTY REGISTRAR OF VOTERS	NORWALK	CA	90650																											
+1186285	0	2	CVR2	F465	AGENCY_2	POF	LOS ANGELES COUNTY	NORWALK	CA	90650																											
+1191506	0	3	CVR2	F465	FO3	POF	City & County of San Francisco Dept. of Elections	San Francisco	CA	94102																											
+1173566	1	1	CVR2	F460	1	CTL					5B	1247075	Abbe Land For City Council				West Hollywood	CA	90069				Bottini	Ivy			Y	CCM		CTY	West Hollywood		H				S
+1192049	0	4	CVR2	F465	FO4	POF	San Francisco County Registar Recorder	San Francisco	CA	94102																											
+1203779	0	1	CVR2	F460	1	ATR					3		Kaufman	Stephen			Los Angeles	CA	90017	(213) 452-6565																	
+1203828	0	1	CVR2	F460	C2000527220060930001	COM					5b	1264745	Laura Richardson Officeholder Account				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y	CCM	CCM		Long Beach	06	H				
+1189642	0	4	CVR2	F465	AGENCY_4	POF	MARIN COUNTY	SAN RAFAEL	CA	94903																											
+1189764	0	1	CVR2	F460	OFC1	ATR					3		DAVIDSON	CARY			LOS ANGELES	CA	90071	(213) 624-6200																	
+1187072	0	1	CVR2	F465	AGENCY_1	POF	Orange County Elections	Santa Ana	CA	92705																											
+1191724	0	1	CVR2	F460	C2000392620060630001	COM					5b	1250520	Kehoe For State Senate				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y	SEN	State Senate	SEN	California	39	S				
+1191829	0	1	CVR2	F460	NIC3	COM					5b	1263599	Friends of Pat Bates - 2006				Laguna Niguel	CA	92677				Presley	Betty			Y										
+1198103	0	1	CVR2	F460	1	CAO					5A		Skipakevich	Michael			South San Francisco	CA	94080								N	SEN		SEN		8					
+1174756	0	1	CVR2	F460	OFC1	ATR					3		KAUNE	JASON D.			MILL VALLEY	CA	94941	(415) 389-6800																	
+1174809	0	1	CVR2	F460	C2000252220060520001	COM					5b	1240122	Friends Of Christine Kehoe 2002				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y	ASM	State Assembly	ASM	State of California	76	H				
+1190748	0	1	CVR2	F460	OFC3	ATR					3		Spinelli	Robert			Sacramento	CA	95814	(916) 443-0505																	
+1190791	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1174883	2	1	CVR2	F460	C2000576920060520000	COM					5b	1251237	Groveman For Calabasas City Council 2003				Burbank	CA	91502				Durkee	Kinde			Y	CCM	Council Member		City of Calabasas	00	H				S
+1211556	0	1	CVR2	F460	OFC1	ATR					3		Eichman	J. Richard			Sacramento	CA	95814	(916) 442-2280																	
+1211582	0	1	CVR2	F460	CVR2I14ATR	ATR					3		Tomlin	Arthur			Grass Valley	CA	95949-8765	530-271-0745 			Gilchrease	Tony													
+1229376	0	2	CVR2	F460	Y16	COM					5b	1292758	FRIENDS OF RICHARD ALARCON FOR CITY COUNCIL				LOS ANGELES	CA	90071	(213) 489-4792	(213) 489-4818		GOULD	DAVID			Y	CCM		CIT	Los Angeles	7	S				
+1204671	0	2	CVR2	F460	Y04	COM					5b	1251747	Friends of Bonnie Garcia 2004				Riverside	CA	92507	(951) 781-2910	(951) 788-6135		Trimble, CPA	James W.			Y	ASM		ASM	State of California	80	H				
+1233933	0	1	CVR2	F460	OFC1	ATR					3		DAVIDSON	CARY			LOS ANGELES	CA	90071	(213) 624-6200																	
+1204568	0	1	CVR2	F460	Y08	COM					5b	1281783	Diaz for City Council				San Jose	CA	95112	(408) 920-0722	(   )         		Avila-Diaz	Sandra			Y	CCM		CIT	City of San Jose	3	S				
+1213011	0	2	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95841	916 348-9100																	
+1213012	1	3	CVR2	F465	AGENCY_3	POF	Los Angeles County Registrar of Voters	Norwalk	CA	90650																											
+1234305	0	1	CVR2	F460	NIC1	COM					5b	1292667	Alberto Torrico For Assembly 2008				Fremont	CA	94538	916-486-9399			Santos	James R.			Y										
+1190133	1	2	CVR2	F460	NIC3	COM					5b	1221992	The Lockyer Committee				Sacramento	CA	95814	916-444-1755			Copeland	Rita			Y										
+1227300	0	2	CVR2	F460	Y16	COM					5b	1292758	FRIENDS OF RICHARD ALARCON FOR CITY COUNCIL				LOS ANGELES	CA	90071	(213) 489-4792	(213) 489-4818		GOULD	DAVID			Y	CCM		CIT	Los Angeles	7	S				
+1229569	0	1	CVR2	F460	T02	ATR					3		Albers	William E.			Washington	DC	20005	(202) 772-5600	(   )         																
+1204769	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1204784	0	1	CVR2	F460	512000	ATR					3		Wiener	Rob			Sacramento	CA	95814																		
+1211932	0	1	CVR2	F460	121	ATR					3		Elliott	Christine			Santa Barbara	CA	93101	8052526972		pilotgirlyv@yahoo.com					N										
+1211991	0	1	CVR2	F465	12	OFF	Registrar Recorder of Los Angeles County	Norwalk	CA	90650																											
+1212039	0	1	CVR2	F460	OFC3	ATR					3		Hiltachk	Thomas W.			Sacramento	c	95814	(916) 442-7757																	
+1211905	1	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1234388	0	3	CVR2	F465	FO3	POF	San Francisco County Registrar	San Francisco	CA	94102																											
+1204720	1	1	CVR2	F460	OFC1	ATR					3		LIM	DARRIN			MILL VALLEY	CA	94941	(415) 389-6800																	
+1212502	0	4	CVR2	F465	FO4	POF	San Francisco County	San Francisco	CA	94102																											
+1231226	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1212790	0	2	CVR2	F465	AGENCY_2	POF	Registrar of Voters, City and County of San Francisco, Department of Elections	San Francisco	CA	94102																											
+1235089	0	3	CVR2	F465	AGENCY_3	POF	Registrar of Voters-County of Sacramento	Sacramento	CA	95823																											
+1235951	0	1	CVR2	F460	CVR2-5b-2	CTL					5b	1231854	Friends of Abel Maldonado				Santa Maria	CA	93458-4953	805-545-0600			Raymer	Christopher			Y										
+1216316	0	1	CVR2	F460	2	CTL					5b	1252906	Perata 2004				Sacramento	CA	95864	(916) 486-9399			Santos	James R.			Y										
+1189952	1	3	CVR2	F460	NIC4	COM					5b	1282317	Tom Torlakson for State Superintendent of Public Instruction 2010				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1212234	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95812-1467																											
+1211110	0	1	CVR2	F460	11109	ATR					3		Wilkinson	Robert D.			Fresno	CA	93704	559-432-5400																	
+1211162	0	1	CVR2	F460	NIC1	COM					5b	990712	Friends of Mark Wyland				Encinitas	CA	92024	760.632.3600			Scott, Jr.	F. Laurence			Y										
+1212536	0	4	CVR2	F465	AGENCY_4	POF	Sacramento County	Sacramento	CA	95823																											
+1213022	1	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1212533	1	1	CVR2	F460	T02	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1227938	0	1	CVR2	F460	C2000657520061231001	ATR					3		Durkee	Kinde			Burbank	CA	91502				Lutness	Carol													S
+1229063	0	1	CVR2	F460	C2000604120061231001	ATR					3		Durkee	Kinde			Burbank	CA	91502				Zane	Denny													
+1212887	0	1	CVR2	F460	C2000392620061021000	COM					5b	1275140	Kehoe For State Senate 2008				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y	SEN	State Senate	SEN	State of California	39	H				S
+1212898	0	2	CVR2	F465	FO2	POF	Los Angeles County Registrar & Recorder	Norwalk	CA	90650																											
+1149336	2	1	CVR2	F460	8	ATR					3		Downing	Betty Ann			Los Angeles	CA	90017	(213) 452-6565																	
+1235184	0	1	CVR2	F460	7	CAO					5A		Hallinan	Tom			Modesto	CA	95350								N	ASM		ASM		26					
+1235202	0	1	CVR2	F460	40000	ATR					3		Howard	Barbara V.Z.			Sacramento	CA	95814	(916) 444-0598																	
+1236183	0	3	CVR2	F465	FO3	POF	San Francisco County Registrar and Recorder	San Francisco	CA	94102																											
+1236530	0	1	CVR2	F460	NIC2	COM					5b	1277000	Friends of Senator Ed Vincent				Los Angeles	CA	90071	(213) 489-4792			Gould	David			Y										
+1238445	0	1	CVR2	F465	FO1	POF	Secretary of State	Sacramento	CA	95814																											
+1157596	3	3	CVR2	F460	C2000581420060317002	COM					5b	1293623	Friends Of Debra Bowen				Burbank	CA	91502				Durkee	Kinde			Y	SOS	Secretary Of State	STW	State of California	n/a	H				S
+1284354	0	1	CVR2	F460	NIC1	COM					5b	1239124	Friends of Mark Leyes				Garden Grove	CA	92844	714-534-3449			Leyes	Mark			Y										
+1238216	1	2	CVR2	F460	OFC1	ATR					3		Bauer	Dave			Sacramento	CA	95833																		
+1237524	0	3	CVR2	F460	NIC3	COM					5b	931297	Neighbors for Russo				Oakland	CA	94618	510-652-1000			Owens	Stacy E.			Y										
+1249669	0	2	CVR2	F460	Y16	COM					5b	1292758	FRIENDS OF RICHARD ALARCON FOR CITY COUNCIL				LOS ANGELES	CA	90071	(213) 489-4792	(213) 489-4818		GOULD	DAVID			Y	CCM		CIT	Los Angeles	7	S				
+1284583	0	1	CVR2	F460	Y06	COM					5b	1268049	Leland Yee for Senate				San Francisco	CA	94114	(415) 285-3414	(   )         		Jin	Ronald			Y	SEN		SEN	California	8	S				
+1275511	0	1	CVR2	F460	1	CAO					5A		Daucher	Lynn			Brea	CA	92821								N	SEN		SEN		34					
+1238920	0	2	CVR2	F460	NIC2	COM					5b	1253843	Loni Hancock for Assembly 2004				Oakland	CA	94618	510-658-2110			Copeland	Rita			Y										
+1238515	0	1	CVR2	F460	8	CTL					5B	1280954	Friends of David Armenta				Pico Rivera	CA	90660	(562) 572-9777			Sanchez	Angel			Y	ASM				58	S				
+1238022	0	2	CVR2	F465	FO2	POF	Los Angeles County Registrar & Recorder	Norwalk	CA	90650																											
+1238906	0	1	CVR2	F460	NIC1	COM					5b	1282319	Friends of Tom Torlakson 2008				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1235964	1	2	CVR2	F460	C2000616520061231001	COM					5b	930094	Committee To Re-Elect Curren Price OLD				Inglewood	CA	90305	(310) 614-3869			Price	Charlena			Y	CCM	City Councilmember	CTY	City of Inglewood	01	H				S
+1281964	0	1	CVR2	F460	OFC1	ATR					3		KAUNE	JASON D.			MILL VALLEY	CA	94941																		
+1284237	0	1	CVR2	F460	NIC1	COM					5b	1268709	The Committee to Elect Tony Thurmond				Richmond	CA	94803	510-223-4394			Torticill	Deb			Y										
+1276691	0	2	CVR2	F460	14	CTL					5B	1292751	Karen Bass for Assembly 2008				Los Angeles	CA	90017	(213) 452-6565			Bass	Karen			Y										
+1238952	0	1	CVR2	F460	Y06	COM					5b	1292609	Mike Eng for Assembly 2008				Los Angeles	CA	90048	(323) 655-4065	(   )         		Padilla	Mary Ellen			Y	ASM		ASM		49	S				
+1232246	1	1	CVR2	F460	C2000527220061231001	COM					5b	1264745	Laura Richardson Officeholder Account				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y	CCM	CCM		Long Beach	06	H				
+1238639	0	2	CVR2	F460	OFC-ACCT	PRO					6b		CABALDON	CHRISTOPHER													Y	OTH	MAYOR, WEST SACRAMENTO								
+1283428	0	1	CVR2	F460	T08	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1280679	0	1	CVR2	F460	Y06	COM					5b	1292805	Hector De La Torre for State Assembly 2008				Los Angeles	CA	90048	(323) 655-4065	(   )         		Padilla	Mary Ellen			Y	ASM		ASM		50	S				
+1282110	0	2	CVR2	F460	NIC2	COM					5b	1292667	Alberto Torrico For Assembly 2008				Fremont	CA	94538	916-486-9399			Santos	James R.			Y										
+1174798	2	2	CVR2	F460	C2000665020060520002	COM					5b	1292706	Lou Correa Campaign Legal Defense Fund				Burbank	CA	91502				Durkee	Kinde			Y	SEN	State Senate	SEN	State of California		S				S
+1237438	0	1	CVR2	F460	F460CVR20122200748C	COM					5b	1265314	Gaines For Assembly				Roseville	CA	95661	916-925-5155			Lawler	Kelly			Y										
+1277213	0	1	CVR2	F460	CI5	CTL					5b	1245212	Re-elect Jack Scott 2004				Pasadena	CA	91107-2038	626 795-5255		jon_fuhrman@charter.net	Fuhrman	Jonathan			Y	SEN	State Senate	SEN		21	H				S
+1235046	1	1	CVR2	F460	C2000583920070120001	COM					5b	1272725	Barry Groveman For Assembly				Burbank	CA	91502	(818) 260-0669			Durkee	Kinde			Y	ASM	Assemblymember	ASM	State of California	41	S				S
+1238200	0	4	CVR2	F465	FO4	POF	Sacramento County Registrar of Voters	Sacramento	CA	95827																											
+1282361	0	1	CVR2	F460	NIC1	COM					5b	1267136	FRIENDS OF ANTHONY PORTANTINO				LOS ANGELES	CA	90071	213-489-4792			Gould	David L.			Y										
+1282537	0	3	CVR2	F460	45	CTL					5B	1275408	Californians For Rocky				Los Angeles	CA	90017	(213) 452-6565			Luis Li				Y										
+1280700	0	4	CVR2	F460	Y10	COM					5b	1273782	RE-ELECT RUDY BERMUDEZ FOR ASSEMBLY 2006				Los Angeles	CA	90071	(213) 489-4792	(213) 489-4818		Gould	David L.			Y	ASM		ASM		56	H				
+1283459	0	1	CVR2	F460	1	ATR					3		Fowler	Phyllis			Sunnyvale	CA	94086	4087209456		phyllis@fmfa.com					N										
+1284476	0	1	CVR2	F460	NIC1	COM					5b	1250941	Audra Strickland for Assembly				Thousand Oaks	CA	91358	805-449--4211			Ray	Lysa			Y										
+1284476	0	2	CVR2	F460	NIC2	COM					5b	1277380	Re Elect Audra Strickland				Thousand Oaks	CA	91358	805-449--4211			Ray	Lysa			Y										
+1238213	0	6	CVR2	F460	7	BNM					6a																							Proposition 85. Waiting Period & Parental Notification Before Term of Minor's Pregnancy	85	Statewide	O
+1300096	0	2	CVR2	F460	NIC2	COM					5b	1293577	Senator Mike Machado Officeholder Account/2004				Sacramento	CA	95814	(916) 442-2952			Benner	Dale			Y										
+1312095	1	1	CVR2	F460	OFC1	ATR					3		LUCAS	STEVEN S.	MR.		MILL VALLEY	CA	94941	415-389-6800																	
+1239009	1	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1239008	1	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1191902	2	3	CVR2	F460	Y04	COM					5b	1251747	Friends of Bonnie Garcia 2004				Riverside	CA	92507	(951) 781-2910	(951) 788-6135		Trimble, CPA	James W.			Y	ASM		ASM	State of California	80	H				
+1285270	0	1	CVR2	F460	OFC1	ATR					3		Copp	Vona L.			Elk Grove	CA	95624	(916)686-1815	(916)686-1813	vona@onemain.com															
+1320268	0	1	CVR2	F460	9	ATR					3		Downing	Betty Ann			Los Angeles	CA	90017	(213) 452-6565																	
+1306090	1	2	CVR2	F460	4	CTL					5B	1297793	Believing In A Better California				Los Angeles	CA	90017	(213) 452-6565			de Leon	Kevin			Y										
+1309677	0	1	CVR2	F460	OFC3	ATR					3		Hiltachk	Thomas W.			Sacramento	CA	95814	916/442-7757																	
+1309639	0	2	CVR2	F460	Y02	COM					5b	1275585	Mike Eng for Assembly				Los Angeles	CA	90048	(323) 655-4065	(   )         		Padilla	Mary Ellen			Y	ASM		ASM		49	S				
+1285438	0	1	CVR2	F460	NIC1	COM					5b	1292848	Friends of Mark DeSaulnier- Assembly 2008				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1285656	0	2	CVR2	F460	NIC2	COM					5b	1231896	Carole Migden Leadership Committee				San Francisco	CA	94102	(415) 552-5214			Migden	Carole			Y										
+1312333	1	1	CVR2	F460	NIC1	COM					5b	1265695	Mayor Christopher Cabaldon Committee				West Sacramento	CA	95691	323-656-0239			Cabaldon	Christopher			Y										
+1311976	0	4	CVR2	F460	NIC4	COM					5b	1282317	Tom Torlakson for State Superintendent of Public Instruction 2010				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1319939	0	2	CVR2	F460	NIC2	COM					5b	1293544	DeVore in '08				Irvine	CA	92620	916-686-1815			Copp	Vona L.			Y										
+1306766	0	1	CVR2	F460	OFC1	ATR					3		YIN	FLORA			LOS ANGELES	CA	90071	(213) 624-6200																	
+1278987	1	3	CVR2	F460	NIC4	COM					5b	1294144	Senator Don Perata Officeholder Committee 2004-2008				Sacramento	CA	95864	916-486-9399			Santos	James R.			Y										
+1303122	0	1	CVR2	F460	OFC1	ATR					3		Dauner	Duane	Mr.		Sacramento	CA	95814-1100	(916) 552-7547																	
+1239012	1	2	CVR2	F465	AGENCY_2	POF	Los Angeles Country	Norwalk	CA	90650																											
+1239012	1	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1303994	0	1	CVR2	F460	OFC1	ATR					3		Garcia	Barry			San Juan Capistrano	CA	92675	949 496-6363																	
+1263783	1	3	CVR2	F460	7	CTL					5B	1250526	Mayor Antonio Villaraigosa's Officeholder Account				Los Angeles	CA	90017	(213) 452-6565			Kaufman	Stephen			Y	MAY					H				
+1303351	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1298265	0	3	CVR2	F465	AGENCY_3	POF	Los Angeles County Registrar of Voters	Norwalk	CA	90650																											
+1303278	0	1	CVR2	F460	9	ATR					3		Kaufman	Stephen			Los Angeles	CA	90017	(213) 452-6565																	
+1303538	0	1	CVR2	F460	C2000391920071231001	COM					5b	1293125	Gloria Negrete McLeod Senate 2010				Montclair	CA	91763				McLeod	Gilbert			Y	SEN	State Senate	SEN	State of California	32	H				S
+1310583	0	1	CVR2	F460	T04	ATR					3		Pessner	Kirk Alan			Burlingame	CA	94010-4443	(650) 401-8735	(   )         																
+1305764	0	1	CVR2	F460	OFC4	ATR					3		Eichman	J. Richard			Sacramento	CA	95814	916-442-2280																	
+1305920	0	2	CVR2	F460	2	CAO					5A		McFadden	Bradley			West Covina	CA	91791								N	ASM		ASM		57					
+1320163	0	1	CVR2	F460	C2000747320080317002	COM					5b	930094	Committee To Re-Elect Curren Price OLD				Inglewood	CA	90305				Price	Charlena			Y	CCM	City Councilmember	CTY	City of Inglewood	01	H				S
+1304828	0	1	CVR2	F460	C2000753620071231003	COM					5b	1296265	Californians For Paul Krekorian				Burbank	CA	91502				Durkee	Kinde			N	ASM	State Assembly	ASM	State of California	43	H				S
+1308414	0	1	CVR2	F460	1	ATR					3	1290624	Cox		Annie		Moline	IL	61265																		
+1308726	0	1	CVR2	F460	86	ATR					3		Wong	Janlee			Davis	CA	95618	5307591589							N										
+1335791	0	1	CVR2	F460	OFC1	ATR					3		Diamond	Francine			Pacific Palisades	CA	90272	510-271-0900																	
+1335800	0	2	CVR2	F460	Y08	COM					5b	1299461	Furutani for Assembly				Los Angeles	CA	90048	(323) 655-4065	(   )         		Padilla	Mary Ellen			Y	ASM		ASM		55	S				
+1345374	0	1	CVR2	F460	Y12	COM					5b	1261395	Jenny Oropeza for Senate				Long Beach	CA	90808	(310) 940-6757	(   )         		Weissman	Sharon L.			Y	SEN		SEN		28	S				
+1204133	2	4	CVR2	F460	NIC4	COM					5b	1282317	Tom Torlakson for State Superintendent of Public Instruction 2010				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1334589	0	1	CVR2	F460	OFC4	ATR					3		Hiltachk	Thomas W.	Mr.		Sacramento	CA	95814	(916) 442-7757																	
+1320481	1	1	CVR2	F460	T06	ATR					3		SANDERS	MICHELLE			LOS ANGELES	CA	90071	(213) 489-4792	(   )         																
+1348163	0	1	CVR2	F450	25660461	ATR						992324	N/A	N/A			N/A		N/A																		
+1335616	0	1	CVR2	F460	NIC1	COM					5b	1272005	Friends of Ira Ruskin				Redwood City	CA	94061	916-348-9100			Copeland	Rita			Y										
+1335587	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1351101	0	2	CVR2	F465	CVR2-2	OFF	Registrar of Voters City & County of San Francisco	San Francisco	CA	94102																											
+1320414	0	2	CVR2	F460	NIC2	COM					5b	1297277	Patty Berg Officerholder Account				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1340624	0	1	CVR2	F460	8	ATR					3		Garamendi	John			Sacramento	CA	95814	(916) 863-6881								LTG		STW			H				
+1346332	0	2	CVR2	F460	C2000571820080630000	COM					5b	991477	Friends Of Paul Krekorian				Burbank	CA	91502				Durkee	Kinde			Y	ASM	State Assembly Person	ASM	State of California	43	H				S
+1351153	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1350695	0	1	CVR2	F460	NIC1	COM					5b	1250941	Audra Strickland for Assembly				Thousand Oaks	CA	91358	805-449-4211			Ray	Lysa			Y										
+1333398	0	2	CVR2	F465	AGENCY_2	POF	San Francisco County	San Francisco	CA	94102																											
+1320394	1	1	CVR2	F460	OFC1	ATR					3		EDDY	JENNIE UNGER			MILL VALLEY	CA	94941	415-389-6800																	
+1346966	0	1	CVR2	F460	CVR2I3ATR	ATR					3		Jones	Judy			San Clemente	CA	92673-3062	949-369-0172 	-369-0726 		Martinez	Xavier													S
+1319908	1	1	CVR2	F460	OFC1	ATR					3		Hiltachk	Thomas W.			Sacramento	CA	95814	916-442-7757	916-442-7759																
+1350119	0	2	CVR2	F465	AGENCY_2	POF	Registrar-Recorder of Los Angeles	Norwalk	CA	90650																											
+1347234	0	1	CVR2	F460	OFC1	ATR					3		Davis-Howard	Damita			Oakland	CA	94609	(510) 893-8766																	
+1347311	0	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1334887	2	1	CVR2	F460	NIC1	COM					5b	1273003	BENOIT FOR ASSEMBLY 2006				RIVERSIDE	CA	92507	916/473-4298			BAUER	DAVID			Y										
+1351416	0	1	CVR2	F460	C2000457120080630001	COM					5b	1296267	Arlie Ricasa 2008				Burbank	CA	91502				Durkee	Kinde			N	ASM	State Assembly Person	ASM	State Of California	78	S				S
+1351417	0	1	CVR2	F460	C2000457020080630001	COM					5b	1296267	Arlie Ricasa 2008				Burbank	CA	91502				Durkee	Kinde			N	ASM	State Assembly Person	ASM	State Of California	78	S				S
+1346960	0	2	CVR2	F460	NIC2	COM					5b	1251222	DICK ACKERMAN FOR SENATE 2004				IRVINE	CA	92602	916/473-4298			BAUER	DAVID			Y										
+1347844	0	2	CVR2	F460	12	CTL					5B	1266579	Steve Bradford for the 51st Assembly District 2006				Los Angeles	CA	90017	(213) 452-6565			Bradford	Steven			Y	ASM	Assembly Member	ASM	Gardena	51	S				S
+1320365	0	2	CVR2	F460	NIC2	COM					5b	1298900	DeSaulnier for Senate 2008				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1345473	0	1	CVR2	F460	OFC1	ATR					3		KAUNE	JASON D.			SAN RAFAEL	CA	94901	415-389-6800	415-388-6874																
+1335669	1	2	CVR2	F460	NIC2	COM					5b	1277456	Committee to Protect California's Future				Sacramento	CA	95814	(916) 442-2952			Nunez	Fabian			Y										
+1334734	0	1	CVR2	F460	OFC1	ATR					3		Levy	Henry C.	Mr.		Oakland	CA	94618	510-652-1000	510-654-2363																
+1334694	0	1	CVR2	F460	18	ATR					3		Woocher	Fredric			Santa Monica	CA	90401	3105761233	3103190156	fwoocher@strumwooch.com					N										
+1334804	0	2	CVR2	F465	CVR2-3	OFF	San Francisco County Registrar of Voters	San Francisco	CA	94102-4605																											
+1335743	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1335098	0	2	CVR2	F460	C2000457020080517000	COM					5b	981488	Arlie Ricasa Campaign				Burbank	CA	91502				Durkee	Kinde			Y	BED	Board of Education		San Diego	5	H				S
+1327607	0	2	CVR2	F460	OFC2	PRO					6b		Nunez	Fabian			Sacramento	CA	94249-0046	(213) 620-4646	(213) 620-0000	a@a.com						ASM		ASM		46	H				
+1364701	0	3	CVR2	F465	FO4	POF	Registrar/Recorder of Los Angeles County	Norwalk	CA	90650																											
+1361654	0	1	CVR2	F460	F460CVR21002200834C	RCP					5b																										
+1351632	0	2	CVR2	F460	NIC3	COM					5b	1294849	Lieber 2012				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1369474	0	2	CVR2	F460	C2000616520081018000	COM					5b	930094	Committee To Re-Elect Curren Price OLD				Inglewood	CA	90305				Price	Charlena			Y	CCM	City Council Member	CTY	City of Inglewood	01	H				S
+1362650	1	1	CVR2	F460	4	CTL					5B	1292700	Padilla for Senate				Los Angeles	CA	90017	(213) 452-6565			Mabie, Bill				Y										
+1367606	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280	916-442-1693	lauras@eichmancpa.com															
+1390509	0	2	CVR2	F460	F460CVR2012120095D	RCP					5b																										
+1351835	0	1	CVR2	F465	183301	OFF	Secretary of State / Political Reform Division,	Sacramento	CA	95814																											
+1351852	0	3	CVR2	F465	CVR2-3	OFF	Depart of Elections San Francisco County	San Francisco	CA	94102																											
+1362261	0	3	CVR2	F460	NIC3	COM					5b	1277980	Taxpayers for Perata				Sacramento	CA	95864	916-486-9399			Santos	James R.			Y										
+1362734	1	1	CVR2	F460	C2000604820080930000	COM					5b	1250520	Kehoe For State Senate				Burbank	CA	91502				Durkee	Kinde			Y	SEN	State Senator	SEN	California	39	S				S
+1368122	0	1	CVR2	F460	CVR2I11ATR	ATR					3		Weber	Peter			Fresno	CA	93711-6911	559-431-7170 			Downing	Cynthia													S
+1369582	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1320417	4	1	CVR2	F460	NIC1	COM					5b	1261603	Fiona Ma For Assembly				San Francisco	CA	94116	415-922-9554			Dang	Helen			Y										
+1345724	1	3	CVR2	F460	NIC4	COM					5b	1294144	Senator Don Perata Officeholder Committee 2004-2008				Sacramento	CA	95864	916-486-9399			Santos	James R.			Y										
+1370626	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County Registrar of Voters	Norwalk	CA	90650																											
+1369542	0	2	CVR2	F465	36	OFF	Department of Elections	San Francisco	CA	94102																											
+1362845	1	1	CVR2	F460	OFC3	ATR					3		ABDOLI	ELLI			SAN RAFAEL	CA	94901	(415) 389-6800																	
+1389456	0	1	CVR2	F460	OFC2	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280																	
+1361490	0	1	CVR2	F460	OFC2	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1369680	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1369753	1	1	CVR2	F460	OFC1	ATR					3		Haley	Nancy R.			Encinitas	CA	92024	(760) 632-3600	(760) 632-3601	nhaley@thinkcpa.com															
+1368843	1	1	CVR2	F460	27129984	ATR					3	1266205	Minor	William	Mr.		Washington	DC	20004	202-799-4312	202-799-5312	william.minor@dlapiper.com															
+1334323	2	1	CVR2	F460	17	CTL					5B	1305444	California 2020				Los Angeles	CA	90017	(213) 452-6565			Padilla	Ackley			Y										
+1363488	0	2	CVR2	F465	AGENCY_2	POF	City & County of San Francisco, Dept. of Elections	San Francisco	CA	94102																											
+1363530	0	1	CVR2	F460	Y08	COM					5b	1294034	Friends of George Plescia				La Mesa	CA	91941	(619) 698-4333	(   )         		Baber	William			Y	LTG		STW			S				
+1370438	0	3	CVR2	F460	OFC1	ATR					3		Levy	Henry C.	Mr.		Oakland	CA	94618	(510) 652-1000																	
+1370747	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1378239	1	1	CVR2	F460	15840	ATR					3		Hilton	Ted			San Diego	CA	92169	000-000-0000																	
+1350179	1	1	CVR2	F460	OFC1	ATR					3		BROWN	BRIAN			SANTA ANA	CA	92701	609/858-4818		bbrown@nationformarriage.org															
+1362759	0	1	CVR2	F460	C2000749920080930000	COM					5b	1251001	Senate Committee Gloria N. McLeod 2006				Chino	CA	91710				McLeod	Gilbert			Y	SEN	State Senator	SEN	California	32	S				S
+1363557	0	1	CVR2	F460	T02	ATR					3		Gould	David L.			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1369081	0	1	CVR2	F460	NIC2	COM					5b	1304649	Jim Beall for Senate				San Jose	CA	95124	415-252-3700							Y										
+1398431	0	1	CVR2	F460	OFC1	ATR					3		Owens	Stacy E.	Ms.		Oakland	CA	94618	510-652-1000																	
+1397477	0	1	CVR2	F460	7	ATR					3		Kaufman	Stephen			Los Angeles	CA	90017	(213) 452-6565																	
+1464104	0	1	CVR2	F460	NIC1	COM					5b	1268709	The Committee to Elect Tony Thurmond				Richmond	CA	94803	(510) 223-4394			Torticill	Deb			Y										
+1396710	0	4	CVR2	F460	Y08	COM					5b	1304048	ONE CALIFORNIA				Los Angeles	CA	90071	(213) 489-4792	(213) 489-4818		Gould	David L.			Y	ASM		ASM		56	H				
+1363072	1	1	CVR2	F460	Y16	COM					5b	1314372	Friends of Noreen Evans for State Senate 2014				Santa Rosa	CA	95403	(707) 568-5524	(   )         		Bimbi	Peggy			Y	SEN		SEN	State District	2	S				
+1393252	0	2	CVR2	F460	C2000892820081231000	COM					5b	1313824	Price For Assembly 2010				Burbank	CA	91502				Durkee	Kinde			N	ASM	State Assembly Person	ASM	State Of California	51	H				S
+1396771	0	2	CVR2	F460	Y02	COM					5b	990238	ED VINCENT FOR SENATE				Los Angeles	CA	90071	(213) 489-4792	(213) 489-4818		Gould	David			Y	SEN		SEN			S				
+1419458	0	1	CVR2	F460	1	ATR					3	921055	Peddle		Justine		Atlanta	GA	30328	404-828-4381																	
+1420090	0	1	CVR2	F460	OFC1	ATR					3		Hayes	Steve			San Francisco	CA	94105	(415) 356-7518																	
+1398446	0	1	CVR2	F460	OFC1	ATR					3		Greene	Sandra			Washington	DC	20005	(916) 442-2952																	
+1391370	1	1	CVR2	F460	T04	ATR					3		Groh	Albert			Oakland	CA	94612	(510) 839-0193	(   )         																
+1393528	0	1	CVR2	F460	OFC1	ATR					3		Cottingham	Ron			Sacramento	CA	95834	(916) 928-3777																	
+1395139	0	1	CVR2	F460	NIC2	COM					5b	1300419	FRIENDS OF JEFF DENHAM AGAINST THE RECALL				MODESTO	CA	95354	916/473-4298			DAVID	BAUER			Y										
+1420814	0	1	CVR2	F460	OFC3	ATR					3		Spinelli	Robert			Sacramento	CA	95814	(916) 443-0505																	
+1431609	0	1	CVR2	F460	OFC1	ATR					3		REED	DANA W.			LOS ANGELES	CA	90010	(213)624-6200																	
+1431622	0	1	CVR2	F460	3	ATR					3		McMahon	Michael			Alameda	CA	94501	5107273142							N										
+1427703	0	1	CVR2	F460	18	CTL					5B	1313818	Felipe Fuentes for Assembly 2010				Los Angeles	CA	90017				Felipe Fuentes				Y			STW							
+1395068	0	2	CVR2	F460	20	CTL					5B	1308910	Garamendi for Governor 2010				Sacramento	CA	95814	(916) 863-5881			Garamendi	John			Y										
+1429960	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280	916-442-1693	lauras@eichmancpa.com															
+1396503	0	1	CVR2	F460	CVR2I533ATR	ATR					3		Baza	Larry			San Diego	CA	92104-4101	858-456-9900 			Gordon	John													S
+1396531	0	3	CVR2	F465	CVR2-3	OFF	Registrar Recorder of Los Angeles County	Norwalk	CA	90650																											
+1398492	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1432453	0	1	CVR2	F460	T02	ATR					3		Moore Sanders	Michelle			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1432700	0	1	CVR2	F460	50	ATR					3		McOsker	Pat			Los Angeles	CA	90026	(213) 485-2091																	
+1417009	0	2	CVR2	F450	OFC2	POF						1227710	Friedlander	Carl																							
+1370652	1	2	CVR2	F460	NIC2	COM					5b	1314309	DeSaulnier for Senate 2012				Sacramento	CA	95841	(916) 348-9100			Copeland	Rita			Y										
+1402239	1	3	CVR2	F460	7	BNM					6B																N										
+1396257	0	4	CVR2	F460	13	CAO					6B		de Leon	Kevin			Los Angeles	CA	90017								Y	ASM		ASM		45	H				S
+1398510	0	3	CVR2	F465	AGENCY_3	POF	City and County of San Francisco	San Francisco	CA	94102																											
+1398718	0	2	CVR2	F460	Y04	COM					5b	1236770	Councilmember Bonnie Lowenthal Officeholder Account							(   )         	(   )         		Powell	Roger			Y	CCM		CIT			S				
+1416836	1	1	CVR2	F460	OFC3	ATR					3		Cahan	Hope	Ms.		San Jose	CA	95124	650-270-9596																	
+1431200	0	1	CVR2	F460	OFC4	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1458952	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280	916-442-1693																
+1438499	1	1	CVR2	F460	NIC1	COM					5b	1272182	Wolk for Assembly 2006				Sacramento	CA	95814	916-930-3200			Churchwell	Steven G.			Y										
+1435859	0	1	CVR2	F460	C2000753620090630003	COM					5b	1318897	Krekorian For City Council 2009				Burbank	CA	91502				Durkee	Kinde			Y	CCM	City Council Member	CIT	City Of Los Angeles	02	S				S
+1435861	0	2	CVR2	F460	C2000891720090630004	COM					5b	1318897	Krekorian For City Council 2009				Burbank	CA	91502				Durkee	Kinde			Y	CCM	City Council Member	CIT	City Of Los Angeles	02	S				S
+1433999	0	1	CVR2	F460	OFC1	ATR					3		White	Linda			Sacramento	CA	95814	(916)447-7315																	
+1447227	0	2	CVR2	F460	NIC2	COM					5b	1317600	Norby for Clerk-Recorder				Rancho Sta Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+1453517	0	1	CVR2	F460	NIC1	COM					5b	1294043	FRIENDS OF SAM AANESTAD				PENN VALLEY	CA	95946				BAUER	DAVID			Y										
+1462825	0	2	CVR2	F460	2	BNM					6B																N										
+1437741	0	2	CVR2	F460	NIC3	COM					5b	1302319	Alliance for California's Renewal				Rancho Sta Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+1434782	0	1	CVR2	F460	OFC1	ATR					3		Copty	Julie			Washington	DC	20001	(202) 220-4548																	
+1423158	1	2	CVR2	F460	C2000892820090502001	COM					5b	1277744	Price For State Assembly				Burbank	CA	91502				Durkee	Kinde			Y	ASM	State Assembly Person	ASM	State of California	51	S				S
+1435984	0	1	CVR2	F460	OFC1	ATR					3		YIN	FLORA			LOS ANGELES	CA	90010	(213) 624-6200																	
+1463198	0	1	CVR2	F460	1	CAO					5A		Miles, Jr.	Lawrence W.			Sacramento	CA	95821								N	ASM		ASM		5					
+1463212	0	1	CVR2	F460	CVR2I7340ATR	ATR					3		Reno	Beth			Encinitas	CA	92024-8705	760-632-3600			Haley	Nancy													S
+1463310	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1458813	0	1	CVR2	F460	T02	ATR					3		Gould	David L.			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1433746	0	2	CVR2	F460	2	BNM					6B																N										
+1438172	0	1	CVR2	F460	NIC1	COM					5b	1314036	Re-Elect Joan Buchanan for Assembly 2010				San Ramon	CA	94583	925-806-0560			Copeland	Rita			Y										
+1438246	0	1	CVR2	F460	501	ATR					3		Bray	Susan			Sacramento	CA	95814	916-747-8381																	
+1438284	0	1	CVR2	F460	NIC1	COM					5b	1314155	Huber For Assembly 2010				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1450140	0	1	CVR2	F460	T04	ATR					3		Groh	Albert			Oakland	CA	94612	(510) 839-0193	(   )         																
+1455213	0	3	CVR2	F460	C2000953620091121000	COM					5b	991477	Friends Of Paul Krekorian				Burbank	CA	91502				Durkee	Kinde			Y	ASM	State Assembly Person	ASM	State of California	43	H				S
+1463575	0	1	CVR2	F460	C2000168620091231000	ATR					3	AsstTreas	Durkee	Kinde			Burbank	CA	91502								N						H				S
+1438776	0	4	CVR2	F460	6282462	CAO					5a		Mendoza	Tony			Long Beach	CA	90807	(562) 427-2100								ASM		ASM		56					
+1396262	1	1	CVR2	F460	NIC2	COM					5b	931502	Friends of Paul Fong				Sunnyvale	CA	94085-3843	408-746-2056			Nishahara	Jeremy			Y										
+1398667	1	1	CVR2	F460	NIC1	COM					5b	1305370	Eisenhut for Assembly 2008				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1463844	0	1	CVR2	F460	OFC1	ATR					3		Garcia	Barrett			San Juan Capistrano	CA	92675	949 496-6363																	
+1433442	0	1	CVR2	F460	OFC3	ATR					3		HENEGHAN, ESQ.	KEVIN R.			SAN FRANCISCO	CA	94108	(415)732-7700	(415)732-7701																
+1435696	0	2	CVR2	F465	7		Secretary of State	Sacramento	CA	95814																											
+1435706	0	1	CVR2	F460	15	CTL					5B	1314045	Coto Latino Community Dev. Ballot Meas. Cmte.				Los Angeles	CA	90017	(213) 452-6565	(213) 452-6575		Coto	Joe			Y			STW	0						
+1437690	0	1	CVR2	F460	OFC1	ATR					3		Garcia	Barrett			San Juan Capistrano	CA	92675	949 496-6363																	
+1435970	0	1	CVR2	F460	T02	ATR					3		SANDERS	MICHELLE MOORE			LOS ANGELES	CA	90071	(213) 489-4792	(   )         																
+1435775	0	1	CVR2	F460	1	ATR					3		Sherman	Fred			Washington	DC	20005	2028428679							N										
+1446096	0	2	CVR2	F460	NIC2	COM					5b	1317990	Wilson for State Assembly 2010				San Ramon	CA	94583	949-858-7448			Presley	Betty			Y										
+1446105	0	1	CVR2	F460	NIC1	COM					5b	990885	Committee to Elect Louie A Lujan				La Puente	CA	91744	323-893-6802			Lujan	Louie			Y										
+1490840	0	1	CVR2	F460	OFC1	ATR					3		Hiltachk	Thomas W.			Sacramento	CA	95814	916/442-7757																	
+1490843	0	1	CVR2	F460	OFC1	ATR					3		Bell, Jr.	Charles H.			Sacramento	CA	95814	916-442-7757	916-442-7759																
+1474808	0	1	CVR2	F460	NIC2	COM					5b	1294082	Diane Harkey for Assembly				Rancho Sta Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+1490957	0	2	CVR2	F465	AGENCY_2	POF	Registrar-Recorder of Los Angeles	Norwalk	CA	90650																											
+1473148	0	1	CVR2	F460	OFC2	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1473277	0	1	CVR2	F460	d7e578c4-886d-4871-8	ATR					3	1244939	Maxwell	Carol			Birmingham	AL	35242	(205) 298-3229																	
+1474123	0	2	CVR2	F460	NIC3	COM					5b	1314668	Senator Bob Dutton 2008 Officeholder Account				Rancho Cucamonga	CA	91730	949-858-7448			Presley	Betty			Y										
+1488639	0	1	CVR2	F460	0c1a297b-4236-4844-8	ATR					3	930174	Yanosy	James M.			Hartford	CT	06155	(860) 547-7006																	
+1474283	1	1	CVR2	F460	OFC1	ATR					3		DAVIDSON	CARY			LOS ANGELES	CA	90010	(213) 624-6200																	
+1465723	1	1	CVR2	F460	NIC1	COM					5b	1293649	Adams for Assembly 2008				Hesperia	CA	92345	949-858-7448			Presley	Betty			Y										
+1474386	0	1	CVR2	F460	NIC1	COM					5b	962318	Friends of James Shelby				Citrus Heights	CA	95621	916-719-7147			Shelby, II	James			Y										
+1489279	0	1	CVR2	F460	1	CAO					5A		Medina	Jose			Riverside	CA	92506								N	ASM		ASM		64					
+1465507	0	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95841	916-348-9100	916-348-9111																
+1474097	0	2	CVR2	F460	NIC4	COM					5b	1324832	Fabian Nunez for Treasurer 2014				Sacramento	CA	95814	(916) 442-2952			Nunez	Fabian			Y										
+1491103	0	1	CVR2	F460	NIC2	COM					5b	1273871	Adams for Assembly 2006				Hesperia	CA	92345	949-858-7448			Presley	Betty			Y										
+1481814	0	1	CVR2	F460	1	ATR					3		Gage	Terry			Lincoln	CA	95648	9166459747	9166459749	caaa@psyber.com					N										
+1490381	0	1	CVR2	F460	CVR2I1591ATR	ATR					3		Burruto	David	Mr.		Burlingame	CA	94010-2839	650-219-0457			Martinez	Xavier													S
+1491332	0	1	CVR2	F460	NIC1	COM					5b	1323807	John Eastman for Attorney General 2010				RanchoStaMarg	CA	92688	949 858 7448			Presley	Betty			Y										
+1458971	1	1	CVR2	F460	OFC12	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1491177	0	2	CVR2	F465	AGENCY_2	POF	San Francisco County	San Francisco	CA	94102																											
+1471292	0	2	CVR2	F460	7	BNM					6A																N							Commty Fund Protct Act / Best Pract Budgt Act	N/A	Statewide	S
+1474180	0	2	CVR2	F460	NIC2	COM					5b	1295115	SENATOR BOB MARGETT OFFICEHOLDER COMMITTEE 2004				GLENDORA	CA	91740				BAUER	DAVID			Y										
+1489842	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280																	
+1435450	1	1	CVR2	F460	NIC1	COM					5b	981683	Committee to Elect Robert Wieckowski				Fremont	CA	94538	510-790-2732			Wieckowski	Eugene			Y										
+1465644	0	2	CVR2	F460	OFC1	ATR					3		Heneghan	Kevin R.			San Francisco	CA	94108	415 732-7700																	
+1485419	0	1	CVR2	F460	OFC1	ATR					3		Titus	Ashlee N.			Sacramento	CA	95814	(916) 442-7757																	
+1465629	1	1	CVR2	F460	NIC1	COM					5b	1297721	Hagman for Assembly				Chino Hills	CA	91709	949-858-7448			Presley	Betty			Y										
+1474746	0	1	CVR2	F460	16	CTL					5B	1321242	The Janice Hahn Lt. Governor 2010 Committee				Los Angeles	CA	90017	(213) 452-6565			Hahn	Janice			Y	LTG		STW			S				
+1473370	0	1	CVR2	F460	C2000392920100317000	COM					5b	1319499	Claude Parrish For Orange County Assessor 2010 Assessor 2010				Burbank	CA	91502				Durkee	Kinde			N	ASR	Assessor		Orange County		S				S
+1474796	0	3	CVR2	F460	23	CAO					6B		Coto	Joe			Sacramento	CA	95814	 	 							ASM		ASM	0	23	H				
+1507773	0	1	CVR2	F460	CVR2-5b-1	CTL					5b	1293157	Gaines For Assembly 2008				Roseville	CA	95661-7902	(916) 925-5155			Lawler	Kelly			Y										
+1507101	0	1	CVR2	F460	1	CAO					5A		PEREA	HENRY T			FRESNO	CA	93704								N	ASM		ASM		31					
+1505836	0	1	CVR2	F460	1	CAO					5A		PHAM	LONG			FOUNTAIN VALLEY	CA	92708								N	ASM		ASM		68					
+1508458	0	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95814	916-348-9100	916-348-9111	campaigns@rcbs.us															
+1507827	0	2	CVR2	F460	6741496	CAO					5a		Garamendi	John			Long Beach	CA	90807	(562) 427-2100							Y	GOV		STW			S				
+1474327	1	1	CVR2	F460	OFC1	ATR					3		DAVIDSON	CARY			LOS ANGELES	CA	90010	(213) 624-6200																	
+1492327	0	1	CVR2	F460	18292845	ATR					3	1307878	Thompson, Principal	Robert C.		Officer	Washington	DC	20005	202-466-0666																	
+1490841	1	1	CVR2	F460	OFC1	ATR					3		Bell, Jr.	Charles H.			Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+1491618	0	1	CVR2	F460	NIC1	COM					5b	1308175	Newsom for California - Governor 2010				San Francisco	CA	94114	415-516-1252			Sutton	James R.			Y										
+1491749	0	3	CVR2	F465	AGENCY_3	POF	Los Angeles County Registrar of Voters	Norwalk	CA	90650																											
+1500688	0	1	CVR2	F460	F460CVR20715201049	ATR					3		Cleary	Anne			Atlanta	GA	30338	(678)579-5248																	
+1465268	1	2	CVR2	F460	Y04	COM					5b	1324210	Mike Gatto For Assembly 2010-Special Primary				Los Angeles	CA	90048	(323) 655-4065	(   )         		Leiderman	Jane			Y	ASM		ASM		43	S				
+1506614	0	1	CVR2	F460	C2000106120100630000	ATR					3	AsstTreas	Furman	Larry			Sherman Oaks	CA	91423								N						H				S
+1500086	0	1	CVR2	F460	18424697	ATR					3	1307878	Thompson, Principal	Robert C.		Officer	Washington	DC	20005	202-466-0666																	
+1508525	0	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95841	916-348-9100	916-348-9111	campaigns@rcbs.us															
+1508532	0	1	CVR2	F460	NIC1	COM					5b	1294254	Anna Caballero for Assembly 2008				Salinas	CA	93906	831-422-6464			Santos	James R.			Y										
+1465159	1	1	CVR2	F460	NIC1	COM					5b	1292891	Steve Poizner for Insurance Commissioner 2010				Rancho Sta Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+1492001	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1508027	0	3	CVR2	F460	Y18	COM					5b	1293247	Ridley-Thomas State Senate Office Holder Account				Los Angeles	CA	90043	(323) 298-0816	(323) 299-0803		Yarbrough	Ida			Y	SEN		SEN	District	26	H				
+1492161	0	2	CVR2	F460	NIC4	COM					5b	1314000	Dave Jones for Insurance Committee 2010				Sacramento	CA	95864	916-486-9399			Santos	James R.			Y										
+1506877	0	3	CVR2	F460	Y06	COM					5b	1296263	Mike Davis for Assembly 2008				Los Angeles	CA	90071	(213) 489-4792	(213) 489-4818		Gould	David L.			Y	ASM		ASM		48	S				
+1506908	0	1	CVR2	F460	1	CAO					7		CONTRERAS	ALFONSO													N	ASM				57					S
+1507635	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1320317	2	1	CVR2	F460	NIC2	COM					5b	1307133	Committee for a New Economy (Steinberg Ballot Measure Committee)				Sacramento	CA	95814	(916) 444-1186			Steinberg	Darrell			Y										
+1504709	0	1	CVR2	F460	OFC1	ATR					3		Augustine	Curt			Sacramento	CA	95814	(916)447-7315																	
+1499197	0	1	CVR2	F460	T02	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90071	(213) 489-4792	(   )         																
+1491789	0	1	CVR2	F460	NIC2	COM					5b	1314232	Emmerson for Senate 2012				Redlands	CA	92374	909-794-6419			Presley	Betty			Y										
+1507350	0	1	CVR2	F460	PRI1	CAO					7		Brown	Jerry	Mr.													GOV		STW			S				S
+1485216	1	2	CVR2	F460	PRI1	BNM					6a																							Best Practices Budget Accountability Act (Version 2)	NA	Statewide	S
+1501575	0	1	CVR2	F460	OFC3	ATR					3		WELCH	SEAN P.			SAN RAFAEL	CA	94901																		
+1506433	0	3	CVR2	F465	AGENCY_3	POF	SAN FRANCISCO DEPARTMENT OF ELECTIONS	SAN FRANCISCO	CA	94102																											
+1530203	0	1	CVR2	F460	Y02	COM					5b	1274282	Kevin Jeffries for State Assembly				Riverside	CA	92501	(951) 274-9500	(951) 274-7828		Daley	Kathleen			Y	ASM		ASM	66TH DISTRICT	66	S				
+1530249	0	2	CVR2	F460	2	BNM					6B																N										
+1522708	0	3	CVR2	F465	Cvr2-8	OFF	Registrar-Recorder of Los Angeles County Campaign Finance Disclosure Section	Norwalk	CA	90650																											
+1526095	0	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1531999	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1511940	0	1	CVR2	F460	1	CAO					5A		Branstine	Dan			Murrieta	Ca	92563								N	ASM		ASM		66					
+1530728	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1521159	0	2	CVR2	F460	2	RCP					5B	1288703	Merced County Democratic Central Committee 2006				Merced	CA	95340	2092615787			Gray	Adam			N										
+1521162	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1522855	0	2	CVR2	F460	OFC1	ATR					3		Allen	Michael	Mr.		Santa Rosa	CA	95409	(707) 695-6454																	
+1522901	0	2	CVR2	F460	NIC2	COM					5b	1314308	Ira Ruskin for Senate 2012				Redwood City	CA	94061	916-348-9100			Copeland	Rita			Y										
+1522902	0	1	CVR2	F460	NIC1	COM					5b	1293236	Ira Ruskin for Assembly 2008				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1528081	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1531399	0	2	CVR2	F465	CVR2-23781-197	POF	Registrar Recorder Of Los Angeles County	Norwalk	CA	90650-3134																											
+1523062	1	2	CVR2	F460	NIC3	COM					5b	1307146	California Rising				San Francisco	CA	94108	415-732-4502			Henegan	Kevin			Y										
+1532123	0	2	CVR2	F460	NIC2	COM					5b	1328323	Alberto Torrico for Supervisor 2014				Sacramento	CA	95864	916-486-9399			Santos	James R.			Y										
+1532133	0	2	CVR2	F460	NIC3	COM					5b	1314000	Dave Jones for  Insurance Commissioner 2010				Sacramento	CA	95864	916-486-9399			Santos	James R.			Y										
+1519137	0	1	CVR2	F460	OFC1	ATR					3		Hiltachk	Thomas W.			Sacramento	CA	95814	916-442-7757																	
+1520446	0	1	CVR2	F460	1	CAO					5A		CONTRA COSTA COUNTY COMMITTEE ON POLITICAL EDUCATION AFL-CIO	PAMELA			MARTINEZ	CA	94553								N	OTH	CITY COUNCIL	CIT	CITY OF PINOLE						
+1473644	1	1	CVR2	F460	OFC6	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1531416	0	1	CVR2	F460	T02	ATR					3		Valencia	John R.			Sacramento	CA	95814	(916) 441-2430	(   )         																
+1521007	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1522268	0	2	CVR2	F460	NIC2	COM					5b	1315874	Lucille Kring for Mayor 2010				Anaheim	CA	92802	714-530-2366			Kring	Ronald			Y										
+1522515	0	1	CVR2	F460	OFC1	ATR					3		Paternoster	Rocco			Sacramento	CA	95814	916-326-4257																	
+1529297	0	1	CVR2	F460	NIC1	COM					5b	1314487	Fletcher for Assembly 2010				San Diego	CA	92122	858-457-1393			Haley	Nancy			Y										
+1531831	0	3	CVR2	F465	AGENCY_3	POF	SAN FRANCISCO COUNTY	SAN FRANCISCO	CA	94102																											
+1149504	4	1	CVR2	F460	C2000475020051231001	COM					5b	1321817	Horton, Board Of Equalization 2010				Burbank	CA	91502				Durkee	Kinde			Y	BOE	Board of Equilization Member	BOE	State of California	04	S				S
+1473118	2	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280	916-442-1693																
+1523973	0	1	CVR2	F460	C2000636020100930001	COM					5b	1283077	Education Efficiency Committee				Burbank	CA	91502				Durkee	Kinde			Y						H	Education Efficiency Committee	n/a	California	S
+1531334	1	2	CVR2	F465	CVR2-23781-233	POF	Registrar Recorder Of Los Angeles County	Norwalk	CA	90650-3134																											
+1531566	0	1	CVR2	F460	OFC1	ATR					3		Wilson	Amy			Turlock	CA	95380	209-669-0880																	
+1521503	0	2	CVR2	F460	NIC3	COM					5b	1296820	JEFF DENHAM OFFICEHOLDER COMMITTEE, SENATE 2006				MODESTO	CA	95354	916/473-4298			DAVID	BAUER			Y										
+1507351	1	3	CVR2	F465	AGENCY_3	POF	City and County of San Francisco	San Francisco	CA	94102																											
+1522473	1	1	CVR2	F460	NIC1	COM					5b	1304649	Jim Beall for Senate 2012				San Jose	CA	95124	415-884-5500			Beall Jr.	Jim			Y										
+1531704	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1500432	1	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1572264	0	1	CVR2	F460	NIC1	COM					5b	1314644	Lori Saldana for Senate 2012				San Diego	CA	92103	916-348-9100			Copeland	Rita			Y										
+1491761	2	2	CVR2	F460	11	CTL					5B	1314045	Coto Latino Community Dev. Ballot Meas. Cmte.				Los Angeles	CA	90017	(213) 452-6565	(213) 452-6575		Coto	Joe			Y			STW	0						
+1572396	0	4	CVR2	F460	NIC4	COM					5b	1257906	Democrat Jerome Horton for Board of Equalization 2006 (Re-Open)				Sacramento	CA	95814	(916) 442-2952			Horton	Jerome			Y										
+1558555	0	1	CVR2	F460	CVR25b_3313849	COM					5b	1318700	Villines for Insurance Commissioner 2010				Fresno	CA	93721	559-266-3453			Egan	Richard M.			Y										
+1546644	0	2	CVR2	F465	CVR2-23781-314	POF	Registrar Recorder Of Los Angeles County	Norwalk	CA	90650-3134																											
+1522991	1	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1572590	0	3	CVR2	F460	21	CTL					5B	1313624	Kevin de Leon for Assembly 2010				Los Angeles	CA	90017	(213) 452-6565			de Leon	Kevin			Y	ASM		ASM		45	H				S
+1569006	0	3	CVR2	F460	NIC3	COM					5b	1264562	Committee to Elect Lucille Kring				Anaheim	CA	92802	714-530-2366			Kring	Ronald			Y										
+1572368	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1572389	0	1	CVR2	F465	44	OFF	Secretary of State	Sacramento	CA	95814																											
+1508404	1	2	CVR2	F460	OFC2	PRO					6b		WILSON, PROPONENT	CHRISTY																							
+1522980	1	1	CVR2	F460	OFC1	ATR					3		Lighty	Michael			Oakland	CA	94612	(510) 273-2200																	
+1531867	1	1	CVR2	F460	OFC1	ATR					3		Deane	Shawnda			Sacramento	CA	95842	(916) 285-5733	(916) 333-1344																
+1557771	0	4	CVR2	F465	13	POF	Registrar of Voters - County of San Diego	San Diego	CA	92123																											
+1539658	0	1	CVR2	F460	OFC1	ATR					3		Hayes	Steve			San Francisco	CA	94105	(415) 356-7518																	
+1474854	1	2	CVR2	F460	Y06	COM					5b	1292805	Hector De La Torre for State Assembly 2008				Los Angeles	CA	90048	(323) 655-4065	(   )         		Padilla	Mary Ellen			Y	ASM		ASM		50	S				
+1565964	0	1	CVR2	F450	38446063	ATR						810263	Smith	Raymond E.		III	Fairfax	VA	22030	(703) 267-1152	(703) 267-3942	rsmith@nrahq.org															
+1572349	0	1	CVR2	F465	37	OFF	California Secretary of State	Sacramento	CA	95814																											
+1573056	0	1	CVR2	F460	NIC1	COM					5b	1315656	Committee to Elect Susan Bonilla for Assembly 2010				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1522854	3	1	CVR2	F460	OFC1	ATR					3		EDDY	JENNIE UNGER			SAN RAFAEL	CA	94901	415-389-6800																	
+1570329	0	1	CVR2	F460	CVR2I589ATR	ATR					3		McLaughlin	Evan		Pol. Dir.	San Diego	CA	92105-1699	619-283-5411			Martinez	Xavier	Mr.												S
+1563914	0	1	CVR2	F460	OFC1	ATR					3		HENEGHAN, ESQ	KEVIN			SAN FRANCISCO	CA	94108	(415) 732-7700																	
+1532049	1	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90650																											
+1532048	1	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1572363	0	2	CVR2	F465	AGENCY_2	POF	Los Angeles County	Norwalk	CA	90651																											
+1572423	0	1	CVR2	F460	OFC1	ATR					3		DAVIDSON	CARY			LOS ANGELES	CA	90010	(213) 624-6200																	
+1531211	1	1	CVR2	F460	21	CTL					5B	1305444	CA 2020 Senator Alex Padilla's Ballot Measure Cmte				Los Angeles	CA	90017	(213) 452-6565			Padilla	Ackley			Y										
+1567997	0	4	CVR2	F460	C2000004820110122001	COM					5b	1318897	Krekorian For City Council 2009 - Officeholder Officeholder				Burbank	CA	91502				Durkee	Kinde			Y	CCM	City Council Member	CIT	City Of Los Angeles	02	H				S
+1572718	0	3	CVR2	F465	AGENCY_3	POF	San Francisco County	San Francisco	CA	94102																											
+1531949	1	1	CVR2	F460	Y10	COM					5b	1333783	Mike Eng For Assembly 2010-OH				Los Angeles	CA	90048	(323) 655-4065	(   )         		Leiderman	Jane			Y	ASM		ASM		49	S				
+1558564	0	1	CVR2	F460	OFC1	ATR					3		Waddell	Joanne																							
+1570862	0	1	CVR2	F460	NIC1	COM					5b	1311517	Steve Poizner for Governor 2010				Rancho Sta Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+1570915	0	3	CVR2	F460	NIC3	COM					5b	1283077	Education Efficiency Committee (Horton Ballot Measure Committee)				Sacramento	CA	95814	(916) 442-2952			Horton	Jerome			Y										
+1572283	0	1	CVR2	F460	18	ATR					3		Vanyi	Scarlett			Sacramento	CA	958272513	9163666646	9163666674	svanyi@csea.org					N										
+1569467	0	3	CVR2	F465	CVR2-23782-345	POF	Department Of Elections City & County of San Francisco	San Francisco	CA	94102																											
+1508048	1	2	CVR2	F465	3	OFF	Los Angeles County Registrar Recorder	Norwalk	CA	90650																											
+1565905	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280																	
+1602319	0	1	CVR2	F465	2	POF	SECRETARY OF STATE - POLITICAL REFORM DIVISION	SACRAMENTO	CA	95814																											
+1607219	0	1	CVR2	F460	2	CTL					5B	1316499	Lara for Assembly 2010				Los Angeles	CA	90017				Lara	Ricardo			Y	ASM		ASM		50	H				
+1607418	0	1	CVR2	F460	OFC1	ATR					3		Regalia	Ken			San Francisco	CA	94111	415-981-6600																	
+1608159	0	1	CVR2	F460	NIC1	COM					5b	1333821	Harkey for Assembly 2012				Rancho Santa Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+1608195	0	2	CVR2	F460	NIC2	COM					5b	1294417	Friends of Senator Ellen Corbett 2010				Sacramento	CA	95814	(916)442-2952			Corbett	Mary			Y										
+1558544	1	2	CVR2	F460	C2000891720101231003	COM					5b	1324553	Krekorian For City Council 2011				Burbank	CA	91502				Durkee	Kinde			Y	CCM	City Council Member	CIT	City Of Los Angeles	02	H				S
+1567998	1	1	CVR2	F460	C2000891720110122002	COM					5b	1321819	Krekorian For City Council 2009 - Gen.				Burbank	CA	91502				Durkee	Kinde			Y	CCM	City Council Member	CIT	City Of Los Angeles	02	S				S
+1607439	0	2	CVR2	F460	NIC2	COM					5b	1333762	Newsom for California Lieutenant Governor 2014				San Francisco	CA	94114	415-412-3455			Newsom	Gavin			Y										
+1621649	0	3	CVR2	F460	OFC1	ATR					3		Warren	Nancy L.			Novato	CA	94949-5731	415-884-5500	415-884-5501	nwarren@warrenandassoc.com															
+1621670	0	1	CVR2	F460	NIC1	COM					5b	1314985	Dr. Ed Hernandez, O.D. Democrat for Senate 2010				La Puente	CA	91744	626-338-4172			Hernandez	Edward P.			Y										
+1609099	0	1	CVR2	F460	NIC1	COM					5b	1314036	Re-Elect Joan Buchanan for Assembly 2010				San Ramon	CA	94583	925-806-0560			Copeland	Rita			Y										
+1602841	0	2	CVR2	F460	CVR2I4ATR	ATR					3	1335042	Reno	Beth			Encinitas	CA	92024-8705	760-632-3600	760-632-3601		Haley	Nancy			Y										S
+1578761	0	1	CVR2	F465	2	POF	Secretary of State	Sacramento	CA	95814																											
+1574617	2	2	CVR2	F460	C2001072320110129001	COM					5b	1314048	Ted Lieu For Attorney General 2010				Burbank	CA	91502				Durkee	Kinde			Y	ATT	Attorney General	STW	State Of California	00	S				S
+1601287	0	1	CVR2	F460	T02	ATR					3		Moore Sanders	Michelle			Los Angeles	CA	90010	(213) 489-4792	(   )         																
+1572738	1	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95841	916-348-9100																	
+1595896	0	1	CVR2	F460	1	CAO					5A		Snodgrass	Donna			Yucaipa	CA	92399								N	OTH	CalPERS Board of Administration	STW							
+1605761	0	1	CVR2	F460	T02	ATR					3		Snelson	Kathy			Sacramento	CA	95814	(916) 442-8888	(   )         																
+1607864	0	1	CVR2	F460	OFC1	ATR					3		Titus	Ashlee N.			Sacramento	CA	95814	916-442-7757																	
+1608015	0	1	CVR2	F460	OFC4	ATR					3		Simmons	Jerry			Los Angeles	CA	90010	(213) 624-6200																	
+1599317	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280																	
+1606700	0	1	CVR2	F460	CVR2-9	ATR					3		Pessner	Kirk Alan			Burlingame	CA	94010	650/401-8735	/																
+1609231	0	1	CVR2	F460	NIC1	COM					5b	1280732	Eggman 4 Council				Stockton	CA	95204				Hall	Renee			Y										
+1620289	0	1	CVR2	F460	NIC1	COM					5b	1316861	PHIL TING FOR ASSESSOR 2010				OAKLAND	CA	94618	415/566-6611			OWENS	STACY			Y										
+1587613	1	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95814	916-348-9100	916-348-9111	campaigns@rcbs.us															
+1591832	0	1	CVR2	F460	9	CTL					5B	1292700	Padilla for Senate				Los Angeles	CA	90017	(213) 452-6565			Mabie, Bill				Y										
+1606193	0	1	CVR2	F460	NIC1	COM					5b	991830	COMMITTEE TO ELECT SOPHIA SCHERMAN TO THE ELK GROVE CITY COUNCIL				ELK GROVE	CA	95624	916/685-3860			SCHERMAN	SOPHIA			Y										
+1609305	0	1	CVR2	F460	OFC3	ATR					3		O'CONNOR	THOMAS			SAN FRANCISCO	CA	94103	(415) 621-7103																	
+1608125	0	4	CVR2	F460	24	CTL					5B	1313624	Kevin de Leon for Assembly 2010				Los Angeles	CA	90017	(213) 452-6565			de Leon	Kevin			Y	ASM		ASM		45	H				S
+1608983	0	4	CVR2	F460	21	COM					5B	1323711	Kevin de Leon for Senate 2010				Los Angeles	CA	90017	(213) 452-6565			de Leon	Kevin			Y	SEN				22	S				S
+1584614	0	2	CVR2	F460	Y24	COM					5b	1292758	ALARCON LEGAL DEFENSE FUND				LOS ANGELES	CA	90010-3090	(213) 489-4792	(213) 489-4818		GOULD	DAVID L.			Y	CCM		CIT	City of Los Angeles	7	S				
+1598790	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1600310	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280																	
+1639079	3	1	CVR2	F460	69	CAO					5A		Brown	Cheryl			San Bernardino	CA	92404								N	ASM		ASM		47					
+1635184	1	2	CVR2	F460	NIC3	COM					5b	1343107	Fiona Ma for State Board of Equalization 2014				Sacramento	CA	95864	916-486-9399			Santos	James R.			Y										
+1647616	0	2	CVR2	F460	3	CTL					5B	1334166	Lara for Assembly 2012				Los Angeles	CA	90017	(213) 452-6565			Lara	Ricardo			Y	ASM		ASM		50	H				
+1637441	0	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95841	916 348-9100	916 348-9111																
+1636473	1	1	CVR2	F460	NIC2	COM					5b	1314330	Elaine Alquist Senate 2008 Officeholder Account				Sacramento	CA	95842	(916) 285-5733			Alquist	Elaine			Y										
+1628050	0	1	CVR2	F460	OFC5	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280																	
+1646042	0	1	CVR2	F460	b2808e05-4e71-46ac-8	ATR					3	1263106	Hodges	Caitlin			Washington	DC	20001	(202) 263-5923																	
+1646071	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280		lauras@eichmancpa.com															
+1607663	1	3	CVR2	F460	6282486	ATR					3		Downing	Betty Ann			Long Beach	CA	90807	(562) 427-2100							Y										
+1626358	0	2	CVR2	F460	Y06	COM					5b	1314580	Garrick for Assembly 2010				San Diego	CA	92119	(619) 713-6888	(   )         		Boling, CPA	C. April			Y	ASM		ASM		74	S				
+1627750	0	1	CVR2	F460	OFC3	ATR					3		Isbell	Reese			San Francisco	CA	94109	415-812-6209																	
+1622368	0	1	CVR2	F460	OFC3	ATR					3		Bell	Charles H.			Sacramento	CA	95814	(916) 442-7757																	
+1630641	0	1	CVR2	F460	f37fbc14-1a3d-4f6b-9	ATR					3	1257506	Pope	Erica			Chicago	IL	60603	(312) 732-5852																	
+1629546	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280		lauras@eichmancpa.com															
+1629550	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1631929	0	4	CVR2	F460	Y12	COM					5b	1334704	MIKE DAVIS ASSEMBLY 2010 OFFICEHOLDER				LOS ANGELES	CA	90010-3090	(213) 489-4792	(213) 489-4818		GOULD	DAVID L.			Y	ASM			Los Angeles	48	H				
+1632588	0	1	CVR2	F460	T02	ATR					3		Snelson	Kathy			Sacramento	CA	95814	(916) 442-8888	(   )         																
+1633971	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Robin			Encinitas	CA	92024	760-632-3600																	
+1599327	1	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1636984	0	1	CVR2	F460	OFC1	ATR					3		Paulson	Lou			Sacramento	CA	95833	(916) 921-9111																	
+1633073	0	1	CVR2	F460	Y06	CTL					5b	1328153	Re-Elect Garcia 2012 for Mayor				Pacific Grove	CA	93950	831/277-6320			Quirarte	Claudia			Y	MAY		CIT	Monterey County		H				
+1646056	0	1	CVR2	F460	OFC1	ATR					3		Evering	Deborah			Richmond	CA	94804	510-206-7732																	
+1633616	0	1	CVR2	F460	50	ATR					3		Licwinko	Mary Lou			San Francisco	CA	94129	4155610850							N										
+1647721	0	1	CVR2	F460	Y18	CTL					5b	1340011	Furutani For City Council 2011				Los Angeles	CA	90048	323/655-4065			Leiderman	Jane			Y	CCM		CIT	City of Los Angeles	15	S				
+1634026	0	3	CVR2	F460	CVR25b_3397026	COM					5b	1336396	Senator Lou Correa Officeholder Committee 2010				San Marcos	CA	92078				Martinez	Xavier			Y										
+1647033	0	1	CVR2	F460	1	ATR					3	990697																									
+1647268	0	1	CVR2	F460	OFC1	ATR					3		Haley	Nancy			Encinitas	CA	92024	(760) 632-3600	(760) 632-3601	nhaley@thinkcpa.com															
+1647269	0	2	CVR2	F460	Y02	CTL					5b	1274282	Kevin Jeffries for State Assembly				Riverside	CA	92501	951/274-9500			Teaman	Richard			Y	ASM		ASM		66	S				
+1647772	0	2	CVR2	F460	NIC2	COM					5b	1317457	Michael Allen for Assembly 2010				San Rafael	CA	94901	707-695-6454			Theis	Richard J.			Y										
+1637944	0	2	CVR2	F460	CVR2-5b-1102	CTL					5b	1337183	Sharon Runner For Senate 2012				Willows	CA	95988-9788	(530) 934-5823			Lawler	Kelly			Y										
+1647305	0	1	CVR2	F460	CVR2-5b-990	CTL					5b	1325120	Tax Fighters for Anderson Senate 2010				La Mesa	CA	91942-6437				Baber	William			Y										
+1677487	0	2	CVR2	F465	14	POF	Los Angeles Registrar-Recorder	Norwalk	CA	90650																											
+1677718	0	1	CVR2	F460	NIC1	COM					5b	1314551	NESTANDE FOR ASSEMBLY 2010				PALM DESERT	CA	92260	916/473-4298			BAUER	DAVID			Y										
+1680205	0	2	CVR2	F460	11	CTL					5B	1334166	Lara for Assembly 2012				Los Angeles	CA	90017	(213) 452-6565			Lara	Ricardo			Y	ASM		ASM		50	H				
+1669707	0	1	CVR2	F460	6534009	ATR					3	1308865	Cortina	Judith			Tampa	FL	33607	813-282-7275																	
+1637511	1	2	CVR2	F460	30	CTL					5B	1321922	Building CA's Future: John A. Perez Ballot Measure Committee				Los Angeles	CA	90017	(213) 452-6565			Villar	Deborah			Y										
+1637511	1	3	CVR2	F460	24	CTL					5B	1333592	John A. Perez for Assembly 2012				Los Angeles	CA	90017	(213) 452-6565			Villar	Deborah			Y	ASM		ASM		46	S				
+1662841	0	1	CVR2	F460	NIC2	COM					5b	1335538	Cook for Senate 2012				San Bernardino	CA	92408	909-889-0871			Duran	Roger			Y										
+1662061	0	1	CVR2	F460	19931285	ATR					3	1280698	Glaser	Mark			Albany	NY	12207	518-689-1413	518-689-1499	glaserm@gtlaw.com															
+1662671	0	1	CVR2	F460	OFC1	ATR					3		Ventura	Salvador G.	Mr.		San Jose	CA	95125	408-269-4332																	
+1670573	0	1	CVR2	F425	3	ATR					3		Kaufman	Stephen			Los Angeles	CA	90017																		
+1661618	1	2	CVR2	F460	168	CAO					5A		Gordon	Richard			Menlo Park	CA	94025								N	ASM		ASM		24					
+1663897	0	1	CVR2	F460	OFC1	ATR					3		Rosen	William			Sacramento	CA	95815	916-285-5733	916-333-1344																
+1647359	2	1	CVR2	F460	CVR25b_3394274	COM					5b	1320010	Rudy Ramirez for City Council 2010				Chula Vista	CA	91911				Peralta	Frank			Y										
+1664997	0	2	CVR2	F465	3	POF	San Francisco Department of Elections	San Francisco	CA	94102																											
+1666096	0	2	CVR2	F460	Y18	CTL					5b	1340011	Furutani For City Council 2011				Los Angeles	CA	90048	323/655-4065			Leiderman	Jane			Y	CCM		CIT	City of Los Angeles	15	S				
+1670265	0	1	CVR2	F460	1	ATR					3		GALLAGHER	RICHARD			SANTA MARIS	CA	93456	8058781011		CPARN434@COMCAST.NET					N										
+1663537	0	1	CVR2	F460	62	RCP					5B	1321602	Steven Bradford for Assembly 2010				Los Angeles	CA	90017	(213) 452-6565			Bradford	Steven			Y	ASM		ASM		51	H				
+1675776	0	1	CVR2	F460	NIC4	COM					5b	1324832	Fabian Nunez for Treasurer 2014				Sacramento	CA	95814	(916) 442-2952			Nunez	Fabian			Y										
+1669063	1	1	CVR2	F460	Y04	CTL					5b	1316533	Jeff Stone for State Senate 2010				Riverside	CA	92507	951/781-2910			Hopkins, CPA	Dana			Y	SEN		SEN		36	S				
+1663518	1	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280	916-442-1693	lauras@eichmancpa.com															
+1673242	0	2	CVR2	F460	Y06	CTL					5b	1314019	Kevin Jeffries for Assembly 2010				Riverside	CA	92501	951/274-9500			Teaman	Richard			Y	ASM		ASM		66	S				
+1676525	0	1	CVR2	F460	1	CAO					5A		Ing	Mitchell			Monterey Park	CA	91754								N	ASM		ASM		49					
+1673347	0	2	CVR2	F460	3	CTL					5B	1341838	Senator Lou Correa Legal Defense Fund				San Marcos	CA	92078	7607521610			Martinez	Xavier			Y										
+1673359	0	1	CVR2	F465	AGENCY_1	POF	SECRETARY OF STATE	SACRAMENTO	CA	95814																											
+1664091	0	1	CVR2	F460	PRI1	CAO					7		Roth	Richard														SEN		SEN		31	S				S
+1702723	0	1	CVR2	F460	PRI1	CAO					7		NIELSEN	JIM														SEN		SEN		4	S				S
+1704249	0	1	CVR2	F460	9387094	CAO					5a		Rendon	Anthony			Long Beach	CA	90807								Y		Assembly District 63								S
+1694234	0	1	CVR2	F460	OFC1	ATR					3		Titus	Ashlee N.			Sacramento	CA	95814	916-442-7757	916-442-7759																
+1702952	0	1	CVR2	F460	OFC4	ATR					3		Rexroad	Matt			Sacramento	CA	95825	916-648-1222																	
+1704369	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1694719	0	1	CVR2	F460	PRI1	BNM					6a																							Political Contributions by Payroll Deduction. Contributions to Candidates. Initiative Statute. Proposition	32	Statewide	O
+1694799	0	1	CVR2	F460	NIC1	COM					5b	1288131	Friends of Joe Baca, Jr.				Rialto	CA	92376				Baca, Jr.	Joe			Y										
+1700477	0	1	CVR2	F465	2	POF	JOHN ALBIN	CAMARILLO	CA	93010																											
+1700896	0	1	CVR2	F460	1	ATR					3	981293	McPherson		Michael		Washington	DC	20036																		
+1700978	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1680523	0	2	CVR2	F460	6282486	ATR					3		Downing	Betty Ann			Long Beach	CA	90807	(562) 427-2100							Y										
+1694826	0	1	CVR2	F460	eeeed479-972b-40f6-b	ATR					3	842008	Roberge	Mark			San Diego	CA	92101																		
+1701442	0	1	CVR2	F460	OFC3	ATR					3		Roath	Trish			Sacramento	CA	95814	916-444-2772																	
+1695094	1	2	CVR2	F460	PRI2	BNM					6a																							Sales and Income Tax Increase Initiative	30	Statewide	S
+1680345	0	2	CVR2	F460	6282462	CAO					5a		Mendoza	Tony			Long Beach	CA	90807	(562) 427-2100			Weissman	Sharon			Y		Assembly District 56								
+1685788	0	2	CVR2	F460	2	CAO					5A		Fox	Steve			Lancaster	CA	93534								N	ASM		ASM		36					
+1607054	1	1	CVR2	F460	31	ATR					3		Kaufman	Stephen			Los Angeles	CA	90017	(213) 452-6565																	
+1680450	0	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95841	916-348-9100	916-348-9111	rita@rcbs.us															
+1693831	0	1	CVR2	F460	4338266	ATR					3	1337192	D'Amato	Mark			Boston	MA	02117	617-357-9500 X43303		Mark.D'amato@libertymutual.com															
+1693207	0	2	CVR2	F460	2	RCP					5B	C00490870	Merced County Democratic Central Committee - Federal				Merced	CA	95340	2098327228			Heller	Ryan			N										
+1694224	0	1	CVR2	F460	1	ATR					3		Torey	Carter			Washington	DC	20005	2028428679							N										
+1680775	0	2	CVR2	F460	NIC3	COM					5b	1335303	Friends of Calderon Board of Equalization 2014				Covina	CA	91722	626-915-7635			Miranda	Yolanda			Y										
+1680859	0	1	CVR2	F460	OFC1	ATR					3		Sutton	James R.			San Francisco	CA	94108	415 732-7700																	
+1701301	0	1	CVR2	F460	1	ATR					3		Brenner	Julie			Menlo Park	CA	94025	6502339015		julie@richgordon2012.com					N										
+1666055	1	1	CVR2	F460	66	ATR					3		Corradi	Pam			Burbank	CA	91501	8188460024		pamcorradi@att.net					N										
+1663151	1	1	CVR2	F460	NIC1	COM					5b	991830	COMMITTEE TO ELECT SOPHIA SCHERMAN TO THE ELK GROVE CITY COUNCIL				ELK GROVE	CA	95624	916/685-3860			SCHERMAN	SOPHIA			Y										
+1704085	0	1	CVR2	F460	BNM-4	BNM					6a		Paycheck Protection																					Political Contributions by Payroll Deduction. Contributions to Candidates.  Initiative Statute.	32		O
+1704118	0	1	CVR2	F465	Cvr2-8	OFF	Secretary of State Political Reform Division	Sacramento	CA	95814																											
+1695277	0	3	CVR2	F460	NIC3	COM					5b	1348436	Lara for Assembly 2020				Los Angeles	CA	90017	(213) 452-6565			Lara	Ricardo			Y										
+1702270	0	1	CVR2	F460	e115ad68-488c-4c80-9	ATR					3	1342334	Manna	Deirdra			Des Plaines	IL	60018	(847) 553-3613																	
+1702429	1	1	CVR2	F460	1	ATR					3		Smeltzer	Barbara			Des Moines	IA	50321	5403418808							N										
+1704229	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1704231	0	2	CVR2	F460	NIC2	COM					5b	1282647	Abel Guillen for Peralta Board				Oakland	CA	94609				Hank	Levy			Y										
+1693895	0	4	CVR2	F460	6	CTL					5B	1351559	Committee Against the Recall of Rob Bonta				Sacramento	CA	95841	5108725141			Copeland	Rita			Y										
+1702335	0	1	CVR2	F460	OFC6	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1731925	0	2	CVR2	F460	50	CTL					5B	1319901	Felipe Fuentes Reform CA Ballot Measure Committee				Los Angeles	CA	90017	(213) 452-6565			Fuentes	Felipe			Y	ASM		STW							
+1739937	0	1	CVR2	F465	2	POF	California Secretary of State	Sacramento	CA	95814																											
+1740048	0	1	CVR2	F460	NIC2	COM					5b	1353473	Das Williams for Assembly 2014				Santa Barbara	CA	93101	916-285-5733			Williams	Das													
+1735444	0	1	CVR2	F460	OFC1	ATR					3		Mohammadizad	Neema			Martinez	CA	94553	(925) 932-1230																	
+1737696	0	1	CVR2	F460	501	ATR					3		Bray	Susan			Sacramento	CA	95814	916-747-8381																	
+1704574	0	1	CVR2	F460	PRI1	CAO					7		Roth	Richard														SEN		SEN		31	S				S
+1723463	0	2	CVR2	F465	Cvr2-6	OFF	Riverside Registrar of Voters																														
+1704709	0	1	CVR2	F460	NIC1	COM					5b	1336374	Mary Hayashi For Senate 2014				Los Angeles	CA	90010	213 489-4792			Gould	David			Y										
+1695235	1	2	CVR2	F460	OFC1	ATR					3		Deane	Shawnda			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1704523	0	1	CVR2	F460	12	CTL					5B	1342322	Lara for Senate 2012				Los Angeles	CA	90017	(213) 452-6565			Lara	Ricardo			Y	SEN		sen		33	S				
+1637213	4	1	CVR2	F460	NIC1	COM					5b	1324086	Rob Bonta for City Council 2010				Alameda	CA	94501				Reyes	Ben			Y										
+1695017	2	1	CVR2	F460	OFC1	ATR					3		Titus	Ashlee N.			Sacramento	CA	95814	916-442-7757																	
+1680322	1	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1674322	1	2	CVR2	F460	PRI3	BNM					6a																							State Budget.  State and Local Governement.		Statewide - Proposition 31	S
+1716608	0	1	CVR2	F460	1	ATR					3		Bigelow	Lynne			Redding	CA	96001	5302419131		lynnevista@sbcglobal.net					N										
+1702930	1	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1680589	1	2	CVR2	F460	NIC5	COM					5b	1314435	Tom Torlakson Assembly 2008 Officeholder Account				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1740301	0	2	CVR2	F460	CVR2-5b-9712	CTL					5b	1354472	Hueso for Senate 2013				Encinitas	CA	92024-8705	(760) 632-3600			Haley	Nancy			Y										
+1740348	0	1	CVR2	F460	OFC1	ATR					3		Bell	Charles H.		Jr.	Sacramento	CA	95814	(916) 442-7757																	
+1664093	1	3	CVR2	F460	22	COM					5B	1328464	Kevin de Leon for Assembly 2018				Los Angeles	CA	90017	(213) 452-6565			de Leon	Kevin			Y	ASM		ASM		45	S				S
+1738017	0	1	CVR2	F460	CVR2-5b-20520	CTL					5b	1334205	Phil Ting for Mayor 2011				San Francisco	CA	94109	(415) 322-0118			Gould	David			Y										
+1729687	0	1	CVR2	F460	1961ec0d-f2ed-413f-b	ATR					3	1276906	Martin	Kelly			Milwaukee	WI	53202	(414) 665-4456																	
+1738561	0	2	CVR2	F460	CVR2-5b-100731	CTL					5b	1333789	Brown for Governor 2014				Oakland	CA	94612-1743	(510) 628-0202			Singh	Rubeena			Y										
+1740618	0	1	CVR2	F460	NIC1	COM					5b	1314309	DeSaulnier For Senate 2012				Sacramento	CA	95841	925-827-4662			Copeland	Rita			Y										
+1740670	0	1	CVR2	F460	NIC1	COM					5b	1299642	Friends of Michael Allen for City Council				San Rafael	CA	94901	(707) 695-6454			Seward	Alene			Y										
+1739297	0	3	CVR2	F460	10	BNM					6B		Brown	Jerry													N	GOV					H				
+1739326	0	1	CVR2	F465	CI47	POF	Secretary of State  Political Reform Division	Sacramento	CA	95814																											
+1783470	0	1	CVR2	F460	NIC2	COM					5b	1347510	Californians Building a Healthy Future - Dr. Pan Ballot Measure Committee				Sacramento	CA	95815	(916) 285-5733			Pan	Dr. Richard			Y										
+1770837	0	2	CVR2	F460	NIC2	COM					5b	1357971	Rodriguez for Assembly 2013				Covina	CA	91722	626-915-7635			Miranda	Yolanda			Y										
+1783680	0	1	CVR2	F460	CVR2-3	ATR					3		Slosberg	David M			San Bruno	CA	94066	650/676-4200	/	rfedo@cox.net															
+1783740	0	2	CVR2	F460	12424417	POF					3		Norris	Nathan S.			Torrance	CA	90501	(562) 427-2100																	
+1694386	1	2	CVR2	F460	NIC4	COM					5b	1334205	Phil Ting for Mayor 2011				San Francisco	CA	94109	415-322-0118			Gould	David			Y										
+1741110	0	5	CVR2	F460	10594671	CTL					5b	1337257	Jose Solorio Assembly (2010) Officeholder Account				Long Beach	CA	90807	(562) 427-2100			Solorio	Jose			Y										
+1741112	0	1	CVR2	F460	9	CTL					5B	1310257	Rebuild Long Beach Ballot Measure Committee, Sponsored by Mayor Bob Foster				Los Angeles	CA	90017	(213) 452-6565			Kaufman	Stephen			Y	MAY		CIT			H				
+1750942	0	1	CVR2	F460	9867286	ATR					3		Ruben	Daniel			Cambridge	MA	02138	(617) 517-7600																	
+1741154	0	4	CVR2	F460	OFC1	ATR					3		Orellana	Ingrid			Los Angeles	CA	90010	213 489-4792	213 489-4818	iorellana@davidgouldcompany.com															
+1741271	0	2	CVR2	F460	NIC2	COM					5b	1313555	Mary Hayashi Democrat for Assembly 2010				Los Angeles	CA	90010	213 489-4792			Gould	David			Y										
+1765748	1	1	CVR2	F460	OFC3	ATR					3		Bell	Charles H.			Sacramento	CA	95814	(916) 442-7757																	
+1765342	0	1	CVR2	F460	OFC1	ATR					3		Groh	Albert			Oakland	CA	94612	(510) 839-0193																	
+1776981	0	4	CVR2	F460	CVR25b_3410731	COM					5b	1344156	Lou Correa for Board of Equalization 2014				San Marcos	CA	92069				Martinez	Xavier			Y										
+1751265	0	1	CVR2	F460	NIC1	COM					5b	1354389	Torres for Senate 2013				Covina	CA	91722	626-915-7635			Miranda	Yolanda			Y										
+1778642	0	1	CVR2	F460	OFC1	ATR					3		Diamond	Francine			Pacific Palisades	CA	90272	510-271-0900																	
+1751441	0	2	CVR2	F460	Y04	CTL					5b	1277165	MIKE DAVIS FOR ASSEMBLY 2006				LOS ANGELES	CA	90010	213/489-4792			GOULD	DAVID L.			Y	ASM		ASM		48	S				
+1774743	0	1	CVR2	F460	OFC1	ATR					3		Orellana	Ingrid			Los Angeles	CA	90010	213 489-4792	213 489-4818	iorellana@davidgouldcompany.com															
+1774908	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1774970	0	2	CVR2	F460	NIC2	COM					5b	1288846	Freddie Rodriguez for City Council 2010				Pomona	CA	91766	909-802-4137			Miranda	Yolanda			Y										
+1779330	0	1	CVR2	F460	1	ATR					3		Torello	Robin			San Leandro	CA	94577	5106353121							N										
+1779341	0	1	CVR2	F460	1	ATR					3		Sanborn	Gregory E.			Concord	CA	94518	5103057377		gsanborn@att.net					N										
+1782586	0	1	CVR2	F460	11	CTL					5B	1356676	Betsy Butler for Assembly 2014				Los Angeles	CA	90017	(213) 452-6565			Butler	Betsy			Y	ASM				62					
+1757937	0	1	CVR2	F460	1	CAO					5A		Douglas	Farrah			Carlsbad	CA	92008								N	OTH	City Council	CIT	Carlsbad						
+1764561	0	1	CVR2	F460	20855135	ATR					3	1280698	Glaser	Mark			Albany	NY	12207	518-689-1413	518-689-1499	glaserm@gtlaw.com															
+1775948	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1782852	0	2	CVR2	F460	NIC2	COM					5b	1349399	Harkey for Senate 2014				Rancho Sta Margarita	CA	92688	949-858-7448			Presley	Betty			Y										
+1776368	0	1	CVR2	F460	50aa7fcb7c36428d83a	ATR					3	1263106	Hodges	Caitlin			Washington	DC	20001	(202) 263-5923																	
+1783296	0	1	CVR2	F460	T02	ATR					3		Johnson	Dottie			Sacramento	CA	95814	(916) 442-8888	(   )         																
+1776720	0	1	CVR2	F460	OFC1	ATR					3		LIM	DARRIN			SAN RAFAEL	CA	94901	(415) 389-6800																	
+1819325	0	1	CVR2	F460	Y04	COM					5b	1354719	Micah Ali for Assembly 2014				Los Angeles	CA	90043	(424) 704-1308	(   )         		Ali	Micah			Y	ASM		ASM	State of California	64	S				
+1809940	0	2	CVR2	F460	CVR25b_3397027	COM					5b	1341838	Senator Lou Correa Legal Defense Fund				San Marcos	CA	92069				Martinez	Xavier			Y										
+1818189	0	2	CVR2	F460	NIC2	COM					5b	1337937	Michelle Steel Boad of Equalization 2010 Officeholder Account				Palos Verdes	CA	90274	949-858-7448			Slater	Jen			Y										
+1815679	0	1	CVR2	F460	1	ATR					3		McMahon	Mike			Alameda	CA	94501	5105232263							N										
+1783812	0	1	CVR2	F460	OFC1	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90010	2134894792	2134894818	mymsanders@davidgouldcompany.com															
+1788380	0	2	CVR2	F460	21	CTL					5B	1355796	Susan Shelley for Assembly, 2014				Woodland Hills	CA	91367	8182278726			Shelley	Susan			Y										
+1783754	1	1	CVR2	F460	13229584	ATR					3		Gomez	Jimmy			Long Beach	CA	90807								Y										
+1797077	0	1	CVR2	F465	2	POF	SECRETARY OF STATE POLITICAL REFORM DIVISION	SACRAMENTO	CA	95814																											
+1695276	1	1	CVR2	F460	6	ATR					3		Kaufman	Stephen			Los Angeles	CA	90017	(213) 452-6565																	
+1783766	1	2	CVR2	F460	NIC2	COM					5b	1355660	V. Manuel Perez for Supervisor 2014				Sacramento	CA	95815	916-285-5733			Perez	V. Manuel			Y										
+1790205	0	4	CVR2	F460	NIC4	COM					5b	1334205	Phil Ting for Mayor 2011				San Francisco	CA	94109	415-322-0118			Gould	David			Y										
+1790766	0	1	CVR2	F460	OFC1	ATR					3		DAVIDSON	CARY			LOS ANGELES	CA	90010	(213) 624-6200																	
+1780335	1	1	CVR2	F450	1	ATR							Exelby	Amy			Washington	DC	20006	2022232373																	
+1811776	0	1	CVR2	F460	OFC2	ATR					3		Garcia	Barrett			San Juan Capistrano	CA	92675	949 496-6363																	
+1808382	0	1	CVR2	F460	1	CAO					5A		Armenta	Christopher			Los Angeles	CA	90034								N	ASM		ASM		54					
+1783679	1	1	CVR2	F460	NIC2	COM					5b	1354460	Manuel Perez for Assembly 2012 Officeholder Account				Sacramento	CA	95815	916-285-5733			Perez	V. Manuel			Y										
+1812907	0	1	CVR2	F460	CVR2I3CAO	CAO					6b		Runner	George			Sacramento	CA	95818-3954	530-934 5823			Lawler	Kelly				SEN		STW		17	H				S
+1818655	0	2	CVR2	F460	11393661	CTL					5b	1318428	Long Beach Citycouncilmember Steve Neal Officeholder Fund(2010)				Long Beach	CA	90807				Neal	Katonja			Y										
+1814757	0	1	CVR2	F460	NIC2	COM					5b	1362168	Mike Morrell for Senate 2014				Rancho Cucamonga	CA	91730	916-686-1815			Copp	Vona L.			Y										
+1818956	0	2	CVR2	F460	NIC2	COM					5b	1354449	Make California Strong, Raul Bocanegra Ballot Measure Committee				Sacramento	CA	95815	916-285-5733			Deane	Shawnda			Y										
+1818983	0	2	CVR2	F460	NIC3	COM					5b	1317776	Roger Dickinson for Assembly 2010				Sacramento	CA	95811	916-446-7600			Hagedorn	Jane			Y										
+1814127	0	1	CVR2	F460	11776f6460dd42dfa61	ATR					3	930174	Hazel	Michael			Simsbury	CT	06089	(860) 843-6991																	
+1817723	0	1	CVR2	F460	NIC3	COM					5b	1340507	Re-Elect Mark Johannessen to West Sacramento City Council 2014				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1854123	0	3	CVR2	F460	OFC1	ATR					3		Maltbie	Amber			Sacramento	CA	95814	(916) 442-8888	(916) 442-0382																
+1861406	0	1	CVR2	F460	OFC4	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1861583	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1854262	0	1	CVR2	F460	CVR2130	CTL					5b	1340467	Jackson for Senate 2016				Long Beach	CA	90807-6010	5624272100							N										
+1853393	0	2	CVR2	F460	OFC1	ATR					3		Slater	Jen			Irvine	CA	92618	949-858-7448	949-858-6807	info@campaign-compliance.com															
+1854334	0	2	CVR2	F460	NIC2	COM					5b	1355252	Holly Mitchell for Assembly 2014				Culver City	CA	90230	323-708-4848			Mitchell	Holly			Y										
+1773554	1	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280	916-442-1693	lauras@eichmancpa.com															
+1852128	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1814742	1	1	CVR2	F460	NIC1	COM					5b	1334013	Mike Morrell for Assembly 2012				Rancho Cucamonga	CA	91730	916-686-1815			Copp	Vona L.			Y										
+1821262	0	1	CVR2	F460	1	ATR					3		Boylan	Judith K.			Placerville	CA	95667	5306212674							N										
+1830165	0	1	CVR2	F460	NIC1	COM					5b	1355645	ERIC LINDER FOR ASSEMBLY 2014				CORONA	CA	92882	951/223-6722			DAVID	BAUER			Y										
+1831850	0	1	CVR2	F460	12	CTL					5B	1363852	Betsy Butler for Senate 2014				Los Angeles	CA	90017	(213) 452-6565			Butler	Betsy			Y										
+1825998	0	1	CVR2	F460	PRI1	BNM					6a																							REFERENDUM ON AB1266	0	STATEWIDE	S
+1832141	0	1	CVR2	F460	PRI1	CAO					7		Torlakson	Tom														SUP		STW			H				S
+1818709	1	1	CVR2	F460	NIC2	COM					5b	1352107	California Patriots PAC - Donnelly				Huntington Beach	CA	92647	626-357-8237			Fugatt	John			Y										
+1830660	0	1	CVR2	F460	c5fbf074c9fb47348e3	ATR					3	830078	Wensel	Deborah			Chicago	IL	60631-3512	(847) 297-7800																	
+1831833	0	1	CVR2	F460	Y08	CTL					5b	1353987	Allan Mansoor for Assembly 2014				Costa Mesa	CA	92626	619/713-6888			Boling, CPA	C. April			Y	ASM		ASM		74	S				
+1852183	0	1	CVR2	F460	4107954	ATR					3	1234646	Sexton	Robin			Crofton	MD	21114	410-721-0718	410-721-0726	SextonPAC@verizon.net															
+1852514	0	1	CVR2	F460	85397936	ATR					3		Healy	Elizabeth			Napa	CA	94558	(707) 226-0413			Dasinger	Harry			N										
+1831369	0	1	CVR2	F460	CVR2-17	ATR					3		SANDERS	MICHELLE MOORE			LOS ANGELES	CA	90010	213/489-4792	/																
+1851787	0	1	CVR2	F460	OFC2	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280	916-442-1693	lauras@eichmancpa.com															
+1851937	0	1	CVR2	F460	OFC6	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1851989	0	1	CVR2	F460	37187393	ATR					3	1229652	Yeager	Robert E.			Memphis	TN	38120-4117	(901) 818-7026																	
+1853365	0	1	CVR2	F460	OFC1	ATR					3		Bell	Charles H.		Jr.	Sacramento	CA	95814	(916) 442-7757																	
+1853190	1	1	CVR2	F460	OFC9	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1818963	2	1	CVR2	F460	NIC4	COM					5b	1363694	Rob Bonta Advancing CA Ballot Measure Committee				Sacramento	CA	95815	(916) 285-5733			Bonta	Rob			Y										
+1817913	1	1	CVR2	F460	OFC1	ATR					3		Lim	Andy			Los Angeles	CA	90025	310-575-8811	323-395-0519																
+1832572	0	2	CVR2	F460	11624378	ATR					3		Lowenthal	Suja			Long Beach	CA	90807	(562) 427-2100			Coward	Broc													
+1734198	1	1	CVR2	F460	OFC4	ATR					3		REED	DANA W.			LOS ANGELES	CA	90010	(213) 624-6200																	
+1832383	0	1	CVR2	F460	Y02	CTL					5b	1256228	Jeff Stone for Supervisor 2016				Riverside	CA	92507	951/781-2910			Hopkins, CPA	Dana			Y	PAC		CTY	County of Riverside	3R	H				
+1852119	0	1	CVR2	F460	1	ATR					3		Leathers-Sibblis	Charlene			Stockton	CA	95207	2096013994							N										
+1853924	0	1	CVR2	F465	CVR25	OFF	Secretary of State	Sacramento	CA	95814-5701																											
+1853931	0	1	CVR2	F465	AGENCY_1	POF	Riverside County Clerk	Riverside	CA	92507																											
+1861205	0	1	CVR2	F460	1	ATR					3		Jelincic	J.J.			Hayward	CA	94544	9165026181		jj@jjforcalpers.org					N										
+1892409	0	1	CVR2	F460	OFC4	ATR					3		Blue	Luisa			San Jose	CA	95131	(408)954-8715																	
+1893503	0	2	CVR2	F460	OFC3	PRO					6b		Jones	Dave			Sacramento	CA	95814	916-349-4236	916-552-1850	insurancecommissionerdavejones@gmail.com						INS		STW			H				
+1893504	0	1	CVR2	F460	NIC1	COM					5b	1309968	Friends of Ben Allen for School Board 2012				Los Angeles	CA	90010	213 489-4792			Allen	Ben			Y										
+1893505	0	2	CVR2	F460	11060292	CAO					5a		Mendoza	Tony			Long Beach	CA	90807	(562) 427-2100							Y		Central Basin Water District #5								
+1893526	0	1	CVR2	F460	OFC1	ATR					3		Garcia	Eduardo			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1892453	0	1	CVR2	F460	OFC1	ATR					3		Bell, Jr.	Charles H.			Sacramento	CA	95814	916-442-7757	916-442-7759																
+1872619	0	1	CVR2	F460	NIC3	COM					5b	1348670	MARY HAYASHI FOR SUPERVISOR 2012				Hayward	CA	94541	213-489-4792			Gould	David			Y										
+1893610	0	2	CVR2	F460	OFC1	ATR					3		Chavez	Luis			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1893613	0	2	CVR2	F460	PRI1	CAO					7		CAMPOS	DAVID														ASM		ASM		17	S				O
+1818965	1	2	CVR2	F460	OFC1	ATR					3		Deane	Shawnda			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1893653	0	1	CVR2	F460	OFC2	ATR					3		Copp	Vona L.			Elk Grove	CA	95624	916-686-1815		vona@onemain.com															
+1872794	0	1	CVR2	F460	OFC1	ATR					3		Bagley	Shawn			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1872926	0	1	CVR2	F460	CVR2123	CAO					7	1364160	Sbranti	Tim													N	ASM		ASM		16					S
+1880982	1	1	CVR2	F460	OFC1	ATR					3		Copeland	Rita			Sacramento	CA	95841	916-348-9100	916-348-9111	campaigns@rcbs.us															
+1890422	0	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1853781	2	1	CVR2	F460	OFC3	ATR					3		Dean	Aubyn Jo			Granite Bay	CA	95746	(916) 660.0217	(916) 660.0218	aubynjo@ajdeanconsulting.com															
+1872944	0	3	CVR2	F460	12424408	POF					3		Mendivil	Ryan M.			Torrance	CA	90501	(310) 766-0350																	
+1864123	0	1	CVR2	F460	OFC1	ATR					3		Sanders	Michelle Moore			Los Angeles	CA	90010	213-489-4792	213-489-4818	mymsanders@davidgouldcompany.com															
+1866639	0	1	CVR2	F460	2	ATR					3		Leathers-Sibblis	Charlene			Stockton	CA	95207	2096013994							N										
+1867761	0	1	CVR2	F460	OFC3	ATR					3		Diaz	Cesar			Sacramento	CA	95814	(916) 443-3302																	
+1866875	0	1	CVR2	F460	OFC4	ATR					3		Medina	Louis			Los Angeles	CA	90071	(213) 228-8492																	
+1867071	0	1	CVR2	F460	1	ATR					3		Sanborn	Gregory E.			Concord	CA	94518	5103057377		gsanborn@att.net					N										
+1867090	0	1	CVR2	F460	23	ATR					3		Budge	Pam			Napa	CA	94558	7077383766							N										
+1267933	1	1	CVR2	F460	85397936	ATR					3		Healy	Elizabeth			Napa	CA	94558	(707) 226-0413			Dasinger	Harry			N										
+1870784	0	2	CVR2	F465	Cvr2-13	OFF	San Francisco Director of Elections	San Francisco	CA	94102-4635																											
+1871245	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814 																											
+1871476	0	2	CVR2	F460	NIC2	COM					5b	1355422	Paul Fong for Assembly 2012 Officeholder Account				San Jose	CA	95117	408-746-2056			Fong	Paul			Y										
+1866565	0	1	CVR2	F460	1	CAO					5A		Flores	Daniel			San Francisco	CA	94109								N	OTH	Superior Court Judge	STW							
+1866671	0	1	CVR2	F460	OFC2	ATR					3		Eichman	J. Richard			Sacramento	CA	95814	(916) 442-2280																	
+1871529	0	1	CVR2	F460	OFC1	ATR					3		Bell	Charles H.		Jr.	Sacramento	CA	95814	(916) 442-7757																	
+1351146	2	1	CVR2	F460	85397936	ATR					3		Healy	Elizabeth			Napa	CA	94558	(707) 226-0413			Dasinger	Harry			N										
+1891553	0	1	CVR2	F460	OFC3	ATR					3		Breyman,	Gaye			Santa Ana	CA	92704	(714) 427-0321																	
+1854085	3	1	CVR2	F460	OFC1	ATR					3		Medina	Jose			Riverside	CA	92506	(916) 285-5733	(916) 333-1344																
+1869171	1	1	CVR2	F460	1	CAO					5A		Pfeil	Dana			Sonora	CA	95370								N	OTH	Superior Court Judge	CTY	Calaveras						
+1872684	0	1	CVR2	F465	Cvr2-8	OFF	Secretary of State Political Reform Division	Sacramento	CA	95814																											
+1861965	1	1	CVR2	F460	OFC4	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1873096	0	2	CVR2	F460	NIC2	COM					5b	1347510	Californians Building a Healthy Future - Dr. Pan Ballot Measure Committee				Sacramento	CA	95815	916-285-5733			Pan	Dr. Richard			Y										
+1870801	0	1	CVR2	F425	1	ATR							Exelby	Amy			Washington	DC	20009	2022232373																	
+1891699	0	1	CVR2	F460	1	ATR					3		Boylan	Judith K.			Placerville	CA	95667	5306212674							N										
+1891994	0	1	CVR2	F465	AGENCY_1	POF	SECRETARY OF STATE	SACRAMENTO	CA	95814																											
+1871271	0	2	CVR2	F460	12051609	ATR					3		Perea	Henry T.			Long Beach	CA	90807								Y										
+1871380	0	2	CVR2	F460	NIC4	COM					5b	1339273	Tom Torlakson Superintendent of Public Instruction 2010 Officeholder Account				Sacramento	CA	95841	916-348-9100			Copeland	Rita			Y										
+1871706	0	3	CVR2	F460	OFC1	ATR					3		Warren	Nancy L.			Novato	CA	94949-5731	415-884-5500	415-884-5501	nwarren@warrenandassoc.com															
+1872082	0	2	CVR2	F460	OFC1	ATR					3		Copp	Vona L.			Elk Grove	CA	95624	916-686-1815	916/686-1813	vona@onemain.com															
+1931426	0	1	CVR2	F460	1	CAO					5A		Ammiano	Tom			San Francisco	CA	94117								N	ASM		ASM		17					
+1935200	0	1	CVR2	F460	OFC1	ATR					3		Titus	Ashlee N.			Sacramento	CA	95814	916-442-7757																	
+1931961	0	3	CVR2	F460	OFC2	ATR					3		Orellana	Ingrid			Los Angeles	CA	90010	213 489-4792	213 489-4818																
+1916698	0	1	CVR2	F465	CVR2-483262-66	POF	Secretary Of State	Sacramento	CA	95814-5701																											
+1917753	0	2	CVR2	F460	OFC1	ATR					3		Deane	Shawnda			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1922144	0	1	CVR2	F460	1	CAO					5A		Correa	Lou			Sanat Ana	CA	92706								N	SEN		SEN		34					
+1922962	0	1	CVR2	F460	CVR2I2ATR	ATR					3		Montgomery	Thomas	Mr.	III	San Rafael	CA	94901-1927	415-250-4036			Wilkinson	John	Mr												S
+1928067	0	1	CVR2	F460	OFC1	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	916-442-2280																	
+1933194	0	1	CVR2	F460	1	CAO					5A		Yamada	Mariko			Sacramento	CA	95812								N	ASM		ASM		4					
+1892756	1	1	CVR2	F460	OFC3	ATR					3		Woocher	Fredric D.			Los Angeles	CA	90024	(310) 576-1233	(310) 319-0156	fwoocher@strumwooch.com															
+1873207	1	1	CVR2	F460	NIC1	COM					5b	1359007	Matt Dababneh for Assembly 2013				Los Angeles	CA	90017	(213) 452-6565			Dababneh	Matt			Y										
+1776366	1	1	CVR2	F460	OFC1	ATR					3		Mojica	Cosme			San Jose	CA	95131	(408)526-0606																	
+1900659	0	2	CVR2	F460	2	CAO					5A		Gordon	Richard S.			Menlo Park	CA	94025								N	ASM		ASM		24					
+1900948	0	2	CVR2	F460	OFC1	ATR					3		Sanchez	Stephanie			Encinitas	CA	92024	760-632-3600																	
+1903007	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1903042	0	2	CVR2	F465	AGENCY_2	POF	San Benito County Registrar of Voters	Hollister	CA	95023																											
+1903055	0	1	CVR2	F460	OFC1	ATR					3		Titus	Ashlee N.			Sacramento	CA	95814	(916) 442-7757																	
+1903037	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1903183	0	1	CVR2	F465	AGENCY_1	POF	SECRETARY OF STATE	SACRAMENTO	CA	95814																											
+1904814	0	1	CVR2	F460	NIC1	COM					5b		Melissa Melendez for Assembly 2014				Lake Elsinroe	CA	92532	951-226-4692			Copp	Vona L.			Y										
+1904573	0	1	CVR2	F460	OFC3	ATR					3		Blue	Luisa			San Jose	CA	95131	(408) 954-8715																	
+1871476	1	1	CVR2	F460	NIC1	COM					5b	1296165	Paul Fong for Assembly 2008				San Jose	CA	95117	408-746-2056			Fong	Paul			Y										
+1908775	0	1	CVR2	F460	NIC2	COM					5b	1277456	Committee to Protect California's Future - Nunez Ballot Measure				Sacramento	CA	95814	(916) 442-2952			Nunez	Fabian			Y										
+1916652	0	1	CVR2	F460	OFC2	ATR					3		Deane	Shawnda			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1933304	0	1	CVR2	F460	1	ATR					3	1269841	Murat		Corinne		El Segundo	CA	90245	310-252-6628																	
+1933591	2	1	CVR2	F460	5	CAO					5A		Pham	Long			Fountain Valley	CA	92708								N	ASM		ASM		72					
+1861321	1	1	CVR2	F460	OFC3	ATR					3		Stephen	Laura Ann			Sacramento	CA	95814	(916) 442-2280	(916) 442-1693	lauras@eichmancpa.com															
+1918624	0	1	CVR2	F460	1	CAO					5A		Miller	Adam			Lakewood	CA	90714								N	ASM		ASM		63					
+1934263	0	1	CVR2	F460	OFC2	ATR					3		LIM	DARRIN			SAN RAFAEL	CA	94901	(415)389-6800																	
+1920245	0	1	CVR2	F460	1	ATR					3		Reid	Deborah A.			New York	NY	10001	2127301770		dreid@iatse.net					N										
+1903949	1	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1903886	1	1	CVR2	F460	OFC1	ATR					3		Dobbins	Michael			San Diego	CA	92103	(619) 560-0151																	
+1904712	0	1	CVR2	F460	NIC1	COM					5b	1316499	Lara for Assembly 2010				Los Angeles	CA	90017	(213) 452-6565			Lara	Ricardo			Y										
+1934880	0	2	CVR2	F460	NIC2	COM					5b	1356004	Elevate California: Yes on 2, Marc Levine Ballot Issue Committeettee				San Anselmo	CA	94960	415-459-2873			Raful	Bruce			Y										
+1934885	0	1	CVR2	F460	Y08	CTL					5b	1293148	John Chiang for Controller 2010				Los Angeles	CA	90048	323/655-4065			Leiderman	Jane			Y	CON		STW			H				
+1893561	1	1	CVR2	F460	OFC1	ATR					3		Deane	Shawnda			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1925872	0	1	CVR2	F460	OFC5	ATR					3		Stephen	Laura			Sacramento	CA	95814	916-442-2280																	
+1935996	0	1	CVR2	F465	9	POF	California Secretary of State Political Reform Division	Sacramento	CA	95814																											
+1936376	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1936779	0	1	CVR2	F460	OFC1	ATR					3		Deane	Shawnda			Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1936717	0	1	CVR2	F460	29	CTL					5B	1321242	The Janice Hahn Lt. Governor 2010 Committee				Los Angeles	CA	90017	(213) 452-6565			Hahn	Janice			Y	LTG		STW			S				
+1902565	1	1	CVR2	F460	OFC3	ATR					3		Woocher	Fredric D.			Los Angeles	CA	90024	(310) 576-1233	(310) 319-0156	fwoocher@strumwooch.com															
+1937578	1	2	CVR2	F460	Y06	CTL					5b	1357658	Buchanan for Assembly 2012 Officeholder Account				Sacramento	CA	95814	916/254-5180			Olson	Rebecca			Y	ASM		ASM		16	S				
+1937412	0	3	CVR2	F460	12249588	CTL					5b	1354096	Rendon for Assembly 2014				Long Beach	CA	90807	(562) 427-2100			Rendon	Anthony			Y										
+1937417	0	1	CVR2	F465	AGENCY_1	POF	SECRETARY OF STATE	SACRAMENTO	CA	95814																											
+1937594	0	1	CVR2	F460	1	CAO					5A		Miller	Glenn A.			Indio	CA	92201								N	SEN		SEN		28					
+1937607	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1937609	0	1	CVR2	F465	AGENCY_1	POF	Secretary of State	Sacramento	CA	95814																											
+1893648	1	1	CVR2	F460	OFC2	ATR					3		MINTZER	JONATHAN			SAN FRANCISCO	CA	94108	(415) 732-7700	(415) 732-7701	CAMPAIGN@CAMPAIGNLAWYERS.COM															
+1832560	1	3	CVR2	F460	NIC4	COM					5b	1361217	John A. Perez for Controller 2014				Los Angeles	CA	90017	(213) 452-6565			Kaufman	Stephen			Y										
+1937769	0	1	CVR2	F460	CVR2-5b-60216	CTL					5b	1373572	Phil Ting for Assembly 2016				Oakland	CA	94618-1385	(510) 652-1000			Owens	Stacy	Ms.		Y										
+1935875	1	1	CVR2	F460	NIC1	COM					5b	1354418	HALL FOR SENATE 2016				Los Angeles	CA	90010	213 489-4792			David	Gould			Y										
