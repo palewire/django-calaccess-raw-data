@@ -69,6 +69,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
 
 
 class EfsFilingLogCd(CalAccessBaseModel):
+    """
+    This is an undocumented model.
+    """
     filing_date = models.DateTimeField(db_column='FILING_DATE', null=True)
     filingstatus = models.IntegerField(db_column='FILINGSTATUS')
     vendor = models.CharField(db_column='VENDOR', max_length=250)
@@ -84,6 +87,9 @@ class EfsFilingLogCd(CalAccessBaseModel):
 
 
 class FilersCd(CalAccessBaseModel):
+    """
+    This table is the parent table from which all links and associations to a filer are derived.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
 
     class Meta:
@@ -112,6 +118,9 @@ class FilerAcronymsCd(CalAccessBaseModel):
 
 
 class FilerAddressCd(CalAccessBaseModel):
+    """
+    Links filers and addresses. This table maintains a history of when addresses change.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     adrid = models.IntegerField(db_column='ADRID')
     effect_dt = models.DateTimeField(
@@ -130,6 +139,9 @@ class FilerAddressCd(CalAccessBaseModel):
 
 
 class FilerEthicsClassCd(CalAccessBaseModel):
+    """
+    This table stores lobbyist ethics training dates.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     ethics_date = models.DateTimeField(db_column='ETHICS_DATE', null=True)
@@ -206,6 +218,9 @@ class FilerStatusTypesCd(CalAccessBaseModel):
 
 
 class FilerToFilerTypeCd(CalAccessBaseModel):
+    """
+    This table links a filer to a set of characteristics that describe the filer. This table maintains a history of changes and allows the filer to change characteristics over time.
+    """
     filer_id = models.IntegerField(
         db_column='FILER_ID',
         help_text="Filer's unique identification number"
