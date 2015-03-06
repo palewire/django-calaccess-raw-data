@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	ENTITY_CD	PAYEE_NAML	PAYEE_NAMF	PAYEE_NAMT	PAYEE_NAMS	PAYEE_CITY	PAYEE_ST	PAYEE_ZIP4	EXPN_DATE	AMOUNT	CUM_YTD	CUM_OTH	EXPN_CHKNO	EXPN_CODE	EXPN_DSCR	AGENT_NAML	AGENT_NAMF	AGENT_NAMT	AGENT_NAMS	CMTE_ID	TRES_NAML	TRES_NAMF	TRES_NAMT	TRES_NAMS	TRES_CITY	TRES_ST	TRES_ZIP4	CAND_NAML	CAND_NAMF	CAND_NAMT	CAND_NAMS	OFFICE_CD	OFFIC_DSCR	JURIS_CD	JURIS_DSCR	DIST_NO	OFF_S_H_CD	BAL_NAME	BAL_NUM	BAL_JURIS	SUP_OPP_CD	MEMO_CODE	MEMO_REFNO	BAKREF_TID	G_FROM_E_F	XREF_SCHNM	XREF_MATCH
+591419	0	33	EXPN	E	100	OTH	Press Ready				Sacramento	CA	95814		908.82					Design																																
+598321	0	27	EXPN	G	CI70	OTH	Home Depot				Encinitas	CA	92024	2/14/2000 12:00:00 AM	84.65				OFC		Muir	Mr. Mark																														
+592465	1	119	EXPN	G	EDT246	OTH	KTXL-TV				SAN FRANCISCO	CA	94145	1/31/2000 12:00:00 AM	5100	0			TEL		CARAT																												EXP588	E		
+592427	1	383	EXPN	G	EDT374	OTH	OMEGA CINEMA PROPS INC.				LOS ANGELES	CA	90038	2/17/2000 12:00:00 AM	626.44	0			PRO		GODDARD CLAUSSEN																												EXP698	E		
+637932	0	6	EXPN	E	EXP98	OTH	LACAAW				Los Angeles	CA	90015	2/24/2000 12:00:00 AM	150	0			CVC																																	
+637944	0	33	EXPN	E	EXP1392	OTH	Dept. of Public Works				Los Angeles	CA	90014	4/10/2000 12:00:00 AM	407.15	0				Miscellaneous Expenditures																																
+641893	0	16	EXPN	E	EXPNDT0003845400	OTH	Pacific Bell 				Van Nuys	CA	91388		177.26				OFC																																	
+640316	0	17	EXPN	F461P5	5397	COM	Friends of Denise Moreno Ducheny  ID930054				San Diego	CA	92113	1/12/2000 12:00:00 AM	500	2500		13381	MON	Contribution to non-federal candidate for Denise Moreno Ducheny (CA-79-D)					930054								Ducheny	Denise			ASM	State House/Assembly	ASM	State House/Assembly	79					S						
+643978	0	44	EXPN	E	EXP523	IND	Lee	Wendy			Anaheim	CA	92806-	6/30/2000 12:00:00 AM	100	0			OFC																																	
+644190	0	309	EXPN	G	EDT579	OTH	MCCARTHY WIRELESS INC. - KNCQ				REDDING	CA	96003	2/24/2000 12:00:00 AM	888.25	0			RAD		GODDARD CLAUSSEN																												EXP746	E		
+592465	2	253	EXPN	G	PDT135	OTH	MUSIC FOR PICTURES				GLEN ECHO	MD	20812	2/19/2000 12:00:00 AM	600	0			TEL		LAGUENS HAMBURGER STONE																												PAY778	E		
+644399	0	204	EXPN	G	EDT24	IND	Robinson	Pauline			Gardena	CA	90248	3/14/2000 12:00:00 AM	148.68	0			TRS		California State Employees Association																												EXP149	E		
+644909	0	96	EXPN	E	E644	OTH	Foothill Copy				Auburn	CA	95603	3/1/2000 12:00:00 AM	87.14	1394.25		153	CTB	Slate mailer - to support Jane Roberts (ID# NOT REQ'D)																																
+645056	0	30	EXPN	E	E80	IND	Newmark	David				  	     	6/29/2000 12:00:00 AM	90.07	4802.41		404	OFC																																	
+645146	0	17	EXPN	D	D363	RCP	Friends of Denise Moreno Ducheny							6/28/2000 12:00:00 AM	2000	2000		1265	MON														Moreno Ducheny	Denise			ASM		ASM		79 	H				S						
+645207	0	71	EXPN	E	E3744	IND	Gomez	David G.			Los Angeles	CA	90025	6/1/2000 12:00:00 AM	1043	13583.71		3648	SAL																																	
+645223	0	86	EXPN	E	EXP24	COM	West for Assembly	Tony			San Jose	CA	95172	2/28/2000 12:00:00 AM	10000	0			CTB						992325																											
+591472	1	58	EXPN	G	EDT32	OTH	POSTMASTER-SACRAMENTO				Sacramento	CA	95813	2/4/2000 12:00:00 AM	393.36	0				POSTAGE	THE DONEGAL GROUP																												EXP2717	E		
+642807	1	12	EXPN	D	EXP74	COM	Reyes	Friends of Sarah			Fresno	CA	93710	4/2/2000 12:00:00 AM	1000	1222.51			MON						980021								Sarah Reyes				ASM		ASM		31					S						
+669171	0	22	EXPN	E	E112	OTH	Social Gatherings				San Jose	CA	95126	9/8/2000 12:00:00 AM	3020.18	3669.68		1059	FND																																	
+669260	0	5	EXPN	G	EDT15	OTH	EMBASSY SUITES				SAN DIEGO	CA	92110	8/16/2000 12:00:00 AM	1217.41	0				TIM LESLIE TRIP TO SAN DIEGO 7/30	CITIBANK AADVANTAGE																												EXP21166	E		
+669481	0	17	EXPN	E	092920000E4_17	IND	USPS				San Luis Obispo	CA	93403	9/21/2000 12:00:00 AM	13200			1045	POS																																	
+669545	0	770	EXPN	E	E2183	IND	Gomez	Edward J.			Alta Loma	CA	91737	8/10/2000 12:00:00 AM	149.61	2828.82		11377	VOT																																	
+669545	0	1332	EXPN	E	E2219	IND	Mendoza	Kevin			San Diego	CA	     	8/10/2000 12:00:00 AM	169.86	376.72		11413	VOT																																	
+669549	0	1053	EXPN	E	091920000E8777_158	OTH	Yuba County Central Committee				Marysville	CA	95901	9/13/2000 12:00:00 AM	1268.51				VOT	Explain: 																																
+669559	0	285	EXPN	E	IK32	COM	Simon Salinas for Assembly Attn: Lina Salinas				Salinas	CA	93906							art/design                 $ 748.86  5825					990401																						X		130034			
+669611	0	34	EXPN	E	6450	COM	Ed Chavez For Assembly				La Puente	ca	91746		1000				CTB						990411																											
+645230	1	254	EXPN	E	E97	IND	Johnson	James			LONG BEACH	CA	90808	4/18/2000 12:00:00 AM	512.20	8934.69		10020	VOT																																	
+671401	0	4	EXPN	F465P3	EDT130	OTH	United Teachers Los Angeles				Los Angeles	CA	90010	2/25/2000 12:00:00 AM	141.18	1321.51			IND	Postage & handling fee for Prop. 1A 21 22 23 25 26 (141.18 ea.) 27 28 (141.19 ea)																																
+669618	1	308	EXPN	E	SV11	OTH	Employment Development Dept.				Sacramento	CA	94280-0001		1019.19				SAL																												X		1038182			
+675826	0	17	EXPN	E	DB6735	COM	Havice 2000				Winnetka	CA	91306	10/4/2000 12:00:00 AM	1000			9729	CTB						963086																											
+676041	0	37	EXPN	E	EXPNDT0007147500	OTH	Point West Food Service 				Sacramento	CA	95821		368				FND																																	
+669394	1	521	EXPN	G	EDT459	OTH	Select Personnel Services				Santa Barbara	CA	93101	8/6/2000 12:00:00 AM	1146.44	0				Employment Agency-Temporary Staffing	Woodward & McDowell																												EXP15696	E		
+677454	0	1	EXPN	D	EDT73	COM	Measure D							10/9/2000 12:00:00 AM	23820.54	413909.53			IND	Print Ad payment - See Form 460 Schedule G for subvendor information																			OTH	Alameda County			Measure D			O						
+669628	1	226	EXPN	D	D262	IND								8/22/2000 12:00:00 AM	4200	9985.64	0		IKD	Polling													Keegan	Todd			ASM		ASM		77					S						
+684273	0	28	EXPN	E	CD247EDC	OTH	Roberts & Associates				Sacramento	CA	95814	9/13/2000 12:00:00 AM	3802.11			692	FND																																	
+677532	1	20	EXPN	E	EXP17989	OTH	Woodward & McDowell				Burlingame	CA	94010	10/5/2000 12:00:00 AM	75000	0			TEL																																	
+716455	1	109	EXPN	G	EDT101	OTH	Office Depot				Santa Clara	CA	95051	11/15/2000 12:00:00 AM	370.24	0			OFC		Timmons	David C.																											EXP1465	E		
+717886	0	13	EXPN	F461P5	EXP1515	COM	FRIENDS OF BILL CAMPBELL				OAKDALE	CA	95361	8/5/2000 12:00:00 AM	750	3750			MON						950478								BILL CAMBELL				ASM		ASM		71					S						
+718354	0	33	EXPN	E	EXP5306	OTH	INTERNAL REVENUE SVC.				Fresno	CA	93888	12/4/2000 12:00:00 AM	1515	0				PAYROLL TAXES																																
+718378	0	340	EXPN	E	IK524	COM	Machado for Senate 2000				Sacramento	CA	95814							Staff Services ($275.41)					983468																						X		120636			
+719157	0	45	EXPN	E	EXP2402	OTH	Voter Link				Costa Mesa	CA	92626	11/3/2000 12:00:00 AM	981.37	0			LIT																																	
+719188	0	113	EXPN	E	E768	IND	Gonzalez	Nancy			Los Angeles	CA	91204	10/31/2000 12:00:00 AM	320	1060		3186	SAL																																	
+719482	0	12	EXPN	F461P5	EXP77	COM	Democratic Business PAC				Sacramento	CA	95814	8/18/2000 12:00:00 AM	2000	10500			MON						980542								PAC Activities													S						
+719676	0	93	EXPN	D	EXP2030	COM	FRIENDS OF JIM BRULTE				RANCHO CUCAMONGA	CA	91729-	12/21/2000 12:00:00 AM	5000	15495			MON						962673								JIM BRULTE				SEN		SEN		31					S						
+718564	1	107	EXPN	E	EXP2021	OTH	Digital Tractor				Sacramento	CA	95814	11/3/2000 12:00:00 AM	377.13	0			LIT																																	
+732214	0	15	EXPN	E	EXPNDT0009121100	OTH	Roth	Alice			Glendale	CA	91205		105.43				CMP																																	
+669587	2	36	EXPN	E	EXP31098	OTH	Pacific Communication Concepts Inc.				Los Angeles	CA	90030-0129	9/7/2000 12:00:00 AM	5553.53	0			POS																																	
+736796	0	9	EXPN	D	CI3428	OTH	Woody Fleming				Los Angeles	CA	90011	3/22/2001 12:00:00 AM	500	500		1283	MON						1226431								Fleming	Woody			CCM	Los Angeles City Council	CIT							S						
+745303	0	175	EXPN	G	041320010E13748	OTH	Mr. Benjamin D Canino Jr.				Glendale	CA	91202		604.78				SAL			RP Non Federal Acct																														
+758271	0	9	EXPN	D	CI3503	OTH	Paul Pogue				Sunland	CA	91041	5/14/2001 12:00:00 AM	16000	16000		7404	IND	Installation - Yard Signs													Villaraigosa	Antonio			MAY	Los Angeles City Mayor	CIT							S						
+760965	0	57	EXPN	D	EDT664	COM	Re-Elect Boardmember Valerie Fields				Los Angeles	CA	90077	5/25/2001 12:00:00 AM	47	736490.38			IKD	Lunch for school site visit					990669								Re-Elect Bdmember Valerie Fields #990669				BED				4					S						
+766316	0	3	EXPN	F461P5	EXP648	COM	BUILDING INDUSTRY ASSOCIATION OF SOUTHERN CALIFORNIA PAC				DIAMOND BAR	CA	91765-	1/21/2000 12:00:00 AM	5000	5000			MON						741733												OTH	GENERAL PURPOSE COMMITTEE								S		EXP648				
+768660	0	21	EXPN	E	E854	OTH	Independent Printers				North Hollywood	CA	91606	5/11/2001 12:00:00 AM	583.20	745.20		3186	LIT																																	
+770492	0	20	EXPN	D	NON4085	COM	Gorell for Assembly				Sacramento	CA	95821	5/31/2001 12:00:00 AM	697.68	1047.68			IKD	Fundraiser - Food					1234051								Jeff Gorell				ASM		ASM		35	S				S						
+769548	0	90	EXPN	E	E2402	OTH	LEE'S COPY NETWORK				BAKERSFIELD	CA	93309	2/8/2001 12:00:00 AM	125.64	765.55		4036	PRT																																	
+770810	0	24	EXPN	E	EXP40266	COM	THE PERSONAL INSURANCE FEDERATION OF CALIFORNIA PAC				SACRAMENTO	CA	95814-	3/22/2001 12:00:00 AM	5000	0			CTB						910256																											
+771307	0	33	EXPN	E	SV2	OTH	Brannan's Bar & Grill Inc.				Sacramento	CA	95814		563.70				FND																												X		102651			
+771316	0	29	EXPN	E	103955	OTH	First USA Bank NA				Henderson	NV	89016-0882		3257.35				FND																																	
+771656	0	83	EXPN	E	EXP282	OTH	Mnemonic Computer Services				Beverly Hills	CA	90211	5/31/2001 12:00:00 AM	1755.40	0			WEB																																	
+771710	0	2	EXPN	D	D932	RCP	Citizens to Elect Russ Bogh							2/27/2001 12:00:00 AM	3000	3000		1114	MON														Bogh	Russell	Mr.		ASM		ASM		65 	S				S						
+772238	0	168	EXPN	E	0518200135E14137_38	OTH	Santa Clarita Republican Women's Fed.				Newhall	CA	91321	5/2/2001 12:00:00 AM	236.25				VOT	Explain: 																																
+746593	1	239	EXPN	E	SV1414	OTH	Press Association Incorporated				Newark	NJ	07195-0607		1275.01				OFC	63256																											X		1987			
+773267	0	7	EXPN	D	EXPNDT0000111833	COM	Friends Of Los Angeles Community College District				Beverly Hills	CA	90211	3/27/2001 12:00:00 AM	5000	5000	0		MON						1220614	Padilla							Friends Of Los Angeles Community College District  [ID# 1220614]								-		Prop A (Support) 	A	Los Angeles County	S						
+773300	0	101	EXPN	E	141495	OTH	Network Direct International				Henderson	NV	89052-4920		550				OFC																																	
+773517	0	11	EXPN	E	EXPNDT0010602800	OTH	Creations By Gina 				Los Angeles	CA	90010		4500				OFC	Independent Exp. - 4in. Blooming plants																																
+779532	0	105	EXPN	E	E119	IND	Meneses	Joaquin			Los Angeles	CA	90005	8/3/2001 12:00:00 AM	500	4250		1112	CNS																																	
+779889	0	4	EXPN	E	EXP18	IND	Eichman	J. Richard			Sacramento	CA	95814	3/21/2001 12:00:00 AM	167.80	0			PRO																																	
+714841	1	11	EXPN	E	EXP80	OTH	Jasper Communications				Los Angeles	CA	90048	11/13/2000 12:00:00 AM	17488	0			CTB	In-Kind Contribution to No on Proposition 35.																																
+785464	0	4	EXPN	D	EXP2857	COM	Voter Registration 2002				Sacramento	CA	95814	8/9/2001 12:00:00 AM	10000	10000			MON						1231329																		Voter Registration 2002			S						
+785740	0	24	EXPN	D	EXPNDT0000121519	COM	Frommer For Assembly 2002 (Dario) 				Glendale	CA	91204	9/13/2001 12:00:00 AM	500	500	0		MON						1235286								Frommer	Dario			ASM	ASM	ASM	ASM	43	H	 			S						
+786160	1	517	EXPN	E	E10646	OTH	US Search				Los Angeles	CA	90066	8/24/2001 12:00:00 AM	55	615		6763	OFC																																	
+719073	1	406	EXPN	E	E8142	OTH	Laura Talmus Associates				San Francisco	CA	94102	8/10/2000 12:00:00 AM	416.49	126638.82		5346	FND																																	
+792005	1	25	EXPN	E	EXP271	OTH	PROGRESSIVE CAMPAIGNS				SANTA MONICA	CA	90405-3311	8/2/2001 12:00:00 AM	1512.30	0			PET																																	
+645217	1	371	EXPN	E	E7164	OTH	Oxford Argonaut Mailers				Cudahy	CA	90201	3/17/2000 12:00:00 AM	7701.21	15791.85		4824	POS																																	
+804710	0	25	EXPN	F461P5	EXP274	COM	Friends of Philip Angelides				Sacramento	CA	95814	10/8/2001 12:00:00 AM	2000	2000			MON	Monetary Contribution through Burrtec Waste Industries, Inc.					970634								Philip Angelides				TRE		STW							S						
+805142	0	4	EXPN	E	DB14938		Frank Heron				Los Angeles,	CA	90025	12/31/2001 12:00:00 AM	5301.77			1052		Person of the Year Dinner																																
+805237	0	7	EXPN	F461P5	EXP14	COM	Oropeza	Friends of Jenny			Long Beach	CA	90808	10/2/2001 12:00:00 AM	1000	1000			MON						990293								Jenny Oropeza				ASM		ASM		55					S						
+809767	0	4	EXPN	E	1002204	OTH	Bank of America				Phoenix	AZ	85072		125.40				TRC																																	
+805563	1	2	EXPN	D	PDT38	COM	Edwin Chau for School Board				Alhambra	CA	91801	11/13/2001 12:00:00 AM	3000	3000			IKD	Consulting fee					1235735								Edwin Chau				BED									S						
+812360	0	8	EXPN	E	E457	OTH	Cleveland Mailing Services				Sacramento	CA	95814	2/22/2001 12:00:00 AM	258.80	507.74		3005	POS																																	
+720226	2	296	EXPN	E	EXP19368	OTH	KHYL-FM				SACRAMENTO	CA	95825	11/1/2000 12:00:00 AM	3060	0			RAD																																	
+773315	2	95	EXPN	E	E9880	IND	Avila	Creighton A.			Vacaville	CA	95688	5/15/2001 12:00:00 AM	1265.79	4288.01		1145	SAL																																	
+822618	0	36	EXPN	E	E115	OTH	McNally Temple Associates				Sacramento	CA	95814	2/12/2002 12:00:00 AM	110157.23	271362.69		1531	CTB	Payment For Postcard and Related Costs For Mailing - to support Yes on 45 (ID# 1239930)																																
+822139	0	4	EXPN	E	E91	OTH	P.M. Consulting, Inc.				Brea	CA	92821	2/1/2002 12:00:00 AM	9500	9500		1507	PRO																																	
+823016	0	112	EXPN	E	IK58	COM	Dick Dickerson for Senate				Sacramento	CA	95814							Slate Mailer $5,000					1231857																						X		1422312			
+821995	0	2	EXPN	D	D129	COM	Friends of Greg Aghazarian							1/29/2002 12:00:00 AM	1000	1000		1327	MON														Aghazarian	Greg			ASM		ASM		26	S				S						
+821823	0	38	EXPN	E	E195	OTH	Political Data Inc				Burbank	CA	91507	2/2/2002 12:00:00 AM	812.12	1266.47		1140	LIT																																	
+822428	0	79	EXPN	E	79	OTH	Tim Davis				Sacramento	CA	95816		838.50				IND	Mailer																																
+805505	2	594	EXPN	E	E11745	OTH	Winstar				Columbus	OH	43271-0952	11/20/2001 12:00:00 AM	1484.75	16837.31		10401	OFC																																	
+804970	1	53	EXPN	G	G447	OTH	Potrero Hill Neighborhood House				San Francisco	CA		10/24/2001 12:00:00 AM	125	9692.80		0	CVC	Booth for Potrero Hill Festival	Barnes, Mosher, Whitehurst, Lauter & Partners																															
+717784	1	19	EXPN	F461P5	EXP19	COM	Taxpayers for Dave Cox Assembly 2000				Sacramento	CA	95814	11/1/2000 12:00:00 AM	3000	3000			MON	1500.00 to Dave Cox; 1500.00 Dave Dickerson					962448								Dave Cox				ASM		ASM		05	H				S		EXP19				
+822507	1	51	EXPN	E	0206200227E281_37	OTH	Continuing the Republican Revolution				Tustin	CA	92781	2/6/2002 12:00:00 AM	500			1126	LIT	Explain: 																																
+851307	0	165	EXPN	E	EXP899	OTH	The Monaco Group				Placentia	CA	92870	2/25/2002 12:00:00 AM	13811.74	0			LIT																																	
+852900	0	97	EXPN	E	1291313	COM	Carole Migden Leadership Committee				San Francisco	CA	94102		2500				CTB						1231896																											
+852757	0	17	EXPN	E	E138	OTH	Diane Stone & Associates				Oakdale	CA	95361	2/19/2002 12:00:00 AM	416.34	6174.68		1092	FND																																	
+851809	0	28	EXPN	D	NON291	COM	Shelley For Secretary of State							3/5/2002 12:00:00 AM	1305.85	2054.93			IKD	organizer time,phone bank,printing					1234309								Kevin Shelley				SOS		STW			S				S						
+854530	0	217	EXPN	E	E764	IND	Wasson	Jan			Marina Del Rey	CA	90292	5/15/2002 12:00:00 AM	4465	31446.21		1380	PRO																																	
+855440	0	21	EXPN	F461P5	EXP90	COM	Committee to Elect Jim Brulte				Rancho Cucamonga	CA	91729	4/3/2002 12:00:00 AM	2250	5250			MON						1231483								Jim Brulte				BOE		BOE		03					S						
+854858	0	79	EXPN	E	E384	IND	Petersen	Linda			Sacramento	CA	95816	6/19/2002 12:00:00 AM	247.50	7912.43		1118		Mileage & Parking Fee																																
+855705	0	1681	EXPN	G	EDT2105	OTH	Fairmont Miramar Hotel				Santa Monica	CA	90401	6/13/2002 12:00:00 AM	256.59	0			TRS	J.Fifis Santa Monica 5/13/02	Fisfis	James N.																											EXP12765	E		
+855687	0	134	EXPN	E	0513200259E389_115	OTH	Internal Revenue Service				Ogden	UT	84201	3/13/2002 12:00:00 AM	111.03			1206		Explain:Taxes 																																
+856570	0	246	EXPN	G	0725200251E24850	OTH	Meaghan Ferrall				Los Angeles	CA	90048		811.83				SAL		CRP	Federal Account 																														
+856570	0	632	EXPN	E	0405200231E21756_242	OTH	First USA Bank, NA				Henderson	NV	89016	3/27/2002 12:00:00 AM	3255.29					Explain:SEE SCHEDULE G 																																
+822690	1	2	EXPN	E	E757	OTH	NWPC							2/2/2002 12:00:00 AM	100	100		1358	MTG																																	
+856843	0	573	EXPN	E	IK1615	COM	Yes on 45, Citizens Right to Vote				Sacramento	CA	95814							mailing services  $ 4.53 *adj postage diff*  $ 5.93  11961					1239930																						X		2465312			
+857407	0	95	EXPN	F461P5	EXP2062	COM	Yes on Measure E				Fresno	CA	93710	2/21/2002 12:00:00 AM	500	500			MON						1239866								Measure E						OTH	City of Fresno						S						
+871077	0	64	EXPN	G	EDT60	OTH	DOUBLETREE HOTEL				Sacramento	CA	95815	8/20/2002 12:00:00 AM	2000	0				FUNDRAISING EXP.	CITIBANK																												EXP1644	E		
+856907	1	71	EXPN	E	111	OTH	Hal Hammond Graphics				Sacramento	CA	95816		261.38				IND	Mailer																																
+870570	0	13	EXPN	E	T109216	OTH	So. San Francisco Conference Center				So. San Francisco	CA	94080		13080				FND	Payment for Banquet																																
+871203	0	54	EXPN	E	E302	OTH	Wendy Warfield & Associates				Sacramento	CA	95814	9/2/2002 12:00:00 AM	48.42	3584.48		282	OFC																																	
+871206	0	33	EXPN	E	EXP2699	IND	Richman	Rachel			Berkeley	Ca	94703	8/26/2002 12:00:00 AM	25.76	0			OFC	Reimbursement																																
+869901	0	5	EXPN	D	EXP251	COM	Burton for State Senate				Sacramento	CA	95814	8/13/2002 12:00:00 AM	2000	2000			MON						962647								John Burton				SEN		SEN		03					S						
+871334	0	68	EXPN	E	082820020E632_41	OTH	Placer County Clerk				Auburn	CA	95603	8/8/2002 12:00:00 AM	330			1293	FIL																													3E				
+871387	0	2	EXPN	D	EXP9963	COM	Democratic Party of Orange County				Santa Ana	CA	92701	8/22/2002 12:00:00 AM	125	125			MON						742006																		Democratic Party of Orange County		General Purpose Committee	S						
+870954	0	144	EXPN	E	EXP1858	IND	Mc Pherson	Bruce	Mr.		Santa Cruz	CA	95060	9/9/2002 12:00:00 AM	144.60	0				REIMB PARKING EXPENSES UNDER $100																																
+871097	0	1039	EXPN	G	G1037	IND	Whalen	Robert			Merced	CA	95348	8/6/2002 12:00:00 AM	170.12	1264620.02		0	VOT		CA Voter Registration 2002 - Federal Account																															
+871376	0	53	EXPN	G	G1057	OTH	Kinko's				Sacramento	CA	95813	7/9/2002 12:00:00 AM	38.43	1002.61		0	OFC		Davey	Steve																														
+870552	0	36	EXPN	E	1487374	RCP	JEROME E. HORTON FOR ASSEMBLY				LOS ANGELES	CA	90009		1000	0	0	007017	CTB	JEROME HORTON, STATE HOUSE  CA					992136																											
+871705	0	63	EXPN	E	1165314	COM	Manny Diaz for Assembly				San Jose	CA	95113		2000				CTB						992399																											
+871736	0	744	EXPN	E	0918200231E25127_266	IND	Tyrell	Charmaine			Stockton	CA	95219	9/3/2002 12:00:00 AM	8482.69				VOT	Explain: 																																
+855705	1	643	EXPN	E	EXP8230	OTH	Right Internet, Inc.				Washington	DC	20002	5/7/2002 12:00:00 AM	5000	0			WEB																																	
+855705	1	1697	EXPN	G	EDT1827	OTH	3 Day Blinds, Inc.				Santa Monica	CA	90403	5/30/2002 12:00:00 AM	1814.16	0			OFC		Fortier	Mary Pat																											EXP11220	E		
+876925	0	18	EXPN	D	D640	COM	Friends of Donna Gerber							10/9/2002 12:00:00 AM	100	100		1484	MON														Gerber	Donna			ASM		ASM		15	H				S						
+871612	1	355	EXPN	E	E8733	IND	Castaneda	Carmelita			Hanford	CA	93230	9/19/2002 12:00:00 AM	103.92	197.95		12183	VOT																																	
+877778	0	22	EXPN	D	398844	COM	Gutierrez-Kenney	Phyllis			Seattle	WA	98115	10/16/2002 12:00:00 AM	625	1250		10574	MON	Monetary Contribution													Gutierrez-Kenney	Phyllis			ASM		STW		046	s				s						
+887317	0	14	EXPN	E	EXP260	OTH	GOTV							11/1/2002 12:00:00 AM	31437	0			SAL																																	
+856297	2	50	EXPN	E	103686	OTH	Marin Charter & Tours, Inc.				San Rafael	CA	94901		930.50				MTG																																	
+877277	1	26	EXPN	E	DB18446	OTH	Friends of Senator Richard Alarcon				Los Angeles,	CA	90071	10/15/2002 12:00:00 AM	3000			2106	CTB						972171																											
+894513	0	1561	EXPN	D	D6644	IND								11/4/2002 12:00:00 AM	400	1145009.92	0		IKD	Precinct walker 5105 Member communication													Hall	Vince			ASM		ASM		78	S				S						
+900383	0	2	EXPN	E	EXP92	IND	J. Richard Eichman, C.P.A.				Sacramento	CA	95814	8/1/2002 12:00:00 AM	170.73	0			PRO																																	
+894513	1	344	EXPN	D	D6739	IND								11/4/2002 12:00:00 AM	400	1483212.19	0		IKD	precinct walker  5131													Acuna	Joey		Jr.	ASM		ASM		80	S				S						
+877826	1	2290	EXPN	E	SV4130	IND	Priest	Adam			San Francisco	CA	94117		756.80				SAL	3597																											X		6975			
+907004	0	31	EXPN	D	CI3414	OTH	Quantum Signs				Lake Forest	CA	92630	10/21/2002 12:00:00 AM	112.06	2871.31		1163	IKD	Banners					1245829								Eggleston	G. Wayne			CCM	San Clemente City Council	CIT							S						
+894513	1	1010	EXPN	D	D6907	IND								10/29/2002 12:00:00 AM	794.61	9110.37	0		IKD	postage differential  T103102 EFT102902 02M1													Garamendi	John			INS		STW			S				S						
+871612	2	1198	EXPN	E	E7220	IND	Lor	Joy			Stockton	CA	95215	8/1/2002 12:00:00 AM	51.22	1549.97		11118	VOT																																	
+855324	2	334	EXPN	E	E6008	IND	Landeros	Daniel			Bakersfield	CA	93307	6/13/2002 12:00:00 AM	224.14	1461		10300	VOT																																	
+909588	0	12	EXPN	F461P5	EXP357	COM	WESTLEY FOR CONTROLLER				REDWOODCITY	CA	94061	9/16/2002 12:00:00 AM	1000	1500			MON						1230847								STEVE WESTLEY				CON		STW							S						
+907495	0	19	EXPN	F461P5	10447843	RCP	C V R P Bash 2002				Sacramento	CA	95814	8/7/2002 12:00:00 AM	1000	1000	0	21465645	MON						97-0967								C V R P Bash 2002				OTH	Activities	LOC	Activities	000	S				S						
+909397	0	23	EXPN	E	E312	COM	Dave Jones				Sacramento	CA	95814	12/30/2002 12:00:00 AM	3000	3000		1564	CTB						1219350																											
+910714	0	473	EXPN	E	IK5769	COM	Fiona Ma for Supervisor				San Francisco	CA	94122							data/lists                 $ 100.00 member communication  72527					1238185																						X		1396316			
+912599	0	128	EXPN	F465P3	IE2311	IND	Flores	Yolanda			Panorama City	CA	91402	11/5/2002 12:00:00 AM	65.11	304.59				Salary																																
+911358	0	2	EXPN	E	EXP123	COM	Voter Education Project				Newport Beach	CA	92660	10/24/2002 12:00:00 AM	35000	0			LIT						589002																											
+912596	0	41	EXPN	E	E3520	OTH	Monique's LTD				Carson	CA	90745	11/13/2002 12:00:00 AM	300	300		1508	OFC																																	
+912912	0	6	EXPN	E	EXPNDT0000203373	OTH	Durkee & Associates 				Burbank	CA	91502		3329.54				PRO																																	
+912998	0	18	EXPN	E	1143313	COM	CA Democratic Party				Sacramento	CA	95814-3115		25000				CTB						741666																											
+785669	3	241	EXPN	E	EXP3742	OTH	St. Hilaire Consulting				Huntington Beach	CA	92648	9/6/2001 12:00:00 AM	188.34	0			FND																																	
+878655	3	6	EXPN	E	16671712	IND	Bunyan	Robert			Mission Viejo	CA	92692		100				RFD																																	
+912919	0	30	EXPN	D	D353	COM	Joe Simitian for Assembly				Palo Alto	CA	94303-3022	10/30/2002 12:00:00 AM	1000	1000			MON														Simitian	Joe			ASM		ASM		21	H				S						
+911297	1	135	EXPN	F461P5	EXP1661	COM	DARIO FROMMER FOR ASSEMBLY 2002				SACRAMENTO	CA	95814	10/22/2002 12:00:00 AM	2000	3000			MON						1235286								DARIO FROMMER				ASM		ASM		43					S						
+911297	1	60	EXPN	F461P5	EXP1703	COM	BILL MORROW FOR SENATE 2002				LA MESA	CA	91941	9/13/2002 12:00:00 AM	1000	2000			MON						1234028								BILL MORROW				SEN		SEN		38					S						
+822521	1	104	EXPN	E	E2616	OTH	Employment Development Department				Sacramento	CA	94230-6276	2/15/2002 12:00:00 AM	8815.14	15775.52		0	SAL																																	
+809721	3	118	EXPN	G	EDT737	OTH	Dollar Rent A Car				Los Angeles	CA		1/14/2002 12:00:00 AM	260.96	0			TRS	M.Hutchings LA 11/13-11/16/01	Marcie Hutchings Productions																												EXP2574	E		
+857402	1	152	EXPN	E	E3184	OTH	Federal Express				Memphis	TN	38101-1140	4/19/2002 12:00:00 AM	10.55	6612.31		2434	POS																																	
+912764	1	5	EXPN	F461P5	EDT258	IND	ACUNA-WILLIAM	REGINA H.			VENTURA	CA	93003	10/15/2002 12:00:00 AM	794.02	5867.55				PAYROLL EXPENSE	ANDERSON PACIFIC, LLC.																										X					
+907119	1	229	EXPN	G	EDT341	OTH	WILLETT TRAVEL				STUDIO CITY	CA	91604	10/31/2002 12:00:00 AM	1141.50	0			TRS		WOODWARD & MCDOWELL																												EXP298	E		
+945319	0	62	EXPN	E	e4324	OTH	Hotel Bahia				Ensenada	BC	23000		128.88				MTG	visa 4888 6031 0163 7825																																
+871927	1	12	EXPN	E	EXPNDT0000182737	COM	Parents' Ballot Guide 				Torrance	CA	90501		1000				LIT						1226502																											
+945588	0	134	EXPN	G	G1720	OTH	Alphagraphics Printshops of the Future				Rancho Cucamonga	CA	91730	1/1/2003 12:00:00 AM	670.71	670.71		0	LIT		Diane Stone & Associates																															
+946731	0	3	EXPN	E	EXP11	IND	Hawkins	Sonia			Fresno	CA	93728	4/4/2003 12:00:00 AM	75	0			MTG																																	
+947752	0	31	EXPN	E	DB2009	OTH	Best Buy				Riverside,	CA	92507	1/13/2003 12:00:00 AM	209.23				OFC																												X		DB1973			
+946094	1	11	EXPN	E	EXP943	OTH	COMMITTEE ON MORAL CONCERNS				SACRAMENTO	CA	95812	3/7/2003 12:00:00 AM	675	0				OVERHEAD REIMBURSEMENT																																
+948213	0	32	EXPN	E	E204	OTH	KNX Radio				Los Angeles	CA	90020	5/9/2003 12:00:00 AM	2350	14350		1908	IND	Radio Ad - to support Williams For Council-General (ID# 1253824)																																
+911051	1	5	EXPN	D	EDT195	PTY	California Republican Party				Burbank	CA	91506	11/9/2002 12:00:00 AM	900	10492.37			IKD	Rent					810163								California Republican Party													S						
+948450	1	18	EXPN	D	EXPNDT0000214140	OTH	The Strategy Group 				Pasadena	CA	91105	5/2/2003 12:00:00 AM	5000	11135.03	0		IND	Mailer design, printing, postage - Korenstein for LA City Council #12					1253925	Durkee							Korenstein	Julie			CCM	City Council Member	CIT	City of Los Angeles	12	S				S						
+1032773	1	5	EXPN	E	E201	OTH	A.J.Goodman Consulting				San Francisco	CA	94115	4/5/2004 12:00:00 AM	3500	10822.72		1105	CNS																																	
+962114	0	35	EXPN	E	EXP1287	COM	Cox	Taxpayers for Dave			Fair Oaks	CA	95628	7/7/2003 12:00:00 AM	1000	0			CTB						1250931																											
+960827	0	22	EXPN	F461P5	EXP99	COM	Hancock for Assembly 2004	Loni			Berkeley	CA	94701	4/23/2003 12:00:00 AM	1000	1000			MON						1253843								Loni Hancock				SEN		ASM		14					S						
+960866	0	3	EXPN	F461P5	EXP76	COM	Californians for Schwarzenegger				Sacramento	CA	95814	9/2/2003 12:00:00 AM	10000	11000			MON						1256981								Arnold Schwarzenegger				GOV					S				S						
+963781	0	7	EXPN	F461P5	146642	COM	Californians for Schwarzenegger				Sherman Oaks	CA	91423	8/20/2003 12:00:00 AM	20000	20052	0	1256981	MON						1256981								Schwarzenegger	Arnold			GOV		STW			S				S		7				
+963124	0	10	EXPN	E	E410	OTH	Chase Automotive Finance				Wilmington	DE	19886	7/1/2003 12:00:00 AM	349.04	3141.42		148	TRC																																	
+912351	2	162	EXPN	E	EXP63724	IND	Coors	Jonathan			Malibu	CA	90265	10/24/2002 12:00:00 AM	2015.38	0			OFC																																	
+963729	0	229	EXPN	E	1007200311E28599_229	OTH	Mr. Carlton W Fogliani				Sacramento	CA	95814	9/4/2003 12:00:00 AM	5000			1035	CNS	Explain: 																																
+805505	3	10	EXPN	D	DD13065	COM								12/19/2001 12:00:00 AM	25000	25155		10498	MON														California Democratic Party									S				S						X
+963685	0	25	EXPN	E	T145920	OTH	VERIZON CALIFORNIA				INGLEWOOD	CA	90313-0001		29.14				CMP																																	
+810086	2	108	EXPN	E	D12241	OTH	San Francisco Newspaper Agency				San Francisco	CA	94120		360				OFC																																	
+979500	0	24	EXPN	E	EXP1887	COM	Coto for Assembly				San Jose	CA	95113	12/31/2003 12:00:00 AM	3200	0			CTB						1253176																											
+849834	3	350	EXPN	E	D17211	IND	South	Garry			Los Angeles	CA	90049		15667.92				SAL																																	
+962807	1	10	EXPN	E	E740	IND	Boling	C. April			San Diego	CA	92119	8/2/2003 12:00:00 AM	8.60	7631.70		1118	POS																																	
+979912	0	111	EXPN	E	EXP473	OTH	Dorsey Graphics				San Jose	CA	95120	12/15/2003 12:00:00 AM	145	0			CMP																																	
+979940	0	16	EXPN	D	D1047	COM								11/21/2003 12:00:00 AM	10000	65000	0		MON														Democratic State Central Committee													S						
+980327	0	953	EXPN	F465P3	IE1433	IND	Vieyra	Antonio			Inglewood	CA	90301	10/7/2003 12:00:00 AM	23.33	339.47				Voter Contact																																
+984491	0	21	EXPN	E	EXP259	COM	Ted Gaines for Supervisor				Granite Bay	CA	95746	1/16/2004 12:00:00 AM	1000	0			CTB						911363																											
+990944	0	173	EXPN	E	EXP12661	OTH	Sacramento Police Dept., Metro Division				Sacramento	CA	95822	10/2/2003 12:00:00 AM	1500	0			MTG																																	
+990946	0	144	EXPN	E	D26306	OTH	Jennifer Mraz				Los Angeles	CA	90035		809.44				SAL																																	
+990721	0	227	EXPN	E	EXP930	OTH	Pacific Bell SBC				Sacramento	Ca	95887	11/6/2003 12:00:00 AM	158.74	0			OFC																																	
+978628	1	4	EXPN	G	EDT142	OTH	Hyatt Hotel				Indian Wells	CA	92210	11/16/2003 12:00:00 AM	250.64	0			TRC	(VISA) Meal & Lodging; Republican Conference	Bank of America VISA																												EXP500	E		
+990944	0	271	EXPN	E	EXP9398	OTH	Federal Express				Memphis	TN	38101	10/6/2003 12:00:00 AM	939.53	0			POS																																	
+996614	0	36	EXPN	E	E91	OTH	Union Bank of California				San Diego	CA	92120	2/1/2004 12:00:00 AM	350	1831		2071		Payroll withholding																																
+996877	0	46	EXPN	E	EXP339	OTH	The Monaco Group				Placentia	CA	92870	1/26/2004 12:00:00 AM	6401.05	0			LIT																																	
+995584	0	2	EXPN	D	D137	COM	IRA RUSKIN DEMOCRAT FOR ASSEMBLY							1/26/2004 12:00:00 AM	500	500		136	MON														RUSKIN	IRA			ASM		ASM			S				S						
+996810	0	15	EXPN	E	T162852	OTH	Glendora Trophy & Engraving				Glendora	CA	91740		887.65				MTG	Name badges for members at meetings																																
+997412	1	61	EXPN	E	EXP193	OTH	Dan Siwulec Communications Marketing, Inc.				Pacific Palisades	CA	90272	2/10/2004 12:00:00 AM	13444.77	0			IND	mailer																																
+1014370	0	88	EXPN	E	EXP266	OTH	Michael Pavlik, CPA				Yreka	CA	96097	3/9/2004 12:00:00 AM	40	0			PRO																																	
+1024159	0	3	EXPN	E	EXP329	COM	YES ON Q				WEST SACRAMENTO	CA	95695	2/17/2004 12:00:00 AM	2500	0			CTB						1261186																											
+1021833	0	4	EXPN	D	EXP451	COM	Hollingsworth for Senate '06				Sacramento	CA	95814	6/23/2004 12:00:00 AM	1000	1000			MON						1251235								Dennis Hollingsworth				SEN		SEN		36					S						
+1023430	0	2	EXPN	D	1292411	COM	DAUCHER				OAKDALE	CA	95361	6/10/2004 12:00:00 AM	500	500			MON														DAUCHER	LYNN												s						
+1023604	0	24	EXPN	E	EXP1037	COM	Bermudez for Assembly 2004				Pasadena	CA	91107	5/11/2004 12:00:00 AM	750	0			CTB						1250547																											
+1026582	0	22	EXPN	E	CI255	OTH	Olins, Hayes & Miller				San Diego	CA	92101	3/11/2004 12:00:00 AM	123.87			1301	CTB	In-Kind Contribution - Linda Soubirous - Attorney Fees - ID# 1253926																																
+1028588	0	37	EXPN	E	E861	OTH	Padilla & Associates				Beverly Hills	CA	90211	3/1/2004 12:00:00 AM	500	3181.08		1061	PRO																																	
+1028562	0	3	EXPN	D	D62	OTH								2/19/2004 12:00:00 AM	10000	10000	0		MON														Proposition 58 - The California Balanced Budget Act (2004)											58	State of California	S						
+1028389	0	70	EXPN	F461P5	EXP313	COM	Sharon Runner for Assembly				Sacramento	CA	95812	5/17/2004 12:00:00 AM	500	500			MON						1254043								Sharon Runner				ASM		ASM		36	H				S						
+1030615	0	62	EXPN	E	EXP1367	COM	Orange County Professional Firefighters Association PAC				Santa Ana	CA	92705	6/30/2004 12:00:00 AM	1000	0			TSF	TRANSFER BACK to Friends of Supervisor Tom Wilson - ID# 962927..originally transferred into Assembly Cmte 6/19/03					950925																											
+1031924	0	3	EXPN	F461P5	EXP2	COM	Californians for Schwarzenegger				Santa Monica	CA	90401	2/26/2004 12:00:00 AM	2500000	4000000			MON	Forgiveness of loan					1256981								Arnold Schwarzenegger				GOV		STW							S						
+1031169	0	89	EXPN	G	EDT32	OTH	BIG TIME MOVERS				SILVER SPRINGS	MD	20906	5/5/2004 12:00:00 AM	756.25	0				STORAGE	SEITCHIK	BRIAN																											EXP879	E		
+1031958	0	10	EXPN	E	EXPNDT0000284886	COM	Padilla For City Council 				Pacoima	CA	91331		500				CTB						983443																											
+1032059	0	1150	EXPN	E	060220040E34648_511	OTH	Bader & Associates				Newport Beach	CA	92660	5/25/2004 12:00:00 AM	12800			3130	VOT	Explain: 																																
+1032389	0	111	EXPN	E	EXP1774	OTH	KHOI HANH				MIDWAY CITY	CA	92655	5/17/2004 12:00:00 AM	364	0				PRINTING																																
+1033196	0	97	EXPN	E	EXP1324	OTH	Miller Maxfield Consulting				Santa Cruz	Ca	95062	6/29/2004 12:00:00 AM	2900	0			CNS																																	
+1033200	0	43	EXPN	G	EDT1389	IND	Acosta	Jose			Watsonville	CA	95076	5/6/2004 12:00:00 AM	120.03	0			VOT		Senate Voter Registration Project- Federal																												EXP183	E		
+872263	4	131	EXPN	E	E526	OTH	Ross Communications				Sacramento	CA	95814	8/1/2002 12:00:00 AM	10000	667496.33		1178	CNS																																	
+1033200	0	613	EXPN	G	EDT530	IND	Gawe	Michael			Stockton	CA	95207	4/6/2004 12:00:00 AM	77.47	0			VOT		Senate Voter Registration Project- Federal																												EXP160	E		
+677241	2	74	EXPN	G	EDT268	OTH	CITY OF PALO ALTO				PALO ALTO	CA	94301	10/17/2000 12:00:00 AM	308	0			MTG		SILICON VALLEY ASSOCIATION OF REALTORS																												EXP809	E		
+1032718	1	100	EXPN	E	EXPNDT0000261375	OTH	Lloyd-Jones	Sandra			Venice	CA	90291		1883.92				SAL																																	
+996436	3	12	EXPN	E	EXPNDT0000252863	OTH	Fox Printing Company, Inc. 				Sun Valley	CA	91352		264.13				OFC																																	
+1044605	0	395	EXPN	G	EDT2015	IND	Green	Ronald			Sacramento	CA	95820	7/13/2004 12:00:00 AM	280.74	0			VOT		Senate Voter Registration Project- Federal																												EXP242	E		
+1044539	0	1	EXPN	D	EXP340	COM	Andreas for Assembly				Palm Springs	CA	92263	9/24/2004 12:00:00 AM	3200	3200			MON						1255403								Mary Ann Andreas				ASM				80					S						
+1044727	0	29	EXPN	E	EXP451	COM	Bob Huff for State Assembly				Diamond Bar	CA	91765	8/2/2004 12:00:00 AM	1000	0			CTB						1253818																											
+1045019	0	171	EXPN	E	e8483	IND	Varner	Katie			Newhall	CA	91321-2907		398.63				SAL	Non Employee Compensation																																
+1044689	0	120	EXPN	E	E930	OTH	Prepress				Fresno	CA	93728	9/18/2004 12:00:00 AM	542.73	1665.19		1583	CMP																																	
+1045226	0	1	EXPN	D	EXPNDT0000288654	COM	Millie Escobado For Judge 				Montebello	CA	90640	8/13/2004 12:00:00 AM	1000	1000	0		MON						1260489								Escobedo	Millie			SCJ	Superior Court Judge		State of California	00	H				S						
+1045321	0	47	EXPN	E	EXPNDS0000004798	OTH	Sprint 				Dallas	TX	75265		255				OFC																												X		EXPNDT0000296920			
+1045384	0	53	EXPN	E	D145	OTH	Smith Kaufman LLP				Los Angeles	CA	90017		4562.75				PRO																																	
+1032059	1	510	EXPN	G	0519200446E34281	OTH	Jet Printers				Garden Grove	CA	92840		5176.46					Explain:Printing	Republican Party Federal Acct	California 																										0519200446E34281				
+1049761	0	10	EXPN	E	DB35932	COM	Candaele For College Trustee 				Beverly Hills,	CA	90211	10/14/2004 12:00:00 AM	500			1115	CTB						1230542																											
+1050556	0	6	EXPN	E	EXP1377	OTH	VOICE & VIEWPOINT				SAN DIEGO	CA	92105	10/4/2004 12:00:00 AM	2000	0			PRT																																	
+1044605	1	66	EXPN	G	EDT2290	IND	Atkins	Jason			San Luis Obispo	CA	93401	9/27/2004 12:00:00 AM	160.70	0			VOT		Senate Voter Registration Project- Federal																												EXP258	E		
+1048898	0	8	EXPN	D	CI3739	COM	Perata 2004				Los Angeles	CA	90020	10/15/2004 12:00:00 AM	6400	6400		1199	MON						1252906								Perata	Don			SEN	SD 9	SEN		9					S		CI3739				
+1050864	0	87	EXPN	E	EXP5704	COM	Tom Torlakson for Senate Campaign				Martinez	CA	94553	10/12/2004 12:00:00 AM	1000	0			CTB						990655																											
+1050279	0	153	EXPN	G	30473g1611	OTH	Staples				Seaside	CA	93955-3501		81.59				OFC		Mainstream GOP Consulting																															
+1050319	0	6	EXPN	D	D4189	COM	Voter Education And Registration Fund (VERF)				Sacramento	CA	95814	10/4/2004 12:00:00 AM	25000	0			MON	contribution													Voter Education And Registration Fund (VERF)													S						
+1050924	0	1445	EXPN	E	1616188	IND	Stratton	Lisa			Sacramento	CA	95816		1315.74				SAL																																	
+1051126	0	86	EXPN	G	EDT303	OTH	KNSD-TV				SAN DIEGO	CA	92111	10/12/2004 12:00:00 AM	18547	0			TEL		GCW MEDIA SERVICES, INC.																												EXP767	E		
+1043830	2	33	EXPN	D	EXP2165	COM	Kuykendall Assembly Committee				Long Beach	CA	90803	9/22/2004 12:00:00 AM	1000	3200			MON						1256838								Steve Kuykendall				ASM		ASM		54					S						
+1045236	1	2	EXPN	D	D1525	COM	Rita Topalian 58th State Assembly				Whittier	CA	90602	9/23/2004 12:00:00 AM	250	250			MON														Rita Topalian 58th State Assembly													S						
+1044094	1	47	EXPN	E	EXP889	OTH	Bank One				Henderson	NV	89016	8/9/2004 12:00:00 AM	450	0			CVC																																	
+1026580	1	16	EXPN	E	DB36667	COM	Wendy Greuel Officehold Committee				Los Angeles,	CA	90004	2/24/2004 12:00:00 AM	500			1539	CTB						1237261																											
+1076002	0	9	EXPN	E	E54	IND	Schultze	Debi			Simi Valley	CA	93065	11/19/2004 12:00:00 AM	192.85	23087.91		1037		OFC 132.47 / POS 60.38																																
+980329	1	1	EXPN	D	DD2595	COM								8/13/2003 12:00:00 AM	250	250		1228	MON														Californians Against Waste													S						X
+1078769	0	6	EXPN	D	PDT46	COM	Ira Ruskin Democrate For  Assembly				Palo Alto	CA	94306	10/22/2004 12:00:00 AM	3276.79	19090.96			IND						1252809								Ira Ruskin				ASM		ASM		21	S				S		PDT46				
+1078861	0	20	EXPN	E	DB16009	OTH	Verizon California 				Inglewood,	CA	90313-0001	10/25/2004 12:00:00 AM	122.76			3052	OFC																																	
+1079179	0	17	EXPN	D	CI328	OTH	McNally Temple Associates, Inc.				Sacramento	CA	95814	10/25/2004 12:00:00 AM	103.07	103.07		1316	IND	Newspaper Ad													Gray	Jon			BED	Lake Elsinore Unified School District	CTY				Lake Elisnore Unified School District - Riverside			S						
+1031294	1	14	EXPN	F461P5	EXP124	COM	Friends of Kevin McCarthy for Assembly 2004				Oakdale	CA	95361	2/4/2004 12:00:00 AM	1500	1500			MON						1252923								Kevin McCarthy				ASM		ASM		32					S						
+1078017	0	8	EXPN	F461P5	8		Civil Justice Association of California				Sacramento	CA	95814	12/21/2004 12:00:00 AM	250	250	0		MON						E24575																											
+1079828	0	77	EXPN	E	E3116	OTH	Bieber Communications				Santa Ana	CA	92704	10/19/2004 12:00:00 AM	49.10	9048.24		0	CTB	MBR - Doorhanger - to support Larry Stirling for State Senate (ID# 992301)																																
+1050727	2	148	EXPN	G	EDT511	OTH	SPRINGHILL SUITES (MARRIOTT)**				SAN DIEGO	CA	92131	10/1/2004 12:00:00 AM	2529.45	0			TRS		RUSSO MARSH & ASSOCIATES, INC.																												EXP20	E		
+1079330	0	23	EXPN	G	EDT784	OTH	AT&T				PHOENIX	AZ	85062	11/1/2004 12:00:00 AM	1100.87	0			OFC		RUSSO MARSH & ASSOCIATES, INC.																												EXP101	E		
+1045332	3	127	EXPN	E	EXP320	OTH	REPUBLICAN VOTER CHECKLIST #598002				TORRANCE	CA	90501	9/9/2004 12:00:00 AM	27000	0			LIT																																	
+1079945	0	39	EXPN	D	EDT26	COM	Proposition 68							10/19/2004 12:00:00 AM	191.25	12976.34			IND	Mass mailing																							Proposition	68	Statewide	O						
+1051093	2	83	EXPN	G	NON2307	OTH	KTVU-TV				OAKLAND	CA	94607	10/13/2004 12:00:00 AM	54349	0			TEL		TARGET ENTERPRISES, LTD.																															
+1081724	0	28	EXPN	E	E539	IND	Kagel	Lezlie			Santa Rosa	CA	95403	12/3/2004 12:00:00 AM	199.06	11115.22		1102	CNS																																	
+1045175	5	52	EXPN	E	EXP2220	OTH	VOTER/CONSUMER RESEARCH, INC.				WASHINGTON	DC	20002	9/10/2004 12:00:00 AM	9500	0			POL																																	
+1103081	0	27	EXPN	D	849156	RCP	BASS FOR ASSEMBLY 2006				SACRAMENTO	CA	95814	1/31/2005 12:00:00 AM	1000	1000		2038	MON														BASS FOR ASSEMBLY 2006													s						
+1080892	2	105	EXPN	E	EXPNDT0000305073	OTH	The Innovation Group Inc 				New Orleans	LA	70176		1500				PRO																																	
+1100257	1	58	EXPN	D	EXP39913	COM	Mullin - State Assembly	Gene			Sacramento	CA	95814	1/28/2005 12:00:00 AM	1000	1000			MON						1253402								Gene Mullin				ASM		ASM		19					S						
+1104942	0	29	EXPN	F461P5	EXP1053	COM	TAXPAYERS FOR DAVE COGDILL				OAKDALE	CA	95361	3/11/2005 12:00:00 AM	1000	1000			MON						1273125								DAVE COGDILL				SEN		SEN		14					S						
+1045155	3	157	EXPN	E	EXP1546	OTH	Monica Cisneros dba Animo				Elk Grove	CA	95758	7/27/2004 12:00:00 AM	44.20	0			FND																																	
+1113005	0	49	EXPN	E	EXP1562	OTH	Yankee Comunications				Bakersfield	CA	93389	4/6/2005 12:00:00 AM	2500	0			CNS																																	
+1099707	1	7	EXPN	F461P5	7		Jan Perry Re-Election Committee				Los Angeles	CA	90025	2/14/2005 12:00:00 AM	250	250	0		MON	check # 301468					162279								Perry	Jan			OTH	City Council Member	CIT	City of Los Angeles		H				S		7				
+1113344	0	119	EXPN	E	E960	OTH	Verisign				Mountain View	CA	94043	5/18/2005 12:00:00 AM	29.90	179.40		0	WEB																																	
+1117053	0	41	EXPN	E	EXP91817	OTH	AT&T 916-444-3676				Phoenix	AZ	85062-8522	4/26/2005 12:00:00 AM	110.89	0			OFC	office																																
+1075892	1	285	EXPN	E	E3034	OTH	Union Bank of California				San Diego	CA	92120	10/29/2004 12:00:00 AM	123.90	327.85		0	OFC																																	
+1045331	2	641	EXPN	G	0819200429E36805	OTH	Office Depot				Salt Lake City	UT	84130		132.02					Explain:Office Supplies	Republican Party Federal Acct	California 																										0819200429E36805				
+1104099	1	477	EXPN	E	033020050E42569_275	IND	Moatazedi	Masy			Long Beach	CA	90802	3/15/2005 12:00:00 AM	1781.52			100011	SAL	Explain: 																																
+1117980	0	1	EXPN	D	EXPNDT0000348935	OTH	California Grocers Association PAC 				Sacramento	CA	95814	1/12/2005 12:00:00 AM	5000	5000	0		MON						760914								California Grocers Association PAC 							California Grocers Association PAC						S						
+1045331	2	1957	EXPN	E	0915200442E37817_271	OTH	Calif. Repub. Natl. Conv. Deligation-NFF				Santa Monica	CA	90401	9/14/2004 12:00:00 AM	40000			5078	CTB	Explain: 					496450																											
+1079317	1	23	EXPN	E	E3358	OTH	American Express				Los Angeles	CA	90096-0001	12/10/2004 12:00:00 AM	328.95	50312.41		1276	CMP																																	
+1118690	0	2	EXPN	D	D120	IND								6/16/2005 12:00:00 AM	5000	5250	0		MON														Angelides	Phil			GOV		STW							S						
+1028590	1	3	EXPN	D	D857	COM	Friends of Tom Umberg							2/19/2004 12:00:00 AM	100	100		1565	MON														Umberg	Tom			ASM		ASM		69	S				S						
+1081486	2	308	EXPN	D	D2351	IND								10/22/2004 12:00:00 AM	7093.51	603416.72	0		IKD	postage differential  23200													Gordon	Mike			ASM		ASM		53	S				S						
+1119313	0	160	EXPN	E	D4844	OTH	Raena Banks-Neal				Inglewood	CA	90301		2000				CNS																																	
+1126546	0	117	EXPN	E	E2219	IND	Thomas	K. C.		MD	Los Angeles	CA	90069	8/1/2005 12:00:00 AM	500	500		1254	RFD																																	
+1123218	0	18	EXPN	E	258860	OTH	COPE-CENTRAL LABOR COUNCIL				RIVERSIDE	CA	92501		500			1200	CTB						851055																											
+1118126	2	78	EXPN	E	T267390	OTH	Midtown Micro				Sacramento	CA	95825		104.85				WEB																																	
+1130717	0	9	EXPN	D	CI934	COM	Jose Huizar For LA City Council				Los Angeles	CA	90033	9/13/2005 12:00:00 AM	500	500		1884	MON						1277167								Huizar	Jose			CCM	Los Angeles City Council	CIT				Los Angeles			S						
+1126479	1	858	EXPN	E	EXP5968	IND	Lambert	Heather			Sacramento	CA	95835	9/22/2005 12:00:00 AM	2325.45	0			SAL																																	
+1132089	0	1241	EXPN	D	D783	OTH								9/27/2005 12:00:00 AM	124.65	8347882.29	0		IKD	Office Expenses													School Funding. State Spending. Initiative Constitutional Amendment.  Prop 76											76		O						
+1132089	0	2761	EXPN	D	D1381	OTH								10/5/2005 12:00:00 AM	1.05	142846.61	0		IKD	Office Expenses													Electric Service Providers.  Regulation. Initiative Statue   Prop 80											80	Statewide	S						
+1132089	1	402	EXPN	D	D2770	OTH								10/22/2005 12:00:00 AM	30.78	1460897.31	0		IKD	Office Expenses													Public School Teachers. Waiting Period for Permanent Status. Dismissal.  Prop 74											74	Statewide	O						
+1132089	0	5572	EXPN	G	G1073354	OTH	KFMB - TV				San Diego	CA	92186		325528.75				CTB		Colsky Media, Inc.																															
+1132089	1	3549	EXPN	E	IK303	COM	Yes on 79, No on 78, a coalition of consumer organizations				Sacramento	CA	95814							Office Expenses					1279270																						X		118233			
+1132089	2	2500	EXPN	D	D1678	OTH								10/11/2005 12:00:00 AM	25	189355.68	0		IKD	Office Expenses													Prescription Drug Discounts. State Negotiated Rebates.  Prop 79											79	Statewide	S						
+1132089	3	5368	EXPN	E	975	IND	Smith	Eric			Costa Mesa	CA	92626		32.16				IND	Salary																																
+1141630	0	1041	EXPN	E	EXPNDT0000357733	OTH	Buell	Justin			San Francisco	CA	94118		1608.88				SAL																																	
+1141866	0	1	EXPN	D	EXP52	COM	California Democratic Party				Sacramento	CA	95814	9/26/2005 12:00:00 AM	5000	5000			MON						741666								California Democratic Party													S						
+1144022	0	13	EXPN	E	314768	IND	Polejes	Brian			San Diego	CA	92104		562.50				FND	reimbursement for advancing ticket money																																
+1144042	0	38	EXPN	E	102620050E452_3	OTH	Burgess for Congress				Washington	DC	20003	10/5/2005 12:00:00 AM	1000			44-10371	CTB	Explain: 					H2TX26093																											
+1143386	0	12	EXPN	E	EXP29640	COM	JENNY OROPEZA FOR STATE SENATE				SACRAMENTO	CA	95814	10/11/2005 12:00:00 AM	1000	0			CTB						1261395																											
+1145311	0	6	EXPN	D	D4	COM	For the Children of West County							8/2/2005 12:00:00 AM	1000	1000		1137	MON														For the Children of West County													S						
+1145712	1	986	EXPN	E	E2333	IND	Gutierrez	Araceli	Ms.		La Mesa	CA	91941	11/9/2005 12:00:00 AM	50.63	405		0	IND	Salary - to oppose Proposition 76																																
+1044365	2	20	EXPN	E	740	COM	Nancy Pelosi for Congress				San Francisco	CA	94104	9/28/2004 12:00:00 AM	5000	5000		1434		Contribution: Nancy Pelosi (CA-8-D)					C00213512																					S						
+1146770	0	78	EXPN	G	EDT49	OTH	RIVA GRILL				SOUTH LAKE TAHOE	CA	96150	10/17/2005 12:00:00 AM	4315.83	0				FUNDRAISING EXP.	FIRST CARD																												EXP478	E		
+1146372	0	18	EXPN	E	EXPNDT0000352920	OTH	Bank One/Chase Card Services 				Palatine	IL	60094		80				OFC																																	
+1146347	0	83	EXPN	D	PDT219	COM	Prop 79							11/3/2005 12:00:00 AM	30.73	394.71			IND	Door Hangers																							Prescription Drug Discounts, State-Negotiated Rebates			S						
+1146970	0	1	EXPN	D	EXP172	COM	Friends of Joe Canciamilla				Sacramento	CA	95814	7/25/2005 12:00:00 AM	1000	1000			MON						1271921								Joe Canciamilla				SEN		SEN		7					S						
+1117321	1	97	EXPN	E	E6100	OTH	U S Postmaster				Los Angeles	CA	90043	4/20/2005 12:00:00 AM	370	740		1534	POS																																	
+1147331	0	676	EXPN	E	102720050E45646_455	OTH	The Monaco Group				Placentia	CA	92870	10/27/2005 12:00:00 AM	4312.31			5046	CTB	Explain:Member Com. to Support 77 																																
+1118607	1	349	EXPN	E	EXP3075	OTH	SBC				Sacramento	Ca	95887	1/6/2005 12:00:00 AM	86.92	0			OFC																																	
+1148731	0	329	EXPN	D	D402	OTH								11/5/2005 12:00:00 AM	53.75	468969.88	0		IKD	Walkers													Proposition 77 - Redistricting. Initiative Constitutional Amendment											77	California	O						
+1148865	0	30	EXPN	E	EXP387	OTH	St. Demetrios Greek Orthodox Church				Concord	CA	94521	9/6/2005 12:00:00 AM	300	0			PRT																																	
+1148521	0	59	EXPN	E	1134424	OTH	New Economy Working Solution				Santa Rosa	CA	95906		2000				CVC																																	
+1149290	0	1582	EXPN	E	EXP1461	IND	Saucedo	Enrique G.			Montebelllo	CA	90640	11/15/2005 12:00:00 AM	99.85	0			IND	Wages																																
+1149458	0	23	EXPN	E	E1582	OTH	Milagro Strategies				Los Angeles	CA	90032	10/31/2005 12:00:00 AM	2887	2887		1203	LIT																																	
+1149331	0	71	EXPN	E	E3970	OTH	Verizon Wireless				Mission Hills	CA	91346-9622	8/30/2005 12:00:00 AM	39.07	287		1201	OFC																																	
+1045185	1	306	EXPN	E	EXP3539	COM	Friends of Mark Wyland-2004				Oakdale	CA	95361	8/27/2004 12:00:00 AM	500	0			CTB						1251364																											
+1148958	1	348	EXPN	E	E3571	IND	Wise	W. Thurman	Mr.		Irvine	CA	92606	12/8/2005 12:00:00 AM	560	1251.32		3207	CTB	MBR - Consulting - to support Friends of Kevin Faulconer (ID# 1278616)																																
+1124306	3	86	EXPN	E	115353	OTH	La Costa Resort & Spa				Carlsbad	CA	92009		45834.70				FND																																	
+1149281	1	68	EXPN	E	E2434	IND	Serrano	Laura			Pico Rivera	CA	90660	11/16/2005 12:00:00 AM	350	450		1191	CNS																																	
+1126390	1	115	EXPN	E	EXP295	OTH	Groundswell Communications, Inc.				Alexandria	VA	22314	8/11/2005 12:00:00 AM	1023.90	0			TRS	In-Kind Contribution to Californians for Affordable Prescriptions ($767.93) and Californians for the Wrong Prescription ($255.97) See Sch G																																
+1126390	1	198	EXPN	G	EDT183	OTH	Adlink				Los Angeles	CA	90025	9/24/2005 12:00:00 AM	1153705	0			TEL		GCW Media Services																												EXP352	E		
+1147018	1	20	EXPN	E	1209786	COM	CATHLEEEN GALGIANI FOR ASSEMBLY				TRACY	CA	95376		3000				CTB						1273296																											
+1131880	2	245	EXPN	E	EXP527	COM	Our Voice Latino Voter Guide				Los Angeles	CA	90039	10/12/2005 12:00:00 AM	22910	0				Slate Mail. In-Kind Contributions to Californians for Affordable Prescriptions ($11,455.00) and Californians Against the Wrong Prescription ($11,455.00)					599015																											
+996611	1	58	EXPN	D	EXP4447	COM	Steinberg for Senate	Darrell			Sacramento	CA	95814	2/10/2004 12:00:00 AM	1000	1000			MON	Reallocate contribution from Primary 2006 to General 2006					1257601								Darrell Steinberg				SEN		SEN		6	S				S						
+1156706	0	9	EXPN	E	EXP1506	IND	Bashir	Joseph			Cypress	CA	90630	2/23/2006 12:00:00 AM	167.86	0			VOT																																	
+1142413	1	24	EXPN	E	EXP898	OTH	J. Richard Eichman, C.P.A.				Sacramento	CA	95814	12/8/2005 12:00:00 AM	87.30	0			CTB	In-Kind to Sacramentans for Jobs and Prosperity																																
+1156801	0	60	EXPN	E	105533	COM	Mike Eng for Assembly				Los Angeles	CA	90048		6700				CTB						1275585																											
+1156825	0	39	EXPN	E	T342696	OTH	Sub-Vendor - Mikuni Japanese				Sacramento	CA	95814		0				MTG	$57.07	Chase Platinum MasterCard																															
+1145157	1	19	EXPN	E	DB49404	COM	Kern County Democratic Central Committee				Bakersfield,	CA	93302	9/26/2005 12:00:00 AM	400			1281	CTB						741996																											
+1156255	0	2	EXPN	E	EXP81	COM	Plescia for Assembly				La Mesa	CA	91941	3/10/2006 12:00:00 AM	3000	0			CTB						1272598																											
+1156355	0	8	EXPN	E	E213	OTH	California Healthcare Institute				La Jolla	CA	92037	2/14/2006 12:00:00 AM	2000	2000		3110	CVC																																	
+1147844	1	15	EXPN	E	EXP10109	IND	Cheslog	Craig			Antioch	CA	94509	11/23/2005 12:00:00 AM	341.76	0			OFC																																	
+1145436	1	29	EXPN	E	EXPNDS0000007508	OTH	Paypal 								220				WEB																												X		EXPNDT0000376070			
+1157364	0	49	EXPN	E	EXP1091	OTH	Fashion America				Los Angeles	CA	90035	2/22/2006 12:00:00 AM	602.14	0			CMP																																	
+1149060	1	699	EXPN	E	EXP36067	IND	Kabateck	John			Sacramento	CA	95821	11/14/2005 12:00:00 AM	280.46	0			TRS																																	
+1157249	0	3	EXPN	E	EXP2682	OTH	River City Business Services				Sacramento	CA	95841	2/7/2006 12:00:00 AM	21.20	0			OFC																																	
+1157473	0	1	EXPN	D	DD255	COM								1/17/2006 12:00:00 AM	150	150		1077	MON														Consumer Attorneys Assn. Los Angeles PAC													S						X
+1157423	0	13	EXPN	E	E1144	OTH	BLackrock Associates, LLC				San Francisco	CA	94133	1/5/2006 12:00:00 AM	1575	1575		1609	OFC																																	
+1172244	0	56	EXPN	E	052220060E1807_21	COM	Go Mike Bishop				Rochester	MI	48307	5/15/2006 12:00:00 AM	5000			33-10260	CTB	Explain: 					MIBISHOSE																											
+1157264	1	21	EXPN	E	EXP847	OTH	Doubletree Hotel - Bakersfield				Bakersfield	CA	93308	2/5/2006 12:00:00 AM	111.69	0			TRS	Hotel 2/5																																
+1172675	0	12	EXPN	E	EXP291	COM	Runner for Senate 2008	George			Sacramento	CA	95814	4/4/2006 12:00:00 AM	1000	0			CTB						1272115																											
+1172844	0	188	EXPN	E	200006133_23	OTH	Coleman For Senate 08				Alexandria	VA	22301	4/4/2006 12:00:00 AM	5000			11-15864	CTB	Explain: 					S2MN00126																											
+1172844	0	29	EXPN	D	200006071	OTH	Dingell	John D.			Washington	DC	20005	3/7/2006 12:00:00 AM	1000	1000		11-15824	MON	Direct Contribution					H6MI16034								Dingell	John D.			U S									S						
+1157192	1	30	EXPN	G	PDT30	OTH	Bridges on the River				Sacramento	CA	95833	1/29/2006 12:00:00 AM	115.07	0			MTG		Cardmember Services																												PAY434	E		
+1174512	0	38	EXPN	E	EF1689	OTH	Jim Ross Consulting				San Francisco	CA	94110-1915		4004				CMP	Doorhangers																																
+1174601	0	72	EXPN	E	EXP1576	OTH	CompleteCampaigns.com				San Diego	CA	92102	5/16/2006 12:00:00 AM	215.25	0			OFC																																	
+1174371	0	35	EXPN	G	G608-3321-e	OTH	PayChex				Ventura	CA	93003-7337		511.55				SAL	Payroll Taxes	Ventura County Republican Central Committee (Fed.)																															
+1174461	0	95	EXPN	E	E1098	COM	Friends of George Nakano				Sacramento	CA	95814	5/19/2006 12:00:00 AM	3300	3300		2210	CTB						1256871																											
+1174916	0	23	EXPN	E	EXPNDT0000426192	OTH	Digital Tractor 				Sacramento	CA	95814		262.91				CMP																																	
+1174345	0	125	EXPN	G	EDT731	OTH	EDD				Sacramento	CA	95814	4/20/2006 12:00:00 AM	307.53	0			SAL	payroll taxes	ADP																												EXP101138	E		
+1174540	1	41	EXPN	E	EXP1248	OTH	Warren & Associates, LLC				San Francisco	CA	94114-	3/23/2006 12:00:00 AM	1005.25	0			PRO																																	
+1174743	0	225	EXPN	G	G801	IND	Hanson	Lisa			Oakland	CA	94611	5/8/2006 12:00:00 AM	750	5125		0		Mail production	Barnes, Mosher, Whitehurst, Lauter & Partners																															
+1174787	0	2	EXPN	E	E307	OTH	AT&T				Sacramento	CA	95887-0001	5/10/2006 12:00:00 AM	545.42	1270.53		1226	OFC																																	
+1174852	0	12	EXPN	E	EXPNDT0000419049	OTH	Nova Information Systems Inc/Durkee & Associates				City Of Commerce	CA	90040		48				OFC																																	
+1184755	0	1	EXPN	D	EXP2421	COM	California Taxpayers for Jerome Horton				Sacramento	CA	95814	6/2/2006 12:00:00 AM	2000	2000			MON	no event contribution to campagin					1257906								Horton, Jerome													S		EXP2421				
+1119163	2	178	EXPN	G	G873	OTH	United Airlines				Elk Grove Township	IL		6/8/2005 12:00:00 AM	235.20	753.60		1443	TRC		San Mateo County Credit Union																															
+1184963	0	49	EXPN	E	E172	OTH	THE MONACO GROUP				PLACENTIA	CA	92870	5/30/2006 12:00:00 AM	4700	35414		276	PRT																																	
+1174522	1	61	EXPN	E	1749911	OTH	Chambers Lopez & Gaitan				Arlington	VA	22205		2250				OFC																																	
+1174915	1	92	EXPN	E	EXPNDS0000009047	OTH	Milano's Cucina Italiana 				Glendale	CA	91203		374.11				TRC																												X		EXPNDT0000419266			
+1183918	0	21	EXPN	E	E10106	IND	Davis	Cheryl			Los Angeles	CA	90062	6/8/2006 12:00:00 AM	250	250		19380	VOT																																	
+1184796	0	85	EXPN	E	EXP75074	OTH	Dome Printing				Sacramento	CA	95815	5/24/2006 12:00:00 AM	17857.41	0			IND	Independent Expenditure Supporting Various Candidates.																																
+1189516	0	64	EXPN	E	EXP2448	OTH	Bell, McAndrews & Hiltachk, LLP				Sacramento	CA	95814	6/23/2006 12:00:00 AM	107.78	0			PRO																																	
+1189583	0	8	EXPN	D	D1254	COM	Mary Salas for State Assembly							6/2/2006 12:00:00 AM	3300	3300		1165	MON														Salas	Mary			ASM		ASM		79	S				S						
+1189001	0	10	EXPN	F461P5	CE101	COM	Friends of Roger Dickinson				Sacramento	CA	95814	4/11/2006 12:00:00 AM	500	500	0		MON	Made by Eleni Tsakopoulos- Kounalakis					980217								Dickinson	Roger			BSU		CTY	Sacramento County	1					S						
+1189127	0	19	EXPN	F461P5	19		Taxpayers For Bob Huff				Oakdale	CA	95361	6/13/2006 12:00:00 AM	3300	3300	0		MON						1275281								Huff	Bob			ASM		ASM		60	H				S						
+1189671	0	11	EXPN	E	EXP498	OTH	Cardinal Communication Strategies				Sacramento	CA	95825	6/2/2006 12:00:00 AM	1529.09	0			PHO																																	
+1174052	2	63	EXPN	E	EXP615	IND	LASON	TOBY			IRVINE	CA	92620	5/16/2006 12:00:00 AM	1250	0				CONSULTING																																
+1191546	0	9	EXPN	E	E61	OTH	Western Graphics				Lemon Grove	CA	92045	6/2/2006 12:00:00 AM	20602.15	44461.54		1043	LIT																																	
+1191668	0	33	EXPN	D	D61	IND								5/31/2006 12:00:00 AM	54.66	683.44	0		IND	Shipping of Newsletter for Distribution													Richardson (I)	Laura			ASM		ASM		55					S						
+1189954	0	121	EXPN	G	EDT1131	OTH	LOS ANGELES COUNTY BOARD OF REAL ESTATE				MANHATTAN BEACH	CA	90266	5/31/2006 12:00:00 AM	500	0			OFC		INGLEWOOD BOARD OF REALTORS																												EXP2963	E		
+1191362	0	3	EXPN	F465P3	EDT110	OTH	Meta Information Services, Inc.				Sacramento	CA	95814	5/24/2006 12:00:00 AM	60	2005.21			LIT	Data Files																																
+1191784	0	105	EXPN	E	EXP24689	IND	Jenkins	Kara			Fair Oaks	CA	95628	6/2/2006 12:00:00 AM	14	0			TRS																																	
+1191902	0	38	EXPN	G	G3031	OTH	Esquire Grill				Sacramento	CA		6/7/2006 12:00:00 AM	43	721		0	MTG		American Express																															
+1192620	0	60	EXPN	E	EXPNDT0000445750	OTH	Urban Art Lithography 				Sacramento	CA	95816		9760				LIT																																	
+1157456	2	40	EXPN	E	EXP1774	OTH	Ad-Venture  Video Productions, Inc				Fresno	CA	93727	2/14/2006 12:00:00 AM	555	0			MTG																																	
+1174313	2	40	EXPN	G	G100977	IND	Walker	Dennis			Danville	CA	94526		1235				LIT		Phil Giarrizzo dba Phil Giarrizzo Campaign Consulting																															
+1174518	1	11	EXPN	D	DD857	IND								4/20/2006 12:00:00 AM	1000	1000		2851	MON														Auerbach	Rick			ASR		CTY		00	H				S						X
+1192610	0	481	EXPN	E	EXPNDT0000446678	OTH	AV Brokers 				Azusa	CA	91702		1260				MTG																																	
+1149060	2	215	EXPN	D	EDT1927	COM	Proposition 76							11/14/2005 12:00:00 AM	20976.96	15278460.25			IND	RAD-Radio Airtime and Production Costs (voluntary disclosure of expenditures)																							Proposition 76		Statewide	S						
+1204410	0	15	EXPN	G	G2884	OTH	Ambrosia Fine Food				Sacramento	CA	95814	7/18/2006 12:00:00 AM	287.22	287.22		732	OFC		Chase Card Services																															
+1204941	0	131	EXPN	G	EDT60	OTH	Evvia Estiatorio				Palo Alto	CA	94301	8/15/2006 12:00:00 AM	194	0			MTG		Platinum Plus for Business																												EXP3362	E		
+1204835	0	3	EXPN	D	D408	IND								9/30/2006 12:00:00 AM	3300	4800	0		MON														Bass	Karen			ASM		ASM		47					S						
+1204970	0	1588	EXPN	G	PDT339	OTH	KIEM				Eureka	CA	95503	8/17/2006 12:00:00 AM	6659	0			TEL		National Media , Inc																												PAY41014	E		
+1211509	0	19	EXPN	E	1271326	COM	Garamendi for Lt. Governor				Sacramento	CA	95814		6000				CTB						1266998																											
+1204077	1	72	EXPN	G	EDT22	OTH	TARGET				SACRAMENTO	CA	95841	9/11/2006 12:00:00 AM	145.57	0				SUPPLIES	MURRAY	JAYME																											EXP855	E		
+1211668	0	7	EXPN	E	DB61208	COM	Mark Ridley-Thomas For Senate				Los Angeles,	CA	90017	10/16/2006 12:00:00 AM	2500			434	CTB						1277296																											
+1211920	0	4	EXPN	E	DB60800	COM	Angelides 2006				Sacramento,	CA	95814	10/5/2006 12:00:00 AM	5000			6838	CTB						1253280																											
+1157320	2	19	EXPN	E	EXP357	OTH	Powers	Brandon			Pasadena	CA	91106	1/6/2006 12:00:00 AM	2500	0			CNS																																	
+1204663	1	33	EXPN	E	EXPNT000000000452743	OTH	Edison Co				Rosemead	CA	917710001		300				OFC																																	
+1213044	0	356	EXPN	E	EXP2910	IND	Dominguez	Sergio			Bakersfield	CA	93301	9/15/2006 12:00:00 AM	317.59	0			VOT																																	
+1213044	1	1384	EXPN	E	EXP1840	IND	Sanchez	Jaime			Sacramento	CA	95826	7/21/2006 12:00:00 AM	288.25	0			VOT																																	
+1204767	1	1319	EXPN	E	IK1094	COM	Friends of Wilmer Carter				Rialto	CA	92376							office setup                  $3.25  75437					1282074																						X		1654311			
+1204970	1	115	EXPN	E	EXP39096	IND	Killeen	Tim			Sacramento	CA	95814	7/14/2006 12:00:00 AM	1350	0			SAL																																	
+1204906	2	171	EXPN	G	EDT53	OTH	KEROTV				Bakersfield	CA	93301	9/30/2006 12:00:00 AM	18844.50	0			TEL		Greenstripe Media, Inc.																												EXP1476	E		
+1226482	0	5	EXPN	E	EXP1131	OTH	Eichman	J. Richard			Sacramento	CA	95814	10/16/2006 12:00:00 AM	588.38	0			PRO																																	
+1141630	2	285	EXPN	E	EXPNT000000000357725	IND	Zimmerman	Iris			Palo Alto	CA	94303		690				SAL																																	
+1234102	0	12	EXPN	F461P5	EXPNDT00000000476787	COM	Leland Yee For Senate				San Francisco	CA	94122	11/7/2006 12:00:00 AM	500	750			MON						1268049								Yee	Leland			SEN	State Senate	SEN	State of California	08					S						
+1233713	0	10	EXPN	D	NON6702	COM	Yes on Prop. 1D				Sacramento	CA	95814	11/6/2006 12:00:00 AM	1226.97	7442448.52			IKD	Phone Banks 11/06/06					1288476																		Yes on Prop. 1D, A Coalition of Parents, Educators, Tax Payers, Labor and Business Dedicated to Building Better Schools			S						
+1233180	0	11	EXPN	E	DB62389	COM	Kern County Democratic Central Committee				Bakersfield,	CA	93302	11/2/2006 12:00:00 AM	1000			595	CTB						741996																											
+1234403	0	8	EXPN	F461P5	EXP424	COM	Brownley for Assembly	Julia			Covina	CA	91722	11/6/2006 12:00:00 AM	500	1000			MON						1271026								Julia Brownley				ASM		ASM		41					S		EXP424				
+1236229	0	5	EXPN	F461P5	CE208	COM	Friends of Mae Cendana				Bay Point	CA	94565	10/25/2006 12:00:00 AM	500	500	0		MON	Made by Garaventa Enterprises					1290441								Cendana	Mae			OTH	Director	OTH	Ambrose Recreation & Park District						S						
+1234044	0	5	EXPN	F461P5	5		Re-Elect Audra Strickland for Assembly				Costa Mesa	CA	92626	9/1/2006 12:00:00 AM	1500	1500	0		MON						1277380								Strickland	Audra			ASM		ASM		37	H				S						
+1236186	0	12	EXPN	F461P5	CE230	COM	Gaines for Assembly				Granite Bay	CA	95746	9/21/2006 12:00:00 AM	2500	2500	0		MON	Made by Angelo Tsakopoulos					1265314								Gaines	Ted			ASM		ASM		4					S						
+1236583	0	44	EXPN	E	EXP1770	OTH	ML Associates, LLC				West Hollywood	CA	90069	11/30/2006 12:00:00 AM	106.87	0			PRO																																	
+1238478	0	12	EXPN	D	D28	OTH	Family Faith & Freedom Association							11/6/2006 12:00:00 AM	573.92	573.92		1016	IKD	Slate Mailer Appearance													Emami	Christopher			BED		LOC	Orange County		S				S						
+1238665	0	448	EXPN	D	D3484	IND								11/6/2006 12:00:00 AM	99.27	145957.18	0		IKD	shipping  23917													Karnette	Betty			ASM		ASM		54	H				S						
+1238260	0	142	EXPN	D	D219	IND								12/19/2006 12:00:00 AM	43.12	674.96	0		IND	Shipping of Newsletter for Distribution													Ridley-Thomas (I)	Mark			SEN		SEN		26					S						
+1238443	0	113	EXPN	F461P5	EDT249	OTH	Burnside & Associates				Los Angeles	CA	90019	8/22/2006 12:00:00 AM	13978.63					Consulting, mailing, walkers	Englander & Associates																										X					
+1238807	0	981	EXPN	E	D1153	OTH	Sharon Taylor				Lakewood	CA	90713		661.99				IND	SAL/Phil Angelides													Angelides	Phil			GOV		STW			S				S						
+1239119	0	2669	EXPN	E	EXP1074	IND	Perez	Maribel			Los Angeles	CA	90006	11/30/2006 12:00:00 AM	80	0			IND	Voter Contact																																
+1212649	1	81	EXPN	E	EXP1385	OTH	XOVR, LLC				Santa Monica	CA	90404	10/11/2006 12:00:00 AM	80000	0			TEL																																	
+1174524	1	66	EXPN	G	G1263818	OTH	Patina Restaurant				Los Angeles	CA	90012		549.24				MTG		U.S. Bank																															
+1143179	1	6	EXPN	D	D551	COM	Committee to Elect Bill Pollacek							8/12/2005 12:00:00 AM	500	500		1790	MON														Pollacek	Bill			TRS		CTY	Contra Costa County		S				S						
+1255403	0	12	EXPN	E	ET50	COM	Republican Central Committee of Los Angeles County (Fed. Acct.)				Pasadena	CA	91105-2564		4000				TSF							Aminoff	Gary			Los Angeles	CA	90067-4216																				
+1204767	3	2194	EXPN	E	IK847	COM	Ted Lieu for Assembly 2006 c/o Durkee & Associates				Burbank	CA	91502							office setup                $102.21  75368					1280888																						X		1642311			
+1212509	2	1218	EXPN	E	17761812	IND	Wagaman	Christine			Davis	CA	95616		2465.53				SAL																																	
+1211516	1	18	EXPN	E	EXP1798	OTH	Southern Cal. Edison				Rosemead	CA	91770	10/16/2006 12:00:00 AM	658.94	0			OFC																																	
+1231203	1	11	EXPN	E	EXP996	OTH	James R. Santos Bookkeeping Service				Sacramento	CA	95864	11/7/2006 12:00:00 AM	72.02	0			POS																																	
+1270907	1	5	EXPN	F461P5	6		CALIFORNIA REPUBLICAN PARTY				Burbank	CA	91506	6/8/2007 12:00:00 AM	125000	125000	0		MON						810163																											
+1204467	1	31	EXPN	E	EXP1600	OTH	Warren & Associates LLC				San Francisco	CA	94114-0000	7/26/2006 12:00:00 AM	911.25	0			PRO																																	
+1276660	0	4	EXPN	F461P5	4		AUERBACH	RICK			LOS ANGELES	CA	90004	5/30/2007 12:00:00 AM	750	0	0		MON						1223494																											
+1280739	0	21	EXPN	E	EXPNT000000000512909	OTH	Durkee & Associates				Burbank	CA	91502		1500			0000010025	PRO																																	
+1277213	0	9	EXPN	E	DB48582	IND	Register	Fred P.		Jr.	Altadena,	CA	91001	6/13/2007 12:00:00 AM	1500			195	CNS	Retnr 8-6/07																																
+1278163	0	68	EXPN	D	70510.E926	OTH	Whitfield	Edward			Washington	DC	20003	5/9/2007 12:00:00 AM	1000	2000		11-10794	MON	Direct Contribution					H4KY01040								Whitfield	Edward			U S									S						
+1278750	0	11	EXPN	E	E1736	IND	Aluisi	Ashley	Ms.		San Diego	CA	92129	2/12/2007 12:00:00 AM	225	8708.22		3375	CNS																																	
+1279300	0	98	EXPN	E	E7	OTH	U.S. Postal Service				Los Angeles	CA	90071	1/19/2007 12:00:00 AM	144	144		1006	POS																																	
+1279812	0	10	EXPN	E	1108323	COM	South Bay Labor Council COPE				San Jose	CA	95125		250				CTB						744711																											
+1283455	0	4	EXPN	E	5		Allied Printing Co.				Sacramento	CA	95814		1827.44				LIT																																	
+1281863	0	57	EXPN	E	EXP1424	OTH	Verizon Wireless				Mission Hills	CA	91346	1/29/2007 12:00:00 AM	174.60	0			OFC																																	
+1282744	0	115	EXPN	E	2030339	COM	Bass for Assembly 2008				Sacramento	CA	95814		2000				CTB						1292751																											
+1284458	0	73	EXPN	G	EDT23	OTH	Lowes Inc.				Upland	CA	91766	4/26/2007 12:00:00 AM	180.83	0			OFC		Rider	Nan																											EXP270	E		
+1236840	1	36	EXPN	E	EXP1065	OTH	Cingular Wireless				Los Angeles	CA	90060	12/28/2006 12:00:00 AM	93.29	0			OFC																																	
+1190073	1	23	EXPN	D	D749	OTH	Independent Campaign Group, Inc.							5/31/2006 12:00:00 AM	20394.55	352299.21		1875	IND	Production and Mailing of Brochure													Bermudez	Rudy			SEN		SEN		30	S				S						
+1132139	2	18	EXPN	D	102720050E45634	OTH	Homeland Security	OC Measure C:			Santa Ana	CA	92701	10/21/2005 12:00:00 AM	520	696.80		wire	IKD	Explain:CTB, Member Com. to Oppose OC C					OCC								Homeland Security	OC Measure C:												O						
+1231321	2	6	EXPN	E	EXP2451	IND	LAPSLEY	ROBERT			SACRAMENTO	CA	95814		17500				CNS																													EXP2451				
+1293160	0	18	EXPN	D	EXP2938	COM	Nava 2008	Pedro			Sacramento	CA	95814	8/20/2007 12:00:00 AM	1000	1000			MON						1293442								Pedro Nava				ASM		ASM		35					S						
+1238216	3	117	EXPN	G	PDT484	OTH	AT&T				Los Angeles	CA		11/7/2006 12:00:00 AM	320.66	0			OFC		Capital Campaigns, Inc.																												PAY3994	E		
+1285419	1	1	EXPN	D	EXP256	PTY	California Democratic Party				Sacramento	CA	95814-5221	5/16/2007 12:00:00 AM	620	1240			MON						741666					Sacramento	Ca	95814	California Democratic Party																			
+1238955	1	322	EXPN	F465P3	EDT2917	IND	Pardo	Teresa			Los Angeles	CA	90006-	11/6/2006 12:00:00 AM	5.60	325886.42			IND	Voter Contact																																
+1293763	0	4	EXPN	E	EXP563	OTH	AT & T				Phoenix	AZ	85062-8522	9/13/2007 12:00:00 AM	18.78	0			OFC																																	
+1296520	0	6	EXPN	D	7									3/26/2007 12:00:00 AM	3000	3000			MON														Torlakson	Tom for Sup. Pub. Inst.			SUP		STW							S						
+1297712	0	85	EXPN	E	EXP6607	COM	ALEX PHILLIPS FOR CITY COUNCIL				SAN CARLOS	CA	94070	9/20/2007 12:00:00 AM	500	0			CTB						1300780																											
+1294853	0	21	EXPN	D	CI3965	COM	Friends Of Omar Ahmad				San Carlos	CA	94070	9/19/2007 12:00:00 AM	1000	1000		1373	MON						1300734								Ahmad	Omar			CCM	San Carlos City Council	CIT				San Carlos			S						
+1298179	0	3	EXPN	E	EF4242	IND	Yates	Donald	Mr.		Newbury Park	CA	91320-4547		38.50				OFC																																	
+1239119	1	2855	EXPN	E	EXP1680	IND	Perez	Vicente			HAYWARD	CA	94545-	11/6/2006 12:00:00 AM	6.40	0				To be reimbursed by SOLT Issues																																
+1239119	1	2814	EXPN	E	EXP515	IND	Pena	Isabel			Riverside	CA	92503	10/31/2006 12:00:00 AM	101.20	0			IND	Voter Contact																																
+1304020	0	27	EXPN	E	EXP534	COM	Friends of Anthony Portantino 2008				Sacramento	CA	95814	10/11/2007 12:00:00 AM	2000	0			CTB						1292690																											
+1306702	0	25	EXPN	D	CI4277	COM	Friends Of Lloyd				Los Angeles	CA	90004	12/12/2007 12:00:00 AM	5000	5000		2585	MON						1278106								Levine	Lloyd			SEN		SEN		23					S						
+1304912	0	9	EXPN	F461P5	aaa1aea6c2d2b25eb6c	RCP	Villines for Assembly				Fresno	CA	93709	10/23/2007 12:00:00 AM	2500	2500			MON						1293100	Flick	I.						Villines	Michael			ASM		ASM	Assembly District 029	029					S						
+1305999	0	13	EXPN	D	D117	COM								1/8/2008 12:00:00 AM	21086.68	207092.71	0		IKD	printing													Yes on Prop. 93, Committee for Term Limits Reform													S						
+1309259	0	30	EXPN	D	EXP2740	COM	Haggerty	Committee to Re-Elect Scott			Fremont	CA	94536-	8/28/2007 12:00:00 AM	250	250			MON						970474								Scott Haggerty				CSU		OTH	Alameda County						S						
+1311296	0	7	EXPN	E	12		U.S. Postal Service				Eureka	CA	95501		19.86				POS																																	
+1312001	0	101	EXPN	F461P5	EXP4585	COM	Anna Caballero for Assembly 2008				Salinas	CA	93901	12/4/2007 12:00:00 AM	2600	3600			MON						1294254								Anna Caballero				ASM		ASM		28					S						
+1310228	0	30	EXPN	E	EXP393	OTH	AT & T				Sacramento	CA	95887-0001	11/12/2007 12:00:00 AM	38.78	0			OFC																																	
+1311474	0	18	EXPN	G	NON66	OTH	Silverado				Napa	CA	94558	12/28/2007 12:00:00 AM	581.84	0			MTG		Woodward	Richard																														
+1307406	1	46	EXPN	E	EXP142	OTH	The KRKC Stations				King City	CA	93930	8/14/2007 12:00:00 AM	150	0			RAD																																	
+1312562	1	2	EXPN	E	EXP103	OTH	Meridian Pacific				Sacramento	CA	95825	8/9/2007 12:00:00 AM	424.24	0			CNS																																	
+1310353	1	83	EXPN	G	EDT41	OTH	Chevron				Carmichael	CA	95923-	11/8/2007 12:00:00 AM	258.96	0			TRC		U.S. Bank																												EXP3654	E		
+1319648	0	13	EXPN	E	E2070	OTH	AT & T				Phoenix	AZ	85062-8522	1/27/2008 12:00:00 AM	89.77	315.99		4312	OFC																																	
+1319722	0	11	EXPN	E	DB76117	OTH	I.B.E.W. COPE Fund				Washington,	DC	20001	1/23/2008 12:00:00 AM	466.70			1221		Not For State Or Local Candidate																																
+1318162	0	1	EXPN	D	5									3/5/2008 12:00:00 AM	1000	1000			MON	Fresno County Supervisor													Anderson	Susan			OTH	Fresno County Supervisor	CTY	Fresno County						S						
+1318580	0	54	EXPN	E	1827076_4	COM	Doyle for Governor				Madison	WI	53701	1/25/2008 12:00:00 AM	1000			11-16433	CTB	Explain: 					WIDOYLEGV																											
+1320220	0	43	EXPN	G	G1136	OTH	Mikuni Japanese Restaurant				Sacramento	CA	95814	2/21/2008 12:00:00 AM	2374.50	2374.50		0	FND		Wendy Warfield & Associates																															
+1319702	0	50	EXPN	E	EXP1767	COM	Charles Calderon for Assembly 2008				Sacramento	CA	95814-	2/1/2008 12:00:00 AM	3600	0			CTB						1292792																											
+1320516	0	98	EXPN	G	G10396	OTH	Renaissance - LAX				Los Angeles	CA	90008	2/22/2008 12:00:00 AM	110	221.96		1362	MTG		American Express  Executive Corp. Card																															
+1319942	0	13	EXPN	E	EXP309	OTH	Ace Parking Managment, Inc.				Irvine	CA	92614-5995	2/19/2008 12:00:00 AM	272	0			OFC																																	
+1325445	0	3322	EXPN	E	D136096	COM	Courage Campaign Issues Committee								20				CTB						1280745																											
+1306024	3	102	EXPN	G	EDT231	OTH	KGOE-AM				Eureka	CA	95503	1/19/2008 12:00:00 AM	239.90	0			RAD		Greenstripe Media, Inc.																												EXP434	E		
+1334620	0	11	EXPN	E	E684	OTH	PAULE CONSULTING INC.				TEMECULA	CA	92591	4/10/2008 12:00:00 AM	1093.20	2873.54		1134	CNS																																	
+1334417	0	22	EXPN	D	EXP5641	COM	Hollingsworth	Taxpayers for			Sacramento	CA	95814	5/12/2008 12:00:00 AM	1000	1000			MON						1295870								Dennis Hollingsworth				ASM		ASM		66					S						
+1334866	0	3	EXPN	E	EXP205	OTH	James R. Santos Bookkeeping Serives				Sacramento	CA	95864	3/18/2008 12:00:00 AM	22.76	0			POS																																	
+1320955	1	19	EXPN	E	EXPNT000000000549567	COM	Patrick O' Donnell For City Council 2008				Burbank	CA	91502		350			0000000304	CTB						1303029																											
+1334978	0	337	EXPN	E	2845	OTH	River City Business Services				Sacramento	CA	95841		30					payroll processing fees																																
+1302430	2	53	EXPN	D	D89	IND								12/12/2007 12:00:00 AM	194	75194.86	0		IKD	mileage    23956													Furutani	Warren T.			ASM		ASM		55					S						
+1335363	0	57	EXPN	E	EXPNT000000000534522	IND	Sanow	Lisa			Los Angeles	CA	90034		7.38			0000006235	POS																																	
+1335668	0	769	EXPN	E	EXP6819	IND	Shamma	Alexandra			Seaside	CA	93955	5/9/2008 12:00:00 AM	255.62	0			VOT																																	
+1334978	0	562	EXPN	E	SV831	OTH	Homboldt County Democratic Central Committee				Eureka	CA	95502		-594					050808 reimbursement: liability insurance																											X		3334			
+1335635	0	28	EXPN	F465P3	PDT3	OTH	TIM SULLENS PHOTOGRAPHY				BURBANK	CA	91505	5/8/2008 12:00:00 AM	850	92751.40			IND	PHOTOGRAPHY FOR MAILER																																
+1238756	3	29	EXPN	F461P5	EXP1473	PTY	CALIFORNIA REPUBLICAN PARTY				BURBANK	CA	91506-	9/13/2006 12:00:00 AM	450000	825000			MON						810163								GENERAL PURPOSE COMMITTEE													S		EXP1473				
+1335597	0	18	EXPN	E	EXP2295	COM	Democratic State Central Committee of California				Sacramento	CA	95814-	4/25/2008 12:00:00 AM	5000	0			CTB						741666																											
+1340235	1	826	EXPN	D	DD170730	COM	Nancy Skinner for Assembly							4/13/2008 12:00:00 AM	50	23675		2070001790	MON																																	X
+1346338	0	13	EXPN	E	EXPNT000000000564373	OTH	Connie Sanders Emerson Fundraising				Sacramento	CA	95819		1500			0000010160	CNS																																	
+1347377	0	2	EXPN	E	2		Amstutz Associates - Marcus Johnson				Oakland	CA	94607		150.49				MBR	Newsletter Print and Mail																																
+1349595	0	30	EXPN	G	EDT126	OTH	TFC, Inc.				Napa	CA	94558	5/27/2008 12:00:00 AM	9800	0			LIT	Campaign literature and mailings	Spaulding Printing, Inc.																												EXP176	E		
+1350820	0	1535	EXPN	E	D176138	COM	Equality for All								5				CTB						1259396																											
+1350504	0	4	EXPN	E	EXP468	OTH	Contra Costa County Registrar of Voters				Martinez	CA	94553	6/30/2008 12:00:00 AM	282.84	0			FIL																																	
+1350779	0	138	EXPN	G	PDT189	OTH	Federal Express				Memphis	TN	38101	5/28/2008 12:00:00 AM	318.02	0			POS		Gilliard Blanning Associates																												PAY1994	F		
+1352045	0	23	EXPN	D	EDT513	COM	Jane Morrison for DCCC				San Francisco	CA	94117-	5/23/2008 12:00:00 AM	7.86	116.53			IND	Print ad					1262135								Jane Morrison				OTH	Democratic County Central Committee	OTH	San Francisco County	12					S						
+1349584	1	61	EXPN	E	EXP64160	COM	Eisenhut for Assembly 2008				Sacramento	CA	95814	5/23/2008 12:00:00 AM	2000	0			CTB						1305370																											
+1359572	0	7	EXPN	F461P5	00000000000000582050	COM	Garcetti For Council 2009				Los Angeles	CA	90027	6/9/2008 12:00:00 AM	250	250			MON						1304681								Garcetti     Los Angeles	Eric			CCM	City Council Member	CIT	City of Los Angeles	13	S				S						
+1362802	0	22	EXPN	D	EXP18675	COM	Taxpayers for Bob Huff - 2008				Rancho Santa Margarita	CA	92688	9/4/2008 12:00:00 AM	1000	2500			MON						1292695								Bob Huff				SEN		SEN		29	S				S						
+1363355	0	10	EXPN	E	EXP153	OTH	GREENBERG QUINLAN ROSNER RESEARCH				WASHINGTON	DC	20002	8/28/2008 12:00:00 AM	15000	0			CNS																																	
+1363118	0	207	EXPN	E	E5398	IND	Hansen	Chris			Poway	CA	92064	8/31/2008 12:00:00 AM	1412.50	5650		2749	CTB	MBR - SAL - to support April Boling for City Council (ID# 1298534)																																
+1363188	0	36	EXPN	E	EXP711	IND	Shaw	Kelly			Sacramento	Ca	95814	9/23/2008 12:00:00 AM	2100.85	0			CNS																																	
+1363712	0	127	EXPN	G	EDT123	OTH	Taylors Prime Steaks Inc.				La Canada	CA	91011	8/8/2008 12:00:00 AM	122.88	0			MTG	Meeting Ed Rendon, Anthony Rendon, Anthony Portantino discuss labor Issues & Campaign	CHASE CARD SERVICES																												EXP1626	E		
+1369184	0	11	EXPN	E	EXP654	COM	FRIENDS OF ABRAM WILSON				San Ramon	CA	94583	10/6/2008 12:00:00 AM	3600	0			CTB						1298169																											
+1369450	0	1259	EXPN	D	DD189503	COM	Equality for All							10/12/2008 12:00:00 AM	70	211236		2070002491	MON														Equality for All																			X
+1369450	0	1350	EXPN	D	DD189594	COM	Equality for All							10/12/2008 12:00:00 AM	100	211236		2070002491	MON														Equality for All																			X
+1369450	0	3504	EXPN	D	DD193493	COM	Friends of Hannah-Beth Jackson2008							10/8/2008 12:00:00 AM	25	15195		2070002470	MON														Friends of Hannah-Beth Jackson2008													S						X
+1363513	1	362	EXPN	G	100320080E66233	OTH	Ship for Less				Costa Mesa	CA	92627		165.62					Explain:Shipping	Republican Party Federal Acct	California 																										100320080E66233				
+1369577	0	26	EXPN	E	EXP3431	OTH	Anthem Media LLC				Austin	TX	78746	10/9/2008 12:00:00 AM	8520	0			TEL	Production																																
+1370123	0	1171	EXPN	E	IK502	COM	Eisenhut for Assembly 2008				Turlock	CA	95381							mail production           $13442.11 postage differential       $5712.73  51597					1305370																						X		1941312			
+1370200	0	14	EXPN	E	EXPNS000000000020041	OTH	Southwest Airlines				Dallas	TX	75201		638				TRC																												X		EXPNT000000000599303			
+1370484	0	36	EXPN	G	EDT36	OTH	KNCI				Sacramento	CA	95841	10/14/2008 12:00:00 AM	4117.50	0			IND	Radio Buy/Support/Proposition 6, Statewide	Mark Capitolo Public Affairs																												EXP791	E		
+1370518	1	10	EXPN	E	EXP10840	OTH	Eagle Press, Inc.				Sacramento	CA	95814-	10/7/2008 12:00:00 AM	4505.84	0			LIT																																	
+1390485	0	23	EXPN	D	80806.E1106	OTH	Voinovich	George			Washington	DC	20006	7/17/2008 12:00:00 AM	3000	3000		11-10958	MON	Direct Contribution					S8OH00011								Voinovich	George			U S									S						
+1382072	0	34	EXPN	E	EXP213	OTH	Actblue				Cambridge	MA	02238-2110	10/8/2008 12:00:00 AM	44.66	0			FND																																	
+1368976	1	12	EXPN	E	D88	COM	LA County Democratic Party-Issues				Burbank	CA	91502		5000				CTB						744544								LA County Democratic Party-Issues													S						
+1390852	0	14	EXPN	F461P5	927480	RCP	Cathleen Galgiana for Assembly 2008							12/1/2008 12:00:00 AM	1000	1000			MON						1292897								Galgiana	Cathleen			ASM		ASM													
+1390065	0	6	EXPN	E	6		White	Taylor			Modesto	CA	95350		1250				CTB	Contribution to campaign																																
+1370681	6	177	EXPN	G	NON9102	IND	KABX-FM				Los Angeles	CA	90024	10/15/2008 12:00:00 AM	1687.25	0			RAD		GCW MEDIA SERVICES																															
+1391645	0	34	EXPN	D	D6121	OTH	Coronado Communications							11/21/2008 12:00:00 AM	510	302202.64		3525	IKD	MBR - LIT													Thalheimer	Phil			CCM		CIT	City of San Diego	1	S				S						
+1390363	0	55	EXPN	E	EXP5676	OTH	NIELSEN, MERKSAMER, PARRINELLO, MUELLER & NAYLOR, LLP				SACRAMENTO	CA	95814	12/30/2008 12:00:00 AM	3643.52	0			PRO																																	
+1392524	0	19	EXPN	E	EXP2053	OTH	California Bank & Trust/Bankcard Center				Salt Lake City	UT	84130-0833	11/20/2008 12:00:00 AM	723.62	0				See Sch G for Credit Card Payee																																
+1392531	0	4	EXPN	F461P5	589221	COM	De La Torre for State Assembly 2008				Sacramento	CA	95814	8/18/2008 12:00:00 AM	1000	1000	0		MON						1292805	De La Torre	Hector			Sacramento	CA	95814	De La Torre	Hector			ASM		ASM		50	H				S						
+1394915	0	11	EXPN	D	DF13294	OTH	Eye/Comm				Santee	CA	92071-5617	10/20/2008 12:00:00 AM	221.70	2177.39			IKD	allocated portion MBR slate ma (Funds Spent from Federal Account) to support Marty J Block													Block	Marty			ASM	State Assembly	ASM	State	78	S				S						
+1396802	0	7	EXPN	D	EXP2189	COM	Friends of Anthony Portantino 2010				Los Angeles	CA	90071	12/31/2008 12:00:00 AM	490870.86	490870.86			MON						1313454								Anthony Portantino				ASM		ASM		44					S						
+1363097	2	1010	EXPN	E	4490	OTH	US Postal Service - West Sacramento				West Sacramento	CA	95799-0075		57.39				IND	postage  Yes on Props 1A, 3, 12																																
+1397071	0	992	EXPN	D	D2710	OTH								10/28/2008 12:00:00 AM	154.18	40024.63	0		IND	mail production  51913													Proposition 12											12		S						
+1396142	0	28	EXPN	F461P5	EXP170	COM	TAXPAYERS FOR DAVE COX - SENATE 2008				SACRAMENTO	CA	95814	10/31/2008 12:00:00 AM	1000	1000			MON						1272611								DAVE COX				SEN		SEN		1					S						
+1369259	1	284	EXPN	G	EDT581	OTH	KRTY FM				San Jose	CA	95122	10/6/2008 12:00:00 AM	6035	0			RAD		MARKETING COMMUNICATIONS SERVICES																												EXP91219	E		
+1370123	2	8	EXPN	D	D844	IND								10/6/2008 12:00:00 AM	194000	1078460.72	0		MON														Block	Marty			ASM		ASM		78	S				S						
+1398906	0	1206	EXPN	D	DD202444	COM	Courage Campaign Issues Committee							10/28/2008 12:00:00 AM	25	32060	0	2070002664	MON														Courage Campaign Issues Committee																			X
+1398904	0	13	EXPN	D	90129.E69136	OTH	Jeff Denham	Friends of			Sacramento	CA	95833	12/5/2008 12:00:00 AM	42800	92800		1022	MON	S,CTB,					1293752								Jeff Denham	Friends of												S						
+1398906	0	8183	EXPN	D	DD210814	COM	Equality for All							10/28/2008 12:00:00 AM	90	731176	0	2070002663	MON														Equality for All																			X
+1398906	0	15585	EXPN	E	D202880	COM	Equality for All								250	0	0		CTB						1259396																											
+1398732	0	28	EXPN	G	EDT134	OTH	River City Business Services				Sacramento	CA	95841	10/27/2008 12:00:00 AM	744.70	0			PRO		Stanislaus County Democratic Central Committee- Fed																												EXP351	E		
+1398906	0	25686	EXPN	E	D212989	COM	Equality for All								50	0	0		CTB						1259396																											
+1362683	2	40	EXPN	E	D889	OTH	Cingular Wireless				Phoenix	AZ	85062		887.45				OFC																												X		D874			
+1396394	1	239	EXPN	E	EXP135915	OTH	ENGAGE LLC				FALLS CHURCH	VA	22044	12/8/2008 12:00:00 AM	26154.40	0			WEB																																	
+1398906	0	16186	EXPN	E	D203481	COM	Equality for All								100	0	0		CTB						1259396																											
+1398906	0	16192	EXPN	E	D203487	COM	Equality for All								15	0	0		CTB						1259396																											
+1398906	0	16434	EXPN	E	D203729	COM	Equality for All								50	0	0		CTB						1259396																											
+1398906	0	19277	EXPN	E	D206573	COM	Equality for All								80	0	0		CTB						1259396																											
+1398906	0	6251	EXPN	D	DD207498	COM	Equality for All							10/24/2008 12:00:00 AM	20	731176	0	2070002628	MON														Equality for All																			X
+1398906	0	25347	EXPN	E	D212649	COM	Equality for All								10	0	0		CTB						1259396																											
+1370643	1	1	EXPN	D	EXP215	COM	No on 8, Equality for All				West Hollywood	CA	90069	10/7/2008 12:00:00 AM	6000	2892682.15			MON						1259396																		Eliminates right of same-sex couples to marry. Initiative Constitutional Amendment.	8	Statewide	O						
+1282491	3	25	EXPN	E	EXPNT000000000514009	OTH	Firefighters Print & Design				Sacramento	CA	95833		3547.50			0000010703	LIT																																	
+1361559	1	57	EXPN	D	EXP3258	COM	Steel 2010	Friends of Michelle			Rancho Santa Margarita	CA	92688	8/18/2008 12:00:00 AM	500	500			MON						1294305								Michelle Steel				BOE		STW							S						
+1363458	3	164	EXPN	G	EDT75	OTH	KABC-TV				Philadelphia	PA	19131	7/28/2008 12:00:00 AM	1080775	0			TEL		Media Strategies & Research, Inc.																												EXP7209	E		
+1417042	0	18	EXPN	G	G3333-7583-e	IND	Bantilan	Cory E.			Santa Barbara	CA	93110-1319		545.81				SAL	salary	Santa Barbara County Republican Party (Federal Acct.C00174334)																															
+1406991	0	609	EXPN	D	DD217139	COM	Placer Democrats							1/19/2009 12:00:00 AM	20	2775		2070002933	MON														Placer Democrats																			X
+1392627	1	6	EXPN	E	EXP49249	COM	Berryhill for Assembly	Bill			Sacramento	CA	95812	10/31/2008 12:00:00 AM	1500	0			CTB						1291443																											
+1417001	0	8	EXPN	E	22		Kwong	Jonipher			West Hollywood	CA	90046		493				TRS																																	
+1420008	0	52	EXPN	D	EXP1995	COM	Skinner for Assembly 2010				Sacramento	CA	95814	3/25/2009 12:00:00 AM	3900	3900			MON						1313828								Nancy Skinner				ASM		ASM		14					S						
+1394671	1	116	EXPN	G	PDT166	OTH	Westfield				San Francisco	CA	94103	12/20/2008 12:00:00 AM	1683	0				Staff Gifts	California Bank & Trust--Bankcard Center																												PAY2453	E		
+1421086	0	65	EXPN	E	EXP11358	COM	Friends of Bill Monning 2010				Monterey	CA	93940	1/23/2009 12:00:00 AM	1000	0			CTB						1313609																											
+1423262	1	42	EXPN	G	EDT22	OTH	Stone's Phones dba Campaign Communication Solutions				Rancho Mirage	CA	92270	4/29/2009 12:00:00 AM	22070.88	0			PHO		Coast Campaign Group																												EXP3858	E		
+1362059	3	18	EXPN	D	EXP24348	COM	Hayashi Democrat for Assembly 2008	Mary			Sacramento	CA	95814	8/13/2008 12:00:00 AM	1000	3000			MON						1293240								Mary Hayashi				ASM		ASM		18					S						
+1423327	0	38	EXPN	E	EXP283	OTH	IMAGEX				PLEASANTON	CA	94588	4/16/2009 12:00:00 AM	1144.92	0				SEE SCHEDULE G																																
+1362743	2	42	EXPN	E	EXPNT000000000581351	IND	Nazarian	Adrin			Burbank	CA	91505		208.18			0000001149	OFC																																	
+1431429	0	8	EXPN	E	E1449376	COM	San Mateo Labor Council AFL-CIO COPE				Foster City	CA	94404	6/9/2009 12:00:00 AM	1075			400004	CTB						743614																											
+1362398	1	11	EXPN	D	CI286	COM	Trutanich For City Attorney				Sherman Oaks	CA	91423	9/4/2008 12:00:00 AM	1000	1000		509	MON						1301975								Trutanich	Carmen			CAT		CIT				Los Angeles			S						
+1433555	0	226	EXPN	E	050120090E1546_33	OTH	Committee to Elect Dan Deasy				Pittsburgh	PA	15205	4/29/2009 12:00:00 AM	250			11-11356	CTB	Explain: 					PADEASEHO																											
+1433110	0	43	EXPN	D	DF5358	OTH	SG & A Campaigns				Pasadena	CA	91101-5235	5/18/2009 12:00:00 AM	6000	90273.06			IND	Consultant-MemberCommunication to support Jack Weiss													Weiss	Jack			CAT	Los Angeles	CIT	Los Angeles		H				S						
+1434612	0	61	EXPN	D	EXP7051	COM	Lieu 2010	Friends of Ted			Sacramento	CA	95814	6/2/2009 12:00:00 AM	1000	2000			MON						1314048								Ted Lieu				ATT		STW							S						
+1370123	3	972	EXPN	E	10521812	IND	Brown	Enedelia			Sacramento	CA	95827		2956.56				SAL																																	
+1433610	0	15	EXPN	E	EXP658	OTH	Keeslar & Associates				Sacramento	CA	95814	2/24/2009 12:00:00 AM	302.76	0			CNS	Lobbying disclosure statements																																
+1434122	0	9	EXPN	F461P5	E1449303	COM	Meg 2010				Cupertino	CA	95014	6/18/2009 12:00:00 AM	10000	10000			MON						1315455								Whitman	Meg			GOV		STW			S				S						
+1436017	0	9	EXPN	E	E12069	OTH	Blooming Designs				Los Angeles	CA	90066	6/12/2009 12:00:00 AM	1350	1350		21204	FND																																	
+1434794	0	26	EXPN	E	EXP145	COM	San Francisco Building & Construction Trades Council Political Organization of Workers for Employee Rights(POWER PAC)				San Francisco	CA	94102	3/12/2009 12:00:00 AM	5000	0			CTB						1237101																											
+1397071	1	971	EXPN	D	D2565	OTH								10/27/2008 12:00:00 AM	90.12	40024.63	0		IND	printing  51894													Proposition 12											12		S						
+1435832	0	25	EXPN	E	EXPNT000000000652861	OTH	AT&T				Sacramento	CA	95834		237.91				OFC																																	
+1435983	0	23	EXPN	E	EXPNS000000000022428	OTH	Johnny's Half Shell				Washington	DC	20001		8271.90				FND																												X		EXPNT000000000624818			
+1436292	0	11	EXPN	F461P5	219765	RCP	Price for Senate 2009				Torrance	CA	90501	2/26/2009 12:00:00 AM	500	500		2166665	MON						1313825								Price	Curren			SEN		SEN		26	s				s						
+1436341	0	61	EXPN	E	E4313	OTH	THE BOVEE COMPANY				SACRAMENTO	CA	95814	3/26/2009 12:00:00 AM	3800	36805		5316	CNS																																	
+1437238	0	23	EXPN	E	EXP1345	OTH	JC-Evans, Inc.				Gold River	CA	95928	3/23/2009 12:00:00 AM	3500	0			WEB																																	
+1437240	0	19	EXPN	E	EXP383	IND	HARVILL	MAI			SACRAMENTO	CA	95816	4/3/2009 12:00:00 AM	716	0			CNS																																	
+1437222	0	153	EXPN	G	PDT29	OTH	COURTYARD BY MARRIOTT				SALINAS	CA	93907	5/8/2009 12:00:00 AM	133.59	0			TRS		MARRIOTT REWARDS																											PDT29	PAY920	E		
+1438630	0	1928	EXPN	D	DD249932	COM	Gavin Newsom for CA Exploratory Committee				NOVATO	CA	94949-5731	5/31/2009 12:00:00 AM	25	600719.91	0	2070003332	MON	Earmarked from: CUSHMAN, RANDALL													Gavin Newsom for CA Exploratory Committee													S						X
+1438550	0	11	EXPN	E	EF36674	OTH	AT&T				Sacramento	CA	95834-1222		108.23				OFC																																	
+1438022	0	137	EXPN	G	PDT69	OTH	O'Malley's Flowers				San Dimas	CA	91773	2/3/2009 12:00:00 AM	124.49	0			OFC	2/3 Gift: Meaghan McLaughlin Flowers for Birthday	Cardmember Services																												PAY240	E		
+1438772	0	247	EXPN	E	EXP140300	IND	Gleave	David			Washington	DC	20037	3/10/2009 12:00:00 AM	350	0				Contribution Return																																
+1438164	0	14	EXPN	F461P5	EXP1551	COM	FLETCHER FOR ASSEMBLY 2010				SAN DIEGO	CA	92122	3/20/2009 12:00:00 AM	1500	1500			MON						1314487								NATHAN FLETCHER				ASM		ASM		75	H				S						
+1438630	0	5142	EXPN	E	D248815	COM	BERMAN FOR ASSEMBLY 2010				BURBANK	CA	91502		25	0	0		CTB	Earmarked from: WHITELOCK, JAMIE					1317936																											
+1438630	0	6277	EXPN	E	D251264	COM	Gavin Newsom for CA Exploratory Committee				NOVATO	CA	94949-5731		5	0	0		CTB	Earmarked from: FOWLER, JAMES																																
+1438630	0	7748	EXPN	E	D251704	COM	Gavin Newsom for CA Exploratory Committee				NOVATO	CA	94949-5731		50	0	0		CTB	Earmarked from: ALVARADO, BILL																																
+1441163	0	41	EXPN	E	EXP1749	OTH	AT&T				Orlando	FL	32859	6/9/2009 12:00:00 AM	50.87	0			OFC																																	
+1275555	1	63	EXPN	E	12736989	RCP	FRIENDS OF JOHN LAIRD				SACRAMENTO	CA	95819		1000	0	0	004033	CTB	JOHN LAIRD, STATE SENATE CA					1293458																											
+1362653	2	48	EXPN	F450P5	16790817	RCP	DIANE SINGER FOR ASSEMBLY				ANAHEIM	CA	92809	9/29/2008 12:00:00 AM	500	500	0	006201	MON	DIANE SINGER, STATE HOUSE  CA					1304610								SINGER	DIANE			ASM	STATE HOUSE	ASM	Assembly District		S				S						
+1433855	1	26	EXPN	D	18907855	RCP	Charles Calderon 2010				Sacramento	CA	95814	6/22/2009 12:00:00 AM	500	500	0	007367	MON	CHARLES CALDERON, STATE HOUSE 58th CA													CALDERON	CHARLES			ASM	STATE HOUSE	ASM	Assembly District	58	S				S			18907855			
+1450624	0	4441	EXPN	E	D262123	COM	MARK LENO FOR SENATE 2008				WEST HOLLYWOOD	CA	90069		50				MON	Earmarked Contribution from: DEWEY, CRISTINE																																
+1450573	1	8	EXPN	F461P5	8		FRIENDS OF TOM HARMAN FOR ATTORNEY GENERAL 2010				SACRAMENTO	CA	95833	7/8/2009 12:00:00 AM	500	2000	0		MON						1313875								HARMAN	TOM			ATT		STW							S		8				
+1452060	0	13	EXPN	F461P5	13		Lou Correa for State Senate 2010				Sacramento	CA	95814	8/19/2009 12:00:00 AM	2000	2000	0		MON						1293209								Correa	Lou			SEN		SEN		34	S				S						
+1262041	1	64	EXPN	D	EXP5126	COM	Migden	Re-Elect Senator Carole			Sacramento	CA	95814	2/22/2007 12:00:00 AM	200	1700			MON						1273463								Carole Migden (SEN)				SEN		SEN		03					S						
+1457528	0	6	EXPN	D	EXP7312	COM	Jones for Insurance Commissioner 2010	Dave			Sacramento	CA	95814	8/21/2009 12:00:00 AM	1000	1000			MON						1314000								Dave Jones				INS		STW							S						
+1344618	1	23	EXPN	E	E1449527	OTH	Exeter Alumni Foundation				Exeter	CA	93221	4/15/2009 12:00:00 AM	360			177		Table																																
+1453054	0	76	EXPN	E	EXP1840	COM	Padilla for Senate 2010				Sacramento	CA	95814	9/1/2009 12:00:00 AM	100	0			CTB						1292700																											
+1457048	0	2	EXPN	E	EXP19	IND	Eichman	J. Richard			Sacramento	CA	95814	9/21/2009 12:00:00 AM	111.86	0			PRO																																	
+1460936	0	2139	EXPN	D	DD272181	COM	LOS ANGELES COUNTY YOUNG DEMOCRATS				Los Angeles	CA	90025-9083	11/1/2009 12:00:00 AM	100	2886.50		2070004256	CTB	Earmarked Contribution from: FINNEY, TAL													LOS ANGELES COUNTY YOUNG DEMOCRATS																			X
+1460936	0	3010	EXPN	D	DD273122	OTH	SUTTER COUNTY DEMOCRATIC CENTRAL COMMITTEE				Yuba City	CA	95992-0704	10/4/2009 12:00:00 AM	30	135		2070004047	CTB	Earmarked Contribution from: BAKER, LINDA													SUTTER COUNTY DEMOCRATIC CENTRAL COMMITTEE																			X
+1460936	0	5188	EXPN	E	D273569	COM	JOSH BECKER, DEMOCRAT FOR ASSEMBLY 2010				Sacramento	CA	95841-3111		500				CTB	Earmarked Contribution from: PELL, BARNEY																																
+1463876	0	76	EXPN	G	GV1007	OTH	Cingular Wireless fka AT&T				Phoenix	AZ	85028-6086		130.52				OFC		Davey	Stephen																														
+1463851	0	24	EXPN	E	EXP91	OTH	Fundraising by Net, LLC c/o Election Mall Technology				Washington	DC	20004	12/11/2009 12:00:00 AM	8.33	0			OFC	Service Charge																																
+1462721	0	1	EXPN	D	EXP27619	COM	California Democratic Party				Sacramento	CA	95814	10/15/2009 12:00:00 AM	1000	1000			MON						741666								California Democratic Party													S						
+1456145	1	497	EXPN	E	EF9899	IND	Halnan	Charles T.			Sacramento	CA	95814-3809		3433.50				FND																																	
+1464749	0	73	EXPN	E	EXPNT000000000679689	IND	Tran	Phuc			Westminster	CA	92683		440.20			0000000117	SAL																																	
+1465084	0	94	EXPN	E	EF9247	OTH	AT&T				Sacramento	CA	95887-0001		27.76				OFC																																	
+1465064	0	131	EXPN	E	EXP2861	OTH	Weitzman, LLC	Daniel C.			Sacramento	CA	95814	10/28/2009 12:00:00 AM	6000	0			FND																																	
+1464886	0	67	EXPN	G	PDT10	OTH	Hyatt Westlake Plaza				Westlake Village	CA	91361	12/11/2009 12:00:00 AM	139.50	0			TRC	Travel:  Candidate lodging for funeral	Chase Card Services																												PAY741	E		
+1465190	0	23	EXPN	E	D2233	OTH	Culturas				Coachella	CA	92236		500				CVC																																	
+1465190	0	25	EXPN	E	D2237	OTH	Ella Baker Center for Human Rights				Oakland	CA	94609		250				CVC																																	
+1464977	0	28	EXPN	E	EXP188	OTH	AT&T				Sacramento	CA	95887	10/5/2009 12:00:00 AM	51.12	0			OFC																																	
+1464978	0	953	EXPN	D	DD3303	OTH								11/4/2009 12:00:00 AM	28.54	1565.10		1213	IKD														Acosta-Salazar	Angela			CCB		LOC	Rio Honda Community College District		S			Rio Honda Community College District	S						X
+1465665	0	8	EXPN	E	D749	OTH	Elevate Lounge				Los Angeles	CA	90017		182				MTG	8/12/09 Meal for Candidate + Authorized Individual + 1 - Discuss Potential Ballot Measures																											X		D747			
+1463745	1	11	EXPN	E	DB90704		UFCW Region 8 States Council				Buena Park,	CA	90620	9/15/2009 12:00:00 AM	4000			1069		Adminstrative Costs - Person Of The Year																																
+1438518	1	51	EXPN	E	EXP382	OTH	Capitol Area Development Authority				Sacramento	CA	95814	6/1/2009 12:00:00 AM	600	0			TRS	Lodging																																
+1465629	1	134	EXPN	G	EDT43	OTH	Target Stores				Chino Hills	CA	91710	12/14/2009 12:00:00 AM	243.45	0			OFC		Spence	Mike																											EXP407	E		
+1471334	0	3	EXPN	E	42		INC	CBFS			BURBANK	CA	91506		2118				LIT																																	
+1465840	0	99	EXPN	E	EXP418	OTH	AT&T				Sacramento	CA	95887-0001	11/24/2009 12:00:00 AM	23.86	0			CMP																																	
+1464966	1	39	EXPN	E	EXP721	OTH	Cardmember Service				St. Louis	MO	63179	11/30/2009 12:00:00 AM	1753.05	0				See schedule G for individual credit card payees																																
+1474097	0	13	EXPN	E	EXP806	IND	Schwartz	Janie			Sacramento	CA	95864-	2/10/2010 12:00:00 AM	500	0				Campaign Consulting																																
+1474609	0	16	EXPN	E	EXP3201	IND	Burchill	Kiyomi			Sacramento	CA	95811	3/16/2010 12:00:00 AM	171.40	0			TRS	4/16/10 - rountrip airfare for legislative staff from Sacramento, CA to Burbank, CA to attend Party convention																																
+1473819	0	7	EXPN	E	DB94741	COM	Tom Ammiano For Assembly 2010				San Francisco,	CA	94117	3/11/2010 12:00:00 AM	500			1087	CTB						1314003																											
+1473929	0	18	EXPN	G	201		GoDaddy.com				Scottsdale	AZ	85260		144.82				WEB		Looman	David																														
+1474382	0	108	EXPN	E	EXP7035	COM	Garrick for Assembly 2010				Sacramento	CA	95812	1/28/2010 12:00:00 AM	1000	0			CTB						1314580																											
+1474757	0	2	EXPN	E	E105	OTH	AT&T Mobility				Los Angeles	CA	90060-0017	1/19/2010 12:00:00 AM	229.26	678.29		1047	OFC																																	
+1474532	0	130	EXPN	E	EXP8289	COM	MARK WYLAND FOR SENATE 2010				ENCINITAS	CA	92024	3/9/2010 12:00:00 AM	1900	0			CTB						1294033																											
+1465561	1	159	EXPN	G	EDT62	OTH	Southwest Airlines				Dallas	TX	75235	9/12/2009 12:00:00 AM	107	0			TRS	9-12-09; 1 Person = Ind. w/Authority; Airfare to & from Dist. for Meetings & Business	Ward	Christopher																											EXP302	E		
+1474853	0	1	EXPN	E	E121	OTH	Bankcard Center				West Valley City	UT	84119	3/1/2010 12:00:00 AM	1995.95	3991.90		0																																		
+1476382	0	53	EXPN	E	EXP1085	OTH	WF Business Direct				Sacramento	CA	95834	1/26/2010 12:00:00 AM	398.68	0			TRC																																	
+1464588	1	5	EXPN	F461P5	EXP10	COM	GLORIA ROMERO FOR SUPERINTENDENT OF PUBLIC INSTRUCTION 2010				Los Angeles	CA	90048	12/9/2009 12:00:00 AM	4500	6500			MON						1300474								GLORIA ROMERO				SUP		STW							S						
+1465184	1	535	EXPN	E	EXP3878	OTH	Federal Express				Pasadena	CA	91106	9/21/2009 12:00:00 AM	119.35	0			POS																																	
+1474873	0	325	EXPN	E	EXP7118	IND	Considine	Travis			Palo Alto	CA	94301	2/12/2010 12:00:00 AM	3000	0			SAL																																	
+1464978	1	380	EXPN	D	DD2802	OTH								11/4/2009 12:00:00 AM	161.40	2951.45		1210	IKD														Rubio	Susan			CCM		CIT	City of Baldwin Park		S			City of Baldwin Park	S						X
+1464101	1	98	EXPN	E	EXP466	IND	Owens	Anthony			Oakland	CA	94602	12/14/2009 12:00:00 AM	126.45	0			OFC	Reimbursed expenses under the $500 Schedule G threshold.																																
+1489790	0	4	EXPN	E	D866	OTH	Kaufman Legal Group				Los Angeles	CA	90017		3.82				OFC																																	
+1489271	0	1	EXPN	D	EXP984	COM	Alby	Taxpayers for Barbara			Elverta	CA	95626	4/12/2010 12:00:00 AM	1000	1000			MON						1311623								Barbara Alby				BOE		OTH	Statewide	02					S						
+1490653	0	12	EXPN	E	EXP360	OTH	SUTTER CLUB				SACRAMENTO	CA	95814	5/8/2010 12:00:00 AM	297.37	297.37			FND																																	
+1489612	0	3	EXPN	D	CI4603	COM	Re-Elect Mayor Bob Foster 2010							3/22/2010 12:00:00 AM	500	500		2885	MON						1317748								Foster	Bob			MAY		CIT				Long Beach			S						
+1491896	0	9	EXPN	D	D143	OTH	The Strategy Group							5/20/2010 12:00:00 AM	31516.82	254157.76		1133	IND	Mailer													Nelson	Shawn			CSU		CTY	Orange County	4	S				O						
+1492085	0	15	EXPN	E	EXPNT000000000728392	IND	Schneider	Beth			Santa Barbara	CA	93190		50			0000002335	OFC																																	
+1492124	0	8	EXPN	F465P3	EDT5903	OTH	Woodland Hills Printing				Woodland Hills	CA	91364	5/19/2010 12:00:00 AM	597.78	15217			IND	Campaign flyers																																
+1492063	1	29	EXPN	E	EXP1309	OTH	Brokers Worldwide				Folcroft	PA	19032	5/10/2010 12:00:00 AM	7426.24	56006.93			POS																																	
+1496574	0	54	EXPN	F465P3	EDT57	OTH	KSNI-FM				Santa Maria	CA	93455	5/28/2010 12:00:00 AM	306				IND	Radio Buy Opposing John Laird	McNally Temple Associates, Inc.																										X					
+1491784	1	8	EXPN	D	EDT461	COM	Alejo	Luis (I)						5/13/2010 12:00:00 AM	3377.70	53662.32			IND	Mailer					1318679								Luis Alejo				ASM		ASM		28					S						
+1491611	1	52	EXPN	G	G2256	OTH	California Women's Leadership Association				Irvine	CA	92602	3/19/2010 12:00:00 AM	150	150		2199		Membership	Chase Card Services																															
+1496816	0	12	EXPN	G	G13-2785-e	COM	Taxpayers for Dave Cox				Sacramento	CA	95814-4433		9392.18				VOT		Republican Party of Sacramento County (Fed. Acct.)				962448																											
+1501868	0	13	EXPN	E	DB99258	COM	Luis Alejo For Assembly				Watsonville,	CA	95076	6/2/2010 12:00:00 AM	1000			0	CTB	Monetary Contribution					1318679																											
+1502910	0	3	EXPN	D	EDT140	COM	Garrett Yee for Assembly 2010				Fremont	CA	94536	5/26/2010 12:00:00 AM	18276	168433.73			IND	Printing, design and data for mail piece.					1317966								Candidate Garrett Yee				ASM		ASM		20	S				S						
+1503648	0	9	EXPN	E	EXPNT000000000721114	OTH	Durkee & Associates				Burbank	CA	91502		516.80			0000001017	PRO																																	
+1504865	0	59	EXPN	F461P5	315024	RCP	Lorri Galloway for Supervisor 2010				Anaheim	CA	92806	2/26/2010 12:00:00 AM	500	500			MON						1319565								Galloway	Lorri			CSU	Co. Supv.	CTY	4th District						S		3				
+1506849	0	4	EXPN	F461P5	NON35	COM	YES ON 20, NO ON 27 - HOLD POLITICIANS ACCOUNTABLE				SAN RAFAEL	CA	94901	3/22/2010 12:00:00 AM	370500	1813494.99			IKD	STOCK					1321618								PROPOSITION 20 (SUPPORT); PROPOSITION 27 (OPPOSE)						STW													
+1506879	0	25	EXPN	E	EXP629	OTH	Pirayou Law Offices				San Jose	CA	95120	5/28/2010 12:00:00 AM	360	60			PRO																																	
+1506258	0	12	EXPN	E	E4449	OTH	Verizon				Arlington	VA	22201	6/4/2010 12:00:00 AM	90.71	643.75		1670	OFC																																	
+1492045	2	522	EXPN	E	EXP10079	IND	Bullock	Chasen			San Marcos	CA	92069	4/30/2010 12:00:00 AM	1000	5204.09			SAL																																	
+1506844	0	6	EXPN	E	EXP693	OTH	UNITED FARM WORKERS				KEENE	CA	93531	1/21/2010 12:00:00 AM	14.75	7359			OFC	adjustment to Jan 2009																																
+1474898	2	129	EXPN	G	PDT37	OTH	Netfile				Mariposa	CA	95338	2/28/2010 12:00:00 AM	262.50	262.50			OFC	Software Fee	James R.Santos Bookkeeping Service																												PAY1314	E		
+1508269	0	13	EXPN	F461P5	NON6009	COM	Brown for Governor 2010				Oakland	CA	94612	2/23/2010 12:00:00 AM	1579.87	16579.87			IKD	Fundraising Lunch					1321867								Jerry Brown				GOV		STW							S		NON6009				
+1508337	0	591	EXPN	E	EXP12540	IND	Jackson	Edward M.			Oakland	CA	94612	6/29/2010 12:00:00 AM	46.08	9362.10			MTG																													EXP12540				
+1508509	0	46	EXPN	G	PDT44	OTH	EVERYTHING AUDIO VISUAL				SAN FRANCISCO	CA	94124	4/30/2010 12:00:00 AM	850	850			MTG		LEAGUE OF CALIFORNIA CITIES (NON-PUBLIC FUNDS)																												PAY473	E		
+1508542	0	95	EXPN	G	PDT47	OTH	Facebook				Palo Alto	CA	94301	6/24/2010 12:00:00 AM	100	6013.33			WEB		American Express																												PAY774	F		
+1508642	0	22	EXPN	G	GV195	OTH	Southwest Airlines Co.				El Paso	TX	79925-5699		353.40				FND	Airfare-Guest Speaker at 4/2810 Fundraiser in Marysville	Brulte	Jim																														
+1508609	0	85	EXPN	G	EDT363	OTH	Southwest Airlines				Dallas	TX	75235	6/24/2010 12:00:00 AM	228.40	2572.20			TRS	6/8-10 airfare for staff member to San Francisco/campaign meeting with candidate	Martin	Mather R.																											EXP8128	E		
+1466173	1	4	EXPN	E	EXP269	IND	Cohn	Jo Anne			Santa Rosa	CA	95407	7/2/2009 12:00:00 AM	300	8979.83				Campaign Field Staffer Payment																																
+1491389	3	477	EXPN	E	EF23290	IND	Fontana	Patricia			Sacramento	CA	95814-3809		2569.66				SAL																																	
+1336415	3	16	EXPN	E	42		Times Printing				Eureka	CA	95501		2082.09				FND																													42				
+1522111	0	1	EXPN	D	EXP7181	COM	Lincoln Club of San Diego County				San Diego	CA	92119	8/9/2010 12:00:00 AM	10000	11500			MON						831561								Lincoln Club of San Diego County					General Purpose Committee								S						
+1465184	2	1917	EXPN	G	PDT57	OTH	Boxx Jockey				Dallas	TX	75202	12/9/2009 12:00:00 AM	47231.54	79110.08			RAD		Scott Howell & Company, Inc.																												PAY6640	E		
+1492045	3	2243	EXPN	G	EDT3009	OTH	KNSD-TV				San Diego	CA	92111	5/19/2010 12:00:00 AM	68488.75	363417.50			TEL		Smart Media Group																												EXP10822	E		
+1522225	0	4	EXPN	D	EXP9493	COM	Hickey, Graham & Stogner for SHCD 2010				Emerald Hills	CA	94062	8/24/2010 12:00:00 AM	500	500			MON						1330109								Jack Hickey, Frederick Graham, & Michael Stogner				OTH	Board Members	OTH	Sequoia Healthcare District						S						
+1522744	0	58	EXPN	F465P3	D201	OTH	Chris Corban Motion Design				Chicago	IL	60646	8/26/2010 12:00:00 AM	2730	8210826.72		1036	IND	TEL/Jerry Brown													Brown	Jerry			GOV		STW			S				S	X					
+1522544	0	1363	EXPN	E	EXP17899	IND	Ashlock	Caitlin			San Francisco	CA	94133	9/30/2010 12:00:00 AM	2200	2200			FND																																	
+1522745	0	124	EXPN	G	EDT78	OTH	Southwest Airlines				Dallas	TX	75235	8/10/2010 12:00:00 AM	161.70	5294.50			TRS	GZari airfare 8/13 SMF-BUR for Campaign Meetings	Cardmember Service																												EXP595	E		
+1522710	0	581	EXPN	E	EXP1322	IND	Maestas	Katherine E.			Elk Grove	CA	95758	7/1/2010 12:00:00 AM	414.11	6015.95			VOT																																	
+1522785	0	12	EXPN	E	EXP8283	OTH	Employment Development Department				Sacramento	CA	94230-6276	7/15/2010 12:00:00 AM	772.46	5723.49			SAL																																	
+1521607	1	86	EXPN	G	G31573-20517-e	OTH	Costco				San Diego	CA	92108-4743		316					Food/Bev  for volunteers	San Diego County Democratic Party (Fed. Acct.)																															
+1523121	0	4	EXPN	E	EXP138	OTH	James R. Santos Bookkeeping Service				Sacramento	CA	95864	8/5/2010 12:00:00 AM	11.10	166.20			POS																																	
+1523139	0	61	EXPN	G	PDT60	OTH	U S Postmaster				San Francisco	CA	94104	8/31/2010 12:00:00 AM	176	176			POS		Roumeliotes	Stefanie																											PAY3321	E		
+1522956	0	81	EXPN	E	EXP2251	OTH	Southwest Airlines				Dallas	TX	75235	7/21/2010 12:00:00 AM	156.70	3989.90			TRC	Airfare LA to San Jose																																
+1529940	0	2	EXPN	F450P5	2		Dr. Ruben Barron for Trustee 2010				Yorba Linda	CA	92886	10/4/2010 12:00:00 AM	250	250			MON	Check					1327977								Barron	Ruben			OTH	Trustee Community College District	CTY	North Orange County						S						
+1530424	0	12	EXPN	E	EXP4918	OTH	Seaside Printing Company Inc.				Long Beach	CA	90802	10/13/2010 12:00:00 AM	1037.14	1037.14			LIT																																	
+1523593	0	286	EXPN	D	DF32147	OTH	River City Trade Printers, Inc.				Rancho Cordova	CA	95742-6252	9/23/2010 12:00:00 AM	25.98	681.38			IKD	printing to support Christopher Parker													Parker	Christopher			BOE		BOE		2	S				S						
+1530500	0	55	EXPN	G	G12311	IND	Pulliam	Jaylen	Ms.		Inglewood	CA	90305	10/15/2010 12:00:00 AM	1248	1248		0	PHO		S B Strategies, LLC																															
+1522462	1	25	EXPN	E	EXP1263	OTH	AT&T				Sacramento	CA	95887	7/28/2010 12:00:00 AM	47.14	360.25			OFC																																	
+1531665	0	250	EXPN	D	NON5984	COM	Prop 24 - Repeal of Corporate Tax Breaks							10/16/2010 12:00:00 AM	21.70	547.60			IND	 Data for mailer																							Repeal of Corporate Tax Breaks	24	Statewide	S						
+1531931	1	143	EXPN	G	PDT221	OTH	KRCR-TV				REDDING	CA	96001	10/5/2010 12:00:00 AM	2618	5083			TEL		GCW MEDIA SERVICES																												PAY495	E		
+1531795	0	764	EXPN	D	DF34609	OTH	Political Data, Inc.				Burbank	CA	91502-2428	10/1/2010 12:00:00 AM	2.86	100.77			IND	data to support Sandre Swanson													Swanson	Sandre			ASM		ASM		16	H				S						
+1531795	0	1754	EXPN	E	EF33087	OTH	Mailing Systems, Inc.				Rancho Cordova	CA	95742-6252		1721.95				CTB	In-Kind Contribution: mailing services to support Manuel Perez																																
+1532144	0	83	EXPN	G	PDT164	OTH	KOFY-TV				San Francisco	CA	94124	10/1/2010 12:00:00 AM	3782.50	7148.50			TEL		Sadler Strategic Media, Inc.																												PAY1515	E		
+1508276	1	135	EXPN	G	PDT58	OTH	Office Depot				Los Angeles	CA	90012	6/30/2010 12:00:00 AM	837.23	1834.97			OFC	Office Supplies	Croce	Renee																											PAY1975	E		
+1510457	3	26	EXPN	D	DF28150	OTH	Internal Revenue Services				Fresno	CA	93888-0001	7/15/2010 12:00:00 AM	3151.12	136161.65			IKD	federal payroll taxes to support Anna Caballero													Caballero	Anna			SEN		SEN		12	S				S						
+1474094	4	31	EXPN	E	EXP129	IND	Cooley	Steve			Toluca Lake	CA	91602	2/26/2010 12:00:00 AM	140	1004.74			MTG																																	
+1531931	2	21	EXPN	E	EXP515	OTH	M4 STRATEGIES INC.				COSTA MESA	CA	92626	10/15/2010 12:00:00 AM	26000	26000			CNS																																	
+1531795	1	1200	EXPN	E	EF34491	OTH	Admail West				Sacramento	CA	95811-0311		7.15				IND	mailing services to support Warren Furutani																																
+1523593	1	844	EXPN	E	EF32004	OTH	Mack Crounse Group				Alexandria	VA	22311-1750		40000				CTB	In-Kind Contribution: research to support Anna Caballero																																
+1531795	1	2442	EXPN	E	EF34174	OTH	Political Data, Inc.				Burbank	CA	91502-2428		1.56				IND	data to support Toni Atkins																																
+1563884	0	5	EXPN	E	EXP22370	OTH	ACEC California				Sacramento	CA	95814	11/1/2010 12:00:00 AM	693.28	1618.38			MTG	10/25 Napa Meeting																																
+1557768	0	6	EXPN	E	EXPNT000000000781460	OTH	Bank Of America				Phoenix	AZ	85072-3121		2779.75			0000001004	OFC																																	
+1566867	0	75	EXPN	G	EDT66	OTH	POSTMASTER				WEST SACRAMENTO	CA	95691	11/1/2010 12:00:00 AM	18444.11	58632.36			LIT		TONY SICILIANI PRINTING																												EXP1245	E		
+1531795	3	159	EXPN	D	DF33005	OTH	Commerce Printing Services				Sacramento	CA	95811-0510	10/4/2010 12:00:00 AM	57.10	42108.96			IKD	printing to support Bill Lockyer													Lockyer	Bill			TRE		STW		sta	H				S						
+1566643	0	7	EXPN	E	E1622	PTY	California Democratic Party				Sacramento	CA	95814	10/18/2010 12:00:00 AM	20000	20455		8950	CTB	contribute to excess fund					741666																											
+1531795	2	698	EXPN	D	DF34189	OTH	Pitney Bowes, Inc.				Neenah	WI	54956-1005	10/14/2010 12:00:00 AM	56.03	3678.18			IKD	postage to support Christopher Parker													Parker	Christopher			BOE		BOE		2	S				S						
+1568802	0	5	EXPN	E	EXP312	IND	Rushing	Rocky			Sacramento	CA	95818	10/18/2010 12:00:00 AM	223.09	614.03			MTG																																	
+1531795	2	2877	EXPN	G	G7-37926-e	OTH	Principal Life				Des Moines	IA	50392-0001		910.90				OFC	dental insurance	Democratic State Central Committee of CA - Federal																															
+1569283	0	3	EXPN	E	EXP837	OTH	Olson Hagel & Fishburn LLP				Sacramento	CA	95814	8/13/2010 12:00:00 AM	867.55	1574.55			PRO																																	
+1571261	0	49	EXPN	E	EXP1922	IND	Cheung	Jason			Hercules	CA	94547	11/2/2010 12:00:00 AM	200	200			CNS																																	
+1505625	1	15	EXPN	F461P5	EXP666	COM	Lockyer 2010				Los Angeles	CA	90067	1/22/2010 12:00:00 AM	5000	5000			MON						1293126								Bill Lockyer				TRE		STW							S						
+1571898	0	3	EXPN	G	G4553-2475-e	OTH	Gem Investments				Modesto	CA	95354-1130		395				OFC	Rent	Stanislaus Republican Central Committee																															
+1572050	0	12	EXPN	D	PDT842	IND	Pugno (I)	Andy						10/29/2010 12:00:00 AM	21034.20	628914.45			IND	Newspaper Ad													Andy Pugno (I)				ASM		ASM		5					O						
+1572349	0	64	EXPN	F465P3	D5263	OTH	LaShawn White				Compton	CA	90220	11/1/2010 12:00:00 AM	7.46	61474.17			IND	OFC/Kamala Harris, Support													Harris	Kamala			ATT		STW			S				S	X					
+1572067	0	27	EXPN	E	EXP3336	OTH	Gilliard, Blanning  & Assoc.				Rocklin	CA	95765	11/15/2010 12:00:00 AM	10000	92.40			CNS																																	
+1572383	0	40	EXPN	E	D2534	OTH	American Express Merchant Services				Omaha	NE	68103		117.80				OFC																																	
+1523058	1	4	EXPN	F465P3	EDT16	OTH	KBUE				Burbank	CA	91504	9/21/2010 12:00:00 AM	15250				IND	Radio Ad	Ossen Cardenas Media, Inc.																										X					
+1572343	0	107	EXPN	F465P3	D5518	IND	Aleman	Guillermina			Bell Gardens	CA	90201	10/22/2010 12:00:00 AM	456.25	844422.38			IND	SAL/Jerry Brown, Support													Brown	Jerry			GOV		STW			S				S	X					
+1572512	0	6	EXPN	E	E176	OTH	Wayne Ordos, Attorney at Law				Sacramento	CA	95814	12/9/2010 12:00:00 AM	1000	12500		2578	PRO																																	
+1576730	0	125	EXPN	E	EXPNT000000000788155	IND	Sklena	Matthew			Castaic	CA	91384		400			0000001397	SAL																																	
+1531193	3	50	EXPN	E	EXP2151	OTH	The Compass Media Group, Inc.				Chicago	IL	60614	10/1/2010 12:00:00 AM	17408	102002			IND	Mailer/Oppose/Andy Pugno/State Assembly/District 5																																
+1572900	0	155	EXPN	E	EXPNT000000000772488	IND	Aguilar	Laura			Santa Ana	CA	92703		577.25				IND	Canvassers																																
+1572900	0	197	EXPN	E	EXPNT000000000788915	IND	Camacho	Carlos			Orange	CA	92868		100			0000010243	SAL																																	
+1572837	0	7	EXPN	F461P5	EXP371	COM	Voters to Elect Larry Masuoka				Fair Oaks	CA	95628	8/10/2010 12:00:00 AM	500	500			MON	Made by Vanir Constructoin Management, Inc.					1256318								Larry Masuoka				BED		OTH	San Juan Unified School District						S						
+1572311	1	169	EXPN	G	EDT89	OTH	U.S. Postmaster				Sacramento	CA	95814	11/23/2010 12:00:00 AM	77645	462389.77			LIT		The Compass Media Group, Inc.																												EXP808	E		
+1523020	1	76	EXPN	G	EDT53	OTH	AT & T Mobility				Los Angeles	CA	90010	9/14/2010 12:00:00 AM	326.05	967.28			OFC		U.S. Bank																												EXP1018	E		
+1492144	4	22	EXPN	E	275		NYFotography				Bakersfield	CA	93302		1225					photography																																
+1588250	0	22	EXPN	D	D3382	COM	THE DOUG LA MALFA COMMITTEE - SENATE 2010							3/6/2011 12:00:00 AM	1500	1500		6060	MON	2010 Campaign Debt Reduction													LA MALFA	DOUG			SEN		SEN		4	S				S						
+1587266	0	31	EXPN	D	EXP4207	COM	Perez for Assembly 2012	Manuel			Sacramento	CA	95814	2/16/2011 12:00:00 AM	1000	1000			MON						1334035								Manuel Perez				ASM		ASM		80					S						
+1362924	1	1539	EXPN	D	DD184537	RCP	Wolk for Senate							9/1/2008 12:00:00 AM	100	5060			MON														Wolk for Senate													S		DD184537				
+1531446	1	112	EXPN	G	D110	OTH	Rosanna Acosta				Colton	CA	92324		840				SAL		Knott's Family Planning Institute																													E		
+1325445	1	1704	EXPN	D	DD137121	RCP	Courage Campaign Issues Committee							12/9/2007 12:00:00 AM	25	82933.69			MON														Courage Campaign Issues Committee															DD137121				
+1572272	1	264	EXPN	E	EXP2962	OTH	Paylink Trust				Sacramento	CA	95841	11/30/2010 12:00:00 AM	507.78	20492.69			SAL																																	
+1599121	0	5	EXPN	F461P5	EXP140	COM	Gordon for Assembly 2012	Rich			Sacramento	CA	95814	2/15/2011 12:00:00 AM	1000	1000			MON						1335224								Rich Gordon				ASM		ASM		21					S						
+1599338	0	8	EXPN	F461P5	EXP215	COM	Nestande for Assembly 2012	Brian			Palm Desert	CA	92260	6/13/2011 12:00:00 AM	2000	2000			MON						1334108								Brian Nestande				ASM		ASM		64					S						
+1603909	0	7	EXPN	E	EXP290	COM	Committee to Elect Marcelino Valdez for Fresno City Council District 7 2010				Fresno	CA	93711	2/1/2011 12:00:00 AM	-250	-250			CTB	Void Check					1325930																											
+1601334	0	117	EXPN	G	GV85	OTH	Old Soul Co.				Sacramento	CA	95811-4024		100				OFC	Refreshments for Swearing-In 12/6/10	Chase Card Services																															
+1546721	2	1036	EXPN	D	DF37808	OTH	Political Data, Inc.				Burbank	CA	91502-2428	10/20/2010 12:00:00 AM	16.82	61835.61			IKD	data to support John Chiang													Chiang	John			CON		STW		sta	H				S						
+1572382	1	20	EXPN	D	EDT68	IND	Brown (I)	Jerry						10/30/2010 12:00:00 AM	244.78	154808.98			IND	Phonebanking & Other Voter Contact (10/30/10 - 11/2/10)													Jerry Brown (I)				GOV		STW							S						
+1603877	0	13	EXPN	E	EXP13595	OTH	Olson Hagel & Fishburn, LLP				Sacramento	CA	95814-	4/15/2011 12:00:00 AM	307.68	2645.36			PRO																																	
+1546721	2	3120	EXPN	E	EF38725	COM	Rubio For Senate				Shafter	CA	93263-1907		3.50				CTB	Inkind Expenditure:mail production to support Michael Rubio					1309039																						X					
+1605772	0	2	EXPN	D	12									2/23/2011 12:00:00 AM	1000	1000			MON	FPPC 1333845													Hill	Jerry			ASM		ASM		19					S						
+1605783	0	67	EXPN	G	EDT205	OTH	US Postmaster				Oxnard	CA	93036	2/28/2011 12:00:00 AM	70	193.20			POS		Cardmember Services																												EXP1914	E		
+1607678	0	4	EXPN	D	DD560504	COM	Joy Janes				Long Beach	CA	90807	1/12/2011 12:00:00 AM	100	100		7444	MON														Janes	Joy				Lakewood City Council								S						X
+1608612	0	9	EXPN	E	EXP231	COM	Take Back Red California				Concord	CA	94518	5/17/2011 12:00:00 AM	2000	2000			CTB						1283664																											
+1609119	0	39	EXPN	E	D943	OTH	Consolidated Graphics Management Ltd.				Sacramento	CA	95824		791				IND	POS/Forescee Hogan-Rowles, Support													Hogan-Rowles	Forescee			CCM		CIT		08	S				S						
+1621049	0	19	EXPN	D	EXP41189	COM	Skinner for Assembly 2012				Sacramento	CA	95814	9/1/2011 12:00:00 AM	1000	2000			MON						1334307								Nancy Skinner				ASM		ASM		14					S						
+1627409	0	3	EXPN	E	E61	OTH	David L. Gould Company				Los Angeles	CA	90010	10/1/2011 12:00:00 AM	250	3750		1054	PRO																																	
+1631950	0	4	EXPN	D	19									9/23/2011 12:00:00 AM	1500	1500			MON														McCullough	Andrew			OTH	City council	CIT	San Rafael						S						
+1629235	0	76	EXPN	E	EXP7862	OTH	MERIDIAN PACIFIC, INC.				SACRAMENTO	CA	95825	11/30/2011 12:00:00 AM	678.57	160379.88			MTG																																	
+1632430	0	1	EXPN	E	EXP859	OTH	California Public Securities Association				San Francisco	CA	94126	12/12/2011 12:00:00 AM	42000	84000				See Schedule G																																
+1633207	0	2	EXPN	E	E32	OTH	Aristotle International  Inc.				Washington	DC	20003	8/8/2011 12:00:00 AM	37.50	0		0	OFC																																	
+1633237	0	11	EXPN	E	65		Ethan Wade Graphics	Ethan Wade			Granite Bay	Ca	95746		1995.89				FND	T-shirts for Fundraising event																												65				
+1636839	0	3155	EXPN	E	D410188	COM	LONI HANCOCK FOR STATE SENATE				BERKELEY	CA	94705		100				CTB	Earmarked Contribution from: MERCHANT, CAROLYN					1314017																											
+1636753	0	60	EXPN	E	EF2795	IND	Thompson	Steve			Biggs	CA	95917	9/27/2011 12:00:00 AM	293.40	0			TRS	9/23 and 9/24 Mileage for District Travel																																
+1637082	0	21	EXPN	G	EDT1	OTH	Beverages & More				Stockton	CA	95207	7/13/2011 12:00:00 AM	477.06	477.06			FND		Bank of America																												EXP14	E		
+1637686	0	7	EXPN	E	E42	OTH	ActBlue				Cambridge	MA	02138	7/31/2011 12:00:00 AM	2.38	0		0	OFC																																	
+1623032	1	97	EXPN	F461P5	P5-1905	COM	Joe Simitian for Senate 2012				Sacramento	CA	95814	9/13/2011 12:00:00 AM	1200	1200			CTB						1312207								Simitian	Joe			SEN	State Senator			24	S				S						
+1646314	0	19	EXPN	D	EXP290277	COM	Logue for Assembly 2012	Friends of Dan			Sacramento	CA	95814	3/14/2012 12:00:00 AM	1500	1500			MON						1335498								Dan Logue				ASM		ASM		03					S						
+1646585	0	19	EXPN	D	EXP672	COM	NAPA SOLANO CLC COPE				Vallejo	CA	94590	3/13/2012 12:00:00 AM	1000	1000			MON						742921								NAPA SOLANO CLC COPE													S						
+1646402	0	5	EXPN	D	D560	COM								3/13/2012 12:00:00 AM	1000	1000			MON														Good	Susan			CCM		CIT			S				S						
+1646000	0	13	EXPN	E	6		Adam Gray For Assembly				Sacramento	CA	95814		5000				CTB						1325999																											
+1637153	1	10	EXPN	E	10		Wilson/Perkins/Allen				Oklahoma City	OK	73103		10000				POL	Check																												10				
+1647441	0	128	EXPN	E	EXP1037	IND	Leon	Ruth			Arvin	CA	93203	1/30/2012 12:00:00 AM	200	450			OFC																																	
+1572400	2	10	EXPN	D	EDT319	COM	BECERRA FOR CITY COUNCIL 2010				SIMI VALLEY	CA	93063	10/20/2010 12:00:00 AM	177.32	255.55			IKD	NEWSPAPER ADS					981780								GLEN BECERRA				CCM		OTH	CITY OF SIMI VALLEY						S						
+1591741	2	185	EXPN	E	EXP9152	COM	SERNA FOR SUPERVISOR 2010				SACRAMENTO	CA	95811	1/24/2011 12:00:00 AM	125	125			CTB						1318921																											
+1647556	1	15	EXPN	E	EXP57	IND	Paderes	Vincent			Stockton	CA	95209	2/29/2012 12:00:00 AM	196.51	3952.46			TRC	2/10-2/12/12, lodging in San Diego, CA for Democratic Convention, 1, candidate.																																
+1633045	1	27	EXPN	E	243		Hope Road Consulting, LLC				San Francisco	CA	94104		2000				WEB																																	
+1647713	0	55	EXPN	E	E306	OTH	TAI Events  Inc.				Sherman Oaks	CA	91423	3/15/2012 12:00:00 AM	3000	0		1100	CNS																																	
+1636372	2	37	EXPN	E	EXP12854	COM	Runner for Board of Equalization 2014	Taxpayers for George			Sacramento	CA	95814	11/15/2011 12:00:00 AM	1500	1500			CTB						1334634																											
+1647496	1	81	EXPN	G	EDT45	OTH	Amtrak				Sacramento	CA	95814	2/13/2012 12:00:00 AM	101.60	101.60			TRS	2/10/12, train for campaign consultant to San Diego, CA for CA Democratic Convention, 1.	Card Service Center																												EXP590	E		
+1572204	1	7	EXPN	E	D302	OTH	RP California				Brea	CA	92823		630				CNS																																	
+1647027	1	7	EXPN	E	EXP428	OTH	JC Evans, Inc.				Gold River	CA	95670	1/10/2012 12:00:00 AM	12938.27	12938.27			LIT																																	
+1662398	0	9	EXPN	E	11		Union Yes Federal Credit Union				Orange	CA	92868		476.03					Political Meetings																																
+1662180	0	9	EXPN	D	EXP1325	COM	Pannell City Council Campaign Committee 2012	Bonnie			Elk Grove	CA	95758	5/9/2012 12:00:00 AM	1500	1500			MON						1332456								Bonnie Pannell				CCM		OTH	City of Sacramento						S						
+1663248	0	12	EXPN	E	EXP470	COM	Californians to Protect Schools, Universities & Public Safety, A Ballot Measure Committee Supported by Governor Jerry Brown				Oakland	CA	94612	3/29/2012 12:00:00 AM	10000	10000			CTB						1343257																											
+1663450	0	272	EXPN	D	DD440678	COM	Brian C. Johnson For Assembly 2012				Los Angeles	CA	90010	4/29/2012 12:00:00 AM	50	33286.60		3000071489	MON	Earmarked Contribution from: WOODHOUSE, ERIK													Brian C. Johnson For Assembly 2012													S						X
+1647199	1	4	EXPN	D	EXP13053	COM	COMMITTEE TO ELECT DARCY KUENZI				RIVERSIDE	CA	92506	3/15/2012 12:00:00 AM	500	500			MON						1303439								DARCY KUENZI				CCM		OTH	CITY OF MENIFEE VALLEY						S						
+1663450	0	1480	EXPN	D	DD441425	COM	TED LIEU FOR STATE SENATE 2014				SACRAMENTO		95814	3/18/2012 12:00:00 AM	250	9038		3000066733	MON	Earmarked Contribution from: HORTON, LAURA													TED LIEU FOR STATE SENATE 2014																			X
+1664185	0	109	EXPN	G	NON1724	IND	Zomer	Lisa			Oakland	CA	94605	5/1/2012 12:00:00 AM	1651.75	0			TEL		Axe Digital, LLC																															
+1664191	0	81	EXPN	G	EDT13	OTH	Chicory Coffe & Tea				Sacramento	CA	95814	5/9/2012 12:00:00 AM	300.62	300.62			MTG	5/9/12 Third House Event	Bank of America																												EXP762	E		
+1664207	0	33	EXPN	E	E81	OTH	Padilla & Associates				Los Angeles	CA	90048	5/10/2012 12:00:00 AM	1200	0		1023	PRO	Accounting Fee																																
+1663678	1	62	EXPN	E	EXP755	OTH	Federal Express				Memphis	TX	38101	4/25/2012 12:00:00 AM	18.30	381.31			POS																																	
+1674124	0	12	EXPN	E	EXP143	OTH	Revolvis Consulting Inc.				San Diego	CA	92119	4/3/2012 12:00:00 AM	500	3000			CNS																																	
+1675326	0	401	EXPN	E	EF80000	OTH	Think, Inc.				El Dorado Hills	CA	95762-9310	5/29/2012 12:00:00 AM	6490.86	0			CTB	In-Kind Contribution: printing to support Michael Allen																																
+1675326	0	629	EXPN	G	G6898-80869-e	IND	Flores	Tenoch			San Francisco	CA	94117-2079	6/5/2012 12:00:00 AM	257.76	0			OFC	health insurance (<25% FEA)	Democratic State Central Committee of CA - Federal																															
+1662220	1	61	EXPN	E	E1518979	COM	Dr. Richard Pan for Assembly 2012				Sacramento	CA	95814	5/15/2012 12:00:00 AM	1000			3304	CTB						1334305																											
+1676351	0	5	EXPN	E	5		Mickelson	Sheila			Westchester	CA	90045		142.20				OFC																																	
+1664163	1	69	EXPN	G	EDT18	COM	National Tax Limitation Committee Newsletter				Laguna Niguel	CA	92677	4/25/2012 12:00:00 AM	2838.50	7314.50			LIT		McNally Temple Associates, Inc.				1306386																								EXP468	E		
+1677595	0	58	EXPN	G	EDT276	OTH	River Park Golf Center				Fresno	CA	93720	6/25/2012 12:00:00 AM	900	900			FND		Calif. Apartment Association																												EXP87264	E		
+1677507	0	8	EXPN	F461P5	EDT60	OTH	Taxpayers for Safer Neighborhoods				San Juan Capistrano	CA	92675	3/5/2012 12:00:00 AM	12000	43000			IND	In Support of John Solis for City Council					1271053								John M Solis				CCM		OTH	City of La Puente						S						
+1678754	0	46	EXPN	G	EDT22	OTH	GSI Phones				El Segundo	CA	90245	5/23/2012 12:00:00 AM	1846.50	22657.80			PHO		Direct Connections Campaign Services Inc.																												EXP41	E		
+1664251	2	420	EXPN	E	D9590	OTH	Pedro Rojo				Los Angeles	CA	90063		265.36				IND	SAL/Patrick O'Donnell													O'Donnell	Patrick			CCM		CIT		04					S						
+1678669	0	97	EXPN	F465P3	EDT373.390	OTH	Intermarket Manufacturing Service, Inc.				El Cajon	CA	92020	5/23/2012 12:00:00 AM	599.21				IND	Signs	Chase Card Services																										X					
+1680209	0	9	EXPN	F461P5	EXP403	COM	DR RICHARD PAN FOR ASSEMBLY 2012				Sacramento	CA	95814	6/1/2012 12:00:00 AM	1000	1000			MON						1334305								RICHARD PAN				ASM		ASM		09					S						
+1680554	0	56	EXPN	E	E465	OTH	River City Printers				Rancho Cordova	CA	95742	5/29/2012 12:00:00 AM	4364.70	0		2712	IND	Printing to support Bob Wieckowski (See Schedule D)																																
+1680797	0	2	EXPN	E	EXP32	OTH	Yolanda Miranda & Associates				Covina	CA	91722	3/13/2012 12:00:00 AM	1.88	301.88			POS																																	
+1637755	1	2	EXPN	D	DD32	OTH								12/27/2011 12:00:00 AM	21132.29	63116.42			IKD																					Statewide			Changes Law to Allow Auto Insurance Companies to Set Prices Based on a Driver's History of Insurance Coverage. Initiative Statute.		Statewide	O						X
+1680734	0	2	EXPN	E	EF922	IND	Short	Jeff			Roseville	CA	95661-7777	6/1/2012 12:00:00 AM	1000	0			CNS																																	
+1692871	0	649	EXPN	D	DD471365	COM	FRIENDS OF THEA SELBY FOR D5 SUPERVISOR 2012				SAN FRANCISCO		94102	9/30/2012 12:00:00 AM	250	10614		3000094186	MON	Earmarked Contribution from: ELLINGER, JOSHUA													FRIENDS OF THEA SELBY FOR D5 SUPERVISOR 2012													S						X
+1693432	0	3	EXPN	D	EXP1535	COM	Major General Richard D. Roth USAF (Ret.) for Senate 2012				Sacramento	CA	95814	8/6/2012 12:00:00 AM	3900	7800			MON						1343709								Major General Richard D. Roth				SEN		SEN		31					S						
+1694277	0	33	EXPN	E	5		Betsy Butler for Assembly 2012				Santa Monica	CA	90409		1000				CTB						1334532																											
+1694040	0	25	EXPN	E	E84	COM	Nestande Assembly 2012, Brian				Palm Desert	CA	92260	8/17/2012 12:00:00 AM	1000	1000		1082	CTB						1334108																											
+1694357	0	16	EXPN	E	EXP610	IND	PACHECO	MELISSA			RIALTO	CA	92376	7/24/2012 12:00:00 AM	190.63	190.63				DATA ENTRY																																
+1694638	0	17	EXPN	D	EXP953	COM	Kaplan for Oakland				Oakland	CA	94612	9/16/2012 12:00:00 AM	250	250			MON						1341827								Rebecca Kaplan				CCM		OTH	Oakland, CA		H				S						
+1694395	0	23	EXPN	E	E336	OTH	Los Angeles County Registrar Recorder / County Clerk				Norwalk	CA	90651	8/6/2012 12:00:00 AM	3600	0		2131		Candidate statement																																
+1694186	0	46	EXPN	E	437680	OTH	Rudy Salas for State Assembly 2012 ID#1341013				Sacramento	CA	95814	9/20/2012 12:00:00 AM	2000	2000			CTB						1341013																											
+1694748	0	115	EXPN	E	EXP23359	COM	Ron Calderon for Assembly 2014				Sacramento	CA	95814	9/12/2012 12:00:00 AM	1300	2600			CTB						1344714																											
+1694852	0	1	EXPN	E	EXP2468	IND	 Mike  Morrell				Upland	CA	91786-	9/25/2012 12:00:00 AM	150.33	150.33			OFC																																	
+1695050	0	1912	EXPN	G	G51448-87104-e	IND	Dayani	Ferishta			Sacramento	CA	95816-6248	9/26/2012 12:00:00 AM	63.94	0			TRS	mileage	Democratic State Central Committee of CA - Federal																															
+1695274	0	30	EXPN	E	EXP573	OTH	Bullseye Interactive Media, a division of Struble Eichenbaum Communications				Washington	DC	20003	8/15/2012 12:00:00 AM	400	12600			WEB																																	
+1695375	0	21	EXPN	E	D645982	OTH	Verizon Wireless				Dallas	TX	75266		212.53				OFC																												X		D645968			
+1695475	0	98	EXPN	E	EXP1028	OTH	DAVID L. GOULD COMPANY				Los Angeles	CA	90010	9/10/2012 12:00:00 AM	230.20	29368.07			OFC																																	
+1695331	0	54	EXPN	E	EF1001	OTH	Right Strategy Group				Folsom	CA	95630-6301	8/10/2012 12:00:00 AM	1300	0			CNS																																	
+1694370	2	98	EXPN	E	EXP502	IND	ARCIDIARONO	ELISA			THOUSAND OAKS	CA	91361	9/26/2012 12:00:00 AM	707.63	2811.28			SAL																																	
+1695267	1	324	EXPN	G	EDT417	OTH	KOGO-AM				San Diego	CA	92123	9/30/2012 12:00:00 AM	8908	57324			RAD		Greenstripe Media, Inc.																												EXP639	E		
+1694853	1	38	EXPN	G	EDT46	OTH	Insight Group	The			Tempe	AZ	85283	9/13/2012 12:00:00 AM	56770.86	56770.86			POL		Perry Communications Group, Inc.																												EXP51107	E		
+1702822	1	1338	EXPN	E	D483800	COM	RE-ELECT JOAN BUCHANAN FOR ASSEMBLY 2012				DANVILLE		94526		500				CTB	Earmarked Contribution from: WELCH, KATHERINE					1335063																											
+1703530	0	6	EXPN	F465P3	EDT62	OTH	Mailrite Print & Mail, Inc.				Sacramento	CA	95834	10/19/2012 12:00:00 AM	52010.57	131709.83			IND	Mailer																																
+1703608	0	43	EXPN	G	EDT56	OTH	Time Warner South San Fernando Valley Zone				Cypress	CA	90630	10/4/2012 12:00:00 AM	82189.05	82189.05			IND	Television	Greenstripe Media Inc.																												EXP133	E		
+1704198	0	23	EXPN	E	EF852	COM	Mobley for Assembly				Merced	CA	95340-3702	10/16/2012 12:00:00 AM	2000	0			CTB	Monetary Contribution:  to support Mobley for Assembly					1340249																											
+1704293	0	10	EXPN	D	EXP549	COM	Hernandez for Assembly 2012	Roger			Los Angeles	CA	90010	10/4/2012 12:00:00 AM	2000	2000			MON						1334127								Roger Hernandez				ASM		ASM		48					S						
+1704454	0	233	EXPN	D	DF89204	COM	Democratic State Central Committee of CA - Federal				Sacramento	CA	95811-5221	10/9/2012 12:00:00 AM	97.27	112.66			IND	Literature/Mailings-LIT (F/S S to support Benjamin Hueso													Hueso	Benjamin			ASM		ASM		79	S				S						
+1704467	0	2	EXPN	D	PDT1076	COM	Batey (I)	Bill						10/15/2012 12:00:00 AM	4916.34	41867.79			IND	Mailer													Bill Batey (I)				ASM		ASM		61					O						
+1704467	0	433	EXPN	E	EXP2793	OTH	San Joaquin and Calaveras Counties Central Labor Council				Stockton	CA	95202	10/15/2012 12:00:00 AM	1000	1000			IND	Office Space/Support/Cathleen Galgiani/State Senate/District 6																																
+1704501	0	82	EXPN	D	EDT420	IND	No on Prop 31							10/11/2012 12:00:00 AM	7.50	363.75			IND	Slate Mailer																							State Budget. State and Local Government. Initiative Constitutional Amendment and Statute. Proposition	31	Statewide	O						
+1694830	2	18	EXPN	E	E1528227	OTH	Foodsco				Fresno	CA	93726	9/22/2012 12:00:00 AM	16.51			DEBIT	CMP	Fuel reimbursement for campaign manager																																
+1704467	1	589	EXPN	E	EXP2975	IND	Torres	Diana L.			Ontario	CA	91761	10/19/2012 12:00:00 AM	166.18	811.09			IND	Canvassers/Support/Jose Medina/State Assembly/District 61																																
+1704467	1	187	EXPN	D	EDT1187	COM	Medina (I)	Jose J.						10/19/2012 12:00:00 AM	76.25	309937.83			IND	Office Space													Jose J. Medina (I)				ASM		ASM		61					S						
+1715266	0	264	EXPN	D	DF91981	OTH	Digital Tractor Graphic Design				Sacramento	CA	95831-2975	10/26/2012 12:00:00 AM	3.85	26837.13			IND	Graphics to support Proposition 40																							Proposition 40	40	Statewide	S						
+1703267	2	10	EXPN	D	EXP498	COM	Ian Calderon for Assembly 2012				Whittier	CA	90602	10/4/2012 12:00:00 AM	3900	4900			MON						1336514								Ian Calderon				ASM		ASM		57					S		EXP498				
+1715225	1	50	EXPN	D	DF35629	OTH	Roper Mailing Service - MEMBER COMMUNICATION				Garden Grove	CA	92840-6355	11/1/2012 12:00:00 AM	849.40	7298.38			IKD	MBR-Printing to oppose Tita Smith													Smith	Tita			MAY		CIT	Orange		S				O						
+1704485	1	14	EXPN	E	EXP880	OTH	California Democratic Party				Sacramento	CA	95811	10/8/2012 12:00:00 AM	10000	67500			CTB						741666																											
+1732314	0	15	EXPN	E	EXP481	OTH	Huffman Public Affairs, LLC				Studio City	CA	91604	10/26/2012 12:00:00 AM	7000	25086			CNS																																	
+1703619	1	10	EXPN	E	12		Charles Rouse Campaign Fund				Corning	CA	96021		500				CTB						1345268																											
+1703846	2	5	EXPN	E	EXP1183	OTH	Activate Direct, LLC				Sacramento	CA	95811	10/10/2012 12:00:00 AM	1000	1000			LIT																																	
+1695116	1	50	EXPN	E	EXP3234	COM	Perea for Assembly 2012				Sacramento	CA	95814	9/4/2012 12:00:00 AM	1000	3000			CTB						1334118																											
+1733063	0	16	EXPN	E	71		USPS				Covina	CA	91723		190				POS																																	
+1734795	0	1	EXPN	F461P5	1		Ted Lieu				Sacramento	CA	95814	7/2/2012 12:00:00 AM	1000	1000	0		MON						1333752								Lieu	Ted			SEN		STW							S						
+1704071	1	563	EXPN	G	PDT293	OTH	Phoenix Direct Mail Services				San Diego	CA	92111	10/17/2012 12:00:00 AM	630.29	85286.49			IND	Mailer	Chase Card Services																												PAY16602	E		
+1736526	0	48	EXPN	E	EF1131	OTH	Completecampaigns.Com				San Diego	CA	92123-1880	10/22/2012 12:00:00 AM	51.50	0			OFC																																	
+1735524	0	409	EXPN	D	PDT441	COM	Yes on Proposition 30							10/29/2012 12:00:00 AM	21	17005.64			IND	Phone Banking																							Yes on Proposition 30		Statewide	S						
+1737142	0	22	EXPN	E	EXP1355	IND	Morgan	David			Canyon Lake	CA	92587	11/6/2012 12:00:00 AM	1000	14035.74			CNS																																	
+1737938	0	14	EXPN	E	EXP1149	IND	Siciliani	Tony			Sacramento	CA	95816	10/26/2012 12:00:00 AM	144500	564294.22			LIT																																	
+1738197	0	123	EXPN	G	E1534100	OTH	PYRAMID ALEHOUSE				SACRAMENTO	CA	95814	10/24/2012 12:00:00 AM	380.16				FND		CAPITAL ONE BANK																															
+1739300	0	245	EXPN	G	CI432	IND	Casco	Samantha			Rosemead	CA	91770	11/5/2012 12:00:00 AM	689	689			PHO		Del Sol Group, Inc.																															
+1695307	2	129	EXPN	E	EXP1090	OTH	Paylink				Sacramento	CA	95841	9/14/2012 12:00:00 AM	73	6958.86			PRO																																	
+1740387	0	43	EXPN	E	EXP515	IND	Fort	Sandra M.			Fontana	CA	92334	10/30/2012 12:00:00 AM	443.74	1312.26			SAL																																	
+1740350	0	59	EXPN	E	EXP1487	IND	Ellingsen	Tracy L.			Moreno Valley	CA	92553	10/31/2012 12:00:00 AM	1079.56	5161.58			SAL																																	
+1703927	1	23	EXPN	E	EXP324	OTH	MC Designs Studio				Mission Hills	CA	91346	10/17/2012 12:00:00 AM	1321.03	2173.63			CMP																																	
+1740685	0	298	EXPN	E	EXP772	OTH	Paylink				Sacramento	CA	95841	11/2/2012 12:00:00 AM	75	139162.32			PRO																																	
+1740524	0	72	EXPN	F465P3	D12152	OTH	Quizno's				Los Angeles	CA	90048	11/1/2012 12:00:00 AM	1247.90	1189749.68		1137	IND	Field Expenses/Political Contribs by Payroll Deduction. Contributions to Candidates Oppose													Pol Contribs by Payroll Ded. Contribs to Candidate						STW				Pol Contribs by Payroll Ded. Contribs to Candidate	32	STW	O						
+1695320	3	148	EXPN	G	EDT16	OTH	Zata 3 Consulting, LLC				Washington	DC	20003	9/14/2012 12:00:00 AM	5865.80	5865.80			PHO		Acosta Consulting																												EXP445	E		
+1740583	0	7	EXPN	F465P3	EDT1239	OTH	Pacific Print Resources				Emeryville	CA	94608	10/26/2012 12:00:00 AM	224.95	25932.24			IND	Member Communication Mailer																																
+1740923	0	69	EXPN	D	EDT313	COM	John Perez (I)							10/21/2012 12:00:00 AM	0.24	237.24			IND	Online Voter Guide; 10/21 - 10/29													John Perez				ASM		ASM		53					S						
+1704467	2	625	EXPN	G	PDT1098	OTH	Brokers Worldwide				San Francisco	CA	94111	10/15/2012 12:00:00 AM	138.55	15541.83			IND	Mailer	The Strategy Group, Inc.																												PAY2801	E		
+1608449	1	10	EXPN	D	EDT2282	COM	MEASURE B (SAN JUAN CAPISTRANO)							5/26/2011 12:00:00 AM	1000	40291.61			IND	GRAPHIC DESIGN																							MEASURE B		CITY OF SAN JUAN CAPISTRANO	S						
+1704467	2	200	EXPN	D	EDT1219	COM	Medina (I)	Jose J.						10/19/2012 12:00:00 AM	108.07	279436.89			IND	Canvassers													Jose J. Medina (I)				ASM		ASM		61					S						
+1739656	1	27	EXPN	E	27		No on H, El Monte Citizens Against Beverage Taxes				San Rafael	CA	94901		5000				CTB						1349569																							27				
+1742430	0	5	EXPN	E	EF259	OTH	Tri Counties Bank				Willows	CA	95988-2834	8/5/2012 12:00:00 AM	20	0			OFC																																	
+1438135	1	192	EXPN	G	EDT1832	OTH	ISSUE STRATEGIES, INC.				GRANADA HILLS	CA	91344	6/18/2009 12:00:00 AM	2500	2500			PHO		ENGLANDER KNABE & ALLEN																												EXP4538	E		
+1704474	1	41	EXPN	E	EXP1623	IND	Tseng	Tommy			Monterey Park	CA	91755	10/4/2012 12:00:00 AM	1500	5341.14			SAL																																	
+1740901	1	17	EXPN	E	EXP2123	OTH	American Express				New York	NY	10285	11/20/2012 12:00:00 AM	88.60	69986.58			TRC	District Travel																																
+1762368	0	574	EXPN	D	DD528788	COM	LONDON BREED FOR SAN FRANCISCO SUPERVISOR 2012				SAN FRANCISCO		94104	3/3/2013 12:00:00 AM	500	17125		3000108524	MON	Earmarked Contribution from: SZETO, RICHARD													LONDON BREED FOR SAN FRANCISCO SUPERVISOR 2012													S						X
+1766489	0	870	EXPN	E	D529312	COM	LOS ANGELES COUNTY YOUNG DEMOCRATS				LOS ANGELES	CA	90025-9083		30				CTB	Earmarked Contribution from: PRAGER, PAIGE					921188																											
+1773795	0	5	EXPN	E	E613	OTH	The Bovee Company				Sacramento	CA	95814	4/5/2013 12:00:00 AM	1000	0		2222	CNS																																	
+1770819	0	41	EXPN	E	E1542142	IND	Bergquam	Ben			Madera	CA	93636	5/14/2013 12:00:00 AM	115.25			1106		Agent Bill Payment 																																
+1767976	0	129	EXPN	F465P3	EDT451	IND	Hernandez Ayinaga	Krystal J.			Visalia	CA	93292	5/3/2013 12:00:00 AM	193.93	183033.65			IND	Field Program (Phonebank & Canvassing)																																
+1770806	0	148	EXPN	E	EXP31594	OTH	Lexis-Nexis				Los Angeles	CA	90013-3003	6/6/2013 12:00:00 AM	229	1374			FND																																	
+1775161	0	1	EXPN	D	EXP1409	COM	DONALD TERRY FOR RANCHO CORDOVA CITY COUNCIL				RANCHO CORDOVA	CA	95741	2/5/2013 12:00:00 AM	1000	1000			MON						1346313								DONALD TERRY				CCM		OTH	RANCHO CORDOVA						S						
+1776125	0	33	EXPN	E	EXP1005	COM	Mitchell for Assembly 2014	Holly			Sacramento	CA	95814	6/26/2013 12:00:00 AM	8200	8200			CTB						1355252																											
+1774957	0	211	EXPN	D	EDT446	IND	Perez (I)	Leticia						5/3/2013 12:00:00 AM	193.93	510748.40			IND	Field Program (Phonebank & Canvassing)													Leticia Perez				SEN		SEN		16					S						
+1776524	0	70	EXPN	E	EXP8423	OTH	Tony & Alba's Pizza & Pasta				San Jose	CA	95128	7/10/2013 12:00:00 AM	88.65	1492.84			CTB	Food for Volunteers/Chavez/Member Communications																																
+1740350	1	264	EXPN	G	EDT326	OTH	Starbucks				Seattle	WA	98134	10/28/2012 12:00:00 AM	25.90	297.85			OFC		American Express																												EXP1778	E		
+1778817	0	38	EXPN	E	EXP3340	COM	TORRES FOR SENATE 2014				Sacramento	CA	95814	6/24/2013 12:00:00 AM	2000	2000			CTB						1350311																											
+1780855	0	277	EXPN	G	EDT3198	OTH	RESIDENCE INN BY MARRIOTT				WASHINGTON	DC	20037	6/24/2013 12:00:00 AM	1198.83	1198.83			TRS		PACIFIC WEST ASSOCIATION OF REALTORS																												EXP6587	E		
+1782103	0	30	EXPN	E	EXP343	OTH	Harbor Bay RV & Self Storage				Alameda	CA	94502	6/3/2013 12:00:00 AM	280	1400			OFC																																	
+1782945	0	1	EXPN	D	2									1/29/2013 12:00:00 AM	250	250			MON														Walker	Annette			OTH	School Board	CIT	HUSD						S						
+1782652	0	7	EXPN	E	EXP200	OTH	Voter Connections				Sacramento	CA	95816	4/27/2013 12:00:00 AM	18	803.43			OFC																																	
+1783097	0	128	EXPN	G	EDT59	OTH	Glendora Chamber of Commerce				Glendora	CA	91741	6/19/2013 12:00:00 AM	125	125			CVC		Chase Card Services																												EXP432	E		
+1783375	0	80	EXPN	E	E302	COM	Wright Board of Equalization 2018, Rod				Sacramento	CA	95814	6/17/2013 12:00:00 AM	1000	1000		1814	CTB						1355190																											
+1784003	0	33	EXPN	E	E200	OTH	Wilson  Elser  Moscowitz  Edelman & Dicker LLP				ALBANY	NY	12207	4/16/2013 12:00:00 AM	5000	0		1552	PRO																																	
+1783679	0	3	EXPN	E	EXP18	IND	Castellanos, Jr.	Gabriel			Sacramento	CA	95814	4/19/2013 12:00:00 AM	158.56	1852.90			TRC	04/11-04/12, Rental car, Fundraising event, 1, Candidate.																																
+1774892	1	25	EXPN	E	EXP31978	OTH	AT&T - Carol Stream				Dallas	TX	75202-4206	6/25/2013 12:00:00 AM	1794.80	16552.94			FND																																	
+1786463	1	147	EXPN	E	EXP32513	OTH	Docuware/Caltronics Business Systems				Sacramento	CA	95827-2531	7/31/2013 12:00:00 AM	460.24	4114.42			MTG																																	
+1790194	0	193	EXPN	G	EDT3712	IND	Kindelt	Anthony J.			Sacramento	CA	95819-2725	8/20/2013 12:00:00 AM	1604.60	25110.07				salary (<25% FEA)	Democratic State Central Committee of CA - Federal																												EXP32933	E		
+1741184	1	24	EXPN	E	D7910	OTH	First Bank Merchant Svc Discount				Fort Lauderdale	FL	33314		632.36				OFC																																	
+1790687	0	5	EXPN	G	D1253	IND	Alves	Gloria			Los Angeles	CA	90016		2121.85				SAL		LA County Democratic Central Committee																													E		
+1790027	0	1833	EXPN	E	D545025	COM	FLETCHER FOR MAYOR 2014 EXPLORATORY COMMITTEE				ENCINITAS		92024		500				CTB	Earmarked Contribution from: NEWMAN, RUSS					1359831																											
+1756370	4	58	EXPN	E	EXP16862	COM	Quirk-Silva for Assembly 2014	Sharon			Sacramento	CA	95814	3/25/2013 12:00:00 AM	1000	1000			CTB						1353689																											
+1800893	0	77	EXPN	E	E2283	COM	Gaines for Senate 2016				Sacramento	CA	95814	9/20/2013 12:00:00 AM	1500	0		23460	CTB						1355749								Gaines	Ted			SEN	State Senator	SEN	State District Office	1	S										
+1801122	0	20	EXPN	E	EXP1342	COM	Councilmember Curren Price Officeholder Account 2013				Los Angeles	CA	90046	9/19/2013 12:00:00 AM	500	500			CTB						1359453																											
+1782412	1	110	EXPN	G	EDT6	OTH	C & R Memorabilia				Antioch	CA	94509	3/20/2013 12:00:00 AM	125	125			OFC		Card Service Center																												EXP210	E		
+1802902	0	23	EXPN	E	EXP640	IND	Gross	Angelique			North Hollywood	CA	91601	10/18/2013 12:00:00 AM	650.30	4775.10			SAL																																	
+1464032	1	1	EXPN	E	EXP18	OTH	David L. Gould Company				Los Angeles	CA	90010	9/2/2009 12:00:00 AM	566.18	566.18			PRO																																	
+1678921	1	4	EXPN	F461P5	EXP2113	PTY	Republican Party of Orange County				Tustin	CA	92780	2/9/2012 12:00:00 AM	50	2550			MON						742088								Republican Party of Orange County													S						
+1813997	0	33	EXPN	D	EXP9568	COM	Ted Lieu for State Senate 2014				Sacramento	CA	95814	11/4/2013 12:00:00 AM	1000	3000			MON						1333752								Ted Lieu				SEN		SEN		28					S						
+1811517	0	6	EXPN	E	12		Gill	Firoz			Fremont	CA	94539		300					Paid student intern to register student voters, attend classroom sessions and political meetings, distribute information and fundraise for the PAC.																																
+1816605	0	36	EXPN	E	457653	IND	Gray	Adam			Sacramento	CA	95814		5000			1385	CTB	Campaign for Assembly Dist. 21					1354868																											
+1814907	0	8	EXPN	D	EXP3120	COM	PADILLA FOR SECRETARY OF STATE 2014				San Francisco	CA	94104	12/10/2013 12:00:00 AM	2500	2500			MON						1340348								ALEX PADILLA				SOS		STW							S						
+1815889	0	29	EXPN	E	EXP42936	COM	Sebastian Ridley-Thomas for Assembly 2014				Los Angeles	CA	90046	10/7/2013 12:00:00 AM	2000	3250			CTB						1358245																							EXP42936				
+1814698	0	75	EXPN	E	EXP4363	COM	Evan Low for Assembly 2014				Campbell	CA	95008	10/29/2013 12:00:00 AM	1000	4000			CTB						1346170																											
+1781530	1	173	EXPN	G	PDT35	OTH	Verizon Wireless				Bedminster	NJ	07921	6/10/2013 12:00:00 AM	196.96	1607.84			OFC		American Express																												PAY377	E		
+1816830	0	5	EXPN	E	EXP5150	OTH	Cottonwood Golf Course				El Cajon	CA	92019	9/20/2013 12:00:00 AM	5075.25	5075.25			FND																																	
+1817776	0	127	EXPN	E	EXP823	OTH	Sierra Club				San Francisco	CA	94105	8/5/2013 12:00:00 AM	300	300			OFC																																	
+1818893	0	178	EXPN	G	EDT680	OTH	LUCIDO PROPERTY MANAGEMENT				FRESNO	CA	93722	7/12/2013 12:00:00 AM	639.01	1239.01			OFC	OFFICE SPACE RENTAL	COOK GOVERNMENT AFFAIRS, COMMUNICATIONS																												EXP13369	E		
+1819402	0	356	EXPN	D	PDT1379	COM	Alvarez	David						10/17/2013 12:00:00 AM	56	131858.14			IND														David Alvarez				MAY		OTH	San Diego		S				S						
+1819100	0	85	EXPN	D	EXP1635	PTY	San Luis Obispo County Republican Central Committee				San Luis Obispo	CA	93401	12/23/2013 12:00:00 AM	2000	1720814.50			MON	Earmarked Contributions - See Schedule I					841621								San Luis Obispo County Republican Central Committee													S		EXP1635				
+1829460	0	10	EXPN	E	E1578783	COM	Solis for Supervisor 2014				Los Angeles	CA	90048	3/12/2014 12:00:00 AM	500			8022	CTB						1356549																											
+1825534	0	5	EXPN	D	EXP457754	COM	Marble for City Council 2014				Woodland	CA	95695	10/14/2013 12:00:00 AM	5000	5000	0		MON						1283909								Bill Marble				CCM		OTH	Woodland						S						
+1828032	1	182	EXPN	E	E10681	IND	Hansen	Harrison T.			San Diego	CA	92101	2/14/2014 12:00:00 AM	205.54	0		6694		SAL - in support of Faulconer for Mayor 2014																																
+1831716	0	26	EXPN	E	E1066	IND	Cohn	Ben			San Bruno	CA	94066	2/28/2014 12:00:00 AM	1250	0		14249	CNS																																	
+1832092	0	31	EXPN	E	EXP1029	OTH	Pacific Advocacy Group				Sacramento	CA	95831	3/4/2014 12:00:00 AM	1545	4635			CNS																													EXP1029				
+1832336	0	29	EXPN	E	EF3769	OTH	KM Strategies				San Diego	CA	92102-1952	3/4/2014 12:00:00 AM	10922.50	0			CNS																																	
+1832336	1	80	EXPN	G	GV352	OTH	AIPAC - American Israel Public Affairs Committee				Washington	DC	20001-2604	2/7/2014 12:00:00 AM	300	0			MTG		Chase Card Services																															
+1832544	0	47	EXPN	E	EXP547	OTH	Jay S. Ahn dba ASAP Screen Printing Co.				North Hollywood	CA	91605	2/21/2014 12:00:00 AM	471.97	471.97			CMP																																	
+1832607	1	319	EXPN	G	EDT237	OTH	Wilson Creek Winery				Temecula	CA	92591	2/28/2014 12:00:00 AM	1780.05	2656.80			FND		American Express																												EXP3416	E		
+1831797	1	22	EXPN	E	EXP2097	OTH	American Associated Pharmacies				Scottsboro	AL	35769	1/30/2014 12:00:00 AM	3200	0			FND																																	
+1832668	0	7018	EXPN	E	D603706	COM	SWANSON FOR SENATE 2016				SACRAMENTO		95841		50				CTB	Earmarked Contribution from: HUEN, FLOYD					1347713																											
+1832668	0	6706	EXPN	E	D604734	COM	STAND WITH SANDRA FLUKE FOR STATE SENATE 2014				SANTA MONICA		90408		26				CTB	Earmarked Contribution from: HOLLAND, JACQUELINE K					1363476																											
+1819402	1	198	EXPN	D	PDT1487	COM	Alvarez	David						10/8/2013 12:00:00 AM	56	131858.14			IND														David Alvarez				MAY		OTH	San Diego		S				S						
+1845950	1	67	EXPN	G	EDT12	OTH	TVEyes, Inc.				Fairfield	CT	06824	2/10/2014 12:00:00 AM	1176.40	1176.40			TEL		Redwood Pacific Public Affairs																												EXP271	E		
+1831177	1	35	EXPN	E	EXP17901	COM	Huff for Assembly 2016	Taxpayers for Bob			Sacramento	CA	95814	3/11/2014 12:00:00 AM	1500	1500			CTB						1355244																											
+1852613	0	247	EXPN	F465P3	PDT2471	IND	Baeza	Laura			Chula Vista	CA	91913	1/28/2014 12:00:00 AM	56	141824.15			IND	Phone bankign																																
+1852462	0	10	EXPN	D	10									4/18/2014 12:00:00 AM	500	500			MON														Cortese for Mayor													S						
+1832306	1	47	EXPN	E	E1578879	COM	Diane Harkey for BOE 2014				San Juan Capistrano	CA	92675	3/13/2014 12:00:00 AM	1000			1195	CTB						1337528																											
+1854095	0	181	EXPN	G	EDT182	OTH	Office Depot				Van Nuys	CA	91441	4/21/2014 12:00:00 AM	6.31	653.86			OFC		Card Service Center																												EXP1117	E		
+1854104	0	25	EXPN	E	EXP343	OTH	Deane & Company				Sacramento	CA	95815	5/16/2014 12:00:00 AM	77.03	8978.86			PRO																																	
+1854458	0	1258	EXPN	D	DD615323	COM	JOE KROVOZA FOR ASSEMBLY 2014				SACRAMENTO		95815	4/27/2014 12:00:00 AM	100	28305		3000154135	MON	Earmarked Contribution from: JOSEPH, LUCY													JOE KROVOZA FOR ASSEMBLY 2014													S						X
+1854458	0	434	EXPN	D	DD616962	COM	COMMITTEE TO REELECT PUBLIC DEFENDER JEFF ADACHI 2014				SAN FRANCISCO		94107	4/13/2014 12:00:00 AM	100	4145		3000151730	MON	Earmarked Contribution from: RAJA, ALEEM													COMMITTEE TO REELECT PUBLIC DEFENDER JEFF ADACHI 2014													S						X
+1853954	0	239	EXPN	G	EDT108	OTH	KSCO-AM/KOMY-AM				Santa Cruz	CA	95062	5/12/2014 12:00:00 AM	2518.12	5036.25			IND	Radio	Greenstripe Media, Inc.																												EXP18	E		
+1832484	1	24	EXPN	G	PDT14	OTH	Beacon Hotel & Corporate Quarters				Washington	DC	20036	3/15/2014 12:00:00 AM	1835.47	3976.56				Travel Expenses	Union Yes Federal Credit Union																												PAY246	E		
+1854095	1	112	EXPN	E	EXP964	IND	Orenstein	Justin B.			West Hills	CA	91307	4/1/2014 12:00:00 AM	11.40	8753.32			TRS																																	
+1854458	0	2495	EXPN	D	DD616134	COM	STAND WITH SANDRA FLUKE FOR STATE SENATE 2014				SANTA MONICA		90408	3/31/2014 12:00:00 AM	250	96463.50		3000150159	MON	Earmarked Contribution from: BENDICH, JUDITH													STAND WITH SANDRA FLUKE FOR STATE SENATE 2014													S						X
+1854458	0	3783	EXPN	E	D615404	COM	DAN WOLK FOR ASSEMBLY 2014				NOVATO		94949-5731		50				CTB	Earmarked Contribution from: FONTAINE, LARISSA					1358060																											
+1864583	0	10	EXPN	E	EXP308	OTH	AT&T				CAROL STREAM	IL	60197	3/6/2014 12:00:00 AM	46.59	486.62			OFC																																	
+1861337	0	1	EXPN	F461P5	1		SONDERGAARD SMITTCAMP	LISA						5/16/2014 12:00:00 AM	5000	0	0		MON														SONDERGAARD SMIICAMP	LISA			OTH	DISTRICT ATTORNEY	CTY	FRESNO						S						
+1852378	1	8	EXPN	D	D11147	COM								4/28/2014 12:00:00 AM	1386.76	80782.04			IKD	MBR - VOIP telephone system rental													Cate	Chris			CCM		CIT	San Diego	6					S						
+1866964	0	11	EXPN	E	42		Chapman	Kitty			Stockton	Ca	94203		526.59				FND	Reimbursement for decoarations, tableware, Ice																																
+1827809	1	97	EXPN	G	EDT5	OTH	Banning Beaumont Directory				Banning	CA	92220	2/13/2014 12:00:00 AM	225	225			PRT		Lithopass Printing																												EXP243	E		
+1870422	0	39	EXPN	E	EXP740	IND	Arnold	Will			Davis	CA	95616	4/29/2014 12:00:00 AM	196	31535.81			POS																																	
+1869223	0	3114	EXPN	E	D626126	COM	DEAN DEMOCRATIC CLUB OF SILICON VALLEY				MOUNTAIN VIEW		94042		10				CTB	Earmarked Contribution from: CURTIS, CAR					1287517																											
+1869319	0	5	EXPN	F461P5	P5-46	COM	Families Working Toward Financial Freedom				San Diego	CA	92119	5/23/2014 12:00:00 AM	2500	5000			CTB	From Prime Steaks Inc					1366246														CIT	San Diego			Minimum wage increase	TBD		S						
+1869223	0	4768	EXPN	E	D627551	COM	STAND WITH SANDRA FLUKE FOR STATE SENATE 2014				SANTA MONICA		90408		10				CTB	Earmarked Contribution from: STONE, RUSS					1363476																											
+1870292	0	107	EXPN	E	EXP52618	IND	Brenes	Arnulfo			Spring Valley	CA	91977	6/6/2014 12:00:00 AM	56	2912			IND	Precinct walking																																
+1854211	1	9	EXPN	E	D456808	OTH	Meltdown 2.0 LLC				Los Angeles	CA	90046		350				WEB																																	
+1870989	0	141	EXPN	F461P5	EDT134	OTH	Political Data Inc.				Burbank	CA	91502	5/23/2014 12:00:00 AM	200	9743.19					Chariot																										X					
+1871574	0	30	EXPN	F461P5	EXP427	COM	Pacheco for Supervisor 2014				Fresno	CA	93721	5/17/2014 12:00:00 AM	3000	10000			MON	Contribution Made by Affiliated Entity ACDF, LLC, 1306 West Herndon Avenue, Suite 101, Fresno, CA 93711					1360246								Brian Pacheco				CSU		OTH	Fresno County	01					S						
+1872327	0	353	EXPN	E	EXP36703	COM	Shawn Bagley for Senate 2014				Salinas	CA	93908	6/30/2014 12:00:00 AM	25000	25961.76			CTB						1364596																											
+1871999	0	192	EXPN	G	PDT82	OTH	Hyatt Hotels				Sacramento	CA	95814	6/20/2014 12:00:00 AM	297	406.86			TRS	John Williams	California Bank & Trust																												PAY928	E		
+1872138	0	3	EXPN	E	EXP244	COM	Solano County Democratic Central Committee - Federal				Sacramento	CA	95841	6/5/2014 12:00:00 AM	486.74	7245.50				Transfer to Federal					C00455865																											
+1872804	0	38	EXPN	G	GV643	OTH	Chops				Sacramento	CA	95814-3801	6/30/2014 12:00:00 AM	119.96	0				6/15 Meal for budget meeting for 5 including candidate	Valley First Credit Union																															
+1872535	0	31	EXPN	F461P5	EXP597	COM	Toni Atkins for Assembly 2014				Encinitas	CA	92024	5/14/2014 12:00:00 AM	4100	4100			MON						1353435								Toni Atkins				ASM		ASM		78					S						
+1872818	0	14	EXPN	E	EF1126	OTH	CompleteCampaigns.com				Washington	DC	20003	5/29/2014 12:00:00 AM	5	0			OFC																																	
+1832028	2	141	EXPN	G	PDT10	OTH	Southwest Airlines				Dallas	TX	75235	3/17/2014 12:00:00 AM	421	12090			TRS		California Bank & Trust - Bankcard Center																											PDT10	PAY453	E		
+1873207	0	71	EXPN	E	EXP699	OTH	River City Business Services				Sacramento	CA	95841	6/30/2014 12:00:00 AM	84.25	674.75			OFC																																	
+1822423	1	62	EXPN	E	EXP33997	OTH	Comcast				Philadelphia	PA	19102-2109	1/13/2014 12:00:00 AM	118.04	2446.34			FND																																	
+1872996	1	99	EXPN	G	EDT364	OTH	Vintners Collective				Napa	CA	94559	6/5/2014 12:00:00 AM	403.68	403.68			FND	Appetizers Only	Card Service Center																												EXP1600	E		
+1872028	1	73	EXPN	E	EXP1806	OTH	Wells Fargo Bank				Sacramento	CA	95814	5/18/2014 12:00:00 AM	31	318.69			OFC																																	
+1892215	0	70	EXPN	E	EXP7942	COM	JIMMY GOMEZ FOR ASSEMBLY 2014				Long Beach	CA	90807	7/14/2014 12:00:00 AM	500	1500			CTB						1354022																											
+1892482	0	38	EXPN	D	EXP251201	COM	Gaines for Senate 2016				Sacramento	CA	95814	9/30/2014 12:00:00 AM	1000	1000			MON						1355749								Edward (Ted) M. Gaines				SEN		SEN		01					S						
+1893526	0	71	EXPN	E	EXP1108	OTH	One Printing				Palm Desert	CA	92260	9/29/2014 12:00:00 AM	569.12	1138.24			LIT	Printing - In-Kind to Betty Sanchez for City Council 2014 (#1370375)																																
+1893573	0	165	EXPN	G	PDT20	OTH	NexDayFlyers				Compton	CA	90220	8/19/2014 12:00:00 AM	1511.78	1904.05			LIT		Revolvis Consulting, Inc.																												PAY1390	F		
+1893580	0	79	EXPN	E	VNH759VXFB6	OTH	The Strategy Group, Inc.				Evanston	IL	60201-5017		5000				CNS																																	
+1893749	0	91	EXPN	E	VNH6G9VB758	IND	Veres	Steven F.			Sherman Oaks	CA	91423-1218		149.38			1309	TRS																																	
+1893814	0	52	EXPN	E	E456	OTH	CA Bank & Trust				Los Angeles	CA	90071	8/26/2014 12:00:00 AM	166.35	0		-61	OFC	Cr.Card Processing Fee																																
+1893619	0	647	EXPN	G	EDT175	OTH	KZSB-AM				Santa Barbara	CA	93101	8/15/2014 12:00:00 AM	1927.80	3855.60			RAD		GREENSTRIPE MEDIA, INC.																												EXP1190	E		
+1893672	0	131	EXPN	E	VN7WS9T2KF6	IND	Omotalade	Jacquelyn			San Francisco	CA	94110-3062		75			1153	WEB	Reimbursement																																
+1893619	0	201	EXPN	E	EXP1583	IND	RATCHFORD	ASHLEY			Sacramento	CA	95818	9/30/2014 12:00:00 AM	819.13	4625.93			SAL																																	
+1895032	0	9505	EXPN	E	D638600	COM	STAND WITH SANDRA FLUKE FOR STATE SENATE 2014				SANTA MONICA		90408		24	0	0		CTB	Earmarked Contribution from: RODDY, CANDACE					1363476																											
+1895032	0	9610	EXPN	E	D638672	COM	STAND WITH SANDRA FLUKE FOR STATE SENATE 2014				SANTA MONICA		90408		10	0	0		CTB	Earmarked Contribution from: MCKEEVER, KIMBERLY					1363476																											
+1900683	0	1	EXPN	E	2		Edrington	Thomas			Eureka	CA	95503		4200					outreach coordinator																												2				
+1895032	0	10140	EXPN	E	D639202	COM	STAND WITH SANDRA FLUKE FOR STATE SENATE 2014				SANTA MONICA		90408		3	0	0		CTB	Earmarked Contribution from: RAY, A. JOSEPH					1363476																											
+1902303	0	88	EXPN	E	240832	COM	Williams	Das			Sacramento	CA	95814		500			11898	CTB						1353473																											
+1902789	0	72	EXPN	E	EXP3090	COM	Weber for Assembly 2014	Dr.			San Marcos	CA	92069	10/6/2014 12:00:00 AM	8200	16400			CTB						1354184																											
+1893710	1	16	EXPN	E	EXP501	COM	New Frontier Democratic Club				Los Angeles	CA	90045	9/19/2014 12:00:00 AM	515	515			CTB						981728																											
+1892366	2	90	EXPN	E	E1597390	OTH	CHRISTIAN PUBLIC SERVANTS INC				MODESTO	CA	95352	8/28/2014 12:00:00 AM	250			1340	CVC																																	
+1904595	0	28	EXPN	D	PDT10	IND	Solorio (I)	Jose						10/2/2014 12:00:00 AM	9443.50	397931.44			IND	Survey													Jose Solorio				SEN		SEN		34					S						
+1904482	0	22	EXPN	E	EXP1115	OTH	Sentinel Printers				Santa Cruz	CA	95060	10/16/2014 12:00:00 AM	150	150			LIT																																	
+1904778	0	75	EXPN	G	PDT29	OTH	Southwest Airlines				Dallas	TX	75235	10/1/2014 12:00:00 AM	316	2242.20			TRS	Reimbursement:Airfare	Juan de Leon Research, Inc.																												PAY1119	F		
+1893209	1	10	EXPN	E	EXP5402	OTH	California Senate Staff Alumni Association (CSSAA)				Gold River	CA	95760	9/22/2014 12:00:00 AM	500	500			CVC																																	
+1903351	1	1048	EXPN	E	EXP39192	IND	Connelly	John W			Sacramento	CA	95826-5071	10/15/2014 12:00:00 AM	2994.42	6088.84			SAL																																	
+1903993	1	24	EXPN	D	EXP249	COM	Torlakson for Superintendent of Public Instruction 2014				Sacramento	CA	95814	10/17/2014 12:00:00 AM	1000	3000			MON						1333916								Tom Torlakson				SUP		STW							S						
+1892979	1	1414	EXPN	G	EDT5633	IND	Sandel	Jordan			San Francisco	CA	94115	7/10/2014 12:00:00 AM	1503.14	24257.16				salary (<25% FEA)	California Democratic Party - Federal																												EXP37575	E		
+1904524	1	14	EXPN	E	EXP1928	IND	Anderson	Phylicia M.			El Cerrito	CA	94530	10/10/2014 12:00:00 AM	129.29	917.96			SAL																																	
+1872487	1	98	EXPN	E	VN7R39TB803	OTH	First Bank Merchant Services				Fort Lauderdale	FL	33340-7066		297.87				OFC																																	
+1914636	0	3	EXPN	F461P5	3		DUFFIELD FOR CITY COUNCIL 2014 (ID#1367215)				Newport Beach	CA	92663	5/27/2014 12:00:00 AM	1100	1100	0		MON						1367215								Duffield	Duffy			OTH	City Council	CIT	Newport Beach		S				S						
+1872957	2	129	EXPN	G	PDT50	IND	YORK	BARBARA			Alexandria	VA	22311	6/30/2014 12:00:00 AM	635	635			MTG		DIXON/DAVIS MEDIA GROUP																												PAY1147	E		
+1904631	1	25	EXPN	E	EXP2112	IND	Galvan	Anthony			Sacramento	CA	95864	10/10/2014 12:00:00 AM	129.29	129.29			SAL																																	
+1893498	3	262	EXPN	G	EDT81	OTH	Office Depot				Palmdale	CA	93550	9/17/2014 12:00:00 AM	549.56	1452.81			OFC		Baird	Robert																											EXP1038	E		
+1891490	2	50	EXPN	E	EXP925	IND	Fong	Aubrie			Sacramento	CA	95833	9/17/2014 12:00:00 AM	371.03	1877.87			OFC																																	
+1893619	2	127	EXPN	E	EXP1391	OTH	TALBOT DIGITAL				WASHINGTON	DC	20009	9/10/2014 12:00:00 AM	370875	2367126.84			WEB																																	
+1694275	4	101	EXPN	E	EXP14567	COM	Olsen for Assembly 2012				Oakdale	CA	95361	7/31/2012 12:00:00 AM	1000	1150			CTB						1333965																											
+1916666	0	1217	EXPN	G	EDT7594	OTH	USPS - C/o MSI				Rancho Cordova	CA	95742-6252	10/31/2014 12:00:00 AM	3073.94	802913.64			POS		Mailing Systems, Inc.																												EXP40261	E		
+1925223	0	10	EXPN	E	EXP7302	COM	Gatto for Assembly 2014	Mike			Sacramento	CA	95814	10/23/2014 12:00:00 AM	1000	2000			CTB						1353682																											
+1925861	0	1	EXPN	D	EXP2537	COM	Beall for Senate 2016	Jim			Sacramento	CA	95814	12/1/2014 12:00:00 AM	750	2250			MON						1354578								Jim Beall				SEN		SEN		15					S						
+1926070	0	21	EXPN	E	E125	OTH	Firebrand Media LLC				Laguna Beach	CA	92651	10/22/2014 12:00:00 AM	1480	0		1894	IND	Newspaper Ad To support Rob Zur Schmiede																																
+1891432	1	22	EXPN	E	EXP6120	OTH	Voter Guide Slate Cards				LONG BEACH	CA	90808	8/26/2014 12:00:00 AM	1800	1800			IND	Slate mailer for Spering																																
+1929905	0	9	EXPN	F461P5	EXP76	COM	Hernandez for Assembly 2014	Roger			Sacramento	CA	95814	10/20/2014 12:00:00 AM	1500	1500			MON						1354454								Roger Hernandez				ASM		ASM		48					S		EXP76				
+1931921	0	67	EXPN	E	EXP555	COM	Union Bank				Los Angeles	CA	90071	10/31/2014 12:00:00 AM	3	166			OFC																																	
+1932024	0	5	EXPN	F465P3	EDT46.35	OTH	Pacific Standard Print				Sacramento	CA	95818	10/20/2014 12:00:00 AM	3360				IND	Postage for Mailer	AMS Communications, Inc.																										X					
+1932071	0	109	EXPN	G	GV3750	OTH	KJFX-FM				Fresno	CA	93710-7807	10/24/2014 12:00:00 AM	2227	0			RAD	Radio Advertising	Sadler Strategic Media, Inc.																															
+1904775	1	36	EXPN	E	EXP1501	IND	Zenk	Paul			Meadow Vista	CA	95722	10/1/2014 12:00:00 AM	1300	8039.20			TEL																																	
+1933372	0	26	EXPN	G	NON525	IND	Gutierrez	Joe			Los Angeles	CA	90003	10/8/2014 12:00:00 AM	1009	0			VOT		GLF Consulting																															
+1933107	0	16	EXPN	E	EXP122	OTH	KBC Mailing				Sun Valley	CA	91352	10/27/2014 12:00:00 AM	1250	5612.73			LIT	Mail Services																																
+1936225	0	132	EXPN	E	EXP41088	IND	King	Bryan			Sacramento	CA	95814	12/1/2014 12:00:00 AM	1443.47	5708.58			SAL																																	
+1935847	0	42	EXPN	G	EDT29	OTH	Selland's Market Cafe				Sacramento	CA	95819	12/10/2014 12:00:00 AM	338.50	338.50			MTG	Staff lunch:  Senator & 21 staff attending  (10/29/14)	USAA Savings Bank																												EXP334	E		
+1935897	0	5	EXPN	E	20		USPS				Whittier	CA	90602		245				POS	Postage																																
+1935932	0	3	EXPN	F461P5	3		Nora Campos for Assembly 2014				Novato	CA	94949	10/27/2014 12:00:00 AM	1000	1000	0		MON						1353485								Campos	Nora			ASM		ASM		27	S				S						
+1936603	0	187	EXPN	E	EXP717	OTH	S-MART				Stockton	CA		10/28/2014 12:00:00 AM	12.26	46.09			PHO	FOOD FOR STUDENTS																																
+1937102	0	22	EXPN	E	E2684	OTH	McNally Temple Associates  Inc.				Sacramento	CA	95811	12/8/2014 12:00:00 AM	11000	0		4090	CNS																																	
+1937327	0	52	EXPN	E	E612	IND	Folie	Elizabeth R.			Los Angeles	CA	90007	11/14/2014 12:00:00 AM	280	0		0	CNS																																	
+1893426	2	71	EXPN	E	D553590	OTH	Leukemia & Lymphoma Society				White Plains	NY	10605		1000				CVC																																	
+1904447	2	53	EXPN	E	EXP2395	OTH	Select Bankcard				Lehi	UT	84043	10/8/2014 12:00:00 AM	254.13	49454.35			OFC																																	
+1937546	0	53	EXPN	E	D564481	COM	Saleh for City Council 2015				Bell	CA	90201		1000				CTB						1334427																											
+1893619	3	252	EXPN	G	PDT119	OTH	GETTY IMAGES				SEATTLE	WA	 98104	9/30/2014 12:00:00 AM	975	12924.37			TEL		DIXON/DAVIS MEDIA GROUP																												PAY1948	E		
+1937697	0	14	EXPN	E	EXP590	COM	Jim Cooper for Assembly 2014				Elk Grove	CA	95758	10/27/2014 12:00:00 AM	1000	1000			CTB						1354346																											
+1937797	0	1	EXPN	E	EXP143	OTH	Trujillo Communications				Van Nuys	CA	91401	7/2/2014 12:00:00 AM	215	22137.81			CMP																																	
+1931641	1	60	EXPN	G	PDT73	OTH	Target				Livermore	CA	94551	11/5/2014 12:00:00 AM	193.35	193.35			MTG		Personal Insurance Federation of California																												PAY36178	F		
+1937578	1	13	EXPN	E	E8210	OTH	Miller & Olson LLP				Burlingame	CA	94010	10/7/2014 12:00:00 AM	148.66	0		8597	PRO																																	
+1937932	0	60	EXPN	E	66		Butler	Kiara			Los Angeles	CA	90037		100				SAL																																	
+1938337	0	8	EXPN	F461P5	EXP11	COM	NINA SENN FOR OAKLAND SCHOOL BOARD 2014				OAKLAND	CA	94611	12/4/2014 12:00:00 AM	700	700			MON						1368416								NINA SENN				OTH	SCHOOL DIRECTOR	OTH	OAKLAND UNIFIED SCHOOL DISTRICT	4					S						
+1937352	1	58	EXPN	G	GV49	OTH	KCCL-FM				Sacramento	CA	958154212		367.20				RAD		The Battin Group																											GV49				
+1937084	1	393	EXPN	G	EDT287	OTH	Walgreens				Fresno	CA	93720	10/31/2014 12:00:00 AM	100	650			OFC	10/31/14, Gas Gift Card for Volunteer Travel, Willie Guerrero	Rognerud	Johannes																											EXP1831	E		

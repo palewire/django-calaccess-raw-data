@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	ENTITY_CD	ENTY_NAML	ENTY_NAMF	ENTY_NAMT	ENTY_NAMS	ENTY_CITY	ENTY_ST	ENTY_ZIP4	CTRIB_EMP	CTRIB_OCC	CTRIB_SELF	ELEC_DATE	CTRIB_DATE	DATE_THRU	AMOUNT	CMTE_ID	CAND_NAML	CAND_NAMF	CAND_NAMT	CAND_NAMS	OFFICE_CD	OFFIC_DSCR	JURIS_CD	JURIS_DSCR	DIST_NO	OFF_S_H_CD	BAL_NAME	BAL_NUM	BAL_JURIS	MEMO_CODE	MEMO_REFNO	BAL_ID	CAND_ID	SUP_OFF_CD	SUP_OPP_CD
+594989	0	1	S497	F497P2	1950													2/24/2000 12:00:00 AM		2500	962652																			
+594252	0	1	S497	F497P1	2000-0338	OTH	American River Conservancy				Coloma	CA	95613				3/7/2000 12:00:00 AM	2/25/2000 12:00:00 AM		2000																				
+598407	0	1	S497	F497P2	2898													2/25/2000 12:00:00 AM		10000	981166																			
+597657	0	2	S497	F497P1	INC179	COM	Political Action for Classified Employees of California School Employees Association				Sacramento	CA	95814					2/28/2000 12:00:00 AM		3000	761128																			
+603439	0	6	S497	F497P1	CI78	OTH	Rutherford Investments				Palm Desert	CA	92260				3/7/2000 12:00:00 AM	3/2/2000 12:00:00 AM		1000		Battin	Jim			SEN		SEN		37	S									
+599247	0	2	S497	F497P1	INC441	OTH	Swift Transportation Corp.				Phoenix	AZ	890389243					3/1/2000 12:00:00 AM		1000																				
+600411	0	3	S497	F497P1	INC244	COM	AFSCME California People				Sacramento	CA	95814					3/1/2000 12:00:00 AM		1000	960772																			
+600633	0	2	S497	F497P2	EXP51	COM	Wes Chesbro for Senate				Sacramento	CA	95814				3/7/2000 12:00:00 AM	3/2/2000 12:00:00 AM		2000	971967	Wes Chesbro				SEN		SEN		2										
+607367	0	1	S497	F497P1	5568	OTH												3/2/2000 12:00:00 AM		1000	498137																			
+608329	0	1	S497	F497P1	4771													3/1/2000 12:00:00 AM		5000	972142																			
+600185	0	7	S497	F497P2	EXP154	COM	Oller	Friends of Rico			Roseville	CA	95678				3/7/2000 12:00:00 AM	3/2/2000 12:00:00 AM		1000	982908	Rico Oller				SEN		SEN		1										
+606779	0	1	S497	F497P1	6361	OTH												3/6/2000 12:00:00 AM		5000	498071																			
+600267	0	1	S497	F497P1	4156	IND	SPOON 	ROBERTA			SAN DIEGO	CA	92101		ATTORNEY			2/29/2000 12:00:00 AM		2000																				
+600694	0	1	S497	F497P2	NON13	COM	Yes On Proposition 1A				Los Angeles	CA	90071				3/7/2000 12:00:00 AM	3/1/2000 12:00:00 AM		5854.62	99-2094											Proposition 1A	1A	California		NON13				
+605986	0	1	S497	F497P2	4725													2/29/2000 12:00:00 AM		2500	940282																			
+606006	0	1	S497	F497P2	4987													2/29/2000 12:00:00 AM		2500	971887																			
+674857	0	5	S497	F497P2	EXP3039	COM	Re-Elect Assemblywomen Carole Migden				San Francisco	CA	94109					10/24/2000 12:00:00 AM		10000	943828	Carole Migden				ASM		ASM		13	H									
+676297	0	1	S497	F497P2	1	CTL	ALPERT FOR SENATE, DEDE	 	 	 	SACRAMENTO	CA	958140000				11/7/2000 12:00:00 AM	10/24/2000 12:00:00 AM		1000	951247	ALPERT	DEDE			SEN				39								090475		S
+676186	0	1	S497	F497P1	1	OTH	AMERIQUEST CAPITAL CORPORATION	 	 	 	ORANGE	CA	928680000					10/23/2000 12:00:00 AM		1000	499220																			S
+674951	1	1	S497	F497P1	INC363	COM	California Associations of Collectors PAC-FUND				Sacramento	CA	95865					10/23/2000 12:00:00 AM		1000	790689																			
+676880	0	2	S497	F497P1	INC1497	OTH	UNITED FOOD & COMMERCIAL WORKERS				WASHINGTON	DC	20006					10/25/2000 12:00:00 AM		1500																				
+679081	0	11	S497	F497P1	2000-1577	COM	Manny Diaz for Assembly				San Jose	CA	95113				11/7/2000 12:00:00 AM	10/27/2000 12:00:00 AM		20000																				
+680799	0	2	S497	F497P1	2	IND	CHECCHI	KATHRYN			BEVERLY HILLS	CA	90210    		HOMEMAKER			10/27/2000 12:00:00 AM		1000																				S
+679775	0	1	S497	F497P1	1	COM	CALIFORNIA ASSOCIATION OF HIGHWAY PATROLMEN	 	 	 	SACRAMENTO	CA	958140000					10/28/2000 12:00:00 AM		1000	802001																			S
+683511	0	4	S497	F497P1	F497P1-1638	CAO	Assembly Democratic Leadership 2000				Sacramento	CA	95814					10/31/2000 12:00:00 AM	10/31/2000 12:00:00 AM	4075	992113																			
+681229	0	4	S497	F497P1	4	OTH	STS CONSULTANTS, LTD.				VERNON HILLS	IL	60061    					10/30/2000 12:00:00 AM		1000																				S
+682712	0	4	S497	F497P2	12	CTL	BRIGGS FOR ASSEMBLY, MIKE	 	 	 	FRESNO	CA	937040000				11/7/2000 12:00:00 AM	10/31/2000 12:00:00 AM		1000	961265	BRIGGS	MIKE			ASM				29								095155		S
+683466	0	8	S497	F497P1	INC1062	COM	RICHMAN FOR ASSEMBLY 2000				LOS ANGELES	CA	90017					11/1/2000 12:00:00 AM		2000	990193																			
+681305	0	2	S497	F497P1	F497P10000074699	OTH	Distilled Spirits Council Of The US Inc 				Washington	DC	20005					10/30/2000 12:00:00 AM		1000																				
+685326	0	3	S497	F497P2	07	COM	CEDILLO, FRIENDS OF GIL	 	 	 	LOS ANGELES	CA	915040000				11/7/2000 12:00:00 AM	11/2/2000 12:00:00 AM		1000	962860																			S
+677652	1	6	S497	F497P1	2000-1509	IND	Lansing	Sherry			Los Angeles	CA	90077	Paramount Pictures	Chairman		11/7/2000 12:00:00 AM	10/25/2000 12:00:00 AM		5000																				
+685331	0	5	S497	F497P1	2	IND	XINCAID	MICHAEL			ALAMEDA,	CA	94502    	WINZLER & KELLY	CIVIL ENGINEER			11/3/2000 12:00:00 AM		1300																				S
+685820	0	1	S497	F497P1	F497P1-865	COM	Democratic State Central Committee of California				Sacramento	CA	95814					11/2/2000 12:00:00 AM	11/2/2000 12:00:00 AM	66588.42	741666																			
+744323	0	2	S497	F497P1	F497P1-308	OTH	Chu	Judy			Monterey Park	CA	91755	City of Monterey Park	City Councilmember			4/25/2001 12:00:00 AM		50000																				
+737100	0	2	S497	F497P2	F497P2-424	RCP	Candaele for College Trustee				Beverly Hills	CA	90211					3/30/2001 12:00:00 AM		1000	1230542	Candaele	Kelly			CCM	City Council Member	   			S									
+799964	0	1	S497	F497P1	INC1318	OTH	AWIN MANAGEMENT INC.				SCOTTSDALE	AZ	85260					12/7/2001 12:00:00 AM		1000																				
+801655	0	2	S497	F497P1	2001-0909	OTH	ChevronTexaco Corporation				Concord	CA	94524					12/19/2001 12:00:00 AM		5000																				
+799358	0	1	S497	F497P1	F497P1-442	OTH	Cabazon Band of Mission Indians				Indio	CA	92201					11/14/2001 12:00:00 AM		5000																				
+799857	0	1	S497	F497P1	F497P10000130778	COM	Healthcare Employees Union Local 399 PAC				Los Angeles	CA	90017					12/5/2001 12:00:00 AM		1000	746034																			
+801563	0	13	S497	F497P1	F497P1-56573	IND	McClain-Hill	Cynthia			Los Angeles	CA	90014	McClain-Hill Associates	Attorney			12/18/2001 12:00:00 AM	12/18/2001 12:00:00 AM	1168.56																				
+802010	0	2	S497	F497P1	INC389	COM	SEIU Local 535/Political Action Fund				Oakland	CA	94612					12/22/2001 12:00:00 AM		1000	830173																			
+802852	0	1	S497	F497P1	INC389	OTH	AMGEN INC				WASHINGTON	DC	20005					12/31/2001 12:00:00 AM		1000																				
+802320	1	2	S497	F497P1	F497P1-666	OTH	Awin Management Inc				Scottsdale	CA	85260					12/26/2001 12:00:00 AM		5000																				
+802562	0	15	S497	F497P1	2001-1084	IND	Swig	Steven L.			San Francisco	CA	94109-4515	Law Office of Steven Swig	Attorney	X		12/27/2001 12:00:00 AM		1000																				
+807662	0	2	S497	F497P1	2002-0151	SCC	California State Council of Laborers PAC				Sacramento	CA	95814					1/15/2002 12:00:00 AM		1000	902770																			
+808095	0	3	S497	F497P1	F497P1-59287	IND	Horowitz	Benjamin			Los Altos	CA	94024	LoudCloud	CEO			1/17/2002 12:00:00 AM		1000																				
+802501	0	2	S497	F497P1	F497P1-6	OTH	Sears Roebuck & Co				Hoffman Estates	IL	60179					12/29/2001 12:00:00 AM		3000																				
+817830	0	3	S497	F497P1	INC6450	COM	Peach PAC				Lafayette	CA	94549					2/7/2002 12:00:00 AM		2500	744129																			
+816882	0	2	S497	F497P1	T79742	OTH	Wm.J. Clark Trucking Service Inc.				King City	CA	93930					2/5/2002 12:00:00 AM		1000																				
+817991	0	1	S497	F497P1	F497P1-325	COM	METRO-PAC				Sacramento	CA	95814					2/9/2002 12:00:00 AM		1000	840819																			
+817993	0	1	S497	F497P1	F497P1-901	IND	Reiner	Robert			Beverly Hills	CA	90210	self	director			2/9/2002 12:00:00 AM		1000																				
+816968	0	11	S497	F497P1	INC662	OTH	TRANSPORT WORKERS UNION OF AMERICA, AFL-CIO - CALIFORNIA STATE CONFERENCE				SAN FRANCISCO	CA	94115					2/6/2002 12:00:00 AM		5000																				
+810119	0	2	S497	F497P1	2002-0303	OTH	Balfour Investors, Inc.				New York	NY	10020					1/23/2002 12:00:00 AM		1000																				
+818283	0	3	S497	F497P1	2002-0780	IND	Kolligian	Lee			Pacific Palisades	CA	90272	Mouth, Piece, Sports	Attorney			2/11/2002 12:00:00 AM		1000																				
+820591	0	2	S497	F497P1	INC370	IND	Levine	Lloyd			Sacramento	CA	95825	California State Assembly	Legislative Director			2/16/2002 12:00:00 AM		22000																INC:S497:370				
+818678	0	3	S497	F497P1	F497P1-410	OTH	West Valley MRF, LLC				Ontario	CA	91764					2/14/2002 12:00:00 AM		1000																				
+825200	0	1	S497	F497P2	2002-1520	CAO	State & School Employees Including Cops, Nurses and Educators for Steve Hardy				Sacramento	CA	95814				3/5/2002 12:00:00 AM	2/22/2002 12:00:00 AM		15000	1242955	Hardy	Steve			ASM		ASM		8										
+824682	0	3	S497	F497P1	F497P10000146079	OTH	Kiesel, Boucher & Larson LLP 				Beverly Hills	CA	90211					2/22/2002 12:00:00 AM		5000																				
+822510	0	2	S497	F497P1	1129	IND	Bonnell	Mike			Santa Cruz	CA	95062				3/5/2002 12:00:00 AM	1/31/2002 12:00:00 AM		50																				
+824405	0	2	S497	F497P2	EXP890	COM	Alquist for Senate				Sacramento	CA	95814				3/5/2002 12:00:00 AM	2/22/2002 12:00:00 AM		1000	1230006	Elaine Alquist				SEN		SEN		13										
+822938	0	1	S497	F497P2	EXP19	COM	Ron Bamieh for District Attorney				Ventura	CA	93003				3/5/2002 12:00:00 AM	2/20/2002 12:00:00 AM		40000	1237695	Ron Bamieh				DAT		OTH	County of Ventura		S									
+824522	0	1	S497	F497P1	INC1018	COM	Consumer Attorneys Campaign Committee				Sacramento	CA	95814					2/21/2002 12:00:00 AM		3000	1231884															INC:S497:1018				
+827228	0	4	S497	F497P1	INC3721	OTH	Safeway,Inc.				Pleasanton	CA	94588-					2/27/2002 12:00:00 AM		1000																				
+827476	0	3	S497	F497P2	EXP211	COM	Middle Pac				Whittier	CA	90608					2/28/2002 12:00:00 AM		3000	1233302	Ron Calderon				ASM														
+828411	0	7	S497	F497P1	2002-2322	COM	Orange County Professional Firefighters Association PAC				Tustin	CA	92780-7319					3/2/2002 12:00:00 AM		1000	950925																			
+826480	1	9	S497	F497P2	2002-0034	CAO	Kim Burton for Public Defender				San Francisco	CA	94122				3/5/2002 12:00:00 AM	2/25/2002 12:00:00 AM		3805.73	1231633	Burton	Kim			PDR		CIT	San Francisco		S					2002-0034 				
+827983	0	1	S497	F497P1	F497P10000147760	IND	Esparza	Moctesuma			Los Angeles	CA	90032	N/A	Retired			3/1/2002 12:00:00 AM		1000																				
+828085	0	3	S497	F497P1	F497P1-3915	OTH	CIGNA Healthcare of California, Inc.				Glendale	CA	91209-2125					2/28/2002 12:00:00 AM		1000																				
+829500	0	1	S497	F497P1	F497P1-173	OTH	Realty Executives				Chula Vista	CA	91910					3/4/2002 12:00:00 AM		1000																				
+843062	0	4	S497	F497P1	C62772	OTH	Clorox Company				Oakland	CA	94612-0000				11/5/2002 12:00:00 AM	4/30/2002 12:00:00 AM		10000																				
+841497	0	1	S497	F497P1	C62703	OTH	CBC Framing, Inc.				Canoga Park	CA	91304-0000				11/5/2002 12:00:00 AM	4/23/2002 12:00:00 AM		10000																				
+836227	0	2	S497	F497P1	INC5650	IND	Ash	Roy L.			Los Angeles	CA	90077	Self Employed	Investor			4/16/2002 12:00:00 AM		25000																				
+831439	0	1	S497	F497P1	F497P1-646	SCC	Peace Officers Research Association of California PAC				Sacramento	CA	95833					2/14/2002 12:00:00 AM	2/14/2002 12:00:00 AM	6000	810830																			
+847472	0	1	S497	F497P1	F497P1-211	COM	California Refuse Removal Council South PAC				Orange	CA	92868					6/20/2002 12:00:00 AM		5000	761465																			
+828904	0	9	S497	F497P1	F497P1-587	OTH	Safeway Inc				Sacramento	CA	95825					3/1/2002 12:00:00 AM		1000																				
+861461	0	4	S497	F497P1	C84491	IND	Villa	Fernando			Long Beach	CA	90813-0000	County of Los Angeles	Physician		3/5/2002 12:00:00 AM	8/9/2002 12:00:00 AM		1000																				
+864695	0	3	S497	F497P1	2002-4450	OTH	Waste Management, Inc. & Affiliated Entities				Houston	TX	77253					8/20/2002 12:00:00 AM		1000																				
+865851	0	1	S497	F497P1	T105724	OTH	San Manuel Tribal Administration				Highland	CA	92346					8/29/2002 12:00:00 AM		1000																				
+867729	0	1	S497	F497P1	2002-4884	OTH	Fox Group A Division of News America Inc.				Beverly Hills	CA	90213					9/11/2002 12:00:00 AM		2000																				
+868640	0	2	S497	F497P1	CI3081	OTH	The Dentists Insurance Company				Sacramento	CA	95812				11/5/2002 12:00:00 AM	9/20/2002 12:00:00 AM		3000		Houston	Guy S.	Mr.		ASM		ASM		15	S									
+869499	1	20	S497	F497P1	INC47105	OTH	Sharp Ideas, Inc.				Fresno	CA	93704					9/26/2002 12:00:00 AM		2500																				
+868612	0	1	S497	F497P1	F497P1-928	OTH	Calko Steel Inc.				Los Angeles	CA	90003					9/20/2002 12:00:00 AM		1000																				
+868620	0	2	S497	F497P1	INC1120	COM	Helen Thomson Committee for a Healthy California				Sacramento	CA	95814					9/19/2002 12:00:00 AM		3000	1244906																			
+870134	1	12	S497	F497P1	2002-5527	COM	United Food and Commercial Workers Intl Union, AFL-CIO Active Ballot Club CA				Washington	DC	20006-1598					9/30/2002 12:00:00 AM		5000	1247000																			
+872447	0	2	S497	F497P1	INC1267	IND	Bodal	Bernt O.			Seattle	WA	98121	American Seafoods	CEO			10/8/2002 12:00:00 AM		3000																				
+870073	0	1	S497	F497P1	C1883	IND	Bloom	Ronald			Beverly Hills	CA	90212-0000	Crown Assoc. Realty, Inc.	Property Investments		11/5/2002 12:00:00 AM	9/30/2002 12:00:00 AM		1000																				
+872868	0	4	S497	F497P1	INC139	COM	TAXPAYERS FOR ACCOUNTABILITY AND BETTER SCHOOLS				MILL VALLEY	CA	94941					10/8/2002 12:00:00 AM		100000	1222562																			
+873255	0	4	S497	F497P1	F497P1-1584	PTY	Democratic State Central Committee of CA				Sacramento	CA	95814					10/8/2002 12:00:00 AM	10/8/2002 12:00:00 AM	1329.72	741666																			
+874583	0	6	S497	F497P1	INC13605	IND	Spanos	A	Mr.		Stockton	CA	95207-5515	A G Spanos Companies	Chairman			10/15/2002 12:00:00 AM		3000																				
+875365	0	1	S497	F497P1	F497P1-744	COM	CAP Trust Legislative Committee				Los Angeles	CA	90071					10/18/2002 12:00:00 AM		1000	760951																			
+868554	1	7	S497	F497P1	2002-5017	COM	Laborers' Political League Educational Fund				Washington	DC	20006					9/18/2002 12:00:00 AM		25000	930207																			
+877014	0	2	S497	F497P1	T117008	RCP	Californians ~~~ied for Patient Protection PAC				Sacramento	CA	95814					10/23/2002 12:00:00 AM		3000	920780																			
+875500	0	12	S497	F497P1	2002-6689	IND	Michels	Philip			Los Angeles	CA	90024-2910	Michels & Watkins	Attorney			10/18/2002 12:00:00 AM		1000																				
+877128	0	3	S497	F497P1	2002-7108	COM	San Francisco Laborer's Local 261 PAC				San Francisco	CA	94110					10/22/2002 12:00:00 AM		5000	981076																			
+876161	0	1	S497	F497P1	F497P1-411	COM	Machado for Senate 2000				Sacramento	CA	95814					10/19/2002 12:00:00 AM		3000	983466																			
+882333	0	3	S497	F497P2	NON47	COM	Denham for Senate				Modesto	CA	95353					10/28/2002 12:00:00 AM		41293.49	1240178	Jeffrey John Denham				SEN		SEN		12						NON:S497:47				
+878857	0	1	S497	F497P2	D2341	OTH	All Direct Mail Services				North Hollywood	CA	91605-0000				11/5/2002 12:00:00 AM	10/23/2002 12:00:00 AM		7192												Measure K	K	CIT						
+879110	0	1	S497	F497P1	F497P1-1685	OTH	Galt Ventures Inc				Wichita	KS	67212					10/23/2002 12:00:00 AM		1000																				
+879460	0	1	S497	F497P2	T117615	COM	CA Voter Reg. 2002 Committee				Sacramento	CA	95814					10/25/2002 12:00:00 AM		1000	1234252																			
+880093	1	6	S497	F497P2	F497P2-163	COM	Cedillo for State Senate				Burbank	CA	91502				11/5/2002 12:00:00 AM	10/25/2002 12:00:00 AM		3000	1222288	Cedillo	Gil			SEN	State Senator			22	S									
+882186	0	6	S497	F497P1	F497P1-1739	IND	Veloz	Thomas			Valencia	CA	91355	Ultraviolet Devices	President			10/28/2002 12:00:00 AM		1000																				
+883615	0	1	S497	F497P1	2002-8229	SCC	Standing Committee on Political Education of the CA Labor Federation, AFL-CIO				Oakland	CA	94610-3561					10/29/2002 12:00:00 AM		3000	741504																			
+886669	0	17	S497	F497P1	C90484	COM	Operating Engineers Local #3 Statewide PAC				Alameda	CA	94502-0000				11/5/2002 12:00:00 AM	10/31/2002 12:00:00 AM		75000	981697																			
+882634	0	11	S497	F497P1	F497P1-1845	PTY	Democratic State Central Committee of CA				Sacramento	CA	95814					10/28/2002 12:00:00 AM	10/28/2002 12:00:00 AM	148.16	741666																			
+883967	0	12	S497	F497P1	2002-8339	IND	Robertson	Sanford R.			San Francisco	CA	94109					10/29/2002 12:00:00 AM		5000																				
+883149	0	12	S497	F497P1	F497P1-1152	SCC	Pacific Bell/Pacific Telesis Group Employee PAC				San Francisco	CA	94105					10/29/2002 12:00:00 AM		4000	981470																			
+886910	0	1	S497	F497P1	INC113	OTH	American Trucking Association, Inc.				Alexandria	VA	22314					11/1/2002 12:00:00 AM		5000																				
+884724	1	19	S497	F497P1	F497P1-1169	PTY	Democratic State Central Committee of CA				Sacramento	CA	95814					10/30/2002 12:00:00 AM	10/30/2002 12:00:00 AM	182.03	741666																			
+886782	1	7	S497	F497P1	F497P1-868	PTY	San Diego County Republican Central Committee				San Diego	CA	92120					10/30/2002 12:00:00 AM		1120	741949																			
+887964	1	26	S497	F497P1	F497P1-1297	PTY	Democratic State Central Committee of CA				Sacramento	CA	95814					11/4/2002 12:00:00 AM	11/4/2002 12:00:00 AM	4800.61	741666																			
+945997	1	1	S497	F497P1	2003-0444	COM	State Building & Construction Trades Council of California PAC Small Contributor Committee				Sacramento	CA	95814					7/29/2003 12:00:00 AM		3570.29	743501																			
+927869	0	2	S497	F497P1	INC8	OTH	Harbor Bay Isle Associates				Alameda	CA	94501-					4/3/2003 12:00:00 AM		6400																				
+941282	0	3	S497	F497P1	INC521	OTH	Mercury General Corporation				Los Angeles	Ca	90010					7/3/2003 12:00:00 AM		21200																				
+889587	1	7	S497	F497P1	INC61507	OTH	Direct, LLC				Los Angeles	CA	90077					11/5/2002 12:00:00 AM		5000																				
+897098	0	8	S497	F497P1	2002-9637	OTH	Phoebus Consultants, LLC				Los Angeles	CA	90071					12/18/2002 12:00:00 AM		5000																				
+957576	0	1	S497	F497P1	INC3195	IND	Cook	Sylvia S.			Venice	CA	90292	Self-Employed, Same	Designer			8/29/2003 12:00:00 AM		1000																				
+960766	0	7	S497	F497P1	C98012	IND	Glucksten	Bradley			Los Angeles	CA	90036-0000	Apex Realty	Realtor		10/7/2003 12:00:00 AM	9/29/2003 12:00:00 AM		1000																				
+958703	0	21	S497	F497P1	INC5262	IND	Nye	Patricia			Corona	CA	92880	Hammer Down, Inc.	Office Administrator			9/15/2003 12:00:00 AM		1000																				
+962173	0	2	S497	F497P2	PDT40	COM	Califorians Against the Costly Recall of the Governor				Los Angeles	Ca	90035				10/7/2003 12:00:00 AM	10/6/2003 12:00:00 AM		10000	1256416					OTH	Recall Ballot Measure	STW												
+966935	0	10	S497	F497P2	2003-2133	CAO	Committee to Elect Judy Munoz				Hesperia	CA	92345				11/4/2003 12:00:00 AM	10/23/2003 12:00:00 AM		1000	1259824	Munoz	Judy			OTH	School Board	OTH	Victor Valley USD											
+961536	2	11	S497	F497P1	C98151	IND	Kessler	Warren J.			Encino	CA	91316-0000	Warren J. Kessler	Lawyer		10/7/2003 12:00:00 AM	10/1/2003 12:00:00 AM		1000																				
+961536	1	4	S497	F497P1	C98142	IND	Wexler	David D.			Los Angeles	CA	90046-0000	Rosenfeld Meyer & Sussman	Attorney		10/7/2003 12:00:00 AM	10/1/2003 12:00:00 AM		1000																				
+959533	1	1	S497	F497P1	C97420	COM	Governor Gray Davis Committee				Los Angeles	CA	90035-0000				10/7/2003 12:00:00 AM	9/23/2003 12:00:00 AM		626036.88	962636																			
+962424	0	2	S497	F497P1	INC9354	IND	Beck	Gary			San Diego	CA	92121	HST, Inc.	COO			10/6/2003 12:00:00 AM		1000																				
+961513	0	33	S497	F497P1	1184775_33	IND	A Plus Real Estate,				Prior Lake	MN	55372					7/22/2003 12:00:00 AM		5000																				
+979033	0	2	S497	F497P1	C4370	OTH	Kings Arco Arena Limited Partnership				Sacramento	CA	95834-0000				3/2/2004 12:00:00 AM	12/29/2003 12:00:00 AM		10000																				
+976788	0	1	S497	F497P1	INC902	IND	Schroeder	Michael J.			Newport Beach	CA	92661	Michael J. Schroeder, P.C.	Attorney			12/15/2003 12:00:00 AM		2200																				
+977163	0	1	S497	F497P1	INC68	OTH	American Magline Group				Los Angeles	CA	90064					12/22/2003 12:00:00 AM		3200																				
+970355	0	1	S497	F497P2	EXP32	COM	Citizens for a Better Hawthorne				Rncho Snta Margarita	CA	92688					11/3/2003 12:00:00 AM		5000	1253766	Citizens for a Better Hawthorne																		
+978555	0	1	S497	F497P1	INC148	IND	Holden	Nate N.			Los Angeles	CA	90016	None	Retired Councilmember & Legislator			1/6/2004 12:00:00 AM		55000																				
+984283	0	6	S497	F497P1	INC756	OTH	Metropolitan Pain Management Consutlants, Inc.				Sacramento	CA	95821-					1/21/2004 12:00:00 AM		1000																				
+988061	0	1	S497	F497P1	F497P1-5007	IND	Goldman	Catherine S.			Cupertino	CA	95014		Mother			1/28/2004 12:00:00 AM		1000																				
+980976	1	1	S497	F497P1	2004-0101	COM	CA State Council of Service Employees Political Issues, Defense and Advocacy				Sacramento	CA	95814					1/12/2004 12:00:00 AM		1719.75	960895																			
+988725	0	2	S497	F497P1	INC2780	OTH	EMERALD VENTURE GROUP, INC.				SAN DIEGO	CA	92108					1/28/2004 12:00:00 AM		10000																				
+990712	0	2	S497	F497P1	INC805	OTH	Simpson Resource Company				Seattle	WA	98101					2/2/2004 12:00:00 AM		1500																				
+993075	0	8	S497	F497P1	F497P1-4484	IND	Roberson	David			Newport Coast	CA	92657	United Sports Agency	Executive			2/10/2004 12:00:00 AM		1000																				
+982185	0	1	S497	F497P1	F497P1-1595	OTH	The FHK Companies				Sacramento	CA	95864					1/14/2004 12:00:00 AM		1000																				
+991947	0	1	S497	F497P1	2004-0243	OTH	AT & T				Sacramento	CA	95814					2/3/2004 12:00:00 AM		1000																				
+994667	0	130	S497	F497P1	1702	IND	Williamson	John			Fresno	CA	93710-7504	John F. Wiliamson Insurance Services	Employee Benefits Specialist		3/2/2004 12:00:00 AM	2/5/2004 12:00:00 AM		35																				
+995973	0	2	S497	F497P2	2004-0474	CAO	Friends of Ted Lempert				Redwood City	CA	94064				3/2/2004 12:00:00 AM	2/17/2004 12:00:00 AM		2000	1222139	Lempert	Ted			SEN		SEN		11										
+994788	0	1	S497	F497P1	F497P1-1779	COM	Californians for Civil Justice Reform PAC				Sacramento	CA	95814					2/13/2004 12:00:00 AM		1000	821251																			
+995000	0	7	S497	F497P1	F497P1-1468	COM	Friends of Community Colleges				Burbank	CA	91502					2/15/2004 12:00:00 AM		1000	1243019																			
+996295	0	2	S497	F497P1	F497P1-824	SCC	CA-NV Conference Of Operating Engineers Political Action Committee				Sacramento	CA	95815					2/18/2004 12:00:00 AM		1000	981568																			
+995039	0	173	S497	F497P1	1456	IND	Gordon	Paul			Van Nuys	CA	91411-1817	Insurance & Financial Services			3/2/2004 12:00:00 AM	1/5/2004 12:00:00 AM		10																				
+998045	0	2	S497	F497P1	C2605	OTH	Glaxo Smith Kline				Research Triangle	NC	27709-0000				3/2/2004 12:00:00 AM	2/19/2004 12:00:00 AM		1200																				
+999388	0	2	S497	F497P1	C1565	COM	Alan Lowenthal for Senate				Beverly Hills	CA	90211-0000				3/2/2004 12:00:00 AM	2/22/2004 12:00:00 AM		2000	1250578																			
+1000203	0	1	S497	F497P1	2004-0745	COM	Friends of Dede Alpert				San Diego	CA	92138					2/24/2004 12:00:00 AM		3200	951247																			
+1002513	0	2	S497	F497P1	INC1171	OTH	Morongo Band of Mission Indians				Cabazon	CA	92230					2/26/2004 12:00:00 AM		3000																				
+1002597	0	1	S497	F497P2	CI143	COM	Friends Of John Longville				Rialto	CA	92377				3/2/2004 12:00:00 AM	2/26/2004 12:00:00 AM		3000	1246357	Longville	John			ASM	AD 61	ASM		61										
+997935	0	3	S497	F497P2	EXP328	COM	Coto for Assembly				San Jose	CA	95126				3/2/2004 12:00:00 AM	2/20/2004 12:00:00 AM		1000	1253176	Joe Coto				ASM		ASM		23	H					EXP:S497:328				
+1004254	0	1	S497	F497P2	7614	CAO	Californians Against Higher Taxes				Mill Valley	CA	94941				3/2/2004 12:00:00 AM	2/20/2004 12:00:00 AM	2/20/2004 12:00:00 AM	25000		Californians Against High				OTH	State Committee		State											
+1008831	0	1	S497	F497P2	EXP788	COM	DE LA TORRE FOR ASSEMBLY				SOUTH GATE	CA	90280					2/23/2004 12:00:00 AM		1000	1253965	HECTOR DE LA TORRE				ASM		ASM		50										
+1003383	0	6	S497	F497P1	INC1249	IND	Rogers	Kathi			San Juan Capistrano	CA	92675	None	Retired			2/26/2004 12:00:00 AM		2500																				
+1003252	0	2	S497	F497P2	F497P2-257	COM	De La Torre for Assembly				South Gate	CA	90280					2/27/2004 12:00:00 AM		1000	1253965	De La Torre	Hector			ASM	State Assembly Person				S									
+995593	1	1	S497	F497P1	INC95	COM	California Apartment Association				Sacramento	CA	95814					2/17/2004 12:00:00 AM		25000	745208																			
+1017495	0	4	S497	F497P1	C4979	IND	Kohlberg	Andrew S.			Carlsbad	CA	92008-0000	Kisco Retirement Communities	President and CEO		3/7/2006 12:00:00 AM	5/4/2004 12:00:00 AM		10000																				
+1003269	0	1	S497	F497P1	C817	COM	Judy Chu for Assembly 2004				Beverly Hills	CA	90211-0000				3/2/2004 12:00:00 AM	2/26/2004 12:00:00 AM		3200	1250390																			
+1003842	0	1	S497	F497P1	INC587	COM	CALIFORNIA MOTOR CAR DEALERS ASSOCIATION PAC				SACRAMENTO	CA	95814					3/1/2004 12:00:00 AM		1200	741623																			
+1003524	0	3	S497	F497P2	T165013	CAO	Nation For Assembly 2004				San Rafael	CA	94912				3/2/2004 12:00:00 AM	2/27/2004 12:00:00 AM		1000	12500792	Nation	Joe			ASM		ASM		6	H									
+1039366	0	1	S497	F497P1	F497P10000289357	OTH	Ivie, McNeil & Wyatt 				Los Angeles	CA	90012					8/18/2004 12:00:00 AM		2500																				
+1039535	0	4	S497	F497P1	2004-1589	OTH	Target Stores				Minneapolis	MN	55403					8/27/2004 12:00:00 AM		2000																				
+1024230	0	2	S497	F497P1	INC407	OTH	eBAY INC.				SAN JOSE	CA	95125					7/20/2004 12:00:00 AM		25000																				
+1038070	0	2	S497	F497P1	INC498	COM	Recreation Political Action Committee				Auburn	CA	95604					8/17/2004 12:00:00 AM		1000	831498																			
+1022208	0	1	S497	F497P1	INC8	IND	Campbell	John B. T.			Irvine	CA	92603	State of California	Assemblyman			6/30/2004 12:00:00 AM		18000																				
+1036789	0	1	S497	F497P1	F497P10000287339	OTH	Blue Cross Of California 				Thousand Oaks	CA	91359-5055					8/10/2004 12:00:00 AM		1000																				
+1042448	1	3	S497	F497P1	NON3211	PTY	Democratic State Central Committee of California				Sacramento	CA	95814					9/21/2004 12:00:00 AM		19991.94	741666																			
+1042841	0	10	S497	F497P1	INC1538	OTH	Perona, Langer, Beck, Lallande & Serbin				Long Beach	CA	90807-0948					9/24/2004 12:00:00 AM		3200																				
+1042568	0	1	S497	F497P1	2004-1823	OTH	Alliance of Catholic Health Care				Sacramento	CA	95814					9/22/2004 12:00:00 AM		5000																				
+1041958	0	1	S497	F497P1	F497P1-1782	SCC	California Building Industry Association Small Contributor Committee				Sacramento	CA	95814					9/17/2004 12:00:00 AM		6400	1233615																			
+1042881	0	1	S497	F497P1	NON345	PTY	Democratic State Central Committee of California				Sacramento	CA	95814					9/24/2004 12:00:00 AM		160	741666																			
+1041341	0	1	S497	F497P1	F497P1-1461	IND	Alder	Michael			Beverly Hills	CA	90210-3604	Law Offices of C. Michael Alder	self-employed			9/13/2004 12:00:00 AM		2000																				
+1041818	0	1	S497	F497P1	INC1379	OTH	P G & E Corporation				San Francisco	CA						9/16/2004 12:00:00 AM		1000																				
+1041426	0	3	S497	F497P1	INC1254	OTH	SPRINT				SHAWNEE MISSION	KS	66207					9/13/2004 12:00:00 AM		1600																				
+1040676	0	2	S497	F497P1	INC824	OTH	EAST LAWN INC.				Sacramento	CA	95819					9/7/2004 12:00:00 AM		1250																				
+1041107	0	21	S497	F497P1	F497P1-909	IND	Tolt	Nikki			Beverly Hills	CA	90211	Law Offices of Nikki Tolt	Attorney			9/9/2004 12:00:00 AM		1000																				
+1046518	0	3	S497	F497P1	INC2445	IND	Rooney	James F. and Julie A.			Portola Valley	CA	94028	Gilead Sciences	VP Clinical Research			10/8/2004 12:00:00 AM		20000																				
+1045877	0	3	S497	F497P1	3	OTH	Northgate Petroleum Co.				Chico	CA	95927					10/6/2004 12:00:00 AM		1000																				
+1043685	0	9	S497	F497P1	2004-1926	OTH	Monsanto Company				St. Louis	MO	63167					9/29/2004 12:00:00 AM		2000																				
+1042977	1	1	S497	F497P1	INC3095	SCC	California State Employees Association Member Action Committee				Sacramento	CA	95814-					9/27/2004 12:00:00 AM		6400	950799																			
+1043709	3	14	S497	F497P1	F497P10000295545	OTH	Rucka O'Boyle Lombardo & McKenna 				Salinas	CA	93906					9/30/2004 12:00:00 AM		2000																				
+1043188	1	1	S497	F497P1	T197466	RCP	MICRA California PAC of Norcal Mutual Insurance Company				Burlingame	CA	94010					9/28/2004 12:00:00 AM		1500	1264748																			
+1043890	0	1	S497	F497P1	INC919	SCC	CA Independent Public Employees Leg. Council				San Bernardino	CA	92410					9/30/2004 12:00:00 AM		1000	891128																			
+1043742	0	1	S497	F497P1	CI73	COM	Physicians for the Group Practice of Medicine PAC				Piedmont	CA	94611				11/2/2004 12:00:00 AM	9/30/2004 12:00:00 AM		1000	992303																			
+1048792	0	1	S497	F497P1	INC132	COM	Consulting Engineers & Land Issues PAC				Sacramento	CA	95814					10/18/2004 12:00:00 AM		10000	1270458																			
+1048625	0	1	S497	F497P2	F497P2-1966	COM	Yes On Measure A				South San Francisco	CA	94080					10/18/2004 12:00:00 AM		19996.74	1254445																			
+1046430	1	17	S497	F497P1	INC1603	OTH	St. Ann Hospice Home Care, Inc.				Glendale	CA	91201					10/8/2004 12:00:00 AM		10000																				
+1049149	0	9	S497	F497P1	30598	OTH	Molina Healthcare, Inc.				Long Beach	CA	90802-4212				11/2/2004 12:00:00 AM	10/18/2004 12:00:00 AM		1000																				
+1049716	0	3	S497	F497P1	T206648	RCP	California Motor Car Dealers Association PAC				Sacramento	CA	95814					10/20/2004 12:00:00 AM		3200	741623																			
+1049535	0	39	S497	F497P1	101920040C5276716_39	OTH	Pine Valley Ranch				Newport Beach	CA	92660					10/19/2004 12:00:00 AM		6700																				
+1049244	0	3	S497	F497P1	2004-2381	OTH	Agua Caliente Band of Cahuilla Indians				Palm Springs	CA	92262					10/18/2004 12:00:00 AM		2200																				
+1051192	0	1	S497	F497P1	F497P1-88	SCC	California Optometric PAC Small Contributor Committee				Sacramento	CA	95814					10/21/2004 12:00:00 AM		1000	745825																			
+1049823	0	9	S497	F497P2	CI350	COM	Lowenthal For State Senate				Long Beach	CA	90803				11/2/2004 12:00:00 AM	10/19/2004 12:00:00 AM		1500	1250578	Lowenthal	Alan			SEN		SEN		27										
+1048889	1	1	S497	F497P1	F497P1-1716	SCC	CA State Council of Laborers PAC				Sacramento	CA	95814					10/18/2004 12:00:00 AM		1000	902770																			
+1055862	0	1	S497	F497P2	EXP8781	COM	Public Health Warning: No on 64				Sacramento	CA	95814				11/2/2004 12:00:00 AM	10/25/2004 12:00:00 AM		225000	1270479											Prop 64	64							
+1052802	0	1	S497	F497P2	F497P2-138	COM	Gary Podesto for Senate				Stockton	CA	95207				11/2/2004 12:00:00 AM	10/21/2004 12:00:00 AM		23600	1256166	Podesto	Gary			SEN	State Senator			05	S									
+1053706	1	1	S497	F497P1	70	OTH	S.d. Earles Construction, Inc.				Apple Valley	CA	92308				11/2/2004 12:00:00 AM	10/18/2004 12:00:00 AM		2900																				
+1054650	0	6	S497	F497P2	EDT2	COM	Ron Calderon for Assembly				Rancho Murieta	CA	95683					10/25/2004 12:00:00 AM		15.75	1250909	Assembly Member Ron Calderon				ASM		ASM		58	H					EDT:S497:2				
+1052736	0	11	S497	F497P2	F497P2-383	COM	Ira Ruskin Democrat for Assembly				Redwood City	CA	94061				11/2/2004 12:00:00 AM	10/22/2004 12:00:00 AM		441.59	1252809	Ruskin	Ira	Mr.		ASM	State Assembly Person		State of California	21	S									
+1053880	0	3	S497	F497P1	INC2642	OTH	Silber Pearlman, LLP				Dallas	TX	95204					10/21/2004 12:00:00 AM		8000																				
+1057347	0	1	S497	F497P1	1614	IND	Larkin-Thorne	Sonja			Avon	CT	06001-3149				11/2/2004 12:00:00 AM	10/26/2004 12:00:00 AM		500																				
+1058331	0	5	S497	F497P2	103020040E6352	RCP	Hill for Assembly	Greg			Redondo Beach	CA	90277				10/30/2004 12:00:00 AM	10/29/2004 12:00:00 AM		110000	1255189	Hill for Assembly	Greg																	
+1057546	0	18	S497	F497P2	102920040E39894	COM	Association	Johnson Clark			Sacramento	CA	95814				11/2/2004 12:00:00 AM	10/29/2004 12:00:00 AM		17204.83		For Assembly	Greg Hill			ASM		ASM		53						102920040E39894				
+1056151	1	5	S497	F497P1	F497P1-3161	COM	LA County Probation Officers Union, AFSCME, Local 685 PAC				Los Angeles	CA	90057					10/28/2004 12:00:00 AM		1000	744558																			
+1056151	1	7	S497	F497P1	F497P1-3164	COM	Wolk for Assembly 2004				Sacramento	CA	95814					10/28/2004 12:00:00 AM		1000	1253650																			
+1058133	0	11	S497	F497P2	2004-0356	CAO	Pinard for Senate				Sacramento	CA	95814				11/2/2004 12:00:00 AM	10/28/2004 12:00:00 AM		50196.07	1260326	Pinard	Margaret			SEN		SEN		15	S									
+1056013	0	9	S497	F497P2	EXP386	COM	John Campbell for Senate				Oakdale	CA	95361				11/2/2004 12:00:00 AM	10/27/2004 12:00:00 AM		3200	990037	John Campbell				SEN		SEN		35						EXP:S497:386				
+1058151	0	17	S497	F497P1	F497P1-1810	IND	Kimber	Les			Fresno	CA	93706	California Advocate	owner			10/29/2004 12:00:00 AM	11/2/2004 12:00:00 AM	3200																				
+1058161	0	4	S497	F497P2	CI850	COM	Underwood For Assembly				Del Mar	CA	92014				11/2/2004 12:00:00 AM	10/29/2004 12:00:00 AM		3200	1260430	Underwood	Karen			ASM		ASM		74										
+1056761	0	6	S497	F497P1	2004-3124	COM	International Brotherhood of Electrical Workers Educational Committee				Washington	DC	20005					10/27/2004 12:00:00 AM		50000	900161																			
+1049172	1	15	S497	F497P2	EXP2186	COM	Klehs Committee	The			San Leandro	CA	94577				11/2/2004 12:00:00 AM	10/19/2004 12:00:00 AM		1000	1245454	Johan Klehs				ASM		ASM		18										
+1060260	1	8	S497	F497P1	F497P1-1485	PTY	Democratic State Central Comm of CA				Sacramento	CA	95814					11/2/2004 12:00:00 AM	11/2/2004 12:00:00 AM	1173.34	741666																			
+1048484	2	10	S497	F497P2	NON15	PTY	SAN JOAQUIN COUNTY REPUBLICAN CENTRAL COMMITTEE				ESCALON	CA	95320					10/17/2004 12:00:00 AM		7920	742270																			
+1051309	1	9	S497	F497P2	2004-0106	CAO	Parra for Assembly Committee 2004				Bakersfield	CA	93302				11/2/2004 12:00:00 AM	10/20/2004 12:00:00 AM		19183.28	1251452	Parra	Nicole			ASM		ASM		30	H									
+1106571	0	7	S497	F497P1	7	IND	Daniel	Rania			Houston	TX	77002	n/a	Homemaker			5/2/2005 12:00:00 AM		5300																				
+1107364	0	129	S497	F497P1	C24808	IND	Struhl	Robin			Boca Raton	FL	33496-0000	N/A	Homemaker		5/17/2005 12:00:00 AM	5/10/2005 12:00:00 AM		1000																				
+1095366	0	8	S497	F497P1	INC861	IND	James	Iovine	Mr.		Los Angeles	CA	90025	Vivendi-Universal	Co-Chair Universal Music			3/2/2005 12:00:00 AM		22300																				
+1095366	0	11	S497	F497P1	INC857	IND	Rose	Marshall	Mr.		New York	NY	10021	The Georgetown Group	Chairman			3/2/2005 12:00:00 AM		11150																				
+1109847	0	2	S497	F497P1	F497P1-3173	COM	PHYSICIANS & PHARMACISTS ALLIANCE				LONG BEACH	CA	90801					6/7/2005 12:00:00 AM		5600	1277073																			
+1107673	0	18	S497	F497P1	C25487	IND	Malkin	Stephen			Highland Park	IL	60035-0000	Ranger Capitalist Management	Executive		5/17/2005 12:00:00 AM	5/15/2005 12:00:00 AM		1000																				
+1108576	0	1	S497	F497P1	INC735	OTH	Chinatown LLC				San Jose	CA	95110					5/24/2005 12:00:00 AM		5000																				
+1108915	0	34	S497	F497P1	INC3358	OTH	Princess Tours				Seattle	WA	98121-1299					5/21/2005 12:00:00 AM		10000																				
+1107586	0	18	S497	F497P1	C25348	OTH	Fahn Bros Properties, LLC				Sacramento	CA	95814-0000				5/17/2005 12:00:00 AM	5/13/2005 12:00:00 AM		1000																				
+1108915	0	65	S497	F497P1	INC3355	IND	Rich	Jeff			Dallas	TX	75204	ACS, Incorporated	CEO & Director			5/23/2005 12:00:00 AM		50000																				
+1109155	0	2	S497	F497P1	C10319	OTH	AIW, Inc.				Hyattsville	MD	20781-0000				11/2/2004 12:00:00 AM	5/23/2005 12:00:00 AM		5000																				
+1125012	0	5	S497	F497P1	INC5611	IND	Fields	Herb			Los Angeles	CA	90048	Bedford Freight Lines, Inc.	Owner			9/12/2005 12:00:00 AM		5000																				
+1124853	1	14	S497	F497P1	INC5537	IND	Herrera	Rudy			Bakersfield	CA	93309	Interactive Healthcare Medical Group	Chiropractor			9/9/2005 12:00:00 AM		3000																				
+1125768	0	6	S497	F497P1	INC5885	OTH	Miner Joaquin Building Corporation				Stockton	CA	95201					9/21/2005 12:00:00 AM		25000																				
+1126161	0	4	S497	F497P1	2005-1344	COM	Alliance for a Better California				Sacramento	CA	95814					9/27/2005 12:00:00 AM		5.44	1273998																			
+1125927	0	12	S497	F497P1	INC5894	IND	Poitras	John H.			Santa Ynez	CA	93460	Hidden Valley Ranch	Retired			9/22/2005 12:00:00 AM		1000																				
+1123964	0	8	S497	F497P1	INC5276	OTH	Lancaster Moving & Storage, Inc.				Lancaster	CA	93535					8/26/2005 12:00:00 AM		2500																				
+1132788	0	9	S497	F497P1	2005-4553	COM	CA State Council of Service Employees Issues Committee				Sacramento	CA	95814					10/27/2005 12:00:00 AM		625.04	960895																			
+1128132	0	8	S497	F497P1	F497P1-65	OTH	Scott's Jack London Seafood, Inc.				Oakland	CA	94607					10/14/2005 12:00:00 AM		5000																				
+1128033	0	21	S497	F497P1	2005-3295	COM	Democratic State Central Committee of California				Sacramento	CA	95814					10/12/2005 12:00:00 AM		2044.34	741666																			
+1128222	0	3	S497	F497P1	F497P10000365930	IND	Stanton	Joan			New York	NY	10022	N/A	Retired			10/7/2005 12:00:00 AM		10000																				
+1132582	0	4	S497	F497P2	EDT547	COM	Californians for Affordable Prescriptions - Yes on 78				Sacramento	CA	95814				11/8/2005 12:00:00 AM	10/28/2005 12:00:00 AM		100000	1275570	Prescription Drugs. Discounts. Initiative Statute						OTH	Statewide-Prop 78							EDT:S497:547				
+1129497	0	13	S497	F497P1	F497P1-124	IND	Soltan	Star S.			Rancho Santa Fe	CA	92067	Star S. Soltan	Attorney			10/21/2005 12:00:00 AM		1000																				
+1129498	0	1	S497	F497P1	INC278	OTH	JC PENNY CORPORATION, INC.				SALT LAKE CITY	UT	84110					10/21/2005 12:00:00 AM		20000																				
+1130618	1	8	S497	F497P1	2005-4482	OTH	Goldstein, Gellman, Melbostad, Gibson & Harris LLP				San Francisco	CA	94109					10/25/2005 12:00:00 AM		1000																				
+1135061	0	3	S497	F497P2	F497P20000369264	CAO	Californians For Fair Representation No On 77				Sacramento	CA	95814					11/2/2005 12:00:00 AM		1000	1276320																			
+1134343	0	2	S497	F497P2	2005-4624	BNM	No on 75, educators, firefighters, school employees, health care givers, etc.				Sacramento	CA	95814				11/8/2005 12:00:00 AM	10/30/2005 12:00:00 AM	11/5/2005 12:00:00 AM	45000	1277769											Proposition 75. Public Employee Union Dues. Required Consent for Political Contributions		Statewide						
+1135164	0	2	S497	F497P2	2005-5141	CAO	Friends of Anthony (Tony) Spitaleri				Sunnyvale	CA	94086					11/1/2005 12:00:00 AM		6694.60	1271060	Spitaleri	Anthony			CCM		CIT	City of Sunnyvale	1										
+1133551	0	4	S497	F497P2	NON3453	COM	No on 74 Committee				Sacramento	CA	95814				11/8/2005 12:00:00 AM	10/31/2005 12:00:00 AM		471.04	1277914											Public School Teachers.  Waiting Period For Permanent Status.  Dismissal.  Initiative Statute.								
+1134830	0	14	S497	F497P1	2005-5189	COM	Alliance for a Better California				Sacramento	CA	95814					10/22/2005 12:00:00 AM		286.43	1273998																			
+1135815	0	17	S497	F497P1	INC26554	IND	Forsythe	G.R.	Mr.		Wheeling	IL	60090	Indeck Energy Services	CEO			11/2/2005 12:00:00 AM		50000																				
+1141935	0	3	S497	F497P1	C112	IND	Melendez	Marife			Alameda	CA	94501-0000	American Liquid Packaging System	Controller		1/13/2006 12:00:00 AM	12/29/2005 12:00:00 AM		3300																				
+1141048	0	5	S497	F497P1	C1721	IND	Tsakopoulos	Kyriakos			Roseville	CA	95661-0000	KT Development Company	President		1/9/2006 12:00:00 AM	12/22/2005 12:00:00 AM		5000																				
+1136656	0	4	S497	F497P1	F497P1-409	IND	McTish	Matthew P.			Orefield	PA	18069	McTish Kunkel & Associates	President			11/6/2005 12:00:00 AM		5000																				
+1138101	0	3	S497	F497P1	F497P10000374333	OTH	Pacific Coast Capital Partners LLC 				El Segundo	CA	90245					11/23/2005 12:00:00 AM		10000																				
+1136786	0	14	S497	F497P1	INC29462	IND	Duong	David	Mr.		Oakland	CA	94607	California Waste Solutions	President			11/7/2005 12:00:00 AM		5000																				
+1155960	0	3	S497	F497P1	F497P10000403689	IND	Simone	Louise			New York	NY	10022	N/A	Retired			3/16/2006 12:00:00 AM		1000																				
+1155251	1	2	S497	F497P1	2006-0328	OTH	CSC Holdings, Inc.				Bethpage	NY	11741					2/28/2006 12:00:00 AM		5000																				
+1155469	0	1	S497	F497P1	INC70	OTH	J. G. BOSWELL COMPANY				CORCORAN	CA	93212					3/13/2006 12:00:00 AM		1000																				
+1156099	0	4	S497	F497P1	INC935	SCC	SEIU United Healthcare Workers West PAC				Sacramento	CA	95814					3/17/2006 12:00:00 AM		6700	747285																			
+1155251	0	12	S497	F497P1	2006-0325	IND	Spagnoli	Christine			Santa Monica	CA	90405	Greene, Broillet & Wheeler	Attorney			3/2/2006 12:00:00 AM		10000																				
+1155939	0	11	S497	F497P1	2006-0402	OTH	Venture Out Properties, LLC				San Francisco	CA	94108					3/16/2006 12:00:00 AM		10000																				
+1156206	0	6	S497	F497P1	F497P1-2763	OTH	Pacific Life				Newport Beach	CA	92660-6397					3/16/2006 12:00:00 AM		1000																				
+1157756	0	5	S497	F497P1	2006-0697	IND	Griffiths	Martin			Palos Verdes Estates	CA	90274	Arthur Anderson	Certified Public Accountant			3/22/2006 12:00:00 AM		1000																				
+1157924	1	1	S497	F497P1	2006-0734	IND	Ahmed	Sajid B.			Whittier	CA	90601	Alpha Scribe Systems	Chief Executive Officer			3/24/2006 12:00:00 AM		2000																				
+1159955	0	2	S497	F497P1	2006-0008	IND	Reiner	Robert			Beverly Hills	CA	90210	Self	Producer	X		3/31/2006 12:00:00 AM		4000																				
+1157497	0	1	S497	F497P1	INC484	COM	THE DOCTOR'S COMPANY PAC				NAPA	CA	94558					3/22/2006 12:00:00 AM		1000	923140																			
+1156317	0	4	S497	F497P1	C725	IND	Smith	Aaron			Santa Barbara	CA	93130-0000	N/A	Student		6/6/2006 12:00:00 AM	3/17/2006 12:00:00 AM		2000																				
+1159751	0	2	S497	F497P1	INC964	IND	DODDRIDGE	WILLIAM			TUSTIN	CA	92780	GOLDEN WEST DIAMOND CO.	PRESIDENT			3/29/2006 12:00:00 AM		5600																				
+1160499	0	3	S497	F497P1	2006-0798	OTH	Michael Douglas dba MD Investments				Woodside	CA	94062					4/3/2006 12:00:00 AM		5000																				
+1159922	0	8	S497	F497P1	INC2710	IND	Swette	Brian	Mr.		Hillsboro Beach	FL	33062	Retired	Retired			3/29/2006 12:00:00 AM		5000																				
+1159575	0	2	S497	F497P1	C1848	IND	Oved	Rafi			Beverly Hills	CA	90212-0000	Rafi Oved	Investor		6/6/2006 12:00:00 AM	3/28/2006 12:00:00 AM		1000																				
+1162223	0	2	S497	F497P1	INC161	IND	DUHAMEL	WILLIAM F.			CORTE MADERA	CA	94925	FARALLON CAPITAL MANAGEMENT	INVESTOR			4/13/2006 12:00:00 AM		29000																				
+1159899	1	4	S497	F497P1	2006-0771	OTH	Creative Artists Agency				Beverly Hills	CA	90212					3/30/2006 12:00:00 AM		5000																				
+1161458	0	1	S497	F497P1	F497P10000413024	IND	Rosenwald	Lindsay			New York	NY	10019	Paramount BioCapital	Chairman & CEO			4/10/2006 12:00:00 AM		5000																				
+1167168	0	18	S497	F497P1	INC3332	OTH	Foster Poultry Farms				Livingston	CA	95334					4/28/2006 12:00:00 AM		5000																				
+1164839	0	1	S497	F497P1	F497P10000416537	IND	Salter	Maxwell			Beverly Hills	CA	90210	Benos Inc	Chairman			4/24/2006 12:00:00 AM		1500																				
+1168414	0	3	S497	F497P1	INC1383	OTH	SEIU PEA INternational				Washington	DC	20005					5/1/2006 12:00:00 AM		5600																				
+1168598	0	2	S497	F497P1	F497P1-22320	OTH	Federal Express				Washington	DC	20044					5/2/2006 12:00:00 AM		1000																				
+1168466	0	1	S497	F497P1	1	IND	Garcia	Rosalva			Santa Ana	CA	927012318	Rosalva Garcia	Doctor			4/30/2006 12:00:00 AM		1000																				
+1169860	0	1	S497	F497P1	2006-1353	OTH	Belvedere-Tiburon Library Foundation				Belvedere-Tiburon	CA	94920					5/10/2006 12:00:00 AM		1000																				
+1169517	0	1	S497	F497P1	2006-1320	OTH	Jackson Properties, Inc.				Sacramento	CA	95824					5/7/2006 12:00:00 AM		1000																				
+1169168	1	3	S497	F497P1	C5429	OTH	Kawada Company of America, Ltd.				Los Angeles	CA	90016-0000				5/9/2006 12:00:00 AM	5/5/2006 12:00:00 AM		1000																				
+1170227	0	1	S497	F497P1	C1720	OTH	AT&T Inc. and its Affiliates				San Francisco	CA	94105-0000				6/6/2006 12:00:00 AM	5/11/2006 12:00:00 AM		1000																				
+1171992	0	2	S497	F497P1	INC2150	SCC	AT&T California Employee PAC				San Francisco	CA	94105					5/18/2006 12:00:00 AM		5000	981470																			
+1171334	1	4	S497	F497P1	F497P1-625	OTH	Diageo				Norwalk	CT	06851					5/16/2006 12:00:00 AM		1000																				
+1172090	0	45	S497	F497P1	INC9442	IND	Rich	Jeffrey	Mr.		Dallas	TX	75202	Rich Capital LLC(self)	CEO			5/19/2006 12:00:00 AM		22300																				
+1171914	0	5	S497	F497P1	F497P1-3214	COM	Local 660 State & Local Political Fund				Los Angeles	CA	90015					5/19/2006 12:00:00 AM		200	743794																			
+1172138	0	15	S497	F497P1	F497P10000425876	COM	Political Action Committee Of CCAA 				San Francisco	CA	94108					5/20/2006 12:00:00 AM		1000	841144																			
+1172082	0	1	S497	F497P1	F497P10000425488	IND	Abernethy	Robert			Manhattan Beach	CA	90266	American Standard Development	President			5/19/2006 12:00:00 AM		2000																				
+1171973	0	9	S497	F497P1	F497P10000425337	OTH	Foster Poultry Farms 				Livingston	CA	95334					5/19/2006 12:00:00 AM		1100																				
+1175712	0	2	S497	F497P1	C3088	SCC	COPE CA Labor Federation, AFL-CIO				Oakland	CA	94610-3561				6/6/2006 12:00:00 AM	5/26/2006 12:00:00 AM		8000	741504																			
+1175714	0	2	S497	F497P2	EXP17	COM	JEREMY BACA FOR ASSEMBLY				SACRAMENTO	CA	95818					5/25/2006 12:00:00 AM		1000	1274712	JEREMY BACA				ASM		ASM		62										
+1173319	0	1	S497	F497P2	EXP133	COM	Alvarez for Assembly 2006				Santa Ana	CA	92701				6/6/2006 12:00:00 AM	5/23/2006 12:00:00 AM		3300	1278965	Claudia Alvarez				ASM		ASM		69										
+1175503	0	9	S497	F497P1	2006-2129	IND	Kavounas	Edmond A.			Greenwich	CT	08830	Rockwood Capital Corporation	President			5/25/2006 12:00:00 AM		5000																				
+1174715	0	2	S497	F497P1	INC1761	IND	Eglin	Kelley B.			Moraga	CA	94556	Kelley B. Eglin	Attorney			5/24/2006 12:00:00 AM		1000																				
+1173591	0	1	S497	F497P1	C126	OTH	Muro Tire's Inc.				Irwindale	CA	91706-0000				6/6/2006 12:00:00 AM	5/23/2006 12:00:00 AM		1000																				
+1179519	0	3	S497	F497P1	33554	IND	Buell	Hoy			Arroyo Grande	CA	93420-5807	Greenheart Farms	Farmer		6/6/2006 12:00:00 AM	6/5/2006 12:00:00 AM		1000																				
+1177452	0	1	S497	F497P1	C1842	OTH	Maher Guiley & Maher, P.A.				Winter Park	FL	32789-0000				6/6/2006 12:00:00 AM	5/30/2006 12:00:00 AM		1000																				
+1170318	1	25	S497	F497P1	2006-1497	IND	Pedas	Theodore			Washington	DC	20016	Circle Management Company	President			5/12/2006 12:00:00 AM		3500																				
+1166745	1	8	S497	F497P1	2006-1132	IND	Mahdesian	Richard			Studio City	CA	91604	Servicon Systems, Inc.	General Manager			4/27/2006 12:00:00 AM		1500																				
+1178455	0	11	S497	F497P2	EXP2787	COM	Wyland for Senate	Mark			Oakdale	CA	95361				6/6/2006 12:00:00 AM	6/2/2006 12:00:00 AM		1000	1253967	Mark Wyland				SEN		SEN		38										
+1176176	1	35	S497	F497P1	F497P1-6964	SCC	U. A. Local 38 COPE Fund				San Francisco	CA	94103					5/29/2006 12:00:00 AM		1000	746875																			
+1177946	0	1	S497	F497P2	1030410	COM	Steinberg	Darrell			Sacramento	CA	95814				6/6/2006 12:00:00 AM	6/1/2006 12:00:00 AM	6/5/2006 12:00:00 AM	1000	1000.00	Steinberg	Darrell					SEN			h									
+1175950	0	5	S497	F497P1	INC487	OTH	The Boeing Company				Seattle	WA	98124-1113					5/27/2006 12:00:00 AM		1000																				
+1189628	1	3	S497	F497P1	3	IND	Shorenstein	Lydia			San Francisco	CA	94118	Homemaker	Homemaker			8/7/2006 12:00:00 AM		5600																3				
+1178932	0	8	S497	F497P1	F497P10000431381	IND	Barrack	Thomas		Jr.	Los Angeles	CA	90067	Colony Capital, Inc.	Investor			6/2/2006 12:00:00 AM		5000																				
+1179390	0	1	S497	F497P1	INC717	COM	APARTMENT ASSOC. OF ORANGE COUNTY PAC				GARDEN GROVE	CA	92843					6/5/2006 12:00:00 AM		1300	980470																			
+1178867	0	4	S497	F497P1	3376	IND	Tabak	Stewart			Stockton	CA	95204-5253	Tabak Law Firm	Attorney		6/8/2006 12:00:00 AM	6/2/2006 12:00:00 AM		1000																				
+1163490	3	1	S497	F497P1	2006-1019	IND	Aitken	Wylie A.			Santa Ana	CA	92707	Aitken, Aitken & Cohn	Attorney			4/19/2006 12:00:00 AM		5000																				
+1169227	3	2	S497	F497P1	2006-1313	IND	Andrianos	Dino			Burbank	CA	91504	Star Restaurant	Owner			5/5/2006 12:00:00 AM		1000																				
+1179482	0	2	S497	F497P2	2		Bermudez For Senate				Norwalk	CA	90650				6/6/2006 12:00:00 AM	6/5/2006 12:00:00 AM		6700	1269758	Bermudez	Rudy			SEN		SEN		30	S					2				
+1177345	1	10	S497	F497P2	2006-2401	CAO	Tom Umberg for State Senate				Santa Ana	CA	92702				6/6/2006 12:00:00 AM	5/30/2006 12:00:00 AM		4100	1272712	Umberg	Tom			SEN		SEN		34										
+1181998	1	12	S497	F497P1	2006-2992	IND	Stevens	Chris L.			Sacramento	CA	95816	Cambridge Homes	Owner			6/27/2006 12:00:00 AM		22300																				
+1200319	0	1	S497	F497P1	F497P1-21	IND	Barbour	David			Fairfax	CA	94930	Autodesk, Inc.	Software Engineer			9/11/2006 12:00:00 AM		5000																				
+1198230	0	1	S497	F497P1	F497P1-23058	IND	Hawthorne	Timothy R.			Newport Beach	CA	92663	Buchanan Street Partners	Executive Vice President			8/25/2006 12:00:00 AM		1000																				
+1198955	1	3	S497	F497P1	2006-3716	IND	Friedman	David L.			Santa Monica	CA	90402	Friedman Psychiatric Medical Group	Physician			8/31/2006 12:00:00 AM		1000																				
+1198949	0	4	S497	F497P1	INC515	OTH	Cox Communications, Inc.				Atlanta	GA	30319					8/31/2006 12:00:00 AM		2500																				
+1199999	0	1	S497	F497P1	2006-3811	OTH	C.C.C.D. Enterprises, Inc. Orange Coast College				Costa Mesa	CA	92626					8/31/2006 12:00:00 AM		10000																				
+1201039	0	2	S497	F497P1	092020060C2296_3	OTH	Southfork Partnership				Roseville	CA	95661					9/19/2006 12:00:00 AM		1650																				
+1202644	0	4	S497	F497P1	2006-4320	IND	Filson	Steve N.			Danville	CA	94506	United Airlines	Pilot			9/27/2006 12:00:00 AM		1000																				
+1201273	0	12	S497	F497P1	12	IND	Bell	Robert J.			Rancho Sante Fe	CA	92067	Luce Forward Hamilton & Scripps	Attorney			9/21/2006 12:00:00 AM		3000																				
+1203070	0	3	S497	F497P1	INC2636	COM	Taxpayers for Ackerman				Sacramento	CA	95833					9/29/2006 12:00:00 AM		3300	1282840																			
+1202930	1	2	S497	F497P1	C4543	IND	Strumwasser	Michael			Malibu	CA	90265-0000	Strumwasser & Wrocher LLP	Attorney		10/1/2006 12:00:00 AM	9/29/2006 12:00:00 AM		2500																				
+1202945	0	3	S497	F497P1	C3346	SCC	CA State Employees' Assn. Member Action Comm.				Sacramento	CA	95814-0000				11/7/2006 12:00:00 AM	9/29/2006 12:00:00 AM		3300	950799																			
+1206197	0	5	S497	F497P1	2006-4668	OTH	Southern California Edison				Rosemead	CA	91770					10/10/2006 12:00:00 AM		2500																				
+1207401	0	2	S497	F497P1	F497P100000000464977	COM	AT&T Inc. And Its Affiliates				San Francisco	CA	94105					10/12/2006 12:00:00 AM		3300	478036																			
+1208001	0	36	S497	F497P1	INC42790	COM	UPSPAC-California				Atlanta	GA	30328					10/13/2006 12:00:00 AM		10000	921055																			
+1207956	0	1	S497	F497P1	2006-5108	OTH	Law Offices of R. Rex Parris				Lancaster	CA	93534					10/13/2006 12:00:00 AM		6500																				
+1206154	0	1	S497	F497P1	INC873	OTH	Advance America				Spartanburg	SC	29306					10/10/2006 12:00:00 AM		1000																				
+1210260	1	7	S497	F497P1	F497P1-24225	OTH	Clearwater Port LLC				Houston	TX	77056					10/23/2006 12:00:00 AM		5000																				
+1212009	0	1	S497	F497P2	EXP135	COM	No on 90. Californians Against the Taxpayer Trap				Mill Valley	CA	94941				11/7/2006 12:00:00 AM	10/25/2006 12:00:00 AM		52000	1285334											Government Acquisition, Regulation of Private Property	90	Statewide						
+1211497	0	22	S497	F497P2	11088	CAO	Mark Ridley-Thomas for State Senate				Los Angeles	CA	90043				11/7/2006 12:00:00 AM	10/25/2006 12:00:00 AM	10/25/2006 12:00:00 AM	2300	1277296	Ridley-Thomas	Mark			SEN	State Senate		State	26										
+1211700	0	18	S497	F497P1	INC3197	IND	Pritzker	Jeanne			Los Angeles	CA	90025	None	Homemaker			10/24/2006 12:00:00 AM		5600																				
+1213824	0	1	S497	F497P1	INC2306	COM	Pipe Trades District Council 436 PAC				Fresno	CA	93727					10/27/2006 12:00:00 AM		3300	810629																			
+1214106	0	26	S497	F497P1	INC45233	IND	Tognazzini	Terry	M.		Santa Ana	CA	92705	Tog Hotel Properties	Owner			10/27/2006 12:00:00 AM		2500																				
+1213744	0	1	S497	F497P1	INC2497	COM	California Dental Hygienists Political Action Committee				Sacramento	CA	95814					10/27/2006 12:00:00 AM		1000	830002																			
+1214205	0	7	S497	F497P2	2006-0212	CAO	Tony Mendoza for Assembly				Los Angeles	CA	90071				11/7/2006 12:00:00 AM	10/28/2006 12:00:00 AM		10670.73	1266727	Mendoza	Tony			ASM		ASM		56	S									
+1216925	0	1	S497	F497P2	EXP576	COM	LET'S REBUILD CALIFORNIA - YES ON 1A, 1B, 1C, 1D, AND 1E				SACRAMENTO	CA	95814					10/31/2006 12:00:00 AM		400000	1287490							STW				PROPOSITION 1A, 1B, 1C, 1D, AND 1E								
+1218157	0	1	S497	F497P2	EXP117274	COM	Julia Brownley for Assembly				Santa Monica	CA	90405					11/1/2006 12:00:00 AM		3350	1271026	Julia Brownley				ASM		ASM		41										
+1218340	0	4	S497	F497P2	EDT411	COM	Chavez for Mayor				San Jose	CA	95112				11/7/2006 12:00:00 AM	10/31/2006 12:00:00 AM		503.32	1281694	Ms. Cindy Chavez				MAY		OTH	City of San Jose		S									
+1218888	0	2	S497	F497P2	2006-5468	CAO	Charles Calderon for Assembly 2006				Covina	CA	91722				11/7/2006 12:00:00 AM	11/1/2006 12:00:00 AM		1000	1274242	Calderon	Charles			ASM		ASM		58										
+1218343	0	7	S497	F497P1	INC3766	OTH	TFT Properties, Inc.				Belmont	CA	94002					10/31/2006 12:00:00 AM		1000																				
+1218439	0	1	S497	F497P2	1		Los Angeles County Democratic Party - State Candidate Committee				Burbank	CA	91502				11/7/2006 12:00:00 AM	11/1/2006 12:00:00 AM		13950	1237135															1				
+1217772	0	2	S497	F497P2	D73	COM											11/1/2006 12:00:00 AM	10/30/2006 12:00:00 AM		10000	0551324																			
+1220707	0	5	S497	F497P1	773300	COM	GENE MULLIN - STATE ASSEMBLY 2006				SOUTH SAN FRANCISCO	CA	94083					11/4/2006 12:00:00 AM		10000	1275188																			
+1220221	1	5	S497	F497P1	5	OTH	Kaplan Fox & Kilsheimer LLP				New York	NY	10022					11/4/2006 12:00:00 AM		5000																5				
+1220575	0	8	S497	F497P1	INC2408	COM	Wine Institute California PAC				Sacramento	CA	95814					11/6/2006 12:00:00 AM		2500	1277874																			
+1219987	0	1	S497	F497P1	F497P1-2197	COM	United Pilots Political Action Committee				Rosemont	IL	60018					11/3/2006 12:00:00 AM		2500	499656																			
+1218355	1	10	S497	F497P2	2006-0250	CAO	Cathleen Galgiani for Assembly				Tracy	CA	95376				11/7/2006 12:00:00 AM	10/31/2006 12:00:00 AM		21144.40	1273296	Galgiani	Cathleen			ASM		ASM		17	S									
+1220836	0	2	S497	F497P2	2006-7177	COM	Los Angeles County Democratic Party Issues & Advocacy Committee				Los Angeles	CA	90010				11/7/2006 12:00:00 AM	11/6/2006 12:00:00 AM		20000	744554																			
+1269017	0	1	S497	F497P1	INC50790	IND	Schooley	Laverne D.			Long Beach	CA	90802	Fulwider Patton	Attorney/Partner			5/14/2007 12:00:00 AM		5000																				
+1220870	1	22	S497	F497P1	INC46144	IND	Kuo	Lily	Ms.		Cerritos	CA	90703	Lily Kuo	Marketing Consultant			11/6/2006 12:00:00 AM		2500																				
+1254474	0	1	S497	F497P1	INC81	OTH	AMERICAN INSURANCE ASSOCIATION				WASHINGTON	DC	20036					3/21/2007 12:00:00 AM		10750																				
+1265219	0	1	S497	F497P1	INC50684	OTH	Can-Am Plumbing				Pleasanton	CA	94566					4/30/2007 12:00:00 AM		5000																				
+1267174	1	197	S497	F497P1	INC150548	IND	Wolfman	Elias			Fort Bragg	CA	95437	Self Employed	Optometrist			3/31/2007 12:00:00 AM		7.29																INC:A:150548				
+1267174	1	452	S497	F497P1	INC148660	IND	Seger	Ronald			Mountain View	CA	94040	Self Employed	Optometrist			2/28/2007 12:00:00 AM		14.58																INC:A:148660				
+1267174	1	1128	S497	F497P1	INC149957	IND	Barnett	Melissa			Sacramento	CA	95835	Self Employed	Optometrist			2/28/2007 12:00:00 AM		8.75																INC:A:149957				
+1267174	1	1647	S497	F497P1	INC148876	IND	Goldberg	Teresa			Albany	CA	94706	Self Employed	Optometrist			2/28/2007 12:00:00 AM		14.58																INC:A:148876				
+1267174	1	1549	S497	F497P1	INC150603	IND	Mc Farland	Gregory			Rancho Mirage	CA	92270	Self Employed	Optometrist			3/31/2007 12:00:00 AM		29.16																INC:A:150603				
+1267174	1	4110	S497	F497P1	INC149908	IND	Han	Jing			Folsom	CA	95630	Self Employed	Optometrist			2/28/2007 12:00:00 AM		9.47																INC:A:149908				
+1275084	0	243	S497	F497P1	IDT1666	OTH	Wittmeier Chevrolet				Chico	CA	95928					1/25/2007 12:00:00 AM		62.50																IDT:A:1666				
+1275470	0	84	S497	F497P1	INC3510	OTH	Heritage Provider Network				Marina del Rey	CA	90292					5/29/2007 12:00:00 AM		466.67																INC:A:3510				
+1288410	0	8	S497	F497P1	A17835	OTH	Californian MHE - 196				Paramount	CA	90723					7/18/2007 12:00:00 AM		210																				
+1275589	0	1	S497	F497P1	INC520	IND	Rich	Howard S.			New York	NY	10012	Howard S. Rich	Real Estate Developer			6/26/2007 12:00:00 AM		3600																				
+1275084	0	686	S497	F497P1	IDT2111	OTH	Riverside Mitsubishi				Riverside	CA	92504-4104					5/9/2007 12:00:00 AM		87.50																IDT:A:2111				
+1291009	0	27	S497	F497P1	C3865	IND	Sims	Harlan			Los Angeles	CA	90056-0000	HMS Properties	Real Estate Investment / Property Management		9/11/2007 12:00:00 AM	7/23/2007 12:00:00 AM		200																				
+1299351	0	2	S497	F497P2	2007-0044	BNM	Yes on Proposition 92, Californians for Improving Community Colleges				Sacramento	CA	95814					11/1/2007 12:00:00 AM	11/6/2007 12:00:00 AM	2772.24	1282453											Proposition 92 - Community Colleges Funding								
+1302761	0	79	S497	F497P1	C4045	OTH	Medlmmune Affairs, Inc.				Gaithersburg	MD	20878-0000				1/9/2008 12:00:00 AM	11/27/2007 12:00:00 AM		1000																				
+1266186	1	6	S497	F497P1	INC39	OTH	Southern California Edison				Rosemead	CA	91770					5/8/2007 12:00:00 AM		75000																				
+1299792	0	135	S497	F497P1	INC5873	IND	Duff	Richard			San Francisco	CA	94123-4120	Self-employed	Chiropractor			8/30/2007 12:00:00 AM		10																INC:A:5873				
+1303478	0	141	S497	F497P1	INC512	OTH	Highland Chiropractic				Highland	CA	92346					11/27/2007 12:00:00 AM		100																INC:A:512				
+1303738	1	13	S497	F497P1	F497P100000000534862	IND	Nersesyan	Vergine			Glendale	CA	91205	N/A	Homemaker			12/31/2007 12:00:00 AM		6000																				
+1307585	0	148	S497	F497P1	INC220094	IND	WAGTER	JOHNNIE			RIVERSIDE	CA	925088980	FARMERS GROUP INC	AGENT			1/14/2008 12:00:00 AM		82.50																INC:A:220094				
+1305882	0	3796	S497	F497P1	INC185434	IND	Zovickian	David			San Francisco	CA	94109-8319	Self Employed	Dentist			1/18/2008 12:00:00 AM		120																INC:A:185434				
+1305882	0	659	S497	F497P1	INC187238	IND	Vixie	Linda			Susanville	CA	96130-8739	Self Employed	Dentist			1/17/2008 12:00:00 AM		120																INC:A:187238				
+1305882	0	881	S497	F497P1	INC188947	IND	Nahigian	Martin			Fresno	CA	93711-3503	Self Employed	Dentist			1/18/2008 12:00:00 AM		120																INC:A:188947				
+1305882	0	1991	S497	F497P1	INC188265	IND	Nguyen	Thanhlong			Westminster	CA	92683-3347	Self Employed	Dentist			1/17/2008 12:00:00 AM		120																INC:A:188265				
+1305882	0	1631	S497	F497P1	INC186855	IND	Tam	Anita			Hacienda Heights	CA	91745-5333	Self Employed	Dentist			1/17/2008 12:00:00 AM		120																INC:A:186855				
+1305882	0	747	S497	F497P1	INC189430	IND	Moon	Paul			Red Bluff	CA	96080-2373	Self Employed	Dentist			1/18/2008 12:00:00 AM		200																INC:A:189430				
+1300390	1	1	S497	F497P1	INC1281	OTH	LEAGUE OF CALIFORNIA CITIES - NON PUBLIC FUNDS				SACRAMENTO	CA	95814					12/5/2007 12:00:00 AM		150000																				
+1312205	0	2	S497	F497P1	2008-0012	COM	Committee to Protect California's Future				Sacramento	CA	95814					1/30/2008 12:00:00 AM		300000	1277456																			
+1305882	0	2703	S497	F497P1	INC187664	IND	Stanley	Ralph			San Jose	CA	95124-3243	Self Employed	Dentist			1/17/2008 12:00:00 AM		120																INC:A:187664				
+1307635	0	4	S497	F497P1	2008-0273	OTH	Taft College Foundation				Taft	CA	93268					1/28/2008 12:00:00 AM		6000																				
+1316307	0	44	S497	F497P1	45	IND	Richardson	Lawrence			Durham	NC	27701	info req	info req			7/9/2007 12:00:00 AM		134.14																				
+1316885	0	22	S497	F497P1	IDT19	IND	Erickson	Christina			Oakland	CA	94607	Genentech Inc.	Sr. Compliance Auditor			2/11/2008 12:00:00 AM		100																IDT:A:19				
+1317461	0	2	S497	F497P1	INC386	COM	California Independent Petroleum PAC				Sanco Sta Margarita	CA	92688					3/7/2008 12:00:00 AM		1000	822237																			
+1322250	0	1	S497	F497P1	INC817	COM	Emergency Medical PAC				Sacramento	CA	95814					4/1/2008 12:00:00 AM		2000	771066																			
+1324925	0	1	S497	F497P1	F497P1-3527	IND	Matich	Robert	Mr.		San Bernardino	CA	92412	Robert Matich	Self Employed			4/16/2008 12:00:00 AM		3600																				
+1322075	0	2	S497	F497P1	F497P1-1949	IND	Ernst	Don			San Luis Obispo	CA	93401	Self Employed	Attorney			3/28/2008 12:00:00 AM		1000																				
+1323844	0	2	S497	F497P1	2	OTH	Sonoma County Alliance				Healdsburg	CA	95448					3/30/2008 12:00:00 AM		5000	791511																			
+1324991	0	1	S497	F497P1	F497P100000000554473	OTH	Linebarger Goggan Blair & Sampson LLP				Austin	TX	78741					4/15/2008 12:00:00 AM		1500																				
+1324288	0	1	S497	F497P1	INC100	IND	SIMONSEN	GERALD			POWAY	CA	92064	RM PROPERTIES	PRES.			4/3/2008 12:00:00 AM		50000																				
+1324046	0	1	S497	F497P1	INC2997	OTH	AKAMAC (Assn. of Korean Asian Medicine & Acupuncture of CA) formerly AKOMAC				Los Angeles	CA	90010		Not a Political Committee			4/10/2008 12:00:00 AM		1000																				
+1322138	0	1	S497	F497P1	INC2397	OTH	Rainbow Disposal Co.				Huntington Beach	CA	92647					3/31/2008 12:00:00 AM		1000																				
+1324090	0	288	S497	F497P1	2008-2129	IND	Lacayo	Jery			Mariposa	CA	95338-9609	N/A	Retired			3/20/2008 12:00:00 AM		270																				
+1326015	0	5	S497	F497P1	INC304	IND	Vrionis	Gary			Danville	CA	94506	Vrionis & Son, LLC	Real Estate			4/21/2008 12:00:00 AM		2000																				
+1326202	0	3	S497	F497P1	T537883	IND	Shannon	Blake			Tulare	CA	93274	Andreini & Co.	Insurance			4/22/2008 12:00:00 AM		1000																				
+1328325	0	4	S497	F497P1	C699	OTH	BNSF Railway Company				Fort Worth	TX	76131-0000				6/3/2008 12:00:00 AM	4/28/2008 12:00:00 AM		1000																				
+1326187	0	1	S497	F497P1	INC1566	COM	CALIFORNIANS FOR NEIGHBORHOOD PROTECTION: YES ON PROP. 99, NO ON PROP 98, A SPONSORED COMMITTEE OF CONSERVATIONISTS AND LABOR				WEST HOLLYWOOD	CA	90069					4/22/2008 12:00:00 AM		150000	1287066																			
+1329763	0	1	S497	F497P1	INC1059	COM	Tom Harman for Senate 2008				Sacramento	CA	95833					4/29/2008 12:00:00 AM		1500	1277569																			
+1326076	0	4	S497	F497P1	C8231	COM	DRIVE Committee				Washington	DC	20001-2130				4/22/2008 12:00:00 AM	4/21/2008 12:00:00 AM		2500	880969																			
+1326991	0	280	S497	F497P1	INC128664	IND	Ucar	Kalust			GLENDALE	CA	91204	Ucar Kalust, MD	Physician			3/21/2008 12:00:00 AM		100																INC:A:128664				
+1326907	0	37	S497	F497P1	INC17926	OTH	Ralph Stone and Company, Inc.				Los Angeles	CA	90025					3/24/2008 12:00:00 AM		107																INC:A:17926				
+1327002	0	4	S497	F497P1	5473	IND	Debber	Janet			Rocklin	CA	95765-3723	n/a	Homemaker		6/3/2008 12:00:00 AM	4/24/2008 12:00:00 AM		1800																				
+1331377	0	1551	S497	F497P1	INC199272	IND	Manaloto	Abdon			Roseville	CA	95661-4602	Self Employed - no business name	Dentist			4/28/2008 12:00:00 AM		120																				
+1331377	0	1610	S497	F497P1	INC202772	IND	Jue	Daniel			Sacramento	CA	95818-1314	Self Employed - no business name	Dentist			4/28/2008 12:00:00 AM		120																				
+1331377	0	3716	S497	F497P1	INC198973	IND	Barsoum	Maher			Upland	CA	91786-7029	Self Employed - no business name	Dentist			4/28/2008 12:00:00 AM		120																				
+1332607	0	399	S497	F497P1	INC3715	IND	McCorkle	Lee			Glenn	CA	95943	McCorkle Farms Inc	Farmer			4/28/2008 12:00:00 AM		50																				
+1331377	1	3278	S497	F497P1	INC199514	IND	Wallace	Glynis			Torrance	CA	90505-6576	Self Employed - no business name	Dentist			4/28/2008 12:00:00 AM		120																				
+1331377	1	1756	S497	F497P1	INC200222	IND	Cardenas	Mauricio			Irvine	CA	92620-2215	Self Employed - no business name	Dentist			4/28/2008 12:00:00 AM		120																				
+1331377	1	3691	S497	F497P1	INC200307	IND	Kitagawa	Francine			Pleasanton	CA	94566-6926	Self Employed - no business name	Dentist			4/28/2008 12:00:00 AM		120																				
+1331543	0	8	S497	F497P1	C175	SCC	CA Federation of Teachers COPE				Burbank	CA	91505-0000				6/3/2008 12:00:00 AM	5/7/2008 12:00:00 AM		3600	741857																			
+1332114	0	71	S497	F497P1	INC129709	IND	Hu	Benjamin			SAN MATEO	CA	94401	Hu Benjamin, MD	Physician			5/9/2008 12:00:00 AM		150																				
+1331377	1	3551	S497	F497P1	INC203811	IND	Ghazal	Carolyn			Irvine	CA	92606-1009	Self Employed - no business name	Dentist			4/28/2008 12:00:00 AM		120																				
+1331996	0	1	S497	F497P1	F497P1-449	COM	Insurance Brokers And Agents Candidate PAC				Granite Bay	CA	95746					5/12/2008 12:00:00 AM		1600	743103																			
+1332192	0	2	S497	F497P1	F497P1-168	OTH	THE PEPSI BOTTLING GROUP,INC				ALISO VIEJO	CA	92656					5/13/2008 12:00:00 AM		1000																				
+1331689	0	3	S497	F497P1	650	IND	Esparza	Moctesuma			Los Angeles	CA	90017-2081	Maya Cinemas	Executive		1/1/1900 12:00:00 AM	5/8/2008 12:00:00 AM		1000																				
+1332575	0	5	S497	F497P1	INC687	OTH	Rite Aid Headquarters Corporation				Harrisburg	PA	17105-0042					5/14/2008 12:00:00 AM		1500																				
+1332325	0	1	S497	F497P1	INC919	COM	CSLEA PAC				Sacramento	CA	95814					5/13/2008 12:00:00 AM		2000	970375																			
+1333770	0	1033	S497	F497P1	INC37308	OTH	POWER ENGINEERING				ALAMEDA	CA	94501					2/28/2008 12:00:00 AM		172.93																				
+1333509	0	17	S497	F497P1	INC141557	OTH	PARI-MUTUEL EMPS GLD 280,SEIU				DUARTE	CA	91010-2672					3/19/2008 12:00:00 AM		150																INC:A:141557				
+1333770	0	287	S497	F497P1	INC37985	OTH	GHILOTTI CONST CO				SANTAROSA	CA	95407					4/28/2008 12:00:00 AM		1803.22																				
+1333200	0	264	S497	F497P1	264	OTH	811-817 Oxford Avenue LLC				Van Nuys	CA	91401					5/15/2008 12:00:00 AM		400																				
+1336398	0	28	S497	F497P1	29	OTH	Hennig Shea Redwood Avenue				San Mateo	CA	94402					5/20/2008 12:00:00 AM		100																				
+1334384	0	1	S497	F497P1	F497P1-2704	COM	CA Association of Highway Patrolmen				Sacramento	CA	95818					5/21/2008 12:00:00 AM		1000	802001																			
+1336603	0	1	S497	F497P1	731	COM	California Society of Plastic Surgeons				Sacramento	CA	95825-6320				6/3/2008 12:00:00 AM	5/24/2008 12:00:00 AM		1000	870009																			
+1337930	0	1	S497	F497P1	T548015	OTH	San Francisco Police Officers Association				San Francisco	CA	94103					5/28/2008 12:00:00 AM		2200																				
+1336656	0	5	S497	F497P1	F497P1-3845	COM	Friends of Community Colleges				Burbank	CA	91502					5/23/2008 12:00:00 AM		1000	1243019																			
+1355356	0	1	S497	F497P1	INC577	COM	CA Defense Counsel PAC				Sacramento	CA	95814					8/11/2008 12:00:00 AM		1000	850665																			
+1338091	1	14	S497	F497P2	F497P2-5078	COM	Jan Goldsmith for City Attorney				San Diego	CA	92108				6/3/2008 12:00:00 AM	5/27/2008 12:00:00 AM		116.89	1302750	Goldsmith	Jan			CAT	Member Communication	CIT	City of San Diego		S									
+1336912	1	7	S497	F497P2	EXP857	COM	Gilmore for Assembly	Danny			Hanford	CA	93230				6/3/2008 12:00:00 AM	5/27/2008 12:00:00 AM		1000	1293625	Danny Gilmore				ASM		ASM		30										
+1339323	0	5	S497	F497P2	PDT135	COM	Craig Mann for City Council				San Jose	CA	95135				6/3/2008 12:00:00 AM	5/30/2008 12:00:00 AM		200	1302273	Craig Mann				CCM		OTH	City of San Jose	8						PDT:S497:135				
+1339710	0	1	S497	F497P1	F497P1-142	OTH	Biggers	Kevin J.			Rancho Palos Verdes	CA	90275					6/2/2008 12:00:00 AM		10600																				
+1340931	0	234	S497	F497P1	IDT2155	IND	Hobica	George			New York	NY	10019-4553	Expedia	President Airfarewatchdog.com			5/24/2008 12:00:00 AM		1000																				
+1339955	0	1	S497	F497P2	NON2005	COM	Ferrera	Friends of John			Davis	CA	95618				6/3/2008 12:00:00 AM	5/29/2008 12:00:00 AM		1399.34	1297541	John Ferrera				CSU		OTH	County of Yolo											
+1356256	0	2	S497	F497P1	INC1059	IND	Cevasco	Carol			Cottonwood	CA	96022	R. Cevasco Nursery	Owner			8/15/2008 12:00:00 AM		500																				
+1355360	0	1	S497	F497P1	INC6187	SCC	California Professional Firefighters PAC				Sacramento	CA	95833-					8/11/2008 12:00:00 AM		1000	744058																			
+1341217	1	47	S497	F497P1	INC8968	IND	Melo	Jere			Fort Bragg	CA	95437	City of Fort Bragg	Mayor			5/20/2008 12:00:00 AM		40																INC:A:8968				
+1354777	0	33	S497	F497P1	INC32784	IND	bush	steven			laCrescenta	ca	91214	prestige preschools inc.	ceo			8/6/2008 12:00:00 AM		5000																				
+1342067	1	11	S497	F497P1	INC19	IND	Merrill	Meldon H.			San Diego	CA	92103	None	Retired			5/30/2008 12:00:00 AM		5000																				
+1342067	1	16	S497	F497P1	INC41	IND	Lesar	John			Tampa	FL	33647	None	Retired			5/30/2008 12:00:00 AM		1000																				
+1354458	1	269	S497	F497P1	21171	IND	Bader	Jeff			Menlo Park	CA	94025-6546	Health & Life Associates	Manager, Broker Services		11/4/2008 12:00:00 AM	7/11/2008 12:00:00 AM		21																				
+1354777	0	138	S497	F497P1	INC32826	IND	merrill	marvin			newbury park	ca	91320	n/a	none			8/6/2008 12:00:00 AM		1000																				
+1358281	0	783	S497	F497P1	INC208299	IND	Nguyen	Dinh			Oxnard	CA	93033-5300	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1355771	0	72	S497	F497P1	INC34451	IND	LAURICELLA	CRAIG			AGUA DULCE	CA	91350	CAR, INC.	MECHANIC			8/12/2008 12:00:00 AM		1000																				
+1356993	0	21	S497	F497P1	INC40955	IND	COTTAM	JOHN			ALTA LOMA	CA	91737	INDUSTRIAL BRUSH CORP.	EXECUTIVE			8/20/2008 12:00:00 AM		2500																				
+1357188	0	3	S497	F497P1	INC6255	IND	Ruby	Cynthia			Saratoga	CA	95070-	n/a	Community Volunteer			8/22/2008 12:00:00 AM		1000																				
+1355394	1	1	S497	F497P1	INC3113	OTH	Anheuser-Busch Companies Inc.				Sacramento	CA	95814-	N/A	N/A			8/11/2008 12:00:00 AM		1000																				
+1355646	0	2	S497	F497P1	36109	IND	Cunneen	James	Hon.		San Jose	CA	95120-2209	Californian Strategies	Partner		11/4/2008 12:00:00 AM	8/12/2008 12:00:00 AM		1000																				
+1357159	0	118	S497	F497P1	INC42015	IND	RAY	MONTE			AGOURA HILLS	CA	91301	N/A	NONE			8/21/2008 12:00:00 AM		2000																				
+1358281	0	290	S497	F497P1	INC207801	IND	Van Horne	Paul			La Mesa	CA	91942-1534	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1358281	0	574	S497	F497P1	INC208089	IND	Frey	Mark			Santa Rosa	CA	95404-4813	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1358281	0	1089	S497	F497P1	INC208610	IND	Moreno	Michael			Stockton	CA	95219-2355	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		40																				
+1358281	0	3295	S497	F497P1	INC210865	IND	Sadri	Ali			Irvine	CA	92619-3245	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1358281	0	3480	S497	F497P1	INC211052	IND	Thai	Jeanette			Lake Forest	CA	92630-4703	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1358281	0	3325	S497	F497P1	INC210895	IND	Maddox	George			Newport Beach	CA	92663-2740	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1358281	0	1210	S497	F497P1	INC208734	IND	Daughters	David			Solana Beach	CA	92075-2031	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1358281	0	2517	S497	F497P1	INC210078	IND	Anderson	Diane			Temecula	CA	92591-4614	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1358281	0	2714	S497	F497P1	INC210276	IND	Vines	Edward			Gilroy	CA	95020-7801	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		20																				
+1360012	0	192	S497	F497P1	INC172666	IND	Loo	Jonathan			Stockton	CA	95207-5689	Self Employed - no business name	Optometrist			8/29/2008 12:00:00 AM		16.67																				
+1358864	0	1	S497	F497P2	EXP752	COM	Californians for Jobs & a Strong Economy				Sacramento	CA	95814					9/8/2008 12:00:00 AM		5000	1275549	Californians for Jobs & a Strong Economy				OTH	Independent Expenditure Committee													
+1358542	0	7	S497	F497P1	INC2645	IND	Johns	Gordon			Solana Beach	CA	92075	None	Retired			9/3/2008 12:00:00 AM		1000																				
+1359034	0	4	S497	F497P1	INC1137	OTH	BNSF Railway Company				Fort Worth	TX	76131					9/8/2008 12:00:00 AM		2600																				
+1359409	1	8	S497	F497P1	INC1747	IND	Link	Raymond			Diablo	CA	94528-0818	n/a	Retired			9/11/2008 12:00:00 AM		1000																				
+1359151	0	1	S497	F497P1	INC12242	IND	Barboni	Richard C.			San Francisco	CA	94127	None	Retired			9/10/2008 12:00:00 AM		1000																				
+1360012	0	980	S497	F497P1	INC172169	IND	Ho	Anne			La Puente	CA	91744	Self Employed - no business name	Optometrist			7/31/2008 12:00:00 AM		11.29																				
+1359659	0	106	S497	F497P1	INC58653	IND	WARNER	JAMES L.			Citrus Heights	CA	95621	N/A	NONE			9/14/2008 12:00:00 AM		1000																				
+1360012	0	760	S497	F497P1	INC172227	IND	Balestrery	Frank			Tracy	CA	95376	Eaton Optometric Group	Optometrist			7/31/2008 12:00:00 AM		16.67																INC:A:172227				
+1362127	0	2	S497	F497P1	INC881	OTH	Oklahoma Farm Bureau				Oklahoma City	OK	73105					10/3/2008 12:00:00 AM		2000																				
+1360315	0	9	S497	F497P1	INC118	IND	Royse	Richard			Gleneden	OR	97388	None	Retired			9/22/2008 12:00:00 AM		1000																				
+1360182	0	15	S497	F497P1	INC68207	IND	CARPENTER	CLYDE			Olympia	WA	98502	OOA	SURGEON			9/18/2008 12:00:00 AM		1000																				
+1360568	0	5	S497	F497P1	C8989	PTY	Democratic State Central Committee of CA				Sacramento	CA	95814-0000				11/4/2008 12:00:00 AM	9/23/2008 12:00:00 AM		10000	741666																			
+1360909	0	138	S497	F497P1	INC2863	OTH	Bunge North America				Emporia	KS	66801					8/28/2008 12:00:00 AM		150																INC:A:2863				
+1360752	0	39	S497	F497P1	INC73986	IND	LYNN	HARVEY K.			Santa Barbara	CA	93111	N/A	NONE			9/24/2008 12:00:00 AM		1000																				
+1361598	0	20	S497	F497P1	INC4333	IND	Koush	Anthony			San Francisco	CA	94131	EMC	Customer Service			10/1/2008 12:00:00 AM		1000																				
+1364676	0	27	S497	F497P1	INC6215	IND	Voelcker	Kevin			Aliso Viejo	CA	92656-8002	Pacific Power Source, Inc.	President			10/7/2008 12:00:00 AM		1000																				
+1362250	0	1	S497	F497P1	5673	OTH	Capital Insurance Group				Monterey	CA	93940-5326				11/4/2008 12:00:00 AM	10/3/2008 12:00:00 AM		1800																				
+1363825	0	8	S497	F497P1	INC1151	COM	San Francisco Police Officers Association				San Francisco	CA	94103					10/3/2008 12:00:00 AM		1000	771229																			
+1361094	0	20	S497	F497P1	INC3366	IND	Duflock	Margaret			San Ardo	CA	93450	Margaret Duflock Ranch	Rancher			9/2/2008 12:00:00 AM		100																				
+1366012	0	8	S497	F497P1	NON2261	PTY	Democratic State Central Committee of California				Sacramento	CA	95814					10/13/2008 12:00:00 AM		17458.24	741666															NON:S497:2261				
+1365737	0	4	S497	F497P1	INC6387	IND	Darling	Robert			San Francisco	CA	94109	Wells Fargo Bank	Attorney			10/13/2008 12:00:00 AM		1000																				
+1366706	0	12	S497	F497P1	INC99655	IND	PURYEAR	JEFFREY			Bryan	TX	77802	TEXAS AGRILIFE RESEARCH STATION	LAB RESEARCH ASSOC.			10/15/2008 12:00:00 AM		1000																				
+1365526	0	30	S497	F497P1	INC32209	IND	Harman	Jane			Washington	DC	20020	US House of Representatives	US Congresswoman			10/9/2008 12:00:00 AM		1000																				
+1365462	0	7	S497	F497P1	INC21938	IND	Testa Mc Cullagh	Cindy			San Francisco	CA	94109	Shorenstein Company	Public Affairs Director			10/9/2008 12:00:00 AM		1500																				
+1367071	0	75	S497	F497P1	INC43984	IND	Permut	David			Encino	CA	91436	Permut Presentations	Producer			10/16/2008 12:00:00 AM		2000																				
+1368419	0	2	S497	F497P1	F497P1-526	PTY	DEMOCRATIC ST. CENTRAL COMM. OF CA.				SACRAMENTO	CA	95814					10/21/2008 12:00:00 AM	10/21/2008 12:00:00 AM	6759.28	741666																			
+1367772	0	24	S497	F497P1	INC102499	IND	Pettingill	Richard	Mr.		Folsom	CA	95630-7962	None	Project Manager			10/19/2008 12:00:00 AM		2500																				
+1368288	0	8	S497	F497P1	NON2665	PTY	California Democratic Party				Sacramento	CA	95814					10/20/2008 12:00:00 AM		2020.25	741666																			
+1366708	1	90	S497	F497P1	INC44080	IND	Yothers	Stuart			New York	NY	10011	Ropes & Gray LLP	Attorney			10/15/2008 12:00:00 AM		1000																				
+1367071	0	6	S497	F497P1	INC53103	IND	Beekhuis	Christiaan			San Jose	CA	95112	Fat Spaniel Technologies, Inc.	President			10/16/2008 12:00:00 AM		1000																				
+1367208	0	2	S497	F497P1	INC11808	IND	Grove	Eva			Los Altos	CA	94022-	Homemaker	Homemaker			10/18/2008 12:00:00 AM		1674																				
+1368042	0	1	S497	F497P2	EXP1593	COM	Democratic State Central Committee of California				Sacramento	CA	95814-					10/20/2008 12:00:00 AM		150000	741666	Democratic State Central Committee of California																		
+1370280	0	1	S497	F497P1	F497P1-1103	COM	California New Car Dealers Association PAC				Sacramento	CA	95814					10/22/2008 12:00:00 AM		1000	741623																			
+1370332	0	3	S497	F497P1	INC236	OTH	David Evans and Associates, Inc.				Portland	OR	97201					10/23/2008 12:00:00 AM		15000																				
+1374516	0	84	S497	F497P1	INC114386	IND	Fong	Walter			Lagunna Beach	CA	92651	Fong Chiropractic	Chiropractor			10/27/2008 12:00:00 AM		1000																				
+1372893	0	1	S497	F497P2	EXP4	COM	Yes on Proposition 2 - Californians for Humane Farms				Sacramento	CA	95841				11/4/2008 12:00:00 AM	10/27/2008 12:00:00 AM		50000	1301462											Proposition 2 - Standards for Confining Farm Animals								
+1371941	0	10	S497	F497P1	INC1091	IND	STARR	BEVERLY			Auburn	AL	36832	D + J ENTERPRISES, INC.	CONTROLLER			10/23/2008 12:00:00 AM		25000																				
+1369027	0	2	S497	F497P1	12578	COM	Marty Block for State Assembly				San Diego	CA	92103-3398				11/4/2008 12:00:00 AM	10/21/2008 12:00:00 AM		6000	1294016																			
+1370534	0	5	S497	F497P1	F497P1-2255	COM	Physicians for the Group Practice of Medicine PAC				Piedmont	CA	94611					10/21/2008 12:00:00 AM		3600	992303																			
+1377407	0	40	S497	F497P1	INC92541	IND	Elder	Ralph			Berkeley	CA	94705	None	Not Employed			10/29/2008 12:00:00 AM		1000																				
+1374224	0	1	S497	F497P1	T579053	RCP	California Correctional Peace Officers Association				Sacramento	CA	95814					10/27/2008 12:00:00 AM		1000	830349																			
+1372731	0	1	S497	F497P2	EXP1081	COM	Friends of Joan Buchanan				San Ramon	CA	94583-0000				11/4/2008 12:00:00 AM	10/27/2008 12:00:00 AM		3600	1299423	Joan Buchanan				ASM		ASM		15										
+1372179	0	1	S497	F497P2	PDT620	COM	Alicia Crank: Candidate for  Mountain View City Council				Mountain View	CA	94042				11/4/2008 12:00:00 AM	10/21/2008 12:00:00 AM		5.45	1287839	Alicia Crank				CCM		OTH	City of Mountain View, CA							PDT:S497:620				
+1374516	0	198	S497	F497P1	INC114229	IND	Parker	Clyde		Jr.	The Woodlands	TX	77381	Winstead PC	Attorney			10/27/2008 12:00:00 AM		1000																				
+1372094	0	4	S497	F497P1	102520080C5655768_3	IND	Agua Caliente Band				Palm Springs	CA	92262					10/24/2008 12:00:00 AM		30200																				
+1372843	0	1	S497	F497P1	NON213	PTY	Democratic State Central Committee of California				Sacramento	CA	95814					10/24/2008 12:00:00 AM		35.69	741666																			
+1375586	0	2	S497	F497P1	F497P1-1766	SCC	State Building And Construction Trades Council Of Califonia PAC				Sacramento	CA	95814					10/29/2008 12:00:00 AM		2000	743501																			
+1374941	0	1	S497	F497P2	EXP17357	COM	Alquist for State Senate 2008	Elaine			Sacramento	CA	95814				11/4/2008 12:00:00 AM	10/29/2008 12:00:00 AM		2000	1272101	Elaine Alquist				SEN		SEN		13										
+1377273	0	1	S497	F497P2	NON20	COM	Campaign for Teen Safety - No on 4				Sacramento	CA	95814				11/4/2008 12:00:00 AM	10/30/2008 12:00:00 AM		1667	1276142											Proposition 4 - Waiting Period & Parental Notification Before Termination of Minor's Pregnancy								
+1375641	0	58	S497	F497P1	INC90957	IND	Park	Lorri J.			Palo Alto	CA	94301	Same Name	Self-Employed Investor			10/28/2008 12:00:00 AM		10000																				
+1377191	0	21	S497	F497P1	2701	PTY	Democratic State Central Committee of CA				Sacramento	CA	95811-5221				11/4/2008 12:00:00 AM	10/29/2008 12:00:00 AM		176.62	741666																			
+1376887	0	1	S497	F497P2	F497P2-50	COM	Friends of Ben Allen				Santa Monica	CA	90402				11/4/2008 12:00:00 AM	10/30/2008 12:00:00 AM		1500	1309968	Allen	Ben			OTH	Other	LOC			S									
+1379733	0	1	S497	F497P2	EXP6605	COM	Jones for Assembly 2008	Dave			Sacramento	CA	95814				11/4/2008 12:00:00 AM	11/3/2008 12:00:00 AM		1000	1293059	Dave Jones				ASM		ASM		09										
+1380396	0	1	S497	F497P2	EXP199	COM	Alyson Huber for State Assembly				Lodi	CA	95240				11/4/2008 12:00:00 AM	11/3/2008 12:00:00 AM		1000	1299300	Alyson Huber				ASM		ASM		10										
+1379519	0	3	S497	F497P2	2070002708	CAO	Friends of Hannah-Beth Jackson2008				Santa Barbara	CA	93190				11/18/2008 12:00:00 AM	11/2/2008 12:00:00 AM		4348		Jackson	Hannah-Beth			SEN		SEN		19										
+1379107	1	3	S497	F497P1	C9860	PTY	Democratic State Central Committee of CA				Sacramento	CA	95814-0000				11/4/2008 12:00:00 AM	10/31/2008 12:00:00 AM		300	741666																			
+1378773	0	1	S497	F497P2	NON2494	COM	Fresno Citizens for Safe & Healthy Neighborhoods				Sacramento	CA	95814				11/4/2008 12:00:00 AM	10/30/2008 12:00:00 AM		328	1312229	Fresno Citizens for Safe & Healthy Neighborhoods																		
+1379527	0	2	S497	F497P1	36464	IND	Balbona	Joseph			Sherman Oaks	CA	91403-4329	RBB Architects, Inc.	Architect		11/4/2008 12:00:00 AM	11/3/2008 12:00:00 AM		2500																				
+1379037	0	11	S497	F497P1	INC566	COM	Julia Brownley For Assembly 2008				Covina	CA	91722					10/31/2008 12:00:00 AM		1000	1292925																			
+1378599	0	4	S497	F497P2	EXP20072	COM	De La Torre for State Assembly 2008				Sacramento	CA	95814				11/4/2008 12:00:00 AM	10/31/2008 12:00:00 AM		3600	1292805	Hector De La Torre				ASM		ASM		50						EXP:S497:20072				
+1379051	1	2808	S497	F497P1	INC37143	IND	Schultz	Janet			Brooklyn	NY	11234	n/a	Retired			10/22/2008 12:00:00 AM		100																				
+1374071	2	12	S497	F497P1	INC29055	IND	Shankar	Cheri			Encino	CA	91316	Just So, Inc.	Business Owner			10/28/2008 12:00:00 AM		5000																				
+1380408	1	26	S497	F497P2	2008-0817	CAO	Fran Florez for Assembly				Shafter	CA	93263				11/4/2008 12:00:00 AM	11/3/2008 12:00:00 AM		19666.14	1292679	Florez	Fran			ASM		ASM		30	S					2008-0817 				
+1375686	1	94	S497	F497P1	INC114316	IND	KAY	STEEVE			Diamond Bar	CA	91765	N/A	NONE			10/28/2008 12:00:00 AM		20000																				
+1379051	1	454	S497	F497P1	INC28549	IND	Jameson	Rose M.			La Verne	CA	91750	n/a	Retired			10/27/2008 12:00:00 AM		100																				
+1379051	2	1895	S497	F497P1	INC33718	IND	Rose	Katherine			Palmetto Bay	FL	33158	Nova Southeastern University	Assistant Vice President			10/22/2008 12:00:00 AM		100																				
+1379051	1	2223	S497	F497P1	INC35068	IND	Pepper	Natalie F.			San Lorenzo	CA	94580	Kaiser Permanente	Benefit Policy Manager			10/22/2008 12:00:00 AM		100																				
+1379051	1	1658	S497	F497P1	INC33082	IND	Hernandez	Judy			Westlake Village	CA	91362	n/a	Retired			10/22/2008 12:00:00 AM		100																				
+1379051	1	1797	S497	F497P1	INC33566	IND	Oryszak	Stephanie			Cleveland	OH	44103	Cleveland Clinic	Project Manager			10/22/2008 12:00:00 AM		100																				
+1379051	2	702	S497	F497P1	INC29417	IND	Gibson	Trish			Bloomington	IN	47403	Indiana University	Associate Instructor			10/21/2008 12:00:00 AM		25																				
+1379051	2	220	S497	F497P1	INC27838	IND	Maher	Marcia			Marshall	MI	49068	Star Properties	Landlord			10/20/2008 12:00:00 AM		50																				
+1379051	2	1380	S497	F497P1	INC31985	IND	Keane	Heather			Arlington	MA	02474	n/a	Unemployed			10/21/2008 12:00:00 AM		400																				
+1379051	2	1398	S497	F497P1	INC32048	IND	Anderson	Peggy L.			Healdsburg	CA	95448	Accreditation Helper	Client Services Executive			10/21/2008 12:00:00 AM		40																				
+1379051	2	1995	S497	F497P1	INC34061	IND	Weisman	Michael			Yonkers	NY	10701	Alliance Bernstein	Manager			10/22/2008 12:00:00 AM		100																				
+1379051	2	2964	S497	F497P1	INC37413	IND	Stonehill	David			New York	NY	10014	Viacom	Attorney			10/24/2008 12:00:00 AM		50																				
+1379051	2	815	S497	F497P1	INC31838	IND	Geer	Julie			Poulsbo	WA	98370	Advanced Acoustic Concepts, Inc.	Project Administration			10/21/2008 12:00:00 AM		50																				
+1379051	2	1688	S497	F497P1	INC33023	IND	Kaminski	Christine			Bridgeport	CT	06606	SunGard Higher Education	Database Administrator			10/21/2008 12:00:00 AM		50																				
+1382633	1	3	S497	F497P1	INC159	OTH	Pechanga Band of Mission Indians				Temecula	CA	92593					11/25/2008 12:00:00 AM		-5000																INC:S497:159				
+1369212	1	59	S497	F497P1	INC72769	IND	Raatz	Kristine			Gold River	CA	95670	MetLife Home Loans	Managment Underwriter IV			10/21/2008 12:00:00 AM		1000																				
+1404155	0	5	S497	F497P2	EDT1062	COM	No Recall of Madison Nguyen Committee				San Jose	CA	95121				3/3/2009 12:00:00 AM	2/23/2009 12:00:00 AM		26.16	1306644											Madison Nguyen Recall		City of San Jose, CA						
+1403595	0	1	S497	F497P1	T598254	IND	Silk	Stephen R.			San Marino	CA	91108	Eastdel Secured	Commercial Real Estate Broker			2/20/2009 12:00:00 AM		6500																				
+1379051	2	3438	S497	F497P1	INC38910	IND	Waits	Ann			Maysville	KY	41056	n/a	Unemployed			10/28/2008 12:00:00 AM		50																				
+1379051	2	3716	S497	F497P1	INC40020	IND	Rysewyk	Rebecca			Knoxville	TN	37924	n/a	Unemployed			10/30/2008 12:00:00 AM		100																				
+1419125	0	19	S497	F497P1	INC1895	OTH	Laborers Local #166 (Intermediary for Unitemized Union Member Contributions)				Oakland	CA	94621-					2/6/2009 12:00:00 AM		76.76																				
+1417568	0	33	S497	F497P1	INC3109	OTH	KIDCO, L.P.				Lodi	CA	92540					2/3/2009 12:00:00 AM		312.75																INC:A:3109				
+1418512	0	143	S497	F497P1	INC13888	OTH	Menifee Council of Classified Employees AFT Local 6109 (Unitemized Member Contributions)				Menifee	CA	92584-					4/14/2009 12:00:00 AM		163																				
+1417119	0	226	S497	F497P1	INC13530	OTH	Evergreen Federation of Teachers AFT Local 3688 (Unitemized Member Contributions)				Cottonwood	CA	96022-					2/13/2009 12:00:00 AM		87.50																				
+1422767	0	23	S497	F497P1	INC4131	OTH	Kiesel, Boucher & Larson, LLP				Beverly Hills	CA	90211					4/20/2009 12:00:00 AM		200																				
+1423031	0	1826	S497	F497P1	INC230717	IND	La Due	Stephen			Dublin	CA	94568-1337	Self Employed - no business name	Dentist			4/30/2009 12:00:00 AM		120																				
+1423031	0	1508	S497	F497P1	INC230314	IND	Sirotnik	Robert			Riverside	CA	92509-6616	Self Employed - no business name	Dentist			4/30/2009 12:00:00 AM		120																				
+1423461	0	490	S497	F497P1	INC280081	IND	DURRER	LINDA J			RED BLUFF	CA	960808937	FARMERS GROUP INC	AGENT			5/4/2009 12:00:00 AM		25																				
+1423461	0	367	S497	F497P1	INC281657	IND	FRANKLIN	JANICE M			SIMI VALLEY	CA	93065-5459	FARMERS GROUP INC	SVP BUSINESS INTEGRATION			4/30/2009 12:00:00 AM		50																				
+1432692	0	4	S497	F497P1	F497P100000000651247	OTH	Daiichi Sankyo Inc				Parsippany	NJ	07054					6/30/2009 12:00:00 AM		1000																				
+1442963	0	165	S497	F497P1	INC240182	IND	Ramirez	Ted			Dixon	CA	95620-3238	Self Employed - no business name	Dentist			7/22/2009 12:00:00 AM		26.66																				
+1430151	0	14	S497	F497P1	10975	OTH	William P. Young Construction, Inc.				San Leandro	CA	94577-3126				6/8/2010 12:00:00 AM	6/30/2009 12:00:00 AM		6500																				
+1443520	0	1	S497	F497P1	C1132	SCC	CA State Council of Laborers PAC				Sacramento	CA	95814-0000				8/25/2009 12:00:00 AM	8/24/2009 12:00:00 AM		2800	902770																			
+1447749	0	193	S497	F497P1	INC9602	IND	Eng	Steven			South San Francisco	CA	94080	McDonald Franchise	Owner			8/7/2009 12:00:00 AM		45																INC:A:9602				
+1445404	0	1250	S497	F497P1	INC185973	IND	Mason	Daniel			Chula Vista	CA	91910-6953	Self Employed - no business name	Optometrist			8/31/2009 12:00:00 AM		16.67																				
+1447749	0	50	S497	F497P1	INC9809	IND	Molina	Janet			Phelan	CA	92371	McDonald Franchise	Owner			9/3/2009 12:00:00 AM		80																INC:A:9809				
+1447442	0	2	S497	F497P1	INC70	COM	Citizens for Brulte				Rancho Cucamonga	CA	91729					10/11/2009 12:00:00 AM		3900	1283599																			
+1445404	0	985	S497	F497P1	INC184954	IND	Likens	Christopher			Irvine	CA	92604	Woodbridge Optometry	Optometrist			7/31/2009 12:00:00 AM		16.67																INC:A:184954				
+1445404	0	1698	S497	F497P1	INC185732	IND	Tran	Quynh			Diamond Bar	CA	91765	Self Employed - no business name	Optometrist			8/31/2009 12:00:00 AM		16.67																				
+1446455	0	50	S497	F497P1	INC7492	OTH	GWF Power Systems Company				Pittsburg	CA	94565-6006					8/7/2009 12:00:00 AM		150																INC:A:7492				
+1453612	0	1	S497	F497P2	D1690	IND	Finlay for City Council 2009				Duarte	CA	91008-0000				11/3/2009 12:00:00 AM	10/31/2009 12:00:00 AM		32.90		Finlay	Margaret			CCM														
+1451312	0	5	S497	F497P1	INC184	IND	PCI - PARKING CONCEPTS INC				IRVINE	CA	92618					10/28/2009 12:00:00 AM		1000																				
+1455257	0	264	S497	F497P1	INC29580	OTH	Copeland State Farm Insurance	Heather			Davis	CA	95616					11/13/2009 12:00:00 AM		100																INC:A:29580				
+1450956	3	42	S497	F497P2	D2448	OTH	Committee to Elect Anastasia Ventura Lynwood School Board 2009				Lynwood	CA	90262-0000				11/3/2009 12:00:00 AM	10/23/2009 12:00:00 AM		4.50	1321661		Ventura	Anastasia		BED														
+1454286	0	10	S497	F497P1	12046	OTH	Allergan				Irvine	CA	92612-1531				6/8/2010 12:00:00 AM	11/4/2009 12:00:00 AM		25900																				
+1453277	0	3	S497	F497P2	F497P200000000675376	OTH	AMAC				Redondo Beach	CA	90277				11/3/2009 12:00:00 AM	10/29/2009 12:00:00 AM		109.75		Hu	Philip			BED	Board of Education	CTY	Los Angeles County		S									
+1454391	0	3	S497	F497P1	INC4878	IND	Wilson	David			Laguna Beach	CA	92651	Toyota of Orange	Auto Dealer			11/2/2009 12:00:00 AM		10000																				
+1455929	0	155	S497	F497P1	INC11706	IND	RMP Consultant Group				Westlake Village	CA	91362					10/14/2009 12:00:00 AM		250																				
+1455929	0	385	S497	F497P1	INC12015	IND	Speers	JoAnne			Sacramento	CA	95833	League of California Cities	General Counsel			7/31/2009 12:00:00 AM		5																INC:A:12015				
+1470804	0	1	S497	F497P1	INC384	COM	CA Association of Highway Patrolmen				Sacramento	CA	95818					2/26/2010 12:00:00 AM		3900	802001																			
+1472345	0	1	S497	F497P1	1	OTH	CA Hospital Assn. PAC, Sponsored by CAHHS				Sacramento	CA	95814					3/13/2010 12:00:00 AM	3/13/2010 12:00:00 AM	1000	790773																			
+1466680	0	1	S497	F497P1	F497P100000000701057	IND	Kellner	Richard			Los Angeles	CA	90017	Kabateck Brown Kellner LLP	Attorney			2/3/2010 12:00:00 AM		1000																				
+1476826	0	13	S497	F497P1	14744	IND	Rothstein	Glen			Encino	CA	91436-3829	Blank Rome	Attorney		6/8/2010 12:00:00 AM	3/29/2010 12:00:00 AM		1000																				
+1473047	0	2	S497	F497P1	F497P1-767	IND	Swerdlow	Robert M.			Los Angeles	CA	90019	O'Melveny & Myers	Attorney			3/17/2010 12:00:00 AM		2832.78																				
+1473056	0	4	S497	F497P1	INC243	IND	Erkiletian	Michael			Watsonville	CA	95076	n/a	Not Employed			3/16/2010 12:00:00 AM		2800																				
+1477269	1	7	S497	F497P1	18469	OTH	Entertainment Software Association				Washington	DC	20004-1611				4/13/2010 12:00:00 AM	4/1/2010 12:00:00 AM		5000																				
+1473776	0	15	S497	F497P1	INC12529	IND	Stenbakken	Dwight			Sacramento	CA	95831	League of California Cities	Deputy Executive Director			1/29/2010 12:00:00 AM		40																INC:A:12529				
+1473036	0	2	S497	F497P1	F497P1-1137	OTH	DJ FOOD MART/SUBWAY				BAKERSFIELD	CA	93314					3/16/2010 12:00:00 AM		3900																				
+1473036	0	4	S497	F497P1	F497P1-1135	OTH	JR FOOD MART & TACO BELL EXPRESS				BAKERSFIELD	CA	93311					3/16/2010 12:00:00 AM		3900																				
+1473041	0	1	S497	F497P1	F497P1-186	COM	Hall for Assembly 2010				Los Angeles	CA	90071					3/17/2010 12:00:00 AM		1000	1313597																			
+1473804	0	1	S497	F497P1	14213	OTH	Raymond Group				Concord	CA	94520				6/8/2010 12:00:00 AM	3/19/2010 12:00:00 AM		2356.77																				
+1479899	0	6	S497	F497P1	INC6176	IND	Kapoor Collins	Shelly			San Francisco	CA	94105	Enscient Corporation	IT			4/13/2010 12:00:00 AM		1000																				
+1479019	0	1	S497	F497P1	F497P1-2081	OTH	Los Alamitos Race Course				Los Alamitos	CA	90720					4/10/2010 12:00:00 AM		1000																				
+1479542	0	1	S497	F497P1	INC13	OTH	Environmental Defense Fund				New York	NY	10010					3/31/2010 12:00:00 AM		75000																				
+1477464	0	6	S497	F497P1	C1590	COM	CA Hospital Assn. PAC				Sacramento	CA	95814-0000				6/8/2010 12:00:00 AM	4/1/2010 12:00:00 AM		1353.56	790773																			
+1479649	0	1	S497	F497P1	041320100C5783449_1	COM	Apartment Assoc of Greater LA PAC				Los Angeles	CA	90006					4/12/2010 12:00:00 AM		1250	811-735																			
+1479807	0	254	S497	F497P1	INC267609	IND	Pollard	Angela			Los Gatos	CA	95032-1416	Angela Pollard, MD	PHYSICIAN			3/31/2010 12:00:00 AM		100																				
+1478374	0	1	S497	F497P1	F497P1-1178	OTH	PECHANGA BAND OF LUISENO INDIANS				FAIR OAKS	CA	95628					4/7/2010 12:00:00 AM		3900																				
+1478428	0	7	S497	F497P1	INC1156	IND	Park	Youn Sook			Simi Valley	CA	93063	Aroma Golf Academy	Executive			4/7/2010 12:00:00 AM		1000																				
+1479692	0	19	S497	F497P1	INC9309	IND	Kogod	Marsha	Ms		Los Angeles	CA	90036	N/A	Retired			4/12/2010 12:00:00 AM		25900																				
+1481502	0	17	S497	F497P1	INC197	IND	Oneal	Stephen			Lafayette	CA	94549-0000	Howrey LLP	Attorney			4/22/2010 12:00:00 AM		1000																				
+1480586	0	2	S497	F497P1	F497P1-3910	SCC	California Teachers Association Association for Better Citizenship				Burlingame	CA	94010					4/19/2010 12:00:00 AM		7800	741941																			
+1481602	0	3	S497	F497P1	F497P1-26280	IND	Lo	Hai Fu			Hillsborough	CA	94010	QFCO,Inc. dba Queens Way Foods Co.	President			4/21/2010 12:00:00 AM		1000																				
+1482082	0	2	S497	F497P1	INC474	COM	Sacramento Metropolitan Chamber PAC				Sacramento	CA	95814					4/23/2010 12:00:00 AM		1100	840819																			
+1482025	0	16	S497	F497P1	15645	COM	Democratic State Central Committee Of CA				Sacramento	CA	95811-5221				6/8/2010 12:00:00 AM	4/23/2010 12:00:00 AM		6612.90	741666																			
+1486207	0	7	S497	F497P1	C2555	OTH	Education Management LLC				Pittsburgh	PA	15222-0000				6/8/2010 12:00:00 AM	5/3/2010 12:00:00 AM		2000																				
+1487133	0	2	S497	F497P1	F497P100000000723095	OTH	Financial Consulting Services				Phoenix	AZ	85021					5/10/2010 12:00:00 AM		1000																				
+1486212	1	1	S497	F497P1	F497P1-26295	SCC	CA Nurses Association PAC				Sacramento	CA	95814					5/3/2010 12:00:00 AM		1000	780657																			
+1487195	0	13	S497	F497P2	EXP3162	COM	Taxfighters for Joel Anderson Senate 2010				La Mesa	CA	91941					5/11/2010 12:00:00 AM		1500	1325120	Anderson,														EXP:S497:3162				
+1489463	0	61	S497	F497P1	INC19804	OTH	New Orange Hills Inc				Orange	CA	92869					4/28/2010 12:00:00 AM		120.83																				
+1488669	0	1	S497	F497P1	1	IND	Schaupp	Charles			Esparto	CA	95627	US Marines/SchauppFamilyJoint Venture	Retired Military/Farmer			5/19/2010 12:00:00 AM	5/19/2010 12:00:00 AM	20000																1				
+1489034	1	24	S497	F497P1	INC470	IND	Thompson	David			Moraga	CA	94556	Transbay Cable/Reed Smith	Attorney			5/21/2010 12:00:00 AM		1000																				
+1488476	0	1	S497	F497P1	C1332	COM	CA Association of Health Facilities				Sacramento	CA	95853-0000				6/8/2010 12:00:00 AM	5/17/2010 12:00:00 AM		1000	741816																			
+1489154	0	5	S497	F497P1	C2615	OTH	Comcast				Philadelphia	PA	19103-0000				6/8/2010 12:00:00 AM	5/21/2010 12:00:00 AM		2500																				
+1489102	0	2	S497	F497P1	INC996	COM	Farmers Employees & Agents PAC				San Rafael	CA	94901	N/A	N/A			5/22/2010 12:00:00 AM		3900	901422																			
+1493511	0	2	S497	F497P2	EXP1138	COM	TORLAKSON FOR STATE				Luguna Niguel	CA	92677					6/1/2010 12:00:00 AM		3900	1282317	TOM TORLAKSON				SUP														
+1493081	0	3	S497	F497P1	INC136	OTH	Los Angeles Police Protective League				Los Angeles	CA	90017					5/28/2010 12:00:00 AM		2500																				
+1494277	0	1	S497	F497P1	F497P1-344	COM	CA Academy of Eye Physicians & Surgeons PAC				San Francisco	CA	94105					6/1/2010 12:00:00 AM		2000	980331																			
+1490601	1	13	S497	F497P2	EXP1954	COM	Jerry Hill for State Assembly 2010				San Mateo	CA	94402				6/8/2010 12:00:00 AM	5/26/2010 12:00:00 AM		7800	1313437	Jerry Hill				ASM		ASM		19										
+1513465	0	59	S497	F497P1	INC20945	IND	Campbell	Tracy			Sacramento	CA	95814	California Hospital Association	Vice President, Public Advocacy			7/21/2010 12:00:00 AM		110																INC:A:20945				
+1494253	1	4	S497	F497P1	NON481	PTY	Democratic State Central Committee of California				Sacramento	CA	95814					6/1/2010 12:00:00 AM		5000	741666															NON:S497:481				
+1496619	0	3	S497	F497P1	F497P1-1438	COM	Service Employees Int'l Union, Local 721				Los Angeles	CA	90020					6/8/2010 12:00:00 AM		3900	743794																			
+1496374	0	11	S497	F497P1	INC8048	IND	Washington	Pauletta			Santa Monica	CA	90405	Self - same name	Entertainer			6/7/2010 12:00:00 AM		1000																				
+1496722	0	11	S497	F497P1	24207	IND	Chambers	John			Los Altos Hills	CA	94022-2421	CISCO	Chairman/ CEO		6/22/2010 12:00:00 AM	6/9/2010 12:00:00 AM		10000																				
+1512327	0	2	S497	F497P1	F497P100000000747766	COM	CCPOA PAC  CA Correctional Peace Officer's Assn PAC				Sacramento	CA	95814					8/12/2010 12:00:00 AM		1000	830349																			
+1511340	0	1	S497	F497P1	INC1390	SCC	Laborers Local 185 PAC				Sacramento	CA	95814					8/9/2010 12:00:00 AM		7800	870122																			
+1512046	0	10	S497	F497P1	INC2608	IND	Welinsky	Howard			Tuluca Lake	CA	91690	Warner Bros.	Supervisor			8/10/2010 12:00:00 AM		1000																				
+1501668	0	14	S497	F497P1	22723	IND	Adler	Sara			Glendora	CA	91741-2000	Scripps College	College Professor		11/2/2010 12:00:00 AM	7/19/2010 12:00:00 AM		5000																				
+1504653	0	7	S497	F497P1	INC13314	IND	McNealy	Scott			Portola Valley	CA	94028	Sun Microsystems	Chairman			7/19/2010 12:00:00 AM		12950																				
+1504653	0	14	S497	F497P1	INC13379	OTH	Lance-Kashian Company				Fresno	CA	93720					7/20/2010 12:00:00 AM		25900																				
+1512253	0	3	S497	F497P1	INC2621	COM	Lockyer for Treasurer 2010				Sacramento	CA	95841					8/12/2010 12:00:00 AM		3900	1293126																			
+1516008	0	41	S497	F497P1	INC10637	OTH	Shannon & Wilson, Inc.				Sacramento	CA	95811					8/2/2010 12:00:00 AM		38																INC:A:10637				
+1515038	0	9	S497	F497P1	INC14970	IND	Lane	Ray	Mr.		Atherton	CA	94027	Kleiner Perkins Caufield & Byers	Managing Partner			8/24/2010 12:00:00 AM		25900																				
+1514022	0	5	S497	F497P1	INC2540	IND	Countryman	Byron E.			San Juan Capistrano	CA	92675	Law Offices of Countryman & McDaniel	Managing Partner			8/19/2010 12:00:00 AM		750																				
+1515185	0	52	S497	F497P1	INC13337	IND	Hunter	Yvonne L.			Davis	CA	95616	League of California Cities	Legislative Representative			7/14/2010 12:00:00 AM		10																INC:A:13337				
+1513840	0	3	S497	F497P1	C4320819	OTH	Exxon Mobil Corporation				Sacramento	CA	95814					8/18/2010 12:00:00 AM		2000	479277					OTH	Major Donor													
+1515185	0	66	S497	F497P1	INC13351	IND	Kelly	Lacy			Garden Grove	CA	92840	League of CA Cities	Orange County Division Executive Director			7/14/2010 12:00:00 AM		10																INC:A:13351				
+1515346	0	1	S497	F497P1	F497P1-3413	OTH	CA Credit Union				Glendale	CA	91203					8/25/2010 12:00:00 AM		1000																				
+1515949	0	4	S497	F497P1	INC481	IND	Marcus Greathouse	Sydney		Sydney	Agoura Hills	CA	91301	The Cheesecake Factory	Vice President-Legal Services			8/30/2010 12:00:00 AM		1000																				
+1515566	0	3	S497	F497P1	INC1097	IND	ESPINOZA	GUERRERO			SAN FRANCISCO	CA	94080	PANCHO VILLA	OWNER			8/26/2010 12:00:00 AM		1000																				
+1516200	0	3	S497	F497P1	INC1488	IND	Yen	Ho Tzu			Mountain View	CA	94039	Micro Lithography, Inc.	Vice President			8/30/2010 12:00:00 AM		1000																				
+1517678	0	28	S497	F497P1	INC15750	OTH	Managed Care Systems, LLC				Bakersfield	CA	93309					9/8/2010 12:00:00 AM		2000																				
+1516777	0	15	S497	F497P1	INC6719	OTH	Heimark Distributing				Indio	CA	92201					7/20/2010 12:00:00 AM		197.01																				
+1520098	0	10	S497	F497P1	36568	IND	Slobe	Robert			Sacramento	CA	95815-4211	North Sacramento Land Company	real estate		11/2/2010 12:00:00 AM	9/24/2010 12:00:00 AM		2500																				
+1521229	0	841	S497	F497P1	INC335116	IND	WHITE	MICHAEL W			WASCO	CA	93280	FARMERS GROUP INC	AGENT			7/23/2010 12:00:00 AM		5																				
+1519214	0	1	S497	F497P1	INC2572	IND	Chapin	Dane			Carlsbad	CA	92009	USAOPOLY, Inc.	Toy Manufacturer			9/20/2010 12:00:00 AM		1000																INC:S497:2572				
+1519625	0	3	S497	F497P1	INC3002	OTH	Panish, Shea & Boyle, LLP				Los Angeles	CA	90025					9/22/2010 12:00:00 AM		2500																				
+1520092	0	3	S497	F497P1	INC1087	IND	Rowland	Margaret Ferrari			Fairfield	CA	94533	Maggie Ferrari Designs	Jewelry Designer			9/24/2010 12:00:00 AM		3900																				
+1520204	0	1	S497	F497P2	EXP74	COM	Yes on 25, Citizens for an On-Time Budget				Sacramento	CA	95814				11/2/2010 12:00:00 AM	9/27/2010 12:00:00 AM		500000	1323713											Proposition 25 - Changes Legislative Vote Requirement To Pass Budget	25	Statewide						
+1520306	0	1	S497	F497P1	INC561	COM	California Assn of Health Facilities PAC				Sacramento	CA	95816					9/27/2010 12:00:00 AM		1000	741816																			
+1520422	0	2	S497	F497P1	INC844	IND	Hart	Marjorie L.			New York	NY	10065	Retired	Retired			9/27/2010 12:00:00 AM		1000																				
+1521229	0	108	S497	F497P1	INC345870	IND	CURTIS	DEBORAH L			TURLOCK	CA	95382	FARMERS GROUP INC	AGENT			8/18/2010 12:00:00 AM		100																				
+1520599	0	13	S497	F497P1	INC20869	IND	Veloz	Roberta			Valencia	CA	91355	Henry Mayo Newhall Memorial Hospital	Trustee			7/6/2010 12:00:00 AM		100																				
+1521229	0	697	S497	F497P1	INC345552	IND	MORIARTY	TREVOR			SAN LUIS OBISPO	CA	93401	FARMERS GROUP INC	AGENT			8/18/2010 12:00:00 AM		100																				
+1521229	0	990	S497	F497P1	INC351718	IND	FRIEDRICHSEN	DONALD			RANCHO CORDOVA	CA	95670	FARMERS GROUP INC	AGENT			9/27/2010 12:00:00 AM		25																				
+1521770	0	1	S497	F497P1	1	OTH	LYLE PARKS JR CONSTRUCTION				ANAHEIM	CA	92807					9/27/2010 12:00:00 AM	9/27/2010 12:00:00 AM	3900																				
+1521229	0	2091	S497	F497P1	INC350970	IND	NGUYEN	MICHAEL D			MONTEBELLO	CA	90640	FARMERS GROUP INC	AGENT			9/27/2010 12:00:00 AM		20																				
+1521229	0	2529	S497	F497P1	INC326440	IND	WHITLOCK	REED			CAMARILLO	CA	93010-2600	FARMERS GROUP INC	RVP COMMERCIAL OPS			7/15/2010 12:00:00 AM		10																				
+1521451	0	4	S497	F497P1	38591	IND	Riley	John			San Francisco	CA	94123-2307	Self-Employed - John Riley	Attorney/Trustee/Investor		11/2/2010 12:00:00 AM	10/1/2010 12:00:00 AM		1000																				
+1521229	0	1603	S497	F497P1	INC352875	IND	DEBOWSKI	MICHAEL A			FOUNTAIN VALLEY	CA	92708	FARMERS GROUP INC	AGENT			9/27/2010 12:00:00 AM		20																				
+1524037	0	97	S497	F497P1	41849	IND	Jabagchourian	Ara			San Mateo	CA	94402-3614	Cotchett Pitre & McCarthy	Attorney		11/2/2010 12:00:00 AM	10/6/2010 12:00:00 AM		16000																				
+1526705	0	2	S497	F497P1	C4331726	OTH	Pechanga Band of Mission Indians				Fair Oaks	CA	95628-2974					10/14/2010 12:00:00 AM		2000																S4971				
+1527820	0	31	S497	F497P1	INC19681	OTH	Stromer Realty				Yuba City	CA	95991					10/15/2010 12:00:00 AM		1000																				
+1528752	0	17	S497	F497P1	INC6957	IND	SYBERT	RICHARD			SAN DIEGO	CA	92101	GORDON & REES LLP	LAWYER			10/1/2010 12:00:00 AM		2500																INC:A:6957				
+1523320	0	3	S497	F497P1	INC775	IND	Loder	Ron			Laguna Beach	CA	92651	None	Retired			10/6/2010 12:00:00 AM		3250																				
+1524868	0	3	S497	F497P1	C7352	OTH	Pardee Homes				Los Angeles	CA	90024-0000				11/2/2010 12:00:00 AM	10/11/2010 12:00:00 AM		1000																				
+1527543	0	5	S497	F497P1	INC19470	COM	California Women's Leadership Association PAC				San Juan Capistrano	CA	92675					10/14/2010 12:00:00 AM		1000	1237224																			
+1523540	1	1	S497	F497P1	NON18230	IND	Boyett	Carl	Mr.		Modesto	CA	95350	Boyett Petroleum	Petroleum Distributor			10/5/2010 12:00:00 AM		3865.66																NON:S497:18230				
+1528752	0	15	S497	F497P1	INC6955	IND	JAMESON	JAMES			DEL MAR	CA	92014	LIDCO, INC.	BUSINESSMAN			10/1/2010 12:00:00 AM		1000																INC:A:6955				
+1539240	0	1	S497	F497P1	INC478	COM	Skinner for Assembly 2010				Sacramento	CA	95842					10/29/2010 12:00:00 AM		10500	1313828																			
+1539270	0	63	S497	F497P2	38950	CAO	Tom Torlakson for State Superintendent of Public Instruction 2010				Sacramento	CA	95841-3111				11/2/2010 12:00:00 AM	10/28/2010 12:00:00 AM		4.50	1282317	Torlakson	Tom			SUP		STW		sta										
+1529460	0	1	S497	F497P2	1		Dr. Richard Pan for Assembly 2010				Los Angeles	CA	90017				11/2/2010 12:00:00 AM	10/18/2010 12:00:00 AM		1500	1319190	Pan	Richard			ASM		ASM		5	S					1				
+1539290	0	175	S497	F497P1	INC11820	IND	Bruckman	William			REDONDO BEACH	CA	90277-5389	Raytheon Company	Dir II Engineering			8/26/2010 12:00:00 AM		15.12																				
+1539290	0	581	S497	F497P1	INC12053	IND	Field	Stephen			Lakewood	CA	90713-1828	Raytheon Company	Mgr III Systems Engineering			8/26/2010 12:00:00 AM		7.62																				
+1530499	0	3	S497	F497P1	C1280	IND	Milstein	Mark			Santa Monica	CA	90405-0000	Milstein, Adelman & Kreger, LLP	Attorney		11/2/2010 12:00:00 AM	10/19/2010 12:00:00 AM		2000																				
+1533363	0	4	S497	F497P1	1664	IND	Eldred	Kenneth	Mr.		Los Altos	CA	94022-1090	Living Stones Foundation	Chairman		11/2/2010 12:00:00 AM	10/23/2010 12:00:00 AM		3500																				
+1535996	0	2	S497	F497P2	EXP4	COM	Dave Jones for Insurance Commissioner 2010				Sacramento	CA	95814				11/2/2010 12:00:00 AM	10/26/2010 12:00:00 AM		6500	1314000	Assembly Member Dave Jones				INS		STW			S									
+1536200	0	1	S497	F497P1	1761	SCC	CDF Firefighters Small Contributor PAC				Sacramento	CA	95811-3022				11/2/2010 12:00:00 AM	10/26/2010 12:00:00 AM		1000	790318																			
+1537149	0	49	S497	F497P1	INC1683	SCC	Professional Engineers in California Government (PECG PAC)				Sacramento	CA	95814					10/26/2010 12:00:00 AM		2000	822501																			
+1537149	0	57	S497	F497P1	IDT239	IND	Lubin	Bertram			Berkeley	CA	94705	Childrens Hospital Oakland	CEO			10/24/2010 12:00:00 AM		100																				
+1537181	0	91	S497	F497P2	38744	CAO	Committee To Re-Elect Assembly Member Manuel Perez				Los Angeles	CA	90017-5864				11/2/2010 12:00:00 AM	10/26/2010 12:00:00 AM		13.44	1313845	Perez	Manuel			ASM		ASM		80										
+1537020	1	1	S497	F497P2	2		San Diegans for Healthy Neighborhoods and a Strong Economy				San Diego	CA	92105				11/2/2010 12:00:00 AM	10/27/2010 12:00:00 AM		-1000	1326995															2				
+1530020	1	3	S497	F497P2	EXP429	COM	Gorell for Assembly 2010	Jeff			Sacramento	CA	95814				11/2/2010 12:00:00 AM	10/19/2010 12:00:00 AM		500	1305314	Jeff Gorell				ASM		ASM		37						EXP:S497:429				
+1532121	0	19	S497	F497P1	INC10661	OTH	The Rosenberg Company				Sausalito	CA	94965					10/20/2010 12:00:00 AM		6500																				
+1532130	0	7	S497	F497P1	47453	COM	Skinner for Assembly 2010				Sacramento	CA	95814				11/2/2010 12:00:00 AM	10/21/2010 12:00:00 AM		1400	1313828																			
+1532969	0	4	S497	F497P2	EXP170	COM	Steven Bradford for Assembly 2010				Sacramento	CA	95814				11/2/2010 12:00:00 AM	10/22/2010 12:00:00 AM		2000	1321602	Steven Bradford				ASM		ASM		51										
+1533122	0	4	S497	F497P1	INC2591	SCC	SEIU Local 121RN PAC				North Hollywood	CA	91602					10/22/2010 12:00:00 AM		1500	1303833																			
+1539945	0	3	S497	F497P1	NON1607	PTY	Democratic State Central Committee of CA				Sacramento	CA	95811					10/30/2010 12:00:00 AM		68.23	741666																			
+1597179	0	276	S497	F497P1	INC287677	IND	Johnson	Toby			Fresno	CA	93720	Sierra Pacific Ortho Ctr Med Grp, Inc.	Physician			6/2/2011 12:00:00 AM		150																				
+1539367	0	1	S497	F497P1	NON2267	PTY	Democratic State Central Committee of CA				Sacramento	CA	95811					10/28/2010 12:00:00 AM		33540.06	741666																			
+1539936	0	5	S497	F497P1	F497P100000000771550	OTH	Umpqua Bank				Roseburg	OR	97470					10/29/2010 12:00:00 AM		1000																				
+1542092	0	1	S497	F497P1	NON1625	PTY	Democratic State Central Committee of California				Sacramento	CA	95811					11/1/2010 12:00:00 AM		213.68	741666															NON:S497:1625				
+1595873	0	237	S497	F497P1	INC256	IND	Johnson	Ronald			San Luis Obispo	CA	93401	Independent State Farm or All State Insurance Co.	Insurance Agent			5/5/2011 12:00:00 AM		120																INC:A:256				
+1539725	0	4	S497	F497P1	C1337	COM	Personal Care Products Council Committee for Responsible Government				Washington	DC	20036-0000				11/2/2010 12:00:00 AM	10/29/2010 12:00:00 AM		1000	1271781																			
+1598367	0	33	S497	F497P1	INC11832	OTH	Kimley-Horn and Associates, Inc.				Orange	CA	92686					4/26/2011 12:00:00 AM		181																INC:A:11832				
+1597179	0	102	S497	F497P1	INC287503	IND	Martinez	Daniel			San Jose	CA	95116	Daniel Martinez, MD	Physician			4/7/2011 12:00:00 AM		100																				
+1626186	0	317	S497	F497P1	INC8163	IND	Mohammed	Eleanor			Salinas	CA	93906	Independent All State or State Farm Insurance Agent	Insurance Agent			10/15/2011 12:00:00 AM		100																				
+1615568	0	54	S497	F497P1	INC10242	OTH	W.A. Thompson, Inc.				Bakersfield	CA	93313					7/11/2011 12:00:00 AM		369.36																				
+1539662	0	10	S497	F497P1	INC1974	OTH	Clos du Val Wine Co., Ltd.				Napa	CA	94558-					3/23/2010 12:00:00 AM		2500																				
+1534423	1	8	S497	F497P2	8	CAO	Sandre Swanson for Assembly 2010				Sacramento	CA	95841				11/2/2010 12:00:00 AM	10/25/2010 12:00:00 AM		1000	1313422	Swanson	Sandre			ASM		ASM		016	S									
+1582673	0	4	S497	F497P1	INC31983	IND	Strebig	James			Irvine	CA	92604-1734	St Joseph Medical Group	Physician			3/9/2011 12:00:00 AM		400																				
+1553521	0	4	S497	F497P1	7115	COM	Valero PAC				Sacramento	CA	95814-3954				1/4/2011 12:00:00 AM	12/21/2010 12:00:00 AM		2000	1236101																			
+1576727	0	14	S497	F497P1	F497P100000000791600	SCC	Service Employees International Union Local 1000				Sacramento	CA	95814					2/11/2011 12:00:00 AM		7800	1273063																			
+1626186	0	75	S497	F497P1	INC7901	IND	Chan	Alan			San Francisco	CA	94109	Independent All State or State Farm Insurance Agent	Insurance Agent			10/15/2011 12:00:00 AM		50																				
+1543061	0	25	S497	F497P1	INC1385	COM	CA Optometric -PAC				Sacramento	CA	95814					10/26/2010 12:00:00 AM		2000	745825																			
+1557043	1	10	S497	F497P1	F497P100000000782317	OTH	Blue Shield Of California				San Francisco	CA	94105					1/3/2011 12:00:00 AM		3568.83																				
+1590066	0	1	S497	F497P1	375	COM	California Medical Association PAC				Sacramento	CA	95814-2949				5/3/2011 12:00:00 AM	4/28/2011 12:00:00 AM		1000	742617																			
+1592503	0	33	S497	F497P1	INC32792	IND	An	Hyung			Paradise	CA	95954	Richard Pantera, MD	Physician			4/28/2011 12:00:00 AM		250																				
+1546758	0	125	S497	F497P1	INC276604	IND	Cooper	Curt			Trinidata	CA	95570	Curt Cooper, MD	PHYSICIAN			11/2/2010 12:00:00 AM		100																				
+1539290	0	685	S497	F497P1	INC10789	IND	Ashmun	Danial			Oceanside	CA	92057-5533	Raytheon Company	Sr Principal Systems Engr			7/14/2010 12:00:00 AM		9.19																				
+1592502	1	7	S497	F497P1	INC51562	IND	Carmichael	Stan			Downey	CA	90241	Independent State Farm or All State Insurance Co.	Insurance Agent			4/15/2011 12:00:00 AM		30																INC:A:51562				
+1569908	0	1	S497	F497P1	F497P100000000788666	COM	California Radiological PAC				Sacramento	CA	95814					1/29/2011 12:00:00 AM		3900	811596																			
+1651898	0	1585	S497	F497P1	INC21784	IND	Hakl	Anthony			Sacramento	CA	95814	State of California	Attorney			11/19/2011 12:00:00 AM		10																				
+1651898	0	1611	S497	F497P1	INC21797	IND	Hanson	Marilee			Sacramento	CA	95814	State of California	Attorney			11/19/2011 12:00:00 AM		10																				
+1651898	0	3145	S497	F497P1	INC20394	IND	Schwartz	Stacy			Los Angeles	CA	90013	State of California	Attorney			10/25/2011 12:00:00 AM		10																				
+1651898	0	3928	S497	F497P1	INC23129	IND	Zywicke	Gregg			San Francisco	CA	94102-7004	State of California	Attorney			11/19/2011 12:00:00 AM		10																				
+1640886	0	1	S497	F497P1	1	OTH	NTS				Bakersfield	CA	933902470					2/6/2012 12:00:00 AM		20000																				
+1651898	0	175	S497	F497P1	INC20933	IND	Fay	Marcia A			Sacramento	CA	94244-2550	State of California	Attorney			10/25/2011 12:00:00 AM		10																				
+1658817	0	1	S497	F497P2	EXP342	COM	Republican Party of San Diego Co.				San Diego	CA	92150					5/2/2012 12:00:00 AM		8000	741949	Republican Party of San Diego County				OTH	General Purpose Committee													
+1658874	0	6	S497	F497P1	INC10697	OTH	Anthony's Seafood Group				San Diego	CA	91910					1/21/2012 12:00:00 AM		208.33																INC:A:10697				
+1629358	0	1	S497	F497P1	INC19	IND	Coen	Sean D.			Los Angeles	CA	90010	LA County	Murder Gang Prosecuter			1/17/2012 12:00:00 AM		7500																				
+1651898	0	1038	S497	F497P1	INC21478	IND	Csapo	Josef			Monterey Park	CA	91754	State of California	Attorney			11/19/2011 12:00:00 AM		10																				
+1652068	0	17	S497	F497P1	INC692	IND	Brown	J'Amy M.			Santa Barbara	CA	93108	J'Amy M. Brown	Investor/Consultant			3/31/2012 12:00:00 AM		250																				
+1643026	0	1	S497	F497P1	C3121	SCC	CA Teachers Assn. - Assn. for Better Citizenship				Burlingame	CA	94010-0000				2/27/2012 12:00:00 AM	2/17/2012 12:00:00 AM		7800	741941																			
+1651898	0	290	S497	F497P1	INC21029	IND	Abrams	Eva			Sacramento	CA	94279	State of California	Attorney			10/25/2011 12:00:00 AM		10																				
+1647376	0	3	S497	F497P1	INC1	IND	Ha	Julie K.			Beverly Hills	CA	90210	Mayfield College	Educator			3/15/2012 12:00:00 AM		3900																				
+1651898	0	1167	S497	F497P1	INC20224	IND	Dovi	Susan			San Francisco	CA	94102	State of California	Attorney			10/25/2011 12:00:00 AM		10																				
+1653094	0	4	S497	F497P1	4	RCP	California New Car Dealers Association PAC				Sacramento	CA	95814					4/19/2012 12:00:00 AM		2000	741623																			
+1655677	0	2	S497	F497P1	INC82	IND	Pirie	Robert S.			New York	NY	10011	None	Retired			4/26/2012 12:00:00 AM		1000																				
+1645730	0	30	S497	F497P1	397	IND	Stancil	Erma			Chula Vista	CA	91915-2621	Trinity	Social Worker/PhD Student			3/17/2012 12:00:00 AM		5																				
+1653818	0	22	S497	F497P1	INC47158	IND	Buccigross	Richard			San Diego	CA	92123	Richard L. Buccigross, MD	Physician			3/30/2012 12:00:00 AM		172.50																				
+1659302	0	4	S497	F497P1	INC330	OTH	ODS Technologies, LP dba TVG Network				Los Angeles	CA	90045					5/3/2012 12:00:00 AM		2000																				
+1651724	0	12	S497	F497P1	INC719	OTH	Pacific Life				Newport Beach	CA	92660					4/3/2012 12:00:00 AM		2000																				
+1650751	0	3	S497	F497P2	EDT161	COM	Committee to Elect Charlie Klinakis 2012 for La Puente City Council				La Puente	CA	91744				4/10/2012 12:00:00 AM	4/3/2012 12:00:00 AM		263.18	1344087	Charlie Klinakis				CCM		OTH	La Puente							EDT:S497:161				
+1653420	0	2	S497	F497P1	C578	OTH	Prime Administration				Los Angeles	CA	90036-0000				6/5/2012 12:00:00 AM	4/19/2012 12:00:00 AM		1000																				
+1653854	0	7	S497	F497P1	INC909	IND	Ostrander	Kathrina			Berkeley	CA	94707	Bayer	Government Affairs			3/20/2012 12:00:00 AM		250																				
+1651898	0	1506	S497	F497P1	INC19253	IND	Gomez	Glynda			Van Nuys	CA	91406	State of California	Judge			10/25/2011 12:00:00 AM		10																				
+1659522	0	1	S497	F497P1	INC184	SCC	Service Employees International Union Local 721, CTW, CLC State & Local				Los Angeles	CA	90020					5/4/2012 12:00:00 AM		3900	743794																			
+1645482	0	1	S497	F497P1	INC432	IND	Chen	Shawn			Pasadena	CA	91106	Sias Group	President			3/15/2012 12:00:00 AM		1000																				
+1649887	0	3	S497	F497P1	C8554865	OTH	Visa U.S.A. Inc.				Washington	DC	20036					3/29/2012 12:00:00 AM		1900																				
+1651898	0	3104	S497	F497P1	INC22670	IND	Saud	Philipp			Sacramento	CA	95814	State of California	Attorney			11/19/2011 12:00:00 AM		10																				
+1681362	0	1	S497	F497P2	EXP718	COM	No on 32, opposed to special exemptions from campaign finance rules for corporate special interests				Sacramento	CA	95814				11/6/2012 12:00:00 AM	7/19/2012 12:00:00 AM		250000	1340076											Prohibits Political Contributions by Payroll Deduction. Prohibitions on Contributions to Candidates. Initiative Statute.	32	Statewide						
+1659590	0	4	S497	F497P1	24	COM	Cook for Assembly 2010				San Bernardino	CA	92401-1709				6/5/2012 12:00:00 AM	5/5/2012 12:00:00 AM		2000	1314267																			
+1659586	0	1	S497	F497P1	585	COM	Cal. New Car Dealers Assoc. PAC				Sacramento	CA	95814-3964				6/5/2012 12:00:00 AM	5/4/2012 12:00:00 AM		1000	741623																			
+1660786	0	4	S497	F497P1	C3323	OTH	Safeway, Inc.				Pleasanton	CA	94588-3229				6/5/2012 12:00:00 AM	5/14/2012 12:00:00 AM		1500																				
+1682545	0	46	S497	F497P1	INC14121	IND	Brown	Sean			Los Angeles	CA	90034	Independent All State Agent or State Farm Insurance Agent	Insurance Agent			7/17/2012 12:00:00 AM		100																				
+1662503	0	1	S497	F497P1	INC112	IND	McKillop	Alice M.			Diamond Springs	CA	95619	Requested	Information			5/21/2012 12:00:00 AM		5000																				
+1660351	0	2	S497	F497P1	C3315	OTH	Landfill Energy Systems				Novi	MI	48377-0000				6/5/2012 12:00:00 AM	5/10/2012 12:00:00 AM		2000																				
+1660183	0	4	S497	F497P1	INC104	IND	Jacks	Rolland & Venetia			Santa Barbara	CA	93103	Schooner Enterprises, Inc.	Property Manager			3/27/2012 12:00:00 AM		1000																				
+1664663	0	5	S497	F497P2	EXP690	COM	Mike Gatto for Assembly 2012				Sacramento	CA	95814				6/5/2012 12:00:00 AM	5/24/2012 12:00:00 AM		1000	1333937	Mike Gatto				ASM		ASM		43										
+1662785	0	1	S497	F497P1	9859	OTH	Ted J. Balestreri Enterprises				Monterey	CA	93940-1016				6/5/2012 12:00:00 AM	5/22/2012 12:00:00 AM		1000																				
+1668224	0	2	S497	F497P1	C4400203	OTH	Kraft Foods Global, Inc.				Portland	OR	97211					6/4/2012 12:00:00 AM		1000																				
+1666802	0	6	S497	F497P2	F497P2-159	CAO	Kersey for Council 2012				San Diego	CA	92128				6/5/2012 12:00:00 AM	5/30/2012 12:00:00 AM		500	1338545	Kersey	Mark			CCM			San Diego	5										
+1666845	0	2	S497	F497P1	INC446	IND	Hickox	Winston H.			Sacramento	CA	95864	California Environmental Protection Agency	Secretary			5/30/2012 12:00:00 AM		1000																				
+1661764	0	4	S497	F497P1	INC1012	OTH	Yocha Dehe Wintun Nation				Brooks	CA	95606					5/21/2012 12:00:00 AM		2000																				
+1661915	1	10	S497	F497P1	C4397288	IND	RECHNITZ	SCHLOMO			LOS ANGELES	CA	90036	TWINMED, LLC	PRESIDENT			5/21/2012 12:00:00 AM		2000																				
+1684696	0	2	S497	F497P1	F497P1-10496	OTH	Kabateck Brown Kellner LLP				Los Angeles	CA	90017					8/13/2012 12:00:00 AM		2500																				
+1661345	0	2	S497	F497P1	INC65	IND	Allen	Penny			Brandon	OR	97411	Allen & Co	Real Estate Brover			5/18/2012 12:00:00 AM		1100																				
+1666920	0	4	S497	F497P1	F497P1-648	COM	California Association of Professional Scientist CAPS-PAC				Sacramento	CA	95814					5/31/2012 12:00:00 AM		1000	860894																			
+1664675	0	2	S497	F497P2	EXP661	COM	Bradford for Assembly 2012	Steven			Sacramento	CA	95814				6/5/2012 12:00:00 AM	5/25/2012 12:00:00 AM		1000	1334072	Steven Bradford				ASM		ASM		62						EXP:S497:661				
+1653854	1	32	S497	F497P1	INC962	OTH	Waste Management & Affiliated Entities				Sacramento	CA	95814					3/28/2012 12:00:00 AM		1866.98																				
+1663791	0	2	S497	F497P1	INC1200	COM	CCPOA PAC				Sacramento	CA	95814					5/23/2012 12:00:00 AM		1400	830349																			
+1661415	1	7	S497	F497P1	F497P1-10153	SCC	Service Employees Int'l Union Local 1000				Sacramento	CA	95814					5/17/2012 12:00:00 AM		3900	1273063																			
+1666228	0	1	S497	F497P2	D2695	OTH	Mike Soubirous for Supervisor 2012				Riverside	CA	92517-0000				6/5/2012 12:00:00 AM	5/29/2012 12:00:00 AM		50000	1342501	Soubirous	Mike			BSU			Riverside County	01										
+1695798	0	2	S497	F497P2	2		Nate Miley for Supervisor				Oakland	CA	94605				6/5/2012 12:00:00 AM	5/30/2012 12:00:00 AM		5000	992285	Miley	Nate			OTH	Supervisor	CTY	Alameda		S					2				
+1685528	0	1	S497	F497P1	INC748	COM	CA Credit Union League PAC				Ontario	CA	91761					8/16/2012 12:00:00 AM		1500	760225																			
+1690997	0	1	S497	F497P1	5076	SCC	CA Dental Political Action Comm. (CALDPAC)				Sacramento	CA	95814-3925				11/6/2012 12:00:00 AM	9/24/2012 12:00:00 AM		2500	742855																			
+1691016	0	3	S497	F497P1	INC1094	IND	Giraldin	James			Topanga	CA	90290	One West Bank	CEO			9/23/2012 12:00:00 AM		2500																				
+1691928	0	6	S497	F497P1	C9343081	COM	Political Action Committee Legislative Involvement for Taxicab Paratransit Association of California (LIFTPAC)				Sacramento	CA	95814					9/27/2012 12:00:00 AM		2500	746220																			
+1691750	0	1	S497	F497P1	C4411911	OTH	Paper Pulp & Film, Inc				Fresno	CA	93725					9/27/2012 12:00:00 AM		3900																				
+1688492	0	1	S497	F497P1	55609	COM	Service Employees International Union Local 1021 Issues PAC				Oakland	CA	94609-3510				11/6/2012 12:00:00 AM	9/5/2012 12:00:00 AM		3050	1296947																			
+1688351	0	21	S497	F497P1	INC84045	IND	Parks	Michael			Fresno	CA	93720	California School Employees Association	Field Director			8/14/2012 12:00:00 AM		20																				
+1692905	0	1	S497	F497P1	C4416428	IND	Van Wagenen	Reed			Clovis	CA	93619	Self	Oral Surgeon			10/2/2012 12:00:00 AM		1000																				
+1689430	0	427	S497	F497P1	INC15513	IND	Dolkas	Chris			anytown	ca	12345	Independent State Farm or Allstate Insurance Agent	Insurance Agent			8/16/2012 12:00:00 AM		50																				
+1686131	0	3	S497	F497P1	F497P1-10528	COM	Mark Leno For Senate 2012				Encinitas	CA	92024					8/20/2012 12:00:00 AM		3900	1293202																			
+1691229	0	73	S497	F497P1	INC8469	IND	MCMACKIN	NICOLE			SANTA ANA	CA	92707	ITC	MANAGING PARTNER			9/6/2012 12:00:00 AM		-1000																INC:A:8469				
+1688642	0	1	S497	F497P1	INC2	COM	California Faculty Association Political Issues Committee				Los Angeles	CA	90045					9/7/2012 12:00:00 AM		1500	881029																			
+1689430	0	236	S497	F497P1	INC15504	IND	Padilla	Andre			Vista	CA	92081	Independent State Farm or Allstate Insurance Agent	Insurance Agent			8/16/2012 12:00:00 AM		50																				
+1695528	0	3	S497	F497P1	F497P1-707	OTH	Redflex Traffic Systems  Inc.				Phoenix	AZ	85085					10/5/2012 12:00:00 AM		1000																				
+1689430	0	278	S497	F497P1	INC15818	IND	Schiro	Peter			Sacramento	CA	95816	Independent State Farm or Allstate Insurance Agent	Insurance Agent			8/16/2012 12:00:00 AM		100																				
+1695282	0	1	S497	F497P1	C24761	OTH	Santa Ynez Band Of Mission Indians				Santa Ynez	CA	93460-9679				11/6/2012 12:00:00 AM	10/5/2012 12:00:00 AM		2000																				
+1695984	0	26	S497	F497P1	INC471	SCC	International Longshore & Warehouse Union Local 13 PAC				San Pedro	CA	90731					8/15/2012 12:00:00 AM		3900	1226530																			
+1699471	0	31	S497	F497P1	INC2255	IND	Tanquary	Patricia			Pleasant Hill	CA	94523	Contra Costa Health Plan	Adminstrative Assistant			10/9/2012 12:00:00 AM		165																				
+1701863	0	1	S497	F497P2	EXP1276	COM	Bonta for State Assembly 2012				Sacramento	CA	95814					10/23/2012 12:00:00 AM		1900	1339722	Rob Bonta				ASM		ASM		18										
+1701868	0	2	S497	F497P2	PDT232	COM	Stop corporate special exemptions from campaign finance rules, sponsored by working families, John A. Perez & labor orgs	No on 32,			Sacramento	CA	95814				11/6/2012 12:00:00 AM	10/22/2012 12:00:00 AM		3750	1340076											Political Contributions by Payroll Deduction. Contributions to Candidates. Initiative Statute. Proposition 32		Statewide						
+1701868	0	3	S497	F497P2	PDT233	COM	To Protect Our Schools & Public Safety, A Broad Coalition of Business, Labor, Law Enforcement, Teachers & Governor Brown	Yes on Prop 30 -			Oakland	CA	94612				11/6/2012 12:00:00 AM	10/22/2012 12:00:00 AM		3750	1343257											Temporary Taxes to Fund Education. Guaranteed Local Public Safety Funding. Initiative Constitutional Amendment. Proposition 30		Statewide						
+1699049	0	2	S497	F497P1	3044	IND	Bornstein	Michael			Sugar Land	TX	77478-3020	Pediatric Center	physician		11/6/2012 12:00:00 AM	10/16/2012 12:00:00 AM		1500																				
+1702795	0	1	S497	F497P1	3109	PTY	Republican Party of Riverside County				Moreno Valley	CA	92557-8739				11/6/2012 12:00:00 AM	10/24/2012 12:00:00 AM		62000	747101																			
+1706192	0	3	S497	F497P2	281288	OTH	BREYER FOR ASSEMBLY 2012				NOVATO	CA	94949-5731				11/6/2012 12:00:00 AM	10/28/2012 12:00:00 AM		11210	1346250	BREYER	MICHAEL			OTH	Unknown Office	STW												
+1700336	0	1	S497	F497P1	1223	COM	EdVoice for the Kids PAC				Sacramento	CA	95814-3609				11/6/2012 12:00:00 AM	10/18/2012 12:00:00 AM		1500	1243091																			
+1701335	1	3	S497	F497P1	F497P1-829	PTY	DEMOCRATIC STATE CENTRAL COMMITTEE OF CALIFORNIA				SACRAMENTO	CA	95814					10/22/2012 12:00:00 AM		1064.03	741666																			
+1701335	1	8	S497	F497P1	F497P1-824	PTY	DEMOCRATIC STATE CENTRAL COMMITTEE OF CALIFORNIA				SACRAMENTO	CA	95814					10/22/2012 12:00:00 AM		320.65	741666																			
+1702454	0	2	S497	F497P1	NON1801	PTY	Democratic State Central Committee of California				Sacramento	CA	95811					10/23/2012 12:00:00 AM		20127.62	741666															NON:S497:1801				
+1703306	0	1	S497	F497P1	INC1323	OTH	Bridgepoint Education Inc				San Diego	CA	92128					10/24/2012 12:00:00 AM		2000																				
+1705586	0	1	S497	F497P2	1		California Patriot PAC				Huntington Beach	CA	92647				11/6/2012 12:00:00 AM	10/26/2012 12:00:00 AM		3900	1352107															1				
+1705377	0	9	S497	F497P2	EXP202	COM	Frazier for Assembly 2012	Jim			Sacramento	CA	95814				11/6/2012 12:00:00 AM	10/26/2012 12:00:00 AM		1500	1341437	Jim Frazier				ASM		ASM		11						EXP:S497:202				
+1705377	0	27	S497	F497P2	EXP220	COM	Rendon for Assembly 2012	Anthony			Sacramento	CA	95814				11/6/2012 12:00:00 AM	10/26/2012 12:00:00 AM		300	1335297	Anthony Rendon				ASM		ASM		63						EXP:S497:220				
+1705861	0	15	S497	F497P2	F497P2-4234	CAO	LARA FOR SENATE 2012				SACRAMENTO	CA	95814				11/6/2012 12:00:00 AM	10/26/2012 12:00:00 AM		2500	1342322	LARA	RICARDO			SEN		SEN		33										
+1700286	0	4	S497	F497P1	INC979	COM	California Faculty Association Political Issues Committee				Los Angeles	CA	90045					10/18/2012 12:00:00 AM		100000	881029																			
+1703907	0	2	S497	F497P1	INC1975	COM	Local 101 AFSCME AFL-CIO				San Jose	CA	95112					10/24/2012 12:00:00 AM		2500	821697																			
+1698462	0	3	S497	F497P1	F497P1-7821	OTH	United HealthCare Services Inc.				Minneapolis	MN	55440					10/14/2012 12:00:00 AM		2000																				
+1701501	0	8	S497	F497P1	INC10883	OTH	Yard House Restaurants, LLC				Irvine	CA	92618-0959					10/22/2012 12:00:00 AM		300																INC:A:10883				
+1698688	0	2	S497	F497P1	INC1746	OTH	United Airlines, Inc.				San Francisco	CA	94128					10/15/2012 12:00:00 AM		1000																				
+1698692	0	8	S497	F497P1	101220120C5888038_10	COM	Yes on Prop. 32 Stop Special Interest				Sacramento	CA	95814					10/9/2012 12:00:00 AM		500000	1343790																			
+1698692	0	16	S497	F497P2	101220120E86965	COM	Yes on Prop. 31 CA for Govt. Accountability				Sacramento	CA	95814				11/6/2012 12:00:00 AM	10/2/2012 12:00:00 AM		15919.47	1310030	YES on 31	Californians for Govt. Accountability					STW					31			101220120E86965				
+1714630	0	1	S497	F497P1	C9637253	COM	Mendoza for Senate 2014				Long Beach	CA	90807					11/16/2012 12:00:00 AM		66000	1308496																			
+1713139	0	3	S497	F497P1	INC1385	COM	International Union Of Operating Engineers Local 12				Pasadena	CA	91103					11/6/2012 12:00:00 AM		3900	743030																			
+1713167	0	1	S497	F497P1	INC134	IND	Torlakson	Tom			Antioch	CA	94531-4247	Candidate	Candidate			11/6/2012 12:00:00 AM		7000																				
+1726281	0	2	S497	F497P1	95698	COM	Cooperative Of American Physicians State PAC				Los Angeles	CA	90071-1406				3/12/2013 12:00:00 AM	1/14/2013 12:00:00 AM		15000	760951																			
+1747132	0	1	S497	F497P2	1		Alex Padilla for City Council 2013				Los Angeles	CA	90012				4/2/2013 12:00:00 AM	1/29/2013 12:00:00 AM		1000	1349062	Padilla	Alex			OTH	Inglewood City Council	CIT	Inglewood		S					1				
+1708277	0	43	S497	F497P1	92224	COM	Roger Dickinson For Assembly 2012				Sacramento	CA	95842-2526				11/6/2012 12:00:00 AM	10/29/2012 12:00:00 AM		2500	1334124																			
+1711892	0	1	S497	F497P2	EXP229	COM	INLAND EMPIRE TAXPAYERS ASSOCIATION, SUPPORTING JEFF MILLER AND OPPOSING RICHARD ROTH FOR STATE SENATE 2012				Riverside	CA	92501					11/1/2012 12:00:00 AM		123000	1285847	INLAND EMPIRE TAXPAYERS ASSOCIATION, SUPPORTING JEFF MILLER AND OPPOSING RICHARD ROTH FOR STATE SENATE 2012						OTH	PRIMARILY FORMED INDEPENDENT EXPEND CMTE											
+1733619	0	3	S497	F497P2	288378	OTH	MYRTLE COLE FOR CITY COUNCIL 2013				SAN DIEGO	CA	92112				3/14/2013 12:00:00 AM	1/27/2013 12:00:00 AM		940	1354342	COLE	MYRTLE			OTH	Unknown Office	STW												
+1749474	0	1	S497	F497P2	4069	CAO	Ben Hueso for Senate 2013				Sacramento	CA	95814-3940				3/12/2013 12:00:00 AM	2/12/2013 12:00:00 AM		4300	1354472	Hueso	Ben			SEN		SEN		40										
+1753156	0	4	S497	F497P1	INC104	OTH	Tri-Cal Inc.				Corona	CA	92882-1948					3/13/2013 12:00:00 AM		1250																				
+1708180	0	7	S497	F497P2	EXP8025	COM	Sherry Hodges for State Assembly 2012				Encinitas	CA	92024				11/6/2012 12:00:00 AM	10/29/2012 12:00:00 AM		1000	1336458	Sherry Hodges				ASM		ASM		76										
+1711220	0	2	S497	F497P2	2		Taxpayers for Carl DeMaio-Mayor 2012				San Diego	CA	92101				11/6/2012 12:00:00 AM	10/29/2012 12:00:00 AM		5000	1345160															2				
+1735889	0	1	S497	F497P2	EXP79	COM	Jim Dear for Mayor 2013				Carson	CA	90745				3/5/2013 12:00:00 AM	1/29/2013 12:00:00 AM		3000	1294596	Jim Dear				MAY		OTH	City of Carson		H									
+1754675	0	1	S497	F497P2	EXP1176	PTY	DEMOCRATIC STATE CENTRAL COMMITTEE OF CALIFORNIA				SACRAMENTO	CA	95814					4/3/2013 12:00:00 AM		12500	741666	GENERAL PURPOSE COMMITTEE														EXP:S497:1176				
+1753531	0	1	S497	F497P1	INC525	OTH	IBEW PAC Educational Committee				Washington	DC	20001					3/21/2013 12:00:00 AM		6800																				
+1745102	0	2	S497	F497P2	EXP8796	COM	MONICA GARCIA FOR SCHOOL BOARD 2013				Los Angeles	CA	90010					2/6/2013 12:00:00 AM		1000	1346436	MONICA GARCIA				OTH	SCHOOL BOARD	OTH	LAUSD											
+1747361	0	2	S497	F497P2	F497P2-1415	CAO	Torres for Senate 2013				Sacramento	CA	95814				3/12/2013 12:00:00 AM	2/13/2013 12:00:00 AM		1000	1354389	Torres	Norma			SEN		SEN		32										
+1748140	0	1	S497	F497P2	EXP239	COM	Price for City Council 2013	Committee to Elect Curren			Los Angeles	CA	90017					2/15/2013 12:00:00 AM		5000	1355501	Curren Price																		
+1745817	0	27	S497	F497P1	INC76928	IND	Pattamakom	Srisawai			Ventura	CA	93003	Diesfled & Pattamokom OB/GYN Med Corp	Physician			1/18/2013 12:00:00 AM		200																				
+1779596	0	1	S497	F497P2	EXP4456	COM	Santa Clara County Democratic Central Committee United Democratic Campaign				Oakland	CA	94618					7/29/2013 12:00:00 AM		10000	871053	Santa Clara County Democratic Central Committee United Democratic Campaign																		
+1789803	0	12	S497	F497P2	304789	OTH	FIONA MA FOR STATE BOARD OF EQUALIZATION 2014				SACRAMENTO	CA	95864				9/17/2013 12:00:00 AM	9/2/2013 12:00:00 AM		250	FPPC #134	MA	FIONA			OTH	Unknown Office	STW												
+1756119	0	44	S497	F497P1	INC19533	IND	Copeland	Heather			Davis	CA	95616	Independent State Farm or Allstate Agent	Insurance Agent			4/1/2013 12:00:00 AM		100																				
+1766794	0	2	S497	F497P2	3413		California Republican Party				Burbank	CA	91506-1727				5/14/2013 12:00:00 AM	5/1/2013 12:00:00 AM		75000	810163																			
+1789803	0	18	S497	F497P2	305411	OTH	JOE KROVOZA FOR ASSEMBLY 2014				SACRAMENTO	CA	95815				9/17/2013 12:00:00 AM	9/2/2013 12:00:00 AM		525	1357708	KROVOZA	JOE			OTH	Unknown Office	STW												
+1774102	0	1	S497	F497P2	EXP8515	COM	Californians for Good Schools & Good Jobs				Sacramento	CA	95815					7/8/2013 12:00:00 AM		5000	1352702																			
+1767635	0	2	S497	F497P2	EXP7826	COM	Los Angeles County Democratic Party State Candidate Committee				Sacramento	CA	95814					5/7/2013 12:00:00 AM		2500	1237135	Political Party Committee																		
+1787476	0	1	S497	F497P1	INC111	COM	CA Refuse Recycling Council North PAC				Sacramento	CA	95814					8/12/2013 12:00:00 AM		2000	923445																			
+1768397	0	41	S497	F497P1	INC95	OTH	Syngenta Crop Protection, LLC				Greensboro	NC	27409					4/12/2013 12:00:00 AM		1000																				
+1759901	0	1	S497	F497P2	EXP2013	COM	Vidak for Senate 2013				Hanford	CA	93230				5/21/2013 12:00:00 AM	4/19/2013 12:00:00 AM		2000	1356181	Andy Vidak				SEN		SEN		16										
+1767952	0	115	S497	F497P1	INC19940	IND	Machado	Rich			San Francisco	CA	94129	Independent Allstate or State Farm Insurance Co.	Insurance Agent			5/8/2013 12:00:00 AM		125																				
+1773395	0	18	S497	F497P2	299092	OTH	FRESNO COUNTY DEMOCRATIC PARTY				FRESNO	CA	93755				7/23/2013 12:00:00 AM	6/30/2013 12:00:00 AM		240	743910							STW												
+1759749	1	5	S497	F497P1	INC604	COM	Communications Workers of America CWA COPE PCC				Sacramento	CA	95833					4/18/2013 12:00:00 AM		3800	C00002089																			
+1773697	0	1	S497	F497P2	3557	CAO	Vidak For Senate 2013				Fresno	CA	93721-2924				7/23/2013 12:00:00 AM	7/2/2013 12:00:00 AM		15925	1356181	Vidak	Andy			SEN		SEN		16										
+1790641	0	2	S497	F497P2	2		Holly J. Mitchell for Senate 2013				Sacramento	CA	95814				9/17/2013 12:00:00 AM	9/11/2013 12:00:00 AM	9/11/2013 12:00:00 AM	1000	1358812	Mitchell	Holly			SEN		SEN		26	S					2				
+1776547	0	1	S497	F497P1	INC242	SCC	California State Association of Electrical Workers				Pasadena	CA	91101					7/8/2013 12:00:00 AM		13200	743107																			
+1790769	0	23	S497	F497P2	EXP736	COM	McIntyre for West Covina City Council 2013				West Covina	CA	91791					9/11/2013 12:00:00 AM		999	1358938	Andrew McIntyre				CCM		OTH	City of West Covina							EXP:S497:736				
+1767584	1	2	S497	F497P1	2	IND	Hayde	Michael			Irvine	CA	92614	Western National Group	CEO			5/6/2013 12:00:00 AM		50000																2				
+1767014	0	2	S497	F497P1	INC342	OTH	Pardee Homes				Los Angeles	CA	90024					5/2/2013 12:00:00 AM		1000																				
+1791485	0	6	S497	F497P1	57624	OTH	Philip Morris USA Inc. dba Altria Client Services Inc				Sacramento	CA	95814-3912				6/3/2014 12:00:00 AM	9/13/2013 12:00:00 AM		1200																				
+1791658	0	1	S497	F497P2	EXP656	COM	Valerie Hill for City Council 2013				Riverside	CA	92506				11/5/2013 12:00:00 AM	9/18/2013 12:00:00 AM		1000	1355919	Valerie Hill				CCM		OTH	Riverside							EXP:S497:656				
+1788927	0	3	S497	F497P1	INC32758	OTH	Hewlett-Packard Company				Palo Alto	CA	94304-1112					8/21/2013 12:00:00 AM		8000																				
+1769048	0	3	S497	F497P2	PDT1854	COM	Cindy Chavez for Supervisor 2013				San Jose	CA	95120				6/4/2013 12:00:00 AM	5/17/2013 12:00:00 AM		58.89	1356465	Cindy Chavez				CSU		OTH	Santa Clara County	2						PDT:S497:1854				
+1778994	0	2	S497	F497P1	INC84374	IND	Martin	Kim			Downey	CA	90242	Independent Allstate or State Farm Ins. Co.	Insurance Agent			7/17/2013 12:00:00 AM		180																				
+1826478	0	14	S497	F497P1	58488	IND	Fisher	Elizabeth			San Francisco	CA	94115-1162	R&E Fisher Comm Property Trust	Homemaker		6/3/2014 12:00:00 AM	3/3/2014 12:00:00 AM		27200																				
+1803433	0	5	S497	F497P2	EXP8213	COM	Sebastian Ridley-Thomas for Assembly 2014				Sacramento	CA	95814					11/14/2013 12:00:00 AM		1000	1358245	Sebastian Ridley-Thomas				ASM		ASM		54	S									
+1811920	0	2	S497	F497P1	F497P1-5251	IND	Sabelhaus	Patrick			Sacramento	CA	95814	Patrick Sabelhaus	Attorney			12/27/2013 12:00:00 AM		5000																				
+1802006	0	3	S497	F497P2	EXP2063	COM	JumpStart Vallejo supporting Malgapo, Verder-Aliga, Dew and Summers for City Council 2013				Vallejo	CA	94590				11/5/2013 12:00:00 AM	10/31/2013 12:00:00 AM		250	1360302	Rozzana Verder-Aliga				CCM		OTH	City of Vallejo							EXP:S497:2063				
+1804570	0	8	S497	F497P1	NON102	OTH	Table Mountain Rancheria				Friant	CA	93626					11/8/2013 12:00:00 AM		28098.50																NON:S497:102				
+1826699	0	1	S497	F497P2	EXP46296	COM	Brian Dahle for Assembly 2014				Sacramento	CA	95814					3/7/2014 12:00:00 AM		1250	1354659	Brian Dahle				ASM		ASM		01						EXP:S497:46296				
+1827186	0	2	S497	F497P1	C4530504	COM	California Independent Telephone				Sacramento	CA	95814-3705					3/10/2014 12:00:00 AM		1500	771171																			
+1827024	0	1	S497	F497P1	INC245	COM	California Pawnbrokers Assoc PAC				Sacramento	CA	95814					3/10/2014 12:00:00 AM		1000	743255																			
+1799947	0	1	S497	F497P2	EXP38923	COM	Dababneh for Assembly 2013	Matt			Encino	CA	91436				11/19/2013 12:00:00 AM	10/30/2013 12:00:00 AM		1000	1359007	Matt Dababneh				ASM		ASM		45										
+1807953	0	1	S497	F497P1	F497P1-30067	OTH	Garmet Line  Inc				Los Angeles	CA	90058					12/13/2013 12:00:00 AM		6800																				
+1828092	0	5	S497	F497P1	INC1416	IND	Peruri	Sangeeth			Los Altos	CA	94022	None	Retired			3/13/2014 12:00:00 AM		5000																				
+1823577	0	1	S497	F497P1	INC1208	IND	Schonfeld	Devy			Pasadena	CA	91106	None	Not employed			2/21/2014 12:00:00 AM		5800																				
+1826302	0	15	S497	F497P1	INC221481	OTH	IBEW 11 ELECTRICAL WKRS				PASADENA	CA	91101					1/21/2014 12:00:00 AM		917.20																INC:A:221481				
+1828911	0	2	S497	F497P1	INC132	IND	Wilks	Staci			Cisco	TX	76437	Self/Staci Wilks	Investor			3/14/2014 12:00:00 AM		2500																				
+1805536	0	1	S497	F497P2	EXP5	PTY	Los Angeles County Democratic Party Issues and Advocacy Committee				Los Angeles	CA	90004					11/21/2013 12:00:00 AM		10000	744554																			
+1823768	0	35	S497	F497P2	327280	OTH	SONOMA COUNTY DEMOCRATIC PARTY				SANTA ROSA	CA	95402				3/25/2014 12:00:00 AM	2/23/2014 12:00:00 AM		2000	742474							STW												
+1823936	0	1	S497	F497P2	D557	COM	Los Angeles County Democratic Party - Issues and Advocacy Committee				Los Angeles	CA	90017-0000					2/21/2014 12:00:00 AM		2207.98	744554	Los Angeles County Democratic Party - Issues and Advocacy Committee																		
+1828106	0	2	S497	F497P1	INC651	SCC	Northern California District Council of Laborers PAC				Sacramento	CA	95814					3/12/2014 12:00:00 AM		8200	1243030																			
+1806323	0	15	S497	F497P2	317402	OTH	LOS ANGELES COUNTY YOUNG DEMOCRATS				SAN MARINO	CA	91108				12/3/2013 12:00:00 AM	12/1/2013 12:00:00 AM		500	921188							STW												
+1829386	0	2	S497	F497P2	EXP85	COM	Armando Gomez for Assembly 2014				Milpitas	CA	95035					3/17/2014 12:00:00 AM		4100	1356331	Armando Gomez				ASM		ASM		25										
+1833181	0	20	S497	F497P2	EXP268	COM	Nazarian for Assembly 2014	Adrin			Sacramento	CA	95814				6/3/2014 12:00:00 AM	3/24/2014 12:00:00 AM		1000	1354458	Adrin Nazarian				ASM		ASM		46						EXP:S497:268				
+1840760	0	1	S497	F497P1	F497P1-2164	SCC	California Nurses Association PAC				Sacramento	CA	95814					4/23/2014 12:00:00 AM		1000	780657																			
+1833358	0	8	S497	F497P2	EXP24116	COM	Gordon for State Assembly 2014	Rich			Sacramento	CA	95814				6/3/2014 12:00:00 AM	3/25/2014 12:00:00 AM		100	1353592	Richard Gordon				ASM		ASM		24						EXP:S497:24116				
+1833673	0	3	S497	F497P1	INC2579	COM	Santa Clara & San Benito Counties Building & Construction Trades Council PAC				San Jose	CA	95125					3/25/2014 12:00:00 AM		1000	743618																			
+1831396	0	5	S497	F497P1	INC92	OTH	Law Offices of Marlin G. Stapleton, Jr				Tustin	CA	92780					3/20/2014 12:00:00 AM		1000																				
+1838603	0	2	S497	F497P1	VN92TCN2MP6	IND	Ma	Hong			Chino Hills	CA	91709-1513	N/A	Retired			4/14/2014 12:00:00 AM		10000																				
+1832037	0	11	S497	F497P2	332002	OTH	CRESSMAN FOR SECRETARY OF STATE 2014				SACRAMENTO	CA	95815					3/23/2014 12:00:00 AM		110	1358362	CRESSMAN	DEREK			OTH	Unknown Office	STW												
+1837263	0	39	S497	F497P2	EXP7226	COM	Tony Thurmond for Assembly 2014				Sacramento	CA	95814				6/3/2014 12:00:00 AM	4/9/2014 12:00:00 AM		8200	1355575	Tony Thurmond for Assembly 2014				ASM		ASM		15										
+1834086	0	2	S497	F497P1	C5458656	OTH	Davita Inc.				Denver	CO	80202					3/25/2014 12:00:00 AM		1000																				
+1838045	0	13	S497	F497P1	VN8QBCMMCH8	OTH	Brownstein, Hyatt, Farber, Schreck, LLP				Santa Barbara	CA	93101-2706					4/10/2014 12:00:00 AM		2000																				
+1836171	0	2	S497	F497P1	INC1243	COM	CARGO PAC				Sacramento	CA	95834					4/4/2014 12:00:00 AM		1895.27	760458																			
+1837314	0	1	S497	F497P2	1		California Republican Leadership Fund				Sacramento	CA	95814				6/3/2014 12:00:00 AM	4/9/2014 12:00:00 AM		15911.23	1340317															1				
+1832674	0	23	S497	F497P2	23	CAO	MAGDALENA GOMEZ FOR SUPERVISOR 2014				PARLIER	CA	93648					3/24/2014 12:00:00 AM	3/25/2014 12:00:00 AM	1500	1363376	GOMEZ	MAGDALENA			OTH	SUPERVISOR	CTY	PARLIER		S									
+1835588	0	2	S497	F497P2	EXP3212	COM	AUTUMN BURKE FOR ASSEMBLY 2014				LONG BEACH	CA	90807				6/3/2014 12:00:00 AM	4/1/2014 12:00:00 AM		1000	1357822	AUTUMN BURKE				ASM		ASM		62										
+1836192	0	8	S497	F497P2	D1682	IND	James Johnson for City Attorney 2014				Long Beach	CA	90802-0000				4/8/2014 12:00:00 AM	4/3/2014 12:00:00 AM		50	1360256	Johnson	James			CAT			City of Long Beach							D1682				
+1841319	0	1	S497	F497P1	C3563	COM	Women's Political Committee State Account				Los Angeles	CA	90017-0000				6/3/2014 12:00:00 AM	4/23/2014 12:00:00 AM		4100	770995																			
+1841319	0	4	S497	F497P1	C3580	SCC	California-Nevada Conference of Operating Engineers				Sacramento	CA	95814-0000				6/3/2014 12:00:00 AM	4/23/2014 12:00:00 AM		3000	1237671																			
+1831268	0	1	S497	F497P2	EXP1732	COM	Walters 2012 Officeholder Account	Senator Mimi			Sacramento	CA	95814				6/3/2014 12:00:00 AM	3/21/2014 12:00:00 AM		2000	1355246	Mimi Walters				SEN		SEN		37										
+1839553	0	1	S497	F497P1	INC1928	OTH	E & J Gallo Winery				Modesto	CA	95354					4/18/2014 12:00:00 AM		2300																				
+1849259	0	1	S497	F497P1	F497P1-1040	COM	California Academy of Eye Physicians & Surgeons PAC				San Francisco	CA	94105					5/12/2014 12:00:00 AM		1000	980331																			
+1845362	0	7	S497	F497P2	EXP625268	COM	O'Donnell for Assembly 2014				Los Angeles	CA	90048				6/3/2014 12:00:00 AM	4/30/2014 12:00:00 AM		1000	13645888	Patrick O'Donnell				ASM		ASM		70										
+1848489	0	1	S497	F497P2	EXP1038	COM	Torlakson for Superintendent for Public Instruction 2014 with major funding by California Teachers Association				Sacramento	CA	95814				6/3/2014 12:00:00 AM	5/8/2014 12:00:00 AM		350000	1364714	Torlakson for Superintendent for Public Instruction 2014 with major funding by California Teachers Association														EXP:S497:1038				
+1851663	0	10	S497	F497P2	EXP387	COM	MATT DABABNEH FOR ASSEMBLY 2014				LOS ANGELES	CA	90017					5/19/2014 12:00:00 AM		1000	1357053	JIM FRAZIER				ASM		ASM		45										
+1849943	0	2	S497	F497P1	C5560831	COM	Planned Parenthood Advocacy Project Los Angeles County Action Fund				Sacramento	CA	95814					5/13/2014 12:00:00 AM		4100	971616																			
+1850476	0	6	S497	F497P1	C7584345	OTH	Morongo Band of Mission Indians Native American Rights Fund				Banning	CA	92220					5/14/2014 12:00:00 AM		2100																				
+1846509	0	1	S497	F497P1	1	IND	Munger, Jr.	Charles T.			Palo Alto	CA	94301	N/A	Physicist			4/30/2014 12:00:00 AM	4/30/2014 12:00:00 AM	1600																				
+1847367	0	2	S497	F497P1	VNJ5RCPKAE1	OTH	1-800-Contacts, Inc.				Draper	UT	84020-7942					5/2/2014 12:00:00 AM		1400																				
+1845801	0	1	S497	F497P2	EXP335	COM	Connie M Leyva for Senate 2014				Los Angeles	CA	90017				6/3/2014 12:00:00 AM	4/30/2014 12:00:00 AM		2500	1364508	Connie M. Leyva				SEN		SEN		20	S									
+1846242	0	1	S497	F497P1	VN8QBCP59C8	IND	Marti	Vicki			Fairfax	CA	94930	N/A	Retired			4/29/2014 12:00:00 AM		1000																				
+1846805	0	1	S497	F497P1	VNJ6CCPAKJ7	SCC	Faculty for Our University's Future, A Committee Sponsored By The California Faculty Association SCC				Sacramento	CA	95814-2716					4/30/2014 12:00:00 AM		50000	850007																			
+1846746	0	27	S497	F497P2	EXP6125	COM	Mike McGuire for State Senate 2014				San Rafael	CA	94901					5/1/2014 12:00:00 AM		1500	1361300	Mike McGuire				SEN		SEN		02										
+1846602	0	2	S497	F497P1	INC801	COM	Amalgamated Transit Union Local 1277 Political Action Committee				Los Angeles	CA	90031					5/1/2014 12:00:00 AM		4100	970941																			
+1847430	0	11	S497	F497P1	INC854	IND	Tuttle	Robert H.			Beverly Hills	CA	90212	Tuttle-Click Automotive Group	Business Executive			5/5/2014 12:00:00 AM		5000																				
+1851377	0	8	S497	F497P1	F497P1-30997	IND	Hung	Maan-Huei			Pasadena	CA	91103	Law Offices of Maan-Huei Hung	Attorney			5/17/2014 12:00:00 AM		1000																				
+1852686	0	2	S497	F497P1	1026	SCC	Peace Officers Research Association of Cal PAC SCC				Sacramento	CA	95834-3725				6/3/2014 12:00:00 AM	5/21/2014 12:00:00 AM		2000	810830																			
+1847088	0	8	S497	F497P2	EXP24618	COM	Friends of Frank Bigelow for Assembly 2014				Sacramento	CA	95814					5/2/2014 12:00:00 AM		1500	1353691	Frank Bigelow				ASM		ASM		05										
+1848557	0	1	S497	F497P2	EXP702	COM	Jacqui Irwin for State Assembly 2014				Camarillo	CA	93010				6/3/2014 12:00:00 AM	5/8/2014 12:00:00 AM		4100	1362508	Jacqui Irwin				ASM		ASM		44										
+1847482	0	2	S497	F497P1	572	IND	Separate Property Trust	Donald L. Rogers			San Bernardino	CA	92401-1709	Retired	N/A		6/3/2014 12:00:00 AM	5/5/2014 12:00:00 AM		1000																				
+1847471	0	1	S497	F497P1	INC230	COM	BIOCOM PAC				San Diego	CA	92119					5/2/2014 12:00:00 AM		1000	963088																			
+1856730	0	1	S497	F497P1	INC57	OTH	BNSF Railway Company				Fort Worth	TX	76131	N/A	N/A			5/30/2014 12:00:00 AM		10000																				
+1854361	0	1	S497	F497P1	VN8QBCRJ5H6	OTH	Marriott International, Inc.				Louisville	TN	37777-4810					5/21/2014 12:00:00 AM		3500																				
+1854207	0	1	S497	F497P1	INC148	COM	Friends of Jimmy Gomez for Assembly 2014				Long Beach	CA	90807					5/22/2014 12:00:00 AM		1000	1354022																			
+1858362	0	2	S497	F497P1	VNJ5QCSH7D0	OTH	Visa U.S.A Inc.				San Francisco	CA	94105-2802					6/2/2014 12:00:00 AM		1000																				
+1858825	0	10	S497	F497P1	58871	SCC	IBEW Local 18 Water & Power Defense League				Los Angeles	CA	90004-4340				6/3/2014 12:00:00 AM	6/3/2014 12:00:00 AM		17200	744817																			
+1875915	0	1	S497	F497P2	D2111	OTH	Kuehl for Supervisor 2014				Los Angeles	CA	90048-0000				11/4/2014 12:00:00 AM	8/8/2014 12:00:00 AM		16856		Kuehl	Sheila			BOE			Los Angeles County	03						D2111				
+1876991	0	2	S497	F497P2	EXP1598	COM	Connie M. Leyva for Senate 2014				Sacramento	CA	95814				11/4/2014 12:00:00 AM	8/13/2014 12:00:00 AM		8200	1364508	Connie M. Leyva				SEN		SEN		20										
+1856424	0	10	S497	F497P2	EXP8419	COM	Mendoza for Assembly 2014				Fresno	CA	93721					5/28/2014 12:00:00 AM		1500	1356173	Rudy Mendoza				ASM		ASM		26										
+1858123	0	1	S497	F497P1	1822	COM	AFSCME Local 2620 PAC				Los Angeles	CA	90020-1742				6/3/2014 12:00:00 AM	6/2/2014 12:00:00 AM		1000	850523																			
+1857111	0	1	S497	F497P1	INC243	COM	California Latino Caucus Leadership PAC				Los Angeles	CA	90017					5/30/2014 12:00:00 AM		4100	1321501																			
+1855503	0	89	S497	F497P1	VN8QBANZ026	OTH	Los Angeles County Medical Association PAC				Los Angeles	CA	90017-3541					5/23/2014 12:00:00 AM		4400	1311583																			
+1857005	0	15	S497	F497P2	EXP508	COM	MAIENSCHEIN FOR ASSEMBLY 2014				SACRAMENTO	CA	95814					5/30/2014 12:00:00 AM		1100	1354963	BRIAN MAIENSCHEIN				ASM		ASM		77										
+1876274	0	1	S497	F497P1	1	RCP	Patients, Prodivers and Healthcare Insurers to Protect Access & Contain Health Costs				San Rafael	CA	94901					8/11/2014 12:00:00 AM		12000	1359222															1				
+1878029	0	6	S497	F497P2	F497P2-2468	CAO	Eduardo Garcia for Assembly 2014				Sacramento	CA	95815				11/4/2014 12:00:00 AM	8/15/2014 12:00:00 AM		4100	1355370	Garcia	Eduardo			ASM		ASM		56										
+1855503	2	34	S497	F497P1	VN8QBANY0A0	COM	CARGO PAC - California Trucking Association				West Sacramento	CA	95691-3531					5/23/2014 12:00:00 AM		100	760458																			
+1877755	0	1	S497	F497P1	INC582	COM	California Beer & Beverage Distributors Community Affairs				Sacramento	CA	95814					8/13/2014 12:00:00 AM		1500	761487																			
+1878125	0	2	S497	F497P1	INC558	OTH	PG&E Corporation				San Francisco	CA	94105					8/14/2014 12:00:00 AM		3000																				
+1875308	0	1	S497	F497P1	INC1216	SCC	I.B.E.W. Local No. 302 PAC				Martinez	CA	94553					8/6/2014 12:00:00 AM		4100	840975																			
+1858134	0	1	S497	F497P1	4225	COM	The Boeing Company PAC				Arlington	VA	22209-2300				6/3/2014 12:00:00 AM	6/3/2014 12:00:00 AM		1500																				
+1857616	0	30	S497	F497P2	342473	OTH	KEVIN DE LECN FOR SENATE 2014				SACRAMENTO	CA	95814					6/1/2014 12:00:00 AM		3	1334203					OTH	Unknown Office	STW												
+1878170	0	1	S497	F497P1	4500	SCC	United Nurses Assn of CA/Union of Health Care Prof. PAC				Sacramento	CA	95814-4602				11/4/2014 12:00:00 AM	8/16/2014 12:00:00 AM		8200	1295768																			
+1857163	0	5	S497	F497P2	EXP417	COM	Torlakson for Superintendent of Public Instruction 2014				San Francisco	CA	94104				6/3/2014 12:00:00 AM	5/29/2014 12:00:00 AM		700	1333916	Superintendent Tom Torlakson				SUP		STW			H									
+1876004	0	2	S497	F497P1	4477	OTH	Astellas Pharma US, Inc.				Northbrook	IL	60062-6111				11/4/2014 12:00:00 AM	8/11/2014 12:00:00 AM		1500																				
+1883362	0	1	S497	F497P1	INC486	COM	California Medical Association	CALPAC			Sacramento	CA	95814					9/9/2014 12:00:00 AM		3000	742617																			
+1886418	0	4	S497	F497P2	EXP177	COM	CONNIE M. LEYVA FOR SENATE 2014				Los Angeles	CA	90017					9/18/2014 12:00:00 AM		1000	1364508	CONNIE LEYVA				SEN		SEN		20										
+1885611	0	6	S497	F497P2	EXP83832	COM	Wood for Assembly 2014	Jim			Healdsberg	CA	95448				11/4/2014 12:00:00 AM	9/16/2014 12:00:00 AM		4000	1353392	Jim Wood				ASM		ASM		2										
+1886473	0	3	S497	F497P1	C5822435	IND	Levine	David			Los Angeles	CA	90064	Jerry B. Epstein Management Co.	Real Estate Management			9/17/2014 12:00:00 AM		1000																				
+1881893	0	11	S497	F497P2	357703	OTH	FIONA MA FOR STATE BOARD OF EQUALIZATION 2014				SACRAMENTO	CA	95864					8/31/2014 12:00:00 AM		1	1343107	MA	FIONA			OTH	Unknown Office	STW												
+1879700	0	1	S497	F497P1	F497P1-832	IND	Bozick	Michael	Mr.		Indian Wells	CA	92210	Self Employed	Grower			8/20/2014 12:00:00 AM		1000																				
+1885718	0	1	S497	F497P1	INC1696	COM	California Association Of Winegrape Growers State PAC				Sacramento	CA	95814					9/16/2014 12:00:00 AM		1500	801893																			
+1884300	0	1	S497	F497P1	INC1631	COM	Independent Insurance Political Action Committee (IIPAC)				Granite Bay	CA	95746					9/10/2014 12:00:00 AM		1000	743103																			
+1884684	0	1	S497	F497P2	1		Central Valley Stonewall Democratic Club				Stockton	CA	95204				11/4/2014 12:00:00 AM	9/11/2014 12:00:00 AM	9/11/2014 12:00:00 AM	500	1280605															1				
+1886573	0	4	S497	F497P1	INC3394	OTH	E & B Natural Resources Management Corporation				The Woodlands	TX	77380					8/4/2014 12:00:00 AM		47018																				
+1884833	0	1	S497	F497P2	1		VIDAK FOR SENATE 2014				WILLOWS	CA	95988				11/4/2014 12:00:00 AM	9/12/2014 12:00:00 AM	9/12/2014 12:00:00 AM	1500	1359757															1				
+1886659	0	1	S497	F497P2	1		Yes on Prop 46				Sacramento	CA	95841				11/4/2014 12:00:00 AM	8/27/2014 12:00:00 AM	8/27/2014 12:00:00 AM	15000												Yes on Prop 46	Prop 46			1				
+1882746	0	2	S497	F497P1	F497P1-610	COM	Western Manufactured Housing Communities Assoc PAC				Sacramento	CA	95814					9/5/2014 12:00:00 AM		1000	742422																			
+1883270	0	1	S497	F497P1	INC737	COM	Bocanegra for Assembly 2014				Sacramento	CA	95815					9/5/2014 12:00:00 AM		4100	1354450																			
+1886695	0	3	S497	F497P1	F497P1-1607	COM	IBEW Pac Educational Fund				Washington	DC	20001					9/18/2014 12:00:00 AM		4100	C00027342																			
+1884835	0	3	S497	F497P1	INC1326	SCC	Northern CA Carpenters Regional Council				Oakland	CA	94621					9/11/2014 12:00:00 AM		3000	972104																			
+1885148	0	7	S497	F497P1	C4554015	OTH	One Baxter Way, LP				Austin	TX	78759					9/12/2014 12:00:00 AM		1000																				
+1883326	0	2	S497	F497P1	37288	COM	Chula Vista Mobilhome Park Owners PAC				La Mesa	CA	91942-6719				11/4/2014 12:00:00 AM	9/8/2014 12:00:00 AM		12500	1365888																			
+1882698	0	1	S497	F497P1	INC673	SCC	Professional Engineers in California Government PECG-PAC				Sacramento	CA	95814					9/4/2014 12:00:00 AM		1000	822501																			
+1881405	0	2	S497	F497P1	C10444785	SCC	CDF Firefighters Small Contributor PAC  FPPC ID#790318 Small Contributor Committee				Sacramento	CA	95814					8/27/2014 12:00:00 AM		1000	790318																			
+1882878	0	3	S497	F497P2	EXP1067	COM	James Gore for Supervisor 2014				Santa Rosa	CA	95403				11/4/2014 12:00:00 AM	9/5/2014 12:00:00 AM		2750	1362345	James Gore				CSU		OTH	Sonoma County	04						EXP:S497:1067				
+1883413	0	1	S497	F497P2	4583	PTY	San Diego County Democratic Party				San Diego	CA	92111-1320				11/4/2014 12:00:00 AM	9/9/2014 12:00:00 AM		1500	741906																			
+1891535	0	3	S497	F497P2	EXP935	COM	Tavaglione County Supervisor 2014				Riverside	CA	92506					10/2/2014 12:00:00 AM		5000	932127	John Tavaglione				CSU		OTH	County of Riverside							EXP:S497:935				
+1887263	0	1	S497	F497P1	INC849	SCC	Political Action for Classified Employees of CA School Employees				Sacramento	CA	95814					9/21/2014 12:00:00 AM		3000	761128																			
+1889961	0	1	S497	F497P2	1		Committee for a safe and prosperous Oxnard supporting MacDonald for Mayor and Huber for Council 2014.  sponsored by firefighters and police officers associations.				Oxnard	CA	93030				11/4/2014 12:00:00 AM	9/30/2014 12:00:00 AM		15000	1371111															1				
+1888372	0	67	S497	F497P1	INC16061	OTH	Dokken Engineering				Folsom	CA	95630					7/21/2014 12:00:00 AM		498																INC:A:16061				
+1891216	0	3	S497	F497P2	EXP2333	COM	REPUBLICAN CENTRAL COMMITTEE OF SAN LUIS OBISPO COUNTY				SACRAMENTO	CA	95814					10/1/2014 12:00:00 AM		5000	841621	GENERAL PURPOSE COMMITTEE																		
+1888393	0	4	S497	F497P2	VN7A79VXCZ2	COM	Elizabeth Echols for Assembly 2014				Ste K	CA	95815-4404				11/4/2014 12:00:00 AM	9/25/2014 12:00:00 AM		2600	1357373	Echols	Elizabeth			ASM		ASM		15										
+1890483	0	1	S497	F497P1	F497P1-31810	COM	UCPCM/PAC				Alameda	CA	94501					9/30/2014 12:00:00 AM		1000	970546																			
+1888530	0	2	S497	F497P2	EXP420	COM	McCusker for Water Board 2014				Tustin	CA	92780				11/4/2014 12:00:00 AM	9/25/2014 12:00:00 AM		1500	1361838	Justin McCusker				OTH	Water Board	OTH	Santa Margarita Water Board											
+1888253	0	1	S497	F497P1	VN8QBD5JX19	OTH	Humboldt Redwood Company, LLC				Calpella	CA	95418					9/23/2014 12:00:00 AM		4300																				
+1893635	0	1	S497	F497P1	INC1314	SCC	UA Local 246 Plumbers and Pipefitters COPE Committee Small Contributor Committee				Fresno	CA	93727					10/6/2014 12:00:00 AM		4100	870601																			
+1889496	0	1	S497	F497P2	VN7SB9W13S1	COM	Betty Yee for Controller 2014				Ste 300	CA	94104-2810				11/4/2014 12:00:00 AM	9/26/2014 12:00:00 AM		5000	1335071	Yee	Betty			CON		STW												
+1894100	0	1	S497	F497P1	INC1514	COM	California Charter Schools Association PAC				Sacramento	CA	95814-4439					10/7/2014 12:00:00 AM		2000	1302433																			
+1888558	1	198	S497	F497P1	INC67638	IND	Fernandes	Elido			Modesto	CA	95358-8594	Retired	Retired			9/25/2014 12:00:00 AM		100																				
+1889477	0	10	S497	F497P1	INC38141	COM	Nora Campos for Assembly 2014				San Jose	CA	95127					9/26/2014 12:00:00 AM		25000	1353485																			
+1897961	0	7	S497	F497P2	7	CAO	Das Williams for Assembly 2014				Sacramento	CA	95814				11/4/2014 12:00:00 AM	10/14/2014 12:00:00 AM		1000	1353473	Williams	Das			ASM		ASM		037										
+1896401	0	6	S497	F497P1	INC4455	IND	Eisler	Shirley			Hillsborough	CA	94010	None	Retired			10/10/2014 12:00:00 AM		2000																				
+1898186	0	6	S497	F497P1	C4562489	PTY	Democratic State Central Committee of CA				Sacramento	CA	95811					10/14/2014 12:00:00 AM		1483.81	741666					OTH	Political Party							Other						
+1896112	0	5	S497	F497P1	INC5	IND	Lundberg	Grant			Durham	CA	95938	Wehah Farm, Inc.	Manager			10/8/2014 12:00:00 AM		2500																				
+1901002	0	1	S497	F497P2	D251122	COM	Ian Calderon for Assembly 2014				La Puente	CA	91744					10/17/2014 12:00:00 AM		2500	1353568	Calderon	Ian				Assembly District 57													
+1895157	0	1	S497	F497P1	INC863	COM	California Permanente Medical Groups PAC				Sacramento	CA	95814					10/8/2014 12:00:00 AM		4100	992303																			
+1897355	1	1	S497	F497P2	EXP81	COM	Committee to Save our Neighborhoods, Sponsored by Alliance of Californians for Community Empowerment Action				Los Angeles	CA	90007					10/10/2014 12:00:00 AM		5000	1352610	Committee to Save our Neighborhoods.				OTH	Political Action Committee													
+1900248	0	2	S497	F497P1	INC5052	IND	Mei Mei Chan				San Francisco	CA	94116	MEI Architects	Architect			10/17/2014 12:00:00 AM		4100																				
+1895410	0	1	S497	F497P2	EXP651	COM	Citizens for a Safe Fourth of July - Yes on Measure II				Sacramento	CA	95814				11/4/2014 12:00:00 AM	10/7/2014 12:00:00 AM		10000	1370192	Citizens for a Safe Fourth of July - Yes on Measure II				OTH	P.F. Ballot Measure Committee	OTH	City of Villa Park											
+1897225	0	3	S497	F497P1	INC1670	IND	Wilhelm	Mike			Fresno	CA	93720	Walter & Wilhelm Law Group	Attorney			10/13/2014 12:00:00 AM		1000																				
+1897011	0	1	S497	F497P1	1519	IND	Kirkpatrick	Gregg			Rolling Hills	CA	90274	self	Real Estate		11/4/2014 12:00:00 AM	10/13/2014 12:00:00 AM		1000																				
+1898780	0	4	S497	F497P2	EXP333	COM	Californians Against Prop 47				Sacramento	CA	95833				11/4/2014 12:00:00 AM	10/15/2014 12:00:00 AM		5000	1368083	Prop 47-Criminal Sentences, Misdemeanor Penalties, Initiative Statute						STW												
+1895565	0	1	S497	F497P2	EXP30	COM	ASHLEY SWEARENGIN FOR STATE CONTROLLER 2014				FRESNO	CA	93710					10/8/2014 12:00:00 AM		13600	1364788	ASHLEY SWEARENGIN				CON		STW												
+1898002	0	2	S497	F497P2	EXP1215	COM	EDUARDO GARCIA FOR ASSEMBLY 2014				Sacramento	CA	95815					10/13/2014 12:00:00 AM		2500	1355370	EDUARDO GARCIA				ASM		ASM		56										
+1897860	0	7	S497	F497P2	EXP145	COM	Maienschein for Assembly 2014				Sacramento	CA	95814				11/4/2014 12:00:00 AM	10/14/2014 12:00:00 AM		1000	1354963	Brian Maienschein				ASM		ASM		77						EXP:S497:145				
+1898063	0	1	S497	F497P2	EXP157	COM	Dave Jones for Insurance Commissioner 2014				Sacramento	CA	95814				11/4/2014 12:00:00 AM	10/13/2014 12:00:00 AM		1200	1341684	Dave Jones				INS		STW												
+1899778	0	2	S497	F497P1	INC5170	COM	Justice for America (NM PAC ID 2400661); Committee to Support Kamala Harris for Attorney General 2014				Albuquerque	NM	87106-3731					10/16/2014 12:00:00 AM		6800	1372540																			
+1896652	0	10	S497	F497P2	NON38509	COM	Newsom for California Lieutenant Governor 2014				Novato	CA	94949-5731				11/4/2014 12:00:00 AM	10/9/2014 12:00:00 AM		86.39	1333762	Gavin Newsom				LTG		STW			H									
+1898113	0	2	S497	F497P1	INC915	COM	Cooperative of American Physicians State Political Action Committee				Los Angeles	CA	90071					10/13/2014 12:00:00 AM		4100	760951																			
+1905676	0	4	S497	F497P1	37726	COM	Manufactured Housing Education Trust PAC				Irvine	CA	92618-2956				11/4/2014 12:00:00 AM	10/24/2014 12:00:00 AM		6500	820165																			
+1901835	0	16	S497	F497P2	EXP14016	COM	MIGUEL SANTIAGO FOR ASSEMBLY 2014				LOS ANGELES	CA	90010				11/4/2014 12:00:00 AM	10/20/2014 12:00:00 AM		1000	1357866	MIGUEL SANTIAGO				ASM		ASM		53										
+1907225	0	1	S497	F497P2	1		Friends of Mike Lempres Atherton Council				Atherton	CA	94027				11/4/2014 12:00:00 AM	10/27/2014 12:00:00 AM	10/28/2014 12:00:00 AM	1000	1369199	Lempres	Mike			OTH	Council	CIT	Atherton		S					1				
+1906525	1	14	S497	F497P2	EXP2683	COM	Lorena Gonzalez for Assembly 2014				Chula Vista	CA	91911				11/4/2014 12:00:00 AM	10/27/2014 12:00:00 AM		4100	1358017	Lorena Gonzalez				ASM		ASM		80										
+1902354	0	1	S497	F497P2	F497P2-384	BNM	No on 46  Patients  Providers and Healthcare Insurers to Contain Health Costs				Sacramento	CA	95815				11/4/2014 12:00:00 AM	10/21/2014 12:00:00 AM		1977	1359222											Drug and Alcohol Testing of Doctors. Medical Negligence Lawsuits. Initiative Statute.	46	Statewide						
+1902170	0	3	S497	F497P1	2949	OTH	Mason, Robbins, Browning & Godwin				Merced	CA	95348-2644				11/4/2014 12:00:00 AM	10/22/2014 12:00:00 AM		1000																				
+1904333	0	1	S497	F497P1	INC2612	OTH	Benedict Canyon Equities, Inc.				Santa Monica	CA	90405					10/23/2014 12:00:00 AM		6000																				
+1912331	0	2	S497	F497P2	1752	PTY	California Republican Party-State Account				Burbank	CA	91506-1727				11/4/2014 12:00:00 AM	10/31/2014 12:00:00 AM		1500	810163																			
+1902546	0	4	S497	F497P2	F497P2-1301	COM	Richmond Working Families For Jobs 2014 In Support of Bates for Mayor  Myrick  Ramsey  Powers  Rogers for City Council				Oakland	CA	94618				11/4/2014 12:00:00 AM	10/21/2014 12:00:00 AM		2500	1372270																			
+1910724	1	124	S497	F497P1	INC2470	OTH	Akiva Niamehr LLP				Los Angeles	CA	90024					10/23/2014 12:00:00 AM		5000																				
+1896994	1	21	S497	F497P2	21		Holly J. Mitchell for Senate 2014				Sacramento	CA	95814				11/4/2014 12:00:00 AM	10/10/2014 12:00:00 AM		3000	1361039	Mitchell	Holly J			SEN		SEN		30	H					21				
+1902930	0	7	S497	F497P2	NON38665	COM	Medina for Assembly 2014				Sacramento	CA	95815				11/4/2014 12:00:00 AM	10/21/2014 12:00:00 AM		8692.67	1353794	Jose Medina				ASM		ASM		61										
+1905789	0	21	S497	F497P2	427734	CAO	Eric Linder for Assembly 2014				Santa Ana	CA	92705-5646				11/4/2014 12:00:00 AM	10/24/2014 12:00:00 AM		4011	1355645	Linder	Eric			ASM		ASM		60										
+1908364	0	3	S497	F497P1	4811	SCC	CA Dental PAC (CALDPAC) -SCC				Sacramento	CA	95814-4439				11/4/2014 12:00:00 AM	10/29/2014 12:00:00 AM		1300	742855																			
+1906613	0	6	S497	F497P1	INC2533	OTH	Law Office of Carla DeDominics				Escondido	CA	92025					10/24/2014 12:00:00 AM		2500																				
+1906613	0	13	S497	F497P1	INC2539	OTH	The Burchett Law Firm, P.C.				San Diego	CA	92101					10/24/2014 12:00:00 AM		1000																				
+1910509	0	7	S497	F497P2	EXP42559	COM	Melissa Melendez for Assembly 2014				Sacramento	CA	95814				11/4/2014 12:00:00 AM	10/30/2014 12:00:00 AM		1000	1353839	Melissa Melendez				ASM		ASM		67						EXP:S497:42559				
+1906275	0	1	S497	F497P1	INC242	OTH	Boss Enterprise and Consulting				Reno	NV	89509					10/27/2014 12:00:00 AM		5500																				
+1950219	0	1	S497	F497P2	EXP1204	COM	San Diego County Democratic Party				San Diego	CA	92111					3/2/2015 12:00:00 AM		10000	741906	San Diego County Democratic Party																		
+1913744	0	1	S497	F497P1	INC659	OTH	Rincon Band of Luiseno Mission Indians of the Rincon Reservation				Valley Center	CA	92082					11/4/2014 12:00:00 AM		2000																				
+1913570	0	1	S497	F497P1	INC142	IND	Jones	G. Bradford			Los Angeles	CA	90067	Redpoint Ventures	Venture Capitalist			11/3/2014 12:00:00 AM		10000	1239946																			
+1913613	0	5	S497	F497P1	INC2683	OTH	Home Depot				Atlanta	GA	30339					11/3/2014 12:00:00 AM		1000																				
+1913617	0	1	S497	F497P1	VNW37D98B57	IND	Fukushima	Glen			Washington	DC	20037-3321	Airbus	Senior Fellow			11/2/2014 12:00:00 AM		1000																				
+1939984	0	10	S497	F497P1	435040	COM	Caterpillar California Dealers PAC				Sacramento	CA	95833-3292				3/17/2015 12:00:00 AM	2/9/2015 12:00:00 AM		416.66	870343																			
+1939984	0	18	S497	F497P2	435050	CAO	Jeff Stone for State Senate 2018				Riverside	CA	92507-0608				3/17/2015 12:00:00 AM	2/7/2015 12:00:00 AM		1657.15	1374274	Stone	Jeff			SEN		SEN		28										
+1914651	0	2	S497	F497P2	EDT1	COM	Charles Manne for City Council 2014				Tracy	CA	95377				11/4/2014 12:00:00 AM	11/1/2014 12:00:00 AM		450	1367742	Charles Manne				MAY		OTH	City of Tracy		S					EDT:S497:1				
+1918842	0	1	S497	F497P1	INC150	OTH	Station Casinos, LLC and North Fork Rancheria of Mono Indians				Las Vegas	NV	89135					12/12/2014 12:00:00 AM		30000																				
+1944922	0	4	S497	F497P2	EXP458	COM	Safe Neighborhoods & Better Schools for Steve Veres for City Council 2015				Sacramento	CA	95841				3/3/2015 12:00:00 AM	2/18/2015 12:00:00 AM		25000	1374593	Steve Veres				CCM		OTH	City of Los Angeles											

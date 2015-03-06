@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	RECSUBTYPE	ENTITY_CD	PAYEE_NAML	PAYEE_NAMF	PAYEE_NAMT	PAYEE_NAMS	PAYEE_CITY	PAYEE_ST	PAYEE_ZIP4	CREDCARDCO	BENE_NAME	BENE_POSIT	BENE_AMT	EXPN_DSCR	EXPN_DATE	AMOUNT	MEMO_CODE	MEMO_REFNO	BAKREF_TID
+645128	0	75	LEXP	F635P3C	367	1	OTH	Paradise Cafe				Santa Barbara	CA	93101		Rito Guerra	Admin. Assist. to Sen. O'Connell	11.97	Lunch	6/22/2000 12:00:00 AM	24.20			
+673921	0	3	LEXP	F635P3C	6	1	OTH	Frank Fat's Restaurant				Sacramento	CA			Melinda Melendez	Assistant to Speaker Assemblyman Bob Hertzberg	27.67	lunch	9/25/2000 12:00:00 AM	0			
+681275	0	39	LEXP	F615P1	LEXP00039	2	OTH	Safeway				Sacramento	CA	95815		Mr. Ignacio Hernandez	Chief of Staff A. Romero	0.07	Snack			N		
+645059	0	1	LEXP	F635P3C	159	1	OTH	SACRAMENTO KINGS LIMITED PARTNERSHIP				SACRAMENTO	CA	95834		ELVIA DIAZ	COMMITTEE ASSISTANT SENATOR POLANCO'S OFFICE	54.50	TICKETS	4/2/2000 12:00:00 AM	234			
+624267	0	99	LEXP	F635P3C	110	1	OTH	Clown Alley Products Inc.				Cincinnati	OH	45212		RICHARD MOUNTJOY	SENATOR	5.00	HAT	3/2/2000 12:00:00 AM	0			
+644680	0	21	LEXP	F635P3C	1221	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		ANA MATOSANTOS	LEGISLATIVE AIDE TO SENATOR MARTHA ESCUTIA	299.00	CONCERT TICKETS AND SUITE EXPENSES	5/3/2000 12:00:00 AM	2734.60			
+645128	0	7	LEXP	F635P3C	293	1	OTH	Sacramento Kings				Sacramento	CA	95834		David Pegos	Legis. Aide to Assem. House	157.00	2 tickets	4/9/2000 12:00:00 AM	314			
+681137	0	32	LEXP	F635P3C	207	1	OTH	Signature Room				Chicago	IL			Terry Reardon	Chief of Staff - Senator Jim Costa	41.14	Food & Beverage	7/18/2000 12:00:00 AM	0			
+681272	0	99	LEXP	F635P3C	LEXP00099	2	OTH	Costco				Sacramento	CA	95815		Mr. Ignacio Hernandez	Chief of Staff A. Romero	1.19	Snack			N		
+653381	0	21	LEXP	F635P3C	LEXP00021	2	OTH	City of Thousand Oaks				Thousand Oaks	CA	91362		Mazzoni	Assemblymember	49.75	Food and Beverage			N		
+624538	0	4	LEXP	F615P1	1160	1	OTH	AMARIN RESTAURANT				SACRAMENTO	CA	95814	MASTERCARD	CHRIS FLAMMER	CHIEF OF STAFF SENATOR POLANCO	8.70	FOOD & BEVERAGE	1/28/2000 12:00:00 AM	17.55			
+681272	0	125	LEXP	F635P3C	LEXP00125	2	OTH	Winco Foods				Elk Grove	CA	95758		Ms. Lee Angela Reid	Leg. Asst. S. Wright	0.32	Snack			N		
+643955	0	5	LEXP	F635P3C	23	1	OTH	Sterling Hotel				Sacramento	CA	95814		Dion Aroner	Assembly member	17.27	food & beverage		0			
+628841	0	45	LEXP	F635P3C	64	1	OTH	Anything Goes	Catering by Virga's			Sacramento	CA	95814		Assem. Hannah-Beth Jackson		17.75	Reception	1/18/2000 12:00:00 AM	0			
+715619	0	31	LEXP	F635P3C	LEXP00031	2	OTH	Costco				Sacramento	C			Susan Hough	Human Resources Director Admin Office of Courts	13.67	Holiday Open House			N		
+624267	1	71	LEXP	F635P3C	81	1	OTH	Clown Alley Products Inc.				Cincinnati	OH	45212		HOWARD WAYNE	ASSEMBLYMEMBER	5.00	HAT	3/2/2000 12:00:00 AM	0			
+624267	1	81	LEXP	F635P3C	91	1	OTH	Clown Alley Products Inc.				Cincinnati	OH	45212		JOHN BURTON	SENATOR	5.00	HAT	3/2/2000 12:00:00 AM	0			
+624267	1	102	LEXP	F635P3C	113	1	OTH	Clown Alley Products Inc.				Cincinnati	OH	45212		DEBRA ORTIZ	SENATOR	5.00	HAT	3/2/2000 12:00:00 AM	0			
+719280	0	18	LEXP	F635P3C	LEXP00018	2	OTH	Los Angeles Department of Airports								Leonard	Assembly Member	480	Airport Parking & Shuttle			N		
+718632	0	64	LEXP	F635P3C	276	1	OTH	WALT DISNEY COMPANY THE				BURBANK	CA	91521-7773		Brent Kukris	Legislative Correspondant for Assemblyman Bill Campbell	43.00	Disneyland Tickets	12/22/2000 12:00:00 AM	43			
+682740	0	40	LEXP	F635P3C	LEXP00040	2	OTH	Signature at the 95th				Chicago	IL	60601-3706		Donald Moulds	Consultant	41.14	Food & Bev			N		
+683312	0	7	LEXP	F635P3C	1069	1	OTH	Sacramento River Cats				Sacramento	CA	N/A	N/A	Steve McCarthy	Legislative Director	73.00	Baseball game.	8/9/2000 12:00:00 AM	73			
+682005	0	6	LEXP	F635P3C	LEXP00006	1	OTH	Sacramento River Cats				Sacramento	CA	95814		Matt Rexroad	Chief of Staff Assm. Bill Morrow	35	Baseball game ticket	8/8/2000 12:00:00 AM	35	N		
+681366	0	1	LEXP	F635P3C	2367	1	OTH	U.S. OLYMPIC TRACK AND FIELD TRIALS				SACRAMENTO	CA			SEE ATTACHMENT A		0.00	TICKETS	7/19/2000 12:00:00 AM	400			
+682005	0	38	LEXP	F635P3C	LEXP00038	2	OTH	California Republican National Convention				Santa Monica	CA	90401		Jan Leja	Assembly Candidate (AD-65)	71.41	Wellness Center Event/CA Republican National Convention			N		
+719516	0	1	LEXP	F615P1	191	1	OTH	Esquire Grill				Sacramento	CA	95814		Robert Herrell	Consultant to Senator Speier	10.00	Lunch	12/20/2000 12:00:00 AM	55.22			
+682803	0	2	LEXP	F635P3C	1950	1	OTH	MONTAGNA RESTAURANT RESORT				OLYMPIC VALLEY	CA			JIM COSTA	SENATOR 	58.99	DINNER (9/6/2000 $14.37 REIMBURSED TO BP)	7/9/2000 12:00:00 AM	294.95			
+718632	0	1	LEXP	F635P3C	209	1	OTH	WALT DISNEY COMPANY THE				BURBANK	CA	91521-7773		Martin Ludlow	Chief of Staff for Speaker Emeritus Antonio Villaraigosa	82.00	Disneyland Tickets	10/1/2000 12:00:00 AM	82			
+681426	0	13	LEXP	F635P3C	RP20	2	OTH	Top of the Market				San Diego	CA			Mrs. Richard Monteith	Spouse Senator Richard Monteith	28.69	Meal					
+681585	0	1	LEXP	F635P3C	1103	1	OTH	none	none	none	none	none	ca	00000	none	none	none	0	none	12/30/1899 12:00:00 AM	0			
+682502	0	15	LEXP	F635P3C	1723	1	OTH	CALIF REPUBLICAN NATL CONVENTION DELEGATION NONFEDERAL ACCOUNT				SANTA MONICA	CA	90401		JOHN LEWIS	STATE SENATOR	2.80	ACADEMY OF MUSIC EVENT AT REPUBLICAN NATIONAL CONVENTION	7/29/2000 12:00:00 AM	0			
+722979	0	54	LEXP	F635P3C	RP35	2	IND	Village				Parker Dam	CA	92267		Greg Humer	Senior Consultant Asm Republican Caucus	10.75	Dinner					
+679895	1	16	LEXP	F635P3C	260	1	OTH	California Republican National Convention				Santa Monica	CA	90401		Howard J. Kaloogian	AD-74 Legislator	21.43	Regan/Schultz Rittenhouse Square Brunch at Republican Convention	8/2/2000 12:00:00 AM	0			
+682675	1	36	LEXP	F635P3C	39	1	OTH	WALT DISNEY COMPANY THE				BURBANK	CA	91521-7773		Rachel Otte	Principal Assistant for Assemblyman Anthony Pescetti	82.00	Disneyland Tickets	8/3/2000 12:00:00 AM	82			
+679895	1	47	LEXP	F635P3C	293	1	OTH	California Republican National Convention				Santa Monica	CA	90401		Jan Leja	AD-65 Candidate	16.67	Entertainment & reception food at the Republican Convention	8/1/2000 12:00:00 AM	0			
+682918	0	22	LEXP	F635P3C	2263	1	OTH	SAN RAMON LEARNING CENTER				SAN RAMON	CA	94583		ANGELA WIEDRRICH		256.00	WOMEN'S LEADERSHIP CONFERENCE	9/15/2000 12:00:00 AM	0			
+743667	0	25	LEXP	F635P3C	LEXP00025	2	OTH	City of Redding				Redding	CA	96049-6071		Clydene Leslie	spouse	49.68	Food and beverage			N		
+745521	0	82	LEXP	F635P3C	1729	1	OTH	The Senator				Sacramento	CA	95814		Dick Monteith	Senator	69.92	Reception	2/27/2001 12:00:00 AM	0			
+742647	0	21	LEXP	F635P3C	LEXP00021	2	OTH	City of Redding				Redding	CA	96049-6071		Dave Kelley	Assemblymember	49.68	Food and beverage			N		
+746185	0	10	LEXP	F635P3C	LEXP00010	2	OTH	City of Redding				Redding	CA	96049-6071		Roy Ashburn	Assemblymember	49.68	Food and beverage			N		
+743348	0	15	LEXP	F635P3C	LEXP00015	2	OTH	City of Redding				Redding	CA	96049-6071		Dennis Cardoza	Assemblymember	49.68	Food and beverage			N		
+743348	0	16	LEXP	F635P3C	LEXP00016	2	OTH	City of Redding				Redding	CA	96049-6071		Rebecca Cohn	Assemblymember	49.68	Food and beverage			N		
+745106	0	3	LEXP	F625P3A	LEXP00003	2	OTH	LOB Cafe				Sacramento	CA	95814		Glen Campora	Redevelopment Specialist Dept. HCD	1.5	Coffee for Lowenthal Working Group (CRA) meeting			N		
+741854	0	10	LEXP	F635P3C	LEXP00010	2	OTH	City of Redding				Redding	CA	96049-6071		Roy Ashburn	Assemblymember	49.68	Food and beverage			N		
+743550	0	6	LEXP	F635P3C	LEXP00006	2	OTH	City of Redding				Redding	CA	96049-6071		Bob Margett	Senator	49.68	Food and beverage			N		
+745282	0	4	LEXP	F615P1	1710	1	IND	Bank of America				San Francisco	CA	94104		Bill Campbell	Assemblyman	6.75	'Parking'	3/21/2001 12:00:00 AM	54			
+746314	0	56	LEXP	F635P3C	3086	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		BARBARA COLLIER	MOTHER OF SAMIRA WATT	38.22	ICE SKATING TICKET SUITE EXPENSES	2/9/2001 12:00:00 AM	0			
+742148	0	3	LEXP	F635P3C	4005	1	OTH	THE SUTTER CLUB				SACRAMENTO	CA	95814		STEVEN GREEN	LEGAL CHIEF COUNSEL CALIFORNIA DEPARTMENT OF INSURANCE	32.27	RECEPTION	1/18/2001 12:00:00 AM	0			
+742649	0	1	LEXP	F635P3C	LEXP00001	1	OTH	City of Redding				Redding	CA	96049-6071		Dick Ackerman	Senator	49.68	Food and beverage	2/28/2001 12:00:00 AM	282.47	N		
+743316	0	8	LEXP	F635P3C	LEXP00008	2	OTH	city of Redding				Redding	CA	96049-6071		Jeanine Monteith	spouse	49.68	Food and beverage			N		
+744337	0	10	LEXP	F635P3C	LEXP00010	2	OTH	Los Angeles World Airports				Los Angeles	CA	90045		Marco Firebaugh	Assembly Member	25	parking & shuttle service - LAX			N		
+743576	0	5	LEXP	F635P3C	EX3	1	OTH	Hyatt Regency				Sacramento	CA	95814		Charles Poochigan	Senator	22.21	Breakfast	2/28/2001 12:00:00 AM	399.77			
+743322	0	24	LEXP	F635P3C	LEXP00024	2	OTH	City of ReddIng				Redding	CA	96049-6071		Tim Leslie	Assemblymember	49.68	Food and beverage			N		
+772149	0	1	LEXP	F635P3C	P3C1	1	OTH	See Attached List Of Payees								Mark Wyland	Assemblymember	38.03	Reception	5/2/2001 12:00:00 AM	4753.82			
+771294	0	1	LEXP	F635P3C	597	1	OTH	BENIHANA				HAWTHORNE	CA	90742		CLAUDE PARRISH	MEMBER BOARD OF EQUALIZATION	7.56	BEVERAGE	6/25/2001 12:00:00 AM	7.56			
+746466	0	2	LEXP	F615P1	576	1	OTH	Amarin Thai Cuisine				Sacramento	CA	95814		Cheryle Hart	Commission Assist. Senate Advisory Commisssion on Cost Control	6.65	Lunch	2/23/2001 12:00:00 AM	13.29			
+770130	0	61	LEXP	F635P3C	LEXP00061	2	OTH	CRRC Trash Bash Reception								Blake Sue	Legis. Dr. Senator Knight	58.08	The total cost of the event was $12719.42 of which the California Refuse Removal Council			Y	MEMO-718200161015	
+770445	0	9	LEXP	F635P3C	102	1	OTH	Capitol Crossroads Cafe				Sacramento	CA	95814		Lou Correa	Assembly Member	39.85	Food & beverage		0			
+746652	0	5	LEXP	F635P3C	P3C1	1	OTH	Esquire Grill				Sacramento	CA	95814		Joe Nation	Assemblymember	18.23	Lunch	3/1/2001 12:00:00 AM	100.96			
+769629	0	8	LEXP	F635P3C	255	1	OTH	Calif. Restaurant Assn.				Sacramento	CA	95814		Dario Frommer	Assembly Member	26.18	beverages	4/25/2001 12:00:00 AM	26.18			
+770130	0	82	LEXP	F635P3C	LEXP00082	2	OTH	CRRC Trash Bash Reception								Michel Debra	Office Mgr. Assembly Member Thomson	58.08	The total cost of the event was $12719.42 of which the California Refuse Removal Council			Y	MEMO-718200161015	
+770751	0	7	LEXP	F635P3C	LEXP00007	2	OTH	Sacramento River Cats Baseball Club LLC				Sacramento	CA	95814		Brian Haddix	Undersecretary Cal EPA	25.25	Food beverage			N		
+772692	0	2	LEXP	F615P1	EX16-1	2	OTH	Frank Fats				Sacramento	CA	95614	Mastercard	Candace Johnson	Leg. Aide for Assemblyman Maddox	9.94	Lunch					
+746697	0	4	LEXP	F615P1	LEXP00004	1	OTH	Mother India				Sacramento	CA	95814		Alan Gordon	DTSC Leg Director	6.39	Lunch with Alan Gordon	1/29/2001 12:00:00 AM	12.79	N		
+682889	2	3	LEXP	F635P3C	189	1	OTH	California Republican National Convention Delegation				Santa Monica	CA	90401		Roy Ashburn	Assemblymember	33.33	Acadamy of Music Event	7/29/2000 12:00:00 AM	0			
+773203	0	5	LEXP	F635P3C	3493	1	OTH	PACIFIC BELL PARK				SAN FRANCISCO	CA	94107		ELAINE KNIGHT	STAFFMEMBER ASSEMBLYMEMBER CAROLE MIGDEN	73.44	TICKETS	6/30/2001 12:00:00 AM	146.88			
+770885	0	13	LEXP	F635P3C	5765	1	OTH	PARTY CONCIERGE				SACRAMENTO	CA	91706		SEE ATTACHMENT A	SEE ATTACHMENT A	0.00	RECEPTION	6/13/2001 12:00:00 AM	0			
+746459	0	14	LEXP	F635P3C	221	1	OTH	Capital City Catering				Sacramento	CA	95825		Bruce McPherson	Senator	3.50	Refreshments	2/21/2001 12:00:00 AM	0			
+746459	0	23	LEXP	F635P3C	230	1	OTH	Hob Nob Hill Restaurant				San Diego	CA	92101	Master Card	Colin Rice	Chief of Staff Assemblyman Juan Vargas	11.67	Breakfast	2/16/2001 12:00:00 AM	13.99			
+746586	0	6	LEXP	F635P3C	LEXP00006	2	OTH	Edible Events				Sacramento	CA	95815		Dennis Hall	Legislative Director (Chan's Office)	5.65	Breakfast			N		
+682740	2	58	LEXP	F635P3C	LEXP00058	1	OTH	Anaheim Angels				Anaheim	CA	92806		Fred Jenner	AA to Assm. Bates	19.5	Ticket food & Bev	8/30/2000 12:00:00 AM	46	N		
+793018	0	29	LEXP	F635P3C	RP98	2	OTH	Wilson Creek Winery & Vineyards				Temecula	CA	92591		Bob Pacheco	Assemblymember	26.88	Lunch					
+773340	0	36	LEXP	F635P3C	RP38	2	OTH	Sterling Hotel				Sacramento	CA	95814		Heather Scott	Staff Person Sen. Sher	15.00	Reception					
+804059	0	21	LEXP	F635P3C	2802	1	OTH	STRAWBERRY LODGE				KYBURZ	CA	95720-9600		LYNN WYMAN	SPOUSE OF ASSEMBLYMEMBER PHIL WYMAN	19.05	19TH ANNUAL LEGISLATOR'S SKI EVENT	3/9/2001 12:00:00 AM	0	 		
+768358	1	20	LEXP	F615P1	118	1	OTH	Brannan's Bar & Grill				Sacramento	CA	95814		Rod Pacheco	Assemblymember	5.12	Reception See Above	6/19/2001 12:00:00 AM	0		118	
+789943	0	67	LEXP	F635P3C	LEXP00067	2	OTH	CMTA				Sacramento	CA	95814		Mark Wyland	Assemblymember	105	Food & Bev.			N		
+792746	0	120	LEXP	F615P1	LEXP00120	2	OTH	See's Candy				Sacramento	CA	95814	Other	Cathy Evans	Office of Assembly Member Hollingsworth	6.34	See's Candy			N		
+792746	0	146	LEXP	F615P1	LEXP00146	2	OTH	See's Candy				Sacramento	CA	95814	Other	Sheri Tall	Office of Assembly Member Maddox	8.45	See's Candy			N		
+791833	0	28	LEXP	F635P3C	724	1	OTH	MANHATTAN COUNTRY CLUB				MANHATTAN BEACH	CA	91266		Richard Katz	Board Member State Resource Water Board	37.58	Lunch at the Estyle.com Classic 2001 Tennis Tournament (Reimbursed 9/27/01)	8/9/2001 12:00:00 AM	0			
+772882	1	17	LEXP	F635P3C	LEXP00017	2	OTH	Eurest Dining Service				Sacramento	CA	95814		Beth Hummel	Consultant	12.08	Lunch			N		
+788319	0	1	LEXP	F635P3C	LEXP00001	1	OTH													9/30/2001 12:00:00 AM	0	N		
+791853	0	14	LEXP	F635P3C	183	1	OTH	La Rua Restaurant				British Columbia				Al Alquist	Husband of Elaine Alquist	65.55	Dinner CSG-West Annual Meeting	7/25/2001 12:00:00 AM	0			
+792423	0	46	LEXP	F635P3C	638	1	OTH	WALT DISNEY COMPANY THE				BURBANK	CA	91521-7773		Irma Morales	Executive Committee Secretary Office of Senator Joseph Dunn	86.00	Disneyland tickets	8/7/2001 12:00:00 AM	86			
+792746	0	19	LEXP	F615P1	LEXP00019	2	OTH	See's Candy				Sacramento	CA	95814	Other	Charles Wright	Offie of Senator Karnette	8.45	See's Candy			N		
+773542	0	27	LEXP	F635P3C	EX10-9	2	OTH	Merce Miller				Davis	CA	95617		Alison Walker	Assembly Democratic Caucus	58.08	Trash Bash (Staff)					
+768358	2	40	LEXP	F615P1	137	1	OTH	Brannan's Bar & Grill				Sacramento	CA	95814		Melinda Melendez	Consultant, Assemblymember Hertzberg	5.12	Reception, See Above	6/19/2001 12:00:00 AM	0		137	
+791884	0	1	LEXP	F635P3C	2660	1	OTH	none				na	na	na		na	na	0.00	none	6/30/2001 12:00:00 AM	2142.77	 		
+812155	0	4	LEXP	F615P1	2985	1	OTH	None				None	CA	95814		Art Terzakis	Senate G.O. Committee	5.60	'Bottle of Wine'	11/6/2001 12:00:00 AM	5.60			
+773306	1	1	LEXP	F635P3C	3242	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		JOSE ATILIO HERNANDEZ	POLICY CONSULTANT, OFFICE OF SENATOR RICHARD ALARCON	75.50	TICKET TO SACRAMENTO KINGS V. MILWAUKEE BUCKS BASKETBALL GAME *REIMBURSED $75.50 ON 8/1/01	4/3/2001 12:00:00 AM	75.50			
+837237	0	26	LEXP	F635P3C	6721	1	OTH	SHERATON GRAND				SACRAMENTO	CA	95814		JASPREET JOHL	STAFF OF ASSEMBLYMEMBER JOE SIMITIAN	29.20	RECEPTION	3/11/2002 12:00:00 AM	0			
+836730	0	7	LEXP	F635P3C	LEXP00007	2	OTH	City of Norwalk				Norwalk	CA	90651		Rico Oller	Senator	49.75	Food and beverage			Y	MEMO-420200232652	
+813903	0	9	LEXP	F635P3C	85	1	OTH	Eulipia Restaurant				San Jose	CA	95113		Sandra Pizarro	Chief of Staff, Asm. Manny Diaz	29.09	Dinner	11/13/2001 12:00:00 AM	0			
+837133	0	34	LEXP	F635P3C	LEXP00034	2	OTH	City of Norwalk				Norwalk	CA	90651		Helen Thomson	Assemblymember	49.75	Food and beverage			Y	MEMO-420200234025	
+814624	1	33	LEXP	F635P3C	385	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Aaron Bone	Legislative Assistant to Assemblyman Dave Cogdill	128.89	Event Ticket, Suite Expenses	11/20/2001 12:00:00 AM	3399.24			
+746314	1	102	LEXP	F635P3C	3169	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		NOAH JUSTIN	SON OF JOSEPH JUSTIN	99.11	BASKETBALL TICKET, SUITE EXPENSES	2/27/2001 12:00:00 AM	0			
+746314	1	104	LEXP	F635P3C	3175	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		DAVID KERSTEN	HUSBAND OF ELIZABETH KERSTEN	99.11	BASKETBALL TICKET, SUITE EXPENSES	2/27/2001 12:00:00 AM	0			
+772897	1	1	LEXP	F635P3C	20	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Kathryn Harris	Legislative Assistant to Assemblyman Anthony Pescetti	112.09	Basketball Ticket, Parking Pass, Suite Expenses	4/1/2001 12:00:00 AM	2801.35			
+773340	1	15	LEXP	F635P3C	RP17	2	OTH	Sterling Hotel				Sacramento	CA	95814		Richard Dickerson	Assemblymember	15.00	Reception					
+772897	1	41	LEXP	F635P3C	90	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Bob Rucker	Chief of Staff for Senator Dick Monteith	115.39	Basketball Ticket, Parking Pass, Suite Expenses	4/16/2001 12:00:00 AM	0			
+772897	1	49	LEXP	F635P3C	103	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		David Pegos	Legislative Director for Senator Maurice Johannessen	151.71	Basketball Ticket, Suite Expenses	4/22/2001 12:00:00 AM	0			
+746314	1	17	LEXP	F635P3C	3049	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		TARA AGUILAR	WIFE OF VINCENT AGUILAR	109.19	BASKETBALL TICKET, SUITE EXPENSES	1/17/2001 12:00:00 AM	0			
+837005	0	51	LEXP	F635P3C	3501	1	OTH	California Foresty Association				Sacramento	CA	95814		Howard Wayne	Assemblymember	6.10	drinks & appetizers	3/19/2002 12:00:00 AM	18.18			
+746314	1	34	LEXP	F635P3C	3064	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		JERILYN STANLEY	LEGISLATIVE DIRECTOR FOR ASSEMBLYMAN ROD PACHECO	107.54	BASKETBALL TICKET, SUITE EXPENSES, AND PARKING	1/25/2001 12:00:00 AM	0			
+746314	1	63	LEXP	F635P3C	2919	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		ANGIE BARKER 	NIECE OF SANDY KENNEDY	38.98	ICE SKATING TICKETS, SUITE EXPENSES	2/10/2001 12:00:00 AM	0			
+746314	1	176	LEXP	F635P3C	3208	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		FAITH JEFFERSON	ASSEMBLY RULES HUMAN RESOURCES SPECIALIST	109.26	BASKETBALL TICKET AND SUITE EXPENSES	1/30/2001 12:00:00 AM	0			
+836314	0	1	LEXP	F615P1	3468	1	OTH	Vallejo's Cantina				Sacramento	Ca	95814		Sean MacNeil	Assemblymember Pat Wiggins	9.02	'Lunch'	3/4/2002 12:00:00 AM	143.58			
+809451	1	3	LEXP	F635P3C	LEXP00003	2	OTH	City of Norwalk				Norwalk	CA	90651		William 'Pete' Knight	Senator	49.75	Food and beverage			Y	MEMO-42020023379	
+809451	1	16	LEXP	F635P3C	LEXP00016	2	OTH	City of Norwalk				Norwalk	CA	90651		Lynn Daucher	Assemblymember	49.75	Food and beverage			Y	MEMO-42020023379	
+814624	1	10	LEXP	F635P3C	309	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Monica Azevedo	District Director for Assemblyman Anthony Pescetti	114.65	Basketball Ticket, Suite Expenses, Parking Pass	10/30/2001 12:00:00 AM	2820.90			
+814624	1	17	LEXP	F635P3C	334	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Kyle Woods	Son of Cindy Woods	42.54	Event Ticket, Suite Expenses	11/9/2001 12:00:00 AM	0			
+839343	0	15	LEXP	F635P3C	LEXP00015	2	OTH	Sheraton Grand Hotel				Sacramento	CA	95814		Joe Daly	Office of Assemblymember Wilma Chan	27	Lunch (32 attendees @ $27.00/person)			N		
+839721	0	118	LEXP	F635P3C	3102	1	IND	ELIZABETH BAILEY				FAIR OAKS	CA	95628		KEVIN GROFF	OFFICE OF SEN. MCPHERSON	12.12	LEGISLATIVE RECEPTION	1/17/2002 12:00:00 AM	0			
+839834	0	15	LEXP	F635P3C	562	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Edward Emerick	Son of Melissa Kludjian	102.87	Basketball Ticket, Suite Expenses	1/2/2002 12:00:00 AM	0			
+839721	0	147	LEXP	F635P3C	3232	1	OTH	FAMILY WINEMAKERS OF CALIFORNIA				SACRAMENTO	CA	95814		BRANDI EPSTEIN	OFFICE OF SEN. ACKERMAN	2.86	LEGISLATIVE RECEPTION	1/17/2002 12:00:00 AM	0			
+840142	0	86	LEXP	F635P3C	LEXP00086	2	OTH	California Rice Commission				Sacramento	CA	95825		Patricia Wiggins	Assemblymember	32	Rice gift boxes			N		
+840062	0	11	LEXP	F635P3C	LEXP00011	2	OTH	Vallejo's Restaurant				Sacramento	CA	95814		Andreade, Renee	Scheduler, Sen. Steve Peace	9.31	Food & Beverage			N		
+840076	0	9	LEXP	F635P3C	4303	1	OTH	GORDON BIERSCH				SAN JOSE	CA	95110		MR. H.D. PALMER	DIRECTOR OF COMMUNICATIONS, SENATE REPUBLICAN CAUCUS	15.44	LUNCH	2/9/2002 12:00:00 AM	61.76			
+840254	0	63	LEXP	F635P3C	LEXP00063	2	OTH	California Citrus Mutual				Exeter	CA	93221		Sam Aanestad	Assemblymember	9.69	Oranges			N		
+838131	0	11	LEXP	F635P3C	LEXP00011	2	OTH	City of Norwalk				Norwalk	CA	90651		Ed Chavez	Assemblymember	49.75	Food and beverage			Y	MEMO-42020023424	
+839325	0	33	LEXP	F635P3C	1036	1	OTH	The Flower Club				Los Angeles	CA	90060		Jack Scott	Senator, State of California	3.77	Reception Costs	3/6/2002 12:00:00 AM	0			
+840254	0	118	LEXP	F635P3C	LEXP00118	2	OTH	California Citrus Mutual				Exeter	CA	93221		Charlene Zettel	Assemblymember	9.69	Oranges			N		
+840254	0	121	LEXP	F635P3C	LEXP00121	2	OTH	Frank Fat's								Abel Maldonado	Assemblymember	38.29	Board of Directors Lunch			N		
+834767	1	31	LEXP	F635P3C	LEXP00031	2	OTH	City of Norwalk				Norwalk	CA	90651		George Nakano	Assemblymember	49.75	Food and beverage			Y	MEMO-420200232513	
+848513	0	2	LEXP	F635P3C	3799	1	OTH	The Firehouse Restaurant				Sacramento	CA	95814		Bill Maze	Candidate for Assembly	82.04	Dinner	5/13/2002 12:00:00 AM	0			
+853241	0	2	LEXP	F635P3C	EX2-1	2	OTH	Firehouse Restaurant				Sacramento	CA	95814		Bob Margett	Senator	24.92	Dinner on 4/9/02					
+853379	0	11	LEXP	F615P1	P146	1	OTH	Zebra Club Cafe				Sacramento	CA	95814		Tony Easley	Staff, Assembly Appropriations	8.00	Lunch	6/4/2002 12:00:00 AM	22.50			
+853888	0	21	LEXP	F635P3C	LEXP00021	2	OTH	Sheraton Grand Hotel				sacramento	CA	95814		George Nakano	AssemblyMember	49	Dinner			N		
+839325	1	21	LEXP	F635P3C	1027	1	OTH	Hyatt Regency Sacramento				Sacramento	CA	95814		Kristie Stauffacher	Aide, Office of Senator Machado	37.00	Reception Costs	3/6/2002 12:00:00 AM	0			
+881944	0	2	LEXP	F635P3C	4902	1	OTH	Wine Valley Catering				Napa	CA	94559		Marco Antonio Firebaugh	Assembly District 50	3500.00	catering fees for a Latino Causcus Event held at the Kunde Estate Winery	9/17/2002 12:00:00 AM	3500			
+882667	0	7	LEXP	F635P3C	117	1	OTH	Morton's of Chicago				Sacramento	CA	95814		Assemblyman Mike Briggs	Assemblyman	29.60	Appetizers & Refreshments	8/19/2002 12:00:00 AM	0		117	
+857271	0	36	LEXP	F635P3C	1029	1	OTH	EDISON CUSTOMER TECHNOLOGY APPLICATION CENTER				IRWINDALE	CA	91702		CELESTE CANTU	EXECUTIVE DIRECTOR  STATE WATER RESOURCES CONTROL BOARD	16.50	MEAL/BEVERAGE	5/15/2002 12:00:00 AM	1732.50			
+883413	0	4	LEXP	F635P3C	9512	1	OTH	THE LODGE AT PEBBLE BEACH				PEBBLE BEACH	CA	93953		LINDA ACKERMAN	SPOUSE OF ASSEMBLY MEMBER DICK ACKERMAN	215.00	GOLF **	9/25/2002 12:00:00 AM	215		9512	
+857281	0	12	LEXP	F635P3C	698	1	OTH	Esquire Grill				Sacramento	CA	95814		Kimberly Jones	Staff Assistant - Claude Parrish	14.79	Meal	4/18/2002 12:00:00 AM	0			
+853577	1	5	LEXP	F635P3C	8464	1	OTH	IN & OUT BURGERS				BALDWIN PARK	CA	91706		SEE ATTACHMENT A	SEE ATTACHMENT A	10.20	LEGISLATIVE RECEPTION	6/19/2002 12:00:00 AM	8473.94			
+813158	1	12	LEXP	F635P3C	77	1	OTH	Northwest Embroidery				Milton	WA	98354		Norma Zendejas	Office of Assemblyman Marco Firebaugh	50.00	jacket	12/20/2001 12:00:00 AM	50			
+853750	0	4	LEXP	F615P1	8454	1	OTH	KAISER PERMANENTE BRAND IDENTITY ITEMS								ABEL MALDONADO	ASSEMBLY MEMBER	5.00	KAISER PERMANENTE FIRST AID KIT CONSISTING OF SUNSCREEN, BANDAIDS,ETC.	4/30/2002 12:00:00 AM	10			
+837912	1	9	LEXP	F635P3C	7601	1	OTH	World Trade Club				San Francisco	CA	94105		Ed Chavez	Assemblyman	75.00	Annual Conference Dinner	1/17/2002 12:00:00 AM	0			
+912570	0	39	LEXP	F635P3C	1094	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Melissa Thornton	Daughter of Martha Nicholas	38.10	Ice Show Ticket (5:30 pm perf.), Suite Expenses	10/27/2002 12:00:00 AM	0			
+885196	0	15	LEXP	F635P3C	P3C40	1	OTH	Von's Supermarket No. 2025				Lakewood	CA	90713		Delores Sanchez	District Director, Senator Romero	4.91	Refreshments	9/12/2002 12:00:00 AM	147.25			
+885775	0	20	LEXP	F635P3C	5029	1	OTH	GAYLORD PALMS				KISSIMMEE	FL	34746		SIOBHAN GUINEY	CHIEF OF STAFF, ASSEMBLYMEMBER RUSS BOGH	21.76	LUNCH	8/5/2002 12:00:00 AM	87.04			
+885611	2	41	LEXP	F635P3C	1113	1	OTH	WALT DISNEY  PARKS & RESORTS				ORLANDO	FL	32891-1037		MARY BATTIN	WIFE OF CALIFORNIA SENATOR JIM BATTIN	33.33	MEAL/BEVERAGE	8/16/2002 12:00:00 AM				
+885611	2	47	LEXP	F635P3C	1120	1	OTH	WALT DISNEY PARKS & RESORTS				ORLANDO	FL	32891-1037		PETER HOGOPIAN	STEPSON OF ASSEMBLYMAN MIKE BRIGGS	33.33	MEAL/BEVERAGE	8/16/2002 12:00:00 AM	0			
+909749	0	1	LEXP	F635P3C	EX47	1	OTH	Cafe Rio California				Oakland	CA			Lenka Culik-Caro	CALTRANS Dept. Dist.4 Director	8.80	Lunch	10/28/2002 12:00:00 AM	440			
+885847	1	27	LEXP	F635P3C	978	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834	American Express	Mario Paulo	Senior Consultant, Office of Policy, Assembly Republican Caucus	41.50	Event Ticket, Suite Expenses	9/7/2002 12:00:00 AM	0			
+910699	0	11	LEXP	F635P3C	LEXP00011	1	OTH	NONE								RAY HAYNES	ASSEMBLYMEMBER	8	PARKING AT SAN DIEGO AIRPORT 12/9/02 - 12/31/02 	12/9/2002 12:00:00 AM	24	N		
+912570	0	82	LEXP	F635P3C	1138	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Tanisha Willis	Secretary to Assemblywoman Barbara Matthews	126.88	Basketball Ticket, Suite Expenses, Parking Pass	11/17/2002 12:00:00 AM	0			
+912570	0	1	LEXP	F635P3C	1045	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Mike Briggs	Assemblyman	131.94	Concert Ticket, Suite Expenses, Parking Pass	10/21/2002 12:00:00 AM	3230.38			
+885457	1	5	LEXP	F635P3C	861	1	OTH	Sacramento Community Center				Sacramento	CA	95814		Kathryn Rivera-Hernandez	Deputy, Governor's Office	35.00	Ticket to Melissa Etheridge Concert.	8/14/2002 12:00:00 AM	0			
+930403	0	7	LEXP	F635P3C	LEXP00007	2	OTH	city of Lakewood				Lakewood	CA	90712		Bob Margett	Senator	49.99	Dinner and Beverages			Y	MEMO-416200335856	
+929914	0	2	LEXP	F635P3C	1073	1	OTH	CLASSIC TROPHY				SACRAMENTO	CA	95814		SEE ATTACHMENT B		9.55	BUSINESS CARD HOLDER	1/14/2003 12:00:00 AM	73.39		1073	
+928429	0	22	LEXP	F635P3C	LEXP00022	2	OTH	Sheraton Grand Hotel				Sacramento	CA	95814		Jay La Suer	Assemblymember	49.99	Dinner and beverages			Y	MEMO-416200333419	
+929061	0	11	LEXP	F635P3C	LEXP00011	2	OTH	city of Lakewood				Lakewood	CA	90712		Russ Bogh	Assemblymember	49.99	Dinner and Beverages			Y	MEMO-41620033211	
+928878	0	2	LEXP	F635P3C	LEXP00002	2	OTH	City of Lakewood				Lakewood	CA	90712		Jim Battin	Senator	49.99	Dinner and beverages			Y	MEMO-41620033711	
+930164	0	4	LEXP	F635P3C	1257	1	OTH	ARCO ARENA				SACRAMENTO	CA	95834		STAN HAZELROTH	TECHNOLOGY, TRADE & COMMERCE AGENCY	63.92	BASKETBALL TICKETS	2/14/2003 12:00:00 AM	0			
+928881	0	5	LEXP	F635P3C	LEXP00005	2	OTH	city of Lakewood				Lakewood	CA	90712		Sheila Kuehl	Senator	49.99	Dinner and beverages			Y	MEMO-416200331226	
+928424	0	13	LEXP	F635P3C	LEXP00013	2	OTH	city of Lakewood				Lakewood	CA	90712		Jack Scott	Senator	49.99	Dinner and beverages			Y	MEMO-416200331732	
+928424	0	37	LEXP	F635P3C	LEXP00037	2	OTH	city of Lakewood				Lakewood	CA	90712		Jackie Loehman	Staff for Assemblymember Dutton	49.99	Dinner and beverages			Y	MEMO-416200331732	
+929163	0	2	LEXP	F635P3C	EX7-1	2	OTH	Strawberry Lodge				Kyburz	CA	95720-9600		Susan Aanestad	Spouse	43.29	Legislative Ski Event and Reception					
+929163	0	13	LEXP	F635P3C	EX8-2	2	OTH	Strawberry Lodge				Kyburz	CA	95720-9600		Guy Houston	Assembly Member	43.29	Legislative Ski Event and Reception					
+931052	0	15	LEXP	F635P3C	LEXP00015	2	OTH	city of Lakewood				Lakewood	CA	90712		Lynn Daucher	Assemblymember	49.99	Dinner and Beverages			Y	MEMO-416200331427	
+931140	0	1	LEXP	F615P1	LEXP00001	1	OTH	Esquire Grill				Sacramento	CA	95814	Other	Angela Haywood	Secretary to U&C Committee	10	Discuss AB 816	3/14/2003 12:00:00 AM	53	N		
+928425	0	15	LEXP	F635P3C	LEXP00015	2	OTH	city of Lakewood				Lakewood	CA	90712		Lynn Daucher	Assemblymember	49.99	Dinner and Beverages			Y	MEMO-416200332154	
+928875	0	7	LEXP	F635P3C	LEXP00007	2	OTH	city of Lakewood				Lakewood	CA	90712		Bob Margett	Senator	49.99	Dinner and Beverages			Y	MEMO-416200334054	
+885847	2	10	LEXP	F635P3C	964	1	OTH	FRESH & QUICK				SACRAMENTO	CA	95822		Catherine J.K. Sandoval	Staff Director, Business, Transportation & Housing Agency	9.64	Lunch	7/30/2002 12:00:00 AM	0			
+932034	0	1	LEXP	F635P3C	1172	1	OTH	Modesto Chamber of Commerce				Modesto	CA	95353		Greg Aghazarian	District 26 Assemblymember 	26.00	Meal at Modesto Chamber of Commerce Installation & Awards Dinner	1/23/2003 12:00:00 AM	234			
+931742	0	15	LEXP	F635P3C	LEXP00015	2	OTH	The Sutter Club				Sacramento	CA	94814		Honorable Guy S. Houston	Assembly Member	38.66	Reception			N		
+931385	0	43	LEXP	F635P3C	1560	1	OTH	DINING IN				SANTA ANA	CA	92706		MICHELLE HART	DISTRICT DIRECTOR FOR ASSEMBLYMEMBER CAMPBELL 	23.80	MEAL/BEVERAGE	3/10/2003 12:00:00 AM	0			
+931285	0	2	LEXP	F635P3C	3	1	OTH	Sutter Printing				Sacramento	CA	95814		See list with paper copy (page 8)	Elected Official	0.00	Invitations	3/19/2003 12:00:00 AM	469.43			
+931284	0	25	LEXP	F635P3C	6088	1	OTH	SUTTER CLUB				SACRAMENTO	CA	95814		CHRIS SHULTZ	LEGISLATIVE STAFF, SENATOR ALPERT'S OFFICE	35.23	RECEPTION	3/12/2003 12:00:00 AM	0			
+945664	0	10	LEXP	F635P3C	P3C5	1	OTH	Frank Fat's Catering				Sacramento	CA	95814		Ardie Zahedani	Staff Member, Lt. Governor	31.21	Reception	5/6/2003 12:00:00 AM	17882.79		P3C5	
+857401	1	3	LEXP	F635P3C	4693	1	OTH	RIO BRAVO				BAKERSFIELD	CA	93306		EMMETT COOPER	PIPELINE SAFETY ENGINEER - CA STATE FIRE MARSHALL	47.00	RECEPTION	5/7/2002 12:00:00 AM	0			
+857401	1	9	LEXP	F635P3C	4699	1	OTH	RIO BRAVO				BAKERSFIELD	CA	93306		DOUG ALLEN	PIPELINE GIS ANALYST- DEPT OF FORESTRY & FIRE PROTECTION	47.00	RECEPTION	5/7/2002 12:00:00 AM	0			
+931321	0	22	LEXP	F635P3C	RP22	2	OTH	Griselda's Catering				Sacramento	CA	95814		Alan Lowenthal	Assemblymember	25.27	Reception					
+930195	1	66	LEXP	F635P3C	164	1	OTH	Oakland Marriott				Oakland	CA	94607		Ed Chavez	CA Assemblyman	47.51	food and beverage	2/12/2003 12:00:00 AM	47.51			
+931805	0	44	LEXP	F635P3C	LEXP00044	2	OTH	Memorial Auditorium				Sacramento	CA	95814		Keith	Richman	Assemblymember	84	Food, Beverage, Entertainment			N		
+931992	2	5	LEXP	F615P1	LEXP00005	2	OTH	Vallejo's Restaurant				Sacramento	CA	95814		Ricardo Lara	Communications Director/Assemblyman Marco Firebaug	10	Meal			N		
+946821	0	8	LEXP	F635P3C	1269	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Jesus Torres	Legislative Aide to Senator Denise Ducheny	119.51	Basketball ticket, Suite expenses	4/8/2003 12:00:00 AM	0			
+948962	0	202	LEXP	F635P3C	3~201	2	OTH	Jamba Juice				Sacramento	CA	95818		Kevin McElvain	Assist to Senate Cmte on Appropriations	2.73	Jamba Juice					
+943121	2	11	LEXP	F635P3C	5	1	OTH	California Plant Health Association				Sacramento	CA	95814		Steve Samuelian	Assemblyman	71.74	Dinner	4/21/2003 12:00:00 AM	373.05			
+946821	0	75	LEXP	F635P3C	1361	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		George Plescia	Assemblyman 	222.34	Basketball ticket, Suite expenses	5/11/2003 12:00:00 AM	0			
+946821	1	76	LEXP	F635P3C	1362	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Caroline Silveira	Legislative Director for Assemblyman George Plescia	222.34	Basketball ticket, Suite expenses	5/11/2003 12:00:00 AM	0			
+947515	0	8	LEXP	F635P3C	6184	1	OTH	Black Tie Catering				Sacramento	CA	95862		Janice Rocco	Chief of Staff for Assemblymember Hannah-Beth Jackson	28.26	Legislative Reception; food and beverage	4/1/2003 12:00:00 AM	79.11			
+968057	0	1	LEXP	F615P1	1874	1	OTH	CHOPS				SACRAMENTO	CA	95814		MATT BACK	CHIEF OF STAFF, ASSEMBLYMAN JOHN CAMPBELL	10.00	LUNCH	8/22/2003 12:00:00 AM	146.55			
+948962	0	666	LEXP	F635P3C	4~298	2	OTH	Tasty Time Ice Cream				Folsom	CA	95630		Chris Updegrove	Assist to Lt Governor's Office	2.88	Ice Cream					
+968320	0	1	LEXP	F615P1	1	1	OTH	Leticia McCarty				Sacramento	Ca	95814						8/15/2003 12:00:00 AM	10		1	
+948962	0	94	LEXP	F635P3C	3~93	2	OTH	Jamba Juice				Sacramento	CA	95818		Josephine Figueroa	Chief of Staff to Assm Mullin	2.73	Jamba Juice					
+969262	0	11	LEXP	F635P3C	LEXP00011	2	OTH	Los Angeles World Airports								John Longville	Assembly Member	210	Ontarion Airport parking and shuttle service			N		
+931385	3	28	LEXP	F635P3C	1542	1	OTH	ESQUIRE GRILL				SACRAMENTO	CA	95814-3906		GAIL DELIKHANT	LEGISLATIVE DIRECTOR FOR ASSEMBLYMEMBER AGHAZARIAN	39.64	MEAL/BEVERAGE	2/25/2003 12:00:00 AM	0			
+946821	2	102	LEXP	F635P3C	1391	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Samira Collier Watt	Personnel Services Specialist, Senate Rules Committee	83.13	Concert ticket, Suite expenses	5/22/2003 12:00:00 AM	0			
+947477	1	55	LEXP	F635P3C	1993	1	OTH	MEGAMI RESTAURANT				SACRAMENTO	CA	95814		MICHELLE MORRIS	EXECUTIVE SCHEDULER FOR ASSEMBLYMEMBER NATION 	7.14	MEAL/BEVERAGE	6/25/2003 12:00:00 AM	14.28			
+970130	0	5	LEXP	F615P1	23	1	OTH	PYRAMID BREWERY				SACRAMENTO	CA	95814		DON LEVIN	CONSULTANT, ASSEMBLY REPUBLICAN CAUCUS	10.00	LUNCH	9/30/2003 12:00:00 AM	19.70			
+969682	0	3	LEXP	F635P3C	LEXP00003	1	OTH	Soka University				Aliso Viejo	CA			John Campbell	Assembly Member	25	luncheon	9/24/2003 12:00:00 AM	12000	N		
+969698	0	2	LEXP	F635P3C	6387	1	OTH	THE PALACE HOTEL				SAN FRANCISCO	CA	94105		HONORABLE RAY HAYNES	ASSEMBLYMAN, 66TH DISTRICT	5.19	REFRESHMENTS	7/23/2003 12:00:00 AM	0			
+931385	3	54	LEXP	F635P3C	1780	1	OTH	ESQUIRE GRILL				SACRAMENTO	CA	95814-3906		THERESA TAYLOR-CARROLL	SPEAKER'S COUNSEL FOR ASSEMBLYMEMBER WESSON	38.16	MEAL/BEVERAGE	3/13/2003 12:00:00 AM	0			
+989397	0	70	LEXP	F635P3C	6745	1	OTH	Chateau Souverain Winery and Cafe				Geyserville	CA	95441		Coby Pizzotti	Assembly Office of Majority Services	79.06	Dinner - State Legislative Staff Tour	10/15/2003 12:00:00 AM	0			
+989397	0	38	LEXP	F635P3C	6753	1	OTH	Hotel Healdsburg				Healdsburg	CA	95445		Anna Ferrara	Senate Office of Research	165.21	Dinner - State Legislative Staff Tour	10/16/2003 12:00:00 AM	0			
+948038	1	53	LEXP	F635P3C	RP138	2	OTH	Distinctive Recognition				Sacramento	CA	95826		John Laird	Assemblymember	9.00	Mousepads					
+989032	0	1	LEXP	F615P1	LEXP00001	1	OTH	Chops				Sacramento	CA	95814-3801		Joe Canciamilla	Assembly Member	3	Beverage	12/1/2003 12:00:00 AM	115.93	N		
+969370	0	9	LEXP	F635P3C	4	1	OTH	Metro Cafe				Oakland	CA	94607		Clark Paulsen	Caltrans Headquarters, Chief, Toll Bridge Accounting	13.46	Lunch	7/21/2003 12:00:00 AM	134.64			
+947477	1	20	LEXP	F635P3C	1866	1	OTH	CHOPS IN SACRAMENTO				SACRAMENTO	CA	95814		JUAN CARLOS TORRES	CHIEF OF STAFF FOR ASSEMBLYMEMBER FIREBAUGH	25.13	MEAL/BEVERAGE	4/11/2003 12:00:00 AM	0			
+989248	0	21	LEXP	F625P3A	40	1	OTH	See's Candy				Sacramento	CA	95814		Office Staff of and Dick Ackerman	California State Senate	0.00	Box of Candy	12/15/2003 12:00:00 AM	25.60			
+1012506	0	15	LEXP	F635P3C	1730	1	OTH	ARCO Arena				Sacramento	CA	95834		Michael Gonzales	Husband of Lynne Martin	131.04	Basketball ticket & Suite expenses	1/11/2004 12:00:00 AM	0			
+1012506	0	37	LEXP	F635P3C	1753	1	OTH	ARCO Arena				Sacramento	CA	95834		Jeff Sauls	Husband of Julie Sauls	128.34	Basketball ticket & Suite expenses	1/16/2004 12:00:00 AM	0			
+990675	0	15	LEXP	F635P3C	6525	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		CHUCK HAHN	CHIEF OF STAFF OFFICE OF ASSEMBLYMEMBER COGDILL	120.00	TICKET TO KINGS BASKETBALL GAME	12/5/2003 12:00:00 AM	120			
+1011621	0	1	LEXP	F635P3C	LEXP00001	1	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Sam Aanestad	Senator	45.88	Food and Beverages	3/30/2004 12:00:00 AM	292.56	Y	MEMO-422200432247	
+1010595	0	5	LEXP	F635P3C	438	1	OTH	Esquire Grill				Sacramento	CA	95814		Alan Lofaso	Dir., Office Gov. Affairs - CPUC	9.99	Lunch	2/4/2004 12:00:00 AM	57.95			
+1011029	0	95	LEXP	F635P3C	3~72	2	OTH	California Rice Commission				Sacramento	CA	95825		Dede Alpert	Senator	26.63	Rice Gift Box					
+1011633	0	18	LEXP	F635P3C	LEXP00018	2	OTH	Hyatt Regency Islandia				San Diego	CA	92109		Loni Hancock	Assemblymember	158.54	Food & Beverage			N		
+1012506	0	112	LEXP	F635P3C	1831	1	OTH	ARCO Arena				Sacramento	CA	95834		Julie Gallagher	Legislative Director for Assm. Pat Wiggins	137.15	Basketball ticket, Suite expenses & parking pass	2/29/2004 12:00:00 AM	0			
+1011029	0	128	LEXP	F635P3C	3~105	2	OTH	California Rice Commission				Sacramento	CA	95825		Paul Miner	Governor's office	26.63	Rice Gift Box					
+1012141	0	51	LEXP	F635P3C	LEXP00051	2	OTH	The Sutter Club				Sacramento	CA	95814		Lynn Montgomery	Chief of Staff	42.07	Receptioni			N		
+1011215	0	14	LEXP	F635P3C	32~6	2	OTH	Girl in the Moon Gift Shop				Milwaukee	WI	53208		James Brulte	Senator	3.50	Pilsner Mug					
+1012807	0	4	LEXP	F635P3C	210	1	OTH	The Broiler				Sacramento	CA	95814		Brett Michelin	Leg. Director, Sen. Aanestad	16.17	Lunch	1/14/2004 12:00:00 AM			210	
+1011793	0	15	LEXP	F635P3C	LEXP00015	2	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Alan Lowenthal	Assemblymember	45.88	Food and Beverages			Y	MEMO-427200435837	
+1012435	0	38	LEXP	F635P3C	6831	1	OTH	SUTTER CLUB				SACRAMENTO	CA	95814		MARCO FIREBAUGH	ASSEMBLY MEMBER	42.81	FOOD & BEVERAGE	2/2/2004 12:00:00 AM	0			
+990908	0	5	LEXP	F635P3C	RP77	2	OTH	Capital City Catering				Sacramento	CA	95825		Skip Close	FMS Project Mgr, CalTrans	43.88	Reception					
+1014406	0	5	LEXP	F615P1	EX31	1	OTH	Crest Cafe				Sacramento	CA	95814		Julia King	Ch. of Staff, Assm. Maldonado	7.34	Lunch	3/30/2004 12:00:00 AM	14.68			
+1014497	1	59	LEXP	F635P3C	2345	1	OTH	POWELL'S CATERING				LOS ANGELES	CA	90061		MARK RIDLEY THOMAS	CALIFORNIA STATE ASSEMBLYMEMBER	7.55	MEAL/BEVERAGE	3/12/2004 12:00:00 AM	0			
+1014026	0	2	LEXP	F635P3C	1476	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Marco Firebaugh	Assemblyman, State of California	47.00	Disneyland Ticket	1/26/2004 12:00:00 AM	47			
+1013786	0	11	LEXP	F635P3C	RP149	2	OTH	Hyatt Regency Islandia				San Diego	CA	92109		Paul Koretz	Assembly Member	77.78	Food & Beverage					
+1013299	1	19	LEXP	F635P3C	LEXP00019	2	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Bill Maze	Assemblymember	49.99	Food and Beverages			Y	MEMO-520200442039	
+1012932	1	17	LEXP	F635P3C	LEXP00017	2	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Debbie Malumed	Assemblymember	49.99	Food and beverages			Y	MEMO-427200431134	
+1012058	1	26	LEXP	F635P3C	LEXP00026	2	OTH	City of Santa Fe Springs				Santa Fe Springs	Ca	90670		Mark Wyland	Assemblymember	49.99	Food and beverages			Y	MEMO-427200432110	
+1014026	0	23	LEXP	F635P3C	1504	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Vanessa Byrd	Staff Services Member, Department of Toxic Substances Control	29.00	CEEIN Environmentality Luncheon	2/27/2004 12:00:00 AM	29			
+1013790	0	1	LEXP	F635P3C	LEXP00001	1	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Sam Aanestad	Senator	45.88	Food and beverages	3/30/2004 12:00:00 AM	392.54	Y	MEMO-42820043624	
+1013303	0	5	LEXP	F635P3C	LEXP00005	2	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Mike Machado	Senator	0	Food and beverages			N		
+1013303	0	26	LEXP	F635P3C	LEXP00026	2	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Mark Wyland	Assemblymember	0	Food and Beverages			N		
+1013655	0	3	LEXP	F635P3C	7216	1	OTH	Costco				Sacramento	CA	95815		See Attached	See Attached	.43	Lunch	3/23/2004 12:00:00 AM	19.12		3731	
+1013947	0	35	LEXP	F635P3C	6904	1	OTH	HYATT REGENCY ISLANDIA				SAN DIEGO	CA	92109		JOHN STEVENS	SENIOR ADVISOR TO SPEAKER NUNEZ	46.81	BREAKFAST	3/10/2004 12:00:00 AM	0			
+1031751	0	1	LEXP	F615P1	EX40	1	OTH	Sacramento River Cats				Sacramento	CA	95814		Mark Reeder	Legislative Director	10	Ticket to Game	4/21/2004 12:00:00 AM	18			
+1030062	0	6	LEXP	F635P3C	LEXP00006	2	OTH	Esquire Grill				Sacramento	CA	95814		Rick Dunne, CIWMB	Advisor	3.91	Appetizers/Beverages  at welcoming reception for CIWMB Board Members			N		
+1011641	1	27	LEXP	F635P3C	LEXP00027	2	OTH	City of Santa Fe Springs				Santa Fe Springs	CA	90670		Margaret Pena	Staff	10	Beverages			Y	MEMO-42220043389	
+1025622	0	2	LEXP	F615P1	3824	1	OTH	SHERATON GRAND				SACRAMENTO	CA	95814		DENISE MORENO DUCHENY	SENATOR	10.00	BREAKFAST	5/27/2004 12:00:00 AM	48.24		3824	
+1032388	0	27	LEXP	F635P3C	RP261	2	OTH	Sheraton Grand Sacramento				Sacramento	CA	95814		Loni Hancock	Assemblymember	14.46	Legislative Reception					
+1027084	1	3	LEXP	F635P3C	3817	1	OTH	PALOMINO RESTAURANT MARRIOTT				PALM DESERT	CA	92211		ASSEMBLYMEMBERS NICOLE PARRA, CINDY MONTANEZ;	STEVEN VERES, DIRECTOR, ASSEMBLYMEMBER MONTANEZ OFFICE	81.31	DINNER	5/13/2004 12:00:00 AM	406.55			
+1031951	0	57	LEXP	F635P3C	1943	1	OTH	ARCO Arena				Sacramento	CA	95834		Terry Reardon	Chief of Staff to Assm. Joe Canciamilla	214.96	Basketball ticket; Suite expenses	4/29/2004 12:00:00 AM	0			
+931699	2	40	LEXP	F635P3C	LEXP00040	2	OTH	City of Lakewood				Lakewood	CA	90712		Will Smith	Staff for Assemblymember Runner	49.99	Dinner and beverages			Y	MEMO-416200332224	
+1014341	1	59	LEXP	F635P3C	1723	1	OTH	Arco Arena				Sacramento	CA	95834		Beth Dacumos	Cheif of Staff to Asm. Bermudez, District 56	147.68	1 Kings ticket and refreshments	3/28/2004 12:00:00 AM	2362.88			
+1039624	0	25	LEXP	F635P3C	2~24	2	OTH	GIRL SCOUT COUNCILS OF CALIFORNIA				SACRAMENTO	CA	95814		FRAN PAVLEY	ASSEMBLYWOMAN	7.25	GIRL SCOUT PIN AND BOX OF COOKIES					
+1029776	0	6	LEXP	F635P3C	RP163	2	OTH	Frank Fat's Catering				Sacramento	CA	95814		Steve Kawamura	Staff, Assembly Budget Committee	29.62	Reception					
+1031231	0	9	LEXP	F635P3C	7061	1	OTH	DAILY GRILL				IRVINE	CA	92715		CHUCK DEVORE	CANDIDATE FOR ASSEMBLY	20.70	LUNCH	6/21/2004 12:00:00 AM	41.40			
+1039624	0	4	LEXP	F635P3C	2~3	2	OTH	GIRL SCOUT COUNCILS OF CALIFORNIA				SACRAMENTO	CA	95814		BETTY KARNETTE	SENATOR	7.25	GIRL SCOUT PIN AND BOX OF COOKIES					
+1039624	0	7	LEXP	F635P3C	2~6	2	OTH	GIRL SCOUT COUNCILS OF CALIFORNIA				SACRAMENTO	CA	95814		JACKIE SPEIER	SENATOR	7.25	GIRL SCOUT PIN AND BOX OF COOKIES					
+1012101	1	11	LEXP	F635P3C	LEXP00011	2	OTH	Sheraton Grand				Sacramento	CA	95814		Shirley Horton	Assemblymember	49.99	Food and Beverages			Y	MEMO-420200435425	
+1014497	2	13	LEXP	F635P3C	2442	1	OTH	SACRAMENTO KINGS LIMITED PARTNERSHIP				SACRAMENTO	CA	95834		JAMES JACK	CHIEF OF STAFF FOR SENATOR MCPHERSON	77.50	TICKET	2/3/2004 12:00:00 AM	0			
+1014497	2	17	LEXP	F635P3C	2319	1	OTH	CHOPS STEAK				SACRAMENTO	CA	95814		NORMA ZENDEJAS	SCHEDULER FOR ASSEMBLYMEMBER FIREBAUGH	15.92	MEAL/BEVERAGE	2/10/2004 12:00:00 AM	31.83			
+1059305	0	3	LEXP	F635P3C	LEXP00003	2	OTH	California Republican Party				Burbank	CA	91506		Jim Battin	Senator	6.17	Reception			N		
+1059381	0	105	LEXP	F625P3A	LEXP00105	2	OTH	See's Candy				Sacramento	CA	95814	Other	Trish Lenkiewicz	Office of Assembly Member Dave Cox	5.55	See's Candy			N		
+1058940	0	2	LEXP	F635P3C	1641	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		John Campbell	Assemblyman, State of California	129.00	Dinner	7/9/2004 12:00:00 AM	129			
+1057441	0	1	LEXP	F635P3C	EX11	1	OTH	AmEx/Chops				Sacramento	CA	95814		John Laird	Assemblyman	-25.00	Reim. received from Laird for 5/5/04 Lunch	8/26/2004 12:00:00 AM	-25			
+1059606	0	33	LEXP	F635P3C	2713	1	OTH	AU PIED DE COCHON				MEXICO CITY	MX			CINDY MONTANEZ	CALIFORNIA STATE ASSEMBLYMEMBER	141.84	MEAL/BEVERGAE	9/5/2004 12:00:00 AM	0			
+1056220	0	3	LEXP	F625P3A	21~2	2	OTH	Vallejo's Taqueria & Cantina(Mastercard)				Sacramento	CA	95814		Marisol Avina	Legislative Staffer	8.47	supper					
+1056220	0	15	LEXP	F625P3A	21~14	2	OTH	Vallejo's Taqueria & Cantina(Mastercard)				Sacramento	CA	95814		Erika Contreras	Legislative staffer	8.47	supper					
+1059381	0	143	LEXP	F625P3A	LEXP00143	2	OTH	See's Candy				Sacramento	CA	95814	Other	David Hersch	Office of Assembly Member Paul Koretz	6.94	See's Candy			N		
+1059401	0	35	LEXP	F635P3C	2034	1	OTH	Arco Arena				Sacramento	CA	95834		Juan Camacho	Asst to Asm. Nunez, District 46	14.50	Ticket to Giants game	8/6/2004 12:00:00 AM	43.50			
+1014193	1	2	LEXP	F635P3C	511	1	OTH	Sheraton Grand Hotel				Sacramento	CA	95814	MasterCard	Loni Hancock	State Assemblymember	66.95	Dinner	2/25/2004 12:00:00 AM	0			
+1053933	0	5	LEXP	F635P3C	8	1	OTH	Robert Newsom - California Club				LA	CA	90067		Stephan Castellanos	State Architect	4.22	Beverages for Excom mtg.	7/15/2004 12:00:00 AM	63.33			
+1059675	0	47	LEXP	F635P3C	LEXP00047	2	OTH	Frank Fat's				Sacramento	CA	95814		Juan Torres	Chief-of-Staff to A/Cindy Montanez	18.45	Food & Bev.			N		
+1054635	0	12	LEXP	F635P3C	LEXP00012	1	OTH	Del Mar Thoroughbred Club				Del Mar	CA	92014		Barbara Morrow	Spouse	85	Directors Room $35.00 and Lunch $50.00	8/14/2004 12:00:00 AM	85	N		
+1031568	3	50	LEXP	F635P3C	2528	1	OTH	STAPLES CENTER				LOS ANGELES	CA	90015		SHARON RUNNER 	CALIFORNIA STATE ASSEMBLYMEMBER	200.00	TICKET/MEAL/BEVERAGE	5/15/2004 12:00:00 AM	0			
+931795	1	20	LEXP	F635P3C	7880	1	OTH	Strawberry Lodge				Strawberry	CA	95720		Jill LaMalfa	Wife of Assembly Member Doug LaMalfa	33.90	Sponsor-Legislative Ski Day	3/6/2003 12:00:00 AM	0			
+1059606	0	1	LEXP	F635P3C	2681	1	OTH	DOS COYOTES BORDER CAFE				SACRAMENTO	CA	95815		NICOLE VAZQUEZ	SENATE HEALTH CONSULTANT	6.60	MEAL/BEVERAGE	7/9/2004 12:00:00 AM	13.20			
+1057345	0	18	LEXP	F635P3C	89	1	OTH	Griselda's Catering				Sacramento	CA	95814		Armando Viramontes	Staff to Assemblymember Loni Hancock	16.50	Reception Aug 5		0			
+745521	1	77	LEXP	F635P3C	1736	1	OTH	The Senator				Sacramento	CA	95814		Sherron Blonien	Staff to Senator Vasconcellos	69.92	Reception	2/27/2001 12:00:00 AM	0			
+1070943	2	1	LEXP	F615P1	8417	1	IND	Ryan Broddrick				Sacramento	CA	95814		Ryan Broddrick	Director  Department of Fish and Game	9.95	'Lunch'	11/2/2004 12:00:00 AM	20.67	 		
+1080787	0	27	LEXP	F635P3C	2076	1	OTH	ARCO Arena				Sacramento	CA	95834		Jazmine Moreno	Dependent daughter of Roseanne Moreno	44.59	(1:30 pm) Ice show ticket; Suite expenses	11/7/2004 12:00:00 AM	0		2076	
+1081426	0	3	LEXP	F635P3C	8562	1	OTH	All West Coachlines				Sacramento	CA	95814		Brian Crabb	Kevin Murray Office of Senator	114.82	Transportation.	10/7/2004 12:00:00 AM	0			
+1080787	0	66	LEXP	F635P3C	2115	1	OTH	ARCO Arena				Sacramento	CA	95834		Louise Pastor	Office Assistant, Senate Office Serivces	151.19	Basketball ticket; Suite expenses; Parking pass	11/16/2004 12:00:00 AM	0			
+1081191	0	63	LEXP	F615P1	63	1	OTH	See's Candy				Sacramento	CA	95814		Office Staff of and Senator Maldonado	State Senate	0.00	Box of holiday candy to share	12/21/2004 12:00:00 AM	26.40			
+1074125	0	7	LEXP	F635P3C	4866	1	OTH	THE LODGE AT PEBBLE BEACH				PEBBLE BEACH	CA	93953		CHRIS KAHN	SPOUSE OF FLO KAHN	197.50	GOLF	10/1/2004 12:00:00 AM	395		4866	
+1027158	1	4	LEXP	F635P3C	4113	1	OTH	OFFICE DEPOT				SANTA ANA 	CA	92725		SEE ATTACTMENT 'C & D'		0.00	RECEPTION	5/11/2004 12:00:00 AM	0		4113	
+1023247	2	7	LEXP	F635P3C	7449	1	OTH	Elizabeth Bailey				Fair Oaks	CA	95628		See Attached	See Attached	34.12	Luncheon Forum	5/20/2004 12:00:00 AM	1637.90		6843	
+1014497	4	37	LEXP	F635P3C	2566	1	OTH	ESQUIRE GRILL				SACRAMENTO	CA	95814-3906		KIRK HUDSON	CONSULTANT FOR SENATOR MCCLINTOCK	29.58	MEAL/BEVERAGE	5/5/2004 12:00:00 AM	0			
+1079351	0	6	LEXP	F635P3C	2918	1	OTH	PINOT				COSTA MESA	CA	92626		CATHERINE CAMPBELL	SPOUSE OF ASSEMBLYMEMBER CAMPBELL	91.36	MEAL/BEVERAGE	10/17/2004 12:00:00 AM	0			
+1101943	0	23	LEXP	F635P3C	LEXP00023	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Tim Leslie	Assemblymember	47.87	Food and beverages			Y	MEMO-418200535548	
+912570	1	123	LEXP	F635P3C	1193	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Lucia Valencia	Executive Assistant to Senator Deborah Ortiz	128.17	Basketball Ticket, Suite Expenses, Parking Pass	12/6/2002 12:00:00 AM	0			
+1031951	1	80	LEXP	F635P3C	1967	1	OTH	Levy Restaurants at Staples Center				Los Angeles	CA	90015		Randall Hernandez	Apptmts. Secretary for Gov. Schwarzenegger	290.89	Basketball ticket; Parking pass; Suite expenses	6/8/2004 12:00:00 AM	0			
+1078447	1	6	LEXP	F635P3C	2278	1	OTH	Il Fornaio				Sacramento	CA	95814		Perry Kenny	Tax Consultant, Board of Equalization	22.38	Luncheon	11/4/2004 12:00:00 AM	0			
+1059194	1	1	LEXP	F635P3C	1972	1	OTH	ARCO Arena				Sacramento	CA	95834		Meredith Borak	Executive Assistant to Sen. Liz Figueroa	174.88	2 Concert tickets, Suite expenses for 2 guests	7/7/2004 12:00:00 AM	1613.92			
+1059194	1	47	LEXP	F635P3C	2018	1	OTH	ARCO Arena				Sacramento	CA	95834		Ronald Lee	Legislative Asst., Senate Office Services	47.77	1 Circus ticket, Suite expenses for 1 guest, Parking pass	9/11/2004 12:00:00 AM	682.09		2018	
+912570	1	26	LEXP	F635P3C	1074	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Michael Pank	Husband of Karen Pank	42.09	Ice Show Ticket (3:30 pm perf.), Suite Expenses	10/26/2002 12:00:00 AM	0			
+946821	3	74	LEXP	F635P3C	1360	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834	`	Javier Garcia	Husband of Bonnie Garcia	222.34	Basketball ticket, Suite expenses	5/11/2003 12:00:00 AM	0			
+989791	1	30	LEXP	F635P3C	1581	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Sandy Kennedy Delisle	Staff Assistant, Assembly Speaker's Office of Member Services	51.99	Disney on Ice ticket, Suite expenses, Parking pass	11/9/2003 12:00:00 AM	0		1581	
+912570	1	57	LEXP	F635P3C	1113	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Jamie Palmer	Secretary to Assembly Speaker Herb Wesson	132.40	Basketball Ticket, Suite Expenses, Parking Pass	11/8/2002 12:00:00 AM	0			
+1101262	0	2	LEXP	F635P3C	6	1	OTH	Morton's (The Steakhouse)				Sacramento	CA	95814	AMEX	Silvia Solis	Legislative Director for Assemblymember Rudy Bermudez (AD-56)	75.43	Dinner and Refreshments	2/15/2005 12:00:00 AM	0		6	
+969574	1	46	LEXP	F635P3C	1529	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Jesse Delgado	Son of Elizabeth Delgado	36.29	Circus ticket, Suite expenses	9/20/2003 12:00:00 AM	0			
+839834	1	123	LEXP	F635P3C	783	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Bob Rucker	Chief of Statt to Senator Dick Monteith	117.98	Basketball ticket, Suite expense, Parking pass	3/26/2002 12:00:00 AM	0			
+1101757	0	13	LEXP	F635P3C	LEXP00013	2	OTH	Los Angeles World Airports				Los Angeles	CA			Jenny Oropeza	Assembly Member	130	LAX Airport Parking and Shuttle Service			N		
+857431	1	16	LEXP	F635P3C	845	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834	American Express	Carrie McKinley	Wife of Chris Tapio	112.71	Basketball Ticket, Suite Expenses	4/9/2002 12:00:00 AM	0			
+839834	1	28	LEXP	F635P3C	590	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Ruben Medina	Secretary, Senate Rules Committee	121.10	Basketball Ticket, Suite Expenses, Parking Pass	1/13/2002 12:00:00 AM	0			
+839834	1	50	LEXP	F635P3C	627	1	OTH	ARCO SPORTS ARENA				SACRAMENTO	CA	95834		Boris Cardenas	Media Consultant, Assembly Speaker's Office of Majority Services	48.77	Event Ticket, Suite Expenses, Parking Pass	2/7/2002 12:00:00 AM	1107.91			
+1059496	2	25	LEXP	F635P3C	676	1	OTH	Marriott Marquis Hotel				New York City	NY	10036	MasterCard	Lynn Daucher	Assembly Person	61.00	Breakfast & gift	9/1/2004 12:00:00 AM	0			
+1100549	0	44	LEXP	F635P3C	2~13	2	OTH	California Rice Commission				Sacramento	CA	95825		Ed Chavez	Assembly Member	23.63	Rice Gift Box					
+1103919	0	7	LEXP	F635P3C	LEXP00007	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Bob Margett	Senator	47.87	Food and beverages			Y	MEMO-418200534625	
+1103125	0	3	LEXP	F635P3C	LEXP00003	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Bob Dutton	Senator	47.87	Food and beverages			Y	MEMO-418200534239	
+1103327	0	2	LEXP	F615P1	8670	1	OTH	Pyramid Alehouse				Sacramento	CA	95814		David Weaver	Legislative Director to Assembly Member Tom Harman	10.00	'Lunch'	2/10/2005 12:00:00 AM	25			
+1103355	0	1	LEXP	F635P3C	5	1	OTH	Sutter Club				Sacramento	CA	95814		Mark Ridley-Thomas	Assemblymember	16.89	Food & Beverage	2/8/2005 12:00:00 AM	3886			
+1103901	0	21	LEXP	F635P3C	LEXP00021	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Doug La Malfa	Assemblymember	47.87	Food and beverages			Y	MEMO-418200533947	
+1104317	0	17	LEXP	F635P3C	8135	1	OTH	FRANK FATS				SACRAMENTO	CA	95814		KATARINA MALY	LEGISLATIVE STAFF, ASSEMBLY MEMBER GENE MULLIN'S OFFICE	21.90	LUNCH	3/17/2005 12:00:00 AM	0			
+1103904	0	22	LEXP	F635P3C	LEXP00022	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Jay La Suer	Assemblymember	10	Reception only			Y	MEMO-419200531254	
+1102751	0	37	LEXP	F635P3C	LEXP00037	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		George Runner	Senator	47.87	Food and beverages			Y	MEMO-419200531126	
+1104882	0	82	LEXP	F635P3C	3~29	2	OTH	Baily Hat Company				Chicago	IL	60674		Barbara Matthews	Assemblymember	20.00	hat					
+1104727	0	23	LEXP	F635P3C	RP278	2	OTH	Fisher Scientific				Pasadena	CA	91185		Bonnie Garcia	Assemblymember	151.27	Firefighter Helmet					
+1105076	0	11	LEXP	F635P3C	LEXP00011	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Russ Bogh	Assemblymember	47.87	Food and beverages			Y	MEMO-419200531611	
+1104382	0	36	LEXP	F635P3C	LEXP00036	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Victor Francovich	Staf	47.87	Food and beverages			Y	MEMO-4192005362	
+1102635	0	23	LEXP	F635P3C	LEXP00023	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Tim Leslie	Assemblymember	47.87	Food and beverages			Y	MEMO-418200533619	
+1103750	0	8	LEXP	F635P3C	7935	1	OTH	PAESANO'S PIZZERIA				SACRAMENTO	CA	95814		SHAUN FLANIGAN	LEGISLATIVE DIRECTOR, OFFICE OF ASSEMBLYMEMBER PLESCIA	24.30	MEAL	1/10/2005 12:00:00 AM	0			
+1103900	0	34	LEXP	F635P3C	LEXP00034	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Clydene Leslie	Spouse	47.87	Food and beverages			Y	MEMO-428200535851	
+1104059	0	7	LEXP	F635P3C	6~1	2	OTH	BofA Credit Card - Advantage Presentations				Sacramento	CA	95814		Richard Conrad	Acting State Architect	4.50	Board Mtg. - A/V					
+1032521	1	8	LEXP	F635P3C	7816	1	IND	Cornwell	Carrie			Sacramento	CA	95814		Carrie Cornwell	Chief of Staff for Senator Tom Torlakson	27.50	Legislative Reception:  Food and beverage	4/14/2004 12:00:00 AM	60.15			
+1105782	1	3	LEXP	F615P1	3	1	OTH	Griselda's Venture				Sacramento	CA	95814		Amy Strassburg	Senator Alquist	2.81	coffee/danish	3/11/2005 12:00:00 AM	58.80		3	
+1097573	1	51	LEXP	F635P3C	LEXP00051	2	OTH	Volume Services America/Classique Catering				Sacramento	CA	95814	Amex	Doug Brown	Principal Consultant, Sen. BP&ED Committee	33	Tax Symposium Luncheon			N		
+1104438	1	1	LEXP	F635P3C	8198	1	OTH	MICROSOFT CATERING				REDMOND	WA	98052		KEVIN MURRAY	SENATOR	9.85	LUNCH	2/7/2005 12:00:00 AM	86.57			
+1104699	2	8	LEXP	F635P3C	LEXP00001~7	2	OTH	Hyatt Regency				San Francisco	CA	94120-7020		Barbara Matthews	Assembly Member	112.76	Dinner					
+1105428	0	93	LEXP	F635P3C	2409	1	OTH	Arco Arena				Sacramento	CA	95834		Susan McIntyre	Chief of Staff, Asm. Ruskin	105.26	Ticket to Kings game and refreshments	3/28/2005 12:00:00 AM	105.26			
+1112885	1	3	LEXP	F635P3C	2~2	2	OTH	MBNA CREDIT CARD - SHERATON GRAND HOTEL				SACRAMENTO	CA	95814		ERIC WORTHEN	ASSEMBLY STAFF	10.00	LEGISLATIVE RECEPTION					
+1104699	2	57	LEXP	F635P3C	LEXP00021~38	2	OTH	Hyatt Regency				San Francisco	CA	94120-7020		Malaki Seku-Amen	Legislative Director- reportable to Assembly Member Ray Haynes	37.90	Reception					
+1101955	1	21	LEXP	F635P3C	4~11	2	OTH	Visa / Pyramid Alehouse				Sacramento	CA	95814		Cal Rossi	Dir Governor's Fresno Office	27.13	Food and Beverage					
+1105185	0	2	LEXP	F635P3C	1729	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		The Honorable Dario Frommer	Assemblymember, State of California	21.89	Lunch 	3/2/2005 12:00:00 AM	21.89			
+1105856	0	131	LEXP	F635P3C	LEXP00131	2	OTH	Hywatt Newporter				Newport Beach	CA	92660		Lori Saldana	Assemblymember	55.56	Food & Bev.			N		
+1112854	0	4	LEXP	F635P3C	299	1	OTH	The Broiler				Sacramento	CA	95814	American Express	Diane Colborn	Committee Consultant Assembly Water, Parks, & Wildlife Comm.	16.95	Lunch	4/16/2005 12:00:00 AM	39.29			
+1105203	0	11	LEXP	F635P3C	LEXP00011	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Russ Bogh	Assemblymember	47.87	Food and beverages			Y	MEMO-413200532633	
+1105203	0	32	LEXP	F635P3C	LEXP00032	2	OTH	City of Moreno Valley				Moreno Valley	CA	92552-0805		Audra Strickland	Assemblymember	47.87	Food and beverages			Y	MEMO-413200532633	
+1105766	0	1	LEXP	F615P1	3213	1	OTH	KAMON CAFE				SACRAMENTO	CA	95814		MATT STANLEY	CONSULTANT TO ASSEMBLYMEMBER MOUNTJOY	7.25	MEAL/BEVERAGE	1/14/2005 12:00:00 AM	14.49			
+1105739	0	10	LEXP	F635P3C	9073	1	OTH	Greene & Associates (Intermediary)				Alta Loma	CA	91701		Roy Ashburn	Senator	98.98	Brunch	1/20/2005 12:00:00 AM	8414			
+1119210	0	18	LEXP	F635P3C	3433	1	OTH	THE BROILER				SACRAMENTO	CA	95814		DANA APPLING	DIRECTOR, OFFICE OF RATEPAYER ADVOCATES, CPUC	14.43	MEAL/BEVERAGE	4/18/2005 12:00:00 AM	28.86			
+1118193	0	28	LEXP	F635P3C	1770	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Margo Brown	Scheduling Director, Office of Governor Schwarzenegger	73.27	Gift basket	6/6/2005 12:00:00 AM	73.27			
+1119120	0	8	LEXP	F635P3C	2463	1	OTH	San Francisco Giants				San Francisco	CA	94107		Chuck Hahn	Chief of Staff, Assemblymember Dave Cogdill	26.00	Ticket and lunch for Giants game	4/5/2005 12:00:00 AM	69.25			
+1117437	0	57	LEXP	F635P3C	2~26	2	OTH	California Rice Commission				Sacramento	CA	95825		Leland Yee	Assembly Member	23.63	Rice Gift Box					
+1119120	0	38	LEXP	F635P3C	2499	1	OTH	Chops				Sacramento	CA	95814		John Doherty 	Chief of Staff, Assem. Alberto Torrico	5.27	Refreshments	5/24/2005 12:00:00 AM	33.75			
+1112964	1	9	LEXP	F635P3C	9360	1	OTH	Raleys and Bel Air				Elk Grove	CA	95624		See Attached	See Attached	3.12	Board Dinner	5/24/2005 12:00:00 AM	468		1100	
+1119308	0	7	LEXP	F635P3C	3252	1	OTH	CREST THEATER				SACRAMENTO	CA	95814		CHUCK DEVORE	CALIFORNIA STATE ASSEMBLYMEMBER	30.00	TICKETS	5/10/2005 12:00:00 AM	0			
+1116300	1	6	LEXP	F635P3C	8390	1	OTH	TECHNET				PALO ALTO	CA	94303		ANNE VOLZ	SCHEDULER, ASSEMBLY MEMBER GUY HOUSTON'S OFFICE	46.17	RECEPTION	6/29/2005 12:00:00 AM	0			
+1117437	0	71	LEXP	F635P3C	2~40	2	OTH	California Rice Commission				Sacramento	CA	95825		Ira Ruskin	Assembly Member	23.63	Rice Gift Box					
+1117529	0	1	LEXP	F635P3C	7226	1	OTH	BIBA'S RESTAURANT				SACRAMENTO	CA	95816		PATTY BERG	ASSEMBLYWOMAN	35.25	DINNER	4/12/2005 12:00:00 AM	539.97			
+1118958	0	10	LEXP	F635P3C	8471	1	OTH	THE CARLTON HOTEL				ATASCADERO	CA	93422		DEE LACEY	DIRECTOR, CALIFORNIA MID STATE FAIR BOARD OF DIRECTORS	23.69	LUNCHEON	5/11/2005 12:00:00 AM	331.57			
+1119210	1	43	LEXP	F635P3C	3479	1	OTH	TEXAS MEXICAN RESTAURANT				SACRAMENTO	CA	95814		MIKE VILLINES	CALIFORNIA STATE ASSEMBLYMEMBER	17.65	MEAL/BEVERAGE	5/17/2005 12:00:00 AM	0			
+1117292	1	2	LEXP	F635P3C	8357	1	OTH	ESQUIRE GRILL				SACRAMENTO	CA	95814		SHAUN FLANIGAN	LEGISLATIVE DIRECTOR TO ASSEMBLY MEMBER GEORGE PLESCIA	28.81	MEAL	5/5/2005 12:00:00 AM	86.47			
+1105269	1	4	LEXP	F635P3C	8~3	2	OTH	Sheraton Grand Sacramento Hotel				Sacramento	CA	95814		Sharlene Garcia	Policy Analyst, California Department of Food and Agriculture	44.18	Food, beverage and room rental for catered event.					
+1119308	0	107	LEXP	F635P3C	3352	1	OTH	CREST THEATER				SACRAMENTO	CA	95814		LYNN LORBER	CONSULTANT TO ASSEMBLY HIGHER EDUCATION COMMITTEE 	45.00	TICKETS	5/10/2005 12:00:00 AM	0			
+1114593	0	217	LEXP	F635P3C	2~216	2	OTH	Tasty Time				Folsom	CA	95763		David Titus	Scheduler, Tran	3.08	Ice Cream Cone					
+1133960	0	16	LEXP	F635P3C	8701	1	OTH	RODNEY'S CIGAR & LIQUOR				SACRAMENTO	CA	95814		ALFONSO SANCHEZ	SENIOR ASSISTANT, OFFICE OF ASSEMBLYMEMBER RONALD CALDERON	6.54	BEVERAGES	9/8/2005 12:00:00 AM	0			
+1133038	0	25	LEXP	F635P3C	LEXP00025	2	OTH	Corporate Motivators				Costa Mesa	CA	92626		Karen Bass	Assemblymember, District 47	6.62	Gift Basket.			N		
+1134115	0	52	LEXP	F625P3A	LEXP00052	2	OTH	Le Grand Confectionary				Sacramento	CA	95821	Other	Michael LaFrenais	Office of Assembly Member Calderon	7.5	Candy			N		
+1119210	2	65	LEXP	F635P3C	3503	1	OTH	GOLDEN ONE CREDIT UNION				SACRAMENTO	CA	95814		LAURA SOTELO	SCHEDULER SENATOR GLORIA ROMERO	8.52	MEAL/BEVERAGE	5/19/2005 12:00:00 AM	0			
+1132698	1	14	LEXP	F625P3A	1072	1	OTH	Cafe Dolce				Sacramento	CA	95814		Staff of Senator Ackerman		18.00	3 dozen cookies	9/8/2005 12:00:00 AM	18			
+1105134	2	20	LEXP	F635P3C	8012	1	OTH	CHOPS				SACRAMENTO	CA	95814		CHRIS LEHMAN	CONSULTANT, OFFICE OF SENATOR PERATA	13.78	FOOD AND BEVERAGE	2/1/2005 12:00:00 AM	168			
+1133795	0	9	LEXP	F635P3C	EX3-8	2	OTH	California Healthcare Institute (CHI)				La Jolla	CA	92037		Gil Sambrano	Staff, CIRM	20.86	Reception Sponsorship					
+1133950	1	28	LEXP	F635P3C	2619	1	OTH	SBC Park				San Francisco	CA	94107		Philip Schmidt	Spouse of Lisa Schmidt	39.74	Ticket to Giants game	8/7/2005 12:00:00 AM	0			
+1133950	0	6	LEXP	F635P3C	2594	1	OTH	SBC Park				San Francisco	CA	94107		Donna Lucas	Assistant to the First Lady	210.63	Ticket to Giants game	7/18/2005 12:00:00 AM	0			
+1119120	1	50	LEXP	F635P3C	2511	1	OTH	Crocodile's				Sacramento	CA	95815		Assembly Member Dario Fromer	Assembly Member	5.77	Refreshments	5/31/2005 12:00:00 AM	0			
+1133950	1	62	LEXP	F635P3C	2662	1	OTH	Monster Park				San Francisco	CA	94124		Jason Bryant	Chief of Staff, Asm Guy Houston	108.37	Ticket to 49ers game and refreshments	9/11/2005 12:00:00 AM	1300.44			
+1118193	2	27	LEXP	F635P3C	1770	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Margo Brown	Scheduling Director, Office of Governor Schwarzenegger	73.27	Gift basket	6/6/2005 12:00:00 AM	73.27			
+1164380	0	27	LEXP	F635P3C	LEXP00027	2	OTH	City of Lakewood				Lakewood	CA	90712	Other	Keith Richman	Assemblymember	49.99	Dinner and beverages			Y	MEMO-421200635550	
+1167757	0	2	LEXP	F635P3C	P3C34	1	OTH	Esquire Grill				Sacramento	CA	95814		Hilary McLean	Press Secretary, SPI J. O'Connell	27.28	Lunch	3/15/2006 12:00:00 AM	54.47			
+1164149	0	3	LEXP	F635P3C	LEXP00003	2	OTH	City of Lakewood				Lakewood	CA	90712	Other	Bob Dutton	Senator	49.99	Dinner and beverages			Y	MEMO-42220063833	
+1164166	0	3	LEXP	F635P3C	LEXP00003	2	OTH	City of Lakewood				Lakewood	CA	90712	Other	Bob Dutton	Senator	49.99	Dinner and beverages			Y	MEMO-422200634617	
+1146558	0	74	LEXP	F635P3C	2560	1	OTH	ARCO Arena				Sacramento	CA	95834		Pia Jones	Wife of Daniel Jones	160.01	1 Basketball Ticket & Suite Expenses for 1 Guest	12/8/2005 12:00:00 AM	0			
+1118193	3	33	LEXP	F635P3C	1774	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		The Honorable Gloria Romero	Senator, State of California	10.77	Hat	6/24/2005 12:00:00 AM	10.77			
+1148433	0	57	LEXP	F635P3C	1899	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		The Honorable Chuck DeVore	Assemblymember, State of California	224.00	Disneyland tickets	12/23/2005 12:00:00 AM	224			
+1133451	2	3	LEXP	F635P3C	8~2	2	OTH	Hyatt Regency Sacramento				San Francisco	CA	941207020		Dennis Albiani	Deputy Legislative Secretary, Office of the Governor	29.81	Food, beverage, and room rental for catered breakfast.					
+1146712	0	5	LEXP	F635P3C	659	1	OTH	Oak Tree Racing Association				Arcadia	CA	91007		Kerry Yoshida	Capitol Director for Sen. Bob Margett	62.30	Admission, parking, luncheon	10/21/2005 12:00:00 AM	62.30			
+1147760	0	1	LEXP	F615P1	3556	1	OTH	EMMA'S TACO HOUSE				SACRAMENTO	CA	95814		BILL CARDOZA	CONSULTANT BOARD OF EQUALIZATION MEMBER BILL LEONARD	7.69	MEAL/BEVERAGE	10/13/2005 12:00:00 AM	15.38			
+1147644	0	11	LEXP	F635P3C	3649	1	OTH	QUALCOMM STADIUM				SAN DIEGO	CA	92108		ROBIN UMBERG	SPOUSE OF ASSEMBLYMEMBER TOM UMBERG	140.00	TICKET TO PACIFIC LIFE HOLIDAY BOWL/MEAL/BEVERAGE	12/29/2005 12:00:00 AM	0			
+1149244	0	3	LEXP	F635P3C	5~2	2	OTH	Delta King				Sacramento	CA	95814		Laura Ortega	Chief of Staff-Assm. Russ Bogh	90.67	Reception					
+1164787	0	12	LEXP	F635P3C	LEXP00012	2	OTH	City of Lakewood				Lakewood	CA	90712	Other	Asael Sala	Legislative Assistant	49.99	Dinner and beverages			Y	MEMO-42120063234	
+1133960	3	5	LEXP	F635P3C	8685	1	OTH	HAWTHORNE LANE				SAN FRANCISCO	CA	94105		ROBERT LANE	CHIEF OF STAFF, OFFICE OF CPUC COMMISSIONER JOHN BOHN	88.37	DINNER	7/21/2005 12:00:00 AM	353.49			
+1145603	0	5	LEXP	F615P1	1~4	2	OTH	Vallejo's Restaurant				Sacramento	CA	95814		Cindy Boyd	OPR Policy Analyst	9.50	Post-Session Lunch					
+1165666	0	11	LEXP	F635P3C	6~7	2	OTH	The Sutter Club				Sacramento	CA	95814		Claude Parrish	Vice Chairman	17.54	Legislative Reception					
+1165947	0	25	LEXP	F635P3C	2~24	2	OTH	Sutter Club				Sacramento	CA	95814		Kyle Packham	Assemblymember Sharon Runner	20.00	breakfast					
+1166867	0	1	LEXP	F635P3C	LEXP00001	1	OTH	city of Lakewood				Lakewood	CA	90712	Other	Sam Aanestad	Senator	49.99	Dinner and beverages	3/27/2006 12:00:00 AM	232.71	Y	MEMO-422200634514	
+1167731	0	35	LEXP	F635P3C	3902	1	OTH	SACRAMENTO KINGS LIMITED PARTNERSHIP				SACRAMENTO	CA	95834		BOB GRAHAM	SPOUSE OF CAROL GRAHAM SCHEDULER SENATOR JOE DUNN	104.50	TICKET	2/21/2006 12:00:00 AM	0			
+1167731	0	49	LEXP	F635P3C	3913	1	OTH	SACRAMENTO KINGS LIMITED PARTNERSHIP				SACRAMENTO	CA	95834		GRACIANO DACUMOS	SPOUSE OF BETH DACUMOS CHIEF OF STAFF ASSEMBLYMEMBER RUDY BERMUDEZ	89.50	TICKET	3/21/2006 12:00:00 AM	0			
+1164934	0	22	LEXP	F635P3C	2~21	2	OTH	City of Lakewood				Lakewood	CA	90712		Gloria Negrete McLeod	Assemblymember	49.99	Dinner and beverages					
+1165947	0	40	LEXP	F635P3C	2~39	2	OTH	Sutter Club				Sacramento	CA	95814		Dillon Gibbons	Assemblymember Bonnie Garcia	20.00	breakfast					
+1167863	0	15	LEXP	F635P3C	11773	1	OTH	Maloof Sports & Entertainment				Sacramento	CA	95834		Joan O'Connor	Office Assistant Senate Office Services	44	Disney on Ice	2/18/2006 12:00:00 AM	132			
+1167743	0	6	LEXP	F635P3C	RP6	2	OTH	Southern Wine & Spirits of America, Inc.				Miami	FL	33169		Ira Ruskin	Assemblymember	14.96	Beverages					
+1165435	0	3	LEXP	F635P3C	9451	1	OTH	IL FORNAIO				SACRAMENTO	CA	95814		AMY  ARAMBULA	SPOUSE, ASSEMBLYMAN ARAMBULA	18.83	LUNCH	1/5/2006 12:00:00 AM	0			
+1166670	0	16	LEXP	F635P3C	RP340	2	OTH	Distinctive Recognition				Sacramento	CA	95826		John Laird	Assemblymember	37.50	Golf Shirt					
+1165658	0	42	LEXP	F635P3C	3~41	2	OTH	Griselda's Catering				Sacramento	CA	95814		Dianna Kent	Office of Assemblyman Ed Chavez	7.97	Lysol Spray Disinfectant (12oz) food & beverage					
+1167743	0	57	LEXP	F635P3C	RP62	2	OTH	Southern Wine & Spirits of America, Inc.				Miami	FL	33169		Steve Maviglio	Chief Consultant, Democratic Caucus	14.96	Beverages					
+1166670	0	48	LEXP	F635P3C	RP372	2	OTH	Event Architects, LLC				Sacramento	CA	95814		Mark Leno	Assemblymember	17.50	Lunch					
+1166577	0	1	LEXP	F635P3C	LEXP00001	1	OTH	Frank Fat's				Sacramento	CA	95814		Frances Pavley	Assemblymember	10	Dinner, with three legislators receiving gifts of $10.00	3/22/2006 12:00:00 AM	194.22	N		
+1167731	0	10	LEXP	F635P3C	3869	1	OTH	CARL'S JR.				MORENO VALLEY	CA	92557		ERIN SASSE	FIELD REPRESENTATIVE GOVERNOR ARNOLD SCHWARZENEGGER	9.78	MEAL/BEVERAGE	1/13/2006 12:00:00 AM	0			
+1167811	0	18	LEXP	F635P3C	1937	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Kevin Gilhooley	Staff, Assemblymember Todd Spitzer	82.00	Lunch at Club 33	3/15/2006 12:00:00 AM	82			
+1168061	0	2	LEXP	F635P3C	1~1	2	OTH	Le Poulet				Berkeley	CA	94709		Bridget Lott	Calif. Hwy. Patrol, Redwood City	14.52	Lunch					
+1167769	1	42	LEXP	F635P3C	9521	1	OTH	Hyatt Regency Monterey				Monterey	Ca	93940		Erin Hicks	Associate Consultant, Speaker's Office of Member Services	52.33	Food & Beverage	2/8/2006 12:00:00 AM	0			
+1167769	1	53	LEXP	F635P3C	9532	1	OTH	Hyatt Regency Monterey				Monterey	Ca	93940		Rick Simpson	Chief Consultant, Assembly Member Fabian Nunez	52.33	Food & Beverage	2/8/2006 12:00:00 AM	0			
+1168110	1	9	LEXP	F615P1	392	1	OTH	TEXAS MEXICAN FOOD				SACRAMENTO	CA	95014		AARON BLOOM	LEGISLATIVE AIDE, OFFICE OF SENATOR TOM TORLAKSON	10.00	LUNCH	2/8/2006 12:00:00 AM	24.98			
+1166482	1	22	LEXP	F635P3C	RP265	2	OTH	Golden Bear Sportswear				San Francisco	CA	94103		Lloyd Levine	Assembly Member	75.00	Black Leather Portfolio					
+1168095	0	163	LEXP	F635P3C	3000	1	OTH	Arco Arena				Sacramento	CA	95834		Nell Soto	Senator, District 32	119.30	Ticket to Kings game, refreshments and parking pass.	3/14/2006 12:00:00 AM	0			
+1165354	1	54	LEXP	F635P3C	3~31	2	OTH	CA Rice Commission				Sacramento	CA	95825		Dennis Mountjoy	Assembly Member	19.29	Rice Gift Box					
+1163566	1	39	LEXP	F635P3C	4~38	2	OTH	Sheraton Grand Sacramento				Sacramento	CA	95814		Jacqueline Wade	Legislative Aide, Senator Bob Dutton	31.99	March on Sacramento - Legislative Reception					
+1149244	1	1	LEXP	F635P3C	5	1	OTH	Delta King				Sacramento	CA	95814		Hon. Jeff Denham	State Senator	90.67	Reception	4/26/2005 12:00:00 AM	634.71		5	
+1168032	0	3	LEXP	F615P1	11802	1	IND	Chops				Sacramento	CA	95814	American Express	Margaret Pena	Consultant Senator Romero's Office	9.50	'Lunch'	2/24/2006 12:00:00 AM	56.85			
+1168032	0	4	LEXP	F615P1	11801	1	IND	Frant Fat's				Sacramento	CA	95814	American Express	John Laird	Assemblyman	9.50	'Dinner'	3/8/2006 12:00:00 AM	172.28			
+1167427	1	41	LEXP	F635P3C	9656	1	OTH	CALIFORNIA CHAMBER OF COMMERCE				SACRAMENTO	CA	95814		KAREN PANK	DEPUTY LEGISLATIVE SECRETARY, OFFICE OF THE GOVERNOR	6.62	RECEPTION	1/6/2006 12:00:00 AM	0			
+1189531	0	8	LEXP	F635P3C	7~7	2	OTH	LOS ANGELES COUNTY METROPOLITAN TRANSPORTATION AUTHORITY				LOS ANGELES	CA	90012		TIMOTHY LIPPMAN	STAFF FOR ASM PAVLEY	17.90	LUNCH AND PARKING					
+1167980	0	4	LEXP	F635P3C	RP432	2	OTH	Hyatt Regency Irvine				Irvine	CA	92614		Leisa Brug	District Director, Assm. Devore	27.38	Breakfast					
+1166541	1	3	LEXP	F615P1	LEXP00003	2	OTH	Frank Fat's				Sacramento	CA	95814		Jennifer Galehouse	Assemblymember	9.75	Dinner, with four legislators receiving gifts of $9.75 			N		
+1216081	0	3	LEXP	F635P3C	11046	1	OTH	ASSOCIATION OF CALIFORNIA LIFE & HEALTH INSURANCE COMPANIES				SACRAMENTO	CA	95814		LLOYD LEVINE	ASSEMBLY MEMBER	175.00	GOLF	9/27/2006 12:00:00 AM	0			
+1146558	1	5	LEXP	F635P3C	2488	1	OTH	ARCO Arena				Sacramento	CA	95834		Melissa Garcia	Dependent Daughter of Bonnie Garcia	71.04	1 Concert Ticket & Suite Expenses for 1 Guest	10/23/2005 12:00:00 AM	0			
+1191448	1	94	LEXP	F635P3C	9334	1	OTH	HYATT MONTEREY				MONTEREY	CA	93940		DARIO FROMMER	ASSEMBLYMEMBER, SPOUSE OF PG&E EMPLOYEE	46.19	LUNCH DURING THE DEMOCRATIC CAUCUS POLICY RETREAT	2/8/2006 12:00:00 AM	0			
+1216537	0	128	LEXP	F625P3A	LEXP00128	2	OTH	LeGrand Confectionary				Sacramento	CA	95821	Other	Rebecca Marcus	Office of Assembly Member Johan Klehs	10	Candy			N		
+1189765	1	5	LEXP	F635P3C	1299	1	OTH	Soto	Nell							Nell Soto	Senator	42.34	Food & Beverage	5/17/2006 12:00:00 AM	42.34			
+1209297	0	4	LEXP	F635P3C	10606	1	OTH	MORTONS OF CHICAGO				SACRAMENTO	CA	95814		GREG CAMPBELL	OFFICE OF ASSEMBLY MEMBER FABIAN NUNEZ	110.18	DINNER	8/23/2006 12:00:00 AM	661.09			
+1216537	0	157	LEXP	F625P3A	LEXP00157	2	OTH	LeGrand Confectionary				Sacramento	CA	95821	Other	Jennifer Turner	Office of Assembly Member Kevin McCarthy	10	Candy			N		
+1212445	0	31	LEXP	F635P3C	2~30	2	OTH	CALIFORNIA GRAPE & TREE FRUIT LEAGUE				FRESNO	CA	93710		ALBERTO TORRICO	ASSEMBLY MEMBER	15.00	FRUIT GIFT BOX					
+1166425	1	7	LEXP	F625P3A	9039	1	OTH	ROSANNA VENTURINI				CHICO	CA	95973		SEE ATTACHMENT H 		6.97	BARTENDER	3/29/2006 12:00:00 AM	52			
+1212445	0	87	LEXP	F635P3C	2~86	2	OTH	CALIFORNIA GRAPE & TREE FRUIT LEAGUE				FRESNO	CA	93710		BOB HUFF	ASSEMBLY MEMBER	15.00	FRUIT GIFT BOX					
+1191448	1	35	LEXP	F635P3C	9253	1	OTH	HYATT MONTEREY				MONTEREY	CA	93940		JIM GIVENS	ASSEMBLY SERGEANT	38.22	LUNCH DURING THE DEMOCRATIC CAUCUS POLICY RETREAT	2/7/2006 12:00:00 AM	0			
+1187965	1	1	LEXP	F635P3C	1208	1	OTH	The Broiler				Sacramento	CA	95814		Drew Liebert, 	Chief Consultant, Assm. Judiciary Committee	19.00	Lunch with Jim Cervantes, Chrm., CalPSA Board of Directors	6/28/2006 12:00:00 AM	38			
+1192632	0	2	LEXP	F625P3A	19	1	OTH	Texas Mexican Restaurant				Sacramento	CA			Maria Lerma	Office of Assembly Member Joe Coto	10.00	Lunch	5/24/2006 12:00:00 AM	20.36		19	
+1165198	1	9	LEXP	F635P3C	11463	1	OTH	Volumne Services-Classique Catering				Sacramento	CA	95814		Thomas N. Hudson	Senior Tax Counsel-Office of Bd Mbr Bill Leonard	35.95	Cal-Annual Members Luncheon	3/23/2006 12:00:00 AM	653.05			
+1168095	1	140	LEXP	F635P3C	2977	1	OTH	Monterey Bay Aquarium				Monterey	CA	93940		Jenny Oropreza	Assembly Member, District 55	126.49	Assembly Democratic Retreat Reception and Dinner	2/28/2006 12:00:00 AM	0			
+1212445	0	1	LEXP	F635P3C	2	1	OTH	CALIFORNIA GRAPE & TREE FRUIT LEAGUE				FRESNO	CA	93710		ARNOLD SCHWARZENEGGER	GOVERNOR	15.00	FRUIT GIFT BOX	8/23/2006 12:00:00 AM	1785			
+1216537	0	42	LEXP	F625P3A	LEXP00042	2	OTH	LeGrand Confectionary				Sacramento	CA	95821	Other	Sean Adams	Office of Senator Bob Margett	7.5	Candy			N		
+1166646	1	53	LEXP	F635P3C	12~39	2	OTH	CA CITRUS MUTUAL				EXETER	CA	93221		JOSEPH DUNN	SENATOR	4.50	ORANGES					
+1216537	0	94	LEXP	F625P3A	LEXP00094	2	OTH	LeGrand Confectionary				Sacramento	CA	95821	Other	Honorable Bill Emmerson	California State Assembly	7.5	Candy			N		
+1119407	1	4	LEXP	F635P3C	LEXP00004	1	OTH	Trader Vics				San Francisco	CA	94102		Peter Arth	Chief of Staff to CPUC Commissioner Michael Peevey	27.3	Food & Bev.	6/9/2005 12:00:00 AM	218.43	N		
+1105856	1	35	LEXP	F635P3C	LEXP00035	2	OTH	Hyatt Newporter				Newport Beach	CA	92660		Patty Berg	Assemblymember	25.86	Food & Bev.			N		
+1217314	0	2	LEXP	F615P1	LEXP00002	1	OTH	Amarin Thai Cuisine				Sacramento	CA	95814	VISA	Tami Bui	Legis. Aide, Senator Perata	9.3	Meal & bev	7/31/2006 12:00:00 AM	18.55	N		
+1216692	0	9	LEXP	F635P3C	3293	1	OTH	Arco Arena				Sacramento	CA	95834		Rosanna Carvacho	Principal Consultant, Senator Romero	73.84	Ticket to Monarchs game.	7/30/2006 12:00:00 AM	0			
+1217122	0	15	LEXP	F635P3C	287	1	OTH	The Grove Steakhouse				Alpine	CA	91901		Cindy Montanez	Assemblymember	159.42	Meal	8/3/2006 12:00:00 AM	0			
+1234194	0	9	LEXP	F615P1	EX25-1	2	OTH	See's Candy				Sacramento	CA	95814		Entire Staff	CPUC Consumer Protection & Service Div.	14	1 box of candy per office					
+1189784	1	7	LEXP	F635P3C	9904	1	OTH	SHERATON GRAND HOTEL				SACRAMENTO	CA	95814		BOB HUFF	CALIFORNIA STATE ASSEMBLY MEMBER	58.66	RECEPTION & REFRESHMENTS	4/18/2006 12:00:00 AM	0			
+1231902	0	3	LEXP	F635P3C	RP223	2	OTH	Fairmont Sonoma Mission Inn & Spa				Sonoma	CA	95476		Ellen Corbett	Senator	36.96	Reception					
+1231902	0	20	LEXP	F635P3C	RP241	2	OTH	Fairmont Sonoma Mission Inn & Spa				Sonoma	CA	95476		Jack Scott	Senator	36.96	Reception					
+1236343	0	45	LEXP	F635P3C	49	1	OTH	Sonoma Mission Inn				Sonoma	CA	95476		Barbara Guido	Sen. Democratic Caucus	35.74	Breakfast	12/5/2006 12:00:00 AM	2784.08			
+1190947	1	60	LEXP	F635P3C	2765	1	OTH	ARCO Arena				Sacramento	CA	95834		Susan Basset	Wife of Kevin Basset	229.08	1 Basketball ticket, Suite expense for 1 guest	4/30/2006 12:00:00 AM	0			
+1216692	0	76	LEXP	F635P3C	3370	1	OTH	Asia de Cuba Restaurant				San Francisco	CA	94102		Kevin Murray	State Senate District 26	74.00	Dinner	9/25/2006 12:00:00 AM	223.68			
+1239132	0	3	LEXP	F635P3C	LEXP00003	1	OTH	Sproul Community Center				Norwalk	CA	90650		Tony Mendoza	State Assembly Candidste	5	Food & Beverage	10/26/2006 12:00:00 AM	15	N		
+1149530	1	2	LEXP	F625P3A	15	1	OTH	Texas Mexican Restaurant				Sacramento	CA	95814		Maria Lerma	Office of Assembly Member Joe Baca	10.00	Lunch	10/17/2005 12:00:00 AM	21.75		15	
+1256430	1	16	LEXP	F635P3C	3~1	2	OTH	CA RICE COMMISSION				SACRAMENTO	CA	958263249		RICHARD ACKERMAN	STATE SENATOR	23.05	RICE GIFT BOX					
+1259166	0	31	LEXP	F635P3C	EX1-30	2	OTH	Ziegler Associates				Sacramento	CA	95814		Valerie Brown	Legis Aide, Assem. Ruskin	92.44	Reception					
+1190734	1	1	LEXP	F635P3C	9998	1	OTH	FRANK FATS				SACRAMENTO	CA	95814		RON CLADERON	ASSEMBLY MEMBER	62.04	DINNER	4/26/2006 12:00:00 AM	496.28			
+1238961	0	101	LEXP	F635P3C	12989	1	OTH	Claremont Resort & Hotel				Berkeley	CA	94705		Valarie Brown	Horton Office of Assemblymember Jerome	10.00	Energy Policy Conference Session- sodas coffee water audio visual equipment rental	10/6/2006 12:00:00 AM	0			
+1259316	0	19	LEXP	F635P3C	11077	1	OTH	RIO DE GADO				SAN DIEGO	CA	92101		JANELLE RIELLA	STAFF MEMBER OF GEORGE PLESCIA	64.27	MEAL	3/19/2007 12:00:00 AM	192.82			
+1260318	0	26	LEXP	F635P3C	4442	1	OTH	OSHIMA SUSHI				SACRAMENTO	CA	95834		ELIZABETH WATSON	LEGISLATIVE DIRECTOR CALIFORNIA STATE ASSEMBLYMEMBER ANTHONY ADAMS	14.13	MEAL/BEVERAGE	2/5/2007 12:00:00 AM	56.51			
+1191448	2	37	LEXP	F635P3C	9255	1	OTH	HYATT MONTEREY				MONTEREY	CA	93940		VINCENT HARRIS	CHIEF OF STAFF, OFFICE OF ASSEMBLYMEMBER MARK RIDLEY-THOMAS	38.22	LUNCH DURING THE DEMOCRATIC CAUCUS POLICY RETREAT	2/7/2006 12:00:00 AM	0			
+1259732	0	3	LEXP	F635P3C	321	1	OTH	Wendt-Harp	Elizabeth			Loomis	CA	95650		See Attachment IV		2.60	Reception	1/16/2007 12:00:00 AM	450			
+1238623	0	28	LEXP	F635P3C	13442	1	IND	WIGGINS				SACRAMENTO	CA	95812-4025		PAT WIGGINS	CIWMB-BOARD MEMBER	8.16	CIWMB RECEPTION - COST/PERSON $40.49 IEDA SHARE $8.16 (SEE ATTACHMENTS)	11/14/2006 12:00:00 AM	8.16			
+1238961	0	242	LEXP	F635P3C	12871	1	OTH	Silverado Resort & Hotel				Napa	CA	94558		Emily Currin	Niello Office of Assemblymember	85.00	reception on 10/04 and breakfast on 10/05.	10/4/2006 12:00:00 AM	0			
+1191448	2	5	LEXP	F635P3C	9146	1	OTH	THE BROILER				SACRAMENTO	CA	95814		BILL EMMERSON	ASSEMBLYMEMBER	31.14	DINNER	1/23/2006 12:00:00 AM	253			
+1191448	3	10	LEXP	F635P3C	9831	1	OTH	SAFE DESIGNS				SAN CARLOS	CA	94070		RUTH COLEMAN	DIRECTOR OF CALIFORNIA STATE PARKS 	5.15	HAT 	4/22/2006 12:00:00 AM	5.15			
+1238961	0	267	LEXP	F635P3C	12802	1	OTH	Starbucks				Sacramento	CA	95814		Cyndi Hillery	LaMalfa Office of Assemblymember	2.00	Coffee	10/4/2006 12:00:00 AM	0			
+1191448	2	126	LEXP	F635P3C	9366	1	OTH	HYATT MONTEREY				MONTEREY	CA	93940		ALBERTO TORRICO	ASSEMBLYMEMBER	46.19	LUNCH DURING THE DEMOCRATIC CAUCUS POLICY RETREAT	2/8/2006 12:00:00 AM	0			
+1216892	2	35	LEXP	F635P3C	4193	1	OTH	HYATT REGENCY SACRAMENTO				SACRAMENTO	CA	95814		NICOLE RICE	DEPUTY APPOINTMENT SECRETARY GOVENOR ARNOLD SCHWARZENEGGER	18.09	MEAL/BEVERAGE	8/11/2006 12:00:00 AM	36.17			
+1238382	1	57	LEXP	F635P3C	2113	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		The Honorable Mark Wyland	Senator, State of California	5.00	Holiday ornament	12/15/2006 12:00:00 AM	5			
+1258151	1	32	LEXP	F635P3C	5~29	2	OTH	Sutter Club				Sacramento	CA	95814		Wilmer Amina Carter	Assemblymember	3.42	CHI Chairmans Reception					
+1259093	0	4	LEXP	F635P3C	11129	1	OTH	DOUBLETREE HOTEL				BAKERSFIELD	CA	93311		NERISSA ROBINSON	LEGISLATIVE AID TO ASSEMBLYWOMAN NICOLE PARRA	33.79	DINNER	2/1/2007 12:00:00 AM	0			
+1262417	0	656	LEXP	F635P3C	21~11	2	OTH	Target				Sacramento	CA	95834		Rob Cook	DGS Deputy Director	0.05	a/v rental					
+1262417	0	414	LEXP	F635P3C	14~36	2	OTH	Sierra Office Supply				Sacramento	CA	95827		Aaron Noble	DSA - Senior Architect	0.40	Holders for Namebadges					
+1261010	0	19	LEXP	F635P3C	14236	1	OTH	Frank Fat's				Sacramento	CA	95814	Diners Club MatserCard	Nicole Parra	CA State Assemblywoman	31.87	Dinner	1/4/2007 12:00:00 AM	318.66			
+1262051	0	43	LEXP	F635P3C	P3C27	1	OTH	Spataro Ristorante				Sacramento	CA	95814		Don Perata	Senator	5.50	Beverages	3/7/2007 12:00:00 AM	30.24			
+1260858	0	21	LEXP	F625P3A	EX28	1	OTH	TraderJoes+BevMo+				Sacramento	CA			Quentin Kopp	Pres., High Speed Rail Auth.	7.83	Reception	1/16/2007 12:00:00 AM	0.01			
+1262053	0	40	LEXP	F635P3C	RP113	2	OTH	Ambrosia Fine Food				Sacramento	CA	95815		Paul Gosselin	Chief Dep Dir, Dept of Pesticide Reg	54.21	Legislative Reception					
+1260938	0	24	LEXP	F635P3C	RP151	2	OTH	Southern Wine & Spirits of America, Inc.				Miami	FL	33169		Chris Garland	Deputy Director, Democratic Caucus	2.12	Beverages					
+1262370	0	32	LEXP	F635P3C	RP97	2	OTH	Griselda's Catering				Sacramento	CA	95814		Mark Leno	Assembly Member	101.60	Legislative Reception					
+1262417	0	153	LEXP	F635P3C	9~40	2	OTH	Borders				Sacramento	CA	95825		Craig Rush	DSA - Principal Structural Engineer	0.88	a/v rental					
+1262053	0	71	LEXP	F635P3C	RP144	2	OTH	Ambrosia Fine Food				Sacramento	CA	95815		Stephen Patterson	Staff, Assm. Carter	54.21	Legislative Reception					
+1262504	0	27	LEXP	F635P3C	RP552	2	OTH	All Seasons All Reasons, Fine Catering				Sacramento	CA	95818		Cameron Smyth	Assembly Member	18.00	Refreshments at Legislative Reception					
+1262053	0	192	LEXP	F635P3C	P3C122	1	OTH	Wine Institute				San Francisco	CA	94105		Jack Scott	Senator	7.08	Wine	3/9/2007 12:00:00 AM	7.08			
+1262560	0	40	LEXP	F635P3C	3537	1	OTH	Arco Arena				Sacramento	CA	95834		Russell Lowery	Chief of Staff to Senator Dutton	105.15	Ticket to Kings game and refreshments	1/24/2007 12:00:00 AM	0			
+1262417	0	209	LEXP	F635P3C	10~43	2	OTH	Brands on Sale				Cerritos	CA	90703		Terri Stevenson	DSA - Financial Manager	0.60	a/v rental					
+1262417	0	361	LEXP	F635P3C	13~36	2	OTH	AlphaGraphics				Sacramento	CA	95814		Aaron Noble	DSA - Senior Architect	0.62	Namebadges					
+1261723	0	56	LEXP	F635P3C	422	1	OTH	Griselda's Catering				Sacramento	CA	95814		Darlene Kurch	Staffer to Senator Dutton	14.45	Reception	2/13/2007 12:00:00 AM	0			
+1261724	0	20	LEXP	F635P3C	12459	1	OTH	ESQUIRE GRILL				SACRAMENTO	CA	95814		ADRIAN NAZARIAN	CHIEF OF STAFF, ASSEMBLY MEMBER PAUL KREKORIAN	20.22		3/14/2007 12:00:00 AM	0			
+1262051	0	29	LEXP	F635P3C	P3C12	1	OTH	The Grove Steakhouse				Alpine	CA	91901		Collin McGlassen	Staff Member, Assm. Joel Anderson	13.25	Lunch	1/22/2007 12:00:00 AM	300.25			
+1262417	0	244	LEXP	F635P3C	11~25	2	OTH	Longs Drugs				Sacramento	CA	95814		Lynn Jacobs	Department of Housing and Community Development - Director	0.07	a/v rental					
+1262417	0	409	LEXP	F635P3C	14~31	2	OTH	Sierra Office Supply				Sacramento	CA	95827		Evelyn Matteucci	State and Consumer Services Agency - General Counsel	0.40	Holders for Namebadges					
+1262548	2	100	LEXP	F635P3C	RP224	2	OTH	Asante Catering				Sacramento	CA	95820		Patricia Wiggins	Senator	9.91	Lunch					
+1262749	0	16	LEXP	F635P3C	RP525	2	OTH	Embassy Suites				Temecula	CA	92591		Victoria Stewart	Staff, Assm. Anderson	130.95	Lodging (2/28/07 - 3/1/07)					
+1262470	2	57	LEXP	F625P3A	46~56	2	OTH	APS International				San Francisco	CA	94105		Roger Niello	Assembly Member	4.52	Coffee Mug					
+1278971	0	52	LEXP	F635P3C	14474	1	OTH	McDonalds Salad Day				Sacramento	ca	95814		Jason Murphy	Senator Scott	5.71	Luncheon	5/15/2007 12:00:00 AM	0			
+1262548	1	65	LEXP	F635P3C	RP188	2	OTH	Asante Catering				Sacramento	CA	95820		Nell Soto	Assembly Member	9.91	Lunch					
+1262749	0	40	LEXP	F635P3C	RP541	2	OTH	Stephany Borders Catering				Hemet	CA	92544		Mirian Ingenito	Consultant, Sen. Appropriations Comm.	11.60	Lunch					
+1262470	1	33	LEXP	F625P3A	46~32	2	OTH	APS International				San Francisco	CA	94105		Martin Garrick	Assembly Member	4.52	Coffee Mug					
+1260421	1	16	LEXP	F635P3C	4~15	2	OTH	Sheraton Grand Sacramento				Sacramento	CA	95814		Ted W. Lieu	Assembly Member	23.53	March on Sacramento - Legislative Reception					
+1262417	1	388	LEXP	F635P3C	14~10	2	OTH	Sierra Office Supply				Sacramento	CA	95827		Richard Conrad	DSA - Principal Architect	0.40	Holders for Namebadges					
+1261578	1	6	LEXP	F635P3C	14136	1	IND	DAVIS				SACRAMENTO	CA	95814		MIKE DAVIS	ASSEMBLY MEMBER	124.79	DINNER	3/20/2007 12:00:00 AM	0			
+1278971	0	112	LEXP	F635P3C	14516	1	OTH	McDonalds Salad Day				Sacramento	ca	95814		Scott Ogus	Assemblymember Feuer	5.71	Luncheon	5/15/2007 12:00:00 AM	0			
+1262548	2	19	LEXP	F635P3C	RP141	2	OTH	Asante Catering				Sacramento	CA	95820		Michael D. Duvall	Assembly Member	9.91	Lunch					
+1167863	1	9	LEXP	F635P3C	11777	1	OTH	Maloof Sports & Entertainment				Sacramento	CA	95834		Linsay Doll	Legislative Director Senator Hollingsworth	89.50	Kings Basketball Game	3/14/2006 12:00:00 AM	537			
+1262417	1	259	LEXP	F635P3C	11~40	2	OTH	Longs Drugs				Sacramento	CA	95814		Craig Rush	DSA - Principal Structural Engineer	0.07	a/v rental					
+1166624	2	22	LEXP	F635P3C	RP37	2	OTH	Ambrosia Fine Food				Sacramento	CA	95815		Beth Jines	Public Affairs Chief, SWRCB	55.48	Legislative Reception					
+1262417	1	287	LEXP	F635P3C	12~15	2	OTH	The California Museum				Sacramento	CA	95814		Abdi Farhang	DGS- Project Manager	6.79	Room Rental, security fees, room setup					
+1261864	1	1	LEXP	F635P3C	8	1	OTH	Multiple Payees								Sam Aanestad	Member, CA State Senate	10.34	Agricultural commodity sampler bag	2/27/2007 12:00:00 AM	1257.88		8	
+1262417	1	432	LEXP	F635P3C	15~1	2	OTH	Doug Pauley				Sacramento	CA	95818		Will  Bush	Interim Director - DGS	1.68	Entertainment					
+1262417	1	451	LEXP	F635P3C	15~20	2	OTH	Doug Pauley				Sacramento	CA	95818		Rita Hamilton	Deputy Director-DGS	1.68	Entertainment					
+1262548	2	79	LEXP	F635P3C	RP203	2	OTH	Asante Catering				Sacramento	CA	95820		David Cox	Senator	9.91	Lunch					
+1262071	1	5	LEXP	F635P3C	RP6	2	OTH	Timbers Restaurant and Steakhouse				Corning	CA	96021		Dr. Deborah Malumed	Spouse to Senator Alan Lowenthal	15.50	Dinner					
+1283457	0	35	LEXP	F635P3C	3~26	2	OTH	Bagel Cafe				Martinez	CA			Beverly Hodge	Caltrans	7.81	Lunch					
+1284134	0	78	LEXP	F635P3C	14889	1	OTH	Griselda's Catering/State Capitol Museum/State of California				Sacramento	CA	95814		Elizabeth Delgado	Office of Assemblymember Hector De La Torre	5.60	Legislative Reception	5/16/2007 12:00:00 AM	0			
+1262417	2	217	LEXP	F635P3C	10~51	2	OTH	Brands on Sale				Cerritos	CA	90703		Steven Winkel	CA Seismic Safety Commission	0.60	a/v rental					
+1262417	2	552	LEXP	F635P3C	19~13	2	OTH	Sacramento State				Sacramento	CA	95819		Mark DeSaulnier	CA State Assembly Member	6.40	Invitations(postage, printing, design)					
+1282608	0	3	LEXP	F635P3C	11545	1	OTH	TARTS & TRUFFLES				SACRAMENTO	CA	95819		ANN BANCROFT	COMMUNICATION DIRECTOR - DEPARTMENT OF EDUCATION	12.09	LUNCH	4/18/2007 12:00:00 AM	0			
+1285610	0	2	LEXP	F635P3C	LEXP00002	1	OTH	JLC Consultant Services				Bonita	CA	91902		Tyree Dillingham	Governor's Office	19.66	Cesar Chavez Breakfast	4/2/2007 12:00:00 AM	500	N		
+1262417	2	306	LEXP	F635P3C	12~34	2	OTH	The California Museum				Sacramento	CA	95814		Joel McRonald	DGS Real Estate Services Division - Chief of seismic and special programs	6.79	Room Rental, security fees, room setup					
+1284743	0	14	LEXP	F635P3C	RP569	2	OTH	Hilton Sacramento Arden West				Sacramento	CA	95815		Clint Lorimore	Staff, Governor Schwarzenegger	36.85	Dinner					
+1262417	2	460	LEXP	F635P3C	15~29	2	OTH	Doug Pauley				Sacramento	CA	95818		Dan Levernier	Regional Manager - DSA	1.68	Entertainment					
+1262417	2	643	LEXP	F635P3C	20~51	2	OTH	BatteryBob				Miami	FL	33176		Steven Winkel	CA Seismic Safety Commission	0.05	a/v rental					
+1284134	0	153	LEXP	F635P3C	14913	1	OTH	Griselda's Catering/State Capitol Museum/State of California				Sacramento	CA	95814		Maria Garcia	Office of Assemblymember Mary Salas	5.60	Legislative Reception	5/16/2007 12:00:00 AM	0			
+1186717	2	19	LEXP	F635P3C	1~18	2	OTH	CSPA				Washington	DC	20006		Eddie Sprecco	Assembly Person Benoit's Office	1.59	Skintimate & Edge Shave Gel					
+1223520	1	7	LEXP	F635P3C	LEXP00007	2	OTH	CRRC Northern District				SACRAMENTO	CA	95814		JUDY FRIEDMAN	CIWMB ACTING DEPUTY DIRECTOR WASTE PREV & MKT DEV	8.16	CIWMB RECEPTION.  28 REPORTABLE PERSONS ATTENDING.  CRRC-SD CONTRIBUTED $8.16 PER PERSON			N		
+1261194	1	13	LEXP	F635P3C	14102	1	OTH	The Sutter Club				Sacramento	CA	95814		Hattie Hanley	Health Policy Advisor - Department of Managed Health Care	14.98	Reception and Dinner	1/23/2007 12:00:00 AM	0			
+1282327	1	31	LEXP	F635P3C	4556	1	OTH	WOOD RANCH BBQ & GRILL				CERRITOS	CA	90703		CLAUDIA ORNELAS	FIELD REPRESENTATIVE CALIFORNIA STATE ASSEMBLYMEMBER TONY MENDOZA	33.55	MEAL/BEVERAGE	5/31/2007 12:00:00 AM	67.10			
+1262470	4	110	LEXP	F625P3A	46~109	2	OTH	APS International				San Francisco	CA	94105		Edward Vincent	Senator	4.52	Coffee Mug					
+1262470	4	53	LEXP	F625P3A	46~52	2	OTH	APS International				San Francisco	CA	94105		Pedro Nava	Assembly Member	4.52	Coffee Mug					
+1296683	0	4	LEXP	F635P3C	LEXP00004	1	OTH	DEL MAR THOROUGHBRED CLUB				DEL MAR	CA	92014		SHAUN FLANIGAN	CHIEF OF STAFF, GEORGE PLESCIA OFFICE	170	DIRECTORS ROOM $100.00, LUNCH $50.00, VALET PARKING $20.00	7/18/2007 12:00:00 AM	170	N		
+1297541	0	1	LEXP	F615P1	1	1	OTH	O'Deli Cafeteria				Sacramento	CA	95814						7/18/2007 12:00:00 AM	294.16		1	
+1260453	2	3	LEXP	F635P3C	RP3	2	OTH	Strawberry Lodge				Strawberry	CA	95720		Kaesa Aanestad	Daughter of Assm. Aanestad	256.15	Ski Event & Reception					
+1167956	3	28	LEXP	F635P3C	2607	1	OTH	ARCO Arena				Sacramento	CA	95834		Tony Beard	Chief Senate Sergeant at Arms	100.07	1 Concert ticket, Suite expense for 1 guest	2/2/2006 12:00:00 AM	0			
+1216680	1	4	LEXP	F635P3C	2787	1	OTH	ARCO Arena				Sacramento	CA	95834		Rick Battson	Chief of Staff to Sen. Joe Dunn	147.40	1 Concert ticket; Parking pass; Suite expense for 1 guest	8/12/2006 12:00:00 AM	1119.20			
+1296172	0	4	LEXP	F625P3A	1371	1	OTH	Magnolia Grill				Sacramento	CA	95814		see Attachment III B		13.20	2 dozen cookies	9/5/2007 12:00:00 AM	1623.60			
+1262548	3	70	LEXP	F635P3C	RP193	2	OTH	Asante Catering				Sacramento	CA	95820		Michael Villines	Assembly Member	9.91	Lunch					
+1312402	0	39	LEXP	F635P3C	15942	1	OTH	Embassy Suites Hotel				South Lake Tahoe	CA	96150		John Kennedy	Assembly Republican Caucus	49	Lunch & policy issue briefing on energy efficiency programs.	10/18/2007 12:00:00 AM	0			
+1296100	1	1	LEXP	F635P3C	15736	1	OTH	Spataro Restaurant				Sacramento	CA	95814		Ron Sanui	Pharmacy Consultant Managed Medi-Cal	17.13	Lunch	9/13/2007 12:00:00 AM	17.13			
+1311386	0	83	LEXP	F635P3C	7~82	2	OTH	See's Candy				Sacramento	Ca	95814		The Staff of and Todd Spitzer	Legislature	29.00	Candy					
+1262053	1	61	LEXP	F635P3C	RP134	2	OTH	Ambrosia Fine Food				Sacramento	CA	95815		Sande Monagan	Chief Executive Dir, California Grown	54.21	Legislative Reception					
+1282327	2	37	LEXP	F635P3C	4577	1	OTH	PIATTI RISTORANTE & BAR				SACRAMENTO	CA	95825		CAMILLE COTO	SPOUSE OF JOE COTO CALIFORNIA STATE ASEMBLYMEMBER	68.86	MEAL/BEVERAGE	6/4/2007 12:00:00 AM	0			
+1312019	0	54	LEXP	F635P3C	RP358	2	OTH	Fairmont Sonoma Mission Inn & Spa				Sonoma	CA	95476		Nettie Sabelhaus	Director of Appts, Secty of Senate	62.08	Cocktail Reception					
+1309602	0	3	LEXP	F635P3C	RP176	2	OTH	Calpine Corporation				San Jose	CA	95113		Emily Towner	Scheduler, Senator Denham	49.78	Food & Transportation					
+1309602	0	10	LEXP	F635P3C	RP183	2	OTH	Calpine Corporation				San Jose	CA	95113		Kellie Smith	Consultant, Sen Energy, Utilities & Comm	49.78	Food & Transportation					
+1262053	1	129	LEXP	F635P3C	P3C59	1	OTH	Wine Institute				San Francisco	CA	94105		Betty Karnette	Assemblymember	7.08	Wine	3/9/2007 12:00:00 AM	7.08			
+1312402	0	155	LEXP	F635P3C	15830	1	OTH	Murphys Historic Hotel				MURPHYS	CA	95247		Melanie Gutierrez	Senate Energy Committee	66	Nights Lodging	10/16/2007 12:00:00 AM	0			
+1277698	1	129	LEXP	F635P3C	2~128	2	OTH	CSPA				Washington	DC	20006		Assembly Member Maze	Assembly Member	1.59	Skintimate & Edge Shave Gel					
+1308333	0	1	LEXP	F615P1	16165	1	OTH	PAESANO'S				SACRAMENTO	CA	95814		CHIOS HOLGUIN	SPECIAL CONSULTANT TO THE ASSEMBLY DEMOCRATIC CAUCUS	9.64	'LUNCH'	12/18/2007 12:00:00 AM	19.28			
+1262053	1	198	LEXP	F635P3C	P3C128	1	OTH	Wine Institute				San Francisco	CA	94105		Leland Yee	Senator	7.08	Wine	3/9/2007 12:00:00 AM	7.08			
+1329137	1	25	LEXP	F635P3C	6~3	2	OTH	Neumann Limosine				Sacramento	CA	95815		Jim Battin	State Senator	56.25	Transportation					
+1351215	0	30	LEXP	F635P3C	12659	1	OTH	ENTERPRISE RENT-A-CAR				SACRAMENTO 	CA	95814		KELLIE SMITH	CONSULTANT, SENATE COMMITTEE ON ENERGY, UTILITIES AND COMMUNICATIONS	39.70	TRANSPORTATION TO DIABLO CANYON POWER PLANT	5/9/2008 12:00:00 AM	0			
+1351215	0	37	LEXP	F635P3C	12666	1	OTH	PEET'S COFFEE & TEA				SAN FRANCISCO	CA	94111		DAVE ALEXANDER	DWR, SETTLEMENTS MANAGER	1.50	BEVERAGES PROVIDED AT MEETING	5/22/2008 12:00:00 AM	22.50			
+1330284	0	5	LEXP	F635P3C	P3C275	1	OTH	BJ's Moreno Valley				Moreno Valley	CA	92553		Kelly Battin	Senior Field Rep, Senator Battin	12.13	Lunch	3/26/2008 12:00:00 AM	24.26			
+1328101	0	1	LEXP	F635P3C	P3C15	1	OTH	Frank Fat's				Sacramento	CA	95814		Julio Martinez	Staff, Assm. Eng	60.92	Reception	3/11/2008 12:00:00 AM	24126.48		P3C15	
+1327049	0	1	LEXP	F635P3C	14312	1	OTH	IL FORNAIO				PASADENA	CA	91103		SEE ATTACHMENT A	SEE ATTACHMENT A	110.53	DINNER	3/6/2008 12:00:00 AM	1436.85			
+1327173	0	2	LEXP	F615P1	14187	1	OTH	MIKUNI'S 				SACRAMENTO	CA	95814		PAUL HEGYI	CHIEF OF STAFF, ASB. VAN TRAN	9.01	LUNCH	1/29/2008 12:00:00 AM	36.02			
+1329076	0	5	LEXP	F615P1	16214	1	OTH	Hyatt Regency				Sacramento	CA	95814		Benjamin Palmer	Sen Judiciary Comm	1.25	'Refreshments'	3/27/2008 12:00:00 AM	1.25			
+1328503	0	1	LEXP	F615P1	16643	1	OTH	Esquire Grill				Sacramento	CA	95814	B of A VISA	John Laird	Assemblyman	9.50	'Dinner'	2/13/2008 12:00:00 AM	238.96			
+1329329	0	6	LEXP	F635P3C	4888	1	OTH	SACRAMENTO KINGS LIMITED PARTNERSHIP				SACRAMENTO	CA	95834		MATT CARLOCK	SENATE SPECIAL SERVICES 	94.50	MEAL/BEVERAGE/ TICKET/PARKING	2/6/2008 12:00:00 AM	194			
+1329065	0	8	LEXP	F635P3C	16613	1	OTH	The Broiler				Sacramento	CA	95814		Denise Moreno Ducheny	Senator	16.16	Lunch	2/4/2008 12:00:00 AM	77.58			
+1329349	0	4	LEXP	F615P1	4893	1	OTH	QDOBA MEXICAN GRILL				SACRAMENTO	CA	95834		BILL CARDOZA	CONSULTANT BOARD OF EQUALIZATION MEMBER BILL LEONARD	8.97	MEAL/BEVERAGE	2/29/2008 12:00:00 AM	17.94			
+1326339	1	17	LEXP	F635P3C	13~11	2	OTH	Sutter Club				Sacramento	CA	95814		Anthony Adams	Assembly Member	30.00	Legislative Reception					
+1328814	0	1	LEXP	F635P3C	4	1	OTH	Spataro Restaurant				Sacramento	CA	95814		See Attached List	See Attached List	49.59	Reception	3/25/2008 12:00:00 AM	9967.69		4	
+1307049	1	7	LEXP	F635P3C	3~5	2	OTH	LunchStop				Oakland	CA	94607		Russ Sweeden	Caltrans	8.65	Lunch					
+1349372	0	197	LEXP	F635P3C	3~196	2	OTH	Griselda's Ventures				Sacramento	CA	95814		Nicole Vazquez	Staffer - Assemblymember Laird	9.79	PCPC Legislative Reception					
+1348175	0	28	LEXP	F635P3C	12~18	2	OTH	Sacramento Convention Center				Sacramento	CA	95814		Fredericka McGee	Legal Counsel, Office of Assembly Member Bass	35.01	African American Caucus Luncheon					
+1351215	0	50	LEXP	F635P3C	12679	1	OTH	PG&E CONFERENCE RM. 1410				SAN FRANCISCO	CA	94105		CLAIRE EUSTACE	CALIFORNIA PUBLIC UTILITIES COMMISSION	0.40	FACILITIES COST	6/5/2008 12:00:00 AM	10			
+1328049	1	83	LEXP	F635P3C	LEXP00083	2	OTH	California Rice Commission				Sacramento	CA	95826		Dave Jones	Assembly Member	19.07	RICE GIFT BOX - 90 boxes @ $19.07 each			N		
+1329622	1	14	LEXP	F635P3C	12379	1	OTH	SAN JOSE CHAMBER OF COMMERCE				SAN JOSE	CA	95113		DIANA BAUTISTA	FIELD REPRESENTATIVE, SENATOR ABEL MALDONADO	35.00	LUNCH EVENT HELD AT FAIRMONT HOTEL, SAN JOSE	1/24/2008 12:00:00 AM	35			
+1349372	0	105	LEXP	F635P3C	3~104	2	OTH	Griselda's Ventures				Sacramento	CA	95814		Timothy Lippman	Staffer - Assemblymember Brownley	9.79	PCPC Legislative Reception					
+1349937	0	13	LEXP	F635P3C	5088	1	OTH	FAMOUS DAVE'S BBQ				RANCHO CUCAMONGA	CA	91730		NAN RIDER	DISTRICT DIRECTOR CALIFORNIA STATE ASSEMBLYMEMBER BILL EMMERSON	12.21	MEAL/BEVERAGE	5/28/2008 12:00:00 AM	24.42			
+1348064	0	53	LEXP	F635P3C	3~15	2	OTH	Bailey Hat Company				Atlanta	GA	31193		Doug LaMalfa	Assemblymember	20.00	hat					
+1350783	0	1	LEXP	F615P1	14697	1	OTH	MAGNOLIA GRILL				SACRAMENTO	CA	95814		GENE WONG, CHIEF COUNCIL	SENATE JUDICIARY	8.91	LUNCH	5/30/2008 12:00:00 AM	133.65			
+1347750	0	1	LEXP	F635P3C	LEXP00001	1	OTH													6/30/2008 12:00:00 AM	21232	N		
+1349372	0	32	LEXP	F635P3C	3~31	2	OTH	Griselda's Ventures				Sacramento	CA	95814		Joe Cotto	Assemblymember	9.79	PCPC Legislative Reception					
+1377420	0	113	LEXP	F635P3C	12~11	2	OTH	Lunch Stop				Oakland	CA	94607		Ed Whitby	CHP	9.00	Lunch					
+1351409	0	79	LEXP	F635P3C	3~78	2	OTH	Reckitt Benckiser, Inc.				Parsippany	NJ	07054		Lina Hamilton	Staffer - Senator Correa	7.50	PCPC reception gift bag					
+1351409	0	85	LEXP	F635P3C	3~84	2	OTH	Reckitt Benckiser, Inc.				Parsippany	NJ	07054		Ed Hernandez	Assemblymember	7.50	PCPC reception gift bag					
+1350600	1	4	LEXP	F635P3C	2413	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		The Honorable Tom Harman	Senator, State of California	376.00	Disneyland parkhopper tickets	5/19/2008 12:00:00 AM	376			
+1350600	1	9	LEXP	F635P3C	2402	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Derrick Mims	District Director, Assemblymember Warren Furitani	82.92	Prince Caspian Screening	5/22/2008 12:00:00 AM	82.92			
+1367399	0	15	LEXP	F615P1	2~7	2	OTH	Taste of Thai				Sacramento	CA	95818		Kimberly Craig	Staff to Sen. Ducheny	8.99	lunch					
+1376875	0	2	LEXP	F635P3C	17422	1	OTH	Subway				Davis	CA	95616		Chloe Lukins	California Public Utilities Commission	5.07	Lunch	10/17/2008 12:00:00 AM	5.07			
+1374771	0	37	LEXP	F635P3C	1011	1	OTH	Mason's				Sacramento	CA	95814		Christine Kehoe	Senator	52.60	Reception	8/12/2008 12:00:00 AM	0			
+1377532	0	4	LEXP	F635P3C	3~1	2	OTH	Wynn Hotel				Las Vegas	NV	89109		Dale Banda	Deputy Commissioner, CA Department of Insurance	378.00	Lodging					
+1378230	0	137	LEXP	F625P3A	17362	1	IND	Capital Confections				Sacramento	CA	95821		Charlie Fennessey	Ofc of Sen. George Runner	5.71	Candy	8/18/2008 12:00:00 AM	0			
+1378230	0	146	LEXP	F625P3A	17381	1	IND	Capital Confections				Sacramento	CA	95821		Tora Dias	Ofc of Sen. Patricia Wiggins	5.00	Candy	8/18/2008 12:00:00 AM	0			
+1351409	0	326	LEXP	F635P3C	4~107	2	OTH	Griselda's Catering				Sacramento	CA	95814		Susan McEntire	Staffer - Assemblymember Ruskin	9.43	CSPA Legislative Day					
+1377420	0	101	LEXP	F635P3C	11~1	2	OTH	Sierra Deli & Market				Oakland	CA	94607		Joanne McDermott	Caltrans	10.88	Refreshment					
+1350543	2	13	LEXP	F635P3C	4~12	2	OTH	Marian Dalsey				Sacramento	CA	95814		Mia Orr	Legislative Staff	67.85	pro rata share of catered event					
+1378021	0	9	LEXP	F635P3C	2401	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Carol Liu	Candidate, California State Senate	29.93	Lunch	9/10/2008 12:00:00 AM	29.93			
+1378063	0	3	LEXP	F635P3C	5~1	2	OTH	La Bou Delivers				Sacramento	CA	95820		Don Harris	OSHPD	15.84	Lunch					
+1371268	1	35	LEXP	F635P3C	RP58	2	OTH	Vintage Steakhouse				Coarsegold	CA	93614		Joan Buchanan	Candidate, Assembly Member	63.92	Dinner					
+1346152	1	52	LEXP	F635P3C	965	1	OTH	Sheraton Grand				Sacramento	CA	95814		Kip Lipper	Consultant, Senate Rules Comte.	33.76	Dinner	4/30/2008 12:00:00 AM	0			
+1346152	1	75	LEXP	F635P3C	931	1	OTH	Sheraton Grand				Sacramento	CA	95814		Judy Chu	Member, SBOE	108.76	Dinner	4/30/2008 12:00:00 AM	0			
+1394977	0	2	LEXP	F635P3C	1~1	2	OTH	Corner Bakery				Santa Ana	CA	92705		Samantha Fitzgerald	District Director, Office of Assembly Member Todd Spitzer	9.88	Lunch					
+1312144	1	14	LEXP	F635P3C	RP367	2	OTH	Fairmont Sonoma Mission Inn & Spa				Sonoma	CA	95476		Erin Niemela	Chief of Staff, Senator Perata	194.25	Lodging					
+1395834	2	5	LEXP	F635P3C	6	1	OTH	The Fairmont San Francisco				San Francisco	CA	94108				0.00		11/8/2008 12:00:00 AM	2099.25		6	
+1398375	0	26	LEXP	F635P3C	4723	1	OTH	Sacramento Magazine Corp.				Sacramento	CA	95819		Tara Andress	Legislative Director to Senator Wiggins	75.00	Ticket to Best of Sacramento 2008 Party	12/4/2008 12:00:00 AM	1275			
+1393303	3	64	LEXP	F635P3C	15~2	2	OTH	Pennisi's Deli				Sacramento	CA	95814		Jennifer Grutzius	CA Bus, Transp & Housing Agency	15.82	Lunch					
+1298053	1	4	LEXP	F635P3C	LEXP00004	2	OTH	Dal Rae Restaurant				Pico Rivera	CA	92806	MASTERCARD	Gil Cedillo Jr.	District Director	39.11	Food & Bev.			N		
+1395834	2	49	LEXP	F635P3C	12~2	2	OTH	Wine & Roses				Lodi	CA	95242		Mark DeSaulnier	Senator	159.14	Dinner					
+1312144	1	78	LEXP	F635P3C	RP433	2	OTH	Fairmont Sonoma Mission Inn & Spa				Sonoma	CA	95476		Barbara Guido	Office Mgr, Sen. Perata	40.00	Valet					
+1398253	0	6	LEXP	F635P3C	RP88	2	OTH	Chukchansi Gold Resort & Casino				Coarsegold	CA	93614		Bill Berryhill	Assembly Member	71.20	Food & Beverages					
+1393303	2	10	LEXP	F635P3C	9~9	2	OTH	Costco				Sacramento	CA	95815		Josh Eddy	CA Dept of Food & Ag	1.85	Reception Drinks					
+1393303	2	12	LEXP	F635P3C	9~11	2	OTH	Costco				Sacramento	CA	95815		Jennifer Gibbons	Office of Assm Villines	1.85	Reception Drinks					
+1397740	0	16	LEXP	F635P3C	2496	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		The Honorable Tony Strickland	Senator, State of California	256.00	Disneyland tickets	12/11/2008 12:00:00 AM	256			
+1397740	0	26	LEXP	F635P3C	2506	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Arwen Chenery	Chief of Staff, Senator Jack Scott	26.19	Lunch	11/21/2008 12:00:00 AM	26.19			
+1398340	0	1	LEXP	F635P3C	5336	1	OTH	FIM CAFE				BEVERLY HILLS	CA	90210		FRAN PAVLEY	CALIFORNIA STATE SENATOR	19.00	MEAL & BEVERAGE	11/21/2008 12:00:00 AM	630			
+1312019	1	51	LEXP	F635P3C	RP356	2	OTH	Fairmont Sonoma Mission Inn & Spa				Sonoma	CA	95476		Barbara Guido	Office Mgr, Sen. Perata	62.08	Cocktail Reception					
+1395834	1	18	LEXP	F635P3C	9	1	OTH	Wine & Roses				Lodi	CA	95242		Elaine Alquist	Senator	151.51	Hotel Room	12/2/2008 12:00:00 AM	4895.40		9	
+1422195	0	68	LEXP	F635P3C	4~19	2	OTH	Sutter Club				Sacramento	CA	95814		Michael Duvall	Assemblymember	20.00	breakfast					
+1436073	1	45	LEXP	F635P3C	7~13	2	OTH	Sierra Market & Deli				Oakland	CA	94607		Dina Noel	CTC	8.30	Lunch					
+1436073	1	48	LEXP	F635P3C	9~1	2	OTH	La Bou				Sacramento	CA	95814		Tony Anziano	Caltrans	6.56	Lunch					
+1421317	0	6	LEXP	F635P3C	RP339	2	OTH	Sutter Club				Sacramento	CA	95814		Loni Hancock	Senator	59.11	Reception					
+1420539	0	2	LEXP	F635P3C	P3C94	1	OTH	The Grove Steakhouse				Alpine	CA	91901		Rich Grosch	Staff Member, Assembly Member Block	37.11	Lunch	1/20/2009 12:00:00 AM	445.34		P3C94	
+1284708	4	1	LEXP	F635P3C	976	1	OTH	CHEVRON CORPORATION AND ITS SUBSIDIARIES				San Ramon	CA	94583		Marina Voskanian	Chief of Planning and Development, California State Lands Commission	100.00	Local transportation in Dhaka.	5/13/2007 12:00:00 AM	100			
+1421832	0	1	LEXP	F635P3C	18941	1	OTH	Spataro Restaurant				Sacramento 	CA	95814		Alyson Huber	Assembly Member	37.09	California Legislative Women's Caucus Reception	1/6/2009 12:00:00 AM	853.05			
+1419166	0	80	LEXP	F635P3C	LEXP00080	2	OTH	California Citrus Mutual				EXETER	CA	93221		Patricia Wiggins	Senator	5.5	Cartons of oranges.  152 cartons to 117 recipients at $5.50 per carton			N		
+1419984	0	16	LEXP	F635P3C	6~9	2	OTH	Mason's				Sacramento	CA	95814		Paul Fong	CA Assemblyman	22.93	Food and Beverage					
+1377480	1	1	LEXP	F635P3C	17216	1	OTH	Ella Dining Room and Bar				Sacramento	CA	95814		Ron Sanui 	Senior Consultant Pharmacist Department of Health Services	30.00	Lunch meeting	8/13/2008 12:00:00 AM	90.31			
+1421845	0	12	LEXP	F635P3C	2~11	2	OTH	Sacramento Kings				Sacramento	CA	95834		Ethan Jones	Staff, Assm. Comm. on Elections and Redistricting	155.42	Dinner					
+1393303	5	28	LEXP	F635P3C	12~5	2	OTH	SeaWorld of CA				San Diego	CA	92109		Nathan Fletcher	Assemblymember	121.37	Dinner					
+1422195	0	13	LEXP	F635P3C	3~6	2	OTH	Bailey Hat Company				Atlanta	GA	31193		Connie Conway	Assemblymember	20.00	hat					
+1422195	0	47	LEXP	F635P3C	3~40	2	OTH	Bailey Hat Company				Atlanta	GA	31193		Jennifer Williams	Office of Assemblymember Roger Niello	20.00	hat					
+1422284	1	27	LEXP	F635P3C	19069	1	OTH	Amgen Tour of California				Thousand Oaks	CA	91320		Ted Gaines	Assembly Member	300	Reception/Dinner	2/12/2009 12:00:00 AM	0			
+1430505	0	6	LEXP	F635P3C	1687	1	OTH	Rayna's Gourmet Catering				Sacramento	CA	95824		Muriel Johnson	Director	0.00	Food & Drink	3/17/2009 12:00:00 AM	0			
+1436310	0	3	LEXP	F635P3C	P3C107	1	OTH	The Grove Steakhouse				Alpine	CA	91901		Sherry Hodges	Staff Member, Assembly Member Garrick	26.95	Lunch	6/9/2009 12:00:00 AM	134.75			
+1435647	0	4	LEXP	F635P3C	1696	1	OTH	Harkey	Diane			Sacramento	CA	95814		Diane Harkey	Assemblymember	36.79	Food & Beverage	5/19/2009 12:00:00 AM	36.79			
+1421924	2	35	LEXP	F635P3C	13770	1	OTH	CALIFORNIA HEALTHCARE INSTITUTE (CHI)				LA JOLLA	CA	92037		ALBERTO TORRICO	ASSEMBLY MEMBER	16.68	RECEPTION	1/28/2009 12:00:00 AM	0			
+1422227	1	37	LEXP	F635P3C	RP108	2	OTH	Griselda's Catering				Sacramento	CA	95814		Andrew Clemmons	Staff, Assembly Member Van Tran	14.01	Ice Cream Social					
+1435762	0	38	LEXP	F635P3C	15~20	2	OTH	Pennisi's Deli				Sacramento	CA	95814		Michael Villines	Assemblymember	13.35	Lunch					
+1436353	0	1	LEXP	F615P1	P137	1	OTH	Frank Fat's				Sacramento	CA	95814		Stan Diorio	Staff Member, Senator Wright	9.50	Meal	4/10/2009 12:00:00 AM	69.15			
+1421924	2	42	LEXP	F635P3C	13796	1	OTH	CALIFORNIA HEALTHCARE INSTITUTE (CHI)				LA JOLLA	CA	92037		MARTY BLOCK	ASSEMBLY MEMBER	10.29	CALIFORNIA LIFESCIENCES DAY EVENT SPONSORSHIP	3/24/2009 12:00:00 AM	3500		13796	
+1434015	0	44	LEXP	F635P3C	13988	1	OTH	CAFE LEAH				SAN FRANCISCO	CA	94104		JUNAID RAHMIN	REGULATORY ANALYST, CALIFORNIA PUBLIC UTILITIES COMMISSION	3.13	MEAL PROVIDED AT MEETING	6/12/2009 12:00:00 AM	0			
+1418836	1	77	LEXP	F635P3C	LEXP00012~65	2	OTH	California Rice Commission				Sacramento	CA	95826		Roger Niello	Assembly Member	30.77	Gift Box					
+1396074	2	14	LEXP	F635P3C	1~13	2	OTH	ELLA DINING ROOM				SACRAMENTO	CA	95814		ALAN LOFASO	CHIEF DEPUTY, OFFICE OF BOARD OF EQUALIZATION MEMBER BETTY YEE	41.88	DINNER					
+1422227	1	226	LEXP	F635P3C	RP299	2	OTH	Griselda's Catering				Sacramento	CA	95814		Patricia Stephenson	Staff, Senate Accounting Office	14.01	Ice Cream Social					
+1393303	6	59	LEXP	F635P3C	15	1	OTH	Pennisi's Deli				Sacramento	CA	95814		Djibril Diop	Senate Comm on Asia Pac Rim	15.82	Lunch	12/9/2008 12:00:00 AM	711.75			
+1436460	0	9	LEXP	F635P3C	2576	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Cine Ivery	District Representative, Senator Rod Wright	32.79	UP - screening tickets	5/30/2009 12:00:00 AM	32.79			
+1431504	0	33	LEXP	F635P3C	6	1	OTH	Christy Sinclair				Sacramento	CA	95825		Marty Block	Assembly Member	1.25	Women's Caucus Reception	4/27/2009 12:00:00 AM	194.01			
+1434869	0	3	LEXP	F635P3C	19156	1	OTH	Frank Fat's				Sacramento	CA	95814		Jayme Chick	Chief Deputy Appointments Secretary: Governor Schwarzennegger	64.53	Dinner	7/11/1900 12:00:00 AM	193.61			
+1435762	0	135	LEXP	F635P3C	24~46	2	OTH	Classique Catering				Sacramento	CA	95814		Beverly Sandeen	Univ of CA, Davis	11.14	Breakfast					
+1419166	1	32	LEXP	F635P3C	LEXP00005~27	2	OTH	California Citrus Mutual				EXETER	CA	93221		Steve Knight	Assembly Member	5.50	Cartons of oranges.  152 cartons to 117 recipients at $5.50 per carton					
+1434015	0	3	LEXP	F635P3C	13946	1	OTH	GRANGE RESTAURANT				SACRAMENTO	CA	95814		PAUL FONG	ASSEMBLYMEMBER	41.41	DINNER	4/14/2009 12:00:00 AM	0			
+1419370	1	3	LEXP	F635P3C	17054	1	OTH	HYATT REGENCY SACRAMENTO				SACRAMENTO	CA	95814		SENATORS MALDONADO,	ASHBURN & COGDILL	114.66	LEGISLATIVE DINNER	3/16/2009 12:00:00 AM	1643.36		17054	
+1418836	2	103	LEXP	F635P3C	LEXP00012~90	2	OTH	California Rice Commission				Sacramento	CA	95826		Norma Torres	Assembly Member	30.77	Gift Box					
+1422227	2	166	LEXP	F635P3C	RP239	2	OTH	Griselda's Catering				Sacramento	CA	95814		A. Morales	Staff, Gov. Schwarzenegger	14.01	Ice Cream Social					
+1422227	2	64	LEXP	F635P3C	RP136	2	OTH	Griselda's Catering				Sacramento	CA	95814		Kevin Erickson	Staff, Assembly Member Sam Blakeslee	14.01	Ice Cream Social					
+1422227	2	190	LEXP	F635P3C	RP263	2	OTH	Griselda's Catering				Sacramento	CA	95814		Anthony Pico	Staff, Assembly Member Fiona Ma	14.01	Ice Cream Social					
+1422227	2	197	LEXP	F635P3C	RP270	2	OTH	Griselda's Catering				Sacramento	CA	95814		Kala Rathlal	Staff, Assembly Member Jim Beall Jr.	14.01	Ice Cream Social					
+1450598	0	7	LEXP	F635P3C	1097	1	OTH									Connie Conway	Assembly Member	22.28	Reception - CCTA Open House	8/26/2009 12:00:00 AM	0			
+1438799	0	86	LEXP	F635P3C	657	1	OTH	Griselda's Ventures				Sacramento	CA	95814		Cynthia Gonzalez	Staffer - Senator Calderon	14.23	PCPC Legislative Reception - food & reuseable bag	4/1/2009 12:00:00 AM	0			
+1435762	1	33	LEXP	F635P3C	15~15	2	OTH	Pennisi's Deli				Sacramento	CA	95814		Jean Fuller	Assemblymember	13.35	Lunch					
+1437519	1	2	LEXP	F635P3C	6	1	OTH	Images in Chocolate				Houston	TX	77032				0.00		5/13/2009 12:00:00 AM	2201.40		6	
+1438474	0	31	LEXP	F635P3C	P3C408	1	OTH	MWD Gene Camp				Parker Dam	CA	92267		Tim Patton	Legislative Assistant, Assm. Lowenthal	9.00	Breakfast (5/1/09 - 5/3/09)	5/1/2009 12:00:00 AM	207			
+1438474	0	33	LEXP	F635P3C	P3C410	1	OTH	MWD Gene Camp				Parker Dam	CA	92267		Tim Patton	Legislative Assistant, Assm. Lowenthal	20.00	Dinner (5/1/09 - 6/3/09)	5/1/2009 12:00:00 AM	460			
+1453060	0	224	LEXP	F635P3C	5~28	2	OTH	Lunch Stop				Oakland	CA	94607		Ravi Kundra	Caltrans	18.66	Lunch					
+1453060	0	232	LEXP	F635P3C	5~36	2	OTH	Lunch Stop				Oakland	CA	94607		Sandy Michelotti	Caltrans	18.66	Lunch					
+1453060	0	264	LEXP	F635P3C	5~68	2	OTH	Lunch Stop				Oakland	CA	94607		Charles Hazelwood	Caltrans	18.66	Lunch					
+1435762	2	82	LEXP	F635P3C	22~5	2	OTH	Kautz Ironstone Vineyards				Lodi	CA	95240		Eloisa Klementich	Asst Dep Sec, CA Bus Transp & Housing	5.99	Drinks					
+1451847	0	7	LEXP	F615P1	1~6	2	OTH	Gallagher's Irish Pub				Sacramento	CA	95814		Greg Hurner	Member Hollingsworth Staff	10.00	Food/Beverage					
+1436930	1	5	LEXP	F635P3C	3~4	2	OTH	Spataro Restaurant				Sacramento	CA	95814		Mark Wyland	Senator	176.90	Meal and beverages at dinner event.					
+1435762	1	94	LEXP	F635P3C	24~5	2	OTH	Classique Catering				Sacramento	CA	95814		Mary Beth Barber	Arts Council of CA	11.14	Breakfast					
+1435762	2	141	LEXP	F635P3C	24~52	2	OTH	Classique Catering				Sacramento	CA	95814		Mark Weatherford	CA Office of Information Security & Privacy	11.14	Breakfast					
+1435361	1	20	LEXP	F635P3C	1045	1	OTH	Sheraton Grand				Sacramento	CA	95814		Michelle Kim	Office Assistant, Senator Yee	63.23	Reception	5/4/2009 12:00:00 AM	0			
+1452258	1	5	LEXP	F635P3C	5~4	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Kevin Jeffries	Assembly Member	410.00	airport parking and shuttle services					
+1453060	0	1047	LEXP	F635P3C	13~75	2	OTH	Lunch Stop				Oakland	CA	94607		Constance Wood	Caltrans	18.66	Breakfast					
+1329564	1	2	LEXP	F635P3C	3~1	2	OTH	Friant Water Authority				Lindsay	CA	93247		Brenda Quintana	Special Advisor to Governor	26.54	gift					
+1459718	0	1	LEXP	F615P1	1	1	OTH	Ashley Carrera				Sacramento	CA	95814						10/15/2009 12:00:00 AM	10			
+1452258	2	8	LEXP	F635P3C	5~7	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Joseph Travaglione	Member, CA Trans Commission	30.00	airport parking and shuttle services					
+1453060	0	659	LEXP	F635P3C	9~75	2	OTH	Lunch Stop				Oakland	CA	94607		Mark Bester	Caltrans	18.66	Dinner					
+1453060	0	900	LEXP	F635P3C	12~25	2	OTH	Lunch Stop				Oakland	CA	94607		Carlos Marin	Caltrans	18.66	dinner					
+1438799	1	169	LEXP	F635P3C	745	1	OTH	Griselda's Ventures				Sacramento	CA	95814		Danielle Williams	Staffer - Senator Ashburn	14.23	PCPC Legislative Reception - food & reuseable bag	4/1/2009 12:00:00 AM	0			
+1346152	2	53	LEXP	F635P3C	923	1	OTH	Senator Hotel Building				Sacramento	CA	95814		Gina Zira	Chief of Staff to Asm. Mimi Walters	52.98	Reception	4/30/2008 12:00:00 AM	0			
+1453268	0	30	LEXP	F635P3C	4951	1	OTH	Arco Arena				Sacramento	CA	95834		Scott Allen	Assembly Fellow to Assemblywoman Carter	140.72	Ticket to Green Day Concert & Refreshments	8/24/2009 12:00:00 AM	2814.40			
+1436083	1	1	LEXP	F635P3C	217	1	OTH	Sea World San Diego				San Diego	CA	92109		Greg Schmidt	Secretary of the Senate	240.00	Tickets to park	4/16/2009 12:00:00 AM	240			
+1463513	0	82	LEXP	F635P3C	19939	1	OTH	Penguins Catering				Auburn	CA	95604		Theresa Schilling	Wiggins Office of Senator	17.00	Lunch and presentation from Placer County Water Agency (PCWA)	10/8/2009 12:00:00 AM	0			
+1453012	1	5	LEXP	F635P3C	17259	1	OTH	FREDENSBORG STORE KRO AND HOTEL SLOTSGADE 6								SEE ATTACHMENT 'F'		62.91	LUNCH	9/27/2009 12:00:00 AM	629.10			
+1419516	1	2	LEXP	F635P3C	2	1	OTH	State Capital Museum				Sacramento	CA					0.00		2/1/2009 12:00:00 AM	96		2	
+1462122	0	3	LEXP	F635P3C	2~2	2	OTH	American Express				Highland	CA	92346		Sherry Leonard	Spouse	12.57	Food and Beverage					
+1453060	0	512	LEXP	F635P3C	8~25	2	OTH	Lunch Stop				Oakland	CA	94607		Carlos Marin	Caltrans	18.66	Lunch					
+1453060	0	760	LEXP	F635P3C	10~79	2	OTH	Lunch Stop				Oakland	CA	94607		Allen Jackson	Caltrans	18.66	Breakfast					
+1453060	0	1020	LEXP	F635P3C	13~48	2	OTH	Lunch Stop				Oakland	CA	94607		Glynn Suratos	Caltrans	18.66	Breakfast					
+1453060	0	1259	LEXP	F635P3C	15~92	2	OTH	Lunch Stop				Oakland	CA	94607		S. Dexter	CHP	18.66	Dinner					
+1453139	0	18	LEXP	F635P3C	14155	1	OTH	LOBBY LOUNGE, INN AT SPANISH BAY				PEBBLE BEACH	CA	95814		ALEX PADILLA	STATE SENATOR	18.84	REFRESHMENTS	7/25/2009 12:00:00 AM	0			
+1438799	1	90	LEXP	F635P3C	662	1	OTH	Griselda's Ventures				Sacramento	CA	95814		Carol Thomas	Staffer - Senate Health	14.23	PCPC Legislative Reception - food & reuseable bag	4/1/2009 12:00:00 AM	0			
+1438799	1	237	LEXP	F635P3C	813	1	OTH	Griselda's Ventures				Sacramento	CA	95814		Sally Kay	Staffer - Assemblymember Blakeslee	14.23	PCPC Legislative Reception - food & reuseable bag	4/1/2009 12:00:00 AM	0			
+1465616	0	34	LEXP	F635P3C	5623	1	OTH	UNITED STATES CAPITOL HISTORICAL SOCIETY				WASHINGTON	DC	20002		JULIA BROWNLEY	CALIFORNIA STATE ASSEMBLYMEMBER	16.50	HOLIDAY ORNAMENT	12/17/2009 12:00:00 AM	0			
+1395834	4	18	LEXP	F635P3C	9	1	OTH	Wine & Roses				Lodi	CA	95242		Elaine Alquist	Senator	151.51	Hotel Room	12/2/2008 12:00:00 AM	4895.40			
+1465655	1	63	LEXP	F635P3C	5045	1	OTH	Omni Hotel				San Diego	CA	92101		Laura Jimenez	District Representative to Assemblyman Hernandez	30.00	Lunch - AT&T Network Disaster Recovery Exercise	10/20/2009 12:00:00 AM	0			
+1465655	1	65	LEXP	F635P3C	5047	1	OTH	Omni Hotel				San Diego	CA	92101		Deanna Spehn	Policy Director to Senator Kehoe	30.00	Lunch - AT&T Network Disaster Recovery Exercise	10/20/2009 12:00:00 AM	0			
+1374771	2	12	LEXP	F635P3C	986	1	OTH	Mason's				Sacramento	CA	95814		Sandre Swanson	Assembly Member	52.60	Reception	8/12/2008 12:00:00 AM	0			
+1397963	2	1	LEXP	F635P3C	2512	1	OTH	Jonathan Club				Los Angeles	CA	90071		Steve Poizner	Insurance Commissioner	49.00	Lunch	12/4/2008 12:00:00 AM	806.25			
+1421627	1	25	LEXP	F635P3C	13760	1	OTH	CALIFORNIA HEALTHCARE INSTITUTE (CHI)				LA JOLLA	CA	92037		BRIAN NESTANDE	ASSEMBLY MEMBER	16.68	RECEPTION	1/28/2009 12:00:00 AM	0			
+1465212	0	1	LEXP	F635P3C	P3C31	1	OTH	Amazon.com								Darrell Steinberg	Senator	25.00	Helicopter Memento	12/4/2009 12:00:00 AM	25			
+1435361	3	18	LEXP	F635P3C	1043	1	OTH	Sheraton Grand				Sacramento	CA	95814		Robert Huff	Senator	63.23	Reception	5/4/2009 12:00:00 AM	0			
+1465547	0	17	LEXP	F635P3C	14272	1	OTH	LIGHTENING FOODS				SAN FRANCISCO	CA	94105		PAUL DOUGLASS	REGULATORY ANALYST, CPUC	6.98	LUNCH PROVIDED AT MEETING	10/21/2009 12:00:00 AM	273.39			
+1148758	3	16	LEXP	F635P3C	1387	1	OTH	Town Bar & Grill				Dublin 2, Ireland				Michael Peevey	President, CPUC	79.64	meal 	10/3/2005 12:00:00 AM	0			
+1482793	0	30	LEXP	F635P3C	4~15	2	OTH	Classique Catering				Sacramento	CA	98514		Mengjun He	Legal Advisor	19.58	Breakfast					
+1465340	1	5	LEXP	F635P3C	5554	1	OTH	QUALCOMM STADIUM				SAN DIEGO	CA	92108		CURT HAGMAN	CALIFORNIA STATE ASSEMBLYMEMBER	420.00	TICKETS TO HOLIDAY BOWL/MEALS/BEVERAGES	12/30/2009 12:00:00 AM	0			
+1464161	2	1	LEXP	F635P3C	17633	1	OTH	MAS MEXICAN FOOD				ROSEVILLE	CA	95661		HECTOR DE LA TORRE	ASSEMBLY MEMBER	20.89	LUNCH	12/15/2009 12:00:00 AM	41.77			
+1421924	5	19	LEXP	F635P3C	13754	1	OTH	CALIFORNIA HEALTHCARE INSTITUTE (CHI)				LA JOLLA	CA	92037		JERRY HILL	ASSEMBLY MEMBER	16.68	RECEPTION	1/28/2009 12:00:00 AM	0			
+1482097	0	109	LEXP	F635P3C	LEXP00109	2	OTH	Sheraton Grand Sacramento				Sacramento	CA	95814		MaryLou Verder-Carlos	Department of Pesticide Regualation	23.22	meal			N		
+1436073	2	56	LEXP	F635P3C	9~9	2	OTH	La Bou				Sacramento	CA	95814		Jon Tapping	Caltrans	6.56	Lunch					
+1436073	2	73	LEXP	F635P3C	13~7	2	OTH	Boudin Bakery				San Francisco	CA			Ramin Bolourchian	Caltrans	13.83	Lunch					
+1452258	6	7	LEXP	F635P3C	5~6	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		John Benoit	Senator	130.00	airport parking and shuttle services					
+1462826	1	11	LEXP	F635P3C	17989	1	OTH	STATE FARM INSURANCE COMPANIES				SACRAMENTO	CA	95814		JOSE SOLORIO	ASSEMBLYMEMBER	275.00	BOWL GAME TICKET	1/7/2010 12:00:00 AM	0			
+1485646	0	6	LEXP	F635P3C	4~4	2	OTH	Bailey Hat Company				Atlanta	GA	311933738		Cris Forsyth	Office of Assemblyman Jim Beall	20.00	Hat					
+1502694	0	17	LEXP	F635P3C	2~16	2	OTH	CLCV Education Fund				Oakland	CA	94612		Paul Fong	Assemblymember	2.00	food/beverage					
+1501767	0	1	LEXP	F635P3C	20755	1	IND	McDonald's Salad Day				Sacramento	CA	95814		Aaron Karp	Office of the Governor	3.68	Luncheon	5/12/2010 12:00:00 AM	0			
+1484236	0	19	LEXP	F635P3C	2~18	2	OTH	Centerplate/Classique Catering (American Express)				Sacramento	CA	95814		Andi Lane	member/staff	54.78	food/drink					
+1485040	0	16	LEXP	F635P3C	RP418	2	OTH	Sutter Club				Sacramento	CA	95814		Greg Hurner	Staff, Senator Hollingsworth	57.49	Reception					
+1504239	0	17	LEXP	F635P3C	13~16	2	OTH	Citizen Hotel				Sacramento	CA	95814		Paul Hegyi	Office of Assembly Member Van Tran	37.40	reception food and beverages					
+1485792	1	70	LEXP	F635P3C	5143	1	OTH	Arco Arena				Sacramento	CA	95834		Madhavi Knickerbocker	Legislative Director to Assemblyman Nestande	154.84	Ticket to Zac Brown Band Concert & Refreshments	3/11/2010 12:00:00 AM	0			
+1484596	0	4	LEXP	F635P3C	2~3	2	OTH	Sierra Deli & Market				Oakland	CA	94607		Rick Land	Caltrans	7.44	Lunch					
+1484729	0	3	LEXP	F635P3C	17811	1	OTH	CITIZEN HOTEL				SACRAMENTO	CA	95814		SEE ATTACHMENT 'C'		42.08	LEGISLATIVE BREAKFAST	3/9/2010 12:00:00 AM	2146.08			
+1436073	2	92	LEXP	F635P3C	15~2	2	OTH	Lunch Stop				Oakland	CA	94607		Penny Gray	Caltrans	13.11	Lunch					
+1484759	1	1	LEXP	F635P3C	4	1	OTH	Spataro				Sacramento	CA	95814		Anthony Adams	Assemblymember	24.16	Reception & Dinner	3/23/2010 12:00:00 AM	20506.98		4	
+1507197	0	4	LEXP	F635P3C	2~3	2	OTH	Rolling Hills Casino				Corning	CA	96021		Bob Whalen	Candidate for Assembly	33.63	Dinner					
+1502392	1	203	LEXP	F635P3C	2~202	2	OTH	CONSUMER SPECIALTY PRODUCTS ASSOCIATON				WASHINGTON	DC	20006		DENNIS HOLLINGSWORTH	SENATOR	5.35	GIFT BAG ITEM					
+1506157	0	12	LEXP	F635P3C	82	1	OTH	Citizen Hotel				Sacramento	CA	95814		Voleck Tang	Office of Assemblymember  Joan Buchanan	79.15	CHI 2010 California Life Sciences Day Reception	5/19/2010 12:00:00 AM	0			
+1506446	0	4	LEXP	F635P3C	1~3	2	OTH	Griselda's Catering				Sacramento	CA	95814		Patrick Bouteller	Fletcher staff	15.73	pro rata share of catered event					
+1452291	1	11	LEXP	F635P3C	3271	1	OTH	ARCO Arena				Sacramento	CA	95834		Robert Logan	Husband of Junay Gardner Logan	57.59	1 Ticket to Ringling Brothers Circus, Suite expenses for 1	8/28/2009 12:00:00 AM	0			
+1506508	0	35	LEXP	F635P3C	2722	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Michelle Duquette-Caballero	Executive Assistant, Office of Assemblymember Alyson L. Huber	28.50	Iron Man 2 Screening	5/18/2010 12:00:00 AM	0			
+1484039	1	1	LEXP	F635P3C	2	1	OTH	Odyssey Restaurant (AMEX)				Granada Hills	CA	91344		Nader Kamanga, MD	Faculty, UCLA Medical Center	18.68	Food & Beverage	1/22/2010 12:00:00 AM	39.36		2	
+1502392	1	127	LEXP	F635P3C	2~126	2	OTH	CONSUMER SPECIALTY PRODUCTS ASSOCIATON				WASHINGTON	DC	20006		MELISSA PETERSON	ASSM.-SOLORIO'S OFFICE	5.35	GIFT BAG ITEM					
+1507991	0	18	LEXP	F635P3C	14818	1	OTH	LA MISSION RESTAURANT				SANTA CRUZ	CA	95060		RAYMOND KWAN	ROADSIDE VEGETATION MANAGER, CALTRANS	14.00	LUNCH	5/12/2010 12:00:00 AM	0			
+1420258	3	16	LEXP	F635P3C	5~15	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Bill Emmerson	Assembly Member	550.00	airport's parking and shuttle services					
+1506508	1	129	LEXP	F635P3C	2820	1	OTH	WALT DISNEY COMPANY, THE				BURBANK	CA	91521-7773		Jason Buckner	Field Representative, Office of Assemblymember Wilmer Amina Carter	40.00	Toy Story 3 Screening	6/19/2010 12:00:00 AM	290			
+1508101	0	19	LEXP	F635P3C	1524	1	OTH	Pollard	Sonny			Taft	CA	93268		Annette Tenneboe	Environmental Scientist, Dept. of Fish & Game	17.83	Lunch	6/30/2010 12:00:00 AM	0			
+1506199	0	5	LEXP	F635P3C	P3C26	1	OTH	Hernandez Family Properties, LLC				La Puente	CA	91744		Dr. Ed Hernandez	Assembly Member	7038.72	Rent for office building lease	6/1/2010 12:00:00 AM	7038.72			
+1438410	3	18	LEXP	F635P3C	5~17	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Ted Lieu	Assembly Member	150.00	airport parking and shuttle services					
+1506211	0	10	LEXP	F635P3C	RP232	2	OTH	Chops Restaurant				Sacramento	CA	95814		Robert Weisenmiller	Commissioner, CA Energy Comm	20.71	Reception					
+1541018	1	7	LEXP	F635P3C	5946	1	OTH	CHOPS STEAK SEAFOOD & BAR				SACRAMENTO	CA	95814		SAM CHUNG	LEGISLATIVE DIRECTOR CALIFORNIA STATE ASSEMBLYMEMBER AUDRA STRICKLAND	23.87	MEAL/BEVERAGE	8/26/2010 12:00:00 AM	0			
+1569443	0	10	LEXP	F635P3C	6~9	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Paul Cook	Assembly Member	50.00	airport parking and shuttle services					
+1538097	0	1	LEXP	F635P3C	19091	1	OTH	PEBBLE BEACH GOLF COURSE				PEBBLE BEACH	CA	93953		SENATOR JUAN VARGAS		420.00	GOLF	9/22/2010 12:00:00 AM	420			
+1504647	2	14	LEXP	F635P3C	2~13	2	OTH	Social Club & Cosmo Cafe				Sacramento	CA	95814		Lori Saldana	State Assemblymember	3.99	Reception with food and drinks					
+1329296	1	33	LEXP	F635P3C	RP312	2	OTH	Ambrosia Fine Food				Sacramento	CA	95815		Van Tran	Assembly Member	99.48	Legislative Reception					
+1569333	0	5	LEXP	F635P3C	14	1	OTH	ROLL INTERNATIONAL CORPORATION & AFFILIATES				LOS ANGELES	CA	90064		BILL BERRYHILL	ASSEMBLYMEMBER	12.00	HOLIDAY GIFT BOX	12/15/2010 12:00:00 AM	12			
+1463992	3	28	LEXP	F635P3C	5~27	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Ed Hernandez	Assembly Member	90.00	airport parking and shuttle services					
+1504229	1	9	LEXP	F635P3C	2~8	2	OTH	CRRC North District				Sacramento	CA	95814		Bernice Jimenez	Scheduler-Office of Assembly Member Bill Emmerson	41.33	Reception					
+1421317	2	30	LEXP	F635P3C	RP363	2	OTH	Sutter Club				Sacramento	CA	95814		Matt Hale	Staff, Assm. Ruskin	59.11	Reception					
+1569333	0	60	LEXP	F635P3C	81	1	OTH	ROLL INTERNATIONAL CORPORATION & AFFILIATES				LOS ANGELES	CA	90064		MARTIN GARRICK	ASSEMBLYMEMBER	12.00	HOLIDAY GIFT BOX	12/15/2010 12:00:00 AM	12			
+1421317	2	15	LEXP	F635P3C	RP348	2	OTH	Sutter Club				Sacramento	CA	95814		Alex Padilla	Senator	59.11	Reception					
+1262053	2	132	LEXP	F635P3C	P3C62	1	OTH	Wine Institute				San Francisco	CA	94105		Doug LaMalfa	Assemblymember	7.08	Wine	3/9/2007 12:00:00 AM	7.08			
+1541022	1	2	LEXP	F635P3C	5279	1	OTH	Arco Arena				Sacramento	CA	95834		Ashley Johnson	Scheduler to Assemblyman Hall	316.16	Two Tickets to Rihanna Concert and Refreshments	7/9/2010 12:00:00 AM				
+1569333	0	97	LEXP	F635P3C	120	1	OTH	ROLL INTERNATIONAL CORPORATION & AFFILIATES				LOS ANGELES	CA	90064		CAMERON SMYTH	ASSEMBLYMEMBER	12.00	HOLIDAY GIFT BOX	12/15/2010 12:00:00 AM	12			
+1540990	0	7	LEXP	F635P3C	15026	1	OTH	MORTON'S - THE STEAKHOUSE				SACRAMENTO	CA	95814		JOAN BUCHANAN	ASSEMBLYMEMBER	209.86	DINNER	7/20/2010 12:00:00 AM	0			
+1572419	1	25	LEXP	F635P3C	5535	1	OTH	Arco Arena				Sacramento	CA	95834		Eric Dietz	Legislative Aide to Assemblyman Devore	197.22	Two Tickets to the Alan Jackson Concert and Parking Pass	11/4/2010 12:00:00 AM	2407.86			
+1585797	0	433	LEXP	F635P3C	1670	1	OTH	CALIFORNIA TRIBAL BUSINESS ALLIANCE				SACRAMENTO	CA	95814		CAMILLE WAGNER		10.47	RECEPTION	1/11/2011 12:00:00 AM	0			
+1571979	0	32	LEXP	F635P3C	21309	1	OTH	Hilton Hotel				Santa Clara	CA	95054		Tara Dias Andress	Wiggins Office of Senator	222.00	Lodging breakfast lunch meeting space and AV support for energy summit briefing	12/8/2010 12:00:00 AM	0			
+1506041	2	9	LEXP	F635P3C	6~8	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Warren Furutani	Assembly Member	90.00	airport parking and shuttle services					
+1585797	0	186	LEXP	F635P3C	1421	1	OTH	CALIFORNIA TRIBAL BUSINESS ALLIANCE				SACRAMENTO	CA	95814		GABRIELLE JACKSON		10.47	RECEPTION	1/11/2011 12:00:00 AM	0			
+1506539	2	60	LEXP	F635P3C	RP129	2	OTH	Sutter Club				Sacramento	CA	95814		Jared Huffman	Assembly Member	91.05	Reception					
+1591939	0	13	LEXP	F635P3C	5572	1	OTH	Staples Center				Los Angeles	CA	90015		Steve Bradford	California State Assemblyman - AD-51	25.92	Two Tickets to NBA All Star Game	2/20/2011 12:00:00 AM	3249.48			
+1590536	0	1	LEXP	F635P3C	3	1	OTH	CalSTRS				West Sacramento	CA	95605		Pascal Villiger	Portfolio Manager	5665.54	reimbursement of travel expenses (hotel and airfare)	3/24/2001 12:00:00 AM	5665.54		3	
+1591320	0	45	LEXP	F635P3C	5645	1	OTH	Celebrations Party Rentals & Tents				Roseville	CA	95678		Bob Wieckowski	Assemblymember - AD 20	4.87	Party Rentals for Watson Event	2/14/2011 12:00:00 AM	0			
+1592124	0	11	LEXP	F635P3C	3~10	2	OTH	K. Alexis Corporation				Sacramento	CA	95814		Kevin Eastman	Office of Senator Doug LaMalfa	38.27	Food and drink at Legislative Welcome Reception					
+1591939	0	52	LEXP	F635P3C	5675	1	OTH	Cafeteria 15L				Sacramento	CA	95814		Joan Buchanan	Assemblymember - AD 15	2.10	Reception - Institute for Elected Women Event	1/13/2011 12:00:00 AM	0			
+1591548	0	4	LEXP	F615P1	P1106	1	OTH	Pyramid Alehouse				Sacramento	CA	95814		Adam Keigwin	Chief of Staff, Senator Yee	9.64	Lunch	3/7/2011 12:00:00 AM	20.49			
+1591356	0	326	LEXP	F635P3C	RP530	2	OTH	Mason's Restaurant / The Cafeteria				Sacramento	CA	95814		Greg Wesley	Cap. Dir., Assembly Member Fuentes	89.25	Food, Beverages & Entertainment					
+1590848	0	10	LEXP	F635P3C	6179	1	OTH	CAFETERIA 15L				SACRAMENTO	CA	95814		SUSAN BONILLA	CALIFORNIA STATE ASSEMBLYMEMBER	1.62	MEAL/BEVERAGE	1/12/2011 12:00:00 AM	0			
+1569534	1	12	LEXP	F635P3C	RP104	2	OTH	Citizen Hotel				Sacramento	CA	95814		Teresa Schilling	Staff, Senator Wiggins	42.15	Food, Beverages & Coffee Mug					
+1590136	0	40	LEXP	F635P3C	18~1	2	OTH	Spataro Restaurant				Sacramento	CA	95814		Ross Warren	Office of Assbmbr Mary Hayashi	57.96	Dinner					
+1591998	0	3	LEXP	F635P3C	1642	1	OTH	Guckenheimer Enterprises, Inc.				San Ramon	CA	94583		Russell Walls	Senior WRCE, CA Regional Water Control Board	14.96	Lunch	3/9/2011 12:00:00 AM	0			
+1590463	0	4	LEXP	F615P1	P159	1	OTH	Frank Fat's				Sacramento	CA	95814		Stan Diorio	Staff, Senator Wright	9.50	Lunch	1/24/2011 12:00:00 AM	47.25			
+1608622	0	33	LEXP	F635P3C	1231	1	OTH	Griselda's Ventures				Sacramento	CA	95814		Chris Norby	Assemblymember	13.22	PCPC 2011 Legislative Reception	4/13/2011 12:00:00 AM	0			
+1607553	0	153	LEXP	F635P3C	2~152	2	OTH	Mattel Inc.				El Segundo	CA	90245		Heather Schiffman	District Rep for Mark DeSaulnier	9.99	UNO Card Game					
+1607302	0	10	LEXP	F635P3C	6225	1	OTH	GRANGE				SACRAMENTO	CA	95814		ALEX PADILLA	CALIFORNIA STATE SENATOR	84.15	MEAL/BEVERAGE	4/6/2011 12:00:00 AM	168.29			
+1591073	1	29	LEXP	F635P3C	6~15	2	OTH	Institute for Elected Women: California				Eureka	CA	955026907		Noreen Evans	Senator	2.10	Dinner					
+1606456	0	8	LEXP	F635P3C	1029	1	OTH	Barona Creek Golf Course				Lakeside	CA	92040		Kevin de Leon	State Senator - District 22	80.00	Round of golf	4/18/2011 12:00:00 AM	80			
+1591837	1	21	LEXP	F635P3C	4~19	2	OTH	Griselda's Ventures, Inc.				Sacramento	CA	95814		Victoria Grajek	Office of Assemblymember Cathleen Galgiani	33.83	Appetizers and beverages at welcome back reception.					
+1538768	2	16	LEXP	F635P3C	6~15	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Jerome Horton	Member-Board of Equalization	90.00	airport parking and shuttle services					
+1608923	0	45	LEXP	F635P3C	RP45	2	OTH	Sutter Club				Sacramento	CA	95814		Frances Spivy-Weber	Vice Chair, Water Resources Control Bd	94.04	Ocean Day Reception					
+1605451	0	2	LEXP	F635P3C	20664	1	OTH	P.F. CHANG'S				SHERMAN OAKS	CA	91403	AMERICAN EXPRESS	CHRIS HOLDEN	CALIFORNIA STATE ASSEMBLY CANDIDATE	17.48	LUNCH	6/22/2011 12:00:00 AM	157.35			
+1603753	0	33	LEXP	F635P3C	16	1	OTH	Sutter Club				Sacramento	CA	95814		Mike Bowman	CA Bus, Transp & Housing Agency	37.18	Reception	6/1/2011 12:00:00 AM	18592.64		16	
+1603753	1	86	LEXP	F635P3C	20~34	2	OTH	Classique Catering				Sacramento	CA	95814		Tim Olson	CA Energy Commission	19.43	Breakfast					
+1622813	0	5	LEXP	F635P3C	15832	1	OTH	UNIVERSAL STUDIOS, INC.				UNIVERSAL CITY	CA	91608		JORGE M. MARQUEZ	FIELD REPRESENTATIVE, OFFICE OF SENATOR ED HERNANDEZ	46.00	MOVIE TICKETS AND BREAKFAST	7/31/2011 12:00:00 AM	0			
+1621309	0	2	LEXP	F635P3C	3508	1	OTH	POWER BALANCE PAVILION				Sacramento	CA	95834		Jaime Palmer	Legislative Secretary - Speaker John Perez	326.54	2 concert tickets, one parking pass, suite expenses for two	8/17/2011 12:00:00 AM	765.08			
+1622928	0	8	LEXP	F635P3C	1692	1	OTH	Guckenheimer Enterprises, Inc.				San Ramon	CA	94583		Greg Issinghof	Engineering Geologist Calif. Reg. Water Quality Control Board	15.00	Lunch	8/24/2011 12:00:00 AM	0			
+1571553	1	5	LEXP	F635P3C	1626	1	OTH	Hilton Hotel				Pleasanton	CA	94588		Scott Murtha	Environmental Scientist, Dept. of Fish & Game	105.00	meals at oil spill course	11/8/2010 12:00:00 AM	0			
+1621474	1	4	LEXP	F635P3C	15771	1	OTH	FRIENDS OF JIM BOYD				FAIR OAKS	CA	95628		SYLVIA BENDER	DEPUTY DIRECTOR, ELECTRICITY SUPPLY ANALYSIS, CALIFORNIA ENERGY COMMISSION	2.72	SUTTER CLUB RECEPTION	8/22/2011 12:00:00 AM			15771	
+1485610	2	4	LEXP	F635P3C	1450	1	OTH	Little Louie's Deli				Richmond	CA	94801		Bob Chedsey	CA State Lands Commission 	11.00	lunch 	1/7/2010 12:00:00 AM	0			
+1617242	0	18	LEXP	F635P3C	LEXP00018	1	OTH	DEL MAR THOROUGHBRED CLUB				DEL MAR	CA	92014		JOHN PEREZ	ASSEMBLYMAN	165	TC ADMISSION AND BUFFET $165.00	7/21/2011 12:00:00 AM	165	N		
+1607138	1	9	LEXP	F645P2A	15701	1	OTH	SHERATON GRAND HOTEL				SACRAMENTO	CA	95814		BILL EMMERSON	SENATOR	57.65	FOOD & BEVERAGE	4/12/2011 12:00:00 AM	0			
+1621414	0	3	LEXP	F635P3C	RP3	2	OTH	Sheraton Grand Sacramento				Sacramento	CA	95814		Nancy Skinner	Assembly Member	47.35	Food & Beverages - Clean Tech Convening Event					
+1632924	0	5	LEXP	F635P3C	69	1	OTH	Spataro Restaurant and Bar				Sacramento	CA	95814		Mark Williams	Air Pollution Specialist, Air Resources Board	37.00	Food and Beverage	12/12/2011 12:00:00 AM	0			
+1622683	0	3	LEXP	F635P3C	1036	1	OTH	Classic Party Rentals				Sacramento	CA	95834-1187		Senator Lois Wolk	Senate District 05	5.28	Client event --Tent/AC/Rentals	9/15/2011 12:00:00 AM				
+1622927	0	41	LEXP	F635P3C	LEXP00041	2	OTH	The Basement Rotunda-State Capitol				Sacramento	CA	95814		Jan Stevens, Assistant	CA Dept of Justice	15.18	Retirement Reception for Randele Kanouse			N		
+1634442	0	1	LEXP	F615P1	22439	1	OTH	Pyramid Alehouse				Sacramento	CA	95814		Kevin O'Neill	Chief of Staff to Asm Cameron Smyth	8.94	'Lunch'	10/10/2011 12:00:00 AM	23.40			
+1635169	0	2	LEXP	F635P3C	5	1	OTH	Gap Inc. Catering				San Francisco	CA	94105		Hon. Connie Conway	Republican Leader, CA State Assembly	26.17	Reception	11/1/2011 12:00:00 AM	52.34			
+1622250	0	6	LEXP	F635P3C	6370	1	OTH	JW MARRIOTT LOS ANGELES AT L.A. LIVE				LOS ANGELES	CA	90015		CATHERINE SANDOVAL	COMMISSIONER CALIFORNIA PUBLIC UTILITIES COMMISSION	8.50	MEAL/BEVERAGE	7/17/2011 12:00:00 AM	425			
+1654833	0	21	LEXP	F635P3C	LEXP00021	2	OTH	Sheraton Grand Sacramento				Sacramento	CA	95814		Ron Nunes	Air Resources Board	25.08	Meal			N		
+1652268	0	3	LEXP	F635P3C	22918	1	OTH	Guckenheimer Enterprises Inc. Dept#33628				San Francisco	CA	94139		Craig Renolds	CoS	23.90	Senator Wolk Lunch	1/13/2012 12:00:00 AM	566.55			
+1637020	0	3	LEXP	F635P3C	1~2	2	OTH	Paragary Restaurant Group (Spataro) and Discount Mugs (www.discountmugs.com)				Sacramento	CA	95814		Keali'i Bright	Staff, Office of Secretary John Laird	7.66	refreshments at afternoon reception and coffee mug					
+1637020	0	16	LEXP	F635P3C	1~15	2	OTH	Paragary Restaurant Group (Spataro) and Discount Mugs (www.discountmugs.com)				Sacramento	CA	95814		Jim Martin	Staff, Department of General Services	7.66	refreshments at afternoon reception and coffee mug					
+1637090	0	18	LEXP	F635P3C	16036	1	OTH	CANYON CAFE				AVILA BEACH	CA	93424		STEVE REEDER	BATTALION FIRE CHIEF, CALFIRE	23.12	MEALS PROVIDED AT FACILITY TOUR	11/29/2011 12:00:00 AM	0			
+1633269	1	7	LEXP	F635P3C	RP615	2	OTH	Chukchansi Gold Resort & Casino				Coarsegold	CA	93614		Jamie Mori	Scheduler, Senator Cannella	39.67	Dinner					
+1637904	0	25	LEXP	F635P3C	22743	1	OTH	Murphys Historic Hotel and Lodge				Murphys	CA	95247		Chris Odneal	Cannella Office of Senator	20.00	Breakfast on Oct 6 and Oct 7	10/7/2011 12:00:00 AM	0			
+1637116	0	4	LEXP	F635P3C	1711	1	OTH	Chevron El Segundo Cafeteria				El Segundo	CA	90245		Robert Pullen-Miles	Field Representative, Office of Senator Ted Lieu	50.00	Meal, Flashlight, Anniversary Book and Hotwheel car 	11/5/2011 12:00:00 AM	13650			
+1637160	0	13	LEXP	F635P3C	5775	1	OTH	Seranto's Restaurant				Kihei	HI	96753		Charles Calderson	Assembly Member - AD 58	113.61	Dinner at Seranto's Restaurant	11/14/2011 12:00:00 AM	340.85			
+1637355	0	6	LEXP	F635P3C	1~5	2	OTH	Gannon's Restaurant				Wailea	HI	96753		Ron Calderon	Senator	27.55	Dinner					
+1623013	2	8	LEXP	F635P3C	RP205	2	OTH	Crest Theater				Sacramento	CA	95814		Athena Lawson	Legislative Aide, Assm. Smyth	37.29	Film, Food & Beverages					
+1637904	0	184	LEXP	F635P3C	22647	1	OTH	Lila & Sage				Murphys	CA	95247		Roy Sianez	Torres Office of Assemblymember	40.00	BBQ Dinner and reception catered at NCPA's hydro warehouse	10/5/2011 12:00:00 AM	0			
+1590214	1	7	LEXP	F635P3C	21653	1	OTH	Tender Greens				Culver City	CA	90232	Mastercard	Stephanie Campbell	Assoc Park and Recreation Specialist	13.82	Tour of Baldwin Hills SP with CSPF Staff and David McNeill	1/6/2011 12:00:00 AM	69.14			
+1620888	1	14	LEXP	F635P3C	22359	1	OTH	Paradise Foods				Novato	CA	94949	Mastercard	Ruth Coleman	State Parks Director	2.80	Refreshments at Park Closures Narrative Dev meeting	8/4/2011 12:00:00 AM	33.89		8010	
+1637904	0	217	LEXP	F635P3C	22567	1	OTH	Party City				Roseville	CA	95678		Claire Hallbrook	Wolk Office of Senator	4.50	Misc expenses (i.e. napkins table mats) for BBQ dinner and lunch	10/5/2011 12:00:00 AM	0			
+1655470	0	81	LEXP	F635P3C	RP700	2	OTH	Rooney Tate Group				Sacramento	CA	95811		Leslie Villegas	Leg Asst, Assembly Member Williams	97.05	Food, Beverages and Entertainment					
+1655470	0	174	LEXP	F635P3C	RP793	2	OTH	Rooney Tate Group				Sacramento	CA	95811		Carmen Angulo	Sr Field Rep, Assembly Member Bonilla	97.05	Food, Beverages and Entertainment					
+1657936	0	593	LEXP	F635P3C	9~77	2	OTH	LunchStop Cafe				Oakland	CA	94607		Raasheeba Davis	CA Dept of Transportation	26.51	Dinner					
+1657588	0	31	LEXP	F635P3C	RP144	2	OTH	Sutter Club				Sacramento	CA	95814		Randall Winston	Staff, Gov. Brown	93.92	Ocean Day 2012 Reception					
+1658100	0	26	LEXP	F635P3C	6559	1	OTH	THE BROILER / GALLAGHER'S				SACRAMENTO	CA	95814		ROGER DICKINSON	CALIFORNIA STATE ASSEMBLYMEMBER	18.87	MEAL/BEVERAGE	2/13/2012 12:00:00 AM	0			
+1657936	1	310	LEXP	F635P3C	6~88	2	OTH	LunchStop Cafe				Oakland	CA	94607		Seyed Noorbakhsh	CA Dept of Transportation	26.51	Breakfast					
+1655470	0	359	LEXP	F635P3C	RP980	2	OTH	Rooney Tate Group				Sacramento	CA	95811		Mike Morrell	Assembly Member	97.05	Food, Beverages and Entertainment					
+1657936	0	93	LEXP	F635P3C	4~66	2	OTH	LunchStop Cafe				Oakland	CA	94607		Mike Whiteside	CA Dept of Transportation	26.51	Lunch					
+1657936	0	95	LEXP	F635P3C	4~68	2	OTH	LunchStop Cafe				Oakland	CA	94607		Mo Mohamidi	CA Dept of Transportation	26.51	Lunch					
+1656453	0	1	LEXP	F635P3C	EX4	1	OTH	Coronado Chamber of Commerce				Coronado	CA	92118		Toni Atkins	Assembly Member	200	Ticket to Military Ball	3/31/2012 12:00:00 AM	200			
+1656073	0	1	LEXP	F635P3C	8	1	OTH	Mayahuel Restaurant				Sacramento	CA	95814		Bill Berryhill	Assembly Member	19.16	Legislative Reception	1/18/2012 12:00:00 AM	4215.75			
+1657936	0	241	LEXP	F635P3C	6~19	2	OTH	LunchStop Cafe				Oakland	CA	94607		Chris Bledsoe	CA Dept of Transportation	26.51	Breakfast					
+1658191	1	81	LEXP	F635P3C	16183	1	OTH	CENTURY THEATRES				SACRAMENTO	CA	95814		BRIAN ZEIGER	FIELD REPRESENTATIVE, OFFICE OF ASSEMBLYMEMBER MARTY BLOCK	19.00	FOOD, BEVERAGE AND MOVIE TICKET	2/29/2012 12:00:00 AM	0			
+1656485	0	14	LEXP	F635P3C	EX15-13	2	OTH	Parakay, Inc.				Sacramento	CA	95816		Eireann Flannery	Office of Lt. Gov. Newsom	82.31	Reception					
+1657936	1	154	LEXP	F635P3C	5~29	2	OTH	LunchStop Cafe				Oakland	CA	94607		Dennis English	CA Dept of Transportation	26.51	Dinner					
+1655242	1	14	LEXP	F635P3C	2~13	2	OTH	SHERATON GRAND HOTEL				SACRAMENTO	CA	95814		Lila Mirrashidi	Office of Governor Brown	54.50	Food and Beverage					
+1658132	1	4	LEXP	F635P3C	8~3	2	OTH	LOS ANGELES COUNTY METROPOLITAN TRANSPORTATION AUTHORITY				Los Angeles	CA	90012		Rosalba Gonzalez	Staff for Asm. Bob Blumenfield	19.83	Lunch and Parking					
+1676709	0	12	LEXP	F635P3C	2~11	2	OTH	Sutter Club				Sacramento	CA	95814		Dillon Gibbons	Chief of Staff Office of Senator Cannella	41.66	Food & Beverage					
+1670897	0	34	LEXP	F635P3C	2~33	2	OTH	CRRC North District				Sacramento	CA	95814		Chris Corgas	Assembly Fellow - Office of Assembly Member Curt Hagman	38.20	Reception					
+1603606	1	9	LEXP	F635P3C	20628	1	OTH	KAITLYN MATTOS	KAITIE			ESPARTO	CA	95627		SEE ATTACHMENT 'B & C'		0.00	RECEPTION	5/17/2011 12:00:00 AM	0		20628	
+1621894	1	8	LEXP	F635P3C	23630	1	OTH	Spanish Bay				Pebble Beach	CA	93953		Fiona Ma	Assemblywoman	37.00	Golf Balls	7/22/2011 12:00:00 AM	0			
+1654827	1	90	LEXP	F635P3C	LEXP00090	2	OTH	California Citrus Mutual				Exeter	CA	93321		Gloria Negrete McLeod	Senator	8.68	Naval Oranges - 106 boxes @ $8.68 each.			N		
+1673685	0	1	LEXP	F635P3C	23847	1	OTH	Ella's Restaurant				Sacramento	CA	95814		Assemblyman Bill Berryhill	Assembly Member	38.00	AGC Legislative Day kick-off Reception	6/18/2012 12:00:00 AM	3492.33			
+1604756	2	8	LEXP	F635P3C	6~7	2	OTH	Los Angeles World Airports				Los Angeles	CA	91145		Mike Feuer	Assembly Member	90.00	airport parking and shuttle services					
+1658191	2	24	LEXP	F635P3C	16123	1	OTH	CENTURY THEATRES				SACRAMENTO	CA	95814		DAMON CONKLIN	CHIEF OF STAFF, OFFICE OF SENATOR TOM  HARMAN	76.00	FOOD, BEVERAGE & MOVIE TICKETS	2/29/2012 12:00:00 AM	0			
+1675861	0	1	LEXP	F635P3C	LEXP00001	1	OTH	The Meritage Resort				Napa	CA	94558		Honorable Fiona Ma	Assembly Member	136.9	Food & Beverage	6/21/2012 12:00:00 AM	26010.31	N		
+1675983	0	2	LEXP	F635P3C	RP39	2	OTH	Los Angeles Yacht Club				San Pedro	CA	90731		Marisol Barajas	Staff Member, Assm. Lowenthal	33.83	Lunch					
+1670897	1	36	LEXP	F635P3C	2~35	2	OTH	CRRC North District				Sacramento	CA	95814		Gina Frisby	Legislative Aide - Office of Assembly Member Fiona Ma	38.20	Reception					
+1676709	1	14	LEXP	F635P3C	2~13	2	OTH	Sutter Club				Sacramento	CA	95814		Loni Hancock	Senator	41.66	Food & Beverage					
+1676709	1	15	LEXP	F635P3C	2~14	2	OTH	Sutter Club				Sacramento	CA	95814		Robert Huff	Senator	41.66	Food & Beverage					
+1674657	1	6	LEXP	F635P3C	RP199	2	OTH	Griselda's Catering				Sacramento	CA	95814		Kevin Eastman	Legislative Director, Senator LaMalfa	68.53	Legislative Reception					
+1677394	0	6	LEXP	F635P3C	7	1	OTH	Edward P. and Diane M. Hernandez, ODs				La Puente	CA	91744		Dr. Ed Hernandez	Senator	5961.63	Payment for VSP Network enrollees eyecare services	5/31/2012 12:00:00 AM	5961.63			
+1677412	1	6	LEXP	F635P3C	22134	1	OTH	GRANGE				SACRAMENTO	CA	95814		TOM DALY	ASSEMBLYMEMBER	72.45	DINNER	6/18/2012 12:00:00 AM	144.95		22134	
+1703850	0	7	LEXP	F635P3C	LEXP00007	1	OTH	Sutter Club				Sacramento	CA	95814		Nettie Sabelhaus	Office of the Governor	35.6	Meal	9/11/2012 12:00:00 AM	71.20	N		
+1679754	0	2	LEXP	F615P1	21566	1	OTH	AMBROSIA CAFE				SACRAMENTO	CA	95814		MICHAEL ERKE	CONSULTANT OF SENATOR LOIS WOLK	8.90	LUNCH	4/25/2012 12:00:00 AM	28.89			
+1678121	0	3	LEXP	F635P3C	4~1	2	OTH	Spataro Restaurant & Bar				Sacramento	CA	95816		Terry Schanz	Policy Director, Assemblymember Isadore Hall	93.80	Dinner					
+1678876	0	27	LEXP	F635P3C	14~3	2	OTH	Chico Bag				Chico	CA	95973		Stan DiOrio	Office of Senator Roderick Wright	4.84	Chico Bag					
+1655470	1	474	LEXP	F635P3C	RP1096	2	OTH	Rooney Tate Group				Sacramento	CA	95811		Sarah Musiker	Leg Aide, CA Secretary of State	97.05	Food, Beverages and Entertainment					
+1679421	0	2	LEXP	F635P3C	LEXP00002	2	OTH	Zov's Bostro				Tustin	CA	92780		Samuel Han	Dist.Dir., Asm.Don Wagner	12.25	food/beverage			N		
+1655470	1	73	LEXP	F635P3C	RP692	2	OTH	Rooney Tate Group				Sacramento	CA	95811		Bob Blumenfield	Assembly Member	97.05	Food, Beverages and Entertainment					
+1680061	0	27	LEXP	F635P3C	4~26	2	OTH	Griselda's Ventures, Inc.				Sacramento	CA	95814		Erin Shaw	Communications Director, Senator Blakeslee	16.87	Food & Beverages					
+1655470	1	172	LEXP	F635P3C	RP791	2	OTH	Rooney Tate Group				Sacramento	CA	95811		Mariana Sabeniano	Senior Asst, Assembly Member Bonilla	97.05	Food, Beverages and Entertainment					
+1680458	0	30	LEXP	F635P3C	1494	1	OTH	Chop's				Sacramento	CA	95814		Howard Quan	Staffer - Asm. Fong's Office	14.28	PCPC 2012  Legislative Reception - Food, beverage & gift	5/23/2012 12:00:00 AM	0			
+1658115	1	3	LEXP	F635P3C	LEXP00003	2	OTH	McCormick & Schmicks				Sacramento	CA	95814		Evan Corder	Staff	0	Legislative reception			N		
+1655470	1	309	LEXP	F635P3C	RP930	2	OTH	Rooney Tate Group				Sacramento	CA	95811		Bob Wieckowski	Assembly Member	97.05	Food, Beverages and Entertainment					
+1736525	0	1	LEXP	F635P3C	12	1	OTH	Various								Curtis Grima	Assm Rep Caucus	14.80	refreshments	12/18/2012 12:00:00 AM	858.17		12	
+1710444	0	24	LEXP	F635P3C	24287	1	OTH	Governor's Cup Foundation				West Sacramento	CA	95605		Anthony Cannella	Senator	343.84	Reception	7/20/2012 12:00:00 AM	343.84			
+1658100	2	79	LEXP	F635P3C	6619	1	OTH	POWER BALANCE PAVILION				SACRAMENTO	CA	95834		MICHELLE CABALLERO	EXECUTIVE SECRETARY CALIFORNIA STATE ASSEMBLYMEMBER ALYSON HUBER	98.00	TICKETS/PARKING	3/31/2012 12:00:00 AM	98			
+1674921	2	12	LEXP	F635P3C	11	1	OTH	Chops				Sacramento	CA	95814		Jean Fuller	Senator	19.36	Lunch	5/17/2012 12:00:00 AM	77.43			
+1709188	0	8	LEXP	F635P3C	22736	1	OTH	PIZZA ROCK				SACRAMENTO	CA	95814		VICTORIA HARRIS, LEG. AIDE	SENATOR JUAN VARGAS	7.09	PIZZA	8/31/2012 12:00:00 AM	0			
+1708739	0	5	LEXP	F635P3C	22478	1	OTH	P.F. CHANG'S				SHERMAN OAKS	CA	91403	AMERICAN EXPRESS	AL MURATSUCHI	CALIFORNIA STATE ASSEMBLY CANDIDATE	21.95	LUNCH	9/27/2012 12:00:00 AM	153.63			
+1709585	0	3	LEXP	F635P3C	6780	1	OTH	FOX COMMISSARY				LOS ANGELES	CA	90035		HOLLY MITCHELL	CALIFORNIA STATE ASSEMBLYMEMBER	40.03	MEAL/BEVERAGE	7/16/2012 12:00:00 AM	200.15			
+1674782	1	17	LEXP	F635P3C	RP134	2	OTH	California Automatic Vendor Council				Pasadena	CA	91101		Wilmer Amina Carter	Assembly Member	20.00	Snack gift bags from vendors.					
+1674921	3	21	LEXP	F635P3C	13~3	2	OTH	Costco				Sacramento	CA	95812		Brook Taylor	Dep Dir, Communic, GoBiz	0.06	Drinks					
+1734818	0	4	LEXP	F635P3C	LEXP00004	2	OTH	Scott's Seafood Grill and Bar				Walnut Creek	CA	94596		Crystal Araujo	Dist.Rep./Sen.Mark DeSaulnier	50.13	food/beverage			N		
+1674921	3	89	LEXP	F635P3C	23~11	2	OTH	Pennisis Deli				Sacramento	CA	95814		Jonathan Armabel	Assm Perea Office	13.99	Lunch					
+1674782	1	111	LEXP	F635P3C	RP235	2	OTH	California Automatic Vendor Council				Pasadena	CA	91101		Roderick Wright	Senator	20.00	Snack gift bags from vendors.					
+1674921	3	155	LEXP	F635P3C	29~22	2	OTH	Party Concierge				Sacramento	CA	95814		Mike Davis	Assembly Member	1.40	Reception Decorations					
+1736185	0	13	LEXP	F635P3C	13	1	OTH	Costco				Sacramento	CA	95815		Curt Hagman	Assembly Member	2.37	Reception Drinks	11/6/2012 12:00:00 AM	166			
+1709845	0	38	LEXP	F635P3C	16717	1	OTH	GRISELDA'S CATERING				SACRAMENTO	CA	95814		ALEX PADILLA	STATE SENATOR	33.19	BREAKFAST	8/23/2012 12:00:00 AM	0			
+1763035	0	9	LEXP	F635P3C	LEXP00009	2	OTH	California Cotton Growers Association				Fresno	CA	93727		Henry Perea	Assembly Member	8.12	Handkerchief & Cotton Bale			N		
+1763047	0	24	LEXP	F635P3C	4~19	2	OTH	American Pistachio Growers Assocition				Fresno	CA	93711		Tom Berryhill	Senator	3.00	Pistachios					
+1764509	0	4	LEXP	F635P3C	3~3	2	OTH	JW Marriot				Los Angeles	CA	90015		Connie Conway	State Assemblymember	140.58	2013 Inaugural Dinner					
+1763065	0	16	LEXP	F635P3C	4~11	2	OTH	Western Agricultural Processors Association				Fresno	CA	93727		Bill Quirk	Assembly Member	8.82	Walnuts, almonds, & pecans					
+1738882	0	11	LEXP	F635P3C	12	1	OTH	Edward P. and Diane M. Hernandez, ODs				La Puente	CA	91744		Dr. Ed Hernandez	Senator	8746.22	Payment for VSP Network enrollees eyecare services	12/15/2012 12:00:00 AM	8746.22			
+1760462	0	9	LEXP	F635P3C	24783	1	OTH	Sheraton Grand Sacramento 				Sacramento	CA	95814	Visa	Richard Fu	California Motor Vehicles Department 	26.18	Food and beverages: Program Integrity and High-Performance Analytics in Government event	2/28/2013 12:00:00 AM	0			
+1760574	0	13	LEXP	F635P3C	5	1	OTH	Dollar Tree				Rancho Cordova	CA			Shannon Grove	Assembly Member	0.15	decorations	2/5/2013 12:00:00 AM	30.24		5	
+1656945	1	5	LEXP	F635P3C	15~4	2	OTH	Harveys Resort Hotel & Casino				Stateline	NV	89440		Nick Hardeman	Principal Consultant to Speaker John Perez	70.74	Dinner					
+1657730	2	6	LEXP	F635P3C	3~5	2	OTH	Sheraton Grand Hotel				Sacramento	CA	95814		Desi Soto	Staff, CA Department of Education	54.50	Meal and refreshments at the Water Cooler Conference					
+1764512	1	17	LEXP	F635P3C	4~16	2	OTH	THE MIX				SACRAMENTO	CA	95814		JIM PATTERSON	ASSEMBLYMEMBER	92.17	RECEPTION AND ENTERTAINMENT					
+1766132	0	497	LEXP	F635P3C	RP1625	2	OTH	Cafeteria 15L				Sacramento	CA	95814		Brendan Hughes	Leg Director, Assembly Member Adam Gray	6.48	Back in Session Bash					
+1766200	0	1	LEXP	F635P3C	25144	1	OTH	Esquire Grill				Sacramento	CA	95814		Bob Wieckowski	Assemblymember	88.00	NCPA Member Dinner	1/14/2013 12:00:00 AM	88			
+1766132	1	283	LEXP	F635P3C	RP1407	2	OTH	Cafeteria 15L				Sacramento	CA	95814		Eileen Ricker	Communications Dir Asm Mem Tom Berryhill	6.48	Back in Session Bash					
+1766132	1	143	LEXP	F635P3C	RP1264	2	OTH	Cafeteria 15L				Sacramento	CA	95814		Andrew Hintz	IT Manager, Speaker Offc Membr Services	6.48	Back in Session Bash					
+1766132	1	154	LEXP	F635P3C	RP1275	2	OTH	Cafeteria 15L				Sacramento	CA	95814		Irwin Nowick	Principal Consultant, Senate Rules	6.48	Back in Session Bash					
+1764715	0	4	LEXP	F635P3C	17014	1	OTH	CALIFORNIA MUSEUM				SACRAMENTO	CA	95814		KEVIN DELEON	SENATOR	1.97	RECEPTION	2/6/2013 12:00:00 AM	1.97		17014	
+1766132	1	356	LEXP	F635P3C	RP1482	2	OTH	Cafeteria 15L				Sacramento	CA	95814		Veronica Stone	Executive Asst Senator Richard Roth	6.48	Back in Session Bash					
+1764512	0	40	LEXP	F635P3C	4~39	2	OTH	THE MIX				SACRAMENTO	CA	95814		SAM OH	OFFICE STAFF; ASM ERIC LINDER	70.98	RECEPTION					
+1765517	0	29	LEXP	F635P3C	15	1	OTH	Eduardo Martinez				Sacramento	CA	95814		Shannan Velayas	Press Secretary, Secretary of State's Office	0.00	Salary and expenses paid to spouse	3/31/2013 12:00:00 AM	23235.79		15	
+1765382	0	39	LEXP	F635P3C	QtzdFaZjm4sm	2										Wilkins, Eric	Environmental Scientist, CA Dept. of Fish and Wildlife	80.69						MYyXWlmNDTsA
+1766151	0	98	LEXP	F635P3C	17~35	2	OTH	Bailey/EDDY				Atlanta	GA	31193		Aaron Skaggs	Assemblymember Isadore Hall	20.00	Hat					
+1766299	0	38	LEXP	F635P3C	taexOKQSGlQc	2										Lyons, Matthew	Senior Field Representative Assembly Member Holden	20.00						hsXJgmhEoAtO
+1766132	0	186	LEXP	F635P3C	RP1307	2	OTH	Cafeteria 15L				Sacramento	CA	95814		Olgalilia Ramirez	Field Rep., Assembly Mem Roger Dickinson	6.48	Back in Session Bash					
+1766216	1	11	LEXP	F635P3C	3~10	2	OTH	Cal ISO				Folsom	CA	95630		Edwin Charkowicz	Supervisor, RA Procurement & Oversight - California Public Utilities Commission	27.50	Lunch					
+1766216	1	47	LEXP	F635P3C	3~46	2	OTH	Cal ISO				Folsom	CA	95630		Adam Schultz	Analyst - California Public Utilities Commission	27.50	Lunch					
+1766132	0	367	LEXP	F635P3C	RP1493	2	OTH	Cafeteria 15L				Sacramento	CA	95814		Bryan King	Intern, Senator Ted Lieu	6.48	Back in Session Bash					
+1783059	0	1	LEXP	F635P3C	17461	1	OTH	BORD-A-PETITE CATERING				BAKERSFIELD	CA	93313		JEAN FULLER	STATE SENATOR	77.08	TEJON VALLEY RANCH PROMOTIONAL EVENT APPETIZERS/BEVERAGES 	6/22/2013 12:00:00 AM	9129.43			
+1765382	2	32	LEXP	F635P3C	aVJv2kyBelUu	2										Serpa, Paulo	GIS Analyst, CA Dept. of Fish and Wildlife	80.69						MYyXWlmNDTsA
+1777556	0	48	LEXP	F635P3C	1847	1	OTH	Social Nightclub & Cafe Bernardo KBAR				Sacramento	CA	95814		Hugh Slayden	Consultant, Senator Calderon	27.79	Reception	4/29/2013 12:00:00 AM	0			
+1780048	0	109	LEXP	F635P3C	24~25	2	OTH	Sutter Club				Sacramento	CA	95814		Scott Wilk	Assemblymember	29.39	Reception					
+1780936	0	5	LEXP	F635P3C	6~4	2	OTH	LOS ANGELES COUNTY METROPOLITAN TRANSPORTATION AUTHORITY				Los Angeles	CA	90012		JOSH KURPIES	STAFF FOR ASM. RICHARD BLOOM	23.07	LUNCH AND PARKING					
+1781281	0	5	LEXP	F635P3C	2~4	2	OTH	Thunder Valley Casino				Lincoln	CA	95648		Karl Kimmelshue	Chief of Staff, Assm. Frank Bigelow	59.31	Dinner					
+1778948	0	44	LEXP	F635P3C	MZN7xjO3hJBL	2										Robinson, Lauren	Staff, Assembly Member Lowenthal	36.92						xtvhGhgDzlqI
+1783299	0	20	LEXP	F635P3C	9~6	2	OTH	Mix Downtown				Sacramento	CA	95814		Honorable Mark DeSaulnier	Senator	13.32	Justice Day Reception					
+1779036	0	1	LEXP	F635P3C	LEXP00001	1	OTH									Bill Emmerson	Senator	29.16	Group dinner after tour of facility.	4/4/2013 12:00:00 AM	233.28	N		
+1780982	0	41	LEXP	F635P3C	syaqZXJbMb3F	2										Hernandez, Roger	Assembly Member	4.43						qTQNi1WhmkOh
+1782074	0	2	LEXP	F635P3C	2~1	2	OTH	PALA CASINO				PALA	CA	92059		LETICIA PEREZ	CANDIDATE FOR STATE SENATE	28.32	DINNER					
+1782483	0	14	LEXP	F635P3C	LEXP00014	1	OTH	Chops				Sacramento	CA	95814	Amex	Diane Harkey	Assemblymember	26.1	Meal	6/3/2013 12:00:00 AM	1303.70	N		
+1782601	0	1	LEXP	F635P3C	3	1	OTH	58 Degrees & Holding Co.				Sacramento	CA	95811		Raul Bocanegra	Assemblymember	120.08	Decision Makers Dinner	6/18/2013 12:00:00 AM	1080.72			
+1800512	0	2	LEXP	F635P3C	7025	1	OTH	RED RABBIT KITCHEN & BAR				SACRAMENTO	CA	95816		JAMIE MORI	POLITICAL DIRECTOR CALIFORNIA STATE SENATOR ANTHONY CANNELLA	41.05	MEAL/BEVERAGE	7/9/2013 12:00:00 AM	0			
+1799652	0	1	LEXP	F635P3C	4	1	OTH	Ag Tour				Santa Maria	CA			Marc Levine	Assemblyman	20.00	Farm Tour Transportation	7/31/2013 12:00:00 AM	20		4	
+1799207	0	7	LEXP	F635P3C	2~6	2	OTH	Starbucks Coffee Company				Sacramento	CA	95814		Myda Garcia	Asm Waldron's Office	4.95	Food/Beverage					
+1783328	2	6	LEXP	F635P3C	aHAS7lQmhUde	2										Perez, Lilliana	Staff, Assembly Member Atkins	58.51						1EkXkYmywQka
+1763365	1	5	LEXP	F615P1	BHOrnlYeLq8X	1	IND	Frank Fats Restaurant				Sacramento	CA	95814				0.00	Dinner	2/5/2013 12:00:00 AM	35.37		F615P1.BHOrnlYeLq8X	
+1782961	1	20	LEXP	F635P3C	25221	1	OTH	N/A					  			Luis Alejo	Assembly Member	33.07	Reception	4/30/2013 12:00:00 AM	0			
+1766151	1	3	LEXP	F635P3C	16~2	2	OTH	Sutter Club				Sacramento	CA	95814		Matt Borasi	Assemblymember Curt Hagman	30.00	Breakfast					
+1781788	1	12	LEXP	F615P1	ErvEoKQbrb5I	2										Eo, Yong	Associate Consultant, Assembly Member Blumenfield	9.84						pYiecGTlSym5
+1766293	2	12	LEXP	F635P3C	kgS7ooHXxcvj	2										Welch, Virgil	Special Assistant to Mary Nichols, California Air Resources Board	11.25						uTtjBfnuGFsf
+1781721	1	18	LEXP	F635P3C	17250	1	OTH	BIBA				SACRAMENTO	CA	95816		KEN COOLEY	ASSEMBLYMEMBER	114.25	FOOD & BEVERAGE	5/23/2013 12:00:00 AM	0			
+1782967	1	1	LEXP	F635P3C	4	1	OTH	Ronald S. Calderon				Sacramento	CA	95814		Ronald S. Calderon	CA State Senator	40.18	Lunch	6/18/2013 12:00:00 AM	40.18			
+1765382	3	14	LEXP	F635P3C	VfvbwRZCb7f6	2										Gregorio, Dominic	Manager, Watersheds, Oceans and Wetlands State Water Resources Control Board 	80.69						MYyXWlmNDTsA
+1783060	1	57	LEXP	F635P3C	17329	1	OTH	CENTURY THEATRES				SACRAMENTO	CA	95814		MATTHEW PERALTA	ASSEMBLY FELLOW, OFFICE OF ASSEMBLYMEMBER BRIAN MAIENSCHIEIN	19.50	FOOD, BEVERAGE & MOVIE TICKET	6/25/2013 12:00:00 AM	0			
+1800353	0	7	LEXP	F635P3C	25434	1	OTH	The Cork & More				South Lake Tahoe	CA	96510		Bryan Barton	Chief Ranger	16.83	Refreshments for Insider's Tour of Vikingsholm Castle	8/22/2013 12:00:00 AM	33.66		8175	
+1796583	0	1	LEXP	F615P1	1	1	OTH	Il Fornaio				Sacramento	CA	95814		Robert Herrell	Deputy Commissioner & Legislative Director	10.00	lunch	7/24/2013 12:00:00 AM	10			
+1779791	1	3	LEXP	F635P3C	6987	1	OTH	THE BROILER				SACRAMENTO	CA	95814		JAMIE MORI	POLITICAL DIRECTOR CALIFORNIA STATE SENATOR ANTHONY CANNELLA	20.33	MEAL/BEVERAGE	4/16/2013 12:00:00 AM	40.67			
+1783000	1	63	LEXP	F635P3C	o3olt7yflVs3	2										Alves, Leonardo Scherer	Staff, Senate Natural Resources and Water Committee	75.28						a9dlPsmTAlSN
+1778170	1	2	LEXP	F635P3C	5	1	OTH	BofA Credit Card - Eurest Catering				West Sacramento	CA	95605		Stephan Castellanos	Executive Director, California Commission on Disability Access	19.57	Long Range Planning Meeting	5/30/2013 12:00:00 AM	176.09		5	
+1818575	0	1	LEXP	F635P3C	2	1	OTH	Barona Cultural Center & Museum				Lakeside	CA	92040		Mike Gipson	Candidate for State Assembly	31.57	Meal	10/23/2013 12:00:00 AM	221			
+1779791	2	10	LEXP	F635P3C	7074	1	OTH	PANDA CATERING				ROSEMEAD	CA	91770		PETER KIM	TAXPAYER ADVOCATE CALIFORNIA STATE BOARD OF EQUALIZATION	26.48	MEAL/BEVERAGE	5/3/2013 12:00:00 AM	0			
+1818892	0	70	LEXP	F635P3C	26059	1	OTH	Compass Group USA Eurest Dining Services				Boston	MA	02241		Angela Haywood	Yee Office of Senator	20.00	Lunch at HP in Palo Alto	10/8/2013 12:00:00 AM	0			
+1815355	1	5	LEXP	F635P3C	3~2	2	OTH	USC				Los Angeles	CA	90089		Sebastian Simril	Guest	102.00	$37 for lunch and $65 for football ticket					
+1818892	0	114	LEXP	F635P3C	26142	1	OTH	Rock Wall Winery				Alameda	CA	94501		Erik Brahms	Dahle Office of Assemblymember	33.00	Reception and dinner location	10/8/2013 12:00:00 AM	0			
+1812932	0	4	LEXP	F635P3C	17856	1	OTH	BAJA LIMO				RANCHO CORDOVA	CA	95742		MATT OSTERLI	FISCAL CONSULTANT, CALIFORNIA STATE SENATE	83.47	TRANSPORTATION	12/17/2013 12:00:00 AM	0			
+1818892	0	140	LEXP	F635P3C	26022	1	OTH	Santa Clara Marriott Hotel				Santa Clara	CA	95054		Chris Odneal	Patterson Office of Assemblymember	431.00	Energy Summit costs including: briefing room reception dinner lodging breakfast	10/8/2013 12:00:00 AM	0			
+1813917	0	1	LEXP	F635P3C	LEXP00001	1	OTH	Tequila Museo Mayahuel				Sacramento	CA	95814		John Eisenhut	Board Member, Air Resources Board	25	Meal	11/5/2013 12:00:00 AM	91.56	N		
+1816876	0	21	LEXP	F635P3C	sRrhk3whFKri	2										Ingram, Campbell	Executive Officer, Sacramento San Joaquin Delta Conservancy	24.61						JG3YBLExKi2y
+1816876	0	43	LEXP	F635P3C	ABEsxLdjYnxO	2										McLoughlin, Mark	Director of Environmental Services, High Speed Rail Authority	29.76						LiT5zckInT6y
+1782961	2	18	LEXP	F635P3C	25229	1	OTH	N/A					  			Josh Cook	Chief of Staff Assm Dahle	33.07	Reception	4/30/2013 12:00:00 AM	0			
+1782961	2	23	LEXP	F635P3C	25222	1	OTH	N/A					  			Rebecca DeLaRosa	Sr Leg Asst Assem Alejo	33.07	Reception	4/30/2013 12:00:00 AM	0			
+1815601	0	3	LEXP	F635P3C	25025	1	OTH	ALBERTSONS				RANCHO CUCAMONGA	CA	91737		SEE ATTACHMENT B		0.00		10/4/2013 12:00:00 AM	79.98			
+1815921	0	2	LEXP	F635P3C	AbcAXdiIIxdP	2										Hernandez, Dr. Ed	Senator	6222.23						rnPIoyb92jmd
+1815921	0	10	LEXP	F635P3C	1BWvBiKqdVIZ	1	IND	San Mateo County Sheriff's Activities League				Redwood City	CA	94063				0.00	Sheriff's Activities League Annual Award Dinner (2)	10/17/2013 12:00:00 AM	200			
+1818920	1	5	LEXP	F635P3C	25922	1	OTH	SILVERADO STAGES				Sacramento	CA	95838		SEE ATTACHMENT		39.05	Transportation	11/13/2013 12:00:00 AM	937.37			
+1843662	0	3	LEXP	F635P3C	2~2	2	OTH	Sheraton Grand Hotel				Sacramento	CA	95814		Jaycob Bytel	Fellow, FPPC	95.05	Meal and refershements at the Water Cooler Early Learing Conference					
+1816736	1	1	LEXP	F635P3C	3	1	OTH	THE WALT DISNEY COMPANY				BURBANK	CA	91521		KRISTIN OLSEN	ASSEMBLYMEMBER	420.00	DISNEYLAND TICKETS	10/4/2013 12:00:00 AM	420		3	
+1782120	2	38	LEXP	F635P3C	U7NJVwDwaNPQ	2										McNamee, Meredith	Staff, Senator Pavley	115.46						umlRlCmH53qb
+1780944	2	40	LEXP	F635P3C	LEXP00040	2	OTH	The Sheraton Grand				sacramento	CA	95814		Roger Hernandez	State Assm.	59	food/beverage			N		
+1780944	2	68	LEXP	F635P3C	LEXP00068	2	OTH	Lisa's Bon Appetit				Torrance	CA	90505		Miguel Cordova	field Rep/Asm.Muratsuchi	6.23	food/beverage			N		
+1765725	1	5	LEXP	F635P3C	17129	1	OTH	IL FORNAIO				SACRAMENTO	CA	95814		TED LIEU	STATE SENATOR	102.22	FOOD AND BEVERAGE	1/30/2013 12:00:00 AM	0			
+1765725	2	14	LEXP	F635P3C	17139	1	OTH	CALIFORNIA MUSEUM				SACRAMENTO	CA	95814		KEVIN DE LEON	STATE SENATOR	1.97	RECEPTION	2/6/2013 12:00:00 AM	1.97			
+1818892	1	174	LEXP	F635P3C	26192	1	OTH	WaterFront Hotel				Oakland	CA	94607		Elena Lee	Garcia Office of Assemblymember	266.00	Lodging and breakfast	10/8/2013 12:00:00 AM	0			
+1818892	1	190	LEXP	F635P3C	26187	1	OTH	WaterFront Hotel				Oakland	CA	94607		Ryan Pierini	Quirk Office of Assemblymember	266.00	Lodging and breakfast	10/8/2013 12:00:00 AM	0			
+1842041	0	9	LEXP	F635P3C	3~6	2	OTH	California Cut Flower Commission				Santa Barbara	CA	93190		Richard Bloom	Assembly Member	35.00	Floral Arrangement					
+1839713	0	9	LEXP	F615P1	5	1	OTH	Strega								Trina Sanders	LACERA	48.72	Dinner	3/19/2014 12:00:00 AM	108.27			
+1780048	3	17	LEXP	F635P3C	17~2	2	OTH	Hyatt				Sacramento	CA	95814		Abby Browning	GoBiz	9.62	Lunch-SPEAKER					
+1840664	0	1	LEXP	F635P3C	2068	1	OTH	Grange Restaurant & Bar				Sacramento	CA	95814	VISA	Tim Valderrama	Chief of Staff, Senator Hernandez	108.06	Dinner with staff and reps of CCHA	3/12/2014 12:00:00 AM	1729			
+1780048	3	56	LEXP	F635P3C	22~2	2	OTH	Sutter Club				Sacramento	CA	95814		Abby Browning	GoBiz	66.53	Reception					
+1845328	1	244	LEXP	F635P3C	2~243	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Marisol Prieto-Valle	Executive Secretary - Assembly Member V. Manuel Perez	9.20	Back-to-Session-Bash (food, beverages, entertainment)					
+1845328	1	515	LEXP	F635P3C	2~514	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Paul Fong	Assemblyman	9.20	Back-to-Session Bash (food, beverages, entertainment)					
+1845328	0	208	LEXP	F635P3C	2~207	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Jenny Callison	Committee Secretary - Assembly Member Sharon Quirk-Silva	9.20	Back-to-Session-Bash (food, beverages, entertainment)					
+1845667	0	8	LEXP	F635P3C	2051	1	OTH	Griselda's Catering				Sacramento	CA	95814		Cynthia Alvarez	Staffer for Assemblyperson Nazarian	9.01	Food/beverages for breakfast	2/19/2014 12:00:00 AM	0			
+1845667	0	30	LEXP	F635P3C	2073	1	OTH	Griselda's Catering				Sacramento	CA	95814		Heidi Jensen	Staffer for Senator Knight	9.01	Food/beverages for breakfast	2/19/2014 12:00:00 AM	0			
+1843962	0	5	LEXP	F635P3C	6WfU1ofC1zWd	2										Fazio, Joe	Staff, Assm. Mullin	16.62						EkiAWqsiK5GF
+1844606	0	37	LEXP	F635P3C	18222	1	OTH	ESQUIRE GRILL				SACRAMENTO	CA	95814		ROGELIO CAUNILLO	FELLOW/LEGISLATIVE AIDE, OFFICE OF SENATOR ANDY VIDAK	26.26	FOOD AND BEVERAGE	3/19/2014 12:00:00 AM	0			
+1764116	4	19	LEXP	F635P3C	hBssebNLWly1	2										Salacies, Arturo	Staff, Assm. Yamada	14.00						XHgbQhcCWnkn
+1845328	0	312	LEXP	F635P3C	2~311	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Conrad Gregory	Chief Consultant - Office of Lt. Governor	9.20	Back To Session Bash (Food, Beverages, and Entertainment)					
+1845328	1	321	LEXP	F635P3C	2~320	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Jacqueline Wong-Hernandez	Principal Consultant - Senate Committee on Appropriations	9.20	Back To Session Bash (Food, Beverages, and Entertainment)					
+1845328	0	13	LEXP	F635P3C	2~12	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Alejandra Duran	Assembly Member Al Muratsuchui's Office	9.20	Back-to-Session-Bash (food, beverages, entertainment)					
+1845328	0	377	LEXP	F635P3C	2~376	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Kenton Stanhope	Legislative Aide - Senator Jim Beall	9.20	Back To Session Bash (Food, Beverages, and Entertainment)					
+1845328	0	55	LEXP	F635P3C	2~54	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Andrew McElhinney	Legislative Director - Assembly Member Diane Harkey	9.20	Back-to-Session-Bash (food, beverages, entertainment)					
+1845328	0	63	LEXP	F635P3C	2~62	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Katie Masingale	Legislative Director - Assembly Member Frank Bigelow	9.20	Back-to-Session-Bash (food, beverages, entertainment)					
+1845328	1	439	LEXP	F635P3C	2~438	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Julius McIntyre	Consultant -Senator Roderick Wright	9.20	Back To Session Bash (Food, Beverages, and Entertainment)					
+1845328	0	454	LEXP	F635P3C	2~453	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Trevor Taylor	Legislative Aide-Senator William Monning	9.20	Back To Session Bash (Food, Beverages, and Entertainment)					
+1845328	1	213	LEXP	F635P3C	2~212	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Samantha Seng	Legislative Aide - Assembly Member Steve Fox	9.20	Back-to-Session-Bash (food, beverages, entertainment)					
+1845328	2	176	LEXP	F635P3C	2~175	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Aly Puccetti	Joint Rules Committee - Assembly Member Richard Gordon	9.20	Back-to-Session-Bash (food, beverages, entertainment)					
+1845867	0	50	LEXP	F635P3C	9~47	2	OTH	Cafeteria 15 L				Sacramento	CA	95814		Deborah Zavala	Scheduler/Exec. Asst., Office of Assembly Member Melendez	45.15	Food, beverage, name badge, invitation, postage at catered event.					
+1846090	0	25	LEXP	F635P3C	GRKkBdOiAvO5	2										Edwards, Colin	Field Representative, Assembly Member Allen	37.27						n7vUy87jDxff
+1845328	2	518	LEXP	F635P3C	2~517	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Cristina Garcia	Assemblymember	9.20	Back-to-Session Bash (food, beverages, entertainment)					
+1845328	3	109	LEXP	F635P3C	2~108	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Eleni Lewis	Assembly Fellow - Assembly Member Katcho Achadjian	9.20	Back to Session Bash (food, beverages, and entertainment)					
+1867885	0	9	LEXP	F635P3C	18696	1	OTH	LUCCA				SACRAMENTO	CA	95814		SHARON QUIRK-SILVA	ASSEMBLY MEMBER	68.36	DINNER	4/29/2014 12:00:00 AM	0			
+1870183	0	21	LEXP	F635P3C	LEXP00021	2	OTH	Centerplate/Classique Catering				Sacramento,	CA	95814		Susanna Schlendorf	Chief of Staff, St.Assm. Joan Buchanan	37.41	food/bev			N		
+1870221	0	2	LEXP	F625P3A	2094	1	OTH	Capitol Garage Coffee Company				Sacramento	CA	95814		Brian Maienschein	Assembly Member	7.87	Lunch	4/23/2014 12:00:00 AM	87.89			
+1842624	1	8	LEXP	F635P3C	jWgOAxzPBySh	1	IND	Pizza Bell				Elk Grove	CA	95624				0.00	Food & Beverage	3/12/2014 12:00:00 AM	70.56			
+1859011	0	6	LEXP	F635P3C	2~5	2	OTH	Sierra Deli & Market				Oakland	CA	94607		Ali Banani	Caltrans	6.18	Lunch					
+1845328	3	328	LEXP	F635P3C	2~327	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Brie Lindsey	Science and Technology Fellow-Senate Office of Research	9.20	Back To Session Bash (Food, Beverages, and Entertainment)					
+1845328	3	340	LEXP	F635P3C	2~339	2	OTH	California Tribal Business Alliance				Sacramento	CA	95814		Dana Quakenbush	Office Assistant - Senator Alex Padilla	9.20	Back To Session Bash (Food, Beverages, and Entertainment)					
+1844818	1	14	LEXP	F635P3C	9lyS6vQcsus6	2										Casey, John	Chief of Staff, Assembly Member Atkins	109.57						hO5zd1O5XC8g
+1843278	1	34	LEXP	F635P3C	FLBYjcQvN4Ns	2										Seng, Samantha	Legislative Aide, Assembly Member Fox	99.68						flvqlJZgjSKg
+1866177	0	4	LEXP	F635P3C	3~3	2	OTH	TOGO's of Orange				Orange	CA	92868		Steve LaMotte	Office of Assembly Member Diane Harkey	5.75	Lunch					
+1867548	0	164	LEXP	F635P3C	23~12	2	OTH	Classique Catering				Sacramento	CA	95814		Dana Jones	CA State Parks Dept	28.48	Breakfast					
+1869372	0	29	LEXP	F635P3C	3~28	2	OTH	FIRESTONE PUBLIC HOUSE				SACRAMENTO	CA	95814		MIKEY HOTHI	STAFF; ASM RICHARD PAN	68.28	COCKTAIL RECEPTION					
+1867548	0	71	LEXP	F635P3C	19~14	2	OTH	Costco				Sacramento	CA	95815		Shannon Shellenberg	Sen Office of Intl Rel	0.62	Drinks					
+1871453	0	29	LEXP	F635P3C	3~28	2	OTH	Bailey Hat Company				Denver	PA	17517		Craig Wilson	Office of Assemblymember Scott Wilk	25.00	Hat					
+1859011	1	10	LEXP	F635P3C	2~9	2	OTH	Sierra Deli & Market				Oakland	CA	94607		Brian Maroney	Caltrans	6.18	Lunch					
+1867548	0	128	LEXP	F635P3C	22~21	2	OTH	Sutter Club				Sacramento	CA	95814		Ezilda Samoville	Senate Office of Intl Rel	32.06	Reception					
+1867548	0	132	LEXP	F635P3C	22~25	2	OTH	Sutter Club				Sacramento	CA	95814		Brook Taylor	GO-Biz	32.06	Reception					
+1869745	0	57	LEXP	F635P3C	7426	1	OTH	CENTURY THEATRES				SACRAMENTO	CA	95814		LISA JOHNSON	OFFICE OF CALIFORNIA STATE SENATOR SCOTT WILK	19.50	TICKET / FOOD / BEVERAGE	5/21/2014 12:00:00 AM	0			
+1873142	0	276	LEXP	F635P3C	2387	1	OTH	Ella Dining Room & Bar				Sacramento	CA	95814		Christina Garcia	Assemblymember	41.58	2014 California Day Reception:  Food, beverage & gift bag	5/21/2014 12:00:00 AM	0			
+1871831	3	4	LEXP	F635P3C	TE38HkatYt6s	1	IND	Tequila Museo Mayahuel				Sacramento	CA	95814				0.00	Food, Beverages & Book	6/17/2014 12:00:00 AM	3101.38		F635P3C.TE38HkatYt6s	
+1910851	0	27	LEXP	F635P3C	2~26	2	OTH	ALEXIS CATERING				SACRAMENTO	CA	95814		GONZO ANTONIO VILLEGAS	ASSEMBLY FELLOW; ASM KRISTIN OLSEN	31.25	FOOD AND BEVERAGES					
+1905798	0	98	LEXP	F635P3C	LEXP00098	2	OTH	California Fresh Fruit Association				Fresno	CA	93711		Richard Corey	Exec. Ofcr. CA Air Resources Board	14	Fresh fruit			N		
+1901067	0	11	LEXP	F635P3C	LEXP00011	2	OTH	Sheraton Grand Sacramento				Sacramento	CA	95814		Rajan Mutialu	Analyst, CA PUC	43.26	Meal			N		
+1910997	0	69	LEXP	F635P3C	28024	1	IND	The Alliance for Solar Choice				San Francisco	CA	94105	American Express	Rich Gordon	Assemblymember	9.91	Hard Hat with a The Alliance for Solar Choice Sticker	6/24/2014 12:00:00 AM	0			
+1871761	0	40	LEXP	F635P3C	RhBrTB47ihWk	2										Hernandez, Leia	District Representative, Senator Huff	18.26						zB9Uz51A16Uu
+1872080	0	4	LEXP	F635P3C	18820	1	OTH	APPLE CATERING				CUPERTINO	CA	95014		ERIKA WEBB-HUGHES	FEDERAL POLICY LIAISON, CALIFORNIA STATE BOARD OF EDUCATION	20.00	FOOD AND BEVERAGE	4/23/2014 12:00:00 AM	20			
+1843962	1	10	LEXP	F635P3C	lmfp9fmZmiXM	1	IND	Roseville Chamber of Commerce				Roseville	CA	95678				0.00	Roseville Chamber of Commerce Installation Dinner	1/29/2014 12:00:00 AM	70			
+1872992	0	4	LEXP	F635P3C	2~3	2	OTH	The Citizen Hotel				Sacramento	CA	95814		Gino Folchi	Staff, Assemblymember Harkey	56.85	Reception					
+1871831	2	60	LEXP	F635P3C	tSIqWxtdpMtl	2										Guerrero, Willie	Principal Consultant/Caucus Consultant, Senator Lara	37.82						TE38HkatYt6s
+1871831	2	20	LEXP	F635P3C	c6zgbmrlGYeJ	2										Medina, Andrew	Senior Consultant, Assembly Member Fong	37.82						TE38HkatYt6s
+1910718	0	10	LEXP	F635P3C	28102	1	IND	Stacy Beard				South Lake Tahoe	CA	96151		Jason Eaton	Maintenance Worker I	5.82	Reimb for Park Champions workday refreshments at MacKerricher SP	7/20/2014 12:00:00 AM	17.46		6486	
+1910808	0	19	LEXP	F635P3C	3~18	2	OTH	FIRESTONE PUBLIC HOUSE				SACRAMENTO	CA	95814		STEVE COHN	CANDIDATE FOR CA ASSEMBLY	49.89	COCKTAIL RECEPTION					
+1937142	0	8	LEXP	F635P3C	2~7	2	OTH	Specialty's Caf? & Bakery				Pleasanton	CA	94588		Ryan Guillen	Office of Senator Bill Monning	7.13	Food and Drink During Member Company Tour					
+1927555	0	1	LEXP	F635P3C	4	1	OTH	Planet Hollywood Resort				Las Vegas	NV	89109		Brad Harward	HCD Manufactured Housing Program Manager	154.56	Hotel Room for speaking engagement	10/15/2014 12:00:00 AM	154.56			
+1937346	0	47	LEXP	F635P3C	XlsVaIVykTYy	2										Colt, Christina Marie	Director of Community Outreach, Assembly Member Waldron	4.99						ZneTW5gxhtYj
+1911303	0	14	LEXP	F645P2A	14	1	OTH	Stephanie Pe?a				Midwest	OK	73130		Wendy Bruget	City of LA Commissioner	0.19	Production announcer voiceover services for National Affiliate Luncheon	7/19/2014 12:00:00 AM	300			
+1911539	0	39	LEXP	F635P3C	2FHlKvGlnZLa	2										Dermenjian, Talene	Field Representative, Assembly Member Nazarian	0.42						iVkMFyYzyk3q
+1911303	0	143	LEXP	F645P2A	68	1	OTH	AleDan, LLC				Long Beach	CA	90803		Ana Guerrero	Chief of Staff, LA Mayor's Office	2.72	Multimedia creative, technical, and production services for Awards Gala	7/22/2014 12:00:00 AM	3883			
+1930860	0	12	LEXP	F635P3C	6~11	2	OTH	LOS ANGELES COUNTY METROPOLITAN TRANSPORTATION AUTHORITY				Los Angeles	CA	90012		JOSH KRUPIES	STAFF FOR ASM. BLOOM	16.67	LUNCH AND PARKING					
+1932395	0	1	LEXP	F635P3C	10	1	OTH	The Andrews Hotel				San Francisco	CA	94019		Brian Peck	GO-Biz	390.91	Hotel Stay	12/4/2014 12:00:00 AM	390.91		10	
+1932395	0	56	LEXP	F635P3C	37~8	2	OTH	Ritz Carlton				Dana Point	CA	92629		Diane Harkey	Assemblymember	184.69	Break & Reception					
+1933893	0	8	LEXP	F635P3C	9	1	OTH	Edward P. and Diane M. Hernandez, ODs				La Puente	CA	91744		Dr. Ed Hernandez	Senator	15922.59	Payment for VSP Network enrollees eyecare services	12/15/2014 12:00:00 AM	15922.59			
+1911165	1	4	LEXP	F635P3C	6	1	OTH	USC				Los Angeles	CA	90089		Richard Gordon	Assemblymember	90.20	attended USC reception with President Nikias	9/5/2014 12:00:00 AM	90.20			
+1867548	1	103	LEXP	F635P3C	21~13	2	OTH	Paul Baker Printing Inc.				Roseville	CA	95678		Brook Taylor	GO-Biz	1.72	Reception Invitations					
