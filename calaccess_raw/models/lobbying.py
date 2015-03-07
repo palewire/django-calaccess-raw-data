@@ -658,7 +658,7 @@ class F690P2Cd(CalAccessBaseModel):
         verbose_name_plural = 'F690P2_CD'
 
     def __unicode__(self):
-    return self.filing_id
+        return self.filing_id
 
 
 class LattCd(CalAccessBaseModel):
