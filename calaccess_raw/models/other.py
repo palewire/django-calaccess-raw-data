@@ -41,6 +41,9 @@ class AddressCd(CalAccessBaseModel):
         db_table = 'ADDRESS_CD'
         verbose_name = 'ADDRESS_CD'
         verbose_name_plural = 'ADDRESS_CD'
+        
+    def __unicode__(self):
+        return self.adrid
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
