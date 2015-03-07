@@ -157,6 +157,9 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         db_table = 'FILER_ETHICS_CLASS_CD'
         verbose_name = 'FILER_ETHICS_CLASS_CD'
         verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
+    
+    def __unicode__(self):
+        return unicode(self.filer_id)
 
 
 class FilerInterestsCd(CalAccessBaseModel):
@@ -1156,3 +1159,6 @@ class ReportsCd(CalAccessBaseModel):
         db_table = 'REPORTS_CD'
         verbose_name = 'REPORTS_CD'
         verbose_name_plural = 'REPORTS_CD'
+        
+    def __unicode__(self):
+        return self.rpt_id
