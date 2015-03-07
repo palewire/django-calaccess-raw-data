@@ -622,6 +622,9 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         db_table = 'LOBBY_AMENDMENTS_CD'
         verbose_name = 'LOBBY_AMENDMENTS_CD'
         verbose_name_plural = 'LOBBY_AMENDMENTS_CD'
+    
+    def __unicode__(self):
+        return self.filing_id
 
 
 class F690P2Cd(CalAccessBaseModel):
