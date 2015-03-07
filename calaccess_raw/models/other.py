@@ -1153,3 +1153,6 @@ class ReportsCd(CalAccessBaseModel):
         db_table = 'REPORTS_CD'
         verbose_name = 'REPORTS_CD'
         verbose_name_plural = 'REPORTS_CD'
+        
+    def __unicode__(self):
+        return self.rpt_id
