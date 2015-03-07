@@ -1134,3 +1134,6 @@ class LpayCd(CalAccessBaseModel):
         db_table = 'LPAY_CD'
         verbose_name = 'LPAY_CD'
         verbose_name_plural = 'LPAY_CD'
+        
+    def __unicode__(self):
+        return self.filing_id
