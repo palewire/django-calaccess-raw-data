@@ -70,6 +70,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
             "measure_name"
         )
 
+    def __unicode__(self):
+        return self.measure_name
+
 
 class EfsFilingLogCd(CalAccessBaseModel):
     """
