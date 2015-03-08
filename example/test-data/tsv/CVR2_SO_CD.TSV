@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	ENTITY_CD	ENTY_NAML	ENTY_NAMF	ENTY_NAMT	ENTY_NAMS	ITEM_CD	MAIL_CITY	MAIL_ST	MAIL_ZIP4	DAY_PHONE	FAX_PHONE	EMAIL_ADR	CMTE_ID	IND_GROUP	OFFICE_CD	OFFIC_DSCR	JURIS_CD	JURIS_DSCR	DIST_NO	OFF_S_H_CD	NON_PTY_CB	PARTY_NAME	BAL_NUM	BAL_JURIS	SUP_OPP_CD	YEAR_ELECT	POF_TITLE
+804982	0	1	CVR2	F410	CVR21CAO	CAO	Rico	Stephen	Mr.		CTL	Madera	CA	93638-8841						ASM		ASM		25	S		Democrat				2002	
+673511	0	0	CVR2	F410	1	CAO	Schiff	Adam			CTL									SEN		SEN		21			Democrat				1996	
+635497	1	0	CVR2	F410	1	CAO	Burton	John			CTL									SEN		SEN		3			Democrat				1996	
+644163	0	0	CVR2	F410	1	BNM	California Reading & Literacy Improvement. Public Library Construction Bond				PFC																	14	Statewide	S		
+655016	0	0	CVR2	F410	1	CAO	Burton	John			CTL									SEN		SEN		3			Democrat				1996	
+751230	1	2	CVR2	F410	1	SPO	California Nurses Association				SPO	Oakland	CA	94612					Registered Nurses													
+670124	2	1	CVR2	F410	1	CAO	Klehs	Johan			CTL									BOE		BOE		1			Democrat				1998	
+636392	2	1	CVR2	F410	1	CAO	Bustamante	Cruz			CTL									LTG		STW					Democrat				2002	
+843056	4	2	CVR2	F410	OFC3	POF	Strasburg	Alan M.			ATR	Los Angeles	Ca	90024																		
+864153	3	1	CVR2	F410	5	BNM	Water Quality, Supply and Safe Drinking Water Projects. Coastal Wetlands Purchase and Prot.				PFC																	50	Statewide	S		
+788999	2	5	CVR2	F410	2	SPO	The Trust for Public Land				SPO	Sacramento	CA	95814					Conservation Organization													
+886829	1	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	916-442-2280		lauras@eichmancpa.com															
+898588	1	1	CVR2	F410	ACCT-CAN	CAO	REED	THOMASINA	Ms.		CTL	Los Angeles	CA	90045	(310)215-3215					ASM		ASM		51			DEM					
+826356	1	2	CVR2	F410	3	SPO	California State Council of Service Employees				SPO	Sacramento	CA	95814					Service Employees													
+846119	0	1	CVR2	F410	CVR21CAO	CAO	Mastin	Jim			CTL	Ukiah	CA	95482						ASM		ASM	                                        	1	S		Democratic				2002	
+847026	0	1	CVR2	F410	5144	POF	Sloan	June			ATR	Los Banos	CA	93635	209-826-2232																	
+847327	1	1	CVR2	F410	1	SPO	Service Employees International Union Local 790				SPO	Oakland	CA	94607	(510) 465-0120				Service Employees													
+851452	0	5	CVR2	F410	SPO3	SPO	Political Action for Classified Employees of CA School Employees				SPO	Sacramento	CA	95814					Public Employees													
+851452	0	6	CVR2	F410	PRI1	COM	Hardy	Steve			PFC									ASM		ASM		8	S					S		
+636297	2	1	CVR2	F410	1	BNM	Elimination of Public Schools & Funding. Voucher System				PFC																	38	Statewide	O		
+925469	0	1	CVR2	F410	1	CAO	Frommer	Dario			CTL									ASM		ASM		43			Democrat				2004	
+737183	2	1	CVR2	F410	1	CAO	Crettol	Jim			CTL									ASM		ASM		30			Democrat				2002	
+900502	2	2	CVR2	F410	OFC1	POF	Copeland	Rita			ATR	Sacramento	Ca	95841	916-348-9100	916-348-9111																
+938185	3	4	CVR2	F410	4	SPO	Planning and Conservation League				SPO	Sacramento	CA	95814					Environmental Organization													
+635498	4	1	CVR2	F410	1	CAO	Steinberg	Darrell			CTL									ASM		ASM		9			Democrat				2000	
+946488	0	1	CVR2	F410	ACCT-CAN	CAO	Margett	Bob			CTL	Arcadia	CA	91007	916/445-2848					SEN		STW		29	H		REP					
+810071	3	5	CVR2	F410	4	SPO	California Retailers Association				SPO	Sacramento	CA	95814					Retailers													
+810071	3	7	CVR2	F410	6	SPO	League of Women Voters of California				SPO	Sacramento	CA	95814					Women Voters													
+864153	4	5	CVR2	F410	2	SPO	Southern California Water Committee				SPO	Rancho Cucamonga	CA	91730	(909) 980-4700				Water Organization													
+906994	0	2	CVR2	F410	1	CAO	Shelley	Kevin			CTL									SOS		STW					Democrat				2006	
+909210	0	2	CVR2	F410	1	CAO	Nation	Joe			CTL									ASM		ASM		06			Democrat				2004	
+810484	2	1	CVR2	F410	1	CAO	Pine	Dave			CTL									ASM		ASM		19			Democrat				2002	
+981340	0	1	CVR2	F410	ACCT-BMC	BNM	911 Emergency & Trauma Care Act				PFC																		Statewide - California	S		
+977660	1	1	CVR2	F410	OFC1	POF	Bell, Jr.	Charles H.			ATR	Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+990186	1	1	CVR2	F410	1	BNM	Recall of Governor Gray Davis				PFC																		Statewide	O		
+990795	0	1	CVR2	F410	ACCT-CAN	CAO	Aroner	Dion	Ms.		CTL	Oakland	CA	94610						SEN		SEN		9	S		DEM					
+961267	5	4	CVR2	F410	OFC6	PRO	SULLIVAN	JOHN			CTL																					
+958641	1	1	CVR2	F410	1	CAO	Bustamante	Cruz M.			CTL									GOV		STW					Democrat				2003	
+1028221	0	2	CVR2	F410	3	SPO	National Education Association				SPO	Washington	DC	20036					Public Education													
+959600	0	1	CVR2	F410	ACCT-CAN	CAO	Holden	Nate	Mr.		CTL	Los Angeles	CA	90016	(323) 965-1218		(310) 823-1896			ASM		ASM		47	S		DEM				2004	
+958984	2	2	CVR2	F410	2	SPO	California State Council of Service Employees				SPO	Sacramento	CA	95814	(916) 442-3838				Labor Organization													
+962285	1	1	CVR2	F410	6756	CAO	Maze	Bill			CTL	Visalia	CA	93277	559-732-2115					ASM		ASM		34			Republican				2002	
+973102	0	1	CVR2	F410	1	CAO	Pinard	Margaret Ann			CTL									SEN		SEN		15			Democrat				2004	
+799859	3	2	CVR2	F410	1	SPO	Peace Officers Research Association of California				SPO	Sacramento	CA	95833	(916) 921-0660				Peace Officers													
+977660	0	2	CVR2	F410	ACCT-BMC	BNM	Support/Oppose State Ballot Measures				PFC																				2003	
+953232	2	2	CVR2	F410	OFC1	POF	Guardarrama	Joseph A.	Mr.		ATR	Santa Monica	CA	90401	310-458-1405	310-260-2666																
+998219	2	1	CVR2	F410	357000	ATR	Paulson	Lou			ATR	Sacramento	CA	95833	(916) 921-9111																	
+940360	2	1	CVR2	F410	1	SPO	California Conference of Machinists				SPO	Petaluma	CA	94952	(707) 795-0086				Labor Organization													
+1020972	0	2	CVR2	F410	OFC1	POF	Hiltachk	Thomas	Mr.		ATR	Sacramento	CA	95814	(916) 442-7757																	
+843056	5	2	CVR2	F410	OFC3	POF	Strasburg	Alan M.			ATR	Los Angeles	Ca	90024																		
+1023193	1	1	CVR2	F410	OFC2	POF	Strom	Joel	Dr.		POF	Los Angeles	Ca	90064	310.277.3451	310.277.4136	drjoelstrom@earthlink.net															
+947028	2	1	CVR2	F410	4769	SPO	California Association of Ophthalmology				SPO	San Francisco	CA	94105					Health													
+963810	2	1	CVR2	F410	ACCT-CAN	CAO	Parra	Nicole			CTL	Hanford	Ca	93230						ASM		ASM		30	H		DEM				2004	
+800467	4	1	CVR2	F410	210000	ATR	Cottingham	Ron			ATR	Sacramento	CA	95834	(916) 928-3777																	
+800128	4	4	CVR2	F400	A5	ATH	Randy Beintema				SMA	Sacramento	CA	95834	(916) 928-3777																	
+800128	4	16	CVR2	F400	A17	ATH	Joe Flannagan				SMA	Sacramento	CA	95834	(916) 928-3777																	
+867101	5	1	CVR2	F410	1	BNM	Housing and Emergency Shelter Trust Fund Act of 2002				PFC																	46	Statewide	S		
+852748	3	1	CVR2	F410	ACCT-CAN	CAO	Torlakson	Tom			CTL	Sacramento	CA	95841	(916)348-9100					SEN		SEN		7	H		DEM				2004	
+1038401	1	3	CVR2	F410	SPO1	SPO	California Building Industry Association				SPO	Sacramento	CA	95814	(916) 443-7933				Professional/Trade													
+917340	2	1	CVR2	F410	OFC1	POF	Carpenter	Pat			ATR	Washington	DC	20003	(202) 479-1230																	
+998219	3	1	CVR2	F410	357000	ATR	Paulson	Lou			ATR	Sacramento	CA	95833	(916) 921-9111																	
+998219	3	6	CVR2	F410	5	SPO	Consumer Attorneys of California				SPO	Sacramento	CA	95814					Consumer Attorneys													
+1072253	0	1	CVR2	F410	ACCT-CAN	CAO	Arambula	Juan			CTL	Fresno	CA	93704	559-824-7829					ASM		ASM		31	H		DEM				2006	
+1040232	0	1	CVR2	F410	ACCT-BMC	BNM	Committee to Preserve Voter Choice, Yes on 60				PFC																		Statewide	S		
+1109611	0	1	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693	lauras@eichmancpa.com															
+1037179	3	7	CVR2	F410	7	SPO	National Black Police Association				SPO	Washington	DC	20010	(202) 986-2070				Non-Profit Organization													
+1110463	0	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1098100	0	1	CVR2	F410	PRI1	COM	SA2005RF0009	Number Not Assigned			PFC																		State of California	S		
+980233	2	2	CVR2	F410	SPO1	SPO	INSTITUTE FOR FAMILIES AND TAXPAYERS				SPO	TUSTIN	CA	92780																		
+973102	6	1	CVR2	F410	1	CAO	Pinard	Margaret Ann			CTL									SEN		SEN		15			Democrat				2004	
+1111726	0	1	CVR2	F410	433000	ATR	Balgenorth	Robert			ATR	Sacramento	CA	95814	(916) 443-3302																	
+1111726	1	11	CVR2	F410	3	SPO	California School Employees Association				SPO	San Jose	CA	95131	(408) 263-8000				School employees													
+655475	3	1	CVR2	F410	1	CAO	Vasconcellos	John			CTL									SEN		SEN		13			Democrat				2000	
+1113534	2	1	CVR2	F410	1	BNM	Governor's Budget Power Grab				PFC																	76	Statewide	O		
+1111622	1	1	CVR2	F410	OFC1	POF	STEPHEN	LAURA ANN			ATR	SACRAMENTO	CA	95814	916-442-2280																	
+1040057	2	1	CVR2	F410	ACCT-BMC	BNM	STEM CELL RESEARCH FUNDING, BONDS				PFC																	71	STATEWIDE	O		
+1123959	0	1	CVR2	F410	1	SPO	California State Employees Association, SEIU Local 1000				SPO	Sacramento	CA	95814					Labor Union													
+1123489	1	1	CVR2	F410	5	BNM	Punish New Teachers Act				PFC																	74	Statewide	O		
+1113540	0	9	CVR2	F410	10	SPO	California School Employees Association				SPO	San Jose	CA	95131					School Employees													
+939519	5	7	CVR2	F410	15	SPO	California School Employees Association				SPO	Sacramento	CA	95814					School Employee Organization													
+1118334	0	1	CVR2	F410	SPO1	SPO	Seneca Network, Inc.				SPO	Santa Monica	CA	90401					Political Membership Association													
+1113534	1	10	CVR2	F410	11	SPO	California Teachers Association				SPO	Burlingame	CA	94010					Educators													
+1130903	0	1	CVR2	F410	ACCT-BMC	BNM	Prop 74 -Teacher Tenure, Prop 75 - Union Dues Check-Off & Prop 76 - Budget Reform				PFC																		Statewide	S		
+1131873	2	3	CVR2	F410	SPO3	SPO	Hotel and Restaurant Employees International Union				SPO	San Francisco	CA	94102					Restaurant Workers													
+1111688	3	1	CVR2	F410	ACCT-CAN	CAO	Nowwatka	Paul M.	Mr.		CTL	Torrance	Ca	90501-2310	310.320.6535					ASM		ASM		53	S		REP				2005	
+1043976	2	1	CVR2	F410	SPO1	SPO	Howard Jarvis Taxpayers Association				SPO	Los Angeles	CA	90005	(213) 251-9665				Taxpayers													
+983762	5	1	CVR2	F410	OFC1	POF	Spinelli	Robert			ATR	Sacramento	CA	95814	(916) 443-0505																	
+1144755	1	1	CVR2	F410	2	CAO	Steinberg	Darrell			CTL									SEN		SEN		6			Democrat				2006	
+1111726	4	1	CVR2	F410	433000	ATR	Balgenorth	Robert			ATR	Sacramento	CA	95814	(916) 443-3302																	
+1125195	1	3	CVR2	F410	2	SPO	Northern California District Council of Laborers				SPO	Pleasanton	CA	94588-3322	(925) 469-6800				Labor Organization													
+1017790	4	1	CVR2	F410	SPO1	SPO	Howard Jarvis Taxpayers Association				SPO	Los Angeles	CA	90005	213-384-9656				Taxpayer Reform Group													
+1065278	1	2	CVR2	F410	2	SPO	Primerica Financial Services, Inc.				SPO	Duluth	GA	30099					Insurance/Financial Services													
+984129	1	1	CVR2	F410	1	ATR	Dismukes	Dan 			ATR	Atlanta	GA	30328	(404) 828-7861																	
+1162803	0	1	CVR2	F410	ACCT-CAN	CAO	Grimes	James W.			CTL	Yucaipa	CA	92339	909-936-8337					ASM		ASM		65	S		REP					
+900488	4	1	CVR2	F410	ACCT-CAN	CAO	MCCLINTOCK	TOM			CTL	SACRAMENTO	CA	95814	(916) 445-8366					SEN		SEN		19			REP				2004	
+1181748	0	2	CVR2	F410	2	SPO	Affordable Housing Collaborative				SPO	Sacramento	CA	95814	(916) 447-0503				Non profit affordable housing advocacy organization													
+1169129	0	2	CVR2	F410	2	BNM	Proposition 82 - Public Preschool Education. Tax Increase. Initiative Constitutional Amend				PFC																	82	Statewide	S		
+1019523	2	1	CVR2	F410	OFC3	POF	Stephen	Laura			ATR	Sacramento	CA	95814	916-442-2280																	
+1108013	1	1	CVR2	F410	ACCT-CAN	CAO	Runner	George			CTL	Lancaster	CA	93534	661-942-0885	661-723-7845				SEN		SEN			H		REP				2005	
+1185793	0	4	CVR2	F410	SPO2	SPO	Small Business Action Committee				SPO	Sacramento	CA	95814					Small businesses													
+1159764	1	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	916-442-2280																	
+970040	6	2	CVR2	F410	SPO1	SPO	Howard Jarvis Taxpayers Association				SPO	Los Angeles	CA	90005					Taxpayer Organization													
+1062116	2	2	CVR2	F410	SPO2	SPO	Point Center Financial, Inc.				SPO	San Juan Capistrano	CA	92675	(800) 544-8800	(949) 661-1850			Finance													
+1174526	0	3	CVR2	F410	SPO2	SPO	Peace Officers Research Association of California (PORAC)				SPO	Sacramento	CA	95834					Professional Association													
+1041458	2	4	CVR2	F410	SPO4	SPO	Taiwan Hotel & Motel Association				SPO	San Gabriel	CA	91776	(626) 280-2207				Lodging													
+1180954	0	2	CVR2	F410	1	SPO	Association of American Publishers, Inc.				SPO	New York	NY	10003					Trade Association													
+1123136	4	2	CVR2	F410	5	BNM	Qualification and Passage of 2006 tobacco tax Measure				PFC																		Statewide	S		
+1198687	1	1	CVR2	F410	12243	POF	Packard	Dianna			POF	Carlsbad	CA	92010	760-729-8723																	Assistant Campaign Manager
+1200128	1	9	CVR2	F410	12	SPO	California Commuter Alliance, a Project of the California Alliance for Jobs				SPO	Los Angeles	CA	90025					Commuters													
+1201247	0	1	CVR2	F410	ACCT-BMC	BNM	TAX ON CIGARETTES. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE - 86				PFC																		STATEWIDE	O		
+1201247	0	3	CVR2	F410	SPO1	SPO	PACIFIC GROSERVICE, INC.				SPO	SAN JOSE	CA	95110																		
+1206804	1	5	CVR2	F410	SPO4	SPO	SAN MANUEL BAND OF MISSION INDIANS				SPO	PATTON	CA	92369																		
+1204672	1	2	CVR2	F410	2	BNM	Proposition 1A. Transportation Investment Fund.				PFC																	1A	Statewide	S		
+1200128	3	2	CVR2	F410	3	BNM	Highway Safety, Traffic Reduction, Air Quality, Port Security Bond Act of 2006				PFC																	1B	Statewide	S		
+1223022	0	2	CVR2	F410	SPO1	SPO	California Trucking Association				SPO	West Sacramento	CA	95691	916-373-3500	916-371-7346	khenning@caltrux.org															
+1167930	3	1	CVR2	F410	ACCT-CAN	CAO	Torlakson	Tom			CTL	Sacramento	CA	95841	916-348-9100					SEN		SEN		7	H		DEM					
+1244474	1	1	CVR2	F410	CVR22969ATR	ATR	Wind	Karen			ATR	Pleasanton	CA	94566-7666																		
+1251075	2	1	CVR2	F410	ACCT-BMC	BNM	Term Limits and Legislative Reform Act				PFC																		Statewide	S		
+925469	4	1	CVR2	F410	1	CAO	Frommer	Dario			CTL									ASM		ASM		43			Democrat				2004	
+1251251	0	2	CVR2	F410	OFC1	POF	Suttie	John			POF	Los Angeles	CA	90401																		
+1262850	1	1	CVR2	F410	1	ATR	Luis	Lori			ATR	Modesto	CA	95354	2095276453																	
+1041458	3	1	CVR2	F410	OFC2	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1284604	1	1	CVR2	F410	11488	CAO	Dale	Jack			CTL	San Diego	CA	92101	619-299-8683					ASM		ASM		77			Republican				2006	
+1285260	2	1	CVR2	F410	SPO1	SPO	Planned Parenthood Advocacy Project Los Angeles County				SPO	Los Angeles	CA	90033	(323) 223-4462	(323) 225-5844			Non-Profit Advocacy Organization													
+1008856	1	1	CVR2	F410	OFC1	POF	Wells	Robert			ATR	Burlingame	CA	94010	(650) 692-4300	(650) 259-1029																
+847338	4	2	CVR2	F410	1	SPO	Service Employees International Union Local 790				SPO	Oakland	CA	94607	(510) 465-0120				Service Employees													
+1293478	1	1	CVR2	F410	SPO1	SPO	Consumer Attorneys of California				SPO	Sacramento	CA	95814	(916) 442-6902				Consumer Attorneys													
+1206804	4	1	CVR2	F410	OFC1	POF	DAVIDSON	CARY			ATR	LOS ANGELES	CA	90071	(213) 624-6200																	
+1290156	1	2	CVR2	F410	SPO1	SPO	Blue Cross of California				SPO	Sacramento	CA	95814	(916) 447-9280				Health Care													
+1289289	1	1	CVR2	F410	OFC2	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1251251	1	4	CVR2	F410	SPO2	SPO	California Farm Bureau Federation				SPO	Sacramento	CA	95833					Agriculture													
+1275840	0	1	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1223658	3	1	CVR2	F410	ACCT-CAN	CAO	Schwarzenegger	Arnold			CTL									GOV		STW			H		REP				2006	
+1251251	2	1	CVR2	F410	ACCT-BMC	BNM	California Property Owners & Farmland Protection Act (AG # 07-0015)				PFC																		Statewide	S		
+1139266	6	1	CVR2	F410	449000	ATR	Calfo	Cathryn			ATR	Sacramento	CA	95814	(916) 442-2952																	
+1319098	1	2	CVR2	F410	SPO1	SPO	California Dematology Society				SPO	Sacramento	CA	95814					Trade/Profession													
+1309194	2	1	CVR2	F410	SPO1	SPO	Planned Parenthood of Orange and San Bernardino Counties Action Fund				SPO	Orange	CA	92866					Non-Profit Advocacy Organization													
+1321528	0	1	CVR2	F410	3	ATR	Olivito	Sam			ATR	Paramount	CA	90723	5626335533																	
+1021582	3	1	CVR2	F410	OFC1	POF	Bell, Jr.	Charles H.			ATR	Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+1299164	0	3	CVR2	F410	3	SPO	Citigroup Inc.				SPO	New York	NY	10043					Banking Financial Services													
+1326077	2	3	CVR2	F410	SPO4	SPO	CLEAN ENERGY FUELS CORP.				SPO	SEAL BEACH	CA	90740					RENEWABLE ENERGY AND ALTERNATIVE FUEL COMPANIES													
+1146967	2	2	CVR2	F410	1	SPO	Service Employees International Union Local 715				SPO	San Jose	CA	95131	(408) 954-8715				Service Employees													
+1289281	2	1	CVR2	F410	ACCT-BMC	BNM	Amended Indian Gaming Compacts				PFC																	94	Statewide	O		
+1301604	0	1	CVR2	F410	OFC1	POF	Titus	Ashlee N.			ATR	Sacramento	CA	95814	916-442-7757	916-442-7759																
+1303469	1	1	CVR2	F410	OFC1	POF	Berge	John			ATR	San Francisco	CA	94104	(415) 352-0710																	
+1251075	5	1	CVR2	F410	ACCT-BMC	BNM	Term Limits and Legislative Reform Act				PFC																	93	Statewide	S		
+1314968	0	3	CVR2	F410	SPO1	SPO	Greenlining Action				SPO	Berkeley	CA	94704	(510) 926-4026	(510) 926-4010			Non-Profit Organization													
+1251251	6	1	CVR2	F410	ACCT-BMC	BNM	California Property Owners & Farmland Protection Act (AG # 07-0015); Proposition 98				PFC																		Statewide	S		
+1329096	0	2	CVR2	F410	SPO1	SPO	Associated Builders and Contractors, Inc., Golden State Chapter				SPO	Livermore	CA	94551					Professional/Trade													
+1331926	0	1	CVR2	F410	PRI1	COM	Hegyi	Paul			PFC									ASM		ASM		10	S					S		
+1341510	0	1	CVR2	F410	1	SPO	California Nurses Assn.				SPO	Oakland	CA	94612					Healthcare													
+1336434	0	1	CVR2	F410	SPO1	SPO	California Teachers Association				SPO	Sacramento	CA	95814					Labor Organization													
+1338158	0	1	CVR2	F410	SPO1	SPO	Bay Area Bioscience Association				SPO	South San Francisco	CA	94080					Life Science Association													
+1341606	0	1	CVR2	F410	ACCT-CAN	CAO	Canciamilla	Joseph			CTL	Pittsburg	CA	94565						ATT		STW					Democratic Party				2010	
+1306001	2	3	CVR2	F410	SPO2	SPO	Drug Policy Alliance Network				SPO	New York	NY	10018					Nonprofit advocacy organization													
+1332397	0	1	CVR2	F410	1	SPO	THE SHELBRAN COMPANY, INC.				SPO	TEMECULA	CA	92592					REAL ESTATE													
+1072253	1	1	CVR2	F410	ACCT-CAN	CAO	Arambula	Juan			CTL	Fresno	CA	93704	559-824-7829					ASM		ASM		31	H		Democratic Party					
+1330624	1	1	CVR2	F410	PRI1	COM	Hall	Isadore			PFC									ASM		ASM		52	S					S		
+1292420	3	5	CVR2	F410	4	SPO	Faculty Association of California Community Colleges				SPO	Sacramento	CA	95814					membership association													
+1353570	0	2	CVR2	F410	OFC1	POF	Wayne	Howard			ATR	San Diego	CA	92110																		
+970622	2	1	CVR2	F410	1	SPO	Operating Engineers Local Union No. 3				SPO	Alameda	CA	94502					Labor Organization													
+1342187	1	6	CVR2	F410	PRI1	BNM	Proposition 6. Criminal Penalties and Law. Public Safety Funding.				PFC																	6	Statewide	O		
+1332096	6	1	CVR2	F410	SPO2	SPO	California Tribal Business Alliance IE PAC				SPO	Sacramento	CA	95814					Indian Gaming													
+1383121	0	1	CVR2	F410	OFC1	POF	TICHENOR	DAN			POF	CASTRO VALLEY	CA	94552	510-537-8440																	
+1353026	0	1	CVR2	F410	ACCT-BMC	BNM	Limits on Marriage. Constitutional Amendment. Proposition				PFC																	8	Statewide	O		
+1342187	2	5	CVR2	F410	SPO4	SPO	California Federation of Teachers				SPO	Burbank	CA	91505					Labor Organization													
+1367089	1	2	CVR2	F410	PRI1	BNM	Limit on Marriage.  Constitutional Amendment				PFC																	8	Statewide	O		
+1362275	0	1	CVR2	F410	OFC1	POF	Hiltachk	Thomas W.			ATR	Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+1365974	0	1	CVR2	F410	PRI1	COM	Jackson	Hannah Beth			PFC									SEN		SEN		19						S		
+1340217	2	1	CVR2	F410	OFC1	POF	Mele	Steven			ATR	West Hollywood	CA	90069	310-385-7300	323-395-0519																
+1112113	3	4	CVR2	F410	SPO1	SPO	California Chamber of Commerce				SPO	Sacramento	CA	95814	(916) 444-6670	(916) 325-1284			Miscellaneous													
+1387865	0	5	CVR2	F410	OFC5	POF	Ellis-Lamkins (Executive Officer)	Phaedra			POF	San Jose	CA	95125	408-266-3790																	
+1152096	2	1	CVR2	F410	OFC5	POF	Stephen	Laura			ATR	Sacramento	CA	95814	916-442-2280																	
+1384664	0	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+855348	2	1	CVR2	F410	OFC3	POF	Roath	Trish			ATR	Sacramento	CA	95814	916-444-2772																	
+1387631	0	5	CVR2	F410	SPO1	SPO	California Association of Hospitals and Health Systems				SPO	Sacramento	CA	95814	(916) 552-7622				Association of Hospitals and Health Systems													
+1388620	1	3	CVR2	F410	3	SPO	Association of Orange County Deputy Sheriffs				SPO	Santa Ana	CA	92703					Deputy Sheriffs													
+1388623	0	1	CVR2	F410	1	POF	Drozd	Don			POF	Santa Ana	CA	92701	9165561776																	Co-chairman
+1388446	0	2	CVR2	F410	3	SPO	Freight, Construction, General Drivers, Warehousemen and Helpers, Local No. 287				SPO	San Jose	CA	95112					Organized Labor / International Brotherhood of Teamsters													
+1388449	0	4	CVR2	F410	5	SPO	International Union of Elevator Constructors Local 8				SPO	San Francisco	CA	94110					415-285-2900													
+1388549	0	1	CVR2	F410	1	POF	CROCKER	ARLEEN			POF	CAMARILLO	CA	93012	8053833300																	TREASURER
+1444662	0	4	CVR2	F410	SPO1	SPO	BAY AREA COUNCIL				SPO	SAN FRANCISCO	CA	94111					NON-PROFIT ORGANIZATION													
+1388766	1	3	CVR2	F410	4	SPO	Irvine Police Association				SPO	Irvine	CA	92606					Police officers													
+1388866	0	7	CVR2	F410	11	BNM	Referendum on Amendment to Indian Gaming Compact				PFC																	97	Statewide	S		
+1388666	1	4	CVR2	F410	5	SPO	SANTA CLARA COUNTY PROBATION PEACE OFFICERS UNION LOCAL 1587 AFSCME AFL-CIO				SPO	Santa Clara	CA	95050					Labor Organization													
+1388668	0	2	CVR2	F410	3	SPO	SOUTHERN CALIFORNIA DISTRICT COUNCIL OF THE OPERATIVE PLASTERERS & CEMENT MASONS INTERNATIONAL ASSOCIATION				SPO	POMONA	CA	91768					MEMBERSHIP ORGANIZATION													
+1388963	1	2	CVR2	F410	OFC4	POF	Clark, President	Aggie			POF	Seattle	WA	98188	(206) 246-3500																	
+1385147	1	4	CVR2	F410	SPO1	SPO	California Optometric Association				SPO	Sacramento	CA	95816	916-441-3990				Optometrists													
+1351433	1	1	CVR2	F410	OFC1	POF	Levy	Henry C.	Mr.		ATR	Oakland	CA	94618	(510) 652-1000																	
+1388914	1	2	CVR2	F410	OFC3	POF	Dasinger	Harry	Mr.		ATR	Napa	CA	94558	(707) 226-0208	(707) 226-0153	hdasinger@thedoctors.com															
+1002973	3	3	CVR2	F410	SPO1	SPO	Service Employees International Union				SPO	Washington	DC	20036	(202) 730-7489				Labor													
+1125245	3	2	CVR2	F410	OFC2	POF	Radford, President	Doyle			POF	Pleasanton	CA	94588	(925)469-6800																	
+943070	7	2	CVR2	F410	OFC10	POF	Tyndale, Vice President	Mark			POF	Sacramento	CA	95811	(916)446-7661																	
+1061495	2	2	CVR2	F410	OFC2	POF	Pedroia, Treasurer	Mark			POF	Santa Rosa	CA	95404	(707) 546-7417																	
+1387664	0	2	CVR2	F410	OFC2	POF	Borsos	John			POF	Sacramento	CA	95814	916-326-5850	916-447-9405	jborsos@seiu-uhw.org															
+1387684	0	2	CVR2	F410	OFC3	POF	Tamayo	Dave			POF	Sacramento	CA	95824	916-390-4076		davetamayo@sbcglobal.net															
+877971	3	2	CVR2	F410	OFC2	POF	Standley	Joe			POF	Pinole	CA	94564	510-724-9277																	
+1387664	9	3	CVR2	F410	OFC3	POF	Brandon	Obie			POF	West Sacramento	CA	95798	916-952-7775	916-371-2627	okbrandon@sbcglobal.net															
+1388004	0	1	CVR2	F410	SPO-4	SPO	BIOCOM				SPO	San Diego	CA	92121	(858) 455-0300				Biotechnology													
+1388010	0	2	CVR2	F410	OFC2	POF	Weichelt, SDAR President	Erik			POF	San Diego	CA	92111	858/715-8000																	
+1388015	0	4	CVR2	F410	OFC4	POF	Mercurio, SDAR CEO	Michael			POF	San Diego	CA	92111	858/715-8000																	
+1388016	1	2	CVR2	F410	OFF-9	POF	Ezratty	Dave			POF	San Diego	CA	92121	(619) 440-5398																	Chairman
+1388018	1	2	CVR2	F410	OFF-5	POF	Baumann	Susie			POF	San Diego	CA	92106	(619) 222-9585																	Chair
+963154	3	3	CVR2	F410	CVR2-5	POF	Johnston	Brian		MD	POF	Los Angeles	CA	90017	(213) 683-9900																	Board Member
+1388721	1	2	CVR2	F410	3	SPO	Sacramento County Deputy Sheriffs Association				SPO	Sacramento	CA	95814					Deputy Sheriffs													
+1244702	2	1	CVR2	F410	OFC3	POF	Noll Wood, Executive Director	Betty			POF	Rancho Cucamonga	CA	91739	909-899-8211																	
+1386309	1	1	CVR2	F410	OFC3	POF	Thornsberry, Chair	Matthew			POF	Highland	CA	92346	909-855-8794																	
+1388790	0	1	CVR2	F410	CVR2-A-485	POF	Leach	Brian			POF	Orland	CA	95963-8131	(530) 988-5352										S							
+1204473	1	3	CVR2	F410	SPO1	SPO	AFSCME Local 829				SPO	South San Francisco	CA	94080	(650) 588-6112				Labor Union													
+1388790	1	3	CVR2	F410	CVR2-A-2	POF	Benningfield	Shirley			POF	Willows	CA	95988-3208	(530) 934-2221		jbandrocket@juno.com								S							
+1245258	1	1	CVR2	F410	OFC1	POF	Preminger	Steve	Mr.		POF	San Jose	CA	95125	408-445-9500																	
+1385952	0	2	CVR2	F410	OFC2	POF	Diede - Executive Vice President	Brad			POF	Sacramento	CA	95864	916-973-2925																	
+1350957	2	3	CVR2	F410	SPO1	SPO	California National Organization for Women				SPO	Sacramento	CA	95814	916-442-3414	916-442-4765																
+1385953	0	3	CVR2	F410	SPO1	SPO	Los Angeles Casino Owners				SPO	Sacramento	CA	95814					Casino Owners													
+1021582	4	3	CVR2	F410	SPO1	SPO	California New Car Dealers Association				SPO	Sacramento	CA	95814	(916) 441-2599	(916) 441-5612			New Car Dealers													
+1387592	1	1	CVR2	F410	OFC3	POF	Evans, Chair	Sidney			POF	Houston	TX	77002	(713) 497-5690																	
+925903	3	2	CVR2	F410	SPO1	SPO	California Medical Association				SPO	Sacramento	CA	95814					Health													
+1388601	0	2	CVR2	F410	2	SPO	CA Correctional Peace Officers Association				SPO	West Sacramento	CA	95605					916-372-6060													
+1387696	0	4	CVR2	F410	4	BNM	Abortion Waiting Period and Parental Notification Initiative				PFC																	4	Statewide	O		
+1387684	1	1	CVR2	F410	OFC2	POF	Copeland	Rita			ATR	Sacramento	CA	95841	916-348-9100	916-348-9111	rita@rivercitybusinessservices.com															
+1387620	0	1	CVR2	F410	OFC2	POF	Jacobs	Lori			ATR	Encinitas	CA	92024	760.632.3600																	
+1387620	0	5	CVR2	F410	OFC6	POF	Comstock	Steve			POF	Rancho Santa Fe	CA	92067	858-756-1174																	
+1387911	2	2	CVR2	F410	OFC2	POF	Hansen, President	Jay			POF	Sacramento	CA	95814	(916) 443-5900																	
+1386286	1	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	916-442-2280		lauras@eichmancpa.com															
+799832	2	4	CVR2	F410	SPO1	SPO	California Correctional Supervisors Organization				SPO	Escalon	CA	95320	(209) 838-2940				Professional Trade Organization													
+636399	8	6	CVR2	F410	SPO1	SPO	Plumbers, Steamfitters & Refrigeration Fitters Local 393				SPO	San Jose	CA	95123	(408) 225-3030	(408) 225-3405			Labor Organization													
+782269	4	2	CVR2	F410	OFC2	POF	Howard, Assistant Treasurer	Barbara V.Z.			POF	Sacramento	CA	95814	(916) 444-0598																	
+1388637	0	3	CVR2	F410	3	SPO	Crime Victims United of California				SPO	Sacramento	CA	95814					Victims Advocates													
+1388639	0	1	CVR2	F410	1	POF	Salarno	Nina			POF	Sacramento	CA	95814	9165561776																	Chair
+1387627	1	5	CVR2	F410	5	SPO	University Council - American Federation of Teachers				SPO	Los Angeles	CA	90025					Education													
+1388744	0	2	CVR2	F410	2	SPO	GRAPHIC COMMUNICATIONS UNION DISTRICT COUNCIL NO. 2				SPO	FULLERTON	CA	92631					SPONSORING ORGANIZATION													
+1388746	0	2	CVR2	F410	3	SPO	GLAZIERS UNION LOCAL 718				SPO	SAN FRANCISCO	CA	94107					SPONSORING ORGANIZATION													
+1284429	2	2	CVR2	F410	3	POF	Matthes	E. Charles			POF	Alta Loma	CA	91701	9099891459																	Treasurer
+1388796	0	2	CVR2	F410	3	SPO	Insulators and Asbestos Workers Local No. 16				SPO	Alameda	CA	94502					Trade Association													
+1348381	2	2	CVR2	F410	5	POF	Schroeder	Matthew			POF	Camp Hill	PA	17011	7172148876																	Vice President
+1348381	2	3	CVR2	F410	2	SPO	Rite Aid Corporation				SPO	Camp Hill	PA	17011																		
+1388812	0	5	CVR2	F410	CVR2-8	POF	Ipsen	Laura			POF	San Jose	CA	95134	(408) 526-4000																	PAC Board Member
+1388814	0	2	CVR2	F410	2	POF	Carter	Michael			POF	Milwaukee	WI	53202	4146652165																	PAC Chairman
+1387904	0	1	CVR2	F410	OFC1	POF	Mele	Lou Anne			ATR	West Hollywood	CA	90046	310-385-7300	323-395-0519																
+1387884	2	1	CVR2	F410	SPO-11	SPO	Building Industry Association of San Diego County				SPO	San Diego	CA	92123					Building Industry													
+1362275	2	3	CVR2	F410	OFC3	POF	Flint - Responsible Officer	Jeff			POF	Sacramento	CA	95814	916-441-3039																	
+1388692	0	1	CVR2	F410	1	POF	SIERRA JR.	RICHARD			POF	SAN BERNARDINO	CA	92408	9098845321																	TREASURER
+1384165	1	2	CVR2	F410	OFC6	POF	LAPSLEY	ROB			POF	SACRAMENTO	CA	95814	(916) 444-6670		rob.lapsley@calchamber.com															
+1388700	0	2	CVR2	F410	4	POF	LEWIS	HANK			POF	SAN LUIS OBISPO	CA	93401	8055435693																	TREASURER
+1388935	0	1	CVR2	F410	1	POF	ESPARZA	ARMANDO			POF	SANTA ANA	CA	92701	7145427203																	BUSINESS MANAGER
+1320390	3	2	CVR2	F410	OFC2	POF	Harris, President	David			POF	Pleasanton	CA	94588	(925) 463-3760																	
+1388999	0	8	CVR2	F410	PRI1	BNM	Non-Tribal Commercial Gambling Expansion				PFC																	68	Statewide	O		
+1384145	1	1	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1294631	2	2	CVR2	F410	OFC2	POF	Payan	Clark			POF	Pleasanton	CA	94566	925-426-3310																	
+1020271	3	2	CVR2	F410	OFC4	POF	Smith, Jr., Government Affairs Chair	Ed			POF	Folsom	CA	95630	(916) 448-8236																	
+1210671	3	2	CVR2	F410	OFC3	POF	McIntyre; Principal Officer	Carolyn			POF	Sacramento	CA	95814	916-446-7732																	
+1387590	1	3	CVR2	F410	SPO1	SPO	California Wind Energy Association				SPO	Berkeley	CA	94708	(510) 845-5077				Energy													
+1388617	0	1	CVR2	F410	1	POF	Palmer	Greg			POF	Sacramento	CA	95814	9165561776																	President
+1387715	1	1	CVR2	F410	1	ATR	Metcalf	Ben			ATR	Washington	DC	20005	2027725600																	
+979277	2	1	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1180779	2	2	CVR2	F410	OFC4	POF	Arendt, CFO	Ronald A.			POF	Sacramento	CA	95825	(916) 929-6000																	
+1387932	1	5	CVR2	F410	OFF-8	POF	Ryan	Jim			POF	San Diego	CA	92121	(858) 558-7444																	Executive Vice President
+1387556	0	5	CVR2	F410	SPO1	SPO	PACIFIC GAS & ELECTRIC COMPANY				SPO	SAN FRANCISCO	CA	94105					UTILITY COMPANY													
+1180955	2	5	CVR2	F410	SPO1	SPO	Calfornia Rice Industry Association				SPO	Sacramento	CA	95826	(916) 387-2290				Rice Industry													
+1388096	1	3	CVR2	F410	OFC3	POF	Shannon - Chairman	Patrick			POF	Sacramento	CA	95814	916-530-1530																	
+973943	2	6	CVR2	F410	OFC8	POF	Eng-Huntsinger; Vice President Finance	Mary			POF	Redondo Beach	CA	90278	310-429-1215																	
+961307	2	2	CVR2	F410	OFC2	POF	Howard, Assistant Treasurer	Barbara V.Z.			POF	Sacramento	CA	95814	(916) 444-0598																	
+961307	2	3	CVR2	F410	SPO1	SPO	California School Employees Association				SPO	San Jose	CA	95131					Labor Organization													
+1251075	8	1	CVR2	F410	ACCT-BMC	BNM	Term Limits and Legislative Reform Act				PFC																	93	Statewide	S		
+1388644	1	4	CVR2	F410	5	SPO	National Association to Protect Children				SPO	Asheville	NC	28801					Pro-Child, Anti-Crime Membership Association													
+1367228	2	2	CVR2	F410	CVR2-A-510	POF	Scalese	Jason			POF	Burlingame	CA	94010-3624	(650) 863-4813		jascalese@yahoo.com								S							
+1312339	3	5	CVR2	F410	SPO1	SPO	Service Employees International Union Local 1021				SPO	Oakland	CA	94609	(510) 893-8766				Labor Organization													
+1388706	0	1	CVR2	F410	1	POF	GITLIN	ALAN M.			POF	LOS ANGELES	CA	90046	3238760160																	TREASURER
+1388759	1	2	CVR2	F410	1	SPO	Anaheim Police Association				SPO	Anaheim	CA	92805					Police Officers													
+1388767	0	2	CVR2	F410	2	POF	STEITZ	RICK			POF	FRESNO	CA	93721	5594420544																	PRESIDENT
+943964	3	3	CVR2	F410	OFC3	POF	Schlitz, Director	William			POF	Oakland	CA	94612	(510)844-1160																	
+1125596	3	2	CVR2	F410	SPO1	SPO	National Tax Limitation Committee				SPO	Roseville	CA	95661					Non Profit Taxpayer Organization													
+1245258	2	1	CVR2	F410	OFC1	POF	Preminger, Chair	Steve	Mr.		POF	San Jose	CA	95125	408-445-9500																	
+1388906	0	1	CVR2	F410	1	POF	Jimenez	Mike			POF	West Sacramento	CA	95605	9165561776																	President
+1388948	0	2	CVR2	F410	OFC2	POF	ABERLE	PAM			POF	LODI	CA	95242																		
+1383754	1	2	CVR2	F410	OFC4	POF	Soennichsen; Chairman	Betty			POF	San Jose	CA	95130	408-379-3747																	
+983466	3	3	CVR2	F410	OFC4	POF	Okumura, Secretary	David			POF	Sacramento	CA	95814	(916)326-4334																	
+1389090	2	2	CVR2	F410	35	POF	McOsker	Pat			POF	Los Angeles	CA	90026	(213) 485-2091																	
+1389090	2	3	CVR2	F410	36	POF	Leon	Jobe			POF	Los Angeles	CA	90026																		
+1388902	2	1	CVR2	F410	3	POF	D'Arcy	Brian			POF	Los Angeles	CA	90004																		
+1388908	2	2	CVR2	F410	4	POF	Canzano,	Eugene			POF	Los Angeles	CA	90004	(213) 387-8274																	
+1344605	3	1	CVR2	F410	OFC1	POF	Pelote	Willie			ATR	Sacramento	CA	95814	(916) 441-1570																	
+1344605	3	3	CVR2	F410	OFC3	POF	Schlitz, Director	William			POF	Oakland	CA	94612	(510)844-1160																	
+1053157	6	2	CVR2	F410	OFC3	POF	Medina, Trustee	Eliseo			POF	Oakland	CA	94612	(408) 557-7613																	
+1098334	6	2	CVR2	F410	OFC3	POF	Medina, Trustee	Eliseo			POF	Oakland	CA	94612	(408) 557-7613																	
+1411679	0	1	CVR2	F410	CAO-0	CAO	Yee	Betty T.			CTL	San Francisco	CA	94102	(916) 747-1155					BOE		BOE		1	S						2010	
+1412112	0	1	CVR2	F410	ACCT-BMC	BNM	Mental Health and Service Act: Proposition 63 amendments				PFC																	Prop 1E	Statewide	O		
+1428311	0	1	CVR2	F410	ACCT-CAN	CAO	FULLER	JEAN			CTL	BAKERSFIELD	CA	93306	661 871-5101					ASM		ASM		32	S		Republican Party				2006	
+1384650	2	1	CVR2	F410	OFC3	POF	Zaremberg, President & CEO	Allan S.			POF	Sacramento	CA	95814	(916) 930-1226																	
+1413555	3	2	CVR2	F410	OFC1	POF	Nunez, Committee Chair	Joe			POF	Sacramento	CA	95814	(916) 443-7817																	
+1112421	4	2	CVR2	F410	SPO1	SPO	California Labor Federation, AFL-CIO				SPO	Oakland	CA	94610-3548					Labor Organization													
+1380259	3	5	CVR2	F410	SPO1	SPO	American Federation of State, County and Municipal Employees Local 3299				SPO	Oakland	CA	94612					Labor Organization													
+1389484	1	3	CVR2	F410	F410CVR207272009750	CAO	Cardinal Health Inc.				SPO	Dublin	OH	43017					Health Care													
+1410919	1	1	CVR2	F410	ACCT-CAN	CAO	Steel	Michelle			CTL	Palos Verdes	CA	90274	310-697-9000	310-697-9010				BOE		BOE		3	H		Republican Party				2010	
+1431830	0	1	CVR2	F410	ACCT-CAN	CAO	ALIOTO-PIER	MICHELA			CTL	SAN FRANCISCO	CA	94102	(415) 554-7752					INS		STW			S		Democratic Party				2010	
+1199007	5	9	CVR2	F410	SPO8	SPO	Coalition for Adequate School Housing				SPO	Sacramento	CA	95814					School housing organization													
+1387803	2	4	CVR2	F410	CVR2PFC_16845	BNM	California Taxpayer Protection Act of 2010				PFC																	N/A	Statewide	S		
+1073895	6	11	CVR2	F410	OFC13	POF	Kendell	Kate			POF	San Francisco	CA	94102	415-392-6257																	
+1389097	0	2	CVR2	F410	OFC4	POF	REED	DANA W.			ATR	LOS ANGELES	CA	90017	213-624-6200																	
+1388741	1	3	CVR2	F410	3	SPO	UNITE HERE LOCAL 11				SPO	LOS ANGELES	CA	90017					(213) 481-8530													
+1388690	1	2	CVR2	F410	3	SPO	UNITED PUBLIC EMPLOYEES OF CALIFORNIA LOCAL 792				SPO	REDDING	CA	96001					MEMBERSHIP ORGANIZATION													
+1388457	1	4	CVR2	F410	5	SPO	UPLAND PROFESSIONAL FIREFIGHTERS				SPO	UPLAND	CA	91785					SPONSORING ORGANIZATION													
+783216	9	3	CVR2	F410	SPO1	SPO	SEIU United Healthcare Workers West				SPO	Oakland	CA	94612					Labor Organization													
+1403582	7	5	CVR2	F410	SPO2	SPO	CALIFORNIA ALLIANCE FOR JOBS				SPO	SACRAMENTO	CA	95814					LABOR													
+1389983	1	1	CVR2	F410	OFC1	POF	Weinstein	Susan B.			ATR	North Hollywood	CA	91602	(818) 284-4555																	
+1388783	1	1	CVR2	F410	1	POF	REED	REYNALDO			POF	LOS ANGELES	CA	90012	2132176778																	TREASURER
+1402830	0	4	CVR2	F410	4	POF	Pence	Mike			POF	Hayward	CA	94544	9163637460																	PAC Account Officer
+1402912	0	1	CVR2	F410	1	ATR	Snelson	Kathy			ATR	Sacramento	CA	95814	9164428888																	
+1402912	1	3	CVR2	F410	4	SPO	California Association of Health Plans				SPO	Sacramento	CA	95814					Health organizations													
+1403725	0	1	CVR2	F410	ACCT-BMC	BNM	California State Lottery				PFC																		Statewide	S		
+1403582	11	6	CVR2	F410	SPO2	SPO	CALIFORNIA ALLIANCE FOR JOBS				SPO	SACRAMENTO	CA	95814					LABOR													
+1407164	0	1	CVR2	F410	CAO-0	CAO	Hill	Jerry A.			CTL	Sacramento	CA	95814	(   )					ASM		ASM		19	S		Democrat				2008	
+1431830	1	1	CVR2	F410	ACCT-CAN	CAO	ALIOTO-PIER	MICHELA			CTL	SAN FRANCISCO	CA	94133	(415) 402-0303					INS		STW			S		Democratic Party				2010	
+1388608	2	3	CVR2	F410	SPO1	SPO	Sacramento Builders Exchange				SPO	Sacramento	CA	95811	916-442-8991																	
+1387349	1	6	CVR2	F410	OFC13	POF	REED (SAN DIEGO)	JOEL			POF	SAN DIEGO	CA	92130	(858) 704-3202																	
+1410156	0	1	CVR2	F410	ACCT-CAN	CAO	Brulte	Jim			CTL	Rancho Cucamonga	CA	91730	909-945-2550					BOE		BOE		2	S		Republican Party				2010	
+1435110	0	2	CVR2	F410	1	CAO	Plescia	George			PFC									LTG		STW								S		
+1193397	3	2	CVR2	F410	OFC3	POF	Doyle, M.D.	Chrstine A.			POF	San Jose	CA	95128	408-423-9615	408-423-9617	drdoyle@monty-doyle.com															
+961307	4	3	CVR2	F410	SPO1	SPO	California School Employees Association				SPO	San Jose	CA	95131					Labor Organization													
+1429999	1	1	CVR2	F410	1	POF	Jue	Kay Cooperman			POF	Palos Verdes estates	CA	90275	3103773512																	President
+1306001	6	6	CVR2	F410	SPO2	SPO	Drug Policy Alliance Network				SPO	New York	NY	10018					Nonprofit advocacy organization													
+1388899	1	4	CVR2	F410	OFC4	POF	Marvel, Board PAC Committee/President	Brian			POF	San Diego	CA	92111	(858) 573-1199																	
+1388015	1	4	CVR2	F410	OFC4	POF	Mercurio, SDAR CEO	Michael			POF	San Diego	CA	92111	858/715-8000																	
+1415438	2	2	CVR2	F410	OFC2	POF	HENEGHAN	KEVIN R.			ATR	SAN FRANCISCO	CA	94108	(415) 732-7700	(415) 732-7700																
+1388015	2	3	CVR2	F410	OFC3	POF	Marquez, SDAR President Elect	Mark			POF	San Diego	CA	92111	858/715-8000																	
+1380594	2	1	CVR2	F410	OFC1	POF	Harper, President	Bill			POF	Sacramento	CA	95827	(916)368-1485																	
+1381675	2	2	CVR2	F410	SPO1	SPO	State Coalition of Probation Organizations				SPO	Sacramento	CA	95827					Probation Officers													
+1388625	1	1	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280																	
+1389106	0	1	CVR2	F410	1	POF	Arnold	Evelyn			POF	Long Beach	CA	90802	5624268341																	Chair
+1387869	2	2	CVR2	F410	OFC4	POF	Adams, Executive Director	Jane H.			POF	Sacramento	CA	95832	(916) 665-2777																	
+1389070	2	1	CVR2	F410	OFC1	POF	Sermersheim, President	Kristina M.			POF	San Jose	CA	95131	(408) 954-8715																	
+1429993	0	1	CVR2	F410	1	POF	Abin	John			POF	Oxnard	CA	93031	8054446752																	Co-Chair
+1149176	2	1	CVR2	F410	ACCT-BMC	BNM	Healthcare Coverage Requirements Referendum.				PFC																	72	Statewide	O		
+924817	5	6	CVR2	F410	CVR2-A-981	POF	Obler	Marta			POF	Fresno	CA	93720-2348	(559) 298-5240		jaobler@aol.com								S							
+1402798	1	3	CVR2	F410	SPO1	SPO	Northern California Water Association				SPO	Sacramento	CA	95814					Water Association													
+1402948	1	3	CVR2	F410	4	POF	Byerrum	Jim			POF	Whittier	CA	90603	5629473811																	Board Member
+1344993	3	1	CVR2	F410	CVR2-A-22	CAO	Vidal	Thomas			CTL	Redondo Beach	CA	90277-3258						ASM		ASM		53	S		Republican					
+1416329	0	1	CVR2	F410	1	ATR	Downing	Betty Ann			ATR	Los Angeles	CA	90017	2134526565																	
+1416339	0	2	CVR2	F410	2	POF	Nelson	Matt			POF	Huntington Beach	CA	92646	7145933177																	Union Vice President
+1396714	0	1	CVR2	F410	ACCT-CAN	CAO	Nakanishi	Alan S.			CTL	Lodi	CA	95242	916/686-1815					ASM		ASM		10	H		Republican Party					
+1089080	5	2	CVR2	F410	OFC2	POF	Corrigan, Board Chair	Courtenay			POF	Los Altos	CA	94022	(650) 941-7326																	
+1326077	5	2	CVR2	F410	OFC1	POF	YIN	FLORA			ATR	LOS ANGELES	CA	90010	(213) 624-6200																	
+1326077	5	3	CVR2	F410	OFC2	POF	MITCHELL	WARREN			POF	SEAL BEACH	CA	90740	(714) 533-8005																	
+1279030	4	1	CVR2	F410	OFC1	POF	Davis-Howard	Damita			ATR	Oakland	CA	94609	(510) 893-8766																	
+1417319	0	1	CVR2	F410	2	ATR	Katz	Eugene			ATR	Charlotte	NC	28288	7043743234																	
+1412112	5	3	CVR2	F410	SPO1	SPO	California Council of Community Mental Health Agencies				SPO	Sacramento	CA	95814	(916)557-1166				Non-Profit Organization													
+1424099	2	1	CVR2	F410	CAO-0	CAO	FLOREZ	FRAN			CTL	SHAFTER	CA	93263	(661) 746-2264					ASM		ASM		30	S		DEMOCRAT				2008	
+1424381	0	2	CVR2	F410	ACCT-BMC	BNM	Adams Recall Initiative				PFC																		Assembly 59	O		
+1427354	0	1	CVR2	F410	CVR2CTL_3311612	CAO	Villines	Michael N.			CTL									INS		STW			S		Republican Party				2010	
+1389091	1	3	CVR2	F410	OFC3	POF	Stein	Gilbert			POF	Santa Cruz	CA	95062	(831) 429-5420																	
+1387556	1	3	CVR2	F410	OFC2	POF	MCFADDEN	NANCY			POF	SAN FRANCISCO	CA	94105	415-973-7015																	
+1424635	1	1	CVR2	F410	ACCT-CAN	CAO	TING	PHILIP Y.			CTL	SAN FRANCISCO	CA	94108	415/732-7700	415/732-7701				ASR		OTH	SAN FRANCISCO		H	X						
+1430732	0	1	CVR2	F410	ACCT-CAN	CAO	Yee	Garrett			CTL	Fremont	CA	94536	(510) 219-0865					ASM		ASM		20	S		Democratic Party				2010	
+1309734	4	1	CVR2	F410	OFC1	POF	Hiltachk	Thomas W.			ATR	Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+1427112	1	1	CVR2	F410	ACCT-BMC	BNM	CONTINUOUS COVERAGE AUTO INSURANCE DISCOUNT ACT (AG #09-0021)				PFC																		STATEWIDE	S		
+1427112	1	5	CVR2	F410	SPO1	SPO	MERCURY GENERAL CORPORATION AND AFFILIATES				SPO	LOS ANGELES	CA	90010					INSURANCE													
+1341785	2	1	CVR2	F410	ACCT-CAN	CAO	Eisenhut	John			CTL	Sacramento	CA	95841	209-341-2081					ASM		ASM		26	S		Democratic Party					
+1339250	3	2	CVR2	F410	OFC2	POF	Moore, President	Sharon-Frances			POF	San Diego	CA	92111	(619) 560-0151																	
+1389077	0	3	CVR2	F410	5	POF	Babior	Adrianna			POF	Los Angeles	CA	90025	(310) 477-8081																	
+1388861	1	3	CVR2	F410	SPO1	SPO	California Workers Compensation Defense Attorneys Association				SPO	San Diego	CA	92111	(858) 874-2100				Legal													
+1389079	1	1	CVR2	F410	1	ATR	Torello	Robin			ATR	San Leandro	CA	94577	5106353121																	
+1389274	0	3	CVR2	F410	3	POF	Pacheco	Gayle			POF	Walnut	CA	91789	6263321145																	Vice President
+1389275	0	1	CVR2	F410	1	CAO	Battin, Jr.	James F.			CTL									SEN		SEN		37			Republican				2004	
+1416996	1	2	CVR2	F410	OFC2	POF	King	Kathleen			POF	Novato	CA	94949-5731	415-884-5500	415-884-5501																
+1417370	0	1	CVR2	F410	CVR2-A-2	CAO	Hueso	Ben			CTL	San Diego	CA	92113-1144						ASM				79	S		DEM				2010	
+1417407	1	1	CVR2	F410	CAO-0	CAO	Horton	Shirley			CTL	Bonita	CA	91908	(619) 691-5044					ASM		ASM		78	S		Republican				2006	
+1388783	2	2	CVR2	F410	3	SPO	AFSCME LOCAL 1001				SPO	LOS ANGELES	CA	90012					SPONSORING ORGANIZATION													
+1155167	2	1	CVR2	F410	CVR2-6	SPO	Orange County Automobile Dealers Association				SPO	Costa Mesa	CA	92626	(714) 424-6090				Automobile Dealers													
+1389088	1	3	CVR2	F410	OFC3	POF	NIELSEN	JADINE			POF	HONOLULU	HI	96825	808-395-7709																	
+1388738	2	3	CVR2	F410	OFC2	POF	HAMILTON	TERRY			POF	PASADENA	CA	91104	(626) 797-9785																	
+1428109	1	1	CVR2	F410	CAO-0	CAO	HALL	ISADORE			CTL	Compton	CA	90220	(   )					ASM		ASM		52	S	X					2010	
+1388948	1	11	CVR2	F410	OFC11	POF	MATSON	ANNE			POF	LODI	CA	95240																		
+1389083	0	5	CVR2	F410	SPO1	SPO	CALIFORNIA ASSOCIATION OF REALTORS				SPO	LOS ANGELES	CA	90020	(213) 739-8200																	
+1326077	4	5	CVR2	F410	OFC4	POF	WILBURN	STEVE			POF	NEWPORT BEACH	CA	92633	(949) 270-2397																	
+1001588	7	4	CVR2	F410	SPO5	SPO	UNITED AUBURN INDIAN COMMUNITY				SPO	LINCOLN	CA	95648																		
+1001588	7	5	CVR2	F410	SPO6	SPO	MORONGO BAND OF MISSION INDIANS				SPO	CABAZON	CA	92230																		
+1389086	0	2	CVR2	F410	OFC2	POF	WALSH	SARAH			POF	SHERMAN OAKS	CA	91403	(818) 995-6600																	
+1389089	0	1	CVR2	F410	CVR2-4	POF	FLOREZ	DEAN			POF	Shafter	CA	93263																		PRINCIPAL OFFICER
+637685	9	1	CVR2	F410	OFC1	POF	Peskin	Aaron			POF	San Francisco	CA	94104	415-626-1161																	
+1485497	1	1	CVR2	F410	ACCT-BMC	BNM	Cancer Research Initiative				PFC																		Statewide	S		
+1485497	1	5	CVR2	F410	OFC4	POF	Daniels, Principal Officer	Molly			POF	Washington	DC	20004	(916) 442-2952																	
+1397281	2	2	CVR2	F410	OFC2	POF	Lawhon	Sam			POF	Coarsegold	CA	93614	559-760-7755																	
+1387555	1	4	CVR2	F410	PRI1	BNM	Best Practicies Budget Accountability Act				PFC																		Statewide	S		
+1457469	0	5	CVR2	F410	PRI1	COM	Emmerson	Bill			PFC									SEN		SEN		37						S		
+1472149	0	5	CVR2	F410	SPO2	SPO	Jon Coupal				SPO	Sacramento	CA	95814	(916) 444-9950				Howard Jarvis Taxpayers Association													
+1457160	2	2	CVR2	F410	CVR2-A-38957	CAO	Brown	Edmund		Jr.	CTL	Oakland	CA	94611-1120	(510) 238-8744					GOV		STW			S		Democratic				2010	
+1485649	1	2	CVR2	F410	3	POF	Jason Kruger				POF	Los Angeles	CA	90036	3239341933																	Principal Officer
+1485649	1	3	CVR2	F410	4	POF	Courtni Pugh				POF	Los Angeles	CA	90010	2134013336																	Principal Officer
+1389011	4	2	CVR2	F410	OFC2	POF	TREVIZO	ROBERT			POF	SAN FRANCISCO	CA	94103	(415) 732-7700																	
+1422829	4	4	CVR2	F410	SPO1	SPO	Sacramento County Probation Association				SPO	Sacramento	CA	95827					Law Enforcement													
+1499694	0	4	CVR2	F410	SPO1	SPO	California Professional Firefighters				SPO	Sacramento	CA	95833	(916) 921-9111				Firefighters Organization													
+1457098	0	1	CVR2	F410	ACCT-CAN	CAO	MALDONADO	ABEL			CTL	SANTA MARIA	CA	93458						LTG		STW					Republican Party				2010	
+1462533	2	6	CVR2	F410	SPO2	SPO	American Federation of State County and Municipal Employees International, AFL-CIO				SPO	Washington	DC	20036	(202) 429-1088				Labor Organization													
+1469849	5	6	CVR2	F410	SPO2	SPO	CALIFORNIA TAXPAYERS' ASSOCIATION				SPO	SACRAMENTO	CA	95814					TAXPAYERS' ASSOCIATION													
+1456119	3	4	CVR2	F410	4	POF	Toebben	Gary			POF	Los Angeles	CA	90017	213-452-6565																	
+1518811	0	3	CVR2	F410	3	POF	Sorenson	Nathan			POF	Olivehurst	CA	95901	5303298345																	Chairman
+1468638	9	3	CVR2	F410	OFC2	POF	Ruderman	Phyllis			POF	Los Angeles	CA	90024	(310) 576-1233	(310) 319-0156																
+1388779	1	2	CVR2	F410	4	SPO	AFSCME LOCAL 2620				SPO	LOS ANGELES	CA	90020					SPONSORING ORGANIZATION													
+1417143	2	2	CVR2	F410	OFC2	POF	Taiz, Board Member	Lillian			POF	Los Angeles	CA	90045	(310) 641-4430																	
+1389448	2	1	CVR2	F410	F410CVR208192010154	ATR	Schell	Mary			ATR	Dublin	OH	43017	(614)764-3437																	
+1388951	1	3	CVR2	F410	OFC5	POF	Haraburda, Chamber Treasurer	Joseph	Mr.		POF	Oakland	CA	94612	510-547-2451																	
+1498406	0	1	CVR2	F410	ACCT-BMC	BNM	Suspends Air Pollution Control Laws (09-0094)				PFC																		Statewide	O		
+1455437	0	1	CVR2	F410	ACCT-CAN	CAO	Emmerson	Bill			CTL	Hemet	CA	92544	949-858-7448	949-858-6807				SEN		SEN		37	S		Republican Party				2010	
+1455574	0	3	CVR2	F410	SPO1	SPO	Medical Insurance Exchange of California				SPO	Oakland	CA	94618	(510) 428-9411				Healthcare													
+1436366	2	2	CVR2	F410	1	SPO	International Brotherhood of Boilermakers				SPO	Kansas City	KS	66101					International Labor Union													
+970611	3	2	CVR2	F410	1	SPO	Operating Engineers Local Union No. 3				SPO	Alameda	CA	94502	5107487400				Labor Organization													
+1446121	2	4	CVR2	F410	OFC2	PRO	MUNGER, JR./PROPONENT	CHARLES T.			CTL	PALO ALTO	CA	94301	(650) 926-5326						NONE					X						
+957270	5	2	CVR2	F410	OFC2	POF	Lutz, Vice-President	Ken	Mr.		POF	San Bernardino	CA	92408	909-885-6074																	
+1468606	0	3	CVR2	F410	SPO1	SPO	California Teachers Association				SPO	Burlingame	CA	94010	(650) 697-1400				Teachers Organization													
+1474147	0	1	CVR2	F410	ACCT-CAN	CAO	Newsom	Gavin			CTL	San Francisco	CA	94114	415-412-3455					LTG		STW			S		Democratic Party				2010	
+785294	5	1	CVR2	F410	2	POF	Rome A. Aloise	Randy Cammack - Co-Chair,			POF	Sacramento	CA	95814	9164460291																	Co-Chair
+1312339	5	4	CVR2	F410	OFC9	POF	Sanchez	Roxanne			ATR	Oakland	CA	94609	(510) 350-4527																	
+1389070	3	2	CVR2	F410	OFC2	POF	O'Neill, Executive Board Representative	Brian			POF	San Jose	CA	95131	(408) 954-8715																	
+1389070	3	4	CVR2	F410	SPO1	SPO	Service Employees International Union Local 521				SPO	San Jose	CA	95131	(408) 954-8715				Labor Organization													
+1389006	2	1	CVR2	F410	OFC3	POF	HENEGHAN, ESQ.	KEVIN R.			ATR	SAN FRANCISCO	CA	94108	(415)732-7700	(415)732-7701																
+958984	7	2	CVR2	F410	OFC3	POF	Sermersheim, Vice President	Kristy			POF	Sacramento	CA	95814	(916) 442-3838																	
+1482147	0	4	CVR2	F410	SPO1	SPO	EdVoice Independent Expenditure Committee				SPO	Sacramento	CA	95814	916-448-3868				Non-Profit Organization - Education Policy													
+1486172	1	1	CVR2	F410	ACCT-CAN	CAO	Eastman	John			CTL	Rancho Sta Margarita	CA	92688	949-858-7448	949-858-6807	eastmanforag@gmail.com			ATT		OTH	Statewide		S		Republican Party				2010	
+1428312	4	1	CVR2	F410	OFC1	POF	Gasser	David			ATR	Burlingame	CA	94010	(650) 692-4300																	
+1488214	0	6	CVR2	F410	SPO4	SPO	California Labor Federation, AFL-CIO				SPO	Oakland	CA	94610					Labor Organization													
+1500251	0	1	CVR2	F410	ACCT-CAN	CAO	Bonilla	Susan A.			CTL	Concord	CA	94520	925-360-8053		Susanbonilla4@gmail.com			ASM		ASM		11	S		Democratic Party				2010	
+1389484	2	2	CVR2	F410	F410CVR20727201026	POF	Cushman	Nancy			POF	Detroit	MI	48275	(248)371-7271																	Vice President
+1389484	2	3	CVR2	F410	F410CVR20727201076	CAO	Cardinal Health Inc.				SPO	Dublin	OH	43017					Health Care													
+1279030	8	2	CVR2	F410	OFC8	POF	Sanchez, President	Roxanne			POF	Oakland	CA	94609	(510) 350-4527																	
+1387651	2	2	CVR2	F410	2	POF	Wolfe	Chuck			POF	Washington	DC	20005	2028428679																	CEO
+1224439	8	3	CVR2	F410	CVR2-A-38957	POF	Brown	Edmund		Jr.	POF	Oakland	CA	94611-1120	(510) 238-8744					ATT		STW			S							
+1389090	3	3	CVR2	F410	36	POF	Leon	Jobe			POF	Los Angeles	CA	90026																		
+1487179	2	3	CVR2	F410	PRI1	COM	Pan	Richard			PFC									ASM		ASM		5						S		
+1500556	0	2	CVR2	F410	2	POF	Nordlinger	Stephanie			POF	Los Angeles	CA	90008	3232993244																	President
+1387703	1	1	CVR2	F410	CVR2-3	POF	Hollingsworth	Dan			POF	Murrieta	CA	92562-	(951) 679-9009																	Chairman
+1195139	4	5	CVR2	F410	PRI4	BNM	Suspend AB 32, the Global Warming Act of 2006				PFC																	23	State of California	O		
+1446121	6	1	CVR2	F410	OFC1	POF	ABDOLI	ELLI			ATR	SAN RAFAEL	CA	94901	(415) 389-6800																	
+1519565	1	1	CVR2	F410	1	POF	Rate	Scott			POF	Sacramento	CA	95814	9165561776																	Chairman
+1447955	0	3	CVR2	F410	3	SPO	AFSCME LOCAL 2620				SPO	LOS ANGELES	CA	90020					LABOR ORGANIZATION													
+1453802	1	1	CVR2	F410	ACCT-CAN	CAO	Kehoe	Christine			CTL									SEN		SEN		39	H		Democratic Party				2008	
+1454775	0	5	CVR2	F410	SPO2	SPO	CALIFORNIA TAXPAYERS' ASSOCIATION				SPO	SACRAMENTO	CA	95814	(916)441-0490	(916)441-1619			TAXPAYERS													
+1458152	0	1	CVR2	F410	1	CAO	Ricasa	Arlie			CTL									ASM		STW					Democrat				2004	
+1459020	0	1	CVR2	F410	3	CAO	Perez	Manuel			CTL									ASM		ASM		80			Democrat				2008	
+1459020	1	1	CVR2	F410	3	CAO	Perez	Manuel			CTL									ASM		ASM		80			Democrat				2008	
+1285260	5	2	CVR2	F410	OFC2	POF	Dunlap, Principal Officer	Sue			POF	Los Angeles	CA	90007	(213) 284-3200																	
+1514444	1	8	CVR2	F410	SPO5	SPO	Service Employees International Union Local 1000				SPO	Sacramento	CA	95814					Service Employees													
+1073895	8	5	CVR2	F410	OFC9	POF	Hawes	Dan			POF	Los Angeles	CA	90027	323-671-2400																	
+1498406	1	10	CVR2	F410	SPO6	SPO	Environmental Entrepreneurs				SPO	San Francisco	CA	94104					Environmental Organization													
+1038401	4	2	CVR2	F410	OFC4	POF	Snow,  Assistant Treasurer/Secretary	Liz			POF	Sacramento	CA	95814	(916) 443-7933																	
+1388805	3	2	CVR2	F410	3	POF	Guarisco	Annette			POF	Washington	DC	20001	2027755080																	Vice Chairman
+1425404	5	4	CVR2	F410	OFC4	POF	ABDOLI	ELLI			ATR	SAN RAFAEL	CA	94901																		
+1195139	3	1	CVR2	F410	OFC1	POF	Diamond	Francine			ATR	Pacific Palisades	CA	90272	510-271-0900																	
+1498406	0	4	CVR2	F410	OFC3	POF	Crowfoot, Principal Officer	Wade			POF	San Francisco	CA	94105	(415) 293-6050																	
+1399428	2	1	CVR2	F410	ACCT-CAN	CAO	Nunez	Fabian			CTL	Sacramento	CA	95814	916-442-2952					SEN		SEN		22	S		Democratic Party				2010	
+1488757	0	2	CVR2	F400	OFC2	ATR	Lighty	Michael			POF	Oakland	CA	95612	(510) 273-2200																	
+1489116	0	2	CVR2	F410	3	BNM	Continuous Coverage Auto Insurance Disc. Act				PFC																	17	Statewide	O		
+1388774	1	1	CVR2	F410	1	POF	DELIS	DON			POF	SACRAMENTO	CA	95828	9166811170																	TREASURER
+926404	10	2	CVR2	F410	CVR2-A-998	POF	Blake	Susan			POF	Sacramento	CA	95826-4141	(916) 362-8969										S							
+1470430	2	3	CVR2	F410	OFC2	POF	Nelson - President	Eric			POF	Granite Bay	CA	95746	916-660-0132																	
+1433255	2	2	CVR2	F410	OFC1	POF	Deane	Shawnda			ATR	Sacramento	CA	95842	(916) 285-5733	(916) 333-1344																
+1471110	0	1	CVR2	F410	ACCT-CAN	CAO	Dickinson	Roger			CTL	Sacramento	CA	95815						CSU		OTH	Sacramento County		H	X						
+1296042	8	2	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1451549	1	1	CVR2	F410	ACCT-BMC	BNM	Regulate, Control and Tax Cannabis Act of 2010				PFC																	19	State of California	S		
+1386538	4	2	CVR2	F410	OFC2	POF	Corrigan, Board Chair	Courtenay			POF	Los Altos	CA	94022	(650)941-7326																	
+1445539	1	1	CVR2	F410	ACCT-CAN	CAO	Harris	Kamala D.			CTL	San Francisco	CA	94108	415 732-7700	415 732-7701				ATT		STW					Democratic Party				2010	
+1388750	2	1	CVR2	F410	1	POF	PEREZ	JUDY			POF	PARAMOUNT	CA	90723	5622599400																	TREASURER
+1519986	1	9	CVR2	F410	SPO5	SPO	California Teachers Association				SPO	Sacramento	CA	95814					Employee Organization													
+1422829	2	2	CVR2	F410	OFC3	POF	Stuber	Greg			ATR	Sacramento	CA	95827																		
+1387899	2	2	CVR2	F410	OFC2	POF	Calzada, Vice President	Armando			POF	Sacramento	CA	95834	(916) 928-8300																	
+1478539	2	2	CVR2	F410	SPO1	SPO	California Medical Association				SPO	Sacramento	CA	95814	(916) 444-5532				Medical													
+1446121	3	4	CVR2	F410	PRI1	BNM	PROPOSITION 27				PFC																		STATEWIDE BALLOT MEASURE - NOVEMBER 2010	O		
+970610	3	1	CVR2	F410	3	ATR	Goff	Carl			ATR	Alameda	CA	94502	5107487400																	
+1468638	2	3	CVR2	F410	OFC1	POF	Lowenstein	Daniel			POF	Los Angeles	CA	90024	(310) 576-1233	(310) 319-0156																
+1359743	3	1	CVR2	F410	OFC1	POF	Titus	Ashlee N.			ATR	Sacramento	CA	95814	916-442-7757	916-442-7759																
+1112421	5	2	CVR2	F410	SPO1	SPO	California Labor Federation, AFL-CIO				SPO	Oakland	CA	94610-3548					Labor Organization													
+1479863	0	3	CVR2	F410	OFC3	POF	Retterer - Secretary	Jason			POF	Salinas	CA	93901	831-754-2444																	
+1389058	3	2	CVR2	F410	OFC2	POF	Young, Vice Chairman	Bruce			POF	Sacramento	CA	95814	(916) 447-8868																	
+1472750	1	1	CVR2	F410	ACCT-CAN	CAO	Dominguez	Francisco			CTL	Gilroy	CA	95020	(916) 285-5733	(916) 333-1344				ASM		ASM		28	S		Democratic Party				2010	
+1454582	3	1	CVR2	F410	ACCT-CAN	CAO	Williams	Das			CTL	Santa Barbara	CA	93101	(805) 637-7711	(916) 333-1344				ASM		ASM		35	S		Democratic Party				2010	
+1454775	1	4	CVR2	F410	OFC3	POF	FOX, DIRECTOR	JOEL	MR.		POF	SACRAMENTO	CA	95814	(916)325-0170																	
+1448577	1	4	CVR2	F410	OFC6	POF	EARP	JIM			POF	SACRAMENTO	CA	95814	916-446-2259																	
+1444410	2	3	CVR2	F410	OFC2	POF	Copeland	Rita			ATR	Sacramento	CA	95841	916-348-9100	916-348-9111	campaigns@rcbs.us															
+768547	5	3	CVR2	F410	SPO1	SPO	State Building & Construction Trades Council of California				SPO	Sacramento	CA	95814					Labor Organization													
+1388872	2	3	CVR2	F410	OFC5	POF	Leutheuser - DIR	Todd			POF	Cerritos	CA	90703	562-467-5252																	
+1488471	1	3	CVR2	F410	4	SPO	SEIU Local 721				SPO	Los Angeles	CA	90020					Public Employee Union													
+1388959	1	2	CVR2	F410	2	POF	KWAN	LOCK			POF	SAN FRANCISCO	CA	94102	4158642100																	TRESURER
+1511743	0	1	CVR2	F410	ACCT-BMC	BNM	Repeal of Corporate Tax Breaks				PFC																	24	California	O		
+1512040	1	1	CVR2	F410	1	ATR	Hansen	John			ATR	Pismo Beach	CA	93449	8057731578																	
+1110013	4	2	CVR2	F410	OFC5	POF	Suder, Executive Director	Lois			POF	Sacramento	CA	95814	(916) 443-7401																	
+1235446	5	1	CVR2	F410	CVR2-A-3	POF	DeMartini	James			POF	Modesto	CA	95358-8605	(209) 538-3162		jdemartini@cv-access.com								S							
+1388122	6	2	CVR2	F410	OFC2	POF	Roach	Deloris			POF	Vacaville	CA	95687	707-208-9479		droach87@sbcglobal.net															
+924854	5	4	CVR2	F410	OFC4	POF	Wilkins	Chip			POF	Sacramento	CA	95814	916-443-2745		cwilkins@rtmmlaw.com															
+1608842	1	3	CVR2	F410	OFC3	POF	Unland, Vice President	Jim C.			POF	San Jose	CA	95112																		
+1387883	1	1	CVR2	F410	2	ATR	Hiltachk	Thomas			ATR	Sacramento	CA	95814	9164427757																	
+1513645	3	3	CVR2	F410	OFC2	POF	Skipworth, Principal Officer	Shemika M.			POF	Oakland	CA	94609	(510)428-3939																	
+1387561	1	2	CVR2	F410	OFC2	POF	HOLMES	PAUL	MR.		POF	SACRAMENTO	CA	95814	916-448-8577																	
+1341456	4	3	CVR2	F410	OFC3	POF	Rosario, President	Dionisio			POF	Oakland	CA	94621	(510) 632-4242																	
+1049146	4	1	CVR2	F410	CVR2-A-843	POF	Tootle	Stephen			POF	Visalia	CA	93277-2217	(559) 733-4809										S							
+1428312	6	2	CVR2	F410	OFC2	POF	Stapf-Walters, Treasurer	Karen			POF	Sacramento	CA	95814	(916) 444-3216																	
+1388839	6	4	CVR2	F410	51	ATR	Kropke	Marvin			ATR	Pasadena	CA	91102	(626) 243-9706																	
+1224439	9	1	CVR2	F410	CVR2-A-16927	POF	Singh	Rubeena			POF	Pleasanton	CA	94566-6814											S							
+1601442	2	2	CVR2	F410	OFC1	POF	ABDOLI	ELLI	MS.		ATR	SAN RAFAEL	CA	94901	(415) 389-6800																	
+1384712	2	1	CVR2	F410	1	POF	Bickert	Jim			POF	Martinez	CA	94553	9252289710																	President
+1530305	1	1	CVR2	F410	1	ATR	McLaughlin	Evan			ATR	San Diego	CA	92105	6192835411																	
+943964	5	4	CVR2	F410	SPO1	SPO	American Federation of State, County & Municipal Employees				SPO	Sacramento	CA	95814					Labor Organization													
+1344605	7	3	CVR2	F410	OFC6	POF	Brown, Secretary	Cheryl			POF	Oakland	CA	94606	(510)436-2254																	
+1417370	3	1	CVR2	F410	ACCT-CAN	CAO	Hueso	Ben			CTL	San Diego	CA	92113	916-348-9100	916-348-9111	campaigns@rcbs.us			ASM		ASM		79	H		Democratic Party				2010	
+1614583	2	1	CVR2	F410	OFC1	POF	Brennan, President	Paul			POF	Sacramento	CA	95827	916-368-1485																	
+1385716	2	2	CVR2	F410	9683369	CAO	Solorio	Jose			CTL	Long Beach	CA	90807							State Assembly District 69						Democrat				2010	
+1587318	2	1	CVR2	F410	ACCT-CAN	CAO	Hendricks	Sharon			CTL	Los Angeles	CA	90041	(323) 333-5024					OTH	Community College Rep.	OTH	CalSTRS Board			X					2011	
+1615362	0	2	CVR2	F410	6282486	ATR	Downing	Betty Ann			ATR	Long Beach	CA	90807	(562) 427-2100																	
+1021318	4	5	CVR2	F410	SPO1	SPO	California Professional Firefighters				SPO	Sacramento	CA	95833	(916) 921-9111				Labor and Public Safety Organization													
+876330	7	2	CVR2	F410	OFC2	POF	Stapf-Walters, Treasurer	Karen			POF	Sacramento	CA	94010	(916) 444-3216																	
+1098444	7	3	CVR2	F410	OFC3	POF	Loredo, Treasurer	Cynthia			POF	San Jose	CA	95131	(209)815-4449																	
+1284429	3	3	CVR2	F410	2	POF	Olchawa	J.M.			POF	Grand Terrace	CA	92313	9098256899																	Treasurer
+1572665	0	1	CVR2	F410	ACCT-CAN	CAO	Alioto-Pier	Michela			CTL	San Francisco	CA	94102-4689	415-252-3700	415-252-3701				OTH	Supervisor	OTH	San Francisco	2	H	X						
+1593484	0	4	CVR2	F410	SPO2	SPO	SANTA YNEZ BAND OF CHUMASH INDIANS				SPO	SANTA YNEZ	CA	93460					CALIFORNIA SOVEREIGN INDIAN NATIONS													
+1172567	7	3	CVR2	F410	SPO1	SPO	California State Council of Service Employees				SPO	Sacramento	CA	95814					Labor Organization													
+1204473	5	2	CVR2	F410	OFC2	POF	Young, Vice President	Amy	Ms.		POF	Oakland	CA	94606	(510) 436-2214																	
+1526068	3	4	CVR2	F410	SPO1	SPO	Environmental Defense Action Fund				SPO	New York	NY	10010	212-616-1202				Environmental Organization													
+1470430	5	4	CVR2	F410	SPO1	SPO	Western Electrical Contractors Association, Inc.				SPO	Rancho Cordova	CA	95655	(916) 453-0112	(916) 452-7011			Electrical Contractors													
+1388096	3	3	CVR2	F410	OFC4	POF	Dekessian - Secretary/Asst. Treasurer	Marty			POF	Los Angeles	CA	90017	213-688-9500																	
+1451549	2	3	CVR2	F410	OFC2	POF	Lee, President	Richard	Mr.		POF	Oakland	CA	94612	(510) 251-1544																	
+1544651	2	3	CVR2	F410	OFC4	POF	Wozniak, President	DJ			POF	San Mateo	CA	94403	(650) 587-2345																	
+1575950	1	1	CVR2	F410	CVR2CTL_3371281	CAO	Valadao	David			CTL									ASM		ASM		30	H		Republican Party				2012	
+1261772	5	3	CVR2	F410	5	POF	Schwartz	Steve			POF	Washington	DC	20006	2022332373																	Assistant Treasurer
+1480067	2	6	CVR2	F410	SPO1	SPO	Planning and Conservation League				SPO	Sacramento	CA	95814	(916) 313-4521				Environmental Organization													
+1227761	3	1	CVR2	F410	OFC1	POF	Hunt, Chairman	Joseph J.			POF	Washington	DC	20006	(202) 383-4800																	
+1612779	0	8	CVR2	F410	SPO4	SPO	American Federation of State, County and Municipal Employees				SPO	Sacramento	CA	95814					Labor Organization													
+1613318	0	1	CVR2	F410	CAO-0	CAO	Waldron	Marie			CTL	Escondido	CA	92025	(760) 476-9570					PAC		STW		75		X	Republican Party				2012	
+1520438	2	2	CVR2	F410	OFC2	POF	Lundahl	Annie			ATR	Sacramento	CA	95814																		
+1195139	6	2	CVR2	F410	OFC2	POF	Rose	Sarah			POF	Oakland	CA	94612																		
+1562666	1	1	CVR2	F410	ACCT-CAN	CAO	Valentine	Bob			CTL	Manhattan beach	CA	90266	310-545-6565	310-546-8151				SEN		SEN		28	S		Republican Party				2011	
+1555257	1	2	CVR2	F410	OFC1	POF	Deane	Shawnda			ATR	Sacramento	CA	95842	(916) 285-5733	(916) 333-1344																
+1388809	1	3	CVR2	F410	4	SPO	Verizon Communications Inc.				SPO	Philadelphia	PA	19103					Connected Organization													
+1597730	0	3	CVR2	F410	SPO1	SPO	California Restaurant Association				SPO	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693			Manufacturing/Industrial													
+1598270	1	1	CVR2	F410	1	POF	Stephens	Robert			POF	San Rafael	CA	94901	4154595318																	Candidate
+1098444	6	5	CVR2	F410	PRI1	COM	Brown	Jerry			PFC									GOV		STW								S		
+1407719	5	4	CVR2	F410	8	POF	Lasky	Gary			POF	Fresno	CA	93704	5593123061																	Auditor
+1180955	3	5	CVR2	F410	SPO1	SPO	Calfornia Rice Industry Association				SPO	Sacramento	CA	95826	(916) 387-2290				Rice Industry													
+1455383	4	1	CVR2	F410	OFC5	POF	Lofaso, Officer	Alan			POF	Sacramento	CA	95811	916-348-9100																	
+1339250	6	3	CVR2	F410	OFC3	POF	Parra, Vice President	Alberto			POF	San Diego	CA	92111	(619) 560-0151																	
+1612526	2	1	CVR2	F410	CVR2CTL_3370973	CAO	Conway	Connie			CTL									ASM		ASM		34	H		Republican Party					
+1202687	6	3	CVR2	F410	3	SPO	Deere & Company				SPO	Moline	IL	61265					Manufacturing													
+1531015	0	1	CVR2	F410	CVR2CTL_3324490	CAO	Halderman	Linda			CTL									ASM		ASM		29	S		Republican Party				2010	
+1388809	3	1	CVR2	F410	2	ATR	Huerta	Raul			ATR	Oxnard	CA	93030	8059885750																	
+1603060	0	1	CVR2	F410	ACCT-CAN	CAO	PUGNO	ANDY			CTL	FOLSOM	CA	95630	916/608-3065					ASM		ASM		5	S		Republican Party				2010	
+1349186	5	3	CVR2	F410	SPO1	SPO	California Association of Nurse Anesthesia Practice				SPO	Dublin	CA	94568					Health													
+1389055	4	6	CVR2	F410	SPO1	SPO	Service Employees International Union Local 221				SPO	San Diego	CA	92111	(619) 560-0151	(619) 560-1299			Labor Organization													
+1563902	0	9	CVR2	F410	SPO11	SPO	TESORO CORPORATION - GOLDEN EAGLE REFINERY				SPO	MARTINEZ	CA	94553					CONTRA COSTA OIL REFINERY													
+1244474	11	2	CVR2	F410	CVR2-A-2336	POF	Sathre	Ron			POF	Union City	CA	94587-2856	(510) 487-2425		pb4Yguy@aol.com								S							
+1598481	0	1	CVR2	F410	CVR2-A-7	POF	Haueter	Bob			POF	Valencia	CA	91381-0746											S							
+1531015	3	1	CVR2	F410	CVR2CTL_3324490	CAO	Halderman	Linda			CTL									ASM		ASM		29	S		Republican Party				2010	
+1513993	1	1	CVR2	F410	CAO-0	CAO	JEFFRIES	KEVIN D			CTL	Lake Elsinore	CA	92530	(951) 274-9500					ASM		ASM		66	S		Republican				2006	
+925907	6	2	CVR2	F410	SPO1	SPO	California Medical Association				SPO	Sacramento	CA	95814					Health													
+1582073	1	2	CVR2	F410	OFC2	POF	Hiltachk	Thomas W.			ATR	Sacramento	CA	95814	(916) 442-7757																	
+818631	11	4	CVR2	F410	OFC4	POF	Freitas, Secretary Treasurer	Jeff			POF	Sacramento	CA	95814	(916) 446-2788																	
+1387618	2	1	CVR2	F410	OFC1	POF	Hiltachk	Thomas W.			ATR	Sacramento	CA	95814	(946) 442-7757																	
+1598930	0	1	CVR2	F410	CVR2-A-293	CAO	Smyth	Cameron	Mr.		CTL	Newhall	CA	91321-2585			casmyth@yahoo.com			ASM		ASM		38	S	X						
+1608814	1	1	CVR2	F410	OFC1	POF	Vado, Chief Financial Officer	Franco			POF	San Jose	CA	95112																		
+1608842	1	2	CVR2	F410	OFC2	POF	Beattie, President	George			POF	San Jose	CA	95112																		
+1615868	0	2	CVR2	F410	OFC1	POF	HENEGHAN	KEVIN			ATR	SAN FRANCISCO	CA	94108	(415) 732-7700																	
+856039	9	5	CVR2	F410	OFC5	POF	Levine	Sharon		MD	POF	Oakland	CA	94612																		
+1614526	2	1	CVR2	F410	3	POF	Welinsky	Howard			POF	Los Angeles	CA	90048	3238544410																	Chair
+1423745	2	1	CVR2	F410	6282462	CAO	Mendoza	Tony			CTL	Long Beach	CA	90807	(562) 427-2100					ASM	Assembly District 56			56			Democrat				2010	
+1318082	6	1	CVR2	F410	OFC1	POF	Denhart	Amy			ATR	San Diego	CA	92108	(619) 881-4595																	
+1021318	5	5	CVR2	F410	SPO1	SPO	California Professional Firefighters				SPO	Sacramento	CA	95833	(916) 921-9111				Labor and Public Safety Organization													
+1545995	0	1	CVR2	F410	1	ATR	Johnson	Derrick 			ATR	Washington	DC	20036	(202) 822-7320																	
+1513645	4	3	CVR2	F410	OFC2	POF	Skipworth, Principal Officer	Shemika M.			POF	Oakland	CA	94609	(510)428-3939																	
+1604480	0	3	CVR2	F410	OFC3	POF	Kessler, Vice President	Jon	Mr.		POF	Cupertino	CA	95014	(408) 373-5112																	
+1592216	2	1	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280																	
+1423758	2	4	CVR2	F410	6282486	ATR	Downing	Betty Ann			ATR	Long Beach	CA	90807	(562) 427-2100																	
+1579926	0	1	CVR2	F410	1	POF	Porth	Jason			POF	San Francisco	CA	94132	4153057448																	President
+1514591	1	1	CVR2	F410	CAO-0	CAO	FLOREZ	DEAN			CTL	Shafter	CA	93263	(661) 746-2264					CON		STW			S		DEMOCRAT				0	
+1363461	3	4	CVR2	F410	OFC5	POF	Crow - 2nd Vice-Chair	Suzanne Brown			POF	Novato	CA	94945	415-309-6170																	
+1530582	1	1	CVR2	F400	OFC1	ATH	Leach	Tracy			SMA	Bakersfield	CA	93301	661 327-1698																	
+1553209	0	1	CVR2	F410	ACCT-CAN	CAO	Wilson	Abram			CTL	San Ramon	CA	94583	925-735-3513	949-858-6807	hawilsonad15@yahoo.com			ASM		ASM		15			Republican Party				2008	
+1385811	2	1	CVR2	F410	ACCT-CAN	CAO	McCarty	Kevin			CTL	Sacramento	CA	95816	916-739-1126					ASM		ASM		9	S		Democratic Party					
+1388888	3	3	CVR2	F410	OFC3	POF	Morrison	Carol			POF	San Jose	CA	95138	408-568-4236																	
+1526024	2	3	CVR2	F410	SPO1	SPO	Sprinkler Fitters & Apprentices UA Local 483				SPO	Hayward	CA	94545					Sprinkler Fitters													
+1299444	2	2	CVR2	F410	OFC2	POF	Bryant - Other Principal Officer	Cynthia			POF	Sacramento	CA	95814	916-448-0995																	
+1289289	5	2	CVR2	F410	OFC3	POF	Cord - Chairman	Robert			POF	Walnut Creek	CA	94506	925-945-1495																	
+1642148	1	6	CVR2	F410	OFC5	POF	MAINARDI	JESSE A.			ATR	SAN FRANCISCO	CA	94108	415/732-7700																	
+1642176	3	3	CVR2	F410	SPO1	SPO	Personal Insurance Federation of California				SPO	Sacramento	CA	95814	916-442-6646				Insurance													
+1441772	4	4	CVR2	F410	OFC4	POF	Foo, Political Action Chair	Seyron			POF	Sacramento	CA	95816	909-234-3423																	
+1643956	0	1	CVR2	F410	OFC1	POF	Titus	Ashlee N.			ATR	Sacramento	CA	95814	916-442-7757																	
+1008856	3	2	CVR2	F410	OFC2	POF	Stapf-Walters, Treasurer	Karen			POF	Sacramento	CA	95814	(916) 444-3216																	
+1321374	2	2	CVR2	F410	4	POF	Abbaszadeh	Reza			POF	Sacramento	CA	95814	9164463122																	PAC Board Member
+1675974	0	1	CVR2	F410	CVR2CTL_3398775	CAO	Grove	Shannon			CTL									ASM		ASM		32	H		Republican Party				2012	
+1676417	0	3	CVR2	F410	3	POF	Krouse	Donald			POF	Morongo Valley	CA	92256	7603633849																	Vice-President
+1388910	2	3	CVR2	F410	3	SPO	Los Angeles Police Protective Leage				SPO	Los Angeles	CA	90017					Police Officers													
+1339250	7	4	CVR2	F410	OFC4	POF	Garcias, President	David			POF	San Diego	CA	92111	(619) 560-0151																	
+1453800	2	1	CVR2	F410	ACCT-CAN	CAO	Kehoe	Chrsitine			CTL	San Diego	CA	92103	(916) 442-2952					ASM		ASM		78	S		Democratic Party				2012	
+1402830	1	1	CVR2	F410	1	ATR	Johnson	Dottie			ATR	Sacramento	CA	95814	9164428888																	
+1678152	0	1	CVR2	F410	1	POF	Ricasa	Arlie			POF	Bonita	CA	91902	7607521610																	Candidate
+1486983	2	2	CVR2	F410	OFC3	POF	Rizzo, Officer	John	Mr.		POF	Berkeley	CA	94702	(510) 848-0800																	
+1687852	0	2	CVR2	F410	OFC2	POF	Levy	Henry C.	Mr.		ATR	Oakland	CA	94618	(510) 652-1000																	
+993127	2	3	CVR2	F410	SPO1	SPO	Thoroughbred Owners of California				SPO	Del Mar	CA	92014	(858) 794-1019				Sponsor													
+1627059	1	1	CVR2	F410	ACCT-BMC	BNM	Three Strikes Law. Sentencing for Repeat Felony Offenders Initiative Statute (11-0057)				PFC																		Statewide	S		
+1620427	3	4	CVR2	F410	OFC5	POF	JOHNSON, CFO	RUSS			POF	SANTA ROSA	CA	95405	(707) 696-2528																	
+1388438	2	2	CVR2	F410	17544627	SPO	International Brotherhood of Teamsters				SPO	Washington	DC	20001					Labor Union													
+1388018	4	2	CVR2	F410	CVR2-4	SPO	California Restaurant Association				SPO	Sacramento	CA	95814					Restaurant													
+1668965	1	3	CVR2	F410	SPO1	SPO	American Society of Pension Professionals & Actuaries				SPO	Arlington	VA	22203	(703) 516-9300				Retirement													
+1670469	0	2	CVR2	F410	2	POF	Weingard	Rick			POF	Palm Springs	CA	92264	7603209969																	Chair
+1671069	1	5	CVR2	F410	SPO1	SPO	Good Jobs Los Angeles				SPO	Gardena	CA	90248	(310) 308-8183				Grassroots Organization													
+1679452	0	1	CVR2	F410	4213787	ATR	Knott	Stephen			ATR	North Bergen	NJ	07047	(212) 425-3240																	
+1389026	3	2	CVR2	F410	2	POF	Davis	Steven			POF	San Diego	CA	92101	6196964645																	Chairman
+1627458	0	3	CVR2	F410	OFC2	POF	Bucher	Mark			POF	Tustin	CA	92780	714-573-2201																	
+1626306	0	1	CVR2	F410	ACCT-CAN	CAO	Lin	Matthew			CTL	Alhambra	CA	91801	626-888-3531	626-564-8651				ASM		ASM		49	S		Republican Party				2012	
+1629354	0	4	CVR2	F410	CVR2-A-50611	POF	Brown	Anne			POF	Oakland	CA	94612-1743	(510) 238-8744										S							
+1627059	0	4	CVR2	F410	OFC3	POF	Marshall, Principal Officer	Larry			POF	Palo Alto	CA	94306	(650)723-7572																	
+1615017	3	2	CVR2	F410	OFC2	POF	Larimore-Hall, Chair	Daraka			POF	Santa Barbara	CA	93101	818-260-0669																	
+1625705	1	2	CVR2	F410	OFC2	POF	Other Principal Officer	Cynthia Bryant			POF	Sacramento	CA	95814	(916) 448-0995																	
+1625705	1	3	CVR2	F410	SPO1	SPO	California Charter Schools Association Advocates				SPO	Sacramento	CA	95814	916-442-7757				California Charter Schools													
+1629243	0	1	CVR2	F410	2	SPO	Glendale Police Officers Association				SPO	Glendale	CA	91209					Employee Association													
+1627693	0	2	CVR2	F410	OFC2	POF	Sanchez, President	Victor U.			POF	Sacramento	CA	95812	(916) 266-6449																	
+1631926	1	2	CVR2	F410	1	SPO	Monterey Bay Central Labor Council AFL-CIO				SPO	Salinas	CA	93905					Labor Union Group													
+1631837	1	2	CVR2	F410	OFC3	POF	Basu	Ab			POF	Washington	DC	20024	202-962-9513																	
+1546777	3	2	CVR2	F410	OFC1	POF	Deane	Shawnda			ATR	Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1629466	1	2	CVR2	F410	OFC2	POF	Brown, President	Robert			POF	Stockton	CA	95207	209-982-1000																	
+1630171	1	1	CVR2	F400	OFC1	ATR	MAINARDI, ESQ	JESSE			POF	SAN FRANCISCO	CA	94108	415/732-7700																	
+1388694	4	2	CVR2	F410	1	POF	BROWN	SANDY			POF	LOS ANGELES	CA	90010	2133806678																	PRESIDENT
+1628304	0	1	CVR2	F410	2	ATR	Allen	Martin			ATR	Bakersfield	CA	93309	6613770407																	
+1389049	4	1	CVR2	F410	CVR2-10	ATR	Dennis Stephens	Nicolle			ATR	Sacramento	CA	95814-	(916) 448-9082																	
+1389049	4	7	CVR2	F410	CVR2-16	OFF	Laird-Blanton	Anne			POF	San Rafael	CA	94901	(415) 457-2545																	Board Member
+1279030	10	5	CVR2	F410	SPO1	SPO	Service Employees International Union Local 1021				SPO	Oakland	CA	94609	(510) 893-8766				Labor Organization													
+1626810	0	1	CVR2	F410	ACCT-CAN	CAO	Roth	Richard D.			CTL	Riverside	CA	92507	(951) 682-6500					SEN		SEN		31	S		Democratic Party				2012	
+1353025	4	1	CVR2	F410	CVR2-A-9	POF	Petitt	Charlene			POF	Chowchilla	CA	93610-9373	(559) 665-2774										S							
+1353025	4	2	CVR2	F410	CVR2-A-52	POF	Watkins	James			POF	Coarsegold	CA	93614-9709	(559) 683-7945										S							
+1628421	0	1	CVR2	F410	OFC1	POF	SUTTON	JAMES			ATR	SAN FRANCISCO	CA	94108	415/732-7700																	
+1559380	1	1	CVR2	F410	ACCT-CAN	CAO	HORNE	SUE			CTL	AUBURN	CA	95602	530/269-3041					ASM		ASM		3	S		Republican Party				2008	
+1383791	4	2	CVR2	F410	OFC2	POF	Eichman	J. Richard			ATR	Sacramento	CA	95814	(916) 442-2280																	
+1340217	8	2	CVR2	F410	OFC3	POF	DAVIDSON	CARY			ATR	LOS ANGELES	CA	90010	(213) 624-6200																	
+1638226	0	1	CVR2	F410	1	POF	Ling	Robert			POF	City of Commerce	CA	90040	9165561776																	President
+1639664	0	1	CVR2	F410	OFC1	POF	Titus	Ashlee N.			ATR	Sacramento	CA	95814	916-442-7757																	
+1388680	2	3	CVR2	F410	3	SPO	INTERNATIONAL ASSOCIATION OF FIREFIGHTERS, AFL-CIO, LOCAL 1014 a/k/a L.A. COUNTY FIREFIGHTERS LOCAL 1014				SPO	EL MONTE	CA	91731					AFFILAIATE													
+961307	7	2	CVR2	F410	OFC2	POF	Sookprasert, Assistant Treasurer	Jai			POF	Sacramento	CA	95814	(916) 444-0598																	
+961307	7	4	CVR2	F410	SPO1	SPO	California School Employees Association				SPO	San Jose	CA	95131					Labor Organization													
+1616470	2	1	CVR2	F410	OFC1	POF	Stephen	Laura			ATR	Sacramento	CA	95814	916-442-2280	916-442-1693	lauras@eichmancpa.com															
+1624726	1	3	CVR2	F410	SPO1	SPO	CALIFORNIA NOW				SPO	SAN RAFAEL	CA	94901					SOCIAL WELFARE ORGANIZATION													
+1630113	0	3	CVR2	F410	3	POF	O'Connell	Jack			POF	Long Beach	CA	90807	5624272100																	Principal Officer
+1642295	1	1	CVR2	F410	1	ATR	Kaufman	Stephen			ATR	Los Angeles	CA	90017	2134526565																	
+1388695	1	1	CVR2	F410	1	POF	SANTILLAN	PEDRO			POF	LAKEWOOD	CA	90712	5624219346																	TREASURER
+1198155	3	3	CVR2	F410	CVR2-A-348	POF	Holderreed	Glenn			POF	Davis	CA	95616-4916	(530) 758-9394		glenn@quacera.com								S							
+1614827	6	2	CVR2	F410	OFC3	POF	ABDOLI	ELLI			ATR	SAN RAFAEL	CA	94901	(415)389-6800																	
+1643384	1	4	CVR2	F410	SPO1	SPO	State Building and Construction Trades Council of California				SPO	Sacramento	CA	95814					Labor Organization													
+1244474	13	3	CVR2	F410	CVR2-A-3335	POF	Caro	Suzanne			POF	Oakland	CA	94610-2549	(510) 763-4092		sue@suecaro.com								S							
+1389058	7	2	CVR2	F410	OFC2	POF	Scott, Principal Officer	Kathryn			POF	Sacramento	CA	95831	(916) 447-8868																	
+1388677	3	1	CVR2	F410	1	POF	LARA	DAVID			POF	LOS ANGELES	CA	90017	2133688660																	TREASURER
+1633346	0	2	CVR2	F410	2	CAO	Perea	Henry T.			CTL									ASM		ASM		31			Democratic				2010	
+1289709	4	3	CVR2	F410	SPO1	SPO	BOMA California				SPO	Sacramento	CA	95814					Real Estate													
+970040	12	1	CVR2	F410	OFC1	POF	Suttie - CFO	John			POF	Los Angeles	CA	90005	(213)384-9656																	
+1017790	7	2	CVR2	F410	OFC3	POF	Coupal	Jon			POF	Sacramento	CA	95814	916-444-9950																	
+1644219	1	4	CVR2	F410	OFC4	POF	Tsang, Secretary	Cecilia			POF	Sacramento	CA	95816	916-266-9630																	
+1343178	4	3	CVR2	F410	SPO1	SPO	California Professional Association of Specialty Contractors (CALPASC)				SPO	Sacramento	CA	95864	916-973-2925	916-480-7404			Trade contractors, suppliers and related businesses													
+1654340	1	2	CVR2	F410	OFC2	POF	Izen, President	Tyler			POF	Los Angeles	CA	90017	(213) 251-4554																	
+1388744	2	1	CVR2	F410	3	POF	CARUSO	NICHOLAS			POF	FULLERTON	CA	92631	7144473382																	TREASURER
+1658313	1	7	CVR2	F410	10	SPO	California School Employees Association				SPO	San Jose	CA	95131					Public School Employees Association													
+1659281	2	1	CVR2	F410	ACCT-CAN	CAO	Paderes	Xochitl			CTL	Stockton	CA	95209	(209) 483-8099					ASM		ASM		13	S		Democratic Party				2012	
+1574532	6	2	CVR2	F410	OFC1	POF	NIELSEN	VIGO G.		JR.	POF	SAN RAFAEL	CA	94901	(415) 389-6800																	
+1470430	7	4	CVR2	F410	SPO1	SPO	Western Electrical Contractors Association, Inc.				SPO	Rancho Cordova	CA	95655	(916) 453-0112	(916) 452-7011			Electrical Contractors													
+1399672	1	2	CVR2	F410	OFC3	POF	Leach	Mark			ATR	San Mateo	CA	94402	(650) 574-4239																	
+1387804	4	3	CVR2	F410	SPO1	SPO	Democratic Governors' Association				SPO	Washington	DC	20005	202-772-5600				Governors' Association													
+1153689	4	1	CVR2	F410	OFC1	POF	Stephen	Laura			ATR	Sacramento	CA	95814	916-442-2280																	
+1639043	0	4	CVR2	F410	OFC4	POF	Lehane, Principal Officer	Chris			POF	Sacramento	CA	95814	(916) 558-1516																	
+1391096	1	2	CVR2	F410	CVR2-4	SPO	International Brotherhood of Electrical Workers Local Union #6				SPO	San Francisco	CA	94117	(415) 861-5752				Labor Organization													
+1612779	5	10	CVR2	F410	SPO6	SPO	California Federation of Teachers				SPO	Sacramento	CA	95814					Labor Organization / Educators													
+1639785	1	2	CVR2	F410	2	SPO	Orange County Employees Association				SPO	Santa Ana	CA	92701					County Public Employees													
+1639803	0	1	CVR2	F410	1	POF	Nichols	Mark			POF	Santa Ana	CA	92703	9165561776																	Chair
+1388680	3	3	CVR2	F410	3	SPO	L.A. COUNTY FIREFIGHTERS LOCAL 1014, IAFF				SPO	EL MONTE	CA	91731					AFFILAIATE													
+1640924	1	5	CVR2	F410	5	SPO	California Federation of Teachers				SPO	Burbank	CA	91505					Educators' Organization													
+1514444	3	8	CVR2	F410	SPO5	SPO	Service Employees International Union Local 1000				SPO	Sacramento	CA	95814					Service Employees													
+1112113	4	1	CVR2	F410	OFC2	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280																	
+1341007	2	8	CVR2	F410	1	POF	Herrick	Mike			POF	Newbury Park	CA	91320	8054849339																	Steering Comm Member
+1388914	2	1	CVR2	F410	1	ATR	Healy	Elizabeth			ATR	Napa	CA	94558	7072260143																	
+1389067	4	2	CVR2	F410	OFC4	POF	Werner, Business Representative	Richard			POF	San Ramon	CA	94583	(925) 314-8600																	
+1498406	9	6	CVR2	F410	SPO1	SPO	California League of Conservation Voters				SPO	Oakland	CA	94612	(510)271-0900				Environmental Organization													
+1641956	0	4	CVR2	F410	OFC3	POF	Vecchio	Brian			POF	Woodland Hills	CA	91367	(805) 583-1500																	
+1641956	0	5	CVR2	F410	OFC4	POF	Duncan	Don			POF	Oakland	CA	94612	(510) 251-1856																	
+1630171	2	2	CVR2	F400	OFC4	ATH	ULRICH	JOHN			SMA	SOUTH SAN FRANCISCO	CA	94080	650/871-5730																	
+1387351	1	2	CVR2	F410	OFC2	POF	FOLWARKOW	SCOTT			POF	SACRAMENTO	CA	95814	916-503-1639																	
+1387768	2	2	CVR2	F410	2	POF	Humphries	Fred			POF	Washington	DC	20005	2022635900																	Principal
+1387768	3	3	CVR2	F410	4	SPO	Microsoft Corporation				SPO	Redmond	WA	98073					Technology													
+856869	6	3	CVR2	F410	SPO1	SPO	Associated Builders and Contractors Northern California Chapter				SPO	Livermore	CA	94551					Professional/Trade													
+1026425	11	1	CVR2	F410	OFC4	POF	Smoot	Rose			ATR	Sacramento	CA	95816	(916) 441-3990																	
+1627059	2	3	CVR2	F410	OFC2	POF	Robinson, Principal Officer	Jeffrey D.			POF	Washington	DC	20005	(202)682-1300																	
+1671895	2	1	CVR2	F410	OFC1	POF	Jackson	Marijane			ATR	Los Angeles	CA	90042	323-855-0764		mikijackson@mac.com															
+1299164	3	2	CVR2	F410	2	POF	Dowling	S. Colin			POF	Washington	DC	20004	(202) 879-6842																	Chairman
+1388625	3	1	CVR2	F410	OFC4	POF	Nielsen, Director	Ben			POF	Gardena	CA	90249	3233219195																	
+1485497	4	4	CVR2	F410	OFC3	POF	Daniel, Principal Officer	Kelley			POF	Washington	DC	20004	(916) 442-2952																	
+1417041	4	4	CVR2	F410	33	SPO	L.A. County Federation of Labor				SPO	Los Angeles	CA	90006					Labor Unions													
+1131255	3	4	CVR2	F410	OFC4	POF	Jacob, Vice President	Mike			POF	San Francisco	CA	94104	(415) 352-0710																	
+912614	6	1	CVR2	F410	OFC1	POF	Huffman, President	Alice			POF	Sacramento	CA	95814	(916) 498-1890																	
+1240029	7	1	CVR2	F410	OFC1	POF	Richman	Paul			ATR	Sacramento	CA	95816	(916) 440-1985																	
+1385141	5	1	CVR2	F410	OFC2	POF	Mebine, O.D., Chairman	L. Bruce			POF	San Francisco	CA	94127	(415) 664-3089																	
+1387575	2	3	CVR2	F410	SPO1	SPO	Construction Employers Association				SPO	Sacramento	CA	95821					Construction													
+1156704	8	2	CVR2	F410	SPO1	SPO	Building Industry Assoc. of the Bay Area				SPO	Walnut Creek	CA	94596	(925) 820-7626																	
+1682860	3	1	CVR2	F410	OFC1	POF	Pugh, Treasurer	Courtni			POF	Los Angeles	CA	90005	(213) 387-8393																	
+865343	6	1	CVR2	F410	OFC1	POF	McIntyre	Carolyn			POF	Sacramento	CA	95814	916.446.7732	916.446.1605	cm@calcable.org															
+1519565	3	3	CVR2	F410	OFC3	POF	Repovich	Peter			ATR	Los Angeles	CA	90017	(213) 251-4554																	
+1098444	10	2	CVR2	F410	OFC2	POF	Mojica, Union Secretary	Cosme			POF	San Jose	CA	95131	(408)526-0606																	
+1719385	0	1	CVR2	F410	OFC1	POF	ADAMS	FRANK			POF	HIGHLAND	UT	84003	714-755-0404																	
+1388566	2	2	CVR2	F410	OFC4	POF	Park, President	Frank			POF	Sacramento	CA	95814	(916) 443-3114																	
+958984	11	1	CVR2	F410	OFC2	POF	Kieffer, Executive Director	Dave			POF	Sacramento	CA	95814	(916) 442-3838																	
+1716974	2	3	CVR2	F410	OFC3	POF	Stansbury, Treasurer	Brian			POF	San Francisco	CA	94103	(415) 861-5060	(415) 552-5741																
+1715538	1	1	CVR2	F410	ACCT-CAN	CAO	Cooley	Ken			CTL	Rancho Cordova	CA	95670	916-705-3674					ASM		ASM		8	H		Democratic Party				2014	
+1249621	4	2	CVR2	F410	SPO1	SPO	California Motorcycle Dealers Association				SPO	Lake Elsinore	CA	92530	(951) 471-1500	(951) 471-1577			Sponsor													
+1671895	4	2	CVR2	F410	OFC2	POF	Dean	Aubyn Jo			POF	Granite Bay	CA	95746	(916) 660.0217																	
+924817	12	4	CVR2	F410	CVR2-A-2010212	POF	Eslick	Candice			POF	Clovis	CA	93612-2313											S							
+1222466	2	1	CVR2	F410	20674290	POF	Buffenbarger	R. Thomas	Mr.		POF	Upper Marlboro	MD	20772	301-967-4575																	President`
+1511313	3	4	CVR2	F410	SPO1	SPO	California Nurses Association				SPO	Oakland	CA	94612	(510) 273-2200				Registered Nurses													
+1235950	6	5	CVR2	F410	SPO1	SPO	Southwest Regional Council of Carpenters				SPO	Los Angeles	CA	90071					Labor Union													
+1689902	0	6	CVR2	F410	SPO2	SPO	Mi Familia Vota				SPO	Riverside	CA	92507					Social and Economic Justice Organization													
+1389020	7	1	CVR2	F410	OFC1	POF	Booker, Secretary-Treasurer	Andre H.			POF	Sacramento	CA	95833	(916) 239-3535																	
+1689205	0	1	CVR2	F410	ACCT-CAN	CAO	Lieu	Ted			CTL	Sacramento	CA	95814	(916)442-2952		info@olsonhagel.com			SEN		SEN		28			Democratic Party				2014	
+1682860	2	4	CVR2	F410	OFC3	POF	Johnson, Principal Officer	Maggie			POF	Los Angeles	CA	90005	(213) 387-8393																	
+1384030	2	2	CVR2	F410	2	POF	Brown	Lee			POF	Upland	CA	91786	9099829898																	Executive Director
+1389093	3	1	CVR2	F410	42	ATR	None				ATR	None	No	90026	2134852091																	
+1642206	1	4	CVR2	F410	3	SPO	California Calls Action Fund				SPO	Los Angeles	CA	90016					Social Justice Organization													
+1388820	3	3	CVR2	F410	6746366	POF	Ming	Stephanie			POF	Auburn Hills	MI	48326	248-371-7268																	Comerica Bank, PAC Services Recordkeeper
+1388697	1	2	CVR2	F410	3	SPO	SAN FRANCISCO LABORERS'S LOCAL 261				SPO	SAN FRANCISCO	CA	94110					MEMBERSHIP ORGANIZATION													
+1338158	10	3	CVR2	F410	SPO1	SPO	Bay Area Bioscience Association				SPO	South San Francisco	CA	94080					Life Science Association													
+1697899	0	2	CVR2	F410	OFC1	POF	Linney, Principal Officer	Doug			POF	Oakland	CA	94612	510-444-4710																	
+1652408	2	3	CVR2	F410	OFC3	POF	Tapley - Director-At-Large	David			POF	Waterford	CA	95386	916-648-1222																	
+1388578	2	3	CVR2	F410	SPO1	SPO	Laborers International Union				SPO	Washington	DC	20006					Trade Union													
+1388021	3	4	CVR2	F410	OFC4	POF	Van den Heuvel (2nd VP)	Mark			POF	San Jose	CA	95125	408-265-7643																	
+856039	10	7	CVR2	F410	OFC7	POF	Sanghvi	Suketu		MD	POF	Oakland	CA	94612																		
+1401749	4	4	CVR2	F410	SPO1	SPO	ORANGE COUNTY BUSINESS COUNCIL				SPO	IRVINE	CA	92614	(949) 476-2242																	
+1389473	3	2	CVR2	F410	6923701	POF	Broome	Richard			POF	Park Ridge	NJ	07656	201.307.2492																	Senior Vice President
+1381430	6	5	CVR2	F410	SPO1	SPO	AFSCME Council 57				SPO	Oakland	CA	94621					Labor Organization													
+1388628	2	4	CVR2	F410	OFC6	POF	Travieso, Secretary	Chelu			POF	Santa Ana	CA	92705	(949) 380-3304																	
+1388564	2	3	CVR2	F410	SPO1	SPO	State of California Automobile Dismantlers Association				SPO	Sacramento	CA	95821	(916) 979-7088				Automotive Industry													
+1385089	1	3	CVR2	F410	SPO1	SPO	California Society of Plastic Surgeons				SPO	Sacramento	CA	95825					Health													
+1388896	3	3	CVR2	F410	SPO1	SPO	CA Coalition on Worker's Compensation				SPO	Sacramento	CA	95814	(916) 441-4111				Trade/Profession													
+1387908	2	6	CVR2	F410	OFF-10	POF	Shaw	Robert			POF	Costa Mesa	CA	92626	7144337100																	Board Member
+1387756	4	1	CVR2	F410	ACCT-BMC	BNM	Temporary Taxes to Fund Education. Guaranteed Local Public Safety Funding. Initiative Constitutional Amendment. Proposition				PFC																	30	Statewide	S		
+1624726	3	2	CVR2	F410	OFC3	POF	ABDOLI	ELLI			ATR	SAN RAFAEL	CA	94901	(415)389-6800																	
+847058	4	2	CVR2	F410	OFC2	POF	Grannis, Controller and Treasurer	Steven			POF	Oakland	CA	94621	(510)568-4788																	
+847058	4	3	CVR2	F410	OFC3	POF	Beltran, Political and Marketing Director	Agustin			POF	Oakland	CA	94621	(209) 993-7340																	
+1700463	0	2	CVR2	F410	3	SPO	International Longshore and Warehouse Union Forman's Local 94				SPO	SAN PEDRO	CA	90731					MEMBERSHIP ORGANIZATION													
+1493121	5	3	CVR2	F410	2	SPO	NEIGHBORHOOD MARKET ASSOCIATION				SPO	SAN DIEGO	CA	92108					MARKETS													
+1704499	1	2	CVR2	F410	OFC2	POF	Sookprasert, Assistant Treasurer	Jai			POF	Sacramento	CA	95814	(916) 444-0598																	
+1021582	6	1	CVR2	F410	OFC1	POF	Bell, Jr.	Charles H.			ATR	Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+1402798	3	3	CVR2	F410	SPO1	SPO	Northern California Water Association				SPO	Sacramento	CA	95814					Water Association													
+1387984	3	2	CVR2	F410	OFC5	POF	Strong	Matt			ATR	Lodi	CA	95841	209-367-8800	209-367-1084																
+1538111	2	1	CVR2	F410	OFC1	POF	Gallagher, Treasurer/Secretary	Sean			POF	Sacramento	CA	95818	(916) 442-2952																	
+1389055	6	1	CVR2	F410	OFC1	POF	Griffee	Kathy			ATR	San Diego	CA	92111	(619) 560-0151																	
+1180844	5	2	CVR2	F410	SPO1	SPO	Communications Workers of America				SPO	Washington	DC	20001					Labor Union													
+1713176	0	6	CVR2	F410	4	SPO	ACLU of San Diego & Imperial Counties				SPO	San Diego	CA	92138					Social Justice Nonprofit													
+827756	10	2	CVR2	F410	OFC3	POF	Burns, President	Russell			POF	Alameda	CA	94502	(510) 748-7400																	
+1714469	0	1	CVR2	F410	ACCT-CAN	CAO	Pan	Dr. Richard			CTL	Sacramento	CA	95815	(916) 285-5733	(916) 333-1344				SEN		SEN		6	S		Democratic Party				2014	
+1389094	1	1	CVR2	F410	1	POF	White	Gretchen			POF	Oakland	CA	94616	5106558118																	President
+1388957	3	2	CVR2	F410	OFC3	POF	Smith	Tim			POF	Chandler	AZ	85225	480-496-7002																	
+1204798	5	2	CVR2	F410	OFC10	POF	Harris, Chair	Pat			POF	San Luis Obispo	CA	93401	805-440-4426																	
+1723658	0	2	CVR2	F410	4	CAO	Reynaga-Emett	Corky			CTL									ASM		STW					Republican				2012	
+1724009	0	1	CVR2	F410	OFC1	POF	Simunovic - President	Daniela			POF	Fresno	CA	93721	559-269-4016																	
+1385716	3	2	CVR2	F410	9683369	CAO	Solorio	Jose			CTL	Long Beach	CA	90807						ASM		ASM		69			Democrat				2010	
+1123581	8	2	CVR2	F410	OFC2	POF	Taiz, President	Lillian			POF	Sacramento	CA	95814	(916)441-4848																	
+1739735	0	1	CVR2	F410	3	BNM	39 Tax Treatment for Multistate Businesses				PFC																	39	Statewide	S		
+1739743	0	1	CVR2	F410	1	POF	Clarke	Carol			POF	Visalia	CA	93277	5593722126																	Chair
+1387559	2	3	CVR2	F410	SPO1	SPO	COALITION FOR ADEQUATE SCHOOL HOUSING				SPO	SACRAMENTO	CA	95814					SCHOOL CONSTRUCTION COALITION													
+1446121	9	3	CVR2	F410	OFC3	POF	MUNGER, JR.	CHARLES T.			POF	PALO ALTO	CA	94301	(650) 926-5326																	
+1301554	5	1	CVR2	F410	OFC1	POF	Stephen	Laura			ATR	Sacramento	CA	95814	916-442-2280	916-442-1693	lauras@eichmancpa.com															
+1723313	0	1	CVR2	F410	CVR2CTL_3420322	CAO	Conway	Connie			CTL									SEN		SEN		18	S		Republican Party				2018	
+1470598	8	8	CVR2	F410	SPO3	SPO	GENENTECH, INC.				SPO	SACRAMENTO	CA	95814	916-443-5703				BIOTECHNOLOGY													
+1691673	2	3	CVR2	F410	5	BNM	TAX TREATMENT FOR MULTISTATE BUSINESSES. CLEAN ENERGY AND ENERGY EFFICIENCY FUNDING. INITIATIVE STATUTE.				PFC																	39	State	O		
+1678152	2	2	CVR2	F410	2	CAO	Ricasa	Arlie			CTL									ASM		STW					Democrat				2008	
+1384089	3	3	CVR2	F410	SPO1	SPO	California Land Title Association				SPO	Sacramento	CA	95814					Finance/Insurance													
+1380786	3	1	CVR2	F410	OFC1	POF	McGarry, Senior Vice President	Mike			POF	Arlington	VA	22201	(754)201-2119																	
+1723924	1	1	CVR2	F410	ACCT-BMC	BNM	Suspends air pollution control laws requiring major polluters to report and reduce greenhouse emmissions, Ballot Measure				PFC																	23	Statewide	O		
+1628616	1	2	CVR2	F410	CAO-0	CAO	Riemer	Craig			CTL	Riverside	CA	92501						SCJ		CTY	State of California	9		X					2012	
+1387756	5	3	CVR2	F410	OFC3	POF	Zuniga, Principal Officer	Ruben			POF	Los Angeles	CA	90071	(213) 228-8492																	
+1380259	5	5	CVR2	F410	SPO1	SPO	American Federation of State, County and Municipal Employees Local 3299				SPO	Oakland	CA	94612					Labor Organization													
+1360239	4	4	CVR2	F410	SPO1	SPO	Civil Justice Association of California				SPO	Sacramento	CA	95814	(916) 443-4900	(916) 443-4306			Legal													
+1316417	4	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	916-442-2280	916-442-1693	lstephen@eichmancpa.com															
+1387707	4	3	CVR2	F410	SPO1	SPO	California Business Properties Association				SPO	Sacramento	CA	95814					Retailer - shopping centers													
+1388995	1	3	CVR2	F410	SPO1	SPO	Capitol Resource Family Impact				SPO	Sacramento	CA	95814	95814				501(c) 4  Non-Profit Organization													
+1289709	5	2	CVR2	F410	OFC4	POF	Stevens - Chief Administration Officer	Melissa			POF	Sacramento	CA	95814	916-443-4676																	
+1724113	1	1	CVR2	F410	OFC1	POF	Titus	Ashlee N.			ATR	Sacramento	CA	95814	916-442-7757																	
+877971	4	2	CVR2	F410	OFC2	POF	Standley	Joe			POF	Pinole	CA	94564	510-724-9277																	
+1389080	3	5	CVR2	F410	SPO1	SPO	SCHOOLSFIRST FEDERAL CREDIT UNION				SPO	SANTA ANA	CA	92711					CREDIT UNION													
+1387885	1	7	CVR2	F410	CVR2-33	OFF	Evans	Ed			POF	Placentia	CA	92670	(916) 448-7002																	Trustee
+1653080	1	4	CVR2	F410	OFC5	POF	Gantt, Asistant Treasurer	Patrick			POF	Sacramento	CA	95814	(916) 319-4800																	
+983762	10	3	CVR2	F410	SPO1	SPO	California Dental Association				SPO	Sacramento	CA	95814	916-443-0505				Professional membership organization of dentists													
+970040	14	3	CVR2	F410	OFC4	POF	Hiltachk	Thomas W.			ATR	Sacramento	CA	95814	310/442-7757																	
+1388861	2	2	CVR2	F410	OFC4	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280																	
+1016248	5	1	CVR2	F410	OFC3	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280		lauras@eichmancpa.com															
+1689902	3	3	CVR2	F410	OFC2	POF	Monterroso, Principal Officer	Ben			POF	West Conina	CA	91792	916-442-3838																	
+1644219	2	3	CVR2	F410	OFC3	POF	Murphy, Treasurer	Stefan			POF	Sacramento	CA	95816	916-266-9630																	
+766310	5	3	CVR2	F410	OFC4	POF	Powers	Bill			POF	Sacramento	CA	95818																		
+1387883	3	9	CVR2	F410	CVR2-13	OFF	Fick	Jerry			POF	Chula Vista	CA	92921	(916) 448-7002																	Trustee
+1387883	3	17	CVR2	F410	CVR2-21	OFF	Newell	Walter			POF	Fairfield	CA	94534	(916) 448-7002																	Trustee
+1320006	5	1	CVR2	F410	OFC1	POF	Blackmon, Treasurer	Clyde			POF	Sacramento	CA	95814	(916) 444-9845																	
+1320006	5	2	CVR2	F410	SPO1	SPO	California Attorneys for Criminal Justice				SPO	Sacramento	CA	95814					Attorneys													
+1671077	5	2	CVR2	F410	OFC1	POF	Scott	McGregor			POF	Sacramento	CA	95814	916-329-7982																	
+1388805	7	4	CVR2	F410	7	POF	Bingol	Selim			POF	Detroit	MI	48265	3136673437																	Chairman
+1330608	8	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280	(916) 442-1693																
+1155843	5	1	CVR2	F410	CVR2-A-226	POF	Libby	Geraldine			POF	Live Oak	CA	95953-9607	(530) 695-3442	(530) 695-3434	rlibby@syix.com								S							
+1774104	2	1	CVR2	F410	1	POF	Smoot	Anthony			POF	Yuba City	CA	95993	5307517643																	Chair
+1782235	1	4	CVR2	F410	OFC3	POF	Kneer, President/CEO - Planned Parenthood of CA	Kathy			POF	Sacramento	CA	95814	(916) 446-5247																	
+1782235	1	7	CVR2	F410	SPO1	SPO	California Medical Association				SPO	Sacramento	CA	95814	(916) 551-2020				Healthcare Providers													
+1388665	3	2	CVR2	F410	5	POF	ORDOS	WAYNE			POF	SACRAMENTO	CA	95814	9165561776																	PAC TREASURER
+1389017	3	3	CVR2	F410	OFC3	POF	Whittle	Scott H.			POF	Los Angeles	CA	90024	310-208-2828																	
+1309194	6	1	CVR2	F410	OFC1	POF	McNabb, Nominating Chair	Liz			POF	Orange	CA	92866	(714)633-6373																	
+1741828	5	5	CVR2	F410	SPO1	SPO	Bakersfield Professional Firefighters Local 246				SPO	Bakersfield	CA	93313					Firefighters													
+882113	9	4	CVR2	F410	CVR2-A-497	POF	Ratzlaff	Joel W.			POF	Tehachapi	CA	93561-8527	(661) 821-6720										S							
+1775354	1	2	CVR2	F410	OFC1	POF	Carroll	Damian			ATR	Encino	CA	91316	(916) 285-5733	(916) 333-1344																
+1388703	2	3	CVR2	F410	SPO1	SPO	International Brotherhood of Electrical Workers Local #47				SPO	Diamond Bar	CA	91765	(909) 860-4239																	
+1739743	1	1	CVR2	F410	1	POF	Macareno	Ruben			POF	Visalia	CA	93291	5593727206																	Chair
+1794288	1	2	CVR2	F410	2	SPO	Fresno, Madera, Kings & Tulare Countis Building Trades Council				SPO	Fresno	CA	93727					AFL-CIO													
+1487182	2	1	CVR2	F410	OFC1	POF	Cottingham, President	Ron			POF	Sacramento	CA	95834	(916) 928-3777																	
+1770056	1	1	CVR2	F410	1	CAO	Haughey	Thomas			CTL									ASM		ASM		52			Democrat				2013	
+1170211	8	2	CVR2	F410	OFC4	POF	Stone, President	Kimberly			POF	Sacramento	CA	95814	(916) 443-4900																	
+1747099	1	3	CVR2	F410	OFC1	POF	Warren	Nancy L.			ATR	Novato	CA	94949-5731	415-884-5500	415-884-5501	nwarren@warrenandassoc.com															
+1745110	1	2	CVR2	F410	OFC1	POF	Deane	Shawnda			ATR	Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1109611	9	2	CVR2	F410	OFC4	POF	Briscoe	Lynn			POF	San Diego	CA	92123	858-636-4221																	
+818326	14	4	CVR2	F410	SPO1	SPO	California Faculty Association				SPO	Los Angeles	CA	90045					Faculty Members													
+1108250	3	4	CVR2	F410	SPO1	SPO	Sprinkler Fitters & Apprentices UA Local 483				SPO	Hayward	CA	94545					Sprinkler Fitters													
+1385147	5	4	CVR2	F410	OFC5	POF	Kimura, O.D., Secretary-Treasurer	Daniel			POF	Sacramento	CA	95816	(916) 441-3990																	
+1753153	1	1	CVR2	F410	ACCT-CAN	CAO	Holden	Chris			CTL	Los Angeles	CA	90017						ASM		ASM		41			Democratic Party				2014	
+1753225	0	1	CVR2	F410	1	POF	Dimel	Rob			POF	Costa Mesa	CA	92626	9165561776																	President
+1096557	12	2	CVR2	F410	OFC2	POF	Nunez, CEO	Joe			POF	Sacramento	CA	95814	(916) 325-1500																	
+1388699	1	3	CVR2	F410	SPO1	SPO	IBEW Local 684				SPO	Modesto	CA	95354					Labor Organization													
+1292337	4	2	CVR2	F410	CVR2-A-1591	ATR	Burruto	David	Mr.		ATR	Burlingame	CA	94010-2839	(650) 219-0457		davidburruto@yahoo.com								S							
+1389983	4	5	CVR2	F410	SPO1	SPO	SEIU Local 121RN				SPO	Pasadena	CA	91103	(818) 284-4555				Labor Organization													
+1312339	9	1	CVR2	F410	OFC6	POF	Alexander, Vice President	Alysabeth			POF	Oakland	CA	94609	(510) 350-4527																	
+1388699	1	1	CVR2	F410	OFC1	POF	Powell, Treasurer	Billy			POF	Modesto	CA	95354	(209) 524-5171																	
+1070308	3	2	CVR2	F410	OFC2	POF	Gonzalez, Executive Director	Jose L.			POF	San Rafael	CA	94903	(415) 472-3960																	
+1746973	1	1	CVR2	F410	ACCT-CAN	CAO	YEE	LELAND			CTL	SAN FRANCISCO	CA	94108	(415) 732-7700					SOS		STW			S		Democratic Party					
+1385918	3	3	CVR2	F410	SPO1	SPO	California Association of Health Underwriters				SPO	Sacramento	CA	95833					Health Insurance													
+1753530	0	1	CVR2	F410	ACCT-CAN	CAO	Rodriguez	Freddie			CTL	Pomona	CA	91766	909-802-4137					ASM		ASM		52	S		Democratic Party				2014	
+818326	16	7	CVR2	F410	SPO4	SPO	California State Council of Service Employees				SPO	Sacramento	CA	95814					Health Care Givers and Other Public Employees													
+1388701	2	4	CVR2	F410	SPO1	SPO	International Brotherhood of Electrical Workers Local 595				SPO	Dublin	CA	94568	(925) 556-0595																	
+1520438	5	5	CVR2	F410	SPO1	SPO	Planned Parenthood Affiliates of California				SPO	Sacramento	CA	95814	(916)442-5247				Non-Profit Organization													
+1755932	0	4	CVR2	F410	OFC4	POF	Vandermost	Julie			POF	San Juan Capistrano	CA	92675	949-489-2700																	
+1294356	9	2	CVR2	F410	1	POF	Gale	Stephen			POF	Santa Rosa	CA	95409	7075379348																	Chair
+1387803	7	2	CVR2	F410	CVR2POF_3315276	POF	Nunez	Peter			POF	San Diego	CA	92109	858-270-2425																	Principal Officer
+1689902	4	5	CVR2	F410	SPO1	SPO	California State Council of Service Employees				SPO	Los Angeles	CA	90010					Labor Organization													
+1744260	3	3	CVR2	F410	SPO1	SPO	California Pawnbrokers Association				SPO	Sacramento	CA	95814	916-669-5322				Retail													
+1457468	6	7	CVR2	F410	SPO2	SPO	American Heart Association                                            Western States Affiliate				SPO	Los Angeles	CA	90017	(213) 291-7093	(213) 291-7003			Non-profit health organization													
+1691273	4	1	CVR2	F410	CVR2-A-62255	POF	Butler	Laphonza			POF	Sacramento	CA	95814-3407	(916) 442-3838										S							
+1615390	4	3	CVR2	F410	3	SPO	Sanofi US Services, Inc.				SPO	Bridgewater	NJ	08807					Connected Corporation													
+1388703	7	3	CVR2	F410	SPO1	SPO	International Brotherhood of Electrical Workers Local #47				SPO	Diamond Bar	CA	91765	(909) 860-4239																	
+1388703	8	1	CVR2	F410	OFC1	POF	Lavin, Treasurer	Patrick			POF	Diamond Bar	CA	91765	(909) 860-4239																	
+1624643	4	1	CVR2	F410	OFC1	POF	Bannon	Thomas			POF	Sacramento	CA	95814	800/927-4222																	
+1317835	4	3	CVR2	F410	4	SPO	HSBC North America				SPO	New York	NY	10018					Financial Services													
+1123581	9	3	CVR2	F410	OFC3	POF	Wehr, Treasurer	Kevin			POF	Sacramento	CA	95814	(916)441-4848																	
+1456051	6	3	CVR2	F410	7263931	POF	Cushman	Nancy			POF	Auburn Hills	MI	48326	248-371-7269																	Vice President
+1753160	0	3	CVR2	F410	4	SPO	GTECH Corporation				SPO	Providence	RI	02903					Gaming Industry													
+1388587	1	1	CVR2	F410	OFC1	POF	Powell, Treasurer	Joseph			POF	San Diego	CA	92120	(619) 265-0501																	
+1388587	1	3	CVR2	F410	OFC3	POF	Seaton-Msemaji, Political Director	Ken			POF	San Diego	CA	92120	(619)265-0501																	
+1768228	1	2	CVR2	F410	OFC3	POF	ESCALANTE, PRESIDENT	MICHAEL			POF	SAN RAFAEL	CA	94901	(415) 389-6800																	
+1388722	1	1	CVR2	F410	CVR2-11	OFF	barnett	douglas			POF	Los Angeles	CA	90037	(323) 710-4473																	Treasurer
+810092	7	1	CVR2	F410	OFC1	POF	Bennett, Treasurer	Ronald W.			POF	Martinez	CA	94553	(925) 228-2302																	
+1388558	1	3	CVR2	F410	9603507	POF	Zinder	Andrea			POF	Buena Park	CA	90620	(714) 995-4601																	Secretary-Treasurer
+1388637	2	1	CVR2	F410	CVR2-5	OFF	Ordos	Wayne			POF	Sacramento	CA	95814																		Treasurer
+1388623	2	2	CVR2	F410	CVR2-4	OFF	Ordos	Wayne			POF	Sacramento	CA	95814	(916) 556-1776																	Treasurer
+1388756	2	3	CVR2	F410	CVR2-3	SPO	California Grocers Association				SPO	Sacramento	CA	95814	(916) 556-1776				Retail and grocery suppliers													
+1772809	0	1	CVR2	F410	ACCT-CAN	CAO	Wolk	Daniel M.			CTL	Davis	CA	95616	530-756-7653	530-297-5626				ASM		ASM		4	S		Democratic Party				2014	
+1354328	2	1	CVR2	F410	CVR2-A-305	POF	Falkenstein	Phil			POF	El Centro	CA	92243	(760) 353-1963		philanddawn@thegrid.net								S							
+1788793	0	2	CVR2	F410	OFC2	POF	Butler, Principal Officer	Laphonza			POF	Los Angeles	CA	90057	(213) 985-0384																	
+1638226	2	2	CVR2	F410	CVR2-5	OFF	Ordos	Wayne			POF	Sacramento	CA	95814	(916) 556-1776																	Treasurer
+1753246	0	3	CVR2	F410	4	SPO	Nestle Waters North America Inc.				SPO	Stamford	CT	06902					Food Retail													
+1698844	3	3	CVR2	F410	1	SPO	ACLU OF NORTHERN CALIFORNIA				SPO	SAN FRANCISCO	CA	94111					SOCIAL JUSTICE NONPROFIT													
+1789628	1	1	CVR2	F410	ACCT-CAN	CAO	Allen	Travis			CTL	Huntington Beach	CA	92649	714-540-2295					ASM		ASM		72	H		Republican Party				2014	
+1773814	1	2	CVR2	F410	OFC2	POF	Canete, Director of Membership & Business Development	Julian			POF	Sacramento	CA	95814	(446-7883		canetej@calasiancc.org															
+1774315	1	1	CVR2	F410	ACCT-CAN	CAO	Sbranti	Tim			CTL	Dublin	CA	94568	925-999-8716					ASM		ASM		16	S		Democratic Party				2014	
+1580504	2	4	CVR2	F410	1	POF	Chen	Shawn			POF	Manhattan Beach	CA	90266	3103721809																	Principal 4
+1390312	4	2	CVR2	F410	5	POF	Shaw	David A.			POF	Sacramento	CA	958272513	9163666646																	PAC Committee Chair
+637685	12	2	CVR2	F410	OFC5	POF	Anderson, Recording Secretary	Kat			POF	San Francisco	CA	94107	(415) 626-1161	(415) 543-3305																
+1388706	1	2	CVR2	F410	OFC2	POF	Poster, National President	Steven			POF	Los Angeles	CA	90046	(323) 876-0160																	
+1388682	1	3	CVR2	F410	4	SPO	LOS ANGELES COUNTY FIREFIGHTERS LOCAL 1014				SPO	EL MONTE	CA	91731					MEMBERSHIP ORGANIZATION													
+1456865	2	2	CVR2	F410	OFC2	POF	Yas	Jessica			ATR	Santa Monica	CA	90405	805-490-2330		jessicayas@gmail.com															
+1388644	3	5	CVR2	F410	5	SPO	National Association to Protect Children				SPO	Asheville	NC	28801					Pro-Child, Anti-Crime Membership Association													
+1782235	7	14	CVR2	F410	SPO7	SPO	THE DOCTORS COMPANY				SPO	NAPA	CA	94558					HEALTHCARE PROVIDERS													
+1891799	0	1	CVR2	F410	OFC1	POF	Titus	Ashlee N.			ATR	Sacramento	CA	95814	(916) 442-7757	(916) 442-7759																
+1892277	0	1	CVR2	F410	OFC1	POF	Titus	Ashlee N.			ATR	Sacramento	CA	95814	916-442-7757																	
+1277118	9	5	CVR2	F410	SPO1	SPO	NARAL Pro-Choice California				SPO	San Francisco	CA	94103	(415) 890-1020	(415) 890-1025			Health													
+1881269	0	1	CVR2	F410	OFC1	POF	Vo	David			POF	Westminster	CA	92683	714-548-6020																	
+1317835	5	1	CVR2	F410	2	ATR	Rosenkoetter	Thomas			ATR	Washington	DC	20005	2024663561																	
+1387631	5	4	CVR2	F410	OFC5	POF	Emmerson, Principal Officer	William			POF	Sacramento	CA	95814	(916) 443-7401																	
+974923	8	3	CVR2	F410	SPO1	SPO	Sacramento Metropolitan Chamber of Commerce				SPO	Sacramento	CA	95814	(916) 552-6800				Miscellaneous													
+1852412	0	1	CVR2	F410	OFC1	POF	Burt, Principal Officer	Kenneth			POF	Sacramento	CA	95814	(916)446-2788																	
+1770523	2	1	CVR2	F410	CVR2POF_3401565	POF	Correa	Lou			POF	San Marcos	CA	92069	714-612-6893																	Principal Officer
+1881947	0	1	CVR2	F410	ACCT-BMC	BNM	Prop. 46 - Drug and Alcohol Testing of Doctors, Medical Negligence Lawsuits, Initiative				PFC																		Statewide	S		
+1701312	2	5	CVR2	F410	SPO2	SPO	FIELDSTEAD & COMPANY				SPO	IRVINE	CA	92614	(949) 474-1965				PHILANTHROPY													
+1202687	8	2	CVR2	F410	2	POF	Woodward	Joanne E.			POF	Moline	IL	61265	3097480344																	Treasurer
+1790029	1	1	CVR2	F410	1	ATR	Fuhrman	Jonathan			ATR	Pasadena	CA	911072038	6267955255																	
+1387768	4	1	CVR2	F410	1	ATR	Fuhriman	Richard Apollo			ATR	Redmond	WA	98052	4255385243																	
+1625221	4	2	CVR2	F410	7908282	POF	Farias	Luis			POF	Carpinteria	CA	93013	805-745-7810																	Vice President of Government Relations
+1112184	6	2	CVR2	F410	SPO1	SPO	The American Agents Alliance				SPO	Sacramento	CA	95814	(916) 283.9473	(916) 283.9479			Finance/Insurance													
+1631274	5	3	CVR2	F410	4	SPO	California Tow Truck Association				SPO	West Sacramento	CA	95691					Towing Industry													
+1807315	3	4	CVR2	F410	SPO1	SPO	Leadership For Jobs & A New Economy				SPO	Glencoe	CA	95232					Non-Profit Organization													
+1090661	8	1	CVR2	F410	OFC1	POF	Johnson, Secretary-Treasurer	Lorretta			POF	Washington	DC	20001	(202) 879-4415																	
+1387555	10	2	CVR2	F410	OFC3	POF	Stephen	Laura			ATR	Sacramento	CA	95814	916-442-1280	916-442-1693	lauras@eichmancpa.com															
+1808290	0	5	CVR2	F410	SPO1	SPO	California Infill Builders Federation				SPO	Orinda	CA	94563	925-255-5119				Builders and developers													
+1685454	3	1	CVR2	F410	3	ATR	HURD	DEBRA			ATR	GLENDORA	CA	917405824	6263275154																	
+1300104	9	5	CVR2	F410	SPO1	SPO	Marin Professional Firefighters Local 1775				SPO	Fairfax	CA	94978	(415) 459-4058				Labor Organization													
+1592194	2	1	CVR2	F410	57359129	SPO	International Brotherhood of Electrical Workers				SPO	Washington	DC	20001					Labor Organization - IBEW													
+1808357	1	3	CVR2	F410	3	POF	Gorbea	Joe			POF	Paradise	CA	95969	5308725767																	Recording Secretary
+1773599	1	1	CVR2	F410	CVR2-A-179	POF	Conley	Skip			POF	Sonora	CA	95370-5519	(209) 534-5631										S							
+1729570	3	1	CVR2	F410	6	CAO	Heckman	Sarah			CTL									OTH	Superior Court Judge / Sutter County	CTY	Sutter County			X					2012	
+1815279	0	1	CVR2	F410	1	POF	Echols	Elizabeth			POF	Oakland	CA	94611	5103381088																	Chair
+946768	7	5	CVR2	F410	SPO1	SPO	Kern County Fire Fighters Union Local 1301				SPO	Bakersfield	CA	93308					Fire Fighters													
+800128	8	16	CVR2	F400	OFC17	ATH	Haiungs	Marc			SMA	Sacramento	CA	95834	(916) 928-3777																	
+799859	10	1	CVR2	F410	OFC1	POF	Durant	Michael			ATR	Sacramento	CA	95834	(916) 928-3777																	
+800467	10	3	CVR2	F410	OFC3	POF	Meyer, Vice President	Brent			POF	Sacramento	CA	95834	(916) 928-3777																	
+1583380	3	1	CVR2	F410	ACCT-CAN	CAO	Fong	Paul			CTL	Sunnyvale	CA	94085-3843	408-746-2056					ASM		ASM		28	H		Democratic Party				2012	
+1388673	4	3	CVR2	F410	CVR2-7	OFF	Mascola	Joe			POF	San Pedro	CA	90731	(310) 521-6363																	Vice President
+1204692	1	3	CVR2	F410	SPO1	SPO	California Association of Highway Patrolmen				SPO	Sacramento	CA	95818					Trade Association													
+1823444	0	2	CVR2	F410	OFC2	POF	Evon, Principal Officer	Kimberly			POF	Los Angeles	CA	90057	(213) 985-0394	(213) 368-0699																
+1836529	1	3	CVR2	F410	OFC3	POF	SNOW	LIZ			POF	SACRAMENTO	CA	95814	916-554-4984																	
+1388648	4	4	CVR2	F410	SPO1	SPO	Plumbers & Steamfitters Local 494				SPO	Long Beach	CA	90806	(561) 490-4717				Labor Organization													
+1387910	2	1	CVR2	F410	OFC1	POF	Johnson - PRES	Tim			POF	Grand Terrace	CA	92313	949-858-7448																	
+1386778	7	4	CVR2	F410	OFC8	POF	Bosley	Tim			POF	Sacramento	CA	95815	(916) 568-5180																	
+1583237	2	1	CVR2	F410	ACCT-CAN	CAO	DENHAM	JEFF			CTL	TURLOCK	CA	95382	831/595-6785					LTG		STW			S		Republican Party				2014	
+1670578	3	1	CVR2	F410	1	POF	Court	Jamie			POF	Santa Monica	CA	90405	3103920522																	Principal Officer
+1849244	1	5	CVR2	F410	SPO1	SPO	Southwest Regional Council of Carpenters				SPO	Los Angeles	CA	90071					Labor Union													
+1799722	2	1	CVR2	F410	OFC1	POF	Kabateck	Brian			POF	Los Angeles	CA	90017	213-217-5000																	
+1774315	2	1	CVR2	F410	ACCT-CAN	CAO	Sbranti	Tim			CTL	Dublin	CA	94568	925-999-8716					ASM		ASM		16	S		Democratic Party					
+1830912	1	1	CVR2	F410	ACCT-CAN	CAO	Ridley-Thomas	Sebastian			CTL	Sacramento	CA	95814	(916) 442-2952					ASM		ASM		54			Democratic Party				2014	
+1519986	4	7	CVR2	F410	SPO3	SPO	California Federation of Teachers				SPO	Burbank	CA	91505					Employee Organization													
+1415438	6	2	CVR2	F410	OFC3	POF	YEE	LELAND			POF	SAN FRANCISCO	CA	94108	415/732-7700																	
+1604823	2	1	CVR2	F410	OFC8	POF	Michelin, Principal Officer	Brett			POF	Sacramento	CA	95814	(916)444-5532																	
+1863599	0	1	CVR2	F410	ACCT-BMC	BNM	Split Roll Property Tax Initiative				PFC																		Statewide	O		
+1830916	2	2	CVR2	F410	OFC3	PRO	Jones	Dave			CTL	Sacramento	CA	95814	916-349-4236	916-552-1850	insurancecommissionerdavejones@gmail.com			INS		STW			H		Democratic Party				2014	
+1342053	2	3	CVR2	F410	SPO1	SPO	American Council of Engineering Companies - California				SPO	Sacramento	CA	95814	916-441-7991	916-441-6312	dsteiner@celsoc.org		Trade Association representing engineers and land surveyors in California													
+1388805	9	3	CVR2	F410	3	POF	Barnes	Victoria			POF	Washington	DC	20001	2027755030																	Vice Chairman
+876330	11	2	CVR2	F410	OFC2	POF	Griffith, Treasurer	Sherry			POF	Sacramento	CA	94010	(916) 444-3216																	
+1713176	1	5	CVR2	F410	4	SPO	ACLU of San Diego & Imperial Counties				SPO	San Diego	CA	92138					Social Justice Nonprofit													
+1863436	0	1	CVR2	F410	CVR2-A-1764	CAO	Gaines	Beth			CTL	Rocklin	CA	95765-5503						ASM		ASM		06	S		REP				2011	
+1388634	3	2	CVR2	F410	OFC4	POF	Hudgins, Board Chair	Rich			POF	Sacramento	CA	95814	(916) 443-4887																	
+1807315	1	2	CVR2	F410	OFC2	POF	Beltran, Vice President	Angie			POF	Oakland	CA	94621	209-993-7340	916-348-9111																
+1389484	4	2	CVR2	F410	8051032	SPO	Cardinal Health Inc.				SPO	Dublin	OH	43017					Health Care													
+1694236	3	1	CVR2	F410	4	ATR	Maltbie	Amber			ATR	Sacramento	CA	95814	9164428888																	
+973943	5	8	CVR2	F410	SPO1	SPO	California Association for Nurse Practitioners				SPO	Sacramento	CA	95814	(916) 441-1361	(916) 441-1846			Medical													
+1389082	4	3	CVR2	F410	OFC5	POF	GARCIA	LAIZA			POF	SACRAMENTO	CA	95814	(916) 492-5200																	
+1887257	0	1	CVR2	F410	3	CAO	Harris	Matthew S.			CTL									OTH	Superior Court Judge (#24)	CTY	Santa Clara County			X					2014	
+1043842	5	3	CVR2	F410	OFC4	POF	Coleman, Partner/Principal Officer	Thomas Y.			POF	San Francisco	CA	94105	(415)773-5700																	
+1869582	1	1	CVR2	F410	CVR2CTL_3379531	CAO	BERRYHILL	TOM			CTL									SEN		SEN		14	H	X						
+1747625	2	2	CVR2	F410	OFC1	POF	Deane	Shawnda			ATR	Sacramento	CA	95815	(916) 285-5733	(916) 333-1344																
+1782235	6	11	CVR2	F410	SPO4	SPO	CALIFORNIA DENTAL ASSOCIATION				SPO	SACRAMENTO	CA	95814	(916) 443-0505				HEALTHCARE PROVIDERS													
+1782235	6	17	CVR2	F410	SPO10	SPO	KAISER PERMANENTE				SPO	PASADENA	CA	91188					HEALTHCARE PROVIDERS													
+1704499	6	4	CVR2	F410	SPO1	SPO	California School Employees Association				SPO	San Jose	CA	95131	(408) 433-1266				Labor Organization													
+1672500	4	5	CVR2	F410	SPO1	SPO	California State Council of Service Employees				SPO	Sacramento	CA	95814	(916) 442-3838				Labor Organization													
+925907	8	2	CVR2	F410	SPO1	SPO	California Medical Association				SPO	Sacramento	CA	95814					Health													
+1388602	3	2	CVR2	F410	OFC3	POF	McCusker- Vice Chair	Justin			POF	Laguna Hills	CA	92653	949-380-3300																	
+1388602	3	4	CVR2	F410	SPO1	SPO	NAIOP Association				SPO	Laguna Hills	CA	92653	949-380-3300																	
+1861440	1	3	CVR2	F410	OFC2	POF	Nielson	Scott			POF	Las Vegas	NV	89135	(702) 495-3800																	
+1876342	0	2	CVR2	F410	OFC2	POF	Donahoe, Principal Officer	Sean			POF	Sacramento	CA	95814	(925) 876-6783																	
+1891250	0	4	CVR2	F410	SPO1	SPO	California Professional Firefighters				SPO	Sacramento	CA	95833	(916) 921-9111				Firefighters													
+1836854	0	1	CVR2	F410	ACCT-BMC	BNM	Public Records. Open Meetings. State Reimbursement to Local Agencies. Legislative Constitutional Amendment. Proposition 42				PFC																		Statewide	S		
+1807751	2	6	CVR2	F410	SPO1	SPO	SEIU United Healthcare Workers West				SPO	Oakland	CA	94612					Labor Organization													
+1874544	1	1	CVR2	F410	OFC1	POF	Robinson, Treasurer	Tamekia			POF	Sacramento	CA	95811	(916) 554-1234		info@olsonhagel.com															
+1632874	4	9	CVR2	F410	SPO4	SPO	Association of California Life and Health Insurance Companies				SPO	Sacramento	CA	95814	(916) 442-3648				Life and Health Insurance													
+1938682	0	3	CVR2	F410	OFC3	POF	Smith, Treasurer	Dereck			POF	Los Angeles	CA	90057	(213) 985-0384	(213) 368-0699																
+1478826	7	5	CVR2	F410	SPO1	SPO	Alliance of Automobile Manufacturers				SPO	Washington	DC	20001					Trade Association													
+1283962	8	3	CVR2	F410	CVR2-A-8744	POF	Azcarate	Albert			POF	Santa Rosa	CA	95403-8644	(707) 280-6841		albertazc@gmail.com								S							
+1387905	4	4	CVR2	F410	SPO1	SPO	Alameda Labor Council, AFL-CIO				SPO	Oakland	CA	94621					Labor Organization													
+1391123	8	3	CVR2	F410	OFC3	POF	Mello, Principal Officer	Caroline			POF	Los Angeles	CA	90005	(213) 387-8393																	
+1694236	4	1	CVR2	F410	4	ATR	Maltbie	Amber			ATR	Sacramento	CA	95814	9164428888																	
+1389054	8	5	CVR2	F410	OFC5	POF	Ziegler, Principal Officer	Jay			POF	San Francisco	CA	94105	(415) 777-0487																	
+1389054	8	6	CVR2	F410	SPO1	SPO	The Nature Conservancy				SPO	San Francisco	CA	94105					Conservation organization													
+1573318	5	4	CVR2	F410	2	SPO	The Boeing Company				SPO	Arlington	VA	222024208					Aerospace													
+1747626	1	1	CVR2	F410	ACCT-CAN	CAO	Fong	Paul			CTL	San Jose	CA	95117	408-746-2056					ASM		ASM		28	H		Democratic Party				2012	
+1391132	2	3	CVR2	F410	CVR2-5	OFF	Hodess	Aram			POF	Martinez	CA	94553	(925) 229-0400																	Principal Officer
+1914417	0	3	CVR2	F410	SPO1	SPO	AIDS HEALTHCARE FOUNDATION				SPO	LOS ANGELES	CA	90028					PUBLIC HEALTH NON-PROFIT													
+1898709	0	3	CVR2	F410	SPO1	SPO	Western Plant Health Association				SPO	Sacramento	CA	95835					Trade Association													
+1615362	4	1	CVR2	F410	13752710	CTL	Solorio	Jose			CTL	Long Beach	CA	90807	(562) 427-2100						State Senate District 34						Democrat				2014	
+1900879	0	2	CVR2	F410	OFC1	POF	Murray, Treasurer	Mark			POF	Sacramento	CA	95814	(916) 443-5422																	
+1626276	3	4	CVR2	F410	OFC4	POF	Leichliter, President	Laren			POF	San Bernardino	CA	92408	(909)885-6074																	
+1478826	6	4	CVR2	F410	OFC5	POF	Mulcahy, Principal Officer	Judy			POF	Washington	DC	20001	(202)326-5500																	
+1478826	6	5	CVR2	F410	SPO1	SPO	Alliance of Automobile Manufacturers				SPO	Washington	DC	20001					Trade Association													
+1394131	4	1	CVR2	F410	CVR2POF_3279953	POF	Nelsen	Joel			POF	Visalia	CA	93277	559-627-5350																	
+1809843	4	2	CVR2	F410	OFC2	POF	Eiden, Principal Officer	Rick			POF	Buena Park	CA	90620	(714) 670-5580																	
+1918070	0	1	CVR2	F410	ACCT-CAN	CAO	Ting	Phil			CTL	Oakland	CA	94618	(510) 652-1000					ASM		ASM		19	H		Democratic Party				2016	
+1691273	6	1	CVR2	F410	CVR2-A-62255	POF	Butler	Laphonza			POF	Sacramento	CA	95814-3407	(916) 442-3838										S							
+1789022	4	3	CVR2	F410	OFC3	POF	Bitchakdjian, Principal Officer	Raffy			POF	Pasadena	CA	91106	(626) 396-9010																	
+1596593	3	1	CVR2	F410	4	ATR	Roberts	Karen			ATR	Sacramento	CA	95814	9164428888																	
+1342050	4	2	CVR2	F410	SPO1	SPO	American Council of Engineering Companies - California				SPO	Sacramento	CA	95814					Association representing engineers and land surveyors in California													
+1827999	1	5	CVR2	F410	CVR2-7	SPO	General Teamsters Local Union 315				SPO	Martinez	CA	94553	(925) 228-2246																	
+1390668	6	1	CVR2	F410	4	POF	Duzy	Berton			POF	Simi Valley	CA	93063	8055838414																	Proponent
+1720890	1	2	CVR2	F410	OFC1	POF	Copp	Vona L.			ATR	Elk Grove	CA	95624	916-686-1815	916-686-1813	vona@onemain.com															
+1718121	2	1	CVR2	F410	ACCT-CAN	CAO	DeSaulnier	Mark			CTL	Concord	CA	94521	925-827-4662	925-728-1895				ASM		ASM		14	S		Democratic Party				2016	
+1807751	3	7	CVR2	F410	PRI1	BNM	Hospitals. Healthcare Service Charges. Initiative Statute. (13-0041)				PFC																		Statewide	S		
+1388564	6	1	CVR2	F410	OFC5	POF	Cowell	Martha			POF	Sacramento	CA	95821	(916) 979.7088																	
+1876347	2	4	CVR2	F410	OFC4	POF	Levy	Henry C.			ATR	Oakland	CA	94618	(510) 652-1000																	
+1221107	4	6	CVR2	F410	SPO1	SPO	Chemical Industry Council of California				SPO	Folsom	CA	95630	(916) 442-2280	(916) 442-1693			Manufacturing / Industrial													
+1946638	0	1	CVR2	F410	OFC1	POF	Stephen	Laura			ATR	Sacramento	CA	95814	916-442-2280																	
+1946638	0	3	CVR2	F410	SPO1	SPO	Western Agricultural Processors Association				SPO	Fresno	CA	93727					Agriculture													
+1332648	4	1	CVR2	F410	ACCT-CAN	CAO	Steinberg	Darrell			CTL	Sacramento	CA	95814						SEN		SEN		6			Democratic Party				2012	
+1387867	3	2	CVR2	F410	OFC4	POF	Blevins, Executive Director	Jennifer			POF	Sacramento	CA	95833	(916) 239-4099																	
+1770516	2	2	CVR2	F410	CVR2CTL_3396989	CAO	Correa	Lou			CTL									ATT		STW			S		Democratic Party				2018	
+1682860	6	4	CVR2	F410	SPO1	SPO	Service Employees International Union Local 99				SPO	Los Angeles	CA	90005	(213) 387-8393				Labor Organization													
+1698666	2	1	CVR2	F410	ACCT-CAN	CAO	Guillen	Abel			CTL	Oakland	CA	94609	510-985-0061					CCB		OTH	Peralta	7		X						
+926805	6	5	CVR2	F410	SPO1	SPO	California Nurses Association				SPO	Oakland	CA	94612					Registered Nurses													
+1603751	2	3	CVR2	F410	OFC3	POF	Rademaker - Sec	Mike			POF	Alta Loma	CA	91701	909-981-4466																	
+1201470	7	4	CVR2	F410	OFC5	POF	Drabble	Nancy			ATR	Sacramento	CA	95814	(916) 442-6902																	
+1201470	7	5	CVR2	F410	SPO1	SPO	Consumer Attorneys of California				SPO	Sacramento	CA	95814					Consumer Attorneys													
+1899119	1	1	CVR2	F410	ACCT-BMC	BNM	Impose a General Tax on Distributors of Sugar-Sweetened Beverages				PFC																	D	City of Berkeley	S		
+1247716	6	2	CVR2	F410	OFC3	POF	Maas	Lisa			POF	Sacramento	CA	95814	(916) 448.7992																	
+1834828	5	2	CVR2	F410	1	POF	Gibson-Price	Lynthia			POF	Washington	DC	20006	2027215600																	Treasurer
+1936195	0	1	CVR2	F410	ACCT-CAN	CAO	Melendez	Melissa			CTL	Lake Elsinore	CA	92532	951-471-1176					ASM		ASM		67	S		Republican Party				2012	
+1698590	3	1	CVR2	F410	OFC1	POF	Stephen	Laura Ann			ATR	Sacramento	CA	95814	(916) 442-2280																	
+1012158	8	2	CVR2	F410	OFC2	POF	Rose	Sarah			POF	Oakland	CA	94612	(510) 271-0900																	

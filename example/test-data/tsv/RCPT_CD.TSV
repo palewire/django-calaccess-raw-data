@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	ENTITY_CD	CTRIB_NAML	CTRIB_NAMF	CTRIB_NAMT	CTRIB_NAMS	CTRIB_CITY	CTRIB_ST	CTRIB_ZIP4	CTRIB_EMP	CTRIB_OCC	CTRIB_SELF	TRAN_TYPE	RCPT_DATE	DATE_THRU	AMOUNT	CUM_YTD	CUM_OTH	CTRIB_DSCR	CMTE_ID	TRES_NAML	TRES_NAMF	TRES_NAMT	TRES_NAMS	TRES_CITY	TRES_ST	TRES_ZIP4	INTR_NAML	INTR_NAMF	INTR_NAMT	INTR_NAMS	INTR_CITY	INTR_ST	INTR_ZIP4	INTR_EMP	INTR_OCC	INTR_SELF	CAND_NAML	CAND_NAMF	CAND_NAMT	CAND_NAMS	OFFICE_CD	OFFIC_DSCR	JURIS_CD	JURIS_DSCR	DIST_NO	OFF_S_H_CD	BAL_NAME	BAL_NUM	BAL_JURIS	SUP_OPP_CD	MEMO_CODE	MEMO_REFNO	BAKREF_TID	XREF_SCHNM	XREF_MATCH	INT_RATE	INTR_CMTEID
+591456	0	7	RCPT	A	A777	OTH	Microsoft				Redmond	WA	98052-6399					2/18/2000 12:00:00 AM		2000	2000	0																																								
+592403	0	1287	RCPT	A	INC2827	OTH	LABORERS UNION LOCAL #270				SAN JOSE	CA	95110-1890					2/16/2000 12:00:00 AM		389.09	775.78																																				INC2827					
+592525	0	3229	RCPT	A	INC6649	IND	Branstrom	Sandra	Mrs.		Livonia	MI						2/2/2000 12:00:00 AM		10	10																																									
+592525	0	10490	RCPT	A	INC12366	OTH	New Mexico Educators				Albuquerque	NM						2/18/2000 12:00:00 AM		1043.25	1043.25																																									
+592525	1	8255	RCPT	A	INC11383	IND	Panman	Viola			San Marcos	CA						2/15/2000 12:00:00 AM		10	10																																									
+592525	3	696	RCPT	A	INC4668	IND	Marangakis	Chris	Mr.		Santa Fe Springs	CA						1/26/2000 12:00:00 AM		25	25																																									
+592525	3	5268	RCPT	A	INC8684	IND	Brambila	Alanna	Mrs.		Moreno Valley	CA						2/10/2000 12:00:00 AM		100	100																																									
+592525	3	9106	RCPT	A	INC12600	IND	Witt	Russell	Mr.		Simi Valley	CA						2/16/2000 12:00:00 AM		75	75																																									
+624323	0	1007	RCPT	A	INC4340	IND	Klaver	Mark			Cloverdale	CA	95425	Kleinfelder Inc.	Info requested			3/29/2000 12:00:00 AM		20	140																																				INC4340					
+639533	0	498	RCPT	A	INC34763	IND	DALEY	RICHARD			Fontana	CA	92335-	FARMERS GROUP INC.	District Manager			4/20/2000 12:00:00 AM		25	150																																									
+641156	0	29	RCPT	A	INC36	IND	Saito	Deby Ann L.			Rolling Hills Estates	CA	90274	Delta Dental Plan	Project Engineer			4/19/2000 12:00:00 AM		100	100																																									
+642267	0	14	RCPT	A	INC370	OTH	Vasko Electric Inc.				Sacramento	CA	95838					2/26/2000 12:00:00 AM		500	500																																									
+644019	0	19	RCPT	I	INC21157	OTH	ROSEVILLE 1ST NATIONAL BANK				Roseville	CA	95661		N/A			4/30/2000 12:00:00 AM		23.64	0		INTEREST																																							
+644026	0	32	RCPT	A	A609	IND	Connerley	Karen			Sacramento	CA	95819-4242	Ronald Sockolov M.D.	Receptionist			3/3/2000 12:00:00 AM		100	150																																									
+644037	0	13	RCPT	F401A	INC174	COM	Matta Tuchman for Congress				Sacramento	CA	95827					2/28/2000 12:00:00 AM		500	500			C00346866																		Gloria Matta Tuchman				OTH	Congressional	OTH		46					S							
+644116	0	66	RCPT	A	A453	OTH	Gregory Canyon LTD A California L.L.C.				San Francisco	CA	94111					6/28/2000 12:00:00 AM		500	500	0																																								
+644962	0	113	RCPT	A	RCPTA0000040587	IND	Esensten	Jack			Rolling Hill Estates	CA	90274	Jack I Esensten	Attorney			5/5/2000 12:00:00 AM		100	100																																									
+644955	0	91	RCPT	A	INC2931	OTH	Healthline Systems Inc.				San Diego	CA	92127					2/23/2000 12:00:00 AM		600	600																																									
+645079	0	1529	RCPT	A	INC3802	IND	MAHLOWITZ	ROBERT			LOS ANGELES	CA	90039	ORRICK HERRINGTON	ATTORNEY			2/22/2000 12:00:00 AM		1000	1000																																									
+654698	0	643	RCPT	A	643	IND	Johnson-Hall	Tiena			Los Angeles	CA	90017	Bank of America	Commun Devel Spec			4/15/2000 12:00:00 AM		9	61																																									
+644898	1	38	RCPT	A	A990	COM	CA Association of Health Facilities PAC (CAHFPAC)				Sacramento	CA	95853-7004					5/18/2000 12:00:00 AM		5000	5000	0		741816																																						
+667638	0	48	RCPT	A	INC442	IND	Gandy	Cynthia			Sacramento	CA	95814	State Farm Insurance Company	Insurance Agent			8/28/2000 12:00:00 AM		40	140																																									
+669152	0	479	RCPT	F401A	INC1179	OTH	Greenfield	Robert			Shingle Springs	CA	95682					9/18/2000 12:00:00 AM		100	100																					Robert Greenfield				OTH	School District	OTH	Gold Trail						S							
+669549	0	155	RCPT	A	100320000C89965_155	OTH	Golden West Electric Inc.				Redding	CA	96099					9/7/2000 12:00:00 AM		200	200																																									
+669583	0	683	RCPT	A	INC8517	OTH	Mendenhall	Trinidad	Ms.		Houston	TX	77024-7022	Fiesta Mart Inc.	Retail Executive			7/27/2000 12:00:00 AM		1000	3100																																									
+669587	0	1810	RCPT	A	INC40761	OTH	M BUMGARNER INC				LIVERMORE	CA	94550	SELF	PRESIDENT			8/28/2000 12:00:00 AM		500	500																																									
+643703	1	91	RCPT	A	INC661	IND	Paulson	Theodore			Rancho Palos Verdes	CA	90275		retired			4/10/2000 12:00:00 AM		100	300																																									
+646954	1	43	RCPT	A	INC321	COM	CA Financial Service Providers Political Action Committee				Sacramento	CA	95814					5/16/2000 12:00:00 AM		1000	1000			901491																																						
+675917	0	579	RCPT	A	DB6623	IND	Stevens	Mark			Orange	CA	92856		FIRE FIGHTER	X		10/21/2000 12:00:00 AM		10	100																																									
+676088	0	35	RCPT	A	INC1599	COM	MGO Democratic Club				Oakland	CA	94611					10/20/2000 12:00:00 AM		200	200			790500																																						
+676870	0	238	RCPT	A	238	IND	Walker	Michael			Fresno	CA	93721	Bank of America	Sr CB Mgr			10/15/2000 12:00:00 AM		8.75	166.25																																									
+676878	0	864	RCPT	A	228648	IND	PHILLIPS-LESENANA	BENJAMIN			SAN DIEGO	CA	92126	Pacific Bell	Coach Leader			10/5/2000 12:00:00 AM	10/20/2000 12:00:00 AM	10	100																																									
+677013	0	7	RCPT	A	INC652	IND	Bradshaw	Bill			Carmichael	CA	95608	Bill Bradshaw	Real Estate			10/19/2000 12:00:00 AM		100	200																																									
+677333	0	22	RCPT	A	INC3042	OTH	Belczak & Sons Inc.				Orange	CA	92857					10/19/2000 12:00:00 AM		250	250																																									
+677381	0	57	RCPT	A	INC43527	OTH	Burger	Eugene			Greenbrae	CA	94904	Eugene Burger Management Corp.	Real Estate Management			10/2/2000 12:00:00 AM		50	800																																				INC43527					
+677381	0	304	RCPT	A	INC48101	IND	ORDAZ	CONNIE M			GILROY	CA	95020	SELF	LANDLORD			10/2/2000 12:00:00 AM		75	125																																									
+677671	0	1185	RCPT	A	INC13703	OTH	Pardee Engineering Inc.				Miami	FL	33178-1428					10/19/2000 12:00:00 AM		100	175																																									
+669587	1	260	RCPT	A	INC36941	IND	HALLADAY	F D			SOUTH PASADENA	CA	91030	NONE	RETIRED			8/4/2000 12:00:00 AM		105	315																																									
+676793	1	240	RCPT	C	NON1966	COM	Democratic State Central Committee				Sacramento	CA	95814					10/21/2000 12:00:00 AM		35882.65	140380.56		Postage Postage Differential	741666																																						
+669394	2	3403	RCPT	A	INC14534	IND	Ginzburg	Arkadiy			Omaha	NE	68118	HDR Engineering Inc.	Engineer			9/13/2000 12:00:00 AM		10	130																																				INC14534					
+667599	1	185	RCPT	C	NON405	OTH	The Travel Shoppe				Fresno	CA	93720					9/29/2000 12:00:00 AM		690	690		2-Weekend Nights-Silverado Country Club in Napa CA																																							
+707341	0	42	RCPT	A	INC2058	OTH	Claypool Distributing				Needles	CA	92363					12/5/2000 12:00:00 AM		18.22	235.09																																									
+644188	2	76	RCPT	A	INC757	IND	Riffenburgh	Roger			Mountain View	CA	94043	Self - Roger Riffenburgh	Engineer			2/22/2000 12:00:00 AM		100	100																																									
+712226	0	265	RCPT	A	INC1271	COM	California Farm Bureau Federation PAC				Sacramento	CA	95833					11/8/2000 12:00:00 AM		500	500			760960																																						
+714393	0	38	RCPT	A	1206200057C20177_38	IND	ANDERS	MARK			GRIDLEY	CA	95948	SHIFFLET BROS. INC.	Trucking			10/27/2000 12:00:00 AM		90	725																																									
+715349	0	544	RCPT	A	237597	IND	STEWART	DOUGLAS			OAKLAND	CA	94608	Pacific Bell Internet Services	Director Dsl Provisioning			11/5/2000 12:00:00 AM	12/20/2000 12:00:00 AM	20	125																																									
+677773	1	35	RCPT	A	A1389	IND	Mendelsohn	David			Napa	CA	94559	Retired	Retired			10/16/2000 12:00:00 AM		150	250	0																																								
+717675	0	3	RCPT	F401A	IDT66	COM	California League of Off Road Voters				Sacramento	CA	95814					10/25/2000 12:00:00 AM		500	1281.14			1224019																		Alan Nakanishi				SEN		SEN		5					S							
+719043	0	205	RCPT	A	A2292	OTH	Jefferson Smurfit Corporation (U.S.)				Alton	IL	62002-2276					12/27/2000 12:00:00 AM		1000	1000	0																																								
+718933	0	237	RCPT	A	A3603	OTH	Cohen Medical Corporation				Long Beach	CA	90802					12/30/2000 12:00:00 AM		1000	1000																																									
+677381	1	3348	RCPT	A	INC47419	IND	FILIPPI	PHILIP A			CASTRO VALLEY	CA	94546	INFO REQ             NO REPLY	INFO REQ             NO REPLY			10/19/2000 12:00:00 AM		100	200																																									
+645079	1	1868	RCPT	A	INC41371	IND	Parker	Dean	Mr.		Los Angeles	CA	90046		Retired			2/26/2000 12:00:00 AM		100	100																																									
+592826	1	1784	RCPT	A	INC10228	IND	Smith	Daniel			Kentfield	CA	94914-0278		ATTORNEY			2/16/2000 12:00:00 AM		50	7550																																									
+645079	2	2590	RCPT	A	INC41893	IND	Walton	Barbara	Ms.		Fremont	CA	94536	WALTON DAY CARE	CHILD CARE			3/6/2000 12:00:00 AM		100	110																																									
+669587	2	2769	RCPT	A	INC42223	IND	POPPLEWELL	MARCELLA C			SAN DIEGO	CA	92116	NONE	RETIRED			9/13/2000 12:00:00 AM		100	100																																									
+759535	0	1069	RCPT	A	A6970	OTH	Hollywood Network Inc.				Beverly Hills	CA	9021					4/30/2001 12:00:00 AM		1000	1000	0																																								
+765689	0	52	RCPT	A	INC694	IND	CULVAHOUSE	ARTHUR B.			LOS ANGELES	CA	90071	O'MELVENY & MYERS LLP.	LAWYER			5/31/2001 12:00:00 AM		200	400																																									
+707338	2	59	RCPT	A	INC164	OTH	J.J.J. Enterprises Inc.				Sunnyvale	CA	94087					11/1/2000 12:00:00 AM		22.50	167.50																																									
+770810	0	986	RCPT	A	INC43089	IND	DAVIS	ROBERT			Santa Ana	CA	92705-	FARMERS INSURANCE GROUP	INSURANCE AGENT			5/10/2001 12:00:00 AM		25	175																																									
+771711	0	27	RCPT	A	A620	RCP	California Medical Association Small Contributor Committee (CALPAC)				Sacramento	CA	95814					2/28/2001 12:00:00 AM		1000	1000	0		1231460																																						
+772134	0	107	RCPT	A	A352	IND	Hurt	William H.	Mr.		San Marino	CA	91108	Capital Strategy Research Inc.	Chairman of the Board			1/24/2001 12:00:00 AM		1000	2000	0																																								
+772186	0	212	RCPT	A	INC44132	IND	Gibbs	Herbert			Sacramento	CA	95821-6534	Self Employed	Dentist			6/7/2001 12:00:00 AM		-90	108																																									
+772281	0	193	RCPT	A	A60	IND	Schweitzer	Warren	Dr.		Woodside	CA	94062	Self	Physician			5/24/2001 12:00:00 AM		100	100	0																																								
+669348	1	11	RCPT	A	092620000C8189_11	OTH	Millbrae Serra Convalescent Hosp				Millbrae	CA	94030					8/10/2000 12:00:00 AM		52.08	468.73	468.73																																								
+773183	0	35	RCPT	A	MC62	IND	Paul	Kenneth			Wasco	CA	93280	self	farmer			6/25/2001 12:00:00 AM		25	150	150																																								
+772913	0	120	RCPT	A	DB9173	IND	Kao	Li F.			Fremont	CA	94536	Charter Group	***REAL ESTATE LICENSEE			5/23/2001 12:00:00 AM		300	300																																									
+779912	1	69	RCPT	I	INC58	IND	Brochini	Bob			Ripon	CA	95366	Bob Brochini Growers	Shipper/Grower			6/4/2001 12:00:00 AM		125	0		Auction proceeds																																							
+669296	2	722	RCPT	A	INC37075	IND	Rocchi	Steven			Oroville	CA	95965-	Self Employed	Optometrist			7/31/2000 12:00:00 AM		14.58	131.22																																									
+783810	0	403	RCPT	A	A3111	IND	Murphy	Robert			Lincolnshire	IL	60069	Allstate Insurance Company	AVP Corp Relat			8/31/2001 12:00:00 AM		14.08	111.08																																									
+772877	1	342	RCPT	A	A1045	IND	Sidley	Timothy			San Dimas	CA	91773	Wes Corp.	Vice President			6/18/2001 12:00:00 AM		100	500	0																																								
+772320	1	76	RCPT	A	T56576	IND	Hovannisian	Janet			Fresno	CA	93747	None	Homemaker	N		5/28/2001 12:00:00 AM		200	200	0																																								
+785444	0	870	RCPT	A	870	IND	Miller	Charme			Sacramento	CA	95825	Bank of America	MgrRetirement Sales			8/15/2001 12:00:00 AM		14	238																																									
+785473	0	1030	RCPT	A	CR20624107	IND	Gonzales	Mark			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/5/2001 12:00:00 AM	9/30/2001 12:00:00 AM	7	140	0																		Deputy Sheriff																						
+785473	0	3013	RCPT	A	CR22909107	IND	Tucker	Erica			Santa Ana	CA	92703	Orange County	Deputy Sheriff			8/31/2001 12:00:00 AM	9/30/2001 12:00:00 AM	7	140	0																		Deputy Sheriff																						
+773386	1	29	RCPT	A	INC659	COM	Central States Joint Board PAC				Chicago	IL	60622-5521					6/1/2001 12:00:00 AM		500	500																																									
+786160	0	67	RCPT	A	A46909	OTH	BGJ Coca-Cola Bottling Company of Los Angeles				Los Angeles	CA	90021					7/20/2001 12:00:00 AM		5000	5000	0																																								
+773220	1	19	RCPT	A	RCPTA0000113598	COM	California Print PAC 				Los Angeles	CA	90091					6/29/2001 12:00:00 AM		2000	2000			92101																																						
+786190	0	80	RCPT	A	A978	IND	Davis	Alice-Jean			Oxnard	CA	93030	Retired	Retired			7/26/2001 12:00:00 AM		100	200	0																																								
+786240	0	1792	RCPT	A	INC55746	IND	Wei	Glenna			Arcadia	CA	91007	Self Employed	Optometrist			8/31/2001 12:00:00 AM		14.58	131.22																																									
+798364	0	9	RCPT	A	c5	OTH	East Bay Chapter				Fremont	CA	94538					9/10/2001 12:00:00 AM		500	500																																									
+669296	3	713	RCPT	A	INC37060	IND	Rice	Derek			Whittier	CA	90603-0000	Self Employed	Optometrist			7/31/2000 12:00:00 AM		14.58	145.80																																									
+803569	0	12	RCPT	A	INC806	OTH	Howell Electric				Santa Clara	CA	95054					11/16/2001 12:00:00 AM		231	462																																									
+804372	0	554	RCPT	A	INC11579	IND	MANUEL A.	SILVIA			SACRAMENTO	CA	95832	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			12/14/2001 12:00:00 AM		19.20	253.32		''																																							
+804381	0	1	RCPT	A	INC4141	OTH	Professional Service Industries, Inc. (PSI)				Long Beach	CA	90815					10/1/2001 12:00:00 AM		326.70	326.70																																				INC4141					
+804399	0	628	RCPT	A	A3796	IND	Murphy	Robert			Lincolnshire	IL	60069	Allstate Insurance Company	AVP Corp Relat			10/31/2001 12:00:00 AM		14.08	167.40	0																																								
+804744	0	75	RCPT	A	A1417	RCP	Ventura County Medical Association PAC				Camarillo	CA	93010					11/9/2001 12:00:00 AM		300	300	0		900156																																						
+804750	0	651	RCPT	A	INC6361	OTH	Lee, Ltd.				Prescott	AZ	86302-0471					9/20/2001 12:00:00 AM		100	100																																									
+804750	0	1128	RCPT	A	INC5794	OTH	Golden Greek Carpets Inc.				Houston	TX	77280-0273					12/5/2001 12:00:00 AM		50	200																																									
+804782	0	11	RCPT	A	INC355	IND	Carpenter	Jan			Delano	CA	93215		Retired			11/9/2001 12:00:00 AM		100	100																																									
+805035	0	268	RCPT	A	INC5743	IND	Kruk	Patrick			La Jolla	CA	92037	T-Bird Restaurant Group	Partner			12/21/2001 12:00:00 AM		100	2500																																				INC5743					
+805198	0	866	RCPT	A	2388	IND	Gregor-Pearse	Mark			San Francisco	CA	94111	Bank of America	Sr Acct Offcr-R E			11/30/2001 12:00:00 AM		7	168																																									
+805534	0	8476	RCPT	A	T85701	IND	CHAPPELL	CAROL			SACRAMENTO	CA	95814-4037	State of California	SOCIAL SERVICES	N		10/15/2001 12:00:00 AM		18	216																																									
+805553	0	50	RCPT	A	A3391	RCP	California Attorneys Administrative Law Judges & Hearing Officers In State Employment PAC				Sacramento	CA	95818				X	12/26/2001 12:00:00 AM	8/31/2001 12:00:00 AM	500	500	0		840154								FRIENDS OF ZETTEL, 2002				San Diego	CA	92119																								1233767
+805534	0	2476	RCPT	A	T87717	IND	TARWATER	PEGGIE			LOS ANGELES	CA	90013	State of California	JUSTICE	N		12/20/2001 12:00:00 AM		18	216																																									
+805726	0	288	RCPT	A	A662	OTH	Universal Studios Inc				Delray Beach	FL	33445					12/26/2001 12:00:00 AM		7500	7500	0																																								
+806112	0	974	RCPT	A	INC47271	OTH	ENTERPRISE RENT-A-CAR CO OF LOS ANGELES				SIMI VALLEY	CA	93065					12/12/2001 12:00:00 AM		3000	3000																																									
+806229	0	28	RCPT	A	INC3370	COM	Bank of America California, PAC				Atlanta	GA	30308					11/28/2001 12:00:00 AM		1000	1000			990697																																						
+808336	0	3	RCPT	A	INC214	OTH	CIBC Oppenheimer				Los Angeles	CA	90024					12/31/2001 12:00:00 AM		374.28	658.48																																				INC214					
+808987	0	6	RCPT	A	INC1294	IND	Chase	Brian			Newport Beach	CA	92660-2412	Bisnar & Chase, LLP	ATTORNEY			1/14/2002 12:00:00 AM		22.50	22.50																																									
+810040	0	14	RCPT	A	A47	IND	Roth	Duane J.	Mr.		La Jolla	CA	92037	Alliance Pharmaceutical Corp.	Chairman & CEO			1/18/2002 12:00:00 AM		250	250	0																																								
+805717	1	27	RCPT	A	A166	IND	Blum	Michael			Belvedere	CA	94920	Law Finance Group Inc.	Attorney			12/11/2001 12:00:00 AM		500	500	0																																								
+809915	1	40	RCPT	A	INC233	IND	HORSTMAN	STEVEN			SAN DIEGO	CA	92138	SCIENCE APPLICATIONS	ENGINEER			1/19/2002 12:00:00 AM		100	100																																									
+805505	1	967	RCPT	C	C56446	OTH	Tutor-Saliba Corp.				Sylmar	CA	91342					12/7/2001 12:00:00 AM		2688.73	127688.73		Reception costs																																							
+785170	1	32	RCPT	A	INC444	IND	Goller	John			Thousand Oaks	CA	91362	Verizon Communications, Inc.	Manager			7/13/2001 12:00:00 AM		10	200																																									
+822473	0	67	RCPT	A	A730	OTH	Health Net of California, Inc.				Rancho Cordova	CA	95870					2/15/2002 12:00:00 AM		3000	3000	0																																								
+805714	1	207	RCPT	A	A3907	OTH	Dall & Associates				Sacramento	CA	95822					12/3/2001 12:00:00 AM		500	500	0																																								
+822791	0	51	RCPT	A	INC369	COM	Home Ownership Advancement				Sacramento	CA	95814					2/4/2002 12:00:00 AM		1500	1500			960592																																						
+786160	3	809	RCPT	A	A51890	IND	Vaupen	Beverly			San Francisco	CA	94127	n/a	Retired			8/8/2001 12:00:00 AM		100	100	0										Gordon & Schwenkmeyer, Inc.				El Segundo	CA	90245																								
+840557	0	609	RCPT	A	INC3118	IND	Martin	Michael L.			Garden Grove	CA	92840	Garden Grove Police Dept	Peace Officer			12/31/2000 12:00:00 AM		10	790																																									
+805225	1	394	RCPT	A	INC6035	IND	Kyle	David			Los Angeles	CA	90071-2627	Law Offices of David Kyle	ATTORNEY			11/13/2001 12:00:00 AM		100	1400																																									
+848438	0	2301	RCPT	A	A30419	IND	Sharma	Niranjan		M.D.	Visalia	CA	93277	State of CA	M.D.			11/30/2001 12:00:00 AM		10	100	0										Union of American Physicians and Dentists				Oakland	CA	94612-2506																								
+851728	0	57	RCPT	A	T89431	OTH	Lennar Communities				Roseville	CA	95661			N		5/3/2002 12:00:00 AM		1000	1000																																									
+851776	0	7	RCPT	A	A-C267	OTH	United Agricultural Benefit Trust				Irvine	CA	92606					6/14/2002 12:00:00 AM		500	500																																									
+821967	3	18	RCPT	A	INC705	IND	PAYNE	DIRK			PLACERVILLE	CA	93667	SELF	DENTIST			1/24/2002 12:00:00 AM		3000	3000																																									
+855705	0	2714	RCPT	A	INC13709	IND	Hedges	Ramona	Mrs.		Morro Bay	CA	93442	N/A	Housewife			6/19/2002 12:00:00 AM		300	300																																									
+855705	0	3784	RCPT	A	INC14770	IND	Choy	Raymond G.	Mr.		San Francisco	CA	94118	N/A	Retired			6/30/2002 12:00:00 AM		500	500																																									
+856674	0	492	RCPT	A	A1457	IND	Siggins	Veronique Laband			Sacramento	CA	95864	Homemaker	Homemaker			4/25/2002 12:00:00 AM		1000	1000	0																																								
+856674	0	598	RCPT	C	C39	SCC	CA Professional Fire Fighters PAC				Sacramento	CA	95833					3/6/2002 12:00:00 AM		1225.08	9477.26	0	Airfare	744058																																						
+856757	0	445	RCPT	A	A4839	IND	Hertzfeld	Robert			San Francisco	CA	94115	Mariposa Management Company	Project Manager			5/14/2002 12:00:00 AM		100	100	0																																								
+856377	0	358	RCPT	A	A1967	OTH	Pier 39 Limited Partnership				San Francisco	CA	94119					6/26/2002 12:00:00 AM		1000	1100	0																																								
+856867	0	2	RCPT	A	RCPTA0000162942	OTH	Advanced Development & Investment Inc 				Los Angeles	CA	90042-4942					3/8/2002 12:00:00 AM		1000	1250																																									
+856881	0	9	RCPT	A	RCPTA0000144838	COM	Associated General Contractors PAC Of CA 				West Sacramento	CA	95691					2/19/2002 12:00:00 AM		1500	1500			890194																																						
+854058	1	337	RCPT	A	T94891	IND	Palazzo Trust	Ralph			Los Banos	CA	93635	Ralph Palazzo & Co, Inc	Rancher	N		5/31/2002 12:00:00 AM		150	150																																									
+852653	1	339	RCPT	A	INC12790	IND	Ellerbroek	Nancy Ann	Dr		Burbank	CA	91505-4809	Nancy Ann Ellerbroek MD	PHYSICIAN			3/20/2002 12:00:00 AM		200	200		''																																							
+871976	0	28	RCPT	A	A535	IND	Frederickson	Carlton H.			Vallejo	CA	94590-6208	Sheet Metal Workers' Local Union 104	Organizer			9/10/2002 12:00:00 AM		371.20	3526.40	0																																								
+872006	0	5235	RCPT	A	T118197	IND	HEUER	GAIL			SACRAMENTO	CA	95818	State of California	MOTOR VEHICLES	N		8/2/2002 12:00:00 AM		10	122																																									
+872006	0	5905	RCPT	A	T118871	IND	VALDES	TODD			LOS ANGELES	CA	90013	State of California	JUSTICE	N		8/2/2002 12:00:00 AM		10	122																																									
+872193	0	242	RCPT	A	RCPTA0000178140	IND	Freeman	Lisa			Los Angeles	CA	90049	Arroyo & Coates	Sr Vice-President			9/5/2002 12:00:00 AM		1000	1000																																									
+855705	1	4103	RCPT	A	INC13631	IND	Sparks	Glenn D.	Mr.		Santa Margarita	CA	93453	State of California	Game Warden			6/20/2002 12:00:00 AM		150	150																																									
+877540	0	563	RCPT	A	INC41727	IND	Woodward	Roy			Santa Ana	CA	92703	Orange County	Deputy Sheriff			10/11/2002 12:00:00 AM		7	147																																									
+871702	1	60	RCPT	A	INC2039	OTH	LEDESMA & MEYER CONSTRUCTION CO., INC.				RANCHO CUCAMONGA	CA	91730					8/30/2002 12:00:00 AM		5000	5000																																									
+871879	1	641	RCPT	A	INC11252	IND	Power	Alexander	Mr.		Santa Ynez	CA	93460-0730		Retired/Personal Investments			8/26/2002 12:00:00 AM		100	225																																									
+855285	1	136	RCPT	A	INC80558	IND	Davies	David	Mr.		F.P.O. Ae	AE	9574	Dept of Navy	Physician			5/23/2002 12:00:00 AM		100	100																																									
+878777	0	48	RCPT	A	A2634	IND	Ahlswede	Kent R.			Chico	CA	95926	Staff Resources, Inc.	Chief Executive Officer			10/17/2002 12:00:00 AM		5000	5000	0																																								
+878735	0	48	RCPT	A	A175	IND	Novogradac	Michael J.			San Francisco	CA	94105	Novogradac & Co., LLP	Certified Public Accountant			10/14/2002 12:00:00 AM		4500	4500	0																																								
+872263	2	293	RCPT	C	C636	PTY	Democratic State Central Committee of CA				Sacramento	CA	95814					9/12/2002 12:00:00 AM		108.93	1490592.32		Workers Comp. Insurance	741666																																						
+878630	1	355	RCPT	C	C187	PTY	Democratic State Central Committee of California - SCC				Sacramento	CA	95814					10/18/2002 12:00:00 AM		17.97	53275.50	0	Data/lists	741666																																						
+878630	3	172	RCPT	A	A5133	IND	Kieschnick	Michael Hall			Palo Alto	CA	94301	Working Assets	Manager			10/8/2002 12:00:00 AM		1000	1000	0																																								
+902651	0	331	RCPT	A	INC17832	IND	HOWARD	PATRICK			SACRAMENTO	CA	95823	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			12/2/2002 12:00:00 AM		3.83	194.04		''																																							
+900892	0	131	RCPT	A	INC180	OTH	Excalibur Consulting				Los Angeles	CA	90016-5209					12/2/2002 12:00:00 AM		100	100																																									
+900640	0	42	RCPT	A	42	OTH	Liggett Group Inc.				Mebane	NC	27302					10/29/2002 12:00:00 AM		310.27	310.27	0																																								
+904955	0	16	RCPT	A	INC1914	IND	Hirotsu	Meryle			Duarte	CA	91010-1239	Los Angeles Unified School District	Teacher			11/27/2002 12:00:00 AM		38.27	274.08																																									
+907186	0	114	RCPT	A	INC99	COM	WESTERN UNITED DAIRYMEN PAC				MODESTO	CA	95354					12/3/2002 12:00:00 AM		500	500			771500																																	INC99					
+910000	0	665	RCPT	A	INC15160	IND	Maslach	Daisy	Mrs.		Corona Del Mar	CA	92625-1422		Retired			11/20/2002 12:00:00 AM		40	415																																									
+911121	0	1925	RCPT	A	INC74202	IND	Silver	Richard L.			Santa Monica	CA	90403	Self Employed	Optometrist			11/30/2002 12:00:00 AM		14.58	174.96																																									
+912126	0	430	RCPT	A	A6117	OTH	Steyer, Lowenthal & Walker				San Francisco	CA	94111-5401				I	11/5/2002 12:00:00 AM		950	950	0										Consumer Attorneys PAC				Sacramento	CA	95814																								
+913313	0	325	RCPT	A	INC3508	COM	The Doctors' Company PAC				Napa	CA	94558					12/23/2002 12:00:00 AM		2000	2000			923140																																						
+919042	0	63	RCPT	A	A564	OTH	Home Care of America				San Marino	CA	91108					1/14/2003 12:00:00 AM		200	200	0																																								
+878653	3	47	RCPT	A	A6088	IND	Brennan	Lawrence P.		Jr.	Los Angeles	CA	90071	Riordan & McKinzie	Attorney			10/3/2002 12:00:00 AM		500	500	0																																								
+878094	1	2902	RCPT	A	T125102	IND	DAVIS	JAMES			SACRAMENTO	CA	95833	State of California	STATE COMP INSURANCE FUND	N		10/14/2002 12:00:00 AM		10	132																																									
+770677	1	491	RCPT	A	INC14163	IND	Heider	Heather			Santa Ana	CA	92701	City of Santa Ana	Police Officer			2/23/2001 12:00:00 AM		20	120																																									
+822521	1	165	RCPT	A	A6382	IND	Del Piero	Eric J.			Monterey	CA	93940-2904	Self	Physician			1/24/2002 12:00:00 AM		200	200	0																																								
+929577	0	648	RCPT	A	INC5294	IND	Valles	David			Santa Ana	CA	92706-2739	Self	ATTORNEY			3/7/2003 12:00:00 AM		30	90																																									
+929874	0	1185	RCPT	A	INC17277	IND	Ree	Peter			Fountain Valley	CA	92708	Peter Carl Ree, MD	Physician			2/18/2003 12:00:00 AM		100	100		''																																							
+931753	0	401	RCPT	A	B001622S001685A	IND	ROOT	DENIS			ORCHARD LAKE	MI	48323	DAIMLERCHRYSLER	EXECUTIVE	N		2/28/2003 12:00:00 AM	2/28/2003 12:00:00 AM	50	150																																									
+912351	1	2957	RCPT	C	NON62388	OTH	Spencer Enterprises, Inc.				Fresno	CA	93727					10/30/2002 12:00:00 AM		400.32	110449.94		Local travel	494033																																						
+940976	0	160	RCPT	A	B000959S000204A	IND	DAY	MICHAEL P			PICKERINGTON	OH	43147	OWENS CORNING	SR SOURCING SPECIALIST	N		4/2/2003 12:00:00 AM	4/2/2003 12:00:00 AM	10	120																																									
+941407	0	618	RCPT	A	INC18692	IND	BOHANNON	STEVE			ROSEVILLE	CA	95747	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			1/10/2003 12:00:00 AM		3.96	120.54		''																																							
+941407	0	2053	RCPT	A	INC23786	IND	GRITZMACHER	DALE			RANCHO CORDOVA	CA	95670	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			6/4/2003 12:00:00 AM		16.50	119.28		''																																							
+942858	0	2019	RCPT	A	INC66350	IND	SANTOS	DAVID			SAN FRANCISCO	CA	94222	FARMERS GROUP, INC.	AGENT			5/20/2003 12:00:00 AM		25	150																																									
+943899	0	614	RCPT	A	INC4973	OTH	Tosdal, Levine, Smith,  Steiner & Wax				San Diego	CA	92101-4520	Self	ATTORNEY			6/9/2003 12:00:00 AM		100	400																																									
+929784	1	21	RCPT	A	T128256	IND	O'Sullivan	Richard			Chico	CA	95973	Tri Counties Bank	EVP	N		3/18/2003 12:00:00 AM		100	100																																									
+945355	1	10	RCPT	A	IDT311	COM	Amalgamated Transit Union Local 256 PAC				Sacramento	CA	95816-				X	6/25/2003 12:00:00 AM	2/10/1999 12:00:00 AM	150	350			950700								Dave Jones For Sacramento City Council				Sacramento	CA	95864																								1219350
+947814	0	71	RCPT	A	INC153	OTH	HARDY & HARPER, INC.				SANTA ANA	CA	90705					1/29/2003 12:00:00 AM		12.50	1047.50																																				INC153					
+947797	0	472	RCPT	A	A5687	IND	Sugino	Lisa L.			Los Angeles	CA	90068	LTSC Community Development Corp.	CDC Director		X	6/30/2003 12:00:00 AM	11/15/2001 12:00:00 AM	125	125	0										Judy Chu for Assembly 2002				Beverly Hills	CA	90211																								1236618
+947975	0	20	RCPT	A	RCPTA0000219127	COM	California Assoc Of Collectors PAC Fund 				Sacramento	CA	95865-4490					6/30/2003 12:00:00 AM		500	1000			790689																																						
+948410	0	3	RCPT	A	C573	IND	Abbey	Peter K.			Santa Barbara	CA	93103	Information Requested	Information Requested			6/30/2003 12:00:00 AM		100	100																																									
+942545	1	379	RCPT	A	INC21168	IND	Deperalta	Uma			San Gabriel	CA	91776	Uma A Deperalta	Physician			5/30/2003 12:00:00 AM		100	100		''																																							
+942545	1	1401	RCPT	A	INC18756	IND	Puig-Llano	Manuel			Chula Vista	CA	91910	Manuel  Puig-Llano	Physician			4/16/2003 12:00:00 AM		100	100		''																																							
+943899	1	142	RCPT	A	INC4733	OTH	Furtado, Jaspovice & Simons				Hayward	CA	94541-4005	Self	ATTORNEY			4/17/2003 12:00:00 AM		50	1700																																									
+855705	4	3320	RCPT	A	INC4390	IND	Newton	Ann G.			Orenda	CA	94563	World Com.	Sales Manager			2/25/2002 12:00:00 AM		2000	0																																									
+855705	4	2556	RCPT	A	INC5241	IND	Spear	Scott			Hermosa Beach	CA	90254	Econ One Research, Inc.	Economist			3/20/2002 12:00:00 AM		100	100																																									
+959419	0	626	RCPT	F496P3	1180154	IND	Tran	Chi			San Diego	CA	92123	REQUESTED	REQUESTED			7/2/2003 12:00:00 AM		75																																										
+959587	0	46	RCPT	A	A5950	IND	Burr	Brian C.			San Francisco	CA	94111	Orrick, Herrington & Sutcliffe	Attorney			9/11/2003 12:00:00 AM		24.15	410.61	0																																								
+957284	1	32	RCPT	A	C91393	OTH	Cubic Transportation Systems, Inc.				San Diego	CA	92111					8/22/2003 12:00:00 AM		10000	10000																																									
+961173	0	1799	RCPT	A	B001992S001645A	IND	MUDRY	THOMAS			ALPHARETTA	GA	30004-8065	GENERAL MOTORS CORPORATION	EXEC-SALES	N		9/30/2003 12:00:00 AM	9/30/2003 12:00:00 AM	25	150																																									
+960320	0	40	RCPT	F496P3	P3-142	IND	Hoffman	Elizabeth			Rancho Palos Verdes	CA	90275	California State University, Long Beach	Faculty Member			8/19/2003 12:00:00 AM		25																																										
+959836	2	227	RCPT	A	INC1566	IND	Scannavino	Leanne			Stockton	CA	95215	Cherokee Freight Lines	Trucker			8/27/2003 12:00:00 AM		2000	2000																																									
+962050	0	78	RCPT	A	INC6139	IND	Thorman	Michael			Hayward	CA	94545-1542	Bonjour & Thorman	ATTORNEY			7/9/2003 12:00:00 AM		20	200																																									
+962057	0	14	RCPT	A	INC5254	IND	Alder	Michael			Beverly Hills	CA	90210-3604	Law Offices Of C. Michael Alder	ATTORNEY			7/8/2003 12:00:00 AM		100	800																																									
+962456	0	425	RCPT	F496P3	1196908	IND	Reade	David			Sacramento	CA	95835	DSR ENTERPRISES	SELF			8/21/2003 12:00:00 AM		125																																										
+962456	0	1624	RCPT	F496P3	1200044	IND	Bialosky	Bruce			Los Angeles	CA	90048	SELF	CPA	X		8/27/2003 12:00:00 AM		145																																										
+959895	2	5073	RCPT	A	A1816	IND	Varela	Eddie G.			Selma	CA	93662	CA State University, Fresno	Human Resources Manager			9/20/2003 12:00:00 AM		99	139	0																																								
+963177	0	34	RCPT	A	INC442	IND	Munson	Charles			Fullerton	CA	92831	Munson, Cronick & Assoc.	CPA			8/15/2003 12:00:00 AM		150	150																																									
+963225	0	88	RCPT	A	INC275	COM	Engineering Contractors Assoc. PAC				Downey	CA	90240					9/27/2003 12:00:00 AM		1000	1000			790729																																	INC275					
+963398	0	36	RCPT	A	INC533	IND	Harris	Nancy N.			Laguna Niguel	CA	92677	GoldenWest Shutters, Inc.	Owner			9/5/2003 12:00:00 AM		250	250																																									
+947209	1	87	RCPT	A	INC126	IND	Fortier	Janet M.			Lodi	CA	95240	n/a	Homemaker			5/29/2003 12:00:00 AM		300	300																																									
+963834	0	35	RCPT	A	RCPTA0000233670	OTH	Relly Cummins Et Al 				Ontario	CA	91762					9/20/2003 12:00:00 AM		1000	1000																																									
+957284	2	46	RCPT	A	C91297	IND	Galef	Bronya			Los Angeles	CA	90077	N/A	Homemaker			8/4/2003 12:00:00 AM		500	500																																									
+957284	2	11	RCPT	A	C91408	IND	Bains	Didar			Yuba City	CA	95993	Didar Bains	Farmer			8/21/2003 12:00:00 AM		1000	1000																																									
+871773	2	7369	RCPT	A	INC39933	IND	Hawes	Wanda L.	Mrs.		Palo Cedro	CA	96073	N/A	Retired			8/30/2002 12:00:00 AM		125	125																																									
+959836	3	2005	RCPT	A	INC8362	IND	Niederreuther	Thomas			Corte Madera	CA	94925	C.w. Brower, Inc.	Owner			9/15/2003 12:00:00 AM		200	200																																									
+959836	3	2443	RCPT	A	INC7245	IND	Bozick	Michael			Indian Wells	CA	92210	R. Bagdasariam, Inc.	Grower			9/20/2003 12:00:00 AM		10000	10000																																									
+872006	1	2724	RCPT	A	T115660	IND	PARKER	NANCY			SACRAMENTO	CA	95814	State of California	HEALTH SERVICES	N		7/2/2002 12:00:00 AM		10	122																																									
+872006	1	5086	RCPT	A	T118046	IND	VAN AKEN	CATHERINE			SACRAMENTO	CA	94244-2550	State of California	JUSTICE	N		8/2/2002 12:00:00 AM		10	122																																									
+912351	2	176	RCPT	A	INC62631	IND	Glenn	Paul F.	Mr.		Montecito	CA	93150	Self Employed	Investor			12/13/2002 12:00:00 AM		1000	1000																																									
+872006	1	8588	RCPT	A	T121568	IND	POPPIC  JR	GEORGE			SACRAMENTO	CA	95814	State of California	AIR RESOURCES BOARD	N		9/1/2002 12:00:00 AM		10	122																																									
+849834	2	2402	RCPT	A	C62906	IND	Witt	Paul Junger			Los Angeles	CA	90025	Witt Thomas Harris Productions	Producer			5/14/2002 12:00:00 AM		10000	20000																																									
+959718	2	754	RCPT	A	INC5763	IND	SMALLEY	BEATRICE			SAN FRANCISCO	CA	94118	N/A	NONE			9/3/2003 12:00:00 AM		200	200																																									
+959836	4	385	RCPT	A	INC4226	IND	Craig	David			Los Angeles	CA	90024	PC Mall Inc.	Sr. Account Executive			8/30/2003 12:00:00 AM		100	100																																									
+959895	3	2851	RCPT	A	A5928	IND	Lee	Michael Pentung			Carlsbad	CA	92009-7102	C&L Commercial Company	Owner		X	9/3/2003 12:00:00 AM	12/15/2000 12:00:00 AM	100	100	0										Lieutenant Governor Bustamante 2002 Committee				Sacramento	CA	95814																								980194
+912643	1	400	RCPT	A	C90592	IND	Levine	Diane			San Diego	CA	92124	CA Dept of Transportation	Statewide Events Program Manager			10/28/2002 12:00:00 AM		500	500																																									
+978690	0	48	RCPT	A	INC10388	IND	Boertje	Dennis A.			Visalia	CA	93191	New York Life	Insurance Sales			11/17/2003 12:00:00 AM		8.50	110.50																																									
+979052	0	772	RCPT	A	B001305S000001A	IND	O'BRIEN	REBECCA			BEVERLY HILLS	CA	90212	COMERICA INC	FX TRADER II	N		10/24/2003 12:00:00 AM	10/24/2003 12:00:00 AM	4.96	128.96																																									
+979172	0	870	RCPT	A	INC13150	IND	Cartwright	Robert		Jr.	San Francisco	CA	94111-4419	The Cartwright Law Firm, Inc	ATTORNEY			12/19/2003 12:00:00 AM		30	115																																									
+979509	0	437	RCPT	A	A10190	IND	Reed	Enrique C.	Dr.		Palos Verdes Estates	CA	90274	CAA Medical Group, Inc.	Anesthesiologist		I	8/15/2003 12:00:00 AM		25	275	0										Alexander	Michael G.	Dr.		Hermosa Beach	CA	90254	CAA Medical Group, Inc.	Anesthesiologist																						
+979636	0	1521	RCPT	A	INC12534	IND	Bainer	Mark			Fair Oaks	CA	95628	Self-Employed	Chiropractor			12/17/2003 12:00:00 AM		5	300																																									
+979663	0	1200	RCPT	A	INC89184	IND	Bowlin	Heather			Fresno	CA	93720	Self Employed	Optometrist			10/31/2003 12:00:00 AM		14.58	174.96																																									
+979611	0	509	RCPT	A	INC11072	IND	YANCEY	SHARON			FRESNO	CA	93710	WELLS FARGO BANK	REVERSE BRANCH SALES MGR.			12/3/2003 12:00:00 AM		26	104																																									
+979753	0	2036	RCPT	A	INC24884	IND	Seybold	Marjorie			San Diego	CA	92161	Marjorie Eleanor Seybold, MD	Physician			11/14/2003 12:00:00 AM		100	200		''																																							
+979804	0	34	RCPT	A	A1860	OTH	PacifiCare				Sacramento	CA	95814					11/10/2003 12:00:00 AM		1000	1065	0																																								
+979748	0	53	RCPT	A	INC11497	IND	Dudley	Varner			Pasadena	CA	91103	Varner Edward Dudley, MD	Physician			12/10/2003 12:00:00 AM		50	100		''																																							
+980022	0	37	RCPT	A	INC475	IND	Vick	Merven L.			Madera	CA	93638	No employer	Retired			11/19/2003 12:00:00 AM		200	300																																									
+980240	0	221	RCPT	A	A414	IND	Noble	May G.			Upper Lake	CA	95485	North Lake Real Estate	Real Estate Broker			9/15/2003 12:00:00 AM		140	140	0																																								
+980393	0	3201	RCPT	A	T155939	IND	MARCUM	DEIDRE			OAKLAND	CA	94605	STATE COMP INSURANCE FUND	STAFF COUNSEL	N		11/22/2003 12:00:00 AM		10	120																																									
+983229	0	11	RCPT	F401A	INC389	COM	Lynnel Pollock Supervisor Cte.				Yolo	CA	95697					1/12/2004 12:00:00 AM		115	115			960046																		Lynnel Pollock				CSU		OTH	Yolo County	5					S							
+983930	0	21	RCPT	A	A-C4461	IND	Herring	Ronald			San Carlos	CA	94070-1551	Self Employed	Attorney at Law			8/18/2003 12:00:00 AM		750	750																																									
+980363	1	55	RCPT	A	INC1020	OTH	Meritage Homes of Northern California, Inc.				Concord	CA	94520					11/14/2003 12:00:00 AM		250	2750																																									
+979784	1	830	RCPT	A	INC19072	IND	Lopez	Jim			Santa Ana	CA	92701	City of Santa Ana	Police Officer			12/23/2003 12:00:00 AM		3	104																																									
+990715	0	118	RCPT	F496P3	INC15967	IND	Tennant	William			Berkeley	CA	94705-2122	Self Employed	Dentist			1/30/2004 12:00:00 AM		260																																										
+993226	0	16	RCPT	F496P3	INC187	COM	Lumber Assoc of CA & NV PAC				Sacramento	CA	95827					2/6/2004 12:00:00 AM		1000				771461																																						
+994947	0	14	RCPT	A	A875	COM	CTA Truck Unit PAC				West Sacramento	CA	95691					1/24/2004 12:00:00 AM		1000	1000	0		1238126																																						
+994869	0	88	RCPT	F401A	INC1701	COM	R.J.Bob Beeler/ Cte. to Re-Elect				Oroville	CA	95966					1/21/2004 12:00:00 AM		420	420			961924																		Bob Beeler				CSU		OTH	Butte County	1					S							
+996852	0	21	RCPT	A	INC448	IND	Dumars	K. W.			Newport Beach	Ca	92260	UCI	Professor Emeritus			2/3/2004 12:00:00 AM		100	100																																									
+980179	1	42	RCPT	A	RCPTA0000240150	IND	Fisher	John			San Francisco	CA	94111	Pisces Inc	Business			9/5/2003 12:00:00 AM		500	500																																									
+1004414	0	9	RCPT	F496P3	C15	COM	Local 11 IBEW AFL-CIO PAC				Pasadena	CA	91101-0000					2/18/2004 12:00:00 AM		4000	4000			822725																																						
+979228	1	3127	RCPT	A	3127	IND	Arredondo	Monica			Monterey Park	CA	91755	Bank of America	Banker			12/31/2003 12:00:00 AM		6	144																																									
+947949	2	2	RCPT	A	C3519	OTH	A M G Pipeline				Fremont	CA	94539					6/16/2003 12:00:00 AM		2000	2000																																									
+946470	1	1441	RCPT	A	1441	IND	Menicucci	Robert			Oakland	CA	94611	Bank of America	Retail Region Mgr			4/30/2003 12:00:00 AM		35	280																																									
+984277	3	80	RCPT	A	C1057	IND	Ross	Robert K.			Los Angeles	CA	90068	The CA Endowment	Physician			1/10/2004 12:00:00 AM		1000	1000																																									
+959895	4	1871	RCPT	A	A1418	IND	Garcia	Anthony J.		Jr.	Pleasanton	CA	94588	Fremont Bank	Banking			9/16/2003 12:00:00 AM		200	200	0																																								
+996605	1	3	RCPT	A	A1798	IND	Muscat	Robert			Sacramento	CA	95831	California Faculty Association	Manager			1/22/2004 12:00:00 AM		50	100	0																																								
+961731	1	179	RCPT	A	1202200328C5143795_4	COM	Republican Jewish Coalition				Washington	DC	20002					1/7/2003 12:00:00 AM		504	504																																									
+979753	1	1752	RCPT	A	INC28341	IND	Rettenmaier	Mark			Newport Beach	CA	92663	Mark Rettenmaier, MD	Physician			11/5/2003 12:00:00 AM		50	100		''																																							
+995891	1	134	RCPT	A	INC31230	IND	De La Merced	Joel			Chino Hills	CA	91709	Med Grp of Chino Jil	Physician			1/30/2004 12:00:00 AM		100	100		''																																							
+1024375	0	128	RCPT	A	A-C2173	IND	Wender	John			Clovis	CA	93611-0525	Jack Wender Insurance Services	Insurance Agent			4/5/2004 12:00:00 AM		50	300																																									
+1024375	0	385	RCPT	A	A-C1895	IND	Jones	J.			Carlsbad	CA	92009-1028	Blue Cross of California	Insurance Sales			3/5/2004 12:00:00 AM		45	270																																									
+1027058	0	958	RCPT	A	INC125489	IND	Michel	Cesar			RCH PALOS VRD	CA	90275-4514	Los Angeles Unified School District	Teacher			2/26/2004 12:00:00 AM		0.41	105.49																																									
+1027465	0	278	RCPT	A	A7646	IND	Hermle	Lynne C.			San Francisco	CA	94111	Orrick, Herrington & Sutcliffe	Attorney			6/3/2004 12:00:00 AM		63.56	238.99	0																																								
+983663	2	5	RCPT	A	T160069	OTH	Bella Garden, Inc.				Santa Maria	CA	93454					2/2/2004 12:00:00 AM		1000	1000																																									
+1031169	0	338	RCPT	C	NON844	IND	PODESTO	GARY			STOCKTON	CA	95219		CANDIDATE			3/15/2004 12:00:00 AM		688.75	100688.75		CATERING																																							
+1031875	0	56	RCPT	A	T170405	OTH	Reininga Corporation				San Francisco	CA	94104				X	5/14/2004 12:00:00 AM	6/29/2001 12:00:00 AM	100	100											Oaklanders First - Brown for Mayor				Oakland	CA	94607																								971991
+1031984	0	77	RCPT	A	A1730	COM	Los Angeles County Council on Political Education				Los Angeles	CA	90006					2/20/2004 12:00:00 AM		2000	2000	0		742204																																						
+1032432	0	6	RCPT	A	INC243	IND	Correa	Martha			Santa Barbara	CA	93105	Garcia Architects Inc	Administration			2/27/2004 12:00:00 AM		500	500																																									
+959895	5	2804	RCPT	A	A1002	IND	Lal	Hari S.			Anaheim	CA	92805	Lal and Associates	Attorney			9/14/2003 12:00:00 AM		2500	2500	0																																								
+872263	4	164	RCPT	A	A630	OTH	Pathways				Modesto	CA	95351					9/6/2002 12:00:00 AM		100	100	0																																								
+959895	5	2185	RCPT	A	A5556	IND	Guzman	Arnulfo			Fresno	CA	93726	Crescent Truck Lines	Truck Driver		X	9/3/2003 12:00:00 AM	1/18/2000 12:00:00 AM	100	100	0										Lieutenant Governor Bustamante 2002 Committee				Sacramento	CA	95814																								980194
+1033209	0	25	RCPT	A	INC561	IND	Hirshberg	Judith A.			Encico	CA	91316-1834	N/A	Retired			2/20/2004 12:00:00 AM		100	100																																									
+1032558	1	148	RCPT	A	A1120	OTH	McKesson Corporation				San Francisco	CA	94104					2/20/2004 12:00:00 AM		2000	2000	0																																								
+1031171	1	741	RCPT	A	INC21262	IND	Black	Samuel			Santa Ana	CA	92705		Apt Owner			6/24/2004 12:00:00 AM		100	100																																									
+1043879	0	856	RCPT	A	B001980S000238A	IND	FORD	EDWARD		JR	BLOOMFIELD HILLS	MI	48304	DAIMLERCHRYSLER	EXECUTIVE	N		7/30/2004 12:00:00 AM	7/30/2004 12:00:00 AM	30	270																																									
+1044272	0	1145	RCPT	A	1145	IND	LEVITT	MARK J			WILMINGTON	DE	19807	MBNA America	Banking			9/10/2004 12:00:00 AM		5.49	334.67																																									
+1044634	0	47	RCPT	A	INC11130	IND	Rudolph	Robert Allen			Fresno	CA	93727	Wilmar Industries	Corporate Sales Manager			7/15/2004 12:00:00 AM		100	100																																									
+1032606	1	13	RCPT	A	INC192	IND	Keushgerian	Hasmig			Montebello	CA	90640	Jasmine's Shell Station	Owner			2/25/2004 12:00:00 AM		100	100																																									
+1044921	0	154	RCPT	A	A1395	IND	Sherwin	Stephen	Mr.		San Francisco	CA	94118	Cell Genesys	CEO			7/14/2004 12:00:00 AM		500	500	0																																								
+1044477	0	1916	RCPT	A	INC10238	COM	Endocrine & Diabetes Center PC				Vienna	VA	22180					9/29/2004 12:00:00 AM		56.24	84.37																																									
+1032498	1	288	RCPT	A	INC1039	OTH	Awin Management, Inc.				Scottsdale	AZ	85260					6/30/2004 12:00:00 AM		600	600																																									
+1045274	0	496	RCPT	A	A6983	OTH	Merlo Lewis M Inc				San Francisco	CA	94117					9/17/2004 12:00:00 AM		401.46	401.46	0																																								
+1044365	1	99	RCPT	A	3326	IND	Landsman	Stephen	Mr.		Chicago	IL	60601	Piper Rudnick, LLP	Attorney			8/16/2004 12:00:00 AM	9/10/2004 12:00:00 AM	1334	1334																																									
+1044275	1	1669	RCPT	A	INC50897	IND	NELSON	WILLIAM			VACAVILLE	CA	95688	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			8/3/2004 12:00:00 AM		18.24	107.84		''																																							
+1043833	1	72	RCPT	A	INC649	IND	Schimmel	Philip			Manhattan Beach	CA	90266	KPMG, LLP	Certified Public Accountant			7/19/2004 12:00:00 AM		200	200																																				INC649					
+1045073	1	23	RCPT	A	INC2054	OTH	Eli Lilly And Company Lilly Corporate Center				Indianapolis	IN	46285					7/22/2004 12:00:00 AM		3200	3200																																									
+1050447	1	23	RCPT	A	A987	COM	Committee to Elect George Martinez				Maywood	CA	90270					10/15/2004 12:00:00 AM		1000	1000	0		1245946																																						
+1045192	2	53	RCPT	A	A1645	IND	Cruz	Juanita F.			San Jose	CA	95136	Space Systems/Loral	Software Configuration Manager			8/11/2004 12:00:00 AM		300	300	0																																								
+1044518	1	3342	RCPT	A	INC163479	IND	Taylor	Mathew			San Pedro	CA	90731-3715	Los Angeles Unified School District	Teacher			9/27/2004 12:00:00 AM		0.42	197.55																																									
+1045349	2	1137	RCPT	A	A1889	IND	Palmer	Jennifer			Pasadena	CA	91101	Pacific Clinics	Executive Assistant			7/9/2004 12:00:00 AM		200	200	0																																								
+1032338	1	15	RCPT	A	A2135	COM	CALIFORNIA MOTOR CAR DEALERS ASSOCIATION - PAC				SACRAMENTO	CA	95814					2/28/2004 12:00:00 AM		1200	2200	0		741623																																						
+1045349	2	183	RCPT	A	A4808	IND	Briscoe	Peter M.			Riverside	CA	92504	Retired	Retired			9/8/2004 12:00:00 AM		100	150	0																																								
+1070369	0	374	RCPT	A	B002376S001208A	IND	BARTLETT	MICHAEL			ROCHESTER HLS	MI	48306-3160	SERVICE PARTS OPERATIONS	SR ADMINISTRATOR	N		12/15/2004 12:00:00 AM	12/15/2004 12:00:00 AM	5	120																																									
+1070378	0	3236	RCPT	A	B001882S002227A	IND	SWEDER	THOMAS A			LIVONIA	MI	48152	FORD MOTOR COMPANY	TCM PROD & VALUE BENCHMARKIN	N		11/1/2004 12:00:00 AM	11/1/2004 12:00:00 AM	10	120																																									
+1071036	0	508	RCPT	A	B001503S000191A	IND	BROMAN	DOROTHEA			GROSSE PTE WOODS	MI	48236	COMERICA INC	TR EST ADM SPECLST-SR	N		12/7/2004 12:00:00 AM	12/7/2004 12:00:00 AM	4	133																																									
+856757	3	112	RCPT	A	C294	IND	Boxenbaum	Charles			Beverly Hills	CA	90211	National Partnership Investments Corporation	Chairman			4/10/2002 12:00:00 AM		5000	5000																																									
+1072288	0	3	RCPT	A	INC290	IND	De Guzman	Michael			Rancho Cucamonga	CA	91729	Michael De Guzman, PA	Physician Assistant			10/27/2004 12:00:00 AM		100	100																																									
+1074357	0	77	RCPT	A	INC41	OTH	Genentech, Inc.				Sacramento	CA	95814					12/9/2004 12:00:00 AM		1000	1000																																				INC41					
+1073638	0	1789	RCPT	A	741847	IND	RIFFE	SCOT			SAN FRANCISCO	CA	94132	SWB Communications Services (LD)	SR. PROJECT MANAGER			10/20/2004 12:00:00 AM	12/20/2004 12:00:00 AM	40	192																																									
+1078534	0	388	RCPT	A	388	IND	DEVESTINE	ROBERT			LANDENBURG	PA	19350	MBNA America	Banking			10/22/2004 12:00:00 AM		21.42	307.49																																									
+1078534	0	246	RCPT	A	246	IND	COCHRAN	MICHAEL J			LANDENBERG	PA	19350	MBNA America	Banking			12/17/2004 12:00:00 AM		21.42	393.18																																									
+1045349	3	314	RCPT	A	A2317	IND	Clarke	John F.			Berkeley	CA	94703	John F. Clarke, Attorney at Law	Attorney			7/15/2004 12:00:00 AM		250	250	0																																								
+1079934	0	3334	RCPT	A	INC10069	IND	Thomas	Milton			Santa Ana	CA	92703	Orange County	Deputy Sheriff			12/27/2004 12:00:00 AM		18.29	202.32																																									
+1080949	0	1	RCPT	A	IDT43	OTH	Circle LC Corp.				Petaluma	CA	94954				I	7/28/2004 12:00:00 AM		25	300											Dairy Farmers of America				Corona	CA	92880																								
+1050848	1	12	RCPT	A	INC1513	IND	Jerry Perenchio Living Trust				Los Angeles	CA	90067	Chartwell Partners, LLC	Businessman			10/1/2004 12:00:00 AM		250000	750000																																									
+990922	4	405	RCPT	A	A2513	OTH	Foxbat Inc.				El Segundo	CA	90245					9/26/2003 12:00:00 AM		500	500	0																																								
+1081755	0	40	RCPT	A	A1056	COM	Recording Industry Association Of America				Washington	DC	20036					10/29/2004 12:00:00 AM		500	500	0		943103																																						
+1081826	0	66	RCPT	A	INC2460	IND	Jolette	Barry	Mr.		Redwood City	CA	94064-0910	San Mateo Credit Union	President/CEO			11/2/2004 12:00:00 AM		50	250																																									
+1050614	1	315	RCPT	A	INC2229	OTH	Fosnight of Buena Park - McDonalds				Buena Park	CA	90620					10/14/2004 12:00:00 AM		500	3900																																									
+990922	4	910	RCPT	A	A2187	IND	Ontiveros	Alejandro			San Jose	CA	95123	Citibank	Mortgage Officer			9/23/2003 12:00:00 AM		100	100	0																																								
+1075689	1	269	RCPT	A	INC15913	IND	Drexler	David			Sherman Oaks	CA	91423-3604	Self	ATTORNEY			11/17/2004 12:00:00 AM		50	300																																									
+1081201	1	173	RCPT	A	A1724	IND	Markovich	Michael	Mr.		Daly City	CA	94015	Markovich Insurance	Insurance Broker			11/3/2004 12:00:00 AM		100	100	0																																								
+1105699	0	145	RCPT	A	INC228	IND	POOLE	WILLIAM E.			SAN DIEGO	CA	92107	SELF-EMPLOYED	MARINA OWNER			3/17/2005 12:00:00 AM		10000	10000																																									
+1111142	0	1616	RCPT	A	B000248S000018A	IND	HATHHORN	WADE			BELLEVUE	WA	98004	HDR INC	DEPARTMENT MANAGER	N		6/3/2005 12:00:00 AM	6/3/2005 12:00:00 AM	35	385																																									
+1111541	0	798	RCPT	A	B002189S001128A	IND	CHASTAIN	DWIGHT D			WYANDOTTE	MI	48192-5104	DAIMLERCHRYSLER	EXECUTIVE	N		5/31/2005 12:00:00 AM	5/31/2005 12:00:00 AM	20	120																																									
+1112160	0	2376	RCPT	A	INC59632	IND	THOMSON, IV	JOHN L.			SACRAMENTO	CA	95842	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			6/10/2005 12:00:00 AM		18.72	103.32		''																																							
+1113888	0	2487	RCPT	A	INC97089	IND	FALSKEN	TIMOTHY L			THOUSAND OAKS	CA	91362	FARMERS GROUP INC	AGENT			6/17/2005 12:00:00 AM		25	150																																									
+1113888	0	188	RCPT	A	INC89455	IND	HERRERA	RUBEN			PITTSBURG	CA	945654940	FARMERS GROUP INC	AGENT			1/18/2005 12:00:00 AM		25	150																																									
+1117053	0	163	RCPT	A	INC93073	OTH	LA SOC.SERV.PRO.TECH.EMPS #800				LOS ANGELES	CA	90048-					4/7/2005 12:00:00 AM		27.81	111.69																																				INC93073					
+1116711	0	144	RCPT	A	062820050C2198_10	COM	American Subcontractors Assn. CA, Inc.				Alexandria	VA	22314					4/7/2005 12:00:00 AM		200	200			981243																																						
+1116725	0	30	RCPT	A	50719.C19269_67	OTH	Solag/CR&R				Stanton	CA	90680					6/28/2005 12:00:00 AM		2500	2500																																									
+1117558	0	1028	RCPT	A	T239395	IND	MARTIGNONI	NORM			MORRO BAY	CA	93442	NONE	RETIRED	N		6/15/2005 12:00:00 AM		100	100																																									
+1118998	0	1515	RCPT	A	INC30399	IND	TIPPIN	PAUL			Santa Ana	CA	92703	Orange County	Deputy Sheriff			6/30/2005 12:00:00 AM		219.48	219.48																																									
+1081581	1	832	RCPT	A	INC3131	OTH	Angel 10th Avenue Food Corp. dba McDonalds #4489				New York	NY	10001					10/26/2004 12:00:00 AM		500	500																																									
+1121238	0	50	RCPT	A	RCPTA0000352751	IND	Fujii	Jody			Elk Grove	CA	95624	Senator Machado	Chief of Staff			7/30/2005 12:00:00 AM		100	100																																									
+1119385	1	880	RCPT	A	A14996	IND	Varanini	Emilio E.			Redondo Beach	CA	90277	State of CA	Deputy Attorney General		X	6/30/2005 12:00:00 AM	10/1/2004 12:00:00 AM	200	200	0										Chiang for California				Los Angeles	CA	90048																								1254774
+1125031	1	1263	RCPT	A	INC639	OTH	I.B.E.W. LOCAL 1710				EL MONTE	CA	91731-					5/23/2005 12:00:00 AM		42.90	128.70																																				INC639					
+1118848	1	135	RCPT	A	C11729	IND	Ball	Marie			Hemet	CA	92543	N/A	Retired			6/21/2005 12:00:00 AM		100	100																																									
+1130713	0	618	RCPT	A	618	IND	LEE	MICHELLE			BELLEVUE	WA	98004	Allstate Insurance Company	Vice President Field			8/5/2005 12:00:00 AM		12.42	129.49																																									
+1026466	1	946	RCPT	A	INC7737	OTH	Asher H Taban MD Inc				Northridge	CA	91325					4/9/2004 12:00:00 AM		28.13	28.13																																									
+1133596	0	10	RCPT	A	INC6155	OTH	California CU				Glendale	CA	91203					9/13/2005 12:00:00 AM		2200	4600																																									
+1104928	1	15	RCPT	A	T228496	IND	Dagostino	James			Oceanside	CA	92056-4658	Self	PT	N		3/11/2005 12:00:00 AM		500	500																																									
+1126498	2	919	RCPT	C	C200	OTH	Planned Parenthood Advocacy Project Los Angeles County				Los Angeles	CA	90033					8/2/2005 12:00:00 AM		8.33	5002.14	0	Email																																							
+1126479	2	938	RCPT	A	INC5828	OTH	Brett Davis Tan & Fit, Inc.				Chula Vista	CA	91910					9/19/2005 12:00:00 AM		2500	4500																																									
+1119257	1	173	RCPT	A	A10326	IND	Liu	David M.			San Marino	CA	91108	United National Bank	Vice President			6/5/2005 12:00:00 AM		250	250	0																																								
+1136798	1	22	RCPT	F496P3	INC34897	IND	Canfield	Betty	Mrs.		Riverside	CA	92509-3509	N/A	Retired			11/7/2005 12:00:00 AM		100	100																																									
+1141907	0	818	RCPT	A	INC62368	IND	COWAN	JOHN B.			SACRAMENTO	CA	95818	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			10/19/2005 12:00:00 AM		25.44	200		''																																							
+1141630	0	125	RCPT	A	RCPTA0000355040	OTH	Barker Management Inc 				Anaheim	CA	92805				I	8/18/2005 12:00:00 AM		2000	2500											Westly 2006 				Burbank	CA	91502																								
+1142078	0	7	RCPT	A	INC1856	OTH	A.S.K. Investments, Inc.				Stanton	CA	90680					12/20/2005 12:00:00 AM		20	499.99																																				INC1856					
+1141907	0	2506	RCPT	A	INC63443	IND	O'SHEA	ROBERT J.			ELK GROVE	CA	95758	Contractors Signatory to 447 Agreement	Plumber/Pipefitter			11/15/2005 12:00:00 AM		17.40	200		''																																							
+1142784	0	8	RCPT	A	A36	OTH	IBEW LOCAL UNION 6, COMMITTEE ON POLITICAL EDUCATION (COPE)				San Francisco	CA	94117					10/28/2005 12:00:00 AM		250	11198.50	0																																								
+1142989	0	12	RCPT	A	T293868	IND	Zwemer	Ted			Whittier	CA	90602	na	Retired	N		9/13/2005 12:00:00 AM		200	200																																									
+1143861	0	3333	RCPT	A	60120.C70659_3971	IND	Goodman	Heather			Bexley	OH	43209	Cardinal Health, Inc	Dir, Purchasing			12/23/2005 12:00:00 AM		6	165																																									
+1144139	0	110	RCPT	A	INC6695	IND	Mast	Sandra			Reseda	CA	91335-1340	Los Angeles Unified School District	Teacher			11/30/2005 12:00:00 AM		10.14	102.47																																									
+1144301	0	3035	RCPT	A	102620050C88786_2183	IND	Charbonneau	Cynthia S			Milwaukee	WI	53221	Exterior Systems Inc	Manager Branch			10/18/2005 12:00:00 AM		5	120																																									
+1144287	0	3375	RCPT	A	100239373_1472	IND	Gerds	Gordon W			St Clair Shores	MI	48080	Comerica Inc	Trust&est Advisor-sr			8/12/2005 12:00:00 AM		10.23	143.22																																									
+1144301	0	407	RCPT	A	082920050C86353_805	IND	Libonati	John J			Reston	VA	20194	Owens Corning	Vp,government & Public Affairs			7/29/2005 12:00:00 AM		20	480																																									
+1146073	0	326	RCPT	A	521327477_1565	IND	Tech	Eric M			Grosse Pointe	MI	48230	Ford Motor Company	Chief Engineer, 07 Super Dut			12/28/2005 12:00:00 AM		75	900																																									
+1145571	0	1098	RCPT	A	A12003	IND	Trapnell	Leslie			Santa Monica	CA	90407	City of Santa Monica	Police Officer			10/25/2005 12:00:00 AM		15	195	0																																								
+1146160	0	560	RCPT	A	IDT582	IND	Monard	Ronald			Mission Viejo	CA	92690	Same Name	Self Emp Attorney		X	9/22/2005 12:00:00 AM	10/27/2003 12:00:00 AM	250	500											Friends of Joe Dunn				Sacramento	CA	95814																								1250874
+1146895	0	432	RCPT	A	INC14247	IND	Marshall	James			Merced	CA	95340	City of Merced	City Manager			10/25/2005 12:00:00 AM		5	130																																				INC14247					
+1147013	0	3864	RCPT	A	INC125975	IND	Huang	Mark			San Bernardino	CA	92401	Self Employed	Optometrist			10/31/2005 12:00:00 AM		29.16	174.96																																									
+1147015	0	181	RCPT	A	INC94152	IND	Smith	Steven			Rancho Saint Margarita	CA	92688	Self Employed	Optometrist			8/31/2005 12:00:00 AM		9	108																																									
+1148684	0	3841	RCPT	A	A15425	OTH	Tutor-saliba Corporation				Sylmar	CA	91342					11/21/2005 12:00:00 AM		594.66	3500	0																																								
+1148434	0	85	RCPT	A	T334723	IND	Best	Frank			Burlingame	CA	94010	PMA	Longshore worker	N		10/7/2005 12:00:00 AM		100	100																																									
+1148684	0	756	RCPT	A	A14538	OTH	California Erectors				Benicia	CA	94510					11/21/2005 12:00:00 AM		15.90	189.35	0																																								
+1148757	1	339	RCPT	A	A2575	IND	Misner	Judy			Temecula	CA	92592	M&J Ramsay Corp	Manager			11/10/2005 12:00:00 AM		100	100	0																																								
+1148948	0	95	RCPT	A	INC949	IND	Vollmer	Lance			Vista	CA	92084-2749	N/A	Retired			12/8/2005 12:00:00 AM		500	1000																																									
+1149254	0	2874	RCPT	A	A16440	IND	Steiner	Martin B.			Sacramento	CA	95818	Hefner, Stark & Marois LLP	Attorney			11/14/2005 12:00:00 AM		1000	4000	0																																								
+1149330	0	12	RCPT	A	A322	IND	Arugon	Mark	Mr.		Guatay	CA	91931	Pur Electric	Power Lineman			12/1/2005 12:00:00 AM		200	200	0																																								
+1145013	1	56	RCPT	A	INC55	IND	DAVI SR	ANTHONY G.			PEBBLE BEACH	CA	93953	A.G. DAVI REAL ESTATE	REALTOR			11/29/2005 12:00:00 AM		3000	3000																																									
+1146729	1	29	RCPT	A	INC2368	IND	Armour	Jeff	Mr.		Laguna Hills	CA	92653-6145	Armour Companies	Real Estate Investments			10/13/2005 12:00:00 AM		100	100																																									
+1149254	1	295	RCPT	A	A18040	IND	Boak	Jeremy			Littletone	CO	80127	Jeremy Boak, Geologist	Geologist			12/21/2005 12:00:00 AM		100	200	0																																								
+1149273	1	100	RCPT	A	A3003	OTH	CA Federation of Teachers AFT, AFL-CIO				Burbank	CA	91506					10/26/2005 12:00:00 AM		750000	1086127.49	0																																								
+1156350	0	384	RCPT	A	C13228	IND	Ryan	David			Pompano Beach	FL	33064	DMJM Harris	Proj. Manager/Railroad System, VP			1/27/2006 12:00:00 AM		25	125																																									
+1156814	0	16	RCPT	A	A538	OTH	IAM Local Lodge 1173 (Intermediary for Unitemized Union Member Contributions)				Concord	CA	94520					1/9/2006 12:00:00 AM		69.10	176.70	0																																								
+1156780	0	1054	RCPT	A	INC136402	IND	Hockel	Brian			Walnut Creek	CA	94598-3627	Self Employed	Dentist			1/27/2006 12:00:00 AM		120	120																																									
+1156778	0	26	RCPT	A	INC324	OTH	Farms Consolidated Holdings LLC				San Francisco	CA	94107					2/13/2006 12:00:00 AM		500	500																																									
+1156780	0	4333	RCPT	A	INC139150	IND	Kabakian	Nanor			Glendale	CA	91208-1023	Self Employed	Dentist			2/21/2006 12:00:00 AM		120	120																																									
+1157115	0	132	RCPT	A	INC6139	IND	PIZER	REBECCA		Psy.D.	BERKELEY	CA	94710	REBECCA PIZER	PSYCHOLOGIST			3/9/2006 12:00:00 AM		150	150																																									
+1157360	0	25	RCPT	A	INC1158	IND	Grisham	Nancy S.			Sebastopol	CA	95472-0000	County of Marin	Attorney			3/5/2006 12:00:00 AM		100	100																																									
+1144880	1	80	RCPT	A	A5704	OTH	Ironworkers Local #433 (Intermediary for Unitemized Union Member Contributions)				Los Angeles	CA	90040					10/4/2005 12:00:00 AM		2460.82	6879.72	0																																								
+1148261	1	28	RCPT	I	INC3840	OTH	Wells Fargo Bank				Sacramento	CA	95825					7/29/2005 12:00:00 AM		0.15	0		Interest Earned																																							
+1156732	1	660	RCPT	A	INC62607	IND	Mason	George			Santa Monica	CA	90404	George Mason,  MD	PHYSICIAN			3/10/2006 12:00:00 AM		4.17	154.17		''																																							
+1149123	1	193	RCPT	A	C1277	OTH	James Hotel LA, LLC				New York	NY	10012					11/11/2005 12:00:00 AM		1000	2000																																									
+1172833	0	10	RCPT	I	INC163427	OTH	Bank of America				San Mateo	CA	94402					2/28/2006 12:00:00 AM		322.39	0		Interest for February, 2006																																							
+1173190	0	660	RCPT	A	60410.C28758_659	IND	Hurd	William			Mckees Rocks	PA	15136	Hdr Inc	Mgr-proj-sr Trans			1/27/2006 12:00:00 AM		25	250																																									
+1173227	0	20	RCPT	A	INC3358	OTH	Girardi & Keese				Los Angeles	CA	90017-1904	Self	ATTORNEY			5/16/2006 12:00:00 AM		25000	25000																																									
+1156122	1	176	RCPT	A	INC12163	IND	Shaffer	Douglas			Santa Monica	CA	90401-1038	Self	ATTORNEY			2/3/2006 12:00:00 AM		50	150																																									
+1174007	0	116	RCPT	A	A4335	OTH	Suncoast Financial Mortgage Corp				San Diego	CA	92101					5/17/2006 12:00:00 AM		4400	10000	0																																								
+1174158	0	412	RCPT	A	67841	IND	Crane	Bernard	Mr		Sonoma	CA	95476	Self	Farmer			4/27/2006 12:00:00 AM		100	100																																									
+1157390	1	164	RCPT	A	A1686	IND	Stapler	Richard J.			Sacramento	CA	95833	California State Assembly	Deputy Press Secretary			3/13/2006 12:00:00 AM		150	150	0																																								
+1174328	0	468	RCPT	A	INC3047	IND	Horwath	Melanie	Ms.		Gonzales	CA	93926	Gonzales Packing Co.	Manager			4/18/2006 12:00:00 AM		1000	1000																																									
+1174467	0	73	RCPT	F401A	INC985	OTH	Shelia Young For Supervisor				San Leandro	CA	94578					4/7/2006 12:00:00 AM		2600	2600			1275205																		Shelia Young				CSU		OTH	Alameda	3					S							
+1174710	0	70	RCPT	A	INC959	IND	Isenberg	Marilyn			Sacramento	CA	95818	N/A	Retired			5/18/2006 12:00:00 AM		250	500																																									
+1119163	2	1084	RCPT	A	A2340	IND	Tancico	Lourdes			San Francisco	CA	94102	Tancico Law Offices	Attorney			3/11/2005 12:00:00 AM		200	200	0																																								
+1183414	0	114	RCPT	A	INC908	COM	New Majority California PAC				Mill Valley	CA	94941					6/1/2006 12:00:00 AM		3300	3300			992074																																						
+1174240	1	118	RCPT	A	A5828	IND	Bunim	Lynn	Ms.		San Francisco	CA	94115	AJJG	Government Relations			3/21/2006 12:00:00 AM		100	100	0																																								
+1185661	0	1	RCPT	A	A1952	OTH	AFSCME Local # 3299 HED (Unitemized Member Contributions)				Oakland	CA	94612					2/3/2006 12:00:00 AM		119.20	848.10	0																																								
+1186033	0	19	RCPT	A	100272675_107	IND	Dreon	Steven			Wildwood	MO	63040	Cingular Wireless, Llc	Exec Dir -network			6/9/2006 12:00:00 AM		18.46	243.06																																									
+1186263	0	547	RCPT	A	INC137669	IND	DABELGOTT	CHARLES R			SAN DIEGO	CA	92130-2181	FARMERS GROUP INC	EXEC DIR STATE OFFICE DIV			5/31/2006 12:00:00 AM		50	240																																									
+1186242	0	25	RCPT	A	DB58159	IND	Moore	Michael			Huntington Beach,	CA	92647		UNION REP - IBEW LOCAL 47			6/30/2006 12:00:00 AM		72	252																																									
+1188493	0	52	RCPT	A	INC223994	IND	Kitaoka	Alvin			Gardena	CA	90249-4119	Los Angeles Unified School District	Teacher			6/2/2006 12:00:00 AM		21.75	155.20																																									
+1173853	1	156	RCPT	C	C2156	IND	Auerbach	Audrey	Ms.		Petaluma	CA	94954	SRJC	Instructor			5/6/2006 12:00:00 AM		75	100		Food & Beverage																																							
+1174522	2	763	RCPT	A	A28007	IND	Gerber	Ed R.			Oakland	CA	94611	Retired	Retired			5/10/2006 12:00:00 AM		100	200	0																																								
+1157456	2	60	RCPT	A	INC1719	IND	Iovine	Vicki	Mrs.		Los Angeles	CA	90024	Self/Vicki Iovine	Author/Screenwriter			2/14/2006 12:00:00 AM		10000	10000																																									
+1157558	1	12	RCPT	A	A625	COM	CA Society of Plastic Surgeons PAC				Sacramento	CA	95825					3/1/2006 12:00:00 AM		5600	5600	0		870009																																						
+1107044	2	2381	RCPT	A	C21869	IND	Moinuddin	Sheik M.			Loma Linda	CA	92354	Caltrans	Engineer			4/24/2005 12:00:00 AM		150	150																																									
+1149060	2	2612	RCPT	A	INC34982	IND	Armellino	Stephen	Mr.		Santa Ana	CA	92705-1338	US Armor Corporation	Self Employed			11/7/2005 12:00:00 AM		250	250																																									
+1202673	0	2799	RCPT	A	1271511_1510	IND	Olechiw	Karen A			St Clair Shores	MI	48080	Comerica Inc	Br Mgr Iv			8/11/2006 12:00:00 AM		6.66	126.54																																									
+1192284	1	597	RCPT	A	A29146	IND	Kenvin	Verna Rudd			Northridge	CA	91325	Retired	Retired			5/21/2006 12:00:00 AM		50	200	0																																								
+1174649	1	35	RCPT	A	INC1413	IND	Chung	Min Young			Irvine	CA	92602	Coldwell Banker Best Realty	Realtor			4/30/2006 12:00:00 AM		196	197																																									
+1202679	0	164	RCPT	A	60707.C98366_446	IND	Van Sloun	Jeffrey J			Perrysburg	OH	43551	Owens Corning	Sales & Distribution Leader			7/7/2006 12:00:00 AM		25	450																																									
+1203175	0	352	RCPT	A	INC5031	IND	Powell	James			Simi Valley	CA	93063	McDonald Franchise	Owner			9/19/2006 12:00:00 AM		20	200																																				INC5031					
+1204103	0	154	RCPT	A	INC1810	OTH	BNSF Railway Company				Sacramento	CA	95814					9/1/2006 12:00:00 AM		1650	3950																																									
+1204336	0	564	RCPT	A	T379460	IND	Noroian	Lorraine			Fresno	CA	93711	None	Homemaker	N		8/30/2006 12:00:00 AM		100	500																																									
+1204428	0	195	RCPT	A	200610041437-CA-786	IND	McDonald	Kathryn			Tracy	CA	95377-2265	Liberty Mutual	Principal H.R. Generalist			9/29/2006 12:00:00 AM		5.29	103.70																																									
+1204787	0	11	RCPT	A	INC2103	IND	Bagley	Noreen A.			Encino	CA	93436	WB Network	Business Executive			9/12/2006 12:00:00 AM		100	100																																									
+1204874	0	234	RCPT	A	A15370	IND	McClean	Wayne			Calabasas	CA	91302-4018	Law Offices of Wayne McClean	Attorney			9/6/2006 12:00:00 AM		80	300	0																																								
+1204902	0	124	RCPT	A	INC2040	IND	Stanton	Diane M.			Sacramento	CA	95828	State of CA	Research Writer			8/31/2006 12:00:00 AM		250	250																																									
+1174658	4	223	RCPT	A	IDT191	IND	Pingel	Steven R.			Cerritos	Ca	90703	Faunce, Singer & Oatman	Attorney		X	5/20/2006 12:00:00 AM	6/27/2003 12:00:00 AM	500	500											Lockyer 2006				Sacramento	CA	95814																								1250906
+1204913	0	4	RCPT	A	INC502	OTH	Agua Caliente Band of Cahuilla Indians				Palm Springs	CA	92262					8/11/2006 12:00:00 AM		2000	2000																																									
+1205010	0	61	RCPT	A	16948512	IND	Basilotto	Stephen C			Las Vegas	NV	89135	HSBC FINANCE CORP	Mng Dir / COO			9/1/2006 12:00:00 AM		10.58	249	0																																								
+1209315	0	1609	RCPT	A	INC114166	OTH	OJAI FED. TEACHERS #2119				OJAI	CA	93023-4171					9/11/2006 12:00:00 AM		14.34	158.87																																				INC114166					
+1211013	0	371	RCPT	A	INC232769	IND	Trees	Barbara			Tujunga	CA	91042-2036	Los Angeles Unified School District	Teacher			10/20/2006 12:00:00 AM		0.42	114.14																																									
+1204190	1	1270	RCPT	A	INC138391	IND	Middleton	William			El Centro	CA	92243	Self Employed	Optometrist			7/31/2006 12:00:00 AM		14.58	131.21																																									
+1204507	1	137	RCPT	A	INC2687	IND	O'Halloran	John F.			Monarch Beach	CA	92629	None	Retired			9/30/2006 12:00:00 AM		50	150																																									
+1204814	1	570	RCPT	C	C1782	OTH	Planned Parenthood Affiliates of California				Sacramento	CA	95814					8/27/2006 12:00:00 AM		50.14	105341.95	0	Travel																																							
+1204814	1	671	RCPT	C	C1675	OTH	Planned Parenthood of Pasadena, Inc.				Pasadena	CA	91104					9/11/2006 12:00:00 AM		34.20	14273.59	0	Copying																																							
+1149254	2	765	RCPT	A	A16426	IND	Dowd	Michael			San Diego	CA	92123	Lerach, Coughlin, Stoia, Geller, Rudman & Robbins, LLP	Attorney			11/15/2005 12:00:00 AM		2400	2400	0																																								
+1204482	1	66	RCPT	A	INC602	OTH	Valencia Neurology Medical Group				Santa Clarita	CA	91321					9/29/2006 12:00:00 AM		250	250																																									
+1149254	2	3254	RCPT	A	A10974	IND	Willard	Thomas E.			Dana Point	CA	92629	Foundation for Affordable Housing	Founder			9/1/2005 12:00:00 AM		500	500	0																																								
+1192488	1	134	RCPT	A	RCPTA0000434417	IND	Munson	Alexander			San Francisco	CA	94118	Golden Gate University	Professor			5/31/2006 12:00:00 AM		300	650																																									
+1204896	2	139	RCPT	A	A489	IND	Shih	Mei-Ming			San Marino	CA	91108	Rosemead Dialyisis Center	Registered Nurse			8/25/2006 12:00:00 AM		2000	2000	0																																								
+1174377	2	750	RCPT	A	C5667	IND	Yuen	Roger			Los Angeles	CA	90004	Jung & Yuen	Attorney			5/19/2006 12:00:00 AM		1500	1500																																									
+1228028	0	4	RCPT	C	NON390	OTH	American Insurance Association				Washington	DC	20036					11/30/2006 12:00:00 AM		64	909.43		Accounting Services																																	X	NON390					
+1229715	0	505	RCPT	A	INC44139	IND	MCCARTY	CRAIG			VISTA	CA	92081-8715	WELLS FARGO	BANKER			12/15/2006 12:00:00 AM		10	120																																									
+1157613	1	378	RCPT	A	RCPTA000000000401585	IND	Rutter	Paul			Pacific Palisades	CA	90272	Gilchrist & Rutter	Attorney			3/9/2006 12:00:00 AM		1000	1000																																									
+1203290	1	804	RCPT	A	581346287_389	IND	Scott	Douglas W			Novi	MI	48375	Ford Motor Company	Body On Frame Marketing/plan			8/4/2006 12:00:00 AM		20	160																																									
+1203290	2	578	RCPT	A	521344887_847	IND	Rohland	Keith D			Dearborn	MI	48126	Ford Motor Company	Director			8/4/2006 12:00:00 AM		25	200																																									
+1230134	0	675	RCPT	A	011620070C45829_3047	IND	Hammond	David			Mercer Island	WA	98040	Hdr Inc	Regional Marketing Director			12/29/2006 12:00:00 AM		25	575																																									
+1230134	0	1895	RCPT	A	61204.C44376_1805	IND	Floyd	Benjamin			Kennewick	WA	99337	Hdr Inc	Marketing Manager			12/1/2006 12:00:00 AM		15	345																																									
+1230913	0	971	RCPT	A	161250479_2063	IND	Che	Johnny			Troy	MI	48085	Daimlerchrysler	Executive			10/31/2006 12:00:00 AM		34	204																																									
+1230834	0	160	RCPT	A	DB64556	IND	Culp	Brett			Corona,	CA	92883		FIRE FIGHTER	X		12/31/2006 12:00:00 AM		25	120																																									
+1230944	0	645	RCPT	A	61024.C77191_397	IND	Groesbeck	Michael			Gurnee	IL	60031	Cardinal Health, Inc	Svp, Qra			10/13/2006 12:00:00 AM		18.91	462.94																																									
+1230913	0	3834	RCPT	A	521251856_1246	IND	Diefenthaler	Gary			Graytown	OH	43432	Daimlerchrysler	Executive			11/30/2006 12:00:00 AM		10	120																																									
+1157378	2	117	RCPT	A	A1491	OTH	Lexus of Valencia				Valencia	CA	91355					2/27/2006 12:00:00 AM		1000	1000	0																																								
+1231874	0	2506	RCPT	A	B004622S000324A	IND	SLOCUM	PATRICK			WEATHERFORD	TX	76087	COCA-COLA BOTTLING CO. OF NORTH TEXAS	DIVISION DISTRIBUTION MANAGER	N		11/30/2006 12:00:00 AM	11/30/2006 12:00:00 AM	10	120																																									
+1234043	0	4014	RCPT	A	INC244532	IND	Maurer	Joyce			Buena Park	CA	90621-3960	Los Angeles Unified School District	Teacher			12/31/2006 12:00:00 AM		12.45	124.72																																									
+1235634	0	3071	RCPT	A	T447506	IND	GRAPER	SANDRA			GLENDALE	CA	91203-1400	STATE COMP INSURANCE FUND	STF COUN III/SP	N		11/22/2006 12:00:00 AM		10	120																																									
+1191289	2	142	RCPT	A	INC17200	OTH	Mark S. London & Associates Inc				Arroyo Grande	CA	93421					6/15/2006 12:00:00 AM		100	140																																									
+1237226	0	1651	RCPT	A	A3742	IND	Harris	Warren			Long Beach	CA	90755	City of Long Beach	Police Officer			8/1/2006 12:00:00 AM		32	242	0										Long Beach Police Officers Association				Long Beach	CA	90755																								
+1239061	0	12	RCPT	A	INC851	IND	Hansell	Neil			Santa Ana	CA	92703	Orange County	Retired Deputy Sheriff			11/7/2006 12:00:00 AM		10	120																																									
+1238247	0	165	RCPT	A	A6179	IND	Sheinbaum	Stanley			Los Angeles	CA	90049	Stanley Sheinbaum	Publisher		I	10/24/2006 12:00:00 AM		500	500	0										1989 Sheinbaum Trust				Los Angeles	CA	90049																								
+1238216	0	44	RCPT	A	INC3530	OTH	Fieldstead & Company				Irvine	CA	92623					10/26/2006 12:00:00 AM		1000	1000																																									
+1238568	0	58	RCPT	A	58	IND	ROSENBERG	PAUL			SAN FRANCISCO	CA	941212522	CITY & COUNTY OF SAN FRANCISCO	COUNTY EMPLOYEE			12/31/2006 12:00:00 AM		25	130																																									
+1249990	0	48	RCPT	A	A4178	IND	Zifkin	Walter			Marina Del Rey	CA	90292	Merlis, Soltman & Green	Accountant			2/21/2007 12:00:00 AM		250	250	0																																								
+1204567	1	1464	RCPT	A	INC50652	IND	Copland	Steve			Madera	CA	93639	Seabury Copland & Anderson	Insurance Agent			9/5/2006 12:00:00 AM		35	110																																									
+1212010	2	60	RCPT	A	A3942	COM	New Majority California PAC				Mill Valley	CA	94941					10/1/2006 12:00:00 AM		3300	6600	0		992074																																						
+1255402	1	17	RCPT	A	A2051	OTH	Westland Properties				La Jolla	CA	92037					3/8/2007 12:00:00 AM		100	100	0																																								
+1204336	3	504	RCPT	A	T379377	IND	Gigliotti	Mary A.			Fresno	CA	93727	None	Retired	N		8/28/2006 12:00:00 AM		50	185																																									
+1261232	0	5539	RCPT	A	INC166949	IND	Jerome	Charles			Carlsbad	CA	92008-2861	Self Employed	Dentist			3/2/2007 12:00:00 AM		140	200																																									
+1261232	0	5756	RCPT	A	INC170773	IND	Dickard	Richard			Nevada City	CA	95959-2720	Self Employed	Dentist			3/2/2007 12:00:00 AM		120	120																																									
+1274425	0	10	RCPT	A	INC1015	COM	Citigroup Inc. PAC				Washington	DC	20004					5/21/2007 12:00:00 AM		1000	1000			1280730																																						
+1236632	1	1	RCPT	A	DB65485	IND	Albright	Mark			Ontario,	CA	91762	Ontario City	FIRE FIGHTER	X		12/31/2006 12:00:00 AM		56	336																																									
+1277288	0	1090	RCPT	A	INC10988	IND	Miller	Paula			Simi Valley	CA	93063	State Farm Insurance Co.	Insurance Agent			4/30/2007 12:00:00 AM		100	900																																				INC10988					
+1277683	0	3106	RCPT	A	70314.C291980_2067	IND	Berry	Gerald T			Shelby Twp	MI	48315	Comerica Inc	Bnkg Cen Mgr Vi			3/6/2007 12:00:00 AM		13.12	170.56																																									
+1277499	0	311	RCPT	A	INC26127	OTH	Marvin D Ricks DPM Turlock Podiatry Group				Modesto	CA	95350					6/7/2007 12:00:00 AM		50	125																																									
+1278133	0	100	RCPT	A	RCPTA000000000508525	IND	Ennis-Applegate	Mari			Cottonwood	CA	96022	Gerber Elementary	Teacher			6/15/2007 12:00:00 AM		50	100																																									
+1278701	0	186	RCPT	A	INC127804	OTH	SAN MATEO COUNTY EMPLS #829				HAYWARD	CA	94542					4/2/2007 12:00:00 AM		162.58	1343.02																																				INC127804					
+1259941	1	182	RCPT	A	INC15851	OTH	NOLTE Associates, Inc.				Sacramento	CA	95833					2/26/2007 12:00:00 AM		585	1170																																				INC15851					
+1280037	0	6	RCPT	A	INC18634	IND	Crawford	Marie			Signal Hill	CA	90806	City of Signal Hill	Administrative Secretary			3/20/2007 12:00:00 AM		10	110																																				INC18634					
+1281881	0	603	RCPT	A	A4750	OTH	Lompoc Federation of Teachers AFT Local 3151 (Unitemized Member Contributions)				Lompoc	CA	93436					2/5/2007 12:00:00 AM		260.75	4884.68	0																																								
+1257808	1	254	RCPT	A	A582	IND	Cortese	Vincent			Mountain View	CA	94039-1685	n/a	retired			3/6/2007 12:00:00 AM		215	215	0																																								
+1257808	1	374	RCPT	A	A1226	IND	Friedheim	Robin			Carlsbad	CA	92011-4027	n/a	Retired			3/1/2007 12:00:00 AM		310	310	0																																								
+1282600	0	41	RCPT	A	T470951	IND	Cooper	Kim			Burlingame	CA	94010	Self	Ophthalmologist	Y	I	5/15/2007 12:00:00 AM		1000	1000											California Academy of Eye Physicians and Surgeons PAC aka MDeyePAC of California				Sacramento	CA	95814																								980331
+1283397	0	2	RCPT	A	A2380	IND	Belmont	Jeffrey			North Hills	CA	91343	Northridge Atletic Club	Sales		R	1/5/2007 12:00:00 AM		-250	-500	0																																								
+1192260	1	133	RCPT	A	A22722	IND	Pawar	Satgurjit S.			Huntington Beach	CA	92647	Art Inspection Services Store	President			5/26/2006 12:00:00 AM		200	200	0																																								
+1284027	0	17	RCPT	A	T456324	SCC	California Association of Psychiatric Technicians, Inc. Political Action Fund SCC				Sacramento	CA	95814-7138					1/22/2007 12:00:00 AM		1650	1650			882070																																						
+1284145	0	44	RCPT	A	IDT6447	IND	BLUMBERG	ROBERT S.		MD	SF	CA	94123	The Permanente Med Group	Physician		I	2/23/2007 12:00:00 AM		62.50	375											The Permanente Medical Group				Oakland	CA	94612																								
+1284483	0	8	RCPT	A	INC5	IND	Whitney	David		Jr.	Coto de Caza	CA	92679	Lee Associates	Real Estate Broker			3/6/2007 12:00:00 AM		360	360																																									
+1285317	0	111	RCPT	A	A2973	OTH	Del Mar Thoroughbred Club				Del Mar	CA	92014					5/25/2007 12:00:00 AM		500	500	0																																								
+1285366	0	1149	RCPT	A	INC44930	OTH	Achondo	Stephen			West Sacramento	CA	95691-5020	Nor-Cal Produce Transport, Inc.	TRUCKING			3/12/2007 12:00:00 AM		30	60																																									
+1285375	0	69	RCPT	A	INC47	COM	The Doctors Company PAC				Napa	CA	94558					5/30/2007 12:00:00 AM		1000	2000			923140																																						
+1204459	3	383	RCPT	A	C4118	SCC	Holland & Knight LLP CA Cmte. for Effective Gov., Inc.				Los Angeles	CA	90071					9/6/2006 12:00:00 AM		5000	5000			1249641																																						
+1157505	3	94	RCPT	A	C1943	IND	Gage	Linda Schacht			Berkeley	CA	94705	UC Berkeley	Journalist			2/13/2006 12:00:00 AM		250	250																																									
+1293443	0	274	RCPT	A	B004746S000005A	IND	KLUG	TODD			ANAHEIM	CA	92807	COCA-COLA ENTERPRISES INC.	VP, CONVENIENCE RETAIL SALES	N		9/19/2007 12:00:00 AM	9/19/2007 12:00:00 AM	50	200																																									
+1295024	0	103	RCPT	A	103	IND	Devlin	Edward			Staten Island	NY	10312-2752	Citicorp / Citibank	Technical Advisor			8/31/2007 12:00:00 AM		16.88	374.25																																									
+1295024	0	200	RCPT	A	200	IND	Glines	George			Tempe	AZ	85284-1605	Citicorp / Citibank	Director Sba Lending			7/27/2007 12:00:00 AM		6.75	136.20																																									
+1295872	0	653	RCPT	A	26533830	IND	Critchlow	Joellen M			ALLISON PARK	PA	15101	FedEx Ground	Managing Dir - IT Fld Sys Dev			8/31/2007 12:00:00 AM		19.79	112.19	0																																								
+1297099	0	275	RCPT	A	INC183932	IND	Chen	Oscar			Sacramento	CA	95831-1407	Self Employed	Dentist			7/12/2007 12:00:00 AM		20	120																																									
+1284716	1	342	RCPT	I	I81	OTH	Wells Fargo Bank				Sacramento	CA	95814					6/30/2007 12:00:00 AM		3084.42	0	0	interest earned																																							
+1295872	1	1511	RCPT	A	26654357	IND	ANDERSON	PAUL			CORDOVA	TN	38018	Federal Express	DIRECTOR SALES			9/30/2007 12:00:00 AM		6.41	115.38	0																																								
+1303614	0	3363	RCPT	A	80107.C380731_3787	IND	Tobin	Scott B			Ann Arbor	MI	48103	Ford Motor Company	Director, Lrg Car/cu Vehicle			12/7/2007 12:00:00 AM		25	300																																									
+1303204	1	585	RCPT	A	22723868	IND	Quinlan	Michael			Crofton	MD	21114-2651	IBEW	International Representative - Ret.			11/30/2007 12:00:00 AM		0.42	6.24	0																																								
+1303472	0	1946	RCPT	A	INC116035	IND	Raheja	Ashok			Lynwood	CA	90262	A Raheja, MD, Inc	Physician			12/13/2007 12:00:00 AM		50	100																																									
+1303472	0	61	RCPT	A	INC117686	IND	Altman	Robert			Modesto	CA	95357	Robert Altman, MD	Physician			12/13/2007 12:00:00 AM		50	100																																									
+1308386	0	20	RCPT	A	A2538	IND	Becker	Newton D.			Bel Air	CA	90077	n/a	Retired			11/27/2007 12:00:00 AM		250	250	0																																								
+1304669	0	239	RCPT	A	INC240	COM	North Bay Credit Union PAC				Vallejo	CA	94590					7/19/2007 12:00:00 AM		500	500			1243903																																						
+1304669	0	58	RCPT	A	INC535	COM	CA Dental Hygienists' PAC				Sacramento	CA	95814					10/25/2007 12:00:00 AM		1000	1000			830002																																						
+1305177	0	6846	RCPT	A	100271538_3421	IND	Broderdorf	Robert			Oxford	MI	48371	Daimlerchrysler	Executive			9/28/2007 12:00:00 AM		35	420																																									
+1305156	0	40	RCPT	A	INC219	IND	Ostrow	Maynard			Santa Monica	CA	90402	Concession Mngmnt. Corp.	Corporate Executive			11/27/2007 12:00:00 AM		500	500																																									
+1305192	0	5869	RCPT	A	111920070C62657_6102	IND	Reissener	Ray			Panama City	FL	32409	Hdr Inc	Senior Program Manager			11/2/2007 12:00:00 AM		20	500																																									
+1305192	0	7960	RCPT	A	100920070C58135_2067	IND	Donnelly	Thomas			Amity Harbor	NY	11701	Hdr Inc	Construction Svcs			8/10/2007 12:00:00 AM		30	630																																									
+1305229	0	4580	RCPT	A	100304723_1257	IND	Brown	Dora B			Canton	MI	48187	Comerica Inc	Cbo Iv			7/27/2007 12:00:00 AM		8.31	216.06																																									
+1305316	0	38	RCPT	A	INC1201	OTH	Greenberg Traurig LLP				Sacramento	CA	95814					7/19/2007 12:00:00 AM		1000	1000																																									
+1307612	0	26	RCPT	A	RCPTA000000000521156	IND	Napper	Jeffrey			Los Angeles	CA	90030	LBS Financial Credit Union	President & CEO			10/8/2007 12:00:00 AM		1000	1000																																									
+1306363	0	1207	RCPT	A	INC13606	OTH	Stewart State Farm Insurance Companies	David G.			San Francisco	CA	94102					12/14/2007 12:00:00 AM		100	1000																																				INC13606					
+1306363	0	264	RCPT	A	INC13394	IND	Dacus	Tara J.			Fairfield	CA	94533	State Farm Insurance Company	Insurance Agent			12/14/2007 12:00:00 AM		50	800																																				INC13394					
+1306753	0	25	RCPT	A	DB70958	OTH	Health Management Concepts				Jupiter,	FL	33477					9/17/2007 12:00:00 AM		3000	4000																																									
+1204974	2	401	RCPT	A	IDT5437	IND	Pollock	Harold			La Canada	CA	91011	Hamilton Sundstrand	Engineer		I	7/16/2006 12:00:00 AM		15	135											CA League of Conservation Voters				Oakland	CA	94612																								
+1309033	0	4576	RCPT	A	INC263616	IND	Alexander	Gregory			Los Angeles	CA	90065-3347	Los Angeles Unified School District	Teacher			9/30/2007 12:00:00 AM		13.74	167.98																																									
+1309033	0	8194	RCPT	A	INC260494	IND	Kofahl	Steven			West Hls	CA	91307-3313	Los Angeles Unified School District	Teacher			11/30/2007 12:00:00 AM		0.42	167.98																																									
+1309636	0	119	RCPT	A	IDT7984	OTH	Lithia Dodge Chrysler Jeep of Burlingame				Burlingame	CA	94010				I	11/9/2007 12:00:00 AM		62.50	125											California Motor Car Dealers Association				Sacramento	CA	95814-																								
+1309773	0	1858	RCPT	A	INC161444	IND	Rosales	Steven			Torrance	CA	90503	Self Employed	Optometrist			11/30/2007 12:00:00 AM		14.58	174.96																																									
+1310143	0	5748	RCPT	A	A40191	OTH	Tidelands Construction Co				Brentwood	CA	94513					12/13/2007 12:00:00 AM		311.39	3161.29	0																																								
+1310143	0	496	RCPT	A	A35336	OTH	Avar Const Systems Inc				Campbell	CA	95008					7/31/2007 12:00:00 AM		308.45	3920.89	0																																								
+1310143	0	2323	RCPT	A	A36710	OTH	Frank Portman Co				Burlingame	CA	94010					9/22/2007 12:00:00 AM		23.20	510.71	0																																								
+1310215	0	359	RCPT	A	INC6103	IND	MILLER	WILLIAM	MR.		FAIR OAKS	CA	95628	SACRAMENTO SHERIFF'S DEPARTMENT (RETIRED	LAW ENFORCEMENT ADMINISTRATION			12/17/2007 12:00:00 AM		100	100																																									
+1310508	0	10	RCPT	A	T524053	IND	Fisher	Kaye			Tulare	CA	93274	Retired	Retired	N		9/17/2007 12:00:00 AM		500	500																																									
+1311457	0	612	RCPT	A	INC1954	IND	Sullivan	Patrick			Hayward	CA	94541	City of Hayward	Firefighter			8/3/2007 12:00:00 AM		8	118.81																																									
+1312399	0	1709	RCPT	A	INC7839	IND	Nichols	Samuel			Martinez	CA	94553	Contra Costa County Fire Protection District	Fire Fighter			8/7/2007 12:00:00 AM		10	110																																									
+1320417	0	229	RCPT	A	INC1464	IND	Ventura	Richard			San Francisco	CA	94110	SF Hispanic Chamber of Commerce	Exec. Director			3/9/2008 12:00:00 AM		200	200																																									
+1320406	0	59	RCPT	C	NON1433	OTH	ASSOCIATED RIGHT OF WAY SERVICES, INC.				PLEASANT HILL	CA	94523					3/12/2008 12:00:00 AM		143	1143		APPLE IPOD																																							
+1312531	1	478	RCPT	A	INC144126	IND	FLETCHER	ADRIANA			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/13/2007 12:00:00 AM	12/28/2007 12:00:00 AM	180.31	367.90																																									
+1307653	1	430	RCPT	A	INC23103	IND	Perkins	Angela			Escondido	CA	92025	T-Bird Restaurant Group, Inc.	Manager			11/28/2007 12:00:00 AM		5	135																																				INC23103					
+1320143	1	6	RCPT	A	A127	IND	Koeth	Katherine			Claremont	CA	91711		Retired			2/8/2008 12:00:00 AM		100	100	0																																								
+1334021	0	53	RCPT	A	INC17195	IND	Dullard	Ed			San Leandro	CA	94578	Alameda County Medical Center	Chief Information Systems			4/9/2008 12:00:00 AM		100	100																																									
+1334156	0	7	RCPT	A	INC141597	OTH	AFGE/AAFES LOCAL #1764				TRAVIS AFB	CA	94535-0566					3/18/2008 12:00:00 AM		32.88	164.10																																				INC141597					
+1334513	0	5	RCPT	A	INC4835	OTH	Ascent Real Estate, Inc.				San Diego	CA	92104	N/A	N/A			2/21/2008 12:00:00 AM		103.14	103.14																																									
+1334523	0	34	RCPT	F401A	34	OTH	WESTERN PACIFIC RESEARCH INC				BAKERSFIELD	CA	93312					4/30/2008 12:00:00 AM		100	100																					STOVALL	JOHN			OTH	REPUBLICAN CENTRAL COMMITTEE	CTY	KERN COUNTY DISTRICT 4						S							
+1334237	0	200	RCPT	A	A3521	OTH	MONTPELIER ORCHARD MANAGEMENT COMPANY				MODESTO	CA	95354					2/24/2008 12:00:00 AM		500	500	0																																								
+1335094	0	883	RCPT	A	INC6528	OTH	Golden Coach Manor				Hemet	CA	92543					4/17/2008 12:00:00 AM		1710	1710																																									
+1335165	0	3	RCPT	C	NON7369	OTH	Howard Jarvis Taxpayers Association				Los Angeles	CA	90005					3/3/2008 12:00:00 AM		225	5284.44		Admin expenses memo entry only. Not conts pursuant to Cal. Code of Regs. 18215(c)(16)																																	X						
+1335102	0	61	RCPT	A	INC334	OTH	Vertical Ventures Capital, LLC				Concord	CA	94520					5/12/2008 12:00:00 AM		300	300																																									
+1335501	0	220	RCPT	A	A8150	OTH	H.M. Smolens				Mill Valley	CA	94941					4/14/2008 12:00:00 AM		250	250	0																																								
+1335573	0	224	RCPT	A	INC5796	IND	Sheridan	James A.			Palo Alto	CA	94301	Patterson & Sheridan, LLP	Attorney			5/7/2008 12:00:00 AM		250	250																																									
+1309033	1	7192	RCPT	A	INC259411	IND	Roura	Miguel			Montebello	CA	90640-1548	Los Angeles Unified School District	Teacher			10/31/2007 12:00:00 AM		9.65	200																																									
+1336528	0	13	RCPT	A	INC294	COM	California Hospital Association PAC, Sponsored by CAHHS				Sacramento	CA	95814					4/10/2008 12:00:00 AM		1000	2000			790773																																						
+1334904	1	52	RCPT	A	INC1772	IND	FRIEDMAN	KENNI			MODESTO	CA	95350	N/A	NOT EMPLOYED			4/28/2008 12:00:00 AM		100	100																																									
+1340235	1	559	RCPT	A	C1269112	IND	Schlosberg	Mark			Berkeley	CA	94710-2116	ACLU of Northern California	Attorney			5/1/2008 12:00:00 AM		300	300																																									
+1345452	0	759	RCPT	A	INC236623	IND	WRIGHT	THOMAS			EL CAJON	CA	920193870	FARMERS GROUP INC	AGENT			6/6/2008 12:00:00 AM		100	600																																									
+1345667	0	4518	RCPT	A	59170842_155	IND	Power	Edward			Virginia Bch	VA	23454	Hdr Inc	Transp Bus Grp Dir - E Region			3/21/2008 12:00:00 AM		30	390																																									
+1346844	0	341	RCPT	A	INC145219	OTH	AFGE/INS LOCAL #505				LOS ANGELES	CA	90053-					6/16/2008 12:00:00 AM		16.74	100.44																																				INC145219					
+1334887	4	187	RCPT	A	INC980	OTH	Monsanto Company				St. Louis	MO	63167					5/10/2008 12:00:00 AM		1000	2500																																				INC980					
+1319886	2	417	RCPT	A	A4255	IND	Hansen	Richard			San Francisco	CA	94121-3529	N/A	Retired			3/5/2008 12:00:00 AM		150	150	0																																								
+1350233	0	25	RCPT	A	373824	OTH	Nursing Resources				Fremont	CA	94538					3/26/2008 12:00:00 AM		450	450																																									
+1349796	0	5812	RCPT	A	A74520	IND	SNYDER	BRETT			Santa Ana	CA	92703	Orange County	Deputy Sheriff		I	5/2/2008 12:00:00 AM		19.73	183.22	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1350162	0	180	RCPT	A	INC3236	OTH	NETWORK MANAGEMENT GROUP INC.				MONTEREY PARK	CA	91754					5/30/2008 12:00:00 AM		2500	2500																																									
+1350866	0	1544	RCPT	A	T559784	IND	Stavros	Wendy			LOMITA	CA	90717	Pacific Maritime Association	Clerk	N		6/26/2008 12:00:00 AM		5	130																																									
+1309352	1	295	RCPT	A	T511354	OTH	The Dentists Insurance Company				Sacramento	CA	95812					12/7/2007 12:00:00 AM		3600	3600																																									
+1351023	0	49	RCPT	A	T549312	IND	Simoes	Joe			Tipton	CA	93272	Joe Simoes	Dairyman	N		5/27/2008 12:00:00 AM		100	350																																									
+1351380	0	157	RCPT	A	INC857	SCC	Sprinkler Fitters & Apprentices Local 483 PAC				Hayward	CA	94545					5/23/2008 12:00:00 AM		500	500			990058																																						
+1351776	0	245	RCPT	A	IDT2409	IND	Conley	Ellen			Altadena	CA	91001-3325	None	Retired		I	5/18/2008 12:00:00 AM		100	200											Equality California				San Francisco	CA	94114-																								
+1334850	1	166	RCPT	A	INC8695	IND	Jakel	James			La Fayette	CA	94549	City of Antioch	City Manager			5/17/2008 12:00:00 AM		25	125																																									
+1359664	0	657	RCPT	A	80519.C1349_314	IND	Schaffer	Becky S			Land O Lakes	FL	34639	The PBSJ Corporation	Corporate Counsel			4/16/2008 12:00:00 AM		75	1050																																									
+1350176	1	14	RCPT	A	INC637	COM	CSLEA PAC				Sacramento	CA	95814					5/29/2008 12:00:00 AM		1100	2600			970375																																						
+1361155	0	5	RCPT	A	INC660	OTH	Goldman Sachs & Co.				New York	NY	10004					9/30/2008 12:00:00 AM		9036.86	22687.27																																									
+1361306	0	3918	RCPT	A	B004881S000660A	IND	YELVINGTON	SONDRA			TEXARKANA	TX	75501-0912	COCA-COLA BOTTLING CO. OF NORTH TEXAS	SALES CENTER MANAGER II	N		7/21/2008 12:00:00 AM	7/21/2008 12:00:00 AM	4.62	107.78																																									
+1361456	0	728	RCPT	A	71392489_933	IND	Paglino	Pamela S			Canton	MI	48188	Ford Motor Company	Hr Manager - Comp & Ben			7/3/2008 12:00:00 AM		25	225																																									
+1361998	0	1106	RCPT	A	53180315_2300	IND	Hayes	Susan			Tampa	FL	33634	Hdr Inc	Asst Marketing Manager			8/22/2008 12:00:00 AM		15	285																																									
+1320367	3	170	RCPT	A	IDT143	COM	Int'l Brotherhood of Boilermakers, Iron Ship Builders, Blacksmiths, Forgers and Helpers Local Lodge 549 PAC				Pittsburg	CA	94565				X	3/17/2008 12:00:00 AM	6/20/2007 12:00:00 AM	600	3000			962367								Friends of Mark DeSaulnier - Assembly 2008				Sacramento	CA	95841																								1292848
+1362566	0	1017	RCPT	A	INC173279	IND	Babow	Lawrence			Hayward	CA	94545	Eye Spy Optometric	Optometrist			8/29/2008 12:00:00 AM		16.67	150.03																																				INC173279					
+1362566	0	2609	RCPT	A	INC174393	IND	Worrell	Burton			San Jose	CA	95033	Advance Vision Center of Optometry, PC	Optometrist			9/30/2008 12:00:00 AM		16.67	150.03																																				INC174393					
+1362566	0	1585	RCPT	A	INC173546	IND	Monji	Gerald			Burbank	CA	91502	Self Employed - no business name	Optometrist			8/29/2008 12:00:00 AM		16.67	116.68																																									
+1362630	0	60	RCPT	A	INC7300	IND	Durling	Don			Fallbrook	CA	92028-8553	Durlings Nursery Inc	Grower			7/29/2008 12:00:00 AM		110	110																																									
+1362630	0	182	RCPT	A	INC7287	IND	Wilbur	Stephen			Tulare	CA	93274-9463	SBS Ag	Farmer			7/29/2008 12:00:00 AM		510	660																																									
+1363458	0	3000	RCPT	A	INC6829	IND	Wilson	Michelle L.			San Francisco	CA	94107	PG&E	Attorney			7/12/2008 12:00:00 AM		1000	7000																																									
+1363492	0	6217	RCPT	A	INC16336	IND	Ruiz	Gustavo			Los Angeles	CA	90034	Alegria Medical Group	Physician			9/17/2008 12:00:00 AM		100	600																																									
+1363492	0	6625	RCPT	A	INC16604	IND	Simon	Margaret			New York	NY	10011	WBTV	Casting Director			9/17/2008 12:00:00 AM		100	100																																									
+1363543	0	15	RCPT	F401A	15	RCP	MMS STRATEGIES				SACRAMENTO	CA	95826					3/25/2008 12:00:00 AM		2050	2050			990914																		LEARY	MIKE			OTH	CITY COUNCIL	CIT	ELK GROVE CITY COUNCIL DIST. # 3						S							
+1364931	0	20418	RCPT	A	INC50681	OTH	R.P. Westbrook Enterprises, Inc.				Hacienda Heights	CA	91745-2230	N/A	N/A			8/26/2008 12:00:00 AM		100	100	0																																								
+1364931	0	21253	RCPT	A	INC48903	OTH	Magnon Engineering Inc				Rancho Cucamonga	CA	91730-4428	Magbib Engineering Inc	Self-Manager			8/24/2008 12:00:00 AM		2000	2000	0																																								
+1364931	0	14587	RCPT	A	INC73525	IND	Anglin	Deanna			Maricopa	AZ	85239-2951	N/A	Retired			8/25/2008 12:00:00 AM		500	1000	0																																								
+1364931	0	15116	RCPT	A	INC79565	IND	Oler	Ryan	Mr.		San Jose	CA	95126-4083	Brocade	Technical Instructor			9/15/2008 12:00:00 AM		500	600	0																																								
+1364931	1	10809	RCPT	A	INC52406	IND	Isumu	Mara			Hayward	CA	94541-1506	Dept of the Treasury	Tax Analyst			8/28/2008 12:00:00 AM		100	100	0																																								
+1364931	1	13963	RCPT	A	INC66980	IND	Deitrick	Geoffrey	Mr.		Northridge	CA	91343-4646	Paycheck	401k Rep			9/3/2008 12:00:00 AM		100	100	0																																								
+1364931	1	14959	RCPT	A	INC67581	IND	Martin	Cathie			El Dorado	CA	95762	Skyline Energy Savers	Owner			9/4/2008 12:00:00 AM		1000	1000	0																																								
+1362985	1	89	RCPT	A	INC458	IND	Banibashar	Morteza			Torrance	CA	90505	Amar Ranch Market	V.P.			9/16/2008 12:00:00 AM		500	500																																									
+1367212	0	144	RCPT	A	A39575	IND	SARINANA	MOSES			GALT	CA	95632	CA DEPT OF FORESTRY	FIREFIGHTER II			10/8/2008 12:00:00 AM		7	120	0										CDF FIREFIGHTERS				SACRAMENTO	CA	95814-3022																								
+1363172	1	164	RCPT	A	INC2942	OTH	League of California Cities				San Jose	CA	95154	N/A	N/A			9/4/2008 12:00:00 AM		150	150																																									
+1370251	0	55	RCPT	A	INC9398	IND	Buchanan	Brian C.			Santa Rosa	CA	95402	City of Santa Rosa	Fire Fighter			7/12/2008 12:00:00 AM		15	105																																									
+1370612	0	4088	RCPT	A	IDT17660	IND	Lopez	Donna			Anaheim	CA	92801-2035	PYLUSD	teacher		I	10/14/2008 12:00:00 AM		100	100											Equality California (Sponsor)				San Francisco	CA	94114																								
+1362480	1	7	RCPT	A	INC795	IND	Borg	Susan			San Mateo	CA	94403	Durard, McKenna & Borg	Attorney			9/20/2008 12:00:00 AM		250	250																																									
+1370785	0	10576	RCPT	A	INC36595	IND	Moran	Edward			LOS ANGELES	CA	90004	The TCW Group	Executive			10/9/2008 12:00:00 AM		1000	1000	0																																								
+1370785	0	6752	RCPT	A	INC57563	IND	Hobaugh	Richard			Millbrae	CA	94030	Self	Retired			10/17/2008 12:00:00 AM		200	200	0																																								
+1362593	1	156	RCPT	A	INC1124	IND	FOULKROD	JEANNIE			SAN DIEGO	CA	92127	SELF - JEANNIE FOULKROD	ANALYST			8/21/2008 12:00:00 AM		200	200																																									
+1389118	0	1405	RCPT	A	INC143283	IND	Saperstein	Harry			BEVERLY HILLS	CA	90211	Harry Saperstein, MD	PHYSICIAN			12/12/2008 12:00:00 AM		100	100																																									
+1387442	0	3617	RCPT	A	B004998S001266A	IND	TOTH	JON			KNOXVILLE	TN	37931	COCA-COLA ENTERPRISES INC.	MARKET UNIT ON PREMISE SALES DIR	N		11/13/2008 12:00:00 AM	11/13/2008 12:00:00 AM	9.23	206.14																																									
+1389449	0	184	RCPT	A	INC6636	OTH	The Argus Group				Encino	CA	91436					12/30/2008 12:00:00 AM		20	200																																				INC6636					
+1390464	0	567	RCPT	A	011420090C349494_108	IND	Covell	Edward L			Clinton Twp	MI	48038	Comerica Inc	Acao I			12/26/2008 12:00:00 AM		5	115																																									
+1390360	0	2108	RCPT	A	INC265394	IND	BAKER INSURANCE SER	B.W.			MALIBU	CA	902653626	FARMERS GROUP INC	AGENT			12/2/2008 12:00:00 AM		100	1200																																									
+1391210	0	11	RCPT	A	11	IND	PICCHIOTTINO	MICHAEL M			MURRIETA	CA	925629744	PICCHIONTTINO CONSTRUCTION	GENERAL CONTRACTOR	X		10/18/2009 12:00:00 AM		100	100																																									
+1393704	0	18	RCPT	A	INC450	OTH	Rayne of Ventura				Ventura	CA	93003					10/20/2008 12:00:00 AM		250	250																																									
+1362639	1	4	RCPT	I	C209	OTH	Payden & Rygel				Los Angeles	CA	90071					9/30/2008 12:00:00 AM		-24783.08			Net Loss on Investments																																							
+1394317	0	5180	RCPT	A	9349522	IND	GILL	SANDRA			DALY CITY	CA	94014-2901	AT&T Services, Inc.	SR. PROJECT MANAGER-CA			12/5/2008 12:00:00 AM		8	184	0																																								
+1394317	0	5900	RCPT	A	9351319	IND	ROSEBUD	GEMARRO			ANTELOPE	CA	95843-4917	Pacific Bell Telephone Company	ASSOC TECH SUPPORT ANLYS NTWK			12/5/2008 12:00:00 AM		5	115	0																																								
+1394575	0	1844	RCPT	A	INC175876	IND	Tamayo	Robert			Torrance	CA	90505	Self Employed - no business name	Optometrist			11/30/2008 12:00:00 AM		16.67	166.68																																									
+1394874	0	3974	RCPT	A	INC294660	IND	Soliman	Esther			Los Angeles	CA	90039-4003	Los Angeles Unified School District	Teacher			12/31/2008 12:00:00 AM		13.75	170.25																																									
+1395559	0	1243	RCPT	A	INC55918	OTH	COMPASS ENGINEERING CONTR				SAN CARLOS	CA	94070					12/31/2008 12:00:00 AM		29.30	151.95																																									
+1395236	0	895	RCPT	A	895	IND	Hollis	Stephen			Elk Grove	CA	95624	Bank of America	SVP - Senior Vice President			10/31/2008 12:00:00 AM		15	290																																									
+1396394	0	6749	RCPT	A	INC113822	IND	Ely	Leota	Mrs.		Riverside	CA	92504-4064	n/a	Retired			10/27/2008 12:00:00 AM		100	100																																									
+1396560	0	434	RCPT	A	DB85028	IND	Lockman	Charles R.			Carlsbad,	CA	92008		FIRE FIGHTER	X		12/31/2008 12:00:00 AM		20	156.27																																									
+1396604	0	114	RCPT	A	INC1029	OTH	Union Pacific Corporation				Omaha	NE	68179					12/17/2008 12:00:00 AM		1000	1000																																									
+1397945	0	477	RCPT	A	INC32456	OTH	Lieu Nguyen MD INC				Hawthorne	CA	90250					12/4/2008 12:00:00 AM		200	343.76																																									
+1320145	3	230	RCPT	A	T533560	IND	Smith	John			Orinda	CA	94563	Reed Smith	Attorney	N	I	3/17/2008 12:00:00 AM		250	250											ActBlue				Cambridge	MA	02138																								
+1398902	0	31915	RCPT	A	INC124060	IND	Laughlin	Carlene C.			San Francisco	CA	94114	Same Name	Self-Employed Educator			11/1/2008 12:00:00 AM		500	500	0																																								
+1364931	3	14512	RCPT	A	INC60153	IND	Tauataina	Sione			Inglewood	CA	90204	Company Matworks	Staff			9/3/2008 12:00:00 AM		100	100	0																																								
+1350174	3	1455	RCPT	A	INC25177	IND	Zalud	Leonard	Mr.		Porterville	CA	93257-9360	n/a	Retired			6/18/2008 12:00:00 AM		50	155																																									
+1396394	1	6108	RCPT	A	INC128231	IND	Purdy	R			St Charles	IL	60175	Bank of Montreal	Banker			10/26/2008 12:00:00 AM		100	100																																									
+1396394	1	8357	RCPT	A	INC135101	IND	Elphic	Richard	Mr.		Santa Fe	NM	87508-9141	NASA	Scientist			10/28/2008 12:00:00 AM		250	250																																									
+1369259	2	4774	RCPT	A	INC105409	IND	Griffith	Brandon	Mr.		Santa Barbara	CA	93111-1522	Archbald & Spray LLP	Clerk			10/16/2008 12:00:00 AM		100	250																																									
+1398749	1	818	RCPT	A	INC37539	IND	Denman	Margarita			Fullerton	CA	92831	n/a	Unemployed			10/28/2008 12:00:00 AM		50	110																																									
+1363444	1	425	RCPT	A	INC11929	OTH	Jefferson AFT Federation of Teachers AFT Local 1481 (Unitemized Member Contributions)				Daly City	CA	94015-					9/12/2008 12:00:00 AM		727.35	12805.33																																									
+1362562	1	2348	RCPT	A	INC211692	IND	Massa	Dexter			San Jose	CA	95132-2907	Self Employed - no business name	Dentist			8/8/2008 12:00:00 AM		120	120																																									
+1423018	0	149	RCPT	A	C1496495	IND	EDSON	WILLAIM			NEW YORK	NY	10019-3310	STONE TOWER CAPITAL	SENIOR MANAGING DIRECTOR			3/16/2009 12:00:00 AM		100	100																																									
+1352089	2	873	RCPT	A	IDT637	IND	Jaeckel	Clara			San Carlos	CA	94070-2236	Oracle	Documentation Manager		I	5/15/2008 12:00:00 AM		500	500											Equality California (Sponsor)				San Francisco	CA	94114																								
+1423158	0	88	RCPT	A	RCPTA000000000635724	OTH	Golden State Water Company				San Dimas	CA	91773					4/8/2009 12:00:00 AM		2000	2000																																									
+1423169	0	312	RCPT	I	INC2069	OTH	North Valley Bank				Roseville	CA	95661					3/31/2009 12:00:00 AM		158.86	0		Interest Earned																																							
+1363519	1	4473	RCPT	A	IDT14270	IND	Lefevre	Frank			Chicago	IL	60618-6221	Northwestern Medical Faculty Foundation	Physician		I	9/18/2008 12:00:00 AM		100	100											Equality California (Sponsor)				San Francisco	CA	94114																								
+1351776	2	469	RCPT	A	INC2271	IND	Goad	Bethany			San Francisco	CA	94110	None	Student			6/18/2008 12:00:00 AM		100	100																																									
+1363492	2	6242	RCPT	A	INC18967	IND	Orellana	Martha			West Hollywood	CA	90069	Sussman Automatic Corp	Sales Representative			9/22/2008 12:00:00 AM		250	450																																									
+1363492	2	7738	RCPT	A	INC24538	IND	Sobelman	Stephanie			Placerville	CA	95667	None	Homemaker			9/20/2008 12:00:00 AM		100	100																																									
+1370785	1	17197	RCPT	A	INC40998	IND	Thompson	Nicholas			Vallejo	CA	94591	None	Student			10/10/2008 12:00:00 AM		100	100	0																																								
+1398902	1	1019	RCPT	A	INC120499	IND	Arnett	Tammi			Denver	CO	80205	Denver Public Library	Librarian			10/31/2008 12:00:00 AM		100	100	0																																								
+1398902	1	7396	RCPT	A	INC117198	IND	Cunha	Anthony			Redondo Beach	CA	90278	Same Name	Self-Employed Handyman			10/31/2008 12:00:00 AM		50	100	0																																								
+1398902	1	18213	RCPT	A	INC129035	IND	Klein	Henry			Van Nuys	CA	91405	None	Retired			11/2/2008 12:00:00 AM		50	300	0																																								
+1334938	3	48	RCPT	A	INC893	OTH	Fox Group				Beverly Hills	CA	90213					4/25/2008 12:00:00 AM		1500	1500																																									
+1398658	1	111	RCPT	A	INC3017	OTH	Sacramento Central Labor Council, AFL-CIO				Sacramento	CA	95833					11/1/2008 12:00:00 AM		2000	2000																																									
+1430754	0	2926	RCPT	A	90306.C352933_2495	IND	Ellsworth	Mary Ann			Romeo	MI	48065	Comerica Inc	Is Bus Relationship Mgr			2/24/2009 12:00:00 AM		22.95	275.40																																									
+1351306	2	22	RCPT	A	A3233	COM	California Refuse Removal Counsel North PAC				Sacramento	CA	95814					6/27/2008 12:00:00 AM		2000	2000	0		923445																																						
+1430754	0	3267	RCPT	A	90409.C356288_1638	IND	Van Tassell	Jeffrey J			Walnut Creek	CA	94595	Comerica Inc	Grp Mgr Iii-coml Bnkg			4/8/2009 12:00:00 AM		27.46	329.52																																									
+1433003	0	1320	RCPT	A	INC162906	OTH	Petaluma Fed of Teachers 1881				PETALUMA	CA	94954-					6/15/2009 12:00:00 AM		39.77	217.85																																				INC162906					
+1434079	0	32	RCPT	A	0E94C7A926B452590064	OTH	Pro - Tech Mats Industry				Thousand Plms	CA	92276-3324					5/19/2009 12:00:00 AM		100	100																																									
+1434019	0	555	RCPT	A	INC56843	OTH	Hammond	Seth			Goleta	CA	93117-3364	Specialty Crane	TRUCKING			5/27/2009 12:00:00 AM		16	96																																									
+1434907	0	240	RCPT	A	240	IND	Chun	Robert			Dublin	CA	94568-8735	Bank of America	VP - Vice President			6/5/2009 12:00:00 AM		9.50	116.50																																									
+1435345	0	51	RCPT	A	C4262342	COM	California Grocers Association Political Action Committe				Sacramento	CA	95814			N		6/8/2009 12:00:00 AM		1000	1000			760914																																						
+1369259	3	1291	RCPT	A	INC96115	IND	Baak	Rebecca	Mrs.		Huntington Beach	CA	92646-5105	n/a	Homemaker			10/5/2008 12:00:00 AM		500	500																																									
+1369259	3	1484	RCPT	A	INC96133	OTH	Platinum Roofing, Inc.				San Jose	CA	95133-1758					10/5/2008 12:00:00 AM		250	250																																									
+1396394	2	8629	RCPT	A	INC116628	IND	LaMagra	Vincent	Mr.		Fremont	CA	94536-7226	n/a	Retired			10/28/2008 12:00:00 AM		20	105																																									
+1396394	2	8979	RCPT	A	INC116684	IND	Sanchez	Anthony	Mr.		Tujunga	CA	91042-1726	Gene Burton & Assoc	Medical Comm Planner			10/28/2008 12:00:00 AM		200	325																																									
+1396394	2	10477	RCPT	A	INC131322	IND	Wheelwright	Andrew	Mr.		Monroe	WA	98272-2613	Microsoft	Software Design Engineer			10/29/2008 12:00:00 AM		100	600																																									
+1436260	0	648	RCPT	A	A91842	IND	Conn	Michelle			San Jose	CA	95134	Cisco Systems, Inc.	Manager, IBSG/WWGA			5/15/2009 12:00:00 AM		10	130	0										Cisco Systems, Inc.				San Jose	CA	95134																								
+1437307	0	253	RCPT	A	INC106033	IND	Barker	Dennis			Walnut Creek	CA	94595-2224	Tice Valley Chiropractic	Chiropractor			6/1/2009 12:00:00 AM		26	154																																									
+1436740	0	1497	RCPT	A	INC180120	IND	Barritt	Chad			Chula Vista	CA	91911	Self Employed - no business name	Optometrist			3/31/2009 12:00:00 AM		16.67	100.02																																									
+1436740	0	4304	RCPT	A	INC184055	IND	Van Buskirk	Richard			Jackson	CA	95642	Sierra Eyecare Assoicates	Optometrist			6/30/2009 12:00:00 AM		16.67	100.02																																				INC184055					
+1436740	0	4028	RCPT	A	INC183366	IND	Major	Douglas			Paso Robles	CA	93446	Gary L. Englund, O.D. A Professional Corporation	Optometrist			6/30/2009 12:00:00 AM		33.33	100.70																																				INC183366					
+1437714	0	19	RCPT	A	C4260130	COM	Agricultural Council of California PAC				Sacramento	CA	95814			N		5/14/2009 12:00:00 AM		1500	1500			761092																																						
+1438361	0	567	RCPT	A	INC1319	IND	Krishna	Avula Rama			Greenwich	CT	6831	Pzena Investment Management	Investment Management			6/5/2009 12:00:00 AM		5000	5000																																									
+1438457	0	21	RCPT	A	INC299	OTH	Ararat Adult Day Health Care, Inc.				Sacramento	CA	95827					4/13/2009 12:00:00 AM		1000	1000																																									
+1438557	0	29	RCPT	A	INC2335	IND	Brotman	Martin			San Francisco	CA	94133-0000	Sutter Health	President			1/19/2009 12:00:00 AM		100	100																																									
+1438734	0	12305	RCPT	A	A26635	IND	MARTINEZ	LEE			Santa Ana	CA	92703	Orange County	Deputy Sheriff			4/17/2009 12:00:00 AM		13.50	164.46	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1443126	0	22	RCPT	A	RCPTA000000000659936	COM	Krekorian For City Council 2009				Burbank	CA	91502					8/4/2009 12:00:00 AM		100	100			1318897																																						
+1321314	2	86	RCPT	A	INC4169	OTH	GEORGE E. HALL INVESTMENTS				GILROY	CA	95021					3/5/2008 12:00:00 AM		100	100																																									
+1444434	0	8	RCPT	F401A	8	RCP	CALIFORNIA TAXPAYER PROTECTION COMITTEE				UNK	CA	00000					10/2/2006 12:00:00 AM		230	230			000000																		ANDERSON	KRISTINE			OTH	ELSINORE VALLEY MUNI WATER DIST	LOC	ELSINORE VALLEY MUNI WATER DIST						S							
+1428477	1	80	RCPT	A	INC9253	IND	Garcia	Henry			Glendora	CA	91741	McDonald Franchise	Owner			4/29/2009 12:00:00 AM		110	660																																				INC9253					
+1363519	2	163	RCPT	A	INC2881	IND	Anspach	Gary			San Rafael	CA	94901	Same Name	Self Employed Tax Consultant			8/28/2008 12:00:00 AM		500	500																																									
+1370612	1	690	RCPT	A	IDT22181	IND	Brenzel	Seth			San Francisco	CA	94110-5655	The Walden School	Executive Director		I	10/7/2008 12:00:00 AM		250	350											Equality California (Sponsor)				San Francisco	CA	94114																								
+1370612	1	861	RCPT	A	IDT19179	IND	Cabler	Paul			San Francisco	CA	94117-2609	Gap, Inc.	Merchant		I	10/10/2008 12:00:00 AM		100	100											Equality California (Sponsor)				San Francisco	CA	94114																								
+1397292	1	6641	RCPT	A	INC8478	IND	Strassner	W Scott			Rancho Mirage	CA	92270	Same Name	Self Employed Actor/Producer			10/20/2008 12:00:00 AM		150	150																																									
+1450624	0	114	RCPT	A	C2057009	IND	BRANDT	GRAHAM			SAN FRANCISCO	CA	94123-1556	GOLDMAN SACHS	INVESTMENT ADVISOR			7/13/2009 12:00:00 AM		200	200																																									
+1118543	2	147	RCPT	A	RCPTA000000000332358	COM	CSLEA PAC				Sacramento	CA	95814					5/9/2005 12:00:00 AM		2500	3500			970375																																						
+1438557	1	792	RCPT	A	IDT3502	IND	Ullman	Michael			Rancho Santa Fe	CA	92067-0000	Self-employed (same)	Hospitality Industry Consultant		I	5/18/2009 12:00:00 AM		500	500											Actblue				Cambridge	MA	02138-0000																								
+1451809	0	980	RCPT	A	INC186534	IND	Asmus	Paula			Point Richmond	CA	94801	Self Employed - no business name	Optometrist			8/31/2009 12:00:00 AM		16.67	150.03																																									
+1450763	0	223	RCPT	A	INC20432	OTH	Oberkamper & Associates, Civil Engineers, Inc.				Novato	CA	94945					8/12/2009 12:00:00 AM		114	302																																				INC20432					
+1452172	0	2330	RCPT	A	9929623	IND	STEVENSON	TERRI			HAYWARD	CA	94541-6919	AT&T Services, Inc.	SR TECHNICAL TEAM LEAD			8/6/2009 12:00:00 AM		8	120	0																																								
+1457429	0	325	RCPT	A	INC9683	IND	Johnson	Bobby			Compton	CA	90220	McDonald Franchise	Owner			8/7/2009 12:00:00 AM		90	670																																				INC9683					
+1351403	2	83	RCPT	C	RCPTC000000000575230	IND	Waldman	Stuart			Van Nuys	CA	91406	Valley Industry & Commerce Association	President			6/30/2008 12:00:00 AM		77.90	67248.16		Office supplies																																							
+1435098	1	23	RCPT	A	26	IND	Cendejas	Robert E.			Brea	CA	92821	Robert E. Cendejas & Associates	Attorney	X		6/26/2009 12:00:00 AM		250	250																																				26					
+1303050	4	122	RCPT	I	INC2929	IND	Moudry	Chris			Merrill	OR	79633	Sasin Fertilizer & Chemical Company	Secretary/ Treasurer			12/29/2007 12:00:00 AM		100	0		Auction Proceeds																																		INC2929					
+1458966	0	3425	RCPT	A	91211.C374030_6184	IND	Krips	Tracey			Walled Lake	MI	48390	Comerica Inc	Bnkg Cen Mgr Iii			11/16/2009 12:00:00 AM		6.66	166.50																																									
+1458966	0	7116	RCPT	A	100368534_2911	IND	Porterfield	John C			Grandville	MI	49418	Comerica Inc	Grp Mgr Iii-coml Bnkg			9/9/2009 12:00:00 AM		20	500																																									
+1459082	0	29	RCPT	A	29	IND	OU	JENNY			SAN FRANCISCO	CA	94118	JENNY OU L.A.C.	L.A.C.	X		8/6/2009 12:00:00 AM		100	225																																									
+1459089	0	5675	RCPT	A	INC324839	IND	Moorhouse	Brian			Irvine	CA	92620-3296	Los Angeles Unified School District	Teacher			11/30/2009 12:00:00 AM		0.42	166.46																																									
+1459778	0	1309	RCPT	A	00113.C93341_506	IND	Nelson	Frederick			Dublin	OH	43017	Cardinal Health, Inc	Vp, Op Excellence - Bb Prgm			8/14/2009 12:00:00 AM		40.60	1087.45																																									
+1457924	1	1655	RCPT	A	INC178561	IND	Nguyen	Nam			Tracy	CA	95376	Ethan Nguyen, MD	PHYSICIAN			12/10/2009 12:00:00 AM		50	100																																									
+1460043	0	151	RCPT	A	91015.C5296_518	IND	Silva	Nathan			Altamonte Springs	FL	32714	The PBSJ Corporation	Program Manager			10/2/2009 12:00:00 AM		11.25	292.50																																									
+1457924	1	203	RCPT	A	INC174863	IND	Bhandari	Rajan			San Jose	CA	95119	Salahuddin Bibi, MD	PHYSICIAN			11/18/2009 12:00:00 AM		150	150																																									
+1460111	0	1636	RCPT	A	092920090C137032_113	IND	Hinkel	Brian J			Sylvania	OH	43560	Owens Corning Sales, Llc	Project Manager			9/16/2009 12:00:00 AM		10	240																																									
+1461628	0	494	RCPT	A	INC10826	IND	Williams	Evalynne R.			Santa Rosa	CA	95404	City of Santa Rosa	Fire Fighter			9/7/2009 12:00:00 AM		15	120																																									
+1463074	0	41	RCPT	A	INC11835	IND	Arevalo	Paul			Pasadena	CA	91106-4335	City of West Hollywood	City Manager			10/23/2009 12:00:00 AM		250	250																																									
+1463074	0	517	RCPT	A	INC11584	IND	Nantell	James			Burlingame	CA	94010	City of Burlingame	City Manager			9/3/2009 12:00:00 AM		25	300																																									
+1463167	0	1938	RCPT	A	10104880	IND	ROSENBERG	GARY			WALNUT CREEK	CA	94596-6633	Pacific Bell Telephone Company	ACCOUNT MANAGER 2 GEH CA			10/21/2009 12:00:00 AM		5	100	0																																								
+1463803	0	3503	RCPT	A	INC250450	IND	McKelvy	Bruce			Pleasanton	CA	94566-6130	Self Employed - no business name	Dentist			11/6/2009 12:00:00 AM		10	100																																									
+1464106	0	5	RCPT	A	A27064	IND	Abercrombie	Greg			Fullerton	CA	92832	City Of Fullerton	Police Officer			8/7/2009 12:00:00 AM		10	230	0										Fullerton Police Officers Association				Fullerton	CA	92832																								
+1464106	0	2089	RCPT	A	A26702	IND	White	Lloyd			Fullerton	CA	92832	City Of Fullerton	Police Officer			7/31/2009 12:00:00 AM		5	185	0										Fullerton Police Officers Association				Fullerton	CA	92832																								
+1464309	0	10928	RCPT	A	INC43342	IND	Trimble	Jennie			San Bernardino	CA	92408	San Bernardino County	Public Safety Officer			10/26/2009 12:00:00 AM		10	140																																									
+1464309	0	1900	RCPT	A	INC41812	IND	Chambers	Blane			San Bernardino	CA	92408	San Bernardino County	Public Safety Officer			10/26/2009 12:00:00 AM		10	140																																									
+1464309	0	2970	RCPT	A	INC56369	IND	Edmond	Franklin			San Bernardino	CA	92408	San Bernardino County	Public Safety Officer			11/23/2009 12:00:00 AM		10	120																																									
+1464739	0	120	RCPT	A	A1939	OTH	PATTON AMUSEMENT SERVICES				MODESTO	CA	95350					11/3/2009 12:00:00 AM		1000	1000	0																																								
+1464804	0	639	RCPT	A	IDT27372	IND	WAGNER	GAIL		MD	PIEDMONT	CA	94611	The Permanente Med Group	Physician		I	10/22/2009 12:00:00 AM		41.66	499.92											The Permanente Medical Group				Oakland	CA	94612																								
+1465184	0	374	RCPT	A	INC4103	IND	Segall	Gregory			Wynnewood	PA	19096	Versa Capital Management, Inc.	Managing Partner			9/29/2009 12:00:00 AM		5000	5000																																									
+1437780	2	95	RCPT	A	IDT325	COM	CA Assn of Professional Scientists CAPS-PAC				Sacramento	CA	95814				X	1/20/2009 12:00:00 AM	2/5/2007 12:00:00 AM	1000	2000			860894								Friends of Tom Torlakson 2008				Sacramento	CA	95841																								1282319
+1465495	0	1	RCPT	A	A-C36774	OTH	Skilled Healthcare, LLC				Foothill Ranch	CA	92610-2822					7/7/2009 12:00:00 AM		1000	1000																																									
+1465496	0	48	RCPT	A	C24188	OTH	Pinoleville Band of Pomo Indians				Ukiah	CA	95482					11/3/2009 12:00:00 AM		3500	3500																																									
+1465714	0	369	RCPT	A	INC238	IND	Spirtos	Tanya			Redwood City	CA	94062	Women's Care Medical Group	Physician			10/27/2009 12:00:00 AM		250	250																																									
+1465644	0	1101	RCPT	A	INC4563	IND	Rafiq	Abdulrahman			San Jose	CA	95134	Inspurate LLC	CEO			12/7/2009 12:00:00 AM		250	750																																									
+1465651	0	46	RCPT	A	RCPTA000000000692578	IND	Alston	Catherine			San Jose	CA	95119	State Comp Insurance Fund	Staff Counsel			12/31/2009 12:00:00 AM		30	120																																									
+1465770	0	72	RCPT	A	A3280	IND	Cramer	Gary M.			Valencia	CA	91354	Superior Court of CA	Manager			12/31/2009 12:00:00 AM		100	150	0																																								
+1465801	0	10	RCPT	A	INC483	OTH	Check into Cash of California, Inc.				Cleveland	TN	37364					9/29/2009 12:00:00 AM		2000	2000																																									
+1462498	1	1434	RCPT	A	INC145359	IND	CIPRA	JAMES A.			LONG BEACH	CA	908141928	NO REPLY YET	INFORMATION REQUESTED			12/9/2009 12:00:00 AM		50	100																																									
+1465731	0	5	RCPT	A	A26076	IND	Abbott	John			Sacramento	CA	95864	n/a	Retired			10/22/2009 12:00:00 AM		100	100	0																																								
+1466584	0	11698	RCPT	A	A44646	IND	KIEMLE	MATTHEW			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/1/2009 12:00:00 AM		13.50	310.72	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1466584	0	6080	RCPT	A	A76713	IND	DURAN	MANUEL			Santa Ana	CA	92703	Orange County	Deputy Sheriff			12/11/2009 12:00:00 AM		14.50	431.72	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1466584	0	6588	RCPT	A	A71353	IND	ESPINOSA	NOEL			Santa Ana	CA	92703	Orange County	Deputy Sheriff			10/30/2009 12:00:00 AM		9.50	310.72	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1466584	0	20303	RCPT	A	A48882	IND	SEMAN	RONALD			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/10/2009 12:00:00 AM		18	431.72	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1466584	0	19962	RCPT	A	A74111	IND	SCALISE	MICHAEL			Santa Ana	CA	92703	Orange County	Deputy Sheriff			11/13/2009 12:00:00 AM		9.50	310.72	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1474128	0	660	RCPT	A	INC171411	OTH	WHSLE DELIVERY DRIVERS 848				Covina	CA	91724-3625					3/1/2010 12:00:00 AM		48.74	206.34																																				INC171411					
+1474138	0	2206	RCPT	A	A-M24785	COM	Carpenters' District Council of Kansas City and Vicinity SSF				Kansas City	MO	64111-3074				X	3/10/2010 12:00:00 AM	6/30/2008 12:00:00 AM	6000	6000			999999																																X						
+1474900	0	57	RCPT	A	INC1049	IND	Hochhausler	John M.			San Gabriel	CA	91775	Manning & Mardar	Attorney			2/2/2010 12:00:00 AM		250	250																																									
+1474659	0	17	RCPT	A	INC512	COM	CA American Council of Engineering Companies PAC				Sacramento	CA	95814					3/12/2010 12:00:00 AM		1000	1000			782143																																						
+1474175	0	12	RCPT	A	INC125	IND	DOWNING	LLOYD			ROCKLIN	CA	95677	N/A	NOT EMPLOYED			2/9/2010 12:00:00 AM		150	150																																									
+1471314	1	22	RCPT	A	A-C15737	COM	Cisco Systems, Inc., California PAC				Burlingame	CA	94010-4443					2/10/2010 12:00:00 AM		2000	2000			1292423																																						
+1474490	1	95	RCPT	I	I-M17441	OTH	Wells Fargo Bank				Sacramento	CA	95814-4407					2/28/2010 12:00:00 AM		2793.45	3343.97		interest earned																																							
+1464759	1	2758	RCPT	A	A11859	IND	MENENDEZ	NELSON			SANTA ANA	CA	92701	CITY OF SANTA ANA	POLICE OFFICER			7/31/2009 12:00:00 AM		7.50	172.50	0										Santa Ana Police Officers Association				Santa Ana	CA	92701																								
+1464759	1	3128	RCPT	A	A10939	IND	PARK	DANIEL			SANTA ANA	CA	92701	CITY OF SANTA ANA	POLICE OFFICER			7/1/2009 12:00:00 AM		7.50	172.50	0										Santa Ana Police Officers Association				Santa Ana	CA	92701																								
+1464759	1	4008	RCPT	A	A13913	IND	SONTAG	BRANDON			SANTA ANA	CA	92701	CITY OF SANTA ANA	POLICE OFFICER			9/20/2009 12:00:00 AM		7.50	172.50	0										Santa Ana Police Officers Association				Santa Ana	CA	92701																								
+1460021	1	2714	RCPT	A	A68212	IND	HAMRICK	TERANCE			FAIRFIELD	CA	94534	ROCKFORD CORPORATION	PLUMBER		I	12/24/2009 12:00:00 AM		63.70	747.40	0										U.A. LOCAL 342				CONCORD	CA	94518																								
+1490696	0	188	RCPT	A	A935	IND	Lawson	Michael	Mr.		Los Angeles	CA	90005	Skadden, Arps, et al	Attorney			5/3/2010 12:00:00 AM		2500	2500	0																																								
+1490840	0	49	RCPT	A	IDT12091	OTH	Cerritos Infiniti				Newport Beach	CA	92660				I	4/26/2010 12:00:00 AM		125	125											California New Car Dealers Association				Sacramento	CA	95814-																								
+1490920	0	21	RCPT	A	INC272832	IND	Anoosheh-Zomorrodi	Mandana			Newbury Park	CA	91320-2734	Self Employed - no business name	Dentist			3/23/2010 12:00:00 AM		120	120																																									
+1474209	2	250	RCPT	A	INC32121	IND	Krause	Jim			Pasadena	CA	91107	Independent State Farm or All State Agent	Insurange Agent			1/20/2010 12:00:00 AM		50	100																																				INC32121					
+1490431	0	163	RCPT	A	141115104_935	IND	Stonehouse	Gregory			White Bear Lake	MN	55110	Hdr Inc	Wbg Fedl Water Mkt Sector Dir			3/19/2010 12:00:00 AM		15	135																																									
+1489338	0	142	RCPT	A	00417.C2346_26	IND	Driscoll	Eric			Alexandria	VA	22307	Teradata Corporation	Manager			3/24/2010 12:00:00 AM		50	500																																									
+1492045	0	962	RCPT	A	INC9980	IND	Doucette	Thomas	Mr.		Stockton	CA	95219	Frontier Land Companies	President			4/23/2010 12:00:00 AM		10000	10000																																									
+1489278	0	907	RCPT	A	100384091_238	IND	Hartmann	Daniel J			Golden	CO	80401	Comerica Inc	Dlr Svcs Mgr - Central Region			3/22/2010 12:00:00 AM		15	150																																									
+1491358	0	1452	RCPT	A	C2368047	IND	Strand	Sharman			Redondo Beach	CA	90277-6813	RETIRED	RETIRED			5/17/2010 12:00:00 AM		100	100																																									
+1460021	1	2223	RCPT	A	A65256	IND	GABELLINI	DAVID			MARTINEZ	CA	94553	PERFORMANCE MECHANIC			I	9/23/2009 12:00:00 AM		22.60	344.20	0										U.A. LOCAL 342				CONCORD	CA	94518																								
+1491968	0	150	RCPT	C	C813	IND	Furey	Patrick		Sr.	Torrance	CA	90504	City of Torrance	Councilmember			5/17/2010 12:00:00 AM		200	300		Fundraising Event Expenses																																							
+1492015	0	116	RCPT	A	A-C926	IND	Mayer	Berna			Lancaster	CA	93536-5872	High Desert Advisory Services, Inc.	Nurse Practioner			5/18/2010 12:00:00 AM		125	225																																									
+1491376	0	294	RCPT	A	INC314931	IND	NUNEZ INS AGY I	DAVID F			BURBANK	CA	915052828	FARMERS GROUP INC	AGENT			3/22/2010 12:00:00 AM		35	140																																									
+1474296	1	110	RCPT	A	C4300410	IND	Francis	Burton			Fresno	CA	93720	Fresno County	Sr. Dep. Dist. Attorney	N		3/17/2010 12:00:00 AM		200	200																																									
+1474850	1	87	RCPT	A	A779	IND	Scaduto	Lynn H.			Pacific Palisades	CA	90272	Munger Tolles & Olson	Attorney			3/17/2010 12:00:00 AM		200	200	0																																								
+1491606	1	86	RCPT	A	INC6437	IND	Hoefflin	Daniel			Laguna Beach	CA	92651	Unisolve	Executive			5/3/2010 12:00:00 AM		100	100																																									
+1459294	1	5143	RCPT	A	INC304910	IND	WEIDENKELLER	TIM			LOS ALAMITOS	CA	907205648	FARMERS GROUP INC	AGENT			12/22/2009 12:00:00 AM		10	120																																									
+1438619	2	1577	RCPT	A	INC2423	IND	Buckingham	Jane			Encino	CA	91436-2302	Trenderer	President			6/30/2009 12:00:00 AM		500	500																																									
+1502818	0	754	RCPT	A	INC34023	IND	Holz	Tracy E.			Garden Grove	CA	92840	Garden Grove Police Dept	Peace Officer			4/6/2010 12:00:00 AM		10	130																																									
+1501462	0	17	RCPT	A	INC627	IND	Speaker	Dianne M.			Redlands	CA	92374	Coldwell Banker	Realtor			6/15/2010 12:00:00 AM		100	100																																									
+1503509	0	1	RCPT	A	INC318	IND	Best	Linda & Edward			Alamo	CA	94507	Contra Costa Council	President & CEO			5/18/2010 12:00:00 AM		3000	3000																																									
+1501535	0	1023	RCPT	A	A29086	IND	Perez	Hazel			Fullerton	CA	92832	City of Fullerton	Police Officer			1/22/2010 12:00:00 AM		10	130	0										Fullerton Police Officers Association				Fullerton	CA	92832																								
+1506496	0	1176	RCPT	A	INC7171	IND	GIBBONS	JAMES			LOS ANGELES	CA	900204751	NONE	RETIRED			3/31/2010 12:00:00 AM		100	100																																									
+1462899	2	302	RCPT	C	NON3840	OTH	Michelin Tires				Fresno	CA	93725					9/25/2009 12:00:00 AM		800	800		One Set of Michelin Tires																																							
+1507551	0	2680	RCPT	A	INC21018	OTH	VENTURA CNTY FFTRS ASSN #1364				CAMARILLO	CA	93011					6/25/2010 12:00:00 AM		36.92	230.85																																				INC21018					
+1491793	1	185	RCPT	A	C4309129	IND	Borba	Sharon			Riverdale	CA	93656	Sharon K Borba	Farmer	N		5/17/2010 12:00:00 AM		1500	1500																																									
+1492140	1	186	RCPT	A	INC682	IND	Tsakopoulos	Angelo			Sacramento	CA	95826	ATK Development	Developer			4/27/2010 12:00:00 AM		2000	2000																																									
+1508575	0	118	RCPT	A	INC2506	COM	Loni Hancock for State Senate 2012				Sacramento	CA	95841					5/25/2010 12:00:00 AM		5000	5000			1314017																																						
+1492134	2	38	RCPT	A	INC710	IND	Geyerman	Larry			San Diego	CA	92111	Geyerman Services, Inc.	Attorney			4/8/2010 12:00:00 AM		100	100																																									
+1521192	0	26	RCPT	A	A1437	OTH	Dave Long & Associates				Lake Elsinore	CA	92532					8/19/2010 12:00:00 AM		150	150	0																																								
+1521917	0	3	RCPT	A	C4326797	OTH	AFSCME 829				Oakland	CA	94606-5300			N	I	9/30/2010 12:00:00 AM		79.44	218.60											San Mateo County Central Labor Council				Foster City	CA	94404																								
+1522085	0	49	RCPT	A	IDT31756	IND	GOLDSTEIN	SANFORD M.		MD	SF	CA	94127	The Permanente Med Group	Physician		I	7/27/2010 12:00:00 AM		16.67	150.03											The Permanente Medical Group				Oakland	CA	94612																								
+1522724	0	62	RCPT	A	A9294	IND	Gramer	Rick			Irvine	CA	92606	City of Irvine	Police Officer			7/6/2010 12:00:00 AM		40	340	0										Irvine Police Association				Irvine	CA	92714																								
+1523033	0	314	RCPT	A	A-C20093	IND	Zito	Renee			Sacramento	CA	95831-2978	State of CA	Director			7/1/2010 12:00:00 AM		25	229.05																																									
+1522544	0	849	RCPT	A	INC14899	IND	Johnson	Mark			San Juan Capistrano	CA	92675	Mark Chapin Johnson Foundation	Chairman & CEO			8/23/2010 12:00:00 AM		10000	19999																																									
+1522946	0	7035	RCPT	A	INC364434	IND	Yttreness	Jeanne			Talmage	CA	95481	Ukiah USD	Principal			9/3/2010 12:00:00 AM		12.68	122.75																																									
+1524131	0	1979	RCPT	A	INC23237	OTH	IRON WORKERS UNION LOCAL #378				BENICIA	CA	94510-1232					8/30/2010 12:00:00 AM		173.20	1453.86																																				INC23237					
+1523033	0	3052	RCPT	A	A-C26431	IND	Katz	Jonathan			Beverly Hills	CA	90210-5507	Cinnabar	CEO			8/25/2010 12:00:00 AM		500	845.80																																									
+1522880	0	238	RCPT	A	INC6907	IND	Glassman	Portia			Oakland	CA	94612	Self	Attorney			8/9/2010 12:00:00 AM		80	179																																									
+1524130	0	303	RCPT	A	INC175618	OTH	Painters Local #1991				Baldwin Park	CA	91706					7/19/2010 12:00:00 AM		23.21	224.37																																				INC175618					
+1522837	1	64	RCPT	C	NON927	PTY	Democratic State Central Committee of California				Sacramento	CA	95811					9/10/2010 12:00:00 AM		1666.66	900902		Research Fee	741666																																	NON927					
+1521573	1	2010	RCPT	A	A78368	IND	PEARL	DENNIS			BRENTWOOD	CA	94513	PERFORMANCE MECHANIC	PLUMBER		I	9/24/2010 12:00:00 AM		54.50	436.51	0										U.A. LOCAL 342				CONCORD	CA	94518																								
+1532044	0	29	RCPT	F401A	INC255	COM	Noguez Assessor General 2010				Los Angeles	CA	90071					10/12/2010 12:00:00 AM		2000	9170.20			1327922																		John Noguez				ASR		OTH	Los Angeles County						S							
+1530958	0	2018	RCPT	A	A-C43057	IND	Vasquez	W I L			San Ramon	CA	94582-5889	Mainland Development Mgt	Comptroller Consultant			10/10/2010 12:00:00 AM		25	439																																									
+1559044	0	2379	RCPT	A	B005510S000683A	IND	VRANISH	JOSEPHINE			TAMPA	FL	33618	COCA-COLA REFRESHMENTS USA, INC.	PAYROLL TAX MGR	N		10/22/2010 12:00:00 AM	10/22/2010 12:00:00 AM	12	156																																									
+1562544	0	4920	RCPT	A	INC365090	IND	RODRIGUEZ	MARCO A			RANCHO DOMINGUEZ	CA	902206288	FARMERS GROUP INC	AGENT			12/16/2010 12:00:00 AM		10	120																																									
+1532118	0	68	RCPT	C	NON1773	PTY	Democratic State Central Committee of CA				Sacramento	CA	95811					10/5/2010 12:00:00 AM		16560.14	351967.38		Postage Differential	741666																																						
+1531338	1	40	RCPT	A	A597	IND	Mansoor	Henry	Mr.		Northridge	CA	91343	N/A	Retired			10/2/2010 12:00:00 AM		100	300	0																																								
+1560022	0	238	RCPT	A	INC30484	IND	Harrington	Donald J.			Beverly Hills	CA	90211	MassMutual Financial Group	Insurance Agent			10/21/2010 12:00:00 AM		8.50	102																																									
+1568959	0	132	RCPT	A	INC14127	IND	Jacobs	Pamela			Aptos	CA	95003	Town of Los Gatos	Assistant Town Manager			12/29/2010 12:00:00 AM		12.50	212.50																																									
+1570358	0	264	RCPT	A	INC26030	IND	Snow	Laree	Ms		Bakersfield	CA	93314-5256	Self Employed - LaRee Snow	Farmer			11/29/2010 12:00:00 AM		60	110																																									
+1569445	0	1004	RCPT	A	INC24533	IND	Flores	Reynaldo			San Jose	CA	95131	Santa Clara County	Officer			12/3/2010 12:00:00 AM		5	121.76																																									
+1570460	0	118	RCPT	A	IDT971	OTH	Barnum & Celillo Electric, Inc.				Sacramento	CA	95838-3372				I	12/7/2010 12:00:00 AM		1056	9504											Western Electrical Contractors Association				Sacramento	CA	95827																								
+1522956	2	701	RCPT	A	INC3220	IND	Astvasadoorian	Raffy			Camarillo	CA	93010	City of Los Angeles	Deputy City Attorney			9/15/2010 12:00:00 AM		650	4500																																									
+1568830	0	33	RCPT	A	INC64093	OTH	Nance	James			Rancho Dominguez	CA	90220-6807	Southwest Port Services, Inc.	TRUCKING			10/19/2010 12:00:00 AM		16	192																																									
+1571384	0	12	RCPT	F401A	IDT621	COM	New Majority California PAC				San Rafael	CA	94901					10/21/2010 12:00:00 AM		600	1200			992074																		Ron Roberts				CSU		OTH	San Diego County	4					S							
+1573598	0	78	RCPT	C	NON979	PTY	CA Democratic Party				Sacramento	CA	95811					10/19/2010 12:00:00 AM		9000	9000		Polling	741666																																						
+1572725	0	12	RCPT	A	INC365	IND	Uccelli	Paula			Redwood City	CA	94063-	Pete's Harbor	Owner			10/19/2010 12:00:00 AM		1000	1000																																									
+1522376	2	299	RCPT	A	C4325880	OTH	J. Troost Dairy, LP				Chowchilla	CA	93610			N		9/27/2010 12:00:00 AM		500	500																																									
+1461276	1	114	RCPT	A	INC575	OTH	AFSCME Local 444 (intermediary for unitemized member dues)				Oakland	CA	94606					8/14/2009 12:00:00 AM		373.86	4468.94																																									
+1572890	0	23	RCPT	F401A	INC1673	COM	No on Measure B				Sacramento	CA	95841					10/20/2010 12:00:00 AM		500	500			1330862																												no on B Utility rate Roll Back	B	Sacramento	O							
+1572327	0	8	RCPT	A	C7191817	OTH	Experian				Costa Mesa	CA	92626				X	11/24/2010 12:00:00 AM	10/30/2008 12:00:00 AM	2200	2200											Pedro Nava 2008				Long Beach	CA	90807																								1293442
+1573305	0	8002	RCPT	A	A27001	IND	HAGERMAN	BRIAN			Santa Ana	CA	92703	Orange County	Deputy Sheriff			8/6/2010 12:00:00 AM		9.50	209	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1573305	0	15727	RCPT	A	A41156	IND	PHILLIPS	ALAN			Santa Ana	CA	92703	Orange County	Deputy Sheriff			11/26/2010 12:00:00 AM		14.50	319	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1573305	0	17398	RCPT	A	A26020	IND	SALGADO	MARC			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/23/2010 12:00:00 AM		9.50	209	0										Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1369259	4	3358	RCPT	A	INC100822	IND	Schuffert	Eloise			Canoga Park	CA	91306-2038	n/a	Retired			10/11/2008 12:00:00 AM		100	100																																									
+1364931	5	24130	RCPT	A	INC89495	IND	Soohoo	Merrilee	Mrs.		San Ramon	CA	94582-5256	n/a	Homemaker			9/29/2008 12:00:00 AM		100	150	0																																								
+1396394	3	629	RCPT	A	INC119619	IND	Finau	Mary	Mrs.		Burlingame	CA	94010-6233	Ilisapeti Investments LLC	Investor			10/20/2008 12:00:00 AM		250	2050																																									
+1432437	1	236	RCPT	A	INC19184	OTH	Psychiatric Solutions Inc.				Franklin	TN	37067					6/19/2009 12:00:00 AM		6000	6000																																									
+1599807	0	627	RCPT	A	INC116859	IND	GARCIA	FRANK R.			SACRAMENTO	CA	95828	AIRCO MECH	PLUMBER/PIPEFITTER			3/11/2011 12:00:00 AM		20.58	118.74																																									
+1364931	5	12931	RCPT	A	INC55866	IND	Spears	Robyn	Mrs.		Redding	CA	96001-2220	n/a	Homemaker			8/31/2008 12:00:00 AM		180	180	0																																								
+1396394	3	9719	RCPT	A	INC117421	IND	Hatcher	Scott	Mr.		Ventura	CA	93004	Ojai Valley Inn & Spa	Mechanic			10/29/2008 12:00:00 AM		50	100																																									
+1558889	2	38	RCPT	A	INC1737	OTH	Pavement Recycling Systems, Inc.				Mira Loma	CA	91752					11/22/2010 12:00:00 AM		420	420																																				INC1737					
+1364931	5	6031	RCPT	A	INC42690	IND	Anvick	Victor	Mr.		Acton	CA	93510-1889	ATIS Group LLC	Aviation Tax Specialist			8/17/2008 12:00:00 AM		2000	2000	0																																								
+1364931	5	6831	RCPT	A	INC46360	IND	Alires	Billye	Mrs.		Escondido	CA	92029-5313	n/a	Homemaker			8/19/2008 12:00:00 AM		500	500	0																																								
+1603589	0	146	RCPT	A	INC36882	IND	Franks	James D.			Garden Grove	CA	92840	Garden Grove Police Dept	Peace Officer			1/26/2011 12:00:00 AM		10	130																																									
+1396394	3	8486	RCPT	A	INC121059	IND	Hardy	Lani			Kimberly	ID	83341	Pheasant Cove Dental	Dental assistant			10/28/2008 12:00:00 AM		500	500																																									
+1606230	0	1698	RCPT	A	INC320474	IND	Hale	Brent			Santa Monica	CA	90403-4906	Self Employed - no business name	Dentist			4/29/2011 12:00:00 AM		26.67	186.67																																									
+1601436	0	664	RCPT	A	INC379364	IND	WRIGHT	THOMAS			LA MESA	CA	91942	FARMERS GROUP INC	AGENT			4/28/2011 12:00:00 AM		100	600																																									
+1607831	0	1	RCPT	A	1	IND	Robinson	Paxton			Orlando	FL	328224015	Sr IT QA Analyst	Curascript			2/10/2011 12:00:00 AM		250	250																																									
+1602272	0	26	RCPT	A	RCPTA000000000813935	OTH	Hawaiian Gardens Casino Operating Account				Hawaiian Gardens	CA	90716					6/30/2011 12:00:00 AM		6500	6500																																									
+1604506	0	430	RCPT	A	INC4811	IND	White-Cater	Tina			Los Angeles	CA	90043	Time Warner Cable	Trainer I			5/18/2011 12:00:00 AM		25	350																																									
+1604983	0	1	RCPT	A	A13	SCC	California Medical Association Small Contributor Committee				Sacramento	CA	95814					3/28/2011 12:00:00 AM		7800	7800	0		1231460																																						
+1603570	0	26	RCPT	A	IDT38	OTH	Techtrans				Los Angeles	CA	90045				X	4/15/2011 12:00:00 AM	4/12/2011 12:00:00 AM	249	249											Friends of Jerry Amante				Rancho Sta Margarita	CA	92688																								1256105
+1606682	0	352	RCPT	A	C3232279	IND	Davis	Claytie			Oakland	CA	94618-2530	UC BERKELEY	PSYCHOLOGIST			6/13/2011 12:00:00 AM		100	100																																									
+1609314	0	565	RCPT	A	INC6268	IND	BACHMANN	ERIC			San Jose	CA	95112	City of San Jose	Police Officer			3/31/2011 12:00:00 AM		20	220																																									
+1608159	0	7	RCPT	A	IDT5	COM	EdVoice for the Kids PAC				Sacramento	CA	95814				X	4/12/2011 12:00:00 AM	3/24/2011 12:00:00 AM	1000	1000			1243091								Harkey for Assembly 2012				Rancho Sta Margarita	CA	92688																								1333821
+1608604	0	76	RCPT	A	INC114	IND	Zoller	Lois			Chicago	IL	60610	Self	Investor			2/2/2011 12:00:00 AM		100	100																																									
+1609314	0	1880	RCPT	A	INC13365	IND	CERVANTES	MATIAS			San Jose	CA	95112	City of San Jose	Police Officer			3/10/2011 12:00:00 AM		20	220																																									
+1606853	0	2191	RCPT	A	3667261	IND	Littell	Terry			Lisle	IL	60532	Hdr Inc	Sr. Project Manager Architect			2/4/2011 12:00:00 AM		0.26	0.78	0																																								
+1606711	0	103	RCPT	A	RCPTA000000000805188	OTH	Verizon				Sacramento	CA	95814					5/11/2011 12:00:00 AM		3900	3900																																									
+1618238	0	111	RCPT	A	INC2617	OTH	Longbow, LLC				Bakersfield	CA	93301					8/8/2011 12:00:00 AM		347	347																																									
+1363543	1	62	RCPT	F401A	62	RCP	FRIENDS OF DEE McLEAN				IMPERIAL BEACH	CA	91932					9/11/2008 12:00:00 AM		485	485			1309930																		McLEAN	DEE			OTH	SCHOOL BOARD MEMBER	OTH	SOUTH BAY UNION SCHOOL DISTRICT						S		62					
+1602275	1	104	RCPT	A	RCPTA000000000810287	OTH	Metropolitan Pacific Capital Inc				Santa Monica	CA	90401					6/20/2011 12:00:00 AM		250	250																																									
+1609314	0	2666	RCPT	A	INC16213	IND	DE LA CRUZ	MARIE			San Jose	CA	95112	City of San Jose	Police Officer			6/3/2011 12:00:00 AM		20	220																																									
+1609203	0	359	RCPT	A	INC59	IND	Levensohn	Rita			San Francisco	CA	94109	n/a	Retired			3/3/2011 12:00:00 AM		500	500																																									
+1609314	0	8910	RCPT	A	INC12999	IND	PALMER	JUSTIN			San Jose	CA	95112	City of San Jose	Police Officer			3/10/2011 12:00:00 AM		20	220																																									
+1622627	0	22	RCPT	A	INC317	IND	Domanchuk	Paul			Carlotta	CA	95528	Self employed (same name)	Optometrist			8/13/2011 12:00:00 AM		100	100																																									
+1622632	0	730	RCPT	A	INC210640	OTH	Heidi L. Schauffele, O.D.				Antelope	CA	95843-5025					7/12/2011 12:00:00 AM		13.33	116.64																																									
+1629142	0	4	RCPT	A	INC10671	OTH	Anthony's Seafood Group				San Diego	CA	91910					10/25/2011 12:00:00 AM		208.33	2499.96																																				INC10671					
+1622194	0	588	RCPT	A	11649805	IND	CHAVES	SARA			SAN RAMON	CA	94583-2565	AT&T Services, Inc.	SR TECHNICAL DIRECTOR			9/6/2011 12:00:00 AM		7.50	127.50	0																																								
+1600527	3	1369	RCPT	A	INC2589	IND	Smith	Ken			Lake Forest	CA	92630	Independent All State or State Farm Insurance Agent	Insurance Agent			6/15/2011 12:00:00 AM		100	1000																																									
+1622194	0	2751	RCPT	A	11585991	IND	PARSONS	JOSEPH			DALLAS	TX	75248-1537	AT&T Management Services, L.P.	EXEC DIR SHAREOWNER RELATIONS			8/5/2011 12:00:00 AM		8	120	0																																								
+1622632	0	1879	RCPT	A	INC210424	IND	Wu	Raymond		O. D.	Covina	CA	91723	Raymond Wu, O.D.	Optometrist			7/12/2011 12:00:00 AM		16.67	149.99																																									
+1622904	0	119	RCPT	A	A-C62606	IND	Areias	John Rusty			Sacramento	CA	95814-2739	Califronia Strategies	Consultant			9/30/2011 12:00:00 AM		1000	1000																																									
+1600527	2	83	RCPT	A	INC2267	IND	Baker	Steve			Simi Valley	CA	93065	Independent All State or State Farm Insurance Agent	Insurance Agent			6/15/2011 12:00:00 AM		50	300																																									
+1600527	3	487	RCPT	A	INC2374	IND	Foley	Mike			San Diego	CA	92117	Independent All State or State Farm Insurance Agent	Insurance Agent			6/15/2011 12:00:00 AM		50	300																																									
+1617540	1	815	RCPT	A	INC6093	IND	Klein	Michael			Sunnyvale	CA	94086	Independent All State or State Farm Insurance Agent	Insurance Agent			7/15/2011 12:00:00 AM		125	1625																																									
+1630472	0	287	RCPT	A	CS120110927-93	IND	Serjak	Mark			Westlake Village	CA	91362-5413	Verizon California Inc.	DIR-NETWORK OPERATIONS			9/30/2011 12:00:00 AM		35	910																																									
+1629547	0	29	RCPT	C	NON845	OTH	California Society of Industrial Medicine & Surgery				Sacramento	CA	95814					9/15/2011 12:00:00 AM		336.35	1685.42		Accounting Services																																	X	NON845					
+1634177	0	2083	RCPT	A	INC57342	IND	Sampson	Christine			Pleasant Hill	CA	94523	Independent State Farm or All State Insurance Agent	Insurance Agent			9/15/2011 12:00:00 AM		15	180																																									
+1629218	0	816	RCPT	A	INC395832	IND	KRAMER	RONALD A			SIMI VALLEY	CA	93063	FARMERS GROUP INC	AGENT			10/19/2011 12:00:00 AM		15	180																																									
+1633804	0	632	RCPT	A	INC42124	OTH	SAN MATEO CNTY FF 2400				SAN MATEO	CA	94402					10/27/2011 12:00:00 AM		56.57	575.33																																				INC42124					
+1629251	0	1193	RCPT	A	INC31319	IND	Mcdonald III	Thomas			Marina Dl Rey	CA	90292-6861	Raytheon Company	Director II-Program Management			10/20/2011 12:00:00 AM		7.61	196.51																																									
+1629372	0	56	RCPT	A	34201156	IND	LOGUE	WILLIAM			GERMANTOWN	TN	38139	FedEx Corporation	PRESIDENT / CEO			12/15/2011 12:00:00 AM		20.96	375	0																																								
+1631089	0	194	RCPT	A	A25523-I	IND	Kim*	Brian	Dr.		Manhattan Beach	CA	90266	CAA Medical Group  Inc.	Anesthesiologist		I	10/14/2011 12:00:00 AM		25	300											California Anesthesia Associates Medical Group  Inc.				San Diego	CA	92123																								
+1636832	0	430	RCPT	A	INC2238	IND	Filandrinos	Gregory P.			San Diego	CA	92130	Adelphi Surgical	President/CEO			12/6/2011 12:00:00 AM		150	150																																									
+1571109	2	532	RCPT	A	INC5682	IND	Oules	Richard			Granite Bay	CA	95746	US Attorney Gen	Law Enforcement			10/28/2010 12:00:00 AM		50	150																																									
+1635800	0	5094	RCPT	A	11878791	IND	RUMPH	LETICIA			LA MESA	CA	91942-5505	Pacific Bell Telephone Company	MGR OSP ENGRG DESIGN (PB)			12/21/2011 12:00:00 AM		8	192	0																																								
+1636741	0	67	RCPT	A	INC5499	IND	Risley	Brett			Napa	CA	94559	Bell Products	Building Trades Journeyperson			10/26/2011 12:00:00 AM		0.08	5035.35																																				INC5499					
+1634812	1	343	RCPT	A	INC10354	IND	Cullen	Zachery			Palmdale	CA	93551	Independent All State Agent or State Farm Insurance Agent	Insurance Agent			11/29/2011 12:00:00 AM		100	100																																									
+1637133	0	3603	RCPT	A	INC19812	IND	Voet	David			Los Angeles	CA	90013	State of California	Attorney			10/25/2011 12:00:00 AM		10	110																																									
+1636911	0	599	RCPT	A	IDT182	COM	Western United Dairymen STPAC				Modesto	CA	95354				X	12/6/2011 12:00:00 AM	6/3/2011 12:00:00 AM	500	2000											Ornellas for Supervisor 2008				Tracy	CA	95304																								1301695
+1572627	1	6	RCPT	A	C1290	COM	CA Academy of Eye Physicians & Surgeons PAC				San Francisco	CA	94105					10/19/2010 12:00:00 AM		1000	1000			980331																																						
+1637338	0	61	RCPT	A	A-C65083	COM	CAPG Physician Group PAC				Los Angeles	CA	90017-2658					12/8/2011 12:00:00 AM		16250	68500			990463																																						
+1637622	0	1387	RCPT	A	A2774-i	IND	SKOCZULEK	TODD			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/1/2011 12:00:00 AM	12/31/2011 12:00:00 AM	85.50	171											ROBERTSON				Santa Ana	CA	92703																								
+1637563	0	250	RCPT	A	C4380166	IND	Swanson	Mark A			Clovis	CA	93611	A-C Electric Co	Electrical Worker	N		9/28/2011 12:00:00 AM		21.80	145.45																																									
+1647138	0	9	RCPT	A	A-C2684	OTH	Yokohl Ranch				La Mesa	CA	91942-8245					3/1/2012 12:00:00 AM		1500	1500																																									
+1646774	0	422	RCPT	A	C3665580	IND	ELIZONDO	VIRGINIA			BERKELEY	CA	94708	OFFICE OF THE CITY ATTORNEY, CITY AND COUNTY OF SA	ATTORNEY			2/9/2012 12:00:00 AM		100	100																																									
+1647010	0	257	RCPT	A	INC80905	OTH	Prodesse Property Group				Foster City	CA	94404					2/2/2012 12:00:00 AM		1	1995																																									
+1645835	0	269	RCPT	A	A-C38090	IND	Palladino	John			San Mateo	CA	94403-1167	Link-Allen Benefit Group	Insurance Agent/Broker			2/15/2012 12:00:00 AM		85	255																																									
+1646644	0	21	RCPT	A	INC299	COM	FarmPAC				Sacramento	CA	95833					3/14/2012 12:00:00 AM		1300	1300			760960																																						
+1633045	1	48	RCPT	A	48	IND	Zamora	Ana			Oakland	CA	94607	Death Penalty Focus	Program Director			11/7/2011 12:00:00 AM		25	75																																				48					
+1650719	0	4983	RCPT	A	INC335352	IND	Lee	Jinil			Ventura	CA	93003-6193	Self Employed - no business name	Dentist			8/24/2011 12:00:00 AM		10	120	0																																								
+1650719	0	9855	RCPT	A	INC345333	IND	Alikhanian	Vigen			Burbank	CA	91505-2118	Self Employed - no business name	Dentist			11/9/2011 12:00:00 AM		13.33	114.67	0																																								
+1650600	0	4738	RCPT	A	5800523	IND	Miller	Richard			Charlotte	NC	28210	HDR INC	Natl Client Dir, Hydropower			9/16/2011 12:00:00 AM		0.14	6.96	0																																								
+1647713	0	177	RCPT	A	A2499-I	IND	Joplin	Linda C.			Davis	CA	95616	N.A.	Retired		I	2/5/2012 12:00:00 AM		25	275											Actblue				Cambridge	MA	02138																								
+1647713	0	276	RCPT	A	A2665	IND	Pillsbury	Sarah K.			Venice	CA	90291	Sanford-Pillsbury Productions	Film Producer			3/12/2012 12:00:00 AM		500	500																																									
+1628648	2	33	RCPT	A	INC2525	OTH	CATS 4U Inc.				Healdsburg	CA	95448					11/29/2011 12:00:00 AM		256.54	256.54																																				INC2525					
+1662894	0	3	RCPT	A	A-C845	COM	Ventura County Deputy Sheriffs' Association				Ventura	CA	93003-5342				I	2/14/2012 12:00:00 AM		2057.37	16007.91		COM	881276								Vcdsa				Ventura	CA	93003-5342	Sheriff & D.A.	Labor Union																						
+1661733	0	67	RCPT	A	INC713	IND	Klein	Kate Monico			San Francisco	CA	94110	SFDPH	manager			5/11/2012 12:00:00 AM		100	100																																									
+1662917	0	40	RCPT	A	INC172	IND	Kleifield	Steven J.			Los Angeles	CA	90048	Los Angeles Superior Court	Judge			3/25/2012 12:00:00 AM		250	250																																									
+1657832	0	9	RCPT	A	INC10	OTH	Anthem Blue Cross				Sacramento	CA	95818					3/7/2012 12:00:00 AM		67440	67440																																									
+1663983	0	54	RCPT	A	INC3859	OTH	Electrical Workers Local #569 (Intermediary for Unitemized Union Member Contributions)				San Diego	CA	92103-1995					3/27/2012 12:00:00 AM		385.50	1671.77																																									
+1664308	0	80	RCPT	A	INC640	IND	Ball	Timothy M.			Mailbu	CA	90265	NMS Properties	Archietect			4/25/2012 12:00:00 AM		300	300																																									
+1663521	0	37	RCPT	A	INC2848	IND	DiNicola	Carl			Irvine	CA	92612-1007	Ernst & Young, LLP	Partner/Principal			3/30/2012 12:00:00 AM		750	750																																									
+1663450	0	1492	RCPT	A	C4182245	IND	SEAY	KATHERINE			ENCINO	CA	91436	WARNER BROS. PICTURES	LAWYER			5/18/2012 12:00:00 AM		100	175																																									
+1635800	1	4003	RCPT	A	11716342	IND	MOULTON	TOM			EL DORADO HILLS	CA	95762-7554	AT&T Mobility Services LLC	MANAGER OPERATIONS			10/6/2011 12:00:00 AM		8	152	0																																								
+1635800	1	319	RCPT	A	11714654	IND	BANNON	EVELYN			PALMDALE	CA	93551-3176	AT&T Services, Inc.	CLIENT SUPPORT SPECIALIST-CA			10/6/2011 12:00:00 AM		6	114	0																																								
+1675409	0	768	RCPT	A	6469293	IND	Williams	George Eric			Sunset Beach	NC	28468	HDR INC	Office Manager VP			5/25/2012 12:00:00 AM		0.40	11.86	0																																								
+1662855	1	90	RCPT	A	A7137	SCC	Laborers Local Union No. 270 Political Action Committee				Sacramento	CA	95814					5/1/2012 12:00:00 AM		2000	3500			901351																																						
+1675343	0	9	RCPT	A	INC311	OTH	AFSCME Local 257 (intermediary for unitemized member dues)				Oakland	CA	94606					6/18/2012 12:00:00 AM		325.34	1624.88																																									
+1674180	0	7	RCPT	A	7	OTH	TWU Local 200 Members				San Francisco	CA	94115				I	5/2/2012 12:00:00 AM		49.60	297.60											(Intermediary for members - No indiv. over $100 ytd)																														
+1679451	0	29	RCPT	A	INC516	COM	Personal Insurance Federation of CA Agents & Employees PAC				Sacramento	CA	95814					6/4/2012 12:00:00 AM		1000	1000			1338487																																						
+1663610	1	94	RCPT	A	IDT32320	IND	Esquibel	Abe			Claremont	CA	91711	Kaiser Permanente	Social Worker		I	5/18/2012 12:00:00 AM		15	100											CA League of Conservation Voters				Oakland	CA	94612																								
+1680515	0	7	RCPT	A	EXP1720	COM	Assn. of CA Life & Health Insurance Companies PAC				Sacramento	CA	95814				R	2/22/2012 12:00:00 AM		-1600	-1600			761012																																						
+1637511	1	246	RCPT	A	C2835	IND	Solomon	Amy			Los Angeles	CA	90017	Girardi/Keese	Attorney			7/25/2011 12:00:00 AM		2500	2500																																									
+1680058	0	182	RCPT	A	INC799	IND	Powell	William W.			Manhattan Beach	CA	90266	N/A	Retired			5/22/2012 12:00:00 AM		100	200																																									
+1680777	0	19	RCPT	A	C673	COM	CCPOA PAC				Sacramento	CA	95814					5/21/2012 12:00:00 AM		3900	5200			830349																																						
+1693841	0	2549	RCPT	A	6642072	IND	Edgerton	Robert			Folsom	CA	95630	HDR INC	Env Sciences Sec Mgr			8/16/2012 12:00:00 AM		0.55	11.68	0																																								
+1666055	2	26	RCPT	A	26	IND	Martin	Armen			Glendale	CA	91206	Of Counsel at Steptoe & Johnson LLP	attorney			4/13/2012 12:00:00 AM		200	200																																									
+1693841	0	4294	RCPT	A	6772109	IND	Korth	Alan			VALENCIA	CA	91355	HDR INC	Managing Principal, SVP			9/28/2012 12:00:00 AM		0.85	19.66	0																																								
+1692871	0	108	RCPT	A	C4500442	IND	AVALOS	JOHN			SAN FRANCISCO	CA	94112	CITY AND COUNTY OF SF	MEMBER, BOARD OF SUPERVISORS			8/10/2012 12:00:00 AM		100	100																																									
+1693402	0	46	RCPT	A	INC869	OTH	Intuit				San Diego	CA	92129					7/10/2012 12:00:00 AM		1500	1500																																									
+1692933	0	272	RCPT	A	A102357-I	IND	ONEAL	BRIAN			CONCORD	CA	94519	JURY DUTY			I	7/24/2012 12:00:00 AM		14.40	214.60											U.A. LOCAL 342				CONCORD	CA	94518																								
+1679850	1	550	RCPT	A	C1119	IND	Ring	Lawrence			Auburn	CA	95603	Lawrence Ring	Attorney			5/19/2012 12:00:00 AM		250	250																																									
+1693074	0	8	RCPT	A	10	IND	Shroyer	Toni			Novato	CA	94947	Frank Howard Allen	real estate agent			9/15/2012 12:00:00 AM		500	500																																									
+1693188	0	1002	RCPT	A	A2866-I	IND	FIMON	DAVID			RIVERSIDE	CA	92585	CA DEPT OF FORESTRY	FIREFIGHTER I			7/1/2012 12:00:00 AM	9/30/2012 12:00:00 AM	54	106											CDF Firefighters IC Actives Supplimental Contributions				Sacramento	CA	95814																								
+1693211	0	660	RCPT	A	C4414614	IND	Folla	Bill			Petaluma	CA	94954-	J.W. McClenahan Co.	BTJP	N		8/30/2012 12:00:00 AM		14	105.65																																									
+1679419	1	31	RCPT	A	INC370	SCC	United Domestic Workers of America Action Fund				San Diego	CA	92103					5/24/2012 12:00:00 AM		3900	3900			1302384																																						
+1695050	0	168	RCPT	A	A-C83625	COM	Wine Institute California PAC				Sacramento	CA	95814-4602					8/2/2012 12:00:00 AM		50000	73500			1277874																																						
+1694409	0	297	RCPT	A	A5075	IND	Washburn	Rodney			Atherton	CA	94027	N.A.	Retired			8/21/2012 12:00:00 AM		150	800																																									
+1694944	0	53	RCPT	A	C4407863	SCC	California Association of Psychiatric Technicians, Inc SCC				Sacramento	CA	95811-7138			N		8/10/2012 12:00:00 AM		1000	3000			882070																																						
+1694275	0	449	RCPT	A	INC15474	IND	Gervasi	Tony			Placerville	CA	95667	Independent State Farm or Allstate Agent	Insurance Agent			8/16/2012 12:00:00 AM		50	200																																									
+1693976	0	426	RCPT	A	INC10709	IND	Granados	Edgar			San Diego	CA	92123	STEINY AND COMPANY INC.	Electrician			9/17/2012 12:00:00 AM		5.10	122.20																																									
+1694725	0	56	RCPT	A	INC48979	OTH	Evans Hotels				San Diego	CA	92109					7/31/2012 12:00:00 AM		106.60	106.60																																				INC48979					
+1694629	0	225	RCPT	A	INC435248	IND	HACKER	KEN			WALNUT CREEK	CA	94596	FARMERS GROUP INC	AGENT			7/23/2012 12:00:00 AM		25	150																																									
+1694994	1	40	RCPT	A	INC489	SCC	CDF Firefighters, Small Contributor PAC				Sacramento	CA	95811					9/21/2012 12:00:00 AM		7800	15600			790318																																						
+1695160	0	204	RCPT	I	IDT387	IND	Houser	Jan		MD	Riverbank	CA	95367	TPMG	Physician			6/8/2010 12:00:00 AM		99	198																																									
+1695296	1	1236	RCPT	A	C8122	IND	Crawford	Jeffrey A			Santa Clarita	CA	91387	LA DWP	Jry Lnmn/Spl Supv			8/10/2012 12:00:00 AM		102.50	205																																			X	C8122					
+1695464	0	129	RCPT	A	A5798-I	IND	Shankar	Cheri			Encino	CA	91316	N.A.	Not Employed		I	9/23/2012 12:00:00 AM		500	500											Actblue				Cambridge	MA	02138																								
+1695511	0	4	RCPT	A	INC256	COM	Assn of Orange County Deputy Sheriffs PAC				Santa Ana	CA	92703-3705					9/6/2012 12:00:00 AM		500	1500			782021																																						
+1693266	1	17	RCPT	A	A1438	IND	Carrillo	Nathalia			Salinas	CA	93901	L & G Law Firm	Consultant			7/19/2012 12:00:00 AM		40	100																																									
+1693402	1	110	RCPT	A	INC1022	IND	Upadhyayula	Ramesh			Riverside	CA	92506	Desert Hospital Pharmacy	Pharmacist			8/25/2012 12:00:00 AM		200	200																																									
+1701285	0	96	RCPT	F496P3	C120	IND	Friedman	Julie			Malibu	CA	90265-0000	UCLA	Health Educator 			10/18/2012 12:00:00 AM		100	100																																									
+1693188	1	298	RCPT	A	A2152-I	IND	BLAKEWAY	ERIK			SOULSBYVILLE	CA	95372	CA DEPT OF FORESTRY	FIRE APPARATUS ENGINEER			7/1/2012 12:00:00 AM	9/30/2012 12:00:00 AM	54	142											CDF Firefighters IC Actives Supplimental Contributions				Sacramento	CA	95814																								
+1701706	0	4	RCPT	A	A29393-I	OTH	Rose Arbor MHP - 3967				Chula Vista	CA	91910				I	10/12/2012 12:00:00 AM		524	524											WESTERN MANUFACTURED HOUSING COMMUNITIES ASSOCIATION				Sacramento	CA	95814																								
+1713203	0	18	RCPT	F496P3	C2929863	COM	Sheet Metal Workers' International Association Political Action League				Washington	DC	20006					10/29/2012 12:00:00 AM		2500	2500			890947																																					0	
+1704716	0	2	RCPT	A	2	OTH	Asian Pacific Environmental Network (APEN) Action				Oakland	CA	94607					10/19/2012 12:00:00 AM		70000	70000																																									
+1705381	0	308	RCPT	F496P3	INC76861	IND	Vu	Tina			Fremont	CA	94539	Independent State Farm or Allstate Agent	Insurance Agent			10/21/2012 12:00:00 AM		15	135																																									
+1695306	3	187	RCPT	A	IDT188	IND	Metz	David			Berkeley	CA	94702	Fairbank, Maslin, Maullin, Metz & Associates	Pollster		I	7/23/2012 12:00:00 AM		250	250											Actblue				Cambridge	MA	02138																								
+1697547	1	56	RCPT	F496P3	INC35917	IND	Patane	Alfred	Mr		Lodi	CA	95242-2831	N/A	Retired Rancher			10/10/2012 12:00:00 AM		110	110																																									
+1704568	0	134	RCPT	A	C2181	IND	Laughlin	John			River Falls	WI	54022	John Laughlin	Dentist			10/2/2012 12:00:00 AM		125	125																																									
+1702282	3	210	RCPT	A	INC76666	IND	Eaton	Kristen			Oakdale	CA	95361	Independent State Farm or Allstate Agent	Insurance Agent			10/4/2012 12:00:00 AM		15	135																																									
+1704615	1	36	RCPT	A	IDT7798	IND	Pryor	Robert			San Dimas	CA	91773	Retired	Retired		I	9/17/2012 12:00:00 AM		20	180											Los Angeles County Professional Peace Officers Association				San Dimas	CA	91773																								
+1663620	4	26	RCPT	A	IDT700	IND	Cristobal	Virgilio			Emeryville	CA	94608	Cristobal Associates	Principal		I	5/9/2012 12:00:00 AM		100	100											ActBlue				Cambridge	MA	02138																								
+1703368	1	78	RCPT	A	92952	OTH	Marion Ancillary Services Llc				Marion	OH	43302					10/4/2012 12:00:00 AM		37.50	125																																									
+1738068	0	1727	RCPT	A	INC397490	IND	Liao	Ruey Y	Dr.		San Gabriel	CA	91776-3930	Self Employed - no business name	Dentist			10/24/2012 12:00:00 AM		10.91	122.42																																									
+1740255	0	1366	RCPT	A	INC150409	IND	Luc	Nhon Vinh			San Jose	CA	95127-	ACCO Engineered Systems	Apprentice			10/1/2012 12:00:00 AM		8.70	103.32																																									
+1738197	0	114	RCPT	C	C4420551	PTY	STANISLAUS COUNTY REPUBLICAN PARTY				MODESTO	CA	95353			N		10/23/2012 12:00:00 AM		1866.72	304227.78		PAYMENT TO STAFFER	741618																																						
+1762368	0	54	RCPT	A	C7968959	IND	CAEN	ANN			SAN FRANCISCO	CA	94115	NONE	RETIRED			2/28/2013 12:00:00 AM		500	500																																									
+1647457	2	112	RCPT	A	INC6462	IND	Marseglia	Frank C.			Union City	CA	94587	Southland Industries	B/T Journey			2/3/2012 12:00:00 AM		289.32	994.25																																									
+1741002	0	177	RCPT	C	NON1099	OTH	Service Employees International Union Local 99				Los Angeles	CA	90005					10/25/2012 12:00:00 AM		325	129564.04		Design for Mailer																																							
+1746252	0	177	RCPT	A	A7140-T	IND	Huebsch	Thelma L.			Monterey Park	CA	91754	Lager & Associates	Businessperson		X	12/31/2012 12:00:00 AM	9/18/2009 12:00:00 AM	200	200											Mike Eng for Assembly 2010				Los Angeles	CA	90048																								1313549
+1774357	0	2850	RCPT	A	C4492160	IND	Beaumont	Richard			Benicia	CA	94510	Broadway Mechanical Contractors	BTJR	N		2/1/2013 12:00:00 AM		24	137.49																																									
+1664216	1	20	RCPT	A	A629	COM	Faculty for Our University's Future  a committee sponsored by the CA Faculty Association				Los Angeles	CA	90045					5/19/2012 12:00:00 AM		3900	3900			850007																																						
+1766489	0	131	RCPT	A	C7973548	IND	HUR	WON			LOS ANGELES	CA	90017	LAW OFFICES OF WON Y. HUR	ATTORNEY			4/26/2013 12:00:00 AM		100	100																																									
+1774957	0	2	RCPT	A	INC39	COM	California Dental Association Independent Expenditure PAC				Sacramento	CA	95814					2/22/2013 12:00:00 AM		50000	50000			1233321																																						
+1775161	0	16	RCPT	A	INC1451	OTH	MacKay & Somps Civil Engineers				Pleasanton	CA	94588					3/26/2013 12:00:00 AM		90	360																																									
+1766847	1	1	RCPT	A	1	OTH	National Women's Political Caucus Ways & Means Committee				Fresno	CA	93728					3/5/2013 12:00:00 AM		50	50																																				1					
+1739416	1	37	RCPT	A	INC1040	COM	Local Societies of the California Optometric Assoc. PAC				Sacramento	CA	95814					10/30/2012 12:00:00 AM		125	625			950393																																						
+1771725	2	59	RCPT	F496P3	INC12744	OTH	Coldwell Banker - Beverly Hills North				Beverly Hills	CA	90210					2/28/2013 12:00:00 AM		103.60																																										
+1781884	0	64	RCPT	A	INC16182	IND	HALE	RHEA C			LA HABRA	CA	906315022	NONE	RETIRED			6/20/2013 12:00:00 AM		140	140																																									
+1778060	0	1649	RCPT	A	C8081888	IND	VAETH	CHRIS			WASHINGTON	DC	20002	CONSUMER FINANCIAL PROTECTION BUREAU	GOVERNMENT			5/5/2013 12:00:00 AM		200	200																																									
+1741080	1	24	RCPT	A	INC852	IND	STAUBLY	ANDREW			LOS ANGELES	CA	90025-5193	BCBG MAZ AZRIA GROUP	IT			10/26/2012 12:00:00 AM		100	100																																				INC852					
+1783639	0	346	RCPT	A	A2719-I	IND	DANAHER	TIMOTHY			Santa Ana	CA	92703	Orange County	Deputy Sheriff			1/1/2013 12:00:00 AM	6/30/2013 12:00:00 AM	117.50	117.50											Association of Orange County Deputy Sheriffs				Santa Ana	CA	92703																								
+1782569	0	108	RCPT	A	INC154	SCC	California Professional Firefighters PAC				Sacramento	CA	95833					5/21/2013 12:00:00 AM		1000	2000			744058																																						
+1793286	0	75	RCPT	A	INC111678	IND	Donnelly	Ward			San Francisco	CA	94112	Ward Donnelly	Property Management			7/2/2013 12:00:00 AM		100	110																																									
+1775853	1	11	RCPT	A	INC296237	IND	Bagdasarian	Boris			Glendale	CA	91206-4073	Boris Bagdasarian, MD	Physician			4/3/2013 12:00:00 AM		150	150																																									
+1797123	0	176	RCPT	A	209	IND	WONG	CLIFTON			SAN FRANCISCO	CA	94116	CITY OF SAN FRANCISCO	SENIOR ENGINEER			9/30/2013 12:00:00 AM		32.50	100																																									
+1781885	1	245	RCPT	A	INC105769	IND	Hess	Carlene			Elk Grove	CA	95624	Carlene Hess	Property Management			4/17/2013 12:00:00 AM		0.40	160.40																																									
+1776734	1	44	RCPT	A	INC8860	IND	PASSO	WILLIAM			NEWPORT BEACH	CA	92660	PASSCO COMPANIES, LLC	OWNER & CEO			3/19/2013 12:00:00 AM		2500	5000																																				INC8860					
+1695110	2	57	RCPT	A	IDT33301	IND	Eiselman	Cheryl			Danville	CA	94506	None	Retired		I	8/20/2012 12:00:00 AM		50	150											CA League of Conservation Voters				Oakland	CA	94612																								
+1800143	0	5221	RCPT	A	INC455314	IND	Huang	Raymond S	Dr.		San Jose	CA	95112-6215	Self Employed - no business name	Dentist			9/25/2013 12:00:00 AM		10	100																																									
+1663740	2	10	RCPT	A	C4390761	COM	California Credit Union League PAC				Ontario	CA	91761					4/2/2012 12:00:00 AM		1500	1500			760225																																						
+1678153	2	5	RCPT	A	IDT43731	IND	DYBBRO	PAUL E.		MD	BURLINGAME	CA	94010	The Permanente Med Group	Physician		I	6/22/2012 12:00:00 AM		41.66	249.96											The Permanente Medical Group				Oakland	CA	94612																								
+1704694	2	108	RCPT	A	A-C8740	IND	Lavine	Marc			Sunnyvale	CA	94086-4893	Brocade Communications Systems, Inc.	Software Engineer			10/3/2012 12:00:00 AM		50	135																																									
+1812040	0	8	RCPT	A	A57	OTH	Frederick W. Noble and affiliated entities				Palm Springs	CA	92262					9/19/2013 12:00:00 AM		250	250																																									
+1809812	0	675	RCPT	A	INC287	IND	Snyder	Donald L.			Browns Valley	CA	95918	Donald L. Snyder, MD	Emergency Physician			8/19/2013 12:00:00 AM		150	150																																				INC287					
+1813066	0	4026	RCPT	A	INC518425	IND	MELIN	JAMES A			SAN JOSE	CA	95126	FARMERS GROUP INC	AGENT			12/17/2013 12:00:00 AM		15	150																																									
+1809154	0	55	RCPT	A	A157-I	IND	BENDER	JOSHUA R			SANTA ANA	CA	92705	ORANGE COUNTY	FIREFIGHTER			7/1/2013 12:00:00 AM	12/31/2013 12:00:00 AM	60	125											Orange County Professional Firefighters Association				Santa Ana	CA	92705																								
+1811508	0	1	RCPT	A	A-C3944	OTH	Burnside Body Shop				Modesto	CA	95351-1509					10/9/2013 12:00:00 AM		500	500		Contribution																																							
+1811224	0	1211	RCPT	A	INC133249	IND	MCCLINTOCK	ROBERT			SACRAMENTO	CA	95815	IES	PLUMBER/PIPEFITTER			12/13/2013 12:00:00 AM		15.84	127.02																																									
+1812452	0	5198	RCPT	A	INC97263	IND	Tippins	Keri			Sacramento	CA	95814	State of California	Attorney			10/23/2013 12:00:00 AM		10	130																																									
+1783298	1	80	RCPT	A	INC14725	OTH	PACIFIC ADVANCED CIVIL ENGINEERING, INC.				FOUNTAIN VALLEY	CA	92708					5/8/2013 12:00:00 AM		500	500																																				INC14725					
+1814942	0	3120	RCPT	A	INC648342	IND	Malotte	Cameron			Brea	CA	92621	Placentia-Yorba Linda USD	Principal			8/12/2013 12:00:00 AM		17.23	124.99																																									
+1816622	0	485	RCPT	A	C8414061	IND	HEGLE	CHARLOTTE			SACRAMENTO	CA	95835	COUNTY OF SACRAMENTO	ATTORNEY			11/21/2013 12:00:00 AM		500	500																																									
+1816793	0	101	RCPT	A	INC32736	IND	Metz	Larry M			Santa Rosa	CA	95403	W. Bradley Electric, Inc.	Electrician			10/20/2013 12:00:00 AM		12.55	120.53																																									
+1817458	0	247	RCPT	A	A-C57863	OTH	TriNet, Inc.				San Leandro	CA	94577-1670					11/25/2013 12:00:00 AM		8000	9840.97																																									
+1818983	0	142	RCPT	A	INC222	IND	Sanborn	Heidi			Sacramento	CA	95821	California Product Stewardship Council	Director			8/2/2013 12:00:00 AM		100	100																																									
+1825534	0	2522	RCPT	A	INC460708	IND	Phan	Anh Tram	Dr.		Citrus Heights	CA	95621-1704	Self Employed - no business name	Dentist			10/23/2013 12:00:00 AM		10	120	0																																								
+1818849	0	774	RCPT	A	A1317-I	IND	HOSANNA	DAVID			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/1/2013 12:00:00 AM	12/31/2013 12:00:00 AM	148.50	331											Association of Orange County Deputy Sheriffs (intermediary for members under $100)				Santa Ana	CA	92703																								
+1819382	0	36	RCPT	A	VN92TBK57X4	OTH	Andy Spahn & Associates, Inc.				Universal City	CA	91608				X	10/8/2013 12:00:00 AM	9/25/2012 12:00:00 AM	1500	1500											John A. Perez for Assembly 2012				Los Angeles	CA	90017-5864																								1333592
+1818975	1	61	RCPT	A	INC319	IND	Epstein	Robert S.			Berkeley	CA	94707	n/a	Retired			10/1/2013 12:00:00 AM		1000	3500																																									
+1819414	0	2	RCPT	A	C4075	OTH	1642 Las Palmas LLC DBA Sound Nightclub				Los Angeles	CA	90028					11/4/2013 12:00:00 AM		1550	3100																																									
+1812367	1	198	RCPT	A	VN8W1BNB4T8	IND	Fouras	George			San Francisco	CA	94127-2316	City & County of San Francisco	Physician			12/5/2013 12:00:00 AM		250	250																																									
+1832626	0	5805	RCPT	A	INC478706	IND	Chan	Jack	Dr.		Oceanside	CA	92054-2506	Self Employed - no business name	Dentist			2/12/2014 12:00:00 AM		145	145																																									
+1832003	0	5	RCPT	A	INC8	COM	Rocky Chavez For Assembly 2014				Oceanside	CA	92057					2/28/2014 12:00:00 AM		1000	1000			1353974																																						
+1831533	0	126	RCPT	A	A-C58461	IND	Mccann	Joyce			Walnut Creek	CA	94595-2432	Children's Hospital Oakland	Staff Scientist			3/1/2014 12:00:00 AM		100	100																																									
+1832117	0	438	RCPT	A	INC246774	OTH	Eye Center Optometrics				Citrus Heights	CA	95621					3/12/2014 12:00:00 AM		35.24	103.76																																									
+1832505	0	88	RCPT	A	INC304	IND	Watanabe	Wendy			Manhattan Beach	CA	90266	County of Los Angeles	Auditor- Controller			2/22/2014 12:00:00 AM		300	300																																									
+1832626	0	4246	RCPT	A	INC473900	IND	Buenaventura	Christine	Dr.		Bonita	CA	91902-1423	Self Employed - no business name	Dentist			1/22/2014 12:00:00 AM		145	145																																									
+1851540	0	698	RCPT	A	INC225272	OTH	IAM 1781				BURLINGAME	CA	94010-2305					5/2/2014 12:00:00 AM		21.30	106.50																																				INC225272					
+1852945	0	51	RCPT	F401A	INC3286	COM	Paul Ware for Superior Court Judge 2014				San Diego	CA	92127					4/9/2014 12:00:00 AM		4000	8000			1358843																		Paul J. Ware				SCJ		OTH	San Diego County	19					S							
+1832626	0	546	RCPT	A	INC472818	IND	Chera	Alin	Dr.		Santa Rosa	CA	95404-4620	Self Employed - no business name	Dentist			1/15/2014 12:00:00 AM		145	145																																									
+1851749	0	35	RCPT	A	C4538284	IND	Palma	Kurt			Pacifica	CA	94044-	Anderson, Rowe & Buckley	BTJP			3/28/2014 12:00:00 AM		21	101.55																																									
+1852298	0	709	RCPT	A	INC484680	IND	Miller	Laura Claire	Dr.		San Carlos	CA	94070-2955	Self Employed - no business name	Dentist			3/26/2014 12:00:00 AM		145	145																																									
+1832629	1	16	RCPT	A	VNHWWCBPMW4	IND	Cohen	Dianna			Los Angeles	CA	90067-1661	Plastic Pollution Coalition	Creative Director/Co-Founder			3/6/2014 12:00:00 AM		200	200																																									
+1818896	1	819	RCPT	A	IDT29	IND	Turner	Tom			Healdsburg	CA	95448	n/a	Retired		X	10/17/2013 12:00:00 AM	8/25/2013 12:00:00 AM	50	125											Mike McGuire for Supervisor 2014				Healdsburg	CA	95448																								1319351
+1812594	1	84	RCPT	A	INC19962	OTH	Buckley Faculty Association AFT Local 4163 (Unitemized Member Contributions)				Sherman Oaks	CA	94117-					8/30/2013 12:00:00 AM		11536	13891.66																																									
+1853666	0	1	RCPT	A	INC175	OTH	American Chemistry Council				Washington	DC	20002					3/27/2014 12:00:00 AM		1500	1500																																									
+1853850	0	44	RCPT	A	INC1416	IND	Dalby	Lena L.			Sacramento	CA	95818	Law Office of Dalby Wyant	Attorney			1/23/2014 12:00:00 AM		84	200																																									
+1832567	1	192	RCPT	A	VN8QBCBB3Q6	OTH	Sony Pictures Ent., Inc.				Culver City	CA	90232-3195					2/27/2014 12:00:00 AM		1000	2000																																									
+1853955	1	58	RCPT	A	INC747	OTH	San Jose Construction Company, Inc.				Santa Clara	CA	95050					4/10/2014 12:00:00 AM		300	300																																									
+1862640	0	686	RCPT	A	C4547550	IND	Macklin	Malik			San Francisco	CA	94105	Broadway Mechanical Contractors	BTJP			6/27/2014 12:00:00 AM		23.63	120.98																																									
+1861624	0	11	RCPT	A	INC5768	OTH	Coddington, Hicks & Danforth				Redwood City	CA	94065					5/30/2014 12:00:00 AM		250	1500																																				INC5768					
+1870274	0	23	RCPT	A	INC1637	IND	Murphy	Stephen M.			San Diego	CA	92101	Law Offices of Stephen M. Murphy	Attorney			6/16/2014 12:00:00 AM		30	180																																									
+1872329	0	33	RCPT	A	INC1244	IND	PHAM	ALEXANDER			NEWPORT BEACH	CA	92667	NAIL SALON	OWNER			5/28/2014 12:00:00 AM		3400	7500																																									
+1871616	0	680	RCPT	A	INC4043	IND	JAMES	ANTHONY			Pasadena	CA	91106	CITY OF PASADENA	FIRE ENGINEER			4/30/2014 12:00:00 AM		10	120																																									
+1852575	1	1626	RCPT	A	INC51775	IND	Gurumurthy	Ram			San Diego	CA	92108	SDCCD	Faculty			5/7/2014 12:00:00 AM		117.75	127.62																																									
+1647274	1	217	RCPT	A	81531	OTH	Career & Clinical Consultants				Grand Rapids	MI	49508-4999					2/21/2012 12:00:00 AM		37.50	150																																									
+1890236	0	1172	RCPT	A	C4556258	IND	Ottinger	Derek			Richmond	CA	94804	CARRIER CORPORATION	BTJR			8/29/2014 12:00:00 AM		29.02	214.49																																									
+1890449	0	997	RCPT	F496P3	INC50608	OTH	S R Lanphear Farms				Modesto	CA	95358-8557					9/30/2014 12:00:00 AM		50	100																																								0.00	
+1852416	1	31	RCPT	A	INC18228	OTH	Dolan Concrete Construction				Santa Clara	CA	95054-3303					5/15/2014 12:00:00 AM		1425.96	1425.96																																				INC18228					
+1868482	1	380	RCPT	A	123457	OTH	Christopher G Brown Md Llc				Westerville	OH	43081					6/4/2014 12:00:00 AM		50	100																																									
+1831985	1	51	RCPT	A	118667	OTH	Midlothian Medcial Center Inc.				Youngstown	OH	44502					3/6/2014 12:00:00 AM		56.25	112.50																																									
+1891530	0	271	RCPT	A	INC19565	IND	Ruiz	Rosanna			Roseville	CA	95678	McDonald Franchise	Owner			7/28/2014 12:00:00 AM		30	210																																				INC19565					
+1739801	1	109	RCPT	A	94837	OTH	Stanley S Roland Do Pc				Lapeer	MI	48446-1925					11/29/2012 12:00:00 AM		133.36	150																																									
+1892001	0	54	RCPT	A	A-C2411	IND	Dent	Diana M			San Diego	CA	92123-3402	San Diego Unified School District	Teacher/Educator		I	9/29/2014 12:00:00 AM		100	100											Act Blue Technical Services				Cambridge	MA	02138-5106																								
+1892761	0	1897	RCPT	A	INC33537	IND	Gutierrez	Jesus			Oakland	CA	94612	Los Angeles County Physicians	Physician			9/25/2014 12:00:00 AM		8	144																																									
+1892937	0	1	RCPT	A	INC3002	OTH	Green Valley Mobile Home Park				Yucaipa	CA	92399-4143					8/25/2014 12:00:00 AM		436	436																																									
+1893641	0	11	RCPT	A	IDT122	IND	Gonzalez	Luis			Montebello	CA	90640-3427	CA State Senate	Field Representative		I	7/29/2014 12:00:00 AM		50	100											ActBlue CA				Cambridge	MA	02238-2110																								
+1893683	0	195	RCPT	A	INC1218	OTH	V. Sattui Winery, Inc.				Saint Helena	CA	94574					8/26/2014 12:00:00 AM		2500	2500																																									
+1893356	0	134	RCPT	F401A	INC12497	IND	Hwangbo	Steve			La Palma	CA	90623					9/24/2014 12:00:00 AM		178	178																					Steve Hwangbo				OTH	La Palma City Council								S							
+1893519	1	52	RCPT	F401A	53	IND	Mohammed Nadeem for Santa Clara City County 2				Santa Clara	CA	35051	Not Applicable	Not Applicable			8/23/2014 12:00:00 AM		360	360																					Nadeem	Mohamed			OTH	City Council	CIT	Santa Clara						S							
+1893422	0	393	RCPT	I	INC2915	OTH	Community 1st Bank				Auburn	CA	95603					8/29/2014 12:00:00 AM		78.73	0		Interest Earned																																							
+1893344	0	2056	RCPT	A	INC552374	IND	HERNANDEZ	ERNESTO			TORRANCE	CA	90501	FARMERS GROUP INC	AGENT			9/19/2014 12:00:00 AM		25	625																																									
+1904617	0	17	RCPT	A	INC833	COM	DRIVE Committee				Washington	DC	20001-2198					10/6/2014 12:00:00 AM		1500	3000			880969																																						
+1903788	0	1315	RCPT	A	A3042-I	IND	RAMOS	GABRIEL			Santa Ana	CA	92703	Orange County	Deputy Sheriff			7/1/2014 12:00:00 AM	10/18/2014 12:00:00 AM	51	136											Association of Orange County Deputy Sheriffs (intermediary for members under $100)				Santa Ana	CA	92703																								
+1904559	0	399	RCPT	A	INC35732	IND	Waggoner	Jason			San Diego	CA	92123	SULLIVAN SOLAR POWER OF CA INC	Electrician			10/8/2014 12:00:00 AM		16	142.35																																									
+1904597	0	23	RCPT	C	NON236	PTY	Democratic State Central Committee of California/ California Democratic Party				Sacramento	CA	95811					10/7/2014 12:00:00 AM		3.12	2897.43		Graphics	741666																																						
+1924410	0	5	RCPT	C	NON70	OTH	California Nurses Association				Oakland	CA	94612					11/24/2014 12:00:00 AM		2934.78	5931.96		Legal & Reporting Services																																							
+1926906	0	262	RCPT	A	INC119381	IND	Chao	Kuang-Hwa			Pleasant Hill	CA	94523	Kuang-Hwa Chao, MD	Physician			11/13/2014 12:00:00 AM		50	100																																									
+1916666	0	84	RCPT	A	INC40028	COM	San Francisco Bar Pilots PAC				San Francisco	CA	94111					10/27/2014 12:00:00 AM		9000	45000			743492																																						
+1892837	1	15	RCPT	A	INC11388	IND	Brooks	Lionel			Richmond	CA	94801	Alameda Hospital	Housekeeper Aide			7/30/2014 12:00:00 AM		0.60	105.40																																									
+1928568	0	1889	RCPT	A	C4572218	IND	Bryning	Steve			Pittsburg	CA	94565	City Mechanical Inc.	BTAP			12/4/2014 12:00:00 AM		47.40	292.66																																									
+1931743	0	84	RCPT	A	INC232387	IND	Cassidy	Barry			Dublin	CA	94568	None	Retired			12/1/2014 12:00:00 AM		10	120																																									
+1931021	0	2777	RCPT	A	INC36057	IND	Van Osdel	Lewis A			Oakland	CA	94612	Public Employed Retired System	Physician			10/23/2014 12:00:00 AM		10	110																																									
+1932187	0	7559	RCPT	A	INC524101	IND	Tran	Johnathan H.	Dr.		San Diego	CA	92126-2738	Self Employed - no business name	Dentist			12/11/2014 12:00:00 AM		13.18	152.99	0																																								
+1931641	0	899	RCPT	A	INC34821	IND	Martin-Long	Eva			Cupertino	CA	95014	Independent Allstate or State Farm Ins. Co.	Insurance Agent			12/22/2014 12:00:00 AM		100	900																																									
+1928263	0	140	RCPT	A	A-C2679	IND	Matthews	Ardelle			San Diego	CA	92102-3717	N/A	Retired		X	12/30/2014 12:00:00 AM	10/27/2014 12:00:00 AM	50	150											Dr. Weber for Assembly 2014(Transfered From)				San Marcos	CA	92069-1450																								1354184
+1935712	0	900	RCPT	A	A1704-I	IND	CORONA	BENJAMIN			SACRAMENTO	CA	95811	STATE OF CALIFORNIA	HOSP POLICE OFCR			10/19/2014 12:00:00 AM	12/31/2014 12:00:00 AM	72	192											California Statewide Law Enforcement Association																														
+1935712	0	3224	RCPT	A	A4030-I	IND	ORTIZ	LINDA C			SACRAMENTO	CA	95811	STATE OF CALIFORNIA	EM SVS COORD/OES			10/19/2014 12:00:00 AM	12/31/2014 12:00:00 AM	72	192											California Statewide Law Enforcement Association																														
+1933964	0	32	RCPT	A	131742	OTH	Pediatric Center Of Canton Llc				Canton	OH	44708					11/18/2014 12:00:00 AM		50	200																																									
+1932187	0	13151	RCPT	A	INC528202	IND	Strommer	Leslie Shak	Dr.		San Diego	CA	92108-4523	Self Employed - no business name	Dentist			12/31/2014 12:00:00 AM		12.08	154.98	0																																								
+1933588	0	3686	RCPT	A	14001163	IND	WALKER	LORETTA			ROSEVILLE	CA	95747-6380	AT&T Services, Inc.	VP-EXTERNAL AFFAIRS			12/5/2014 12:00:00 AM		8.33	188.29	0																																								
+1937738	0	476	RCPT	A	A4977-T	IND	Caballero	Tim			Los Angeles	CA	90014	O'Melveny & Myers	Attorney		X	12/31/2014 12:00:00 AM	8/31/2009 12:00:00 AM	50	150											Mike Gatto For Assembly 2010				Los Angeles	CA	90048																								1319224
+1937090	0	167	RCPT	A	INC125087	IND	DAMIANI	DAVID A			SIMI VALLEY	CA	93063	Simi Valley Unified	MAINTENANCE AND OPERATIONS			12/9/2014 12:00:00 AM		0.50	104.50																																									
+1936818	0	108	RCPT	A	IDT84	SCC	Union of American Physicians and Dentists Medical Action Committee				Oakland	CA	94612				X	12/30/2014 12:00:00 AM	6/11/2013 12:00:00 AM	1000	1000			1356185								Bocanegra for Assembly 2014				Sacramento	CA	95815																								1354450
+1936434	0	233	RCPT	A	C9168751	IND	DESRUISSEAUX	HELENE			LOS ANGELES	CA	90077	NOT EMPLOYED	NOT EMPLOYED			10/29/2014 12:00:00 AM		250	750	0																																								
+1937130	0	2147	RCPT	A	INC124430	IND	Margolis	Jeffrey			Sacramento	CA	95827	State of California	Attorney			12/16/2014 12:00:00 AM		10	120																																									
+1937233	0	899	RCPT	A	A1416-I	IND	KINNEY	PATRICK			Santa Ana	CA	92703	Orange County	Deputy Sheriff			10/19/2014 12:00:00 AM	12/31/2014 12:00:00 AM	140.28	333.98											Association of Orange County Deputy Sheriffs (intermediary for members under $100)				Santa Ana	CA	92703																								
+1937461	0	3	RCPT	A	A-C2971	OTH	Forty Niners Football Company, LLC				Santa Clara	CA	95054					10/27/2014 12:00:00 AM		1000	1000																																									
+1944950	0	93	RCPT	A	VN8G2DKA5W0	OTH	LA County Lifeguards/MEBA				Washington	DC	20001-1508					2/14/2015 12:00:00 AM		2.20	0																																			X						
+1944950	0	128	RCPT	A	VN8G2DKA6F0	OTH	Sailors Union of the Pacific				San Francisco	CA	94105-2640					2/14/2015 12:00:00 AM		4.40	0																																			X						
+1937870	1	67	RCPT	A	INC2374	COM	Long Beach Police Officers Association Political Action Committee				Sacramento	CA	95814					10/28/2014 12:00:00 AM		2500	2500			761004																																						

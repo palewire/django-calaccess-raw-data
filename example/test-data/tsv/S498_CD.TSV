@@ -1,0 +1,1001 @@
+FILING_ID	AMEND_ID	LINE_ITEM	REC_TYPE	FORM_TYPE	TRAN_ID	ENTITY_CD	CMTE_ID	PAYOR_NAML	PAYOR_NAMF	PAYOR_NAMT	PAYOR_NAMS	PAYOR_CITY	PAYOR_ST	PAYOR_ZIP4	DATE_RCVD	AMT_RCVD	CAND_NAML	CAND_NAMF	CAND_NAMT	CAND_NAMS	OFFICE_CD	OFFIC_DSCR	JURIS_CD	JURIS_DSCR	DIST_NO	OFF_S_H_CD	BAL_NAME	BAL_NUM	BAL_JURIS	SUP_OPP_CD	AMT_ATTRIB	MEMO_CODE	MEMO_REFNO	EMPLOYER	OCCUPATION	SELFEMP_CB
+1175875	1	39	S498	F498-A	A-218												Torliatt	Pam			ASM		ASM		6					S	23961					
+1177095	0	1	S498	F498-R	INC37	COM	1285549	Brewer	Tom			Torrance	CA	90505	5/30/2006 12:00:00 AM	667																				
+1177096	0	1	S498	F498-R	INC41	COM	1284641	Bruguera	S. Paul			Palos Verdes Estates	CA	90274	5/30/2006 12:00:00 AM	1000																		State of California	Deputy Attorney General	
+1178115	0	1	S498	F498-R	INC43	COM	1253280	Angelides 2006				Sacramento	CA	95814	6/1/2006 12:00:00 AM	10000																				
+1208624	0	4	S498	F498-A	IDT10	OTH		Housing and Emergency Shelter Trust Fund Act of 2006																			Housing and Emergency Shelter Trust Fund Act of 2006	1C	Statewide	S	5500					
+1210192	0	2	S498	F498-A	INC118	COM	1282414	Californians Against Higher Taxes-No on 87,A Coalition of ...				Mill Valley	CA	94941													Oil Tax	87	Statewide	O	65000					
+995992	0	2	S498	F498-A	INC981	COM	1261936	Californians for a Balanced Budget				Sacramento	CA	95814													Yes on 57 & 58	57	Statewide	S	7500					
+996038	0	1	S498	F498-R	INC542	COM	1253674	Dave Jones For Assembly				Sacramento	CA	96864	2/18/2004 12:00:00 AM	2500																				
+676975	1	1	S498	F498-R	INC347	COM		BUSH-CHENEY 2000 INC.				AUSTIN	TX	78768	10/23/2000 12:00:00 AM	2500																				
+676992	0	2	S498	F498-A	INC363	COM	1225770	COMMITTEE FOR LEGISLATIVE COMPENSATION REFORM				YUCAIPA	CA	92399													LEGISLATIVE PENSIONS	33	STATEWIDE	S	6500					
+677726	0	1	S498	F498-R	INC1911	OTH		Fresno County Arts To Zoo 2000				Fresno	CA	93657	10/26/2000 12:00:00 AM	2500																				
+677732	0	1	S498	F498-R	INC1912	OTH		Townsend Raimundo Besler & Usher Inc.				Sacramento	CA	95814	10/26/2000 12:00:00 AM	6100																				
+677769	0	2	S498	F498-A	INC235	COM	990627	Rebecca Cohn For State Assembly				San Jose	CA	95113			Rebecca Cohn				ASM		ASM		24					S	2750					
+678692	0	1	S498	F498-R	INC549	OTH		Townsend Raimundo Besler & Usher Inc.				Sacramento	CA	95814	10/27/2000 12:00:00 AM	33550																	INC549			
+678734	0	1	S498	F498-R	INC673	OTH		Townsend Raimundo Besler & Usher Inc.				Sacramento	CA	95814	10/26/2000 12:00:00 AM	3000																				
+1216175	0	4	S498	F498-A	NM27-1	COM	1291660	Fair Public Policy Coalition				Sacramento	CA	95841			Bill Lockyer				TRE	Treasurer								S	4500					
+1216175	0	7	S498	F498-A	NM30-1	COM	1291647	Fair Public Policy Coalition				Sacramento	CA	95841			Betty Yee				BOE	Bd. of Equalization			1					S	1050					
+1216175	0	8	S498	F498-A	NM31-1	COM	1291647	Fair Public Policy Coalition				Sacramento	CA	95841			Judy Chu				BOE	Board of Equalization			4					S	1075					
+1310536	0	2	S498	F498-A	INC2489	COM	1292695	Taxpayers for Bob Huff 2008				Rancho S. M.	CA	92688			Bob Huff				SEN		SEN		29	S				S	8500					
+1310546	0	2	S498	F498-A	INC46	COM	1293454	Friends of John Benoit				Riverside	CA	92507			John Benoit				SEN		SEN		37	S				S	6884					
+1313208	0	1	S498	F498-R	1	RCP	NOT APP	COALITION TO PROTECT CALIFORNIA'S BUDGET AND ECONOMY				SACRAMENTO	CA	95814	1/31/2008 12:00:00 AM	25000																				
+1313288	0	1	S498	F498-R	1	RCP	1299457	Yes on 93, Citizens for Accountability and Legislative Reform				Sacramento	CA	95814	1/31/2008 12:00:00 AM	5000																				
+1333223	0	2	S498	F498-A	INC235	COM	1303398	Lane Liroff for Judge				Palo Alto	CA	94306			Lane Liroff				SCJ		OTH	Santa Clara County	8	S				S	6750					
+1338093	0	1	S498	F498-R	INC245	COM	1304973	Serena Murillo For Judge				Altadena	CA	91001	5/28/2008 12:00:00 AM	11900																				
+1338234	0	1	S498	F498-R	late805223	COM	1305925	Committee for Real Solutions for Housing, No On F				San Francisco	CA	94103	5/28/2008 12:00:00 AM	5000																				
+1338234	0	2	S498	F498-A	late805224																						Affordable Housing Requirement for the Candlestick Point and Hunters Point Project	F	San Francisco Proposition	O	5000					
+1338383	0	1	S498	F498-R	INC247	COM	1305065	Daly for Judge				San Leandro	CA	94577	5/29/2008 12:00:00 AM	3500																				
+1338390	0	2	S498	F498-A	2	CAO	861576	PAC Residential Builders of S.F.				San Francisco	CA	94117			Haaland	Robert			OTH	DCCC AD13	OTH	AD13						S	587					
+1177104	0	2	S498	F498-A	INC29	COM	1253188	Peterson-More	Diana			Los Angeles	CA	90048			Diana Peterson-More				ASM		ASM		44	S				S	950					
+1177105	0	1	S498	F498-R	INC39	COM	1283253	Shelton	Rod			San Diego	CA	92101	5/30/2006 12:00:00 AM	1100																				
+1177110	0	2	S498	F498-A	INC42	COM	1278584	Willoughby	Anthony			Culver City	CA	90230			Anthony Willoughby				ASM		ASM		48	S				S	379.60					
+1177246	0	2	S498	F498-A	INC2905	OTH	1284508	Mitchell For Superior Court Judge				Los Angeles	CA	90048			Daviann Mitchell				SCJ		OTH		18					S	6500					
+1177513	0	2	S498	F498-A	INC24	OTH	1284750	David Stuart for Judge				Westlake Village	CA	91362			David Stuart				SCJ					S				S	2500					
+1177713	0	1	S498	F498-R	INC102	COM	1286671	Citizens for a Better San Diego County				San Francisco	CA	94108	5/30/2006 12:00:00 AM	2000																				
+1178225	0	1	S498	F498-R	INC1002	COM	1286671	Citizens for a Better San Diego County				San Francisco	CA	94108	5/31/2006 12:00:00 AM	1800																				
+1178225	0	4	S498	F498-A	IDT112	OTH		Plotner	Claire								Claire Plotner				OTH	Republican Central Committee	OTH	San Diego County	66					S	50					
+827684	0	1	S498	F498-R	NM52	OTH		National Cab, Inc.				San Francisco	CA	94124	2/28/2002 12:00:00 AM	2500																				
+827684	0	2	S498	F498-A	NM52-1	OTH		National Cab, Inc.				San Francisco	CA	94124													Prop F: Citizen Oversight on Bond Expenditures	F		S	2500					
+827697	0	1	S498	F498-R	INC525	OTH		Russo, Marsh & Assoc.				Sacramento	CA	95812	2/28/2002 12:00:00 AM	75000																				
+827803	0	2	S498	F498-A	INC305	COM		Friends Of Patsy Fritz				San Diego	CA	92119			Patsy Fritz													S	3300					
+827867	0	1	S498	F498-R	INC2810	OTH	1234956	McAllister For Treasurer				San Diego	CA	92119	3/1/2002 12:00:00 AM	5000																				
+828406	0	2	S498	F498-A	INC149	OTH		Fieldstead & Company				Irvine	CA	92623			Keith Olberg				SOS		STW							S	10000		INC149			
+829467	0	2	S498	F498-A	A-283												Padilla	Steve			MAY		CIT	City of Chula Vista						S	1000					
+739233	0	1	S498	F498-R	INC811	COM	1227709	AFT Local 1521-County				Los Angeles	CA	90068	4/5/2001 12:00:00 AM	18000																				
+739233	0	2	S498	F498-A	INC811	COM	1227709	AFT Local 1521-County				Los Angeles	CA	90068			Joey Hill				CCB		OTH	Los Angeles						S	18000					
+759820	0	2	S498	F498-A	INC153	COM	1234361	Mike Feuer For City Attorney-General				Beverly Hills	CA	90211			Mike Feuer				CAT		OTH	City of Los Angeles						S	2875					
+759880	0	2	S498	F498-A	INC678	COM	1234332	Jack Weiss City Council - General				Marina Del Rey	CA	90292								L.A. City Council /District 5								S	4200					
+760274	0	1	S498	F498-R	INC682	COM	1227709	AFT Local 1521 - County				Los Angeles	CA	90068	5/29/2001 12:00:00 AM	12500																	INC682			
+760274	0	2	S498	F498-A	INC682	COM	1227709	AFT Local 1521 - County				Los Angeles	CA	90068			Joey Hill       LACCD Trustee #6				OTH	Nonmonetary Contribution								S	12500		INC682			
+760450	0	2	S498	F498-A	INC443	IND		Riordan	Richard J.			Los Angeles	CA	90024			Rocky Delgadillo				CAT		OTH	City of Los Angeles						S	10000					
+760498	0	1	S498	F498-R	INC519	COM	1234361	Mike Feuer for City Attorney - General				Beverly Hills	CA	90211	5/29/2001 12:00:00 AM	5000																				
+760534	0	1	S498	F498-R	INC155	COM	1234361	Mike Feuer For City Attorney-General				Beverly Hills	CA	90211	5/30/2001 12:00:00 AM	2875																				
+817888	0	1	S498	F498-R	INC270	COM	1240852	Committee To Re-Elect Judge Robert Simpson				Burbank	CA	91502	2/8/2002 12:00:00 AM	4000																				
+818301	0	2	S498	F498-A	INC300	COM	991829	Californians For Clean Water, Clear Air, Coastal Protection And Safe Neighbohood Parks  Yes On 40				Sacramento	CA	95814			Yes On 40				OTH		STW							S	10000					
+818302	0	2	S498	F498-A	INC267	OTH		Bill Thomas Campaign Committee				Bakersfield	CA	93302			Bill Thomas				OTH	U.S.House of Representatives	OTH		22					S	7350					
+818427	0	2	S498	F498-A	INC297	COM		Michael Goldstein For Judge				Oakland	CA	94611			Michael Goldstein				SCJ		OTH	Alameda	5					S	3000					
+819090	0	2	S498	F498-A	INC724	OTH		Wayne C. Johnson & Associates Inc.				Sacramento	CA	95814			Tom McClintock				CON		STW							S	3000					
+1134027	0	1	S498	F498-R	INC867	COM	1279513	No On 77				Los Angeles	CA	90048	10/31/2005 12:00:00 AM	20000																				
+1135050	0	2	S498	F498-A	INC567	COM	1279513	No on 77				Los Angeles	CA	90048													No on 77	77	Statewide	O	10000					
+1135583	0	1	S498	F498-R	INC866	COM	1279513	No on 77				Los Angeles	CA	90048	11/2/2005 12:00:00 AM	50000																				
+1135839	0	2	S498	F498-A	TRAN0013290348635991	OTH	1279513	No On 77				Los Angeles	CA	90048									STW				Proposition 77	77		O	162000					
+1136376	0	1	S498	F498-R	INC2552	COM	1278876	Safe Neighborhood Schools Coalition/Yes on Y				Los Angeles	CA	90048	11/4/2005 12:00:00 AM	4500																	INC2552			
+1216309	0	2	S498	F498-A	INC65	COM	1287093	Californians for Clean Water & Costal Protection				Mill Valley	CA	94941													Clean Water & Costal Protection	84	Statewide	S	15000					
+1216585	0	1	S498	F498-R	INC51	OTH		ESHERICK HOMSEY DODGE AND DAVIS				SAN FRANCISCO	CA	94110-2014	10/30/2006 12:00:00 AM	2500																				
+1003996	0	2	S498	F498-A	INC674	COM	1254038	Californians For Budget Accountability Yes On 56				Sacramento	CA	95814			Yes On 56				OTH		STW							S	3000					
+1004305	0	2	S498	F498-A	INC559	COM	1254036	Californians For Budget Accountability Yes On 56				Sacramento	CA	95814			Yes On 56				OTH		STW							S	10500					
+1003409	1	2	S498	F498-A	A-246												Williams	Forrest			CCM		CIT	City of San Jose	2					S	1000					
+1003409	1	3	S498	F498-A	A-247												Reed	Chuck			CCM		CIT	City of San Jose	4					S	1000					
+1049316	0	2	S498	F498-A	INC2278	COM	1260322	Donna Groman for Judge				Los Angeles	CA	90071			Donna Groman				SCJ		OTH	Los Angeles	69					S	5000					
+877869	0	2	S498	F498-A	IDT5	COM	1243853	Oscar Garza for School Board				Santa Ana	CA	92706			Oscar Garza				BED		OTH	City of Santa Ana						S	6250					
+878658	0	2	S498	F498-A	INC1	COM	1240214	ACKERMAN FOR ATTORNEY GENERAL				FULLERTON	CA	92831			DICK ACKERMAN				ATT		STW							S	10000					
+878665	0	1	S498	F498-R	INC2	COM	1245318	YES ON 50, A COALITION OF CONSERVATION, BUSINESS & WATER INTEREST GROUPS				SACRAMENTO	CA	95814	10/23/2002 12:00:00 AM	8000																				
+879189	0	2	S498	F498-A	INC886	COM	1238525	Committee to Elect Kelly Maceachern				Irvine	CA	92612			Kelly Maceachern				SCJ		OTH	Orange County	22	S				S	1000					
+819092	0	2	S498	F498-A	INC143	COM		Re-Elect Auerbach 2002				Los Angeles	CA	90017			Rick Auerbach				ASR		OTH	Los Angeles County						S	5000					
+594184	0	2	S498	F498-A	INC87	COM	990049	Citizens for Safe & Healthy Communities-Yes On Measure F				San Diego	CA	92119			Measure F												Orange County	S	3000					
+594820	0	2	S498	F498-A	INC90	COM	922117	No New Taxes-A Project of Howard Jarvis Taxpayer's Association				Los Angeles	CA	90005			Proposition 26													O	15000					
+596444	0	1	S498	F498-R	2000-0146	COM	992131					San Diego	CA	92119	2/22/2000 12:00:00 AM	2500																				
+1218828	0	1	S498	F498-R	INC64	COM	1262902	David Stuart For Judge				Los Angeles	CA	90071	11/1/2006 12:00:00 AM	3750																				
+1218895	0	2	S498	F498-A	INC74	OTH		Pacific Gas & Electric (PGE)				San Francisco	CA	94105													Parking Tax Ordinance	E	San Francisco	O	3000					
+1220519	0	1	S498	F498-R	INC71	OTH		CHONG PARTNERS ARCHITECTURE				SAN FRANCISCO	CA	94105	11/6/2006 12:00:00 AM	2500																				
+1220519	0	2	S498	F498-A	IDT51	COM	1288476	YES ON 1D, A COALITION OF TEACHERS, BUSINESSES AND EDUCATION ORGANIZATIONS				SACRAMENTO	CA	95814			PROPOSITION 1D						OTH	STATEWIDE						S	2500					
+1220521	0	2	S498	F498-A	INC71	OTH	1266998	Garamendi for Lt Governor				Los Angeles	CA	90017			John Garamendi				LTG		STW			S				S	5000		INC71			
+1054983	0	1	S498	F498-R	INC510	COM	1260661	Californians For Stem Cell Research & Cures/Yes on 71				Yreka	CA	96097	10/27/2004 12:00:00 AM	2500																				
+1055497	0	5	S498	F498-A	A-591																						Proposition O - Use of Sales Tax Funds	O	San Francisco County	S	6533.34					
+1055968	0	1	S498	F498-R	INC511	COM	1260376	Californians To Protect Local Taxpayers and Public Safety				Mill Valley	CA	94941	10/28/2004 12:00:00 AM	2500																				
+1056031	0	1	S498	F498-R	NM9	COM	1266996	Natalie Berg for Community College Board				San Francisco	CA	94117	10/26/2004 12:00:00 AM	3000																				
+1056228	0	2	S498	F498-A	INC4	COM	1270479	PUBLIC HEALTH WARNING NO ON 64				SACRAMENTO	CA	95814													LIMITS ON PRIVATE ENFORCEMENT OF UNFAIR BUSINESS COMPETITION LAWS	64	STATEWIDE	O	5000					
+1056535	0	2	S498	F498-A	NM16-1	COM	1263792	Heather Hiles for School District				San Francisco	CA	94114			Heather Hiles for School District				BED	School Board		San Francisco						S	5000					
+891015	0	2	S498	F498-A	INC331	COM	1221992	The Lockyer Committee				Sacramento	CA	95814			Bill Lockyer				ATT		STW							S	3750		INC331			
+920093	0	1	S498	F498-R	INC1498	COM	990084	Field for College Board				Beverly Hills	CA	90211	2/18/2003 12:00:00 AM	4250																				
+920109	0	1	S498	F498-R	INC1495	COM	990152	Warren Furutani Campaign Committee				Beverly Hills	CA	90211	2/18/2003 12:00:00 AM	4250																				
+920749	0	2	S498	F498-A	INC1503	COM	950207	Tokofsky for School Board				Studio City	CA	91604			David Tokofsky				BED		OTH	Los Angeles	5					S	2780					
+921635	0	1	S498	F498-R	INC224	COM		For Kid's Sake-Vote LaMotte Campaign Committee				Los Angeles	CA	90018-1718	2/24/2003 12:00:00 AM	15000																				
+823013	0	1	S498	F498-R	INC146	OTH		Wayne C. Johnson & Associates, Inc.				Sacramento	CA	95814	2/20/2002 12:00:00 AM	5000																				
+823121	0	2	S498	F498-A	INC2774	OTH	1241200	Tom Daly 2002				Anaheim	CA	92805			Tom Daly				OTH	County Clerk/Recorder	OTH	Orange						S	3000					
+823157	0	2	S498	F498-A	IDT84	COM	1234969	Tom McClintock for Controller									Tom McClintock				CON		OTH	California						S	13000					
+824635	0	1	S498	F498-R	INC235	COM	1239930	Yes On 45, Citizens Right To Petition				Sacramento	CA	95814	2/22/2002 12:00:00 AM	8000																				
+824652	0	1	S498	F498-R	INC293	COM	1239930	Yes On 45, Citizens Right To Petition				Sacramento	CA	95814	2/22/2002 12:00:00 AM	30000																				
+824862	0	2	S498	F498-A	INC346	COM	1234985	Committee for Safe & Healthy Communities				San Diego	CA	92119													Measure W		Orange County	S	190000					
+824905	0	1	S498	F498-R	INC500	COM		Committee To Re-Elect Judge Robert Simpson				Burbank	CA	91502	2/22/2002 12:00:00 AM	2500																				
+678880	0	2	S498	F498-A	INC522	COM		Stoker For Congress				Santa Maria	CA	93454			Mike Stoker					House of Representatives	OTH		22					S	3200					
+678985	0	1	S498	F498-R	INC237	COM	1225770	Committee for Legislative Compensation Reform				Yucaipa	CA	92399	10/26/2000 12:00:00 AM	5000																				
+679101	0	2	S498	F498-A	NM77-1	COM	C00348136	Schipske For Congress				Burbank	CA	91502			Shipske	Gerrie				Congress			38					S	2549.30					
+679165	0	2	S498	F498-A	INC60	COM		Taxpayers For Accountability And Better Schools				Mill Valley	CA	94941			Yes on Proposition 39													S	15000					
+679328	0	4	S498	F498-A	IDT74	COM	1222400	Measure O Sacramento County																			Measure O	O	Sacramento County	S	5136.40					
+679502	0	1	S498	F498-R	INC493	IND		Hall	Richard A.			Newport Beach	CA	92660	10/27/2000 12:00:00 AM	10000																		RHC Communities	President	
+681641	0	1	S498	F498-R	INC382	OTH		Townsend Raimundo Besler & Usher Inc.				Sacramento	CA	95814	10/30/2000 12:00:00 AM	5455																				
+1333821	0	2	S498	F498-A	INC689	COM	1303981	Blanchard For Judge				Los Angeles	CA	90071			Kathleen Blanchard				SCJ		OTH	L.A.Superior Court	123	S				S	3000					
+1333837	0	1	S498	F498-R	INC882	COM	1304462	Friends Of Tom Rubinson For Judge				Los Angeles	CA	90071	5/20/2008 12:00:00 AM	3250																				
+1334461	0	1	S498	F498-R	INC1239	OTH	1273874	Pavley For Senate				Los Angeles	CA	90048	5/21/2008 12:00:00 AM	8000																				
+1334506	0	1	S498	F498-R	INC1429	COM	1304462	FRIENDS OF TOM RUBINSON				Los Angeles	CA	90071	5/20/2008 12:00:00 AM	3000																				
+1210991	0	2	S498	F498-A	INC138	COM	801945	Los Angeles County Lincoln Clubs State PAC				Commerce	CA	90040			Tom McClintock				LTG		STW			S				S	2500					
+1210997	0	1	S498	F498-R	INC1885	COM	1276675	John Chiang for California 2006				Los Angeles	CA	90048	10/25/2006 12:00:00 AM	35000																				
+1211773	0	1	S498	F498-R	2006-5963	COM	1271345	Debra Bowen for Secretary of State				Burbank	CA	91502	10/24/2006 12:00:00 AM	40000																				
+1211845	0	2	S498	F498-A	late610252																						School Bonds	A	San Francisco Proposition	S	1250					
+1212912	0	4	S498	F498-A	IDT84	COM		ANNA PIERCY FOR ANAHEIM UHSD									ANNA PIERCY				BED		OTH	ANAHEIM UHSD						S	600					
+1212926	0	2	S498	F498-A	INC1515	COM	1283641	SAN DIEGANS FOR CITY HALL REFORM				ENCINITAS	CA	92024													SAN DIEGO MEASURES B & C		SAN DIEGO	S	4000					
+922772	0	2	S498	F498-A	INC368	OTH		Casden Properties LLC				Beverly Hills	CA	90211			Rod Wright				CCM		OTH	City of Los Angeles	10					S	6000					
+925536	0	1	S498	F498-R	INC117	OTH		Excel Property Management Services Inc				Beverly Hills	CA	90211	3/26/2003 12:00:00 AM	15000																				
+936816	0	1	S498	F498-R	INC262	COM	1253824	Williams for Council General				Los Angeles	CA	90017	5/19/2003 12:00:00 AM	7500																				
+961463	0	2	S498	F498-A	INC395	COM	1257244	Californians For Stability No On Recall				Sacramento	CA	95814			No on Recall of Governor Davis				GOV		STW							S	30000					
+961619	0	2	S498	F498-A	INC400	COM	1256416	Californians Against the Costly Recall of the Governor				Los Angeles	CA	90017			Gray Davis				GOV		STW							S	20000					
+847100	0	2	S498	F498-A	INC596	IND		Ricci	Tom			Palos Verdes Penin	CA	90274													J and L	J L	El Segundo	S	7750					
+863830	0	2	S498	F498-A	INC200	COM		Jeff Denham For Senate				Modesto	CA	95354			Jeff Denham				SEN		SEN							S	3800					
+866435	0	1	S498	F498-R	INC1211	COM	971403	Committee To Re-Elect Donald E. Williamson				Highland	CA	92346	9/5/2002 12:00:00 AM	3000																				
+868925	0	1	S498	F498-R	INC1254	COM		Yes On 47				Mill Valley	CA	94941	9/23/2002 12:00:00 AM	7500																				
+869243	0	2	S498	F498-A	INC311	COM	1239248	Californians for Election Day Voter Registration				Sacramento	CA	95814			Yes on Prop.52												Statewide	S	5150					
+870359	0	1	S498	F498-R	INC417	COM	1234919	Linda Foster For Assesor				Redlands	CA	92375	10/1/2002 12:00:00 AM	3500																				
+870359	0	2	S498	F498-A	INC417	COM	1234919	Linda Foster For Assesor				Redlands	CA	92375			Linda Foster				ASR		OTH							S	3500					
+761761	0	1	S498	F498-R	INC445	COM		Marlene Canter For LA School Board				Burbank	CA	91502	6/4/2001 12:00:00 AM	3096																				
+761833	0	1	S498	F498-R	INC136	COM		Committee to Elect Carl Washington to LA City Council (General Account)				Los Angeles	CA	90037	6/4/2001 12:00:00 AM	5000																				
+761838	0	1	S498	F498-R	INC137	COM		Committee to Elect Carl Washington to LA City Council (General Account)				Los Angeles	CA	90037	6/4/2001 12:00:00 AM	5000																				
+779572	0	1	S498	F498-R	INC462	COM	1235103	David Roberti For City Council				Los Angeles	CA	90027-0202	8/31/2001 12:00:00 AM	10350.95																				
+800517	0	2	S498	F498-A	INC1	IND		VOIGHT	GEORGE D			UPLAND	CA	91784-1106																S	1000					
+1338493	0	1	S498	F498-R	INC696	COM	1296563	HALL FOR ASSEMBLY				Los Angeles	CA	90071	5/29/2008 12:00:00 AM	10000																				
+1338493	0	2	S498	F498-A	INC696	COM	1296563	HALL FOR ASSEMBLY				Los Angeles	CA	90071			Isadore Hall				ASM		ASM		52	S				S	10000					
+1338590	0	10	S498	F498-A	10																						Appointment Diversity	D	City & County of San Francisco	S	622.77					
+1049474	0	2	S498	F498-A	IDT45	COM	1257254	YES ON 64									YES ON 64												STATEWIDE	S	26250					
+1049517	0	1	S498	F498-R	INC694	COM	1236024	Yes For Parks				Oakland	CA	94602	10/19/2004 12:00:00 AM	3000																				
+1050132	0	2	S498	F498-A	INC31	COM	1260240	Californians Against Goverment Run Healthcare, A Committee Against Prop. 72, with Major Funding by Restaurants and Retailers				Sacramento	CA	95814													No on Proposition	72	Statewide	O	2500					
+1051065	0	2	S498	F498-A	INC5651	OTH		Townsend Raimundo Besler & Usher				Sacramento	CA	95814													Measure A		San Diego County	S	14075					
+1051088	0	1	S498	F498-R	INC2297	OTH		Townsend Raimundo Besler & Usher				Sacramento	CA	95814	10/21/2004 12:00:00 AM	2750																				
+1051115	0	1	S498	F498-R	2004-2631	COM	1261851	Californias Against the Deceptive Gambling Proposition				Los Angeles	CA	90071	10/21/2004 12:00:00 AM	110000																				
+879242	0	1	S498	F498-R	INC522	COM	1245470	Yes On Measure C				Fresno	CA	93721	10/23/2002 12:00:00 AM	3690																				
+879982	0	2	S498	F498-A	A-468												Cardoza	Dennis			OTH	US Congress	OTH	Federal						S	5000					
+880461	0	1	S498	F498-R	INC399	IND		Unz	Ron K.			Palo Alto	CA	94301	10/25/2002 12:00:00 AM	15000																		Wall Street Analytics, Inc.	Software Developer	
+880487	0	1	S498	F498-R	INC1301	COM	1244847	Citizens for Fire & Seismic Safety				Los Angeles	CA	90035	10/25/2002 12:00:00 AM	3100																				
+880566	0	2	S498	F498-A	INC364	COM	971403	Committee To Re-Elect Donald E. Williamson				Highland	CA	92346			Donald E. Williamson				ASR		OTH	San Bernardino County						S	2500					
+880567	0	2	S498	F498-A	INC442	COM	1244196	Yes On 46 A Coalition Of Seniors, Women, Teachers, Law Enforcement, Home Builders, Labor  Business & Other Supporters Of Emer				Sacramento	CA	95814			Yes On 46				OTH		STW							S	3000					
+881261	0	2	S498	F498-A	INC1559	OTH	1235208	Public Safety Coalition Against Secession - No on F				Burbank	CA	91502													Measure F		San Fernando Valley Secession	S	3025					
+1000579	0	1	S498	F498-R	INC1074	COM	1260881	TRICIA HUNTER FOR ASSEMBLY				SAN DIEGO	CA	92119	2/24/2004 12:00:00 AM	1007																				
+1000579	0	2	S498	F498-A	INC1074	COM	1260881	TRICIA HUNTER FOR ASSEMBLY				SAN DIEGO	CA	92119			TRICIA HUNTER				ASM		ASM		76					S	1007					
+1050482	0	1	S498	F498-R	INC1567	COM		Small Business Action Committee							10/21/2004 12:00:00 AM	23531.25																				
+1176406	0	2	S498	F498-A	INC2013	COM	1283868	Friends of John Wong				Commerce	CA	90040			John Wong				BOE		BOE		4	S				S	2500					
+1176650	0	1	S498	F498-R	INC1398	COM	1276457	RE-ELECT AUERBACH				LOS ANGELES	CA	90017	5/30/2006 12:00:00 AM	1000																				
+1178225	0	14	S498	F498-A	IDT122	OTH		Hansen	Darlene								Darlene Hansen				OTH	Republican Central Committee	OTH	San Diego County	75					S	50					
+1178225	0	18	S498	F498-A	IDT126	OTH		Rosen	Michael M.								Michael M. Rosen				OTH	Republican Central Committee	OTH	San Diego County	75					S	50					
+598531	0	1	S498	F498-R	INC53	COM		Friends of Katherine Mader				Los Angeles	CA	90071	2/29/2000 12:00:00 AM	2500																				
+600813	0	1	S498	F498-R	INC80	COM	922117	No New Taxes - A Project of Howard Jarvis Taxpayer's Association				Los Angeles	CA	90005	3/2/2000 12:00:00 AM	5000																				
+602269	0	2	S498	F498-A	INC59	COM	991968	Californians For Clean Safe Reliable Water/YES ON PROP 13				Sacramento	CA	95814			Proposition 13													S	3000					
+603907	0	2	S498	F498-A	INC69	COM		Jerome E. Horton for Assembly				Inglewood	CA	90303																S	5000					
+1218100	1	1	S498	F498-R	TRAN0013290348999001	OTH		CH2M Hill Inc				Englewood	CA	80112	10/31/2006 12:00:00 AM	10000																				
+1220803	0	2	S498	F498-A	INC227	OTH		JohnsonClark Associates				Sacramento	CA	95833			Richard Pombo				OTH	US Representative	OTH	Congressional District	11					S	6100					
+1220842	0	2	S498	F498-A	INC222	COM	1276770	Steve Poizner for Insurance Commissioner				RanchoSantaMargarita	CA	92688			Steve Poizner				INS		STW							S	5000					
+1295996	0	6	S498	F498-A	IDT8	COM		No on A - SF 2007																			Transit Reform, Parking Regulation and Emissions Reduction	A	City and County of San Francisco	O	833.33					
+1298196	0	2	S498	F498-A	IDT10	COM	1300697	The Campaign for Small Business, A Committee in Support of Proposition I				San Francisco	CA	94110													Establishing Office of Small Business as City Dept.	I	City & County of San Francisco	S	5000					
+1056758	0	2	S498	F498-A	A-668												Farrukh	Abdallah			OTH	Board of Directors	OTH	Antelope Valley HCD						S	2500					
+1058045	3	1	S498	F498-R	NM17	COM	1268728	Save the Services Comm./Yes on J,K,& O				San Francisco	CA	94114	10/29/2004 12:00:00 AM	10000																		San Francisco	JKO	
+1058981	0	2	S498	F498-A	INC629	OTH	1269835	No New Taxes, A Project of the Small Business Action Cmt & Jarvis Taxpayers Assoc.				Sacramento	CA	95814													Statewide Proposition	63		O	14470					
+1059074	0	2	S498	F498-A	INC1584	COM		Committee To Elect Albert Robles									Albert Robles				OTH	Water Replenishment	OTH	Los Angeles	5	S				S	1000					
+1059530	0	2	S498	F498-A	NM18-1	OTH		Preston Gates & Ellis LLP				San Francisco	CA	94111-3514													Homes for the City - Yes on A	A	San Francisco	S	3000					
+1050134	0	2	S498	F498-A	IDT8	COM	1257254	Yes on 64 - Californians to Stop Shakedown Lawsuits				Mill Valley	CA	94941													Yes on Proposition	64	Statewide	S	5000					
+1057574	0	1	S498	F498-R	INC8	COM		John C. Gutierrez for LA Co.Superior Court Judge				Sylmar	CA	91392-3576	10/29/2004 12:00:00 AM	5000																				
+1057574	0	2	S498	F498-A	INC8	COM		John C. Gutierrez for LA Co.Superior Court Judge				Sylmar	CA	91392-3576			John C.Gutierrez				SCJ		OTH	L.A.Superior Court	29					S	5000					
+1131038	0	2	S498	F498-A	INC1312	COM	1274444	PHARMACEUTICAL RESEARCH & MANUFACTURERS OF AMERICA CA. INITIATIVE FUND				SACRAMENTO	CA	95814													DISCOUNTS ON DRUGS	78	STATEWIDE	S	37500					
+1173364	0	2	S498	F498-A	INC38	COM	1278874	Lowenthal for Judge				Los Angeles	CA	90048			Daniel Lowenthal				SCJ		OTH	L.A. Superior Court	122	S				S	5000					
+1174271	0	2	S498	F498-A	INC2006	COM	1285223	Gary Felien For B.O.E.				La Mesa	CA	91941			Gary Felien				BED		OTH	San Diego County						S	6400					
+1175394	0	2	S498	F498-A	INC48	COM	1281908	Alan Friedenthal for Superior Court Judge				Los Angeles	CA	90071			Alan Friedenthal				SCJ		OTH	L. A. Superior Court	8	S				S	2500					
+1175875	0	32	S498	F498-A	A-210												Hernandez	Ed			ASM		ASM		57					S	12585					
+825057	0	1	S498	F498-R	INC923	COM	1234309	Shelley for Secretary of State - Every Vote Counts				Sacramento	CA	95814	2/22/2002 12:00:00 AM	11000																				
+825248	0	2	S498	F498-A	INC512	OTH		Russo, Marsh & Assoc.				Sacramento	CA	95812			Bill Simon				GOV		STW			S				S	150000					
+825386	0	2	S498	F498-A	INC2782	OTH		McNally Temple Associates, Inc				Sacramento	CA	95814			Bruce McPherson				LTG		STW							S	60000					
+825412	0	2	S498	F498-A	INC318	COM	1230847	Westly for Controller				Burbank	CA	91502			Steve Westly				CON		STW							S	7500					
+825985	0	2	S498	F498-A	INC2787	OTH	1240213	Mendoza For Insurance Commissioner				Los Angeles	CA	90071			Gary Mendoza				INS		OTH	Statewide						S	5000					
+826032	0	1	S498	F498-R	NM40	COM	1231633	Kimiko Burton for Public Defender				San Francisco	CA	94122-4550	2/25/2002 12:00:00 AM	3500																		San Francisco	Public Defender	
+826227	0	2	S498	F498-A	INC517	COM	1239124	Friends of Mark Leyes				Garden Grove	CA	92844			Mark Leyes				OTH	Central Committee	ASM		68	H				S	200					
+826247	0	1	S498	F498-R	INC151	COM		Friends Of Sheriff Lee Baca				Los Angeles	CA	90071	2/25/2002 12:00:00 AM	10000																				
+684805	0	2	S498	F498-A	A-535												Glover	Federal			BSU		CTY	Contra Costa	5					S	1500					
+685057	0	2	S498	F498-A	INC552	COM	1222010	Rick Auerbach/Cte. to Elect Assessor				Los Angeles	CA	90017							OTH	Assessor L.A. County	OTH			S				S	4000					
+685295	0	1	S498	F498-R	INC443	COM	990145	STEVE COOLEY FOR D.A.				TOLUCA LAKE	CA	91602	11/3/2000 12:00:00 AM	5000																				
+685295	0	2	S498	F498-A	INC443	COM	990145	STEVE COOLEY FOR D.A.				TOLUCA LAKE	CA	91602			STEVE COOLEY				DAT		OTH	LOS ANGELES COUNTY						S	5000					
+686345	0	2	S498	F498-A	INC133	COM		Garcetti 2000				Los Angeles	CA	91504			Gil Garcetti				DAT		OTH	Los Angeles County						S	12000					
+736562	0	1	S498	F498-R	INC493	COM	990836	Joel Wachs for Mayor				North Hollywood	CA	91606	3/26/2001 12:00:00 AM	10000																				
+736929	0	1	S498	F498-R	INC802	IND	1229607	Michael Waxman For Community College Board				Beverly Hills	CA	90211	3/28/2001 12:00:00 AM	18000																				
+1336252	0	1	S498	F498-R	INC3693	COM	1294888	Bob Blumenfield for Assembly				Los Angeles	CA	90048	5/19/2008 12:00:00 AM	2760																				
+1336256	0	1	S498	F498-R	INC3694	COM	1304996	Jones for Judge 2008				Los Angeles	CA	90048	5/19/2008 12:00:00 AM	9000																				
+1336256	0	2	S498	F498-A	INC3694	COM	1304996	Jones for Judge 2008				Los Angeles	CA	90048			Laurie Jones				SCJ		OTH	Los Angeles County	84					S	9000					
+1336405	0	1	S498	F498-R	INC4	COM	494211	SYCUAN BAND OF THE KUMEYAAY NATION				EL CAJON	CA	92019	5/22/2008 12:00:00 AM	25000																				
+1336416	0	2	S498	F498-A	IDT3	COM	1285334	PROPOSITION 98	NO 98/YES 99			MILL VALLEY	CA	94941													PROPOSITION 98		STATEWIDE	O	25000					
+1336419	0	1	S498	F498-R	INC2153	COM	1304973	Serena  Murillo for Judge				Altadena	CA	91001	5/23/2008 12:00:00 AM	9900																				
+1213905	0	12	S498	F498-A	A-679												Chavez	Cindy			MAY		CIT	City of San Jose						S	811.18					
+1213905	0	20	S498	F498-A	A-687												Faul	Carol Joan			MAY		CIT	City of Atwater						S	283.64					
+1213905	0	28	S498	F498-A	A-695												Espinosa	Rodrogo			CCM		CIT	City of Livingston						S	283.64					
+1213905	0	31	S498	F498-A	A-698												Carson	Irma			CCM		CIT	City of Bakersfield						S	146.38					
+968722	0	2	S498	F498-A	NM74-1	COM	1250905	Newsom for Mayor				San Francisco	CA	94109			Newsom for Mayor				MAY	Mayor		San Francisco						S	5000					
+977352	0	1	S498	F498-R	INC878	COM	1258055	Horton 2004				Burbank	CA	91502	12/24/2003 12:00:00 AM	3454																				
+977352	0	2	S498	F498-A	INC878	COM	1258055	Horton 2004				Burbank	CA	91502			Jerome Horton				ASM		STW		51					S	3454					
+982684	0	1	S498	F498-R	INC881	COM	920450	Bob Buster for County Supervisor				Riverside	CA	92504	1/15/2004 12:00:00 AM	2057																				
+871108	0	2	S498	F498-A	INC378	COM	1239884	Elect Joe Deering Judge Committee				Santa Monica	CA	90403			Joe Deering				SCJ		OTH	Los Angeles	2					S	2500					
+872698	0	1	S498	F498-R	INC177	COM		The Governor Gray Davis				Los Angeles	CA	90017	10/7/2002 12:00:00 AM	50000																				
+872698	0	2	S498	F498-A	INC177	COM		The Governor Gray Davis				Los Angeles	CA	90017			Gray Davis				GOV		STW							S	50000					
+872711	0	1	S498	F498-R	INC438	COM	1246895	Wilson For Mayor				Woodland Hills	CA	91367	10/7/2002 12:00:00 AM	5000																				
+873593	0	1	S498	F498-R	INC179	COM	1242082	Richard Walmark For judge				Studio City	CA	91604	10/10/2002 12:00:00 AM	2500																				
+873759	0	2	S498	F498-A	INC358	COM	1241445	Citizens & Law Enforcement Against Election Fraud				Sacramento	CA	95814													Same Day Voter Registration	52	Statewide	O	10500					
+809486	0	1	S498	F498-R	INC281	COM		Linda Foster For Assesor				Redlands	CA	92375	1/17/2002 12:00:00 AM	4080																				
+810716	0	1	S498	F498-R	INC969	OTH	1238613	Taxpayers For Traffic Relief/Yes On ACA 4				Mill Valley	CA	94941	1/24/2002 12:00:00 AM	15000																				
+814746	0	1	S498	F498-R	INC480	COM	1240859	Donald Renetzky For Superior Court				Studio City	CA	91604	1/30/2002 12:00:00 AM	2500																				
+814748	0	2	S498	F498-A	INC482	COM	940900	Friends Of Judy Mikels									Judy Mikels				BSU		OTH	Ventura County	4					S	2705					
+1338707	0	2	S498	F498-A	INC704	COM	1300289	BERNARD PARKS FOR SUPERVISOR				Los Angeles	CA	90048			Bernard Parks				CSU		OTH	Los Angeles County	2	S				S	25000					
+1338911	0	2	S498	F498-A	INC115	COM	1285334	No 98/Yes 99, Calif.to Stop the Prop.98 Attack				Mill Valley	CA	94941													No 98/Yes 99		Statewide	S	12500					
+1367603	0	2	S498	F498-A	INC4040	OTH		The La Jolla Group				San Diego	CA	92111													Alcohol Ban	D	City of San Diego	O	5000					
+1367628	0	2	S498	F498-A	INC124	OTH		Pacific Gas & Electric (PGE)				San Francisco	CA	94105													Setting Clean Energy Deadlines	H	City & County of San Francisco	O	3000					
+1135133	0	1	S498	F498-R	INC869	COM	1276142	No On Proposition 73				Sacramento	CA	95814	11/1/2005 12:00:00 AM	12000																				
+1135133	0	2	S498	F498-A	INC869	COM	1276142	No On Proposition 73				Sacramento	CA	95814			No On Proposition 73				OTH		STW							O	12000					
+1135871	0	1	S498	F498-R	INC11	OTH	1226812	African American Voter Registration Education & Participation Project				Los Angeles	CA	90018	11/2/2005 12:00:00 AM	25000																				
+1135871	0	5	S498	F498-A	IDT4	COM	1276320	No on 77																			Redistricting. Initiative Constitutional Amendment	77	Statewide	O	3571.43					
+1135871	0	6	S498	F498-A	IDT5	COM	1279272	Yes on 80																			Electric Service Providers. Regulation. Initiative Statute	80	Statewide	S	3571.43					
+1135871	0	8	S498	F498-A	IDT7	COM	1279270	No on 78																			Discounts on Prescription Drugs. Initiative	78	Statewide	S	3571.42					
+1175773	0	2	S498	F498-A	IDT3	OTH		Haynes	Raymond								Raymond Haynes				BOE		BOE		3					S	20000					
+1175794	0	1	S498	F498-R	late605264	IND		Reilly	Clint			San Francisco	CA	94104	5/26/2006 12:00:00 AM	8000																			Businessman	X
+1177522	0	1	S498	F498-R	INC26	OTH	1285610	Olson for Judge				Los Angeles	CA	90071	5/30/2006 12:00:00 AM	1500																				
+1177522	0	2	S498	F498-A	INC26	OTH	1285610	Olson for Judge				Los Angeles	CA	90071			Lynn Olson				SCJ					S				S	1500					
+1051373	0	1	S498	F498-R	INC503	COM		Californians Against The Deceptive Gambling Proposition				Los Angeles	CA	90071	10/21/2004 12:00:00 AM	25000																				
+1052269	0	1	S498	F498-R	2004-2836	COM	991828	San Francisco Deputy Sheriffs Association				San Francisco	CA	94103	10/21/2004 12:00:00 AM	5000																				
+1052269	0	6	S498	F498-A	A-518												Sandoval	Gerardo			BSU		CTY	San Francisco County	11					S	1000					
+1052296	0	3	S498	F498-A	A-488												Wolk	Lois			ASM		ASM		8					S	4900					
+1052296	0	6	S498	F498-A	A-491												Ruskin	Ira			ASM		ASM		21					S	11200					
+1052296	0	8	S498	F498-A	A-493												Parra	Nicole			ASM		ASM		30					S	7700					
+1052296	0	11	S498	F498-A	A-496												Nava	Pedro			ASM		ASM		35					S	5040					
+1052451	0	1	S498	F498-R	INC737	COM		Californians Against Government Run Healthcare				Sacramento	CA	95814	10/22/2004 12:00:00 AM	15000																				
+883704	0	1	S498	F498-R	2002-8158	COM	1245448	Yes on 47: Taxpayers, Parents, Educators, Business, Labor, Builders				Sacramento	CA	95814	10/29/2002 12:00:00 AM	80000																				
+883757	0	2	S498	F498-A	INC321	COM	1241445	Citizens & Law Enforcement Against Election Fraud				Sacramento	CA	95814													No on Proposition 52	52	California	S	12000					
+1178225	0	34	S498	F498-A	IDT142	OTH		German	G. Michael								G. Michael German				OTH	Republican Central Committee	OTH	San Diego County	78					S	50					
+1179026	0	1	S498	F498-R	INC30	OTH	1275408	Californians for Rocky				Los Angeles	CA	90017	6/2/2006 12:00:00 AM	10000																				
+1179027	0	1	S498	F498-R	INC32	OTH	1276675	John Chiang for California State Controller 2006				Los Angeles	CA	90048	6/2/2006 12:00:00 AM	7500																				
+1179639	0	1	S498	F498-R	INC370	COM	1249787	Adam Smith PAC				La Mesa	CA	91941	6/5/2006 12:00:00 AM	5550																				
+1179639	0	2	S498	F498-A	IDT94	COM	1275448	Taxpayers for Haynes				Willows	CA	95988			Ray Haynes				BOE		STW		3					S	5550					
+1185190	0	1	S498	F498-R	INC55	OTH		Pacific Gas & Electric (PGE)				San Francisco	CA	94105	6/1/2006 12:00:00 AM	3000																				
+676106	0	3	S498	F498-A	IDT67	COM	991528	Friends of Michele Nash-Hoff				San Diego	CA	92119			Michele Nash-Hoff				ASM		ASM		76					S	500					
+676106	0	7	S498	F498-A	IDT71	COM	962605	Strickland for Assembly				Thousand Oaks	CA	91358			Tony Strickland				ASM		ASM		37					S	500					
+676273	0	1	S498	F498-R	INC124	COM		L.A. County Committee for Efficien Government				Beverly Hills	CA	90212	10/24/2000 12:00:00 AM	3843.33																				
+676975	0	1	S498	F498-R	INC347	COM		BUSH-CHENEY 2000 INC.				AUSTIN	TX	78768	10/23/2000 12:00:00 AM	2500																				
+1305587	0	2	S498	F498-A	A-22																						Proposition 94.  Amendment to Indian Gaming Compact.	94	Statewide	S	185150					
+1305587	0	3	S498	F498-A	A-23																						Proposition 95.  Amendment to Indian Gaming Compact.	95	Statewide	S	185150					
+1309275	0	1	S498	F498-R	INC1206	OTH		Alliance For California's Renewal				Rancho Santa Margari	CA	92688	1/30/2008 12:00:00 AM	11000																				
+1309278	0	2	S498	F498-A	INC1205	COM	1300585	Coalition To Protect Californian's Budget & Economy				Sacramento	CA	95814																S	308000					
+1310530	0	1	S498	F498-R	INC2488	COM	1297721	Hagman for Assembly				R.S. Margarita	CA	92688	1/31/2008 12:00:00 AM	4128																				
+1107837	0	2	S498	F498-A	INC254	OTH		Portrait Homes				Corona	CA	92879			James Hahn				MAY		OTH	City of Los Angeles		H				S	5000					
+1107840	0	2	S498	F498-A	INC256	COM	743030	International Union of Operating Engineers Political Fund				Pasadena	CA	91103			James Hahn				MAY		OTH	City of Los Angeles		H				S	5000					
+1173125	0	1	S498	F498-R	INC1	COM	1279896	Friends of Joe Dunn				West Hollywood	CA	90069	5/22/2006 12:00:00 AM	5000																				
+1175750	0	1	S498	F498-R	INC4	COM	1271345	Debra Bowen for Secretary of State				Burbank	CA	91502	5/25/2006 12:00:00 AM	5000																				
+1175772	0	2	S498	F498-A	IDT4	OTH		Strickland	Tony								Tony Strickland				CON		STW							S	20000					
+1175875	1	1	S498	F498-R	2006-0602	COM	822501	Professional Engineers in California Government PECG PAC				Sacramento	CA	95814	5/26/2006 12:00:00 AM	259679																				
+1175875	1	9	S498	F498-A	A-187												Gregory	Michael J.			CCM		CIT	San Leandro City	1					S	160					
+1175875	1	11	S498	F498-A	A-189												Steele	Gail			CSU		CTY	Alameda County	2					S	160					
+1175875	1	14	S498	F498-A	A-192												Adams	Susan L.			CSU		CTY	Marin County	1					S	875					
+1175875	1	19	S498	F498-A	A-197												Polvorosa	Julian			CCM		CIT	San Leandro City	3					S	160					
+1175875	1	27	S498	F498-A	A-206												DeSaulnier	Mark			ASM		ASM		11					S	18072					
+1175875	1	32	S498	F498-A	A-211												Ma	Fiona			ASM		ASM		12					S	10289					
+1175915	0	2	S498	F498-A	INC28	IND		Gray	Tesla Ann			Fallbrook	CA	92088																S	20000					
+1175916	0	1	S498	F498-R	INC25	OTH		SCC Acquisitions, Inc. dba SunCal Companies				Irvine	CA	92614	5/26/2006 12:00:00 AM	20000																				
+1175935	0	1	S498	F498-R	INC160	COM	1283783	Alliance of Orange County Taxpayers				Tustin	CA	92780	5/26/2006 12:00:00 AM	3500																				
+1175976	0	2	S498	F498-A	INC2802	COM	1283385	Steve A. Perez for Sheriff Cte				Bakersfield	CA	93389			Steve A. Perez				OTH	Sheriff	OTH	Kern County						S	4730					
+1177089	0	1	S498	F498-R	INC41	COM	1269289	Standing Up For California				Sacramento	CA	95814	5/30/2006 12:00:00 AM	10000																				
+1177101	0	1	S498	F498-R	INC43	COM	1284508	Mitchell	Daviann			Los Angeles	CA	90048	5/30/2006 12:00:00 AM	1500																			Criminal Gang Prosecutor	
+826437	0	2	S498	F498-A	INC108	COM	1241361	Friends of Bruce Peotter				Irvine	CA	92714			Bruce Peotter				OTH	Auditor/Controller	OTH	County of Orange		S				S	5000					
+826503	0	2	S498	F498-A	INC680	COM	1233818	BOB DUTTON FOR ASSEMBLY				RANCHO CUCAMONGA	CA	91730			BOB DUTTON				ASM		ASM		63					S	1160					
+827368	0	1	S498	F498-R	INC662	OTH		McNally Temple Associates, Inc				Sacramento	CA	95814	2/28/2002 12:00:00 AM	4760																				
+827391	0	2	S498	F498-A	INC153	COM	991829	Californians For Clean Water, Clear Air, Coastal Protection, And Safe Neighborhood Parks,				Sacramento	CA	95814			Yes On Proposition 40						STW							S	5000					
+737085	0	2	S498	F498-A	INC166	COM		Villaraigosa For Mayor				Los Angeles	CA	90017			Antonio Villaraigosa				MAY		OTH	City of Los Angeles						S	3900					
+737385	0	1	S498	F498-R	INC664	COM	1229607	Michael Waxman for Community College Board				Beverly Hills	CA	90211	4/3/2001 12:00:00 AM	25000																				
+737385	0	2	S498	F498-A	INC664	COM	1229607	Michael Waxman for Community College Board				Beverly Hills	CA	90211							OTH	LACCD Trustee #2								S	25000					
+737711	0	2	S498	F498-A	IDT300	IND	983156	Rodman	Matthew S.								Matthew S. Rodman				BED		OTH	Los Angeles	4					S	4000					
+738818	0	1	S498	F498-R	INC127	COM		Dan Rosales Jr. For LACCD				Los Angeles	CA	90017	4/4/2001 12:00:00 AM	5000																				
+738821	0	1	S498	F498-R	INC108	COM		Southern California District Council Of Carpenters Small Contribution Committee				Los Angeles	CA	90020	4/4/2001 12:00:00 AM	10000																				
+1336462	0	3	S498	F498-A	IDT14	COM		Prop E 2008																			Requiring Board of Sup. Approval of Appt to PUC & Qualifications for Mem.	E	San Francisco	O	1666.66					
+1337513	0	2	S498	F498-A	INC3697	COM	1304339	Scott Peters for City Attorney				San Diego	CA	92122			Scott Peters				CAT		OTH	San Diego						S	9820					
+1336416	1	1	S498	F498-R	INC3	COM	831561	LINCOLN CLUB OF SAN DIEGO COUNTY				SAN DIEGO	CA	92119	5/22/2008 12:00:00 AM	50000																				
+1337917	0	2	S498	F498-A	IDT40	COM	1259611	Friends of Mariko Yamada									Mariko Yamada				ASM		ASM		8	S				S	3100					
+1213930	0	1	S498	F498-R	INC40	OTH		AFT 2121				SAN FRANCISCO	CA	94122	10/26/2006 12:00:00 AM	7000																				
+1213930	0	2	S498	F498-A	IDT32	COM	1288476	YES ON 1D, A COALITION OF TEACHERS, BUSINESSES AND EDUCATION ORGANIZATIONS				SACRAMENTO	CA	95814			PROPOSITION 1D						OTH	STATEWIDE						S	7000					
+1214228	0	2	S498	F498-A	IDT694	IND		Grimes	Roy			Sacramento	CA	95819			Roy Grimes				OTH	Unified School District	OTH	Sacramento						S	1600		IDT694			
+1214228	0	3	S498	F498-A	IDT695	IND		Bell	Ellyne			Sacramento	CA	05819			Ellyne Bell				OTH	Unified School District	OTH	 Sacramento						S	1600		IDT695			
+1216192	0	1	S498	F498-R	NM6	COM	1287395	Comm. to Stop the $2 Billion Tax Hike				Mill Valley	CA	94941	10/28/2006 12:00:00 AM	12500																				
+1216304	0	1	S498	F498-R	INC66	COM	1282352	Calif.for Clean Alternative Energy				Los Angeles	CA	90048	10/31/2006 12:00:00 AM	15000																				
+1216306	0	1	S498	F498-R	TRAN0013290348999001	COM	1286420	Californians Against Unaccountable Taxes Sponsored by R.J. Reynolds Tabacco Company				Los Angeles	CA	90071	10/31/2006 12:00:00 AM	84000																				
+999390	0	2	S498	F498-A	INC470	COM	1259463	Re-Elect Judge Dan T. Oki				Studio City	CA	91604			Dan T. Oki				SCJ		STW			H				S	6000					
+1000711	0	2	S498	F498-A	INC1066	COM	1254104	CALIFORNIANS AGAINST HIGHER TAXES				MILL VALLEY	CA	94941													MAKE IT EASIER TO RAISE TAXES ACT OF 2004	56	STATEWIDE	O	4000					
+1003242	0	1	S498	F498-R	INC482	OTH		The Political Scientists				Hermosa Beach	CA	90254	2/27/2004 12:00:00 AM	3000																				
+1003409	0	2	S498	F498-A	A-246												Williams	Forrest			CCM		CIT	City of San Jose	2					S	1000					
+874686	0	1	S498	F498-R	INC273	COM	1221992	The Lockyer Committee				Sacramento	CA	95814	10/16/2002 12:00:00 AM	3000																				
+874690	0	2	S498	F498-A	INC187	COM	1241223	Hank Goldberg For Judge				Los Angeles	CA	90071			Hank Goldberg				SCJ		OTH	Los Angeles County	2					S	3000					
+875488	0	2	S498	F498-A	INC327	COM	1242082	Richard Walmark For Judge				Studio City	CA	91604			Richard Walmark				SCJ		OTH	Los Angeles County	100					S	3000					
+876618	0	1	S498	F498-R	2002-7099	COM	1234626	Garamendi Committee				Fair Oaks	CA	95628	10/22/2002 12:00:00 AM	30000																				
+876620	0	2	S498	F498-A	A-359																						Prop 51 - Transportation, Distribution of Existing Motor Vehicle Sales and Use Tax	51		O	5000					
+876683	0	2	S498	F498-A	INC197	COM		Citizens For Fire & Seismic Safety				Los Angeles	CA	90035			Yes On Measure A						OTH	Los Angeles						S	6500					
+815196	0	2	S498	F498-A	INC999	COM		Cheryl Mills For Superior Court				Walnut Creek	CA	94596			Cheryl Mills				SCJ		OTH							S	3000					
+815197	0	1	S498	F498-R	INC997	COM		Arthur Bocanegra For Superior Court Judge				San Jose	CA	95110	1/31/2002 12:00:00 AM	3000																				
+815197	0	2	S498	F498-A	INC997	COM		Arthur Bocanegra For Superior Court Judge				San Jose	CA	95110			Arthur Bocanegra				SCJ		OTH							S	3000					
+817393	0	2	S498	F498-A	INC1017	COM	1240503	Rusty Areias For Senate 2002				Sacramento	CA	95841			Rusty Areias				SEN		SEN							S	4000					
+817398	0	2	S498	F498-A	INC96	OTH		McNally Temple Associates Inc.				Sacramento	CA	95814			Dan Ostrander				ASM		ASM							S	2640					
+1173126	0	2	S498	F498-A	INC2	COM	1270388	Judy Chu Campaign Committee				Los Angeles	CA	90048			Judy Chu				BOE		BOE		4	S				S	5000					
+1174089	0	2	S498	F498-A	IDT93	COM	1275448	Taxpayers for Haynes				Willows	CA	95988			Ray Haynes				BOE		STW		3					S	4850					
+1174695	0	1	S498	F498-R	INC1388	OTH	741949	SAN DIEGO COUNTY REPUBLICAN CENTRAL COMMITTTEE				SAN DIEGO	CA	92119	5/25/2006 12:00:00 AM	1655																	INC1388			
+1174695	0	2	S498	F498-A	INC1388	OTH	741949	SAN DIEGO COUNTY REPUBLICAN CENTRAL COMMITTTEE				SAN DIEGO	CA	92119			SAN DIEGO COUNTY REPUBLICAN CENTRAL COMMITTEE													S	1655		INC1388			
+1175396	0	1	S498	F498-R	INC954	COM	1276462	Westly for Governor				Burbank	CA	91502	5/26/2006 12:00:00 AM	22500																				
+1175732	0	2	S498	F498-A	INC3	COM	1276462	Westly for Governor				Burbank	CA	91502			Steve Westly				GOV		STW							S	15000					
+1175875	0	4	S498	F498-A	A-182												Brooks	Desley A.			CCM		CIT	Oakland City	6					S	963					
+1175875	0	9	S498	F498-A	A-187												Gregory	Michael J.			CCM		CIT	San Leandro City	1					S	160					
+1175875	0	25	S498	F498-A	A-203												Brownley	Julia			ASM		ASM		41					S	21107					
+1212552	0	2	S498	F498-A	INC7353	OTH		Englander & Associates				Los Angeles	CA	90015													Measure P		City of Arcadia	S	10625					
+1213936	0	1	S498	F498-R	INC42	OTH		GENSLER				SAN FRANCISCO	CA	94105	10/26/2006 12:00:00 AM	5000																				
+1217373	0	1	S498	F498-R	INC1306	OTH	1257254	Nielsen Merksamer Parrinello Mueller & Naylor LLP				Sacramento	CA	95814	10/30/2006 12:00:00 AM	4000																				
+1217377	0	1	S498	F498-R	INC76	IND		Sheldon     (Payment refunded on 10/31/06)	Stephen R.			Newport Beach	CA	92660	10/30/2006 12:00:00 AM	20000																		Sheldon Group	President	
+1218407	0	1	S498	F498-R	INC122	COM	1287093	CALIFORNIANS FOR CLEAN WATER AND COASTAL PROTECTION				Mill Valley	CA	94941	11/1/2006 12:00:00 AM	3000																				
+1053682	0	2	S498	F498-A	INC1	COM	1258201	CALIFORNIANS TO STOP THE PHONE TAX				MILL VALLEY	CA	94941													EMERGENCY MEDICAL SERVICES. TELEPHONE SURCHARGE.	67	STATEWIDE	S	15000					
+1053684	0	2	S498	F498-A	INC2	COM	1266690	FIX THREE STRIKES - YES ON 66				SACRAMENTO	CA	95814													LIMITATIONS ON 3 STRIKES LAW. SEX CRIMES.	66	STATEWIDE	S	3000					
+1053694	0	2	S498	F498-A	INC2282	OTH		Western Pacific Research Inc.				Bakersfield	CA	93312			John Manning				OTH	Health Care District Board	OTH	Antelope Valley						S	3170					
+886930	0	7	S498	F498-A	A-725												Wood	Jim			CCM		CIT	City of Oceanside						S	500					
+887347	0	1	S498	F498-R	INC403	OTH		Tetra Tech, Inc.				Pasadena	CA	91117	11/1/2002 12:00:00 AM	2500																				
+1835126	0	2	S498	F498-A	INC1304	COM	1241346	Committee to Re-elect Elizabeth Dorn Parker, Orange County Board of Education, #5				Costa Mesa	CA	92627			Elizabeth Dorn Parker				BED		OTH	Orange County Board of Education, #5		S				S	10782					
+1835128	0	1	S498	F498-R	INC1306	COM	1363800	Johnson for Superior Court 2014				Irvine	CA	92618	3/31/2014 12:00:00 AM	10000																				
+1835605	0	1	S498	F498-R	INC1068	COM	1361888	Amy Carter For Judge 2014				Los Angeles	CA	90010	4/1/2014 12:00:00 AM	4720																				
+1536877	0	2	S498	F498-A	INC295	COM	1329087	Bert Hill for BART 2010				San Francisco	CA	94105			Bert Hill				OTH	BART Boardmember	OTH	San Francisco						S	7000					
+1537718	0	1	S498	F498-R	INC4856	COM	1323672	Yes on Fair				Los Angeles	CA	90024	10/27/2010 12:00:00 AM	23500																				
+1372522	0	2	S498	F498-A	INC4070	COM	1304996	Jones for Judge 2008				Los Angeles	CA	90048			Lori-Ann Jones				SCJ		OTH	Los Angeles County	84					S	3500					
+1489848	0	2	S498	F498-A	INC194	COM	1317910	Jones-Sawyer for Assembly 2010				Los Angeles	CA	90071			Reggie Jones-Sawyer				ASM		ASM		47					S	5000					
+1538215	0	2	S498	F498-A	INC10215	OTH	1323672	No on the Munger Initiative				Los Angeles	CA	90048													No on Prop 20		Statewide Ballot	S	100000					
+1538351	0	2	S498	F498-A	INC2435	COM	1324078	Yes on 24 - The Tax Fairness Act				Sacramento	CA	95814													Repeals recent legislation that would allow businesses to carry back losses to lower taxable income		Statewide	S	9371.65					
+1643691	0	2	S498	F498-R	F498R000000000731329	COM	Slatemail	New Majority California PAC				Mill Valley	CA	94941	6/2/2010 12:00:00 AM	3500																				
+1643691	0	8	S498	F498-R	F498R000000000727885	COM	1233880	Sycuan Citizens For Good Government				Los Angeles	CA	90071	6/2/2010 12:00:00 AM	3000																				
+1766523	0	2	S498	F498-A	IDT798	COM	(1356388)	Antonio Sanchez for L A School Board 2013 - General				Los Angeles	CA	90017			Antonio Sanchez				BED		OTH	Los Angeles	6					S	7380					
+1766859	0	2	S498	F498-A	2	RCP	1356064	Jose Gardea for Council 2013 - General				Los Angeles	CA	90017			Gardea	Jose A.			OTH	City Council Member	CIT	Los Angeles City Council #1						S	1992					
+1767019	0	1	S498	F498-R	INC285	COM	1355691	Yes on D, Citizens Coalition to Protect Patients & Neighborhoods				Woodland Hills	CA	91364	5/1/2013 12:00:00 AM	7000																				
+1767213	0	1	S498	F498-R	INC1011	COM	1315215	Coalition For L.A. Community College Reform in Support of David Vela				Los Angeles	CA	90017	5/4/2013 12:00:00 AM	8000																				
+1767417	0	1	S498	F498-R	INC1188	COM	1356050	Wendy Greuel for Mayor 2013-General				Van Nuys	CA	91406	5/6/2013 12:00:00 AM	22142																				
+1767428	0	1	S498	F498-R	1	RCP	1347816	California Black Political Action Committee				Los Angeles	CA	90043	5/6/2013 12:00:00 AM	2102																				
+1767428	0	2	S498	F498-A	2	RCP	1347816	California Black Political Action Committee				Los Angeles	CA	90043			Price, Jr.	Curren D.			OTH	City Council Member	CIT	Los Angeles City Council #9						S	2102					
+1835740	0	1	S498	F498-R	INC621	OTH		Robinson Communications Inc				Cupertino	CA	95014	4/2/2014 12:00:00 AM	7221.06																				
+1539659	0	2	S498	F498-A	IDT465	COM	13161104	Noguez Assessor 2010				Los Angeles	CA	90071			John Noguez				ASR		OTH	Los Angeles County						S	2500					
+1581216	0	2	S498	F498-A	INC535	COM	1335625	Gene Stevenson For PUSD Board 2011				Altadena	CA	91003			Gene Stevenson				OTH	School Boardmember	OTH	Pasadena USD	4					S	2785					
+1404636	0	1	S498	F498-A	630022	COM	1308947	Green Energy And Good Jobs Los Angeles				Los Angeles	CA	90017												H	Proposition B		Los Angeles	S	4200		00000000000000630022			
+1444438	0	1	S498	F498-R	1	OTH		TOWNSEND RAIMUNDO BESLER & USHER				SACRAMENTO	CA	95814	10/23/2004 12:00:00 AM	10500																				
+1477532	0	2	S498	F498-A	INC774	COM	1264154	LONG BEACH POLICE OFFICERS ASSN.IE COMM.				Sacramento	CA	95814			Bob Foster				MAY		OTH	City of Long Beach						S	2949.94					
+1477534	0	1	S498	F498-R	INC776	COM	1264154	LONG BEACH POLICE OFFICERS ASSN.IE COMM.				Sacramento	CA	95814	4/2/2010 12:00:00 AM	2949.94																				
+1643708	0	3	S498	F498-A	3	CAO	1305557	Aaron Peskin for Democratic County Central				Sacramento	Ca	94133			Nutter	Melanie			TRE		STW							S	403.35					
+1663810	0	1	S498	F498-R	INC410	OTH	1322596	Californians for a Fresh Start				Los Angeles	CA	90017	5/23/2012 12:00:00 AM	2500																				
+1767506	0	2	S498	F498-A	INC317	COM		Coalition for Community College Excellence				Los Angeles	CA	90017			David Vela				CCB		OTH	Los Angeles						S	10000					
+1767978	0	1	S498	F498-R	INC4106	COM	(1356062)	Garcetti for Mayor 2013 - General				Los Angeles	CA	90048	5/9/2013 12:00:00 AM	60000																				
+1768076	0	2	S498	F498-A	INC1292	COM	1356028	Mike Feuer For City Attorney 2013 General				Los Angeles	CA	90048			Mike Feuer				CAT		OTH	City Of Los Angeles						S	10000					
+1768116	0	1	S498	F498-R	INC29	COM	1356062	Garcetti for Mayor 2013-General				Los Angeles	CA	90048	5/10/2013 12:00:00 AM	30500																				
+1768255	0	1	S498	F498-R	1	RCP	1356058	John Choi for City Council 2013 - General				Los Angeles	CA	90017	5/13/2013 12:00:00 AM	2400																				
+1768424	0	2	S498	F498-A	INC321	COM		Wendy Greuel for Mayor 2013 General				Los Angeles	CA	90049			Wendy Gruel				MAY		OTH	City of Los Angeles						S	30000					
+1768429	0	2	S498	F498-A	2	CAO	1356058	John  choi for City Council 2013-General				Los Angeles	CA				Choi	John			OTH	City Council	CIT	District 13						S	850					
+1768589	0	2	S498	F498-A	INC4109	COM	(1356058)	John Choi for City Council 2013-General				Los Angeles	CA	90017			John Choi				CCM		OTH	Los Angeles	13					S	3083					
+1835975	0	1	S498	F498-R	INC1309	COM	1346285	Ferguson for Judge 2014				Santa Ana	CA	92706	4/2/2014 12:00:00 AM	12228.50																				
+1836177	0	1	S498	F498-R	1	RCP	1364033	Lake for Judge 2014				San Diego	CA	92128	4/4/2014 12:00:00 AM	4350																				
+1836178	0	2	S498	F498-A	INC1310	COM	1359573	Alison Matsumoto-Estrada for Judge 2014				Los Angeles	CA	90010			Alison Matsumoto-Estrada				SCJ		OTH	County of Los Angeles		S				S	5000					
+1836184	0	2	S498	F498-A	INC11906	COM	1359949	Dayan Mathai for Superior Court Judge 2014				Cerritos	CA	90703			Dayan Mathai				SCJ		OTH	County of Los Angeles		S				S	8967					
+1836196	0	1	S498	F498-R	1	RCP	1364292	Andrew Stein For Superior Court Judge				Covina	CA	91722	4/4/2014 12:00:00 AM	1968																				
+1477536	0	2	S498	F498-A	INC875	COM	1264154	LONG BEACH POLICE OFFICERS ASSOC.IE COMM.				Sacramento	CA	95814			Robert Shannon				CAT		OTH	City of Long Beach						S	2578.89					
+1529699	0	17	S498	F498-A	IDT126	COM		No on 23-Californians to Stop the Dirty Energy Proposition																			Suspends Air Pollution Control Laws Requiring Major Polluters to Report and Reduce Greenhouse Gas Emissions; Proposition 23		Statewide	O	11175					
+1529782	0	2	S498	F498-A	1	CAO	1323385	ABEL MALDONADO FOR LT. GOVERNOR				SANTA MARIA	CA	93458			MALDONADO	ABEL			LTG		STW							S	8000					
+1664384	0	2	S498	F498-A	INC181	COM	1336203	No on 29 - Californians Against Out-of-Control Taxes and Spending - Major Funding by Philip Morris USA & RJ Reynolds Tobacco				San Rafael	CA	94901			No on 29				OTH	Statewide Ballot Proposition 29					No on 29 - Tobacco Tax	29	Statewide	O	8750		INC181			
+1664686	0	1	S498	F498-R	INC729	OTH		McNally Temple Associates, Inc.				Sacramento	CA	95811	5/25/2012 12:00:00 AM	2505.70																				
+1664866	0	1	S498	F498-R	INC1015	COM	1322759	Californians for A Cure				Sacramento	CA	95814	5/24/2012 12:00:00 AM	20000																				
+1664868	0	2	S498	F498-A	IDT288	IND		Weber	Shirley			Lemon Grove	CA	91945			Shirley Weber				ASM		OTH	City of San Diego	79	S				S	3094.60					
+1664870	0	2	S498	F498-A	INC1009	COM	1335297	Rendon for Assembly 2012				Long Beach	CA	90807			Anthony Rendon				ASM		OTH	City of Long Beach	63	S				S	1876.08					
+1664873	0	1	S498	F498-R	INC1017	COM		Yes We Can				Sacramento	CA	95814	5/24/2012 12:00:00 AM	2673.84																				
+1789085	0	1	S498	F498-R	INC1203	COM	1354927	Friends of Sheriff Lee Baca 2014				Los Angeles	CA	90010	8/23/2013 12:00:00 AM	5000																				
+1791198	1	1	S498	F498-R	INC778	COM	1356686	San Franciscans for Parks, Jobs and Housing				San Francisco	CA	94105	9/13/2013 12:00:00 AM	20000																				
+1793651	0	2	S498	F498-A	INC74	COM	962837	Committee to Re-Elect Louie Gonzalez				Santa Fe Springs	CA	90670			Louie Gonzalez				CCM		OTH	Santa Fe Springs City Council		S				S	1600					
+1797439	0	1	S498	F498-R	INC1076	COM	1332397	Haskins for Superior Court Judge 2014				Rancho Santa Margarita	CA	92688	10/25/2013 12:00:00 AM	2250																				
+1813239	0	1	S498	F498-R	1	RCP	1360244	Bonnie Lowenthal For Mayor of Long Beach 2014				Los Angeles	CA	90048	1/24/2014 12:00:00 AM	3900																				
+1826767	0	2	S498	F498-A	INC11812	COM	1355478	Haroon for Los Angeles Assessor 2014				Menifee	CA	92586			Omar Haroon				ASR		OTH	County of Los Angeles		S				S	5677					
+1826798	0	1	S498	F498-R	INC1215	COM	1363690	McDonnell for LA County Sheriff 2014				Long Beach	CA	90807	3/7/2014 12:00:00 AM	15000																				
+1826798	0	2	S498	F498-A	INC1215	COM	1363690	McDonnell for LA County Sheriff 2014				Long Beach	CA	90807			Jim McDonnell				OTH	Sheriff	OTH	County of Los Angeles		S				S	15000					
+1827121	0	2	S498	F498-A	INC892	COM	1364025	Matthew Harris for Judge 2014				San Jose	CA	95138			Matthew Harris				SCJ		OTH	Santa Clara County	24					S	13848					
+1540310	0	2	S498	F498-A	INC4863	COM	1323713	Teachers, Firefighters and Nurses for an On-Time Budget				Sacramento	CA	95814													Majority Vote for Legislature to Pass Budget	25	Statewide	S	14284					
+1541134	0	2	S498	F498-A	INC10232	IND		The Wayne Johnson Agency				Sacramento	CA	95833			Larry Aceves				SUP		STW							S	20000					
+1533418	1	1	S498	F498-R	INC210	COM	1323934	No on 26				San Rafael	CA	94901	10/22/2010 12:00:00 AM	38505.80																				
+1549289	0	1	S498	F498-R	INC173	COM	1288513	Californians for Clean Air and Clean Energy Jobs, NO on 23, NO on 26, a project of the CA League of Conservation Voters				West Hollywood	CA	90069	10/25/2010 12:00:00 AM	12500																				
+1549289	0	2	S498	F498-A	IDT5	COM		Proposition 21																			Establishes $18 Annual Vehicle License Surcharge to Help Fund State Parks and Wildlife Programs. Proposition	21	Statewide	S	12500					
+1531806	0	2	S498	F498-A	INC10184	IND		Carlsbad Fire Fighters Leg Action Group				Carlsbad	CA	92008													Measure G		City of Carlsbad	O	3500					
+1532983	0	2	S498	F498-A	INC70	COM	1322292	Californians to Protect Local Taxpayers and Vital Services/A Coalition of Taxpayers, Public Safety, Local Govt				San Rafael	CA	94901													Prohibits the state from Borrowing Funds used for Transportation, & Redevelopment	22	Statewide	S	4500					
+1537914	0	1	S498	F498-R	INC216	OTH		Save Proposition 13				Laguna Niguel	CA	92677	10/28/2010 12:00:00 AM	30000																	INC216			
+1537932	0	2	S498	F498-A	INC3395	COM	1323890	California Jobs Initiative Committee				Santa Monica	CA	90401													Yes on 23	23	California	S	7001.50					
+1538826	0	1	S498	F498-R	INC727	COM	1288513	Californians for Clean Air and Clean Energy Jobs				West Hollywood	CA	90069	10/29/2010 12:00:00 AM	2500																				
+1664889	0	1	S498	F498-R	INC2705	OTH		Starpointe Ventures				Irvine	CA	92812	5/24/2012 12:00:00 AM	5000																				
+1664889	0	2	S498	F498-A	IDT810	OTH		Spitzer	Todd								Todd Spitzer				OTH	Central Committee Member	OTH	Orange County	68					S	5000					
+1666191	0	1	S498	F498-R	INC52	COM	981076	SAN FRANCISCO LABORER'S LOCAL 261 PAC				SAN FRANCISCO	CA	94110	5/29/2012 12:00:00 AM	2500																				
+1666194	0	9	S498	F498-A	IDT86	COM		TOM HSIEH, DCCC, 06/05/2012									TOM HSIEH				OTH	DEMOCRATIC COUNTY CENTRAL COMMITTEE	OTH	ASSEMBLY DISTRICT: 19						S	375					
+1827278	0	1	S498	F498-R	INC1272	COM	1364069	Brennan for Superior Court 2014				Sacramento	CA	95814	3/10/2014 12:00:00 AM	1548																				
+1827470	0	1	S498	F498-R	INC11813	COM	1351696	Parrish for Orange County Assessor 2014				Long Beach	CA	90802	3/10/2014 12:00:00 AM	18150																				
+1827775	0	1	S498	F498-R	INC4270	COM	1359682	Olmsted Instead for Sheriff 2014				Los Angeles	CA	90010	3/6/2014 12:00:00 AM	7500																				
+1827775	0	2	S498	F498-A	INC4270	COM	1359682	Olmsted Instead for Sheriff 2014				Los Angeles	CA	90010			Bob Olmsted				OTH	Sheriff	OTH	Los Angeles						S	7500					
+1827776	0	1	S498	F498-R	INC4283	COM	1354452	Bob Wieckowski for Senate 2014				Fremont	CA	94538	3/12/2014 12:00:00 AM	7432																				
+1828078	0	1	S498	F498-R	INC920	COM	1320901	Benoit for Supervisor 2014				Sacramento	CA	95833	3/13/2014 12:00:00 AM	2865																				
+1828114	0	1	S498	F498-R	INC1279	COM	1264154	Long Beach Police Officers Assoc (IE Committee)				Sacramento	CA	95814	3/13/2014 12:00:00 AM	3481.28																				
+1828119	0	2	S498	F498-A	INC1218	COM	1359977	Committee to Re Elect David Boyd Orange County Board of Education 2- 2014				Santa Ana	CA	92704			David Boyd				BED		OTH	Orange County		S				S	7510					
+1369085	0	2	S498	F498-A	INC352	COM	1311478	Yes on Measure R Los Angeles				Los Angeles	CA	90017												S	Yes on Measure R	R	Los Angeles	S	5000					
+1369176	0	1	S498	F498-R	INC1452	COM	1311478	Yes On Measure R Los Angeles				Los Angeles	CA	90017	10/22/2008 12:00:00 AM	10665																				
+1371928	0	4	S498	F498-A	IDT9	COM		NO ON H, SAN FRANCISCO, 11/04/08																			MEASURE H		SAN FRANCISCO	O	20000					
+1368344	0	1	S498	F498-R	INC94	OTH	822501	Professional Engineers in California Government Political Action Committee				Sacramento	CA	95814	10/20/2008 12:00:00 AM	278318																				
+1368344	0	5	S498	F498-A	IDT29	COM		Florez	Fran								Fran Florez				ASM		ASM		30					S	17632					
+1368344	0	9	S498	F498-A	IDT33	COM		Cooper	Jim								Jim Cooper				CCM		OTH	City of Elk Grove	1					S	1164					
+1368344	0	14	S498	F498-A	IDT38	COM		Maestas	Katherine								Katherine Maestas				CCM		OTH	City of Elk Grove	5					S	1164					
+1368344	0	17	S498	F498-A	IDT41	COM		Measure S Stanislaus County																			Better Roads/Safer Streets Program, Measure	S	Stanislaus County	S	1394					
+1368997	0	1	S498	F498-R	INC136	COM		MOTHERS AGAINST GANG VIOLENCE				Los Angeles	CA	90017	10/22/2008 12:00:00 AM	5000																				
+1369011	0	2	S498	F498-A	INC726	COM	1304462	FRIENDS OF TOM RUBINSON				Los Angeles	CA	90071			Tom Rubinson				SCJ		OTH	Los Angeles Superior Court	82	S				S	5000					
+1539089	0	4	S498	F498-A	F498A000000000771705	COM	1314638	Expansion PAC				Redondo Beach	CA	90278			Mitchell	Holly			ASM	State Assembly Member	STW	State of California	47	S				S	2500		F498A000000000771705			
+1539321	0	1	S498	F498-R	INC1253	COM	1323672	Yes on FAIR				Los Angeles	CA	90024	10/28/2010 12:00:00 AM	4120																				
+1374974	0	2	S498	F498-A	INC4071	COM	1270897	Citizens for Anaheim's Future				Rancho St. Margarita	CA	92688			Gail Eastman				CCM		OTH	Anaheim						S	3390		INC4071			
+1490699	0	2	S498	F498-A	INC514	COM	C00457374	DeVore for California				Ranchosantamargarita	CA	92688			Chuck DeVore				OTH	US Senate	OTH	California						S	10000					
+1666194	0	12	S498	F498-A	IDT89	COM		SUSAN KOTT, DCCC, 06/05/2012									SUSAN 'SUKI' KOTT				OTH	DEMOCRATIC COUNTY CENTRAL COMMITTEE	OTH	ASSEMBLY DISTRICT: 19						S	375					
+1666194	0	16	S498	F498-A	IDT93	COM		MARIA 'MARILY' MONDEJAR, DCCC, 06/05/2012									MARIA 'MARILY' MONDEJAR				OTH	DEMOCRATIC COUNTY CENTRAL COMMITTEE	OTH	ASSEMBLY DISTRICT: 17						S	375					
+1666194	0	19	S498	F498-A	IDT96	COM		CHRISTOPHER VASQUEZ, DCCC, 06/05/2012									CHRISTOPHER VASQUEZ				OTH	DEMOCRATIC COUNTY CENTRAL COMMITTEE	OTH	ASSEMBLY DISTRICT: 17						S	375					
+1666206	0	2	S498	F498-A	IDT120	COM		NO ON A, SAN FRANCISCO, 6/5/2012																			MEASURE A: GARBAGE COLLECTION AND DISPOSAL		SAN FRANCISCO	O	5000					
+1667269	0	1	S498	F498-R	INC61	OTH	1344802	KEEP SF GREEN; NO ON PROP A; A COALITION OF RECOLOGY, LABOR, BUSINESS AND ENVIRONMENTALIST, MAJOR FUNDING BY RECOLOGY.				SAN FRANCISCO	CA	94107	5/31/2012 12:00:00 AM	2500																				
+1667443	0	2	S498	F498-A	IDT811	COM	C00505354	Elizabeth Emken for US Seante 2012				Danville	CA	94526			Elizabeth Emken				OTH	U.S. Senator	OTH	California						S	2500					
+1662219	0	1	S498	F498-R	INC410	OTH	1322596	Californians for a Fresh Start				Los Angeles	CA	90017	5/22/2012 12:00:00 AM	2500																				
+1663200	0	2	S498	F498-A	IDT129	COM	999999	Payment not yet allocated to candidate/ballot measures									Payment not yet allocated to candidate/ballot measures													S	121652.32					
+1705796	0	1	S498	F498-R	INC1119	COM	1343715	Dan Kalb for City Council 2012				Oakland	CA	94612	10/26/2012 12:00:00 AM	1171																				
+1710512	0	6	S498	F498-A	IDT314	COM		Fred Haynes for School Board									Fred Haynes				OTH		OTH	Bakersfield City School District Area 5	5	S				S	197.25					
+1711144	0	2	S498	F498-A	INC4004	COM	(1348733)	Keep San Jose Jobs				San Jose	CA	95125													No on Measure D	D	San Jose	O	8415					
+1711152	0	2	S498	F498-A	IDT773	COM	(1336400)	Shannon Grove for Assembly 2012									Shannon Grove (1336400)				ASM		ASM		34					S	3489					
+1581234	0	2	S498	F498-A	2	RCP	743686	United Teachers Los Angeles PACE All Purpose				Los Angeles	CA	90010			Poindexter Lamotte	Marguerite			OTH	Board Member L A Unified Sch Bd-Dstr 1	CIT	Los Angeles						S	5000					
+1624148	0	1	S498	F498-R	1	OTH		Waste Solutions Group SF				San Francisco	CA	94124	11/3/2011 12:00:00 AM	1000																				
+1624285	0	2	S498	F498-A	INC1779	COM	1342229	Friends of Wendy Doeh For College Trusttee 2011				Redondo Beach	CA	90278			Wendy Doch				CCB		OTH	El Camino College Brd Trustee						S	12500					
+1368199	0	1	S498	F498-R	INC3	COM	982683	COMMITTEE ON JOBS GOVERNMENT REFORM FUND				SAN FRANCISCO	CA	94104	10/21/2008 12:00:00 AM	25000																				
+1369067	0	1	S498	F498-R	INC99	OTH		SEMPRA ENERGY FORMERLY KNOWN AS SEMPRA ENERGY AND ITS AFFILIATES SAN DIEGO GAS ELECTRICAL SO CAL GAS				SAN DIEGO	CA	92101	10/22/2008 12:00:00 AM	25000																				
+1492957	0	1	S498	F498-R	INC829	OTH	1314000	Dave Jones For Insurance Commissioner 2010				Sacramento	CA	95864	5/28/2010 12:00:00 AM	20000																				
+1492957	0	2	S498	F498-A	INC829	OTH	1314000	Dave Jones For Insurance Commissioner 2010				Sacramento	CA	95864			Dave Jones				INS		STW							S	20000					
+1493107	0	2	S498	F498-A	INC202	COM	1305557	Aaron Peskin for Democratic County Central Committee				San Francisco	CA	94133			Aaron Peskin				OTH	Democratic County Central Committee	OTH	County of San Francisco	13	H				S	7000					
+1493263	0	1	S498	F498-R	INC4530	COM	1315641	Alberto Torrico for Attorney General				Fremont	CA	94538	6/1/2010 12:00:00 AM	55000																				
+1493599	0	1	S498	F498-R	INC9329	OTH		The Wayne Johnson Agency				Sacremento	CA	95833	6/1/2010 12:00:00 AM	15000																				
+1668145	0	2	S498	F498-A	INC923	COM	C00308742	Sherman For Congress				Los Angeles	CA	90017			Brad Sherman				OTH	Congress	OTH	House of Representatives						S	7500					
+1701688	0	2	S498	F498-A	INC3976	COM	(1334856)	Committee to Elect Jackie Lacey				Porter Ranch	CA	91326			Jackie Lacey				DAT		OTH	Los Angeles						S	26754					
+1701977	0	2	S498	F498-A	INC174	COM	C00507228	An Effective Valley Congressman/Cte to Elect				Los Angeles	CA	90024			Howard Berman				OTH	Congress	OTH	Congressional District	30					S	3755		INC174			
+1705077	0	1	S498	F498-R	INC687	COM	1344135	Coalition Against the Costly Food Labeling Proposition				Sacramento	CA	95814	10/25/2012 12:00:00 AM	28125																				
+1705543	0	1	S498	F498-R	INC1907	COM	1341967	Nazarian For Assembly 2012				Covina	CA	91722	10/26/2012 12:00:00 AM	4695																				
+1755406	0	1	S498	F498-R	INC1179	COM	1356121	Cedillo for City Council General 2013				Los Angeles	CA	90010-3015	4/8/2013 12:00:00 AM	1056.10																				
+1760106	0	1	S498	F498-R	INC4097	COM	(1315215)	Coalition For Community College Excellence				Los Angeles	CA	90017	4/19/2013 12:00:00 AM	10000																				
+1534955	0	1	S498	F498-R	INC383	OTH		Landslide Communications				Laguna Niguel	CA	92677	10/25/2010 12:00:00 AM	14000																				
+1537723	0	1	S498	F498-R	INC4860	COM	1288513	Californians for Clean Air and Clean Energy Jobs				West Hollywood	CA	90069	10/28/2010 12:00:00 AM	34776.88																				
+1538341	0	2	S498	F498-A	INC39	COM	1318091	Shiva Farivar for Irvine City Council 2010				Burbank	CA	91502			Shiva Farivar				CCM			City of Irvine						S	5000					
+1538349	0	1	S498	F498-R	INC2434	COM	1288513	Californians for Clean Air and Clean Energy  Jobs, No on 23				West Hollywood	CA	90069	10/27/2010 12:00:00 AM	4000																				
+1369321	0	2	S498	F498-A	INC789	COM	1304279	Rocky L. Crabb for Judge				Los Angeles	CA	90071			Rocky L. Crabb				SCJ		OTH	Los Angeles						S	6000					
+1528651	0	2	S498	F498-A	INC280	COM		John N Creighton Campaign Account				Oakland	CA	94610			John N Creighton				SCJ		OTH		9					S	3000					
+1539666	0	2	S498	F498-A	IDT164	OTH		Proposition 20																			Redistricting of Congressional Districts	20	Statewide	O	1500					
+1705793	0	2	S498	F498-A	2																						POLITICAL CONTRIBUTION BY PAYROLL DEDUCTION	32	STATEWIDE	O	2000					
+1705810	0	2	S498	F498-A	IDT183	COM	1340076	No on 32 Opposed to Special Exemptions from Campaign Finance Rules for Corporate Special Interests				Sacramento	CA	95814													Prohibits Political Contribuitons By Payroll Deductions, Prohibitions on Contributions to Candidates, Initiative Statute	32	State of California	O	5000					
+1705900	0	2	S498	F498-A	INC1049	COM	135113	Tom Ashley for MSJC Trustee 2012				Murrieta	CA	92562			Tom Ashley				OTH	Trustee	OTH	MSJC District		S				S	2811					
+1706000	0	1	S498	F498-R	INC1125	COM	1344135	Coalition Against the Costly Food Labeling Proposition				Sacramento	CA	95814	10/27/2012 12:00:00 AM	20000																				
+1704675	0	1	S498	F498-R	INC11585	COM	1347269	Alliance for Quality Education				Encinitas	CA	92024	10/24/2012 12:00:00 AM	4056																				
+1767399	0	1	S498	F498-R	INC1033	COM	1337185	Wendy Greuel for Mayor 2013				Van Nuys	CA	91406	5/6/2013 12:00:00 AM	7992.50																				
+1771294	0	1	S498	F498-R	INC1928	COM	1356062	Garcetti for Mayor 2013-General				Los Angeles	CA	90048	5/10/2013 12:00:00 AM	4350																				
+1771294	0	2	S498	F498-A	INC1928	COM	1356062	Garcetti for Mayor 2013-General				Los Angeles	CA	90048			Eric Garcetti				MAY		OTH	Los Angeles						S	4350					
+1492596	0	2	S498	F498-A	INC196	COM	1334794	Gloria Romero for California 2010				Los Angeles	CA	90048			Gloria Romero				SUP		STW							S	12500					
+1494933	0	1	S498	F498-R	INC173	COM	1323385	Abel Maldonado for Lt. Governor 2010				Santa Maria	CA	93458	6/4/2010 12:00:00 AM	9500																				
+1494933	0	2	S498	F498-A	INC173	COM	1323385	Abel Maldonado for Lt. Governor 2010				Santa Maria	CA	93458			Abel Maldonado				LTG		STW							S	9500					
+1403703	0	2	S498	F498-A	INC1519	COM		Coalition for Comm.College Excellence				Los Angeles	CA	90017			Angela Reddock				CCB		OTH	L.A.Community College Dist.	2					S	6302					
+1581232	0	2	S498	F498-A	2	RCP	744554	Los Angeles County Democratic Party - Issues & Advocacy Committee				Burbank	CA	91502			Field	Mona			OTH	Trustee-L A Comm College Bd - Seat 1	OTH	Los Angeles County						S	8000					
+1494264	0	3	S498	F498-A	IDT15	IND		Bornstein	Michael								Michael Bornstein				OTH	Democratic County Central Committee	OTH	San Francisco County, District 12						S	403.35					
+1494264	0	19	S498	F498-A	IDT31	IND		Campos	David								David Campos				OTH	Democratic County Central Committee	OTH	San Francisco County, District 13						S	403.35					
+1706043	0	2	S498	F498-A	INC639	OTH		Landslide Communications as agent for Goddard-Clausen West, Inc., No on 30				Roseville	CA	95661													No on 30	30	California	O	14500.52					
+1706044	0	1	S498	F498-R	INC628	OTH		Landslide Communications as agent for SBAC PAC, Yes on 31				Laguna Niguel	CA	92677	10/26/2012 12:00:00 AM	5800.21																	INC628			
+1706667	0	1	S498	F498-R	INC1122	COM	802001	CA Assoc. of Highway Patrolmen				Sacramento	CA	95818	10/29/2012 12:00:00 AM	40000																				
+1707723	0	1	S498	F498-R	3	RCP	1296947	SEIU Local 1021				Sacramento	CA	95814	10/29/2012 12:00:00 AM	5000																				
+1707723	0	3	S498	F498-A	2																						Union Dues	32	California	S	2500					
+1708170	0	2	S498	F498-A	INC2158	COM		Committee For Jobs and Traffic Relief				Los Angeles	CA	90017													Transportation Tax	J	Los Angeles County	S	11000					
+1829153	0	2	S498	F498-A	INC1221	COM	1325192	Janice Rutherford for Supervisor 2014				Fontana	CA	92336			Janice Rutherford				CSU		OTH	County of San Bernardino, #2		H				S	5217					
+1829317	0	2	S498	F498-A	INC601	COM	1240070	Gary Kendrick for City Council				El Cajon	CA				Gary Kendrick				CCM		OTH	City of El Cajon						S	1257.10					
+1829456	0	2	S498	F498-A	2	CAO	1346285	Ferguson for Judge 2014				Santa Ana	CA	92705			Ferguson	Jeff			OTH	Judge of the Superior Court	CTY	35						S	17500					
+1829467	0	1	S498	F498-R	1	CAO	1360946	Teresa Pineda Mango for Judge 2014				Long Beach	CA	90802	3/17/2014 12:00:00 AM	7000																				
+1533418	0	1	S498	F498-R	INC210	COM	1323934	Yes on 26				San Rafael	CA	94901	10/22/2010 12:00:00 AM	38505.80																				
+1371644	0	1	S498	F498-R	INC101	COM	1255438	PHIL THALHEIMER FOR CITY COUNCIL				SAN DIEGO	CA	92130	10/23/2008 12:00:00 AM	3000																				
+1372219	0	1	S498	F498-R	1	RCP	1311406	NO on PROP 10				SAN MATEO	CA	94402	10/25/2008 12:00:00 AM	60000																				
+1494264	0	23	S498	F498-A	IDT35	IND		Migden	Carole								Carole Migden				OTH	Democratic County Central Committee	OTH	San Francisco County, District 13						S	403.36					
+1494546	0	1	S498	F498-R	INC201	COM		Friends of Barbara Boxer				Los Angeles	CA	90017	6/3/2010 12:00:00 AM	5000																				
+1490314	0	1	S498	F498-R	INC607	COM	1323807	John Eastman for Attorney General 2010				Rancho Santa Margari	CA	92688	5/26/2010 12:00:00 AM	32500																				
+1541136	0	2	S498	F498-A	INC10226	IND	1322292	Yes on 22/CA to protect local taxpayers and vital services, a coalition of taxpayers, public safety, local government, transp																			Proposition 22		Statewide	S	51000					
+1541492	0	1	S498	F498-R	INC730	COM	1293126	Lockyer for Treasurer 2010				Sacramento	CA	95841	11/1/2010 12:00:00 AM	20000																				
+1541492	0	2	S498	F498-A	INC730	COM	1293126	Lockyer for Treasurer 2010				Sacramento	CA	95841			Bill  Lockyer				TRE		OTH	Sacramento		S				S	20000					
+1708778	0	2	S498	F498-A	INC1859	COM	1344135	Coalition Against the Costly Food Labeling Proposition				Sacramento	CA	95814													No on Prop. 37	37		S	3000					
+1709111	0	1	S498	F498-R	1	RCP	1346677	Re Elect David Chiu 2012				San Francisco	CA	94107	10/30/2012 12:00:00 AM	2000																				
+1711030	0	1	S498	F498-R	INC956	COM	1334856	Committee To Elect Jackie Lacey for DA 2012				Porter Ranch	CA	91326-1607	10/31/2012 12:00:00 AM	3000																				
+1711368	0	1	S498	F498-R	INC1910	COM	1344135	Coalition Against the Costly Food Labeling Proposition				Sacramento	CA	95814	10/31/2012 12:00:00 AM	7500																				
+1711369	0	2	S498	F498-A	INC1911	COM	1344009	Yes on 39 - California To Close The Out of State Corporate Tax Loophole				Sacramento	CA	95814													Yes on 39	39		S	3000					
+1829519	0	1	S498	F498-R	INC927	COM	1363711	Miguda-Armstead for Judge 2014				Los Angeles	CA	90010	3/17/2014 12:00:00 AM	3800																				
+1829520	0	1	S498	F498-R	INC928	COM	1359116	Donna Hollingsworth Armstrong for Judge 2014				Los Angeles	CA	90010	3/17/2014 12:00:00 AM	4000																				
+1830192	0	1	S498	F498-R	INC1227	COM	1359573	Alison Matsumoto-Estrada for Judge 2014				Los Angeles	CA	90010	3/17/2014 12:00:00 AM	4080																				
+1830192	0	2	S498	F498-A	INC1227	COM	1359573	Alison Matsumoto-Estrada for Judge 2014				Los Angeles	CA	90010			Alison Matsumoto-Estrada				SCJ		OTH	County of Los Angeles		S				S	4080					
+1830201	0	2	S498	F498-A	INC1222	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010			Stacey Okun-Weise				SCJ		OTH	County of Los Angeles		S				S	7000					
+1403763	0	1	S498	F498-R	INC161	COM		Committee To Re Elect Janice Hahn 2009				Los Angeles	CA	90017	2/24/2009 12:00:00 AM	5000																				
+1403768	0	1	S498	F498-R	INC163	COM	1315215	Coalition For Community College Excellence				Los Angeles	CA	90071	2/24/2009 12:00:00 AM	3000																				
+1369033	0	1	S498	F498-R	INC4064	COM	1308244	No On Props 6 & 9, Communities for Safe Neighborhoods & Fiscal Responsibility				Sacramento	CA	95814	10/22/2008 12:00:00 AM	41000																				
+1542065	0	1	S498	F498-R	INC1633	COM	1323934	Stop Hidden Taxes				San Rafael	CA	94901	11/2/2010 12:00:00 AM	13750																				
+1542066	0	1	S498	F498-R	INC1634	COM	1322292	Californians to Protect Local Taxpayers & Vital Services A Coalition Of Taxpayers Public Safety, Local Government				San Rafael	CA	94901	11/2/2010 12:00:00 AM	10000																				
+1542066	0	2	S498	F498-A	INC1634	COM	1322292	Californians to Protect Local Taxpayers & Vital Services A Coalition Of Taxpayers Public Safety, Local Government				San Rafael	CA	94901													Protect Local Services	22	Statewide	S	10000					
+1495593	0	1	S498	F498-R	INC204	COM	1325415	Newsom for California Lieutenant Governor 2010				San Francisco	CA	94114	6/3/2010 12:00:00 AM	45000																				
+1495735	0	2	S498	F498-A	INC3207	COM	1318927	Californians for Fair Auto Insurance Rates				San Rafael	CA	94901													Yes on 17	17	California	S	15000					
+1495802	0	1	S498	F498-R	INC524	COM	1318927	Yes on 17, Californians for Fair Auto Insurance Rates				San Rafael	CA	94901	6/5/2010 12:00:00 AM	5000																				
+1495887	0	2	S498	F498-A	INC146	COM	1326276	Tuchow for DCCC 2010				San Francisco	CA	94118			Matt Tuchow				OTH	Democratic County Central Committee	OTH	San Francisco		H				S	5700					
+1495888	0	2	S498	F498-A	INC147	COM	1326262	Re-elect Mary Jung for DCCC				San Francisco	CA	94127			Mary Jung				OTH	Democratic County Central Committee	OTH	San Francisco						S	2500					
+1495947	0	2	S498	F498-A	INC2825	COM	(1323385)	Abel Maldonado for Lt. Governor 2010				Santa Maria	CA	93458			Abel Maldonado				LTG		STW							S	10000					
+1711654	0	2	S498	F498-A	INC667	COM	1344135	Landslide Communications as agent for Coalition Against Costly Food Labeling, No on 37				Sacramento	CA	95814													No on 37	37	California	O	7520.75		INC667			
+1711849	0	1	S498	F498-R	1	OTH		Sherman for Congress				Los Angeles	CA	90017	11/1/2012 12:00:00 AM	17000																				
+1712208	0	5	S498	F498-A	IDT67	OTH		Proposition 39																			Tax Treatment for Multistate Businesses. Clean Energy and Energy Efficiency Funding. Initiative Statute	39	Statewide	O	500					
+1712208	0	8	S498	F498-A	IDT70	OTH		Measure B																			Safe Sex in the Adult Film Industry Act	B	Los Angeles County	O	100					
+1712272	0	1	S498	F498-R	INC558	COM	1350635	Citizens to Reform San Bernardino 2012:  Yes on Q - No on R				Rancho Santa Margarita		92688	11/2/2012 12:00:00 AM	3590.16																				
+1830351	0	2	S498	F498-A	INC11817	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010			Stacey Okun-Weise				SCJ		OTH	County of Los Angeles		S				S	4000					
+1830530	0	2	S498	F498-A	INC4294	COM	1359573	Alison Matsumoto-Estrada for Judge 2014				Los Angeles	CA	90010			Alison Matsumoto-Estrada				SCJ		OTH	Los Angeles	76					S	5000					
+1830531	0	1	S498	F498-R	INC4290	COM	1359005	Andrew Cooper for Judge 2014				Los Angeles	CA	90010	3/19/2014 12:00:00 AM	5000																				
+1830541	0	2	S498	F498-A	INC4305	COM	1362305	Marc Steinorth for Assembly 2014				Santa Ana	CA	92705			Marc Steinorth				ASM		ASM		40					S	2887					
+1830543	0	1	S498	F498-R	INC4304	COM	1352511	Michelle Steel for Supervisor 2014				Rancho Sna Marg.	CA	92688	3/19/2014 12:00:00 AM	3961																				
+1830545	0	1	S498	F498-R	INC4295	COM	1363711	Miguda-Armstead for Judge 2014				Los Angeles	CA	90010	3/19/2014 12:00:00 AM	5000																				
+1830546	0	2	S498	F498-A	IDT815	COM	1363729	Re-Elect Judge Diane Ritchie 2014									Diane Ritchie (1363729				SCJ		OTH	Santa Clara	24					S	7750					
+1372251	0	1	S498	F498-R	INC1785	COM		Californians for Clean and Renewable Energy, Yes on Prop 10				Los Angeles	CA	90071	10/25/2008 12:00:00 AM	10000																				
+1371230	1	1	S498	F498-R	INC8655	OTH	1301053	California Children's Hospital				Sacramento	CA	95814	10/24/2008 12:00:00 AM	37500																				
+1372344	0	1	S498	F498-R	1	RCP	1302707	CAMPAIGN FOR NONVIOLENT OFFENDERS REHABILITATION				SACRAMENTO	CA	95814	10/27/2008 12:00:00 AM	15000																				
+1375661	0	2	S498	F498-A	INC1788	IND		O'Gara	Michael J.			Montrose	CA	91020			Michael J. O'Gara				SCJ		OTH	Los Angeles County	94					S	2500					
+1375680	0	1	S498	F498-R	INC123	IND		Croul	John V.			Corona Del Mar	CA	92625	10/28/2008 12:00:00 AM	10000																		n/a	Retired	
+1378151	0	2	S498	F498-A	2																						Stop Tenant Harassment	M	San Francisco	S	2500					
+1368344	0	12	S498	F498-A	IDT36	IND		Kelley	M.W.								M.W. Kelley				CSU		OTH	Imperial County	3					S	705					
+1369066	0	2	S498	F498-A	IDT17	COM	1304914	COMMON CAUSE FOR FAIR REDISTRICTING/ YES ON PROP 11 FUND				LOS ANGELES	CA	90017													PROPOSITION 11		STATEWIDE	S	5000					
+1500007	0	2	S498	F498-A	2	CAO	1316229	DE LA TORRE FOR INSURANCE COMMISSIONER 2010				LOS ANGELES	CA	90048			DE LA TORRE	HECTOR			INS		STW							S	3000					
+1530315	0	2	S498	F498-A	INC414	COM	1324078	Yes on 24, The Tax Fairness Act				Sacramento	CA	95814													Tax Fairness Act	24	Statewide	S	87000					
+1710518	1	2	S498	F498-A	IDT302	COM		Kevin McCarthy for Congress									Kevin McCarthy				OTH	Congress				S				S	1452					
+1710518	1	4	S498	F498-A	IDT304	IND	1325436	Shannon Grove for State Assembly									Shannon Grove				ASM				34	S				S	2775.45					
+1710518	1	7	S498	F498-A	IDT308	IND		Haddock	Dean								Dean Haddock				BED		OTH	Panama Buena Vista School Board #2		S				S	654.15					
+1712366	0	1	S498	F498-R	INC505	COM	742617	California Medical Association PAC				Sacramento	CA	95814	11/3/2012 12:00:00 AM	10000																				
+1712639	0	3	S498	F498-A	3	RCP	1334856	Committee to Elect Jackie Lacey DA 2012				Los Angeles	CA	90017			Pavley	Fran			SEN		SEN		27					S	4200					
+1731864	0	2	S498	F498-A	INC1159	COM	1342754	Ron Galperin for City Controller 2013				Los Angeles	CA	90010			Ron Galperin				CTR		OTH	Los Angeles City Controller		S				S	13252					
+1741746	0	2	S498	F498-A	IDT317	IND		Vela	David			Los Angeles	CA	90017			David Vela				CCB		OTH	Los Angeles Community College	6	S				S	4746.33					
+1831150	0	1	S498	F498-R	INC1231	COM	1361625	Brian Kelly for Assessor-Clerk Recorder-Registrar of Voters				Napa	CA	94558	3/20/2014 12:00:00 AM	2858																				
+1831457	0	2	S498	F498-A	INC2231	COM		Marshall Tuck for Superintendent of Public Instruction				Manhattan Beach	CA	90266			Marshall Tuck				SUP		OTH	Los Angeles County						S	30000					
+1831541	0	2	S498	F498-A	2	CAO	1359573	Alison Matsumoto-Estrada For Judge 2014				Los Angeles	Ca	90010			Matsumoto-Estrada	Alison			OTH	Superior Court Judge	CTY	Los Angeles						S	1347					
+1529699	0	9	S498	F498-A	IDT118	COM		Chaing	John								John Chaing				CON		STW							S	35000					
+1529699	0	10	S498	F498-A	IDT119	COM		Newsom	Gavin								Gavin Newsom				LTG		STW							S	7450					
+1529699	0	15	S498	F498-A	IDT124	COM		Torlakson	Tom								Tom Torlakson				SUP		STW							S	7450					
+1368910	0	2	S498	F498-A	INC8582	OTH	1302592	ProtectMarriage.com				Sacramento	CA	95833													Proposition 8		Statewide Ballot Measure	S	100000					
+1372041	0	2	S498	F498-A	INC140	COM	1300289	BERNARD PARKS FOR SUPERVISOR				Los Angeles	CA	90048			Bernard Parks				CSU		OTH	Los Angeles County	2	S				S	25000					
+1528712	0	2	S498	F498-A	INC3223	COM	(1322292)	Californians to Protect Local Taxpayers				San Rafael	CA	94901													Yes on Prop 22	22	Statewide	S	3750					
+1528714	0	2	S498	F498-A	IDT569	COM		Yes on Prop 27 (G10S)																			Yes on Prop 27	27	Statewide	S	10000					
+1530396	0	2	S498	F498-A	INC10169	IND	1321172	Tom Griego For Judge 2010				Los Angeles	CA	90071			Tom Griego				OTH	Superior Court Judge #117	OTH	Superior Court Judge	117					S	4500					
+1531418	0	1	S498	F498-R	INC416	COM	992074	New Majority California Pac				San Rafael	CA	94901	10/21/2010 12:00:00 AM	3995																	INC416			
+1531508	0	2	S498	F498-A	INC418	COM	1240104	CFT COPE  Prop / Ballot				Burbank	CA	91505													Changes legislative vote requirement to pass the state budget from two-thirds to a simple majority.	25	Statewide	S	180000					
+1531711	0	2	S498	F498-A	INC1806	COM	1288513	California for Clean Air And Clean Energy Jobs No On 23				West Hollywood	CA	90069							OTH		STW				Yes On Proposition 21			S	7995					
+1532268	0	2	S498	F498-A	INC812	COM	1305314	Jeff Gorell for Assembly 2010				Rancho Santa Margarita	CA	92688			Jeff Gorell				ASM		OTH	Camarillo	37	S				S	2700					
+1531254	0	4	S498	F498-A	4																						No on 26	26	Statewide	S	3500					
+1741852	0	1	S498	F498-R	INC1017	COM	743686	United Teachers Los Angeles Pace				Los Angeles	CA	90010	2/1/2013 12:00:00 AM	2219																				
+1741855	0	4	S498	F498-A	IDT332	IND		Sanchez	Antonio								Antonio Sanchez				BED		OTH	LAUSD	6	S				S	962.56					
+1831594	0	1	S498	F498-R	INC3244	COM	1363740	Schreiner for Judge 2014				Los Angeles	CA	90048	3/21/2014 12:00:00 AM	12000																				
+1831599	0	2	S498	F498-A	INC1295	COM	1362342	Curry for Assembly 2014				Tustin	CA	92780			Keith Curry				ASM		ASM		74	S				S	9132					
+1831607	0	2	S498	F498-A	2	RCP	932127	John Tavaglion for County Supervisor 2014				Riverside	CA	92504			Tavaglione	John			OTH	Riverside County Suoervisor	CTY	#2						S	4347					
+1831693	0	2	S498	F498-A	2	CAO	1358093	Kevin Jensen For Sheriff				San Jose	CA	95154			Jensen	Kevin			OTH	Sheriff	CTY	Santa Clara County						S	2700					
+1832364	0	1	S498	F498-R	INC944	COM	1363802	Shannon Knight for Judge 2014				Los Angeles	CA	90010	3/24/2014 12:00:00 AM	2500																				
+1538876	0	1	S498	F498-R	INC832	COM	12288513	Californians for Clean Air and Clean Energy Jobs				West Hollywood	CA	90069	10/29/2010 12:00:00 AM	5000																				
+1538876	0	2	S498	F498-A	IDT221	COM		yes On 21				West Hollywood	CA	90069												S	Yes On 21		Statewide	S	5000					
+1372649	0	1	S498	F498-R	INC375	COM	1308619	Safe Neighborhood Act: Yes on Proposition 6				Willows	CA	95988	10/27/2008 12:00:00 AM	7000																				
+1379831	0	1	S498	F498-R	2	OTH		No on 8, Equity for All				West Hollywood	CA	90069	11/3/2008 12:00:00 AM	10000																				
+1531273	0	3	S498	F498-A	3																						No on 23	23	Statewide	S	3500					
+1537684	0	1	S498	F498-R	INC426	COM	1323672	Yes on Fair				Los Angeles	CA	90024	10/27/2010 12:00:00 AM	72500																				
+1541610	0	1	S498	F498-R	F498R000000000772341	COM	Slate	New Majority California PAC				San Rafael	CA	94901	11/1/2010 12:00:00 AM	18700																				
+1541610	0	3	S498	F498-R	F498R000000000772216	COM		New Majority California PAC				San Rafael	CA	94901	11/1/2010 12:00:00 AM	18700																				
+1541610	0	6	S498	F498-A	F498A000000000772342	COM	Slate	New Majority California PAC				San Rafael	CA	94901												H	yes on 26		California	S	18700		F498A000000000772342			
+1532957	0	2	S498	F498-A	INC10187	IND		Pardee Homes				Los Angeles	CA	90024													Proposition C		City of San Diego	S	47678					
+1533006	0	1	S498	F498-R	INC422	OTH		Pardee Homes				Los Angeles	CA	90024	10/21/2010 12:00:00 AM	13195																				
+1533008	0	1	S498	F498-R	INC421	COM	1318783	Mark Ameli for Judge 2010				Los Angeles	CA	90071	10/21/2010 12:00:00 AM	5000																				
+1747246	0	1	S498	F498-R	INC4055	COM	(1341411)	Jose Gardea for Council 2013				Los Angeles	CA	90017	1/23/2013 12:00:00 AM	3500																				
+1747357	0	2	S498	F498-A	2	RCP	1352003	Mike Eng for L.A. Community College Board Trustee 2013				Los Angeles	CA	90048			Eng	Mike			OTH	Board Member	OTH	Los Angeles Comm. College District TA #2						S	2000					
+1749873	0	2	S498	F498-A	1	RCP	n/a	Coalition For Community College Excellence				Los Angeles	CA	90017			Eng	Mike			OTH	LA Community College Board	CIT	Seat  2						S	3483					
+1832424	0	1	S498	F498-R	INC330	COM	1359005	Andrew Cooper for Judge 2014				Los Angeles	CA	90010	3/24/2014 12:00:00 AM	6220																				
+1832445	0	1	S498	F498-R	INC329	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010	3/24/2014 12:00:00 AM	4955																				
+1833246	0	2	S498	F498-A	INC1914	COM	C00556100	Wendy Greuel for Congress				Los Angeles	CA	90017			Wendy Greuel				OTH	U.S. House of Representatives	OTH							S	3962					
+1833988	0	2	S498	F498-A	INC4313	COM	1363183	Joan Chrostek for Judge 2014				Los Angeles	CA	90010			Joan Chrostek				SCJ		OTH	Los Angeles	107					S	5000					
+1528797	0	1	S498	F498-R	INC10158	IND	1325192	Janice Rutherford For Supervisor 2010				Fontana	CA	92336	10/18/2010 12:00:00 AM	7500																				
+1530309	0	1	S498	F498-R	INC1556	COM	1323934	Stop Hidden Taxes				San Rafael	CA	94901	10/20/2010 12:00:00 AM	13750																				
+1531453	0	1	S498	F498-R	INC67	COM	1288513	Californians for Clean Air and Clean Energy Jobs, No on 23				West Hollywood	CA	90069	10/21/2010 12:00:00 AM	3500																	INC67			
+1489319	0	2	S498	F498-A	2																						EMERGENCY NEIGHBORHOOD SCHOOL AND TEACHER RETENTION MEASURE	E	LOS ANGELES UNIFIED SCHOOL DISTRICT	S	1500					
+1533015	0	2	S498	F498-A	INC195	COM	1324906	No on 24, Stop the Jobs Tax				San Rafael	CA	94901													No on 24	24	California	O	21003.17					
+1537635	0	1	S498	F498-R	F498R000000000771131	COM	1318476	Price For Senate 2010				Burbank	CA	91502	10/27/2010 12:00:00 AM	4500																				
+1533406	0	2	S498	F498-A	INC602	COM	1324038	Mimi Walters for Treasurer, 2010				Ranchosantamargarita	CA	92688			Mimi Walters				TRE		STW							S	3398.87					
+1533411	0	2	S498	F498-A	IDT36	OTH		Van Tran for Congress									Van Tran							Congress	47					S	3170					
+1750922	0	1	S498	F498-R	INC301	COM	1353496	Ernest Moreno for LA Community College District Trustee 2013				Los Angeles	CA	90010	2/27/2013 12:00:00 AM	2500																				
+1750991	0	1	S498	F498-R	INC304	COM	1342584	Mike Davis for City Council 2013				Los Angeles	CA	90010	2/27/2013 12:00:00 AM	10000																				
+1751287	0	1	S498	F498-R	INC4085	COM	(1353507)	Antonio Sanchez for LAUSD 2013				Van Nuys	CA	91406	3/1/2013 12:00:00 AM	7520																				
+1751287	0	2	S498	F498-A	INC4085	COM	(1353507)	Antonio Sanchez for LAUSD 2013				Van Nuys	CA	91406			Antonio Sanchez				BED		OTH	Los Angeles	6					S	7520					
+1753629	0	2	S498	F498-A	2	RCP	1354210	Cindy Montanez for L.A. City Council 2013				Los Angeles	CA	90048			Montanez	Cindy			OTH	City Council, District 6	STW							S	1992					
+1754475	0	1	S498	F498-R	INC823	COM	1341335	Mike Feuer for City Attorney 2013				Los Angeles	CA	90048	4/1/2013 12:00:00 AM	33750																				
+1834117	0	2	S498	F498-A	INC11895	COM	1359441	Committee to Elect Dylan Sullivan Judge 2014				South Lake Tahoe	CA	96150			Dylan Sullivan				SCJ		OTH	El  Dorado County		S				S	2824					
+1834292	0	2	S498	F498-A	INC946	COM	1363769	Charles Calderon for Judge 2014				Covina	CA	91722			Charles Calderon				SCJ		OTH	Los Angeles County	48					S	7000					
+1834412	0	2	S498	F498-A	INC11896	COM	1365495	Russell Johnson for Assessor Recorder 2014									Russell Johnson				OTH	Assessor-Recorder	OTH	Kern County		S				S	2655.50					
+1834448	0	1	S498	F498-R	INC3255	COM	1359682	Olmsted Instead for Sheriff 2014				Los Angeles	CA	90010	3/26/2014 12:00:00 AM	3000																				
+1834542	0	2	S498	F498-A	INC2255	COM	1359573	Allison Matsumoto Estrada for Judge 2014				Los Angeles	CA	90010			Allison Matsumoto Estrada				SCJ		OTH	Los Angeles Superior Court						S	2835					
+1403583	0	1	S498	F498-R	INC517	COM	1351215	Coalition for Community College Excellence				Los Angeles	CA	90017	2/20/2009 12:00:00 AM	4080																				
+1403583	0	2	S498	F498-A	IDT147	COM		Angela Reddock for Community College Board									Angela Reddock				CCB		OTH	L.A. Community College	2	S				S	1020					
+1403583	0	4	S498	F498-A	IDT149	COM		Nancy Pearlman for Community College Board									Nancy Pearlman				CCB		OTH	L.A. Community College		S				S	1020					
+1404378	0	1	S498	F498-R	INC169	COM		Wendy Greuel For Controller				Los Angeles	CA	90071	2/27/2009 12:00:00 AM	10000																				
+1536463	0	1	S498	F498-R	INC260	COM	1327922	Noguez Assessor 2010 General				Los Angeles	CA	90071	10/26/2010 12:00:00 AM	2500																				
+1536876	0	2	S498	F498-A	INC1630	COM	1323672	Yes on Fair				Los Angeles	CA	90024													Reapportionment: No on 20/Yes on 27		Statewide	S	30000					
+1537334	1	2	S498	F498-A	2																						No on Prop 20	20	Statewide	S	30000		2			
+1756381	0	2	S498	F498-A	INC280	COM	1356028	Mike Feuer for City Attorney 2013-General				Los Angeles	CA	90048			Mike Feuer				CAT		OTH	Los Angeles						S	23000					
+1756408	0	1	S498	F498-R	INC1028	COM	1351215	Coalition for Community College Excellence				Los Angeles	CA	90017	4/11/2013 12:00:00 AM	3168.69																				
+1756409	0	2	S498	F498-A	INC1029	COM	1356060	Ron Galperin for LA City Controller 2013 General				Los Angeles	CA	90010			Ron Galperin				CTR		OTH	City of Los Angeles		S				S	6337.38					
+1756414	0	2	S498	F498-A	INC1031	COM	1355691	Yes on D, Citizens Coalition to Protect Patients & Neighbors				Woodland Hills	CA	91364													Yes on D Citizens Coalition to Protect Patients & Neighbors		Los Angeles	S	1500					
+1490018	0	13	S498	F498-A	IDT85	COM	1314985	Hernandez	Ed			Pasadena	CA	91105			Ed Hernandez				SEN		SEN		24					S	5801					
+1490018	0	18	S498	F498-A	IDT90	COM	1283540	Smith	Jeff			Clearlake	CA	95422			Jeff Smith				CSU		OTH	Lake County	2					S	500					
+1490018	0	20	S498	F498-A	IDT92	COM	1323530	Orth	Tony			Willits	CA	95490			Tony Orth				CSU		OTH	Mendocino County	3					S	500					
+1490018	0	22	S498	F498-A	IDT94	COM	1317769	Figueroa	Liz			Sunol	CA	94586			Liz Figueroa				CSU		OTH	Alameda County	2					S	500					
+1490018	0	27	S498	F498-A	IDT99	COM	980190	Smith	Laurie			San Jose	CA	95126			Laurie Smith				SHC		OTH	Santa Clara County						S	500					
+1490018	0	30	S498	F498-A	IDT102	OTH	981036	Campos	Tony			Santa Cruz	CA	95060			Tony Campos				CSU		OTH	Santa Cruz County	4					S	500					
+1493552	0	1	S498	F498-R	1	RCP	1317708	Yes on Proposition 15				Sacramento	CA	95842	6/1/2010 12:00:00 AM	2500																				
+1537820	0	2	S498	F498-A	INC597	OTH		California Public Safety Voter guide				Laguna Niguel	CA	92677																S	45000		INC597			
+1537867	0	1	S498	F498-R	INC169	COM	1279586	Atlas PAC				Sacramento	CA	95833	10/27/2010 12:00:00 AM	4000																				
+1757955	0	1	S498	F498-R	INC11763	OTH	1315215	Coalition For Community College Excellence				Los Angeles	CA	90017	4/11/2013 12:00:00 AM	6778																				
+1757955	0	2	S498	F498-A	IDT1239	IND	1353819	Vela	David								David Vela				CCB		OTH	L.A. Community College, #6		S				S	6778					
+1757966	0	2	S498	F498-A	INC11764	COM	1356060	Ron Galperin for L.A. City Controller 2013 General				Los Angeles	CA	90010			Ron Galperin				OTH	City Controller	OTH	City of Los Angeles		S				S	12201					
+1762972	0	1	S498	F498-R	1	RCP	1356028	Mike Feurer for City Attorney General 2013				Los Angeles	CA	90048	4/24/2013 12:00:00 AM	3500																				
+1835064	0	2	S498	F498-A	INC1917	COM		Bob Olmsted for Sheriff 2014				Los Angeles	CA	90010			Bob Olmsted				SHC		OTH	County of Los Angeles						S	3000					
+1835070	0	2	S498	F498-A	INC1463	COM	1359682	Bob Olmsted for Sheriff 2014				Los Angeles	CA	90010			Bob Olmsted				SHC		OTH	County of Los Angeles						S	3000					
+1835073	0	2	S498	F498-A	2	CAO		Rafael A. Dagnesses				Los Angeles	CA	90041			Dagnesses	Rafael			OTH	US Representative	OTH	CD 26						S	4540					
+1835074	0	2	S498	F498-A	IDT820	COM	(970780)	Anthony J. Rackauckas for D.A. Committee				Santa Ana	CA	92701			Anthony J. Rackauckas (970780)				DAT		OTH	Orange County						S	4500					
+1835080	0	1	S498	F498-R	1	RCP	1362923	McDonnell for LA County Sheriff 2014				Long Beach	CA	90807	4/1/2014 12:00:00 AM	16333																				
+1835086	0	1	S498	F498-R	INC11898	COM	1357073	Ling-Ling Chang for Assembly 2014				Santa Ana	CA	92705	3/31/2014 12:00:00 AM	3764																				
+1835086	0	2	S498	F498-A	INC11898	COM	1357073	Ling-Ling Chang for Assembly 2014				Santa Ana	CA	92705			Ling-Ling Chang				ASM		ASM		55	S				S	3764					
+1835095	0	3	S498	F498-A	IDT1254	COM	1359658	Lisa Bartley for Supervisor 2014				Irvine	CA	92612			Lisa Bartlett				CSU		OTH	Orange County, #5		S				S	5157					
+1886425	0	2	S498	F498-A	2																						Portion of Resolution No. 2014-025 approving a Purchase and Sale Agreement with The McConnell Foundation	B	City of Redding	S	2990					
+1886494	0	2	S498	F498-A	INC1635	OTH		Ken Calvert for Congress				Corona	CA	92877			Ken Calvert				OTH	CD/42								S	7761					
+1886515	0	1	S498	F498-R	INC1202	COM	1359949	Dayan Mathai for Superior Court Judge 2014				Cerritos	CA	90703	9/18/2014 12:00:00 AM	12000																				
+1886541	0	1	S498	F498-R	INC991	COM	1352511	Michelle Steel for Supervisor, Landslide Communications as Agent				Rancho Santa Margarita	CA	92688	9/18/2014 12:00:00 AM	2912																				
+1886541	0	2	S498	F498-A	INC991	COM	1352511	Michelle Steel for Supervisor, Landslide Communications as Agent				Rancho Santa Margarita	CA	92688			Michelle Steel				CSU		OTH	Orange	2					S	2912					
+1886629	0	2	S498	F498-A	INC1317	COM	1368289	No on Z				Fresno	CA	93755													No on Measure Z	Z	Fresno	O	2946					
+1892103	0	2	S498	F498-A	INC1379	COM	1343257	Yes on Props 1 and 2, Landslide Communications as agent				Oakland	CA	94612													Yes on 1 and 2	1,2	California	S	18726.07					
+1892640	0	2	S498	F498-A	INC168	COM	1359949	Dayan Mathai For Superior Court Judge 2014				Cerritos	CA	90703			Dayan Mathai				SCJ		OTH	Los Angeles Superior Court	61					S	5000					
+1892693	0	1	S498	F498-R	INC219	COM	1370194	Citizens for A Safe Fourth of July-Yes on Measure T				Sacramento	CA	95814	10/6/2014 12:00:00 AM	1811																				
+1851266	0	4	S498	F498-A	IDT157	COM		Harris	Kamala								Kamala Harris				ATT		STW							S	3500					
+1851266	0	9	S498	F498-A	IDT162	COM		Torlakson	Tom								Tom Torlakson				SUP		STW							S	3500					
+1858606	0	2	S498	F498-A	INC1108	COM	1359835	William E. Bloomfield Jr.				Manhattan Beach	CA	90266			Marshall Tuck				SUP		OTH	California						S	4720					
+1876203	0	2	S498	F498-A	2	RCP	744554	Los Angeles County Democratic Party Issues & Advocacy Committee				Los Angeles	CA	90017			Kuehl	Sheila			OTH	Supervisor #3	CTY	Los Angeles						S	16856					
+1876366	0	2	S498	F498-A	INC911	COM	1368289	No on Z, Landslide Communications as agent				Fresno	CA	93755													No on Measure Z	Z	Fresno	O	2747					
+1876369	0	2	S498	F498-A	INC964	COM	1368289	No on Z, Landslide Communications as agent				Fresno	CA	93755													Measure Z	Z	Fresno	O	2885					
+1876361	1	1	S498	F498-R	INC4220	COM	1368289	No on Z, Landslide Communications as agent				Fresno	CA	93755	8/12/2014 12:00:00 AM	2725																				
+1886836	1	1	S498	F498-R	INC1636	OTH		1717 Media				Sacramento	CA	95811	9/18/2014 12:00:00 AM	7975																				
+1886916	0	2	S498	F498-A	2	CAO	1245779	Committee to Re-Elect Jennifer McGrath City Attorney 2014				Huntington Beach	CA	92648			McGrath	Jennifer			OTH	City Attorney	CIT	Huntington Beach, Orange County						S	2313					
+1887242	0	1	S498	F498-R	INC814	COM	1360789	Re-Elect Supervisor Scott Wiener 2014				San Francisco	CA	94114	9/22/2014 12:00:00 AM	7500																				
+1887285	0	1	S498	F498-R	INC1230	OTH		1717 Media				Sacramento	CA	95811-3001	9/22/2014 12:00:00 AM	2359																				
+1892726	0	1	S498	F498-R	INC174	COM	1359626	Michael Gates For City Attorney 2014				Huntington Beach	CA	92649	8/28/2014 12:00:00 AM	3100																				
+1892726	0	2	S498	F498-A	INC174	COM	1359626	Michael Gates For City Attorney 2014				Huntington Beach	CA	92649			Michael Gates				CAT		OTH	Huntington Beach						S	3100					
+1892732	0	2	S498	F498-A	INC1954	COM	1357276	Michelle Steel for Supervisor 2014				Rancho Santa Margari	CA	92688			Michelle Steel				CSU		OTH	Orange County		S				S	4000					
+1893484	0	1	S498	F498-R	INC1956	COM	1368410	Brenda Roberts for Okland City Auditor 2014							10/3/2014 12:00:00 AM	5958																				
+1893553	0	1	S498	F498-R	INC1959	COM		Friends of the Okland Public Schools				Oakland	CA	94607	10/3/2014 12:00:00 AM	5955																				
+1893658	0	5	S498	F498-A	5	OTH		Strategic Research				Stockton	CA	95204			Dhaliwal	Lathrop			OTH	City Council	CIT	Lathrop						S	250					
+1893658	0	6	S498	F498-A	6	OTH		Strategic Research				Stockton	CA	95204			Kuehne	Doug			OTH	City Council	CIT	Lodi						S	427					
+1893728	0	1	S498	F498-R	1	RCP	1335071	Betty Yee for Controller 2014				Los Angeles	CA	90048	10/6/2014 12:00:00 AM	25000																				
+1893738	0	1	S498	F498-R	1	RCP	requested	Friends of the Oakland Public Schools				Oakland	CA	94607	10/6/2014 12:00:00 AM	6692																				
+1851473	0	2	S498	F498-A	INC1419	COM	1359573	Alison Matsumoto-Estrada for Judge 2014				Los Angeles	CA	90010			Alison Matsumoto-Estrada				SCJ		OTH	County of Los Angeles		S				S	2500					
+1851751	0	1	S498	F498-R	1	CAO		Venture Strategic				Irvine	CA	92612	5/19/2014 12:00:00 AM	4907																				
+1851834	0	2	S498	F498-A	IDT189	COM	1362775	No Wall on the Waterfront, Yes on Prop B, top contributors include Richard and Barbara Stewart				Oakland	CA	94618													The Waterfront Height Limit Right To Vote Act	B	City & County of San Francisco	S	7500					
+1852248	0	2	S498	F498-A	2	RCP	1325555	Friends of John Wong for Assessor 2014				Los Angeles	CA	90040			Wong	John			GOV		STW							S	3000					
+1852248	1	1	S498	F498-R	1	RCP	1325555	Friends of John Wong for Assessor 2014				Los Angeles	CA	90040	5/19/2004 12:00:00 AM	3000																				
+1852479	0	2	S498	F498-A	INC4469	COM	1363769	Charles Calderon for Judge 2014				Covina	CA	91722			Charles Calderon				SCJ		OTH	Los Angeles	48					S	5000					
+1852678	0	1	S498	F498-R	INC4104	COM	1324080	San Diegans Against Crime PAC				Encinitas	CA	92024	3/31/2014 12:00:00 AM	27850																				
+1877395	0	1	S498	F498-R	INC12178	COM	1345115	Michael Gates for City Attorney 2014				Huntington Beach	CA	92649	8/13/2014 12:00:00 AM	3221																				
+1878475	0	2	S498	F498-A	INC12179	COM	1309304	Mason Inocentes for Water Board 2014				Lakewood	CA	90712			Mason Inocentes				OTH	Water Board	OTH	Water Board		S				S	5406					
+1878951	0	1	S498	F498-R	INC2356	COM	1308496	Mendoza for Senate 2014				Long Beach	CA	90807	8/19/2014 12:00:00 AM	3415																				
+1879931	0	1	S498	F498-R	1	CAO		Meridian Pacific, Inc.				Sacramento	CA	95825	8/21/2014 12:00:00 AM	2650																				
+1887745	0	1	S498	F498-R	INC817	COM		Let SF Kids Play				San Francisco	CA	94108	9/23/2014 12:00:00 AM	2000																				
+1887747	0	1	S498	F498-R	INC819	COM	1357023	Re-Elect Supervisor Mark Farrell 2014				San Francisco	CA	94104	9/23/2014 12:00:00 AM	1000																				
+1887826	0	1	S498	F498-R	INC132	COM	1355019	Kuehl for Supervisor 2014				Los Angeles	CA	90048	9/22/2014 12:00:00 AM	7557																				
+1887827	0	3	S498	F498-A	IDT13	COM	1365835	Yes on Measure B, Redding Residents for Jobs and a Sustainable Economy									Measure B						OTH	City of Redding						S	1261					
+1894498	0	1	S498	F498-R	INC205	COM	1364788	Ashley Swearengin for Controller 2014				Irvine	CA	92618	10/6/2014 12:00:00 AM	15000																				
+1894603	0	1	S498	F498-R	INC830	COM	1366048	Support Our Children Our City Fund				San Francisco	CA	94104	10/6/2014 12:00:00 AM	2000																				
+1894603	0	2	S498	F498-A	INC830	COM	1366048	Support Our Children Our City Fund				San Francisco	CA	94104													Children and Youth Fund; Public Education Enrichment Fund; Our Children, Our Families Council; Rainy Day Reserves	C	City and County of San Francisco	S	2000					
+1894710	0	1	S498	F498-R	INC4852	COM	1364512	Jacqueline Lewis for Judge 2014				Los Angeles	CA	90048	10/7/2014 12:00:00 AM	5000																				
+1894713	0	1	S498	F498-R	INC4861	COM	1352511	Michelle Steel for Supervisor 2014				Rancho Sna Marg.	CA	92688	10/7/2014 12:00:00 AM	3050																				
+1894714	0	2	S498	F498-A	INC4848	COM	1353588	Re-Elect Ken Cooley for Assembly 2014				Sacramento	CA	95841			Ken Cooley				ASM		ASM		8					S	3856					
+1852718	0	1	S498	F498-R	INC4131	COM	1342160	GROW ELECT, Landslide Communications as agent				Sacramento	CA	95814	4/18/2014 12:00:00 AM	7972																				
+1852721	0	2	S498	F498-A	INC1969	COM	1364714	Torlakson For Superintendent Of Public Instruction 2014				Sacramento	CA	95814			Tom Torlakson				SUP		STW							S	28177					
+1852739	0	2	S498	F498-A	INC4170	COM	1365591	Citizens for Continued Hospital Excellence				San Diego	CA	92119													Yes on H	H	Grossmont	S	2870					
+1852790	0	1	S498	F498-R	INC877	COM	1342160	GROW ELECT				Sacramento	CA	95814	4/18/2014 12:00:00 AM	7970																				
+1880658	0	1	S498	F498-R	INC240	COM	1356568	Bonnie Garcia for Senate 2014				Willows	CA	95988	8/25/2014 12:00:00 AM	4313.20																				
+1880663	0	1	S498	F498-R	INC662	COM	1356568	Bonnie Garcia for Senate 2014				Willows	CA	95988	8/25/2014 12:00:00 AM	6551.40																				
+1880988	0	2	S498	F498-A	INC4609	COM	1351696	Parrish for Orange County Assessor 2014				Long Beach	CA	90802			Claude Parrish				ASR		OTH	Orange County						S	3957					
+1881508	0	2	S498	F498-A	INC1214	COM	1359949	Dayan Mathai for Superior Court Judge 2014				Cerritos	CA	90703-7277			Dayan Mathai				SCJ		OTH	Los Angeles County	61	S				S	5000					
+1881608	0	2	S498	F498-A	INC687	COM		Marc Steinnorth For Assembly 2014				Santa Ana	CA	92705			Marc Steinorth				ASM		ASM		40					S	3278.30					
+1888073	0	2	S498	F498-A	IDT787	COM		Ben Allen for State Senate									Ben Allen				SEN		SEN		26					S	4120					
+1888602	0	1	S498	F498-R	INC2367	COM		Californians Against Higher Healthcare Costs				Sacramento	CA	95814	9/24/2014 12:00:00 AM	15000																				
+1837169	0	1	S498	F498-R	INC4361	COM	1359116	Donna Hollingsworth Armstrong for Judge 2014				Los Angeles	CA	90010	4/8/2014 12:00:00 AM	5000																				
+1852827	0	1	S498	F498-R	INC1113	COM	1362923	McDonnell for Sheriff, Landslide Communications as agent				Long Beach	CA	90807	3/10/2014 12:00:00 AM	4539																				
+1852839	0	2	S498	F498-A	IDT384	COM	1363591	Helen Kim for LA Superior Court				Los Angeles	CA	90048			Helen Kim				SCJ			Los Angeles County						S	2817					
+1852846	0	1	S498	F498-R	INC1163	COM	1235402	Egan for District Attorney in 2014, Landslide Communications as agent				Fresno	CA	93709	4/12/2014 12:00:00 AM	3546																				
+1852846	0	2	S498	F498-A	INC1163	COM	1235402	Egan for District Attorney in 2014, Landslide Communications as agent				Fresno	CA	93709			Elizabeth Egan				DAT		OTH	Fresno						S	3546					
+1852867	0	1	S498	F498-R	INC1233	COM	1350034	Pat Bates for Senate 2014, Landslide Communications as agent				Rancho Santa Margarita	CA	92688	4/7/2014 12:00:00 AM	4201.83																				
+1881972	0	2	S498	F498-A	2	RCP	1303480	Kenneth C. 'KC' Jones, KC Jones for Judge				Orange	CA	92869			Jones	Kenneth			OTH	Judge of Superior Court	CTY	Orange County						S	6000					
+1882232	0	1	S498	F498-R	INC2361	COM		Ian Calderon for Assembly 2014				Los Angeles	CA	90017	9/3/2014 12:00:00 AM	2500																				
+1882351	0	2	S498	F498-A	INC1618	COM	1339045	Beiser for School Board 2014				San Diego	CA	92123			Kevin Beiser				OTH	SD Unified School Board, District B								S	5241					
+1882352	0	1	S498	F498-R	INC1619	COM	982295	Bob Apodaca for Central Basin Water District 2014				Covina	CA	91722	9/2/2014 12:00:00 AM	2500																				
+1882354	0	1	S498	F498-R	INC12184	COM	982295	Bob Apodaca for Central Water Basin 2014				Covina	CA	91722	9/2/2014 12:00:00 AM	2500																				
+1882463	0	1	S498	F498-R	1	RCP	810771	Huntington Beach District Educators Association Quality Education Committee				Huntington Beach	CA	92648	9/3/2014 12:00:00 AM	4500																				
+1888668	0	1	S498	F498-R	INC3571	COM	1343637	Taxpayers for Ethical Government				Elk Grove	CA	95624	9/24/2014 12:00:00 AM	3500																				
+1888742	0	2	S498	F498-A	IDT53	IND		Tuck	Marshall								Marshall Tuck				SUP		STW			S				S	70000					
+1888890	0	2	S498	F498-A	INC187	COM	1343998	Californians Against Higher Healthcare Costs				Sacramento	CA	95814			Public Notice Required for Insurance Company Rates Initiative										Public Notice Required for Insurance Company Rates Initiative	45	Statewide	O	14540					
+1888922	0	2	S498	F498-A	INC1239	COM	1343257	Yes on Props 1 and 2, a Bi-Partisan Coalition of Business, Labor, Republicans, Democrats and Governor Brown				Oakland	CA	94612													Clean Water & Rainy Day Fund	1&2	Statewide	S	56250					
+1889023	0	1	S498	F498-R	INC1240	COM	1370345	Yes on C, Friends of Compton Community College District				Compton	CA	90220	9/25/2014 12:00:00 AM	2771																				
+1889023	0	2	S498	F498-A	INC1240	COM	1370345	Yes on C, Friends of Compton Community College District				Compton	CA	90220													College Bond Measure	C	Compton Community College District	S	2771					
+1889050	0	2	S498	F498-A	INC4789	COM	1341684	Dave Jones for Insurance Commissioner 2014				Sacramento	CA	95864			Dave Jones				INS		STW							S	60000					
+1889079	0	1	S498	F498-R	INC7	COM	1335071	Betty Yee for Controller 2014				Los Angeles	CA	90048	9/27/2014 12:00:00 AM	25000																				
+1837047	0	2	S498	F498-A	INC11914	COM	1359121	Carla Keehn for Judge 2014				Carlsbad	CA	92011			Carla Keehn				SCJ		BOE	County of San Diego		S				S	12120					
+1836202	0	1	S498	F498-R	1	RCP	1363557	Alex Johnson For LA School Board				Covina	CA	91722	4/4/2014 12:00:00 AM	5300																				
+1836597	0	1	S498	F498-R	INC1318	COM	1354691	Schubert for District Attorney 2014				Elk Grove	CA	95624	4/4/2014 12:00:00 AM	9652																				
+1836607	0	2	S498	F498-A	2	CAO	1359116	Donna Hollingsworth Armstrong for Judge 2014				Los Angeles	CA	90010			Hollingsworth Armstrong	Donna			OTH	Superior Court Judge	CTY	Seat 138						S	2500					
+1836201	0	1	S498	F498-R	1	IND		Haynes	Raymond			Temecula	CA	92591	4/4/2014 12:00:00 AM	2179.90																		Information Requested	Information Requested	
+1836583	0	2	S498	F498-A	INC959	COM	1353533	Friends of John McMahon for San Bernardino County Sheriff 2014				Tustin	CA	92780			John McMahon				OTH	Sheriff	OTH	San Bernardino County						S	3355		INC959			
+1836584	0	2	S498	F498-A	INC960	COM	990932	Friends of Mike Ramos San Bernardino County District Attorney 2014				Tustin	CA	92780			Mike Ramos				DAT		OTH	San Bernardino County						S	3355		INC960			
+1836608	0	1	S498	F498-R	1	CAO	1359005	Andrew Cooper For Judge 2014				Los Angeles	CA	90010	4/7/2014 12:00:00 AM	2500																				
+1836608	0	2	S498	F498-A	2	CAO	1359005	Andrew Cooper For Judge 2014				Los Angeles	CA	90010			Cooper	Andrew			OTH	Superior Court Judge	CTY	Seat 157						S	2500					
+1836610	0	1	S498	F498-R	1	CAO	1363988	Carol Rose For Judge 2014				Los Angeles	CA	90010	4/7/2014 12:00:00 AM	2500																				
+1837207	0	1	S498	F498-R	INC3285	COM	1345328	Elect Paul Schrader Sheriff/Coroner/Public Administrator 2014				Rancho Cucamonga	CA	91730	4/7/2014 12:00:00 AM	3500																				
+1836580	0	2	S498	F498-A	INC957	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010			Stacey Okun-Weise				SCJ		OTH	Los Angeles County	113					S	5000					
+1837028	0	2	S498	F498-A	IDT27	IND		McMahon	John								John McMahon				OTH	Sheriff	OTH	San Bernardino County		H				S	7925					
+1839453	0	2	S498	F498-A	INC1144	COM	1351696	Parrish For Orange County Assessor 2014				Long Beach	CA	90802			Claude Parrish				ASR		OTH	Orange County		S				S	4000					
+1837880	0	2	S498	F498-A	IDT1259	IND		Brewer	Tom								Tom Brewer				DAT		OTH	County of San Diego		S				S	6000					
+1838264	0	1	S498	F498-R	INC1369	OTH		The Wayne Johnson Company				Sacramento	CA	95833	4/11/2014 12:00:00 AM	9000																				
+1838489	0	1	S498	F498-R	INC11925	COM	1362923	McDonnell for LA County Sheriff 2014				Los Angeles	CA	90807	4/14/2014 12:00:00 AM	4000																				
+1837170	0	2	S498	F498-A	INC4360	COM	(1337528)	Harkey for Board of Equalization 2014				Sacramento	CA	95835			Diane Harkey (1337528)				BOE		BOE		3					S	20000					
+1837171	0	1	S498	F498-R	INC4356	COM	1363183	Joan Chrostek for Judge 2014				Los Angeles	CA	90010	4/8/2014 12:00:00 AM	5000																				
+1837175	0	1	S498	F498-R	INC4372	COM	1362515	Somers for Judge 2014				Salinas	CA	93902	4/8/2014 12:00:00 AM	2529																				
+1837177	0	2	S498	F498-A	INC4367	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010			Stacey Okun-Weise				SCJ		OTH	Los Angeles	107					S	5000					
+1838482	0	1	S498	F498-R	INC340	COM	1362508	Jacqui Irwin for State Assembly 2014				Camarillo	CA	93010	4/14/2014 12:00:00 AM	2740																				
+1837765	0	2	S498	F498-A	2	RCP	1360946	Teresa Pineda Magno for Judge 2014				Long Beach	CA	90802			Magno	Teresa			OTH	Judge of the Superior Court #97	CTY	Los Angeles County						S	7000					
+1838523	0	1	S498	F498-R	INC2267	COM	1355019	Kuehl For Supervisor 2014				Los Angeles	CA	90048	4/14/2014 12:00:00 AM	3000																				
+1839113	0	2	S498	F498-A	INC2	COM	1359005	Andrew Cooper for Judge 2014				Los Angeles	CA	90010			Andrew Cooper				SCJ		STW		157	S				S	2500					
+1839392	0	2	S498	F498-A	IDT88	COM		Castagna	Troy								Troy Castagna				OTH	U.S. House of Representatives	OTH	California	25					S	5951.90					
+1842854	0	1	S498	F498-R	INC1395	OTH		The Wayne Johnson Company				Sacramento	CA	95833	4/25/2014 12:00:00 AM	3180																				
+1838938	0	1	S498	F498-R	INC345	COM	1363835	Amy Howorth for State Senate 2014				Long Beach	CA	90802	4/16/2014 12:00:00 AM	6585																				
+1839357	0	2	S498	F498-A	INC1078	COM	1358813	Stacy Okun-Wiese For Judge 2014				Los Angeles	CA	90010			Stacy Okun-Wiese				SCJ		OTH	LA County						S	2500					
+1839489	0	2	S498	F498-A	INC1375	OTH		Pablo Kleinman for Congress				Long Beach	CA	90802			Pablo Kleinman				OTH	CD/30								S	4924					
+1839654	0	2	S498	F498-A	IDT829	COM	1359658	Lisa Bartlett for Supervisor 2014				Irvine	CA	92612			Lisa Bartlett (1359658)				CSU		OTH	Orange	5					S	6277					
+1839702	0	1	S498	F498-R	1	RCP	1364210	Marx Gibbons for Judge 1014				Cerritos	CA	90703	4/18/2014 12:00:00 AM	5000																				
+1839042	0	2	S498	F498-A	2	RCP	n/a	Amy Howorth for State Senate				Long Beach	CA	90802			Howorth	Amy			SEN		STW							S	7489.28					
+1839362	0	1	S498	F498-R	1	CAO	1359835	Tuck for State Superintendent				Noato	CA	94949	4/16/2014 12:00:00 AM	27554.75																				
+1839491	0	1	S498	F498-R	INC11928	OTH	741949	Republican Party of San Diego County				San Diego	CA	92119	4/17/2014 12:00:00 AM	4500																				
+1840096	0	1	S498	F498-R	INC1386	OTH		Clark Strategy Group				Auburn	CA	95603	4/21/2014 12:00:00 AM	10000																				
+1840113	0	2	S498	F498-A	IDT33	IND		Tacherra	Johnny								Johnny Tacherra				OTH	CD/16								S	2500					
+1840203	0	1	S498	F498-R	INC997	COM	1275549	Californians for Jobs & A Strong Economy				Sacramento	CA	95811	4/21/2014 12:00:00 AM	4530																	INC997			
+1840820	0	1	S498	F498-R	INC2276	COM	1359949	Dayan Mathai for Superior Court Judge 2014				Cerritos	CA	90703	4/23/2014 12:00:00 AM	10000																				
+1843009	0	2	S498	F498-A	2	RCP	1365649	John J Griffin Election Committee				Thousand Oaks	CA	91362			Griffin	John			OTH	Assessor	CTY	Ventura County						S	5000					
+1843892	0	2	S498	F498-A	INC3	COM	1359116	Donna Hollingsworth Armstrong for Judge 2014				Los Angeles	CA	90010			Donna Hollingsworth Armstrong				SCJ		OTH	County of Los Angeles		S				S	2500					
+1846450	0	1	S498	F498-R	INC4434	COM	963026	CA Real Estate Independent Expenditure Committee				Los Angeles	CA	90020	5/1/2014 12:00:00 AM	6107																				
+1847104	0	2	S498	F498-A	INC84	COM	1298155	Citizens Against Career Insider Politician Bill Horn For Supervisor 2014 by Services Employers International Union Local 221				Sacramento	CA	95814			Jim Wood				CSU		OTH	San Diego	5					S	3000					
+1847165	0	2	S498	F498-A	1	CAO		Re elect Judge Cope 2014				Murrieta	CA	92562			Cope	Mark			OTH	Superior Court Judge	CTY	Office 3						S	4098					
+1847462	0	2	S498	F498-A	IDT38	IND		Reed	Ursula								Ursula Reed				OTH	Superintendent of Schools	OTH	Alameda County						S	2500					
+1848442	0	2	S498	F498-A	1	RCP	1364952	D A Lempert for Judge				Santa Clara	CA	95051			Lempert	D A			OTH	Judge of the Superior Court Seat 21	STW							S	6500					
+1850360	0	1	S498	F498-R	INC99	COM	1355478	Haroon For Los Angeles Assesor 2014				Sun City	CA	92586	5/15/2014 12:00:00 AM	5000																				
+1851959	0	1	S498	F498-R	INC1420	COM	1363769	Charles Calderon for Judge 2014				Covina	CA	91722	5/19/2014 12:00:00 AM	10000																				
+1852759	0	1	S498	F498-R	INC808	COM	1362923	McDonnell for Sheriff, Landslide Communications as agent				Long Beach	CA	90807	3/10/2014 12:00:00 AM	4539																				
+1839989	0	2	S498	F498-A	INC993	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010			Stacey Okun-Weise				SCJ		OTH	Los Angeles County	113					S	2500					
+1840016	0	2	S498	F498-A	INC82	COM	1356164	Bill Brough State Assembly 2014				Dana Point	CA	92629							ASM		ASM		73	S				S	1871.55					
+1841117	0	2	S498	F498-A	INC1391	COM	1354403	Friends of Damon Dunn 2014				Willows	CA	95988			Damon Dunn				MAY		OTH	City of Long Beach		S				S	3307					
+1841294	0	1	S498	F498-R	1	RCP	1281935	Re-Elect Suoervisor Janet Wolf				Santa Barbara	CA	93111	4/23/2014 12:00:00 AM	2600																				
+1841801	0	2	S498	F498-A	INC146	COM	C00543853	Walters for Congress				Rancho Santa Margarita	CA	92688			Mimi Walters				OTH	Congressional	OTH	Congress	45	S				S	2870					
+1842861	0	1	S498	F498-R	INC640	COM	1347816	California Black Political Action Committee				Los Angeles	CA	90043	4/28/2014 12:00:00 AM	2000																				
+1846673	0	1	S498	F498-R	INC1081	COM	1362752	Bobby Shriver For Supervisor 2014				Los Angeles	CA	90010	4/30/2014 12:00:00 AM	4000																				
+1847016	0	2	S498	F498-A	INC1154	COM	1337528	Harkey for Board of Equalization 2014				Rancho Santa Margarita	CA	92688			Diane Harkey				BOE		BOE		4	S				S	2500					
+1847414	0	2	S498	F498-A	INC2286	IND		Garrett	Patricia A.			Newport Beach	CA	92660			Suzette Martinez				ASM		ASM							S	2877					
+1848188	0	2	S498	F498-A	INC1019	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010			Stacey Okun-Weise				SCJ		OTH	Los Angeles County	113					S	2500					
+1848386	0	1	S498	F498-R	INC1418	COM	1363981	Debra Losnick for Judge 2014				Los Angeles	CA	90048	5/7/2014 12:00:00 AM	12541																				
+1848386	0	2	S498	F498-A	INC1418	COM	1363981	Debra Losnick for Judge 2014				Los Angeles	CA	90048			Debra Losnick				SCJ		OTH	County of Los Angeles		S				S	12541					
+1848603	0	1	S498	F498-R	1	CAO	1359835	Tuck for State Superintendent				Novato	CA	94949	5/8/2014 12:00:00 AM	11960																				
+1852898	0	2	S498	F498-A	INC821	COM	1235402	Egan for District Attorney in 2014, Landslide Communications as agent				Fresno	CA	93709			Elizabeth Egan				DAT		OTH	Fresno						S	3546					
+1855566	0	2	S498	F498-A	IDT5	COM		Prop B 2014																			Voter Approval for Waterfront Development Height Increases	B	City & County of San Francisco	S	5000					
+1855842	0	1	S498	F498-R	1	CAO	C00420935	Kevin McCarthy for Congress				Bakersfield	CA	93389	5/28/2014 12:00:00 AM	10000																				
+1856219	0	2	S498	F498-A	INC373	COM	1353812	Jones-Sawyer for Assembly 2014				Los Angeles	CA	90010			Reggie Jones-Sawyer				ASM		ASM		59					S	12000					
+1858036	0	1	S498	F498-R	INC1095	COM	1359161	Robert Garcia for Mayor 2014				Los Angeles	CA	90010	6/2/2014 12:00:00 AM	2655																				
+1858823	0	1	S498	F498-R	INC1118	COM	C00556100	Wendy Greuel For Congress				Los Angeles	CA	90017	6/4/2014 12:00:00 AM	4320																				
+1858823	0	2	S498	F498-A	INC1118	COM	C00556100	Wendy Greuel For Congress				Los Angeles	CA	90017			Wendy Greuel				OTH	Congress	OTH	California	33					S	4320					
+1879204	0	1	S498	F498-R	INC25	COM	1359626	Michael Gates for City Attorney 2014				Huntington Beach	CA	92649	8/19/2014 12:00:00 AM	2597																				
+1884456	0	2	S498	F498-A	INC2365	COM		Calderon for Director 2014				Los Angeles	CA	90058			Sergio Calderon				OTH	Water Replinishment Division	OTH		4					S	2500					
+1840212	0	1	S498	F498-R	INC349	COM	1363183	Joan Chrostek for Judge 2014				Los Angeles	CA	90010	4/21/2014 12:00:00 AM	2500																				
+1840688	0	1	S498	F498-R	INC1314	COM	1347816	CA Black Political Action Comm.				Los Angeles	CA	90043	4/23/2014 12:00:00 AM	2000																				
+1840887	0	2	S498	F498-A	INC4420	COM	1364755	Committee to Elect Julianne Sylva				Los Gatos	CA	95032			Julianne Sylva				SCJ		OTH	Santa Clara	21					S	6782					
+1840890	0	2	S498	F498-A	INC4406	COM	1363183	Joan Chrostek for Judge 2014				Los Angeles	CA	90010			Joan Chrostek				SCJ		OTH	Los Angeles	107					S	7500					
+1840892	0	2	S498	F498-A	INC4417	COM	1363711	Miguda-Armstead for Judge 2014				Los Angeles	CA	90010			Songhai Miguda-Armstead				SCJ		OTH	Los Angeles	97					S	2500					
+1841112	0	2	S498	F498-A	INC11936	COM	1362923	McDonnell for LA County Sheriff 2014				Los Angeles	CA	90807			Jim McDonnell				OTH	Sheriff	OTH	County of Los Angeles		S				S	10000					
+1843964	0	2	S498	F498-A	INC1988	COM	1364292	Andrew Stein For Superior Court Judge 2014				Covina	CA	91722			Andrew Stein				SCJ		OTH	Los Angeles County	87					S	3600					
+1846613	0	1	S498	F498-R	INC2282	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010	5/1/2014 12:00:00 AM	2500																				
+1846733	0	2	S498	F498-A	INC1348	COM	1340348	Padilla for Secretary Of State 2014				Los Angeles	CA	90017			Alex Padilla				SOS		STW							S	14479					
+1848603	0	2	S498	F498-A	2	CAO	1359835	Tuck for State Superintendent				Novato	CA	94949			Tuck	Marshall			SUP		STW							S	11960					
+1849288	0	2	S498	F498-A	INC1330	COM	1362030	Save San Jose Libraries 2014				Sacramento	CA	95814													Yes On Measure B		San Jose	S	3270.90					
+1850343	0	1	S498	F498-R	1	OTH		Nabih Youssef & Associates				Los Angeles	CA	90071	5/14/2014 12:00:00 AM	3000																				
+1852499	0	4	S498	F498-A	IDT405	COM	1362690	Dan Schnur for Secretary of State									Dan Schnur				SOS		STW							S	32700					
+1852505	0	2	S498	F498-A	IDT762	COM		Neel Kashkari for Governor									Neel Kashkari				GOV		STW							S	24493.76					
+1852774	0	1	S498	F498-R	INC854	COM	1350034	Pat Bates for Senate 2014, Landslide Communications as agent				Rancho Santa Margarita	CA	92688	4/7/2014 12:00:00 AM	4201.83																				
+1885171	0	1	S498	F498-R	1	CAO	922705	Fontanans for John Roberts				Information Requested	CA	91111	9/9/2014 12:00:00 AM	1379																				
+1886906	0	2	S498	F498-A	2	RCP	1245779	Committee to Re-Elect Jennifer McGrath City Attorney 2014				Huntington Beach	CA	92648			McGrath	Jennifer			OTH	City Attorney	CIT	Huntington Beach, Orange County						S	2313					
+1889122	0	2	S498	F498-A	IDT201	OTH		Tuck	Marshall								Marshall Tuck				SUP		STW							S	10000					
+1889125	0	1	S498	F498-R	INC3573	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048	9/26/2014 12:00:00 AM	3000																				
+1889126	0	2	S498	F498-A	IDT1057	COM	1359835	Tuck for State Superintendent of Public Instruction 2014				Novato	CA	94949			Marshall Tuck				SUP		OTH	Statewide						S	14000					
+1840211	0	1	S498	F498-R	INC348	COM	1359573	Alison Matsumoto-Estrada for Judge 2014				Los Angeles	CA	90010	4/21/2014 12:00:00 AM	2500																				
+1841570	0	2	S498	F498-A	INC1393	COM	1363996	Ayore Riaunda for Auditor-Controller 2014				Martinez	CA	94553			Ayore Riaunda				OTH	Auditor-Controller	OTH	Contra Costa County						S	2500					
+1841797	0	1	S498	F498-R	INC141	COM	1359202	Frank Ury for Supervisor 2014				Santa Ana	CA	92705	4/23/2014 12:00:00 AM	2885																				
+1841802	0	1	S498	F498-R	INC147	COM	1337528	Harkey for Board of Equalization 2014				Rancho Santa Margarita	CA	92688	4/24/2014 12:00:00 AM	3000																				
+1847596	0	2	S498	F498-A	INC2287	COM	1363981	Debra Losnick for Judge 2014				Los Angeles	CA	90048			Debra Losnick				SCJ		OTH	Los Angeles Superior Court						S	6448					
+1848301	0	2	S498	F498-A	2	CAO	1359835	Tuck for State Superintendent of PI 2014				Novato	CA	94949			Tuck	Marshall			SUP		STW							S	40000					
+1848439	0	2	S498	F498-A	INC17	COM	1363183	Joan Chrostek for Judge 2014				Los Angeles	CA	90010			Joan Chrostek				SCJ		OTH	County of Los Angeles		S				S	1500					
+1849304	0	1	S498	F498-R	INC1024	COM	1361888	Amy Carter for Judge 2014				Los Angeles	CA	90010	5/12/2014 12:00:00 AM	4000																				
+1852871	0	1	S498	F498-R	INC1241	COM	1359992	David Hadley for Assembly 2014, Landslide Communicatons as agent				Manhattan Beach	CA	90266	4/12/2014 12:00:00 AM	3196																				
+1855157	0	2	S498	F498-A	INC365	COM		JOAN CHROSTEK FOR JUDGE 2014				Los Angeles	CA	90010			Joan Chrostek				SCJ		OTH	Los Angeles Superior Court	107					S	6250					
+1857073	0	12	S498	F498-A	IDT11	COM		Proposition 41																			Proposition 41	41	Statewide	S	129.77					
+1875844	0	2	S498	F498-A	1	OTH		Meridian Pacific, Inc.				Sacramento	CA	95825			Eastman	Gail			OTH	City Council Member	CIT	Anaheim						S	4080					
+1877470	0	2	S498	F498-A	INC168	COM	1351696	Parrish for Orange County Assessor 2014				Long Beach	CA	90802			Claude Parrish				ASR		OTH	Orange County		S				S	5000					
+1878844	0	1	S498	F498-R	2	CAO	1362299	Lucille Kring for Anaheim Mayor 2014				Santa Ana	CA	92705	8/18/2014 12:00:00 AM	4500																				
+1889127	0	2	S498	F498-A	INC3575	COM	1343257	Yes on Props 1 and 2				Oakland	CA	94612													Water Quality, Supply & Infrastructure Improvement Act of 2014 & State Reserve Policy	1&2	Statewide	S	5250					
+1889660	0	2	S498	F498-A	2	RCP	1285847	Inland Empire Taxpayers Association				Riverside	CA	92501			Denver	John			OTH	City Council	CIT	Menifee						S	500					
+1841907	0	2	S498	F498-A	INC198	COM	1337528	Diane Harkey for Board of Equalization 2014				Rancho Santa Margarita	CA	92688			Diane Harkey				BOE		BOE		3					S	5000					
+1841991	0	1	S498	F498-R	1	RCP	requested	Joseph Adelizzi for Judge 2014				Encinitasca	CA	92024	4/26/2014 12:00:00 AM	2600																				
+1843941	0	1	S498	F498-R	INC4	COM	1363802	Shannon Knight for Judge 2014				Los Angeles	CA	90010	4/28/2014 12:00:00 AM	2500																				
+1850432	0	1	S498	F498-R	INC1026	COM	1264154	Long Beach Police Officers Assn. - IE Committee.				Sacramento	CA	95814	5/15/2014 12:00:00 AM	2629																	INC1026			
+1850436	0	1	S498	F498-R	INC1027	COM	1346170	Evan Low for Assembly 2014				Sacramento	CA	95815	5/15/2014 12:00:00 AM	5680																				
+1851547	0	2	S498	F498-A	INC1082	COM	1364714	Torlakson for Superintendent of Public Instruction 2014 with Major Funding by the California Teachers Assn.				Sacramento	CA	95814			Tom Torlakson				SUP		STW							S	100000		INC1082			
+1851831	0	2	S498	F498-A	INC502	COM	1362775	No Wall on the Waterfront, Yes on Prop B, top contributors include Richard and Barbara Stewart				Oakland	CA	94618													The Waterfront Height Limit Right To Vote Act	B	City & County of San Francisco	S	5000					
+1852478	0	2	S498	F498-A	INC4470	COM	1359005	Andrew Cooper for Judge 2014				Los Angeles	CA	90010			Andrew Cooper				SCJ		OTH	Los Angeles	157					S	2500					
+1852484	0	2	S498	F498-A	INC4475	COM	1358813	Stacey Okun-Weise for Judge 2014				Los Angeles	CA	90010			Stacey Okun-Weise				SCJ		OTH	Los Angeles	107					S	2500					
+1852688	0	1	S498	F498-R	INC4113	COM	1350034	Pat Bates for Senate 2014, Landslide Communications as agent				Rancho Santa Margarita	CA	92688	4/7/2014 12:00:00 AM	4201.83																				
+1852688	0	2	S498	F498-A	INC4113	COM	1350034	Pat Bates for Senate 2014, Landslide Communications as agent				Rancho Santa Margarita	CA	92688			Pat Bates				SEN		SEN		36					S	4201.83					
+1880989	0	2	S498	F498-A	INC4611	COM	1335071	Betty Yee for Controller 2014				Los Angeles	CA	90048			Betty Yee				CON		STW							S	75000					
+1882622	0	1	S498	F498-R	INC4644	COM	1362944	Yes on Prop 47, Californians for Safe Neighborhoods & Schools				Sacramento	CA	95815	9/4/2014 12:00:00 AM	80000																				
+1882633	0	2	S498	F498-A	2	CAO	1322465	Tom Tait for Mayor 2014				Rancho Santa Margarita	CA	92688			Tait	Tom			OTH	Mayor	LOC	Anaheim, Orange County						S	1500					
+1882644	0	1	S498	F498-R	1	CAO	1367768	Strong OC Neighborgoods				Sacramento	CA	95825	8/27/2014 12:00:00 AM	1968																				
+1889859	0	2	S498	F498-A	INC824	COM	1371708	No on L, San Franciscans Against Gridlock				San Francisco	CA	94122													Policy Regarding Transportation Priorities in San Francisco	L	City and County of San Francisco	O	1000					
+1890043	0	2	S498	F498-A	INC1661	COM	745849	Westminster Teachers Political Action Group				Fountain Valley	CA	92708																S	3366					
+1890108	0	1	S498	F498-R	INC103	COM	1356164	Bill Brough State Assembly 2014				Dana Point	CA	92629	9/30/2014 12:00:00 AM	2681																				
+1844017	0	2	S498	F498-A	INC79	COM	1359116	Donna Hollingsworth Armstrong For Judge 2014				Los Angeles	CA	90010			Donna Hollingsworth Armstrong				SCJ		OTH	LA County	138					S	2500					
+1844074	0	2	S498	F498-A	INC641	COM		Paul Tanaka for Sheriff 2014				Long Beach	CA	90802			Paul Tanaka				SHC		OTH	Los Angeles County						S	34953.06					
+1844138	0	1	S498	F498-R	INC11941	IND		Venture Strategic				Irvine	CA	92612	4/28/2014 12:00:00 AM	3511																				
+1844138	0	2	S498	F498-A	IDT1264	IND		Gooch	Lesli								Lesli Gooch				OTH	CD/31								S	3551					
+1846639	0	1	S498	F498-R	INC1947	IND		Neves	Lee J.			Stockton	CA	95203	5/1/2014 12:00:00 AM	3214.10																				
+1846688	0	2	S498	F498-A	INC1490	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048			Jeffrey Prang				ASR		OTH	Los Angeles County						S	5000					
+1852852	0	1	S498	F498-R	INC1187	COM	1319499	Parrish for OC Assessor 2014, Landslide Communications as agent				Long Beach	CA	90802	5/2/2014 12:00:00 AM	5700																				
+1852895	0	1	S498	F498-R	INC813	COM	1350034	Pat Bates for Senate 2014, Landslide Communications as agent				Rancho Santa Margarita	CA	92688	4/7/2014 12:00:00 AM	4201.83																				
+1882970	0	3	S498	F498-A	IDT1004	OTH		Delgleize	Barbara								Barbara Delgleize				CCM		OTH	City of Huntington Beach						S	3250					
+1883154	0	1	S498	F498-R	INC179	COM	1362342	Curry for Assembly 2014				Tustin	CA	92780	9/8/2014 12:00:00 AM	3813																				
+1883271	0	2	S498	F498-A	INC16	COM	1370805	Varasteh for Director 2014				Auburn	CA	95604			Ron Varasteh				OTH	Director	OTH	Irvine	48	S				S	6000					
+1883292	0	2	S498	F498-A	INC2363	COM	1368048	Uranga for Water Replenishment Water District 2014				Los Angeles	CA	90010			Tonia Uranga				OTH	Water Replenishment Water Disctrict	OTH		3					S	4000					
+1883408	0	1	S498	F498-R	INC1628	OTH		Theoryr Properties LLC				Ladera Ranch	CA	92694	9/8/2014 12:00:00 AM	5490																				
+1883593	0	2	S498	F498-A	INC4647	COM	1362923	McDonnell for LA County Sheriff 2014				Long Beach	CA	90807			Jim McDonnell				OTH	Sheriff	OTH	Los Angeles						S	10000					
+1890515	0	1	S498	F498-R	INC1304	COM	1275549	Californians for Jobs & A Strong Economy				Sacramento	CA	95811	9/30/2014 12:00:00 AM	5445																	INC1304			
+1890640	0	2	S498	F498-A	INC4826	COM	1365283	Californians for Affordable Health Insurance				Sacramento	CA	95841													Yes on Prop 45	45	Statewide	S	3000					
+1890641	0	1	S498	F498-R	INC4817	COM	1308496	Mendoza for Senate 2014				Long Beach	CA	90807	10/2/2014 12:00:00 AM	5543																				
+1890687	0	1	S498	F498-R	1	IND		Bloomfield	William E.			Redondo Beach	CA	90278	10/1/2014 12:00:00 AM	4000																		Web Services Company Inc.	Chairman of the Board	
+1890713	0	1	S498	F498-R	INC1662	COM	1359949	Dayan Mathai for Superior Court Judge 2014				Cerritos	CA	90703	10/1/2014 12:00:00 AM	4000																				
+1846698	0	1	S498	F498-R	INC1488	COM	1340348	Padilla for Secretary Of State 2014				Los Angeles	CA	90017	5/1/2014 12:00:00 AM	18374																				
+1846716	0	1	S498	F498-R	INC1991	COM	1362752	Bobby Shriver For Supervisor 2014				Los Angeles	CA	90010	4/30/2014 12:00:00 AM	2750																				
+1846985	0	1	S498	F498-R	INC869	COM	1359573	Alison Matsumoto-Estrada For Judge 2014				Los Angeles	CA	90010	5/2/2014 12:00:00 AM	2501																				
+1852908	0	2	S498	F498-A	IDT335	COM		Tony Amador for Congress									Tony Amador					Congress			9					S	3257					
+1852910	0	2	S498	F498-A	INC857	COM	1365591	Citizens for Continued Hospital Excellence				San Diego	CA	92119													Yes on H	H	Grossmont	S	2890					
+1853910	0	1	S498	F498-R	INC1092	COM	1326747	Alliance to Get California Working PAC				Sacramento	CA	95814	5/21/2014 12:00:00 AM	5420																	INC1092			
+1855154	0	1	S498	F498-R	INC363	COM		AMY CARTER FOR JUDGE 2014				Los Angeles	CA	90010	5/24/2014 12:00:00 AM	6250																				
+1884180	0	2	S498	F498-A	INC184	COM	1358868	Young Kim for Assembly 2014				Willows	CA	95988			Young Kim				ASM		ASM			S				S	2699					
+1891022	0	1	S498	F498-R	INC1077	COM		1717 Media, Landslide Communications as agent				Sacramento	CA	95811	10/2/2014 12:00:00 AM	3140																				
+1891028	0	2	S498	F498-A	IDT350	COM		Richard Pan for State Senate									Richard Pan				SEN		SEN		6					S	4102					
+1891029	0	1	S498	F498-R	INC1076	OTH		Meridian Pacific, Inc., Landslide Communications as agent				Sacramento	CA	95825	10/2/2014 12:00:00 AM	2633																				
+1891314	0	1	S498	F498-R	INC119	COM	1370194	Citizens for a Safe Fourth of July - Yes on Measure T				Sacramento	CA	95814	10/2/2014 12:00:00 AM	2550																				
+1847070	0	1	S498	F498-R	INC1015	COM	1364582	Susan Guinn for Assessor Clerk 2014				San Diego	CA	92122	5/2/2014 12:00:00 AM	5300																				
+1847159	0	2	S498	F498-A	2	RCP	C00521211	Spirit of Democracy America				Sacramento	CA	95814			Kleinman	Pablo			OTH	Congress	OTH	CD30						S	1105					
+1847163	0	4	S498	F498-A	4	RCP	1346379	Spirit of Democracy California				Sacramento	CA	95814			Gorsulowsky	Tim			ASM		ASM		9					S	224					
+1847167	0	1	S498	F498-R	1	RCP	1364102	Re-Elect Judge Cope 2014				Murrieta	CA	92562	5/2/2014 12:00:00 AM	5000																				
+1847167	0	2	S498	F498-A	2	RCP	1364102	Re-Elect Judge Cope 2014				Murrieta	CA	92562			Cope	Mark			OTH	Judge of the Superior Court Seat #3	CTY	Riverside County						S	5000					
+1847366	0	2	S498	F498-A	2	CAO	1355732	Maggy Krell for Sacramento DA				Sacramento	CA	95814			Krell	Maggy			OTH	Sacramento District Attorney	CIT	Sacramento County						S	3360					
+1847461	0	1	S498	F498-R	INC1408	OTH		Adam Nick for Congress				Willows	CA	95988	5/2/2014 12:00:00 AM	2500																				
+1855566	1	3	S498	F498-A	IDT7	COM		Phil Ting 2014									Phil Ting				ASM		ASM		19	H				S	2500					
+1856013	0	1	S498	F498-R	INC3349	COM	1365232	King for Attorney General 2014				La Mesa	CA	91942	5/27/2014 12:00:00 AM	3000																				
+1856039	0	1	S498	F498-R	INC4	COM		DONNA HOLLINGSWORTH ARMSTRONG FOR JUDGE 2014				Los Angeles	CA	90010	5/28/2014 12:00:00 AM	6000																				
+1856068	0	2	S498	F498-A	INC2340	COM	1359005	Andrew Cooper for Judge 2014				Los Angeles	CA	90010			Andrew Cooper				SCJ		OTH	Los Angeles Superior Court	157					S	2500					
+1885177	0	1	S498	F498-R	INC1226	COM	1364292	Andrew Stein for Superior Court Judge 2014				Covina	CA	91722	9/12/2014 12:00:00 AM	6320.52																				
+1885348	0	3	S498	F498-A	IDT7	COM	1368392	Committee to Elect Bea Herrera for Boardmember OUHSD 2014									Beatrice Herrera				BED		OTH	Oxnard Union High School District						S	1009					
+1885473	0	2	S498	F498-A	INC1201	COM	C00543165	Strickland for Congress				Beverly	MA	01915			Tony Strickland				OTH	Congress	OTH	Congressional District 25	25					S	6557					
+1885597	0	1	S498	F498-R	1	RCP	1369037	Moving Forward With Nat Bates for Mayor 2014				San Rafael	CA	94901	9/15/2014 12:00:00 AM	11000																				
+1885597	0	5	S498	F498-A	5	RCP	1369037	Moving Forward With Nat Bates for Mayor 2014				San Rafael	CA	94901			Martinez	Al			OTH	City Council Member	CIT	Richmond						S	2750					
+1885711	0	1	S498	F498-R	INC106	OTH	742088	Republican Central Committee of Orange County				Tustin	CA	92780	9/15/2014 12:00:00 AM	3525																				
+1891314	0	2	S498	F498-A	INC119	COM	1370194	Citizens for a Safe Fourth of July - Yes on Measure T				Sacramento	CA	95814													YES ON MEASURE T	T	Huntington Beach, Orange Co	S	2550					
+1891368	0	1	S498	F498-R	INC2368	COM	1335071	Betty Yee for Controller 2014				Los Angeles	CA	90048	10/1/2014 12:00:00 AM	5000																				
+1891428	0	1	S498	F498-R	3	CAO		MATTHEW HARRIS FOR JUDGE				SAN JOSE	CA	95138	10/2/2014 12:00:00 AM	2651																				
+1891760	0	2	S498	F498-A	INC123	COM		Santa Monicans For Open And Honest Development Decisions, Yes On D, No On LC				Los Angeles	CA	90071													Yes On D	D		S	2520					
+1891798	0	1	S498	F498-R	INC4337	COM	1319499	Parrish for OC Assessor 2014, Landslide Communications as agent				Santa Ana	CA	92705	10/3/2014 12:00:00 AM	5420																				
+1847464	0	1	S498	F498-R	INC1406	COM	1365232	King for Attorney General 2014				La Mesa	CA	91942	5/2/2014 12:00:00 AM	5625																				
+1847597	0	2	S498	F498-A	INC2288	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048			Jeffrey Prang				ASR		OTH	Los Angeles County						S	6670					
+1847729	0	1	S498	F498-R	INC16	COM	1361217	John A. Perez for Controller 2014				Los Angeles	CA	90017	5/5/2014 12:00:00 AM	6000																				
+1856547	0	2	S498	F498-A	IDT97	OTH		Harkey	Diane								Diane Harkey				BOE		BOE		3					S	2800					
+1856639	0	2	S498	F498-A	2	CAO	1354025	Shannon Grove for Assembly 2014				Bakersfield	CA	93309			Grove	Shannon			ASM		ASM		34					S	2946.91					
+1856667	0	1	S498	F498-R	1	CAO	1363967	Emma Castro for Judge 2014				Los Angeles	CA	90048	5/29/2014 12:00:00 AM	2500																				
+1857073	0	8	S498	F498-A	IDT7	COM		Tom Torlakson For Superintendent Public Instruction									Tom Torlakson				SUP		STW			H				S	519.08					
+1857078	0	4	S498	F498-A	IDT19	COM		John Chiang for Treasurer									John Chiang				TRE		STW			H				S	480.04					
+1858035	0	2	S498	F498-A	INC1094	COM	1363078	George McKenna for School Board 2014				Los Angeles	CA	90010			George McKenna				OTH	School Boardmember	OTH	Los Angeles Unified School District	1					S	3400					
+1885862	0	1	S498	F498-R	1	CAO		Venture Strategic				Irvine	CA	92612	9/16/2014 12:00:00 AM	5750																				
+1886133	0	1	S498	F498-R	INC910	COM	Pending	Friends to Elect Monica Cooper to the Water Board 2014				Carson	CA	90746	9/16/2014 12:00:00 AM	2500																				
+1886301	0	2	S498	F498-A	INC712	COM	1364788	Swearengin for Controller 2014, Landslide Communications as agent				Irvine	CA	92618			Ashley Swearengin				CON		STW							S	6979					
+1886332	0	5	S498	F498-A	5	RCP	1371238	Teachers & Parents in Support of Solis, Arancibia, Tarantino, Segura, Hall for School Board of Trustees 2014, sponsored & major funding by Sweetwater Education Assn				Chula Vista	CA	91910			Segura	Nick			OTH	Board Member	LOC	Sweetwater Union High School District #4						S	500					
+1891833	0	2	S498	F498-A	INC1367	COM	1337934	Landslide Communications as agent for Harkey for Board of Equalization 2014				Rancho Santa Margarita	CA	92688			Diane Harkey				BOE		BOE		3					S	4000					
+1891845	0	1	S498	F498-R	INC1373	COM	1364788	Ashley Swearengin for Controller, Landslide Communications as agent				Irvine	CA	92618	10/3/2014 12:00:00 AM	22000																				
+1891967	0	2	S498	F498-A	INC911	COM	1364512	Jacqueline Lewis for Judge 2014				Los Angeles	CA	90048			Jacqueline Lewis				SCJ		OTH							S	2500					
+1891973	0	2	S498	F498-A	INC1377	COM	1319499	Parrish for OC Assessor 2014, Landslide Communications as agent				Santa Ana	CA	92705			Claude Parrish				ASR		OTH	Orange County						S	5416					
+1888060	1	1	S498	F498-R	INC295	IND	494345	William E. Bloomfield, Landslide Communications as agent				Manhattan Beach	CA	90266	9/23/2014 12:00:00 AM	4116																				
+1848186	0	2	S498	F498-A	INC1018	COM	1365569	Shirley Horton for Board of Equalization 2014				San Diego	CA	92119			Shirley Horton				BOE		BOE		4					S	15390					
+1848198	0	2	S498	F498-A	INC351	IND		Bloomfield Jr.	William E			Manhattan Beach	CA	90266			Marshall Tuck				SUP		STW							S	20000		INC351			
+1848306	0	2	S498	F498-A	INC1956	COM	1365569	Shirley Horton for Board of Equalization 2014				San Diego	CA	92119			Shirley Horton				BOE		OTH		4					S	14888					
+1848401	0	1	S498	F498-R	INC1415	COM	1364087	Support Contra Costa Community Colleges 2014				Berkeley	CA	94710	5/7/2014 12:00:00 AM	12500																				
+1848663	0	1	S498	F498-R	INC876	COM	1363988	Carol Rose For Judge 2014				Los Angeles	CA	90010	5/9/2014 12:00:00 AM	2501																				
+1896174	0	1	S498	F498-R	INC12592	COM	1332098	Committee for the Re-Election of Dr. Don Parazo, AV Hospital Board 2014				Lancaster	CA	93539	10/8/2014 12:00:00 AM	3477																				
+1896585	0	2	S498	F498-A	IDT66	IND		Kring	Lucille								Lucille Kring				MAY		OTH	City of Anaheim		H				S	4899					
+1896721	0	1	S498	F498-R	INC1378	COM	1341684	Dave Jones for Insurance Commissioner 2014				Sacramento	CA	95864	10/10/2014 12:00:00 AM	45000																				
+1897248	0	1	S498	F498-R	INC742	COM	1364512	Jacqueline Lewis for Judge 2014				Los Angeles	CA	90048	10/13/2014 12:00:00 AM	2500																				
+1896450	0	1	S498	F498-R	INC28	COM	1370805	Varasteh for Director 2014				Irvine	CA	92604	10/10/2014 12:00:00 AM	5000																				
+1896601	0	2	S498	F498-A	INC4875	COM	1354340	Roger Dickinson for Senate 2014				Sacramento	CA	95815			Roger Dickinson				SEN		SEN		6					S	2500					
+1897327	0	1	S498	F498-R	INC26	COM	1368526	No on E: Stop unfair beverage taxes - coalition for an affordable city with major funding by aba california pac				San Rafael	CA	94901	10/10/2014 12:00:00 AM	20000																				
+1897800	0	1	S498	F498-R	INC833	COM	1367199	Yes on F, with Major Support From FC Pier 70, LLC				San Rafael	CA	94901	10/14/2014 12:00:00 AM	5000																				
+1898260	0	2	S498	F498-A	IDT1280	IND		Anderson	Shirley								Shirley Anderson				OTH	Trustee	OTH	Grossmont Union High School Dist.		S				S	2871					
+1898272	0	2	S498	F498-A	IDT68	IND		Stevens	Barbara								Barbara Stevens				OTH	Trustee	OTH	Grossmont Union High School Dist.		S				S	5590					
+1898275	0	2	S498	F498-A	IDT69	IND		Anderson	Shirley								Shirley Anderson				OTH	Trustee	OTH	Grossmont Union High School Dist.		S				S	5590					
+1898641	0	2	S498	F498-A	INC245	COM	1362923	McDonnell for LA County Sheriff 2014				Long Beach	CA	90807			Jim McDonnell				SHC		OTH	Los Angeles County						S	5000					
+1893564	1	2	S498	F498-A	IDT59	IND		Hernandez	Peter								Peter Hernandez				BED		BOE	Hollister School District		S				S	485					
+1895620	0	1	S498	F498-R	INC411	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048	10/7/2014 12:00:00 AM	3600																				
+1896200	0	2	S498	F498-A	INC1375	COM	1369994	Supporters of Fullerton and Cypress Colleges - Yes on J				Irvine	CA	91618													College Bond Measure	J	North Orange County CCD	S	7000					
+1896725	0	2	S498	F498-A	INC11	IND		Larkin	Thomas		Jr.	Newport Beach	CA	92663																S	20000					
+1897037	0	1	S498	F498-R	INC12	COM	1367215	Duffield for City Council 2014				Santa Ana	CA	92705	10/13/2014 12:00:00 AM	20000																				
+1896677	0	2	S498	F498-A	2	OTH		Strategic Research				Stockton	CA	95204			Hernandez	Vince			OTH	City Council	CIT	Manteca						S	434					
+1897734	0	1	S498	F498-R	INC832	COM	1370500	Rodrigo Santos for San Francisco Community College Board 2014				San Francisco	CA	94108	10/14/2014 12:00:00 AM	2500																				
+1898817	0	1	S498	F498-R	INC912	COM	1356678	GIPSON FOR ASSEMBLY 2014				Los Angeles	CA	90010	10/14/2014 12:00:00 AM	5500																				
+1898820	0	2	S498	F498-A	INC913	COM	1364512	Jacqueline Lewis for Judge 2014				Los Angeles	CA	90048			Jacqueline Lewis				SCJ		OTH	Los Angeles Superior Court	61					S	1500					
+1899575	0	2	S498	F498-A	INC3658	COM	1364512	Jacqueline Lewis for Judge 2014				Los Angeles	CA	90048			Jacqueline H. Lewis				SCJ		OTH	Los Angeles County	61					S	2500					
+1896435	0	3	S498	F498-A	2																						Budget Stabilization Account	2	Statewide	S	4879.69					
+1903648	0	1	S498	F498-R	INC1473	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048	10/23/2014 12:00:00 AM	2000																				
+1907635	0	2	S498	F498-A	IDT387	COM	1355575	Tony Thurmond for Assembly 2014				Oakland	CA	94618			Tony Thurmond				ASM		ASM		15	S				S	4400					
+1897328	0	1	S498	F498-R	INC27	COM	1367199	Yes on F, with major support from FC Pier 70, LLC				San Rafael	CA	94901	10/11/2014 12:00:00 AM	15000																				
+1898642	1	1	S498	F498-R	INC246	COM	1361416	Huntington Beach Chamber of Commerce PAC				Los Angeles	CA	90071	10/14/2014 12:00:00 AM	3840																				
+1899457	0	7	S498	F498-A	IDT175	COM		Chiang	John								John Chiang				TRE		STW							S	5000					
+1899913	0	2	S498	F498-A	1																						Minimum Wage Increase	J	San Francisco	S	10000					
+1899392	0	1	S498	F498-R	INC4904	OTH		FSB Core Strategies				Sacramento	CA	95814	10/16/2014 12:00:00 AM	2503																				
+1900186	0	1	S498	F498-R	1	RCP	1367856	Committee to Elect Bobby Shriver Supervisor 2014				Los Angeles	CA	90071	10/17/2014 12:00:00 AM	7500																				
+1900367	0	2	S498	F498-A	INC533	COM	970897	Committee to Elect Janet Abelson 2014				El Cerrito	CA	94530			Janet Abelson				CCM		OTH	City of El Cerrito, CA						S	1400					
+1900894	0	1	S498	F498-R	INC29	COM	1368526	No on E: Stop unfair beverage taxes - coalition for an affordable city with major funding by aba california pac				San Rafael	CA	94901	10/18/2014 12:00:00 AM	20000																				
+1901407	0	1	S498	F498-R	INC1472	COM	1359223	Parker for Board of Equalization 2014				Sacramento	CA	95815	10/21/2014 12:00:00 AM	2500																				
+1899589	0	1	S498	F498-R	1	CAO	1364512	Jacqueline Lewis or Judge 2014				Los Angeles	CA	90048	10/6/2014 12:00:00 AM	4960																				
+1904951	0	2	S498	F498-A	INC561	COM	1367823	San Franciscans Against Real Estate Speculation, A Committee for Proposition G				San Francisco	CA	94110													Additional Transfer Tax on Residential Property Sold Within 5 Years of Purchase	G	City & County of San Francisco, CA	S	5000					
+1906870	0	1	S498	F498-R	1	CAO	1354659	Dahle for Assembly 2014				Willows	CA	95988	9/19/2014 12:00:00 AM	3000																				
+1906870	0	2	S498	F498-A	2	CAO	1354659	Dahle for Assembly 2014				Willows	CA	95988			Rios	Pedro			ASM		ASM		32					S	3000					
+1913320	0	1	S498	F498-R	INC1293	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048	11/3/2014 12:00:00 AM	2000																				
+1913320	0	2	S498	F498-A	INC1293	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048			Jeffrey Prang				ASR		OTH	Los Angeles County		S				S	2000					
+1928433	0	1	S498	F498-R	INC1491	COM	1351215	Coalition for Community College Excellence				Los Angeles	CA	90017	1/22/2015 12:00:00 AM	10628.40																				
+1900365	0	1	S498	F498-R	INC546	COM	1371708	San Franciscans Against Gridlock				San Francisco	CA	94122	10/14/2014 12:00:00 AM	5000																				
+1900370	0	2	S498	F498-A	INC542	IND		Saperstein	Guy			Piedmont	CA	94611																S	2000					
+1901612	0	1	S498	F498-R	INC4916	IND		Wilson	Shawn			Brentwood	CA	94513	10/21/2014 12:00:00 AM	3263																				
+1901612	0	2	S498	F498-A	IDT949	COM	1362183	Tam for Bart 2014				Alameda	CA	94501			Lena Tam (1362183)				OTH	Board	OTH	BART	4					S	3263					
+1901740	0	3	S498	F498-A	IDT62	COM		Barbara Stevens									Barbara Stevens				BED		OTH	Grossmont Union High School District						S	2542					
+1903648	0	2	S498	F498-A	INC1473	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048			Jeffrey Prang				ASR		OTH	Los Angeles County		S				S	2000					
+1907907	0	1	S498	F498-R	INC767	COM	1364512	Jacqueline Lewis for Judge 2014				Los Angeles	CA	90048	10/28/2014 12:00:00 AM	2500																				
+1908622	0	1	S498	F498-R	INC924	COM	1371609	Hall for Senate 2014				Los Angeles	CA	90010	10/29/2014 12:00:00 AM	9000																				
+1909120	0	1	S498	F498-R	INC3725	COM	1286442	Steve Sheldon For Water District 2014				Newport Beach	CA	92660	10/28/2014 12:00:00 AM	3800																				
+1902929	0	1	S498	F498-R	1	RCP	1352724	Parrish for Orange County Assessor				Santa Ana	CA	92705	10/20/2014 12:00:00 AM	4000																				
+1903451	0	2	S498	F498-A	2	CAO	1363158	Brad Torgan for Assembly 2014				West Hollywood	CA	90069			Torgan	Bradly			ASM		ASM		50					S	1750					
+1896253	1	1	S498	F498-R	INC4346	COM	1359411	Yes on Prop. 48				Sacramento	CA	95815	10/9/2014 12:00:00 AM	20000																				
+1904741	0	1	S498	F498-R	INC397	COM	1359913	Jeffrey Prang for Assessor 2014				Los Angeles	CA	90048	10/23/2014 12:00:00 AM	6250																				
+1907163	0	2	S498	F498-A	INC922	COM	1356678	GIPSON FOR ASSEMBLY 2014				Los Angeles	CA	90010			Mike Gipson				ASM		ASM		64					S	5000					
+1907672	0	2	S498	F498-A	INC16	IND		winkel	Robert			Reno	NV	89519																S	5000					
+1907674	0	1	S498	F498-R	INC16	IND		winkel	Robert			Reno	NV	89519	10/28/2014 12:00:00 AM	5000																		Fritz Duda	VP	
+1908204	0	1	S498	F498-R	INC401	COM		McDonnell for LA County Sheriff 2014				Long Beach	CA	90807	10/29/2014 12:00:00 AM	5000																				
+1912596	0	2	S498	F498-A	1																						Additional Transfer Tax on Multi Unit Residential Property Sold Within 5 Years	G	San Francisco	S	5000					
+1912723	0	1	S498	F498-R	INC746	IND	494345	William E. Bloomfield, Landslide Communications as agent (ID# 494345)				Manhattan Beach	CA	90266	11/1/2014 12:00:00 AM	5000																				
+1912723	0	2	S498	F498-A	IDT161	COM	1359835	Marshall Tuck for State Superintendent				San Francisco	CA	94108			Marshall Tuck				SUP		STW							S	5000					
+1924550	0	1	S498	F498-R	1	RCP	1360402	Harris Dawson for City Council 2015				Los Angeles	CA	90017	1/8/2015 12:00:00 AM	1848																				
+1928303	0	2	S498	F498-A	IDT7	IND		Svonkin	Scott								Scott Svonkin				CCB		OTH	Los Angeles	5	S				S	9680.25					
+1908434	0	1	S498	F498-R	INC2111	COM	1343257	Yes on Props. 1 and 2				Oakland	CA	94612	10/28/2014 12:00:00 AM	26250																				
+1909897	0	1	S498	F498-R	INC305	COM	1364788	Swearengin for Controller 2014, Landslide Communications as agent				Irvine	CA	92618	10/30/2014 12:00:00 AM	3500																				
+1912509	0	2	S498	F498-A	INC36	COM	1364512	Jacqueline Lewis for Judge 2014				Los Angeles	CA	90048			Jacqueline Lewis				SCJ		OTH	Los Angeles Superior Court	61					S	3000					
+1912349	1	3	S498	F498-A	IDT22	COM	1367558	Jan Siegel for San Juan Capistrano City Council				San Juan Capistrano	CA	92675			Jan Siegel				CCM		OTH	City of San Juan		S				S	300					
+1927245	0	2	S498	F498-A	IDT1086	OTH		Vega	Francesca								Francesca Vega				CCB		OTH	Los Angeles CCD	1					S	4900					
+1927246	0	2	S498	F498-A	IDT1087	OTH		Kamlager	Sydney								Sydney Kamlager				CCB		OTH	Los Angeles CCD	3					S	4900					
+1928304	0	1	S498	F498-R	INC55	COM		Coalition for Community College Excellence				Los Angeles	CA	90017	1/22/2015 12:00:00 AM	9680.25																				
+1928436	0	1	S498	F498-R	INC1492	COM	1351215	Coalition for Community College Excellence				Los Angeles	CA	90017	1/22/2015 12:00:00 AM	10520.40																				
+1928436	0	2	S498	F498-A	IDT390	IND		Kamlager	Sydney								Sydney Kamlager				CCB		OTH	Los Angeles	3	S				S	10520.40					
+1930617	0	2	S498	F498-A	IDT375	IND		Kamlager	Sydney								Sydney Kamlager				CCB		OTH	Los Angeles	3	S				S	3355.88					
+1931622	0	2	S498	F498-A	IDT987	COM	1366498	Mike Fong for CC Board Trustee 2015				Los Angeles	CA	90017			Mike Fong (1366498)				CCB		OTH	L.A. CCD	7					S	16488					
+1938563	0	1	S498	F498-R	1	RCP	962963	James L. Dear, Friends of Jim Dear				Carson	CA	90749	2/4/2015 12:00:00 AM	1212																				
+1941026	0	1	S498	F498-R	INC1315	COM	1374540	Citizens for Increased Voter Participation, A Committee Supporting Yes on Charter Amendments 1 & 2				Los Angeles	CA	90017	2/11/2015 12:00:00 AM	1687.15																				
+1941540	0	2	S498	F498-A	INC65	COM	1374081	Schmelerson for School Board 2015				Los Angeles	CA	90048			Scott Schmelerson				BED		OTH	LAUSD		S				S	2425					
+1942790	0	2	S498	F498-A	2																						New Election Dates and Schedules for the LAUSD. Charter Amendment 2.	2	Los Angeles Unified School District	S	11550					
+1945464	0	2	S498	F498-A	INC2231	COM	1374540	Citizens for Increased Voter Participation				Los Angeles	CA	90017													Charter Amendments 1 & 2		City of Los Angeles	S	8320					
+1946475	0	1	S498	F498-R	INC2232	IND		Schulte	Steve			Los Angeles	CA	90042	2/21/2015 12:00:00 AM	2800																				

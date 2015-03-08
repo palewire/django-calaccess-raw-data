@@ -5,12 +5,17 @@ import requests
 from hurry.filesize import size
 from optparse import make_option
 from clint.textui import progress
+from django.conf import settings
 from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw import get_download_directory, get_model_list
+from calaccess_raw import (
+    get_download_directory,
+    get_test_download_directory,
+    get_model_list
+)
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
@@ -64,6 +69,13 @@ custom_options = (
         default=False,
         help="Download the ZIP archive without asking permission"
     ),
+    make_option(
+        "--use-test-data",
+        action="store_true",
+        dest="test_data",
+        default=False,
+        help="Use sampled test data (skips download, unzip, prep, clear)"
+    ),
 )
 
 
@@ -74,7 +86,13 @@ CAL-ACCESS database'
 
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
-        self.data_dir = get_download_directory()
+
+        if kwargs['test_data']:
+            self.data_dir = get_test_download_directory()
+            settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
+        else:
+            self.data_dir = get_download_directory()
+
         os.path.exists(self.data_dir) or os.mkdir(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
@@ -97,6 +115,23 @@ CAL-ACCESS database'
         self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
+        if options['test_data']:
+            # disable the steps that don't apply to test data
+            options["download"] = False
+            options["unzip"] = False
+            options["prep"] = False
+            options["clear"] = False
+
+            self.log("Using test data")
+
+            tsv_dir = os.path.join(get_test_download_directory(), "tsv/")
+
+            # if the directory doesn't exist, abort
+            if not os.path.exists(tsv_dir):
+                self.failure("Sampled data tsv directory does not \
+exist at %s" % tsv_dir)
+                return
+
         # Set the options
         self.set_options(*args, **options)
         # Get to work

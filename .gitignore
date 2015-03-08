@@ -15,5 +15,6 @@ docs/_build
 .coverage
 .tox
 example/data
+example/test-data/csv
 example/project/settings_local.py
 example/.static/
