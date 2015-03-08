@@ -229,7 +229,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
         db_table = 'CVR_REGISTRATION_CD'
         verbose_name = 'CVR_REGISTRATION_CD'
         verbose_name_plural = 'CVR_REGISTRATION_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -283,7 +283,7 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         db_table = 'CVR2_REGISTRATION_CD'
         verbose_name = 'CVR2_REGISTRATION_CD'
         verbose_name_plural = 'CVR2_REGISTRATION_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -445,7 +445,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
 
     def __unicode__(self):
         return self.filing_id
-        
+
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
     Additional names data for the lobbyist disclosure forms
@@ -495,7 +495,7 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
         verbose_name = 'CVR2_LOBBY_DISCLOSURE_CD'
         verbose_name_plural = 'CVR2_LOBBY_DISCLOSURE_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -622,7 +622,7 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         db_table = 'LOBBY_AMENDMENTS_CD'
         verbose_name = 'LOBBY_AMENDMENTS_CD'
         verbose_name_plural = 'LOBBY_AMENDMENTS_CD'
-    
+
     def __unicode__(self):
         return self.filing_id
 
@@ -633,22 +633,65 @@ class F690P2Cd(CalAccessBaseModel):
 
         F690 Amendment to Lobbying Disclosure Report
     """
-    filing_id = models.IntegerField(db_column='FILING_ID', help_text = unique filing identification number.)
-    amend_id = models.IntegerField(db_column='AMEND_ID', help_text = amendment identification number. A number of 0 is an original filing and 1 to 999 amendments)
-    line_item = models.IntegerField(db_column='LINE_ITEM', help_text = record line item number.)
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=4, help_text = record type value: for this record this will always equal F690.)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4, help_text = form type. this must equal form type in the parent cover record (CVR).)
-    exec_date = models.DateField(db_column='EXEC_DATE', null=True, help_text = date the original report (or prior amendment to the original report) was executed on.)
-    from_date = models.DateField(db_column='FROM_DATE', null=True, help_text = reporting period from date of original report)
-    thru_date = models.DateField(db_column='THRU_DATE', null=True, help_text = report period to/through date of original.)
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        help_text="unique filing identification number"
+    )
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        help_text="amendment identification number. \
+A number of 0 is an original filing and 1 to 999 amendments"
+    )
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="record line item number"
+    )
+    rec_type = models.CharField(
+        db_column='REC_TYPE',
+        max_length=4,
+        help_text="record type value: for this record this will \
+always equal F690."
+    )
+    form_type = models.CharField(
+        db_column='FORM_TYPE',
+        max_length=4,
+        help_text="form type. this must equal form type in the \
+parent cover record (CVR)."
+    )
+    exec_date = models.DateField(
+        db_column='EXEC_DATE',
+        null=True,
+        help_text="date the original report (or prior amendment to \
+the original report) was executed on."
+    )
+    from_date = models.DateField(
+        db_column='FROM_DATE',
+        null=True,
+        help_text="reporting period from date of original report"
+    )
+    thru_date = models.DateField(
+        db_column='THRU_DATE',
+        null=True,
+        help_text="report period to/through date of original."
+    )
     chg_parts = models.CharField(
-        db_column='CHG_PARTS', max_length=100, blank=True, help_text = "amended into affects items on part(s)" text description.
+        db_column='CHG_PARTS',
+        max_length=100,
+        blank=True,
+        help_text="amended into affects items on part(s) text description."
     )
     chg_sects = models.CharField(
-        db_column='CHG_SECTS', max_length=100, blank=True, help_text = "amended into affects items on sections(s)" text description.
+        db_column='CHG_SECTS',
+        max_length=100,
+        blank=True,
+        help_text="amended into affects items on sections(s) \
+text description."
     )
     amend_txt1 = models.CharField(
-        db_column='AMEND_TXT1', max_length=330, blank=True, help_ text = description of changes to the filing.
+        db_column='AMEND_TXT1',
+        max_length=330,
+        blank=True,
+        help_text="description of changes to the filing"
     )
 
     class Meta:
@@ -1140,6 +1183,6 @@ class LpayCd(CalAccessBaseModel):
         db_table = 'LPAY_CD'
         verbose_name = 'LPAY_CD'
         verbose_name_plural = 'LPAY_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
