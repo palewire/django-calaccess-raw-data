@@ -1904,13 +1904,6 @@ class S496Cd(CalAccessBaseModel):
     )
     date_thru = models.DateField(db_column='DATE_THRU', null=True)
 
-    def __unicode__(self):
-        return "{} Filing {}, Amendment {}".format(
-            self.form_type,
-            self.filing_id,
-            self.amend_id
-        )
-
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'S496_CD'
@@ -1918,7 +1911,11 @@ class S496Cd(CalAccessBaseModel):
         verbose_name_plural = 'S496_CD'
 
     def __unicode__(self):
-        return self.filing_id
+        return "{} Filing {}, Amendment {}".format(
+            self.form_type,
+            self.filing_id,
+            self.amend_id
+        )
 
 
 class SpltCd(CalAccessBaseModel):

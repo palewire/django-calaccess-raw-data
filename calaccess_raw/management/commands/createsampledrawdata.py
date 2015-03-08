@@ -4,11 +4,7 @@ from optparse import make_option
 from calaccess_raw import get_download_directory, get_test_download_directory
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
-from subsample.algorithms import (
-    reservoir_sample,
-    approximate_sample,
-    two_pass_sample
-)
+from subsample.algorithms import two_pass_sample
 from subsample.file_input import FileInput
 from itertools import chain
 
