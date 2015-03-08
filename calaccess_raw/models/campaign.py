@@ -175,7 +175,11 @@ class Cvr2SoCd(CalAccessBaseModel):
         ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org'),
         ('F410', 'Cover Page; Stmt of Organization / Recipient Committee'),
     )
-    form_type = models.CharField(choices=FORM_TYPE_CHOICES, db_column='FORM_TYPE', max_length=4)
+    form_type = models.CharField(
+        choices=FORM_TYPE_CHOICES,
+        db_column='FORM_TYPE',
+        max_length=4
+    )
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
     entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
     enty_naml = models.CharField(
@@ -250,7 +254,7 @@ class Cvr2SoCd(CalAccessBaseModel):
         db_table = 'CVR2_SO_CD'
         verbose_name = 'CVR2_SO_CD'
         verbose_name_plural = 'CVR2_SO_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -438,7 +442,11 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         ('F460', 'Cover Page; Recipient Committee Campaign Statement'),
         ('F497', 'Cover Page; Late Contribution Report')
     )
-    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        choices=FORM_TYPE_CHOICES,
+        max_length=4L,
+        db_column='FORM_TYPE'
+    )
     from_date = models.DateTimeField(
         null=True,
         db_column='FROM_DATE',
@@ -644,7 +652,11 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         ('F465', 'Cover Page; Part V Filing Officer Titles & Addresses'),
         ('F460', 'Cover Page; Additional Committees, Asst. Treasurer, etc.')
     )
-    form_type = models.CharField(choices=FORM_TYPE_CHOICES, max_length=4L, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        choices=FORM_TYPE_CHOICES,
+        max_length=4L,
+        db_column='FORM_TYPE'
+    )
     juris_cd = models.CharField(
         max_length=3L, db_column='JURIS_CD', blank=True
     )
@@ -1222,7 +1234,7 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         db_table = 'CVR3_VERIFICATION_INFO_CD'
         verbose_name = 'CVR3_VERIFICATION_INFO_CD'
         verbose_name_plural = 'CVR3_VERIFICATION_INFO_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -1512,7 +1524,7 @@ class S401Cd(CalAccessBaseModel):
         db_table = 'S401_CD'
         verbose_name = 'S401_CD'
         verbose_name_plural = 'S401_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -1706,7 +1718,7 @@ Campaign Statement)'),
         db_table = 'EXPN_CD'
         verbose_name = 'EXPN_CD'
         verbose_name_plural = 'EXPN_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -1861,6 +1873,7 @@ class DebtCd(CalAccessBaseModel):
     def __unicode__(self):
         return self.filing_id
 
+
 class S496Cd(CalAccessBaseModel):
     """
     Form 496 Late Independent Expenditures
@@ -1903,7 +1916,7 @@ class S496Cd(CalAccessBaseModel):
         db_table = 'S496_CD'
         verbose_name = 'S496_CD'
         verbose_name_plural = 'S496_CD'
-        
+
     def __unicode__(self):
         return self.filing_id
 
@@ -1937,9 +1950,10 @@ class SpltCd(CalAccessBaseModel):
         db_table = 'SPLT_CD'
         verbose_name = 'SPLT_CD'
         verbose_name_plural = 'SPLT_CD'
-    
+
     def __unicode__(self):
         return self.filing_id
+
 
 class S497Cd(CalAccessBaseModel):
     """

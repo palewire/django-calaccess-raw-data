@@ -81,8 +81,9 @@ class FilernameCd(CalAccessBaseModel):
 
 class FilerFilingsCd(CalAccessBaseModel):
     """
-    Key table that links filers to their paper, key data entry, legacy, and electronic filings.
-    This table is used as an index to locate filing information.
+    Key table that links filers to their paper, key data entry, legacy,
+    and electronic filings. This table is used as an index to locate
+    filing information.
     """
     filer_id = models.IntegerField(
         db_column='FILER_ID',
@@ -181,14 +182,15 @@ laundering or other special condition."
         db_table = 'FILER_FILINGS_CD'
         verbose_name = 'FILER_FILINGS_CD'
         verbose_name_plural = 'FILER_FILINGS_CD'
-        
+
     def __unicode__(self):
         return unicode("%s %s" % (self.filer_id, self.filing_id))
 
 
 class FilingsCd(CalAccessBaseModel):
     """
-    This table is the parent table from which all links and association to a filing are derived.
+    This table is the parent table from which all links and association to
+    a filing are derived.
     """
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     filing_type = models.IntegerField(db_column='FILING_TYPE')
@@ -198,7 +200,7 @@ class FilingsCd(CalAccessBaseModel):
         db_table = 'FILINGS_CD'
         verbose_name = 'FILINGS_CD'
         verbose_name_plural = 'FILINGS_CD'
-        
+
     def __unicode__(self):
         return unicode("%s %s" % (self.filing_id, self.filing_type))
 
@@ -262,9 +264,10 @@ class SmryCd(CalAccessBaseModel):
         db_table = 'SMRY_CD'
         verbose_name = 'SMRY_CD'
         verbose_name_plural = 'SMRY_CD'
-     
+
     def __unicode__(self):
         return unicode(self.filer_id)
+
 
 class CvrE530Cd(CalAccessBaseModel):
     """
@@ -332,9 +335,10 @@ class CvrE530Cd(CalAccessBaseModel):
         db_table = 'CVR_E530_CD'
         verbose_name = 'CVR_E530_CD'
         verbose_name_plural = 'CVR_E530_CD'
-     
+
     def __unicode__(self):
         return unicode(self.filer_id)
+
 
 class TextMemoCd(CalAccessBaseModel):
     """
@@ -356,6 +360,6 @@ class TextMemoCd(CalAccessBaseModel):
         db_table = 'TEXT_MEMO_CD'
         verbose_name = 'TEXT_MEMO_CD'
         verbose_name_plural = 'TEXT_MEMO_CD'
-        
+
     def __unicode__(self):
         return unicode(self.filer_id)

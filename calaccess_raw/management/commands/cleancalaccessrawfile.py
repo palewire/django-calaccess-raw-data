@@ -56,13 +56,13 @@ class Command(CalAccessCommand, LabelCommand):
         headers_count = len(headers_list)
         csv_writer.writerow(headers_list)
 
-        has_errors = False;
+        has_errors = False
         log_rows = [[
             'Line number',
             'Headers len',
             'Fields len',
             'Line value'
-        ]];
+        ]]
         # Loop through the rest of the data
         line_number = 1
         for tsv_line in tsv_file:
@@ -119,7 +119,7 @@ class Command(CalAccessCommand, LabelCommand):
                 name,
                 len(log_rows) - 1
             ))
-            self.log_errors(name,log_rows)
+            self.log_errors(name, log_rows)
         # Shut it down
         tsv_file.close()
         csv_file.close()
@@ -137,6 +137,6 @@ class Command(CalAccessCommand, LabelCommand):
         log_writer = csv.writer(log_file, quoting=csv.QUOTE_ALL)
         for row in rows:
             # replace non-ascii characters with ?
-            row = [unicode(x).encode('ascii','replace') for x in row]
+            row = [unicode(x).encode('ascii', 'replace') for x in row]
             log_writer.writerow(row)
         log_file.close()

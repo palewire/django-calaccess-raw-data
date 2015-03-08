@@ -25,8 +25,9 @@ class AcronymsCd(CalAccessBaseModel):
 
 class AddressCd(CalAccessBaseModel):
     """
-    This table holds all addresses for the system. This table can be used for address 
-    based searches and formes the bases for address information desplayed by the AMS.
+    This table holds all addresses for the system. This table can be used
+    for address-based searches and formes the bases for address information
+    desplayed by the AMS.
     """
     adrid = models.IntegerField(db_column="ADRID")
     city = models.CharField(max_length=500, db_column="CITY")
@@ -41,7 +42,7 @@ class AddressCd(CalAccessBaseModel):
         db_table = 'ADDRESS_CD'
         verbose_name = 'ADDRESS_CD'
         verbose_name_plural = 'ADDRESS_CD'
-        
+
     def __unicode__(self):
         return self.adrid
 
@@ -94,7 +95,8 @@ class EfsFilingLogCd(CalAccessBaseModel):
 
 class FilersCd(CalAccessBaseModel):
     """
-    This table is the parent table from which all links and associations to a filer are derived.
+    This table is the parent table from which all links and associations
+    to a filer are derived.
     """
     filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
 
@@ -125,7 +127,8 @@ class FilerAcronymsCd(CalAccessBaseModel):
 
 class FilerAddressCd(CalAccessBaseModel):
     """
-    Links filers and addresses. This table maintains a history of when addresses change.
+    Links filers and addresses. This table maintains a history of when
+    addresses change.
     """
     filer_id = models.IntegerField(db_column='FILER_ID')
     adrid = models.IntegerField(db_column='ADRID')
@@ -157,7 +160,7 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         db_table = 'FILER_ETHICS_CLASS_CD'
         verbose_name = 'FILER_ETHICS_CLASS_CD'
         verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
-    
+
     def __unicode__(self):
         return unicode(self.filer_id)
 
@@ -177,7 +180,8 @@ class FilerInterestsCd(CalAccessBaseModel):
 
 class FilerLinksCd(CalAccessBaseModel):
     """
-    This table links filers to other filers in the system by their type of relationship.
+    This table links filers to other filers in the system by their type
+    of relationship.
     """
     filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True)
     filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True)
@@ -204,7 +208,7 @@ class FilerLinksCd(CalAccessBaseModel):
 
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
-    This is an undocumented model. "JM needs to describe this table. He indicates it is for future use."
+    This is an undocumented model.
     """
     status_type = models.CharField(
         max_length=11L,
@@ -228,7 +232,9 @@ class FilerStatusTypesCd(CalAccessBaseModel):
 
 class FilerToFilerTypeCd(CalAccessBaseModel):
     """
-    This table links a filer to a set of characteristics that describe the filer. This table maintains a history of changes and allows the filer to change characteristics over time.
+    This table links a filer to a set of characteristics that describe the
+    filer. This table maintains a history of changes and allows the filer
+    to change characteristics over time.
     """
     filer_id = models.IntegerField(
         db_column='FILER_ID',
@@ -377,7 +383,8 @@ class FilerTypesCd(CalAccessBaseModel):
 
 class FilerXrefCd(CalAccessBaseModel):
     """
-    This table maps legacy filer identification numbers to the systems filer identification numbers.
+    This table maps legacy filer identification numbers to the systems filer
+    identification numbers.
     """
     filer_id = models.IntegerField(db_column='FILER_ID')
     xref_id = models.CharField(max_length=32L, db_column='XREF_ID')
@@ -526,7 +533,7 @@ class HdrCd(CalAccessBaseModel):
 
 class ImageLinksCd(CalAccessBaseModel):
     """
-    This table links images to filers and accounts. 
+    This table links images to filers and accounts.
     """
     img_link_id = models.IntegerField(db_column='IMG_LINK_ID')
     img_link_type = models.IntegerField(db_column='IMG_LINK_TYPE')
@@ -636,7 +643,8 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table. Temporary table used to generate disclosure table (Lobbyist Contributions 3)
+    Lobbyist contribution disclosure table. Temporary table used to generate
+    disclosure table (Lobbyist Contributions 3)
     """
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
@@ -830,18 +838,6 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 
 
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
-<<<<<<< HEAD
-   
-    """ 
-    This groups terminations by lobby firms.
-
-    """
-
-=======
-    """
-    This is an undocumented model.
-    """
->>>>>>> f24278d75119d376a0ac316556dc1c7bb8ef5112
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=117)
@@ -1151,23 +1147,51 @@ class ReportsCd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
-    rpt_id = models.IntegerField(db_column='RPT_ID', help_text="Unique identification number")
-    rpt_name = models.CharField(db_column='RPT_NAME', max_length=74, help_text="Name of the report")
-    rpt_desc_field = models.CharField(
-        db_column='RPT_DESC_', max_length=32, blank=True, help_text="Description of the report")
-    path = models.CharField(db_column='PATH', max_length=32, blank=True, help_text="Reportpath")
-    data_object = models.CharField(db_column='DATA_OBJECT', max_length=38)
-    parms_flg_y_n = models.IntegerField(
-        db_column='PARMS_FLG_Y_N', blank=True, null=True, help_text="Parameters indication flag"
+    rpt_id = models.IntegerField(
+        db_column='RPT_ID',
+        help_text="Unique identification number"
     )
-    rpt_type = models.IntegerField(db_column='RPT_TYPE', help_text="Type of the report")
-    parm_definition = models.IntegerField(db_column='PARM_DEFINITION', help_text="Parameter definition")
+    rpt_name = models.CharField(
+        db_column='RPT_NAME',
+        max_length=74,
+        help_text="Name of the report"
+    )
+    rpt_desc_field = models.CharField(
+        db_column='RPT_DESC_',
+        max_length=32,
+        blank=True,
+        help_text="Description of the report"
+    )
+    path = models.CharField(
+        db_column='PATH',
+        max_length=32,
+        blank=True,
+        help_text="Reportpath"
+    )
+    data_object = models.CharField(
+        db_column='DATA_OBJECT',
+        max_length=38
+    )
+    parms_flg_y_n = models.IntegerField(
+        db_column='PARMS_FLG_Y_N',
+        blank=True,
+        null=True,
+        help_text="Parameters indication flag"
+    )
+    rpt_type = models.IntegerField(
+        db_column='RPT_TYPE',
+        help_text="Type of the report"
+    )
+    parm_definition = models.IntegerField(
+        db_column='PARM_DEFINITION',
+        help_text="Parameter definition"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'REPORTS_CD'
         verbose_name = 'REPORTS_CD'
         verbose_name_plural = 'REPORTS_CD'
-        
+
     def __unicode__(self):
         return self.rpt_id

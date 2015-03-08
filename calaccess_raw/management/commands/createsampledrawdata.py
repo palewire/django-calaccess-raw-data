@@ -4,8 +4,11 @@ from optparse import make_option
 from calaccess_raw import get_download_directory, get_test_download_directory
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
-
-from subsample.algorithms import reservoir_sample, approximate_sample, two_pass_sample
+from subsample.algorithms import (
+    reservoir_sample,
+    approximate_sample,
+    two_pass_sample
+)
 from subsample.file_input import FileInput
 from itertools import chain
 
@@ -18,6 +21,8 @@ custom_options = (
         help="Number of rows to grab from each table"
     ),
 )
+
+
 class Command(CalAccessCommand, LabelCommand):
     help = 'Create sampled TSV files for easy test runs'
     option_list = CalAccessCommand.option_list + custom_options
@@ -26,11 +31,11 @@ class Command(CalAccessCommand, LabelCommand):
         self.sample_rows = int(options['samplerows'])
         self.log("sample rows is %i" % self.sample_rows)
 
-        self.data_dir       = get_download_directory()
-        self.test_data_dir  = get_test_download_directory()
+        self.data_dir = get_download_directory()
+        self.test_data_dir = get_test_download_directory()
 
-        self.tsv_dir        = os.path.join(self.data_dir, "tsv/")
-        self.sample_dir     = os.path.join(self.test_data_dir, "tsv/")
+        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
+        self.sample_dir = os.path.join(self.test_data_dir, "tsv/")
 
         # make sure sample dir exists and is empty
         os.path.exists(self.test_data_dir) or os.mkdir(self.test_data_dir)
@@ -39,8 +44,8 @@ class Command(CalAccessCommand, LabelCommand):
 
         # Loop through all the files in the source directory
         for name in os.listdir(self.tsv_dir):
-            file = os.path.join(self.tsv_dir,name)
-            out_file = os.path.join(self.sample_dir,name)
+            file = os.path.join(self.tsv_dir, name)
+            out_file = os.path.join(self.sample_dir, name)
 
             self.log("Sample %s" % file)
 

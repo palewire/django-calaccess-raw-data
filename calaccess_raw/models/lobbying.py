@@ -446,6 +446,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     def __unicode__(self):
         return self.filing_id
 
+
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
     Additional names data for the lobbyist disclosure forms
