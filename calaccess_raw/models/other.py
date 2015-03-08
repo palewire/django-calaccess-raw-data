@@ -41,6 +41,9 @@ class AddressCd(CalAccessBaseModel):
         db_table = 'ADDRESS_CD'
         verbose_name = 'ADDRESS_CD'
         verbose_name_plural = 'ADDRESS_CD'
+        
+    def __unicode__(self):
+        return self.adrid
 
 
 class BallotMeasuresCd(CalAccessBaseModel):
@@ -66,6 +69,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
             "measure_short_name",
             "measure_name"
         )
+
+    def __unicode__(self):
+        return self.measure_name
 
 
 class EfsFilingLogCd(CalAccessBaseModel):
@@ -151,6 +157,9 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         db_table = 'FILER_ETHICS_CLASS_CD'
         verbose_name = 'FILER_ETHICS_CLASS_CD'
         verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
+    
+    def __unicode__(self):
+        return unicode(self.filer_id)
 
 
 class FilerInterestsCd(CalAccessBaseModel):
@@ -1159,3 +1168,6 @@ class ReportsCd(CalAccessBaseModel):
         db_table = 'REPORTS_CD'
         verbose_name = 'REPORTS_CD'
         verbose_name_plural = 'REPORTS_CD'
+        
+    def __unicode__(self):
+        return self.rpt_id

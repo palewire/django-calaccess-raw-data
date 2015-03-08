@@ -7,8 +7,6 @@ class CalAccessBaseModel(models.Model):
     """
     An abstract model with some tricks we'll reuse below.
     """
-    DATE_FIELDS = ()
-    DATETIME_FIELDS = ()
     objects = managers.CalAccessManager()
 
     def get_csv_name(self):

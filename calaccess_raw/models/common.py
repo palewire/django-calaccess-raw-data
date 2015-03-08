@@ -262,7 +262,9 @@ class SmryCd(CalAccessBaseModel):
         db_table = 'SMRY_CD'
         verbose_name = 'SMRY_CD'
         verbose_name_plural = 'SMRY_CD'
-
+     
+     def __unicode__(self):
+        return unicode(self.filer_id)
 
 class CvrE530Cd(CalAccessBaseModel):
     """
@@ -330,7 +332,9 @@ class CvrE530Cd(CalAccessBaseModel):
         db_table = 'CVR_E530_CD'
         verbose_name = 'CVR_E530_CD'
         verbose_name_plural = 'CVR_E530_CD'
-
+     
+     def __unicode__(self):
+        return unicode(self.filer_id)
 
 class TextMemoCd(CalAccessBaseModel):
     """
@@ -352,3 +356,6 @@ class TextMemoCd(CalAccessBaseModel):
         db_table = 'TEXT_MEMO_CD'
         verbose_name = 'TEXT_MEMO_CD'
         verbose_name_plural = 'TEXT_MEMO_CD'
+        
+     def __unicode__(self):
+        return unicode(self.filer_id)
