@@ -95,6 +95,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
     def __unicode__(self):
         return self.filer_id
 
+
 class FilersCd(CalAccessBaseModel):
     """
     This table is the parent table from which all links and associations
