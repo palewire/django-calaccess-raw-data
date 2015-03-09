@@ -91,7 +91,9 @@ class EfsFilingLogCd(CalAccessBaseModel):
         db_table = 'EFS_FILING_LOG_CD'
         verbose_name = 'EFS_FILING_LOG_CD'
         verbose_name_plural = 'EFS_FILING_LOG_CD'
-
+ 
+    def __unicode__(self):
+        return self.filer_id
 
 class FilersCd(CalAccessBaseModel):
     """
