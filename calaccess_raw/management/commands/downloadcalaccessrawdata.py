@@ -118,10 +118,6 @@ CAL-ACCESS database'
         self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
-        # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
-        locale_encoding = locale.getpreferredencoding()
-        sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
-
         if options['test_data']:
             # disable the steps that don't apply to test data
             options["download"] = False
@@ -146,7 +142,16 @@ exist at %s" % tsv_dir)
             if options['noinput']:
                 self.download()
             else:
+                # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
+                locale_encoding = locale.getpreferredencoding()
+                old_stdout = sys.stdout
+                sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
+
                 confirm = input(self.prompt)
+
+                # Set things back to the way they were before continuing.
+                sys.stdout = old_stdout
+
                 if confirm != 'yes':
                     self.failure("Download cancelled")
                     return
