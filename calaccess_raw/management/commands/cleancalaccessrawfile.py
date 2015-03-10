@@ -1,7 +1,7 @@
 import os
 import csv
 from io import StringIO
-from csvkit import CSVKitReader
+from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
@@ -39,20 +39,23 @@ class Command(CalAccessCommand, LabelCommand):
         )
 
         # Writer
-        csv_file = open(csv_path, 'wb')
-        csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
+        csv_file = open(csv_path, 'w')
+        csv_writer = CSVKitWriter(csv_file, quoting=csv.QUOTE_ALL)
 
         # Reader
         tsv_file = open(tsv_path, 'rb')
 
         # Pull and clean the headers
         try:
-            headers = tsv_file.next()
+            headers = tsv_file.readline()
         except StopIteration:
             return
-        headers = headers.decode("ascii", "replace").encode('utf-8')
+        headers = headers.decode("ascii", "replace")
         headers_csv = CSVKitReader(StringIO(headers), delimiter='\t')
-        headers_list = headers_csv.next()
+        try:
+            headers_list = next(headers_csv)
+        except StopIteration:
+            return
         headers_count = len(headers_list)
         csv_writer.writerow(headers_list)
 
@@ -67,6 +70,9 @@ class Command(CalAccessCommand, LabelCommand):
         line_number = 1
         for tsv_line in tsv_file:
 
+            # Goofing around with the encoding while we're in there.
+            tsv_line = tsv_line.decode("ascii", "replace")
+
             # Nuke any null bytes
             null_bytes = tsv_line.count('\x00')
             if null_bytes:
@@ -78,9 +84,6 @@ class Command(CalAccessCommand, LabelCommand):
             if sub_char:
                 tsv_line = tsv_line.replace('\x1a', '')
 
-            # Goofing around with the encoding while we're in there.
-            tsv_line = tsv_line.decode("ascii", "replace").encode('utf-8')
-
             # Split on tabs so we can later spit it back out as CSV
             # and remove extra newlines while we are there.
             csv_field_list = tsv_line.replace("\r\n", "").split("\t")
@@ -88,10 +91,10 @@ class Command(CalAccessCommand, LabelCommand):
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems
             if not len(csv_field_list) == headers_count:
-                csv_field_list = CSVKitReader(
+                csv_field_list = next(CSVKitReader(
                     StringIO(tsv_line),
                     delimiter='\t'
-                ).next()
+                ))
                 if not len(csv_field_list) == headers_count:
                     if self.verbosity:
                         msg = '  Bad parse of line %s (%s headers, %s values)'
@@ -137,10 +140,7 @@ class Command(CalAccessCommand, LabelCommand):
             self.log_dir,
             name.lower().replace("tsv", "errors.csv")
         )
-        log_file = open(log_path, 'wb')
-        log_writer = csv.writer(log_file, quoting=csv.QUOTE_ALL)
-        for row in rows:
-            # replace non-ascii characters with ?
-            row = [unicode(x).encode('ascii', 'replace') for x in row]
-            log_writer.writerow(row)
+        log_file = open(log_path, 'w')
+        log_writer = CSVKitWriter(log_file, quoting=csv.QUOTE_ALL)
+        log_writer.writerows(rows)
         log_file.close()
