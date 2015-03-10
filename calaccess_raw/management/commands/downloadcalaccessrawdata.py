@@ -198,7 +198,7 @@ exist at %s" % tsv_dir)
         CAL-ACCESS archive download.
         """
         file_path = os.path.join(self.data_dir, 'download_metadata.txt')
-        with open(file_path, 'wb') as f:
+        with open(file_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
     def download(self):
