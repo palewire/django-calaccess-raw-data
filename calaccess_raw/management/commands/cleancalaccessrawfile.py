@@ -129,6 +129,10 @@ class Command(CalAccessCommand, LabelCommand):
         Log any errors to a csv file
         """
         # Log writer
+        try:
+            os.makedirs(self.log_dir)  # Try to make sure log_dir exists
+        except OSError:
+            pass
         log_path = os.path.join(
             self.log_dir,
             name.lower().replace("tsv", "errors.csv")
