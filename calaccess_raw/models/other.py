@@ -172,6 +172,9 @@ class FilerEthicsClassCd(CalAccessBaseModel):
 
 
 class FilerInterestsCd(CalAccessBaseModel):
+    """
+    Links a filer to their interest codes.
+    """
     filer_id = models.IntegerField(db_column='FILER_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
     interest_cd = models.IntegerField(db_column='INTEREST_CD')
