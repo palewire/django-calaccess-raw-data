@@ -1,5 +1,5 @@
-from base import BaseAdmin
-from campaign import (
+from calaccess_raw.admin.base import BaseAdmin
+from calaccess_raw.admin.campaign import (
     CvrSoCdAdmin,
     Cvr2SoCdAdmin,
     CvrCampaignDisclosureCdAdmin,
@@ -17,7 +17,7 @@ from campaign import (
     F501502CdAdmin,
     S498CdAdmin,
 )
-from lobbying import (
+from calaccess_raw.admin.lobbying import (
     CvrRegistrationCdAdmin,
     Cvr2RegistrationCdAdmin,
     CvrLobbyDisclosureCdAdmin,
@@ -31,7 +31,7 @@ from lobbying import (
     LempCdAdmin,
     LpayCdAdmin,
 )
-from common import (
+from calaccess_raw.admin.common import (
     FilernameCdAdmin,
     FilerFilingsCdAdmin,
     FilingsCdAdmin,
@@ -39,7 +39,7 @@ from common import (
     CvrE530CdAdmin,
     TextMemoCdAdmin,
 )
-from other import (
+from calaccess_raw.admin.other import (
     AcronymsCdAdmin,
     AddressCdAdmin,
     BallotMeasuresCdAdmin,
