@@ -5,11 +5,8 @@ from .base import CalAccessBaseModel
 
 class CvrSoCd(CalAccessBaseModel):
     """
-    Cover page for statement of organization
-
-        F400 -- Statement of Organization (Slate Mailer Organization)
-        F402 -- Statement of Termination (Slate Mailer Organization)
-        F410 -- Statement of Organization (Recipient Committee)
+    Cover page for a statement of organization creation or termination
+    form filed by a slate-mailer organization or recipient committee.
     """
     acct_opendt = models.DateTimeField(db_column="ACCT_OPENDT", null=True)
     actvty_lvl = models.CharField(
@@ -84,8 +81,16 @@ class CvrSoCd(CalAccessBaseModel):
     filing_id = models.CharField(
         max_length=9L, db_column="FILING_ID", blank=True
     )
+    FORM_TYPE_CHOICES = (
+        ('F400', 'Statement of Organization, Slate Mailer Org (F400)'),
+        ('F402', 'Statement of Termination, Slate Mailer Org (F402)'),
+        ('F410', 'Statement of Organization, Recipient Committee (F410)'),
+    )
     form_type = models.CharField(
-        max_length=4L, db_column="FORM_TYPE", blank=True
+        max_length=4L,
+        db_column="FORM_TYPE",
+        blank=True,
+        choices=FORM_TYPE_CHOICES
     )
     genpurp_cb = models.CharField(
         max_length=1L, db_column="GENPURP_CB", blank=True
@@ -162,18 +167,17 @@ class CvrSoCd(CalAccessBaseModel):
 
 class Cvr2SoCd(CalAccessBaseModel):
     """
-    Additional Names / Committees information for the forms 400 & 410
-        F400
-        F410
+    Additional names and committees information included on the second page
+    of a statement of organization creation form filed
+    by a slate-mailer organization or recipient committee.
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     FORM_TYPE_CHOICES = (
-        ('F400', 'Cover Page; Stmt of Organization / Slate Mailer Org'),
-        ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org'),
-        ('F410', 'Cover Page; Stmt of Organization / Recipient Committee'),
+        ('F400', 'Statement of Organization, Slate Mailer Org (F400)'),
+        ('F410', 'Statement of Organization, Recipient Committee (F410)'),
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
