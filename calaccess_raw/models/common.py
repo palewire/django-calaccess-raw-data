@@ -21,7 +21,7 @@ class FilernameCd(CalAccessBaseModel):
     fields in conjunction.
     """
     xref_filer_id = models.CharField(
-        max_length=15L,
+        max_length=15,
         db_column='XREF_FILER_ID',
         db_index=True,
         help_text="The external filer id saved in the forms tables"
@@ -33,40 +33,40 @@ class FilernameCd(CalAccessBaseModel):
         help_text="The internal filer id saved in Cal-Access"
     )
     filer_type = models.CharField(
-        max_length=45L,
+        max_length=45,
         db_column='FILER_TYPE',
         db_index=True,
     )
-    status = models.CharField(max_length=10L, db_column='STATUS')
+    status = models.CharField(max_length=10, db_column='STATUS')
     effect_dt = models.DateField(
         db_column='EFFECT_DT',
         help_text="Effective date for status",
         null=True,
     )
     naml = models.CharField(
-        max_length=200L, db_column='NAML',
+        max_length=200, db_column='NAML',
         help_text="Last name, (though sometimes the full name)"
     )
     namf = models.CharField(
-        max_length=55L, db_column='NAMF', blank=True,
+        max_length=55, db_column='NAMF', blank=True,
         help_text="First name"
     )
     namt = models.CharField(
-        max_length=70L, db_column='NAMT', blank=True,
+        max_length=70, db_column='NAMT', blank=True,
         help_text="Name prefix or title"
     )
     nams = models.CharField(
-        max_length=32L, db_column='NAMS', blank=True,
+        max_length=32, db_column='NAMS', blank=True,
         help_text="Name suffix"
     )
-    adr1 = models.CharField(max_length=200L, db_column='ADR1', blank=True)
-    adr2 = models.CharField(max_length=200L, db_column='ADR2', blank=True)
-    city = models.CharField(max_length=55L, db_column='CITY', blank=True)
-    st = models.CharField(max_length=4L, db_column='ST', blank=True)
-    zip4 = models.CharField(max_length=10L, db_column='ZIP4', blank=True)
-    phon = models.CharField(max_length=60L, db_column='PHON', blank=True)
-    fax = models.CharField(max_length=60L, db_column='FAX', blank=True)
-    email = models.CharField(max_length=60L, db_column='EMAIL', blank=True)
+    adr1 = models.CharField(max_length=200, db_column='ADR1', blank=True)
+    adr2 = models.CharField(max_length=200, db_column='ADR2', blank=True)
+    city = models.CharField(max_length=55, db_column='CITY', blank=True)
+    st = models.CharField(max_length=4, db_column='ST', blank=True)
+    zip4 = models.CharField(max_length=10, db_column='ZIP4', blank=True)
+    phon = models.CharField(max_length=60, db_column='PHON', blank=True)
+    fax = models.CharField(max_length=60, db_column='FAX', blank=True)
+    email = models.CharField(max_length=60, db_column='EMAIL', blank=True)
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -128,7 +128,7 @@ reviewed or not reviewed."
         db_column='SESSION_ID',
         help_text="Legislative session that the filing applies to"
     )
-    user_id = models.CharField(max_length=12L, db_column='USER_ID')
+    user_id = models.CharField(max_length=12, db_column='USER_ID')
     special_audit = models.IntegerField(
         null=True,
         db_column='SPECIAL_AUDIT',
@@ -218,17 +218,17 @@ class SmryCd(CalAccessBaseModel):
         db_index=True
     )
     line_item = models.CharField(
-        max_length=8L,
+        max_length=8,
         db_column='LINE_ITEM',
         db_index=True
     )
     rec_type = models.CharField(
-        max_length=4L,
+        max_length=4,
         db_column='REC_TYPE',
         db_index=True
     )
     form_type = models.CharField(
-        max_length=8L,
+        max_length=8,
         db_column='FORM_TYPE',
         db_index=True
     )
