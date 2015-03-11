@@ -1659,14 +1659,14 @@ class ExpnCd(CalAccessBaseModel):
         blank=True,
         help_text="Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]"
     )
-    ENTITY_CHOICES = (
+    ENTITY_CD_CHOICES = (
         ('COM', 'Recipient Committee'),
         ('RCP', 'Recipient Committee'),
         ('IND', 'Individual'),
         ('OTH', 'Other'),
     )
     entity_cd = models.CharField(
-        choices=ENTITY_CHOICES,
+        choices=ENTITY_CD_CHOICES,
         max_length=3L,
         db_column='ENTITY_CD',
         blank=True,
@@ -1739,9 +1739,16 @@ class ExpnCd(CalAccessBaseModel):
         CIT=City; CTY=County; LOC=Local; OTH=Other"
     )
     juris_dscr = models.CharField(
-        max_length=40L, db_column='JURIS_DSCR', blank=True
+        max_length=40L,
+        db_column='JURIS_DSCR',
+        blank=True,
+        help_text="Office Jurisdiction Description \
+        (Req. if Juris_Cd=[CIT|CTY|LOC|OTH]"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Record line item number"
+    )
     memo_code = models.CharField(
         max_length=1L,
         db_column='MEMO_CODE',
@@ -1772,70 +1779,146 @@ class ExpnCd(CalAccessBaseModel):
         help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
     office_cd = models.CharField(
-        max_length=3L, db_column='OFFICE_CD', blank=True
+        max_length=3L,
+        db_column='OFFICE_CD',
+        blank=True,
+        help_text="Office Sought (See table of code in Overview)"
     )
     payee_adr1 = models.CharField(
-        max_length=55L, db_column='PAYEE_ADR1', blank=True
+        max_length=55L,
+        db_column='PAYEE_ADR1',
+        blank=True,
+        help_text="Address of Payee"
     )
     payee_adr2 = models.CharField(
-        max_length=55L, db_column='PAYEE_ADR2', blank=True
+        max_length=55L,
+        db_column='PAYEE_ADR2',
+        blank=True,
+        help_text="Optional 2nd line of Address"
     )
     payee_city = models.CharField(
-        max_length=30L, db_column='PAYEE_CITY', blank=True
+        max_length=30L,
+        db_column='PAYEE_CITY',
+        blank=True,
+        help_text="Payee City"
     )
     payee_namf = models.CharField(
-        max_length=45L, db_column='PAYEE_NAMF', blank=True
+        max_length=45L,
+        db_column='PAYEE_NAMF',
+        blank=True,
+        help_text="Payee's First name"
     )
     payee_naml = models.CharField(
-        max_length=200L, db_column='PAYEE_NAML', blank=True
+        max_length=200L,
+        db_column='PAYEE_NAML',
+        blank=True,
+        help_text="Payee's Last name"
     )
     payee_nams = models.CharField(
-        max_length=10L, db_column='PAYEE_NAMS', blank=True
+        max_length=10L,
+        db_column='PAYEE_NAMS',
+        blank=True,
+        help_text="Payee's Suffix"
     )
     payee_namt = models.CharField(
-        max_length=10L, db_column='PAYEE_NAMT', blank=True
+        max_length=10L,
+        db_column='PAYEE_NAMT',
+        blank=True,
+        help_text="Payee's Prefix or Title"
     )
     payee_st = models.CharField(
-        max_length=2L, db_column='PAYEE_ST', blank=True
+        max_length=2L,
+        db_column='PAYEE_ST',
+        blank=True,
+        help_text="State code"
     )
     payee_zip4 = models.CharField(
-        max_length=10L, db_column='PAYEE_ZIP4', blank=True
+        max_length=10L,
+        db_column='PAYEE_ZIP4',
+        blank=True,
+        help_text="Zip+4"
     )
-    rec_type = models.CharField(max_length=4L, db_column='REC_TYPE')
+    rec_type = models.CharField(
+        max_length=4L,
+        db_column='REC_TYPE',
+        help_text="Record Type Value: EXPN"
+    )
     sup_opp_cd = models.CharField(
-        max_length=1L, db_column='SUP_OPP_CD', blank=True
+        max_length=1L,
+        db_column='SUP_OPP_CD',
+        blank=True,
+        help_text="Support/Oppose? Values: S; O (F450, F461)"
     )
-    tran_id = models.CharField(max_length=20L, db_column='TRAN_ID')
+    tran_id = models.CharField(
+        max_length=20L,
+        db_column='TRAN_ID',
+        help_text="Transaction ID - permanent value unique to this item"
+    )
     tres_adr1 = models.CharField(
-        max_length=55L, db_column='TRES_ADR1', blank=True
+        max_length=55L,
+        db_column='TRES_ADR1',
+        blank=True,
+        help_text="Treasurer Street 1(Req if [COM|RCP] & no ID#)"
     )
     tres_adr2 = models.CharField(
-        max_length=55L, db_column='TRES_ADR2', blank=True
+        max_length=55L,
+        db_column='TRES_ADR2',
+        blank=True,
+        help_text="Treasurer Street 2"
     )
     tres_city = models.CharField(
-        max_length=30L, db_column='TRES_CITY', blank=True
+        max_length=30L,
+        db_column='TRES_CITY',
+        blank=True,
+        help_text="Treasurer City"
     )
     tres_namf = models.CharField(
-        max_length=45L, db_column='TRES_NAMF', blank=True
+        max_length=45L,
+        db_column='TRES_NAMF',
+        blank=True,
+        help_text="Treasurer's First name (Req if [COM|RCP] & no ID#)"
     )
     tres_naml = models.CharField(
-        max_length=200L, db_column='TRES_NAML', blank=True
+        max_length=200L,
+        db_column='TRES_NAML',
+        blank=True,
+        help_text="Treasurer's Last name (Req if [COM|RCP] & no ID#)"
     )
     tres_nams = models.CharField(
-        max_length=10L, db_column='TRES_NAMS', blank=True
+        max_length=10L,
+        db_column='TRES_NAMS',
+        blank=True,
+        help_text="Treasurer's Suffix"
     )
     tres_namt = models.CharField(
-        max_length=10L, db_column='TRES_NAMT', blank=True
+        max_length=10L,
+        db_column='TRES_NAMT',
+        blank=True,
+        help_text="Treasurer's Prefix or Title"
     )
-    tres_st = models.CharField(max_length=2L, db_column='TRES_ST', blank=True)
+    tres_st = models.CharField(
+        max_length=2L,
+        db_column='TRES_ST',
+        blank=True,
+        help_text="Treasurer State"
+    )
     tres_zip4 = models.CharField(
-        max_length=10L, db_column='TRES_ZIP4', blank=True
+        max_length=10L,
+        db_column='TRES_ZIP4',
+        blank=True,
+        help_text="Treasurer ZIP+4"
     )
     xref_match = models.CharField(
-        max_length=1L, db_column='XREF_MATCH', blank=True
+        max_length=1L,
+        db_column='XREF_MATCH',
+        blank=True,
+        help_text="X = Related item on other Sched has same Tran_ID"
     )
     xref_schnm = models.CharField(
-        max_length=2L, db_column='XREF_SCHNM', blank=True
+        max_length=2L,
+        db_column='XREF_SCHNM',
+        blank=True,
+        help_text="Related item is included on Sched 'C' or 'H2'"
     )
 
     class Meta:
