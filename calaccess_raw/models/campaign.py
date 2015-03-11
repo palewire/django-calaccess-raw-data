@@ -12,10 +12,19 @@ class CvrSoCd(CalAccessBaseModel):
         db_column="ACCT_OPENDT",
         null=True
     )
+    ACTIVITY_LEVEL_CHOICES = (
+        ("CI", "City"),
+        ("CO", "County"),
+        ("ST", "State"),
+        ("", "Unknown"),
+    )
     actvty_lvl = models.CharField(
         max_length=2L,
         db_column="ACTVTY_LVL",
         blank=True
+        choices=ACTIVITY_LEVEL_CHOICES,
+        verbose_name="Activity level",
+        help_text="Organization's level of activity"
     )
     amend_id = models.IntegerField(db_column="AMEND_ID")
     bank_adr1 = models.CharField(
