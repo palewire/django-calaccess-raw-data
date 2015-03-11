@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel
 
 
+@python_2_unicode_compatible
 class CvrRegistrationCd(CalAccessBaseModel):
     """
     Cover page information for the lobbying registration forms below.
@@ -230,10 +232,11 @@ class CvrRegistrationCd(CalAccessBaseModel):
         verbose_name = 'CVR_REGISTRATION_CD'
         verbose_name_plural = 'CVR_REGISTRATION_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class Cvr2RegistrationCd(CalAccessBaseModel):
     """
      Additional names layout for
@@ -284,10 +287,11 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         verbose_name = 'CVR2_REGISTRATION_CD'
         verbose_name_plural = 'CVR2_REGISTRATION_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
     """
     Cover page information for the lobbying disclosure forms
@@ -443,10 +447,11 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR_LOBBY_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_LOBBY_DISCLOSURE_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
     Additional names data for the lobbyist disclosure forms
@@ -497,10 +502,11 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR2_LOBBY_DISCLOSURE_CD'
         verbose_name_plural = 'CVR2_LOBBY_DISCLOSURE_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class LobbyAmendmentsCd(CalAccessBaseModel):
     """
     Lobbyist registration amendment information
@@ -624,10 +630,11 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         verbose_name = 'LOBBY_AMENDMENTS_CD'
         verbose_name_plural = 'LOBBY_AMENDMENTS_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class F690P2Cd(CalAccessBaseModel):
     """
     Amends lobbying disclosure filings
@@ -701,10 +708,11 @@ text description."
         verbose_name = 'F690P2_CD'
         verbose_name_plural = 'F690P2_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class LattCd(CalAccessBaseModel):
     """
     Lobbyist disclosure attachment schedules for payments
@@ -774,8 +782,8 @@ class LattCd(CalAccessBaseModel):
         verbose_name = 'LATT_CD'
         verbose_name_plural = 'LATT_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
 class LexpCd(CalAccessBaseModel):
@@ -1098,6 +1106,7 @@ class LempCd(CalAccessBaseModel):
         verbose_name_plural = 'LEMP_CD'
 
 
+@python_2_unicode_compatible
 class LpayCd(CalAccessBaseModel):
     """
     Payments made/received to/from Lobbying Firms reported on forms
@@ -1185,5 +1194,5 @@ class LpayCd(CalAccessBaseModel):
         verbose_name = 'LPAY_CD'
         verbose_name_plural = 'LPAY_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)

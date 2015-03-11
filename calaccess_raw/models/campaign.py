@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel
 
 
+@python_2_unicode_compatible
 class CvrSoCd(CalAccessBaseModel):
     """
     Cover page for statement of organization
@@ -156,10 +158,11 @@ class CvrSoCd(CalAccessBaseModel):
         verbose_name = 'CVR_SO_CD'
         verbose_name_plural = 'CVR_SO_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class Cvr2SoCd(CalAccessBaseModel):
     """
     Additional Names / Committees information for the forms 400 & 410
@@ -255,10 +258,11 @@ class Cvr2SoCd(CalAccessBaseModel):
         verbose_name = 'CVR2_SO_CD'
         verbose_name_plural = 'CVR2_SO_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
     Cover page information for the campaign disclosure forms below.
@@ -571,10 +575,11 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
     Record used to carry additional names for the campaign
@@ -711,10 +716,11 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         verbose_name = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class RcptCd(CalAccessBaseModel):
     """
     Receipts schedules for the following forms.
@@ -1189,10 +1195,11 @@ identifier. 'X' indicates this condition is true"
         verbose_name = 'RCPT_CD'
         verbose_name_plural = 'RCPT_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
     Cover Page Verification Information for the Campaign Forms below.
@@ -1235,10 +1242,11 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         verbose_name = 'CVR3_VERIFICATION_INFO_CD'
         verbose_name_plural = 'CVR3_VERIFICATION_INFO_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bakref_tid = models.CharField(
@@ -1410,10 +1418,11 @@ class LoanCd(CalAccessBaseModel):
         verbose_name = 'LOAN_CD'
         verbose_name_plural = 'LOAN_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class S401Cd(CalAccessBaseModel):
     """
     This table contains Form 401 (Slate Mailer Organization) payment and other
@@ -1525,10 +1534,11 @@ class S401Cd(CalAccessBaseModel):
         verbose_name = 'S401_CD'
         verbose_name_plural = 'S401_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class ExpnCd(CalAccessBaseModel):
     """
     Expenditure records for the following forms:
@@ -1719,10 +1729,11 @@ Campaign Statement)'),
         verbose_name = 'EXPN_CD'
         verbose_name_plural = 'EXPN_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class F495P2Cd(CalAccessBaseModel):
     """
     F495 Supplemental Preelection Campaign Statement
@@ -1759,10 +1770,11 @@ class F495P2Cd(CalAccessBaseModel):
         verbose_name = 'F495P2_CD'
         verbose_name_plural = 'F495P2_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class DebtCd(CalAccessBaseModel):
     """
     Form 460 (Recipient Committee Campaign Statement)
@@ -1870,10 +1882,11 @@ class DebtCd(CalAccessBaseModel):
         verbose_name = 'DEBT_CD'
         verbose_name_plural = 'DEBT_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class S496Cd(CalAccessBaseModel):
     """
     Form 496 Late Independent Expenditures
@@ -1910,7 +1923,7 @@ class S496Cd(CalAccessBaseModel):
         verbose_name = 'S496_CD'
         verbose_name_plural = 'S496_CD'
 
-    def __unicode__(self):
+    def __str__(self):
         return "{} Filing {}, Amendment {}".format(
             self.form_type,
             self.filing_id,
@@ -1918,6 +1931,7 @@ class S496Cd(CalAccessBaseModel):
         )
 
 
+@python_2_unicode_compatible
 class SpltCd(CalAccessBaseModel):
     """
     Split Records
@@ -1948,10 +1962,11 @@ class SpltCd(CalAccessBaseModel):
         verbose_name = 'SPLT_CD'
         verbose_name_plural = 'SPLT_CD'
 
-    def __unicode__(self):
-        return self.filing_id
+    def __str__(self):
+        return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class S497Cd(CalAccessBaseModel):
     """
     Form 497 Late Contributions Received/Made
@@ -2062,7 +2077,7 @@ class S497Cd(CalAccessBaseModel):
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return "{} Filing {}, Amendment {}".format(
             self.get_form_type_display(),
             self.filing_id,
@@ -2076,6 +2091,7 @@ class S497Cd(CalAccessBaseModel):
         verbose_name_plural = 'S497_CD'
 
 
+@python_2_unicode_compatible
 class F501502Cd(CalAccessBaseModel):
     """
     Candidate Intention Statement
@@ -2243,7 +2259,7 @@ class F501502Cd(CalAccessBaseModel):
         db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return "{} Filing {}, Amendment {}".format(
             self.get_form_type_display(),
             self.filing_id,
@@ -2257,6 +2273,7 @@ class F501502Cd(CalAccessBaseModel):
         verbose_name_plural = 'F501_502_CD'
 
 
+@python_2_unicode_compatible
 class S498Cd(CalAccessBaseModel):
     """
     Form 498 Slate Mailer Late Independent Expenditures Made
@@ -2369,7 +2386,7 @@ class S498Cd(CalAccessBaseModel):
         max_length=1, db_column='SELFEMP_CB', blank=True
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return "{} Filing {}, Amendment {}".format(
             self.get_form_type_display(),
             self.filing_id,

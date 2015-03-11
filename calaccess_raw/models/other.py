@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel
 
 
+@python_2_unicode_compatible
 class AcronymsCd(CalAccessBaseModel):
     """
     Contains acronyms and their meaning.
@@ -19,10 +21,11 @@ class AcronymsCd(CalAccessBaseModel):
         verbose_name_plural = 'ACRONYMS_CD'
         ordering = ("acronym",)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.acronym
 
 
+@python_2_unicode_compatible
 class AddressCd(CalAccessBaseModel):
     """
     This table holds all addresses for the system. This table can be used
@@ -43,10 +46,11 @@ class AddressCd(CalAccessBaseModel):
         verbose_name = 'ADDRESS_CD'
         verbose_name_plural = 'ADDRESS_CD'
 
-    def __unicode__(self):
-        return self.adrid
+    def __str__(self):
+        return str(self.adrid)
 
 
+@python_2_unicode_compatible
 class BallotMeasuresCd(CalAccessBaseModel):
     """ Ballot measures dates and times """
     election_date = models.DateTimeField(db_column='ELECTION_DATE', null=True)
@@ -71,10 +75,11 @@ class BallotMeasuresCd(CalAccessBaseModel):
             "measure_name"
         )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.measure_name
 
 
+@python_2_unicode_compatible
 class EfsFilingLogCd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -92,10 +97,11 @@ class EfsFilingLogCd(CalAccessBaseModel):
         verbose_name = 'EFS_FILING_LOG_CD'
         verbose_name_plural = 'EFS_FILING_LOG_CD'
  
-    def __unicode__(self):
-        return self.filer_id
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilersCd(CalAccessBaseModel):
     """
     This table is the parent table from which all links and associations
@@ -109,10 +115,11 @@ class FilersCd(CalAccessBaseModel):
         verbose_name = 'FILERS_CD'
         verbose_name_plural = 'FILERS_CD'
     
-    def __unicode__(self):
-        return self.filer_id
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilerAcronymsCd(CalAccessBaseModel):
     """
     links acronyms to filers
@@ -127,7 +134,7 @@ class FilerAcronymsCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_ACRONYMS_CD'
         ordering = ("id",)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.acronym
 
 
@@ -153,6 +160,7 @@ class FilerAddressCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_ADDRESS_CD'
 
 
+@python_2_unicode_compatible
 class FilerEthicsClassCd(CalAccessBaseModel):
     """
     This table stores lobbyist ethics training dates.
@@ -167,8 +175,8 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         verbose_name = 'FILER_ETHICS_CLASS_CD'
         verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
 class FilerInterestsCd(CalAccessBaseModel):
@@ -212,6 +220,7 @@ class FilerLinksCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_LINKS_CD'
 
 
+@python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -232,10 +241,11 @@ class FilerStatusTypesCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_STATUS_TYPES_CD'
         ordering = ("status_type",)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.status_type
 
 
+@python_2_unicode_compatible
 class FilerToFilerTypeCd(CalAccessBaseModel):
     """
     This table links a filer to a set of characteristics that describe the
@@ -343,10 +353,11 @@ Populated for Senate, Assembly or Board of Equalization races"
         verbose_name = 'FILER_TO_FILER_TYPE_CD'
         verbose_name_plural = 'FILER_TO_FILER_TYPE_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilerTypesCd(CalAccessBaseModel):
     """
     This lookup table describes filer types.
@@ -383,8 +394,8 @@ class FilerTypesCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_TYPES_CD'
         ordering = ("filer_type",)
 
-    def __unicode__(self):
-        return unicode(self.filer_type)
+    def __str__(self):
+        return str(self.filer_type)
 
 
 class FilerXrefCd(CalAccessBaseModel):
@@ -1149,6 +1160,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         verbose_name_plural = 'RECEIVED_FILINGS_CD'
 
 
+@python_2_unicode_compatible
 class ReportsCd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -1199,5 +1211,5 @@ class ReportsCd(CalAccessBaseModel):
         verbose_name = 'REPORTS_CD'
         verbose_name_plural = 'REPORTS_CD'
 
-    def __unicode__(self):
-        return self.rpt_id
+    def __str__(self):
+        return str(self.rpt_id)

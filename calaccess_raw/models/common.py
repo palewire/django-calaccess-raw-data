@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel
 
 
+@python_2_unicode_compatible
 class FilernameCd(CalAccessBaseModel):
     """
     A combination of CAL-ACCESS tables to provide the analyst with
@@ -75,10 +77,11 @@ class FilernameCd(CalAccessBaseModel):
         verbose_name_plural = 'FILERNAME_CD'
         ordering = ("naml", "namf",)
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilerFilingsCd(CalAccessBaseModel):
     """
     Key table that links filers to their paper, key data entry, legacy,
@@ -183,10 +186,11 @@ laundering or other special condition."
         verbose_name = 'FILER_FILINGS_CD'
         verbose_name_plural = 'FILER_FILINGS_CD'
 
-    def __unicode__(self):
-        return unicode("%s %s" % (self.filer_id, self.filing_id))
+    def __str__(self):
+        return str("%s %s" % (self.filer_id, self.filing_id))
 
 
+@python_2_unicode_compatible
 class FilingsCd(CalAccessBaseModel):
     """
     This table is the parent table from which all links and association to
@@ -201,10 +205,11 @@ class FilingsCd(CalAccessBaseModel):
         verbose_name = 'FILINGS_CD'
         verbose_name_plural = 'FILINGS_CD'
 
-    def __unicode__(self):
-        return unicode("%s %s" % (self.filing_id, self.filing_type))
+    def __str__(self):
+        return str("%s %s" % (self.filing_id, self.filing_type))
 
 
+@python_2_unicode_compatible
 class SmryCd(CalAccessBaseModel):
     """
     This table contains all text memos attached to electronic filings.
@@ -265,10 +270,11 @@ class SmryCd(CalAccessBaseModel):
         verbose_name = 'SMRY_CD'
         verbose_name_plural = 'SMRY_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class CvrE530Cd(CalAccessBaseModel):
     """
     This table method is undocumented in the print docs.
@@ -336,10 +342,11 @@ class CvrE530Cd(CalAccessBaseModel):
         verbose_name = 'CVR_E530_CD'
         verbose_name_plural = 'CVR_E530_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class TextMemoCd(CalAccessBaseModel):
     """
     This table contains all text memos attached to electronic filings.
@@ -361,5 +368,5 @@ class TextMemoCd(CalAccessBaseModel):
         verbose_name = 'TEXT_MEMO_CD'
         verbose_name_plural = 'TEXT_MEMO_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
