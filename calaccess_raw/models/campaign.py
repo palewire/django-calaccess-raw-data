@@ -21,7 +21,7 @@ class CvrSoCd(CalAccessBaseModel):
     actvty_lvl = models.CharField(
         max_length=2L,
         db_column="ACTVTY_LVL",
-        blank=True
+        blank=True,
         choices=ACTIVITY_LEVEL_CHOICES,
         verbose_name="Activity level",
         help_text="Organization's level of activity"
@@ -119,10 +119,10 @@ class CvrSoCd(CalAccessBaseModel):
         ('', 'Unknown'),
         ('BMC', 'BMC'),
         ('CAO', 'CAO'),
-        ('COM', 'COM'),
+        ('COM', 'Recipient committee'),
         ('CTL', 'CTL'),
         ('RCP', 'RCP'),
-        ('SMO', 'SMO'),
+        ('SMO', 'Slate-mailer organization'),
     )
     entity_cd = models.CharField(
         max_length=3L,
