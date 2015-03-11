@@ -249,6 +249,7 @@ exist at %s" % tsv_dir)
         """
         if self.verbosity:
             self.log(" Prepping unzipped data")
+
         # Move the deep down directory we want out
         shutil.move(
             os.path.join(
@@ -260,6 +261,7 @@ exist at %s" % tsv_dir)
         # Clear out target if it exists
         if os.path.exists(self.tsv_dir):
             shutil.rmtree(self.tsv_dir)
+
         # Rename it to the target
         shutil.move(
             os.path.join(self.data_dir, "DATA/"),

@@ -7,149 +7,312 @@ from .base import CalAccessBaseModel
 @python_2_unicode_compatible
 class CvrSoCd(CalAccessBaseModel):
     """
-    Cover page for statement of organization
-
-        F400 -- Statement of Organization (Slate Mailer Organization)
-        F402 -- Statement of Termination (Slate Mailer Organization)
-        F410 -- Statement of Organization (Recipient Committee)
+    Cover page for a statement of organization creation or termination
+    form filed by a slate-mailer organization or recipient committee.
     """
-    acct_opendt = models.DateTimeField(db_column="ACCT_OPENDT", null=True)
-    actvty_lvl = models.CharField(
-        max_length=2, db_column="ACTVTY_LVL", blank=True
+    acct_opendt = models.DateTimeField(
+        db_column="ACCT_OPENDT",
+        null=True
     )
-    amend_id = models.IntegerField(db_column="AMEND_ID")
+    ACTIVITY_LEVEL_CHOICES = (
+        ("CI", "City"),
+        ("CO", "County"),
+        ("ST", "State"),
+        ("", "Unknown"),
+    )
+    actvty_lvl = models.CharField(
+        max_length=2,
+        db_column="ACTVTY_LVL",
+        blank=True,
+        choices=ACTIVITY_LEVEL_CHOICES,
+        verbose_name="Activity level",
+        help_text="Organization's level of activity"
+    )
+    amend_id = models.IntegerField(
+        db_column="AMEND_ID",
+        verbose_name="Amendment ID"
+    )
     bank_adr1 = models.CharField(
-        max_length=55, db_column="BANK_ADR1", blank=True
+        max_length=55,
+        db_column="BANK_ADR1",
+        blank=True
     )
     bank_adr2 = models.CharField(
-        max_length=55, db_column="BANK_ADR2", blank=True
+        max_length=55,
+        db_column="BANK_ADR2",
+        blank=True
     )
     bank_city = models.CharField(
-        max_length=30, db_column="BANK_CITY", blank=True
+        max_length=30,
+        db_column="BANK_CITY",
+        blank=True
     )
     bank_nam = models.CharField(
-        max_length=200, db_column="BANK_NAM", blank=True
+        max_length=200,
+        db_column="BANK_NAM",
+        blank=True
     )
     bank_phon = models.CharField(
-        max_length=20, db_column="BANK_PHON", blank=True
+        max_length=20,
+        db_column="BANK_PHON",
+        blank=True
     )
-    bank_st = models.CharField(max_length=2, db_column="BANK_ST", blank=True)
+    bank_st = models.CharField(
+        max_length=2,
+        db_column="BANK_ST",
+        blank=True
+    )
     bank_zip4 = models.CharField(
-        max_length=10, db_column="BANK_ZIP4", blank=True
+        max_length=10,
+        db_column="BANK_ZIP4",
+        blank=True
     )
     brdbase_cb = models.CharField(
-        max_length=1, db_column="BRDBASE_CB", blank=True
+        max_length=1,
+        db_column="BRDBASE_CB",
+        blank=True
     )
-    city = models.CharField(max_length=30, db_column="CITY", blank=True)
+    city = models.CharField(
+        max_length=30,
+        db_column="CITY",
+        blank=True
+    )
     cmte_email = models.CharField(
-        max_length=60, db_column="CMTE_EMAIL", blank=True
+        max_length=60,
+        db_column="CMTE_EMAIL",
+        blank=True
     )
     cmte_fax = models.CharField(
-        max_length=20, db_column="CMTE_FAX", blank=True
+        max_length=20,
+        db_column="CMTE_FAX",
+        blank=True
     )
     com82013id = models.CharField(
-        max_length=9, db_column="COM82013ID", blank=True
+        max_length=9,
+        db_column="COM82013ID",
+        blank=True
     )
     com82013nm = models.CharField(
-        max_length=200, db_column="COM82013NM", blank=True
+        max_length=200,
+        db_column="COM82013NM",
+        blank=True
     )
     com82013yn = models.CharField(
-        max_length=1, db_column="COM82013YN", blank=True
+        max_length=1,
+        db_column="COM82013YN",
+        blank=True
     )
     control_cb = models.CharField(
-        max_length=1, db_column="CONTROL_CB", blank=True
+        max_length=1,
+        db_column="CONTROL_CB",
+        blank=True
     )
     county_act = models.CharField(
-        max_length=20, db_column="COUNTY_ACT", blank=True
+        max_length=20,
+        db_column="COUNTY_ACT",
+        blank=True
     )
     county_res = models.CharField(
-        max_length=20, db_column="COUNTY_RES", blank=True
+        max_length=20,
+        db_column="COUNTY_RES",
+        blank=True
+    )
+    ENTITY_CODE_CHOICES = (
+        ('', 'Unknown'),
+        ('BMC', 'BMC'),
+        ('CAO', 'CAO'),
+        ('COM', 'Recipient committee'),
+        ('CTL', 'CTL'),
+        ('RCP', 'RCP'),
+        ('SMO', 'Slate-mailer organization'),
     )
     entity_cd = models.CharField(
-        max_length=3, db_column="ENTITY_CD", blank=True
+        max_length=3,
+        db_column="ENTITY_CD",
+        blank=True,
+        choices=ENTITY_CODE_CHOICES,
+        verbose_name="Entity code"
     )
     filer_id = models.CharField(
-        max_length=9, db_column="FILER_ID", blank=True
+        max_length=9,
+        db_column="FILER_ID",
+        blank=True
     )
     filer_namf = models.CharField(
-        max_length=45, db_column="FILER_NAMF", blank=True
+        max_length=45,
+        db_column="FILER_NAMF",
+        blank=True,
+        verbose_name="Filer first name"
     )
     filer_naml = models.CharField(
-        max_length=200, db_column="FILER_NAML", blank=True
+        max_length=200,
+        db_column="FILER_NAML",
+        blank=True,
+        verbose_name="Filer last name"
     )
     filer_nams = models.CharField(
-        max_length=10, db_column="FILER_NAMS", blank=True
+        max_length=10,
+        db_column="FILER_NAMS",
+        blank=True,
+        verbose_name="Filer name suffix"
     )
     filer_namt = models.CharField(
-        max_length=10, db_column="FILER_NAMT", blank=True
+        max_length=10,
+        db_column="FILER_NAMT",
+        blank=True,
+        verbose_name="Filer name title"
     )
     filing_id = models.CharField(
-        max_length=9, db_column="FILING_ID", blank=True
+        max_length=9,
+        db_column="FILING_ID",
+        blank=True
+    )
+    FORM_TYPE_CHOICES = (
+        ('F400', 'Statement of Organization, Slate Mailer Org (F400)'),
+        ('F402', 'Statement of Termination, Slate Mailer Org (F402)'),
+        ('F410', 'Statement of Organization, Recipient Committee (F410)'),
     )
     form_type = models.CharField(
-        max_length=4, db_column="FORM_TYPE", blank=True
+        max_length=4,
+        db_column="FORM_TYPE",
+        blank=True,
+        choices=FORM_TYPE_CHOICES
     )
     genpurp_cb = models.CharField(
-        max_length=1, db_column="GENPURP_CB", blank=True
+        max_length=1,
+        db_column="GENPURP_CB",
+        blank=True
     )
     gpc_descr = models.CharField(
-        max_length=300, db_column="GPC_DESCR", blank=True
+        max_length=300,
+        db_column="GPC_DESCR",
+        blank=True
     )
     mail_city = models.CharField(
-        max_length=30, db_column="MAIL_CITY", blank=True
+        max_length=30,
+        db_column="MAIL_CITY",
+        blank=True
     )
-    mail_st = models.CharField(max_length=2, db_column="MAIL_ST", blank=True)
+    mail_st = models.CharField(
+        max_length=2,
+        db_column="MAIL_ST",
+        blank=True
+    )
     mail_zip4 = models.CharField(
-        max_length=10, db_column="MAIL_ZIP4", blank=True
+        max_length=10,
+        db_column="MAIL_ZIP4",
+        blank=True
     )
-    phone = models.CharField(max_length=20, db_column="PHONE", blank=True)
+    phone = models.CharField(
+        max_length=20,
+        db_column="PHONE",
+        blank=True
+    )
     primfc_cb = models.CharField(
-        max_length=1, db_column="PRIMFC_CB", blank=True
+        max_length=1,
+        db_column="PRIMFC_CB",
+        blank=True
     )
-    qualfy_dt = models.DateTimeField(db_column="QUALFY_DT", null=True)
-    qual_cb = models.CharField(max_length=1, db_column="QUAL_CB", blank=True)
+    qualfy_dt = models.DateTimeField(
+        db_column="QUALFY_DT",
+        null=True,
+        verbose_name="Date qualified",
+        help_text="Date qualified as an organization"
+    )
+    qual_cb = models.CharField(
+        max_length=1,
+        db_column="QUAL_CB",
+        blank=True
+    )
     rec_type = models.CharField(
-        max_length=3, db_column="REC_TYPE", blank=True
+        max_length=3,
+        db_column="REC_TYPE",
+        blank=True
     )
     report_num = models.CharField(
-        max_length=3, db_column="REPORT_NUM", blank=True
+        max_length=3,
+        db_column="REPORT_NUM",
+        blank=True
     )
-    rpt_date = models.DateTimeField(db_column="RPT_DATE", null=True)
-    smcont_qualdt = models.DateTimeField(db_column="SMCONT_QUALDT", null=True)
+    rpt_date = models.DateTimeField(
+        db_column="RPT_DATE",
+        null=True
+    )
+    smcont_qualdt = models.DateTimeField(
+        db_column="SMCONT_QUALDT",
+        null=True
+    )
     sponsor_cb = models.CharField(
-        max_length=1, db_column="SPONSOR_CB", blank=True
+        max_length=1,
+        db_column="SPONSOR_CB",
+        blank=True
     )
-    st = models.CharField(max_length=2, db_column="ST", blank=True)
+    st = models.CharField(
+        max_length=2,
+        db_column="ST",
+        blank=True
+    )
     surplusdsp = models.CharField(
-        max_length=90, db_column="SURPLUSDSP", blank=True
+        max_length=90,
+        db_column="SURPLUSDSP",
+        blank=True
     )
-    term_date = models.DateTimeField(db_column="TERM_DATE", null=True)
+    term_date = models.DateTimeField(
+        db_column="TERM_DATE",
+        null=True
+    )
     tres_city = models.CharField(
-        max_length=30, db_column="TRES_CITY", blank=True
+        max_length=30,
+        db_column="TRES_CITY",
+        blank=True,
+        verbose_name="Treasurer's city"
     )
     tres_namf = models.CharField(
-        max_length=45, db_column="TRES_NAMF", blank=True
+        max_length=45,
+        db_column="TRES_NAMF",
+        blank=True,
+        verbose_name="Treasurer's first name"
     )
     tres_naml = models.CharField(
-        max_length=200, db_column="TRES_NAML", blank=True
+        max_length=200,
+        db_column="TRES_NAML",
+        blank=True,
+        verbose_name="Treasurer's last name"
     )
     tres_nams = models.CharField(
-        max_length=10, db_column="TRES_NAMS", blank=True
+        max_length=10,
+        db_column="TRES_NAMS",
+        blank=True,
+        verbose_name="Treasurer's name suffix"
     )
     tres_namt = models.CharField(
-        max_length=10, db_column="TRES_NAMT", blank=True
+        max_length=10,
+        db_column="TRES_NAMT",
+        blank=True,
+        verbose_name="Treasurer's name title"
     )
     tres_phon = models.CharField(
-        max_length=20, db_column="TRES_PHON", blank=True
+        max_length=20,
+        db_column="TRES_PHON",
+        blank=True,
+        verbose_name="Treasurer's phone number"
     )
     tres_st = models.CharField(
-        max_length=2, db_column="TRES_ST", blank=True
+        max_length=2,
+        db_column="TRES_ST",
+        blank=True,
+        verbose_name="Treasurer's street"
     )
     tres_zip4 = models.CharField(
-        max_length=10, db_column="TRES_ZIP4", blank=True
+        max_length=10,
+        db_column="TRES_ZIP4",
+        blank=True,
+        help_text="Treasurer's ZIP Code"
     )
     zip4 = models.CharField(
-        max_length=10, db_column="ZIP4", blank=True
+        max_length=10,
+        db_column="ZIP4",
+        blank=True
     )
 
     class Meta:
@@ -165,18 +328,17 @@ class CvrSoCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class Cvr2SoCd(CalAccessBaseModel):
     """
-    Additional Names / Committees information for the forms 400 & 410
-        F400
-        F410
+    Additional names and committees information included on the second page
+    of a statement of organization creation form filed
+    by a slate-mailer organization or recipient committee.
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     FORM_TYPE_CHOICES = (
-        ('F400', 'Cover Page; Stmt of Organization / Slate Mailer Org'),
-        ('F402', 'Cover Page; Stmt of Termination / Slate Mailer Org'),
-        ('F410', 'Cover Page; Stmt of Organization / Recipient Committee'),
+        ('F400', 'Statement of Organization, Slate Mailer Org (F400)'),
+        ('F410', 'Statement of Organization, Recipient Committee (F410)'),
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,

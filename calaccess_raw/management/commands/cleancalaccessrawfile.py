@@ -15,7 +15,7 @@ class Command(CalAccessCommand, LabelCommand):
 
     def handle_label(self, label, **options):
         # Set options
-        self.verbosity = options.get("verbosity")
+        self.verbosity = int(options.get("verbosity"))
         self.data_dir = get_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
@@ -61,13 +61,8 @@ class Command(CalAccessCommand, LabelCommand):
         headers_count = len(headers_list)
         csv_writer.writerow(headers_list)
 
-        has_errors = False
-        log_rows = [[
-            'Line number',
-            'Headers len',
-            'Fields len',
-            'Line value'
-        ]]
+        log_rows = []
+
         # Loop through the rest of the data
         line_number = 1
         for tsv_line in tsv_file:
@@ -100,33 +95,32 @@ class Command(CalAccessCommand, LabelCommand):
                     delimiter=str('\t')
                 ))
                 if not len(csv_field_list) == headers_count:
-                    if self.verbosity:
+                    if self.verbosity > 2:
                         msg = '  Bad parse of line %s (%s headers, %s values)'
                         self.failure(msg % (
                             line_number,
                             len(headers_list),
                             len(csv_field_list)
                         ))
-                        log_rows.append([
-                            line_number,
-                            len(headers_list),
-                            len(csv_field_list),
-                            ','.join(csv_field_list)
-                        ])
-                        has_errors = True
-                        continue
+                    log_rows.append([
+                        line_number,
+                        len(headers_list),
+                        len(csv_field_list),
+                        ','.join(csv_field_list)
+                    ])
+                    continue
 
             # Write out the row
             csv_writer.writerow(csv_field_list)
             line_number += 1
+
         # Log errors if there are any
-        if has_errors is True:
-            msg = '%s had %s errors'
-            self.failure(msg % (
-                name,
-                len(log_rows) - 1
-            ))
+        if log_rows:
+            if self.verbosity > 1:
+                msg = '  %s errors'
+                self.failure(msg % len(log_rows) - 1)
             self.log_errors(name, log_rows)
+
         # Shut it down
         tsv_file.close()
         csv_file.close()
@@ -135,16 +129,27 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Log any errors to a csv file
         """
+        # Make sure the log directory exists
+        os.path.exists(self.log_dir) or os.mkdir(self.log_dir)
+
         # Log writer
-        try:
-            os.makedirs(self.log_dir)  # Try to make sure log_dir exists
-        except OSError:
-            pass
         log_path = os.path.join(
             self.log_dir,
             name.lower().replace("tsv", "errors.csv")
         )
         log_file = open(log_path, 'w')
         log_writer = CSVKitWriter(log_file, quoting=csv.QUOTE_ALL)
+
+        # Add the headers
+        log_writer.writerow([
+            'Line number',
+            'Headers len',
+            'Fields len',
+            'Line value'
+        ])
+
+        # Log out the rows
         log_writer.writerows(rows)
+
+        # Shut it down
         log_file.close()
