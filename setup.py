@@ -23,11 +23,11 @@ Secretary of State\'s CAL-ACCESS database',
     author_email='ben.welsh@latimes.com',
     install_requires=(
         'django>=1.7',
-        'csvkit>=0.6.1',
-        'python-dateutil>=1.5',
-        'argparse>=1.2.1',
-        'requests>=2.2.1',
-        'clint>=0.4.1',
-        'hurry.filesize>=0.9'
+        'csvkit',
+        'python-dateutil',
+        'argparse',
+        'requests',
+        'clint',
+        'hurry.filesize'
     ),
 )

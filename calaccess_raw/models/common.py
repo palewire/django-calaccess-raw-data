@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel
 
 
+@python_2_unicode_compatible
 class FilernameCd(CalAccessBaseModel):
     """
     A combination of CAL-ACCESS tables to provide the analyst with
@@ -21,7 +23,7 @@ class FilernameCd(CalAccessBaseModel):
     fields in conjunction.
     """
     xref_filer_id = models.CharField(
-        max_length=15L,
+        max_length=15,
         db_column='XREF_FILER_ID',
         db_index=True,
         help_text="The external filer id saved in the forms tables"
@@ -33,40 +35,40 @@ class FilernameCd(CalAccessBaseModel):
         help_text="The internal filer id saved in Cal-Access"
     )
     filer_type = models.CharField(
-        max_length=45L,
+        max_length=45,
         db_column='FILER_TYPE',
         db_index=True,
     )
-    status = models.CharField(max_length=10L, db_column='STATUS')
+    status = models.CharField(max_length=10, db_column='STATUS')
     effect_dt = models.DateField(
         db_column='EFFECT_DT',
         help_text="Effective date for status",
         null=True,
     )
     naml = models.CharField(
-        max_length=200L, db_column='NAML',
+        max_length=200, db_column='NAML',
         help_text="Last name, (though sometimes the full name)"
     )
     namf = models.CharField(
-        max_length=55L, db_column='NAMF', blank=True,
+        max_length=55, db_column='NAMF', blank=True,
         help_text="First name"
     )
     namt = models.CharField(
-        max_length=70L, db_column='NAMT', blank=True,
+        max_length=70, db_column='NAMT', blank=True,
         help_text="Name prefix or title"
     )
     nams = models.CharField(
-        max_length=32L, db_column='NAMS', blank=True,
+        max_length=32, db_column='NAMS', blank=True,
         help_text="Name suffix"
     )
-    adr1 = models.CharField(max_length=200L, db_column='ADR1', blank=True)
-    adr2 = models.CharField(max_length=200L, db_column='ADR2', blank=True)
-    city = models.CharField(max_length=55L, db_column='CITY', blank=True)
-    st = models.CharField(max_length=4L, db_column='ST', blank=True)
-    zip4 = models.CharField(max_length=10L, db_column='ZIP4', blank=True)
-    phon = models.CharField(max_length=60L, db_column='PHON', blank=True)
-    fax = models.CharField(max_length=60L, db_column='FAX', blank=True)
-    email = models.CharField(max_length=60L, db_column='EMAIL', blank=True)
+    adr1 = models.CharField(max_length=200, db_column='ADR1', blank=True)
+    adr2 = models.CharField(max_length=200, db_column='ADR2', blank=True)
+    city = models.CharField(max_length=55, db_column='CITY', blank=True)
+    st = models.CharField(max_length=4, db_column='ST', blank=True)
+    zip4 = models.CharField(max_length=10, db_column='ZIP4', blank=True)
+    phon = models.CharField(max_length=60, db_column='PHON', blank=True)
+    fax = models.CharField(max_length=60, db_column='FAX', blank=True)
+    email = models.CharField(max_length=60, db_column='EMAIL', blank=True)
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -75,10 +77,11 @@ class FilernameCd(CalAccessBaseModel):
         verbose_name_plural = 'FILERNAME_CD'
         ordering = ("naml", "namf",)
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilerFilingsCd(CalAccessBaseModel):
     """
     Key table that links filers to their paper, key data entry, legacy,
@@ -128,7 +131,7 @@ reviewed or not reviewed."
         db_column='SESSION_ID',
         help_text="Legislative session that the filing applies to"
     )
-    user_id = models.CharField(max_length=12L, db_column='USER_ID')
+    user_id = models.CharField(max_length=12, db_column='USER_ID')
     special_audit = models.IntegerField(
         null=True,
         db_column='SPECIAL_AUDIT',
@@ -183,10 +186,11 @@ laundering or other special condition."
         verbose_name = 'FILER_FILINGS_CD'
         verbose_name_plural = 'FILER_FILINGS_CD'
 
-    def __unicode__(self):
-        return unicode("%s %s" % (self.filer_id, self.filing_id))
+    def __str__(self):
+        return str("%s %s" % (self.filer_id, self.filing_id))
 
 
+@python_2_unicode_compatible
 class FilingsCd(CalAccessBaseModel):
     """
     This table is the parent table from which all links and association to
@@ -201,10 +205,11 @@ class FilingsCd(CalAccessBaseModel):
         verbose_name = 'FILINGS_CD'
         verbose_name_plural = 'FILINGS_CD'
 
-    def __unicode__(self):
-        return unicode("%s %s" % (self.filing_id, self.filing_type))
+    def __str__(self):
+        return str("%s %s" % (self.filing_id, self.filing_type))
 
 
+@python_2_unicode_compatible
 class SmryCd(CalAccessBaseModel):
     """
     This table contains all text memos attached to electronic filings.
@@ -218,17 +223,17 @@ class SmryCd(CalAccessBaseModel):
         db_index=True
     )
     line_item = models.CharField(
-        max_length=8L,
+        max_length=8,
         db_column='LINE_ITEM',
         db_index=True
     )
     rec_type = models.CharField(
-        max_length=4L,
+        max_length=4,
         db_column='REC_TYPE',
         db_index=True
     )
     form_type = models.CharField(
-        max_length=8L,
+        max_length=8,
         db_column='FORM_TYPE',
         db_index=True
     )
@@ -265,10 +270,11 @@ class SmryCd(CalAccessBaseModel):
         verbose_name = 'SMRY_CD'
         verbose_name_plural = 'SMRY_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class CvrE530Cd(CalAccessBaseModel):
     """
     This table method is undocumented in the print docs.
@@ -336,10 +342,11 @@ class CvrE530Cd(CalAccessBaseModel):
         verbose_name = 'CVR_E530_CD'
         verbose_name_plural = 'CVR_E530_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class TextMemoCd(CalAccessBaseModel):
     """
     This table contains all text memos attached to electronic filings.
@@ -361,5 +368,5 @@ class TextMemoCd(CalAccessBaseModel):
         verbose_name = 'TEXT_MEMO_CD'
         verbose_name_plural = 'TEXT_MEMO_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)

@@ -1,5 +1,8 @@
+import codecs
+import locale
 import os
 import shutil
+import sys
 import zipfile
 import requests
 from hurry.filesize import size
@@ -139,7 +142,16 @@ exist at %s" % tsv_dir)
             if options['noinput']:
                 self.download()
             else:
-                confirm = input(self.prompt.encode('utf-8'))
+                # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
+                locale_encoding = locale.getpreferredencoding()
+                old_stdout = sys.stdout
+                sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
+
+                confirm = input(self.prompt)
+
+                # Set things back to the way they were before continuing.
+                sys.stdout = old_stdout
+
                 if confirm != 'yes':
                     self.failure("Download cancelled")
                     return
@@ -191,7 +203,7 @@ exist at %s" % tsv_dir)
         CAL-ACCESS archive download.
         """
         file_path = os.path.join(self.data_dir, 'download_metadata.txt')
-        with open(file_path, 'wb') as f:
+        with open(file_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
     def download(self):

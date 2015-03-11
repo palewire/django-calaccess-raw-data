@@ -1,15 +1,13 @@
 language: python
+
 python:
  - "2.7"
+ - "3.3"
+ - "3.4"
+
 env:
- - DJANGO_VERSION=1.4.15 DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.5.10 DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.6.7 DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.8b1 DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.4.15 DATABASE_SETTINGS='settings_test_postgresql.py'
- - DJANGO_VERSION=1.5.10 DATABASE_SETTINGS='settings_test_postgresql.py'
- - DJANGO_VERSION=1.6.7 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.8b1 DATABASE_SETTINGS='settings_test_postgresql.py'
 
@@ -17,13 +15,16 @@ install:
  - pip install -r requirements_dev.txt
  - pip uninstall -y Django
  - pip install -q Django==$DJANGO_VERSION
+
 before_script:
   - mysql -e 'create database calaccess_raw;'
   - psql -c 'create database calaccess_raw;' -U postgres
   - cp example/project/$DATABASE_SETTINGS.template example/project/settings_local.py
+
 script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw
  - coverage run example/manage.py test calaccess_raw
+
 after_success:
  - coveralls

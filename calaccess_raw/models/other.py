@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel
 
 
+@python_2_unicode_compatible
 class AcronymsCd(CalAccessBaseModel):
     """
     Contains acronyms and their meaning.
@@ -19,10 +21,11 @@ class AcronymsCd(CalAccessBaseModel):
         verbose_name_plural = 'ACRONYMS_CD'
         ordering = ("acronym",)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.acronym
 
 
+@python_2_unicode_compatible
 class AddressCd(CalAccessBaseModel):
     """
     This table holds all addresses for the system. This table can be used
@@ -32,9 +35,9 @@ class AddressCd(CalAccessBaseModel):
     adrid = models.IntegerField(db_column="ADRID")
     city = models.CharField(max_length=500, db_column="CITY")
     st = models.CharField(max_length=500, db_column="ST")
-    zip4 = models.CharField(db_column="ZIP4", null=True, max_length=10L)
-    phon = models.CharField(db_column="PHON", null=True, max_length=20L)
-    fax = models.CharField(db_column="FAX", null=True, max_length=20L)
+    zip4 = models.CharField(db_column="ZIP4", null=True, max_length=10)
+    phon = models.CharField(db_column="PHON", null=True, max_length=20)
+    fax = models.CharField(db_column="FAX", null=True, max_length=20)
     email = models.CharField(max_length=500, db_column="EMAIL")
 
     class Meta:
@@ -43,10 +46,11 @@ class AddressCd(CalAccessBaseModel):
         verbose_name = 'ADDRESS_CD'
         verbose_name_plural = 'ADDRESS_CD'
 
-    def __unicode__(self):
-        return self.adrid
+    def __str__(self):
+        return str(self.adrid)
 
 
+@python_2_unicode_compatible
 class BallotMeasuresCd(CalAccessBaseModel):
     """ Ballot measures dates and times """
     election_date = models.DateTimeField(db_column='ELECTION_DATE', null=True)
@@ -71,10 +75,11 @@ class BallotMeasuresCd(CalAccessBaseModel):
             "measure_name"
         )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.measure_name
 
 
+@python_2_unicode_compatible
 class EfsFilingLogCd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -92,10 +97,11 @@ class EfsFilingLogCd(CalAccessBaseModel):
         verbose_name = 'EFS_FILING_LOG_CD'
         verbose_name_plural = 'EFS_FILING_LOG_CD'
 
-    def __unicode__(self):
-        return self.filer_id
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilersCd(CalAccessBaseModel):
     """
     This table is the parent table from which all links and associations
@@ -109,15 +115,16 @@ class FilersCd(CalAccessBaseModel):
         verbose_name = 'FILERS_CD'
         verbose_name_plural = 'FILERS_CD'
 
-    def __unicode__(self):
-        return self.filer_id
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilerAcronymsCd(CalAccessBaseModel):
     """
     links acronyms to filers
     """
-    acronym = models.CharField(db_column='ACRONYM', max_length=32L)
+    acronym = models.CharField(db_column='ACRONYM', max_length=32)
     filer_id = models.IntegerField(db_column='FILER_ID')
 
     class Meta:
@@ -127,7 +134,7 @@ class FilerAcronymsCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_ACRONYMS_CD'
         ordering = ("id",)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.acronym
 
 
@@ -161,6 +168,7 @@ class FilerAddressCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_ADDRESS_CD'
 
 
+@python_2_unicode_compatible
 class FilerEthicsClassCd(CalAccessBaseModel):
     """
     This table stores lobbyist ethics training dates.
@@ -175,8 +183,8 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         verbose_name = 'FILER_ETHICS_CLASS_CD'
         verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
 class FilerInterestsCd(CalAccessBaseModel):
@@ -202,15 +210,15 @@ class FilerLinksCd(CalAccessBaseModel):
     """
     filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True)
     filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True)
-    active_flg = models.CharField(max_length=1L, db_column='ACTIVE_FLG')
+    active_flg = models.CharField(max_length=1, db_column='ACTIVE_FLG')
     session_id = models.IntegerField(db_column='SESSION_ID')
     link_type = models.IntegerField(db_column='LINK_TYPE')
     link_desc = models.CharField(
-        max_length=255L, db_column='LINK_DESC', blank=True
+        max_length=255, db_column='LINK_DESC', blank=True
     )
     effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
     dominate_filer = models.CharField(
-        max_length=1L, db_column='DOMINATE_FILER', blank=True
+        max_length=1, db_column='DOMINATE_FILER', blank=True
     )
     termination_dt = models.DateField(
         null=True, db_column='TERMINATION_DT', blank=True
@@ -223,16 +231,17 @@ class FilerLinksCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_LINKS_CD'
 
 
+@python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
     status_type = models.CharField(
-        max_length=11L,
+        max_length=11,
         db_column='STATUS_TYPE',
     )
     status_desc = models.CharField(
-        max_length=11L,
+        max_length=11,
         db_column='STATUS_DESC'
     )
 
@@ -243,10 +252,11 @@ class FilerStatusTypesCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_STATUS_TYPES_CD'
         ordering = ("status_type",)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.status_type
 
 
+@python_2_unicode_compatible
 class FilerToFilerTypeCd(CalAccessBaseModel):
     """
     This table links a filer to a set of characteristics that describe the
@@ -262,7 +272,7 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         help_text="Filer type identification number"
     )
     active = models.CharField(
-        max_length=1L,
+        max_length=1,
         db_column='ACTIVE',
         help_text="Indicates if the filer is currently active"
     )
@@ -316,7 +326,7 @@ formed, etc."
         help_text="Indicates type of election (general, primary, special)"
     )
     sub_category_a = models.CharField(
-        max_length=1L,
+        max_length=1,
         db_column='SUB_CATEGORY_A',
         blank=True,
         help_text="Indicates if sponsored or not"
@@ -354,10 +364,11 @@ Populated for Senate, Assembly or Board of Equalization races"
         verbose_name = 'FILER_TO_FILER_TYPE_CD'
         verbose_name_plural = 'FILER_TO_FILER_TYPE_CD'
 
-    def __unicode__(self):
-        return unicode(self.filer_id)
+    def __str__(self):
+        return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilerTypesCd(CalAccessBaseModel):
     """
     This lookup table describes filer types.
@@ -394,8 +405,8 @@ class FilerTypesCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_TYPES_CD'
         ordering = ("filer_type",)
 
-    def __unicode__(self):
-        return unicode(self.filer_type)
+    def __str__(self):
+        return str(self.filer_type)
 
 
 class FilerXrefCd(CalAccessBaseModel):
@@ -404,10 +415,10 @@ class FilerXrefCd(CalAccessBaseModel):
     identification numbers.
     """
     filer_id = models.IntegerField(db_column='FILER_ID')
-    xref_id = models.CharField(max_length=32L, db_column='XREF_ID')
+    xref_id = models.CharField(max_length=32, db_column='XREF_ID')
     effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
     migration_source = models.CharField(
-        max_length=50L, db_column='MIGRATION_SOURCE'
+        max_length=50, db_column='MIGRATION_SOURCE'
     )
 
     class Meta:
@@ -512,31 +523,31 @@ class HdrCd(CalAccessBaseModel):
     Electronic filing record header data
     """
     amend_id = models.IntegerField(db_column='AMEND_ID')
-    cal_ver = models.CharField(max_length=4L, db_column='CAL_VER', blank=True)
-    ef_type = models.CharField(max_length=3L, db_column='EF_TYPE', blank=True)
+    cal_ver = models.CharField(max_length=4, db_column='CAL_VER', blank=True)
+    ef_type = models.CharField(max_length=3, db_column='EF_TYPE', blank=True)
     filing_id = models.IntegerField(db_column='FILING_ID')
     hdr_comment = models.CharField(
-        max_length=200L,
+        max_length=200,
         db_column='HDRCOMMENT',
         blank=True
     )
     rec_type = models.CharField(
-        max_length=3L,
+        max_length=3,
         db_column='REC_TYPE',
         blank=True
     )
     soft_name = models.CharField(
-        max_length=90L,
+        max_length=90,
         db_column='SOFT_NAME',
         blank=True
     )
     soft_ver = models.CharField(
-        max_length=16L,
+        max_length=16,
         db_column='SOFT_VER',
         blank=True
     )
     state_cd = models.CharField(
-        max_length=2L,
+        max_length=2,
         db_column='STATE_CD',
         blank=True
     )
@@ -605,17 +616,17 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     filer_st = models.CharField(max_length=200, db_column="FILER_ST")
     filer_zip = models.IntegerField(db_column="FILER_ZIP", null=True)
     filer_phone = models.CharField(
-        db_column="FILER_PHONE", null=True, max_length=12L
+        db_column="FILER_PHONE", null=True, max_length=12
     )
     entity_type = models.IntegerField(db_column="ENTITY_TYPE", null=True)
     entity_name = models.CharField(max_length=500, db_column="ENTITY_NAME")
     entity_city = models.CharField(max_length=500, db_column="ENTITY_CITY")
     entity_st = models.CharField(max_length=500, db_column="ENTITY_ST")
     entity_zip = models.CharField(
-        db_column="ENTITY_ZIP", blank=True, max_length=10L
+        db_column="ENTITY_ZIP", blank=True, max_length=10
     )
     entity_phone = models.CharField(
-        db_column="ENTITY_PHONE", null=True, max_length=12L
+        db_column="ENTITY_PHONE", null=True, max_length=12
     )
     entity_id = models.IntegerField(db_column="ENTITY_ID", null=True)
     responsible_officer = models.CharField(
@@ -1114,17 +1125,17 @@ class LookupCode(CalAccessBaseModel):
 
 class NamesCd(CalAccessBaseModel):
     namid = models.IntegerField(db_column='NAMID')
-    naml = models.CharField(max_length=200L, db_column='NAML')
-    namf = models.CharField(max_length=50L, db_column='NAMF')
-    namt = models.CharField(max_length=100L, db_column='NAMT', blank=True)
-    nams = models.CharField(max_length=30L, db_column='NAMS', blank=True)
-    moniker = models.CharField(max_length=30L, db_column='MONIKER', blank=True)
+    naml = models.CharField(max_length=200, db_column='NAML')
+    namf = models.CharField(max_length=50, db_column='NAMF')
+    namt = models.CharField(max_length=100, db_column='NAMT', blank=True)
+    nams = models.CharField(max_length=30, db_column='NAMS', blank=True)
+    moniker = models.CharField(max_length=30, db_column='MONIKER', blank=True)
     moniker_pos = models.CharField(
-        max_length=9L, db_column='MONIKER_POS', blank=True
+        max_length=9, db_column='MONIKER_POS', blank=True
     )
-    namm = models.CharField(max_length=20L, db_column='NAMM', blank=True)
-    fullname = models.CharField(max_length=200L, db_column='FULLNAME')
-    naml_search = models.CharField(max_length=200L, db_column='NAML_SEARCH')
+    namm = models.CharField(max_length=20, db_column='NAMM', blank=True)
+    fullname = models.CharField(max_length=200, db_column='FULLNAME')
+    naml_search = models.CharField(max_length=200, db_column='NAML_SEARCH')
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1160,6 +1171,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         verbose_name_plural = 'RECEIVED_FILINGS_CD'
 
 
+@python_2_unicode_compatible
 class ReportsCd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -1210,5 +1222,5 @@ class ReportsCd(CalAccessBaseModel):
         verbose_name = 'REPORTS_CD'
         verbose_name_plural = 'REPORTS_CD'
 
-    def __unicode__(self):
-        return self.rpt_id
+    def __str__(self):
+        return str(self.rpt_id)

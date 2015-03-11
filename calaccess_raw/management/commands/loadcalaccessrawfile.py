@@ -1,4 +1,4 @@
-import csv
+from csvkit import CSVKitReader
 from django.db import connection
 from django.conf import settings
 from django.db import ProgrammingError
@@ -59,7 +59,7 @@ class Command(CalAccessCommand, LabelCommand):
             INTO TABLE %s
             FIELDS TERMINATED BY ','
             OPTIONALLY ENCLOSED BY '"'
-            LINES TERMINATED BY '\\r\\n'
+            LINES TERMINATED BY '\\n'
             IGNORE 1 LINES
             (
         """ % (
@@ -218,9 +218,9 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Returns the column headers from the csv as a list.
         """
-        with open(csv_path) as infile:
-            csv_reader = csv.reader(infile)
-            headers = csv_reader.next()
+        with open(csv_path, 'r') as infile:
+            csv_reader = CSVKitReader(infile)
+            headers = next(csv_reader)
         return headers
 
     def get_row_count(self, csv_path):

@@ -1,5 +1,5 @@
-from base import CalAccessBaseModel
-from campaign import (
+from calaccess_raw.models.base import CalAccessBaseModel
+from calaccess_raw.models.campaign import (
     CvrSoCd,
     Cvr2SoCd,
     CvrCampaignDisclosureCd,
@@ -17,7 +17,7 @@ from campaign import (
     F501502Cd,
     S498Cd,
 )
-from lobbying import (
+from calaccess_raw.models.lobbying import (
     CvrRegistrationCd,
     Cvr2RegistrationCd,
     CvrLobbyDisclosureCd,
@@ -31,7 +31,7 @@ from lobbying import (
     LempCd,
     LpayCd,
 )
-from common import (
+from calaccess_raw.models.common import (
     FilernameCd,
     FilerFilingsCd,
     FilingsCd,
@@ -39,7 +39,7 @@ from common import (
     CvrE530Cd,
     TextMemoCd,
 )
-from other import (
+from calaccess_raw.models.other import (
     AcronymsCd,
     AddressCd,
     BallotMeasuresCd,
