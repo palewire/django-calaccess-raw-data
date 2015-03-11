@@ -26,7 +26,10 @@ class CvrSoCd(CalAccessBaseModel):
         verbose_name="Activity level",
         help_text="Organization's level of activity"
     )
-    amend_id = models.IntegerField(db_column="AMEND_ID")
+    amend_id = models.IntegerField(
+        db_column="AMEND_ID",
+        verbose_name="Amendment ID"
+    )
     bank_adr1 = models.CharField(
         max_length=55L,
         db_column="BANK_ADR1",
@@ -112,10 +115,21 @@ class CvrSoCd(CalAccessBaseModel):
         db_column="COUNTY_RES",
         blank=True
     )
+    ENTITY_CODE_CHOICES = (
+        ('', 'Unknown'),
+        ('BMC', 'BMC'),
+        ('CAO', 'CAO'),
+        ('COM', 'COM'),
+        ('CTL', 'CTL'),
+        ('RCP', 'RCP'),
+        ('SMO', 'SMO'),
+    )
     entity_cd = models.CharField(
         max_length=3L,
         db_column="ENTITY_CD",
-        blank=True
+        blank=True,
+        choices=ENTITY_CODE_CHOICES,
+        verbose_name="Entity code"
     )
     filer_id = models.CharField(
         max_length=9L,
@@ -125,22 +139,26 @@ class CvrSoCd(CalAccessBaseModel):
     filer_namf = models.CharField(
         max_length=45L,
         db_column="FILER_NAMF",
-        blank=True
+        blank=True,
+        verbose_name="Filer first name"
     )
     filer_naml = models.CharField(
         max_length=200L,
         db_column="FILER_NAML",
-        blank=True
+        blank=True,
+        verbose_name="Filer last name"
     )
     filer_nams = models.CharField(
         max_length=10L,
         db_column="FILER_NAMS",
-        blank=True
+        blank=True,
+        verbose_name="Filer name suffix"
     )
     filer_namt = models.CharField(
         max_length=10L,
         db_column="FILER_NAMT",
-        blank=True
+        blank=True,
+        verbose_name="Filer name title"
     )
     filing_id = models.CharField(
         max_length=9L,
@@ -176,7 +194,8 @@ class CvrSoCd(CalAccessBaseModel):
     mail_st = models.CharField(
         max_length=2L,
         db_column="MAIL_ST",
-        blank=True)
+        blank=True
+    )
     mail_zip4 = models.CharField(
         max_length=10L,
         db_column="MAIL_ZIP4",
@@ -194,7 +213,9 @@ class CvrSoCd(CalAccessBaseModel):
     )
     qualfy_dt = models.DateTimeField(
         db_column="QUALFY_DT",
-        null=True
+        null=True,
+        verbose_name="Date qualified",
+        help_text="Date qualified as an organization"
     )
     qual_cb = models.CharField(
         max_length=1L,
@@ -241,42 +262,50 @@ class CvrSoCd(CalAccessBaseModel):
     tres_city = models.CharField(
         max_length=30L,
         db_column="TRES_CITY",
-        blank=True
+        blank=True,
+        verbose_name="Treasurer's city"
     )
     tres_namf = models.CharField(
         max_length=45L,
         db_column="TRES_NAMF",
-        blank=True
+        blank=True,
+        verbose_name="Treasurer's first name"
     )
     tres_naml = models.CharField(
         max_length=200L,
         db_column="TRES_NAML",
-        blank=True
+        blank=True,
+        verbose_name="Treasurer's last name"
     )
     tres_nams = models.CharField(
         max_length=10L,
         db_column="TRES_NAMS",
-        blank=True
+        blank=True,
+        verbose_name="Treasurer's name suffix"
     )
     tres_namt = models.CharField(
         max_length=10L,
         db_column="TRES_NAMT",
-        blank=True
+        blank=True,
+        verbose_name="Treasurer's name title"
     )
     tres_phon = models.CharField(
         max_length=20L,
         db_column="TRES_PHON",
-        blank=True
+        blank=True,
+        verbose_name="Treasurer's phone number"
     )
     tres_st = models.CharField(
         max_length=2L,
         db_column="TRES_ST",
-        blank=True
+        blank=True,
+        verbose_name="Treasurer's street"
     )
     tres_zip4 = models.CharField(
         max_length=10L,
         db_column="TRES_ZIP4",
-        blank=True
+        blank=True,
+        help_text="Treasurer's ZIP Code"
     )
     zip4 = models.CharField(
         max_length=10L,
