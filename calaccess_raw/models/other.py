@@ -114,7 +114,7 @@ class FilersCd(CalAccessBaseModel):
         db_table = 'FILERS_CD'
         verbose_name = 'FILERS_CD'
         verbose_name_plural = 'FILERS_CD'
-    
+
     def __str__(self):
         return str(self.filer_id)
 
