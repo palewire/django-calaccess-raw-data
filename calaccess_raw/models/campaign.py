@@ -1546,82 +1546,171 @@ class ExpnCd(CalAccessBaseModel):
         * Form 900 (Public Employee's Retirement Board Candidate
             Campaign Statement)
     """
-    agent_namf = models.CharField(
-        max_length=45L, db_column='AGENT_NAMF', blank=True
-    )
-    agent_naml = models.CharField(
-        max_length=200L, db_column='AGENT_NAML', blank=True
-    )
-    agent_nams = models.CharField(
-        max_length=10L, db_column='AGENT_NAMS', blank=True
-    )
-    agent_namt = models.CharField(
-        max_length=10L, db_column='AGENT_NAMT', blank=True
-    )
-    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
-    amount = models.DecimalField(
-        decimal_places=2, max_digits=14, db_column='AMOUNT'
-    )
-    bakref_tid = models.CharField(
-        max_length=20L, db_column='BAKREF_TID', blank=True
-    )
-    bal_juris = models.CharField(
-        max_length=40L, db_column='BAL_JURIS', blank=True
-    )
-    bal_name = models.CharField(
-        max_length=200L, db_column='BAL_NAME', blank=True
-    )
-    bal_num = models.CharField(
-        max_length=7L, db_column='BAL_NUM', blank=True
-    )
-    cand_namf = models.CharField(
-        max_length=45L, db_column='CAND_NAMF', blank=True
-    )
-    cand_naml = models.CharField(
-        max_length=200L, db_column='CAND_NAML', blank=True
-    )
-    cand_nams = models.CharField(
-        max_length=10L, db_column='CAND_NAMS', blank=True
-    )
-    cand_namt = models.CharField(
-        max_length=10L, db_column='CAND_NAMT', blank=True
-    )
-    cmte_id = models.CharField(max_length=9L, db_column='CMTE_ID', blank=True)
-    cum_oth = models.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='CUM_OTH', blank=True
-    )
-    cum_ytd = models.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='CUM_YTD', blank=True
-    )
-    dist_no = models.CharField(max_length=3L, db_column='DIST_NO', blank=True)
-    entity_cd = models.CharField(
-        max_length=3L, db_column='ENTITY_CD', blank=True
-    )
-    expn_chkno = models.CharField(
-        max_length=20L, db_column='EXPN_CHKNO', blank=True
-    )
-    expn_code = models.CharField(
-        max_length=3L, db_column='EXPN_CODE', blank=True
-    )
-    expn_date = models.DateField(null=True, db_column='EXPN_DATE', blank=True)
-    expn_dscr = models.CharField(
-        max_length=400L, db_column='EXPN_DSCR', blank=True
-    )
-    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     FORM_TYPE_CHOICES = (
         ('D', 'Form 460 (Recipient Committee Campaign Statement): Schedule D'),
         ('E', 'Form 460 (Recipient Committee Campaign Statement): Schedule E'),
         ('G', 'Form 460 (Recipient Committee Campaign Statement): Schedule G'),
         ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
-Short Form): Part 5'),
+            Short Form): Part 5'),
         ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
-Committee Campaign Statement): Part 5'),
+            Committee Campaign Statement): Part 5'),
         ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
-Report) Part 3'),
+            Report) Part 3'),
         ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
-Campaign Statement)'),
+            Campaign Statement)'),
+    )
+
+    agent_namf = models.CharField(
+        max_length=45L,
+        db_column='AGENT_NAMF',
+        blank=True,
+        help_text="Agent of Ind. Contractor's First name"
+    )
+    agent_naml = models.CharField(
+        max_length=200L,
+        db_column='AGENT_NAML',
+        blank=True,
+        help_text="Agent of Ind. Contractor's Last name (Sched G)"
+    )
+    agent_nams = models.CharField(
+        max_length=10L,
+        db_column='AGENT_NAMS',
+        blank=True,
+        help_text="Agent of Ind. Contractor's Suffix"
+    )
+    agent_namt = models.CharField(
+        max_length=10L,
+        db_column='AGENT_NAMT',
+        blank=True,
+        help_text="Agent of Ind. Contractor's Prefix or Title"
+    )
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment Identification number. \
+        A number of 0 is an original filing and 1 to 999 amendments."
+    )
+    amount = models.DecimalField(
+        decimal_places=2,
+        max_digits=14,
+        db_column='AMOUNT',
+        help_text="Amount of Payment"
+    )
+    bakref_tid = models.CharField(
+        max_length=20L,
+        db_column='BAKREF_TID',
+        blank=True,
+        help_text="Back Reference to a Tran_ID of a 'parent' record"
+    )
+    bal_juris = models.CharField(
+        max_length=40L,
+        db_column='BAL_JURIS',
+        blank=True,
+        help_text="Jurisdiction"
+    )
+    bal_name = models.CharField(
+        max_length=200L,
+        db_column='BAL_NAME',
+        blank=True,
+        help_text="Ballot Measure Name"
+    )
+    bal_num = models.CharField(
+        max_length=7L,
+        db_column='BAL_NUM',
+        blank=True,
+        help_text="Ballot Number or Letter"
+    )
+    cand_namf = models.CharField(
+        max_length=45L,
+        db_column='CAND_NAMF',
+        blank=True,
+        help_text="Candidate's First name"
+    )
+    cand_naml = models.CharField(
+        max_length=200L,
+        db_column='CAND_NAML',
+        blank=True,
+        help_text="Candidate's Last name"
+    )
+    cand_nams = models.CharField(
+        max_length=10L,
+        db_column='CAND_NAMS',
+        blank=True,
+        help_text="Candidate's Suffix"
+    )
+    cand_namt = models.CharField(
+        max_length=10L,
+        db_column='CAND_NAMT',
+        blank=True,
+        help_text="Candidate's Prefix or Title"
+    )
+    cmte_id = models.CharField(
+        max_length=9L,
+        db_column='CMTE_ID',
+        blank=True,
+        help_text="Committee ID (If [COM|RCP] & no ID#, Treas info Req.)"
+    )
+    cum_oth = models.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='CUM_OTH',
+        blank=True,
+        help_text="Cumulative / 'Other' (No Cumulative on Sched E & G)"
+    )
+    cum_ytd = models.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='CUM_YTD',
+        blank=True,
+        help_text="Cumulative / Year-to-date amount \
+        (No Cumulative on Sched E & G)"
+    )
+    dist_no = models.CharField(
+        max_length=3L,
+        db_column='DIST_NO',
+        blank=True,
+        help_text="Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]"
+    )
+    entity_cd = models.CharField(
+        max_length=3L,
+        db_column='ENTITY_CD',
+        blank=True,
+        help_text="Values: [COM|RCP] - Recipient Committee;\n \
+        IND - Individual;\n \
+        OTH - Other"
+    )
+    expn_chkno = models.CharField(
+        max_length=20L,
+        db_column='EXPN_CHKNO',
+        blank=True,
+        help_text="Check Number (Optional)"
+    )
+    expn_code = models.CharField(
+        max_length=3L,
+        db_column='EXPN_CODE',
+        blank=True,
+        help_text="Expense Code - Values: (Refer to list in Overview) \
+        Note: CTB & IND need explanation & listing on Sched D \
+        TRC & TRS require explanation."
+    )
+    expn_date = models.DateField(
+        null=True,
+        db_column='EXPN_DATE',
+        blank=True,
+        help_text="Date of Expenditure (Note: Date not on Sched E & G)"
+    )
+    expn_dscr = models.CharField(
+        max_length=400L,
+        db_column='EXPN_DSCR',
+        blank=True,
+        help_text="Purpose of Expense and/or Description/explanation"
+    )
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        help_text="Unique filing identification number"
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -1629,7 +1718,10 @@ Campaign Statement)'),
         db_column='FORM_TYPE'
     )
     g_from_e_f = models.CharField(
-        max_length=1L, db_column='G_FROM_E_F', blank=True
+        max_length=1L,
+        db_column='G_FROM_E_F',
+        blank=True,
+        help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
     juris_cd = models.CharField(
         max_length=3L, db_column='JURIS_CD', blank=True
