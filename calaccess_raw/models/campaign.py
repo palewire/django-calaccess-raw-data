@@ -1714,20 +1714,6 @@ class ExpnCd(CalAccessBaseModel):
         * Form 900 (Public Employee's Retirement Board Candidate
             Campaign Statement)
     """
-    FORM_TYPE_CHOICES = (
-        ('D', 'Form 460 (Recipient Committee Campaign Statement): Schedule D'),
-        ('E', 'Form 460 (Recipient Committee Campaign Statement): Schedule E'),
-        ('G', 'Form 460 (Recipient Committee Campaign Statement): Schedule G'),
-        ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
-            Short Form): Part 5'),
-        ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
-            Committee Campaign Statement): Part 5'),
-        ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
-            Report) Part 3'),
-        ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
-            Campaign Statement)'),
-    )
-
     agent_namf = models.CharField(
         max_length=45,
         db_column='AGENT_NAMF',
@@ -1886,6 +1872,19 @@ class ExpnCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         help_text="Unique filing identification number"
+    )
+    FORM_TYPE_CHOICES = (
+        ('D', 'Form 460 (Recipient Committee Campaign Statement): Schedule D'),
+        ('E', 'Form 460 (Recipient Committee Campaign Statement): Schedule E'),
+        ('G', 'Form 460 (Recipient Committee Campaign Statement): Schedule G'),
+        ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
+            Short Form): Part 5'),
+        ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
+            Committee Campaign Statement): Part 5'),
+        ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
+            Report) Part 3'),
+        ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
+            Campaign Statement)'),
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
