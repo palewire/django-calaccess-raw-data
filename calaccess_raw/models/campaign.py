@@ -1731,7 +1731,7 @@ class ExpnCd(CalAccessBaseModel):
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
-        max_length=1L, db_column='MEMO_CODE', blank=True
+        max_length=1L, db_column='MEMO_CODE', blank=True, help_text="Memo Amount? (Date/Amount are informational only)"
     )
     memo_refno = models.CharField(
         max_length=20L, 
