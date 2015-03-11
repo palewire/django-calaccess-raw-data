@@ -1908,7 +1908,10 @@ class ExpnCd(CalAccessBaseModel):
         max_length=1L, db_column='MEMO_CODE', blank=True, help_text="Memo Amount? (Date/Amount are informational only)"
     )
     memo_refno = models.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20L,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text="Reference to text contained in a TEXT record."
     )
     off_s_h_cd = models.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
