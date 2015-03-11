@@ -2087,7 +2087,6 @@ class ExpnCd(CalAccessBaseModel):
         db_column='XREF_SCHNM',
         blank=True,
         help_text="Related item is included on Sched 'C' or 'H2'"
->>>>>>> finished adding text from calaccess docs for Expn model. For #222
     )
 
     class Meta:
