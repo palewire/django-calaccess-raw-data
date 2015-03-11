@@ -1,6 +1,8 @@
+from __future__ import unicode_literals
 import os
 import csv
 from io import StringIO
+import six
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
 from django.core.management.base import LabelCommand
@@ -51,7 +53,7 @@ class Command(CalAccessCommand, LabelCommand):
         except StopIteration:
             return
         headers = headers.decode("ascii", "replace")
-        headers_csv = CSVKitReader(StringIO(headers), delimiter='\t')
+        headers_csv = CSVKitReader(StringIO(headers), delimiter=b'\t')
         try:
             headers_list = next(headers_csv)
         except StopIteration:
@@ -72,6 +74,8 @@ class Command(CalAccessCommand, LabelCommand):
 
             # Goofing around with the encoding while we're in there.
             tsv_line = tsv_line.decode("ascii", "replace")
+            if six.PY2:
+                tsv_line = tsv_line.replace('\ufffd', '?')
 
             # Nuke any null bytes
             null_bytes = tsv_line.count('\x00')
@@ -93,7 +97,7 @@ class Command(CalAccessCommand, LabelCommand):
             if not len(csv_field_list) == headers_count:
                 csv_field_list = next(CSVKitReader(
                     StringIO(tsv_line),
-                    delimiter='\t'
+                    delimiter=b'\t'
                 ))
                 if not len(csv_field_list) == headers_count:
                     if self.verbosity:
