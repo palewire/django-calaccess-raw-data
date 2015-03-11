@@ -1546,20 +1546,6 @@ class ExpnCd(CalAccessBaseModel):
         * Form 900 (Public Employee's Retirement Board Candidate
             Campaign Statement)
     """
-    FORM_TYPE_CHOICES = (
-        ('D', 'Form 460 (Recipient Committee Campaign Statement): Schedule D'),
-        ('E', 'Form 460 (Recipient Committee Campaign Statement): Schedule E'),
-        ('G', 'Form 460 (Recipient Committee Campaign Statement): Schedule G'),
-        ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
-            Short Form): Part 5'),
-        ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
-            Committee Campaign Statement): Part 5'),
-        ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
-            Report) Part 3'),
-        ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
-            Campaign Statement)'),
-    )
-
     agent_namf = models.CharField(
         max_length=45L,
         db_column='AGENT_NAMF',
@@ -1673,7 +1659,14 @@ class ExpnCd(CalAccessBaseModel):
         blank=True,
         help_text="Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]"
     )
+    ENTITY_CHOICES = (
+        ('COM', 'Recipient Committee'),
+        ('RCP', 'Recipient Committee'),
+        ('IND', 'Individual'),
+        ('OTH', 'Other'),
+    )
     entity_cd = models.CharField(
+        choices=ENTITY_CHOICES,
         max_length=3L,
         db_column='ENTITY_CD',
         blank=True,
@@ -1712,6 +1705,19 @@ class ExpnCd(CalAccessBaseModel):
         db_index=True,
         help_text="Unique filing identification number"
     )
+    FORM_TYPE_CHOICES = (
+        ('D', 'Form 460 (Recipient Committee Campaign Statement): Schedule D'),
+        ('E', 'Form 460 (Recipient Committee Campaign Statement): Schedule E'),
+        ('G', 'Form 460 (Recipient Committee Campaign Statement): Schedule G'),
+        ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
+            Short Form): Part 5'),
+        ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
+            Committee Campaign Statement): Part 5'),
+        ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
+            Report) Part 3'),
+        ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
+            Campaign Statement)'),
+    )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=6L,
@@ -1731,19 +1737,33 @@ class ExpnCd(CalAccessBaseModel):
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
-        max_length=1L, db_column='MEMO_CODE', blank=True, help_text="Memo Amount? (Date/Amount are informational only)"
+        max_length=1L,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo Amount? (Date/Amount are informational only)"
     )
     memo_refno = models.CharField(
-        max_length=20L, 
-        db_column='MEMO_REFNO', 
+        max_length=20L,
+        db_column='MEMO_REFNO',
         blank=True,
         help_text="Reference to text contained in a TEXT record."
     )
+    OFF_S_H_CD_CHOICES = (
+        ('H', 'Office Held'),
+        ('S', 'Office Sought'),
+    )
     off_s_h_cd = models.CharField(
-        max_length=1L, db_column='OFF_S_H_CD', blank=True
+        choices=OFF_S_H_CD_CHOICES,
+        max_length=1L,
+        db_column='OFF_S_H_CD',
+        blank=True,
+        help_text="Office Sought/Held Code: H=Held; S=Sought"
     )
     offic_dscr = models.CharField(
-        max_length=40L, db_column='OFFIC_DSCR', blank=True
+        max_length=40L,
+        db_column='OFFIC_DSCR',
+        blank=True,
+        help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
     office_cd = models.CharField(
         max_length=3L, db_column='OFFICE_CD', blank=True
