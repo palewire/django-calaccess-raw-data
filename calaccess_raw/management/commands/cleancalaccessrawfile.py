@@ -53,7 +53,7 @@ class Command(CalAccessCommand, LabelCommand):
         except StopIteration:
             return
         headers = headers.decode("ascii", "replace")
-        headers_csv = CSVKitReader(StringIO(headers), delimiter=b'\t')
+        headers_csv = CSVKitReader(StringIO(headers), delimiter=str('\t'))
         try:
             headers_list = next(headers_csv)
         except StopIteration:
@@ -97,7 +97,7 @@ class Command(CalAccessCommand, LabelCommand):
             if not len(csv_field_list) == headers_count:
                 csv_field_list = next(CSVKitReader(
                     StringIO(tsv_line),
-                    delimiter=b'\t'
+                    delimiter=str('\t')
                 ))
                 if not len(csv_field_list) == headers_count:
                     if self.verbosity:
