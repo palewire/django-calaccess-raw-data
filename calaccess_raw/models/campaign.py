@@ -1724,7 +1724,13 @@ class ExpnCd(CalAccessBaseModel):
         help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
     juris_cd = models.CharField(
-        max_length=3L, db_column='JURIS_CD', blank=True
+        max_length=3L,
+        db_column='JURIS_CD',
+        blank=True,
+        help_text="Office Jurisdiction Code Values: STW=Statewide; \
+        SEN=Senate District; ASM=Assembly District; \
+        BOE=Board of Equalization District; \
+        CIT=City; CTY=County; LOC=Local; OTH=Other"
     )
     juris_dscr = models.CharField(
         max_length=40L, db_column='JURIS_DSCR', blank=True
