@@ -59,7 +59,7 @@ class Command(CalAccessCommand, LabelCommand):
             INTO TABLE %s
             FIELDS TERMINATED BY ','
             OPTIONALLY ENCLOSED BY '"'
-            LINES TERMINATED BY '\\r\\n'
+            LINES TERMINATED BY '\\n'
             IGNORE 1 LINES
             (
         """ % (
