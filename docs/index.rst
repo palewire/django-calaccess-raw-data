@@ -45,6 +45,7 @@ Development has been advanced by a series of sprints supported by `Knight-Mozill
 
 * August 13-15, 2014, at `Mozilla's offices in San Francisco <https://www.mozilla.org/en-US/contact/spaces/san-francisco/>`_
 * January 14-15, 2015, at `USC's Wallis Annenberg Hall <http://wallisannenberghall.uscannenberg.org/>`_
+* March 4-8, 2015, the California Code Rush at `NICAR 2015 in Atlanta <http://www.californiacivicdata.org/2015/03/11/code-rush-recap/>`_
 
 Sponsors
 --------
