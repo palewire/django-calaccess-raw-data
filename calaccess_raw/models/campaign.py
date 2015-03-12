@@ -1907,9 +1907,6 @@ class ExpnCd(CalAccessBaseModel):
         CIT=City; CTY=County; LOC=Local; OTH=Other"
     )
     juris_dscr = models.CharField(
-<<<<<<< HEAD
-        max_length=40, db_column='JURIS_DSCR', blank=True
-=======
         max_length=40L,
         db_column='JURIS_DSCR',
         blank=True,
@@ -1919,7 +1916,6 @@ class ExpnCd(CalAccessBaseModel):
     line_item = models.IntegerField(
         db_column='LINE_ITEM',
         help_text="Record line item number"
->>>>>>> finished adding text from calaccess docs for Expn model. For #222
     )
     memo_code = models.CharField(
         max_length=1L,
