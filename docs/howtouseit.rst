@@ -21,7 +21,10 @@ The app needs to be added to the ``INSTALLED_APPS`` in your Django project's set
 
 Also in the Django settings, create a database configure Django so it can connect to it. You have a choice of two different databases when using this application, MySQL and PostgreSQL.
 
-The settings below refer to using MySQL as your database.
+Using MySQL
+~~~~~~~~~~~
+
+Add a database connection string like this to your ``settings.py``.
 
 .. code-block:: python
 
@@ -46,7 +49,10 @@ This will create the MySQL database.
 
     $ mysqladmin -h localhost -u root -p create calaccess
 
-The settings below refer to using PostgreSQL as your database.
+Using PostgreSQL
+~~~~~~~~~~~~~~~~
+
+Add a database connection string like this to your ``settings.py``.
 
 .. code-block:: python
 
@@ -67,14 +73,14 @@ This will create the PostgreSQL database.
 
     $ createdb calaccess
 
+Loading the data
+----------------
+
 Now you're ready to sync the database tables.
 
 .. code-block:: bash
 
     $ python manage.py migrate
-
-Loading the data
-----------------
 
 Once everything is set up, this management command will download the latest bulk data release from the state
 and load it in the database. This'll take a while. Go grab some coffee.
