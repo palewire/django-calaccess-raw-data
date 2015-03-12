@@ -18,6 +18,7 @@ env:
  - DJANGO_VERSION=1.8b1 DATABASE_SETTINGS='settings_test_postgresql.py'
 
 install:
+ - export XDG_CACHE_HOME=$HOME/.cache/
  - pip install -r requirements_dev.txt
  - pip uninstall -y Django
  - pip install -q Django==$DJANGO_VERSION
