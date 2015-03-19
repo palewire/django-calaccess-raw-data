@@ -1832,6 +1832,15 @@ class ExpnCd(CalAccessBaseModel):
         ('RCP', 'Recipient Committee'),
         ('IND', 'Individual'),
         ('OTH', 'Other'),
+        ('PTY', 'PTY - Unknown'),
+        ('SCC', 'SCC 0 Unknown'),
+        ('BNM', 'BNM - Unknown'),
+        ('CAO', 'CAO - Unknown'),
+        ('OFF', 'OFF - Unknown'),
+        ('PTH', 'PTH - Unknown'),
+        ('RFD', 'RFD - Unknown'),
+        ('MBR', 'MBR - Unknown'),
+        ('0', '0 - Unknown'),
     )
     entity_cd = models.CharField(
         choices=ENTITY_CD_CHOICES,
@@ -1932,6 +1941,9 @@ class ExpnCd(CalAccessBaseModel):
     OFF_S_H_CD_CHOICES = (
         ('H', 'Office Held'),
         ('S', 'Office Sought'),
+        ('A', 'A - Unknown'),
+        ('8', '8 - Unknown'),
+        ('O', 'O - Unknown'),
     )
     off_s_h_cd = models.CharField(
         choices=OFF_S_H_CD_CHOICES,
