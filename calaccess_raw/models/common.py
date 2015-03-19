@@ -271,7 +271,7 @@ class SmryCd(CalAccessBaseModel):
         verbose_name_plural = 'SMRY_CD'
 
     def __str__(self):
-        return str(self.filer_id)
+        return str(self.filing_id)
 
 
 @python_2_unicode_compatible
