@@ -5,7 +5,7 @@ This guide will walk users through the process of installing the latest official
 
 .. warning::
 
-    This library is intended to be plugged into project created with the Django web
+    This library is intended to be plugged into a project created with the Django web
     framework. Before you can begin, you'll need to have one up and running.
     If you don't know how, `check out the official Django documentation <https://docs.djangoproject.com/en/dev/intro/tutorial01/>`_.
 
