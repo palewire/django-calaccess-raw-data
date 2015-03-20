@@ -343,7 +343,7 @@ class CvrE530Cd(CalAccessBaseModel):
         verbose_name_plural = 'CVR_E530_CD'
 
     def __str__(self):
-        return str(self.filer_id)
+        return str(self.filing_id)
 
 
 @python_2_unicode_compatible
@@ -369,4 +369,4 @@ class TextMemoCd(CalAccessBaseModel):
         verbose_name_plural = 'TEXT_MEMO_CD'
 
     def __str__(self):
-        return str(self.filer_id)
+        return str(self.filing_id)

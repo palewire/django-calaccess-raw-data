@@ -10,3 +10,7 @@ class CalAccessTest(TestCase):
         for m in get_model_list():
             self.assertEqual(m.objects.get_csv_name(), m().get_csv_name())
             self.assertEqual(m.objects.get_csv_path(), m().get_csv_path())
+
+    def test_model_str(self):
+        for m in get_model_list():
+            m().__str__()
