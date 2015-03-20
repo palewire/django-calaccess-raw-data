@@ -48,6 +48,12 @@ This will create the MySQL database.
 .. code-block:: bash
 
     $ mysqladmin -h localhost -u root -p create calaccess
+    
+If you don't have it already, you'll need to install a Python library that can access MySQL via Django.
+
+.. code-block:: bash
+
+    $ pip install mysqlclient
 
 Using PostgreSQL
 ~~~~~~~~~~~~~~~~
@@ -72,6 +78,12 @@ This will create the PostgreSQL database.
 .. code-block:: bash
 
     $ createdb calaccess
+
+If you don't have it already, you'll need to install a Python library that can access PostgreSQL via Django.
+
+.. code-block:: bash
+
+    $ pip install psycopg2
 
 Loading the data
 ----------------
