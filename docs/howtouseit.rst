@@ -18,7 +18,7 @@ The latest official release of the application can be installed from the Python 
 
     $ pip install django-calaccess-raw-data
 
-The app needs to be added to the ``INSTALLED_APPS`` in your Django project's settings.
+The app needs to be added to the ``INSTALLED_APPS`` in your Django project's ``settings.py`` configuration file.
 
 .. code-block:: python
 
