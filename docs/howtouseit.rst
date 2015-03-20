@@ -49,8 +49,8 @@ Once that's handled, add a database connection string like this to your ``settin
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'calaccess',
-            'USER': 'username',
-            'PASSWORD': 'password',
+            'USER': 'your-username-here',
+            'PASSWORD': 'your-password-here',
             'HOST': 'localhost',
             'PORT': '3306',
             # You'll need this to use our data loading tricks
@@ -64,7 +64,7 @@ Return the command line. This will create a MySQL database to store the data.
 
 .. code-block:: bash
 
-    $ mysqladmin -h localhost -u root -p create calaccess
+    $ mysqladmin -h localhost -u your-username-here -p create calaccess
 
 And, if you don't have it already, you'll need to install a Python library that can access MySQL via Django. That can be done with `pip <https://pip.pypa.io/en/latest/installing.html>`_, a Python package management tool.
 
@@ -85,8 +85,8 @@ Once that's handled, add a database connection string like this to your ``settin
         'default': {
             'NAME': 'calaccess',
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'USER': 'username',
-            'PASSWORD': 'password',
+            'USER': 'your-username-here',
+            'PASSWORD': 'your-password-here',
             'HOST': 'localhost',
             'PORT': '5432'
         }
