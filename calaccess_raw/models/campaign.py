@@ -118,12 +118,15 @@ class CvrSoCd(CalAccessBaseModel):
         blank=True
     )
     ENTITY_CODE_CHOICES = (
+        # Defined here
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
         ('', 'Unknown'),
-        ('BMC', 'BMC'),
-        ('CAO', 'CAO'),
-        ('COM', 'Recipient committee'),
-        ('CTL', 'CTL'),
-        ('RCP', 'RCP'),
+        ('BMC', 'Ballot measure committee'),
+        ('CAO', 'Candidate/officeholder'),
+        ('COM', 'Committee'),
+        ('CTL', 'Controlled committee'),
+        ('RCP', 'Recipient committee'),
         ('SMO', 'Slate-mailer organization'),
     )
     entity_cd = models.CharField(
