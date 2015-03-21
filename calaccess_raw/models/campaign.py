@@ -118,7 +118,7 @@ class CvrSoCd(CalAccessBaseModel):
         blank=True
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here
+        # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
@@ -350,7 +350,7 @@ class Cvr2SoCd(CalAccessBaseModel):
     )
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
     ENTITY_CODE_CHOICES = (
-        # Defined here
+        # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
@@ -580,8 +580,29 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     employer = models.CharField(
         max_length=200, db_column='EMPLOYER', blank=True
     )
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('BMC', 'Ballot measure committee'),
+        ('CAO', 'Candidate/officeholder'),
+        ('COM', 'Committee'),
+        ('CTL', 'Controlled committee'),
+        ('IND', 'Person (Spending > $5,000)'),
+        ('MDI', 'Major donor/independent expenditure'),
+        ('OTH', 'Other'),
+        ('PTY', 'Political party'),
+        ('RCP', 'Recipient committee'),
+        ('SCC', 'Small contributor committee'),
+        ('SMO', 'Slate mailer organization'),
+    )
     entity_cd = models.CharField(
-        max_length=4, db_column='ENTITY_CD', blank=True
+        max_length=4,
+        db_column='ENTITY_CD',
+        blank=True,
+        choices=ENTITY_CODE_CHOICES,
+        verbose_name='entity code'
     )
     file_email = models.CharField(
         max_length=60, db_column='FILE_EMAIL', blank=True
@@ -798,8 +819,30 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     dist_no = models.CharField(
         max_length=3, db_column='DIST_NO', blank=True
     )
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('ATR', 'Assistant treasurer'),
+        ('BNM', 'Ballot measure\'s name/title'),
+        ('CAO', 'Candidate/officeholder'),
+        ('CTL', 'Controlled committee'),
+        ('COM', 'Committee'),
+        ('FIL', 'Candidate filing/ballot fees'),
+        ('OFF', 'Officer (Responsible)'),
+        ('PEX', 'PEX (Unknown)'),
+        ('POF', 'Principal officer'),
+        ('PRO', 'Proponent'),
+        ('RCP', 'Recipient committee'),
+        ('RDP', 'RDP (Unknown)'),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     enty_adr1 = models.CharField(
         max_length=55, db_column='ENTY_ADR1', blank=True
