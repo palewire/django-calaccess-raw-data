@@ -349,7 +349,30 @@ class Cvr2SoCd(CalAccessBaseModel):
         max_length=4
     )
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
-    entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
+    ENTITY_CODE_CHOICES = (
+        # Defined here
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('ATH', 'Authorizing individual'),
+        ('ATR', 'Assistant treasurer'),
+        ('BMN', 'BMN (Unknown)'),
+        ('BNM', 'Ballot measure\'s name/title'),
+        ('CAO', 'Candidate/officeholder'),
+        ('COM', 'Committee'),
+        ('CTL', 'Controlled committee'),
+        ('OFF', 'Officer'),
+        ('POF', 'Principal officer'),
+        ('PRO', 'Proponent'),
+        ('SPO', 'Sponsor'),
+    )
+    entity_cd = models.CharField(
+        db_column='ENTITY_CD',
+        max_length=3,
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
+    )
     enty_naml = models.CharField(
         db_column='ENTY_NAML', max_length=194, blank=True
     )
