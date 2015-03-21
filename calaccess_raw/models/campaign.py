@@ -1142,15 +1142,18 @@ and Form 401 Schedule A, A-1)"
         help_text="Office District Number (used on F401A)"
     )
     ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
         ("", "None"),
-        ("0", "0"),
-        ("BNM", "BNM"),
-        ("COM", "Recipient committee"),
+        ("0", "0 (Unknown)"),
+        ("BNM", "Ballot measure\'s name/title"),
+        ("COM", "Committee"),
         ("IND", "Individual"),
-        ("OFF", "OFF"),
+        ("OFF", "Officer (Responsible)"),
         ("OTH", "Other"),
         ("PTY", "Political party"),
-        ("RCP", "RCP"),
+        ("RCP", "Recipient commmittee"),
         ("SCC", "Small contributor committee"),
     )
     entity_cd = models.CharField(
@@ -1451,7 +1454,33 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
     tran_id = models.CharField(db_column='TRAN_ID', max_length=20)
-    entity_cd = models.CharField(db_column='ENTITY_CD', max_length=3)
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('0', '0 (Unknown)'),
+        ('ATR', 'Assistant treasurer'),
+        ('BBB', 'BBB (Unknown)'),
+        ('COA', 'COA (Unknown)'),
+        ('CAO', 'Candidate/officeholder'),
+        ('CON', 'State controller'),
+        ('MAI', 'MAI (Unknown)'),
+        ('MDI', 'Major donor/independent expenditure'),
+        ('OFF', 'Officer (Responsible)'),
+        ('POF', 'Principal officer'),
+        ('PRO', 'Proponent'),
+        ('RCP', 'Recipient committee'),
+        ('SPO', 'Sponsor'),
+        ('TRE', 'Treasurer'),
+    )
+    entity_cd = models.CharField(
+        db_column='ENTITY_CD',
+        max_length=3,
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
+    )
     sig_date = models.DateField(db_column='SIG_DATE', blank=True, null=True)
     sig_loc = models.CharField(db_column='SIG_LOC', max_length=39, blank=True)
     sig_naml = models.CharField(
