@@ -86,7 +86,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
     descrip_1 = models.CharField(
         max_length=300, db_column='DESCRIP_1', blank=True
     )
-    descrip_2 = models.CharField(
+    descrip_2 = models.CharField(ENTITY
         max_length=300, db_column='DESCRIP_2', blank=True
     )
     eff_date = models.DateField(null=True, db_column='EFF_DATE', blank=True)
@@ -95,11 +95,11 @@ class CvrRegistrationCd(CalAccessBaseModel):
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
-        ('BUS', ''),
-        ('FRM', ''),
-        ('LBY', ''),
-        ('LCO', ''),
-        ('LEM', ''),
+        ('BUS', 'BUS (Unknown)'),
+        ('FRM', 'Lobbying firm'),
+        ('LBY', 'Lobbyist (an individual)'),
+        ('LCO', 'Lobbying coalition'),
+        ('LEM', 'Lobbying employer'),
     )
     entity_cd = models.CharField(
         max_length=3,
@@ -282,12 +282,12 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
-        ('AGY', ''),
-        ('EMP', ''),
-        ('FRM', ''),
-        ('LBY', ''),
-        ('MBR', ''),
-        ('SCL', ''),
+        ('AGY', 'State agency'),
+        ('EMP', 'Employer'),
+        ('FRM', 'Lobbying firm'),
+        ('LBY', 'Lobbyist (an individual)'),
+        ('MBR', 'Member of association'),
+        ('SCL', 'Subcontracted client'),
     )
     entity_cd = models.CharField(
         max_length=3,
@@ -348,13 +348,13 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
-        ('CLI', ''),
-        ('FRM', ''),
-        ('IND', ''),
-        ('LBY', ''),
-        ('LCO', ''),
-        ('LEM', ''),
-        ('OTH', ''),
+        ('CLI', 'CLI (Unknown)'),
+        ('FRM', 'Lobbying firm'),
+        ('IND', 'Person (Spending > $5,000'),
+        ('LBY', 'Lobbyist (an individual)'),
+        ('LCO', 'Lobbying coalition'),
+        ('LEM', 'Lobbying employer'),
+        ('OTH', 'Other'),
     )
     entity_cd = models.CharField(
         max_length=3,
@@ -516,10 +516,10 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
-        ('EMP', ''),
-        ('OFF', ''),
-        ('OWN', ''),
-        ('PTM', ''),
+        ('EMP', 'Employer'),
+        ('OFF', 'Officer (responsible)'),
+        ('OWN', 'Owner'),
+        ('PTM', 'PTM (Unknown)'),
     )
     entity_cd = models.CharField(
         max_length=3,
@@ -796,13 +796,13 @@ class LattCd(CalAccessBaseModel):
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
-        ('FRM', ''),
-        ('IND', ''),
-        ('LBY', ''),
-        ('LCO', ''),
-        ('LEM', ''),
-        ('OTH', ''),
-        ('RCP', ''),
+        ('FRM', 'Lobbying firm'),
+        ('IND', 'Person (Spending > $5,000'),
+        ('LBY', 'Lobbyist (an individual)'),
+        ('LCO', 'Lobbying coalition'),
+        ('LEM', 'Lobbying employer'),
+        ('OTH', 'Other'),
+        ('RCP', 'Recipient committee'),
     )
     entity_cd = models.CharField(
         max_length=3,
@@ -900,8 +900,8 @@ class LexpCd(CalAccessBaseModel):
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
         ('', 'Unknown'),
-        ('IND', ''),
-        ('OTH', ''),
+        ('IND', 'Person (Spending > $5,000'),
+        ('OTH', 'Other'),
     )
     entity_cd = models.CharField(
         max_length=3,
@@ -1271,10 +1271,10 @@ class LpayCd(CalAccessBaseModel):
         # format.html#document/p9
         ('', 'Unknown'),
         ('128', '128 (Unknown)'),
-        ('FRM', ''),
-        ('LCO', ''),
-        ('LEM', ''),
-        ('OTH', ''),
+        ('FRM', 'Lobbying firm'),
+        ('LCO', 'Lobbying coalition'),
+        ('LEM', 'Lobbying employer'),
+        ('OTH', 'Other'),
     )
     entity_cd = models.CharField(
         max_length=3,
