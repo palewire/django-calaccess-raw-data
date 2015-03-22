@@ -1727,10 +1727,25 @@ class S401Cd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        max_length=4,
+        db_column='REC_TYPE',
+        blank=True
+    )
+    FORM_TYPE_CHOICES = (
+        ('F401B', 'Form 401 (Slate mailer organization campaign statement): \
+Schedule B, payments made'),
+        ('F401B-1', 'Form 401 (Slate mailer organization campaign statement): \
+Schedule B-1, payments made by agent or independent contractor'),
+        ('F401C', 'Form 401 (Slate mailer organization campaign statement): \
+Schedule C, persons receiving $1,000 or more'),
+        ('F401D', 'Form 401 (Slate mailer organization campaign statement): \
+Schedule D, candidates or measures supported or opposed with < $100 payment'),
     )
     form_type = models.CharField(
-        max_length=7, db_column='FORM_TYPE', blank=True
+        max_length=7,
+        db_column='FORM_TYPE',
+        blank=True,
+        choices=FORM_TYPE_CHOICES
     )
     tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
     agent_naml = models.CharField(
