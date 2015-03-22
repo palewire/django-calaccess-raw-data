@@ -86,7 +86,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
     descrip_1 = models.CharField(
         max_length=300, db_column='DESCRIP_1', blank=True
     )
-    descrip_2 = models.CharField(ENTITY
+    descrip_2 = models.CharField(
         max_length=300, db_column='DESCRIP_2', blank=True
     )
     eff_date = models.DateField(null=True, db_column='EFF_DATE', blank=True)
