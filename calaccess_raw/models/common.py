@@ -283,8 +283,18 @@ class CvrE530Cd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+    )
     entity_cd = models.CharField(
-        db_column='ENTITY_CD', max_length=32, blank=True
+        db_column='ENTITY_CD',
+        max_length=32,
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES
     )
     filer_naml = models.CharField(db_column='FILER_NAML', max_length=200)
     filer_namf = models.CharField(

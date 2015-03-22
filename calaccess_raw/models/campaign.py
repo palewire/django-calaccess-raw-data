@@ -1941,7 +1941,7 @@ class ExpnCd(CalAccessBaseModel):
         blank=True,
         help_text="Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]"
     )
-    ENTITY_CD_CHOICES = (
+    ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
@@ -1961,7 +1961,7 @@ class ExpnCd(CalAccessBaseModel):
         ('MBR', 'MBR (Unknown)'),
     )
     entity_cd = models.CharField(
-        choices=ENTITY_CD_CHOICES,
+        choices=ENTITY_CODE_CHOICES,
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
@@ -2295,7 +2295,7 @@ class DebtCd(CalAccessBaseModel):
     end_bal = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='END_BAL'
     )
-    ENTITY_CD_CHOICES = (
+    ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
@@ -2505,7 +2505,7 @@ class S497Cd(CalAccessBaseModel):
         db_column='TRAN_ID',
         blank=True
     )
-    ENTITY_CD_CHOICES = (
+    ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
@@ -2839,7 +2839,7 @@ class S498Cd(CalAccessBaseModel):
     tran_id = models.CharField(
         max_length=20, db_column='TRAN_ID', blank=True
     )
-    ENTITY_CD_CHOICES = (
+    ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p9
