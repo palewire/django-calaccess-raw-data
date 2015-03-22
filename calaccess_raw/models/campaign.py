@@ -1515,7 +1515,7 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     """
-    Loans
+    Loans received and made.
     """
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bakref_tid = models.CharField(
@@ -1543,13 +1543,20 @@ class LoanCd(CalAccessBaseModel):
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
     FORM_TYPE_CHOICES = (
-        ('B1', ''),
-        ('B2', ''),
-        ('B3', ''),
-        ('H', ''),
-        ('H1', ''),
-        ('H2', ''),
-        ('H3', ''),
+        ('B1', 'Form 460 (Recipient committee campaign statement): \
+Schedule B1'),
+        ('B2', 'Form 460 (Recipient committee campaign statement): \
+Schedule B2'),
+        ('B3', 'Form 460 (Recipient committee campaign statement): \
+Schedule B3'),
+        ('H', 'Form 460 (Recipient committee campaign statement): \
+Schedule H'),
+        ('H1', 'Form 460 (Recipient committee campaign statement): \
+Schedule H1'),
+        ('H2', 'Form 460 (Recipient committee campaign statement): \
+Schedule H2'),
+        ('H3', 'Form 460 (Recipient committee campaign statement): \
+Schedule H3'),
     )
     form_type = models.CharField(
         max_length=2,
