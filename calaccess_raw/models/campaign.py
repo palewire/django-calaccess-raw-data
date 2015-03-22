@@ -2943,11 +2943,7 @@ class S498Cd(CalAccessBaseModel):
     )
 
     def __str__(self):
-        return "{} Filing {}, Amendment {}".format(
-            self.get_form_type_display(),
-            self.filing_id,
-            self.amend_id
-        )
+        return str(self.filing_id)
 
     class Meta:
         app_label = 'calaccess_raw'
