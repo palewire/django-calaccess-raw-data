@@ -90,8 +90,23 @@ class CvrRegistrationCd(CalAccessBaseModel):
         max_length=300, db_column='DESCRIP_2', blank=True
     )
     eff_date = models.DateField(null=True, db_column='EFF_DATE', blank=True)
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('BUS', ''),
+        ('FRM', ''),
+        ('LBY', ''),
+        ('LCO', ''),
+        ('LEM', ''),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     filer_id = models.CharField(max_length=9, db_column='FILER_ID')
     filer_namf = models.CharField(
@@ -262,8 +277,24 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
     tran_id = models.CharField(
         max_length=20, db_column='TRAN_ID', blank=True
     )
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('AGY', ''),
+        ('EMP', ''),
+        ('FRM', ''),
+        ('LBY', ''),
+        ('MBR', ''),
+        ('SCL', ''),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     entity_id = models.CharField(
         max_length=9, db_column='ENTITY_ID', blank=True
@@ -312,8 +343,25 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     cum_beg_dt = models.DateField(
         null=True, db_column='CUM_BEG_DT', blank=True
     )
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('CLI', ''),
+        ('FRM', ''),
+        ('IND', ''),
+        ('LBY', ''),
+        ('LCO', ''),
+        ('LEM', ''),
+        ('OTH', ''),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     filer_id = models.CharField(max_length=9, db_column='FILER_ID')
     filer_namf = models.CharField(
@@ -463,8 +511,22 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
                 Legislative or administrative action
     """
     amend_id = models.IntegerField(db_column='AMEND_ID')
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('EMP', ''),
+        ('OFF', ''),
+        ('OWN', ''),
+        ('PTM', ''),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     entity_id = models.CharField(
         max_length=9, db_column='ENTITY_ID', blank=True
@@ -729,8 +791,25 @@ class LattCd(CalAccessBaseModel):
         max_digits=16, decimal_places=2, db_column='CUM_AMT'
     )
     cumbeg_dt = models.DateField(db_column='CUMBEG_DT', null=True)
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('FRM', ''),
+        ('IND', ''),
+        ('LBY', ''),
+        ('LCO', ''),
+        ('LEM', ''),
+        ('OTH', ''),
+        ('RCP', ''),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
     form_type = models.CharField(max_length=6, db_column='FORM_TYPE')
@@ -816,7 +895,21 @@ class LexpCd(CalAccessBaseModel):
     credcardco = models.CharField(
         max_length=200, db_column='CREDCARDCO', blank=True
     )
-    entity_cd = models.CharField(max_length=3, db_column='ENTITY_CD')
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('IND', ''),
+        ('OTH', ''),
+    )
+    entity_cd = models.CharField(
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
+    )
     expn_date = models.DateField(null=True, db_column='EXPN_DATE', blank=True)
     expn_dscr = models.CharField(
         max_length=90, db_column='EXPN_DSCR', blank=True
@@ -900,8 +993,21 @@ class LccmCd(CalAccessBaseModel):
     ctrib_namt = models.CharField(
         max_length=10, db_column='CTRIB_NAMT', blank=True
     )
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('COM', 'Committee'),
+        ('CTL', 'Controlling committee'),
+        ('RCP', 'Recipient committee')
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     form_type = models.CharField(
@@ -1159,8 +1265,23 @@ class LpayCd(CalAccessBaseModel):
     emplr_zip4 = models.CharField(
         max_length=10, db_column='EMPLR_ZIP4', blank=True
     )
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('128', '128 (Unknown)'),
+        ('FRM', ''),
+        ('LCO', ''),
+        ('LEM', ''),
+        ('OTH', ''),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     fees_amt = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
