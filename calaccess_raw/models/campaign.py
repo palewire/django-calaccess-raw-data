@@ -2657,18 +2657,26 @@ class F501502Cd(CalAccessBaseModel):
         max_length=8,
         blank=True
     )
-    entity_cd = models.IntegerField(
-        db_column='ENTITY_CD', blank=True, null=True
+    entity_cd = models.CharField(
+        db_column='ENTITY_CD',
+        blank=True,
+        max_length=3,
     )
     report_num = models.IntegerField(
-        db_column='REPORT_NUM', blank=True, null=True
+        db_column='REPORT_NUM',
+        blank=True,
+        null=True
     )
     rpt_date = models.DateTimeField(
-        db_column='RPT_DATE', blank=True, null=True
+        db_column='RPT_DATE',
+        blank=True,
+        null=True
     )
     stmt_type = models.IntegerField(db_column='STMT_TYPE')
     from_date = models.CharField(
-        db_column='FROM_DATE', max_length=32, blank=True
+        db_column='FROM_DATE',
+        max_length=32,
+        blank=True
     )
     thru_date = models.CharField(
         db_column='THRU_DATE', max_length=32, blank=True
