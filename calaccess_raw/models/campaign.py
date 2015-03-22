@@ -2410,9 +2410,12 @@ class S496Cd(CalAccessBaseModel):
     rec_type = models.CharField(
         max_length=4, db_column='REC_TYPE', blank=True
     )
+    FORM_TYPE_CHOICES = (
+        ('F496', 'F496 (Candidate Intention Statement)'),
+    )
     form_type = models.CharField(
         max_length=4, db_column='FORM_TYPE', blank=True,
-        choices=(('F496', 'F496 (Candidate Intention Statement)'),)
+        choices=FORM_TYPE_CHOICES,
     )
     tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
     amount = models.DecimalField(
@@ -2639,13 +2642,14 @@ class F501502Cd(CalAccessBaseModel):
     filing_id = models.IntegerField(db_column='FILING_ID')
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
+    FORM_TYPE_CHOICES = (
+        ('F501', 'F501 (Candidate Intention Statement)'),
+        ('F502', 'F502 (Campaign Bank Account Statement)')
+    )
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
-        choices=(
-            ('F501', 'F501 (Candidate Intention Statement)'),
-            ('F502', 'F502 (Campaign Bank Account Statement)')
-        )
+        choices=FORM_TYPE_CHOICES
     )
     filer_id = models.CharField(
         db_column='FILER_ID',
@@ -2827,14 +2831,15 @@ class S498Cd(CalAccessBaseModel):
         db_column='REC_TYPE',
         blank=True
     )
+    FORM_TYPE_CHOICES = (
+        ('F498-A', 'F498-A (Late Payments Attributed To:)'),
+        ('F498-R', 'F498-R (Late Payments Received From:)')
+    )
     form_type = models.CharField(
         max_length=9,
         db_column='FORM_TYPE',
         blank=True,
-        choices=(
-            ('F498-A', 'F498-A (Late Payments Attributed To:)'),
-            ('F498-R', 'F498-R (Late Payments Received From:)')
-        )
+        choices=FORM_TYPE_CHOICES
     )
     tran_id = models.CharField(
         max_length=20, db_column='TRAN_ID', blank=True
