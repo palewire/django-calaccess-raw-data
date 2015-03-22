@@ -1514,6 +1514,9 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
+    """
+    Loans
+    """
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bakref_tid = models.CharField(
         max_length=20, db_column='BAKREF_TID', blank=True
@@ -1540,10 +1543,13 @@ class LoanCd(CalAccessBaseModel):
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
     FORM_TYPE_CHOICES = (
-        ('F401B-1', 'Payments Made by Agent/Contractor on Behalf of SMO'),
-        ('F401C', '"F400" Persons in SMO Receiving $1000 or more'),
-        ('F401B', 'Payments Made'),
-        ('F401D', 'Candidates/Measurers not on Schedule F401A'),
+        ('B1', ''),
+        ('B2', ''),
+        ('B3', ''),
+        ('H', ''),
+        ('H1', ''),
+        ('H2', ''),
+        ('H3', ''),
     )
     form_type = models.CharField(
         max_length=2,
