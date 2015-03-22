@@ -171,9 +171,11 @@ class CvrSoCd(CalAccessBaseModel):
         blank=True
     )
     FORM_TYPE_CHOICES = (
-        ('F400', 'Statement of Organization, Slate Mailer Org (F400)'),
-        ('F402', 'Statement of Termination, Slate Mailer Org (F402)'),
-        ('F410', 'Statement of Organization, Recipient Committee (F410)'),
+        ('F400', 'Form 400 (Statement of organization, \
+slate mailer organization)'),
+        ('F402', 'Form 402 (Statement of termination, \
+slate mailer organization'),
+        ('F410', 'Form 410 (Statement of organization, recipient committee)'),
     )
     form_type = models.CharField(
         max_length=4,
@@ -340,8 +342,9 @@ class Cvr2SoCd(CalAccessBaseModel):
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     FORM_TYPE_CHOICES = (
-        ('F400', 'Statement of Organization, Slate Mailer Org (F400)'),
-        ('F410', 'Statement of Organization, Recipient Committee (F410)'),
+        ('F400', 'Form 400 (Statement of organization, \
+slate mailer organization)'),
+        ('F410', 'Form 410 (Statement of organization, recipient committee)'),
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -643,17 +646,21 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
     FORM_TYPE_CHOICES = (
-        ('F511', 'Unknown'),
-        ('F900', 'Unknown'),
-        ('F425', 'Cover Page; Semi Annual Statement of No Activity'),
-        ('F450', 'Cover Page; Recipient Committee'),
-        ('F401', 'Cover Page; Part IV; Verification Information'),
-        ('F498', 'Cover Page; Slate Mailer Late Payments Report'),
-        ('F465', 'Cover Page; Supplemental Independent Expenditure Rpt'),
-        ('F496', 'Cover Page; Late Independent Expenditure Report'),
-        ('F461', 'Cover Page; Ind Expenditure & Major Donor Committee'),
-        ('F460', 'Cover Page; Recipient Committee Campaign Statement'),
-        ('F497', 'Cover Page; Late Contribution Report')
+        ('F511', 'Form 511 (Paid spokesman report)'),
+        ('F900', 'Form 900 (Public employee\'s retirement board, \
+candidate campaign statement)'),
+        ('F425', 'Form 425 (Semi-annual statement of no activity, \
+non-controlled recipient committee)'),
+        ('F450', 'Form 450 (Recipient committee campaign statement, \
+short form)'),
+        ('F401', 'Form 401 (Slate mailer organization campaign statement)'),
+        ('F498', 'Form 498 (Late payment report, slate mailer organizations'),
+        ('F465', 'Form 465 (Supplemental independent expenditure report'),
+        ('F496', 'Form 496 (Late independent expenditure report)'),
+        ('F461', 'Form 461 (Independent expenditure committee \
+and major donor committee campaign statement)'),
+        ('F460', 'Form 460 (Recipient committee campaign statement)'),
+        ('F497', 'Form 497 (Late contribution report)')
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -793,16 +800,6 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
     Record used to carry additional names for the campaign
     disclosure forms below.
-
-        F401
-        F450
-        F460
-        F461
-        F425
-        F465
-        F496
-        F497
-        F498
     """
     amend_id = models.IntegerField(db_column='AMEND_ID')
     bal_juris = models.CharField(
@@ -883,10 +880,12 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
     FORM_TYPE_CHOICES = (
-        ('F425', 'Cover Page; Part 1; Assistant Treasurer'),
-        ('F450', 'Cover Page; Part 3; Assistant Treasurer'),
-        ('F465', 'Cover Page; Part V Filing Officer Titles & Addresses'),
-        ('F460', 'Cover Page; Additional Committees, Asst. Treasurer, etc.')
+        ('F425', 'Form 425 (Semi-annual statement of no activity, \
+non-controlled committees)'),
+        ('F450', 'Form 450 (Recipient committee campaign statement, \
+short form)'),
+        ('F465', 'Form 465 (Supplemental independent expenditure report)'),
+        ('F460', 'Form 460 (Recipient committee campaign statement)')
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -957,7 +956,7 @@ class RcptCd(CalAccessBaseModel):
     Receipts schedules for the following forms.
 
         Form 460 (Recipient Committee Campaign Statement)
-        Schedules A, C, I, nd A-1.
+        Schedules A, C, I, and A-1.
 
         Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
     """
@@ -1169,14 +1168,21 @@ and Form 401 Schedule A, A-1)"
         help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = (
-        ('F900', 'Unknown'),
-        ('A-1', 'Unknown'),
-        ('E530', 'Unknown'),
-        ('F496P3', 'Contributions of $100 or More Received'),
-        ('F401A', 'Payments Received'),
-        ('I', 'Sched I / Misc. to Cash'),
-        ('C', 'Sched C / Non-monetary'),
-        ('A', 'Sched A / Monetary')
+        ('F900', 'Form 900 (Public employee\'s retirement board, \
+candidate campaign statement): Schedule A'),
+        ('A-1', 'Form 460: Schedule A-1, contributions transferred \
+to special election committees'),
+        ('E530', 'Form E530 (Issue advocacy receipts)'),
+        ('F496P3', 'Form 496 (Late independent expenditure): \
+Part 3, contributions > $100 received'),
+        ('F401A', 'Form 401 (Slate mailer organization): Schedule A, \
+payments received'),
+        ('I', 'Form 460 (Recipient committee campaign statement): \
+Schedule I, miscellanous increases to cash'),
+        ('C', 'Form 460 (Recipient committee campaign statement): \
+Schedule C, non-monetary contributions received'),
+        ('A', 'Form 460 (Recipient committee campaign statement): \
+Schedule A, monetary contributions received')
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -2007,7 +2013,7 @@ class ExpnCd(CalAccessBaseModel):
         ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
             Committee Campaign Statement): Part 5'),
         ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
-            Report) Part 3'),
+            Report): Part 3'),
         ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
             Campaign Statement)'),
     )
