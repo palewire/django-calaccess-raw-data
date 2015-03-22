@@ -1942,6 +1942,9 @@ class ExpnCd(CalAccessBaseModel):
         help_text="Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]"
     )
     ENTITY_CD_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
         ('', 'Unknown'),
         ('0', '0 (Unknown)'),
         ('COM', 'Committee'),
@@ -2250,7 +2253,9 @@ class F495P2Cd(CalAccessBaseModel):
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
     elect_date = models.DateField(
-        db_column='ELECT_DATE', blank=True, null=True
+        db_column='ELECT_DATE',
+        blank=True,
+        null=True
     )
     electjuris = models.CharField(db_column='ELECTJURIS', max_length=40)
     contribamt = models.FloatField(db_column='CONTRIBAMT')
@@ -2290,8 +2295,25 @@ class DebtCd(CalAccessBaseModel):
     end_bal = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='END_BAL'
     )
+    ENTITY_CD_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('BNM', 'Ballot measure\'s name/title'),
+        ('COM', 'Committee'),
+        ('IND', 'Person (spending > $5,000)'),
+        ('OTH', 'Other'),
+        ('PTY', 'Political party'),
+        ('RCP', 'Recipient Committee'),
+        ('SCC', 'Small contributor committee'),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     expn_code = models.CharField(
         max_length=3, db_column='EXPN_CODE', blank=True
