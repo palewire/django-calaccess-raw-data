@@ -2488,22 +2488,46 @@ class S497Cd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        max_length=4,
+        db_column='REC_TYPE',
+        blank=True
+    )
+    FORM_TYPE_CHOICES = (
+        ('F497P1', 'F497P1 (Late Contributions Received)'),
+        ('F497P2', 'F497P2 (Late Contributions Made)')
     )
     form_type = models.CharField(
         max_length=6, db_column='FORM_TYPE', blank=True,
-        choices=(
-            ('F497P1', 'F497P1 (Late Contributions Received)'),
-            ('F497P2', 'F497P2 (Late Contributions Made)')
-        )
+        choices=FORM_TYPE_CHOICES
     )
     tran_id = models.CharField(
         max_length=20,
         db_column='TRAN_ID',
         blank=True
     )
+    ENTITY_CD_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('0', '0 (Unknown)'),
+        ('BNM', 'Ballot measure\'s name/title'),
+        ('CAO', 'Candidate/officerholder'),
+        ('CTL', 'Controlled committee'),
+        ('COM', 'Committee'),
+        ('IND', 'Person (spending > $5,000)'),
+        ('OFF', 'Officer'),
+        ('OTH', 'Other'),
+        ('PTY', 'Political party'),
+        ('RCP', 'Recipient Committee'),
+        ('SCC', 'Small contributor committee'),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     enty_naml = models.CharField(
         max_length=200, db_column='ENTY_NAML', blank=True
