@@ -1942,28 +1942,27 @@ class ExpnCd(CalAccessBaseModel):
         help_text="Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]"
     )
     ENTITY_CD_CHOICES = (
-        ('COM', 'Recipient Committee'),
+        ('', 'Unknown'),
+        ('0', '0 (Unknown)'),
+        ('COM', 'Committee'),
         ('RCP', 'Recipient Committee'),
-        ('IND', 'Individual'),
+        ('IND', 'Person (spending > $5,000)'),
         ('OTH', 'Other'),
-        ('PTY', 'PTY - Unknown'),
-        ('SCC', 'SCC 0 Unknown'),
-        ('BNM', 'BNM - Unknown'),
-        ('CAO', 'CAO - Unknown'),
-        ('OFF', 'OFF - Unknown'),
-        ('PTH', 'PTH - Unknown'),
-        ('RFD', 'RFD - Unknown'),
-        ('MBR', 'MBR - Unknown'),
-        ('0', '0 - Unknown'),
+        ('PTY', 'Political party'),
+        ('SCC', 'Small contributor committee'),
+        ('BNM', 'Ballot measure\'s name/title'),
+        ('CAO', 'Candidate/officeholder'),
+        ('OFF', 'Officer'),
+        ('PTH', 'PTH (Unknown)'),
+        ('RFD', 'RFD (Unknown)'),
+        ('MBR', 'MBR (Unknown)'),
     )
     entity_cd = models.CharField(
         choices=ENTITY_CD_CHOICES,
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
-        help_text="Values: [COM|RCP] - Recipient Committee;\n \
-        IND - Individual;\n \
-        OTH - Other"
+        verbose_name='entity code',
     )
     expn_chkno = models.CharField(
         max_length=20,
