@@ -2805,11 +2805,7 @@ class F501502Cd(CalAccessBaseModel):
     )
 
     def __str__(self):
-        return "{} Filing {}, Amendment {}".format(
-            self.get_form_type_display(),
-            self.filing_id,
-            self.amend_id
-        )
+        return str(self.filing_id)
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -2843,8 +2839,23 @@ class S498Cd(CalAccessBaseModel):
     tran_id = models.CharField(
         max_length=20, db_column='TRAN_ID', blank=True
     )
+    ENTITY_CD_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('CAO', 'Candidate/officerholder'),
+        ('COM', 'Committee'),
+        ('IND', 'Person (spending > $5,000)'),
+        ('OTH', 'Other'),
+        ('RCP', 'Recipient Committee'),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        choices=ENTITY_CODE_CHOICES,
     )
     cmte_id = models.CharField(
         max_length=9, db_column='CMTE_ID', blank=True
