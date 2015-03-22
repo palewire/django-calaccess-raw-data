@@ -1513,8 +1513,24 @@ class LoanCd(CalAccessBaseModel):
         max_length=20, db_column='BAKREF_TID', blank=True
     )
     cmte_id = models.CharField(max_length=9, db_column='CMTE_ID', blank=True)
+    ENTITY_CODE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p9
+        ('', 'Unknown'),
+        ('COM', "Committee"),
+        ("IND", "Person (spending > $5,000)"),
+        ("OTH", "Other"),
+        ("PTY", "Political party"),
+        ('RCP', 'Recipient committee'),
+        ('SCC', 'Small contributor committee'),
+    )
     entity_cd = models.CharField(
-        max_length=3, db_column='ENTITY_CD', blank=True
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name="entity code",
+        choices=ENTITY_CODE_CHOICES,
     )
     filing_id = models.IntegerField(db_column='FILING_ID')
     FORM_TYPE_CHOICES = (
