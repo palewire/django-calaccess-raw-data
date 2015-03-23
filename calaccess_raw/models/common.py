@@ -553,7 +553,19 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
+    REC_TYPE_CHOICES = (
+        ('i', ''),
+        ('MEMO', ''),
+        ('TEXT', ''),
+        ('trun', ''),
+        ('Unde', ''),
+    )
+    rec_type = models.CharField(
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES
+    )
     FORM_TYPE_CHOICES = (
         (' E', ''),
         ('410', ''),
