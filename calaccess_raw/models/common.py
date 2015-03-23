@@ -233,11 +233,19 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_index=True,
         choices=STATEMENT_TYPE_CHOICES,
     )
+    STATEMENT_STATUS_CHOICES = (
+        ('0', ''),
+        ('11001', ''),
+        ('11002', ''),
+        ('11003', ''),
+    )
     stmnt_status = models.IntegerField(
         db_column='STMNT_STATUS',
-        null=True,
+        db_index=True,
         help_text="The status of the statement. If the filing has been \
 reviewed or not reviewed."
+        verbose_name='statement status',
+        choices=STATEMENT_STATUS_CHOICES,
     )
     session_id = models.IntegerField(
         db_column='SESSION_ID',
