@@ -1,15 +1,15 @@
 from __future__ import unicode_literals
+import os
+import sys
 import codecs
 import locale
-import os
 import shutil
-import sys
 import zipfile
 import requests
 from hurry.filesize import size
 from optparse import make_option
-from clint.textui import progress
 from django.conf import settings
+from clint.textui import progress
 from django.utils.six.moves import input
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
