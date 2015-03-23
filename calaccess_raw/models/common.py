@@ -65,7 +65,24 @@ class FilernameCd(CalAccessBaseModel):
         db_index=True,
         choices=FILER_TYPE_CHOICES
     )
-    status = models.CharField(max_length=10, db_column='STATUS')
+    STATUS_CHOICES = (
+        ('', 'Undefined'),
+        ('A', ''),
+        ('ACTIVE', ''),
+        ('INACTIVE', ''),
+        ('P', ''),
+        ('R', ''),
+        ('S', ''),
+        ('TERMINATED', ''),
+        ('W', ''),
+    )
+    status = models.CharField(
+        max_length=10,
+        db_column='STATUS',
+        db_index=True,
+        choices=STATUS_CHOICES,
+        blank=True,
+    )
     effect_dt = models.DateField(
         db_column='EFFECT_DT',
         help_text="Effective date for status",
