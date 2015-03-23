@@ -34,10 +34,36 @@ class FilernameCd(CalAccessBaseModel):
         null=True,
         help_text="The internal filer id saved in Cal-Access"
     )
+    FILER_TYPE_CHOICES = (
+        (' NOT DEFINED', 'Undefined'),
+        ('ALL FILERS', 'All filers'),
+        ('CANDIDATE/OFFICEHOLDER', 'Candidate/officeholder'),
+        ('CLIENT', 'Client'),
+        ('EMPLOYER', 'Employer'),
+        ('FIRM', 'Firm'),
+        ('INDIVIDUAL', 'Individual'),
+        ('INITIATIVE', 'Initiative'),
+        ('LOBBYIST', 'Lobbyist'),
+        (
+            'MAJOR DONOR/INDEPENDENT EXPENDITURE COMMITTEE',
+            'Major donor or indenpendent expenditure committee'
+        ),
+        ('PAYMENT TO INFLUENCE', 'Payment to influence'),
+        ('PREPAID ACCOUNT', 'Prepaid account'),
+        ('PROPONENT', 'Proponent'),
+        ('PROPOSITION', 'Proposition'),
+        ('RECIPIENT COMMITTEE', 'Recipient committee'),
+        ('SLATE MAILER ORGANIZATIONS', 'Slate mailer organization'),
+        (
+            'TREASURER/RESPONSIBLE OFFICER',
+            'Treasurer/responsible officer'
+        )
+    )
     filer_type = models.CharField(
         max_length=45,
         db_column='FILER_TYPE',
         db_index=True,
+        choices=FILER_TYPE_CHOICES
     )
     status = models.CharField(max_length=10, db_column='STATUS')
     effect_dt = models.DateField(
