@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 import os
 from django.db import models
 from calaccess_raw import get_download_directory
