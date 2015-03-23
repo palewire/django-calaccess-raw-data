@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import os
 import csv
 from io import StringIO
-import six
+from django.utils import six
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
 from django.core.management.base import LabelCommand
