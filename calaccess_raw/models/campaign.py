@@ -2466,7 +2466,7 @@ class S496Cd(CalAccessBaseModel):
         max_length=4, db_column='REC_TYPE', blank=True
     )
     FORM_TYPE_CHOICES = (
-        ('F496', 'F496 (Candidate Intention Statement)'),
+        ('F496', 'F496 (Late independent expenditure report)'),
     )
     form_type = models.CharField(
         max_length=4, db_column='FORM_TYPE', blank=True,
