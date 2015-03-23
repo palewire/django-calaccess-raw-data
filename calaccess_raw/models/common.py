@@ -10,10 +10,7 @@ class FilernameCd(CalAccessBaseModel):
     A combination of CAL-ACCESS tables to provide the analyst with
     filer information.
 
-    Note: Name last can also be the full name of the filer
-    (for both Campaign and lobbying filing entities).
-
-    Full name of all pacs, firms, and employers are always in this last
+    Full name of all PACs, firms, and employers are in the last
     name field.
 
     Major donors can be split between first and last name fields, but usually
