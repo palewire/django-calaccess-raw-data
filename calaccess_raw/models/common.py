@@ -201,7 +201,7 @@ class FilerFilingsCd(CalAccessBaseModel):
     )
     form_id = models.CharField(
         max_length=7,
-        db_column='FORM_ID'
+        db_column='FORM_ID',
         db_index=True,
         verbose_name='form type',
         choices=FORM_ID_CHOICES,
@@ -229,7 +229,7 @@ class FilerFilingsCd(CalAccessBaseModel):
     )
     stmnt_type = models.IntegerField(
         db_column='STMNT_TYPE',
-        verbose_name="statement type"
+        verbose_name="statement type",
         db_index=True,
         choices=STATEMENT_TYPE_CHOICES,
     )
@@ -243,7 +243,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_column='STMNT_STATUS',
         db_index=True,
         help_text="The status of the statement. If the filing has been \
-reviewed or not reviewed."
+reviewed or not reviewed.",
         verbose_name='statement status',
         choices=STATEMENT_STATUS_CHOICES,
     )
