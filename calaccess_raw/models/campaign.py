@@ -2700,8 +2700,8 @@ class F501502Cd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
     FORM_TYPE_CHOICES = (
-        ('F501', 'F501 (Candidate Intention Statement)'),
-        ('F502', 'F502 (Campaign Bank Account Statement)')
+        ('F501', 'Form 501 (Candidate intention statement)'),
+        ('F502', 'Form 502 (Campaign bank account statement)')
     )
     form_type = models.CharField(
         db_column='FORM_TYPE',
