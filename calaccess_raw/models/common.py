@@ -677,7 +677,7 @@ original filing and 1 to 999 amendments.",
         max_length=20,
         blank=True,
         help_text='Links text memo to a specific record',
-        verbose_name='record number'
+        verbose_name='reference number'
     )
     text4000 = models.CharField(
         db_column='TEXT4000',
