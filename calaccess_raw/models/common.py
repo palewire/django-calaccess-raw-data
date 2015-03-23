@@ -96,7 +96,8 @@ class FilerFilingsCd(CalAccessBaseModel):
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
-        help_text="Unique filing identification number"
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
     )
     period_id = models.IntegerField(
         null=True,
@@ -196,7 +197,12 @@ class FilingsCd(CalAccessBaseModel):
     This table is the parent table from which all links and association to
     a filing are derived.
     """
-    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     filing_type = models.IntegerField(db_column='FILING_TYPE')
 
     class Meta:
@@ -216,13 +222,15 @@ class SmryCd(CalAccessBaseModel):
     """
     filing_id = models.IntegerField(
         db_column='FILING_ID',
-        db_index=True
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
     )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     line_item = models.CharField(
@@ -324,12 +332,17 @@ class CvrE530Cd(CalAccessBaseModel):
     """
     This table method is undocumented in the print docs.
     """
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
@@ -412,12 +425,17 @@ class TextMemoCd(CalAccessBaseModel):
     """
     This table contains all text memos attached to electronic filings.
     """
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')

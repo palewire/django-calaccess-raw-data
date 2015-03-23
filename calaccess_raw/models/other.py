@@ -555,12 +555,17 @@ class HdrCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     cal_ver = models.CharField(max_length=4, db_column='CAL_VER', blank=True)
     ef_type = models.CharField(max_length=3, db_column='EF_TYPE', blank=True)
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     hdr_comment = models.CharField(
         max_length=200,
         db_column='HDRCOMMENT',
@@ -1120,7 +1125,12 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     This is an undocumented model (Ask Matt)
     '''
     firm_id = models.IntegerField(db_column='FIRM_ID')
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=58)
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=75)
@@ -1151,7 +1161,12 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     This is an undocumented model
     """
     firm_id = models.IntegerField(db_column='FIRM_ID')
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     filing_sequence = models.IntegerField(db_column='FILING_SEQUENCE')
     firm_name = models.CharField(db_column='FIRM_NAME', max_length=58)
     employer_name = models.CharField(db_column='EMPLOYER_NAME', max_length=75)
@@ -1284,7 +1299,12 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         db_column='FILING_DIRECTORY', max_length=45
     )
     filing_id = models.IntegerField(
-        db_column='FILING_ID', blank=True, null=True
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number",
+        null=True,
+        blank=True,
     )
     form_id = models.CharField(db_column='FORM_ID', max_length=4, blank=True)
     receive_comment = models.CharField(

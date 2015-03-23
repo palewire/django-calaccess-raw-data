@@ -36,7 +36,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     auth_adr1 = models.CharField(
@@ -128,7 +128,12 @@ original filing and 1 to 999 amendments",
         max_length=10, db_column='FILER_NAMT', blank=True
     )
     filing_id = models.IntegerField(
-        null=True, db_column='FILING_ID', blank=True
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number",
+        null=True,
+        blank=True,
     )
     firm_name = models.CharField(
         max_length=200, db_column='FIRM_NAME', blank=True
@@ -269,12 +274,17 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         F606 -- Notice of Termination
         F607 -- Notice of Withdrawl
     """
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     line_item = models.CharField(
@@ -349,7 +359,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     ctrib_n_cb = models.CharField(
@@ -392,7 +402,12 @@ original filing and 1 to 999 amendments",
     filer_namt = models.CharField(
         max_length=10, db_column='FILER_NAMT', blank=True
     )
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     firm_adr1 = models.CharField(
         max_length=55, db_column='FIRM_ADR1', blank=True
     )
@@ -532,7 +547,7 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     ENTITY_CODE_CHOICES = (
@@ -570,7 +585,12 @@ original filing and 1 to 999 amendments",
     enty_title = models.CharField(
         max_length=45, db_column='ENTY_TITLE', blank=True
     )
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     form_type = models.CharField(
         max_length=4, db_column='FORM_TYPE', blank=True
     )
@@ -599,12 +619,17 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
 
         Form 605 Part I
     """
-    filing_id = models.CharField(max_length=9, db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     rec_type = models.CharField(max_length=8, db_column='REC_TYPE')
@@ -735,13 +760,15 @@ class F690P2Cd(CalAccessBaseModel):
     """
     filing_id = models.IntegerField(
         db_column='FILING_ID',
-        help_text="unique filing identification number"
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
     )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     line_item = models.IntegerField(
@@ -819,7 +846,7 @@ class LattCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amount = models.DecimalField(
@@ -849,7 +876,12 @@ original filing and 1 to 999 amendments",
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     form_type = models.CharField(max_length=6, db_column='FORM_TYPE')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -918,7 +950,7 @@ class LexpCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amount = models.DecimalField(
@@ -959,7 +991,12 @@ original filing and 1 to 999 amendments",
     expn_dscr = models.CharField(
         max_length=90, db_column='EXPN_DSCR', blank=True
     )
-    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     form_type = models.CharField(max_length=7, db_column='FORM_TYPE')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -1026,7 +1063,7 @@ class LccmCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amount = models.DecimalField(
@@ -1064,7 +1101,12 @@ original filing and 1 to 999 amendments",
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     form_type = models.CharField(
         max_length=7, db_column='FORM_TYPE', blank=True
     )
@@ -1131,7 +1173,7 @@ class LothCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amount = models.DecimalField(
@@ -1142,7 +1184,12 @@ original filing and 1 to 999 amendments",
         decimal_places=2, null=True, max_digits=14,
         db_column='CUM_AMT', blank=True
     )
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     firm_adr1 = models.CharField(
         max_length=55, db_column='FIRM_ADR1', blank=True
     )
@@ -1218,7 +1265,7 @@ class LempCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     cli_adr1 = models.CharField(
@@ -1253,7 +1300,12 @@ original filing and 1 to 999 amendments",
         max_length=100, db_column='DESCRIP', blank=True
     )
     eff_date = models.DateField(null=True, db_column='EFF_DATE', blank=True)
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     form_type = models.CharField(max_length=7, db_column='FORM_TYPE')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
@@ -1309,7 +1361,7 @@ class LpayCd(CalAccessBaseModel):
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments",
+original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     bakref_tid = models.CharField(
@@ -1371,7 +1423,12 @@ original filing and 1 to 999 amendments",
         decimal_places=2, null=True, max_digits=14,
         db_column='FEES_AMT', blank=True
     )
-    filing_id = models.IntegerField(db_column='FILING_ID')
+    filing_id = models.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
     form_type = models.CharField(max_length=7, db_column='FORM_TYPE')
     lby_actvty = models.CharField(
         max_length=200, db_column='LBY_ACTVTY', blank=True
