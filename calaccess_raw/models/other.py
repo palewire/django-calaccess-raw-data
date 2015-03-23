@@ -88,7 +88,11 @@ class EfsFilingLogCd(CalAccessBaseModel):
     filingstatus = models.IntegerField(db_column='FILINGSTATUS')
     vendor = models.CharField(db_column='VENDOR', max_length=250)
     filer_id = models.CharField(db_column='FILER_ID', max_length=250)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=250)
+    form_type = models.CharField(
+        db_column='FORM_TYPE',
+        max_length=250,
+        help_text='Name of the source filing form or schedule'
+    )
     error_no = models.CharField(db_column='ERROR_NO', max_length=250)
 
     class Meta:

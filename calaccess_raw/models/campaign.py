@@ -184,8 +184,8 @@ slate mailer organization'),
     form_type = models.CharField(
         max_length=4,
         db_column="FORM_TYPE",
-        blank=True,
-        choices=FORM_TYPE_CHOICES
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     genpurp_cb = models.CharField(
         max_length=1,
@@ -364,7 +364,8 @@ slate mailer organization)'),
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
-        max_length=4
+        max_length=4,
+        help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
     ENTITY_CODE_CHOICES = (
@@ -691,7 +692,8 @@ and major donor committee campaign statement)'),
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
-        db_column='FORM_TYPE'
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
     )
     from_date = models.DateTimeField(
         null=True,
@@ -927,7 +929,8 @@ short form)'),
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
-        db_column='FORM_TYPE'
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
     )
     juris_cd = models.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
@@ -1227,7 +1230,7 @@ Schedule A, monetary contributions received')
         choices=FORM_TYPE_CHOICES,
         max_length=9,
         db_column='FORM_TYPE',
-        help_text="Schedule Name/ID: Sched A, C, I, A-1, F401A"
+        help_text='Name of the source filing form or schedule'
     )
     int_rate = models.CharField(
         max_length=9,
@@ -1508,7 +1511,11 @@ original filing and 1 to 999 amendments.",
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
+    form_type = models.CharField(
+        db_column='FORM_TYPE',
+        max_length=4,
+        help_text='Name of the source filing form or schedule'
+    )
     tran_id = models.CharField(db_column='TRAN_ID', max_length=20)
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -1622,7 +1629,8 @@ Schedule H3'),
     form_type = models.CharField(
         max_length=2,
         db_column='FORM_TYPE',
-        choices=FORM_TYPE_CHOICES
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     intr_adr1 = models.CharField(
         max_length=55, db_column='INTR_ADR1', blank=True
@@ -1817,7 +1825,8 @@ Schedule D, candidates or measures supported or opposed with < $100 payment'),
         max_length=7,
         db_column='FORM_TYPE',
         blank=True,
-        choices=FORM_TYPE_CHOICES
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
     agent_naml = models.CharField(
@@ -2126,7 +2135,8 @@ Campaign Statement), Schedule B, expenditures made'),
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=6,
-        db_column='FORM_TYPE'
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
     )
     g_from_e_f = models.CharField(
         max_length=1,
@@ -2382,7 +2392,8 @@ short form)'),
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
-        choices=FORM_TYPE_CHOICES
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     elect_date = models.DateField(
         db_column='ELECT_DATE',
@@ -2473,6 +2484,7 @@ Schedule F, accrued expenses (unpaid bills)'),
         max_length=1,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -2578,6 +2590,7 @@ original filing and 1 to 999 amendments.",
     form_type = models.CharField(
         max_length=4, db_column='FORM_TYPE', blank=True,
         choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
     amount = models.DecimalField(
@@ -2686,8 +2699,10 @@ Part 1, late contributions received'),
 Part 2, late contributions made')
     )
     form_type = models.CharField(
-        max_length=6, db_column='FORM_TYPE', blank=True,
-        choices=FORM_TYPE_CHOICES
+        max_length=6,
+        db_column='FORM_TYPE',
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(
         max_length=20,
@@ -2846,7 +2861,8 @@ original filing and 1 to 999 amendments.",
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
-        choices=FORM_TYPE_CHOICES
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     filer_id = models.CharField(
         db_column='FILER_ID',
@@ -3049,7 +3065,8 @@ Part R: late payments received from')
         max_length=9,
         db_column='FORM_TYPE',
         blank=True,
-        choices=FORM_TYPE_CHOICES
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(
         max_length=20, db_column='TRAN_ID', blank=True

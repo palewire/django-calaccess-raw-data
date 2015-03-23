@@ -236,7 +236,8 @@ original filing and 1 to 999 amendments.",
     line_item = models.CharField(
         max_length=8,
         db_column='LINE_ITEM',
-        db_index=True
+        db_index=True,
+        help_text="Line number of the summary total on the source form"
     )
     REC_TYPE_CHOICES = (
         ('SMRY', 'Summary'),
@@ -246,6 +247,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        verbose_name='record type',
     )
     FORM_TYPE_CHOICES = (
         ('401A', ''),
@@ -289,6 +291,7 @@ original filing and 1 to 999 amendments.",
         db_column='FORM_TYPE',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule'
     )
     amount_a = models.DecimalField(
         decimal_places=2,
@@ -346,7 +349,11 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
+    form_type = models.CharField(
+        db_column='FORM_TYPE',
+        max_length=4,
+        help_text='Name of the source filing form or schedule'
+    )
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
@@ -440,7 +447,11 @@ original filing and 1 to 999 amendments.",
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=8)
+    form_type = models.CharField(
+        db_column='FORM_TYPE',
+        max_length=8,
+        help_text='Name of the source filing form or schedule'
+    )
     ref_no = models.CharField(db_column='REF_NO', max_length=20, blank=True)
     text4000 = models.CharField(
         db_column='TEXT4000',

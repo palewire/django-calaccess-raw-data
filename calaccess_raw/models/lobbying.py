@@ -139,7 +139,10 @@ original filing and 1 to 999 amendments.",
         max_length=200, db_column='FIRM_NAME', blank=True
     )
     form_type = models.CharField(
-        max_length=4, db_column='FORM_TYPE', blank=True
+        max_length=4,
+        db_column='FORM_TYPE',
+        blank=True,
+        help_text='Name of the source filing form or schedule'
     )
     ind_cb = models.CharField(max_length=1, db_column='IND_CB', blank=True)
     ind_class = models.CharField(
@@ -294,7 +297,10 @@ original filing and 1 to 999 amendments.",
         max_length=4, db_column='REC_TYPE', blank=True
     )
     form_type = models.CharField(
-        max_length=10, db_column='FORM_TYPE', blank=True
+        max_length=10,
+        db_column='FORM_TYPE',
+        blank=True,
+        help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(
         max_length=20, db_column='TRAN_ID', blank=True
@@ -428,7 +434,11 @@ original filing and 1 to 999 amendments.",
     firm_zip4 = models.CharField(
         max_length=10, db_column='FIRM_ZIP4', blank=True
     )
-    form_type = models.CharField(max_length=4, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        max_length=4,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
+    )
     from_date = models.DateField(db_column='FROM_DATE', null=True)
     lby_actvty = models.CharField(
         max_length=400, db_column='LBY_ACTVTY', blank=True
@@ -592,7 +602,10 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     form_type = models.CharField(
-        max_length=4, db_column='FORM_TYPE', blank=True
+        max_length=4,
+        db_column='FORM_TYPE',
+        blank=True,
+        help_text='Name of the source filing form or schedule'
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
@@ -633,7 +646,11 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     rec_type = models.CharField(max_length=8, db_column='REC_TYPE')
-    form_type = models.CharField(max_length=9, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        max_length=9,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
+    )
     exec_date = models.CharField(max_length=22, db_column='EXEC_DATE')
     from_date = models.CharField(max_length=22, db_column='FROM_DATE')
     thru_date = models.CharField(max_length=22, db_column='THRU_DATE')
@@ -784,8 +801,7 @@ always equal F690."
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
-        help_text="form type. this must equal form type in the \
-parent cover record (CVR)."
+        help_text='Name of the source filing form or schedule'
     )
     exec_date = models.DateField(
         db_column='EXEC_DATE',
@@ -882,7 +898,11 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    form_type = models.CharField(max_length=6, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        max_length=6,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -997,7 +1017,11 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    form_type = models.CharField(max_length=7, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        max_length=7,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -1108,7 +1132,10 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     form_type = models.CharField(
-        max_length=7, db_column='FORM_TYPE', blank=True
+        max_length=7,
+        db_column='FORM_TYPE',
+        blank=True,
+        help_text='Name of the source filing form or schedule'
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -1211,7 +1238,11 @@ original filing and 1 to 999 amendments.",
     firm_zip4 = models.CharField(
         max_length=10, db_column='FIRM_ZIP4', blank=True
     )
-    form_type = models.CharField(max_length=7, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        max_length=7,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -1306,7 +1337,11 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    form_type = models.CharField(max_length=7, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        max_length=7,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
     sub_adr1 = models.CharField(
@@ -1429,7 +1464,11 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    form_type = models.CharField(max_length=7, db_column='FORM_TYPE')
+    form_type = models.CharField(
+        max_length=7,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule'
+    )
     lby_actvty = models.CharField(
         max_length=200, db_column='LBY_ACTVTY', blank=True
     )
