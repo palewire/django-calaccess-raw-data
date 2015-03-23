@@ -2289,7 +2289,16 @@ class F495P2Cd(CalAccessBaseModel):
     amend_id = models.IntegerField(db_column='AMEND_ID')
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
-    form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
+    FORM_TYPE_CHOICES = (
+        ('F450', 'Form 450 (Recipient committee campaign statement, \
+short form)'),
+        ('F460', 'Form 460 (Recipient committee campaign statement)'),
+    )
+    form_type = models.CharField(
+        db_column='FORM_TYPE',
+        max_length=4,
+        choices=FORM_TYPE_CHOICES
+    )
     elect_date = models.DateField(
         db_column='ELECT_DATE',
         blank=True,
