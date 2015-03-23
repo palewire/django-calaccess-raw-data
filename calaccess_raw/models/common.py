@@ -298,21 +298,24 @@ original filing and 1 to 999 amendments.",
         null=True,
         max_digits=14,
         db_column='AMOUNT_A',
-        blank=True
+        blank=True,
+        help_text='Summary amount from column A'
     )
     amount_b = models.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
         db_column='AMOUNT_B',
-        blank=True
+        blank=True,
+        help_text='Summary amount from column B'
     )
     amount_c = models.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
         db_column='AMOUNT_C',
-        blank=True
+        blank=True,
+        help_text='Summary amount from column C'
     )
     elec_dt = models.DateField(
         null=True,
