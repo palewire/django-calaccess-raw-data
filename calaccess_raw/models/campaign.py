@@ -2375,7 +2375,7 @@ Schedule F, accrued expenses (unpaid bills)'),
     )
     form_type = models.CharField(
         max_length=1,
-        db_column='FORM_TYPE'
+        db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
