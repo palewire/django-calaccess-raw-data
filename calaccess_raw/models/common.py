@@ -318,9 +318,10 @@ original filing and 1 to 999 amendments.",
         help_text='Summary amount from column C'
     )
     elec_dt = models.DateField(
-        null=True,
         db_column='ELEC_DT',
-        blank=True
+        null=True,
+        blank=True,
+        verbose_name='election date'
     )
 
     class Meta:
