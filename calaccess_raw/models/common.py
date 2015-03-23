@@ -452,13 +452,13 @@ original filing and 1 to 999 amendments.",
     )
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
     FORM_TYPE_CHOICES = (
-        ('E530', 'Form 530 (Issue advocacy report)')
+        ('E530', 'Form 530 (Issue advocacy report)'),
     )
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
         db_index=True,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
     )
     ENTITY_CODE_CHOICES = (
@@ -537,7 +537,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class TextMemoCd(CalAccessBaseModel):
     """
-    This table contains all text memos attached to electronic filings.
+    Text memos attached to electronic filings
     """
     filing_id = models.IntegerField(
         db_column='FILING_ID',
@@ -552,7 +552,11 @@ class TextMemoCd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        db_index=True,
+        help_text='Record\'s line item number'
+    )
     REC_TYPE_CHOICES = (
         ('i', ''),
         ('MEMO', ''),
@@ -564,7 +568,8 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
-        choices=REC_TYPE_CHOICES
+        choices=REC_TYPE_CHOICES,
+        verbose_name='record type'
     )
     FORM_TYPE_CHOICES = (
         (' E', ''),
@@ -667,10 +672,19 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES
     )
-    ref_no = models.CharField(db_column='REF_NO', max_length=20, blank=True)
+    ref_no = models.CharField(
+        db_column='REF_NO',
+        max_length=20,
+        blank=True,
+        help_text='Links text memo to a specific record',
+        verbose_name='record number'
+    )
     text4000 = models.CharField(
         db_column='TEXT4000',
-        max_length=4000, blank=True
+        max_length=4000,
+        blank=True,
+        help_text='Contents of the text memo',
+        verbose_name='text'
     )
 
     class Meta:
