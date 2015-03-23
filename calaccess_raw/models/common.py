@@ -227,10 +227,14 @@ class SmryCd(CalAccessBaseModel):
         db_column='LINE_ITEM',
         db_index=True
     )
+    REC_TYPE_CHOICES = (
+        ('SMRY', 'Summary'),
+    )
     rec_type = models.CharField(
         max_length=4,
         db_column='REC_TYPE',
-        db_index=True
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
         ('401A', ''),
