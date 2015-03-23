@@ -90,7 +90,7 @@ class FilernameCd(CalAccessBaseModel):
     )
     naml = models.CharField(
         max_length=200, db_column='NAML',
-        help_text="Last name, (though sometimes the full name)"
+        help_text="Last name, sometimes full name"
     )
     namf = models.CharField(
         max_length=55, db_column='NAMF', blank=True,
@@ -304,13 +304,38 @@ original filing and 1 to 999 amendments.",
 Schedule A, payments received'),
         ('401B', 'Form 401 (Slate mailer organization campaign statement): \
 Schedule B, payments made'),
-        ('A', ''),
-        ('B1', ''),
-        ('C', ''),
-        ('D', ''),
-        ('E', ''),
-        ('F', ''),
+        ('401B-1', 'Form 401 (Slate mailer organization campaign statement): \
+Schedule B1, payments made by agent or independent contractor'),
+        ('A', 'Form 460 (Recipient committee campaign statement): \
+Schedule A, '),
+        ('B1', 'Form 460 (Recipient committee campaign statement): \
+Schedule B1, '),
+        ('B2', 'Form 460 (Recipient committee campaign statement): \
+Schedule B2, '),
+        ('B3', 'Form 460 (Recipient committee campaign statement): \
+Schedule B3, '),
+        ('C', 'Form 460 (Recipient committee campaign statement): \
+Schedule C, '),
+        ('D', 'Form 460 (Recipient committee campaign statement): \
+Schedule D, '),
+        ('E', 'Form 460 (Recipient committee campaign statement): \
+Schedule E, '),
+        ('F', 'Form 460 (Recipient committee campaign statement): \
+Schedule F, '),
+        ('G', 'Form 460 (Recipient committee campaign statement): \
+Schedule G, '),
+        ('H', 'Form 460 (Recipient committee campaign statement): \
+Schedule H, '),
+        ('H1', 'Form 460 (Recipient committee campaign statement): \
+Schedule H1, '),
+        ('H2', 'Form 460 (Recipient committee campaign statement): \
+Schedule H2, '),
+        ('H3', 'Form 460 (Recipient committee campaign statement): \
+Schedule H3, '),
+        ('I', 'Form 460 (Recipient committee campaign statement): \
+Schedule I, '),
         ('F401', 'Form 401 (Slate mailer organization campaign statement)'),
+
         ('F450', 'Form 450 (Recipient committee campaign statement, \
 short form)'),
         ('F460', 'Form 460 (Recipient committee campaign statement)'),
@@ -353,13 +378,8 @@ payments in connection with administrative testimony in ratemaking \
 proceedings before the California Public Utilities Commission'),
         ('F900', 'Form 900 (Form 900 (Public Employee\'s Retirement Board \
          Candidate Campaign Statement)'),
-        ('G', ''),
-        ('H', ''),
-        ('H1', ''),
-        ('H2', ''),
-        ('H3', ''),
-        ('I', ''),
-        ('S640', ''),
+        ('S640', 'Form 640 (Governmental agencies reporting ther payments to \
+influence legislative or administrative action attachment)'),
     )
     form_type = models.CharField(
         max_length=8,
