@@ -865,6 +865,7 @@ class LattCd(CalAccessBaseModel):
         return str(self.filing_id)
 
 
+@python_2_unicode_compatible
 class LexpCd(CalAccessBaseModel):
     """
     Lobbying Activity Expenditure Schedule information (Gifts)
@@ -960,7 +961,11 @@ class LexpCd(CalAccessBaseModel):
         verbose_name = 'LEXP_CD'
         verbose_name_plural = 'LEXP_CD'
 
+    def __str__(self):
+        return str(self.filing_id)
 
+
+@python_2_unicode_compatible
 class LccmCd(CalAccessBaseModel):
     """
     Lobbying Campaign Contributions reported on forms
@@ -1061,7 +1066,11 @@ class LccmCd(CalAccessBaseModel):
         verbose_name = 'LCCM_CD'
         verbose_name_plural = 'LCCM_CD'
 
+    def __str__(self):
+        return str(self.filing_id)
 
+
+@python_2_unicode_compatible
 class LothCd(CalAccessBaseModel):
     """
     Payment to other lobbying firms reported on form
@@ -1133,7 +1142,11 @@ class LothCd(CalAccessBaseModel):
         verbose_name = 'LOTH_CD'
         verbose_name_plural = 'LOTH_CD'
 
+    def __str__(self):
+        return str(self.filing_id)
 
+
+@python_2_unicode_compatible
 class LempCd(CalAccessBaseModel):
     """
     Lobbyist Employers/Subcontracted Clients data from
@@ -1210,6 +1223,9 @@ class LempCd(CalAccessBaseModel):
         db_table = 'LEMP_CD'
         verbose_name = 'LEMP_CD'
         verbose_name_plural = 'LEMP_CD'
+
+    def __str__(self):
+        return str(self.filing_id)
 
 
 @python_2_unicode_compatible

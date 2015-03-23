@@ -14,3 +14,4 @@ class CalAccessTest(TestCase):
     def test_model_str(self):
         for m in get_model_list():
             m().__str__()
+            self.assertNotEqual(m().__str__(), '%s object' % m.__name__)

@@ -138,6 +138,7 @@ class FilerAcronymsCd(CalAccessBaseModel):
         return self.acronym
 
 
+@python_2_unicode_compatible
 class FilerAddressCd(CalAccessBaseModel):
     """
     Links filers and addresses. This table maintains a history of when
@@ -167,6 +168,9 @@ class FilerAddressCd(CalAccessBaseModel):
         verbose_name = 'FILER_ADDRESS_CD'
         verbose_name_plural = 'FILER_ADDRESS_CD'
 
+    def __str__(self):
+        return str(self.filer_id)
+
 
 @python_2_unicode_compatible
 class FilerEthicsClassCd(CalAccessBaseModel):
@@ -187,6 +191,7 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
+@python_2_unicode_compatible
 class FilerInterestsCd(CalAccessBaseModel):
     """
     Links a filer to their interest codes.
@@ -202,7 +207,11 @@ class FilerInterestsCd(CalAccessBaseModel):
         verbose_name = 'FILER_INTERESTS_CD'
         verbose_name_plural = 'FILER_INTERESTS_CD'
 
+    def __str__(self):
+        return str(self.filer_id)
 
+
+@python_2_unicode_compatible
 class FilerLinksCd(CalAccessBaseModel):
     """
     This table links filers to other filers in the system by their type
@@ -229,6 +238,9 @@ class FilerLinksCd(CalAccessBaseModel):
         db_table = 'FILER_LINKS_CD'
         verbose_name = 'FILER_LINKS_CD'
         verbose_name_plural = 'FILER_LINKS_CD'
+
+    def __str__(self):
+        return str('%s-%s' % (self.filer_id_a, self.filer_id_b))
 
 
 @python_2_unicode_compatible
@@ -409,6 +421,7 @@ class FilerTypesCd(CalAccessBaseModel):
         return str(self.filer_type)
 
 
+@python_2_unicode_compatible
 class FilerXrefCd(CalAccessBaseModel):
     """
     This table maps legacy filer identification numbers to the systems filer
@@ -427,7 +440,11 @@ class FilerXrefCd(CalAccessBaseModel):
         verbose_name = 'FILER_XREF_CD'
         verbose_name_plural = 'FILER_XREF_CD'
 
+    def __str__(self):
+        return str(self.filer_id)
 
+
+@python_2_unicode_compatible
 class FilingPeriodCd(CalAccessBaseModel):
     period_id = models.IntegerField(
         db_column='PERIOD_ID',
@@ -468,7 +485,11 @@ class FilingPeriodCd(CalAccessBaseModel):
         verbose_name_plural = 'FILING_PERIOD_CD'
         ordering = ("-end_date",)
 
+    def __str__(self):
+        return str(self.period_id)
 
+
+@python_2_unicode_compatible
 class GroupTypesCd(CalAccessBaseModel):
     """
     This lookup table stores group type information.
@@ -487,7 +508,11 @@ class GroupTypesCd(CalAccessBaseModel):
         verbose_name = 'GROUP_TYPES_CD'
         verbose_name_plural = 'GROUP_TYPES_CD'
 
+    def __str__(self):
+        return str(self.grp_id)
 
+
+@python_2_unicode_compatible
 class HeaderCd(CalAccessBaseModel):
     """
     Lookup table used to report form 460 information in the AMS.
@@ -517,7 +542,11 @@ class HeaderCd(CalAccessBaseModel):
         verbose_name = 'HEADER_CD'
         verbose_name_plural = 'HEADER_CD'
 
+    def __str__(self):
+        return str(self.form_id)
 
+
+@python_2_unicode_compatible
 class HdrCd(CalAccessBaseModel):
     """
     Electronic filing record header data
@@ -558,7 +587,11 @@ class HdrCd(CalAccessBaseModel):
         verbose_name = 'HDR_CD'
         verbose_name_plural = 'HDR_CD'
 
+    def __str__(self):
+        return str(self.filing_id)
 
+
+@python_2_unicode_compatible
 class ImageLinksCd(CalAccessBaseModel):
     """
     This table links images to filers and accounts.
@@ -575,7 +608,11 @@ class ImageLinksCd(CalAccessBaseModel):
         verbose_name = 'IMAGE_LINKS_CD'
         verbose_name_plural = 'IMAGE_LINKS_CD'
 
+    def __str__(self):
+        return str(self.img_link_id)
 
+
+@python_2_unicode_compatible
 class LegislativeSessionsCd(CalAccessBaseModel):
     """
     Legislative session, begin and end dates look up table.
@@ -590,7 +627,11 @@ class LegislativeSessionsCd(CalAccessBaseModel):
         verbose_name = 'LEGISLATIVE_SESSIONS_CD'
         verbose_name_plural = 'LEGISLATIVE_SESSIONS_CD'
 
+    def __str__(self):
+        return str(self.session_id)
 
+
+@python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     change_no = models.IntegerField(db_column='CHANGE_NO')
@@ -640,7 +681,11 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         verbose_name = 'LOBBYING_CHG_LOG_CD'
         verbose_name_plural = 'LOBBYING_CHG_LOG_CD'
 
+    def __str__(self):
+        return str(self.filer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
     filer_id = models.IntegerField(db_column='FILER_ID')
     filing_period_start_dt = models.DateField(
@@ -668,7 +713,11 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_CONTRIBUTIONS1_CD'
         verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS1_CD'
 
+    def __str__(self):
+        return str(self.filer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
     Lobbyist contribution disclosure table. Temporary table used to generate
@@ -700,7 +749,11 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_CONTRIBUTIONS2_CD'
         verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS2_CD'
 
+    def __str__(self):
+        return str(self.filer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistContributions3Cd(CalAccessBaseModel):
     """
     Lobbyist contribution disclosure table.
@@ -731,7 +784,11 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_CONTRIBUTIONS3_CD'
         verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS3_CD'
 
+    def __str__(self):
+        return str(self.filer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistEmployer1Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -769,7 +826,11 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_EMPLOYER1_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER1_CD'
 
+    def __str__(self):
+        return str(self.employer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -807,7 +868,11 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_EMPLOYER2_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER2_CD'
 
+    def __str__(self):
+        return str(self.employer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistEmployer3Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -845,7 +910,11 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_EMPLOYER3_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER3_CD'
 
+    def __str__(self):
+        return str(self.employer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -864,7 +933,11 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
 
+    def __str__(self):
+        return str(self.employer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
@@ -880,7 +953,11 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
 
+    def __str__(self):
+        return str(self.employer_id)
 
+
+@python_2_unicode_compatible
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     employer_id = models.IntegerField(db_column='EMPLOYER_ID')
@@ -899,7 +976,11 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_EMP_LOBBYIST1_CD'
         verbose_name_plural = 'LOBBYIST_EMP_LOBBYIST1_CD'
 
+    def __str__(self):
+        return str(self.lobbyist_id)
 
+
+@python_2_unicode_compatible
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -921,7 +1002,11 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_EMP_LOBBYIST2_CD'
         verbose_name_plural = 'LOBBYIST_EMP_LOBBYIST2_CD'
 
+    def __str__(self):
+        return str(self.lobbyist_id)
 
+
+@python_2_unicode_compatible
 class LobbyistFirm1Cd(CalAccessBaseModel):
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
@@ -950,7 +1035,11 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_FIRM1_CD'
         verbose_name_plural = 'LOBBYIST_FIRM1_CD'
 
+    def __str__(self):
+        return str(self.firm_id)
 
+
+@python_2_unicode_compatible
 class LobbyistFirm2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
@@ -982,7 +1071,11 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_FIRM2_CD'
         verbose_name_plural = 'LOBBYIST_FIRM2_CD'
 
+    def __str__(self):
+        return str(self.firm_id)
 
+
+@python_2_unicode_compatible
 class LobbyistFirm3Cd(CalAccessBaseModel):
     firm_id = models.IntegerField(db_column='FIRM_ID')
     session_id = models.IntegerField(db_column='SESSION_ID')
@@ -1011,7 +1104,11 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_FIRM3_CD'
         verbose_name_plural = 'LOBBYIST_FIRM3_CD'
 
+    def __str__(self):
+        return str(self.firm_id)
 
+
+@python_2_unicode_compatible
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     '''
     This is an undocumented model (Ask Matt)
@@ -1038,7 +1135,11 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_FIRM_EMPLOYER1_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER1_CD'
 
+    def __str__(self):
+        return str(self.firm_id)
 
+
+@python_2_unicode_compatible
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     """
     This is an undocumented model
@@ -1065,7 +1166,11 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_FIRM_EMPLOYER2_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER2_CD'
 
+    def __str__(self):
+        return str(self.filing_id)
 
+
+@python_2_unicode_compatible
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     """
     It's an undocumented model.
@@ -1087,7 +1192,11 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_FIRM_LOBBYIST1_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST1_CD'
 
+    def __str__(self):
+        return str(self.lobbyist_id)
 
+
+@python_2_unicode_compatible
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     lobbyist_id = models.IntegerField(db_column='LOBBYIST_ID')
     firm_id = models.IntegerField(db_column='FIRM_ID')
@@ -1106,7 +1215,11 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
         verbose_name = 'LOBBYIST_FIRM_LOBBYIST2_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST2_CD'
 
+    def __str__(self):
+        return str(self.lobbyist_id)
 
+
+@python_2_unicode_compatible
 class LookupCode(CalAccessBaseModel):
     code_type = models.IntegerField(db_column='CODE_TYPE')
     code_id = models.IntegerField(db_column='CODE_ID')
@@ -1122,7 +1235,11 @@ class LookupCode(CalAccessBaseModel):
         verbose_name = 'LOOKUP_CODES_CD'
         verbose_name_plural = 'LOOKUP_CODES_CD'
 
+    def __str__(self):
+        return str(self.code_id)
 
+
+@python_2_unicode_compatible
 class NamesCd(CalAccessBaseModel):
     namid = models.IntegerField(db_column='NAMID')
     naml = models.CharField(max_length=200, db_column='NAML')
@@ -1143,7 +1260,11 @@ class NamesCd(CalAccessBaseModel):
         verbose_name = 'NAMES_CD'
         verbose_name_plural = 'NAMES_CD'
 
+    def __str__(self):
+        return str(self.namid)
 
+
+@python_2_unicode_compatible
 class ReceivedFilingsCd(CalAccessBaseModel):
     """
     This is undocumented. J M needs to describe this table.
@@ -1169,6 +1290,9 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         db_table = 'RECEIVED_FILINGS_CD'
         verbose_name = 'RECEIVED_FILINGS_CD'
         verbose_name_plural = 'RECEIVED_FILINGS_CD'
+
+    def __str__(self):
+        return str(self.filing_id)
 
 
 @python_2_unicode_compatible
