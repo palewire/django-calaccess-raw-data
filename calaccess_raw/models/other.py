@@ -551,7 +551,13 @@ class HdrCd(CalAccessBaseModel):
     """
     Electronic filing record header data
     """
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     cal_ver = models.CharField(max_length=4, db_column='CAL_VER', blank=True)
     ef_type = models.CharField(max_length=3, db_column='EF_TYPE', blank=True)
     filing_id = models.IntegerField(db_column='FILING_ID')

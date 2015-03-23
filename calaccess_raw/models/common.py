@@ -212,7 +212,7 @@ class FilingsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class SmryCd(CalAccessBaseModel):
     """
-    This table contains all text memos attached to electronic filings.
+    Summary totals from filings.
     """
     filing_id = models.IntegerField(
         db_column='FILING_ID',
@@ -220,7 +220,10 @@ class SmryCd(CalAccessBaseModel):
     )
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
-        db_index=True
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
     )
     line_item = models.CharField(
         max_length=8,
@@ -322,7 +325,13 @@ class CvrE530Cd(CalAccessBaseModel):
     This table method is undocumented in the print docs.
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
     ENTITY_CODE_CHOICES = (
@@ -404,7 +413,13 @@ class TextMemoCd(CalAccessBaseModel):
     This table contains all text memos attached to electronic filings.
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=8)

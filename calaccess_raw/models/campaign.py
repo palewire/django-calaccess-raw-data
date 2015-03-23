@@ -29,8 +29,11 @@ class CvrSoCd(CalAccessBaseModel):
         help_text="Organization's level of activity"
     )
     amend_id = models.IntegerField(
-        db_column="AMEND_ID",
-        verbose_name="Amendment ID"
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
     )
     bank_adr1 = models.CharField(
         max_length=55,
@@ -338,7 +341,13 @@ class Cvr2SoCd(CalAccessBaseModel):
     by a slate-mailer organization or recipient committee.
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     FORM_TYPE_CHOICES = (
@@ -471,7 +480,13 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         F497 -- Late Contribution Report
         F498 -- Slate Mailer Late Payment Report
     """
-    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     amendexp_1 = models.CharField(
         max_length=100, db_column='AMENDEXP_1', blank=True
     )
@@ -801,7 +816,13 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     Record used to carry additional names for the campaign
     disclosure forms below.
     """
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     bal_juris = models.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
@@ -963,8 +984,9 @@ class RcptCd(CalAccessBaseModel):
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
-        help_text="Amendment Identification number. A number of 0 is an \
-original filing and 1 to 999 amendments."
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
     )
     amount = models.DecimalField(
         decimal_places=2,
@@ -1455,7 +1477,13 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         F470
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     form_type = models.CharField(db_column='FORM_TYPE', max_length=4)
@@ -1517,7 +1545,13 @@ class LoanCd(CalAccessBaseModel):
     """
     Loans received and made.
     """
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     bakref_tid = models.CharField(
         max_length=20, db_column='BAKREF_TID', blank=True
     )
@@ -1724,7 +1758,13 @@ class S401Cd(CalAccessBaseModel):
     disclosure schedule (F401B, F401B-1, F401C, F401D) information.
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
         max_length=4,
@@ -1889,8 +1929,9 @@ class ExpnCd(CalAccessBaseModel):
     amend_id = models.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
-        help_text="Amendment Identification number. \
-        A number of 0 is an original filing and 1 to 999 amendments."
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
     )
     amount = models.DecimalField(
         decimal_places=2,
@@ -2286,7 +2327,13 @@ class F495P2Cd(CalAccessBaseModel):
     its last report.
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     FORM_TYPE_CHOICES = (
@@ -2323,7 +2370,13 @@ class DebtCd(CalAccessBaseModel):
     Form 460 (Recipient Committee Campaign Statement)
     Schedule (F) Accrued Expenses (Unpaid Bills) records
     """
-    amend_id = models.IntegerField(db_column='AMEND_ID', db_index=True)
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     amt_incur = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMT_INCUR'
     )
@@ -2460,7 +2513,13 @@ class S496Cd(CalAccessBaseModel):
     Form 496 Late Independent Expenditures
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
         max_length=4, db_column='REC_TYPE', blank=True
@@ -2510,7 +2569,13 @@ class SpltCd(CalAccessBaseModel):
         -- F450P5
         -- F460 (A-B1-B2-C-D-H)
     """
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     elec_amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
     )
@@ -2543,7 +2608,13 @@ class S497Cd(CalAccessBaseModel):
     Form 497 Late Contributions Received/Made
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
         max_length=4,
@@ -2697,7 +2768,13 @@ class F501502Cd(CalAccessBaseModel):
         -- F502
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
     FORM_TYPE_CHOICES = (
         ('F501', 'Form 501 (Candidate intention statement)'),
@@ -2881,7 +2958,13 @@ class S498Cd(CalAccessBaseModel):
     Form 498 Slate Mailer Late Independent Expenditures Made
     """
     filing_id = models.IntegerField(db_column='FILING_ID')
-    amend_id = models.IntegerField(db_column='AMEND_ID')
+    amend_id = models.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments",
+        verbose_name="amendment ID"
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
         max_length=4,
