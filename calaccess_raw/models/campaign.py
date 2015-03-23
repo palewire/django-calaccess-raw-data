@@ -2369,7 +2369,15 @@ class DebtCd(CalAccessBaseModel):
         max_length=400, db_column='EXPN_DSCR', blank=True
     )
     filing_id = models.IntegerField(db_column='FILING_ID', db_index=True)
-    form_type = models.CharField(max_length=1, db_column='FORM_TYPE')
+    FORM_TYPE_CHOICES = (
+       ('F', 'Form 460 (Recipient committee campaign statement): \
+Schedule F, accrued expenses (unpaid bills)'),
+    )
+    form_type = models.CharField(
+        max_length=1,
+        db_column='FORM_TYPE'
+        choices=FORM_TYPE_CHOICES,
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
