@@ -303,7 +303,8 @@ committee campaign statement)'),
         max_digits=14,
         db_column='AMOUNT_A',
         blank=True,
-        help_text='Summary amount from column A'
+        help_text='Summary amount from column A',
+        verbose_name='amount A'
     )
     amount_b = models.DecimalField(
         decimal_places=2,
@@ -311,7 +312,8 @@ committee campaign statement)'),
         max_digits=14,
         db_column='AMOUNT_B',
         blank=True,
-        help_text='Summary amount from column B'
+        help_text='Summary amount from column B',
+        verbose_name='amount B'
     )
     amount_c = models.DecimalField(
         decimal_places=2,
@@ -319,7 +321,8 @@ committee campaign statement)'),
         max_digits=14,
         db_column='AMOUNT_C',
         blank=True,
-        help_text='Summary amount from column C'
+        help_text='Summary amount from column C',
+        verbose_name='amount C'
     )
     elec_dt = models.DateField(
         db_column='ELEC_DT',
