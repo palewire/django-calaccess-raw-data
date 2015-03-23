@@ -2551,8 +2551,10 @@ class S497Cd(CalAccessBaseModel):
         blank=True
     )
     FORM_TYPE_CHOICES = (
-        ('F497P1', 'F497P1 (Late Contributions Received)'),
-        ('F497P2', 'F497P2 (Late Contributions Made)')
+        ('F497P1', 'Form 497 (Late contribution report): \
+Part 1, late contributions received'),
+        ('F497P2', 'Form 497 (Late contribution report): \
+Part 2, late contributions made')
     )
     form_type = models.CharField(
         max_length=6, db_column='FORM_TYPE', blank=True,
