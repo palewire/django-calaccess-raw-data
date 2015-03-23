@@ -204,7 +204,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_column='FORM_ID'
         db_index=True,
         verbose_name='form type',
-        choices=FORM_ID_CHOICES
+        choices=FORM_ID_CHOICES,
     )
     filing_sequence = models.IntegerField(
         db_column='FILING_SEQUENCE',
@@ -217,10 +217,21 @@ class FilerFilingsCd(CalAccessBaseModel):
         help_text="Date the filing was entered into the system",
         null=True
     )
+    STATEMENT_TYPE_CHOICES = (
+        ('0', ''),
+        ('10001', ''),
+        ('10002', ''),
+        ('10003', ''),
+        ('10004', ''),
+        ('10005', ''),
+        ('10006', ''),
+        ('10007', ''),
+    )
     stmnt_type = models.IntegerField(
         db_column='STMNT_TYPE',
-        help_text="Type of statement. (Logged paper, electronic or KDE \
-filing"
+        verbose_name="statement type"
+        db_index=True,
+        choices=STATEMENT_TYPE_CHOICES,
     )
     stmnt_status = models.IntegerField(
         db_column='STMNT_STATUS',
