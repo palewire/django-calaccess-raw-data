@@ -11,7 +11,7 @@ from calaccess_raw.management.commands import CalAccessCommand
 
 class Command(CalAccessCommand, LabelCommand):
     help = 'Clean a source CAL-ACCESS file and reformat it as a CSV'
-    args = '<file path>'
+    args = '<file name>'
 
     def handle_label(self, label, **options):
         # Set options
