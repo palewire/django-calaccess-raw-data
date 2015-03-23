@@ -267,21 +267,42 @@ short form)'),
         ('F461', 'Form 461 (Independent expenditure and major donor \
 committee campaign statement)'),
         ('F465', 'Form 465 ()'),
-        ('F625', 'Form 625 ()'),
-        ('F625P2', 'Form 625 ()'),
-        ('F625P3A', 'Form 625 ()'),
-        ('F625P3B', 'Form 625 ()'),
-        ('F635', 'Form 635 ()'),
-        ('F635P3A', 'Form 635 ()'),
-        ('F635P3B', 'Form 635 ()'),
-        ('F635P3C', 'Form 635 ()'),
-        ('F635P3D', 'Form 635 ()'),
-        ('F635P3E', 'Form 635 ()'),
-        ('F645', 'Form 645 ()'),
-        ('F645P2A', 'Form 645 ()'),
-        ('F645P2B', 'Form 645 ()'),
-        ('F645P2C', 'Form 645 ()'),
-        ('F900', 'Form 900 ()'),
+        ('F625', 'Form 625 (Report of lobbying firm)'),
+        ('F625P2', 'Form 625 (Report of lobbying firm): \
+Part 2, payments received in connection with lobbying activity'),
+        ('F625P3A', 'Form 625 (Report of lobbying firm): \
+Part 3A, payments for activity expenses made in connection with \
+lobbying activities'),
+        ('F625P3B', 'Form 625 (Report of lobbying firm): \
+Part 3B, payments to other lobbying firms made in connection with \
+lobbying activities'),
+        ('F635', 'Form 635 (Report of lobbyist employer and lobbying \
+coalition)'),
+        ('F635P3A', 'Form 635 (Report of lobbyist employer and lobbying \
+coalition): Part 3A, payments in in-house employee lobbyists'),
+        ('F635P3B', 'Form 635 (Report of lobbyist employer and lobbying \
+coalition): Part 3B, payments to lobbying firms'),
+        ('F635P3C', 'Form 635 (Report of lobbyist employer and lobbying \
+coalition): Part 3C, activity expenses'),
+        ('F635P3D', 'Form 635 (Report of lobbyist employer and lobbying \
+coalition): Part 3D, other payments to influence legislative or \
+administrative action'),
+        ('F635P3E', 'Form 635 (Report of lobbyist employer and lobbying \
+coalition): Part 3E, payments in connection with administrative testimony \
+in ratemaking proceedings before the California Public Utilities Commission'),
+        ('F645', 'Form 645 (Report of person spending $5,000 or more to \
+influence legislative or administrative action)'),
+        ('F645P2A', 'Form 645 (Report of person spending $5,000 or more to \
+influence legislative or administrative action): Part 2A, activity expenses'),
+        ('F645P2B', 'Form 645 (Report of person spending $5,000 or more to \
+influence legislative or administrative action): Part 2B, \
+other payments to influence legislative or administrative action'),
+        ('F645P2C', 'Form 645 (Report of person spending $5,000 or more to \
+influence legislative or administrative action): Part 2C, \
+payments in connection with administrative testimony in ratemaking \
+proceedings before the California Public Utilities Commission'),
+        ('F900', 'Form 900 (Form 900 (Public Employee\'s Retirement Board \
+         Candidate Campaign Statement)'),
         ('G', ''),
         ('H', ''),
         ('H1', ''),
