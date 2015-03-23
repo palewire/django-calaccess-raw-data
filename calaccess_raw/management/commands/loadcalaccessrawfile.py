@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from csvkit import CSVKitReader
 from django.db import connection
 from django.conf import settings
