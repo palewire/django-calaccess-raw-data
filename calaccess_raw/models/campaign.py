@@ -2889,8 +2889,10 @@ class S498Cd(CalAccessBaseModel):
         blank=True
     )
     FORM_TYPE_CHOICES = (
-        ('F498-A', 'F498-A (Late Payments Attributed To:)'),
-        ('F498-R', 'F498-R (Late Payments Received From:)')
+        ('F498-A', 'Form 498 (Slate mailer late payment report): \
+Part A: late payments attributed to'),
+        ('F498-R', 'Form 498 (Slate mailer late payment report): \
+Part R: late payments received from')
     )
     form_type = models.CharField(
         max_length=9,
