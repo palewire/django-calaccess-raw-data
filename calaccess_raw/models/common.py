@@ -318,12 +318,12 @@ class FilingsCd(CalAccessBaseModel):
         help_text="Unique filing identificiation number"
     )
     FILING_TYPE_CHOICES = (
-        ('22001', 'Electronic'),
-        ('22002', 'Key data entry'),
-        ('22003', 'Historical lobby'),
-        ('22004', 'Historical campaign'),
-        ('22005', 'AMS'),
-        ('22006', 'Cal Online'),
+        (22001, 'Electronic'),
+        (22002, 'Key data entry'),
+        (22003, 'Historical lobby'),
+        (22004, 'Historical campaign'),
+        (22005, 'AMS'),
+        (22006, 'Cal Online'),
     )
     filing_type = models.IntegerField(
         db_column='FILING_TYPE',
