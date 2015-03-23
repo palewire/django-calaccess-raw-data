@@ -88,10 +88,38 @@ class EfsFilingLogCd(CalAccessBaseModel):
     filingstatus = models.IntegerField(db_column='FILINGSTATUS')
     vendor = models.CharField(db_column='VENDOR', max_length=250)
     filer_id = models.CharField(db_column='FILER_ID', max_length=250)
+    FORM_TYPE_CHOICES = (
+        ('BADFORMAT 253', ''),
+        ('F400', ''),
+        ('F401', ''),
+        ('F402', ''),
+        ('F410', ''),
+        ('F425', ''),
+        ('F450', ''),
+        ('F460', ''),
+        ('F461', ''),
+        ('F465', ''),
+        ('F496', ''),
+        ('F497', ''),
+        ('F498', ''),
+        ('F601', ''),
+        ('F602', ''),
+        ('F603', ''),
+        ('F604', ''),
+        ('F606', ''),
+        ('F607', ''),
+        ('F615', ''),
+        ('F625', ''),
+        ('F635', ''),
+        ('F645', ''),
+        ('form', ''),
+    )
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=250,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     error_no = models.CharField(db_column='ERROR_NO', max_length=250)
 

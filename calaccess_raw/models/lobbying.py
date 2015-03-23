@@ -138,11 +138,20 @@ original filing and 1 to 999 amendments.",
     firm_name = models.CharField(
         max_length=200, db_column='FIRM_NAME', blank=True
     )
+    FORM_TYPE_CHOICES = (
+        ('F601', ''),
+        ('F602', ''),
+        ('F603', ''),
+        ('F604', ''),
+        ('F606', ''),
+        ('F607', ''),
+    )
     form_type = models.CharField(
         max_length=4,
         db_column='FORM_TYPE',
-        blank=True,
-        help_text='Name of the source filing form or schedule'
+        db_index=True,
+        help_text='Name of the source filing form or schedule',
+        choices=FORM_TYPE_CHOICES
     )
     ind_cb = models.CharField(max_length=1, db_column='IND_CB', blank=True)
     ind_class = models.CharField(
@@ -296,11 +305,17 @@ original filing and 1 to 999 amendments.",
     rec_type = models.CharField(
         max_length=4, db_column='REC_TYPE', blank=True
     )
+    FORM_TYPE_CHOICES = (
+        ('F601', ''),
+        ('F602', ''),
+        ('F603', ''),
+    )
     form_type = models.CharField(
         max_length=10,
         db_column='FORM_TYPE',
-        blank=True,
-        help_text='Name of the source filing form or schedule'
+        db_index=True,
+        help_text='Name of the source filing form or schedule',
+        choices=FORM_TYPE_CHOICES,
     )
     tran_id = models.CharField(
         max_length=20, db_column='TRAN_ID', blank=True
@@ -434,10 +449,18 @@ original filing and 1 to 999 amendments.",
     firm_zip4 = models.CharField(
         max_length=10, db_column='FIRM_ZIP4', blank=True
     )
+    FORM_TYPE_CHOICES = (
+        ('F615', ''),
+        ('F625', ''),
+        ('F635', ''),
+        ('F645', ''),
+    )
     form_type = models.CharField(
         max_length=4,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     from_date = models.DateField(db_column='FROM_DATE', null=True)
     lby_actvty = models.CharField(
@@ -601,11 +624,16 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F625', ''),
+        ('F635', ''),
+    )
     form_type = models.CharField(
         max_length=4,
         db_column='FORM_TYPE',
-        blank=True,
-        help_text='Name of the source filing form or schedule'
+        db_index=True,
+        help_text='Name of the source filing form or schedule',
+        choices=FORM_TYPE_CHOICES,
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
@@ -646,10 +674,16 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     rec_type = models.CharField(max_length=8, db_column='REC_TYPE')
+    FORM_TYPE_CHOICES = (
+        ('F601', ''),
+        ('F603', ''),
+    )
     form_type = models.CharField(
         max_length=9,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     exec_date = models.CharField(max_length=22, db_column='EXEC_DATE')
     from_date = models.CharField(max_length=22, db_column='FROM_DATE')
@@ -798,10 +832,18 @@ original filing and 1 to 999 amendments.",
         help_text="record type value: for this record this will \
 always equal F690."
     )
+    FORM_TYPE_CHOICES = (
+        ('F615', ''),
+        ('F625', ''),
+        ('F635', ''),
+        ('F645', ''),
+    )
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     exec_date = models.DateField(
         db_column='EXEC_DATE',
@@ -898,10 +940,17 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    FORM_TYPE_CHOICES = (
+        ('S630', ''),
+        ('S635-C', ''),
+        ('S640', ''),
+    )
     form_type = models.CharField(
         max_length=6,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -1017,10 +1066,18 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F615P1', ''),
+        ('F625P3A', ''),
+        ('F635P3C', ''),
+        ('F645P2A', ''),
+    )
     form_type = models.CharField(
         max_length=7,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -1131,11 +1188,18 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F615P2', ''),
+        ('F625P4B', ''),
+        ('F635P4B', ''),
+        ('F645P3B', ''),
+    )
     form_type = models.CharField(
         max_length=7,
         db_column='FORM_TYPE',
-        blank=True,
-        help_text='Name of the source filing form or schedule'
+        db_index=True,
+        help_text='Name of the source filing form or schedule',
+        choices=FORM_TYPE_CHOICES,
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -1238,10 +1302,15 @@ original filing and 1 to 999 amendments.",
     firm_zip4 = models.CharField(
         max_length=10, db_column='FIRM_ZIP4', blank=True
     )
+    FORM_TYPE_CHOICES = (
+        ('F625P3B', ''),
+    )
     form_type = models.CharField(
         max_length=7,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
@@ -1337,10 +1406,16 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F601P2A', ''),
+        ('F601P2B', ''),
+    )
     form_type = models.CharField(
         max_length=7,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
@@ -1464,10 +1539,16 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F625P2', ''),
+        ('F635P3B', ''),
+    )
     form_type = models.CharField(
         max_length=7,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     lby_actvty = models.CharField(
         max_length=200, db_column='LBY_ACTVTY', blank=True

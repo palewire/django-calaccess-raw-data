@@ -1511,10 +1511,25 @@ original filing and 1 to 999 amendments.",
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
+    FORM_TYPE_CHOICES = (
+        ('F400', ''),
+        ('F401', ''),
+        ('F402', ''),
+        ('F410', ''),
+        ('F425', ''),
+        ('F450', ''),
+        ('F460', ''),
+        ('F461', ''),
+        ('F465', ''),
+        ('F511', ''),
+        ('F900', ''),
+    )
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
     )
     tran_id = models.CharField(db_column='TRAN_ID', max_length=20)
     ENTITY_CODE_CHOICES = (
@@ -2651,8 +2666,20 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
+    PFORM_TYPE_CHOICES = (
+        ('A', ''),
+        ('B1', ''),
+        ('B2', ''),
+        ('C', ''),
+        ('D', ''),
+        ('F450P5', ''),
+        ('H', ''),
+    )
     pform_type = models.CharField(
-        max_length=7, db_column='PFORM_TYPE', blank=True
+        max_length=7,
+        db_column='PFORM_TYPE',
+        db_index=True,
+        choices=PFORM_TYPE_CHOICES,
     )
     ptran_id = models.CharField(
         max_length=32, db_column='PTRAN_ID', blank=True
