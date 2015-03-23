@@ -2033,17 +2033,21 @@ class ExpnCd(CalAccessBaseModel):
         help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = (
-        ('D', 'Form 460 (Recipient Committee Campaign Statement): Schedule D'),
-        ('E', 'Form 460 (Recipient Committee Campaign Statement): Schedule E'),
-        ('G', 'Form 460 (Recipient Committee Campaign Statement): Schedule G'),
+        ('D', 'Form 460 (Recipient committee campaign statement): \
+Schedule D, summary of expenditure supporting/opposing other candidates, \
+measures and committees'),
+        ('E', 'Form 460 (Recipient committee campaign statement): \
+Schedule E, payments made'),
+        ('G', 'Form 460 (Recipient committee campaign statement): \
+Schedule G, payments made by agent of independent contractor'),
         ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
-            Short Form): Part 5'),
-        ('F461P5', 'Form 461 (Independent Expenditure and Major Donor \
-            Committee Campaign Statement): Part 5'),
-        ('F465P3', 'Form 465 (Supplemental Independent Expenditure \
-            Report): Part 3'),
+Short Form): Part 5, payments made'),
+        ('F461P5', 'Form 461 (Independent expenditure and major donor \
+committee campaign statement): Part 5, contributions and expenditures made'),
+        ('F465P3', 'Form 465 (Supplemental independent expenditure \
+report): Part 3, independent expenditures made'),
         ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
-            Campaign Statement)'),
+Campaign Statement), Schedule B, expenditures made'),
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
