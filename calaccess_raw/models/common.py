@@ -218,14 +218,14 @@ class FilerFilingsCd(CalAccessBaseModel):
         null=True
     )
     STATEMENT_TYPE_CHOICES = (
-        ('0', ''),
-        ('10001', ''),
-        ('10002', ''),
-        ('10003', ''),
-        ('10004', ''),
-        ('10005', ''),
-        ('10006', ''),
-        ('10007', ''),
+        (0, ''),
+        (10001, ''),
+        (10002, ''),
+        (10003, ''),
+        (10004, ''),
+        (10005, ''),
+        (10006, ''),
+        (10007, ''),
     )
     stmnt_type = models.IntegerField(
         db_column='STMNT_TYPE',
@@ -234,10 +234,10 @@ class FilerFilingsCd(CalAccessBaseModel):
         choices=STATEMENT_TYPE_CHOICES,
     )
     STATEMENT_STATUS_CHOICES = (
-        ('0', ''),
-        ('11001', ''),
-        ('11002', ''),
-        ('11003', ''),
+        (0, ''),
+        (11001, ''),
+        (11002, ''),
+        (11003, ''),
     )
     stmnt_status = models.IntegerField(
         db_column='STMNT_STATUS',
@@ -285,8 +285,8 @@ laundering or other special condition."
     )
     FILING_TYPE_CHOICES = (
         (0, '0 (Unknown)'),
-        ('22001', 'Electronic'),
-        ('22006', 'Cal Online'),
+        (22001, 'Electronic'),
+        (22006, 'Cal Online'),
     )
     filing_type = models.IntegerField(
         db_column='FILING_TYPE',
