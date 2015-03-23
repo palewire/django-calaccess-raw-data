@@ -451,10 +451,15 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
+    FORM_TYPE_CHOICES = (
+        ('E530', 'Form 530 (Issue advocacy report)')
+    )
     form_type = models.CharField(
         db_column='FORM_TYPE',
         max_length=4,
+        db_index=True,
         help_text='Name of the source filing form or schedule'
+        choices=FORM_TYPE_CHOICES,
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
