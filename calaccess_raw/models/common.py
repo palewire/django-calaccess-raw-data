@@ -165,13 +165,8 @@ laundering or other special condition."
         help_text="When SOS recieved the filing",
     )
     FILING_TYPE_CHOICES = (
-        (None, 'None'),
-        ('22000', 'Filing type'),
+        (0, '0 (Unknown)'),
         ('22001', 'Electronic'),
-        ('22002', 'Key data entry'),
-        ('22003', 'Historical lobby'),
-        ('22004', 'Historical campaign'),
-        ('22005', 'AMS'),
         ('22006', 'Cal Online'),
     )
     filing_type = models.IntegerField(
@@ -203,7 +198,19 @@ class FilingsCd(CalAccessBaseModel):
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    filing_type = models.IntegerField(db_column='FILING_TYPE')
+    FILING_TYPE_CHOICES = (
+        ('22001', 'Electronic'),
+        ('22002', 'Key data entry'),
+        ('22003', 'Historical lobby'),
+        ('22004', 'Historical campaign'),
+        ('22005', 'AMS'),
+        ('22006', 'Cal Online'),
+    )
+    filing_type = models.IntegerField(
+        db_column='FILING_TYPE',
+        db_index=True,
+        choices=FILING_TYPE_CHOICES
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
