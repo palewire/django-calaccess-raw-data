@@ -24,9 +24,9 @@ class CalAccessTest(TestCase):
             m().__str__()
             self.assertNotEqual(m().__str__(), '%s object' % m.__name__)
 
-    def test_form_type_choices(self):
+    def _test_choices(self, field_name):
         """
-        Verify that proper choices appear for all form_type fields.
+        Verify that proper choices appear for the provided field.
         """
         # Loop through the models
         for m in get_model_list():
@@ -34,23 +34,47 @@ class CalAccessTest(TestCase):
             # And then through the fields
             for f in m._meta.fields:
 
-                # Only test against the ones called form_type
-                if not f.name == 'form_type':
+                # Only test against the provided field name
+                if not f.name == field_name:
                     continue
 
                 # Pull out all the choices in that field
                 slug_list = []
+                if not f.choices:
+                    warnings.warn("%s %s has no choices defined" % (
+                        m.__name__,
+                        field_name
+                    ))
                 for slug, name in f.choices:
                     # Make sure that each has a definition
                     # self.assertIsNot(name, '')
                     if not name:
-                        warnings.warn("%s form_type '%s' undefined" % (
+                        warnings.warn("%s %s '%s' undefined" % (
                             m.__name__,
+                            field_name,
                             slug,
                         ))
                     slug_list.append(slug)
 
                 # The query the database and make sure everything in
                 # there has a matching definition in the choices
-                for v in m.objects.values("form_type").distinct():
+                for v in m.objects.values(field_name).distinct():
                     self.assertIn(v, slug_list)
+
+    def test_form_type_choices(self):
+        self._test_choices('form_type')
+
+    def test_form_id_choices(self):
+        self._test_choices('form_id')
+
+    def test_entity_code_choices(self):
+        self._test_choices('entity_code')
+
+    def test_filing_type_choices(self):
+        self._test_choices('filing_type')
+
+    def test_activity_type_choices(self):
+        self._test_choices('filing_type')
+
+    def test_status_choices(self):
+        self._test_choices('status')
