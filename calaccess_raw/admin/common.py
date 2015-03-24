@@ -4,6 +4,7 @@ from calaccess_raw import models
 from .base import BaseAdmin
 
 
+@admin.register(models.FilernameCd)
 class FilernameCdAdmin(BaseAdmin):
     list_display = (
         "id",
@@ -25,6 +26,7 @@ class FilernameCdAdmin(BaseAdmin):
     date_hierarchy = "effect_dt"
 
 
+@admin.register(models.FilerFilingsCd)
 class FilerFilingsCdAdmin(BaseAdmin):
     search_fields = ("filing_id", "filer_id")
     list_display = (
@@ -33,10 +35,12 @@ class FilerFilingsCdAdmin(BaseAdmin):
     )
 
 
+@admin.register(models.FilingsCd)
 class FilingsCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.SmryCd)
 class SmryCdAdmin(BaseAdmin):
     list_display = (
         'filing_id',
@@ -51,17 +55,11 @@ class SmryCdAdmin(BaseAdmin):
     search_fields = ('filing_id', 'form_type', 'line_item')
 
 
+@admin.register(models.TextMemoCd)
 class TextMemoCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.CvrE530Cd)
 class CvrE530CdAdmin(BaseAdmin):
     pass
-
-
-admin.site.register(models.FilernameCd, FilernameCdAdmin)
-admin.site.register(models.FilerFilingsCd, FilerFilingsCdAdmin)
-admin.site.register(models.FilingsCd, FilingsCdAdmin)
-admin.site.register(models.SmryCd, SmryCdAdmin)
-admin.site.register(models.TextMemoCd, TextMemoCdAdmin)
-admin.site.register(models.CvrE530Cd, CvrE530CdAdmin)
