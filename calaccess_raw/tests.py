@@ -77,7 +77,7 @@ class CalAccessTest(TestCase):
         self._test_choices('filing_type')
 
     def test_activity_type_choices(self):
-        self._test_choices('filing_type')
+        self._test_choices('activity_type')
 
     def test_status_choices(self):
         self._test_choices('status')
