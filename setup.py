@@ -6,13 +6,13 @@ from setuptools import setup
 setup(
     name='django-calaccess-raw-data',
     version='0.1.2',
-    packages=[
+    packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
         'calaccess_raw.management',
         'calaccess_raw.management.commands',
         'calaccess_raw.models',
-    ],
+    ),
     include_package_data=True,
     license='MIT',
     description='A Django app to download, extract and load campaign \
