@@ -38,7 +38,17 @@ class FilingsCdAdmin(BaseAdmin):
 
 
 class SmryCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        'filing_id',
+        'amend_id',
+        'form_type',
+        'line_item',
+        'pretty_amount_a',
+        'pretty_amount_b',
+        'pretty_amount_c',
+    )
+    list_filter = ('form_type',)
+    search_fields = ('filing_id', 'form_type', 'line_item')
 
 
 class TextMemoCdAdmin(BaseAdmin):

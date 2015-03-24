@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
+from django.template.defaultfilters import floatformat
+from django.contrib.humanize.templatetags.humanize import intcomma
 from .base import CalAccessBaseModel
 
 
@@ -503,9 +505,28 @@ influence legislative or administrative action attachment)'),
         db_table = 'SMRY_CD'
         verbose_name = 'SMRY_CD'
         verbose_name_plural = 'SMRY_CD'
+        ordering = ("filing_id", "-amend_id", 'form_type', "line_item")
 
     def __str__(self):
         return str(self.filing_id)
+
+    def pretty_amount_a(self):
+        if self.amount_a is None:
+            return None
+        return "$%s" % intcomma(floatformat(self.amount_a, 0))
+    pretty_amount_a.short_description = 'amount A'
+
+    def pretty_amount_b(self):
+        if self.amount_b is None:
+            return None
+        return "$%s" % intcomma(floatformat(self.amount_b, 0))
+    pretty_amount_b.short_description = 'amount B'
+
+    def pretty_amount_c(self):
+        if self.amount_c is None:
+            return None
+        return "$%s" % intcomma(floatformat(self.amount_c, 0))
+    pretty_amount_c.short_description = 'amount C'
 
 
 @python_2_unicode_compatible
