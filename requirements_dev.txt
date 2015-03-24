@@ -9,7 +9,6 @@ pyflakes
 python-coveralls
 python-dateutil
 requests
-six
 sphinx-autobuild
 tox
 clint
