@@ -70,6 +70,9 @@ class CalAccessTest(TestCase):
     def test_entity_code_choices(self):
         self._test_choices('entity_code')
 
+    def test_filer_type_choices(self):
+        self._test_choices('filer_type')
+
     def test_filing_type_choices(self):
         self._test_choices('filing_type')
 
@@ -78,3 +81,18 @@ class CalAccessTest(TestCase):
 
     def test_status_choices(self):
         self._test_choices('status')
+
+    def test_off_s_h_cd_choices(self):
+        self._test_choices('off_s_h_cd')
+
+    def test_pform_type_choices(self):
+        self._test_choices('pform_type')
+
+    def test_statement_type_choices(self):
+        self._test_choices('stmnt_type')
+
+    def test_statement_status_choices(self):
+        self._test_choices('stmnt_status')
+
+    def test_record_type_choices(self):
+        self._test_choices('rec_type')
