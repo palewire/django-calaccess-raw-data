@@ -207,6 +207,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_index=True,
         verbose_name='form type',
         choices=FORM_ID_CHOICES,
+        help_text="Form identification code"
     )
     filing_sequence = models.IntegerField(
         db_column='FILING_SEQUENCE',
@@ -216,7 +217,7 @@ class FilerFilingsCd(CalAccessBaseModel):
     )
     filing_date = models.DateField(
         db_column='FILING_DATE',
-        help_text="Date the filing was entered into the system",
+        help_text="Date the filing entered into the system",
         null=True
     )
     STATEMENT_TYPE_CHOICES = (
@@ -234,6 +235,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         verbose_name="statement type",
         db_index=True,
         choices=STATEMENT_TYPE_CHOICES,
+        help_text="Type of statement"
     )
     STATEMENT_STATUS_CHOICES = (
         (0, ''),
@@ -283,7 +285,7 @@ laundering or other special condition."
         null=True,
         db_column='RPT_DATE',
         blank=True,
-        help_text="When SOS recieved the filing",
+        help_text="Date filing received",
     )
     FILING_TYPE_CHOICES = (
         (0, '0 (Unknown)'),
