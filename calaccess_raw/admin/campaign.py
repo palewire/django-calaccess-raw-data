@@ -37,7 +37,17 @@ class LoanCdAdmin(BaseAdmin):
 
 
 class RcptCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "id",
+        "filing_id",
+        "amend_id",
+        "form_type",
+        "rcpt_date",
+        "ctrib_namf",
+        "ctrib_naml",
+        "amount"
+    )
+    search_fields = ("ctrib_namf", "ctrib_naml",)
 
 
 class F495P2CdAdmin(BaseAdmin):
