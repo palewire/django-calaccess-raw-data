@@ -1,3 +1,5 @@
+contributors.csv
+contributor.csv
 *.egg/
 *.egg-info*
 inspect.py
