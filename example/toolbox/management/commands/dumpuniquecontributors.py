@@ -11,51 +11,87 @@ class Command(CalAccessCommand):
     def handle(self, *args, **options):
         self.cursor = connection.cursor()
         sql = """
-            SELECT DISTINCT
-                ctrib_namt,
-                ctrib_namf,
-                ctrib_naml,
-                ctrib_nams,
-                ctrib_occ,
-                ctrib_emp,
-                ctrib_adr1,
-                ctrib_adr2,
-                ctrib_city,
-                ctrib_st,
-                ctrib_zip4
+        SELECT
+            title,
+            first_name,
+            last_name,
+            suffix,
+            occupation,
+            employer,
+            address1,
+            address2,
+            city,
+            state,
+            zipcode,
+            COUNT(*)
+        FROM (
+            SELECT
+                ctrib_namt as title,
+                ctrib_namf as first_name,
+                ctrib_naml as last_name,
+                ctrib_nams as suffix,
+                ctrib_occ as occupation,
+                ctrib_emp as employer,
+                ctrib_adr1 as address1,
+                ctrib_adr2 as address2,
+                ctrib_city as city,
+                ctrib_st as state,
+                ctrib_zip4 as zipcode
             FROM %(rcpt)s
 
-            UNION
+            UNION ALL
 
-            SELECT DISTINCT
-                lndr_namt,
-                lndr_namf,
-                lndr_naml,
-                lndr_nams,
-                loan_occ,
-                loan_emp,
-                loan_adr1,
-                loan_adr2,
-                loan_city,
-                loan_st,
-                loan_zip4
+            SELECT
+                lndr_namt as title,
+                lndr_namf as first_name,
+                lndr_naml as last_name,
+                lndr_nams as suffix,
+                loan_occ as occupation,
+                loan_emp as employer,
+                loan_adr1 as address1,
+                loan_adr2 as address2,
+                loan_city as city,
+                loan_st as state,
+                loan_zip4 as zipcode
             FROM %(loan)s
 
-            UNION
+            UNION ALL
 
-            SELECT DISTINCT
-                enty_namt,
-                enty_namf,
-                enty_naml,
-                enty_nams,
-                ctrib_occ,
-                ctrib_emp,
-                '',
-                '',
-                enty_city,
-                enty_st,
-                enty_zip4
+            SELECT
+                enty_namt as title,
+                enty_namf as first_name,
+                enty_naml as last_name,
+                enty_nams as suffix,
+                ctrib_occ as occupation,
+                ctrib_emp as employer,
+                '' as address1,
+                '' as address2,
+                enty_city as city,
+                enty_st as state,
+                enty_zip4 as zipcode
             FROM %(s497)s
+        ) as t
+        GROUP BY
+            title,
+            first_name,
+            last_name,
+            suffix,
+            occupation,
+            employer,
+            address1,
+            address2,
+            city,
+            state,
+            zipcode
+        ORDER BY
+            last_name,
+            first_name,
+            suffix,
+            title,
+            city,
+            state,
+            occupation,
+            employer
         """ % dict(
             rcpt=models.RcptCd._meta.db_table,
             loan=models.LoanCd._meta.db_table,
@@ -74,6 +110,7 @@ class Command(CalAccessCommand):
             'address2',
             'city',
             'state',
-            'zipcode'
+            'zipcode',
+            'count'
         ])
-        [writer.writerow(row) for row in self.cursor.fetchall()]
+        writer.writerows(self.cursor.fetchall())
