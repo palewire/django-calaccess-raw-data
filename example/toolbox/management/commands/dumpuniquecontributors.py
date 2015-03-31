@@ -23,6 +23,7 @@ class Command(CalAccessCommand):
             city,
             state,
             zipcode,
+            committee_id,
             COUNT(*)
         FROM (
             SELECT
@@ -36,7 +37,8 @@ class Command(CalAccessCommand):
                 ctrib_adr2 as address2,
                 ctrib_city as city,
                 ctrib_st as state,
-                ctrib_zip4 as zipcode
+                ctrib_zip4 as zipcode,
+                cmte_id as committee_id
             FROM %(rcpt)s
 
             UNION ALL
@@ -52,7 +54,8 @@ class Command(CalAccessCommand):
                 loan_adr2 as address2,
                 loan_city as city,
                 loan_st as state,
-                loan_zip4 as zipcode
+                loan_zip4 as zipcode,
+                cmte_id as committee_id
             FROM %(loan)s
 
             UNION ALL
@@ -68,7 +71,8 @@ class Command(CalAccessCommand):
                 '' as address2,
                 enty_city as city,
                 enty_st as state,
-                enty_zip4 as zipcode
+                enty_zip4 as zipcode,
+                cmte_id as committee_id
             FROM %(s497)s
         ) as t
         GROUP BY
@@ -82,7 +86,8 @@ class Command(CalAccessCommand):
             address2,
             city,
             state,
-            zipcode
+            zipcode,
+            committee_id
         ORDER BY
             last_name,
             first_name,
@@ -111,6 +116,7 @@ class Command(CalAccessCommand):
             'city',
             'state',
             'zipcode',
+            'committee_id',
             'count'
         ])
         writer.writerows(self.cursor.fetchall())
