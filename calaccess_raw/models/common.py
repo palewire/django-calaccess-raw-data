@@ -549,7 +549,16 @@ class CvrE530Cd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     FORM_TYPE_CHOICES = (
         ('E530', 'Form 530 (Issue advocacy report)'),
     )

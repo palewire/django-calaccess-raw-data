@@ -618,7 +618,16 @@ class HeaderCd(CalAccessBaseModel):
     """
     line_number = models.IntegerField(db_column='LINE_NUMBER')
     form_id = models.CharField(db_column='FORM_ID', max_length=5)
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=11)
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     section_label = models.CharField(
         db_column='SECTION_LABEL', max_length=58, blank=True
     )
@@ -670,10 +679,15 @@ original filing and 1 to 999 amendments.",
         db_column='HDRCOMMENT',
         blank=True
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=3,
+        verbose_name='record type',
         db_column='REC_TYPE',
-        blank=True
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     soft_name = models.CharField(
         max_length=90,

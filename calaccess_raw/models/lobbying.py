@@ -213,8 +213,15 @@ registration statement)'),
     qual_date = models.DateField(
         null=True, db_column='QUAL_DATE', blank=True
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     rencert_cb = models.CharField(
         max_length=1, db_column='RENCERT_CB', blank=True
@@ -549,7 +556,16 @@ original filing and 1 to 999 amendments.",
     rcpcmte_nm = models.CharField(
         max_length=200, db_column='RCPCMTE_NM', blank=True
     )
-    rec_type = models.CharField(max_length=3, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     report_num = models.CharField(max_length=3, db_column='REPORT_NUM')
     rpt_date = models.DateField(db_column='RPT_DATE', null=True)
     sender_id = models.CharField(max_length=9, db_column='SENDER_ID')
@@ -657,8 +673,15 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     tran_id = models.CharField(
         verbose_name='transaction ID',
@@ -698,7 +721,16 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    rec_type = models.CharField(max_length=8, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     FORM_TYPE_CHOICES = (
         ('F601', ''),
         ('F603', ''),
@@ -852,11 +884,15 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
+        verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
-        help_text="record type value: for this record this will \
-always equal F690."
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
         ('F615', ''),
@@ -990,8 +1026,15 @@ original filing and 1 to 999 amendments.",
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
     pmt_date = models.DateField(db_column='PMT_DATE', null=True)
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     recip_adr1 = models.CharField(
         max_length=55, db_column='RECIP_ADR1', blank=True
@@ -1151,7 +1194,16 @@ original filing and 1 to 999 amendments.",
     payee_zip4 = models.CharField(
         max_length=10, db_column='PAYEE_ZIP4', blank=True
     )
-    rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     recsubtype = models.CharField(max_length=1, db_column='RECSUBTYPE')
     tran_id = models.CharField(
         verbose_name='transaction ID',
@@ -1256,8 +1308,15 @@ original filing and 1 to 999 amendments.",
     memo_refno = models.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     recip_adr1 = models.CharField(
         max_length=55, db_column='RECIP_ADR1', blank=True
@@ -1380,8 +1439,15 @@ original filing and 1 to 999 amendments.",
     pmt_date = models.DateField(
         null=True, db_column='PMT_DATE', blank=True
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE'
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     subj_namf = models.CharField(
         max_length=45, db_column='SUBJ_NAMF', blank=True
@@ -1486,7 +1552,16 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
-    rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     sub_adr1 = models.CharField(
         max_length=55, db_column='SUB_ADR1', blank=True
     )
@@ -1635,7 +1710,16 @@ original filing and 1 to 999 amendments.",
     per_total = models.DecimalField(
         decimal_places=2, max_digits=14, db_column='PER_TOTAL'
     )
-    rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     reimb_amt = models.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='REIMB_AMT', blank=True

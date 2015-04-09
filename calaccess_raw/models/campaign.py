@@ -233,10 +233,15 @@ slate mailer organization'),
         db_column="QUAL_CB",
         blank=True
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=3,
-        db_column="REC_TYPE",
-        blank=True
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     report_num = models.CharField(
         max_length=3,
@@ -359,7 +364,16 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     FORM_TYPE_CHOICES = (
         ('F400', 'Form 400 (Statement of organization, \
 slate mailer organization)'),
@@ -753,8 +767,15 @@ and major donor committee campaign statement)'),
     primfrm_yn = models.CharField(
         max_length=1, db_column='PRIMFRM_YN', blank=True
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=3, db_column='REC_TYPE'
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     report_num = models.CharField(
         max_length=3, db_column='REPORT_NUM'
@@ -975,7 +996,16 @@ short form)'),
     office_cd = models.CharField(
         max_length=3, db_column='OFFICE_CD', blank=True
     )
-    rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     sup_opp_cd = models.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
@@ -1392,10 +1422,15 @@ Form 401 Schedule A)"
         null=True,
         help_text="Date item received"
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4,
+        verbose_name='record type',
         db_column='REC_TYPE',
-        help_text="Record Type Value: RCPT"
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     sup_opp_cd = models.CharField(
         max_length=1,
@@ -1826,7 +1861,16 @@ Schedule H3'),
     memo_refno = models.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
-    rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     tran_id = models.CharField(
         verbose_name='transaction ID',
         max_length=20,
@@ -1902,10 +1946,15 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4,
+        verbose_name='record type',
         db_column='REC_TYPE',
-        blank=True
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
         ('F401B', 'Form 401 (Slate mailer organization campaign statement): \
@@ -2350,10 +2399,15 @@ Campaign Statement), Schedule B, expenditures made'),
         blank=True,
         help_text="Zip+4"
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4,
+        verbose_name='record type',
         db_column='REC_TYPE',
-        help_text="Record Type Value: EXPN"
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     sup_opp_cd = models.CharField(
         max_length=1,
@@ -2631,7 +2685,16 @@ Schedule F, accrued expenses (unpaid bills)'),
     payee_zip4 = models.CharField(
         max_length=10, db_column='PAYEE_ZIP4', blank=True
     )
-    rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     tran_id = models.CharField(
         verbose_name='transaction ID',
         max_length=20,
@@ -2847,10 +2910,15 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4,
+        verbose_name='record type',
         db_column='REC_TYPE',
-        blank=True
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
         ('F497P1', 'Form 497 (Late contribution report): \
@@ -3015,7 +3083,16 @@ class F501502Cd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=3)
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     FORM_TYPE_CHOICES = (
         ('F501', 'Form 501 (Candidate intention statement)'),
         ('F502', 'Form 502 (Campaign bank account statement)')
@@ -3216,10 +3293,15 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
+    REC_TYPE_CHOICES = (
+        ("", ""),
+    )
     rec_type = models.CharField(
-        max_length=4,
+        verbose_name='record type',
         db_column='REC_TYPE',
-        blank=True
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
         ('F498-A', 'Form 498 (Slate mailer late payment report): \
