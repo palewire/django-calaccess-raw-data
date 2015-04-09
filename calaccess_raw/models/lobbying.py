@@ -7,14 +7,7 @@ from .base import CalAccessBaseModel
 @python_2_unicode_compatible
 class CvrRegistrationCd(CalAccessBaseModel):
     """
-    Cover page information for the lobbying registration forms below.
-
-        F601 -- Lobbying Firm Registration Statement
-        F602 -- Lobbying Firm Activity Authorization
-        F603 -- Lobbyist Employer / Lobbying Coalition Registration Statement
-        F604 -- Lobbyist Certificaiton Statement
-        F606 -- Notice of Termination
-        F607 -- Notice of Withdrawl
+    Cover page of lobbying disclosure forms
     """
     a_b_adr1 = models.CharField(
         max_length=55, db_column='A_B_ADR1', blank=True
@@ -139,12 +132,13 @@ original filing and 1 to 999 amendments.",
         max_length=200, db_column='FIRM_NAME', blank=True
     )
     FORM_TYPE_CHOICES = (
-        ('F601', ''),
-        ('F602', ''),
-        ('F603', ''),
-        ('F604', ''),
-        ('F606', ''),
-        ('F607', ''),
+        ('F601', 'Form 601 (Lobbying firm registration statement)'),
+        ('F602', 'Form 602 (Lobbying firm activity authorization)'),
+        ('F603', 'Form 603 (Lobbyist employer or lobbying coalition \
+registration statement)'),
+        ('F604', 'Form 604 (Lobbyist certification statement)'),
+        ('F606', 'Form 606 (Notice of termination)'),
+        ('F607', 'Form 607 (Notice of withdrawal)'),
     )
     form_type = models.CharField(
         max_length=4,
@@ -277,14 +271,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class Cvr2RegistrationCd(CalAccessBaseModel):
     """
-     Additional names layout for
-
-        F601 -- Lobbying Firm Registration Statement
-        F602 -- Lobbying Firm Activity Authorization
-        F603 -- Lobbyist Employer / Lobbying Coalition Registration Statement
-        F604 -- Lobbyist Certificaiton Statement
-        F606 -- Notice of Termination
-        F607 -- Notice of Withdrawl
+    Cover page of lobbying dislcosure forms
     """
     filing_id = models.IntegerField(
         db_column='FILING_ID',
@@ -314,9 +301,10 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
-        ('F601', ''),
-        ('F602', ''),
-        ('F603', ''),
+        ('F601', 'Form 601 (Lobbying firm registration statement)'),
+        ('F602', 'Form 602 (Lobbying firm activity authorization)'),
+        ('F603', 'Form 603 (Lobbyist employer or lobbying coalition \
+registration statement)'),
     )
     form_type = models.CharField(
         max_length=10,
