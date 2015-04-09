@@ -923,8 +923,8 @@ original filing and 1 to 999 amendments.",
 non-controlled committees)'),
         ('F450', 'Form 450 (Recipient committee campaign statement, \
 short form)'),
+        ('F460', 'Form 460 (Recipient committee campaign statement)'),
         ('F465', 'Form 465 (Supplemental independent expenditure report)'),
-        ('F460', 'Form 460 (Recipient committee campaign statement)')
     )
     form_type = models.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -1484,17 +1484,7 @@ identifier. 'X' indicates this condition is true"
 @python_2_unicode_compatible
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
-    Cover Page Verification Information for the Campaign Forms below.
-
-        F400
-        F402
-        F410
-        F425
-        F450
-        F460
-        F461
-        F465
-        F470
+    Cover page verification information from campaign disclosure forms
     """
     filing_id = models.IntegerField(
         db_column='FILING_ID',
@@ -1509,20 +1499,38 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        db_index=True,
+    )
+    REC_TYPE_CHOICES = (
+        ("CVR3", "CVR3"),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     FORM_TYPE_CHOICES = (
-        ('F400', ''),
-        ('F401', ''),
-        ('F402', ''),
-        ('F410', ''),
-        ('F425', ''),
-        ('F450', ''),
-        ('F460', ''),
-        ('F461', ''),
-        ('F465', ''),
-        ('F511', ''),
-        ('F900', ''),
+        ('F400', 'Form 400 (Statement of organization, \
+slate mailer organization)'),
+        ('F401', 'Form 401 (Slate mailer organization campaign statement)'),
+        ('F402', 'Form 402 (Statement of termination, \
+slate mailer organization'),
+        ('F410', 'Form 410 (Statement of organization, recipient committee)'),
+        ('F425', 'Form 425 (Semi-annual statement of no activity, \
+non-controlled committees)'),
+        ('F450', 'Form 450 (Recipient committee campaign statement, \
+short form)'),
+        ('F460', 'Form 460 (Recipient committee campaign statement)'),
+        ('F461', 'Form 461 (Independent expenditure and major donor \
+committee campaign statement)'),
+        ('F465', 'Form 465 (Supplemental independent expenditure report)'),
+        ('F511', 'Form 511 (Paid spokesman report)'),
+        ('F900', 'Form 900 (Public employee\'s retirement board, \
+candidate campaign statement)'),
     )
     form_type = models.CharField(
         db_column='FORM_TYPE',
@@ -1531,7 +1539,12 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    tran_id = models.CharField(db_column='TRAN_ID', max_length=20)
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        db_column='TRAN_ID',
+        max_length=20,
+        help_text='Permanent value unique to this item',
+    )
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
@@ -1559,19 +1572,47 @@ original filing and 1 to 999 amendments.",
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    sig_date = models.DateField(db_column='SIG_DATE', blank=True, null=True)
-    sig_loc = models.CharField(db_column='SIG_LOC', max_length=39, blank=True)
+    sig_date = models.DateField(
+        verbose_name='signed date',
+        db_column='SIG_DATE',
+        blank=True,
+        null=True,
+        help_text='date when signed',
+    )
+    sig_loc = models.CharField(
+        verbose_name='signed location',
+        db_column='SIG_LOC',
+        max_length=39,
+        blank=True,
+        help_text='city and state where signed',
+    )
     sig_naml = models.CharField(
-        db_column='SIG_NAML', max_length=56, blank=True
+        verbose_name='last name',
+        db_column='SIG_NAML',
+        max_length=56,
+        blank=True,
+        help_text='last name of the signer',
     )
     sig_namf = models.CharField(
-        db_column='SIG_NAMF', max_length=45, blank=True
+        verbose_name='first name',
+        db_column='SIG_NAMF',
+        max_length=45,
+        blank=True,
+        help_text='first name of the signer',
     )
     sig_namt = models.CharField(
-        db_column='SIG_NAMT', max_length=10, blank=True
+        verbose_name='title',
+        db_column='SIG_NAMT',
+        max_length=10,
+        blank=True,
+        help_text='title of the signer',
     )
     sig_nams = models.CharField(
-        db_column='SIG_NAMS', max_length=8, blank=True
+        verbose_name='suffix',
+        db_column='SIG_NAMS',
+        max_length=8,
+        blank=True,
+        help_text='suffix of the signer',
     )
 
     class Meta:
