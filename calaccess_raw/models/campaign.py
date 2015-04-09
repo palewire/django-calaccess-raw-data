@@ -237,7 +237,7 @@ slate mailer organization'),
         blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR", "CVR"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -368,7 +368,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR2", "CVR2"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -776,7 +776,7 @@ and major donor committee campaign statement)'),
         max_length=1, db_column='PRIMFRM_YN', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR", "CVR"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1005,7 +1005,7 @@ short form)'),
         max_length=3, db_column='OFFICE_CD', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR2", "CVR2"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1431,7 +1431,8 @@ Form 401 Schedule A)"
         help_text="Date item received"
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("E530", "E530"),
+        ("RCPT", "RCPT"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1870,7 +1871,7 @@ Schedule H3'),
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("LOAN", "LOAN"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1955,7 +1956,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("S401", "S401"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -2408,7 +2409,7 @@ Campaign Statement), Schedule B, expenditures made'),
         help_text="Zip+4"
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("EXPN", "EXPN"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -2694,7 +2695,7 @@ Schedule F, accrued expenses (unpaid bills)'),
         max_length=10, db_column='PAYEE_ZIP4', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("DEBT", "DEBT"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -2919,7 +2920,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("S497", "S497"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -3092,7 +3093,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR", "CVR"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -3305,7 +3306,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("S498", "S498"),
     )
     rec_type = models.CharField(
         verbose_name='record type',

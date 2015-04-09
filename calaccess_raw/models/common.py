@@ -374,7 +374,7 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record"
     )
     REC_TYPE_CHOICES = (
-        ('SMRY', 'Summary'),
+        ('SMRY', 'SMRY'),
     )
     rec_type = models.CharField(
         max_length=4,
@@ -554,7 +554,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR", "CVR"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -670,11 +670,11 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ('i', ''),
-        ('MEMO', ''),
-        ('TEXT', ''),
-        ('trun', ''),
-        ('Unde', ''),
+        ('i', 'i'),
+        ('MEMO', 'MEMO'),
+        ('TEXT', 'TEXT'),
+        ('trun', 'trun'),
+        ('Unde', 'Unde'),
     )
     rec_type = models.CharField(
         db_column='REC_TYPE',

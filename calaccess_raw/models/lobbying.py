@@ -221,7 +221,7 @@ registration statement)'),
         null=True, db_column='QUAL_DATE', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR", "CVR"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -571,7 +571,7 @@ original filing and 1 to 999 amendments.",
         max_length=200, db_column='RCPCMTE_NM', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR", "CVR"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -688,7 +688,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("CVR2", "CVR2"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -736,7 +736,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("F605", "F605"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -899,7 +899,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("F690", "F690"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1041,7 +1041,7 @@ original filing and 1 to 999 amendments.",
     )
     pmt_date = models.DateField(db_column='PMT_DATE', null=True)
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("LATT", "LATT"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1209,7 +1209,7 @@ original filing and 1 to 999 amendments.",
         max_length=10, db_column='PAYEE_ZIP4', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("LEXP", "LEXP"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1323,7 +1323,7 @@ original filing and 1 to 999 amendments.",
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("LCCM", "LCCM"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1454,7 +1454,7 @@ original filing and 1 to 999 amendments.",
         null=True, db_column='PMT_DATE', blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("LOTH", "LOTH"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1567,7 +1567,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("LEMP", "LEMP"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -1725,7 +1725,7 @@ original filing and 1 to 999 amendments.",
         decimal_places=2, max_digits=14, db_column='PER_TOTAL'
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("LPAY", "LPAY"),
     )
     rec_type = models.CharField(
         verbose_name='record type',

@@ -677,7 +677,9 @@ class HeaderCd(CalAccessBaseModel):
     line_number = models.IntegerField(db_column='LINE_NUMBER')
     form_id = models.CharField(db_column='FORM_ID', max_length=5)
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("AP1", "AP1"),
+        ("AP2", "AP2"),
+        ("SMRY_HEADER", "SMRY_HEADER"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
@@ -738,7 +740,7 @@ original filing and 1 to 999 amendments.",
         blank=True
     )
     REC_TYPE_CHOICES = (
-        ("", ""),
+        ("HDR", "HDR"),
     )
     rec_type = models.CharField(
         verbose_name='record type',
