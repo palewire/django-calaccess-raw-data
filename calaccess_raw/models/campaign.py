@@ -354,7 +354,11 @@ class Cvr2SoCd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
     FORM_TYPE_CHOICES = (
         ('F400', 'Form 400 (Statement of organization, \
@@ -938,7 +942,11 @@ short form)'),
     juris_dscr = models.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     mail_adr1 = models.CharField(
         max_length=55, db_column='MAIL_ADR1', blank=True
     )
@@ -1330,7 +1338,8 @@ list of legal values. Used on Form 401 Schedule A"
     )
     line_item = models.IntegerField(
         db_column='LINE_ITEM',
-        help_text="Record line item number"
+        help_text="Line item number of this record",
+        db_index=True,
     )
     memo_code = models.CharField(
         max_length=1,
@@ -1501,6 +1510,7 @@ original filing and 1 to 999 amendments.",
     )
     line_item = models.IntegerField(
         db_column='LINE_ITEM',
+        help_text="Line item number of this record",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
@@ -1638,7 +1648,9 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     bakref_tid = models.CharField(
-        max_length=20, db_column='BAKREF_TID', blank=True
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True
     )
     cmte_id = models.CharField(max_length=9, db_column='CMTE_ID', blank=True)
     ENTITY_CODE_CHOICES = (
@@ -1713,7 +1725,11 @@ Schedule H3'),
     intr_zip4 = models.CharField(
         max_length=10, db_column='INTR_ZIP4', blank=True
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     lndr_namf = models.CharField(
         max_length=45, db_column='LNDR_NAMF', blank=True
     )
@@ -1861,7 +1877,11 @@ class S401Cd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     rec_type = models.CharField(
         max_length=4,
         db_column='REC_TYPE',
@@ -1988,16 +2008,7 @@ Schedule D, candidates or measures supported or opposed with < $100 payment'),
 @python_2_unicode_compatible
 class ExpnCd(CalAccessBaseModel):
     """
-    Expenditure records for the following forms:
-        * Form 460 (Recipient Committee Campaign Statement): Schedule D
-        * Form 460 (Recipient Committee Campaign Statement): Schedule E
-        * Form 460 (Recipient Committee Campaign Statement): Schedule G
-        * Form 450 (Recipient Committee Campaign Statement Short Form): Part 5
-        * Form 461 (Independent Expenditure and Major Donor Committee
-            Campaign Statement): Part 5
-        * Form 465 (Supplemental Independent Expenditure Report) Part 3
-        * Form 900 (Public Employee's Retirement Board Candidate
-            Campaign Statement)
+    Campaign expenditures from a variety of forms
     """
     agent_namf = models.CharField(
         max_length=45,
@@ -2218,7 +2229,8 @@ Campaign Statement), Schedule B, expenditures made'),
     )
     line_item = models.IntegerField(
         db_column='LINE_ITEM',
-        help_text="Record line item number"
+        help_text="Line item number of this record",
+        db_index=True,
     )
     memo_code = models.CharField(
         max_length=1,
@@ -2438,8 +2450,21 @@ class F495P2Cd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
-    rec_type = models.CharField(db_column='REC_TYPE', max_length=4)
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
+    REC_TYPE_CHOICES = (
+        ('F495', 'F495'),
+    )
+    rec_type = models.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
     FORM_TYPE_CHOICES = (
         ('F450', 'Form 450 (Recipient committee campaign statement, \
 short form)'),
@@ -2542,7 +2567,11 @@ Schedule F, accrued expenses (unpaid bills)'),
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
@@ -2636,9 +2665,20 @@ class S496Cd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
+    REC_TYPE_CHOICES = (
+        ('S496', 'S496'),
+    )
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        verbose_name='record type',
+        max_length=4,
+        db_column='REC_TYPE',
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
         ('F496', 'F496 (Late independent expenditure report)'),
@@ -2706,7 +2746,11 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     PFORM_TYPE_CHOICES = (
         ('A', ''),
         ('B1', ''),
@@ -2754,7 +2798,11 @@ class S497Cd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     rec_type = models.CharField(
         max_length=4,
         db_column='REC_TYPE',
@@ -3117,7 +3165,11 @@ class S498Cd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     rec_type = models.CharField(
         max_length=4,
         db_column='REC_TYPE',

@@ -367,7 +367,7 @@ original filing and 1 to 999 amendments.",
         max_length=8,
         db_column='LINE_ITEM',
         db_index=True,
-        help_text="Line number of the summary total on the source form"
+        help_text="Line item number of this record"
     )
     REC_TYPE_CHOICES = (
         ('SMRY', 'Summary'),
@@ -653,8 +653,8 @@ original filing and 1 to 999 amendments.",
     )
     line_item = models.IntegerField(
         db_column='LINE_ITEM',
+        help_text="Line item number of this record",
         db_index=True,
-        help_text='Record\'s line item number'
     )
     REC_TYPE_CHOICES = (
         ('i', ''),

@@ -288,8 +288,8 @@ original filing and 1 to 999 amendments.",
     )
     line_item = models.IntegerField(
         db_column='LINE_ITEM',
+        help_text="Line item number of this record",
         db_index=True,
-        help_text='Line item on the form where the record can be found',
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "CVR2"),
@@ -652,7 +652,11 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     rec_type = models.CharField(
         max_length=4, db_column='REC_TYPE', blank=True
     )
@@ -841,7 +845,8 @@ original filing and 1 to 999 amendments.",
     )
     line_item = models.IntegerField(
         db_column='LINE_ITEM',
-        help_text="record line item number"
+        help_text="Line item number of this record",
+        db_index=True,
     )
     rec_type = models.CharField(
         db_column='REC_TYPE',
@@ -969,7 +974,11 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
@@ -1096,7 +1105,11 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
@@ -1218,7 +1231,11 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
@@ -1329,7 +1346,11 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
@@ -1434,7 +1455,11 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
     sub_adr1 = models.CharField(
         max_length=55, db_column='SUB_ADR1', blank=True
@@ -1570,7 +1595,11 @@ original filing and 1 to 999 amendments.",
     lby_actvty = models.CharField(
         max_length=200, db_column='LBY_ACTVTY', blank=True
     )
-    line_item = models.IntegerField(db_column='LINE_ITEM')
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
