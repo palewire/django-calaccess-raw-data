@@ -22,10 +22,11 @@ class FilernameCd(CalAccessBaseModel):
     fields in conjunction.
     """
     xref_filer_id = models.CharField(
+        verbose_name='crossreference filer ID',
         max_length=15,
         db_column='XREF_FILER_ID',
         db_index=True,
-        help_text="The external filer id saved in the forms tables"
+        help_text="Alternative filer ID found on many forms"
     )
     filer_id = models.IntegerField(
         verbose_name='filer ID',

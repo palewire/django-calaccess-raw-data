@@ -569,7 +569,7 @@ class FilerTypesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerXrefCd(CalAccessBaseModel):
     """
-    This table maps legacy filer identification numbers to the systems filer
+    This table maps legacy filer identification numbers to the system's filer
     identification numbers.
     """
     filer_id = models.IntegerField(
@@ -579,7 +579,13 @@ class FilerXrefCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    xref_id = models.CharField(max_length=32, db_column='XREF_ID')
+    xref_id = models.CharField(
+        verbose_name='crossreference filer ID',
+        max_length=32,
+        db_column='XREF_ID',
+        db_index=True,
+        help_text="Alternative filer ID found on many forms"
+    )
     effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
     migration_source = models.CharField(
         max_length=50, db_column='MIGRATION_SOURCE'
