@@ -299,11 +299,19 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.CharField(
-        max_length=9, db_column='LINE_ITEM', blank=True
+    line_item = models.IntegerField(
+        db_column='LINE_ITEM',
+        db_index=True,
+        help_text='Line item on the form where the record can be found',
+    )
+    REC_TYPE_CHOICES = (
+        ("CVR2", "CVR2"),
     )
     rec_type = models.CharField(
-        max_length=4, db_column='REC_TYPE', blank=True
+        verbose_name='record type',
+        max_length=4,
+        db_column='REC_TYPE',
+        choices=REC_TYPE_CHOICES,
     )
     FORM_TYPE_CHOICES = (
         ('F601', ''),
@@ -318,7 +326,11 @@ original filing and 1 to 999 amendments.",
         choices=FORM_TYPE_CHOICES,
     )
     tran_id = models.CharField(
-        max_length=20, db_column='TRAN_ID', blank=True
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -340,19 +352,36 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
     )
     entity_id = models.CharField(
-        max_length=9, db_column='ENTITY_ID', blank=True
+        verbose_name='Entity ID',
+        max_length=9,
+        db_column='ENTITY_ID',
+        blank=True,
+        help_text='Identification number of the entity described by \
+the record',
     )
     enty_naml = models.CharField(
-        max_length=200, db_column='ENTY_NAML', blank=True
+        verbose_name='last name',
+        max_length=200,
+        db_column='ENTY_NAML',
+        blank=True
     )
     enty_namf = models.CharField(
-        max_length=45, db_column='ENTY_NAMF', blank=True
+        verbose_name='first name',
+        max_length=45,
+        db_column='ENTY_NAMF',
+        blank=True
     )
     enty_namt = models.CharField(
-        max_length=10, db_column='ENTY_NAMT', blank=True
+        verbose_name='title',
+        max_length=10,
+        db_column='ENTY_NAMT',
+        blank=True
     )
     enty_nams = models.CharField(
-        max_length=10, db_column='ENTY_NAMS', blank=True
+        verbose_name='title',
+        max_length=10,
+        db_column='ENTY_NAMS',
+        blank=True
     )
 
     class Meta:
