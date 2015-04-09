@@ -54,7 +54,13 @@ class AddressCd(CalAccessBaseModel):
 class BallotMeasuresCd(CalAccessBaseModel):
     """ Ballot measures dates and times """
     election_date = models.DateTimeField(db_column='ELECTION_DATE', null=True)
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     measure_no = models.CharField(db_column='MEASURE_NO', max_length=2)
     measure_name = models.CharField(db_column='MEASURE_NAME', max_length=163)
     measure_short_name = models.CharField(
@@ -87,7 +93,14 @@ class EfsFilingLogCd(CalAccessBaseModel):
     filing_date = models.DateTimeField(db_column='FILING_DATE', null=True)
     filingstatus = models.IntegerField(db_column='FILINGSTATUS')
     vendor = models.CharField(db_column='VENDOR', max_length=250)
-    filer_id = models.CharField(db_column='FILER_ID', max_length=250)
+    filer_id = models.CharField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        max_length=250,
+        blank=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     FORM_TYPE_CHOICES = (
         ('BADFORMAT 253', ''),
         ('F400', ''),
@@ -139,7 +152,13 @@ class FilersCd(CalAccessBaseModel):
     This table is the parent table from which all links and associations
     to a filer are derived.
     """
-    filer_id = models.IntegerField(db_column='FILER_ID', db_index=True)
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -157,7 +176,13 @@ class FilerAcronymsCd(CalAccessBaseModel):
     links acronyms to filers
     """
     acronym = models.CharField(db_column='ACRONYM', max_length=32)
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -176,7 +201,13 @@ class FilerAddressCd(CalAccessBaseModel):
     Links filers and addresses. This table maintains a history of when
     addresses change.
     """
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     adrid = models.IntegerField(db_column='ADRID')
     effect_dt = models.DateTimeField(
         db_column='EFFECT_DT',
@@ -209,7 +240,13 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     """
     This table stores lobbyist ethics training dates.
     """
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     session_id = models.IntegerField(db_column='SESSION_ID')
     ethics_date = models.DateTimeField(db_column='ETHICS_DATE', null=True)
 
@@ -228,7 +265,13 @@ class FilerInterestsCd(CalAccessBaseModel):
     """
     Links a filer to their interest codes.
     """
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     session_id = models.IntegerField(db_column='SESSION_ID')
     interest_cd = models.IntegerField(db_column='INTEREST_CD')
     effect_date = models.DateTimeField(db_column='EFFECT_DATE', null=True)
@@ -375,8 +418,11 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
     to change characteristics over time.
     """
     filer_id = models.IntegerField(
+        verbose_name='filer ID',
         db_column='FILER_ID',
-        help_text="Filer's unique identification number"
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
     )
     filer_type = models.IntegerField(
         db_column='FILER_TYPE',
@@ -526,7 +572,13 @@ class FilerXrefCd(CalAccessBaseModel):
     This table maps legacy filer identification numbers to the systems filer
     identification numbers.
     """
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     xref_id = models.CharField(max_length=32, db_column='XREF_ID')
     effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
     migration_source = models.CharField(
@@ -757,7 +809,13 @@ class LegislativeSessionsCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     change_no = models.IntegerField(db_column='CHANGE_NO')
     session_id = models.IntegerField(db_column='SESSION_ID', null=True)
     log_dt = models.DateField(db_column="LOG_DT", null=True)
@@ -811,7 +869,13 @@ class LobbyingChgLogCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     filing_period_start_dt = models.DateField(
         null=True,
         db_column='FILING_PERIOD_START_DT'
@@ -847,7 +911,13 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     Lobbyist contribution disclosure table. Temporary table used to generate
     disclosure table (Lobbyist Contributions 3)
     """
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT',
         null=True
@@ -882,7 +952,13 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     """
     Lobbyist contribution disclosure table.
     """
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     filing_period_start_dt = models.DateField(
         db_column='FILING_PERIOD_START_DT',
         null=True
@@ -1403,7 +1479,13 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     """
     This is undocumented. J M needs to describe this table.
     """
-    filer_id = models.IntegerField(db_column='FILER_ID')
+    filer_id = models.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     filing_file_name = models.CharField(
         db_column='FILING_FILE_NAME', max_length=14
     )

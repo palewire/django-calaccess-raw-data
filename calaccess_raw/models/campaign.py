@@ -140,9 +140,12 @@ original filing and 1 to 999 amendments.",
         verbose_name="Entity code"
     )
     filer_id = models.CharField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
         max_length=9,
-        db_column="FILER_ID",
-        blank=True
+        blank=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
     )
     filer_namf = models.CharField(
         max_length=45,
@@ -669,7 +672,12 @@ original filing and 1 to 999 amendments.",
         max_length=20, db_column='FILER_FAX', blank=True
     )
     filer_id = models.CharField(
-        max_length=15, db_column='FILER_ID', db_index=True
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        max_length=15,
+        blank=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
     )
     filer_namf = models.CharField(
         max_length=45, db_column='FILER_NAMF', blank=True
@@ -3104,9 +3112,12 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule'
     )
     filer_id = models.CharField(
+        verbose_name='filer ID',
         db_column='FILER_ID',
-        max_length=8,
-        blank=True
+        max_length=9,
+        blank=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
     )
     committee_id = models.CharField(
         db_column='COMMITTEE_ID',

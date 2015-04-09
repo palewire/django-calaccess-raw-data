@@ -28,10 +28,11 @@ class FilernameCd(CalAccessBaseModel):
         help_text="The external filer id saved in the forms tables"
     )
     filer_id = models.IntegerField(
+        verbose_name='filer ID',
         db_column='FILER_ID',
         db_index=True,
         null=True,
-        help_text="The internal filer id saved in Cal-Access"
+        help_text="Filer's unique identification number"
     )
     FILER_TYPE_CHOICES = (
         (' NOT DEFINED', 'Undefined'),
@@ -131,8 +132,10 @@ class FilerFilingsCd(CalAccessBaseModel):
     filing information.
     """
     filer_id = models.IntegerField(
+        verbose_name='filer ID',
         db_column='FILER_ID',
         db_index=True,
+        null=True,
         help_text="Filer's unique identification number"
     )
     filing_id = models.IntegerField(

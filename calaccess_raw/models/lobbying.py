@@ -107,7 +107,14 @@ original filing and 1 to 999 amendments.",
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    filer_id = models.CharField(max_length=9, db_column='FILER_ID')
+    filer_id = models.CharField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        max_length=8,
+        blank=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     filer_namf = models.CharField(
         max_length=45, db_column='FILER_NAMF', blank=True
     )
@@ -436,7 +443,14 @@ original filing and 1 to 999 amendments.",
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    filer_id = models.CharField(max_length=9, db_column='FILER_ID')
+    filer_id = models.CharField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        max_length=8,
+        blank=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
     filer_namf = models.CharField(
         max_length=45, db_column='FILER_NAMF', blank=True
     )
