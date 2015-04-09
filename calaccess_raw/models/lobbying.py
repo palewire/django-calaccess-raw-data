@@ -661,7 +661,11 @@ original filing and 1 to 999 amendments.",
         max_length=4, db_column='REC_TYPE', blank=True
     )
     tran_id = models.CharField(
-        max_length=20, db_column='TRAN_ID', blank=True
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
 
     class Meta:
@@ -1017,7 +1021,11 @@ original filing and 1 to 999 amendments.",
         max_length=10, db_column='RECIP_ZIP4', blank=True
     )
     tran_id = models.CharField(
-        max_length=20, db_column='TRAN_ID', blank=True
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
 
     class Meta:
@@ -1145,7 +1153,13 @@ original filing and 1 to 999 amendments.",
     )
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
     recsubtype = models.CharField(max_length=1, db_column='RECSUBTYPE')
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID')
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1275,7 +1289,13 @@ original filing and 1 to 999 amendments.",
     recip_zip4 = models.CharField(
         max_length=10, db_column='RECIP_ZIP4', blank=True
     )
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1375,7 +1395,13 @@ original filing and 1 to 999 amendments.",
     subj_namt = models.CharField(
         max_length=45, db_column='SUBJ_NAMT', blank=True
     )
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID')
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1614,7 +1640,13 @@ original filing and 1 to 999 amendments.",
         decimal_places=2, null=True, max_digits=14,
         db_column='REIMB_AMT', blank=True
     )
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID')
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
 
     class Meta:
         app_label = 'calaccess_raw'

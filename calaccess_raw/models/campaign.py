@@ -371,7 +371,13 @@ slate mailer organization)'),
         max_length=4,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(db_column='TRAN_ID', max_length=19)
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
@@ -974,7 +980,13 @@ short form)'),
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
     title = models.CharField(max_length=90, db_column='TITLE', blank=True)
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID')
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
     tres_namf = models.CharField(
         max_length=45, db_column='TRES_NAMF', blank=True
     )
@@ -1394,10 +1406,11 @@ or 'O' for oppose. Used on Form 401 Sechedule A. \
 Transaction identifier - permanent value unique to this item"
     )
     tran_id = models.CharField(
+        verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
-        help_text="Transaction identifier - permanent value unique to this \
-item"
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
     tran_type = models.CharField(
         max_length=1,
@@ -1551,8 +1564,9 @@ candidate campaign statement)'),
     )
     tran_id = models.CharField(
         verbose_name='transaction ID',
-        db_column='TRAN_ID',
         max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
         help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
@@ -1813,7 +1827,13 @@ Schedule H3'),
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID')
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
     tres_adr1 = models.CharField(
         max_length=55, db_column='TRES_ADR1', blank=True
     )
@@ -1904,7 +1924,13 @@ Schedule D, candidates or measures supported or opposed with < $100 payment'),
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
     agent_naml = models.CharField(
         max_length=200, db_column='AGENT_NAML', blank=True
     )
@@ -2336,9 +2362,11 @@ Campaign Statement), Schedule B, expenditures made'),
         help_text="Support/Oppose? Values: S; O (F450, F461)"
     )
     tran_id = models.CharField(
+        verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
-        help_text="Transaction ID - permanent value unique to this item"
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
     tres_adr1 = models.CharField(
         max_length=55,
@@ -2604,7 +2632,13 @@ Schedule F, accrued expenses (unpaid bills)'),
         max_length=10, db_column='PAYEE_ZIP4', blank=True
     )
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID')
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
     tres_adr1 = models.CharField(
         max_length=55, db_column='TRES_ADR1', blank=True
     )
@@ -2688,7 +2722,13 @@ original filing and 1 to 999 amendments.",
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
+    tran_id = models.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
     amount = models.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
     )
@@ -2767,7 +2807,11 @@ original filing and 1 to 999 amendments.",
         choices=PFORM_TYPE_CHOICES,
     )
     ptran_id = models.CharField(
-        max_length=32, db_column='PTRAN_ID', blank=True
+        verbose_name='transaction ID',
+        max_length=32,
+        db_column='PTRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
 
     class Meta:
@@ -2821,9 +2865,11 @@ Part 2, late contributions made')
         help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(
+        verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
-        blank=True
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -3189,7 +3235,11 @@ Part R: late payments received from')
         help_text='Name of the source filing form or schedule'
     )
     tran_id = models.CharField(
-        max_length=20, db_column='TRAN_ID', blank=True
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
