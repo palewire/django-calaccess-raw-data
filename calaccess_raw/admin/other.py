@@ -56,8 +56,21 @@ class FilerInterestsCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.FilerLinksCd)
 class FilerLinksCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id_a",
+        "filer_id_b",
+        "link_type",
+        "active_flg",
+        "effect_dt",
+        "termination_dt",
+    )
+    list_filter = (
+        "active_flg",
+        "link_type"
+    )
+    search_fields = ("filer_id_a", "filer_id_b")
 
 
 class FilerStatusTypesCdAdmin(BaseAdmin):
@@ -245,7 +258,6 @@ admin.site.register(models.FilerAcronymsCd, FilerAcronymsCdAdmin)
 admin.site.register(models.FilerAddressCd, FilerAddressCdAdmin)
 admin.site.register(models.FilerEthicsClassCd, FilerEthicsClassCdAdmin)
 admin.site.register(models.FilerInterestsCd, FilerInterestsCdAdmin)
-admin.site.register(models.FilerLinksCd, FilerLinksCdAdmin)
 admin.site.register(models.FilerStatusTypesCd, FilerStatusTypesCdAdmin)
 admin.site.register(models.FilerToFilerTypeCd, FilerToFilerTypeCdAdmin)
 admin.site.register(models.FilerTypesCd, FilerTypesCdAdmin)

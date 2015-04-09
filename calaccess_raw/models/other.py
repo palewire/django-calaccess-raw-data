@@ -246,23 +246,90 @@ class FilerInterestsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerLinksCd(CalAccessBaseModel):
     """
-    This table links filers to other filers in the system by their type
-    of relationship.
+    Links filers to each other and records their relationship type.
     """
-    filer_id_a = models.IntegerField(db_column='FILER_ID_A', db_index=True)
-    filer_id_b = models.IntegerField(db_column='FILER_ID_B', db_index=True)
-    active_flg = models.CharField(max_length=1, db_column='ACTIVE_FLG')
-    session_id = models.IntegerField(db_column='SESSION_ID')
-    link_type = models.IntegerField(db_column='LINK_TYPE')
-    link_desc = models.CharField(
-        max_length=255, db_column='LINK_DESC', blank=True
+    filer_id_a = models.IntegerField(
+        verbose_name='Filer ID A',
+        db_column='FILER_ID_A',
+        db_index=True,
+        help_text='Unique identification number for the first filer \
+in the relationship',
     )
-    effect_dt = models.DateField(db_column='EFFECT_DT', null=True)
+    filer_id_b = models.IntegerField(
+        verbose_name='Filer ID B',
+        db_column='FILER_ID_B',
+        db_index=True,
+        help_text='Unique identification number for the second filer \
+in the relationship',
+    )
+    active_flg = models.CharField(
+        verbose_name='active flag',
+        max_length=1,
+        db_column='ACTIVE_FLG',
+        help_text='Indicates if the link is active',
+    )
+    session_id = models.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Session identification number',
+    )
+    LINK_TYPE_CHOICES = (
+        (-12019, '-12019'),
+        (-12018, '-12018'),
+        (-12016, '-12016'),
+        (-12015, '-12015'),
+        (-12014, '-12014'),
+        (-12013, '-12013'),
+        (-12011, '-12011'),
+        (-12008, '-12008'),
+        (-12005, '-12005'),
+        (-12004, '-12004'),
+        (-12002, '-12002'),
+        (-12001, '-12001'),
+        (0, '0'),
+        (12001, '12001'),
+        (12002, '12002'),
+        (12004, '12004'),
+        (12005, '12005'),
+        (12008, '12008'),
+        (12011, '12011'),
+        (12013, '12013'),
+        (12014, '12014'),
+        (12015, '12015'),
+        (12016, '12016'),
+        (12018, '12018'),
+        (12019, '12019'),
+    )
+    link_type = models.IntegerField(
+        choices=LINK_TYPE_CHOICES,
+        db_column='LINK_TYPE',
+        help_text='Denotes the type of the link',
+    )
+    link_desc = models.CharField(
+        verbose_name='link description',
+        max_length=255,
+        db_column='LINK_DESC',
+        blank=True,
+        help_text='Unused',
+    )
+    effect_dt = models.DateField(
+        verbose_name='effective date',
+        db_column='EFFECT_DT',
+        null=True,
+        help_text='Date the link became active',
+    )
     dominate_filer = models.CharField(
-        max_length=1, db_column='DOMINATE_FILER', blank=True
+        max_length=1,
+        db_column='DOMINATE_FILER',
+        blank=True,
+        help_text='Unused',
     )
     termination_dt = models.DateField(
-        null=True, db_column='TERMINATION_DT', blank=True
+        verbose_name='termination date',
+        db_column='TERMINATION_DT',
+        null=True,
+        blank=True,
+        help_text='Date the relationship was terminated',
     )
 
     class Meta:
