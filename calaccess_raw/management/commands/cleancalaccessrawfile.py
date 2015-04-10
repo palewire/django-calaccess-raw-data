@@ -58,6 +58,7 @@ class Command(CalAccessCommand, LabelCommand):
             headers_list = next(headers_csv)
         except StopIteration:
             return
+        # headers_list.insert(0, 'id')
         headers_count = len(headers_list)
         csv_writer.writerow(headers_list)
 
@@ -86,6 +87,7 @@ class Command(CalAccessCommand, LabelCommand):
             # Split on tabs so we can later spit it back out as CSV
             # and remove extra newlines while we are there.
             csv_field_list = tsv_line.replace("\r\n", "").split("\t")
+            # csv_field_list.insert(0, line_number)
 
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems

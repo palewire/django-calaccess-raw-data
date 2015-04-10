@@ -21,6 +21,10 @@ class FilernameCd(CalAccessBaseModel):
     (when they are only an individual's name) use both the first and last name
     fields in conjunction.
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     xref_filer_id = models.CharField(
         max_length=15,
         db_column='XREF_FILER_ID',
@@ -130,6 +134,10 @@ class FilerFilingsCd(CalAccessBaseModel):
     and electronic filings. This table is used as an index to locate
     filing information.
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filer_id = models.IntegerField(
         db_column='FILER_ID',
         db_index=True,
@@ -315,6 +323,10 @@ class FilingsCd(CalAccessBaseModel):
     This table is the parent table from which all links and association to
     a filing are derived.
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -350,6 +362,10 @@ class SmryCd(CalAccessBaseModel):
     """
     Summary totals from filings.
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -536,6 +552,10 @@ class CvrE530Cd(CalAccessBaseModel):
     """
     This table method is undocumented in the print docs.
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -638,6 +658,10 @@ class TextMemoCd(CalAccessBaseModel):
     """
     Text memos attached to electronic filings
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,

@@ -197,6 +197,10 @@ slate mailer organization'),
         db_column="GPC_DESCR",
         blank=True
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     mail_city = models.CharField(
         max_length=30,
         db_column="MAIL_CITY",
@@ -403,6 +407,10 @@ slate mailer organization)'),
     )
     enty_nams = models.CharField(
         db_column='ENTY_NAMS', max_length=10, blank=True
+    )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
     )
     item_cd = models.CharField(db_column='ITEM_CD', max_length=4, blank=True)
     mail_city = models.CharField(
@@ -700,6 +708,10 @@ and major donor committee campaign statement)'),
         db_column='FROM_DATE',
         blank=True
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     juris_cd = models.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
     )
@@ -931,6 +943,10 @@ short form)'),
         max_length=4,
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
+    )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
     )
     juris_cd = models.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
@@ -1232,6 +1248,10 @@ Schedule A, monetary contributions received')
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     int_rate = models.CharField(
         max_length=9,
         db_column='INT_RATE',
@@ -1496,6 +1516,10 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         F465
         F470
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -1646,6 +1670,10 @@ Schedule H3'),
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
+    )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
     )
     intr_adr1 = models.CharField(
         max_length=55, db_column='INTR_ADR1', blank=True
@@ -1842,6 +1870,10 @@ Schedule D, candidates or measures supported or opposed with < $100 payment'),
         blank=True,
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
+    )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
     )
     tran_id = models.CharField(max_length=20, db_column='TRAN_ID', blank=True)
     agent_naml = models.CharField(
@@ -2159,6 +2191,10 @@ Campaign Statement), Schedule B, expenditures made'),
         blank=True,
         help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     juris_cd = models.CharField(
         max_length=3,
         db_column='JURIS_CD',
@@ -2384,6 +2420,10 @@ class F495P2Cd(CalAccessBaseModel):
     contributions received and expenditures made since
     its last report.
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -2501,6 +2541,10 @@ Schedule F, accrued expenses (unpaid bills)'),
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -2582,6 +2626,10 @@ class S496Cd(CalAccessBaseModel):
     """
     Form 496 Late Independent Expenditures
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -2665,6 +2713,10 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     PFORM_TYPE_CHOICES = (
         ('A', ''),
@@ -2700,6 +2752,10 @@ class S497Cd(CalAccessBaseModel):
     """
     Form 497 Late Contributions Received/Made
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -2867,6 +2923,10 @@ class F501502Cd(CalAccessBaseModel):
         -- F501
         -- F502
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -3063,6 +3123,10 @@ class S498Cd(CalAccessBaseModel):
     """
     Form 498 Slate Mailer Late Independent Expenditures Made
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,

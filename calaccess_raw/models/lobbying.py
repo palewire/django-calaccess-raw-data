@@ -153,6 +153,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     ind_cb = models.CharField(max_length=1, db_column='IND_CB', blank=True)
     ind_class = models.CharField(
         max_length=3, db_column='IND_CLASS', blank=True
@@ -286,6 +290,10 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         F606 -- Notice of Termination
         F607 -- Notice of Withdrawl
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -463,6 +471,10 @@ original filing and 1 to 999 amendments.",
         choices=FORM_TYPE_CHOICES,
     )
     from_date = models.DateField(db_column='FROM_DATE', null=True)
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     lby_actvty = models.CharField(
         max_length=400, db_column='LBY_ACTVTY', blank=True
     )
@@ -635,6 +647,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(
         max_length=4, db_column='REC_TYPE', blank=True
@@ -660,6 +676,10 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
 
         Form 605 Part I
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -809,6 +829,10 @@ class F690P2Cd(CalAccessBaseModel):
 
         F690 Amendment to Lobbying Disclosure Report
     """
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     filing_id = models.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -952,6 +976,10 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -1079,6 +1107,10 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -1201,6 +1233,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -1312,6 +1348,10 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
+    )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     memo_code = models.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
@@ -1416,6 +1456,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+    )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
     )
     line_item = models.IntegerField(db_column='LINE_ITEM')
     rec_type = models.CharField(max_length=4, db_column='REC_TYPE')
@@ -1549,6 +1593,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+    )
+    id = models.IntegerField(
+        db_column="id",
+        primary_key=True
     )
     lby_actvty = models.CharField(
         max_length=200, db_column='LBY_ACTVTY', blank=True
