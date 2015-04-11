@@ -16,6 +16,7 @@ Documentation
    howtouseit
    managementcommands
    models
+   faq
    howtocontribute
    officialdocumentation
    changelog
