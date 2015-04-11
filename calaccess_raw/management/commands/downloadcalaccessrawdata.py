@@ -220,7 +220,6 @@ exist at %s" % tsv_dir)
             for chunk in progress.bar(
                 r.iter_content(chunk_size=1024),
                 expected_size=(length/1024)+1,
-                label="Progress: "
             ):
                 f.write(chunk)
                 f.flush()
@@ -287,8 +286,13 @@ exist at %s" % tsv_dir)
             self.header("Cleaning data files")
 
         # Loop through all the files in the source directory
-        for name in os.listdir(self.tsv_dir):
-            call_command("cleancalaccessrawfile", name)
+        tsv_list = os.listdir(self.tsv_dir)
+        for name in progress.bar(tsv_list):
+            call_command(
+                "cleancalaccessrawfile",
+                name,
+                verbosity=self.verbosity
+            )
 
     def load(self):
         """
