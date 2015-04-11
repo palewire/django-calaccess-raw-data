@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django.db.models.loading import get_model
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw.models.other import Verification
 
 
 class Command(CalAccessCommand, LabelCommand):
@@ -41,59 +42,22 @@ class Command(CalAccessCommand, LabelCommand):
             #
             ids = range(1, highest_id + 1)
 
-            # Take out ids we find in the table.
+            # Does not work, so loop through the rows.
             #
-            # (I bet there is a better way to do this. -rrk)
-            #
+            # found_ids = map(id, model.objects.all())
+
+            found_ids = []
             for row in model.objects.all():
-                foundId = row.id
-                ids.remove(foundId)
+                found_ids.append(row.id)
 
-            if len(ids) > 0:
-                self.failure('    ids: %s' % ids)
+            missing_ids = list(set(ids) - set(found_ids))
 
-                # Read the bad lines from the TSV file
-                #
-                # Is there a way to ignore the first line in the for-loop?
-                # Then I would not need check on the if, which seems smelly.
-                #
-                with open(model.objects.get_tsv_path()) as tsv_lines:
-                    for line in tsv_lines:
-                        line_id = line.split('\t')[0]
-                        line = line.encode('string_escape')
-                        line = line.encode('ascii', 'ignore')
-                        if line_id == 'id':
-                            self.failure('\n    hdr: %s' % line)
-                        else:
-                            # Show the line above and the line below
-                            # the problem line, also.
-                            #
-                            # Why 3 times? Because using 'or' gives too long
-                            # a line, just like this line....
-                            #
-                            if (int(line_id) + 1) in ids:
-                                self.failure('\n    tsv: %s' % line)
-                            if int(line_id) in ids:
-                                self.failure('    tsv: %s' % line)
-                            if (int(line_id) - 1) in ids:
-                                self.failure('    tsv: %s' % line)
+            if len(missing_ids) > 0:
+                self.failure('    missing_ids: %s' % missing_ids)
 
+                Verification.objects.filter(table_name=model.__name__).delete()
 
-                # Read the bad lines from the CSV file.
-                # Recall that the number is surrounded by double-quotes.
-                #
-                # A bunch of this string "fixing" here and above is probably
-                # I keep getting this error from one of the 'encode's.
-                #
-                #   TypeError: must be string, not unicode
-                #
-                #with open(model.objects.get_csv_path()) as csv_lines:
-                #    for line in csv_lines:
-                #        line_id = line.split(',')[0].replace('"', '')
-                #        line = line.encode('ascii','ignore')
-                #        line = line.encode(encoding='string_escape')
-                #        line = line.replace('\r', '').replace('\n', '')
-                #        if line_id == 'id':
-                #            self.failure('    hdr: %s' % line)
-                #        if line_id != 'id' and int(line_id) in ids:
-                #            self.failure('    csv: %s' % line)
+                for missing_id in missing_ids:
+                    Verification(
+                        table_name=model.__name__,
+                        table_id=missing_id).save()
