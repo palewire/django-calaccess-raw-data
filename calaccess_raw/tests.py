@@ -24,6 +24,15 @@ class CalAccessTest(TestCase):
             m().__str__()
             self.assertNotEqual(m().__str__(), '%s object' % m.__name__)
 
+    def test_model_doc(self):
+        """
+        Verify that __doc__ methods exist and work for all models.
+        """
+        for m in get_model_list():
+            if not m().__doc__:
+                warnings.warn("%s __doc__ undefined" % (m.__name__))
+            # self.assertNotEqual(m().__doc__, '')
+
     def _test_choices(self, field_name):
         """
         Verify that proper choices appear for the provided field.
