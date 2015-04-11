@@ -301,5 +301,10 @@ exist at %s" % tsv_dir)
         if self.verbosity:
             self.header("Loading data files")
 
-        for model in get_model_list():
-            call_command("loadcalaccessrawfile", model.__name__)
+        model_list = get_model_list()
+        for model in progress.bar(model_list):
+            call_command(
+                "loadcalaccessrawfile",
+                model.__name__,
+                verbosity=self.verbosity,
+            )

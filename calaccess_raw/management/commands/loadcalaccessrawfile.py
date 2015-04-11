@@ -26,7 +26,7 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Loads the source CSV for the provided model.
         """
-        if self.verbosity:
+        if self.verbosity > 2:
             self.log(" Loading %s" % model_name)
 
         model = get_model("calaccess_raw", model_name)
@@ -238,8 +238,8 @@ class Command(CalAccessCommand, LabelCommand):
         successfully.
         """
         if self.verbosity:
-            if model_count != csv_count:
-                msg = '  Table Record count doesn\'t match CSV. \
+            if model_count != csv_count and self.verbosity > 2:
+                msg = '  Table record count doesn\'t match CSV. \
 Table: %s\tCSV: %s'
                 self.failure(msg % (
                     model_count,
