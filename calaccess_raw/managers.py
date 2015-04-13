@@ -25,13 +25,3 @@ class CalAccessManager(models.Manager):
             'tsv',
             self.get_tsv_name()
         )
-
-    def get_highest_id(self):
-        stdin,stdout = os.popen2("tail --lines=1 %s" % self.get_tsv_path())
-        stdin.close()
-        lines = stdout.readlines(); stdout.close()
-        # words = lines[0].split('\t')
-        # self.success(" lines # %d" % int(lines[0].split('\t')[0]))
-        return int(lines[0].split('\t')[0])
-
-

@@ -1,8 +1,9 @@
 from __future__ import unicode_literals
+from django.db import connection
+from django.db.models import Max
 from django.db.models.loading import get_model
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.other import Verification
 
 
 class Command(CalAccessCommand, LabelCommand):
@@ -15,49 +16,50 @@ class Command(CalAccessCommand, LabelCommand):
         # Get the model
         model = get_model("calaccess_raw", label)
 
-        # Get the db total
+        # Get the counts of id values in the files and the database
+        tsv_cnt = sum(1 for line in open(model.objects.get_tsv_path())) - 1
+        csv_cnt = sum(1 for line in open(model.objects.get_csv_path())) - 1
         db_cnt = model.objects.count()
 
-        # Get the CSV total, remembering not to count the header line
-        csv_cnt = sum(1 for line in open(model.objects.get_csv_path())) - 1
+        # Read the highest id value from the files and the database
+        high_tsv_id = model.objects.get_highest_tsv_id()
+        high_csv_id = model.objects.get_highest_csv_id()
+        high_db_id = int(model.objects.all().aggregate(Max('id'))['id__max'])
 
-        # Get the TSV total, remembering not to count the header line
-        tsv_cnt = sum(1 for line in open(model.objects.get_tsv_path())) - 1
-
-        if db_cnt == csv_cnt and csv_cnt == tsv_cnt:
-            self.success('  Table record count matches CSV and TSV')
+        if tsv_cnt == csv_cnt == db_cnt == high_tsv_id == high_csv_id == high_db_id:
+            self.success('  Table record counts and high id values matches in CSV, TSV, and database')
         else:
-            self.failure('  Table Record count doesn\'t match CSV or TSV.')
-            self.failure('    table # %d  CSV # %d  TSV # %d' % (
-                db_cnt,
-                csv_cnt,
-                tsv_cnt,
-            ))
+            self.failure('  Table Record counts or high id values in TSV, CSV or database.')
+            self.failure('    table # %d, CSV # %d, TSV # %d' % (db_cnt, csv_cnt, tsv_cnt))
 
-            # Read the highest id value from the TSV file
+            # Regenerate the TSV file. Since there was a problem, one should see differences.
             #
-            highest_id = model.objects.get_highest_id()
+            with open(model.objects.get_tsv_path()) as f:
+                col_names = f.readline().replace('\r\n', '')
 
-            # Find id values that do not appear in the table
+            next_file_name = model.objects.get_tsv_path().replace('.TSV', '_DERIVED.TSV')
+
+            next_file = open(next_file_name, 'w')
+            next_file.write(col_names + '\r\n')
+
+            # I need to do this because I need the values in the same order as the TSV.
             #
-            ids = range(1, highest_id + 1)
-
-            # Does not work, so loop through the rows.
+            # The field name is the lower-case version of the column key. Except
+            # when it is not.
             #
-            # found_ids = map(id, model.objects.all())
-
-            found_ids = []
             for row in model.objects.all():
-                found_ids.append(row.id)
 
-            missing_ids = list(set(ids) - set(found_ids))
+                next_row = []
 
-            if len(missing_ids) > 0:
-                self.failure('    missing_ids: %s' % missing_ids)
+                for col_name in col_names.split('\t'):
 
-                Verification.objects.filter(table_name=model.__name__).delete()
+                    field_name = col_name.lower()
+                    if field_name == 'hdrcomment':
+                        field_name = 'hdr_comment'
 
-                for missing_id in missing_ids:
-                    Verification(
-                        table_name=model.__name__,
-                        table_id=missing_id).save()
+                    next_row.append(str(getattr(row, field_name)))
+
+                next_file.write('\t'.join(next_row) + '\r\n')
+
+            next_file.close()
+            self.failure('    compare: %s %s' % (model.objects.get_tsv_path(), next_file_name))
