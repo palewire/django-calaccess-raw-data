@@ -14,9 +14,10 @@ class CalAccessTest(TestCase):
         """
         Load data into the database before running other tests.
         """
+        super(CalAccessTest, cls).setUpClass()
         call_command(
             "downloadcalaccessrawdata",
-            verbosity=0,
+            verbosity=1,
             test_data=True,
         )
 
