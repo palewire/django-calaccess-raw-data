@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 from csvkit import CSVKitReader
 from django.db import connection
 from django.conf import settings
-from django.db import ProgrammingError
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
