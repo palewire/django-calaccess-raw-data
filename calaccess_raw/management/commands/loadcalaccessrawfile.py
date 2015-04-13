@@ -118,8 +118,9 @@ class Command(CalAccessCommand, LabelCommand):
             pass
 
         # Drop all the records from the target model's real table
-        self.cursor.execute('TRUNCATE TABLE "%s"' % model._meta.db_table)
-
+        self.cursor.execute('TRUNCATE TABLE "%s" CASCADE' % (
+            model._meta.db_table
+        ))
         # Get the headers and the count from source CSV
         csv_headers = self.get_headers(csv_path)
         csv_count = self.get_row_count(csv_path)
