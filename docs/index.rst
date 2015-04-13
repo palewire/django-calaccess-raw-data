@@ -10,6 +10,7 @@ Intended as a base layer below more sophisticated apps, like `django-calaccess-c
 Documentation
 -------------
 
+
 .. toctree::
    :maxdepth: 2
 

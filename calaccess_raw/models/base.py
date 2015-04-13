@@ -20,6 +20,9 @@ class CalAccessBaseModel(models.Model):
     def klass_name(self):
         return self.__class__.__name__
 
+    def get_field_list(self):
+        return self._meta.fields
+
     def get_csv_name(self):
         return self.__class__.objects.get_csv_name()
 

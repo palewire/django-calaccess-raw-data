@@ -9,10 +9,15 @@ Filings
 {% for object in model_list %}
 {{ object.klass_name }}
 ~~~~~~~~~~~~~~~~~~~~~~~
-{{ object.doc }}
+{{ object.doc.strip }}
 
 .. py:class:: {{ object.klass_name }}
-
+    {% for field in object.get_field_list %}
+    .. py:attribute:: {{ field.name }}
+        {% if field.help_text %}
+            {{ field.help_text|safe }}
+        {% endif %}
+    {% endfor %}
 {% endfor %}
 
 Empty files
