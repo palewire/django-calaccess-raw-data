@@ -90,10 +90,13 @@ CAL-ACCESS database'
 
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
+        self.verbosity = int(kwargs['verbosity'])
 
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
             settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
+            if self.verbosity:
+                self.log("Using test data")
         else:
             self.data_dir = get_download_directory()
 
@@ -116,7 +119,6 @@ CAL-ACCESS database'
                 'calaccess_raw/downloadcalaccessrawdata.txt',
                 prompt_context,
             )
-        self.verbosity = int(kwargs['verbosity'])
 
     def handle(self, *args, **options):
         if options['test_data']:
@@ -125,8 +127,6 @@ CAL-ACCESS database'
             options["unzip"] = False
             options["prep"] = False
             options["clear"] = False
-
-            self.log("Using test data")
 
             tsv_dir = os.path.join(get_test_download_directory(), "tsv/")
 
@@ -167,7 +167,8 @@ exist at %s" % tsv_dir)
             self.clean()
         if options['load']:
             self.load()
-        self.success("Done!")
+        if self.verbosity:
+            self.success("Done!")
 
     def get_download_metadata(self):
         """
@@ -287,7 +288,9 @@ exist at %s" % tsv_dir)
 
         # Loop through all the files in the source directory
         tsv_list = os.listdir(self.tsv_dir)
-        for name in progress.bar(tsv_list):
+        if self.verbosity:
+            tsv_list = progress.bar(tsv_list)
+        for name in tsv_list:
             call_command(
                 "cleancalaccessrawfile",
                 name,
@@ -302,7 +305,9 @@ exist at %s" % tsv_dir)
             self.header("Loading data files")
 
         model_list = get_model_list()
-        for model in progress.bar(model_list):
+        if self.verbosity:
+            model_list = progress.bar(model_list)
+        for model in model_list:
             call_command(
                 "loadcalaccessrawfile",
                 model.__name__,

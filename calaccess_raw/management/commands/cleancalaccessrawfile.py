@@ -118,7 +118,7 @@ class Command(CalAccessCommand, LabelCommand):
         if log_rows:
             if self.verbosity > 1:
                 msg = '  %s errors'
-                self.failure(msg % len(log_rows) - 1)
+                self.failure(msg % (len(log_rows) - 1))
             self.log_errors(name, log_rows)
 
         # Shut it down
