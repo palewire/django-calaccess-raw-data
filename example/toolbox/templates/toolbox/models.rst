@@ -12,11 +12,12 @@ Filings
 {{ object.doc.strip }}
 
 .. py:class:: {{ object.klass_name }}
+    .. py:data:: {{ object.get_csv_name }}
+
     {% for field in object.get_field_list %}
     .. py:attribute:: {{ field.name }}
-        {% if field.help_text %}
-            {{ field.help_text|safe }}
-        {% endif %}
+
+        {% if field.verbose_name %}{{ field.verbose_name|capfirst }}: {% endif %}{% if field.help_text %}{{ field.help_text|safe }}{% endif %}
     {% endfor %}
 {% endfor %}
 
