@@ -9,6 +9,17 @@ class CalAccessBaseModel(models.Model):
     """
     objects = managers.CalAccessManager()
 
+    def doc(self):
+        if self.__doc__.startswith(self.klass_name()):
+            return ''
+        return self.__doc__
+
+    def klass(self):
+        return self.__class__
+
+    def klass_name(self):
+        return self.__class__.__name__
+
     def get_csv_name(self):
         return self.__class__.objects.get_csv_name()
 
