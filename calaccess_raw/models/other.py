@@ -684,7 +684,7 @@ class HeaderCd(CalAccessBaseModel):
     rec_type = models.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
-        max_length=4,
+        max_length=11,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
