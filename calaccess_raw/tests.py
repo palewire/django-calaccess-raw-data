@@ -29,7 +29,7 @@ class CalAccessTest(TestCase):
         Verify that __doc__ methods exist and work for all models.
         """
         for m in get_model_list():
-            if not m().__doc__:
+            if m().__doc__.startswith(m.__name__):
                 warnings.warn("%s __doc__ undefined" % (m.__name__))
             # self.assertNotEqual(m().__doc__, '')
 
