@@ -112,15 +112,13 @@ class Command(CalAccessCommand, LabelCommand):
         Takes a model and a csv_path and loads it into postgresql
         """
         # Drop the temporary table if it already exists
-        try:
-            self.cursor.execute('DROP TABLE temporary_table;')
-        except ProgrammingError:
-            pass
+        self.cursor.execute('DROP TABLE IF EXISTS temporary_table;')
 
         # Drop all the records from the target model's real table
         self.cursor.execute('TRUNCATE TABLE "%s" CASCADE' % (
             model._meta.db_table
         ))
+
         # Get the headers and the count from source CSV
         csv_headers = self.get_headers(csv_path)
         csv_count = self.get_row_count(csv_path)
