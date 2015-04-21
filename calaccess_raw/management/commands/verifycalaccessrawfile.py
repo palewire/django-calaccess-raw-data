@@ -1,9 +1,9 @@
 from __future__ import unicode_literals
-from django.db import connection
 from optparse import make_option
 from django.db.models.loading import get_model
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
+import os
 
 
 class Command(CalAccessCommand, LabelCommand):
@@ -15,14 +15,27 @@ class Command(CalAccessCommand, LabelCommand):
             dest="create_diff",
             help="Create a difference file for the TSV and the database."
         ),
+        make_option(
+            '--missing-ids',
+            action="store_true",
+            dest="missing_ids",
+            default=False,
+            help="List the id values which are found in the \
+TSV file but not the database."
+        ),
     )
 
-    help = 'Compare the number of records in a model \
-against its source CSV and TSV and show the missing ids. \
-\
-Using -create-diff will generate a new copy of the \
-TSV file from the database table, thus showing what \
-was missed.'
+    help = """
+Compare the number of records in a model
+against its source CSV and TSV and show the missing ids.
+
+Using --create-diff will generate a new copy of the
+TSV file from the database table, thus showing what
+was missed.
+
+Using --missing-ids will generate a list of the ids that
+are found in the TSV file but missing from the database.
+"""
     args = '<model name>'
 
     def handle_label(self, label, **options):
@@ -65,10 +78,8 @@ was missed.'
                 next_file = open(next_file_name, 'w')
                 next_file.write(col_names + '\r\n')
 
-            for row in model.objects.all():
-                next_ids.append(str(row.id))
-
-                if create_diff:
+                for row in model.objects.all().order_by('id'):
+                    next_ids.append(int(row.id))
 
                     next_row = []
 
@@ -82,22 +93,56 @@ was missed.'
 
                     next_file.write('\t'.join(next_row) + '\r\n')
 
-            if create_diff:
                 next_file.close()
                 self.failure('    compare: %s %s' %
                              (model.objects.get_tsv_path(), next_file_name))
 
             # Find the ids that are missing from the database
             #
-            with open(model.objects.get_tsv_path()) as f:
-                f.readline()
-                original_ids = []
-                for line in f:
-                    try:
-                        original_ids.append(str(line.split('\t')[0]))
-                    except UnicodeDecodeError:
-                        self.failure('    UnicodeDecodeError: "%s"' %
-                                     unicode(line, 'utf-8'))
+            if options['missing_ids']:
 
-            missing_ids = list(set(original_ids) - set(next_ids))
-            self.failure('    missing_ids: %s' % missing_ids)
+                # if we did create_diffs, we already created this list.
+                #
+                if not create_diff:
+                    for row in model.objects.all().order_by('id'):
+                        next_ids.append(int(row.id))
+
+                with open(model.objects.get_tsv_path()) as f:
+                    last_line = tail(f)
+
+                highest_id = int(last_line[0].split('\t')[0])
+
+                missing_ids = list(set(range(1, highest_id + 1)) -
+                                   set(next_ids))
+                self.failure('    missing_ids: %s' % missing_ids)
+
+
+def tail(f, lines=1, _buffer=4098):
+    """Tail a file and get X lines from the end"""
+    # place holder for the lines found
+    lines_found = []
+
+    # block counter will be multiplied by buffer
+    # to get the block size from the end
+    block_counter = -1
+
+    # loop until we find X lines
+    while len(lines_found) < lines:
+        try:
+            f.seek(block_counter * _buffer, os.SEEK_END)
+        except IOError:  # file is too small, or too many lines requested
+            f.seek(0)
+            lines_found = f.readlines()
+            break
+
+        lines_found = f.readlines()
+
+        # we found enough lines, get out
+        if len(lines_found) > lines:
+            break
+
+        # decrement the block counter to get the
+        # next X bytes
+        block_counter -= 1
+
+    return lines_found[-lines:]
