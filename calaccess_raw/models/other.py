@@ -1573,4 +1573,4 @@ class ReportsCd(CalAccessBaseModel):
         verbose_name_plural = 'REPORTS_CD'
 
     def __str__(self):
-        return str(self.filing_id)
+        return str(self.rpt_id)
