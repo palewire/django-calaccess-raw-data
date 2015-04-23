@@ -9,6 +9,7 @@ bootstrap:
 	python example/manage.py runserver
 
 docs:
+	python example/manage.py createcalaccessrawmodeldocs
 	cd docs && make livehtml
 
 load:
