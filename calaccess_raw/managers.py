@@ -15,3 +15,13 @@ class CalAccessManager(models.Manager):
             'csv',
             self.get_csv_name()
         )
+
+    def get_tsv_name(self):
+        return "%s.tsv" % self.model._meta.db_table
+
+    def get_tsv_path(self):
+        return os.path.join(
+            get_download_directory(),
+            'tsv',
+            self.get_tsv_name()
+        )
