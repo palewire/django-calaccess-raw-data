@@ -16,7 +16,7 @@ and the models in this Django application.
 
     **Source data**
 
-        .. py:attribute:: {{ object.get_tsv_name }}
+        `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
     **Fields**
 
