@@ -14,7 +14,7 @@ class Command(CalAccessCommand):
             'docs'
         )
         self.target_path = os.path.join(self.docs_dir, 'models.rst')
-        model_list = get_model_list()
+        model_list = sorted(get_model_list(), key=lambda x:x().klass_name)
         group_list = {}
         for m in model_list:
             try:
