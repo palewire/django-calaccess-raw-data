@@ -83,9 +83,153 @@ class Command(CalAccessCommand, LabelCommand):
             if sub_char:
                 tsv_line = tsv_line.replace('\x1a', '')
 
+            #
+            # Fix some specific errors found in the tsv files.
+            # In each case, we are recognizing the error (with as little work as possible),
+            # and then correcting the tsv_line value.
+            #
+            # Numbers are 1 greater than the number of errors.
+            #
+            # Done:
+            #
+            #    10 data/log/cvr2_campaign_disclosure_cd.errors.csv
+            #     2 data/log/cvr2_registration_cd.errors.csv
+            #    10 data/log/cvr_campaign_disclosure_cd.errors.csv
+            #
+            # To Do:
+            #
+            #    71 data/log/cvr_lobby_disclosure_cd.errors.csv
+            #     2 data/log/cvr_registration_cd.errors.csv
+            #    12 data/log/debt_cd.errors.csv
+            #   280 data/log/expn_cd.errors.csv
+            #    66 data/log/filername_cd.errors.csv
+            #    17 data/log/lccm_cd.errors.csv
+            #    11 data/log/lemp_cd.errors.csv
+            #   102 data/log/lexp_cd.errors.csv
+            #    13 data/log/loan_cd.errors.csv
+            #    92 data/log/lpay_cd.errors.csv
+            #    44 data/log/names_cd.errors.csv
+            #    65 data/log/rcpt_cd.errors.csv
+            #     4 data/log/s401_cd.errors.csv
+            #    29 data/log/s496_cd.errors.csv
+            #     3 data/log/s497_cd.errors.csv
+            #     2 data/log/s498_cd.errors.csv
+            #    60 data/log/text_memo_cd.errors.csv
+
+            # This committee is putting an extra file before the enty_naml field.
+            #
+            if name == 'CVR2_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if re.search('Jim Frazier for Assembly 2012 Officeholder Account', tsv_line):
+                    tsv_parts = tsv_line.split('\t')
+                    if tsv_parts[12] == ' ':
+                        if tsv_parts[13] == 'Jim Frazier for Assembly 2012 Officeholder Account':
+                            tsv_parts.pop(12)
+                            tsv_line = '\t'.join(tsv_parts)
+
+            # This committee put an empty field before the entity_id.
+            #
+            if name == 'CVR2_REGISTRATION_CD.TSV':
+                if tsv_line.startswith('1718987\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if tsv_parts[7] == '':
+                        if tsv_parts[8] = 'L00102':
+                            tsv_parts.pop(7)
+                            tsv_line = '\t'.join(tsv_parts)
+
+            # These entries have many extra empty fields before the cand_naml field.
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('591440\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 98 and tsv_parts[73] == 'Dickerson':
+                        for idx in range(12):
+                            tsv_parts.pop(61)
+                        tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('591313\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 113 and tsv_parts[88] == 'Pacheco':
+                        for idx in range(27):
+                            tsv_parts.pop(61)
+                        tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('591205\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 89 and tsv_parts[64] == 'Wesson':
+                        for idx in range(3):
+                            tsv_parts.pop(61)
+                        tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('591426\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 87 and tsv_parts[62] == 'Kaloogian':
+                        tsv_parts.pop(61)
+                        tsv_line = '\t'.join(tsv_parts)
+
+            # These have some empty fields added at the end.
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('1172839\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 89:
+                        for idx in range(3):
+                            tsv_parts.pop(85)
+                        tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('1346256\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 89:
+                        for idx in range(3):
+                            tsv_parts.pop(85)
+                        tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('1346489\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 87:
+                        tsv_parts.pop(85)
+                        tsv_line = '\t'.join(tsv_parts)
+
+            # Something split the treas_naml field
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('1819137\t'):
+                    tsv_parts = tsv_line.split('\t')
+                    if len(tsv_parts) == 87:
+                        if tsv_parts[26] == 'Steve Mohr,'
+                            if tsv_parts[27] == ' Senior Vice President/CFO':
+                                if tsv_parts[56] == 'X':
+                                    tsv_parts.pop(26)
+                                    tsv_parts.insert(26, 'Mohr')
+                                    tsv_parts.pop(27)
+                                    tsv_parts.insert(27, 'Steve')
+                                    tsv_parts.pop(28)
+                                    tsv_parts.insert(28, 'Senior Vice President/CFO')
+                                    tsv_parts.pop(55)
+                                    tsv_line = '\t'.join(tsv_parts)
+
+            # Again, this entry has extra empty fields before the cand_naml field.
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+                if tsv_line.startswith('1852507\t'):
+                    tsv_parts = tsv_lines.split('\t')
+                    if len(tsv_parts) == 88:
+                        if tsv_parts[63] == 'Weinreb':
+                            tsv_parts.pop(61)
+                            tsv_parts.pop(61)
+                            tsv_line = '\t'.join(tsv_parts)
+
+            #
+            # Done with specific found fixes in the tsv files.
+            #
+
             # Split on tabs so we can later spit it back out as CSV
             # and remove extra newlines while we are there.
-            csv_field_list = tsv_line.replace("\r\n", "").split("\t")
+            csv_field_list = tsv_line.replace('\r\n', '').split('\t')
 
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems
