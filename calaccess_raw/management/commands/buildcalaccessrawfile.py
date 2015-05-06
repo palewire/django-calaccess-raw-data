@@ -190,3 +190,21 @@ class Command(CalAccessCommand):
             raise Exception(msg)
 
         self.log('model_list: %s' % models)
+
+        # What Is to Be Done?
+        #
+        # download (in download)
+        #
+        # unzip (in download)
+        #
+        # prep (in download)
+        #
+        # clear (in download)
+        #
+        # clean (download calls command: cleancalaccessrawfile)
+        #
+        # load (download calls command: loadcalaccessrawfile)
+        #
+        # verify (optional, nobody calls it)
+        #
+
