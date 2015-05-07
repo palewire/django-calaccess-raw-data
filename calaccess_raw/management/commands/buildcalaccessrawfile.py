@@ -1,4 +1,6 @@
 from optparse import make_option
+from django.core.management import call_command
+from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_model_list
 
@@ -108,6 +110,12 @@ custom_options = (
         type="string",
         dest="only_tables"
     ),
+    make_option(
+        "--verify",
+        action="store_true",
+        default=False,
+        dest="verify_models"
+    ),
 )
 
 
@@ -171,17 +179,19 @@ class Command(CalAccessCommand):
             if options['skip_load']:
                 toDos.remove('load')
 
+        verify_models = options['verify_models']
+
         self.log('Ok')
         self.log('toDos: %s' % toDos)
 
-        models = []
+        model_names = []
         for model in get_model_list():
             if model.__name__.endswith('Cd'):
-                models.append(model.__name__)
+                model_names.append(model.__name__)
 
         if options['only_tables'] is not None:
             only_set = set(options['only_tables'].split(','))
-            models = list(only_set.intersection(set(models)))
+            models = list(only_set.intersection(set(model_names)))
 
         msg = 'Please provide a comma-separated list of tables'
         msg = msg + ', such as "CvrSoCd,HdrCd"'
@@ -191,20 +201,44 @@ class Command(CalAccessCommand):
 
         self.log('model_list: %s' % models)
 
+        # TODO figure out how to pass in other options, verbosity, et al.
+
         # What Is to Be Done?
         #
         # download (in download)
         #
+        # TBD
+
         # unzip (in download)
         #
+        # TBD
+
         # prep (in download)
         #
+        # TBD
+
         # clear (in download)
         #
-        # clean (download calls command: cleancalaccessrawfile)
+        # TBD
+
+        # clean
         #
+        for model_name in model_names:
+            model = get_model("calaccess_raw", model_name)
+            call_command(
+                'cleancalaccessrawfile',
+                '%s.TSV' % model._meta.db_table
+            )
+
         # load (download calls command: loadcalaccessrawfile)
         #
-        # verify (optional, nobody calls it)
-        #
+        # TBD
 
+        # verify (optional)
+        #
+        if verify_models:
+            for model_name in model_names:
+                call_command(
+                    'verifycalaccessrawfile',
+                    model_name
+                )
