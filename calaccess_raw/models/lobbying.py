@@ -91,7 +91,7 @@ original filing and 1 to 999 amendments.",
     eff_date = models.DateField(null=True, db_column='EFF_DATE', blank=True)
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('BUS', 'BUS (Unknown)'),
@@ -336,7 +336,7 @@ registration statement)'),
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('AGY', 'State agency'),
@@ -425,7 +425,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('CLI', 'CLI (Unknown)'),
@@ -632,7 +632,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('EMP', 'Employer'),
@@ -992,7 +992,7 @@ original filing and 1 to 999 amendments.",
     cumbeg_dt = models.DateField(db_column='CUMBEG_DT', null=True)
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('FRM', 'Lobbying firm'),
@@ -1134,7 +1134,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('IND', 'Person (Spending > $5,000'),
@@ -1278,7 +1278,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('COM', 'Committee'),
@@ -1670,7 +1670,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('128', '128 (Unknown)'),

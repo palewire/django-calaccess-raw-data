@@ -173,13 +173,12 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR2_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    'all', '',
-                    39,
-                    [
-                        [13, ' '],
-                        [14, 'Jim Frazier for Assembly 2012 Officeholder Account']
-                    ]):
+                        tsv_line,
+                        'all', '',
+                        39,
+                        [[13, ' '],
+                         [14, 'Jim Frazier for Assembly '
+                              '2012 Officeholder Account']]):
 
                     tsv_parts = tsv_line.split('\t')
                     tsv_parts.pop(13)
@@ -190,12 +189,10 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR2_REGISTRATION_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '1718987', '',
-                    13,
-                    [
-                        [8, 'L00102']
-                    ]):
+                        tsv_line,
+                        '1718987', '',
+                        13,
+                        [[8, 'L00102']]):
 
                     tsv_parts = tsv_line.split('\t')
                     tsv_parts.pop(7)
@@ -207,12 +204,10 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '591440', '',
-                    98,
-                    [
-                        [73, 'Dickerson']
-                    ]):
+                        tsv_line,
+                        '591440', '',
+                        98,
+                        [[73, 'Dickerson']]):
 
                     tsv_parts = tsv_line.split('\t')
                     for idx in range(12):
@@ -222,12 +217,10 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '591313', '',
-                    113,
-                    [
-                        [88, 'Pacheco']
-                    ]):
+                        tsv_line,
+                        '591313', '',
+                        113,
+                        [[88, 'Pacheco']]):
 
                     tsv_parts = tsv_line.split('\t')
                     for idx in range(27):
@@ -237,12 +230,10 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '591205', '',
-                    89,
-                    [
-                        [64, 'Wesson']
-                    ]):
+                        tsv_line,
+                        '591205', '',
+                        89,
+                        [[64, 'Wesson']]):
 
                     tsv_parts = tsv_line.split('\t')
                     for idx in range(3):
@@ -252,12 +243,10 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '591426', '',
-                    87,
-                    [
-                        [62, 'Kaloogian']
-                    ]):
+                        tsv_line,
+                        '591426', '',
+                        87,
+                        [[62, 'Kaloogian']]):
 
                     tsv_parts = tsv_line.split('\t')
                     tsv_parts.pop(61)
@@ -268,23 +257,10 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '1172839', '',
-                    89,
-                    []):
-
-                    tsv_parts = tsv_line.split('\t')
-                    for idx in range(3):
-                       tsv_parts.pop(85)
-                    tsv_line = '\t'.join(tsv_parts)
-
-            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
-
-                if self.fix_is_needed(
-                    tsv_line,
-                    '1346256', '',
-                    89,
-                    []):
+                        tsv_line,
+                        '1172839', '',
+                        89,
+                        []):
 
                     tsv_parts = tsv_line.split('\t')
                     for idx in range(3):
@@ -294,10 +270,23 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '1346489', '',
-                    87,
-                    []):
+                        tsv_line,
+                        '1346256', '',
+                        89,
+                        []):
+
+                    tsv_parts = tsv_line.split('\t')
+                    for idx in range(3):
+                        tsv_parts.pop(85)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1346489', '',
+                        87,
+                        []):
 
                     tsv_parts = tsv_line.split('\t')
                     tsv_parts.pop(85)
@@ -308,14 +297,12 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '1819137', '',
-                    87,
-                    [
-                        [26, 'Steve Mohr,'],
-                        [27, ' Senior Vice President/CFO'],
-                        [56, 'X']
-                    ]):
+                        tsv_line,
+                        '1819137', '',
+                        87,
+                        [[26, 'Steve Mohr,'],
+                         [27, ' Senior Vice President/CFO'],
+                         [56, 'X']]):
 
                     tsv_parts = tsv_line.split('\t')
                     tsv_parts.pop(26)
@@ -327,17 +314,15 @@ class Command(CalAccessCommand, LabelCommand):
                     tsv_parts.pop(55)
                     tsv_line = '\t'.join(tsv_parts)
 
-            # Again, this entry has extra empty fields before the cand_naml field.
+            # Again, this entry has extra empty fields before cand_naml.
             #
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '1852507', '',
-                    88,
-                    [
-                        [63, 'Weinreb']
-                    ]):
+                        tsv_line,
+                        '1852507', '',
+                        88,
+                        [[63, 'Weinreb']]):
 
                     tsv_parts = tsv_line.split('\t')
                     tsv_parts.pop(61)
@@ -349,13 +334,12 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_REGISTRATION_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '1719434', '',
-                    72,
-                    [
-                        [47, ''],
-                        [48, 'Recycling and processing of recycled beverage containers and materials']
-                    ]):
+                        tsv_line,
+                        '1719434', '',
+                        72,
+                        [[47, ''],
+                         [48, 'Recycling and processing of recycled '
+                              'beverage containers and materials']]):
 
                     tsv_parts = tsv_line.split('\t')
                     tsv_parts.pop(47)
@@ -364,13 +348,11 @@ class Command(CalAccessCommand, LabelCommand):
             if name == 'CVR_LOBBY_DISCLOSURE_CD.TSV':
 
                 if self.fix_is_needed(
-                    tsv_line,
-                    '681268', '0',
-                    87,
-                    [
-                        [43, 'AB 525'],
-                        [47, 'SB 136 AB 878']
-                    ]):
+                        tsv_line,
+                        '681268', '0',
+                        87,
+                        [[43, 'AB 525'],
+                         [47, 'SB 136 AB 878']]):
 
                     tsv_parts = tsv_line.split('\t')
                     next_parts = []
