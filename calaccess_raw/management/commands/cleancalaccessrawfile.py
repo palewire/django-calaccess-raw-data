@@ -9,8 +9,8 @@ from calaccess_raw import get_model_list
 from calaccess_raw import get_download_directory
 from django.core.management import call_command
 from django.core.management.base import LabelCommand
-from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
+
 
 # Takes the TSV file name as a parameter.
 #
@@ -25,7 +25,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         if label == 'all':
             #
-            # TODO How to pass the verbosity in here? Cannot seem to pass it in.
+            # TODO How to pass the verbosity in here?
             #
             for m in get_model_list():
                 if m.__name__.endswith('Cd'):
@@ -76,7 +76,6 @@ class Command(CalAccessCommand, LabelCommand):
 
         # We passed all of the checks.
         return True
- 
 
     def clean(self, name):
         """
@@ -202,7 +201,8 @@ class Command(CalAccessCommand, LabelCommand):
                     tsv_parts.pop(7)
                     tsv_line = '\t'.join(tsv_parts)
 
-            # These entries have many extra empty fields before the cand_naml field.
+            # These entries have many extra empty fields before
+            # the cand_naml field.
             #
             if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
 
@@ -363,7 +363,7 @@ class Command(CalAccessCommand, LabelCommand):
 
             if name == 'CVR_LOBBY_DISCLOSURE_CD.TSV':
 
-               if self.fix_is_needed(
+                if self.fix_is_needed(
                     tsv_line,
                     '681268', '0',
                     87,
@@ -383,7 +383,7 @@ class Command(CalAccessCommand, LabelCommand):
                     for i in range(8):
                         tsv_parts.append('')
                     tsv_line = '\t'.join(tsv_parts)
- 
+
             #
             # Done with specific found fixes in the tsv files.
             #
