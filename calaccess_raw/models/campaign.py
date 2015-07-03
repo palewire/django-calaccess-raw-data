@@ -122,7 +122,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('BMC', 'Ballot measure committee'),
@@ -397,7 +397,7 @@ slate mailer organization)'),
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('ATH', 'Authorizing individual'),
@@ -634,7 +634,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('BMC', 'Ballot measure committee'),
@@ -891,7 +891,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('ATR', 'Assistant treasurer'),
@@ -1241,7 +1241,7 @@ and Form 401 Schedule A, A-1)"
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ("", "None"),
         ("0", "0 (Unknown)"),
@@ -1615,7 +1615,7 @@ candidate campaign statement)'),
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('0', '0 (Unknown)'),
@@ -1713,7 +1713,7 @@ original filing and 1 to 999 amendments.",
     cmte_id = models.CharField(max_length=9, db_column='CMTE_ID', blank=True)
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('COM', "Committee"),
@@ -2210,7 +2210,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('0', '0 (Unknown)'),
@@ -2618,7 +2618,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('BNM', 'Ballot measure\'s name/title'),
@@ -2649,8 +2649,8 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-       ('F', 'Form 460 (Recipient committee campaign statement): \
-Schedule F, accrued expenses (unpaid bills)'),
+        ('F', 'Form 460 (Recipient committee campaign statement): '
+              'Schedule F, accrued expenses (unpaid bills)'),
     )
     form_type = models.CharField(
         max_length=1,
@@ -2950,7 +2950,7 @@ Part 2, late contributions made')
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('0', '0 (Unknown)'),
@@ -3337,7 +3337,7 @@ Part R: late payments received from')
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
         # format.html#document/p9
         ('', 'Unknown'),
         ('CAO', 'Candidate/officerholder'),

@@ -1,34 +1,87 @@
 from __future__ import unicode_literals
 import os
+import re
 import csv
 from io import StringIO
 from django.utils import six
 from csvkit import CSVKitReader, CSVKitWriter
+from calaccess_raw import get_model_list
 from calaccess_raw import get_download_directory
+from django.core.management import call_command
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
 
 
+# Takes the TSV file name as a parameter.
+#
 class Command(CalAccessCommand, LabelCommand):
     help = 'Clean a source CAL-ACCESS file and reformat it as a CSV'
     args = '<file name>'
 
     def handle_label(self, label, **options):
+
         # Set options
         self.verbosity = int(options.get("verbosity"))
+
+        if label == 'all':
+            #
+            # TODO How to pass the verbosity in here?
+            #
+            for m in get_model_list():
+                if m.__name__.endswith('Cd'):
+                    call_command(
+                        'cleancalaccessrawfile',
+                        '%s.TSV' % m._meta.db_table
+                    )
+            exit()
+
+        # Derive options
         self.data_dir = get_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         self.log_dir = os.path.join(self.data_dir, "log/")
+
         # Do it
         self.clean(label)
+
+    # When one is looking for a specific condition to do a specific fix,
+    # these checks all follow a standard pattern. I am abstracting those
+    # checks here.
+    #
+    # The conditions is an array of arrays, each of which is a field number
+    # and a string that should appear in that field.
+    #
+    # If these checks pass, it is safe to fix the problem.
+    #
+    def fix_is_needed(self, line, filing_id, amend_id, count, conditions):
+
+        if filing_id != 'all':
+            if amend_id != '':
+                if not line.startswith('%s\t%s\t' % (filing_id, amend_id)):
+                    return False
+            else:
+                if not line.startswith('%s\t' % filing_id):
+                    return False
+
+        parts = line.split('\t')
+
+        if len(parts) != count:
+            return False
+
+        for condition in conditions:
+            idx = condition[0]
+            expected = condition[1]
+            if parts[idx] != expected:
+                return False
+
+        # We passed all of the checks.
+        return True
 
     def clean(self, name):
         """
         Cleans the provided source TSV file and writes it out in CSV format
         """
-        if self.verbosity > 2:
-            self.log(" Cleaning %s" % name)
+        self.log(" Cleaning %s" % name)
 
         # Up the CSV data limit
         csv.field_size_limit(1000000000)
@@ -83,9 +136,243 @@ class Command(CalAccessCommand, LabelCommand):
             if sub_char:
                 tsv_line = tsv_line.replace('\x1a', '')
 
+            #
+            # Fix some specific errors found in the tsv files.
+            # In each case, we are recognizing the error,
+            # hopefully taking a very small amount of time to do it,
+            # and then correcting the tsv_line value.
+            #
+            # Done:
+            #
+            #     9 data/log/cvr2_campaign_disclosure_cd.errors.csv
+            #     1 data/log/cvr2_registration_cd.errors.csv
+            #     9 data/log/cvr_campaign_disclosure_cd.errors.csv
+            #     1 data/log/cvr_registration_cd.errors.csv
+            #
+            # To Do:
+            #
+            #    70 data/log/cvr_lobby_disclosure_cd.errors.csv
+            #    11 data/log/debt_cd.errors.csv
+            #   279 data/log/expn_cd.errors.csv
+            #    65 data/log/filername_cd.errors.csv
+            #    16 data/log/lccm_cd.errors.csv
+            #    10 data/log/lemp_cd.errors.csv
+            #   101 data/log/lexp_cd.errors.csv
+            #    12 data/log/loan_cd.errors.csv
+            #    91 data/log/lpay_cd.errors.csv
+            #    43 data/log/names_cd.errors.csv
+            #    64 data/log/rcpt_cd.errors.csv
+            #     3 data/log/s401_cd.errors.csv
+            #    28 data/log/s496_cd.errors.csv
+            #     2 data/log/s497_cd.errors.csv
+            #     1 data/log/s498_cd.errors.csv
+            #    59 data/log/text_memo_cd.errors.csv
+
+            # This committee is putting an extra file before enty_naml.
+            #
+            if name == 'CVR2_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        'all', '',
+                        39,
+                        [[13, ' '],
+                         [14, 'Jim Frazier for Assembly '
+                              '2012 Officeholder Account']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    tsv_parts.pop(13)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            # This committee put an empty field before the entity_id.
+            #
+            if name == 'CVR2_REGISTRATION_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1718987', '',
+                        13,
+                        [[8, 'L00102']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    tsv_parts.pop(7)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            # These entries have many extra empty fields before
+            # the cand_naml field.
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '591440', '',
+                        98,
+                        [[73, 'Dickerson']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    for idx in range(12):
+                            tsv_parts.pop(61)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '591313', '',
+                        113,
+                        [[88, 'Pacheco']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    for idx in range(27):
+                            tsv_parts.pop(61)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '591205', '',
+                        89,
+                        [[64, 'Wesson']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    for idx in range(3):
+                        tsv_parts.pop(61)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '591426', '',
+                        87,
+                        [[62, 'Kaloogian']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    tsv_parts.pop(61)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            # These have some empty fields added at the end.
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1172839', '',
+                        89,
+                        []):
+
+                    tsv_parts = tsv_line.split('\t')
+                    for idx in range(3):
+                        tsv_parts.pop(85)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1346256', '',
+                        89,
+                        []):
+
+                    tsv_parts = tsv_line.split('\t')
+                    for idx in range(3):
+                        tsv_parts.pop(85)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1346489', '',
+                        87,
+                        []):
+
+                    tsv_parts = tsv_line.split('\t')
+                    tsv_parts.pop(85)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            # Something split the treas_naml field
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1819137', '',
+                        87,
+                        [[26, 'Steve Mohr,'],
+                         [27, ' Senior Vice President/CFO'],
+                         [56, 'X']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    tsv_parts.pop(26)
+                    tsv_parts.insert(26, 'Mohr')
+                    tsv_parts.pop(27)
+                    tsv_parts.insert(27, 'Steve')
+                    tsv_parts.pop(28)
+                    tsv_parts.insert(28, 'Senior Vice President/CFO')
+                    tsv_parts.pop(55)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            # Again, this entry has extra empty fields before cand_naml.
+            #
+            if name == 'CVR_CAMPAIGN_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1852507', '',
+                        88,
+                        [[63, 'Weinreb']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    tsv_parts.pop(61)
+                    tsv_parts.pop(61)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            # An extra field before the descrip_1 field.
+            #
+            if name == 'CVR_REGISTRATION_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '1719434', '',
+                        72,
+                        [[47, ''],
+                         [48, 'Recycling and processing of recycled '
+                              'beverage containers and materials']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    tsv_parts.pop(47)
+                    tsv_line = '\t'.join(tsv_parts)
+
+            if name == 'CVR_LOBBY_DISCLOSURE_CD.TSV':
+
+                if self.fix_is_needed(
+                        tsv_line,
+                        '681268', '0',
+                        87,
+                        [[43, 'AB 525'],
+                         [47, 'SB 136 AB 878']]):
+
+                    tsv_parts = tsv_line.split('\t')
+                    next_parts = []
+                    while len(tsv_parts) > 43:
+                        next_parts.append(tsv_parts.pop(43))
+                    next_field = ' '.join(next_parts)
+                    while re.search(r'  ', next_field):
+                        next_field = next_field.replace('  ', ' ')
+                    tsv_parts.append(next_field)
+                    for i in range(8):
+                        tsv_parts.append('')
+                    tsv_line = '\t'.join(tsv_parts)
+
+            #
+            # Done with specific found fixes in the tsv files.
+            #
+
             # Split on tabs so we can later spit it back out as CSV
             # and remove extra newlines while we are there.
-            csv_field_list = tsv_line.replace("\r\n", "").split("\t")
+            csv_field_list = tsv_line.replace('\r\n', '').split('\t')
 
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems

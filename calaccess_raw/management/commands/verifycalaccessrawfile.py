@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 from django.db.models.loading import get_model
+from django.core.management import call_command
 from django.core.management.base import LabelCommand
+from calaccess_raw import get_model_list
 from calaccess_raw.management.commands import CalAccessCommand
 
 
@@ -10,6 +12,14 @@ class Command(CalAccessCommand, LabelCommand):
 
     def handle_label(self, label, **options):
         self.log(" Verifying %s" % label)
+
+        if label == 'all':
+            for m in get_model_list():
+                call_command(
+                    "verifycalaccessrawfile",
+                    m.__name__,
+                )
+            exit()
 
         # Get the model
         model = get_model("calaccess_raw", label)
