@@ -26,5 +26,5 @@ class Command(CalAccessCommand):
             'group_list': group_list,
         }
         rendered = render_to_string('toolbox/models.rst', context)
-        with open(self.target_path, 'wb') as target_file:
+        with open(self.target_path, 'w') as target_file:
             target_file.write(rendered)
