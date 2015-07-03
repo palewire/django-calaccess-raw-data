@@ -32,8 +32,8 @@ script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw
  - python example/manage.py createcalaccessrawmodeldocs
- - cd docs && make html
- - coverage run `pwd`/example/manage.py test calaccess_raw
+ - cd docs && make html && cd ..
+ - coverage run example/manage.py test calaccess_raw
 
 after_success:
  - coveralls
