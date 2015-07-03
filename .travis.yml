@@ -33,7 +33,7 @@ script:
  - pyflakes calaccess_raw
  - python example/manage.py createcalaccessrawmodeldocs
  - cd docs && make html
- - coverage run example/manage.py test calaccess_raw
+ - coverage run `pwd`/example/manage.py test calaccess_raw
 
 after_success:
  - coveralls
