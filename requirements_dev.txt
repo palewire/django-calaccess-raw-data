@@ -14,3 +14,4 @@ tox
 clint
 csvkit
 subsample
+-e git+https://github.com/california-civic-data-coalition/django-postgres-copy.git@HEAD#egg=django-postgres-copy

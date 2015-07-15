@@ -28,7 +28,8 @@ Secretary of State\'s CAL-ACCESS database',
         'python-dateutil',
         'requests',
         'clint',
-        'hurry.filesize'
+        'hurry.filesize',
+        'django-postgres-copy',
     ),
     classifiers=[
         'Programming Language :: Python',

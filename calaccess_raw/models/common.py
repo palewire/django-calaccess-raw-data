@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
+from calaccess_raw import fields
 from django.utils.encoding import python_2_unicode_compatible
 from django.template.defaultfilters import floatformat
 from django.contrib.humanize.templatetags.humanize import intcomma
@@ -21,14 +22,14 @@ class FilernameCd(CalAccessBaseModel):
     (when they are only an individual's name) use both the first and last name
     fields in conjunction.
     """
-    xref_filer_id = models.CharField(
+    xref_filer_id = fields.CharField(
         verbose_name='crossreference filer ID',
         max_length=15,
         db_column='XREF_FILER_ID',
         db_index=True,
         help_text="Alternative filer ID found on many forms"
     )
-    filer_id = models.IntegerField(
+    filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
         db_index=True,
@@ -60,7 +61,7 @@ class FilernameCd(CalAccessBaseModel):
             'Treasurer/responsible officer'
         )
     )
-    filer_type = models.CharField(
+    filer_type = fields.CharField(
         max_length=45,
         db_column='FILER_TYPE',
         db_index=True,
@@ -77,42 +78,42 @@ class FilernameCd(CalAccessBaseModel):
         ('TERMINATED', ''),
         ('W', ''),
     )
-    status = models.CharField(
+    status = fields.CharField(
         max_length=10,
         db_column='STATUS',
         db_index=True,
         choices=STATUS_CHOICES,
         blank=True,
     )
-    effect_dt = models.DateField(
+    effect_dt = fields.DateField(
         db_column='EFFECT_DT',
         help_text="Effective date for status",
         null=True,
     )
-    naml = models.CharField(
+    naml = fields.CharField(
         max_length=200, db_column='NAML',
         help_text="Last name, sometimes full name"
     )
-    namf = models.CharField(
+    namf = fields.CharField(
         max_length=55, db_column='NAMF', blank=True,
         help_text="First name"
     )
-    namt = models.CharField(
+    namt = fields.CharField(
         max_length=70, db_column='NAMT', blank=True,
         help_text="Name prefix or title"
     )
-    nams = models.CharField(
+    nams = fields.CharField(
         max_length=32, db_column='NAMS', blank=True,
         help_text="Name suffix"
     )
-    adr1 = models.CharField(max_length=200, db_column='ADR1', blank=True)
-    adr2 = models.CharField(max_length=200, db_column='ADR2', blank=True)
-    city = models.CharField(max_length=55, db_column='CITY', blank=True)
-    st = models.CharField(max_length=4, db_column='ST', blank=True)
-    zip4 = models.CharField(max_length=10, db_column='ZIP4', blank=True)
-    phon = models.CharField(max_length=60, db_column='PHON', blank=True)
-    fax = models.CharField(max_length=60, db_column='FAX', blank=True)
-    email = models.CharField(max_length=60, db_column='EMAIL', blank=True)
+    adr1 = fields.CharField(max_length=200, db_column='ADR1', blank=True)
+    adr2 = fields.CharField(max_length=200, db_column='ADR2', blank=True)
+    city = fields.CharField(max_length=55, db_column='CITY', blank=True)
+    st = fields.CharField(max_length=4, db_column='ST', blank=True)
+    zip4 = fields.CharField(max_length=10, db_column='ZIP4', blank=True)
+    phon = fields.CharField(max_length=60, db_column='PHON', blank=True)
+    fax = fields.CharField(max_length=60, db_column='FAX', blank=True)
+    email = fields.CharField(max_length=60, db_column='EMAIL', blank=True)
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -132,20 +133,20 @@ class FilerFilingsCd(CalAccessBaseModel):
     and electronic filings. This table is used as an index to locate
     filing information.
     """
-    filer_id = models.IntegerField(
+    filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
         db_index=True,
         null=True,
         help_text="Filer's unique identification number"
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    period_id = models.IntegerField(
+    period_id = fields.IntegerField(
         null=True,
         db_column='PERIOD_ID',
         blank=True,
@@ -205,7 +206,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         ('F900', ''),
         ('F999', ''),
     )
-    form_id = models.CharField(
+    form_id = fields.CharField(
         max_length=7,
         db_column='FORM_ID',
         db_index=True,
@@ -213,13 +214,13 @@ class FilerFilingsCd(CalAccessBaseModel):
         choices=FORM_ID_CHOICES,
         help_text="Form identification code"
     )
-    filing_sequence = models.IntegerField(
+    filing_sequence = fields.IntegerField(
         db_column='FILING_SEQUENCE',
         db_index=True,
         help_text="Amendment number where 0 is an original filing and 1 to \
 999 are amendments"
     )
-    filing_date = models.DateField(
+    filing_date = fields.DateField(
         db_column='FILING_DATE',
         help_text="Date the filing entered into the system",
         null=True
@@ -234,7 +235,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         (10006, ''),
         (10007, ''),
     )
-    stmnt_type = models.IntegerField(
+    stmnt_type = fields.IntegerField(
         db_column='STMNT_TYPE',
         verbose_name="statement type",
         db_index=True,
@@ -247,7 +248,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         (11002, ''),
         (11003, ''),
     )
-    stmnt_status = models.IntegerField(
+    stmnt_status = fields.IntegerField(
         db_column='STMNT_STATUS',
         db_index=True,
         help_text="The status of the statement. If the filing has been \
@@ -255,37 +256,37 @@ reviewed or not reviewed.",
         verbose_name='statement status',
         choices=STATEMENT_STATUS_CHOICES,
     )
-    session_id = models.IntegerField(
+    session_id = fields.IntegerField(
         db_column='SESSION_ID',
         help_text="Legislative session that the filing applies to"
     )
-    user_id = models.CharField(max_length=12, db_column='USER_ID')
-    special_audit = models.IntegerField(
+    user_id = fields.CharField(max_length=12, db_column='USER_ID')
+    special_audit = fields.IntegerField(
         null=True,
         db_column='SPECIAL_AUDIT',
         blank=True,
         help_text="Denotes whether the filing has been audited for money \
 laundering or other special condition."
     )
-    fine_audit = models.IntegerField(
+    fine_audit = fields.IntegerField(
         null=True,
         db_column='FINE_AUDIT',
         blank=True,
         help_text="Indicates whether a filing has been audited for a fine"
     )
-    rpt_start = models.DateField(
+    rpt_start = fields.DateField(
         null=True,
         db_column='RPT_START',
         blank=True,
         help_text="Starting date for the period the filing represents",
     )
-    rpt_end = models.DateField(
+    rpt_end = fields.DateField(
         null=True,
         db_column='RPT_END',
         blank=True,
         help_text="Ending date for the period the filing represents",
     )
-    rpt_date = models.DateField(
+    rpt_date = fields.DateField(
         null=True,
         db_column='RPT_DATE',
         blank=True,
@@ -296,7 +297,7 @@ laundering or other special condition."
         (22001, 'Electronic'),
         (22006, 'Cal Online'),
     )
-    filing_type = models.IntegerField(
+    filing_type = fields.IntegerField(
         db_column='FILING_TYPE',
         null=True,
         blank=True,
@@ -319,7 +320,7 @@ class FilingsCd(CalAccessBaseModel):
     This table is the parent table from which all links and association to
     a filing are derived.
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -333,7 +334,7 @@ class FilingsCd(CalAccessBaseModel):
         (22005, 'AMS'),
         (22006, 'Cal Online'),
     )
-    filing_type = models.IntegerField(
+    filing_type = fields.IntegerField(
         db_column='FILING_TYPE',
         db_index=True,
         choices=FILING_TYPE_CHOICES
@@ -354,20 +355,20 @@ class SmryCd(CalAccessBaseModel):
     """
     Summary totals from filings.
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.CharField(
+    line_item = fields.CharField(
         max_length=8,
         db_column='LINE_ITEM',
         db_index=True,
@@ -376,7 +377,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ('SMRY', 'SMRY'),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         max_length=4,
         db_column='REC_TYPE',
         db_index=True,
@@ -465,14 +466,14 @@ proceedings before the California Public Utilities Commission'),
         ('S640', 'Form 640 (Governmental agencies reporting ther payments to \
 influence legislative or administrative action attachment)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=8,
         db_column='FORM_TYPE',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    amount_a = models.DecimalField(
+    amount_a = fields.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
@@ -481,7 +482,7 @@ influence legislative or administrative action attachment)'),
         help_text='Summary amount from column A',
         verbose_name='amount A'
     )
-    amount_b = models.DecimalField(
+    amount_b = fields.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
@@ -490,7 +491,7 @@ influence legislative or administrative action attachment)'),
         help_text='Summary amount from column B',
         verbose_name='amount B'
     )
-    amount_c = models.DecimalField(
+    amount_c = fields.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
@@ -499,7 +500,7 @@ influence legislative or administrative action attachment)'),
         help_text='Summary amount from column C',
         verbose_name='amount C'
     )
-    elec_dt = models.DateField(
+    elec_dt = fields.DateField(
         db_column='ELEC_DT',
         null=True,
         blank=True,
@@ -540,13 +541,13 @@ class CvrE530Cd(CalAccessBaseModel):
     """
     This table method is undocumented in the print docs.
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
@@ -556,7 +557,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -566,7 +567,7 @@ original filing and 1 to 999 amendments.",
     FORM_TYPE_CHOICES = (
         ('E530', 'Form 530 (Issue advocacy report)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
         db_index=True,
@@ -579,62 +580,62 @@ original filing and 1 to 999 amendments.",
         # format.html#document/p9
         ('', 'Unknown'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         max_length=32,
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES
     )
-    filer_naml = models.CharField(db_column='FILER_NAML', max_length=200)
-    filer_namf = models.CharField(
+    filer_naml = fields.CharField(db_column='FILER_NAML', max_length=200)
+    filer_namf = fields.CharField(
         db_column='FILER_NAMF', max_length=4, blank=True
     )
-    filer_namt = models.CharField(
+    filer_namt = fields.CharField(
         db_column='FILER_NAMT', max_length=32, blank=True
     )
-    filer_nams = models.CharField(
+    filer_nams = fields.CharField(
         db_column='FILER_NAMS', max_length=32, blank=True
     )
-    report_num = models.CharField(
+    report_num = fields.CharField(
         db_column='REPORT_NUM', max_length=32, blank=True
     )
-    rpt_date = models.DateField(db_column='RPT_DATE', null=True)
-    filer_city = models.CharField(
+    rpt_date = fields.DateField(db_column='RPT_DATE', null=True)
+    filer_city = fields.CharField(
         db_column='FILER_CITY', max_length=16, blank=True
     )
-    filer_st = models.CharField(db_column='FILER_ST', max_length=4, blank=True)
-    filer_zip4 = models.CharField(
+    filer_st = fields.CharField(db_column='FILER_ST', max_length=4, blank=True)
+    filer_zip4 = fields.CharField(
         db_column='FILER_ZIP4', max_length=10, blank=True
     )
-    occupation = models.CharField(
+    occupation = fields.CharField(
         db_column='OCCUPATION', max_length=15, blank=True
     )
-    employer = models.CharField(
+    employer = fields.CharField(
         db_column='EMPLOYER', max_length=13, blank=True
     )
-    cand_naml = models.CharField(db_column='CAND_NAML', max_length=46)
-    cand_namf = models.CharField(
+    cand_naml = fields.CharField(db_column='CAND_NAML', max_length=46)
+    cand_namf = fields.CharField(
         db_column='CAND_NAMF', max_length=21, blank=True
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         db_column='CAND_NAMT', max_length=32, blank=True
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         db_column='CAND_NAMS', max_length=32, blank=True
     )
-    district_cd = models.IntegerField(db_column='DISTRICT_CD')
-    office_cd = models.IntegerField(db_column='OFFICE_CD')
-    pmnt_dt = models.DateField(db_column='PMNT_DT', null=True)
-    pmnt_amount = models.FloatField(db_column='PMNT_AMOUNT')
-    type_literature = models.IntegerField(db_column='TYPE_LITERATURE')
-    type_printads = models.IntegerField(db_column='TYPE_PRINTADS')
-    type_radio = models.IntegerField(db_column='TYPE_RADIO')
-    type_tv = models.IntegerField(db_column='TYPE_TV')
-    type_it = models.IntegerField(db_column='TYPE_IT')
-    type_billboards = models.IntegerField(db_column='TYPE_BILLBOARDS')
-    type_other = models.IntegerField(db_column='TYPE_OTHER')
-    other_desc = models.CharField(db_column='OTHER_DESC', max_length=49)
+    district_cd = fields.IntegerField(db_column='DISTRICT_CD')
+    office_cd = fields.IntegerField(db_column='OFFICE_CD')
+    pmnt_dt = fields.DateField(db_column='PMNT_DT', null=True)
+    pmnt_amount = fields.FloatField(db_column='PMNT_AMOUNT')
+    type_literature = fields.IntegerField(db_column='TYPE_LITERATURE')
+    type_printads = fields.IntegerField(db_column='TYPE_PRINTADS')
+    type_radio = fields.IntegerField(db_column='TYPE_RADIO')
+    type_tv = fields.IntegerField(db_column='TYPE_TV')
+    type_it = fields.IntegerField(db_column='TYPE_IT')
+    type_billboards = fields.IntegerField(db_column='TYPE_BILLBOARDS')
+    type_other = fields.IntegerField(db_column='TYPE_OTHER')
+    other_desc = fields.CharField(db_column='OTHER_DESC', max_length=49)
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -651,20 +652,20 @@ class TextMemoCd(CalAccessBaseModel):
     """
     Text memos attached to electronic filings
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -676,7 +677,7 @@ original filing and 1 to 999 amendments.",
         ('trun', 'trun'),
         ('Unde', 'Unde'),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
@@ -777,21 +778,21 @@ original filing and 1 to 999 amendments.",
         ('SUM', ''),
         ('SUMMARY', ''),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=8,
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES
     )
-    ref_no = models.CharField(
+    ref_no = fields.CharField(
         db_column='REF_NO',
         max_length=20,
         blank=True,
         help_text='Links text memo to a specific record',
         verbose_name='reference number'
     )
-    text4000 = models.CharField(
+    text4000 = fields.CharField(
         db_column='TEXT4000',
         max_length=4000,
         blank=True,

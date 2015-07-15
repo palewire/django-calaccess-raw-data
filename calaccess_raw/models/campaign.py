@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
+from calaccess_raw import fields
 from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel
 
@@ -10,7 +11,7 @@ class CvrSoCd(CalAccessBaseModel):
     Cover page for a statement of organization creation or termination
     form filed by a slate-mailer organization or recipient committee.
     """
-    acct_opendt = models.DateTimeField(
+    acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
         null=True
     )
@@ -20,7 +21,7 @@ class CvrSoCd(CalAccessBaseModel):
         ("ST", "State"),
         ("", "Unknown"),
     )
-    actvty_lvl = models.CharField(
+    actvty_lvl = fields.CharField(
         max_length=2,
         db_column="ACTVTY_LVL",
         blank=True,
@@ -28,94 +29,94 @@ class CvrSoCd(CalAccessBaseModel):
         verbose_name="Activity level",
         help_text="Organization's level of activity"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    bank_adr1 = models.CharField(
+    bank_adr1 = fields.CharField(
         max_length=55,
         db_column="BANK_ADR1",
         blank=True
     )
-    bank_adr2 = models.CharField(
+    bank_adr2 = fields.CharField(
         max_length=55,
         db_column="BANK_ADR2",
         blank=True
     )
-    bank_city = models.CharField(
+    bank_city = fields.CharField(
         max_length=30,
         db_column="BANK_CITY",
         blank=True
     )
-    bank_nam = models.CharField(
+    bank_nam = fields.CharField(
         max_length=200,
         db_column="BANK_NAM",
         blank=True
     )
-    bank_phon = models.CharField(
+    bank_phon = fields.CharField(
         max_length=20,
         db_column="BANK_PHON",
         blank=True
     )
-    bank_st = models.CharField(
+    bank_st = fields.CharField(
         max_length=2,
         db_column="BANK_ST",
         blank=True
     )
-    bank_zip4 = models.CharField(
+    bank_zip4 = fields.CharField(
         max_length=10,
         db_column="BANK_ZIP4",
         blank=True
     )
-    brdbase_cb = models.CharField(
+    brdbase_cb = fields.CharField(
         max_length=1,
         db_column="BRDBASE_CB",
         blank=True
     )
-    city = models.CharField(
+    city = fields.CharField(
         max_length=30,
         db_column="CITY",
         blank=True
     )
-    cmte_email = models.CharField(
+    cmte_email = fields.CharField(
         max_length=60,
         db_column="CMTE_EMAIL",
         blank=True
     )
-    cmte_fax = models.CharField(
+    cmte_fax = fields.CharField(
         max_length=20,
         db_column="CMTE_FAX",
         blank=True
     )
-    com82013id = models.CharField(
+    com82013id = fields.CharField(
         max_length=9,
         db_column="COM82013ID",
         blank=True
     )
-    com82013nm = models.CharField(
+    com82013nm = fields.CharField(
         max_length=200,
         db_column="COM82013NM",
         blank=True
     )
-    com82013yn = models.CharField(
+    com82013yn = fields.CharField(
         max_length=1,
         db_column="COM82013YN",
         blank=True
     )
-    control_cb = models.CharField(
+    control_cb = fields.CharField(
         max_length=1,
         db_column="CONTROL_CB",
         blank=True
     )
-    county_act = models.CharField(
+    county_act = fields.CharField(
         max_length=20,
         db_column="COUNTY_ACT",
         blank=True
     )
-    county_res = models.CharField(
+    county_res = fields.CharField(
         max_length=20,
         db_column="COUNTY_RES",
         blank=True
@@ -132,14 +133,14 @@ original filing and 1 to 999 amendments.",
         ('RCP', 'Recipient committee'),
         ('SMO', 'Slate-mailer organization'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=3,
         db_column="ENTITY_CD",
         blank=True,
         choices=ENTITY_CODE_CHOICES,
         verbose_name="Entity code"
     )
-    filer_id = models.CharField(
+    filer_id = fields.CharField(
         verbose_name='filer ID',
         db_column='FILER_ID',
         max_length=9,
@@ -147,31 +148,31 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    filer_namf = models.CharField(
+    filer_namf = fields.CharField(
         max_length=45,
         db_column="FILER_NAMF",
         blank=True,
         verbose_name="Filer first name"
     )
-    filer_naml = models.CharField(
+    filer_naml = fields.CharField(
         max_length=200,
         db_column="FILER_NAML",
         blank=True,
         verbose_name="Filer last name"
     )
-    filer_nams = models.CharField(
+    filer_nams = fields.CharField(
         max_length=10,
         db_column="FILER_NAMS",
         blank=True,
         verbose_name="Filer name suffix"
     )
-    filer_namt = models.CharField(
+    filer_namt = fields.CharField(
         max_length=10,
         db_column="FILER_NAMT",
         blank=True,
         verbose_name="Filer name title"
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -184,54 +185,54 @@ slate mailer organization)'),
 slate mailer organization'),
         ('F410', 'Form 410 (Statement of organization, recipient committee)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    genpurp_cb = models.CharField(
+    genpurp_cb = fields.CharField(
         max_length=1,
         db_column="GENPURP_CB",
         blank=True
     )
-    gpc_descr = models.CharField(
+    gpc_descr = fields.CharField(
         max_length=300,
         db_column="GPC_DESCR",
         blank=True
     )
-    mail_city = models.CharField(
+    mail_city = fields.CharField(
         max_length=30,
         db_column="MAIL_CITY",
         blank=True
     )
-    mail_st = models.CharField(
+    mail_st = fields.CharField(
         max_length=2,
         db_column="MAIL_ST",
         blank=True
     )
-    mail_zip4 = models.CharField(
+    mail_zip4 = fields.CharField(
         max_length=10,
         db_column="MAIL_ZIP4",
         blank=True
     )
-    phone = models.CharField(
+    phone = fields.CharField(
         max_length=20,
         db_column="PHONE",
         blank=True
     )
-    primfc_cb = models.CharField(
+    primfc_cb = fields.CharField(
         max_length=1,
         db_column="PRIMFC_CB",
         blank=True
     )
-    qualfy_dt = models.DateTimeField(
+    qualfy_dt = fields.DateTimeField(
         db_column="QUALFY_DT",
         null=True,
         verbose_name="Date qualified",
         help_text="Date qualified as an organization"
     )
-    qual_cb = models.CharField(
+    qual_cb = fields.CharField(
         max_length=1,
         db_column="QUAL_CB",
         blank=True
@@ -239,94 +240,94 @@ slate mailer organization'),
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    report_num = models.CharField(
+    report_num = fields.CharField(
         max_length=3,
         db_column="REPORT_NUM",
         blank=True
     )
-    rpt_date = models.DateTimeField(
+    rpt_date = fields.DateTimeField(
         db_column="RPT_DATE",
         null=True
     )
-    smcont_qualdt = models.DateTimeField(
+    smcont_qualdt = fields.DateTimeField(
         db_column="SMCONT_QUALDT",
         null=True
     )
-    sponsor_cb = models.CharField(
+    sponsor_cb = fields.CharField(
         max_length=1,
         db_column="SPONSOR_CB",
         blank=True
     )
-    st = models.CharField(
+    st = fields.CharField(
         max_length=2,
         db_column="ST",
         blank=True
     )
-    surplusdsp = models.CharField(
+    surplusdsp = fields.CharField(
         max_length=90,
         db_column="SURPLUSDSP",
         blank=True
     )
-    term_date = models.DateTimeField(
+    term_date = fields.DateTimeField(
         db_column="TERM_DATE",
         null=True
     )
-    tres_city = models.CharField(
+    tres_city = fields.CharField(
         max_length=30,
         db_column="TRES_CITY",
         blank=True,
         verbose_name="Treasurer's city"
     )
-    tres_namf = models.CharField(
+    tres_namf = fields.CharField(
         max_length=45,
         db_column="TRES_NAMF",
         blank=True,
         verbose_name="Treasurer's first name"
     )
-    tres_naml = models.CharField(
+    tres_naml = fields.CharField(
         max_length=200,
         db_column="TRES_NAML",
         blank=True,
         verbose_name="Treasurer's last name"
     )
-    tres_nams = models.CharField(
+    tres_nams = fields.CharField(
         max_length=10,
         db_column="TRES_NAMS",
         blank=True,
         verbose_name="Treasurer's name suffix"
     )
-    tres_namt = models.CharField(
+    tres_namt = fields.CharField(
         max_length=10,
         db_column="TRES_NAMT",
         blank=True,
         verbose_name="Treasurer's name title"
     )
-    tres_phon = models.CharField(
+    tres_phon = fields.CharField(
         max_length=20,
         db_column="TRES_PHON",
         blank=True,
         verbose_name="Treasurer's phone number"
     )
-    tres_st = models.CharField(
+    tres_st = fields.CharField(
         max_length=2,
         db_column="TRES_ST",
         blank=True,
         verbose_name="Treasurer's street"
     )
-    tres_zip4 = models.CharField(
+    tres_zip4 = fields.CharField(
         max_length=10,
         db_column="TRES_ZIP4",
         blank=True,
         help_text="Treasurer's ZIP Code"
     )
-    zip4 = models.CharField(
+    zip4 = fields.CharField(
         max_length=10,
         db_column="ZIP4",
         blank=True
@@ -349,20 +350,20 @@ class Cvr2SoCd(CalAccessBaseModel):
     of a statement of organization creation form filed
     by a slate-mailer organization or recipient committee.
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -370,7 +371,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ("CVR2", "CVR2"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -382,13 +383,13 @@ original filing and 1 to 999 amendments.",
 slate mailer organization)'),
         ('F410', 'Form 410 (Statement of organization, recipient committee)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
         max_length=4,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
@@ -412,77 +413,77 @@ slate mailer organization)'),
         ('PRO', 'Proponent'),
         ('SPO', 'Sponsor'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         max_length=3,
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    enty_naml = models.CharField(
+    enty_naml = fields.CharField(
         db_column='ENTY_NAML', max_length=194, blank=True
     )
-    enty_namf = models.CharField(
+    enty_namf = fields.CharField(
         db_column='ENTY_NAMF', max_length=34, blank=True
     )
-    enty_namt = models.CharField(
+    enty_namt = fields.CharField(
         db_column='ENTY_NAMT', max_length=9, blank=True
     )
-    enty_nams = models.CharField(
+    enty_nams = fields.CharField(
         db_column='ENTY_NAMS', max_length=10, blank=True
     )
-    item_cd = models.CharField(db_column='ITEM_CD', max_length=4, blank=True)
-    mail_city = models.CharField(
+    item_cd = fields.CharField(db_column='ITEM_CD', max_length=4, blank=True)
+    mail_city = fields.CharField(
         db_column='MAIL_CITY', max_length=25, blank=True
     )
-    mail_st = models.CharField(db_column='MAIL_ST', max_length=4, blank=True)
-    mail_zip4 = models.CharField(
+    mail_st = fields.CharField(db_column='MAIL_ST', max_length=4, blank=True)
+    mail_zip4 = fields.CharField(
         db_column='MAIL_ZIP4', max_length=10, blank=True
     )
-    day_phone = models.CharField(
+    day_phone = fields.CharField(
         db_column='DAY_PHONE', max_length=20, blank=True
     )
-    fax_phone = models.CharField(
+    fax_phone = fields.CharField(
         db_column='FAX_PHONE', max_length=20, blank=True
     )
-    email_adr = models.CharField(
+    email_adr = fields.CharField(
         db_column='EMAIL_ADR', max_length=40, blank=True
     )
-    cmte_id = models.IntegerField(db_column='CMTE_ID', blank=True, null=True)
-    ind_group = models.CharField(
+    cmte_id = fields.IntegerField(db_column='CMTE_ID', blank=True, null=True)
+    ind_group = fields.CharField(
         db_column='IND_GROUP', max_length=87, blank=True
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         db_column='OFFICE_CD', max_length=4, blank=True
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR', max_length=40, blank=True
     )
-    juris_cd = models.CharField(db_column='JURIS_CD', max_length=4, blank=True)
-    juris_dscr = models.CharField(
+    juris_cd = fields.CharField(db_column='JURIS_CD', max_length=4, blank=True)
+    juris_dscr = fields.CharField(
         db_column='JURIS_DSCR', max_length=40, blank=True
     )
-    dist_no = models.CharField(db_column='DIST_NO', max_length=4, blank=True)
-    off_s_h_cd = models.CharField(
+    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
+    off_s_h_cd = fields.CharField(
         db_column='OFF_S_H_CD', max_length=4, blank=True
     )
-    non_pty_cb = models.CharField(
+    non_pty_cb = fields.CharField(
         db_column='NON_PTY_CB', max_length=4, blank=True
     )
-    party_name = models.CharField(
+    party_name = fields.CharField(
         db_column='PARTY_NAME', max_length=63, blank=True
     )
-    bal_num = models.CharField(db_column='BAL_NUM', max_length=7, blank=True)
-    bal_juris = models.CharField(
+    bal_num = fields.CharField(db_column='BAL_NUM', max_length=7, blank=True)
+    bal_juris = fields.CharField(
         db_column='BAL_JURIS', max_length=40, blank=True
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         db_column='SUP_OPP_CD', max_length=4, blank=True
     )
-    year_elect = models.CharField(
+    year_elect = fields.CharField(
         db_column='YEAR_ELECT', max_length=4, blank=True
     )
-    pof_title = models.CharField(
+    pof_title = fields.CharField(
         db_column='POF_TITLE', max_length=44, blank=True
     )
 
@@ -514,122 +515,122 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         F497 -- Late Contribution Report
         F498 -- Slate Mailer Late Payment Report
     """
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    amendexp_1 = models.CharField(
+    amendexp_1 = fields.CharField(
         max_length=100, db_column='AMENDEXP_1', blank=True
     )
-    amendexp_2 = models.CharField(
+    amendexp_2 = fields.CharField(
         max_length=100, db_column='AMENDEXP_2', blank=True
     )
-    amendexp_3 = models.CharField(
+    amendexp_3 = fields.CharField(
         max_length=100, db_column='AMENDEXP_3', blank=True
     )
-    assoc_cb = models.CharField(
+    assoc_cb = fields.CharField(
         max_length=4, db_column='ASSOC_CB', blank=True
     )
-    assoc_int = models.CharField(
+    assoc_int = fields.CharField(
         max_length=90, db_column='ASSOC_INT', blank=True
     )
-    bal_id = models.CharField(max_length=9, db_column='BAL_ID', blank=True)
-    bal_juris = models.CharField(
+    bal_id = fields.CharField(max_length=9, db_column='BAL_ID', blank=True)
+    bal_juris = fields.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
-    bal_name = models.CharField(
+    bal_name = fields.CharField(
         max_length=200, db_column='BAL_NAME', blank=True
     )
-    bal_num = models.CharField(
+    bal_num = fields.CharField(
         max_length=4, db_column='BAL_NUM', blank=True
     )
-    brdbase_yn = models.CharField(
+    brdbase_yn = fields.CharField(
         max_length=1, db_column='BRDBASE_YN', blank=True
     )
-    bus_adr1 = models.CharField(
-        max_length=55, db_column='BUS_ADR1', blank=True
-    )
-    bus_adr2 = models.CharField(
-        max_length=55, db_column='BUS_ADR2', blank=True
-    )
-    bus_city = models.CharField(
+    # bus_adr1 = fields.CharField(
+    #     max_length=55, db_column='BUS_ADR1', blank=True
+    # )
+    # bus_adr2 = fields.CharField(
+    #     max_length=55, db_column='BUS_ADR2', blank=True
+    # )
+    bus_city = fields.CharField(
         max_length=30, db_column='BUS_CITY', blank=True
     )
-    bus_inter = models.CharField(
+    bus_inter = fields.CharField(
         max_length=40, db_column='BUS_INTER', blank=True
     )
-    bus_name = models.CharField(
+    bus_name = fields.CharField(
         max_length=200, db_column='BUS_NAME', blank=True
     )
-    bus_st = models.CharField(max_length=2, db_column='BUS_ST', blank=True)
-    bus_zip4 = models.CharField(
+    bus_st = fields.CharField(max_length=2, db_column='BUS_ST', blank=True)
+    bus_zip4 = fields.CharField(
         max_length=10, db_column='BUS_ZIP4', blank=True
     )
-    busact_cb = models.CharField(
+    busact_cb = fields.CharField(
         max_length=10, db_column='BUSACT_CB', blank=True
     )
-    busactvity = models.CharField(
+    busactvity = fields.CharField(
         max_length=90, db_column='BUSACTVITY', blank=True
     )
-    cand_adr1 = models.CharField(
-        max_length=55, db_column='CAND_ADR1', blank=True
-    )
-    cand_adr2 = models.CharField(
-        max_length=55, db_column='CAND_ADR2', blank=True
-    )
-    cand_city = models.CharField(
+    # cand_adr1 = fields.CharField(
+    #     max_length=55, db_column='CAND_ADR1', blank=True
+    # )
+    # cand_adr2 = fields.CharField(
+    #     max_length=55, db_column='CAND_ADR2', blank=True
+    # )
+    cand_city = fields.CharField(
         max_length=30, db_column='CAND_CITY', blank=True
     )
-    cand_email = models.CharField(
+    cand_email = fields.CharField(
         max_length=60, db_column='CAND_EMAIL', blank=True
     )
-    cand_fax = models.CharField(
+    cand_fax = fields.CharField(
         max_length=20, db_column='CAND_FAX', blank=True
     )
-    cand_id = models.CharField(max_length=9, db_column='CAND_ID', blank=True)
-    cand_namf = models.CharField(
+    cand_id = fields.CharField(max_length=9, db_column='CAND_ID', blank=True)
+    cand_namf = fields.CharField(
         max_length=45, db_column='CAND_NAMF', blank=True
     )
-    cand_naml = models.CharField(
+    cand_naml = fields.CharField(
         max_length=200, db_column='CAND_NAML', blank=True
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         max_length=10, db_column='CAND_NAMS', blank=True
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         max_length=10, db_column='CAND_NAMT', blank=True
     )
-    cand_phon = models.CharField(
+    cand_phon = fields.CharField(
         max_length=20, db_column='CAND_PHON', blank=True
     )
-    cand_st = models.CharField(
+    cand_st = fields.CharField(
         max_length=4, db_column='CAND_ST', blank=True
     )
-    cand_zip4 = models.CharField(
+    cand_zip4 = fields.CharField(
         max_length=10, db_column='CAND_ZIP4', blank=True
     )
-    cmtte_id = models.CharField(
+    cmtte_id = fields.CharField(
         max_length=9, db_column='CMTTE_ID', blank=True
     )
-    cmtte_type = models.CharField(
+    cmtte_type = fields.CharField(
         max_length=1, db_column='CMTTE_TYPE', blank=True
     )
-    control_yn = models.IntegerField(
+    control_yn = fields.IntegerField(
         null=True, db_column='CONTROL_YN', blank=True
     )
-    dist_no = models.CharField(
+    dist_no = fields.CharField(
         max_length=4, db_column='DIST_NO', blank=True
     )
-    elect_date = models.DateTimeField(
+    elect_date = fields.DateTimeField(
         null=True, db_column='ELECT_DATE', blank=True
     )
-    emplbus_cb = models.CharField(
+    emplbus_cb = fields.CharField(
         max_length=4, db_column='EMPLBUS_CB', blank=True
     )
-    employer = models.CharField(
+    employer = fields.CharField(
         max_length=200, db_column='EMPLOYER', blank=True
     )
     ENTITY_CODE_CHOICES = (
@@ -649,29 +650,29 @@ original filing and 1 to 999 amendments.",
         ('SCC', 'Small contributor committee'),
         ('SMO', 'Slate mailer organization'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=4,
         db_column='ENTITY_CD',
         blank=True,
         choices=ENTITY_CODE_CHOICES,
         verbose_name='entity code'
     )
-    file_email = models.CharField(
+    file_email = fields.CharField(
         max_length=60, db_column='FILE_EMAIL', blank=True
     )
-    filer_adr1 = models.CharField(
-        max_length=55, db_column='FILER_ADR1', blank=True
-    )
-    filer_adr2 = models.CharField(
-        max_length=55, db_column='FILER_ADR2', blank=True
-    )
-    filer_city = models.CharField(
+    # filer_adr1 = fields.CharField(
+    #     max_length=55, db_column='FILER_ADR1', blank=True
+    # )
+    # filer_adr2 = fields.CharField(
+    #     max_length=55, db_column='FILER_ADR2', blank=True
+    # )
+    filer_city = fields.CharField(
         max_length=30, db_column='FILER_CITY', blank=True
     )
-    filer_fax = models.CharField(
+    filer_fax = fields.CharField(
         max_length=20, db_column='FILER_FAX', blank=True
     )
-    filer_id = models.CharField(
+    filer_id = fields.CharField(
         verbose_name='filer ID',
         db_column='FILER_ID',
         max_length=15,
@@ -679,26 +680,26 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    filer_namf = models.CharField(
+    filer_namf = fields.CharField(
         max_length=45, db_column='FILER_NAMF', blank=True
     )
-    filer_naml = models.CharField(max_length=200, db_column='FILER_NAML')
-    filer_nams = models.CharField(
+    filer_naml = fields.CharField(max_length=200, db_column='FILER_NAML')
+    filer_nams = fields.CharField(
         max_length=10, db_column='FILER_NAMS', blank=True
     )
-    filer_namt = models.CharField(
+    filer_namt = fields.CharField(
         max_length=10, db_column='FILER_NAMT', blank=True
     )
-    filer_phon = models.CharField(
+    filer_phon = fields.CharField(
         max_length=20, db_column='FILER_PHON', blank=True
     )
-    filer_st = models.CharField(
+    filer_st = fields.CharField(
         max_length=4, db_column='FILER_ST', blank=True
     )
-    filer_zip4 = models.CharField(
+    filer_zip4 = fields.CharField(
         max_length=10, db_column='FILER_ZIP4', blank=True
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -721,134 +722,134 @@ and major donor committee campaign statement)'),
         ('F460', 'Form 460 (Recipient committee campaign statement)'),
         ('F497', 'Form 497 (Late contribution report)')
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
     )
-    from_date = models.DateTimeField(
+    from_date = fields.DateTimeField(
         null=True,
         db_column='FROM_DATE',
         blank=True
     )
-    juris_cd = models.CharField(
+    juris_cd = fields.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
     )
-    late_rptno = models.CharField(
+    late_rptno = fields.CharField(
         max_length=30, db_column='LATE_RPTNO', blank=True
     )
-    mail_adr1 = models.CharField(
-        max_length=55, db_column='MAIL_ADR1', blank=True
-    )
-    mail_adr2 = models.CharField(
-        max_length=55, db_column='MAIL_ADR2', blank=True
-    )
-    mail_city = models.CharField(
+    # mail_adr1 = fields.CharField(
+    #     max_length=55, db_column='MAIL_ADR1', blank=True
+    # )
+    # mail_adr2 = fields.CharField(
+    #     max_length=55, db_column='MAIL_ADR2', blank=True
+    # )
+    mail_city = fields.CharField(
         max_length=30, db_column='MAIL_CITY', blank=True
     )
-    mail_st = models.CharField(max_length=4, db_column='MAIL_ST', blank=True)
-    mail_zip4 = models.CharField(
+    mail_st = fields.CharField(max_length=4, db_column='MAIL_ST', blank=True)
+    mail_zip4 = fields.CharField(
         max_length=10, db_column='MAIL_ZIP4', blank=True
     )
-    occupation = models.CharField(
+    occupation = fields.CharField(
         max_length=60, db_column='OCCUPATION', blank=True
     )
-    off_s_h_cd = models.CharField(
+    off_s_h_cd = fields.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         max_length=40, db_column='OFFIC_DSCR', blank=True
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         max_length=3, db_column='OFFICE_CD', blank=True
     )
-    other_cb = models.CharField(
+    other_cb = fields.CharField(
         max_length=1, db_column='OTHER_CB', blank=True
     )
-    other_int = models.CharField(
+    other_int = fields.CharField(
         max_length=90, db_column='OTHER_INT', blank=True
     )
-    primfrm_yn = models.CharField(
+    primfrm_yn = fields.CharField(
         max_length=1, db_column='PRIMFRM_YN', blank=True
     )
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    report_num = models.CharField(
+    report_num = fields.CharField(
         max_length=3, db_column='REPORT_NUM'
     )
-    reportname = models.CharField(
+    reportname = fields.CharField(
         max_length=3, db_column='REPORTNAME', blank=True
     )
-    rpt_att_cb = models.CharField(
+    rpt_att_cb = fields.CharField(
         max_length=4, db_column='RPT_ATT_CB', blank=True
     )
-    rpt_date = models.DateTimeField(db_column='RPT_DATE', null=True)
-    rptfromdt = models.DateTimeField(
+    rpt_date = fields.DateTimeField(db_column='RPT_DATE', null=True)
+    rptfromdt = fields.DateTimeField(
         null=True, db_column='RPTFROMDT', blank=True
     )
-    rptthrudt = models.DateTimeField(
+    rptthrudt = fields.DateTimeField(
         null=True, db_column='RPTTHRUDT', blank=True
     )
-    selfemp_cb = models.CharField(
+    selfemp_cb = fields.CharField(
         max_length=1, db_column='SELFEMP_CB', blank=True
     )
-    sponsor_yn = models.IntegerField(
+    sponsor_yn = fields.IntegerField(
         null=True, db_column='SPONSOR_YN', blank=True
     )
-    stmt_type = models.CharField(
+    stmt_type = fields.CharField(
         max_length=2, db_column='STMT_TYPE', blank=True
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
-    thru_date = models.DateTimeField(
+    thru_date = fields.DateTimeField(
         null=True, db_column='THRU_DATE', blank=True
     )
-    tres_adr1 = models.CharField(
-        max_length=55, db_column='TRES_ADR1', blank=True
-    )
-    tres_adr2 = models.CharField(
-        max_length=55, db_column='TRES_ADR2', blank=True
-    )
-    tres_city = models.CharField(
+    # tres_adr1 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR1', blank=True
+    # )
+    # tres_adr2 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR2', blank=True
+    # )
+    tres_city = fields.CharField(
         max_length=30, db_column='TRES_CITY', blank=True
     )
-    tres_email = models.CharField(
+    tres_email = fields.CharField(
         max_length=60, db_column='TRES_EMAIL', blank=True
     )
-    tres_fax = models.CharField(
+    tres_fax = fields.CharField(
         max_length=20, db_column='TRES_FAX', blank=True
     )
-    tres_namf = models.CharField(
+    tres_namf = fields.CharField(
         max_length=45, db_column='TRES_NAMF', blank=True
     )
-    tres_naml = models.CharField(
+    tres_naml = fields.CharField(
         max_length=200, db_column='TRES_NAML', blank=True
     )
-    tres_nams = models.CharField(
+    tres_nams = fields.CharField(
         max_length=10, db_column='TRES_NAMS', blank=True
     )
-    tres_namt = models.CharField(
+    tres_namt = fields.CharField(
         max_length=10, db_column='TRES_NAMT', blank=True
     )
-    tres_phon = models.CharField(
+    tres_phon = fields.CharField(
         max_length=20, db_column='TRES_PHON', blank=True
     )
-    tres_st = models.CharField(max_length=2, db_column='TRES_ST', blank=True)
+    tres_st = fields.CharField(max_length=2, db_column='TRES_ST', blank=True)
 
-    tres_zip4 = models.CharField(
+    tres_zip4 = fields.CharField(
         max_length=10, db_column='TRES_ZIP4', blank=True
     )
 
@@ -868,25 +869,25 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     Record used to carry additional names for the campaign
     disclosure forms below.
     """
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    bal_juris = models.CharField(
+    bal_juris = fields.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
-    bal_name = models.CharField(
+    bal_name = fields.CharField(
         max_length=200, db_column='BAL_NAME', blank=True
     )
-    bal_num = models.CharField(max_length=7, db_column='BAL_NUM', blank=True)
-    cmte_id = models.CharField(max_length=9, db_column='CMTE_ID', blank=True)
-    control_yn = models.IntegerField(
+    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True)
+    control_yn = fields.IntegerField(
         null=True, db_column='CONTROL_YN', blank=True
     )
-    dist_no = models.CharField(
+    dist_no = fields.CharField(
         max_length=3, db_column='DIST_NO', blank=True
     )
     ENTITY_CODE_CHOICES = (
@@ -907,51 +908,51 @@ original filing and 1 to 999 amendments.",
         ('RCP', 'Recipient committee'),
         ('RDP', 'RDP (Unknown)'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    enty_adr1 = models.CharField(
-        max_length=55, db_column='ENTY_ADR1', blank=True
-    )
-    enty_adr2 = models.CharField(
-        max_length=55, db_column='ENTY_ADR2', blank=True
-    )
-    enty_city = models.CharField(
+    # enty_adr1 = fields.CharField(
+    #     max_length=55, db_column='ENTY_ADR1', blank=True
+    # )
+    # enty_adr2 = fields.CharField(
+    #     max_length=55, db_column='ENTY_ADR2', blank=True
+    # )
+    enty_city = fields.CharField(
         max_length=30, db_column='ENTY_CITY', blank=True
     )
-    enty_email = models.CharField(
+    enty_email = fields.CharField(
         max_length=60, db_column='ENTY_EMAIL', blank=True
     )
-    enty_fax = models.CharField(
+    enty_fax = fields.CharField(
         max_length=20, db_column='ENTY_FAX', blank=True
     )
-    enty_namf = models.CharField(
+    enty_namf = fields.CharField(
         max_length=45, db_column='ENTY_NAMF', blank=True
     )
-    enty_naml = models.CharField(
+    enty_naml = fields.CharField(
         max_length=200, db_column='ENTY_NAML', blank=True
     )
-    enty_nams = models.CharField(
+    enty_nams = fields.CharField(
         max_length=10, db_column='ENTY_NAMS', blank=True
     )
-    enty_namt = models.CharField(
+    enty_namt = fields.CharField(
         max_length=10, db_column='ENTY_NAMT', blank=True
     )
-    enty_phon = models.CharField(
+    enty_phon = fields.CharField(
         max_length=20, db_column='ENTY_PHON', blank=True
     )
-    enty_st = models.CharField(max_length=2, db_column='ENTY_ST', blank=True)
-    enty_zip4 = models.CharField(
+    enty_st = fields.CharField(max_length=2, db_column='ENTY_ST', blank=True)
+    enty_zip4 = fields.CharField(
         max_length=10, db_column='ENTY_ZIP4', blank=True
     )
-    f460_part = models.CharField(
+    f460_part = fields.CharField(
         max_length=2, db_column='F460_PART', blank=True
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -965,76 +966,76 @@ short form)'),
         ('F460', 'Form 460 (Recipient committee campaign statement)'),
         ('F465', 'Form 465 (Supplemental independent expenditure report)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
     )
-    juris_cd = models.CharField(
+    juris_cd = fields.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
     )
-    mail_adr1 = models.CharField(
-        max_length=55, db_column='MAIL_ADR1', blank=True
-    )
-    mail_adr2 = models.CharField(
-        max_length=55, db_column='MAIL_ADR2', blank=True
-    )
-    mail_city = models.CharField(
+    # mail_adr1 = fields.CharField(
+    #     max_length=55, db_column='MAIL_ADR1', blank=True
+    # )
+    # mail_adr2 = fields.CharField(
+    #     max_length=55, db_column='MAIL_ADR2', blank=True
+    # )
+    mail_city = fields.CharField(
         max_length=30, db_column='MAIL_CITY', blank=True
     )
-    mail_st = models.CharField(max_length=2, db_column='MAIL_ST', blank=True)
-    mail_zip4 = models.CharField(
+    mail_st = fields.CharField(max_length=2, db_column='MAIL_ST', blank=True)
+    mail_zip4 = fields.CharField(
         max_length=10, db_column='MAIL_ZIP4', blank=True
     )
-    off_s_h_cd = models.CharField(
+    off_s_h_cd = fields.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         max_length=40, db_column='OFFIC_DSCR', blank=True
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         max_length=3, db_column='OFFICE_CD', blank=True
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "CVR2"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
-    title = models.CharField(max_length=90, db_column='TITLE', blank=True)
-    tran_id = models.CharField(
+    title = fields.CharField(max_length=90, db_column='TITLE', blank=True)
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    tres_namf = models.CharField(
+    tres_namf = fields.CharField(
         max_length=45, db_column='TRES_NAMF', blank=True
     )
-    tres_naml = models.CharField(
+    tres_naml = fields.CharField(
         max_length=200, db_column='TRES_NAML', blank=True
     )
-    tres_nams = models.CharField(
+    tres_nams = fields.CharField(
         max_length=10, db_column='TRES_NAMS', blank=True
     )
-    tres_namt = models.CharField(
+    tres_namt = fields.CharField(
         max_length=10, db_column='TRES_NAMT', blank=True
     )
 
@@ -1058,159 +1059,159 @@ class RcptCd(CalAccessBaseModel):
 
         Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
     """
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    amount = models.DecimalField(
+    amount = fields.DecimalField(
         decimal_places=2,
         max_digits=14,
         db_column='AMOUNT',
         help_text="Amount Received (Monetary, Inkkind, Promise)"
     )
-    bakref_tid = models.CharField(
+    bakref_tid = fields.CharField(
         max_length=20,
         db_column='BAKREF_TID',
         blank=True,
         help_text="Back Reference to a transaction identifier of a parent \
 record"
     )
-    bal_juris = models.CharField(
+    bal_juris = fields.CharField(
         max_length=40,
         db_column='BAL_JURIS',
         blank=True,
         help_text="Jurisdiction of ballot measure. Used on the Form 401 \
 Schedule A"
     )
-    bal_name = models.CharField(
+    bal_name = fields.CharField(
         max_length=200,
         db_column='BAL_NAME',
         blank=True,
         help_text="Ballot measure name. Used on the Form 401 Schedule A"
     )
-    bal_num = models.CharField(
+    bal_num = fields.CharField(
         max_length=7,
         db_column='BAL_NUM',
         blank=True,
         help_text="Ballot measure number or letter. Used on the Form 401 \
 Schedule A"
     )
-    cand_namf = models.CharField(
+    cand_namf = fields.CharField(
         max_length=45,
         db_column='CAND_NAMF',
         blank=True,
         help_text="Candidate/officeholder's first name. Used on the Form \
 401 Schedule A"
     )
-    cand_naml = models.CharField(
+    cand_naml = fields.CharField(
         max_length=200,
         db_column='CAND_NAML',
         blank=True,
         help_text="Candidate/officeholder's last name. Used on the Form \
 401 Schedule A"
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         max_length=10,
         db_column='CAND_NAMS',
         blank=True,
         help_text="Candidate/officeholder's name suffix. Used on the Form \
 401 Schedule A"
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         max_length=10,
         db_column='CAND_NAMT',
         blank=True,
         help_text="Candidate/officeholder's name prefix or title. Used on \
 the Form 401 Schedule A"
     )
-    cmte_id = models.CharField(
+    cmte_id = fields.CharField(
         max_length=9,
         db_column='CMTE_ID',
         blank=True,
         help_text="Committee Identification number"
     )
-    ctrib_adr1 = models.CharField(
-        max_length=55,
-        db_column='CTRIB_ADR1',
-        blank=True,
-        default="",
-        help_text="First line of the contributor's street address"
-    )
-    ctrib_adr2 = models.CharField(
-        max_length=55,
-        db_column='CTRIB_ADR2',
-        blank=True,
-        help_text="Second line of the contributor's street address"
-    )
-    ctrib_city = models.CharField(
+    # ctrib_adr1 = fields.CharField(
+    #     max_length=55,
+    #     db_column='CTRIB_ADR1',
+    #     blank=True,
+    #     default="",
+    #     help_text="First line of the contributor's street address"
+    # )
+    # ctrib_adr2 = fields.CharField(
+    #     max_length=55,
+    #     db_column='CTRIB_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the contributor's street address"
+    # )
+    ctrib_city = fields.CharField(
         max_length=30,
         db_column='CTRIB_CITY',
         blank=True,
         help_text="Contributor's City"
     )
-    ctrib_dscr = models.CharField(
+    ctrib_dscr = fields.CharField(
         max_length=90,
         db_column='CTRIB_DSCR',
         blank=True,
         help_text="Description of goods/services received"
     )
-    ctrib_emp = models.CharField(
+    ctrib_emp = fields.CharField(
         max_length=200,
         db_column='CTRIB_EMP',
         blank=True,
         help_text="Employer"
     )
-    ctrib_namf = models.CharField(
+    ctrib_namf = fields.CharField(
         max_length=45,
         db_column='CTRIB_NAMF',
         blank=True,
         help_text="Contributor's First Name"
     )
-    ctrib_naml = models.CharField(
+    ctrib_naml = fields.CharField(
         max_length=200,
         db_column='CTRIB_NAML',
         help_text="Contributor's last name or business name"
     )
-    ctrib_nams = models.CharField(
+    ctrib_nams = fields.CharField(
         max_length=10,
         db_column='CTRIB_NAMS',
         blank=True,
         help_text="Contributor's Suffix"
     )
-    ctrib_namt = models.CharField(
+    ctrib_namt = fields.CharField(
         max_length=10,
         db_column='CTRIB_NAMT',
         blank=True,
         help_text="Contributor's Prefix or Title"
     )
-    ctrib_occ = models.CharField(
+    ctrib_occ = fields.CharField(
         max_length=60,
         db_column='CTRIB_OCC',
         blank=True,
         help_text="Occupation"
     )
-    ctrib_self = models.CharField(
+    ctrib_self = fields.CharField(
         max_length=1,
         db_column='CTRIB_SELF',
         blank=True,
         help_text="Self Employed Check-box"
     )
-    ctrib_st = models.CharField(
+    ctrib_st = fields.CharField(
         max_length=2,
         db_column='CTRIB_ST',
         blank=True,
         help_text="Contributor's State"
     )
-    ctrib_zip4 = models.CharField(
+    ctrib_zip4 = fields.CharField(
         max_length=10,
         db_column='CTRIB_ZIP4',
         blank=True,
         help_text="Contributor's ZIP+4"
     )
-    cum_oth = models.DecimalField(
+    cum_oth = fields.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
@@ -1218,7 +1219,7 @@ the Form 401 Schedule A"
         blank=True,
         help_text="Cumulative Other (Sched A, A-1)"
     )
-    cum_ytd = models.DecimalField(
+    cum_ytd = fields.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
@@ -1227,13 +1228,13 @@ the Form 401 Schedule A"
         help_text="Cumulative year to date amount (Form 460 Schedule A \
 and Form 401 Schedule A, A-1)"
     )
-    date_thru = models.DateField(
+    date_thru = fields.DateField(
         null=True,
         db_column='DATE_THRU',
         blank=True,
         help_text="End of date range for items received"
     )
-    dist_no = models.CharField(
+    dist_no = fields.CharField(
         max_length=3,
         db_column='DIST_NO',
         blank=True,
@@ -1254,14 +1255,14 @@ and Form 401 Schedule A, A-1)"
         ("RCP", "Recipient commmittee"),
         ("SCC", "Small contributor committee"),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         help_text="Entity code: Values [CMO|RCP|IND|OTH]",
         choices=ENTITY_CODE_CHOICES
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -1284,126 +1285,126 @@ Schedule C, non-monetary contributions received'),
         ('A', 'Form 460 (Recipient committee campaign statement): \
 Schedule A, monetary contributions received')
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=9,
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
     )
-    int_rate = models.CharField(
+    int_rate = fields.CharField(
         max_length=9,
         db_column='INT_RATE',
         blank=True
     )
-    intr_adr1 = models.CharField(
-        max_length=55,
-        db_column='INTR_ADR1',
-        blank=True,
-        help_text="First line of the intermediary's street address."
-    )
-    intr_adr2 = models.CharField(
-        max_length=55,
-        db_column='INTR_ADR2',
-        blank=True,
-        help_text="Second line of the Intermediary's street address."
-    )
-    intr_city = models.CharField(
+    # intr_adr1 = fields.CharField(
+    #     max_length=55,
+    #     db_column='INTR_ADR1',
+    #     blank=True,
+    #     help_text="First line of the intermediary's street address."
+    # )
+    # intr_adr2 = fields.CharField(
+    #     max_length=55,
+    #     db_column='INTR_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the Intermediary's street address."
+    # )
+    intr_city = fields.CharField(
         max_length=30,
         db_column='INTR_CITY',
         blank=True,
         help_text="Intermediary's City"
     )
-    intr_cmteid = models.CharField(
+    intr_cmteid = fields.CharField(
         max_length=9,
         db_column='INTR_CMTEID',
         blank=True,
         help_text=""
     )
-    intr_emp = models.CharField(
+    intr_emp = fields.CharField(
         max_length=200,
         db_column='INTR_EMP',
         blank=True,
         help_text="Intermediary's Employer"
     )
-    intr_namf = models.CharField(
+    intr_namf = fields.CharField(
         max_length=45,
         db_column='INTR_NAMF',
         blank=True,
         help_text="Intermediary's First Name"
     )
-    intr_naml = models.CharField(
+    intr_naml = fields.CharField(
         max_length=200,
         db_column='INTR_NAML',
         blank=True,
         help_text="Intermediary's Last Name"
     )
-    intr_nams = models.CharField(
+    intr_nams = fields.CharField(
         max_length=10,
         db_column='INTR_NAMS',
         blank=True,
         help_text="Intermediary's Suffix"
     )
-    intr_namt = models.CharField(
+    intr_namt = fields.CharField(
         max_length=10,
         db_column='INTR_NAMT',
         blank=True,
         help_text="Intermediary's Prefix or Title"
     )
-    intr_occ = models.CharField(
+    intr_occ = fields.CharField(
         max_length=60,
         db_column='INTR_OCC',
         blank=True,
         help_text="Intermediary's Occupation"
     )
-    intr_self = models.CharField(
+    intr_self = fields.CharField(
         max_length=1,
         db_column='INTR_SELF',
         blank=True,
         help_text="Intermediary's self employed check box"
     )
-    intr_st = models.CharField(
+    intr_st = fields.CharField(
         max_length=2,
         db_column='INTR_ST',
         blank=True,
         help_text="Intermediary's state"
     )
-    intr_zip4 = models.CharField(
+    intr_zip4 = fields.CharField(
         max_length=10,
         db_column='INTR_ZIP4',
         blank=True,
         help_text="Intermediary's zip code"
     )
-    juris_cd = models.CharField(
+    juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
         help_text="Office jurisdiction code. See the CAL document for the \
 list of legal values. Used on Form 401 Schedule A"
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         max_length=40,
         db_column='JURIS_DSCR',
         blank=True,
         help_text="Office Jurisdiction Description (used on F401A)"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1,
         db_column='MEMO_CODE',
         blank=True,
         help_text="Memo amount flag (Date/Amount are informational only)"
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20,
         db_column='MEMO_REFNO',
         blank=True,
         help_text="Reference to text contained in a TEXT record"
     )
-    off_s_h_cd = models.CharField(
+    off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
@@ -1411,13 +1412,13 @@ list of legal values. Used on Form 401 Schedule A"
 Schedule A. Legal values are 'S' for sought and 'H' for \
 held"
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         max_length=40,
         db_column='OFFIC_DSCR',
         blank=True,
         help_text="Office Sought Description (used on F401A)"
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         max_length=3,
         db_column='OFFICE_CD',
         blank=True,
@@ -1425,7 +1426,7 @@ held"
 CAL document for a list of valid codes. Used on the \
 Form 401 Schedule A)"
     )
-    rcpt_date = models.DateField(
+    rcpt_date = fields.DateField(
         db_column='RCPT_DATE',
         null=True,
         help_text="Date item received"
@@ -1434,14 +1435,14 @@ Form 401 Schedule A)"
         ("E530", "E530"),
         ("RCPT", "RCPT"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
@@ -1449,73 +1450,73 @@ Form 401 Schedule A)"
 or 'O' for oppose. Used on Form 401 Sechedule A. \
 Transaction identifier - permanent value unique to this item"
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    tran_type = models.CharField(
+    tran_type = fields.CharField(
         max_length=1,
         db_column='TRAN_TYPE',
         blank=True,
         help_text="Transaction Type: Values T- third party | F Forgiven \
 loan | R Returned (Negative amount)"
     )
-    tres_adr1 = models.CharField(
-        max_length=55,
-        db_column='TRES_ADR1',
-        blank=True,
-        help_text="First line of the treasurer or responsible officer's \
-street address"
-    )
-    tres_adr2 = models.CharField(
-        max_length=55,
-        db_column='TRES_ADR2',
-        blank=True,
-        help_text="Second line of the treasurer or responsible officer's \
-street address"
-    )
-    tres_city = models.CharField(
+#     tres_adr1 = fields.CharField(
+#         max_length=55,
+#         db_column='TRES_ADR1',
+#         blank=True,
+#         help_text="First line of the treasurer or responsible officer's \
+# street address"
+#     )
+#     tres_adr2 = fields.CharField(
+#         max_length=55,
+#         db_column='TRES_ADR2',
+#         blank=True,
+#         help_text="Second line of the treasurer or responsible officer's \
+# street address"
+#     )
+    tres_city = fields.CharField(
         max_length=30,
         db_column='TRES_CITY',
         blank=True,
         help_text="City portion of the treasurer or responsible officer's \
 street address"
     )
-    tres_namf = models.CharField(
+    tres_namf = fields.CharField(
         max_length=45,
         db_column='TRES_NAMF',
         blank=True,
         help_text="Treasurer or responsible officer's first name"
     )
-    tres_naml = models.CharField(
+    tres_naml = fields.CharField(
         max_length=200,
         db_column='TRES_NAML',
         blank=True,
         help_text="Treasurer or responsible officer's last name"
     )
-    tres_nams = models.CharField(
+    tres_nams = fields.CharField(
         max_length=10,
         db_column='TRES_NAMS',
         blank=True,
         help_text="Treasurer or responsible officer's suffix"
     )
-    tres_namt = models.CharField(
+    tres_namt = fields.CharField(
         max_length=10,
         db_column='TRES_NAMT',
         blank=True,
         help_text="Treasurer or responsible officer's prefix or title"
     )
-    tres_st = models.CharField(
+    tres_st = fields.CharField(
         max_length=2,
         db_column='TRES_ST',
         blank=True,
         help_text="State portion of the treasurer or responsible officer's \
 address"
     )
-    tres_zip4 = models.CharField(
+    tres_zip4 = fields.CharField(
         null=True,
         max_length=10,
         blank=True,
@@ -1523,14 +1524,14 @@ address"
         help_text="Zip code portion of the treasurer or responsible officer's \
 address"
     )
-    xref_match = models.CharField(
+    xref_match = fields.CharField(
         max_length=1,
         db_column='XREF_MATCH',
         blank=True,
         help_text="Related item on other schedule has same transaction \
 identifier. 'X' indicates this condition is true"
     )
-    xref_schnm = models.CharField(
+    xref_schnm = fields.CharField(
         max_length=2,
         db_column='XREF_SCHNM',
         blank=True,
@@ -1552,20 +1553,20 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
     Cover page verification information from campaign disclosure forms
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -1573,7 +1574,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ("CVR3", "CVR3"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -1599,14 +1600,14 @@ committee campaign statement)'),
         ('F900', 'Form 900 (Public employee\'s retirement board, \
 candidate campaign statement)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
@@ -1633,49 +1634,49 @@ candidate campaign statement)'),
         ('SPO', 'Sponsor'),
         ('TRE', 'Treasurer'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         max_length=3,
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    sig_date = models.DateField(
+    sig_date = fields.DateField(
         verbose_name='signed date',
         db_column='SIG_DATE',
         blank=True,
         null=True,
         help_text='date when signed',
     )
-    sig_loc = models.CharField(
+    sig_loc = fields.CharField(
         verbose_name='signed location',
         db_column='SIG_LOC',
         max_length=39,
         blank=True,
         help_text='city and state where signed',
     )
-    sig_naml = models.CharField(
+    sig_naml = fields.CharField(
         verbose_name='last name',
         db_column='SIG_NAML',
         max_length=56,
         blank=True,
         help_text='last name of the signer',
     )
-    sig_namf = models.CharField(
+    sig_namf = fields.CharField(
         verbose_name='first name',
         db_column='SIG_NAMF',
         max_length=45,
         blank=True,
         help_text='first name of the signer',
     )
-    sig_namt = models.CharField(
+    sig_namt = fields.CharField(
         verbose_name='title',
         db_column='SIG_NAMT',
         max_length=10,
         blank=True,
         help_text='title of the signer',
     )
-    sig_nams = models.CharField(
+    sig_nams = fields.CharField(
         verbose_name='suffix',
         db_column='SIG_NAMS',
         max_length=8,
@@ -1698,19 +1699,19 @@ class LoanCd(CalAccessBaseModel):
     """
     Loans received and made.
     """
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    bakref_tid = models.CharField(
+    bakref_tid = fields.CharField(
         max_length=20,
         db_column='BAKREF_TID',
         blank=True
     )
-    cmte_id = models.CharField(max_length=9, db_column='CMTE_ID', blank=True)
+    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True)
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
@@ -1723,14 +1724,14 @@ original filing and 1 to 999 amendments.",
         ('RCP', 'Recipient committee'),
         ('SCC', 'Small contributor committee'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name="entity code",
         choices=ENTITY_CODE_CHOICES,
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -1752,172 +1753,172 @@ Schedule H2'),
         ('H3', 'Form 460 (Recipient committee campaign statement): \
 Schedule H3'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=2,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    intr_adr1 = models.CharField(
-        max_length=55, db_column='INTR_ADR1', blank=True
-    )
-    intr_adr2 = models.CharField(
-        max_length=55, db_column='INTR_ADR2', blank=True
-    )
-    intr_city = models.CharField(
+    # intr_adr1 = fields.CharField(
+    #     max_length=55, db_column='INTR_ADR1', blank=True
+    # )
+    # intr_adr2 = fields.CharField(
+    #     max_length=55, db_column='INTR_ADR2', blank=True
+    # )
+    intr_city = fields.CharField(
         max_length=30, db_column='INTR_CITY', blank=True
     )
-    intr_namf = models.CharField(
+    intr_namf = fields.CharField(
         max_length=45, db_column='INTR_NAMF', blank=True
     )
-    intr_naml = models.CharField(
+    intr_naml = fields.CharField(
         max_length=200, db_column='INTR_NAML', blank=True
     )
-    intr_nams = models.CharField(
+    intr_nams = fields.CharField(
         max_length=10, db_column='INTR_NAMS', blank=True
     )
-    intr_namt = models.CharField(
+    intr_namt = fields.CharField(
         max_length=10, db_column='INTR_NAMT', blank=True
     )
-    intr_st = models.CharField(max_length=2, db_column='INTR_ST', blank=True)
-    intr_zip4 = models.CharField(
+    intr_st = fields.CharField(max_length=2, db_column='INTR_ST', blank=True)
+    intr_zip4 = fields.CharField(
         max_length=10, db_column='INTR_ZIP4', blank=True
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
     )
-    lndr_namf = models.CharField(
+    lndr_namf = fields.CharField(
         max_length=45, db_column='LNDR_NAMF', blank=True
     )
-    lndr_naml = models.CharField(
+    lndr_naml = fields.CharField(
         max_length=200, db_column='LNDR_NAML'
     )
-    lndr_nams = models.CharField(
+    lndr_nams = fields.CharField(
         max_length=10, db_column='LNDR_NAMS', blank=True
     )
-    lndr_namt = models.CharField(
+    lndr_namt = fields.CharField(
         max_length=10, db_column='LNDR_NAMT', blank=True
     )
-    loan_adr1 = models.CharField(
-        max_length=55, db_column='LOAN_ADR1', blank=True
-    )
-    loan_adr2 = models.CharField(
-        max_length=55, db_column='LOAN_ADR2', blank=True
-    )
-    loan_amt1 = models.DecimalField(
+    # loan_adr1 = fields.CharField(
+    #     max_length=55, db_column='LOAN_ADR1', blank=True
+    # )
+    # loan_adr2 = fields.CharField(
+    #     max_length=55, db_column='LOAN_ADR2', blank=True
+    # )
+    loan_amt1 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT1', blank=True
     )
-    loan_amt2 = models.DecimalField(
+    loan_amt2 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT2', blank=True
     )
-    loan_amt3 = models.DecimalField(
+    loan_amt3 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT3', blank=True
     )
-    loan_amt4 = models.DecimalField(
+    loan_amt4 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT4', blank=True
     )
-    loan_amt5 = models.DecimalField(
+    loan_amt5 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT5', blank=True
     )
-    loan_amt6 = models.DecimalField(
+    loan_amt6 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT6', blank=True
     )
-    loan_amt7 = models.DecimalField(
+    loan_amt7 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT7', blank=True
     )
-    loan_amt8 = models.DecimalField(
+    loan_amt8 = fields.DecimalField(
         decimal_places=2, null=True, max_digits=14,
         db_column='LOAN_AMT8', blank=True
     )
-    loan_city = models.CharField(
+    loan_city = fields.CharField(
         max_length=30, db_column='LOAN_CITY', blank=True
     )
-    loan_date1 = models.DateField(db_column='LOAN_DATE1', null=True)
-    loan_date2 = models.DateField(
+    loan_date1 = fields.DateField(db_column='LOAN_DATE1', null=True)
+    loan_date2 = fields.DateField(
         null=True, db_column='LOAN_DATE2', blank=True
     )
-    loan_emp = models.CharField(
+    loan_emp = fields.CharField(
         max_length=200, db_column='LOAN_EMP', blank=True
     )
-    loan_occ = models.CharField(
+    loan_occ = fields.CharField(
         max_length=60, db_column='LOAN_OCC', blank=True
     )
-    loan_rate = models.CharField(
+    loan_rate = fields.CharField(
         max_length=30, db_column='LOAN_RATE', blank=True
     )
-    loan_self = models.CharField(
+    loan_self = fields.CharField(
         max_length=1, db_column='LOAN_SELF', blank=True
     )
-    loan_st = models.CharField(max_length=2, db_column='LOAN_ST', blank=True)
-    loan_type = models.CharField(
+    loan_st = fields.CharField(max_length=2, db_column='LOAN_ST', blank=True)
+    loan_type = fields.CharField(
         max_length=3, db_column='LOAN_TYPE', blank=True
     )
-    loan_zip4 = models.CharField(
+    loan_zip4 = fields.CharField(
         max_length=10, db_column='LOAN_ZIP4', blank=True
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
     REC_TYPE_CHOICES = (
         ("LOAN", "LOAN"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    tres_adr1 = models.CharField(
-        max_length=55, db_column='TRES_ADR1', blank=True
-    )
-    tres_adr2 = models.CharField(
-        max_length=55, db_column='TRES_ADR2', blank=True
-    )
-    tres_city = models.CharField(
+    # tres_adr1 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR1', blank=True
+    # )
+    # tres_adr2 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR2', blank=True
+    # )
+    tres_city = fields.CharField(
         max_length=30, db_column='TRES_CITY', blank=True
     )
-    tres_namf = models.CharField(
+    tres_namf = fields.CharField(
         max_length=45, db_column='TRES_NAMF', blank=True
     )
-    tres_naml = models.CharField(
+    tres_naml = fields.CharField(
         max_length=200, db_column='TRES_NAML', blank=True
     )
-    tres_nams = models.CharField(
+    tres_nams = fields.CharField(
         max_length=10, db_column='TRES_NAMS', blank=True
     )
-    tres_namt = models.CharField(
+    tres_namt = fields.CharField(
         max_length=10, db_column='TRES_NAMT', blank=True
     )
-    tres_st = models.CharField(
+    tres_st = fields.CharField(
         max_length=2, db_column='TRES_ST', blank=True
     )
-    tres_zip4 = models.CharField(
+    tres_zip4 = fields.CharField(
         max_length=10, db_column='TRES_ZIP4', blank=True
     )
-    xref_match = models.CharField(
+    xref_match = fields.CharField(
         max_length=1, db_column='XREF_MATCH', blank=True
     )
-    xref_schnm = models.CharField(
+    xref_schnm = fields.CharField(
         max_length=2, db_column='XREF_SCHNM', blank=True
     )
 
@@ -1937,20 +1938,20 @@ class S401Cd(CalAccessBaseModel):
     This table contains Form 401 (Slate Mailer Organization) payment and other
     disclosure schedule (F401B, F401B-1, F401C, F401D) information.
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -1958,7 +1959,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ("S401", "S401"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -1975,107 +1976,107 @@ Schedule C, persons receiving $1,000 or more'),
         ('F401D', 'Form 401 (Slate mailer organization campaign statement): \
 Schedule D, candidates or measures supported or opposed with < $100 payment'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=7,
         db_column='FORM_TYPE',
         blank=True,
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    agent_naml = models.CharField(
+    agent_naml = fields.CharField(
         max_length=200, db_column='AGENT_NAML', blank=True
     )
-    agent_namf = models.CharField(
+    agent_namf = fields.CharField(
         max_length=45, db_column='AGENT_NAMF', blank=True
     )
-    agent_namt = models.CharField(
+    agent_namt = fields.CharField(
         max_length=200, db_column='AGENT_NAMT', blank=True
     )
-    agent_nams = models.CharField(
+    agent_nams = fields.CharField(
         max_length=10, db_column='AGENT_NAMS', blank=True
     )
-    payee_naml = models.CharField(
+    payee_naml = fields.CharField(
         max_length=200, db_column='PAYEE_NAML', blank=True
     )
-    payee_namf = models.CharField(
+    payee_namf = fields.CharField(
         max_length=45, db_column='PAYEE_NAMF', blank=True
     )
-    payee_namt = models.CharField(
+    payee_namt = fields.CharField(
         max_length=10, db_column='PAYEE_NAMT', blank=True
     )
-    payee_nams = models.CharField(
+    payee_nams = fields.CharField(
         max_length=10, db_column='PAYEE_NAMS', blank=True
     )
-    payee_city = models.CharField(
+    payee_city = fields.CharField(
         max_length=30, db_column='PAYEE_CITY', blank=True
     )
-    payee_st = models.CharField(
+    payee_st = fields.CharField(
         max_length=2, db_column='PAYEE_ST', blank=True
     )
-    payee_zip4 = models.CharField(
+    payee_zip4 = fields.CharField(
         max_length=10, db_column='PAYEE_ZIP4', blank=True
     )
-    amount = models.DecimalField(
+    amount = fields.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
     )
-    aggregate = models.DecimalField(
+    aggregate = fields.DecimalField(
         max_digits=16, decimal_places=2, db_column='AGGREGATE'
     )
-    expn_dscr = models.CharField(
+    expn_dscr = fields.CharField(
         max_length=90, db_column='EXPN_DSCR', blank=True
     )
-    cand_naml = models.CharField(
+    cand_naml = fields.CharField(
         max_length=200, db_column='CAND_NAML', blank=True
     )
-    cand_namf = models.CharField(
+    cand_namf = fields.CharField(
         max_length=45, db_column='CAND_NAMF', blank=True
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         max_length=10, db_column='CAND_NAMT', blank=True
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         max_length=10, db_column='CAND_NAMS', blank=True
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         max_length=3, db_column='OFFICE_CD', blank=True
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         max_length=40, db_column='OFFIC_DSCR', blank=True
     )
-    juris_cd = models.CharField(
+    juris_cd = fields.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
     )
-    dist_no = models.CharField(max_length=3, db_column='DIST_NO', blank=True)
-    off_s_h_cd = models.CharField(
+    dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
+    off_s_h_cd = fields.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
     )
-    bal_name = models.CharField(
+    bal_name = fields.CharField(
         max_length=200, db_column='BAL_NAME', blank=True
     )
-    bal_num = models.CharField(max_length=7, db_column='BAL_NUM', blank=True)
-    bal_juris = models.CharField(
+    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    bal_juris = fields.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
-    bakref_tid = models.CharField(
+    bakref_tid = fields.CharField(
         max_length=20, db_column='BAKREF_TID', blank=True
     )
 
@@ -2094,98 +2095,98 @@ class ExpnCd(CalAccessBaseModel):
     """
     Campaign expenditures from a variety of forms
     """
-    agent_namf = models.CharField(
+    agent_namf = fields.CharField(
         max_length=45,
         db_column='AGENT_NAMF',
         blank=True,
         help_text="Agent of Ind. Contractor's First name"
     )
-    agent_naml = models.CharField(
+    agent_naml = fields.CharField(
         max_length=200,
         db_column='AGENT_NAML',
         blank=True,
         help_text="Agent of Ind. Contractor's Last name (Sched G)"
     )
-    agent_nams = models.CharField(
+    agent_nams = fields.CharField(
         max_length=10,
         db_column='AGENT_NAMS',
         blank=True,
         help_text="Agent of Ind. Contractor's Suffix"
     )
-    agent_namt = models.CharField(
+    agent_namt = fields.CharField(
         max_length=10,
         db_column='AGENT_NAMT',
         blank=True,
         help_text="Agent of Ind. Contractor's Prefix or Title"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    amount = models.DecimalField(
+    amount = fields.DecimalField(
         decimal_places=2,
         max_digits=14,
         db_column='AMOUNT',
         help_text="Amount of Payment"
     )
-    bakref_tid = models.CharField(
+    bakref_tid = fields.CharField(
         max_length=20,
         db_column='BAKREF_TID',
         blank=True,
         help_text="Back Reference to a Tran_ID of a 'parent' record"
     )
-    bal_juris = models.CharField(
+    bal_juris = fields.CharField(
         max_length=40,
         db_column='BAL_JURIS',
         blank=True,
         help_text="Jurisdiction"
     )
-    bal_name = models.CharField(
+    bal_name = fields.CharField(
         max_length=200,
         db_column='BAL_NAME',
         blank=True,
         help_text="Ballot Measure Name"
     )
-    bal_num = models.CharField(
+    bal_num = fields.CharField(
         max_length=7,
         db_column='BAL_NUM',
         blank=True,
         help_text="Ballot Number or Letter"
     )
-    cand_namf = models.CharField(
+    cand_namf = fields.CharField(
         max_length=45,
         db_column='CAND_NAMF',
         blank=True,
         help_text="Candidate's First name"
     )
-    cand_naml = models.CharField(
+    cand_naml = fields.CharField(
         max_length=200,
         db_column='CAND_NAML',
         blank=True,
         help_text="Candidate's Last name"
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         max_length=10,
         db_column='CAND_NAMS',
         blank=True,
         help_text="Candidate's Suffix"
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         max_length=10,
         db_column='CAND_NAMT',
         blank=True,
         help_text="Candidate's Prefix or Title"
     )
-    cmte_id = models.CharField(
+    cmte_id = fields.CharField(
         max_length=9,
         db_column='CMTE_ID',
         blank=True,
         help_text="Committee ID (If [COM|RCP] & no ID#, Treas info Req.)"
     )
-    cum_oth = models.DecimalField(
+    cum_oth = fields.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
@@ -2193,7 +2194,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Cumulative / 'Other' (No Cumulative on Sched E & G)"
     )
-    cum_ytd = models.DecimalField(
+    cum_ytd = fields.DecimalField(
         decimal_places=2,
         null=True,
         max_digits=14,
@@ -2202,7 +2203,7 @@ original filing and 1 to 999 amendments.",
         help_text="Cumulative / Year-to-date amount \
         (No Cumulative on Sched E & G)"
     )
-    dist_no = models.CharField(
+    dist_no = fields.CharField(
         max_length=3,
         db_column='DIST_NO',
         blank=True,
@@ -2227,20 +2228,20 @@ original filing and 1 to 999 amendments.",
         ('RFD', 'RFD (Unknown)'),
         ('MBR', 'MBR (Unknown)'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         choices=ENTITY_CODE_CHOICES,
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
     )
-    expn_chkno = models.CharField(
+    expn_chkno = fields.CharField(
         max_length=20,
         db_column='EXPN_CHKNO',
         blank=True,
         help_text="Check Number (Optional)"
     )
-    expn_code = models.CharField(
+    expn_code = fields.CharField(
         max_length=3,
         db_column='EXPN_CODE',
         blank=True,
@@ -2248,19 +2249,19 @@ original filing and 1 to 999 amendments.",
         Note: CTB & IND need explanation & listing on Sched D \
         TRC & TRS require explanation."
     )
-    expn_date = models.DateField(
+    expn_date = fields.DateField(
         null=True,
         db_column='EXPN_DATE',
         blank=True,
         help_text="Date of Expenditure (Note: Date not on Sched E & G)"
     )
-    expn_dscr = models.CharField(
+    expn_dscr = fields.CharField(
         max_length=400,
         db_column='EXPN_DSCR',
         blank=True,
         help_text="Purpose of Expense and/or Description/explanation"
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -2283,19 +2284,19 @@ report): Part 3, independent expenditures made'),
         ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
 Campaign Statement), Schedule B, expenditures made'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=6,
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
     )
-    g_from_e_f = models.CharField(
+    g_from_e_f = fields.CharField(
         max_length=1,
         db_column='G_FROM_E_F',
         blank=True,
         help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
-    juris_cd = models.CharField(
+    juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
@@ -2304,25 +2305,25 @@ Campaign Statement), Schedule B, expenditures made'),
         BOE=Board of Equalization District; \
         CIT=City; CTY=County; LOC=Local; OTH=Other"
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         max_length=40,
         db_column='JURIS_DSCR',
         blank=True,
         help_text="Office Jurisdiction Description \
         (Req. if Juris_Cd=[CIT|CTY|LOC|OTH]"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1,
         db_column='MEMO_CODE',
         blank=True,
         help_text="Memo Amount? (Date/Amount are informational only)"
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20,
         db_column='MEMO_REFNO',
         blank=True,
@@ -2335,74 +2336,74 @@ Campaign Statement), Schedule B, expenditures made'),
         ('8', '8 - Unknown'),
         ('O', 'O - Unknown'),
     )
-    off_s_h_cd = models.CharField(
+    off_s_h_cd = fields.CharField(
         choices=OFF_S_H_CD_CHOICES,
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
         help_text="Office Sought/Held Code: H=Held; S=Sought"
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         max_length=40,
         db_column='OFFIC_DSCR',
         blank=True,
         help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         max_length=3,
         db_column='OFFICE_CD',
         blank=True,
         help_text="Office Sought (See table of code in Overview)"
     )
-    payee_adr1 = models.CharField(
-        max_length=55,
-        db_column='PAYEE_ADR1',
-        blank=True,
-        help_text="Address of Payee"
-    )
-    payee_adr2 = models.CharField(
-        max_length=55,
-        db_column='PAYEE_ADR2',
-        blank=True,
-        help_text="Optional 2nd line of Address"
-    )
-    payee_city = models.CharField(
+    # payee_adr1 = fields.CharField(
+    #     max_length=55,
+    #     db_column='PAYEE_ADR1',
+    #     blank=True,
+    #     help_text="Address of Payee"
+    # )
+    # payee_adr2 = fields.CharField(
+    #     max_length=55,
+    #     db_column='PAYEE_ADR2',
+    #     blank=True,
+    #     help_text="Optional 2nd line of Address"
+    # )
+    payee_city = fields.CharField(
         max_length=30,
         db_column='PAYEE_CITY',
         blank=True,
         help_text="Payee City"
     )
-    payee_namf = models.CharField(
+    payee_namf = fields.CharField(
         max_length=45,
         db_column='PAYEE_NAMF',
         blank=True,
         help_text="Payee's First name"
     )
-    payee_naml = models.CharField(
+    payee_naml = fields.CharField(
         max_length=200,
         db_column='PAYEE_NAML',
         blank=True,
         help_text="Payee's Last name"
     )
-    payee_nams = models.CharField(
+    payee_nams = fields.CharField(
         max_length=10,
         db_column='PAYEE_NAMS',
         blank=True,
         help_text="Payee's Suffix"
     )
-    payee_namt = models.CharField(
+    payee_namt = fields.CharField(
         max_length=10,
         db_column='PAYEE_NAMT',
         blank=True,
         help_text="Payee's Prefix or Title"
     )
-    payee_st = models.CharField(
+    payee_st = fields.CharField(
         max_length=2,
         db_column='PAYEE_ST',
         blank=True,
         help_text="State code"
     )
-    payee_zip4 = models.CharField(
+    payee_zip4 = fields.CharField(
         max_length=10,
         db_column='PAYEE_ZIP4',
         blank=True,
@@ -2411,87 +2412,87 @@ Campaign Statement), Schedule B, expenditures made'),
     REC_TYPE_CHOICES = (
         ("EXPN", "EXPN"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support/Oppose? Values: S; O (F450, F461)"
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    tres_adr1 = models.CharField(
-        max_length=55,
-        db_column='TRES_ADR1',
-        blank=True,
-        help_text="Treasurer Street 1(Req if [COM|RCP] & no ID#)"
-    )
-    tres_adr2 = models.CharField(
-        max_length=55,
-        db_column='TRES_ADR2',
-        blank=True,
-        help_text="Treasurer Street 2"
-    )
-    tres_city = models.CharField(
+    # tres_adr1 = fields.CharField(
+    #     max_length=55,
+    #     db_column='TRES_ADR1',
+    #     blank=True,
+    #     help_text="Treasurer Street 1(Req if [COM|RCP] & no ID#)"
+    # )
+    # tres_adr2 = fields.CharField(
+    #     max_length=55,
+    #     db_column='TRES_ADR2',
+    #     blank=True,
+    #     help_text="Treasurer Street 2"
+    # )
+    tres_city = fields.CharField(
         max_length=30,
         db_column='TRES_CITY',
         blank=True,
         help_text="Treasurer City"
     )
-    tres_namf = models.CharField(
+    tres_namf = fields.CharField(
         max_length=45,
         db_column='TRES_NAMF',
         blank=True,
         help_text="Treasurer's First name (Req if [COM|RCP] & no ID#)"
     )
-    tres_naml = models.CharField(
+    tres_naml = fields.CharField(
         max_length=200,
         db_column='TRES_NAML',
         blank=True,
         help_text="Treasurer's Last name (Req if [COM|RCP] & no ID#)"
     )
-    tres_nams = models.CharField(
+    tres_nams = fields.CharField(
         max_length=10,
         db_column='TRES_NAMS',
         blank=True,
         help_text="Treasurer's Suffix"
     )
-    tres_namt = models.CharField(
+    tres_namt = fields.CharField(
         max_length=10,
         db_column='TRES_NAMT',
         blank=True,
         help_text="Treasurer's Prefix or Title"
     )
-    tres_st = models.CharField(
+    tres_st = fields.CharField(
         max_length=2,
         db_column='TRES_ST',
         blank=True,
         help_text="Treasurer State"
     )
-    tres_zip4 = models.CharField(
+    tres_zip4 = fields.CharField(
         max_length=10,
         db_column='TRES_ZIP4',
         blank=True,
         help_text="Treasurer ZIP+4"
     )
-    xref_match = models.CharField(
+    xref_match = fields.CharField(
         max_length=1,
         db_column='XREF_MATCH',
         blank=True,
         help_text="X = Related item on other Sched has same Tran_ID"
     )
-    xref_schnm = models.CharField(
+    xref_schnm = fields.CharField(
         max_length=2,
         db_column='XREF_SCHNM',
         blank=True,
@@ -2528,20 +2529,20 @@ class F495P2Cd(CalAccessBaseModel):
     contributions received and expenditures made since
     its last report.
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -2549,7 +2550,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ('F495', 'F495'),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -2561,19 +2562,19 @@ original filing and 1 to 999 amendments.",
 short form)'),
         ('F460', 'Form 460 (Recipient committee campaign statement)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    elect_date = models.DateField(
+    elect_date = fields.DateField(
         db_column='ELECT_DATE',
         blank=True,
         null=True
     )
-    electjuris = models.CharField(db_column='ELECTJURIS', max_length=40)
-    contribamt = models.FloatField(db_column='CONTRIBAMT')
+    electjuris = fields.CharField(db_column='ELECTJURIS', max_length=40)
+    contribamt = fields.FloatField(db_column='CONTRIBAMT')
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -2591,29 +2592,29 @@ class DebtCd(CalAccessBaseModel):
     Form 460 (Recipient Committee Campaign Statement)
     Schedule (F) Accrued Expenses (Unpaid Bills) records
     """
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    amt_incur = models.DecimalField(
+    amt_incur = fields.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMT_INCUR'
     )
-    amt_paid = models.DecimalField(
+    amt_paid = fields.DecimalField(
         decimal_places=2, max_digits=14, db_column='AMT_PAID'
     )
-    bakref_tid = models.CharField(
+    bakref_tid = fields.CharField(
         max_length=20, db_column='BAKREF_TID', blank=True
     )
-    beg_bal = models.DecimalField(
+    beg_bal = fields.DecimalField(
         decimal_places=2, max_digits=14, db_column='BEG_BAL'
     )
-    cmte_id = models.CharField(
+    cmte_id = fields.CharField(
         max_length=9, db_column='CMTE_ID', blank=True
     )
-    end_bal = models.DecimalField(
+    end_bal = fields.DecimalField(
         decimal_places=2, max_digits=14, db_column='END_BAL'
     )
     ENTITY_CODE_CHOICES = (
@@ -2629,20 +2630,20 @@ original filing and 1 to 999 amendments.",
         ('RCP', 'Recipient Committee'),
         ('SCC', 'Small contributor committee'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    expn_code = models.CharField(
+    expn_code = fields.CharField(
         max_length=3, db_column='EXPN_CODE', blank=True
     )
-    expn_dscr = models.CharField(
+    expn_dscr = fields.CharField(
         max_length=400, db_column='EXPN_DSCR', blank=True
     )
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
@@ -2652,94 +2653,94 @@ original filing and 1 to 999 amendments.",
        ('F', 'Form 460 (Recipient committee campaign statement): \
 Schedule F, accrued expenses (unpaid bills)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=1,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
-    payee_adr1 = models.CharField(
-        max_length=55, db_column='PAYEE_ADR1', blank=True
-    )
-    payee_adr2 = models.CharField(
-        max_length=55, db_column='PAYEE_ADR2', blank=True
-    )
-    payee_city = models.CharField(
+    # payee_adr1 = fields.CharField(
+    #     max_length=55, db_column='PAYEE_ADR1', blank=True
+    # )
+    # payee_adr2 = fields.CharField(
+    #     max_length=55, db_column='PAYEE_ADR2', blank=True
+    # )
+    payee_city = fields.CharField(
         max_length=30, db_column='PAYEE_CITY', blank=True
     )
-    payee_namf = models.CharField(
+    payee_namf = fields.CharField(
         max_length=45, db_column='PAYEE_NAMF', blank=True
     )
-    payee_naml = models.CharField(max_length=200, db_column='PAYEE_NAML')
-    payee_nams = models.CharField(
+    payee_naml = fields.CharField(max_length=200, db_column='PAYEE_NAML')
+    payee_nams = fields.CharField(
         max_length=10, db_column='PAYEE_NAMS', blank=True
     )
-    payee_namt = models.CharField(
+    payee_namt = fields.CharField(
         max_length=100, db_column='PAYEE_NAMT', blank=True
     )
-    payee_st = models.CharField(
+    payee_st = fields.CharField(
         max_length=2, db_column='PAYEE_ST', blank=True
     )
-    payee_zip4 = models.CharField(
+    payee_zip4 = fields.CharField(
         max_length=10, db_column='PAYEE_ZIP4', blank=True
     )
     REC_TYPE_CHOICES = (
         ("DEBT", "DEBT"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    tres_adr1 = models.CharField(
-        max_length=55, db_column='TRES_ADR1', blank=True
-    )
-    tres_adr2 = models.CharField(
-        max_length=55, db_column='TRES_ADR2', blank=True
-    )
-    tres_city = models.CharField(
+    # tres_adr1 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR1', blank=True
+    # )
+    # tres_adr2 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR2', blank=True
+    # )
+    tres_city = fields.CharField(
         max_length=30, db_column='TRES_CITY', blank=True
     )
-    tres_namf = models.CharField(
+    tres_namf = fields.CharField(
         max_length=45, db_column='TRES_NAMF', blank=True
     )
-    tres_naml = models.CharField(
+    tres_naml = fields.CharField(
         max_length=200, db_column='TRES_NAML', blank=True
     )
-    tres_nams = models.CharField(
+    tres_nams = fields.CharField(
         max_length=10, db_column='TRES_NAMS', blank=True
     )
-    tres_namt = models.CharField(
+    tres_namt = fields.CharField(
         max_length=100, db_column='TRES_NAMT', blank=True
     )
-    tres_st = models.CharField(max_length=2, db_column='TRES_ST', blank=True)
-    tres_zip4 = models.CharField(
+    tres_st = fields.CharField(max_length=2, db_column='TRES_ST', blank=True)
+    tres_zip4 = fields.CharField(
         max_length=10, db_column='TRES_ZIP4', blank=True
     )
-    xref_match = models.CharField(
+    xref_match = fields.CharField(
         max_length=1, db_column='XREF_MATCH', blank=True
     )
-    xref_schnm = models.CharField(
+    xref_schnm = fields.CharField(
         max_length=2, db_column='XREF_SCHNM', blank=True
     )
 
@@ -2758,20 +2759,20 @@ class S496Cd(CalAccessBaseModel):
     """
     Form 496 Late Independent Expenditures
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -2779,7 +2780,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ('S496', 'S496'),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         max_length=4,
         db_column='REC_TYPE',
@@ -2789,32 +2790,32 @@ original filing and 1 to 999 amendments.",
     FORM_TYPE_CHOICES = (
         ('F496', 'F496 (Late independent expenditure report)'),
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=4, db_column='FORM_TYPE', blank=True,
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    amount = models.DecimalField(
+    amount = fields.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
     )
-    exp_date = models.DateField(db_column='EXP_DATE', null=True)
-    expn_dscr = models.CharField(
+    exp_date = fields.DateField(db_column='EXP_DATE', null=True)
+    expn_dscr = fields.CharField(
         max_length=90, db_column='EXPN_DSCR', blank=True
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
-    date_thru = models.DateField(db_column='DATE_THRU', null=True)
+    date_thru = fields.DateField(db_column='DATE_THRU', null=True)
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -2838,27 +2839,27 @@ class SpltCd(CalAccessBaseModel):
         -- F450P5
         -- F460 (A-B1-B2-C-D-H)
     """
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    elec_amount = models.DecimalField(
+    elec_amount = fields.DecimalField(
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
     )
-    elec_code = models.CharField(
+    elec_code = fields.CharField(
         max_length=2, db_column='ELEC_CODE', blank=True
     )
-    elec_date = models.DateField(db_column='ELEC_DATE', null=True)
-    filing_id = models.IntegerField(
+    elec_date = fields.DateField(db_column='ELEC_DATE', null=True)
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -2872,13 +2873,13 @@ original filing and 1 to 999 amendments.",
         ('F450P5', ''),
         ('H', ''),
     )
-    pform_type = models.CharField(
+    pform_type = fields.CharField(
         max_length=7,
         db_column='PFORM_TYPE',
         db_index=True,
         choices=PFORM_TYPE_CHOICES,
     )
-    ptran_id = models.CharField(
+    ptran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=32,
         db_column='PTRAN_ID',
@@ -2901,20 +2902,20 @@ class S497Cd(CalAccessBaseModel):
     """
     Form 497 Late Contributions Received/Made
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -2922,7 +2923,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ("S497", "S497"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -2935,13 +2936,13 @@ Part 1, late contributions received'),
         ('F497P2', 'Form 497 (Late contribution report): \
 Part 2, late contributions made')
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=6,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
@@ -2965,95 +2966,95 @@ Part 2, late contributions made')
         ('RCP', 'Recipient Committee'),
         ('SCC', 'Small contributor committee'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    enty_naml = models.CharField(
+    enty_naml = fields.CharField(
         max_length=200, db_column='ENTY_NAML', blank=True
     )
-    enty_namf = models.CharField(
+    enty_namf = fields.CharField(
         max_length=45, db_column='ENTY_NAMF', blank=True
     )
-    enty_namt = models.CharField(
+    enty_namt = fields.CharField(
         max_length=10, db_column='ENTY_NAMT', blank=True
     )
-    enty_nams = models.CharField(
+    enty_nams = fields.CharField(
         max_length=10, db_column='ENTY_NAMS', blank=True
     )
-    enty_city = models.CharField(
+    enty_city = fields.CharField(
         max_length=30, db_column='ENTY_CITY', blank=True
     )
-    enty_st = models.CharField(max_length=2, db_column='ENTY_ST', blank=True)
-    enty_zip4 = models.CharField(
+    enty_st = fields.CharField(max_length=2, db_column='ENTY_ST', blank=True)
+    enty_zip4 = fields.CharField(
         max_length=10, db_column='ENTY_ZIP4', blank=True
     )
-    ctrib_emp = models.CharField(
+    ctrib_emp = fields.CharField(
         max_length=200, db_column='CTRIB_EMP', blank=True
     )
-    ctrib_occ = models.CharField(
+    ctrib_occ = fields.CharField(
         max_length=60, db_column='CTRIB_OCC', blank=True
     )
-    ctrib_self = models.CharField(
+    ctrib_self = fields.CharField(
         max_length=1, db_column='CTRIB_SELF', blank=True
     )
-    elec_date = models.DateField(db_column='ELEC_DATE', null=True)
-    ctrib_date = models.DateField(db_column='CTRIB_DATE', null=True)
-    date_thru = models.DateField(db_column='DATE_THRU', null=True)
-    amount = models.DecimalField(
+    elec_date = fields.DateField(db_column='ELEC_DATE', null=True)
+    ctrib_date = fields.DateField(db_column='CTRIB_DATE', null=True)
+    date_thru = fields.DateField(db_column='DATE_THRU', null=True)
+    amount = fields.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMOUNT'
     )
-    cmte_id = models.CharField(max_length=9, db_column='CMTE_ID', blank=True)
-    cand_naml = models.CharField(
+    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True)
+    cand_naml = fields.CharField(
         max_length=200, db_column='CAND_NAML', blank=True
     )
-    cand_namf = models.CharField(
+    cand_namf = fields.CharField(
         max_length=45, db_column='CAND_NAMF', blank=True
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         max_length=10, db_column='CAND_NAMT', blank=True
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         max_length=10, db_column='CAND_NAMS', blank=True
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         max_length=3, db_column='OFFICE_CD', blank=True
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         max_length=40, db_column='OFFIC_DSCR', blank=True
     )
-    juris_cd = models.CharField(
+    juris_cd = fields.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
     )
-    dist_no = models.CharField(max_length=3, db_column='DIST_NO', blank=True)
-    off_s_h_cd = models.CharField(
+    dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
+    off_s_h_cd = fields.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
     )
-    bal_name = models.CharField(
+    bal_name = fields.CharField(
         max_length=200, db_column='BAL_NAME', blank=True
     )
-    bal_num = models.CharField(max_length=7, db_column='BAL_NUM', blank=True)
-    bal_juris = models.CharField(
+    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    bal_juris = fields.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
-    bal_id = models.CharField(max_length=9, db_column='BAL_ID', blank=True)
-    cand_id = models.CharField(max_length=9, db_column='CAND_ID', blank=True)
-    sup_off_cd = models.CharField(
+    bal_id = fields.CharField(max_length=9, db_column='BAL_ID', blank=True)
+    cand_id = fields.CharField(max_length=9, db_column='CAND_ID', blank=True)
+    sup_off_cd = fields.CharField(
         max_length=1, db_column='SUP_OFF_CD', blank=True
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
 
@@ -3079,13 +3080,13 @@ class F501502Cd(CalAccessBaseModel):
         -- F501
         -- F502
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
@@ -3095,7 +3096,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -3106,13 +3107,13 @@ original filing and 1 to 999 amendments.",
         ('F501', 'Form 501 (Candidate intention statement)'),
         ('F502', 'Form 502 (Campaign bank account statement)')
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    filer_id = models.CharField(
+    filer_id = fields.CharField(
         verbose_name='filer ID',
         db_column='FILER_ID',
         max_length=9,
@@ -3120,155 +3121,155 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    committee_id = models.CharField(
+    committee_id = fields.CharField(
         db_column='COMMITTEE_ID',
         max_length=8,
         blank=True
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         blank=True,
         max_length=3,
     )
-    report_num = models.IntegerField(
+    report_num = fields.IntegerField(
         db_column='REPORT_NUM',
         blank=True,
         null=True
     )
-    rpt_date = models.DateTimeField(
+    rpt_date = fields.DateTimeField(
         db_column='RPT_DATE',
         blank=True,
         null=True
     )
-    stmt_type = models.IntegerField(db_column='STMT_TYPE')
-    from_date = models.CharField(
+    stmt_type = fields.IntegerField(db_column='STMT_TYPE')
+    from_date = fields.CharField(
         db_column='FROM_DATE',
         max_length=32,
         blank=True
     )
-    thru_date = models.CharField(
+    thru_date = fields.CharField(
         db_column='THRU_DATE', max_length=32, blank=True
     )
-    elect_date = models.CharField(
+    elect_date = fields.CharField(
         db_column='ELECT_DATE', max_length=32, blank=True
     )
-    cand_naml = models.CharField(
+    cand_naml = fields.CharField(
         db_column='CAND_NAML', max_length=81, blank=True
     )
-    cand_namf = models.CharField(
+    cand_namf = fields.CharField(
         db_column='CAND_NAMF', max_length=25, blank=True
     )
-    can_namm = models.CharField(
+    can_namm = fields.CharField(
         db_column='CAN_NAMM', max_length=10, blank=True
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         db_column='CAND_NAMT', max_length=7, blank=True
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         db_column='CAND_NAMS', max_length=7, blank=True
     )
-    moniker_pos = models.CharField(
+    moniker_pos = fields.CharField(
         db_column='MONIKER_POS', max_length=32, blank=True
     )
-    moniker = models.CharField(
+    moniker = fields.CharField(
         db_column='MONIKER', max_length=4, blank=True
     )
-    cand_city = models.CharField(
+    cand_city = fields.CharField(
         db_column='CAND_CITY', max_length=22, blank=True
     )
-    cand_st = models.CharField(
+    cand_st = fields.CharField(
         db_column='CAND_ST', max_length=4, blank=True
     )
-    cand_zip4 = models.CharField(
+    cand_zip4 = fields.CharField(
         db_column='CAND_ZIP4', max_length=10, blank=True
     )
-    cand_phon = models.CharField(
+    cand_phon = fields.CharField(
         db_column='CAND_PHON', max_length=14, blank=True
     )
-    cand_fax = models.CharField(
+    cand_fax = fields.CharField(
         db_column='CAND_FAX', max_length=14, blank=True
     )
-    cand_email = models.CharField(
+    cand_email = fields.CharField(
         db_column='CAND_EMAIL', max_length=37, blank=True
     )
-    fin_naml = models.CharField(
+    fin_naml = fields.CharField(
         db_column='FIN_NAML', max_length=53, blank=True
     )
-    fin_namf = models.CharField(
+    fin_namf = fields.CharField(
         db_column='FIN_NAMF', max_length=32, blank=True
     )
-    fin_namt = models.CharField(
+    fin_namt = fields.CharField(
         db_column='FIN_NAMT', max_length=32, blank=True
     )
-    fin_nams = models.CharField(
+    fin_nams = fields.CharField(
         db_column='FIN_NAMS', max_length=32, blank=True
     )
-    fin_city = models.CharField(
+    fin_city = fields.CharField(
         db_column='FIN_CITY', max_length=20, blank=True
     )
-    fin_st = models.CharField(
+    fin_st = fields.CharField(
         db_column='FIN_ST', max_length=4, blank=True
     )
-    fin_zip4 = models.CharField(
+    fin_zip4 = fields.CharField(
         db_column='FIN_ZIP4', max_length=9, blank=True
     )
-    fin_phon = models.CharField(
+    fin_phon = fields.CharField(
         db_column='FIN_PHON', max_length=14, blank=True
     )
-    fin_fax = models.CharField(
+    fin_fax = fields.CharField(
         db_column='FIN_FAX', max_length=10, blank=True
     )
-    fin_email = models.CharField(
+    fin_email = fields.CharField(
         db_column='FIN_EMAIL', max_length=15, blank=True
     )
-    office_cd = models.IntegerField(db_column='OFFICE_CD')
-    offic_dscr = models.CharField(
+    office_cd = fields.IntegerField(db_column='OFFICE_CD')
+    offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR', max_length=50, blank=True
     )
-    agency_nam = models.CharField(
+    agency_nam = fields.CharField(
         db_column='AGENCY_NAM', max_length=63, blank=True
     )
-    juris_cd = models.IntegerField(
+    juris_cd = fields.IntegerField(
         db_column='JURIS_CD', blank=True, null=True
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         db_column='JURIS_DSCR', max_length=14, blank=True
     )
-    dist_no = models.CharField(db_column='DIST_NO', max_length=4, blank=True)
-    party = models.CharField(db_column='PARTY', max_length=20, blank=True)
-    yr_of_elec = models.IntegerField(
+    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
+    party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
+    yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
         blank=True,
         null=True
     )
-    elec_type = models.IntegerField(
+    elec_type = fields.IntegerField(
         db_column='ELEC_TYPE', blank=True, null=True
     )
-    execute_dt = models.DateTimeField(
+    execute_dt = fields.DateTimeField(
         db_column='EXECUTE_DT', blank=True, null=True
     )
-    can_sig = models.CharField(
+    can_sig = fields.CharField(
         db_column='CAN_SIG', max_length=13, blank=True
     )
-    account_no = models.CharField(
+    account_no = fields.CharField(
         db_column='ACCOUNT_NO', max_length=22, blank=True
     )
-    acct_op_dt = models.DateField(
+    acct_op_dt = fields.DateField(
         db_column='ACCT_OP_DT', blank=True, null=True
     )
-    party_cd = models.IntegerField(
+    party_cd = fields.IntegerField(
         db_column='PARTY_CD', blank=True, null=True
     )
-    district_cd = models.IntegerField(
+    district_cd = fields.IntegerField(
         db_column='DISTRICT_CD', blank=True, null=True
     )
-    accept_limit_yn = models.IntegerField(
+    accept_limit_yn = fields.IntegerField(
         db_column='ACCEPT_LIMIT_YN', blank=True, null=True
     )
-    did_exceed_dt = models.DateField(
+    did_exceed_dt = fields.DateField(
         db_column='DID_EXCEED_DT', blank=True, null=True
     )
-    cntrb_prsnl_fnds_dt = models.DateField(
+    cntrb_prsnl_fnds_dt = fields.DateField(
         db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True
     )
 
@@ -3287,20 +3288,20 @@ class S498Cd(CalAccessBaseModel):
     """
     Form 498 Slate Mailer Late Independent Expenditures Made
     """
-    filing_id = models.IntegerField(
+    filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    amend_id = models.IntegerField(
+    amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    line_item = models.IntegerField(
+    line_item = fields.IntegerField(
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
@@ -3308,7 +3309,7 @@ original filing and 1 to 999 amendments.",
     REC_TYPE_CHOICES = (
         ("S498", "S498"),
     )
-    rec_type = models.CharField(
+    rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
@@ -3321,14 +3322,14 @@ Part A: late payments attributed to'),
         ('F498-R', 'Form 498 (Slate mailer late payment report): \
 Part R: late payments received from')
     )
-    form_type = models.CharField(
+    form_type = fields.CharField(
         max_length=9,
         db_column='FORM_TYPE',
         blank=True,
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule'
     )
-    tran_id = models.CharField(
+    tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
@@ -3346,95 +3347,95 @@ Part R: late payments received from')
         ('OTH', 'Other'),
         ('RCP', 'Recipient Committee'),
     )
-    entity_cd = models.CharField(
+    entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    cmte_id = models.CharField(
+    cmte_id = fields.CharField(
         max_length=9, db_column='CMTE_ID', blank=True
     )
-    payor_naml = models.CharField(
+    payor_naml = fields.CharField(
         max_length=200, db_column='PAYOR_NAML', blank=True
     )
-    payor_namf = models.CharField(
+    payor_namf = fields.CharField(
         max_length=45, db_column='PAYOR_NAMF', blank=True
     )
-    payor_namt = models.CharField(
+    payor_namt = fields.CharField(
         max_length=10, db_column='PAYOR_NAMT', blank=True
     )
-    payor_nams = models.CharField(
+    payor_nams = fields.CharField(
         max_length=10, db_column='PAYOR_NAMS', blank=True
     )
-    payor_city = models.CharField(
+    payor_city = fields.CharField(
         max_length=30, db_column='PAYOR_CITY', blank=True
     )
-    payor_st = models.CharField(
+    payor_st = fields.CharField(
         max_length=2, db_column='PAYOR_ST', blank=True
     )
-    payor_zip4 = models.CharField(
+    payor_zip4 = fields.CharField(
         max_length=10, db_column='PAYOR_ZIP4', blank=True
     )
-    date_rcvd = models.DateField(db_column='DATE_RCVD', null=True)
-    amt_rcvd = models.DecimalField(
+    date_rcvd = fields.DateField(db_column='DATE_RCVD', null=True)
+    amt_rcvd = fields.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMT_RCVD'
     )
-    cand_naml = models.CharField(
+    cand_naml = fields.CharField(
         max_length=200, db_column='CAND_NAML', blank=True
     )
-    cand_namf = models.CharField(
+    cand_namf = fields.CharField(
         max_length=45, db_column='CAND_NAMF', blank=True
     )
-    cand_namt = models.CharField(
+    cand_namt = fields.CharField(
         max_length=10, db_column='CAND_NAMT', blank=True
     )
-    cand_nams = models.CharField(
+    cand_nams = fields.CharField(
         max_length=10, db_column='CAND_NAMS', blank=True
     )
-    office_cd = models.CharField(
+    office_cd = fields.CharField(
         max_length=3, db_column='OFFICE_CD', blank=True
     )
-    offic_dscr = models.CharField(
+    offic_dscr = fields.CharField(
         max_length=40, db_column='OFFIC_DSCR', blank=True
     )
-    juris_cd = models.CharField(
+    juris_cd = fields.CharField(
         max_length=3, db_column='JURIS_CD', blank=True
     )
-    juris_dscr = models.CharField(
+    juris_dscr = fields.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
     )
-    dist_no = models.CharField(max_length=3, db_column='DIST_NO', blank=True)
-    off_s_h_cd = models.CharField(
+    dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
+    off_s_h_cd = fields.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
     )
-    bal_name = models.CharField(
+    bal_name = fields.CharField(
         max_length=200, db_column='BAL_NAME', blank=True
     )
-    bal_num = models.CharField(max_length=7, db_column='BAL_NUM', blank=True)
-    bal_juris = models.CharField(
+    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    bal_juris = fields.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
-    sup_opp_cd = models.CharField(
+    sup_opp_cd = fields.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
-    amt_attrib = models.DecimalField(
+    amt_attrib = fields.DecimalField(
         max_digits=16, decimal_places=2, db_column='AMT_ATTRIB'
     )
-    memo_code = models.CharField(
+    memo_code = fields.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
     )
-    memo_refno = models.CharField(
+    memo_refno = fields.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
-    employer = models.CharField(
+    employer = fields.CharField(
         max_length=200, db_column='EMPLOYER', blank=True
     )
-    occupation = models.CharField(
+    occupation = fields.CharField(
         max_length=60, db_column='OCCUPATION', blank=True
     )
-    selfemp_cb = models.CharField(
+    selfemp_cb = fields.CharField(
         max_length=1, db_column='SELFEMP_CB', blank=True
     )
 

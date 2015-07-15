@@ -15,6 +15,12 @@ docs:
 load:
 	python  example/manage.py downloadcalaccessrawdata --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
 
+testload:
+	dropdb calaccess_raw
+	createdb calaccess_raw
+	python example/manage.py migrate
+	python example/manage.py test calaccess_raw;
+
 rs:
 	python example/manage.py runserver
 
