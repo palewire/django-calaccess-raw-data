@@ -128,6 +128,21 @@ class Command(CalAccessCommand, LabelCommand):
         model_count = model.objects.count()
         self.finish_load_message(model_count, csv_count)
 
+    def load_sqlite(self, model, csv_path):
+        """
+        Takes a model and csv_path and loads in sqlite.
+        """
+        try:
+            self.cursor.execute('DROP TABLE IF EXISTS temporary_table;')
+        except ProgrammingError:
+            pass
+
+        #drop all records from target
+        self.cursor.execute('DELETE FROM "%s"' % model._meta.db_table)
+        
+        # insert using sqlite
+     
+        
     def get_headers(self, csv_path):
         """
         Returns the column headers from the csv as a list.
