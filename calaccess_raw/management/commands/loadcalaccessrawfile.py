@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
-from postgres_copy import Copy
-from csvkit import CSVKitReader
+#from postgres_copy import Copy
+from csvkit import CSVKitReader, reader
 from django.db import connection
 from django.conf import settings
 from django.db.models.loading import get_model
@@ -40,10 +40,12 @@ class Command(CalAccessCommand, LabelCommand):
             'django.contrib.gis.db.backends.postgis'
                 ):
             self.load_postgresql(model, csv_path)
+        elif engine == 'django.db.backends.sqlite3':
+            self.load_sqlite(model, csv_path)
         else:
             self.failure("Sorry your database engine is unsupported")
             raise CommandError(
-                "Only MySQL and PostgresSQL backends supported."
+                "Only MySQL,PostgresSQL, SQLite3 backends supported."
             )
 
     def load_mysql(self, model, csv_path):
@@ -132,17 +134,55 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Takes a model and csv_path and loads in sqlite.
         """
-        try:
-            self.cursor.execute('DROP TABLE IF EXISTS temporary_table;')
-        except ProgrammingError:
-            pass
-
+        import sqlite3
+        import pandas as pd
         #drop all records from target
         self.cursor.execute('DELETE FROM "%s"' % model._meta.db_table)
+
+        # insert using sqlite executemany
+        csv_headers = self.get_headers(csv_path)
+        csv_record_cn = self.get_row_count(csv_path)
+
+        header_sql_list = []
+        field_types = dict(
+                (f.db_column, f.db_type(connection))
+                for f in model._meta.fields
+            )
+        date_fields = []
+        datetime_fields = []
+        for idx, h in enumerate(csv_headers):
+            # pull datatype
+            data_type = field_types[h]
+            if data_type == 'date':
+                date_fields.append(idx)
+            elif data_type == 'datetime':
+                datetime_fields.append(idx)
         
-        # insert using sqlite
-     
-        
+        with open(csv_path, 'r') as infile:
+            csv_reader = reader(infile)
+            header = csv_reader.next()
+            for idx, row in enumerate(csv_reader):
+                # grab the rows that have things in them 
+                # populated rows
+                pop_rows = []
+                for item_loc, item in enumerate(row): 
+                    if item:
+                        pop_rows.append((item_loc, item))
+                subset_header_string = ""
+                for item in pop_rows:
+                    subset_header_string = subset_header_string + header[item[0]] + ","
+                subset_header_string = subset_header_string[:-1] # drop last comma
+                values = [p[1] for p in pop_rows]
+                values_insert_string = ""
+                for val in values:
+                    values_insert_string = values_insert_string + val + ","
+                values_insert_string = values_insert_string[:-1]
+                print values_insert_string
+                _insert_tmpl = 'INSERT INTO %s (%s) VALUES (%s)' %  (model._meta.db_table, subset_header_string,
+                                join(['?']*len(pop_rows)))
+                self.cursor.execute(_insert_tmpl, values)
+
+
     def get_headers(self, csv_path):
         """
         Returns the column headers from the csv as a list.
