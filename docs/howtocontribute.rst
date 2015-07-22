@@ -30,7 +30,9 @@ Move into it and install the Python dependencies.
     $ cd repo
     $ pip install -r requirements_dev.txt
 
-Make sure you have MySQL or PostgreSQL installed, because we don't currently support any other database backends.
+Make sure you have MySQL or PostgreSQL installed, for production testing.
+
+Alternatively, you can use sqlite. 
 
 If you want to use MySQL. Create a new database named ``calaccess`` like this:
 
@@ -77,6 +79,17 @@ This create the database the PostgreSQL way.
 .. code-block:: bash
 
     $ createdb calaccess
+
+If you're using SQLite, use the local settings bellow. Since SQLite uses files as the database type, you don't have to run a createdb type command:
+
+.. code-block:: python
+
+      DATABASES = {
+            'default': {
+                        'ENGINE': 'django.db.backends.sqlite3',
+                        'NAME': '/path/to/calaccess.db',
+                        }
+            }
 
 Finally create your database and get to work.
 

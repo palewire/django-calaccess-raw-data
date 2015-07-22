@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
-from postgres_copy import Copy
-from csvkit import CSVKitReader
-from django.db import connection
+#from postgres_copy import Copy
+from csvkit import CSVKitReader, reader
+from django.db import connection, transaction
 from django.conf import settings
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
@@ -40,10 +40,12 @@ class Command(CalAccessCommand, LabelCommand):
             'django.contrib.gis.db.backends.postgis'
                 ):
             self.load_postgresql(model, csv_path)
+        elif engine == 'django.db.backends.sqlite3':
+            self.load_sqlite(model, csv_path)
         else:
             self.failure("Sorry your database engine is unsupported")
             raise CommandError(
-                "Only MySQL and PostgresSQL backends supported."
+                "Only MySQL,PostgresSQL, SQLite3 backends supported."
             )
 
     def load_mysql(self, model, csv_path):
@@ -127,6 +129,49 @@ class Command(CalAccessCommand, LabelCommand):
         csv_count = self.get_row_count(csv_path)
         model_count = model.objects.count()
         self.finish_load_message(model_count, csv_count)
+    
+    def load_sqlite(self, model, csv_path):
+        """
+        Takes a model and csv_path and loads in sqlite.
+        """
+        import sqlite3
+        #drop all records from target
+        self.cursor.execute('DELETE FROM "%s"' % model._meta.db_table)
+
+        # insert using sqlite executemany
+        csv_headers = self.get_headers(csv_path)
+        csv_record_cn = self.get_row_count(csv_path)
+
+        header_sql_list = []
+        field_types = dict(
+                (f.db_column, f.db_type(connection))
+                for f in model._meta.fields
+            )
+        date_fields = []
+        datetime_fields = []
+        for idx, h in enumerate(csv_headers):
+            # pull datatype
+            data_type = field_types[h]
+            if data_type == 'date':
+                date_fields.append(idx)
+            elif data_type == 'datetime':
+                datetime_fields.append(idx)
+        
+        with open(csv_path, 'r') as infile:
+            csv_reader = reader(infile)
+            header = csv_reader.next()
+            values_to_insert = []
+            for idx, row in enumerate(csv_reader):
+                values_to_insert.append(row)
+                h_list = ""
+                for h in header: 
+                    h_list = h_list +h+ ","
+                h_list = h_list[:-1]
+                _insert_tmpl = 'INSERT INTO %s (%s) VALUES (%s)' %  (model._meta.db_table, h_list,
+                            ','.join(['?']*len(header)))
+        self.cursor.executemany(_insert_tmpl, values_to_insert)
+        
+
 
     def get_headers(self, csv_path):
         """
