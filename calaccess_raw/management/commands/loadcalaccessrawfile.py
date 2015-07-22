@@ -135,7 +135,6 @@ class Command(CalAccessCommand, LabelCommand):
         Takes a model and csv_path and loads in sqlite.
         """
         import sqlite3
-        import pandas as pd
         #drop all records from target
         self.cursor.execute('DELETE FROM "%s"' % model._meta.db_table)
 
@@ -157,6 +156,7 @@ class Command(CalAccessCommand, LabelCommand):
                 date_fields.append(idx)
             elif data_type == 'datetime':
                 datetime_fields.append(idx)
+        
         with open(csv_path, 'r') as infile:
             csv_reader = reader(infile)
             header = csv_reader.next()
