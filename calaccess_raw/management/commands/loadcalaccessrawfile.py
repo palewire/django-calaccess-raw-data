@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 #from postgres_copy import Copy
 from csvkit import CSVKitReader, reader
-from django.db import connection
+from django.db import connection, transaction
 from django.conf import settings
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
@@ -129,7 +129,7 @@ class Command(CalAccessCommand, LabelCommand):
         csv_count = self.get_row_count(csv_path)
         model_count = model.objects.count()
         self.finish_load_message(model_count, csv_count)
-
+    
     def load_sqlite(self, model, csv_path):
         """
         Takes a model and csv_path and loads in sqlite.
@@ -157,30 +157,20 @@ class Command(CalAccessCommand, LabelCommand):
                 date_fields.append(idx)
             elif data_type == 'datetime':
                 datetime_fields.append(idx)
-        
         with open(csv_path, 'r') as infile:
             csv_reader = reader(infile)
             header = csv_reader.next()
+            values_to_insert = []
             for idx, row in enumerate(csv_reader):
-                # grab the rows that have things in them 
-                # populated rows
-                pop_rows = []
-                for item_loc, item in enumerate(row): 
-                    if item:
-                        pop_rows.append((item_loc, item))
-                subset_header_string = ""
-                for item in pop_rows:
-                    subset_header_string = subset_header_string + header[item[0]] + ","
-                subset_header_string = subset_header_string[:-1] # drop last comma
-                values = [p[1] for p in pop_rows]
-                values_insert_string = ""
-                for val in values:
-                    values_insert_string = values_insert_string + val + ","
-                values_insert_string = values_insert_string[:-1]
-                print values_insert_string
-                _insert_tmpl = 'INSERT INTO %s (%s) VALUES (%s)' %  (model._meta.db_table, subset_header_string,
-                                join(['?']*len(pop_rows)))
-                self.cursor.execute(_insert_tmpl, values)
+                values_to_insert.append(row)
+                h_list = ""
+                for h in header: 
+                    h_list = h_list +h+ ","
+                h_list = h_list[:-1]
+                _insert_tmpl = 'INSERT INTO %s (%s) VALUES (%s)' %  (model._meta.db_table, h_list,
+                            ','.join(['?']*len(header)))
+        self.cursor.executemany(_insert_tmpl, values_to_insert)
+        
 
 
     def get_headers(self, csv_path):
