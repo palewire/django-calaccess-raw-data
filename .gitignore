@@ -2,6 +2,7 @@ contributors.csv
 contributor.csv
 *.egg/
 *.egg-info*
+.eggs/
 inspect.py
 speed.txt
 *.pyc

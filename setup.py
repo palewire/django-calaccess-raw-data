@@ -25,7 +25,6 @@ Secretary of State\'s CAL-ACCESS database',
     install_requires=(
         'django>=1.7',
         'csvkit',
-        'python-dateutil',
         'requests',
         'clint',
         'hurry.filesize',
