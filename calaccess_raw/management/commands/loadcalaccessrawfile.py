@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
-from postgres_copy import Copy
 from csvkit import CSVKitReader
 from django.db import connection
 from django.conf import settings
+from postgres_copy import CopyMapping
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
@@ -116,10 +116,10 @@ class Command(CalAccessCommand, LabelCommand):
             model._meta.db_table
         ))
 
-        c = Copy(
+        c = CopyMapping(
             model,
             csv_path,
-            dict((f.db_column, f.name) for f in model._meta.fields),
+            dict((f.name, f.db_column) for f in model._meta.fields),
         )
         c.save(silent=True)
 
