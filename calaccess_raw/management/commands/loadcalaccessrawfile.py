@@ -138,25 +138,6 @@ class Command(CalAccessCommand, LabelCommand):
         #drop all records from target
         self.cursor.execute('DELETE FROM "%s"' % model._meta.db_table)
 
-        # insert using sqlite executemany
-        csv_headers = self.get_headers(csv_path)
-        csv_record_cn = self.get_row_count(csv_path)
-
-        header_sql_list = []
-        field_types = dict(
-                (f.db_column, f.db_type(connection))
-                for f in model._meta.fields
-            )
-        date_fields = []
-        datetime_fields = []
-        for idx, h in enumerate(csv_headers):
-            # pull datatype
-            data_type = field_types[h]
-            if data_type == 'date':
-                date_fields.append(idx)
-            elif data_type == 'datetime':
-                datetime_fields.append(idx)
-        
         with open(csv_path, 'r') as infile:
             csv_reader = reader(infile)
             header = csv_reader.next()
