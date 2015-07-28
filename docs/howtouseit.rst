@@ -122,7 +122,7 @@ Once everything is set up, this management command will download the latest bulk
 Exploring the data
 ------------------
 
-Finally, start the development server and visit `localhost:8000/admin/ <http://localhost:8000/admin/>`_ in your browser to inspect the CAL-ACESS data in your Django administration panel.
+Finally, start the development server and visit `localhost:8000/admin/ <http://localhost:8000/admin/>`_ in your browser to inspect the CAL-ACCESS data in your Django administration panel.
 
 .. code-block:: bash
 
