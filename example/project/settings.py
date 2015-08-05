@@ -44,6 +44,9 @@ DATABASES = {
         'OPTIONS': {
             'local_infile': 1,
         }
+    },
+    'dat': {
+        'source': 'YOUR_LOCAL_DAT_PATH_HERE'
     }
 }
 

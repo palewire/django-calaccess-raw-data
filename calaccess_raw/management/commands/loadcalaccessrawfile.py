@@ -6,7 +6,7 @@ from postgres_copy import CopyMapping
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
-
+import datpy
 
 class Command(CalAccessCommand, LabelCommand):
     help = 'Load clean CAL-ACCESS file into its corresponding database model'
@@ -32,7 +32,13 @@ class Command(CalAccessCommand, LabelCommand):
         model = get_model("calaccess_raw", model_name)
         csv_path = model.objects.get_csv_path()
 
+        dat_source = settings.DATABASES.get('dat')
+        if dat_source:
+            self.dat = datpy.Dat(dat_source['source'])
+            self.load_dat(model, csv_path)
+
         engine = settings.DATABASES['default']['ENGINE']
+
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
         elif engine in (
@@ -45,6 +51,21 @@ class Command(CalAccessCommand, LabelCommand):
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
             )
+
+    def load_dat(self, model, csv_path):
+        """
+        Takes a model and a csv_path and loads it into dat
+        """
+        dataset = self.dat.dataset(model._meta.db_table)
+        try:
+            dataset.import_file(csv_path, format='csv')
+            dat_status = self.dat.status()
+            model_count = dat_status['rows']
+            csv_count = self.get_row_count(csv_path)
+            self.finish_load_message(model_count, csv_count)
+        except datpy.DatException as e:
+            print e.message
+            print 'Failed to load dat for %s, %s' % (model._meta.db_table, csv_path)
 
     def load_mysql(self, model, csv_path):
         import warnings
