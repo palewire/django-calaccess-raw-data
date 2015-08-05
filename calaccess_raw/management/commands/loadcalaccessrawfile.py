@@ -8,6 +8,7 @@ from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
 import datpy
 
+
 class Command(CalAccessCommand, LabelCommand):
     help = 'Load clean CAL-ACCESS file into its corresponding database model'
     args = '<model name>'
@@ -63,9 +64,13 @@ class Command(CalAccessCommand, LabelCommand):
             model_count = dat_status['rows']
             csv_count = self.get_row_count(csv_path)
             self.finish_load_message(model_count, csv_count)
-        except datpy.DatException as e:
-            print e.message
-            print 'Failed to load dat for %s, %s' % (model._meta.db_table, csv_path)
+        except datpy.DatException:
+            raise CommandError(
+                'Failed to load dat for %s, %s' % (
+                    model._meta.db_table,
+                    csv_path
+                )
+            )
 
     def load_mysql(self, model, csv_path):
         import warnings
