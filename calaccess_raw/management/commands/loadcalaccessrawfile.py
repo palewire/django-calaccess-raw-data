@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+import six
 from csvkit import CSVKitReader
 from django.db import connection
 from django.conf import settings
@@ -6,7 +7,6 @@ from postgres_copy import CopyMapping
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
-import datpy
 
 
 class Command(CalAccessCommand, LabelCommand):
@@ -33,9 +33,7 @@ class Command(CalAccessCommand, LabelCommand):
         model = get_model("calaccess_raw", model_name)
         csv_path = model.objects.get_csv_path()
 
-        dat_source = settings.DATABASES.get('dat')
-        if dat_source:
-            self.dat = datpy.Dat(dat_source['source'])
+        if settings.DATABASES.get('dat') and six.PY2:
             self.load_dat(model, csv_path)
 
         engine = settings.DATABASES['default']['ENGINE']
@@ -57,6 +55,9 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Takes a model and a csv_path and loads it into dat
         """
+        import datpy
+        dat_source = settings.DATABASES.get('dat')
+        self.dat = datpy.Dat(dat_source['source'])
         dataset = self.dat.dataset(model._meta.db_table)
         try:
             dataset.import_file(csv_path, format='csv')
