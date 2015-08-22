@@ -17,17 +17,17 @@ class AcronymsCd(CalAccessBaseModel):
     stands_for = fields.CharField(
         max_length=4,
         db_column="STANDS_FOR",
-        help_text='Definition of the Acronym'
+        help_text='Definition of the acronym'
     )
     effect_dt = fields.DateField(
         null=True,
         db_column="EFFECT_DT",
-        help_text='Effective Date for the Acronym'
+        help_text='Effective date for the acronym'
     )
     a_desc = fields.CharField(
         max_length=50,
         db_column="A_DESC",
-        help_text='Description of the Acronym'
+        help_text='Description of the acronym'
     )
 
     class Meta:
