@@ -36,7 +36,9 @@ class Command(CalAccessCommand):
                     self.create_issue(model, field)
 
     def create_issue(self, model, field):
-        print model, field
+        headline = """
+Add documentation for the ``%s`` field on the ``%s`` database model.
+""" % (field.name, model().klass_name)
         text = """
 Add documentation for the ``%s`` field on the ``%s`` database model.
 
@@ -90,7 +92,10 @@ the core team for inclusion.
        model().klass_group,
        model().klass_group,
 )
-        print text
+        tags = "small, documentation"
+        milestone = "california code rush 2"
+        print headline
+
         time.sleep(1)
 
     def has_docs(self, field):
