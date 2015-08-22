@@ -37,6 +37,60 @@ class Command(CalAccessCommand):
 
     def create_issue(self, model, field):
         print model, field
+        text = """
+Add documentation for the ``%s`` field on the ``%s`` database model.
+
+**Step 1**: Claim this ticket by leaving a comment below. Tell everyone you're ON IT!
+
+**Step 2**: Open up the file that contains this model. It should be in
+<a href="https://github.com/california-civic-data-coalition/django-calaccess-raw-data/
+master/calaccess_raw/models/%s.py">calaccess_raw.models.%s.py</a>.
+
+**Step 3**: Hit the little pencil button in the upper-right corner of the code box to
+begin editing the file.
+
+**Step 4**: Find this model and field in the file. We expect it to lack the ``help_text``
+field typically used in Django to explain what a field contains.
+
+```python
+effect_dt = fields.DateField(
+    null=True,
+    db_column="EFFECT_DT"
+)
+```
+
+**Step 5**: In a separate tab, open up the <a href="">official state documentation</a>
+and find the page that defines all the fields in this model.
+
+**Step 6**: Find the row in that table's definition table that spells out what
+this field contains.
+
+**Step 7**: Return to the GitHub tab.
+
+**Step 8**: If the state documentation has a label explaining what's in the field,
+add it to the field definition by inserted a ``help_text`` argument. That could
+look something like this:
+
+```python
+effect_dt = fields.DateField(
+    null=True,
+    db_column="EFFECT_DT",
+    help_text="The other values in record were effective as of this date"
+)
+```
+
+**Step 9**: Scroll down below the code box and describe the change you've made in
+the committe message. Press the button below.
+
+**Step 10**:  Review your changes and create a pull request submitting them to
+the core team for inclusion.
+""" % (
+       field.name,
+       model().klass_name,
+       model().klass_group,
+       model().klass_group,
+)
+        print text
         time.sleep(1)
 
     def has_docs(self, field):
