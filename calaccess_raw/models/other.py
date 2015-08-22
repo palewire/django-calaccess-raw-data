@@ -48,7 +48,10 @@ class AddressCd(CalAccessBaseModel):
     for address-based searches and formes the bases for address information
     desplayed by the AMS.
     """
-    adrid = fields.IntegerField(db_column="ADRID", help_text = 'Address indentification number')
+    adrid = fields.IntegerField(
+        db_column="ADRID",
+        help_text='Address indentification number'
+    )
     city = fields.CharField(max_length=500, db_column="CITY")
     st = fields.CharField(max_length=500, db_column="ST")
     zip4 = fields.CharField(db_column="ZIP4", null=True, max_length=10)
