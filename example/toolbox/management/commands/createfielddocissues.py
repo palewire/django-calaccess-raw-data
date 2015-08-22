@@ -65,18 +65,19 @@ effect_dt = fields.DateField(
 and find the page that defines all the fields in this model.
 
 **Step 6**: Find the row in that table's definition table that spells out what
-this field contains.
+this field contains. It it lacks documentation. Note that in the ticket and close it now.
 
 **Step 7**: Return to the GitHub tab.
 
-**Step 8**: If the state documentation has a label explaining what's in the field,
-add it to the field definition by inserted a ``help_text`` argument. That could
+**Step 8**: Add the state's label explaining what's in the field,
+to our field definition by inserting it a ``help_text`` argument. That should
 look something like this:
 
 ```python
 effect_dt = fields.DateField(
     null=True,
     db_column="EFFECT_DT",
+    # Add a help_text argument like the one here, but put your string in instead.
     help_text="The other values in record were effective as of this date"
 )
 ```
