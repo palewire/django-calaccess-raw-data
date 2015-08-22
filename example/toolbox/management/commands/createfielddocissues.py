@@ -44,6 +44,6 @@ class Command(CalAccessCommand):
             return True
         if field.help_text:
             return True
-        if not field.__dict__['verbose_name']:
+        if field.__dict__['_verbose_name']:
             return True
         return False

@@ -126,3 +126,21 @@ class CalAccessTest(TestCase):
 
     def test_record_type_choices(self):
         self._test_choices('rec_type')
+
+    def test_field_docs(self):
+        """
+        Verify that all fields have verbose_name or help_text documentation.
+        """
+        for m in get_model_list():
+            for f in m().get_field_list():
+                if f.name == 'id':
+                    continue
+                if f.help_text:
+                    continue
+                if f.__dict__['_verbose_name']:
+                    continue
+                warnings.warn("%s.%s field undocumented" % (
+                        m().klass_name,
+                        f.name
+                    )
+                )
