@@ -9,10 +9,26 @@ class AcronymsCd(CalAccessBaseModel):
     """
     Contains acronyms and their meaning.
     """
-    acronym = fields.CharField(max_length=40, db_column="ACRONYM")
-    stands_for = fields.CharField(max_length=4, db_column="STANDS_FOR")
-    effect_dt = fields.DateField(null=True, db_column="EFFECT_DT")
-    a_desc = fields.CharField(max_length=50, db_column="A_DESC")
+    acronym = fields.CharField(
+        max_length=40,
+        db_column="ACRONYM",
+        help_text='Acronym text value'
+    )
+    stands_for = fields.CharField(
+        max_length=4,
+        db_column="STANDS_FOR",
+        help_text='Definition of the acronym'
+    )
+    effect_dt = fields.DateField(
+        null=True,
+        db_column="EFFECT_DT",
+        help_text='Effective date for the acronym'
+    )
+    a_desc = fields.CharField(
+        max_length=50,
+        db_column="A_DESC",
+        help_text='Description of the acronym'
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -32,7 +48,10 @@ class AddressCd(CalAccessBaseModel):
     for address-based searches and formes the bases for address information
     desplayed by the AMS.
     """
-    adrid = fields.IntegerField(db_column="ADRID")
+    adrid = fields.IntegerField(
+        db_column="ADRID",
+        help_text='Address indentification number'
+    )
     city = fields.CharField(max_length=500, db_column="CITY")
     st = fields.CharField(max_length=500, db_column="ST")
     zip4 = fields.CharField(db_column="ZIP4", null=True, max_length=10)
