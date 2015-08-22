@@ -1,4 +1,5 @@
 import os
+import time
 import calculate
 from django.conf import settings
 from calaccess_raw import get_model_list
@@ -20,7 +21,7 @@ class Command(CalAccessCommand):
             field_count += len(field_list)
             for f in field_list:
                 if not self.has_docs(f):
-                    missing_list.append((m().klass_name, f))
+                    missing_list.append((m, f))
         if missing_list:
             missing_count = len(missing_list)
             self.log(
@@ -30,8 +31,17 @@ class Command(CalAccessCommand):
                     calculate.percentage(missing_count, field_count)
                 )
             )
+            for model, field in missing_list:
+                if model().klass_group != 'other':
+                    self.create_issue(model, field)
+
+    def create_issue(self, model, field):
+        print model, field
+        time.sleep(1)
 
     def has_docs(self, field):
+        if field.name == 'id':
+            return True
         if field.help_text:
             return True
         if not field.__dict__['verbose_name']:
