@@ -58,14 +58,6 @@ disclosure forms below.
 
             *Entity code* 
         
-        .. py:attribute:: enty_adr1
-
-            *Enty adr1* 
-        
-        .. py:attribute:: enty_adr2
-
-            *Enty adr2* 
-        
         .. py:attribute:: enty_city
 
             *Enty city* 
@@ -129,14 +121,6 @@ disclosure forms below.
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
-        .. py:attribute:: mail_adr1
-
-            *Mail adr1* 
-        
-        .. py:attribute:: mail_adr2
-
-            *Mail adr2* 
         
         .. py:attribute:: mail_city
 
@@ -494,14 +478,6 @@ The data contained herin is &quot;as filed&quot; by the entity making the filing
 
             *Brdbase yn* 
         
-        .. py:attribute:: bus_adr1
-
-            *Bus adr1* 
-        
-        .. py:attribute:: bus_adr2
-
-            *Bus adr2* 
-        
         .. py:attribute:: bus_city
 
             *Bus city* 
@@ -529,14 +505,6 @@ The data contained herin is &quot;as filed&quot; by the entity making the filing
         .. py:attribute:: busactvity
 
             *Busactvity* 
-        
-        .. py:attribute:: cand_adr1
-
-            *Cand adr1* 
-        
-        .. py:attribute:: cand_adr2
-
-            *Cand adr2* 
         
         .. py:attribute:: cand_city
 
@@ -618,14 +586,6 @@ The data contained herin is &quot;as filed&quot; by the entity making the filing
 
             *File email* 
         
-        .. py:attribute:: filer_adr1
-
-            *Filer adr1* 
-        
-        .. py:attribute:: filer_adr2
-
-            *Filer adr2* 
-        
         .. py:attribute:: filer_city
 
             *Filer city* 
@@ -689,14 +649,6 @@ The data contained herin is &quot;as filed&quot; by the entity making the filing
         .. py:attribute:: late_rptno
 
             *Late rptno* 
-        
-        .. py:attribute:: mail_adr1
-
-            *Mail adr1* 
-        
-        .. py:attribute:: mail_adr2
-
-            *Mail adr2* 
         
         .. py:attribute:: mail_city
 
@@ -785,14 +737,6 @@ The data contained herin is &quot;as filed&quot; by the entity making the filing
         .. py:attribute:: thru_date
 
             *Thru date* 
-        
-        .. py:attribute:: tres_adr1
-
-            *Tres adr1* 
-        
-        .. py:attribute:: tres_adr2
-
-            *Tres adr2* 
         
         .. py:attribute:: tres_city
 
@@ -1150,14 +1094,6 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
 
             *Memo refno* 
         
-        .. py:attribute:: payee_adr1
-
-            *Payee adr1* 
-        
-        .. py:attribute:: payee_adr2
-
-            *Payee adr2* 
-        
         .. py:attribute:: payee_city
 
             *Payee city* 
@@ -1193,14 +1129,6 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
-        .. py:attribute:: tres_adr1
-
-            *Tres adr1* 
-        
-        .. py:attribute:: tres_adr2
-
-            *Tres adr2* 
         
         .. py:attribute:: tres_city
 
@@ -1393,14 +1321,6 @@ Campaign expenditures from a variety of forms
 
             *Office cd* Office Sought (See table of code in Overview)
         
-        .. py:attribute:: payee_adr1
-
-            *Payee adr1* Address of Payee
-        
-        .. py:attribute:: payee_adr2
-
-            *Payee adr2* Optional 2nd line of Address
-        
         .. py:attribute:: payee_city
 
             *Payee city* Payee City
@@ -1440,14 +1360,6 @@ Campaign expenditures from a variety of forms
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
-        .. py:attribute:: tres_adr1
-
-            *Tres adr1* Treasurer Street 1(Req if [COM|RCP] & no ID#)
-        
-        .. py:attribute:: tres_adr2
-
-            *Tres adr2* Treasurer Street 2
         
         .. py:attribute:: tres_city
 
@@ -1832,14 +1744,6 @@ Loans received and made.
 
             *Form type* Name of the source filing form or schedule
         
-        .. py:attribute:: intr_adr1
-
-            *Intr adr1* 
-        
-        .. py:attribute:: intr_adr2
-
-            *Intr adr2* 
-        
         .. py:attribute:: intr_city
 
             *Intr city* 
@@ -1887,14 +1791,6 @@ Loans received and made.
         .. py:attribute:: lndr_namt
 
             *Lndr namt* 
-        
-        .. py:attribute:: loan_adr1
-
-            *Loan adr1* 
-        
-        .. py:attribute:: loan_adr2
-
-            *Loan adr2* 
         
         .. py:attribute:: loan_amt1
 
@@ -1983,14 +1879,6 @@ Loans received and made.
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
-        .. py:attribute:: tres_adr1
-
-            *Tres adr1* 
-        
-        .. py:attribute:: tres_adr2
-
-            *Tres adr2* 
         
         .. py:attribute:: tres_city
 
@@ -2096,14 +1984,6 @@ Receipts schedules for the following forms.
 
             *Cmte id* Committee Identification number
         
-        .. py:attribute:: ctrib_adr1
-
-            *Ctrib adr1* First line of the contributor's street address
-        
-        .. py:attribute:: ctrib_adr2
-
-            *Ctrib adr2* Second line of the contributor's street address
-        
         .. py:attribute:: ctrib_city
 
             *Ctrib city* Contributor's City
@@ -2179,14 +2059,6 @@ Receipts schedules for the following forms.
         .. py:attribute:: int_rate
 
             *Int rate* 
-        
-        .. py:attribute:: intr_adr1
-
-            *Intr adr1* First line of the intermediary's street address.
-        
-        .. py:attribute:: intr_adr2
-
-            *Intr adr2* Second line of the Intermediary's street address.
         
         .. py:attribute:: intr_city
 
@@ -2283,14 +2155,6 @@ Receipts schedules for the following forms.
         .. py:attribute:: tran_type
 
             *Tran type* Transaction Type: Values T- third party | F Forgiven loan | R Returned (Negative amount)
-        
-        .. py:attribute:: tres_adr1
-
-            *Tres adr1* First line of the treasurer or responsible officer's street address
-        
-        .. py:attribute:: tres_adr2
-
-            *Tres adr2* Second line of the treasurer or responsible officer's street address
         
         .. py:attribute:: tres_city
 
@@ -3647,14 +3511,6 @@ Cover page information for the lobbying disclosure forms
 
             *Filing ID* Unique filing identificiation number
         
-        .. py:attribute:: firm_adr1
-
-            *Firm adr1* 
-        
-        .. py:attribute:: firm_adr2
-
-            *Firm adr2* 
-        
         .. py:attribute:: firm_city
 
             *Firm city* 
@@ -3698,14 +3554,6 @@ Cover page information for the lobbying disclosure forms
         .. py:attribute:: lobby_y_cb
 
             *Lobby y cb* 
-        
-        .. py:attribute:: mail_adr1
-
-            *Mail adr1* 
-        
-        .. py:attribute:: mail_adr2
-
-            *Mail adr2* 
         
         .. py:attribute:: mail_city
 
@@ -3846,14 +3694,6 @@ Cover page of lobbying disclosure forms
 
             *ID* 
         
-        .. py:attribute:: a_b_adr1
-
-            *A b adr1* 
-        
-        .. py:attribute:: a_b_adr2
-
-            *A b adr2* 
-        
         .. py:attribute:: a_b_city
 
             *A b city* 
@@ -3874,14 +3714,6 @@ Cover page of lobbying disclosure forms
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
         
-        .. py:attribute:: auth_adr1
-
-            *Auth adr1* 
-        
-        .. py:attribute:: auth_adr2
-
-            *Auth adr2* 
-        
         .. py:attribute:: auth_city
 
             *Auth city* 
@@ -3897,14 +3729,6 @@ Cover page of lobbying disclosure forms
         .. py:attribute:: auth_zip4
 
             *Auth zip4* 
-        
-        .. py:attribute:: bus_adr1
-
-            *Bus adr1* 
-        
-        .. py:attribute:: bus_adr2
-
-            *Bus adr2* 
         
         .. py:attribute:: bus_cb
 
@@ -4045,14 +3869,6 @@ Cover page of lobbying disclosure forms
         .. py:attribute:: ls_end_yr
 
             *Ls end yr* 
-        
-        .. py:attribute:: mail_adr1
-
-            *Mail adr1* 
-        
-        .. py:attribute:: mail_adr2
-
-            *Mail adr2* 
         
         .. py:attribute:: mail_city
 
@@ -4298,14 +4114,6 @@ Lobbyist disclosure attachment schedules for payments
 
             *Record type* 
         
-        .. py:attribute:: recip_adr1
-
-            *Recip adr1* 
-        
-        .. py:attribute:: recip_adr2
-
-            *Recip adr2* 
-        
         .. py:attribute:: recip_city
 
             *Recip city* 
@@ -4361,10 +4169,6 @@ Lobbying Campaign Contributions reported on forms
         .. py:attribute:: id
 
             *ID* 
-        
-        .. py:attribute:: acct_name
-
-            *Acct name* 
         
         .. py:attribute:: amend_id
 
@@ -4425,14 +4229,6 @@ Lobbying Campaign Contributions reported on forms
         .. py:attribute:: rec_type
 
             *Record type* 
-        
-        .. py:attribute:: recip_adr1
-
-            *Recip adr1* 
-        
-        .. py:attribute:: recip_adr2
-
-            *Recip adr2* 
         
         .. py:attribute:: recip_city
 
@@ -4501,14 +4297,6 @@ Lobbyist Employers/Subcontracted Clients data from
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
         
-        .. py:attribute:: cli_adr1
-
-            *Cli adr1* 
-        
-        .. py:attribute:: cli_adr2
-
-            *Cli adr2* 
-        
         .. py:attribute:: cli_city
 
             *Cli city* 
@@ -4572,14 +4360,6 @@ Lobbyist Employers/Subcontracted Clients data from
         .. py:attribute:: rec_type
 
             *Record type* 
-        
-        .. py:attribute:: sub_adr1
-
-            *Sub adr1* 
-        
-        .. py:attribute:: sub_adr2
-
-            *Sub adr2* 
         
         .. py:attribute:: sub_city
 
@@ -4689,14 +4469,6 @@ Reported in filings of the forms
         .. py:attribute:: memo_refno
 
             *Memo refno* 
-        
-        .. py:attribute:: payee_adr1
-
-            *Payee adr1* 
-        
-        .. py:attribute:: payee_adr2
-
-            *Payee adr2* 
         
         .. py:attribute:: payee_city
 
@@ -4964,14 +4736,6 @@ Payment to other lobbying firms reported on form
 
             *Filing ID* Unique filing identificiation number
         
-        .. py:attribute:: firm_adr1
-
-            *Firm adr1* 
-        
-        .. py:attribute:: firm_adr2
-
-            *Firm adr2* 
-        
         .. py:attribute:: firm_city
 
             *Firm city* 
@@ -5077,14 +4841,6 @@ Payments made/received to/from Lobbying Firms reported on forms
         .. py:attribute:: cum_total
 
             *Cum total* 
-        
-        .. py:attribute:: emplr_adr1
-
-            *Emplr adr1* 
-        
-        .. py:attribute:: emplr_adr2
-
-            *Emplr adr2* 
         
         .. py:attribute:: emplr_city
 
@@ -5262,7 +5018,7 @@ desplayed by the AMS.
 
 BallotMeasuresCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Ballot measures dates and times
+Ballot measure dates and times
 
 .. py:class:: BallotMeasuresCd
 
