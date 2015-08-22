@@ -9,10 +9,26 @@ class AcronymsCd(CalAccessBaseModel):
     """
     Contains acronyms and their meaning.
     """
-    acronym = fields.CharField(max_length=40, db_column="ACRONYM", help_text='Acronym text value')
-    stands_for = fields.CharField(max_length=4, db_column="STANDS_FOR", help_text='Definition of the Acronym')
-    effect_dt = fields.DateField(null=True, db_column="EFFECT_DT", help_text='Effective Date for the Acronym')
-    a_desc = fields.CharField(max_length=50, db_column="A_DESC", help_text='Description of the Acronym')
+    acronym = fields.CharField(
+        max_length=40,
+        db_column="ACRONYM",
+        help_text='Acronym text value'
+    )
+    stands_for = fields.CharField(
+        max_length=4,
+        db_column="STANDS_FOR",
+        help_text='Definition of the Acronym'
+    )
+    effect_dt = fields.DateField(
+        null=True,
+        db_column="EFFECT_DT",
+        help_text='Effective Date for the Acronym'
+    )
+    a_desc = fields.CharField(
+        max_length=50,
+        db_column="A_DESC",
+        help_text='Description of the Acronym'
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
