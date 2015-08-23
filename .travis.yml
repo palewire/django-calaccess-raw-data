@@ -12,10 +12,10 @@ python:
  - "3.4"
 
 env:
- - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.8.2 DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.7 DATABASE_SETTINGS='settings_test_postgresql.py'
- - DJANGO_VERSION=1.8.2 DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=1.7.10 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.8.4 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.7.10 DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=1.8.4 DATABASE_SETTINGS='settings_test_postgresql.py'
 
 install:
  - export XDG_CACHE_HOME=$HOME/.cache/
