@@ -13,8 +13,8 @@ Documentation
    managementcommands
    models
    faq
-   howtocontribute
    officialdocumentation
+   howtocontribute
    changelog
 
 Open-source resources

@@ -1,12 +1,13 @@
-Models
-======
+Database table models
+=====================
 
-A crosswalk between the tables published by California's Secretary of State
-and the models in this Django application.
+The database models in this Django application, which are intended to serve
+as a mirror of the bulk dumps published by California's Secretary of State.
 
+They are grouped here in the same as manner as the state's `official documentation <officialdocumentation.html>`_.
 
 Campaign
--------
+--------
 
 Cvr2CampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,163 +22,163 @@ disclosure forms below.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: bal_juris
 
-            *Bal juris* 
-        
+            *Bal juris*
+
         .. py:attribute:: bal_name
 
-            *Bal name* 
-        
+            *Bal name*
+
         .. py:attribute:: bal_num
 
-            *Bal num* 
-        
+            *Bal num*
+
         .. py:attribute:: cmte_id
 
-            *Cmte id* 
-        
+            *Cmte id*
+
         .. py:attribute:: control_yn
 
-            *Control yn* 
-        
+            *Control yn*
+
         .. py:attribute:: dist_no
 
-            *Dist no* 
-        
+            *Dist no*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: enty_city
 
-            *Enty city* 
-        
+            *Enty city*
+
         .. py:attribute:: enty_email
 
-            *Enty email* 
-        
+            *Enty email*
+
         .. py:attribute:: enty_fax
 
-            *Enty fax* 
-        
+            *Enty fax*
+
         .. py:attribute:: enty_namf
 
-            *Enty namf* 
-        
+            *Enty namf*
+
         .. py:attribute:: enty_naml
 
-            *Enty naml* 
-        
+            *Enty naml*
+
         .. py:attribute:: enty_nams
 
-            *Enty nams* 
-        
+            *Enty nams*
+
         .. py:attribute:: enty_namt
 
-            *Enty namt* 
-        
+            *Enty namt*
+
         .. py:attribute:: enty_phon
 
-            *Enty phon* 
-        
+            *Enty phon*
+
         .. py:attribute:: enty_st
 
-            *Enty st* 
-        
+            *Enty st*
+
         .. py:attribute:: enty_zip4
 
-            *Enty zip4* 
-        
+            *Enty zip4*
+
         .. py:attribute:: f460_part
 
-            *F460 part* 
-        
+            *F460 part*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: juris_cd
 
-            *Juris cd* 
-        
+            *Juris cd*
+
         .. py:attribute:: juris_dscr
 
-            *Juris dscr* 
-        
+            *Juris dscr*
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: mail_city
 
-            *Mail city* 
-        
+            *Mail city*
+
         .. py:attribute:: mail_st
 
-            *Mail st* 
-        
+            *Mail st*
+
         .. py:attribute:: mail_zip4
 
-            *Mail zip4* 
-        
+            *Mail zip4*
+
         .. py:attribute:: off_s_h_cd
 
-            *Off s h cd* 
-        
+            *Off s h cd*
+
         .. py:attribute:: offic_dscr
 
-            *Offic dscr* 
-        
+            *Offic dscr*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: sup_opp_cd
 
-            *Sup opp cd* 
-        
+            *Sup opp cd*
+
         .. py:attribute:: title
 
-            *Title* 
-        
+            *Title*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: tres_namf
 
-            *Tres namf* 
-        
+            *Tres namf*
+
         .. py:attribute:: tres_naml
 
-            *Tres naml* 
-        
+            *Tres naml*
+
         .. py:attribute:: tres_nams
 
-            *Tres nams* 
-        
+            *Tres nams*
+
         .. py:attribute:: tres_namt
 
-            *Tres namt* 
-        
+            *Tres namt*
+
 
 
 Cvr2SoCd
@@ -194,143 +195,143 @@ by a slate-mailer organization or recipient committee.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: enty_naml
 
-            *Enty naml* 
-        
+            *Enty naml*
+
         .. py:attribute:: enty_namf
 
-            *Enty namf* 
-        
+            *Enty namf*
+
         .. py:attribute:: enty_namt
 
-            *Enty namt* 
-        
+            *Enty namt*
+
         .. py:attribute:: enty_nams
 
-            *Enty nams* 
-        
+            *Enty nams*
+
         .. py:attribute:: item_cd
 
-            *Item cd* 
-        
+            *Item cd*
+
         .. py:attribute:: mail_city
 
-            *Mail city* 
-        
+            *Mail city*
+
         .. py:attribute:: mail_st
 
-            *Mail st* 
-        
+            *Mail st*
+
         .. py:attribute:: mail_zip4
 
-            *Mail zip4* 
-        
+            *Mail zip4*
+
         .. py:attribute:: day_phone
 
-            *Day phone* 
-        
+            *Day phone*
+
         .. py:attribute:: fax_phone
 
-            *Fax phone* 
-        
+            *Fax phone*
+
         .. py:attribute:: email_adr
 
-            *Email adr* 
-        
+            *Email adr*
+
         .. py:attribute:: cmte_id
 
-            *Cmte id* 
-        
+            *Cmte id*
+
         .. py:attribute:: ind_group
 
-            *Ind group* 
-        
+            *Ind group*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: offic_dscr
 
-            *Offic dscr* 
-        
+            *Offic dscr*
+
         .. py:attribute:: juris_cd
 
-            *Juris cd* 
-        
+            *Juris cd*
+
         .. py:attribute:: juris_dscr
 
-            *Juris dscr* 
-        
+            *Juris dscr*
+
         .. py:attribute:: dist_no
 
-            *Dist no* 
-        
+            *Dist no*
+
         .. py:attribute:: off_s_h_cd
 
-            *Off s h cd* 
-        
+            *Off s h cd*
+
         .. py:attribute:: non_pty_cb
 
-            *Non pty cb* 
-        
+            *Non pty cb*
+
         .. py:attribute:: party_name
 
-            *Party name* 
-        
+            *Party name*
+
         .. py:attribute:: bal_num
 
-            *Bal num* 
-        
+            *Bal num*
+
         .. py:attribute:: bal_juris
 
-            *Bal juris* 
-        
+            *Bal juris*
+
         .. py:attribute:: sup_opp_cd
 
-            *Sup opp cd* 
-        
+            *Sup opp cd*
+
         .. py:attribute:: year_elect
 
-            *Year elect* 
-        
+            *Year elect*
+
         .. py:attribute:: pof_title
 
-            *Pof title* 
-        
+            *Pof title*
+
 
 
 Cvr3VerificationInfoCd
@@ -345,63 +346,63 @@ Cover page verification information from campaign disclosure forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: sig_date
 
             *Signed date* date when signed
-        
+
         .. py:attribute:: sig_loc
 
             *Signed location* city and state where signed
-        
+
         .. py:attribute:: sig_naml
 
             *Last name* last name of the signer
-        
+
         .. py:attribute:: sig_namf
 
             *First name* first name of the signer
-        
+
         .. py:attribute:: sig_namt
 
             *Title* title of the signer
-        
+
         .. py:attribute:: sig_nams
 
             *Suffix* suffix of the signer
-        
+
 
 
 CvrCampaignDisclosureCd
@@ -429,355 +430,355 @@ The data contained herin is &quot;as filed&quot; by the entity making the filing
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amendexp_1
 
-            *Amendexp 1* 
-        
+            *Amendexp 1*
+
         .. py:attribute:: amendexp_2
 
-            *Amendexp 2* 
-        
+            *Amendexp 2*
+
         .. py:attribute:: amendexp_3
 
-            *Amendexp 3* 
-        
+            *Amendexp 3*
+
         .. py:attribute:: assoc_cb
 
-            *Assoc cb* 
-        
+            *Assoc cb*
+
         .. py:attribute:: assoc_int
 
-            *Assoc int* 
-        
+            *Assoc int*
+
         .. py:attribute:: bal_id
 
-            *Bal id* 
-        
+            *Bal id*
+
         .. py:attribute:: bal_juris
 
-            *Bal juris* 
-        
+            *Bal juris*
+
         .. py:attribute:: bal_name
 
-            *Bal name* 
-        
+            *Bal name*
+
         .. py:attribute:: bal_num
 
-            *Bal num* 
-        
+            *Bal num*
+
         .. py:attribute:: brdbase_yn
 
-            *Brdbase yn* 
-        
+            *Brdbase yn*
+
         .. py:attribute:: bus_city
 
-            *Bus city* 
-        
+            *Bus city*
+
         .. py:attribute:: bus_inter
 
-            *Bus inter* 
-        
+            *Bus inter*
+
         .. py:attribute:: bus_name
 
-            *Bus name* 
-        
+            *Bus name*
+
         .. py:attribute:: bus_st
 
-            *Bus st* 
-        
+            *Bus st*
+
         .. py:attribute:: bus_zip4
 
-            *Bus zip4* 
-        
+            *Bus zip4*
+
         .. py:attribute:: busact_cb
 
-            *Busact cb* 
-        
+            *Busact cb*
+
         .. py:attribute:: busactvity
 
-            *Busactvity* 
-        
+            *Busactvity*
+
         .. py:attribute:: cand_city
 
-            *Cand city* 
-        
+            *Cand city*
+
         .. py:attribute:: cand_email
 
-            *Cand email* 
-        
+            *Cand email*
+
         .. py:attribute:: cand_fax
 
-            *Cand fax* 
-        
+            *Cand fax*
+
         .. py:attribute:: cand_id
 
-            *Cand id* 
-        
+            *Cand id*
+
         .. py:attribute:: cand_namf
 
-            *Cand namf* 
-        
+            *Cand namf*
+
         .. py:attribute:: cand_naml
 
-            *Cand naml* 
-        
+            *Cand naml*
+
         .. py:attribute:: cand_nams
 
-            *Cand nams* 
-        
+            *Cand nams*
+
         .. py:attribute:: cand_namt
 
-            *Cand namt* 
-        
+            *Cand namt*
+
         .. py:attribute:: cand_phon
 
-            *Cand phon* 
-        
+            *Cand phon*
+
         .. py:attribute:: cand_st
 
-            *Cand st* 
-        
+            *Cand st*
+
         .. py:attribute:: cand_zip4
 
-            *Cand zip4* 
-        
+            *Cand zip4*
+
         .. py:attribute:: cmtte_id
 
-            *Cmtte id* 
-        
+            *Cmtte id*
+
         .. py:attribute:: cmtte_type
 
-            *Cmtte type* 
-        
+            *Cmtte type*
+
         .. py:attribute:: control_yn
 
-            *Control yn* 
-        
+            *Control yn*
+
         .. py:attribute:: dist_no
 
-            *Dist no* 
-        
+            *Dist no*
+
         .. py:attribute:: elect_date
 
-            *Elect date* 
-        
+            *Elect date*
+
         .. py:attribute:: emplbus_cb
 
-            *Emplbus cb* 
-        
+            *Emplbus cb*
+
         .. py:attribute:: employer
 
-            *Employer* 
-        
+            *Employer*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: file_email
 
-            *File email* 
-        
+            *File email*
+
         .. py:attribute:: filer_city
 
-            *Filer city* 
-        
+            *Filer city*
+
         .. py:attribute:: filer_fax
 
-            *Filer fax* 
-        
+            *Filer fax*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filer_namf
 
-            *Filer namf* 
-        
+            *Filer namf*
+
         .. py:attribute:: filer_naml
 
-            *Filer naml* 
-        
+            *Filer naml*
+
         .. py:attribute:: filer_nams
 
-            *Filer nams* 
-        
+            *Filer nams*
+
         .. py:attribute:: filer_namt
 
-            *Filer namt* 
-        
+            *Filer namt*
+
         .. py:attribute:: filer_phon
 
-            *Filer phon* 
-        
+            *Filer phon*
+
         .. py:attribute:: filer_st
 
-            *Filer st* 
-        
+            *Filer st*
+
         .. py:attribute:: filer_zip4
 
-            *Filer zip4* 
-        
+            *Filer zip4*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: from_date
 
-            *From date* 
-        
+            *From date*
+
         .. py:attribute:: juris_cd
 
-            *Juris cd* 
-        
+            *Juris cd*
+
         .. py:attribute:: juris_dscr
 
-            *Juris dscr* 
-        
+            *Juris dscr*
+
         .. py:attribute:: late_rptno
 
-            *Late rptno* 
-        
+            *Late rptno*
+
         .. py:attribute:: mail_city
 
-            *Mail city* 
-        
+            *Mail city*
+
         .. py:attribute:: mail_st
 
-            *Mail st* 
-        
+            *Mail st*
+
         .. py:attribute:: mail_zip4
 
-            *Mail zip4* 
-        
+            *Mail zip4*
+
         .. py:attribute:: occupation
 
-            *Occupation* 
-        
+            *Occupation*
+
         .. py:attribute:: off_s_h_cd
 
-            *Off s h cd* 
-        
+            *Off s h cd*
+
         .. py:attribute:: offic_dscr
 
-            *Offic dscr* 
-        
+            *Offic dscr*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: other_cb
 
-            *Other cb* 
-        
+            *Other cb*
+
         .. py:attribute:: other_int
 
-            *Other int* 
-        
+            *Other int*
+
         .. py:attribute:: primfrm_yn
 
-            *Primfrm yn* 
-        
+            *Primfrm yn*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: report_num
 
-            *Report num* 
-        
+            *Report num*
+
         .. py:attribute:: reportname
 
-            *Reportname* 
-        
+            *Reportname*
+
         .. py:attribute:: rpt_att_cb
 
-            *Rpt att cb* 
-        
+            *Rpt att cb*
+
         .. py:attribute:: rpt_date
 
-            *Rpt date* 
-        
+            *Rpt date*
+
         .. py:attribute:: rptfromdt
 
-            *Rptfromdt* 
-        
+            *Rptfromdt*
+
         .. py:attribute:: rptthrudt
 
-            *Rptthrudt* 
-        
+            *Rptthrudt*
+
         .. py:attribute:: selfemp_cb
 
-            *Selfemp cb* 
-        
+            *Selfemp cb*
+
         .. py:attribute:: sponsor_yn
 
-            *Sponsor yn* 
-        
+            *Sponsor yn*
+
         .. py:attribute:: stmt_type
 
-            *Stmt type* 
-        
+            *Stmt type*
+
         .. py:attribute:: sup_opp_cd
 
-            *Sup opp cd* 
-        
+            *Sup opp cd*
+
         .. py:attribute:: thru_date
 
-            *Thru date* 
-        
+            *Thru date*
+
         .. py:attribute:: tres_city
 
-            *Tres city* 
-        
+            *Tres city*
+
         .. py:attribute:: tres_email
 
-            *Tres email* 
-        
+            *Tres email*
+
         .. py:attribute:: tres_fax
 
-            *Tres fax* 
-        
+            *Tres fax*
+
         .. py:attribute:: tres_namf
 
-            *Tres namf* 
-        
+            *Tres namf*
+
         .. py:attribute:: tres_naml
 
-            *Tres naml* 
-        
+            *Tres naml*
+
         .. py:attribute:: tres_nams
 
-            *Tres nams* 
-        
+            *Tres nams*
+
         .. py:attribute:: tres_namt
 
-            *Tres namt* 
-        
+            *Tres namt*
+
         .. py:attribute:: tres_phon
 
-            *Tres phon* 
-        
+            *Tres phon*
+
         .. py:attribute:: tres_st
 
-            *Tres st* 
-        
+            *Tres st*
+
         .. py:attribute:: tres_zip4
 
-            *Tres zip4* 
-        
+            *Tres zip4*
+
 
 
 CvrSoCd
@@ -793,227 +794,227 @@ form filed by a slate-mailer organization or recipient committee.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: acct_opendt
 
-            *Acct opendt* 
-        
+            *Acct opendt*
+
         .. py:attribute:: actvty_lvl
 
             *Activity level* Organization's level of activity
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: bank_adr1
 
-            *Bank adr1* 
-        
+            *Bank adr1*
+
         .. py:attribute:: bank_adr2
 
-            *Bank adr2* 
-        
+            *Bank adr2*
+
         .. py:attribute:: bank_city
 
-            *Bank city* 
-        
+            *Bank city*
+
         .. py:attribute:: bank_nam
 
-            *Bank nam* 
-        
+            *Bank nam*
+
         .. py:attribute:: bank_phon
 
-            *Bank phon* 
-        
+            *Bank phon*
+
         .. py:attribute:: bank_st
 
-            *Bank st* 
-        
+            *Bank st*
+
         .. py:attribute:: bank_zip4
 
-            *Bank zip4* 
-        
+            *Bank zip4*
+
         .. py:attribute:: brdbase_cb
 
-            *Brdbase cb* 
-        
+            *Brdbase cb*
+
         .. py:attribute:: city
 
-            *City* 
-        
+            *City*
+
         .. py:attribute:: cmte_email
 
-            *Cmte email* 
-        
+            *Cmte email*
+
         .. py:attribute:: cmte_fax
 
-            *Cmte fax* 
-        
+            *Cmte fax*
+
         .. py:attribute:: com82013id
 
-            *Com82013id* 
-        
+            *Com82013id*
+
         .. py:attribute:: com82013nm
 
-            *Com82013nm* 
-        
+            *Com82013nm*
+
         .. py:attribute:: com82013yn
 
-            *Com82013yn* 
-        
+            *Com82013yn*
+
         .. py:attribute:: control_cb
 
-            *Control cb* 
-        
+            *Control cb*
+
         .. py:attribute:: county_act
 
-            *County act* 
-        
+            *County act*
+
         .. py:attribute:: county_res
 
-            *County res* 
-        
+            *County res*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filer_namf
 
-            *Filer first name* 
-        
+            *Filer first name*
+
         .. py:attribute:: filer_naml
 
-            *Filer last name* 
-        
+            *Filer last name*
+
         .. py:attribute:: filer_nams
 
-            *Filer name suffix* 
-        
+            *Filer name suffix*
+
         .. py:attribute:: filer_namt
 
-            *Filer name title* 
-        
+            *Filer name title*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: genpurp_cb
 
-            *Genpurp cb* 
-        
+            *Genpurp cb*
+
         .. py:attribute:: gpc_descr
 
-            *Gpc descr* 
-        
+            *Gpc descr*
+
         .. py:attribute:: mail_city
 
-            *Mail city* 
-        
+            *Mail city*
+
         .. py:attribute:: mail_st
 
-            *Mail st* 
-        
+            *Mail st*
+
         .. py:attribute:: mail_zip4
 
-            *Mail zip4* 
-        
+            *Mail zip4*
+
         .. py:attribute:: phone
 
-            *Phone* 
-        
+            *Phone*
+
         .. py:attribute:: primfc_cb
 
-            *Primfc cb* 
-        
+            *Primfc cb*
+
         .. py:attribute:: qualfy_dt
 
             *Date qualified* Date qualified as an organization
-        
+
         .. py:attribute:: qual_cb
 
-            *Qual cb* 
-        
+            *Qual cb*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: report_num
 
-            *Report num* 
-        
+            *Report num*
+
         .. py:attribute:: rpt_date
 
-            *Rpt date* 
-        
+            *Rpt date*
+
         .. py:attribute:: smcont_qualdt
 
-            *Smcont qualdt* 
-        
+            *Smcont qualdt*
+
         .. py:attribute:: sponsor_cb
 
-            *Sponsor cb* 
-        
+            *Sponsor cb*
+
         .. py:attribute:: st
 
-            *St* 
-        
+            *St*
+
         .. py:attribute:: surplusdsp
 
-            *Surplusdsp* 
-        
+            *Surplusdsp*
+
         .. py:attribute:: term_date
 
-            *Term date* 
-        
+            *Term date*
+
         .. py:attribute:: tres_city
 
-            *Treasurer&#39;s city* 
-        
+            *Treasurer&#39;s city*
+
         .. py:attribute:: tres_namf
 
-            *Treasurer&#39;s first name* 
-        
+            *Treasurer&#39;s first name*
+
         .. py:attribute:: tres_naml
 
-            *Treasurer&#39;s last name* 
-        
+            *Treasurer&#39;s last name*
+
         .. py:attribute:: tres_nams
 
-            *Treasurer&#39;s name suffix* 
-        
+            *Treasurer&#39;s name suffix*
+
         .. py:attribute:: tres_namt
 
-            *Treasurer&#39;s name title* 
-        
+            *Treasurer&#39;s name title*
+
         .. py:attribute:: tres_phon
 
-            *Treasurer&#39;s phone number* 
-        
+            *Treasurer&#39;s phone number*
+
         .. py:attribute:: tres_st
 
-            *Treasurer&#39;s street* 
-        
+            *Treasurer&#39;s street*
+
         .. py:attribute:: tres_zip4
 
             *Tres zip4* Treasurer's ZIP Code
-        
+
         .. py:attribute:: zip4
 
-            *Zip4* 
-        
+            *Zip4*
+
 
 
 DebtCd
@@ -1029,143 +1030,143 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amt_incur
 
-            *Amt incur* 
-        
+            *Amt incur*
+
         .. py:attribute:: amt_paid
 
-            *Amt paid* 
-        
+            *Amt paid*
+
         .. py:attribute:: bakref_tid
 
-            *Bakref tid* 
-        
+            *Bakref tid*
+
         .. py:attribute:: beg_bal
 
-            *Beg bal* 
-        
+            *Beg bal*
+
         .. py:attribute:: cmte_id
 
-            *Cmte id* 
-        
+            *Cmte id*
+
         .. py:attribute:: end_bal
 
-            *End bal* 
-        
+            *End bal*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: expn_code
 
-            *Expn code* 
-        
+            *Expn code*
+
         .. py:attribute:: expn_dscr
 
-            *Expn dscr* 
-        
+            *Expn dscr*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: payee_city
 
-            *Payee city* 
-        
+            *Payee city*
+
         .. py:attribute:: payee_namf
 
-            *Payee namf* 
-        
+            *Payee namf*
+
         .. py:attribute:: payee_naml
 
-            *Payee naml* 
-        
+            *Payee naml*
+
         .. py:attribute:: payee_nams
 
-            *Payee nams* 
-        
+            *Payee nams*
+
         .. py:attribute:: payee_namt
 
-            *Payee namt* 
-        
+            *Payee namt*
+
         .. py:attribute:: payee_st
 
-            *Payee st* 
-        
+            *Payee st*
+
         .. py:attribute:: payee_zip4
 
-            *Payee zip4* 
-        
+            *Payee zip4*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: tres_city
 
-            *Tres city* 
-        
+            *Tres city*
+
         .. py:attribute:: tres_namf
 
-            *Tres namf* 
-        
+            *Tres namf*
+
         .. py:attribute:: tres_naml
 
-            *Tres naml* 
-        
+            *Tres naml*
+
         .. py:attribute:: tres_nams
 
-            *Tres nams* 
-        
+            *Tres nams*
+
         .. py:attribute:: tres_namt
 
-            *Tres namt* 
-        
+            *Tres namt*
+
         .. py:attribute:: tres_st
 
-            *Tres st* 
-        
+            *Tres st*
+
         .. py:attribute:: tres_zip4
 
-            *Tres zip4* 
-        
+            *Tres zip4*
+
         .. py:attribute:: xref_match
 
-            *Xref match* 
-        
+            *Xref match*
+
         .. py:attribute:: xref_schnm
 
-            *Xref schnm* 
-        
+            *Xref schnm*
+
 
 
 ExpnCd
@@ -1180,223 +1181,223 @@ Campaign expenditures from a variety of forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: agent_namf
 
             *Agent namf* Agent of Ind. Contractor's First name
-        
+
         .. py:attribute:: agent_naml
 
             *Agent naml* Agent of Ind. Contractor's Last name (Sched G)
-        
+
         .. py:attribute:: agent_nams
 
             *Agent nams* Agent of Ind. Contractor's Suffix
-        
+
         .. py:attribute:: agent_namt
 
             *Agent namt* Agent of Ind. Contractor's Prefix or Title
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amount
 
             *Amount* Amount of Payment
-        
+
         .. py:attribute:: bakref_tid
 
             *Bakref tid* Back Reference to a Tran_ID of a 'parent' record
-        
+
         .. py:attribute:: bal_juris
 
             *Bal juris* Jurisdiction
-        
+
         .. py:attribute:: bal_name
 
             *Bal name* Ballot Measure Name
-        
+
         .. py:attribute:: bal_num
 
             *Bal num* Ballot Number or Letter
-        
+
         .. py:attribute:: cand_namf
 
             *Cand namf* Candidate's First name
-        
+
         .. py:attribute:: cand_naml
 
             *Cand naml* Candidate's Last name
-        
+
         .. py:attribute:: cand_nams
 
             *Cand nams* Candidate's Suffix
-        
+
         .. py:attribute:: cand_namt
 
             *Cand namt* Candidate's Prefix or Title
-        
+
         .. py:attribute:: cmte_id
 
             *Cmte id* Committee ID (If [COM|RCP] & no ID#, Treas info Req.)
-        
+
         .. py:attribute:: cum_oth
 
             *Cum oth* Cumulative / 'Other' (No Cumulative on Sched E & G)
-        
+
         .. py:attribute:: cum_ytd
 
             *Cum ytd* Cumulative / Year-to-date amount         (No Cumulative on Sched E & G)
-        
+
         .. py:attribute:: dist_no
 
             *Dist no* Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: expn_chkno
 
             *Expn chkno* Check Number (Optional)
-        
+
         .. py:attribute:: expn_code
 
             *Expn code* Expense Code - Values: (Refer to list in Overview)         Note: CTB & IND need explanation & listing on Sched D         TRC & TRS require explanation.
-        
+
         .. py:attribute:: expn_date
 
             *Expn date* Date of Expenditure (Note: Date not on Sched E & G)
-        
+
         .. py:attribute:: expn_dscr
 
             *Expn dscr* Purpose of Expense and/or Description/explanation
-        
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: g_from_e_f
 
             *G from e f* Back Reference from Sched G to Sched 'E' or 'F'?
-        
+
         .. py:attribute:: juris_cd
 
             *Juris cd* Office Jurisdiction Code Values: STW=Statewide;         SEN=Senate District; ASM=Assembly District;         BOE=Board of Equalization District;         CIT=City; CTY=County; LOC=Local; OTH=Other
-        
+
         .. py:attribute:: juris_dscr
 
             *Juris dscr* Office Jurisdiction Description         (Req. if Juris_Cd=[CIT|CTY|LOC|OTH]
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
             *Memo code* Memo Amount? (Date/Amount are informational only)
-        
+
         .. py:attribute:: memo_refno
 
             *Memo refno* Reference to text contained in a TEXT record.
-        
+
         .. py:attribute:: off_s_h_cd
 
             *Off s h cd* Office Sought/Held Code: H=Held; S=Sought
-        
+
         .. py:attribute:: offic_dscr
 
             *Offic dscr* Office Sought Description (Req. if Office_Cd=OTH)
-        
+
         .. py:attribute:: office_cd
 
             *Office cd* Office Sought (See table of code in Overview)
-        
+
         .. py:attribute:: payee_city
 
             *Payee city* Payee City
-        
+
         .. py:attribute:: payee_namf
 
             *Payee namf* Payee's First name
-        
+
         .. py:attribute:: payee_naml
 
             *Payee naml* Payee's Last name
-        
+
         .. py:attribute:: payee_nams
 
             *Payee nams* Payee's Suffix
-        
+
         .. py:attribute:: payee_namt
 
             *Payee namt* Payee's Prefix or Title
-        
+
         .. py:attribute:: payee_st
 
             *Payee st* State code
-        
+
         .. py:attribute:: payee_zip4
 
             *Payee zip4* Zip+4
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: sup_opp_cd
 
             *Sup opp cd* Support/Oppose? Values: S; O (F450, F461)
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: tres_city
 
             *Tres city* Treasurer City
-        
+
         .. py:attribute:: tres_namf
 
             *Tres namf* Treasurer's First name (Req if [COM|RCP] & no ID#)
-        
+
         .. py:attribute:: tres_naml
 
             *Tres naml* Treasurer's Last name (Req if [COM|RCP] & no ID#)
-        
+
         .. py:attribute:: tres_nams
 
             *Tres nams* Treasurer's Suffix
-        
+
         .. py:attribute:: tres_namt
 
             *Tres namt* Treasurer's Prefix or Title
-        
+
         .. py:attribute:: tres_st
 
             *Tres st* Treasurer State
-        
+
         .. py:attribute:: tres_zip4
 
             *Tres zip4* Treasurer ZIP+4
-        
+
         .. py:attribute:: xref_match
 
             *Xref match* X = Related item on other Sched has same Tran_ID
-        
+
         .. py:attribute:: xref_schnm
 
             *Xref schnm* Related item is included on Sched 'C' or 'H2'
-        
+
 
 
 F495P2Cd
@@ -1426,43 +1427,43 @@ its last report.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: elect_date
 
-            *Elect date* 
-        
+            *Elect date*
+
         .. py:attribute:: electjuris
 
-            *Electjuris* 
-        
+            *Electjuris*
+
         .. py:attribute:: contribamt
 
-            *Contribamt* 
-        
+            *Contribamt*
+
 
 
 F501502Cd
@@ -1480,227 +1481,227 @@ Candidate Intention Statement
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: committee_id
 
-            *Committee id* 
-        
+            *Committee id*
+
         .. py:attribute:: entity_cd
 
-            *Entity cd* 
-        
+            *Entity cd*
+
         .. py:attribute:: report_num
 
-            *Report num* 
-        
+            *Report num*
+
         .. py:attribute:: rpt_date
 
-            *Rpt date* 
-        
+            *Rpt date*
+
         .. py:attribute:: stmt_type
 
-            *Stmt type* 
-        
+            *Stmt type*
+
         .. py:attribute:: from_date
 
-            *From date* 
-        
+            *From date*
+
         .. py:attribute:: thru_date
 
-            *Thru date* 
-        
+            *Thru date*
+
         .. py:attribute:: elect_date
 
-            *Elect date* 
-        
+            *Elect date*
+
         .. py:attribute:: cand_naml
 
-            *Cand naml* 
-        
+            *Cand naml*
+
         .. py:attribute:: cand_namf
 
-            *Cand namf* 
-        
+            *Cand namf*
+
         .. py:attribute:: can_namm
 
-            *Can namm* 
-        
+            *Can namm*
+
         .. py:attribute:: cand_namt
 
-            *Cand namt* 
-        
+            *Cand namt*
+
         .. py:attribute:: cand_nams
 
-            *Cand nams* 
-        
+            *Cand nams*
+
         .. py:attribute:: moniker_pos
 
-            *Moniker pos* 
-        
+            *Moniker pos*
+
         .. py:attribute:: moniker
 
-            *Moniker* 
-        
+            *Moniker*
+
         .. py:attribute:: cand_city
 
-            *Cand city* 
-        
+            *Cand city*
+
         .. py:attribute:: cand_st
 
-            *Cand st* 
-        
+            *Cand st*
+
         .. py:attribute:: cand_zip4
 
-            *Cand zip4* 
-        
+            *Cand zip4*
+
         .. py:attribute:: cand_phon
 
-            *Cand phon* 
-        
+            *Cand phon*
+
         .. py:attribute:: cand_fax
 
-            *Cand fax* 
-        
+            *Cand fax*
+
         .. py:attribute:: cand_email
 
-            *Cand email* 
-        
+            *Cand email*
+
         .. py:attribute:: fin_naml
 
-            *Fin naml* 
-        
+            *Fin naml*
+
         .. py:attribute:: fin_namf
 
-            *Fin namf* 
-        
+            *Fin namf*
+
         .. py:attribute:: fin_namt
 
-            *Fin namt* 
-        
+            *Fin namt*
+
         .. py:attribute:: fin_nams
 
-            *Fin nams* 
-        
+            *Fin nams*
+
         .. py:attribute:: fin_city
 
-            *Fin city* 
-        
+            *Fin city*
+
         .. py:attribute:: fin_st
 
-            *Fin st* 
-        
+            *Fin st*
+
         .. py:attribute:: fin_zip4
 
-            *Fin zip4* 
-        
+            *Fin zip4*
+
         .. py:attribute:: fin_phon
 
-            *Fin phon* 
-        
+            *Fin phon*
+
         .. py:attribute:: fin_fax
 
-            *Fin fax* 
-        
+            *Fin fax*
+
         .. py:attribute:: fin_email
 
-            *Fin email* 
-        
+            *Fin email*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: offic_dscr
 
-            *Offic dscr* 
-        
+            *Offic dscr*
+
         .. py:attribute:: agency_nam
 
-            *Agency nam* 
-        
+            *Agency nam*
+
         .. py:attribute:: juris_cd
 
-            *Juris cd* 
-        
+            *Juris cd*
+
         .. py:attribute:: juris_dscr
 
-            *Juris dscr* 
-        
+            *Juris dscr*
+
         .. py:attribute:: dist_no
 
-            *Dist no* 
-        
+            *Dist no*
+
         .. py:attribute:: party
 
-            *Party* 
-        
+            *Party*
+
         .. py:attribute:: yr_of_elec
 
-            *Yr of elec* 
-        
+            *Yr of elec*
+
         .. py:attribute:: elec_type
 
-            *Elec type* 
-        
+            *Elec type*
+
         .. py:attribute:: execute_dt
 
-            *Execute dt* 
-        
+            *Execute dt*
+
         .. py:attribute:: can_sig
 
-            *Can sig* 
-        
+            *Can sig*
+
         .. py:attribute:: account_no
 
-            *Account no* 
-        
+            *Account no*
+
         .. py:attribute:: acct_op_dt
 
-            *Acct op dt* 
-        
+            *Acct op dt*
+
         .. py:attribute:: party_cd
 
-            *Party cd* 
-        
+            *Party cd*
+
         .. py:attribute:: district_cd
 
-            *District cd* 
-        
+            *District cd*
+
         .. py:attribute:: accept_limit_yn
 
-            *Accept limit yn* 
-        
+            *Accept limit yn*
+
         .. py:attribute:: did_exceed_dt
 
-            *Did exceed dt* 
-        
+            *Did exceed dt*
+
         .. py:attribute:: cntrb_prsnl_fnds_dt
 
-            *Cntrb prsnl fnds dt* 
-        
+            *Cntrb prsnl fnds dt*
+
 
 
 LoanCd
@@ -1715,207 +1716,207 @@ Loans received and made.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: bakref_tid
 
-            *Bakref tid* 
-        
+            *Bakref tid*
+
         .. py:attribute:: cmte_id
 
-            *Cmte id* 
-        
+            *Cmte id*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: intr_city
 
-            *Intr city* 
-        
+            *Intr city*
+
         .. py:attribute:: intr_namf
 
-            *Intr namf* 
-        
+            *Intr namf*
+
         .. py:attribute:: intr_naml
 
-            *Intr naml* 
-        
+            *Intr naml*
+
         .. py:attribute:: intr_nams
 
-            *Intr nams* 
-        
+            *Intr nams*
+
         .. py:attribute:: intr_namt
 
-            *Intr namt* 
-        
+            *Intr namt*
+
         .. py:attribute:: intr_st
 
-            *Intr st* 
-        
+            *Intr st*
+
         .. py:attribute:: intr_zip4
 
-            *Intr zip4* 
-        
+            *Intr zip4*
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: lndr_namf
 
-            *Lndr namf* 
-        
+            *Lndr namf*
+
         .. py:attribute:: lndr_naml
 
-            *Lndr naml* 
-        
+            *Lndr naml*
+
         .. py:attribute:: lndr_nams
 
-            *Lndr nams* 
-        
+            *Lndr nams*
+
         .. py:attribute:: lndr_namt
 
-            *Lndr namt* 
-        
+            *Lndr namt*
+
         .. py:attribute:: loan_amt1
 
-            *Loan amt1* 
-        
+            *Loan amt1*
+
         .. py:attribute:: loan_amt2
 
-            *Loan amt2* 
-        
+            *Loan amt2*
+
         .. py:attribute:: loan_amt3
 
-            *Loan amt3* 
-        
+            *Loan amt3*
+
         .. py:attribute:: loan_amt4
 
-            *Loan amt4* 
-        
+            *Loan amt4*
+
         .. py:attribute:: loan_amt5
 
-            *Loan amt5* 
-        
+            *Loan amt5*
+
         .. py:attribute:: loan_amt6
 
-            *Loan amt6* 
-        
+            *Loan amt6*
+
         .. py:attribute:: loan_amt7
 
-            *Loan amt7* 
-        
+            *Loan amt7*
+
         .. py:attribute:: loan_amt8
 
-            *Loan amt8* 
-        
+            *Loan amt8*
+
         .. py:attribute:: loan_city
 
-            *Loan city* 
-        
+            *Loan city*
+
         .. py:attribute:: loan_date1
 
-            *Loan date1* 
-        
+            *Loan date1*
+
         .. py:attribute:: loan_date2
 
-            *Loan date2* 
-        
+            *Loan date2*
+
         .. py:attribute:: loan_emp
 
-            *Loan emp* 
-        
+            *Loan emp*
+
         .. py:attribute:: loan_occ
 
-            *Loan occ* 
-        
+            *Loan occ*
+
         .. py:attribute:: loan_rate
 
-            *Loan rate* 
-        
+            *Loan rate*
+
         .. py:attribute:: loan_self
 
-            *Loan self* 
-        
+            *Loan self*
+
         .. py:attribute:: loan_st
 
-            *Loan st* 
-        
+            *Loan st*
+
         .. py:attribute:: loan_type
 
-            *Loan type* 
-        
+            *Loan type*
+
         .. py:attribute:: loan_zip4
 
-            *Loan zip4* 
-        
+            *Loan zip4*
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: tres_city
 
-            *Tres city* 
-        
+            *Tres city*
+
         .. py:attribute:: tres_namf
 
-            *Tres namf* 
-        
+            *Tres namf*
+
         .. py:attribute:: tres_naml
 
-            *Tres naml* 
-        
+            *Tres naml*
+
         .. py:attribute:: tres_nams
 
-            *Tres nams* 
-        
+            *Tres nams*
+
         .. py:attribute:: tres_namt
 
-            *Tres namt* 
-        
+            *Tres namt*
+
         .. py:attribute:: tres_st
 
-            *Tres st* 
-        
+            *Tres st*
+
         .. py:attribute:: tres_zip4
 
-            *Tres zip4* 
-        
+            *Tres zip4*
+
         .. py:attribute:: xref_match
 
-            *Xref match* 
-        
+            *Xref match*
+
         .. py:attribute:: xref_schnm
 
-            *Xref schnm* 
-        
+            *Xref schnm*
+
 
 
 RcptCd
@@ -1935,263 +1936,263 @@ Receipts schedules for the following forms.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amount
 
             *Amount* Amount Received (Monetary, Inkkind, Promise)
-        
+
         .. py:attribute:: bakref_tid
 
             *Bakref tid* Back Reference to a transaction identifier of a parent record
-        
+
         .. py:attribute:: bal_juris
 
             *Bal juris* Jurisdiction of ballot measure. Used on the Form 401 Schedule A
-        
+
         .. py:attribute:: bal_name
 
             *Bal name* Ballot measure name. Used on the Form 401 Schedule A
-        
+
         .. py:attribute:: bal_num
 
             *Bal num* Ballot measure number or letter. Used on the Form 401 Schedule A
-        
+
         .. py:attribute:: cand_namf
 
             *Cand namf* Candidate/officeholder's first name. Used on the Form 401 Schedule A
-        
+
         .. py:attribute:: cand_naml
 
             *Cand naml* Candidate/officeholder's last name. Used on the Form 401 Schedule A
-        
+
         .. py:attribute:: cand_nams
 
             *Cand nams* Candidate/officeholder's name suffix. Used on the Form 401 Schedule A
-        
+
         .. py:attribute:: cand_namt
 
             *Cand namt* Candidate/officeholder's name prefix or title. Used on the Form 401 Schedule A
-        
+
         .. py:attribute:: cmte_id
 
             *Cmte id* Committee Identification number
-        
+
         .. py:attribute:: ctrib_city
 
             *Ctrib city* Contributor's City
-        
+
         .. py:attribute:: ctrib_dscr
 
             *Ctrib dscr* Description of goods/services received
-        
+
         .. py:attribute:: ctrib_emp
 
             *Ctrib emp* Employer
-        
+
         .. py:attribute:: ctrib_namf
 
             *Ctrib namf* Contributor's First Name
-        
+
         .. py:attribute:: ctrib_naml
 
             *Ctrib naml* Contributor's last name or business name
-        
+
         .. py:attribute:: ctrib_nams
 
             *Ctrib nams* Contributor's Suffix
-        
+
         .. py:attribute:: ctrib_namt
 
             *Ctrib namt* Contributor's Prefix or Title
-        
+
         .. py:attribute:: ctrib_occ
 
             *Ctrib occ* Occupation
-        
+
         .. py:attribute:: ctrib_self
 
             *Ctrib self* Self Employed Check-box
-        
+
         .. py:attribute:: ctrib_st
 
             *Ctrib st* Contributor's State
-        
+
         .. py:attribute:: ctrib_zip4
 
             *Ctrib zip4* Contributor's ZIP+4
-        
+
         .. py:attribute:: cum_oth
 
             *Cum oth* Cumulative Other (Sched A, A-1)
-        
+
         .. py:attribute:: cum_ytd
 
             *Cum ytd* Cumulative year to date amount (Form 460 Schedule A and Form 401 Schedule A, A-1)
-        
+
         .. py:attribute:: date_thru
 
             *Date thru* End of date range for items received
-        
+
         .. py:attribute:: dist_no
 
             *Dist no* Office District Number (used on F401A)
-        
+
         .. py:attribute:: entity_cd
 
             *Entity cd* Entity code: Values [CMO|RCP|IND|OTH]
-        
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: int_rate
 
-            *Int rate* 
-        
+            *Int rate*
+
         .. py:attribute:: intr_city
 
             *Intr city* Intermediary's City
-        
+
         .. py:attribute:: intr_cmteid
 
-            *Intr cmteid* 
-        
+            *Intr cmteid*
+
         .. py:attribute:: intr_emp
 
             *Intr emp* Intermediary's Employer
-        
+
         .. py:attribute:: intr_namf
 
             *Intr namf* Intermediary's First Name
-        
+
         .. py:attribute:: intr_naml
 
             *Intr naml* Intermediary's Last Name
-        
+
         .. py:attribute:: intr_nams
 
             *Intr nams* Intermediary's Suffix
-        
+
         .. py:attribute:: intr_namt
 
             *Intr namt* Intermediary's Prefix or Title
-        
+
         .. py:attribute:: intr_occ
 
             *Intr occ* Intermediary's Occupation
-        
+
         .. py:attribute:: intr_self
 
             *Intr self* Intermediary's self employed check box
-        
+
         .. py:attribute:: intr_st
 
             *Intr st* Intermediary's state
-        
+
         .. py:attribute:: intr_zip4
 
             *Intr zip4* Intermediary's zip code
-        
+
         .. py:attribute:: juris_cd
 
             *Juris cd* Office jurisdiction code. See the CAL document for the list of legal values. Used on Form 401 Schedule A
-        
+
         .. py:attribute:: juris_dscr
 
             *Juris dscr* Office Jurisdiction Description (used on F401A)
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
             *Memo code* Memo amount flag (Date/Amount are informational only)
-        
+
         .. py:attribute:: memo_refno
 
             *Memo refno* Reference to text contained in a TEXT record
-        
+
         .. py:attribute:: off_s_h_cd
 
             *Off s h cd* Office Sought/Held Code. Used on the Form 401 Schedule A. Legal values are 'S' for sought and 'H' for held
-        
+
         .. py:attribute:: offic_dscr
 
             *Offic dscr* Office Sought Description (used on F401A)
-        
+
         .. py:attribute:: office_cd
 
             *Office cd* Code that identifies the office being sought. See the CAL document for a list of valid codes. Used on the Form 401 Schedule A)
-        
+
         .. py:attribute:: rcpt_date
 
             *Rcpt date* Date item received
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: sup_opp_cd
 
             *Sup opp cd* Support/oppose code. Legal values are 'S' for support or 'O' for oppose. Used on Form 401 Sechedule A. Transaction identifier - permanent value unique to this item
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: tran_type
 
             *Tran type* Transaction Type: Values T- third party | F Forgiven loan | R Returned (Negative amount)
-        
+
         .. py:attribute:: tres_city
 
             *Tres city* City portion of the treasurer or responsible officer's street address
-        
+
         .. py:attribute:: tres_namf
 
             *Tres namf* Treasurer or responsible officer's first name
-        
+
         .. py:attribute:: tres_naml
 
             *Tres naml* Treasurer or responsible officer's last name
-        
+
         .. py:attribute:: tres_nams
 
             *Tres nams* Treasurer or responsible officer's suffix
-        
+
         .. py:attribute:: tres_namt
 
             *Tres namt* Treasurer or responsible officer's prefix or title
-        
+
         .. py:attribute:: tres_st
 
             *Tres st* State portion of the treasurer or responsible officer's address
-        
+
         .. py:attribute:: tres_zip4
 
             *Tres zip4* Zip code portion of the treasurer or responsible officer's address
-        
+
         .. py:attribute:: xref_match
 
             *Xref match* Related item on other schedule has same transaction identifier. 'X' indicates this condition is true
-        
+
         .. py:attribute:: xref_schnm
 
             *Xref schnm* Related record is included on Sched 'B2' or 'F'
-        
+
 
 
 S401Cd
@@ -2207,159 +2208,159 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: agent_naml
 
-            *Agent naml* 
-        
+            *Agent naml*
+
         .. py:attribute:: agent_namf
 
-            *Agent namf* 
-        
+            *Agent namf*
+
         .. py:attribute:: agent_namt
 
-            *Agent namt* 
-        
+            *Agent namt*
+
         .. py:attribute:: agent_nams
 
-            *Agent nams* 
-        
+            *Agent nams*
+
         .. py:attribute:: payee_naml
 
-            *Payee naml* 
-        
+            *Payee naml*
+
         .. py:attribute:: payee_namf
 
-            *Payee namf* 
-        
+            *Payee namf*
+
         .. py:attribute:: payee_namt
 
-            *Payee namt* 
-        
+            *Payee namt*
+
         .. py:attribute:: payee_nams
 
-            *Payee nams* 
-        
+            *Payee nams*
+
         .. py:attribute:: payee_city
 
-            *Payee city* 
-        
+            *Payee city*
+
         .. py:attribute:: payee_st
 
-            *Payee st* 
-        
+            *Payee st*
+
         .. py:attribute:: payee_zip4
 
-            *Payee zip4* 
-        
+            *Payee zip4*
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
         .. py:attribute:: aggregate
 
-            *Aggregate* 
-        
+            *Aggregate*
+
         .. py:attribute:: expn_dscr
 
-            *Expn dscr* 
-        
+            *Expn dscr*
+
         .. py:attribute:: cand_naml
 
-            *Cand naml* 
-        
+            *Cand naml*
+
         .. py:attribute:: cand_namf
 
-            *Cand namf* 
-        
+            *Cand namf*
+
         .. py:attribute:: cand_namt
 
-            *Cand namt* 
-        
+            *Cand namt*
+
         .. py:attribute:: cand_nams
 
-            *Cand nams* 
-        
+            *Cand nams*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: offic_dscr
 
-            *Offic dscr* 
-        
+            *Offic dscr*
+
         .. py:attribute:: juris_cd
 
-            *Juris cd* 
-        
+            *Juris cd*
+
         .. py:attribute:: juris_dscr
 
-            *Juris dscr* 
-        
+            *Juris dscr*
+
         .. py:attribute:: dist_no
 
-            *Dist no* 
-        
+            *Dist no*
+
         .. py:attribute:: off_s_h_cd
 
-            *Off s h cd* 
-        
+            *Off s h cd*
+
         .. py:attribute:: bal_name
 
-            *Bal name* 
-        
+            *Bal name*
+
         .. py:attribute:: bal_num
 
-            *Bal num* 
-        
+            *Bal num*
+
         .. py:attribute:: bal_juris
 
-            *Bal juris* 
-        
+            *Bal juris*
+
         .. py:attribute:: sup_opp_cd
 
-            *Sup opp cd* 
-        
+            *Sup opp cd*
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: bakref_tid
 
-            *Bakref tid* 
-        
+            *Bakref tid*
+
 
 
 S496Cd
@@ -2374,59 +2375,59 @@ Form 496 Late Independent Expenditures
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
         .. py:attribute:: exp_date
 
-            *Exp date* 
-        
+            *Exp date*
+
         .. py:attribute:: expn_dscr
 
-            *Expn dscr* 
-        
+            *Expn dscr*
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: date_thru
 
-            *Date thru* 
-        
+            *Date thru*
+
 
 
 S497Cd
@@ -2441,175 +2442,175 @@ Form 497 Late Contributions Received/Made
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: enty_naml
 
-            *Enty naml* 
-        
+            *Enty naml*
+
         .. py:attribute:: enty_namf
 
-            *Enty namf* 
-        
+            *Enty namf*
+
         .. py:attribute:: enty_namt
 
-            *Enty namt* 
-        
+            *Enty namt*
+
         .. py:attribute:: enty_nams
 
-            *Enty nams* 
-        
+            *Enty nams*
+
         .. py:attribute:: enty_city
 
-            *Enty city* 
-        
+            *Enty city*
+
         .. py:attribute:: enty_st
 
-            *Enty st* 
-        
+            *Enty st*
+
         .. py:attribute:: enty_zip4
 
-            *Enty zip4* 
-        
+            *Enty zip4*
+
         .. py:attribute:: ctrib_emp
 
-            *Ctrib emp* 
-        
+            *Ctrib emp*
+
         .. py:attribute:: ctrib_occ
 
-            *Ctrib occ* 
-        
+            *Ctrib occ*
+
         .. py:attribute:: ctrib_self
 
-            *Ctrib self* 
-        
+            *Ctrib self*
+
         .. py:attribute:: elec_date
 
-            *Elec date* 
-        
+            *Elec date*
+
         .. py:attribute:: ctrib_date
 
-            *Ctrib date* 
-        
+            *Ctrib date*
+
         .. py:attribute:: date_thru
 
-            *Date thru* 
-        
+            *Date thru*
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
         .. py:attribute:: cmte_id
 
-            *Cmte id* 
-        
+            *Cmte id*
+
         .. py:attribute:: cand_naml
 
-            *Cand naml* 
-        
+            *Cand naml*
+
         .. py:attribute:: cand_namf
 
-            *Cand namf* 
-        
+            *Cand namf*
+
         .. py:attribute:: cand_namt
 
-            *Cand namt* 
-        
+            *Cand namt*
+
         .. py:attribute:: cand_nams
 
-            *Cand nams* 
-        
+            *Cand nams*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: offic_dscr
 
-            *Offic dscr* 
-        
+            *Offic dscr*
+
         .. py:attribute:: juris_cd
 
-            *Juris cd* 
-        
+            *Juris cd*
+
         .. py:attribute:: juris_dscr
 
-            *Juris dscr* 
-        
+            *Juris dscr*
+
         .. py:attribute:: dist_no
 
-            *Dist no* 
-        
+            *Dist no*
+
         .. py:attribute:: off_s_h_cd
 
-            *Off s h cd* 
-        
+            *Off s h cd*
+
         .. py:attribute:: bal_name
 
-            *Bal name* 
-        
+            *Bal name*
+
         .. py:attribute:: bal_num
 
-            *Bal num* 
-        
+            *Bal num*
+
         .. py:attribute:: bal_juris
 
-            *Bal juris* 
-        
+            *Bal juris*
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: bal_id
 
-            *Bal id* 
-        
+            *Bal id*
+
         .. py:attribute:: cand_id
 
-            *Cand id* 
-        
+            *Cand id*
+
         .. py:attribute:: sup_off_cd
 
-            *Sup off cd* 
-        
+            *Sup off cd*
+
         .. py:attribute:: sup_opp_cd
 
-            *Sup opp cd* 
-        
+            *Sup opp cd*
+
 
 
 S498Cd
@@ -2624,159 +2625,159 @@ Form 498 Slate Mailer Late Independent Expenditures Made
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: cmte_id
 
-            *Cmte id* 
-        
+            *Cmte id*
+
         .. py:attribute:: payor_naml
 
-            *Payor naml* 
-        
+            *Payor naml*
+
         .. py:attribute:: payor_namf
 
-            *Payor namf* 
-        
+            *Payor namf*
+
         .. py:attribute:: payor_namt
 
-            *Payor namt* 
-        
+            *Payor namt*
+
         .. py:attribute:: payor_nams
 
-            *Payor nams* 
-        
+            *Payor nams*
+
         .. py:attribute:: payor_city
 
-            *Payor city* 
-        
+            *Payor city*
+
         .. py:attribute:: payor_st
 
-            *Payor st* 
-        
+            *Payor st*
+
         .. py:attribute:: payor_zip4
 
-            *Payor zip4* 
-        
+            *Payor zip4*
+
         .. py:attribute:: date_rcvd
 
-            *Date rcvd* 
-        
+            *Date rcvd*
+
         .. py:attribute:: amt_rcvd
 
-            *Amt rcvd* 
-        
+            *Amt rcvd*
+
         .. py:attribute:: cand_naml
 
-            *Cand naml* 
-        
+            *Cand naml*
+
         .. py:attribute:: cand_namf
 
-            *Cand namf* 
-        
+            *Cand namf*
+
         .. py:attribute:: cand_namt
 
-            *Cand namt* 
-        
+            *Cand namt*
+
         .. py:attribute:: cand_nams
 
-            *Cand nams* 
-        
+            *Cand nams*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: offic_dscr
 
-            *Offic dscr* 
-        
+            *Offic dscr*
+
         .. py:attribute:: juris_cd
 
-            *Juris cd* 
-        
+            *Juris cd*
+
         .. py:attribute:: juris_dscr
 
-            *Juris dscr* 
-        
+            *Juris dscr*
+
         .. py:attribute:: dist_no
 
-            *Dist no* 
-        
+            *Dist no*
+
         .. py:attribute:: off_s_h_cd
 
-            *Off s h cd* 
-        
+            *Off s h cd*
+
         .. py:attribute:: bal_name
 
-            *Bal name* 
-        
+            *Bal name*
+
         .. py:attribute:: bal_num
 
-            *Bal num* 
-        
+            *Bal num*
+
         .. py:attribute:: bal_juris
 
-            *Bal juris* 
-        
+            *Bal juris*
+
         .. py:attribute:: sup_opp_cd
 
-            *Sup opp cd* 
-        
+            *Sup opp cd*
+
         .. py:attribute:: amt_attrib
 
-            *Amt attrib* 
-        
+            *Amt attrib*
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: employer
 
-            *Employer* 
-        
+            *Employer*
+
         .. py:attribute:: occupation
 
-            *Occupation* 
-        
+            *Occupation*
+
         .. py:attribute:: selfemp_cb
 
-            *Selfemp cb* 
-        
+            *Selfemp cb*
+
 
 
 SpltCd
@@ -2794,43 +2795,43 @@ Split Records
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: elec_amount
 
-            *Elec amount* 
-        
+            *Elec amount*
+
         .. py:attribute:: elec_code
 
-            *Elec code* 
-        
+            *Elec code*
+
         .. py:attribute:: elec_date
 
-            *Elec date* 
-        
+            *Elec date*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: pform_type
 
-            *Pform type* 
-        
+            *Pform type*
+
         .. py:attribute:: ptran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
 
 
 
@@ -2849,139 +2850,139 @@ This table method is undocumented in the print docs.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: filer_naml
 
-            *Filer naml* 
-        
+            *Filer naml*
+
         .. py:attribute:: filer_namf
 
-            *Filer namf* 
-        
+            *Filer namf*
+
         .. py:attribute:: filer_namt
 
-            *Filer namt* 
-        
+            *Filer namt*
+
         .. py:attribute:: filer_nams
 
-            *Filer nams* 
-        
+            *Filer nams*
+
         .. py:attribute:: report_num
 
-            *Report num* 
-        
+            *Report num*
+
         .. py:attribute:: rpt_date
 
-            *Rpt date* 
-        
+            *Rpt date*
+
         .. py:attribute:: filer_city
 
-            *Filer city* 
-        
+            *Filer city*
+
         .. py:attribute:: filer_st
 
-            *Filer st* 
-        
+            *Filer st*
+
         .. py:attribute:: filer_zip4
 
-            *Filer zip4* 
-        
+            *Filer zip4*
+
         .. py:attribute:: occupation
 
-            *Occupation* 
-        
+            *Occupation*
+
         .. py:attribute:: employer
 
-            *Employer* 
-        
+            *Employer*
+
         .. py:attribute:: cand_naml
 
-            *Cand naml* 
-        
+            *Cand naml*
+
         .. py:attribute:: cand_namf
 
-            *Cand namf* 
-        
+            *Cand namf*
+
         .. py:attribute:: cand_namt
 
-            *Cand namt* 
-        
+            *Cand namt*
+
         .. py:attribute:: cand_nams
 
-            *Cand nams* 
-        
+            *Cand nams*
+
         .. py:attribute:: district_cd
 
-            *District cd* 
-        
+            *District cd*
+
         .. py:attribute:: office_cd
 
-            *Office cd* 
-        
+            *Office cd*
+
         .. py:attribute:: pmnt_dt
 
-            *Pmnt dt* 
-        
+            *Pmnt dt*
+
         .. py:attribute:: pmnt_amount
 
-            *Pmnt amount* 
-        
+            *Pmnt amount*
+
         .. py:attribute:: type_literature
 
-            *Type literature* 
-        
+            *Type literature*
+
         .. py:attribute:: type_printads
 
-            *Type printads* 
-        
+            *Type printads*
+
         .. py:attribute:: type_radio
 
-            *Type radio* 
-        
+            *Type radio*
+
         .. py:attribute:: type_tv
 
-            *Type tv* 
-        
+            *Type tv*
+
         .. py:attribute:: type_it
 
-            *Type it* 
-        
+            *Type it*
+
         .. py:attribute:: type_billboards
 
-            *Type billboards* 
-        
+            *Type billboards*
+
         .. py:attribute:: type_other
 
-            *Type other* 
-        
+            *Type other*
+
         .. py:attribute:: other_desc
 
-            *Other desc* 
-        
+            *Other desc*
+
 
 
 FilerFilingsCd
@@ -2998,75 +2999,75 @@ filing information.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: period_id
 
             *Period id* Identifies the period when the filing was recieved.
-        
+
         .. py:attribute:: form_id
 
             *Form type* Form identification code
-        
+
         .. py:attribute:: filing_sequence
 
             *Filing sequence* Amendment number where 0 is an original filing and 1 to 999 are amendments
-        
+
         .. py:attribute:: filing_date
 
             *Filing date* Date the filing entered into the system
-        
+
         .. py:attribute:: stmnt_type
 
             *Statement type* Type of statement
-        
+
         .. py:attribute:: stmnt_status
 
             *Statement status* The status of the statement. If the filing has been reviewed or not reviewed.
-        
+
         .. py:attribute:: session_id
 
             *Session id* Legislative session that the filing applies to
-        
+
         .. py:attribute:: user_id
 
-            *User id* 
-        
+            *User id*
+
         .. py:attribute:: special_audit
 
             *Special audit* Denotes whether the filing has been audited for money laundering or other special condition.
-        
+
         .. py:attribute:: fine_audit
 
             *Fine audit* Indicates whether a filing has been audited for a fine
-        
+
         .. py:attribute:: rpt_start
 
             *Rpt start* Starting date for the period the filing represents
-        
+
         .. py:attribute:: rpt_end
 
             *Rpt end* Ending date for the period the filing represents
-        
+
         .. py:attribute:: rpt_date
 
             *Rpt date* Date filing received
-        
+
         .. py:attribute:: filing_type
 
-            *Filing type* 
-        
+            *Filing type*
+
 
 
 FilernameCd
@@ -3091,79 +3092,79 @@ fields in conjunction.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: xref_filer_id
 
             *Crossreference filer ID* Alternative filer ID found on many forms
-        
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filer_type
 
-            *Filer type* 
-        
+            *Filer type*
+
         .. py:attribute:: status
 
-            *Status* 
-        
+            *Status*
+
         .. py:attribute:: effect_dt
 
             *Effect dt* Effective date for status
-        
+
         .. py:attribute:: naml
 
             *Naml* Last name, sometimes full name
-        
+
         .. py:attribute:: namf
 
             *Namf* First name
-        
+
         .. py:attribute:: namt
 
             *Namt* Name prefix or title
-        
+
         .. py:attribute:: nams
 
             *Nams* Name suffix
-        
+
         .. py:attribute:: adr1
 
-            *Adr1* 
-        
+            *Adr1*
+
         .. py:attribute:: adr2
 
-            *Adr2* 
-        
+            *Adr2*
+
         .. py:attribute:: city
 
-            *City* 
-        
+            *City*
+
         .. py:attribute:: st
 
-            *St* 
-        
+            *St*
+
         .. py:attribute:: zip4
 
-            *Zip4* 
-        
+            *Zip4*
+
         .. py:attribute:: phon
 
-            *Phon* 
-        
+            *Phon*
+
         .. py:attribute:: fax
 
-            *Fax* 
-        
+            *Fax*
+
         .. py:attribute:: email
 
-            *Email* 
-        
+            *Email*
+
 
 
 FilingsCd
@@ -3179,19 +3180,19 @@ a filing are derived.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: filing_type
 
-            *Filing type* 
-        
+            *Filing type*
+
 
 
 SmryCd
@@ -3206,47 +3207,47 @@ Summary totals from filings.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: amount_a
 
             *Amount A* Summary amount from column A
-        
+
         .. py:attribute:: amount_b
 
             *Amount B* Summary amount from column B
-        
+
         .. py:attribute:: amount_c
 
             *Amount C* Summary amount from column C
-        
+
         .. py:attribute:: elec_dt
 
-            *Election date* 
-        
+            *Election date*
+
 
 
 TextMemoCd
@@ -3261,39 +3262,39 @@ Text memos attached to electronic filings
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: ref_no
 
             *Reference number* Links text memo to a specific record
-        
+
         .. py:attribute:: text4000
 
             *Text* Contents of the text memo
-        
+
 
 
 
@@ -3318,63 +3319,63 @@ Additional names data for the lobbyist disclosure forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: entity_id
 
-            *Entity id* 
-        
+            *Entity id*
+
         .. py:attribute:: enty_namf
 
-            *Enty namf* 
-        
+            *Enty namf*
+
         .. py:attribute:: enty_naml
 
-            *Enty naml* 
-        
+            *Enty naml*
+
         .. py:attribute:: enty_nams
 
-            *Enty nams* 
-        
+            *Enty nams*
+
         .. py:attribute:: enty_namt
 
-            *Enty namt* 
-        
+            *Enty namt*
+
         .. py:attribute:: enty_title
 
-            *Enty title* 
-        
+            *Enty title*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
 
 
 Cvr2RegistrationCd
@@ -3389,59 +3390,59 @@ Cover page of lobbying dislcosure forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: entity_id
 
             *Entity ID* Identification number of the entity described by the record
-        
+
         .. py:attribute:: enty_naml
 
-            *Last name* 
-        
+            *Last name*
+
         .. py:attribute:: enty_namf
 
-            *First name* 
-        
+            *First name*
+
         .. py:attribute:: enty_namt
 
-            *Title* 
-        
+            *Title*
+
         .. py:attribute:: enty_nams
 
-            *Title* 
-        
+            *Title*
+
 
 
 CvrLobbyDisclosureCd
@@ -3462,219 +3463,219 @@ Cover page information for the lobbying disclosure forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: ctrib_n_cb
 
-            *Ctrib n cb* 
-        
+            *Ctrib n cb*
+
         .. py:attribute:: ctrib_y_cb
 
-            *Ctrib y cb* 
-        
+            *Ctrib y cb*
+
         .. py:attribute:: cum_beg_dt
 
-            *Cum beg dt* 
-        
+            *Cum beg dt*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filer_namf
 
-            *Filer namf* 
-        
+            *Filer namf*
+
         .. py:attribute:: filer_naml
 
-            *Filer naml* 
-        
+            *Filer naml*
+
         .. py:attribute:: filer_nams
 
-            *Filer nams* 
-        
+            *Filer nams*
+
         .. py:attribute:: filer_namt
 
-            *Filer namt* 
-        
+            *Filer namt*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: firm_city
 
-            *Firm city* 
-        
+            *Firm city*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: firm_phon
 
-            *Firm phon* 
-        
+            *Firm phon*
+
         .. py:attribute:: firm_st
 
-            *Firm st* 
-        
+            *Firm st*
+
         .. py:attribute:: firm_zip4
 
-            *Firm zip4* 
-        
+            *Firm zip4*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: from_date
 
-            *From date* 
-        
+            *From date*
+
         .. py:attribute:: lby_actvty
 
-            *Lby actvty* 
-        
+            *Lby actvty*
+
         .. py:attribute:: lobby_n_cb
 
-            *Lobby n cb* 
-        
+            *Lobby n cb*
+
         .. py:attribute:: lobby_y_cb
 
-            *Lobby y cb* 
-        
+            *Lobby y cb*
+
         .. py:attribute:: mail_city
 
-            *Mail city* 
-        
+            *Mail city*
+
         .. py:attribute:: mail_phon
 
-            *Mail phon* 
-        
+            *Mail phon*
+
         .. py:attribute:: mail_st
 
-            *Mail st* 
-        
+            *Mail st*
+
         .. py:attribute:: mail_zip4
 
-            *Mail zip4* 
-        
+            *Mail zip4*
+
         .. py:attribute:: major_namf
 
-            *Major namf* 
-        
+            *Major namf*
+
         .. py:attribute:: major_naml
 
-            *Major naml* 
-        
+            *Major naml*
+
         .. py:attribute:: major_nams
 
-            *Major nams* 
-        
+            *Major nams*
+
         .. py:attribute:: major_namt
 
-            *Major namt* 
-        
+            *Major namt*
+
         .. py:attribute:: nopart1_cb
 
-            *Nopart1 cb* 
-        
+            *Nopart1 cb*
+
         .. py:attribute:: nopart2_cb
 
-            *Nopart2 cb* 
-        
+            *Nopart2 cb*
+
         .. py:attribute:: part1_1_cb
 
-            *Part1 1 cb* 
-        
+            *Part1 1 cb*
+
         .. py:attribute:: part1_2_cb
 
-            *Part1 2 cb* 
-        
+            *Part1 2 cb*
+
         .. py:attribute:: prn_namf
 
-            *Prn namf* 
-        
+            *Prn namf*
+
         .. py:attribute:: prn_naml
 
-            *Prn naml* 
-        
+            *Prn naml*
+
         .. py:attribute:: prn_nams
 
-            *Prn nams* 
-        
+            *Prn nams*
+
         .. py:attribute:: prn_namt
 
-            *Prn namt* 
-        
+            *Prn namt*
+
         .. py:attribute:: rcpcmte_id
 
-            *Rcpcmte id* 
-        
+            *Rcpcmte id*
+
         .. py:attribute:: rcpcmte_nm
 
-            *Rcpcmte nm* 
-        
+            *Rcpcmte nm*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: report_num
 
-            *Report num* 
-        
+            *Report num*
+
         .. py:attribute:: rpt_date
 
-            *Rpt date* 
-        
+            *Rpt date*
+
         .. py:attribute:: sender_id
 
-            *Sender id* 
-        
+            *Sender id*
+
         .. py:attribute:: sig_date
 
-            *Sig date* 
-        
+            *Sig date*
+
         .. py:attribute:: sig_loc
 
-            *Sig loc* 
-        
+            *Sig loc*
+
         .. py:attribute:: sig_namf
 
-            *Sig namf* 
-        
+            *Sig namf*
+
         .. py:attribute:: sig_naml
 
-            *Sig naml* 
-        
+            *Sig naml*
+
         .. py:attribute:: sig_nams
 
-            *Sig nams* 
-        
+            *Sig nams*
+
         .. py:attribute:: sig_namt
 
-            *Sig namt* 
-        
+            *Sig namt*
+
         .. py:attribute:: sig_title
 
-            *Sig title* 
-        
+            *Sig title*
+
         .. py:attribute:: thru_date
 
-            *Thru date* 
-        
+            *Thru date*
+
 
 
 CvrRegistrationCd
@@ -3689,295 +3690,295 @@ Cover page of lobbying disclosure forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: a_b_city
 
-            *A b city* 
-        
+            *A b city*
+
         .. py:attribute:: a_b_name
 
-            *A b name* 
-        
+            *A b name*
+
         .. py:attribute:: a_b_st
 
-            *A b st* 
-        
+            *A b st*
+
         .. py:attribute:: a_b_zip4
 
-            *A b zip4* 
-        
+            *A b zip4*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: auth_city
 
-            *Auth city* 
-        
+            *Auth city*
+
         .. py:attribute:: auth_name
 
-            *Auth name* 
-        
+            *Auth name*
+
         .. py:attribute:: auth_st
 
-            *Auth st* 
-        
+            *Auth st*
+
         .. py:attribute:: auth_zip4
 
-            *Auth zip4* 
-        
+            *Auth zip4*
+
         .. py:attribute:: bus_cb
 
-            *Bus cb* 
-        
+            *Bus cb*
+
         .. py:attribute:: bus_city
 
-            *Bus city* 
-        
+            *Bus city*
+
         .. py:attribute:: bus_class
 
-            *Bus class* 
-        
+            *Bus class*
+
         .. py:attribute:: bus_descr
 
-            *Bus descr* 
-        
+            *Bus descr*
+
         .. py:attribute:: bus_email
 
-            *Bus email* 
-        
+            *Bus email*
+
         .. py:attribute:: bus_fax
 
-            *Bus fax* 
-        
+            *Bus fax*
+
         .. py:attribute:: bus_phon
 
-            *Bus phon* 
-        
+            *Bus phon*
+
         .. py:attribute:: bus_st
 
-            *Bus st* 
-        
+            *Bus st*
+
         .. py:attribute:: bus_zip4
 
-            *Bus zip4* 
-        
+            *Bus zip4*
+
         .. py:attribute:: c_less50
 
-            *C less50* 
-        
+            *C less50*
+
         .. py:attribute:: c_more50
 
-            *C more50* 
-        
+            *C more50*
+
         .. py:attribute:: complet_dt
 
-            *Complet dt* 
-        
+            *Complet dt*
+
         .. py:attribute:: descrip_1
 
-            *Descrip 1* 
-        
+            *Descrip 1*
+
         .. py:attribute:: descrip_2
 
-            *Descrip 2* 
-        
+            *Descrip 2*
+
         .. py:attribute:: eff_date
 
-            *Eff date* 
-        
+            *Eff date*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filer_namf
 
-            *Filer namf* 
-        
+            *Filer namf*
+
         .. py:attribute:: filer_naml
 
-            *Filer naml* 
-        
+            *Filer naml*
+
         .. py:attribute:: filer_nams
 
-            *Filer nams* 
-        
+            *Filer nams*
+
         .. py:attribute:: filer_namt
 
-            *Filer namt* 
-        
+            *Filer namt*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: ind_cb
 
-            *Ind cb* 
-        
+            *Ind cb*
+
         .. py:attribute:: ind_class
 
-            *Ind class* 
-        
+            *Ind class*
+
         .. py:attribute:: ind_descr
 
-            *Ind descr* 
-        
+            *Ind descr*
+
         .. py:attribute:: influen_yn
 
-            *Influen yn* 
-        
+            *Influen yn*
+
         .. py:attribute:: l_firm_cb
 
-            *L firm cb* 
-        
+            *L firm cb*
+
         .. py:attribute:: lby_604_cb
 
-            *Lby 604 cb* 
-        
+            *Lby 604 cb*
+
         .. py:attribute:: lby_reg_cb
 
-            *Lby reg cb* 
-        
+            *Lby reg cb*
+
         .. py:attribute:: lobby_cb
 
-            *Lobby cb* 
-        
+            *Lobby cb*
+
         .. py:attribute:: lobby_int
 
-            *Lobby int* 
-        
+            *Lobby int*
+
         .. py:attribute:: ls_beg_yr
 
-            *Ls beg yr* 
-        
+            *Ls beg yr*
+
         .. py:attribute:: ls_end_yr
 
-            *Ls end yr* 
-        
+            *Ls end yr*
+
         .. py:attribute:: mail_city
 
-            *Mail city* 
-        
+            *Mail city*
+
         .. py:attribute:: mail_phon
 
-            *Mail phon* 
-        
+            *Mail phon*
+
         .. py:attribute:: mail_st
 
-            *Mail st* 
-        
+            *Mail st*
+
         .. py:attribute:: mail_zip4
 
-            *Mail zip4* 
-        
+            *Mail zip4*
+
         .. py:attribute:: newcert_cb
 
-            *Newcert cb* 
-        
+            *Newcert cb*
+
         .. py:attribute:: oth_cb
 
-            *Oth cb* 
-        
+            *Oth cb*
+
         .. py:attribute:: prn_namf
 
-            *Prn namf* 
-        
+            *Prn namf*
+
         .. py:attribute:: prn_naml
 
-            *Prn naml* 
-        
+            *Prn naml*
+
         .. py:attribute:: prn_nams
 
-            *Prn nams* 
-        
+            *Prn nams*
+
         .. py:attribute:: prn_namt
 
-            *Prn namt* 
-        
+            *Prn namt*
+
         .. py:attribute:: qual_date
 
-            *Qual date* 
-        
+            *Qual date*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: rencert_cb
 
-            *Rencert cb* 
-        
+            *Rencert cb*
+
         .. py:attribute:: report_num
 
-            *Report num* 
-        
+            *Report num*
+
         .. py:attribute:: rpt_date
 
-            *Rpt date* 
-        
+            *Rpt date*
+
         .. py:attribute:: sender_id
 
-            *Sender id* 
-        
+            *Sender id*
+
         .. py:attribute:: sig_date
 
-            *Sig date* 
-        
+            *Sig date*
+
         .. py:attribute:: sig_loc
 
-            *Sig loc* 
-        
+            *Sig loc*
+
         .. py:attribute:: sig_namf
 
-            *Sig namf* 
-        
+            *Sig namf*
+
         .. py:attribute:: sig_naml
 
-            *Sig naml* 
-        
+            *Sig naml*
+
         .. py:attribute:: sig_nams
 
-            *Sig nams* 
-        
+            *Sig nams*
+
         .. py:attribute:: sig_namt
 
-            *Sig namt* 
-        
+            *Sig namt*
+
         .. py:attribute:: sig_title
 
-            *Sig title* 
-        
+            *Sig title*
+
         .. py:attribute:: st_agency
 
-            *St agency* 
-        
+            *St agency*
+
         .. py:attribute:: st_leg_yn
 
-            *St leg yn* 
-        
+            *St leg yn*
+
         .. py:attribute:: stmt_firm
 
-            *Stmt firm* 
-        
+            *Stmt firm*
+
         .. py:attribute:: trade_cb
 
-            *Trade cb* 
-        
+            *Trade cb*
+
 
 
 F690P2Cd
@@ -3994,55 +3995,55 @@ Amends lobbying disclosure filings
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: exec_date
 
             *Exec date* date the original report (or prior amendment to the original report) was executed on.
-        
+
         .. py:attribute:: from_date
 
             *From date* reporting period from date of original report
-        
+
         .. py:attribute:: thru_date
 
             *Thru date* report period to/through date of original.
-        
+
         .. py:attribute:: chg_parts
 
             *Chg parts* amended into affects items on part(s) text description.
-        
+
         .. py:attribute:: chg_sects
 
             *Chg sects* amended into affects items on sections(s) text description.
-        
+
         .. py:attribute:: amend_txt1
 
             *Amend txt1* description of changes to the filing
-        
+
 
 
 LattCd
@@ -4061,91 +4062,91 @@ Lobbyist disclosure attachment schedules for payments
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
         .. py:attribute:: cum_amt
 
-            *Cum amt* 
-        
+            *Cum amt*
+
         .. py:attribute:: cumbeg_dt
 
-            *Cumbeg dt* 
-        
+            *Cumbeg dt*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: pmt_date
 
-            *Pmt date* 
-        
+            *Pmt date*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: recip_city
 
-            *Recip city* 
-        
+            *Recip city*
+
         .. py:attribute:: recip_namf
 
-            *Recip namf* 
-        
+            *Recip namf*
+
         .. py:attribute:: recip_naml
 
-            *Recip naml* 
-        
+            *Recip naml*
+
         .. py:attribute:: recip_nams
 
-            *Recip nams* 
-        
+            *Recip nams*
+
         .. py:attribute:: recip_namt
 
-            *Recip namt* 
-        
+            *Recip namt*
+
         .. py:attribute:: recip_st
 
-            *Recip st* 
-        
+            *Recip st*
+
         .. py:attribute:: recip_zip4
 
-            *Recip zip4* 
-        
+            *Recip zip4*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
 
 
 LccmCd
@@ -4165,107 +4166,107 @@ Lobbying Campaign Contributions reported on forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
         .. py:attribute:: bakref_tid
 
-            *Bakref tid* 
-        
+            *Bakref tid*
+
         .. py:attribute:: ctrib_date
 
-            *Ctrib date* 
-        
+            *Ctrib date*
+
         .. py:attribute:: ctrib_namf
 
-            *Ctrib namf* 
-        
+            *Ctrib namf*
+
         .. py:attribute:: ctrib_naml
 
-            *Ctrib naml* 
-        
+            *Ctrib naml*
+
         .. py:attribute:: ctrib_nams
 
-            *Ctrib nams* 
-        
+            *Ctrib nams*
+
         .. py:attribute:: ctrib_namt
 
-            *Ctrib namt* 
-        
+            *Ctrib namt*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: recip_city
 
-            *Recip city* 
-        
+            *Recip city*
+
         .. py:attribute:: recip_id
 
-            *Recip id* 
-        
+            *Recip id*
+
         .. py:attribute:: recip_namf
 
-            *Recip namf* 
-        
+            *Recip namf*
+
         .. py:attribute:: recip_naml
 
-            *Recip naml* 
-        
+            *Recip naml*
+
         .. py:attribute:: recip_nams
 
-            *Recip nams* 
-        
+            *Recip nams*
+
         .. py:attribute:: recip_namt
 
-            *Recip namt* 
-        
+            *Recip namt*
+
         .. py:attribute:: recip_st
 
-            *Recip st* 
-        
+            *Recip st*
+
         .. py:attribute:: recip_zip4
 
-            *Recip zip4* 
-        
+            *Recip zip4*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
 
 
 LempCd
@@ -4284,107 +4285,107 @@ Lobbyist Employers/Subcontracted Clients data from
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: agencylist
 
-            *Agencylist* 
-        
+            *Agencylist*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: cli_city
 
-            *Cli city* 
-        
+            *Cli city*
+
         .. py:attribute:: cli_namf
 
-            *Cli namf* 
-        
+            *Cli namf*
+
         .. py:attribute:: cli_naml
 
-            *Cli naml* 
-        
+            *Cli naml*
+
         .. py:attribute:: cli_nams
 
-            *Cli nams* 
-        
+            *Cli nams*
+
         .. py:attribute:: cli_namt
 
-            *Cli namt* 
-        
+            *Cli namt*
+
         .. py:attribute:: cli_phon
 
-            *Cli phon* 
-        
+            *Cli phon*
+
         .. py:attribute:: cli_st
 
-            *Cli st* 
-        
+            *Cli st*
+
         .. py:attribute:: cli_zip4
 
-            *Cli zip4* 
-        
+            *Cli zip4*
+
         .. py:attribute:: client_id
 
-            *Client id* 
-        
+            *Client id*
+
         .. py:attribute:: con_period
 
-            *Con period* 
-        
+            *Con period*
+
         .. py:attribute:: descrip
 
-            *Descrip* 
-        
+            *Descrip*
+
         .. py:attribute:: eff_date
 
-            *Eff date* 
-        
+            *Eff date*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: sub_city
 
-            *Sub city* 
-        
+            *Sub city*
+
         .. py:attribute:: sub_name
 
-            *Sub name* 
-        
+            *Sub name*
+
         .. py:attribute:: sub_phon
 
-            *Sub phon* 
-        
+            *Sub phon*
+
         .. py:attribute:: sub_st
 
-            *Sub st* 
-        
+            *Sub st*
+
         .. py:attribute:: sub_zip4
 
-            *Sub zip4* 
-        
+            *Sub zip4*
+
         .. py:attribute:: subfirm_id
 
-            *Subfirm id* 
-        
+            *Subfirm id*
+
 
 
 LexpCd
@@ -4405,111 +4406,111 @@ Reported in filings of the forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
         .. py:attribute:: bakref_tid
 
-            *Bakref tid* 
-        
+            *Bakref tid*
+
         .. py:attribute:: bene_amt
 
-            *Bene amt* 
-        
+            *Bene amt*
+
         .. py:attribute:: bene_name
 
-            *Bene name* 
-        
+            *Bene name*
+
         .. py:attribute:: bene_posit
 
-            *Bene posit* 
-        
+            *Bene posit*
+
         .. py:attribute:: credcardco
 
-            *Credcardco* 
-        
+            *Credcardco*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: expn_date
 
-            *Expn date* 
-        
+            *Expn date*
+
         .. py:attribute:: expn_dscr
 
-            *Expn dscr* 
-        
+            *Expn dscr*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: payee_city
 
-            *Payee city* 
-        
+            *Payee city*
+
         .. py:attribute:: payee_namf
 
-            *Payee namf* 
-        
+            *Payee namf*
+
         .. py:attribute:: payee_naml
 
-            *Payee naml* 
-        
+            *Payee naml*
+
         .. py:attribute:: payee_nams
 
-            *Payee nams* 
-        
+            *Payee nams*
+
         .. py:attribute:: payee_namt
 
-            *Payee namt* 
-        
+            *Payee namt*
+
         .. py:attribute:: payee_st
 
-            *Payee st* 
-        
+            *Payee st*
+
         .. py:attribute:: payee_zip4
 
-            *Payee zip4* 
-        
+            *Payee zip4*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: recsubtype
 
-            *Recsubtype* 
-        
+            *Recsubtype*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
 
 
 LobbyAmendmentsCd
@@ -4526,179 +4527,179 @@ Lobbyist registration amendment information
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: exec_date
 
-            *Exec date* 
-        
+            *Exec date*
+
         .. py:attribute:: from_date
 
-            *From date* 
-        
+            *From date*
+
         .. py:attribute:: thru_date
 
-            *Thru date* 
-        
+            *Thru date*
+
         .. py:attribute:: add_l_cb
 
-            *Add l cb* 
-        
+            *Add l cb*
+
         .. py:attribute:: add_l_eff
 
-            *Add l eff* 
-        
+            *Add l eff*
+
         .. py:attribute:: a_l_naml
 
-            *A l naml* 
-        
+            *A l naml*
+
         .. py:attribute:: a_l_namf
 
-            *A l namf* 
-        
+            *A l namf*
+
         .. py:attribute:: a_l_namt
 
-            *A l namt* 
-        
+            *A l namt*
+
         .. py:attribute:: a_l_nams
 
-            *A l nams* 
-        
+            *A l nams*
+
         .. py:attribute:: del_l_cb
 
-            *Del l cb* 
-        
+            *Del l cb*
+
         .. py:attribute:: del_l_eff
 
-            *Del l eff* 
-        
+            *Del l eff*
+
         .. py:attribute:: d_l_naml
 
-            *D l naml* 
-        
+            *D l naml*
+
         .. py:attribute:: d_l_namf
 
-            *D l namf* 
-        
+            *D l namf*
+
         .. py:attribute:: d_l_namt
 
-            *D l namt* 
-        
+            *D l namt*
+
         .. py:attribute:: d_l_nams
 
-            *D l nams* 
-        
+            *D l nams*
+
         .. py:attribute:: add_le_cb
 
-            *Add le cb* 
-        
+            *Add le cb*
+
         .. py:attribute:: add_le_eff
 
-            *Add le eff* 
-        
+            *Add le eff*
+
         .. py:attribute:: a_le_naml
 
-            *A le naml* 
-        
+            *A le naml*
+
         .. py:attribute:: a_le_namf
 
-            *A le namf* 
-        
+            *A le namf*
+
         .. py:attribute:: a_le_namt
 
-            *A le namt* 
-        
+            *A le namt*
+
         .. py:attribute:: a_le_nams
 
-            *A le nams* 
-        
+            *A le nams*
+
         .. py:attribute:: del_le_cb
 
-            *Del le cb* 
-        
+            *Del le cb*
+
         .. py:attribute:: del_le_eff
 
-            *Del le eff* 
-        
+            *Del le eff*
+
         .. py:attribute:: d_le_naml
 
-            *D le naml* 
-        
+            *D le naml*
+
         .. py:attribute:: d_le_namf
 
-            *D le namf* 
-        
+            *D le namf*
+
         .. py:attribute:: d_le_namt
 
-            *D le namt* 
-        
+            *D le namt*
+
         .. py:attribute:: d_le_nams
 
-            *D le nams* 
-        
+            *D le nams*
+
         .. py:attribute:: add_lf_cb
 
-            *Add lf cb* 
-        
+            *Add lf cb*
+
         .. py:attribute:: add_lf_eff
 
-            *Add lf eff* 
-        
+            *Add lf eff*
+
         .. py:attribute:: a_lf_name
 
-            *A lf name* 
-        
+            *A lf name*
+
         .. py:attribute:: del_lf_cb
 
-            *Del lf cb* 
-        
+            *Del lf cb*
+
         .. py:attribute:: del_lf_eff
 
-            *Del lf eff* 
-        
+            *Del lf eff*
+
         .. py:attribute:: d_lf_name
 
-            *D lf name* 
-        
+            *D lf name*
+
         .. py:attribute:: other_cb
 
-            *Other cb* 
-        
+            *Other cb*
+
         .. py:attribute:: other_eff
 
-            *Other eff* 
-        
+            *Other eff*
+
         .. py:attribute:: other_desc
 
-            *Other desc* 
-        
+            *Other desc*
+
         .. py:attribute:: f606_yes
 
-            *F606 yes* 
-        
+            *F606 yes*
+
         .. py:attribute:: f606_no
 
-            *F606 no* 
-        
+            *F606 no*
+
 
 
 LothCd
@@ -4715,91 +4716,91 @@ Payment to other lobbying firms reported on form
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
         .. py:attribute:: cum_amt
 
-            *Cum amt* 
-        
+            *Cum amt*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: firm_city
 
-            *Firm city* 
-        
+            *Firm city*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: firm_phon
 
-            *Firm phon* 
-        
+            *Firm phon*
+
         .. py:attribute:: firm_st
 
-            *Firm st* 
-        
+            *Firm st*
+
         .. py:attribute:: firm_zip4
 
-            *Firm zip4* 
-        
+            *Firm zip4*
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: pmt_date
 
-            *Pmt date* 
-        
+            *Pmt date*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: subj_namf
 
-            *Subj namf* 
-        
+            *Subj namf*
+
         .. py:attribute:: subj_naml
 
-            *Subj naml* 
-        
+            *Subj naml*
+
         .. py:attribute:: subj_nams
 
-            *Subj nams* 
-        
+            *Subj nams*
+
         .. py:attribute:: subj_namt
 
-            *Subj namt* 
-        
+            *Subj namt*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
 
 
 LpayCd
@@ -4817,115 +4818,115 @@ Payments made/received to/from Lobbying Firms reported on forms
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: advan_amt
 
-            *Advan amt* 
-        
+            *Advan amt*
+
         .. py:attribute:: advan_dscr
 
-            *Advan dscr* 
-        
+            *Advan dscr*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: bakref_tid
 
-            *Bakref tid* 
-        
+            *Bakref tid*
+
         .. py:attribute:: cum_total
 
-            *Cum total* 
-        
+            *Cum total*
+
         .. py:attribute:: emplr_city
 
-            *Emplr city* 
-        
+            *Emplr city*
+
         .. py:attribute:: emplr_id
 
-            *Emplr id* 
-        
+            *Emplr id*
+
         .. py:attribute:: emplr_namf
 
-            *Emplr namf* 
-        
+            *Emplr namf*
+
         .. py:attribute:: emplr_naml
 
-            *Emplr naml* 
-        
+            *Emplr naml*
+
         .. py:attribute:: emplr_nams
 
-            *Emplr nams* 
-        
+            *Emplr nams*
+
         .. py:attribute:: emplr_namt
 
-            *Emplr namt* 
-        
+            *Emplr namt*
+
         .. py:attribute:: emplr_phon
 
-            *Emplr phon* 
-        
+            *Emplr phon*
+
         .. py:attribute:: emplr_st
 
-            *Emplr st* 
-        
+            *Emplr st*
+
         .. py:attribute:: emplr_zip4
 
-            *Emplr zip4* 
-        
+            *Emplr zip4*
+
         .. py:attribute:: entity_cd
 
-            *Entity code* 
-        
+            *Entity code*
+
         .. py:attribute:: fees_amt
 
-            *Fees amt* 
-        
+            *Fees amt*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: lby_actvty
 
-            *Lby actvty* 
-        
+            *Lby actvty*
+
         .. py:attribute:: line_item
 
             *Line item* Line item number of this record
-        
+
         .. py:attribute:: memo_code
 
-            *Memo code* 
-        
+            *Memo code*
+
         .. py:attribute:: memo_refno
 
-            *Memo refno* 
-        
+            *Memo refno*
+
         .. py:attribute:: per_total
 
-            *Per total* 
-        
+            *Per total*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: reimb_amt
 
-            *Reimb amt* 
-        
+            *Reimb amt*
+
         .. py:attribute:: tran_id
 
             *Transaction ID* Permanent value unique to this item
-        
+
 
 
 
@@ -4944,27 +4945,27 @@ Contains acronyms and their meaning.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: acronym
 
             *Acronym* Acronym text value
-        
+
         .. py:attribute:: stands_for
 
             *Stands for* Definition of the acronym
-        
+
         .. py:attribute:: effect_dt
 
             *Effect dt* Effective date for the acronym
-        
+
         .. py:attribute:: a_desc
 
             *A desc* Description of the acronym
-        
+
 
 
 AddressCd
@@ -4981,39 +4982,39 @@ desplayed by the AMS.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: adrid
 
             *Adrid* Address indentification number
-        
+
         .. py:attribute:: city
 
-            *City* 
-        
+            *City*
+
         .. py:attribute:: st
 
-            *St* 
-        
+            *St*
+
         .. py:attribute:: zip4
 
-            *Zip4* 
-        
+            *Zip4*
+
         .. py:attribute:: phon
 
-            *Phon* 
-        
+            *Phon*
+
         .. py:attribute:: fax
 
-            *Fax* 
-        
+            *Fax*
+
         .. py:attribute:: email
 
-            *Email* 
-        
+            *Email*
+
 
 
 BallotMeasuresCd
@@ -5028,35 +5029,35 @@ Ballot measure dates and times
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: election_date
 
-            *Election date* 
-        
+            *Election date*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: measure_no
 
-            *Measure no* 
-        
+            *Measure no*
+
         .. py:attribute:: measure_name
 
-            *Measure name* 
-        
+            *Measure name*
+
         .. py:attribute:: measure_short_name
 
-            *Measure short name* 
-        
+            *Measure short name*
+
         .. py:attribute:: jurisdiction
 
-            *Jurisdiction* 
-        
+            *Jurisdiction*
+
 
 
 EfsFilingLogCd
@@ -5071,35 +5072,35 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filing_date
 
-            *Filing date* 
-        
+            *Filing date*
+
         .. py:attribute:: filingstatus
 
-            *Filingstatus* 
-        
+            *Filingstatus*
+
         .. py:attribute:: vendor
 
-            *Vendor* 
-        
+            *Vendor*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: form_type
 
             *Form type* Name of the source filing form or schedule
-        
+
         .. py:attribute:: error_no
 
-            *Error no* 
-        
+            *Error no*
+
 
 
 FilerAcronymsCd
@@ -5114,19 +5115,19 @@ links acronyms to filers
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: acronym
 
-            *Acronym* 
-        
+            *Acronym*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
 
 
 FilerAddressCd
@@ -5142,31 +5143,31 @@ addresses change.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: adrid
 
-            *Adrid* 
-        
+            *Adrid*
+
         .. py:attribute:: effect_dt
 
-            *Effect dt* 
-        
+            *Effect dt*
+
         .. py:attribute:: add_type
 
-            *Add type* 
-        
+            *Add type*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
 
 
 FilerEthicsClassCd
@@ -5181,23 +5182,23 @@ This table stores lobbyist ethics training dates.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: ethics_date
 
-            *Ethics date* 
-        
+            *Ethics date*
+
 
 
 FilerInterestsCd
@@ -5212,27 +5213,27 @@ Links a filer to their interest codes.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: interest_cd
 
-            *Interest cd* 
-        
+            *Interest cd*
+
         .. py:attribute:: effect_date
 
-            *Effect date* 
-        
+            *Effect date*
+
 
 
 FilerLinksCd
@@ -5247,47 +5248,47 @@ Links filers to each other and records their relationship type.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id_a
 
             *Filer ID A* Unique identification number for the first filer in the relationship
-        
+
         .. py:attribute:: filer_id_b
 
             *Filer ID B* Unique identification number for the second filer in the relationship
-        
+
         .. py:attribute:: active_flg
 
             *Active flag* Indicates if the link is active
-        
+
         .. py:attribute:: session_id
 
             *Session ID* Session identification number
-        
+
         .. py:attribute:: link_type
 
             *Link type* Denotes the type of the link
-        
+
         .. py:attribute:: link_desc
 
             *Link description* Unused
-        
+
         .. py:attribute:: effect_dt
 
             *Effective date* Date the link became active
-        
+
         .. py:attribute:: dominate_filer
 
             *Dominate filer* Unused
-        
+
         .. py:attribute:: termination_dt
 
             *Termination date* Date the relationship was terminated
-        
+
 
 
 FilerStatusTypesCd
@@ -5302,19 +5303,19 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: status_type
 
-            *Status type* 
-        
+            *Status type*
+
         .. py:attribute:: status_desc
 
-            *Status desc* 
-        
+            *Status desc*
+
 
 
 FilerToFilerTypeCd
@@ -5331,75 +5332,75 @@ to change characteristics over time.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filer_type
 
             *Filer type* Filer type identification number
-        
+
         .. py:attribute:: active
 
             *Active* Indicates if the filer is currently active
-        
+
         .. py:attribute:: race
 
             *Race* If applicable indicates the race in which the filer is running
-        
+
         .. py:attribute:: session_id
 
             *Session id* Legislative session identification number
-        
+
         .. py:attribute:: category
 
             *Category* Defines the filer's category such as controlled, jointly controlled, etc. (subset of filer's type)
-        
+
         .. py:attribute:: category_type
 
             *Category type* When applicable, the category type specifies additional information about the category. (e.g. state, local, etc.)
-        
+
         .. py:attribute:: sub_category
 
             *Sub category* When applicable specifies general purpose, primarily formed, etc.
-        
+
         .. py:attribute:: effect_dt
 
             *Effect dt* The date the filer assumed the current class or type
-        
+
         .. py:attribute:: sub_category_type
 
             *Sub category type* When applicable specifies broad based or small contributor
-        
+
         .. py:attribute:: election_type
 
             *Election type* Indicates type of election (general, primary, special)
-        
+
         .. py:attribute:: sub_category_a
 
             *Sub category a* Indicates if sponsored or not
-        
+
         .. py:attribute:: nyq_dt
 
             *Nyq dt* Indicates the date when a committee reached its qualifying level of activity
-        
+
         .. py:attribute:: party_cd
 
             *Party cd* Filer's political party
-        
+
         .. py:attribute:: county_cd
 
             *County cd* Filer's county code
-        
+
         .. py:attribute:: district_cd
 
             *District cd* Filer's district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races
-        
+
 
 
 FilerTypesCd
@@ -5414,31 +5415,31 @@ This lookup table describes filer types.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_type
 
             *Filer type* Filer type identification number
-        
+
         .. py:attribute:: description
 
             *Description* Description of the filer type
-        
+
         .. py:attribute:: grp_type
 
             *Grp type* Group type assocated with the filer type
-        
+
         .. py:attribute:: calc_use
 
             *Calc use* Use checkbox flag
-        
+
         .. py:attribute:: grace_period
 
-            *Grace period* 
-        
+            *Grace period*
+
 
 
 FilerXrefCd
@@ -5454,27 +5455,27 @@ identification numbers.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: xref_id
 
             *Crossreference filer ID* Alternative filer ID found on many forms
-        
+
         .. py:attribute:: effect_dt
 
-            *Effect dt* 
-        
+            *Effect dt*
+
         .. py:attribute:: migration_source
 
-            *Migration source* 
-        
+            *Migration source*
+
 
 
 FilersCd
@@ -5490,15 +5491,15 @@ to a filer are derived.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
 
 
 FilingPeriodCd
@@ -5513,39 +5514,39 @@ FilingPeriodCd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: period_id
 
             *Period id* Unique period identification number
-        
+
         .. py:attribute:: start_date
 
             *Start date* Starting date for period
-        
+
         .. py:attribute:: end_date
 
             *End date* Ending date of period
-        
+
         .. py:attribute:: period_type
 
-            *Period type* 
-        
+            *Period type*
+
         .. py:attribute:: per_grp_type
 
             *Per grp type* Period group type
-        
+
         .. py:attribute:: period_desc
 
             *Period desc* Period description
-        
+
         .. py:attribute:: deadline
 
             *Deadline* Deadline date
-        
+
 
 
 GroupTypesCd
@@ -5560,23 +5561,23 @@ This lookup table stores group type information.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: grp_id
 
-            *Grp id* 
-        
+            *Grp id*
+
         .. py:attribute:: grp_name
 
-            *Grp name* 
-        
+            *Grp name*
+
         .. py:attribute:: grp_desc
 
-            *Grp desc* 
-        
+            *Grp desc*
+
 
 
 HdrCd
@@ -5591,47 +5592,47 @@ Electronic filing record header data
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: amend_id
 
             *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-        
+
         .. py:attribute:: cal_ver
 
-            *Cal ver* 
-        
+            *Cal ver*
+
         .. py:attribute:: ef_type
 
-            *Ef type* 
-        
+            *Ef type*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: hdr_comment
 
-            *Hdr comment* 
-        
+            *Hdr comment*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: soft_name
 
-            *Soft name* 
-        
+            *Soft name*
+
         .. py:attribute:: soft_ver
 
-            *Soft ver* 
-        
+            *Soft ver*
+
         .. py:attribute:: state_cd
 
-            *State cd* 
-        
+            *State cd*
+
 
 
 HeaderCd
@@ -5646,59 +5647,59 @@ Lookup table used to report form 460 information in the AMS.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: line_number
 
-            *Line number* 
-        
+            *Line number*
+
         .. py:attribute:: form_id
 
-            *Form id* 
-        
+            *Form id*
+
         .. py:attribute:: rec_type
 
-            *Record type* 
-        
+            *Record type*
+
         .. py:attribute:: section_label
 
-            *Section label* 
-        
+            *Section label*
+
         .. py:attribute:: comments1
 
-            *Comments1* 
-        
+            *Comments1*
+
         .. py:attribute:: comments2
 
-            *Comments2* 
-        
+            *Comments2*
+
         .. py:attribute:: label
 
-            *Label* 
-        
+            *Label*
+
         .. py:attribute:: column_a
 
-            *Column a* 
-        
+            *Column a*
+
         .. py:attribute:: column_b
 
-            *Column b* 
-        
+            *Column b*
+
         .. py:attribute:: column_c
 
-            *Column c* 
-        
+            *Column c*
+
         .. py:attribute:: show_c
 
-            *Show c* 
-        
+            *Show c*
+
         .. py:attribute:: show_b
 
-            *Show b* 
-        
+            *Show b*
+
 
 
 ImageLinksCd
@@ -5713,31 +5714,31 @@ This table links images to filers and accounts.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: img_link_id
 
-            *Img link id* 
-        
+            *Img link id*
+
         .. py:attribute:: img_link_type
 
-            *Img link type* 
-        
+            *Img link type*
+
         .. py:attribute:: img_id
 
-            *Img id* 
-        
+            *Img id*
+
         .. py:attribute:: img_type
 
-            *Img type* 
-        
+            *Img type*
+
         .. py:attribute:: img_dt
 
-            *Img dt* 
-        
+            *Img dt*
+
 
 
 LegislativeSessionsCd
@@ -5752,23 +5753,23 @@ Legislative session, begin and end dates look up table.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: begin_date
 
-            *Begin date* 
-        
+            *Begin date*
+
         .. py:attribute:: end_date
 
-            *End date* 
-        
+            *End date*
+
 
 
 LobbyingChgLogCd
@@ -5783,107 +5784,107 @@ LobbyingChgLogCd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: change_no
 
-            *Change no* 
-        
+            *Change no*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: log_dt
 
-            *Log dt* 
-        
+            *Log dt*
+
         .. py:attribute:: filer_type
 
-            *Filer type* 
-        
+            *Filer type*
+
         .. py:attribute:: correction_flag
 
-            *Correction flag* 
-        
+            *Correction flag*
+
         .. py:attribute:: action
 
-            *Action* 
-        
+            *Action*
+
         .. py:attribute:: attribute_changed
 
-            *Attribute changed* 
-        
+            *Attribute changed*
+
         .. py:attribute:: ethics_dt
 
-            *Ethics dt* 
-        
+            *Ethics dt*
+
         .. py:attribute:: interests
 
-            *Interests* 
-        
+            *Interests*
+
         .. py:attribute:: filer_full_name
 
-            *Filer full name* 
-        
+            *Filer full name*
+
         .. py:attribute:: filer_city
 
-            *Filer city* 
-        
+            *Filer city*
+
         .. py:attribute:: filer_st
 
-            *Filer st* 
-        
+            *Filer st*
+
         .. py:attribute:: filer_zip
 
-            *Filer zip* 
-        
+            *Filer zip*
+
         .. py:attribute:: filer_phone
 
-            *Filer phone* 
-        
+            *Filer phone*
+
         .. py:attribute:: entity_type
 
-            *Entity type* 
-        
+            *Entity type*
+
         .. py:attribute:: entity_name
 
-            *Entity name* 
-        
+            *Entity name*
+
         .. py:attribute:: entity_city
 
-            *Entity city* 
-        
+            *Entity city*
+
         .. py:attribute:: entity_st
 
-            *Entity st* 
-        
+            *Entity st*
+
         .. py:attribute:: entity_zip
 
-            *Entity zip* 
-        
+            *Entity zip*
+
         .. py:attribute:: entity_phone
 
-            *Entity phone* 
-        
+            *Entity phone*
+
         .. py:attribute:: entity_id
 
-            *Entity id* 
-        
+            *Entity id*
+
         .. py:attribute:: responsible_officer
 
-            *Responsible officer* 
-        
+            *Responsible officer*
+
         .. py:attribute:: effect_dt
 
-            *Effect dt* 
-        
+            *Effect dt*
+
 
 
 LobbyistContributions1Cd
@@ -5898,39 +5899,39 @@ LobbyistContributions1Cd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filing_period_start_dt
 
-            *Filing period start dt* 
-        
+            *Filing period start dt*
+
         .. py:attribute:: filing_period_end_dt
 
-            *Filing period end dt* 
-        
+            *Filing period end dt*
+
         .. py:attribute:: contribution_dt
 
-            *Contribution dt* 
-        
+            *Contribution dt*
+
         .. py:attribute:: recipient_name
 
-            *Recipient name* 
-        
+            *Recipient name*
+
         .. py:attribute:: recipient_id
 
-            *Recipient id* 
-        
+            *Recipient id*
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
 
 
 LobbyistContributions2Cd
@@ -5946,39 +5947,39 @@ disclosure table (Lobbyist Contributions 3)
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filing_period_start_dt
 
-            *Filing period start dt* 
-        
+            *Filing period start dt*
+
         .. py:attribute:: filing_period_end_dt
 
-            *Filing period end dt* 
-        
+            *Filing period end dt*
+
         .. py:attribute:: contribution_dt
 
-            *Contribution dt* 
-        
+            *Contribution dt*
+
         .. py:attribute:: recipient_name
 
-            *Recipient name* 
-        
+            *Recipient name*
+
         .. py:attribute:: recipient_id
 
-            *Recipient id* 
-        
+            *Recipient id*
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
 
 
 LobbyistContributions3Cd
@@ -5993,39 +5994,39 @@ Lobbyist contribution disclosure table.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filing_period_start_dt
 
-            *Filing period start dt* 
-        
+            *Filing period start dt*
+
         .. py:attribute:: filing_period_end_dt
 
-            *Filing period end dt* 
-        
+            *Filing period end dt*
+
         .. py:attribute:: contribution_dt
 
-            *Contribution dt* 
-        
+            *Contribution dt*
+
         .. py:attribute:: recipient_name
 
-            *Recipient name* 
-        
+            *Recipient name*
+
         .. py:attribute:: recipient_id
 
-            *Recipient id* 
-        
+            *Recipient id*
+
         .. py:attribute:: amount
 
-            *Amount* 
-        
+            *Amount*
+
 
 
 LobbyistEmpLobbyist1Cd
@@ -6040,35 +6041,35 @@ LobbyistEmpLobbyist1Cd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: lobbyist_id
 
-            *Lobbyist id* 
-        
+            *Lobbyist id*
+
         .. py:attribute:: employer_id
 
-            *Employer id* 
-        
+            *Employer id*
+
         .. py:attribute:: lobbyist_last_name
 
-            *Lobbyist last name* 
-        
+            *Lobbyist last name*
+
         .. py:attribute:: lobbyist_first_name
 
-            *Lobbyist first name* 
-        
+            *Lobbyist first name*
+
         .. py:attribute:: employer_name
 
-            *Employer name* 
-        
+            *Employer name*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
 
 
 LobbyistEmpLobbyist2Cd
@@ -6083,35 +6084,35 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: lobbyist_id
 
-            *Lobbyist id* 
-        
+            *Lobbyist id*
+
         .. py:attribute:: employer_id
 
-            *Employer id* 
-        
+            *Employer id*
+
         .. py:attribute:: lobbyist_last_name
 
-            *Lobbyist last name* 
-        
+            *Lobbyist last name*
+
         .. py:attribute:: lobbyist_first_name
 
-            *Lobbyist first name* 
-        
+            *Lobbyist first name*
+
         .. py:attribute:: employer_name
 
-            *Employer name* 
-        
+            *Employer name*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
 
 
 LobbyistEmployer1Cd
@@ -6126,91 +6127,91 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: employer_id
 
-            *Employer id* 
-        
+            *Employer id*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: employer_name
 
-            *Employer name* 
-        
+            *Employer name*
+
         .. py:attribute:: current_qtr_amt
 
-            *Current qtr amt* 
-        
+            *Current qtr amt*
+
         .. py:attribute:: session_total_amt
 
-            *Session total amt* 
-        
+            *Session total amt*
+
         .. py:attribute:: contributor_id
 
-            *Contributor id* 
-        
+            *Contributor id*
+
         .. py:attribute:: interest_cd
 
-            *Interest cd* 
-        
+            *Interest cd*
+
         .. py:attribute:: interest_name
 
-            *Interest name* 
-        
+            *Interest name*
+
         .. py:attribute:: session_yr_1
 
-            *Session yr 1* 
-        
+            *Session yr 1*
+
         .. py:attribute:: session_yr_2
 
-            *Session yr 2* 
-        
+            *Session yr 2*
+
         .. py:attribute:: yr_1_ytd_amt
 
-            *Yr 1 ytd amt* 
-        
+            *Yr 1 ytd amt*
+
         .. py:attribute:: yr_2_ytd_amt
 
-            *Yr 2 ytd amt* 
-        
+            *Yr 2 ytd amt*
+
         .. py:attribute:: qtr_1
 
-            *Qtr 1* 
-        
+            *Qtr 1*
+
         .. py:attribute:: qtr_2
 
-            *Qtr 2* 
-        
+            *Qtr 2*
+
         .. py:attribute:: qtr_3
 
-            *Qtr 3* 
-        
+            *Qtr 3*
+
         .. py:attribute:: qtr_4
 
-            *Qtr 4* 
-        
+            *Qtr 4*
+
         .. py:attribute:: qtr_5
 
-            *Qtr 5* 
-        
+            *Qtr 5*
+
         .. py:attribute:: qtr_6
 
-            *Qtr 6* 
-        
+            *Qtr 6*
+
         .. py:attribute:: qtr_7
 
-            *Qtr 7* 
-        
+            *Qtr 7*
+
         .. py:attribute:: qtr_8
 
-            *Qtr 8* 
-        
+            *Qtr 8*
+
 
 
 LobbyistEmployer2Cd
@@ -6225,91 +6226,91 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: employer_id
 
-            *Employer id* 
-        
+            *Employer id*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: employer_name
 
-            *Employer name* 
-        
+            *Employer name*
+
         .. py:attribute:: current_qtr_amt
 
-            *Current qtr amt* 
-        
+            *Current qtr amt*
+
         .. py:attribute:: session_total_amt
 
-            *Session total amt* 
-        
+            *Session total amt*
+
         .. py:attribute:: contributor_id
 
-            *Contributor id* 
-        
+            *Contributor id*
+
         .. py:attribute:: interest_cd
 
-            *Interest cd* 
-        
+            *Interest cd*
+
         .. py:attribute:: interest_name
 
-            *Interest name* 
-        
+            *Interest name*
+
         .. py:attribute:: session_yr_1
 
-            *Session yr 1* 
-        
+            *Session yr 1*
+
         .. py:attribute:: session_yr_2
 
-            *Session yr 2* 
-        
+            *Session yr 2*
+
         .. py:attribute:: yr_1_ytd_amt
 
-            *Yr 1 ytd amt* 
-        
+            *Yr 1 ytd amt*
+
         .. py:attribute:: yr_2_ytd_amt
 
-            *Yr 2 ytd amt* 
-        
+            *Yr 2 ytd amt*
+
         .. py:attribute:: qtr_1
 
-            *Qtr 1* 
-        
+            *Qtr 1*
+
         .. py:attribute:: qtr_2
 
-            *Qtr 2* 
-        
+            *Qtr 2*
+
         .. py:attribute:: qtr_3
 
-            *Qtr 3* 
-        
+            *Qtr 3*
+
         .. py:attribute:: qtr_4
 
-            *Qtr 4* 
-        
+            *Qtr 4*
+
         .. py:attribute:: qtr_5
 
-            *Qtr 5* 
-        
+            *Qtr 5*
+
         .. py:attribute:: qtr_6
 
-            *Qtr 6* 
-        
+            *Qtr 6*
+
         .. py:attribute:: qtr_7
 
-            *Qtr 7* 
-        
+            *Qtr 7*
+
         .. py:attribute:: qtr_8
 
-            *Qtr 8* 
-        
+            *Qtr 8*
+
 
 
 LobbyistEmployer3Cd
@@ -6324,91 +6325,91 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: employer_id
 
-            *Employer id* 
-        
+            *Employer id*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: employer_name
 
-            *Employer name* 
-        
+            *Employer name*
+
         .. py:attribute:: current_qtr_amt
 
-            *Current qtr amt* 
-        
+            *Current qtr amt*
+
         .. py:attribute:: session_total_amt
 
-            *Session total amt* 
-        
+            *Session total amt*
+
         .. py:attribute:: contributor_id
 
-            *Contributor id* 
-        
+            *Contributor id*
+
         .. py:attribute:: interest_cd
 
-            *Interest cd* 
-        
+            *Interest cd*
+
         .. py:attribute:: interest_name
 
-            *Interest name* 
-        
+            *Interest name*
+
         .. py:attribute:: session_yr_1
 
-            *Session yr 1* 
-        
+            *Session yr 1*
+
         .. py:attribute:: session_yr_2
 
-            *Session yr 2* 
-        
+            *Session yr 2*
+
         .. py:attribute:: yr_1_ytd_amt
 
-            *Yr 1 ytd amt* 
-        
+            *Yr 1 ytd amt*
+
         .. py:attribute:: yr_2_ytd_amt
 
-            *Yr 2 ytd amt* 
-        
+            *Yr 2 ytd amt*
+
         .. py:attribute:: qtr_1
 
-            *Qtr 1* 
-        
+            *Qtr 1*
+
         .. py:attribute:: qtr_2
 
-            *Qtr 2* 
-        
+            *Qtr 2*
+
         .. py:attribute:: qtr_3
 
-            *Qtr 3* 
-        
+            *Qtr 3*
+
         .. py:attribute:: qtr_4
 
-            *Qtr 4* 
-        
+            *Qtr 4*
+
         .. py:attribute:: qtr_5
 
-            *Qtr 5* 
-        
+            *Qtr 5*
+
         .. py:attribute:: qtr_6
 
-            *Qtr 6* 
-        
+            *Qtr 6*
+
         .. py:attribute:: qtr_7
 
-            *Qtr 7* 
-        
+            *Qtr 7*
+
         .. py:attribute:: qtr_8
 
-            *Qtr 8* 
-        
+            *Qtr 8*
+
 
 
 LobbyistEmployerFirms1Cd
@@ -6423,31 +6424,31 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: employer_id
 
-            *Employer id* 
-        
+            *Employer id*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: termination_dt
 
-            *Termination dt* 
-        
+            *Termination dt*
+
 
 
 LobbyistEmployerFirms2Cd
@@ -6462,31 +6463,31 @@ LobbyistEmployerFirms2Cd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: employer_id
 
-            *Employer id* 
-        
+            *Employer id*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: termination_dt
 
-            *Termination dt* 
-        
+            *Termination dt*
+
 
 
 LobbyistFirm1Cd
@@ -6501,83 +6502,83 @@ LobbyistFirm1Cd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: current_qtr_amt
 
-            *Current qtr amt* 
-        
+            *Current qtr amt*
+
         .. py:attribute:: session_total_amt
 
-            *Session total amt* 
-        
+            *Session total amt*
+
         .. py:attribute:: contributor_id
 
-            *Contributor id* 
-        
+            *Contributor id*
+
         .. py:attribute:: session_yr_1
 
-            *Session yr 1* 
-        
+            *Session yr 1*
+
         .. py:attribute:: session_yr_2
 
-            *Session yr 2* 
-        
+            *Session yr 2*
+
         .. py:attribute:: yr_1_ytd_amt
 
-            *Yr 1 ytd amt* 
-        
+            *Yr 1 ytd amt*
+
         .. py:attribute:: yr_2_ytd_amt
 
-            *Yr 2 ytd amt* 
-        
+            *Yr 2 ytd amt*
+
         .. py:attribute:: qtr_1
 
-            *Qtr 1* 
-        
+            *Qtr 1*
+
         .. py:attribute:: qtr_2
 
-            *Qtr 2* 
-        
+            *Qtr 2*
+
         .. py:attribute:: qtr_3
 
-            *Qtr 3* 
-        
+            *Qtr 3*
+
         .. py:attribute:: qtr_4
 
-            *Qtr 4* 
-        
+            *Qtr 4*
+
         .. py:attribute:: qtr_5
 
-            *Qtr 5* 
-        
+            *Qtr 5*
+
         .. py:attribute:: qtr_6
 
-            *Qtr 6* 
-        
+            *Qtr 6*
+
         .. py:attribute:: qtr_7
 
-            *Qtr 7* 
-        
+            *Qtr 7*
+
         .. py:attribute:: qtr_8
 
-            *Qtr 8* 
-        
+            *Qtr 8*
+
 
 
 LobbyistFirm2Cd
@@ -6592,83 +6593,83 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: current_qtr_amt
 
-            *Current qtr amt* 
-        
+            *Current qtr amt*
+
         .. py:attribute:: session_total_amt
 
-            *Session total amt* 
-        
+            *Session total amt*
+
         .. py:attribute:: contributor_id
 
-            *Contributor id* 
-        
+            *Contributor id*
+
         .. py:attribute:: session_yr_1
 
-            *Session yr 1* 
-        
+            *Session yr 1*
+
         .. py:attribute:: session_yr_2
 
-            *Session yr 2* 
-        
+            *Session yr 2*
+
         .. py:attribute:: yr_1_ytd_amt
 
-            *Yr 1 ytd amt* 
-        
+            *Yr 1 ytd amt*
+
         .. py:attribute:: yr_2_ytd_amt
 
-            *Yr 2 ytd amt* 
-        
+            *Yr 2 ytd amt*
+
         .. py:attribute:: qtr_1
 
-            *Qtr 1* 
-        
+            *Qtr 1*
+
         .. py:attribute:: qtr_2
 
-            *Qtr 2* 
-        
+            *Qtr 2*
+
         .. py:attribute:: qtr_3
 
-            *Qtr 3* 
-        
+            *Qtr 3*
+
         .. py:attribute:: qtr_4
 
-            *Qtr 4* 
-        
+            *Qtr 4*
+
         .. py:attribute:: qtr_5
 
-            *Qtr 5* 
-        
+            *Qtr 5*
+
         .. py:attribute:: qtr_6
 
-            *Qtr 6* 
-        
+            *Qtr 6*
+
         .. py:attribute:: qtr_7
 
-            *Qtr 7* 
-        
+            *Qtr 7*
+
         .. py:attribute:: qtr_8
 
-            *Qtr 8* 
-        
+            *Qtr 8*
+
 
 
 LobbyistFirm3Cd
@@ -6683,83 +6684,83 @@ LobbyistFirm3Cd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: current_qtr_amt
 
-            *Current qtr amt* 
-        
+            *Current qtr amt*
+
         .. py:attribute:: session_total_amt
 
-            *Session total amt* 
-        
+            *Session total amt*
+
         .. py:attribute:: contributor_id
 
-            *Contributor id* 
-        
+            *Contributor id*
+
         .. py:attribute:: session_yr_1
 
-            *Session yr 1* 
-        
+            *Session yr 1*
+
         .. py:attribute:: session_yr_2
 
-            *Session yr 2* 
-        
+            *Session yr 2*
+
         .. py:attribute:: yr_1_ytd_amt
 
-            *Yr 1 ytd amt* 
-        
+            *Yr 1 ytd amt*
+
         .. py:attribute:: yr_2_ytd_amt
 
-            *Yr 2 ytd amt* 
-        
+            *Yr 2 ytd amt*
+
         .. py:attribute:: qtr_1
 
-            *Qtr 1* 
-        
+            *Qtr 1*
+
         .. py:attribute:: qtr_2
 
-            *Qtr 2* 
-        
+            *Qtr 2*
+
         .. py:attribute:: qtr_3
 
-            *Qtr 3* 
-        
+            *Qtr 3*
+
         .. py:attribute:: qtr_4
 
-            *Qtr 4* 
-        
+            *Qtr 4*
+
         .. py:attribute:: qtr_5
 
-            *Qtr 5* 
-        
+            *Qtr 5*
+
         .. py:attribute:: qtr_6
 
-            *Qtr 6* 
-        
+            *Qtr 6*
+
         .. py:attribute:: qtr_7
 
-            *Qtr 7* 
-        
+            *Qtr 7*
+
         .. py:attribute:: qtr_8
 
-            *Qtr 8* 
-        
+            *Qtr 8*
+
 
 
 LobbyistFirmEmployer1Cd
@@ -6774,55 +6775,55 @@ This is an undocumented model (Ask Matt)
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: filing_sequence
 
-            *Filing sequence* 
-        
+            *Filing sequence*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: employer_name
 
-            *Employer name* 
-        
+            *Employer name*
+
         .. py:attribute:: rpt_start
 
-            *Rpt start* 
-        
+            *Rpt start*
+
         .. py:attribute:: rpt_end
 
-            *Rpt end* 
-        
+            *Rpt end*
+
         .. py:attribute:: per_total
 
-            *Per total* 
-        
+            *Per total*
+
         .. py:attribute:: cum_total
 
-            *Cum total* 
-        
+            *Cum total*
+
         .. py:attribute:: lby_actvty
 
-            *Lby actvty* 
-        
+            *Lby actvty*
+
         .. py:attribute:: ext_lby_actvty
 
-            *Ext lby actvty* 
-        
+            *Ext lby actvty*
+
 
 
 LobbyistFirmEmployer2Cd
@@ -6837,55 +6838,55 @@ This is an undocumented model
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: filing_sequence
 
-            *Filing sequence* 
-        
+            *Filing sequence*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: employer_name
 
-            *Employer name* 
-        
+            *Employer name*
+
         .. py:attribute:: rpt_start
 
-            *Rpt start* 
-        
+            *Rpt start*
+
         .. py:attribute:: rpt_end
 
-            *Rpt end* 
-        
+            *Rpt end*
+
         .. py:attribute:: per_total
 
-            *Per total* 
-        
+            *Per total*
+
         .. py:attribute:: cum_total
 
-            *Cum total* 
-        
+            *Cum total*
+
         .. py:attribute:: lby_actvty
 
-            *Lby actvty* 
-        
+            *Lby actvty*
+
         .. py:attribute:: ext_lby_actvty
 
-            *Ext lby actvty* 
-        
+            *Ext lby actvty*
+
 
 
 LobbyistFirmLobbyist1Cd
@@ -6900,35 +6901,35 @@ It&#39;s an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: lobbyist_id
 
-            *Lobbyist id* 
-        
+            *Lobbyist id*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: lobbyist_last_name
 
-            *Lobbyist last name* 
-        
+            *Lobbyist last name*
+
         .. py:attribute:: lobbyist_first_name
 
-            *Lobbyist first name* 
-        
+            *Lobbyist first name*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
 
 
 LobbyistFirmLobbyist2Cd
@@ -6943,35 +6944,35 @@ LobbyistFirmLobbyist2Cd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: lobbyist_id
 
-            *Lobbyist id* 
-        
+            *Lobbyist id*
+
         .. py:attribute:: firm_id
 
-            *Firm id* 
-        
+            *Firm id*
+
         .. py:attribute:: lobbyist_last_name
 
-            *Lobbyist last name* 
-        
+            *Lobbyist last name*
+
         .. py:attribute:: lobbyist_first_name
 
-            *Lobbyist first name* 
-        
+            *Lobbyist first name*
+
         .. py:attribute:: firm_name
 
-            *Firm name* 
-        
+            *Firm name*
+
         .. py:attribute:: session_id
 
-            *Session id* 
-        
+            *Session id*
+
 
 
 LookupCode
@@ -6986,23 +6987,23 @@ LookupCode
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: code_type
 
-            *Code type* 
-        
+            *Code type*
+
         .. py:attribute:: code_id
 
-            *Code id* 
-        
+            *Code id*
+
         .. py:attribute:: code_desc
 
-            *Code desc* 
-        
+            *Code desc*
+
 
 
 NamesCd
@@ -7017,51 +7018,51 @@ NamesCd
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: namid
 
-            *Namid* 
-        
+            *Namid*
+
         .. py:attribute:: naml
 
-            *Naml* 
-        
+            *Naml*
+
         .. py:attribute:: namf
 
-            *Namf* 
-        
+            *Namf*
+
         .. py:attribute:: namt
 
-            *Namt* 
-        
+            *Namt*
+
         .. py:attribute:: nams
 
-            *Nams* 
-        
+            *Nams*
+
         .. py:attribute:: moniker
 
-            *Moniker* 
-        
+            *Moniker*
+
         .. py:attribute:: moniker_pos
 
-            *Moniker pos* 
-        
+            *Moniker pos*
+
         .. py:attribute:: namm
 
-            *Namm* 
-        
+            *Namm*
+
         .. py:attribute:: fullname
 
-            *Fullname* 
-        
+            *Fullname*
+
         .. py:attribute:: naml_search
 
-            *Naml search* 
-        
+            *Naml search*
+
 
 
 ReceivedFilingsCd
@@ -7076,39 +7077,39 @@ This is undocumented. J M needs to describe this table.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: filer_id
 
             *Filer ID* Filer's unique identification number
-        
+
         .. py:attribute:: filing_file_name
 
-            *Filing file name* 
-        
+            *Filing file name*
+
         .. py:attribute:: received_date
 
-            *Received date* 
-        
+            *Received date*
+
         .. py:attribute:: filing_directory
 
-            *Filing directory* 
-        
+            *Filing directory*
+
         .. py:attribute:: filing_id
 
             *Filing ID* Unique filing identificiation number
-        
+
         .. py:attribute:: form_id
 
-            *Form id* 
-        
+            *Form id*
+
         .. py:attribute:: receive_comment
 
-            *Receive comment* 
-        
+            *Receive comment*
+
 
 
 ReportsCd
@@ -7123,43 +7124,43 @@ This is an undocumented model.
 
     **Fields**
 
-        
+
         .. py:attribute:: id
 
-            *ID* 
-        
+            *ID*
+
         .. py:attribute:: rpt_id
 
             *Rpt id* Unique identification number
-        
+
         .. py:attribute:: rpt_name
 
             *Rpt name* Name of the report
-        
+
         .. py:attribute:: rpt_desc_field
 
             *Rpt desc field* Description of the report
-        
+
         .. py:attribute:: path
 
             *Path* Reportpath
-        
+
         .. py:attribute:: data_object
 
-            *Data object* 
-        
+            *Data object*
+
         .. py:attribute:: parms_flg_y_n
 
             *Parms flg y n* Parameters indication flag
-        
+
         .. py:attribute:: rpt_type
 
             *Rpt type* Type of the report
-        
+
         .. py:attribute:: parm_definition
 
             *Parm definition* Parameter definition
-        
+
 
 
 

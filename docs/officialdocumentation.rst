@@ -1,5 +1,5 @@
-Official documentation
-======================
+Official CAL-ACCESS documentation
+=================================
 
 The official CAL-ACCESS documentation, `as published by California's
 Secretary of State <http://www.sos.ca.gov/prd/cal-access/>`_.
@@ -52,7 +52,7 @@ Forms
 
 California file .CAL format
 ---------------------------
- 
+
 .. raw:: html
 
     <div style="margin-bottom:35px;" id="DV-viewer-1308003-cal-access-cal-format" class="DV-container"></div>
@@ -71,4 +71,3 @@ California file .CAL format
       <br />
       <a href="http://s3.documentcloud.org/documents/1308003/cal-access-cal-format.txt">CAL-ACCESS: .CAL format (Text)</a>
     </noscript>
-
