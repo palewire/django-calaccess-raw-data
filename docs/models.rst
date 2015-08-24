@@ -4951,19 +4951,19 @@ Contains acronyms and their meaning.
         
         .. py:attribute:: acronym
 
-            *Acronym* 
+            *Acronym* Acronym text value
         
         .. py:attribute:: stands_for
 
-            *Stands for* 
+            *Stands for* Definition of the acronym
         
         .. py:attribute:: effect_dt
 
-            *Effect dt* 
+            *Effect dt* Effective date for the acronym
         
         .. py:attribute:: a_desc
 
-            *A desc* 
+            *A desc* Description of the acronym
         
 
 
@@ -4988,7 +4988,7 @@ desplayed by the AMS.
         
         .. py:attribute:: adrid
 
-            *Adrid* 
+            *Adrid* Address indentification number
         
         .. py:attribute:: city
 

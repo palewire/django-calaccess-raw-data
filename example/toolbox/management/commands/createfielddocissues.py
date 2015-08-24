@@ -58,7 +58,7 @@ class Command(CalAccessCommand):
                 calculate.percentage(missing_count, field_count)
             )
         )
-        for model, field in missing_list[50:101]:
+        for model, field in missing_list[611:]:
             # For now we are excluding the 'other' model module to
             # avoid overkill
             if model().klass_group != 'other':
@@ -101,7 +101,7 @@ class Command(CalAccessCommand):
             labels=self.labels,
             milestone=self.milestone
         )
-        time.sleep(2)
+        time.sleep(2.5)
 
 TITLE_TEMPLATE = """
 Add documentation for the ``%s`` field on the ``%s`` database model
