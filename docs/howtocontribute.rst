@@ -4,42 +4,48 @@ How to contribute
 This walkthrough will show you how to install the source code of this application
 to fix bugs and develop new features.
 
-First create a new virtualenv.
+Preparing a development environment
+-----------------------------------
+
+It is not required, but it is recommended that development of the library
+be done from within a contained virtual environment.
+
+One way to accomplish is with Python's ``virtualenv`` tool and its helpful companion ``virtualenvwrapper``. If you have that installed a new project can be started with
+the following:
 
 .. code-block:: bash
 
-    $ virtualenv django-calaccess-raw-data
+    $ mkproject django-calaccess-raw-data
 
-Jump in.
-
-.. code-block:: bash
-
-    $ cd django-calaccess-raw-data
-    $ . bin/activate
-
-Clone the repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_.
+That will jump into a new folder in your code directory, where you can clone our code repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_.
 
 .. code-block:: bash
 
-    $ git clone https://github.com/california-civic-data-coalition/django-calaccess-raw-data.git repo
+    $ git clone https://github.com/california-civic-data-coalition/django-calaccess-raw-data.git .
 
-Move into it and install the Python dependencies.
+Next install the other Python libraries our code depends on.
 
 .. code-block:: bash
 
-    $ cd repo
     $ pip install -r requirements_dev.txt
 
-Make sure you have MySQL or PostgreSQL installed, because we don't currently support any other database backends.
+Connecting to a local database
+------------------------------
 
-If you want to use MySQL. Create a new database named ``calaccess`` like this:
+Unlike a typical Django project, this application only supports the MySQL and PostgreSQL database backends. This is because we enlist specialized tools to load the immense amount of source data more quickly than Django typically allows.
+
+We haven't developer similar routines for SQLite and the other Django backends yet, but we're working on it. This might be something you could work on!
+
+If you choose MySQL
+~~~~~~~~~~~~~~~~~~~
+
+Create a new database named ``calaccess`` like this:
 
 .. code-block:: bash
 
     mysqladmin -h localhost -u root -p create calaccess
 
-Then create a file at ``example/project/settings_local.py`` to save your custom database credentials. That
-might look something like this.
+Create a file at ``example/project/settings_local.py`` to save your custom database credentials. That might look something like this.
 
 .. code-block:: python
 
@@ -57,7 +63,16 @@ might look something like this.
         }
     }
 
-If you'd prefer to use PostgreSQL, your local settings should be more like this:
+If you choose PostgreSQL
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create the database the PostgreSQL way.
+
+.. code-block:: bash
+
+    $ createdb calaccess -U postgres
+
+Create a file at ``example/project/settings_local.py`` to save your custom database credentials. That might look something like this.
 
 .. code-block:: python
 
@@ -72,13 +87,10 @@ If you'd prefer to use PostgreSQL, your local settings should be more like this:
         }
     }
 
-This create the database the PostgreSQL way.
+Once the database is configured
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
-
-    $ createdb calaccess
-
-Finally create your database and get to work.
+Create the tables and get to work.
 
 .. code-block:: bash
 

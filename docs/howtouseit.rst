@@ -32,7 +32,7 @@ Connecting to a local database
 
 Also in the ``settings.py`` file, you will need to configure Django so it can connect to a database.
 
-Unlike a typical Django project, this application only supports the MySQL and PostgreSQL database backends. This is because we enlist specialized tools to load the immense amount of source data more quickly than Django typically allows. We haven't worked out those routines for SQLite and the other Django backends yet, but we're working on it.
+Unlike a typical Django project, this application only supports the MySQL and PostgreSQL database backends. This is because we enlist specialized tools to load the immense amount of source data more quickly than Django typically allows. We haven't wdeveloped those routines for SQLite and the other Django backends yet, but we're working on it.
 
 Pick one of the two and continue below.
 
