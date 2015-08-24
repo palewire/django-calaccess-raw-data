@@ -3,10 +3,6 @@ django-calaccess-raw-data
 
 A Django app to download, extract and load campaign finance and lobbying activity data from the California Secretary of State's `CAL-ACCESS <http://www.sos.ca.gov/prd/cal-access/>`_  database
 
-Intended as a base layer below more sophisticated apps, like `django-calaccess-campaign-browser <http://django-calaccess-campaign-browser.californiacivicdata.org/>`_, that transform the source data and load it into simplified models to serve as a platform for investigative analysis.
-
-.. image:: /_static/application-layers.png
-
 Documentation
 -------------
 
