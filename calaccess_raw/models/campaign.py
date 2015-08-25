@@ -437,7 +437,10 @@ slate mailer organization)'),
     )
     mail_st = fields.CharField(db_column='MAIL_ST', max_length=4, blank=True)
     mail_zip4 = fields.CharField(
-        db_column='MAIL_ZIP4', max_length=10, blank=True
+        db_column='MAIL_ZIP4',
+        max_length=10,
+        blank=True,
+        help_text="Zipcode portion of the entity's mailing address"
     )
     day_phone = fields.CharField(
         db_column='DAY_PHONE', max_length=20, blank=True
