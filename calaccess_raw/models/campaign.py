@@ -433,7 +433,8 @@ slate mailer organization)'),
     )
     item_cd = fields.CharField(db_column='ITEM_CD', max_length=4, blank=True)
     mail_city = fields.CharField(
-        db_column='MAIL_CITY', max_length=25, blank=True
+        db_column='MAIL_CITY', max_length=25, blank=True,
+        help_text="City portion of the entity's mailing address"
     )
     mail_st = fields.CharField(
         db_column='MAIL_ST',
