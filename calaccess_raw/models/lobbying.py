@@ -1564,9 +1564,16 @@ original filing and 1 to 999 amendments.",
         help_text='Employing client city'
     )
     cli_namf = fields.CharField(
-        max_length=45, db_column='CLI_NAMF', blank=True
+        max_length=45,
+        db_column='CLI_NAMF',
+        blank=True,
+        help_text='Employing client first name'
     )
-    cli_naml = fields.CharField(max_length=200, db_column='CLI_NAML')
+    cli_naml = fields.CharField(
+        max_length=200,
+        db_column='CLI_NAML',
+        help_text='Employing client last name'
+    )
     cli_nams = fields.CharField(
         max_length=10,
         db_column='CLI_NAMS',
@@ -1574,7 +1581,10 @@ original filing and 1 to 999 amendments.",
         help_text="Employing client suffix"
     )
     cli_namt = fields.CharField(
-        max_length=10, db_column='CLI_NAMT', blank=True
+        max_length=10,
+        db_column='CLI_NAMT',
+        blank=True,
+        help_text='Employing client prefix or title'
     )
     cli_phon = fields.CharField(
         max_length=20,
@@ -1660,23 +1670,37 @@ Part 2B Client/Employer"
         max_length=30,
         db_column='SUB_CITY',
         blank=True,
-        help_text='Sub-contracting lobbying firm city'
+        help_text='Subcontracting lobbying firm city'
     )
     sub_name = fields.CharField(
         max_length=200,
         db_column='SUB_NAME',
         blank=True,
-        help_text='sub-contracting lobbying firms name'
+        help_text='Subcontracting lobbying firms name'
     )
     sub_phon = fields.CharField(
-        max_length=20, db_column='SUB_PHON', blank=True
+        max_length=20,
+        db_column='SUB_PHON',
+        blank=True,
+        help_text='Subcontracting lobbying firm phone number'
     )
-    sub_st = fields.CharField(max_length=2, db_column='SUB_ST', blank=True)
+    sub_st = fields.CharField(
+        max_length=2,
+        db_column='SUB_ST',
+        blank=True,
+        help_text='Subcontracting lobbying firm state'
+    )
     sub_zip4 = fields.CharField(
-        max_length=10, db_column='SUB_ZIP4', blank=True
+        max_length=10,
+        db_column='SUB_ZIP4',
+        blank=True,
+        help_text='Subcontracting lobbying firm ZIP Code'
     )
     subfirm_id = fields.CharField(
-        max_length=9, db_column='SUBFIRM_ID', blank=True
+        max_length=9,
+        db_column='SUBFIRM_ID',
+        blank=True,
+        help_text='Identification number of subcontracting lobbying firm'
     )
 
     class Meta:
