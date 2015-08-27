@@ -1579,14 +1579,19 @@ original filing and 1 to 999 amendments.",
         max_length=2,
         db_column='CLI_ST',
         blank=True,
-        help_text='Employing client State'
+        help_text='Employing client state'
     )
-    cli_zip4 = fields.CharField(max_length=10, db_column='CLI_ZIP4')
+    cli_zip4 = fields.CharField(
+        max_length=10,
+        db_column='CLI_ZIP4',
+        help_text='Employing client ZIP Code'
+    )
     client_id = fields.CharField(
         max_length=9,
         db_column='CLIENT_ID',
         blank=True,
-        help_text="Identification number of the Part 2A employer or \Part 2B Client/Employer"
+        help_text="Identification number of the Part 2A employer or \
+Part 2B Client/Employer"
     )
     con_period = fields.CharField(
         max_length=30,
