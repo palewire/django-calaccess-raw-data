@@ -1620,7 +1620,7 @@ original filing and 1 to 999 amendments.",
         max_length=30, db_column='SUB_CITY', blank=True
     )
     sub_name = fields.CharField(
-        max_length=200, db_column='SUB_NAME', blank=True
+        max_length=200, db_column='SUB_NAME', blank=True, help_text='sub-contracting lobbying firms name'
     )
     sub_phon = fields.CharField(
         max_length=20, db_column='SUB_PHON', blank=True
