@@ -1537,7 +1537,7 @@ class LempCd(CalAccessBaseModel):
         F601 Part 2 B
     """
     agencylist = fields.CharField(
-        max_length=200, db_column='AGENCYLIST', blank=True
+        max_length=200, db_column='AGENCYLIST', blank=True, help_text='Agencies to be lobbied'
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
