@@ -420,24 +420,56 @@ slate mailer organization)'),
         choices=ENTITY_CODE_CHOICES,
     )
     enty_naml = fields.CharField(
-        db_column='ENTY_NAML', max_length=194, blank=True
+        db_column='ENTY_NAML',
+        max_length=194,
+        blank=True,
+        help_text="Entity's business name or last name if the entity is an \
+individual"
     )
     enty_namf = fields.CharField(
-        db_column='ENTY_NAMF', max_length=34, blank=True
+        db_column='ENTY_NAMF',
+        max_length=34,
+        blank=True,
+        help_text="Entity's first name if the entity is an individual"
     )
     enty_namt = fields.CharField(
-        db_column='ENTY_NAMT', max_length=9, blank=True
+        db_column='ENTY_NAMT',
+        max_length=9,
+        blank=True,
+        help_text="Entity's name prefix or title if the entity is an \
+individual"
     )
     enty_nams = fields.CharField(
-        db_column='ENTY_NAMS', max_length=10, blank=True
+        db_column='ENTY_NAMS',
+        max_length=10,
+        blank=True,
+        help_text="Entity's name suffix if the entity is an individual"
     )
-    item_cd = fields.CharField(db_column='ITEM_CD', max_length=4, blank=True)
+    item_cd = fields.CharField(
+        db_column='ITEM_CD',
+        max_length=4,
+        blank=True,
+        help_text="Section of the Statement of Organization this \
+itemization relates to. See CAL document for the definition \
+of legal values for this column."
+    )
     mail_city = fields.CharField(
-        db_column='MAIL_CITY', max_length=25, blank=True
+        db_column='MAIL_CITY',
+        max_length=25,
+        blank=True,
+        help_text="City portion of the entity's mailing address"
     )
-    mail_st = fields.CharField(db_column='MAIL_ST', max_length=4, blank=True)
+    mail_st = fields.CharField(
+        db_column='MAIL_ST',
+        max_length=4,
+        blank=True,
+        help_text="State portion of the entity's mailing address"
+    )
     mail_zip4 = fields.CharField(
-        db_column='MAIL_ZIP4', max_length=10, blank=True
+        db_column='MAIL_ZIP4',
+        max_length=10,
+        blank=True,
+        help_text="Zipcode portion of the entity's mailing address"
     )
     day_phone = fields.CharField(
         db_column='DAY_PHONE', max_length=20, blank=True
@@ -450,40 +482,95 @@ slate mailer organization)'),
     )
     cmte_id = fields.IntegerField(db_column='CMTE_ID', blank=True, null=True)
     ind_group = fields.CharField(
-        db_column='IND_GROUP', max_length=87, blank=True
+        db_column='IND_GROUP',
+        max_length=87,
+        blank=True,
+        help_text="Industry group/affiliation description"
     )
     office_cd = fields.CharField(
-        db_column='OFFICE_CD', max_length=4, blank=True
+        db_column='OFFICE_CD',
+        max_length=4,
+        blank=True,
+        help_text="Code that identifies the office being sought. See \
+CAL document for a list of valid codes."
     )
     offic_dscr = fields.CharField(
-        db_column='OFFIC_DSCR', max_length=40, blank=True
+        db_column='OFFIC_DSCR',
+        max_length=40,
+        blank=True,
+        help_text="Office sought description used if the office sought code \
+(OFFICE_CD) equals other (OTH)."
     )
-    juris_cd = fields.CharField(db_column='JURIS_CD', max_length=4, blank=True)
+    juris_cd = fields.CharField(
+        db_column='JURIS_CD',
+        max_length=4,
+        blank=True,
+        help_text="Office jurisdiction code. See CAL document for a \
+list of legal values."
+    )
     juris_dscr = fields.CharField(
-        db_column='JURIS_DSCR', max_length=40, blank=True
+        db_column='JURIS_DSCR',
+        max_length=40,
+        blank=True,
+        help_text="Office jurisdiction description provided if the jurisdiction \
+code (JURIS_CD) equals other (OTH)."
     )
-    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
+    dist_no = fields.CharField(
+        db_column='DIST_NO',
+        max_length=4,
+        blank=True,
+        help_text="Office district number for Senate, Assembly, and Board \
+of Equalization districts."
+    )
     off_s_h_cd = fields.CharField(
-        db_column='OFF_S_H_CD', max_length=4, blank=True
+        db_column='OFF_S_H_CD',
+        max_length=4,
+        blank=True,
+        help_text="Office sought/held code. Legal values are 'S' for sought \
+and 'H' for held."
     )
     non_pty_cb = fields.CharField(
-        db_column='NON_PTY_CB', max_length=4, blank=True
+        db_column='NON_PTY_CB',
+        max_length=4,
+        blank=True,
+        help_text="Non-partisan check-box. Legal values are 'X' and null."
     )
     party_name = fields.CharField(
-        db_column='PARTY_NAME', max_length=63, blank=True
+        db_column='PARTY_NAME',
+        max_length=63,
+        blank=True,
+        help_text="Name of party (if partisan)"
     )
-    bal_num = fields.CharField(db_column='BAL_NUM', max_length=7, blank=True)
+    bal_num = fields.CharField(
+        db_column='BAL_NUM',
+        max_length=7,
+        blank=True,
+        help_text="Ballot measure number or letter"
+    )
     bal_juris = fields.CharField(
-        db_column='BAL_JURIS', max_length=40, blank=True
+        db_column='BAL_JURIS',
+        max_length=40,
+        blank=True,
+        help_text="Jurisdiction of ballot measure"
     )
     sup_opp_cd = fields.CharField(
-        db_column='SUP_OPP_CD', max_length=4, blank=True
+        db_column='SUP_OPP_CD',
+        max_length=4,
+        blank=True,
+        help_text="Support/oppose code (S/O). Legal values are 'S' for \
+support and 'O' for oppose."
     )
     year_elect = fields.CharField(
-        db_column='YEAR_ELECT', max_length=4, blank=True
+        db_column='YEAR_ELECT',
+        max_length=4,
+        blank=True,
+        help_text="Year of election"
     )
     pof_title = fields.CharField(
-        db_column='POF_TITLE', max_length=44, blank=True
+        db_column='POF_TITLE',
+        max_length=44,
+        blank=True,
+        help_text="Position/title of the principal officer"
     )
 
     class Meta:

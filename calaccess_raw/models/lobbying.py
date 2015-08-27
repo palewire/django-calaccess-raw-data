@@ -1537,7 +1537,7 @@ class LempCd(CalAccessBaseModel):
         F601 Part 2 B
     """
     agencylist = fields.CharField(
-        max_length=200, db_column='AGENCYLIST', blank=True
+        max_length=200, db_column='AGENCYLIST', blank=True, help_text='Agencies to be lobbied'
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1566,18 +1566,18 @@ original filing and 1 to 999 amendments.",
     cli_phon = fields.CharField(
         max_length=20, db_column='CLI_PHON', blank=True
     )
-    cli_st = fields.CharField(max_length=2, db_column='CLI_ST', blank=True)
+    cli_st = fields.CharField(max_length=2, db_column='CLI_ST', blank=True, help_text='Employing client State')
     cli_zip4 = fields.CharField(max_length=10, db_column='CLI_ZIP4')
     client_id = fields.CharField(
         max_length=9, db_column='CLIENT_ID', blank=True
     )
     con_period = fields.CharField(
-        max_length=30, db_column='CON_PERIOD', blank=True
+        max_length=30, db_column='CON_PERIOD', blank=True, help_text='Identification number of the Part 2A employer or Part 2B Client/Employer'
     )
     descrip = fields.CharField(
-        max_length=100, db_column='DESCRIP', blank=True
+        max_length=100, db_column='DESCRIP', blank=True, help_text='Description of employer/client lobbying interest'
     )
-    eff_date = fields.DateField(null=True, db_column='EFF_DATE', blank=True)
+    eff_date = fields.DateField(null=True, db_column='EFF_DATE', blank=True, help_text='Effective Date of Lobbying Contract')
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -1617,10 +1617,10 @@ original filing and 1 to 999 amendments.",
     #     max_length=55, db_column='SUB_ADR2', blank=True
     # )
     sub_city = fields.CharField(
-        max_length=30, db_column='SUB_CITY', blank=True
+        max_length=30, db_column='SUB_CITY', blank=True, help_text='Sub-contracting lobbying firm city'
     )
     sub_name = fields.CharField(
-        max_length=200, db_column='SUB_NAME', blank=True
+        max_length=200, db_column='SUB_NAME', blank=True, help_text='sub-contracting lobbying firms name'
     )
     sub_phon = fields.CharField(
         max_length=20, db_column='SUB_PHON', blank=True
