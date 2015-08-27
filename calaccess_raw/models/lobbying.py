@@ -1507,7 +1507,10 @@ original filing and 1 to 999 amendments.",
         max_length=45, db_column='SUBJ_NAMS', blank=True
     )
     subj_namt = fields.CharField(
-        max_length=45, db_column='SUBJ_NAMT', blank=True
+        max_length=45,
+        db_column='SUBJ_NAMT',
+        blank=True,
+        help_text="Prefix/Title of employer/client subject of lobbying"
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
