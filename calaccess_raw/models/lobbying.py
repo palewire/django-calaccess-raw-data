@@ -1558,7 +1558,11 @@ original filing and 1 to 999 amendments.",
     # cli_adr2 = fields.CharField(
     #     max_length=55, db_column='CLI_ADR2', blank=True
     # )
-    cli_city = fields.CharField(max_length=30, db_column='CLI_CITY')
+    cli_city = fields.CharField(
+        max_length=30,
+        db_column='CLI_CITY',
+        help_text='Employing client city'
+    )
     cli_namf = fields.CharField(
         max_length=45, db_column='CLI_NAMF', blank=True
     )
