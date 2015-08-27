@@ -1564,7 +1564,10 @@ original filing and 1 to 999 amendments.",
     )
     cli_naml = fields.CharField(max_length=200, db_column='CLI_NAML')
     cli_nams = fields.CharField(
-        max_length=10, db_column='CLI_NAMS', blank=True
+        max_length=10,
+        db_column='CLI_NAMS',
+        blank=True,
+        help_text="Employing client suffix"
     )
     cli_namt = fields.CharField(
         max_length=10, db_column='CLI_NAMT', blank=True
