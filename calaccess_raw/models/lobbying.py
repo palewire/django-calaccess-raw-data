@@ -1577,7 +1577,7 @@ original filing and 1 to 999 amendments.",
     descrip = fields.CharField(
         max_length=100, db_column='DESCRIP', blank=True
     )
-    eff_date = fields.DateField(null=True, db_column='EFF_DATE', blank=True)
+    eff_date = fields.DateField(null=True, db_column='EFF_DATE', blank=True, help_text='Effective Date of Lobbying Contract')
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
