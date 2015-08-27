@@ -1572,7 +1572,7 @@ original filing and 1 to 999 amendments.",
         max_length=9, db_column='CLIENT_ID', blank=True
     )
     con_period = fields.CharField(
-        max_length=30, db_column='CON_PERIOD', blank=True
+        max_length=30, db_column='CON_PERIOD', blank=True, help_text='Identification number of the Part 2A employer or Part 2B Client/Employer'
     )
     descrip = fields.CharField(
         max_length=100, db_column='DESCRIP', blank=True, help_text='Description of employer/client lobbying interest'
