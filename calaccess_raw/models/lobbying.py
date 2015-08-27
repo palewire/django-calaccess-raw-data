@@ -1533,11 +1533,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LempCd(CalAccessBaseModel):
     """
-    Lobbyist Employers/Subcontracted Clients data from
-
-        F601 -- Lobbying Firm Registration Statement
-        F601 Part 2 A
-        F601 Part 2 B
+    Lobbyist employers and subcontracted clients
     """
     agencylist = fields.CharField(
         max_length=200,
