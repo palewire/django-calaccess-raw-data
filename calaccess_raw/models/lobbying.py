@@ -1575,7 +1575,7 @@ original filing and 1 to 999 amendments.",
         max_length=30, db_column='CON_PERIOD', blank=True
     )
     descrip = fields.CharField(
-        max_length=100, db_column='DESCRIP', blank=True
+        max_length=100, db_column='DESCRIP', blank=True, help_text='Description of employer/client lobbying interest'
     )
     eff_date = fields.DateField(null=True, db_column='EFF_DATE', blank=True, help_text='Effective Date of Lobbying Contract')
     filing_id = fields.IntegerField(
