@@ -436,7 +436,8 @@ individual"
         db_column='ENTY_NAMT',
         max_length=9,
         blank=True,
-        help_text="Entity's name prefix or title if the entity is an individual"
+        help_text="Entity's name prefix or title if the entity is an \
+individual"
     )
     enty_nams = fields.CharField(
         db_column='ENTY_NAMS',
@@ -448,8 +449,9 @@ individual"
         db_column='ITEM_CD',
         max_length=4,
         blank=True,
-        help_text="Section of the Statement of Organization this itemization \
-relates to. See CAL document for the definition of legal values for this column."
+        help_text="Section of the Statement of Organization this \
+itemization relates to. See CAL document for the definition \
+of legal values for this column."
     )
     mail_city = fields.CharField(
         db_column='MAIL_CITY',
@@ -503,7 +505,8 @@ CAL document for a list of valid codes."
         db_column='JURIS_CD',
         max_length=4,
         blank=True,
-        help_text="Office jurisdiction code. See CAL document for a list of legal values."
+        help_text="Office jurisdiction code. See CAL document for a \
+list of legal values."
     )
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR',
