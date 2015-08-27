@@ -1537,7 +1537,7 @@ class LempCd(CalAccessBaseModel):
         F601 Part 2 B
     """
     agencylist = fields.CharField(
-        max_length=200, db_column='AGENCYLIST', blank=True
+        max_length=200, db_column='AGENCYLIST', blank=True, help_text='Agencies to be lobbied'
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1564,7 +1564,7 @@ original filing and 1 to 999 amendments.",
         max_length=10, db_column='CLI_NAMT', blank=True
     )
     cli_phon = fields.CharField(
-        max_length=20, db_column='CLI_PHON', blank=True, help_text="Employing client's phone number"
+        max_length=20, db_column='CLI_PHON', blank=True
     )
     cli_st = fields.CharField(max_length=2, db_column='CLI_ST', blank=True)
     cli_zip4 = fields.CharField(max_length=10, db_column='CLI_ZIP4')
