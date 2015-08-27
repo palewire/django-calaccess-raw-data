@@ -1583,14 +1583,16 @@ original filing and 1 to 999 amendments.",
     )
     cli_zip4 = fields.CharField(max_length=10, db_column='CLI_ZIP4')
     client_id = fields.CharField(
-        max_length=9, db_column='CLIENT_ID', blank=True
+        max_length=9,
+        db_column='CLIENT_ID',
+        blank=True,
+        help_text="Identification number of the Part 2A employer or \Part 2B Client/Employer"
     )
     con_period = fields.CharField(
         max_length=30,
         db_column='CON_PERIOD',
         blank=True,
-        help_text='Identification number of the Part 2A employer or \
-Part 2B Client/Employer'
+        help_text="Period of the contract"
     )
     descrip = fields.CharField(
         max_length=100,
