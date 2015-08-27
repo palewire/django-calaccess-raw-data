@@ -1573,7 +1573,10 @@ original filing and 1 to 999 amendments.",
         max_length=10, db_column='CLI_NAMT', blank=True
     )
     cli_phon = fields.CharField(
-        max_length=20, db_column='CLI_PHON', blank=True
+        max_length=20,
+        db_column='CLI_PHON',
+        blank=True,
+        help_text="Employing client phone number"
     )
     cli_st = fields.CharField(
         max_length=2,
