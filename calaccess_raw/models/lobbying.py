@@ -239,7 +239,7 @@ registration statement)'),
     rpt_date = fields.DateField(db_column='RPT_DATE', null=True)
     sender_id = fields.CharField(max_length=9, db_column='SENDER_ID')
     sig_date = fields.DateField(
-        null=True, db_column='SIG_DATE', blank=True
+        null=True, db_column='SIG_DATE', blank=True, help_text="date when signed used for print rendering"
     )
     sig_loc = fields.CharField(
         max_length=45, db_column='SIG_LOC', blank=True
