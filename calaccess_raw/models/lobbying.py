@@ -1132,13 +1132,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LexpCd(CalAccessBaseModel):
     """
-    Lobbying Activity Expenditure Schedule information (Gifts)
-    Reported in filings of the forms
-
-        F615 Part 1
-        F625 Part 3A
-        F635 Part 3C
-        F645 Part 2A
+    Lobbying activity expenditures
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1148,23 +1142,42 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amount = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='AMOUNT', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='AMOUNT',
+        blank=True,
+        help_text='Amount of payment',
     )
     bakref_tid = fields.CharField(
-        max_length=20, db_column='BAKREF_TID', blank=True
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True,
+        help_text='Backreference to the tranaction identifer of parent record',
     )
     bene_amt = fields.CharField(
-        max_length=12, db_column='BENE_AMT', blank=True
+        max_length=12,
+        db_column='BENE_AMT',
+        blank=True,
+        help_text='Amount benefiting benficiary',
     )
     bene_name = fields.CharField(
-        max_length=90, db_column='BENE_NAME', blank=True
+        max_length=90,
+        db_column='BENE_NAME',
+        blank=True,
+        help_text='Name of the person beneifiting',
     )
     bene_posit = fields.CharField(
-        max_length=90, db_column='BENE_POSIT', blank=True
+        max_length=90,
+        db_column='BENE_POSIT',
+        blank=True,
+        help_text='Official position of the person beneifiting',
     )
     credcardco = fields.CharField(
-        max_length=200, db_column='CREDCARDCO', blank=True
+        max_length=200,
+        db_column='CREDCARDCO',
+        blank=True,
+        help_text='Name of the credit card company, if paid using a card',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -1181,9 +1194,17 @@ original filing and 1 to 999 amendments.",
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
     )
-    expn_date = fields.DateField(null=True, db_column='EXPN_DATE', blank=True)
+    expn_date = fields.DateField(
+        null=True,
+        db_column='EXPN_DATE',
+        blank=True,
+        help_text='Date of expenditure',
+    )
     expn_dscr = fields.CharField(
-        max_length=90, db_column='EXPN_DSCR', blank=True
+        max_length=90,
+        db_column='EXPN_DSCR',
+        blank=True,
+        help_text='Purpose of the expense and a description or explanation',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1210,37 +1231,70 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text='Reference to the text in a TEXT record',
     )
     # payee_adr1 = fields.CharField(
-    #     max_length=55, db_column='PAYEE_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='PAYEE_ADR1',
+    #   blank=True,
+    #   help_text='First line of payee street address',
     # )
     # payee_adr2 = fields.CharField(
-    #     max_length=55, db_column='PAYEE_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='PAYEE_ADR2',
+    #   blank=True,
+    #   help_text='Second line of payee street address',
     # )
     payee_city = fields.CharField(
-        max_length=30, db_column='PAYEE_CITY', blank=True
+        max_length=30,
+        db_column='PAYEE_CITY',
+        blank=True,
+        help_text='Payee city',
     )
     payee_namf = fields.CharField(
-        max_length=45, db_column='PAYEE_NAMF', blank=True
+        max_length=45,
+        db_column='PAYEE_NAMF',
+        blank=True,
+        help_text='Payee first name',
     )
     payee_naml = fields.CharField(
-        max_length=200, db_column='PAYEE_NAML', blank=True
+        max_length=200,
+        db_column='PAYEE_NAML',
+        blank=True,
+        help_text='Payee last name or business name',
     )
     payee_nams = fields.CharField(
-        max_length=10, db_column='PAYEE_NAMS', blank=True
+        max_length=10,
+        db_column='PAYEE_NAMS',
+        blank=True,
+        help_text='Payee suffix',
     )
     payee_namt = fields.CharField(
-        max_length=10, db_column='PAYEE_NAMT', blank=True
+        max_length=10,
+        db_column='PAYEE_NAMT',
+        blank=True,
+        help_text='Payee title or prefix',
     )
     payee_st = fields.CharField(
-        max_length=2, db_column='PAYEE_ST', blank=True
+        max_length=2,
+        db_column='PAYEE_ST',
+        blank=True,
+        help_text='Payee state',
     )
     payee_zip4 = fields.CharField(
-        max_length=10, db_column='PAYEE_ZIP4', blank=True
+        max_length=10,
+        db_column='PAYEE_ZIP4',
+        blank=True,
+        help_text='Payee ZIP Code',
     )
     REC_TYPE_CHOICES = (
         ("LEXP", "LEXP"),
@@ -1252,7 +1306,16 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    recsubtype = fields.CharField(max_length=1, db_column='RECSUBTYPE')
+    REC_SUBTYPE_CHOICES = (
+        ('1', 'Main'),
+        ('2', 'Detail'),
+    )
+    recsubtype = fields.CharField(
+        max_length=1,
+        db_column='RECSUBTYPE',
+        choices=REC_SUBTYPE_CHOICES,
+        verbose_name='record subtype',
+    )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
