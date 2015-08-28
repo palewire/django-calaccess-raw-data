@@ -727,8 +727,6 @@ original filing and 1 to 999 amendments.",
 class LobbyAmendmentsCd(CalAccessBaseModel):
     """
     Lobbyist registration amendment information
-
-        Form 605 Part I
     """
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -764,111 +762,230 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    exec_date = fields.CharField(max_length=22, db_column='EXEC_DATE')
-    from_date = fields.CharField(max_length=22, db_column='FROM_DATE')
-    thru_date = fields.CharField(max_length=22, db_column='THRU_DATE')
-    add_l_cb = fields.CharField(
-        max_length=1, db_column='ADD_L_CB', blank=True
+    exec_date = fields.CharField(
+        max_length=22,
+        db_column='EXEC_DATE',
+        help_text='Date this amendment executed on',
     )
-    add_l_eff = fields.DateField(null=True, db_column='ADD_L_EFF', blank=True)
+    from_date = fields.CharField(
+        max_length=22,
+        db_column='FROM_DATE',
+        help_text='',
+    )
+    thru_date = fields.CharField(
+        max_length=22,
+        db_column='THRU_DATE',
+        help_text='Reporting date to/through date of original',
+    )
+    add_l_cb = fields.CharField(
+        max_length=1,
+        db_column='ADD_L_CB',
+        blank=True,
+        help_text='Add lobbyist checkbox',
+    )
+    add_l_eff = fields.DateField(
+        null=True,
+        db_column='ADD_L_EFF',
+        blank=True,
+        help_text='Add lobbyist effective date',
+    )
     a_l_naml = fields.CharField(
-        max_length=200, db_column='A_L_NAML', blank=True
+        max_length=200,
+        db_column='A_L_NAML',
+        blank=True,
+        help_text='Add lobbyist last name',
     )
     a_l_namf = fields.CharField(
-        max_length=45, db_column='A_L_NAMF', blank=True
+        max_length=45,
+        db_column='A_L_NAMF',
+        blank=True,
+        help_text='Add lobbyist first name',
     )
     a_l_namt = fields.CharField(
-        max_length=10, db_column='A_L_NAMT', blank=True
+        max_length=10,
+        db_column='A_L_NAMT',
+        blank=True,
+        help_text='Add lobbyist title or prefix',
     )
     a_l_nams = fields.CharField(
-        max_length=10, db_column='A_L_NAMS', blank=True
+        max_length=10,
+        db_column='A_L_NAMS',
+        blank=True,
+        help_text='Add lobbyist suffix',
     )
     del_l_cb = fields.CharField(
-        max_length=8, db_column='DEL_L_CB', blank=True
+        max_length=8,
+        db_column='DEL_L_CB',
+        blank=True,
+        help_text='Delete lobbyist checkbox',
     )
     del_l_eff = fields.CharField(
-        max_length=22, db_column='DEL_L_EFF', blank=True
+        max_length=22,
+        db_column='DEL_L_EFF',
+        blank=True,
+        help_text='Delete lobbyist effective date',
     )
     d_l_naml = fields.CharField(
-        max_length=56, db_column='D_L_NAML', blank=True
+        max_length=56,
+        db_column='D_L_NAML',
+        blank=True,
+        help_text='Delete lobbyist last name',
     )
     d_l_namf = fields.CharField(
-        max_length=35, db_column='D_L_NAMF', blank=True
+        max_length=35,
+        db_column='D_L_NAMF',
+        blank=True,
+        help_text='Delete lobbyist first name',
     )
     d_l_namt = fields.CharField(
-        max_length=10, db_column='D_L_NAMT', blank=True
+        max_length=10,
+        db_column='D_L_NAMT',
+        blank=True,
+        help_text='Delete lobbyist title or prefix',
     )
     d_l_nams = fields.CharField(
-        max_length=8, db_column='D_L_NAMS', blank=True
+        max_length=8,
+        db_column='D_L_NAMS',
+        blank=True,
+        help_text='Delete lobbyiest suffix',
     )
     add_le_cb = fields.CharField(
-        max_length=1, db_column='ADD_LE_CB', blank=True
+        max_length=1,
+        db_column='ADD_LE_CB',
+        blank=True,
+        help_text='Add lobbyiest employer checkbox',
     )
     add_le_eff = fields.DateField(
-        null=True, db_column='ADD_LE_EFF', blank=True
+        null=True,
+        db_column='ADD_LE_EFF',
+        blank=True,
+        help_text='Add lobbyist employer effective date',
     )
     a_le_naml = fields.CharField(
-        max_length=200, db_column='A_LE_NAML', blank=True
+        max_length=200,
+        db_column='A_LE_NAML',
+        blank=True,
+        help_text='Add lobbyist employer last name',
     )
     a_le_namf = fields.CharField(
-        max_length=45, db_column='A_LE_NAMF', blank=True
+        max_length=45,
+        db_column='A_LE_NAMF',
+        blank=True,
+        help_text='Add lobbyist or employer first name',
     )
     a_le_namt = fields.CharField(
-        max_length=10, db_column='A_LE_NAMT', blank=True
+        max_length=10,
+        db_column='A_LE_NAMT',
+        blank=True,
+        help_text='Add lobbyist employer title or prefix',
     )
     a_le_nams = fields.CharField(
-        max_length=10, db_column='A_LE_NAMS', blank=True
+        max_length=10,
+        db_column='A_LE_NAMS',
+        blank=True,
+        help_text='Add lobbyist employer suffix',
     )
     del_le_cb = fields.CharField(
-        max_length=9, db_column='DEL_LE_CB', blank=True
+        max_length=9,
+        db_column='DEL_LE_CB',
+        blank=True,
+        help_text='Delete lobbyist employer check box',
     )
     del_le_eff = fields.CharField(
-        max_length=22, db_column='DEL_LE_EFF', blank=True
+        max_length=22,
+        db_column='DEL_LE_EFF',
+        blank=True,
+        help_text='Delete lobbyist employer effective date',
     )
     d_le_naml = fields.CharField(
-        max_length=160, db_column='D_LE_NAML', blank=True
+        max_length=160,
+        db_column='D_LE_NAML',
+        blank=True,
+        help_text='Delete lobbyist employer last name',
     )
     d_le_namf = fields.CharField(
-        max_length=45, db_column='D_LE_NAMF', blank=True
+        max_length=45,
+        db_column='D_LE_NAMF',
+        blank=True,
+        help_text='Delete lobbyiest employer first name',
     )
     d_le_namt = fields.CharField(
-        max_length=12, db_column='D_LE_NAMT', blank=True
+        max_length=12,
+        db_column='D_LE_NAMT',
+        blank=True,
+        help_text='Delete lobbyist employer name title or prefix',
     )
     d_le_nams = fields.CharField(
-        max_length=9, db_column='D_LE_NAMS', blank=True
+        max_length=9,
+        db_column='D_LE_NAMS',
+        blank=True,
+        help_text='Delete lobbyist employer name',
     )
     add_lf_cb = fields.CharField(
-        max_length=1, db_column='ADD_LF_CB', blank=True
+        max_length=1,
+        db_column='ADD_LF_CB',
+        blank=True,
+        help_text='Add lobbying firm checkbox',
     )
     add_lf_eff = fields.DateField(
-        null=True, db_column='ADD_LF_EFF', blank=True
+        null=True,
+        db_column='ADD_LF_EFF',
+        blank=True,
+        help_text='Add lobbying firm effective date',
     )
     a_lf_name = fields.CharField(
-        max_length=200, db_column='A_LF_NAME', blank=True
+        max_length=200,
+        db_column='A_LF_NAME',
+        blank=True,
+        help_text='Add lobbying firm name',
     )
     del_lf_cb = fields.CharField(
-        max_length=1, db_column='DEL_LF_CB', blank=True
+        max_length=1,
+        db_column='DEL_LF_CB',
+        blank=True,
+        help_text='Delete lobbying firm checkbox',
     )
     del_lf_eff = fields.DateField(
-        null=True, db_column='DEL_LF_EFF', blank=True
+        null=True,
+        db_column='DEL_LF_EFF',
+        blank=True,
+        help_text='Delete lobbying firm effective date',
     )
     d_lf_name = fields.CharField(
-        max_length=200, db_column='D_LF_NAME', blank=True
+        max_length=200,
+        db_column='D_LF_NAME',
+        blank=True,
+        help_text='Delete lobbying firm name',
     )
     other_cb = fields.CharField(
-        max_length=1, db_column='OTHER_CB', blank=True
+        max_length=1,
+        db_column='OTHER_CB',
+        blank=True,
+        help_text='Other amendments checkbox',
     )
     other_eff = fields.DateField(
-        null=True, db_column='OTHER_EFF', blank=True
+        null=True,
+        db_column='OTHER_EFF',
+        blank=True,
+        help_text='Other amendments effective date',
     )
     other_desc = fields.CharField(
-        max_length=100, db_column='OTHER_DESC', blank=True
+        max_length=100,
+        db_column='OTHER_DESC',
+        blank=True,
+        help_text='Description of changes',
     )
     f606_yes = fields.CharField(
-        max_length=1, db_column='F606_YES', blank=True
+        max_length=1,
+        db_column='F606_YES',
+        blank=True,
+        help_text='Lobbyist ceasing all activity',
     )
     f606_no = fields.CharField(
-        max_length=1, db_column='F606_NO', blank=True
+        max_length=1,
+        db_column='F606_NO',
+        blank=True,
+        help_text='Lobbyist ceasing employment but staying active',
     )
 
     class Meta:
