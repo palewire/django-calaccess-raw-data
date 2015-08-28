@@ -10,20 +10,40 @@ class CvrRegistrationCd(CalAccessBaseModel):
     Cover page of lobbying disclosure forms
     """
     # a_b_adr1 = fields.CharField(
-    #     max_length=55, db_column='A_B_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='A_B_ADR1',
+    #   blank=True,
+    #   help_text="First line of individual or business entity address"
     # )
     # a_b_adr2 = fields.CharField(
-    #     max_length=55, db_column='A_B_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='A_B_ADR2',
+    #   blank=True,
+    #   help_text="Second line of individual or business entity address"
     # )
     a_b_city = fields.CharField(
-        max_length=30, db_column='A_B_CITY', blank=True
+        max_length=30,
+        db_column='A_B_CITY',
+        blank=True,
+        help_text='Individual or business entity city',
     )
     a_b_name = fields.CharField(
-        max_length=200, db_column='A_B_NAME', blank=True
+        max_length=200,
+        db_column='A_B_NAME',
+        blank=True,
+        help_text='Name of individual or business entity',
     )
-    a_b_st = fields.CharField(max_length=2, db_column='A_B_ST', blank=True)
+    a_b_st = fields.CharField(
+        max_length=2,
+        db_column='A_B_ST',
+        blank=True,
+        help_text='Individual or business entity state',
+    )
     a_b_zip4 = fields.CharField(
-        max_length=10, db_column='A_B_ZIP4', blank=True
+        max_length=10,
+        db_column='A_B_ZIP4',
+        blank=True,
+        help_text='Individual or business entity ZIP Code.',
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -33,62 +53,148 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     # auth_adr1 = fields.CharField(
-    #     max_length=55, db_column='AUTH_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='AUTH_ADR1',
+    #   blank=True,
+    #   help_text='First line of authorized lobbying firm business address',
     # )
     # auth_adr2 = fields.CharField(
-    #     max_length=55, db_column='AUTH_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='AUTH_ADR2',
+    #   blank=True,
+    #   help_text='Second line of authorized lobbying firm business address',
     # )
     auth_city = fields.CharField(
-        max_length=30, db_column='AUTH_CITY', blank=True
+        max_length=30,
+        db_column='AUTH_CITY',
+        blank=True,
+        help_text='Authorized lobbying firm business address city',
     )
     auth_name = fields.CharField(
-        max_length=200, db_column='AUTH_NAME', blank=True
+        max_length=200,
+        db_column='AUTH_NAME',
+        blank=True,
+        help_text='Authorized lobbying firm business name. \
+Applies to Form 602.',
     )
-    auth_st = fields.CharField(max_length=2, db_column='AUTH_ST', blank=True)
+    auth_st = fields.CharField(
+        max_length=2,
+        db_column='AUTH_ST',
+        blank=True,
+        help_text='Authorized lobbying firm business address state',
+    )
     auth_zip4 = fields.CharField(
-        max_length=10, db_column='AUTH_ZIP4', blank=True
+        max_length=10,
+        db_column='AUTH_ZIP4',
+        blank=True,
+        help_text='Authorized lobbying firm business address ZIP Code',
     )
     # bus_adr1 = fields.CharField(
-    #     max_length=55, db_column='BUS_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='BUS_ADR1',
+    #   blank=True,
+    #   help_text='First line of filer business street address',
     # )
     # bus_adr2 = fields.CharField(
-    #     max_length=55, db_column='BUS_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='BUS_ADR2',
+    #   blank=True,
+    #   help_text='Second line of filer business street address',
     # )
-    bus_cb = fields.CharField(max_length=1, db_column='BUS_CB', blank=True)
-    bus_city = fields.CharField(max_length=30, db_column='BUS_CITY')
+    bus_cb = fields.CharField(
+        max_length=1,
+        db_column='BUS_CB',
+        blank=True,
+        help_text='Business included activity checkbox',
+    )
+    bus_city = fields.CharField(
+        max_length=30,
+        db_column='BUS_CITY',
+        help_text='Filer business address city',
+    )
     bus_class = fields.CharField(
-        max_length=3, db_column='BUS_CLASS', blank=True
+        max_length=3,
+        db_column='BUS_CLASS',
+        blank=True,
+        help_text='Classifiction values of business related entities. \
+This field is exclusive of the business class field. One these \
+must be populated but not both.',
     )
     bus_descr = fields.CharField(
-        max_length=100, db_column='BUS_DESCR', blank=True
+        max_length=100,
+        db_column='BUS_DESCR',
+        blank=True,
+        help_text='Description of business classification if coded as other',
     )
     bus_email = fields.CharField(
-        max_length=60, db_column='BUS_EMAIL', blank=True
+        max_length=60,
+        db_column='BUS_EMAIL',
+        blank=True,
+        help_text='Filer business address email',
     )
-    bus_fax = fields.CharField(max_length=20, db_column='BUS_FAX', blank=True)
+    bus_fax = fields.CharField(
+        max_length=20,
+        db_column='BUS_FAX',
+        blank=True,
+        help_text='Filer business address fax number',
+    )
     bus_phon = fields.CharField(
-        max_length=20, db_column='BUS_PHON', blank=True
+        max_length=20,
+        db_column='BUS_PHON',
+        blank=True,
+        help_text='Filer business address phone number',
     )
-    bus_st = fields.CharField(max_length=2, db_column='BUS_ST', blank=True)
+    bus_st = fields.CharField(
+        max_length=2,
+        db_column='BUS_ST',
+        blank=True,
+        help_text='Filer business address state',
+    )
     bus_zip4 = fields.CharField(
-        max_length=10, db_column='BUS_ZIP4', blank=True
+        max_length=10,
+        db_column='BUS_ZIP4',
+        blank=True,
+        help_text='Filer business address ZIP Code',
     )
     c_less50 = fields.CharField(
-        max_length=1, db_column='C_LESS50', blank=True
+        max_length=1,
+        db_column='C_LESS50',
+        blank=True,
+        help_text='Industry associations with fewer than 50 members \
+check this box',
     )
     c_more50 = fields.CharField(
-        max_length=1, db_column='C_MORE50', blank=True
+        max_length=1,
+        db_column='C_MORE50',
+        blank=True,
+        help_text='Industry associations with more than 50 \
+check this box.',
     )
     complet_dt = fields.DateField(
-        null=True, db_column='COMPLET_DT', blank=True
+        null=True,
+        db_column='COMPLET_DT',
+        blank=True,
+        help_text='Ethics orientation class completion date. Applies to \
+Form 604. As filed by the lobbyist.',
     )
     descrip_1 = fields.CharField(
-        max_length=300, db_column='DESCRIP_1', blank=True
+        max_length=300,
+        db_column='DESCRIP_1',
+        blank=True,
+        help_text='Description of business activity, industry or other',
     )
     descrip_2 = fields.CharField(
-        max_length=300, db_column='DESCRIP_2', blank=True
+        max_length=300,
+        db_column='DESCRIP_2',
+        blank=True,
+        help_text='Description of specific or other lobbying interest',
     )
-    eff_date = fields.DateField(null=True, db_column='EFF_DATE', blank=True)
+    eff_date = fields.DateField(
+        null=True,
+        db_column='EFF_DATE',
+        blank=True,
+        help_text='Effective date of authoarization or termination',
+    )
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
@@ -116,16 +222,28 @@ original filing and 1 to 999 amendments.",
         help_text="Filer's unique identification number",
     )
     filer_namf = fields.CharField(
-        max_length=45, db_column='FILER_NAMF', blank=True
+        max_length=45,
+        db_column='FILER_NAMF',
+        blank=True,
+        help_text='Filer first name',
     )
     filer_naml = fields.CharField(
-        max_length=200, db_column='FILER_NAML', blank=True
+        max_length=200,
+        db_column='FILER_NAML',
+        blank=True,
+        help_text='Filer last name',
     )
     filer_nams = fields.CharField(
-        max_length=10, db_column='FILER_NAMS', blank=True
+        max_length=10,
+        db_column='FILER_NAMS',
+        blank=True,
+        help_text='Filer suffix',
     )
     filer_namt = fields.CharField(
-        max_length=10, db_column='FILER_NAMT', blank=True
+        max_length=10,
+        db_column='FILER_NAMT',
+        blank=True,
+        help_text='Filer title or prefix',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -136,7 +254,11 @@ original filing and 1 to 999 amendments.",
         blank=True,
     )
     firm_name = fields.CharField(
-        max_length=200, db_column='FIRM_NAME', blank=True
+        max_length=200,
+        db_column='FIRM_NAME',
+        blank=True,
+        help_text='Name of the lobbyist employer or firm. Applies to \
+Forms 604, 606, 607.',
     )
     FORM_TYPE_CHOICES = (
         ('F601', 'Form 601 (Lobbying firm registration statement)'),
@@ -154,71 +276,165 @@ registration statement)'),
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES
     )
-    ind_cb = fields.CharField(max_length=1, db_column='IND_CB', blank=True)
+    ind_cb = fields.CharField(
+        max_length=1,
+        db_column='IND_CB',
+        blank=True,
+        help_text='Individual checkbox',
+    )
     ind_class = fields.CharField(
-        max_length=3, db_column='IND_CLASS', blank=True
+        max_length=3,
+        db_column='IND_CLASS',
+        blank=True,
+        help_text='Classification values to category industry related \
+entities. This field is exclusive of the business class field. One these \
+must be populated but not both.',
     )
     ind_descr = fields.CharField(
-        max_length=100, db_column='IND_DESCR', blank=True
+        max_length=100,
+        db_column='IND_DESCR',
+        blank=True,
+        help_text='Description of industry classification \
+if coded as other',
     )
-    influen_yn = fields.IntegerField(
-        null=True, db_column='INFLUEN_YN', blank=True
+    INFLUEN_YN_CHOICES = (
+        ('Y', 'Yes'),
+        ('N', 'No'),
+    )
+    influen_yn = fields.CharField(
+        null=True,
+        max_length=1,
+        choices=INFLUEN_YN_CHOICES,
+        db_column='INFLUEN_YN',
+        blank=True,
+        help_text='Attempt to influence state legislation',
     )
     l_firm_cb = fields.CharField(
-        max_length=1, db_column='L_FIRM_CB', blank=True
+        max_length=1,
+        db_column='L_FIRM_CB',
+        blank=True,
+        help_text="'Lobbying firm within the ... ' checkbox. \
+Applies to Form 607.",
     )
     lby_604_cb = fields.CharField(
-        max_length=1, db_column='LBY_604_CB', blank=True
+        max_length=1,
+        db_column='LBY_604_CB',
+        blank=True,
+        help_text="'Lobbying Agency in this 604 statement' checkbox. \
+Applies to Form 604.",
     )
     lby_reg_cb = fields.CharField(
-        max_length=1, db_column='LBY_REG_CB', blank=True
+        max_length=1,
+        db_column='LBY_REG_CB',
+        blank=True,
+        help_text="'Lobbying Agency in form 601/603 registration \
+statement' checkbox. Applies to Form 604.",
     )
     lobby_cb = fields.CharField(
-        max_length=1, db_column='LOBBY_CB', blank=True
+        max_length=1,
+        db_column='LOBBY_CB',
+        blank=True,
+        help_text='\'Lobbying within the meaning...\' checkbox. \
+Applies to Form 607.',
     )
     lobby_int = fields.CharField(
-        max_length=300, db_column='LOBBY_INT', blank=True
+        max_length=300,
+        db_column='LOBBY_INT',
+        blank=True,
+        help_text='Description of Part III lobbying interests. \
+Applies to Form 603',
     )
     ls_beg_yr = fields.CharField(
-        null=True, db_column='LS_BEG_YR', blank=True, max_length=5
+        null=True,
+        db_column='LS_BEG_YR',
+        blank=True,
+        max_length=5,
+        help_text='Year legislative session begins',
     )
     ls_end_yr = fields.CharField(
-        db_column='LS_END_YR', max_length=5
+        db_column='LS_END_YR',
+        max_length=5,
+        help_text='Year legislative sessions ends',
     )
     # mail_adr1 = fields.CharField(
-    #     max_length=55, db_column='MAIL_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='MAIL_ADR1',
+    #   blank=True,
+    #   help_text='First line of filer mailing street address',
     # )
     # mail_adr2 = fields.CharField(
-    #     max_length=55, db_column='MAIL_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='MAIL_ADR2',
+    #   blank=True,
+    #   help_text='Second line of filer mailing street address',
     # )
     mail_city = fields.CharField(
-        max_length=30, db_column='MAIL_CITY', blank=True
+        max_length=30,
+        db_column='MAIL_CITY',
+        blank=True,
+        help_text='Filer mailing address city',
     )
     mail_phon = fields.CharField(
-        max_length=20, db_column='MAIL_PHON', blank=True
+        max_length=20,
+        db_column='MAIL_PHON',
+        blank=True,
+        help_text='Filer mailing address phone number',
     )
-    mail_st = fields.CharField(max_length=2, db_column='MAIL_ST', blank=True)
+    mail_st = fields.CharField(
+        max_length=2,
+        db_column='MAIL_ST',
+        blank=True,
+        help_text='Filer mailing address state',
+    )
     mail_zip4 = fields.CharField(
-        max_length=10, db_column='MAIL_ZIP4', blank=True
+        max_length=10,
+        db_column='MAIL_ZIP4',
+        blank=True,
+        help_text='Filer mailing address ZIP Code',
     )
     newcert_cb = fields.CharField(
-        max_length=1, db_column='NEWCERT_CB', blank=True
+        max_length=1,
+        db_column='NEWCERT_CB',
+        blank=True,
+        help_text='Will require a new certification checkbox. \
+Applies to Form 604.',
     )
-    oth_cb = fields.CharField(max_length=1, db_column='OTH_CB', blank=True)
+    oth_cb = fields.CharField(
+        max_length=1,
+        db_column='OTH_CB',
+        blank=True,
+        help_text='Other checkbox',
+    )
     prn_namf = fields.CharField(
-        max_length=45, db_column='PRN_NAMF', blank=True
+        max_length=45,
+        db_column='PRN_NAMF',
+        blank=True,
+        help_text='Signer first name',
     )
     prn_naml = fields.CharField(
-        max_length=200, db_column='PRN_NAML', blank=True
+        max_length=200,
+        db_column='PRN_NAML',
+        blank=True,
+        help_text='Signer last name',
     )
     prn_nams = fields.CharField(
-        max_length=10, db_column='PRN_NAMS', blank=True
+        max_length=10,
+        db_column='PRN_NAMS',
+        blank=True,
+        help_text='Signer suffix',
     )
     prn_namt = fields.CharField(
-        max_length=10, db_column='PRN_NAMT', blank=True
+        max_length=10,
+        db_column='PRN_NAMT',
+        blank=True,
+        help_text='Signer title or prefix',
     )
     qual_date = fields.DateField(
-        null=True, db_column='QUAL_DATE', blank=True
+        null=True,
+        db_column='QUAL_DATE',
+        blank=True,
+        help_text='Date qualified. Applies to forms 601 and 603. Only \
+occurs once in lobbying filings.',
     )
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
@@ -231,48 +447,105 @@ registration statement)'),
         choices=REC_TYPE_CHOICES,
     )
     rencert_cb = fields.CharField(
-        max_length=1, db_column='RENCERT_CB', blank=True
+        max_length=1,
+        db_column='RENCERT_CB',
+        blank=True,
+        help_text='Will take a renewel certification checkbox. Applies to \
+Form 604.',
     )
     report_num = fields.CharField(
-        max_length=3, db_column='REPORT_NUM', blank=True
+        max_length=3,
+        db_column='REPORT_NUM',
+        blank=True,
+        help_text='Amendment number as reported by the filer. 000 is the \
+original. 001-999 are amendments.',
     )
-    rpt_date = fields.DateField(db_column='RPT_DATE', null=True)
-    sender_id = fields.CharField(max_length=9, db_column='SENDER_ID')
+    rpt_date = fields.DateField(
+        db_column='RPT_DATE',
+        null=True,
+        help_text='Date this report or amendment is filed, as reported \
+by the filer',
+    )
+    sender_id = fields.CharField(
+        max_length=9,
+        db_column='SENDER_ID',
+        help_text='Identification number of the lobbyist entity submitting \
+this report. This is equal to the filer ID if the filer is the submitting \
+the report and the firm or employer if they are submitting the report.',
+    )
     sig_date = fields.DateField(
         null=True,
         db_column='SIG_DATE',
         blank=True,
-        help_text="date when signed used for print rendering"
+        help_text="Date signed"
     )
     sig_loc = fields.CharField(
-        max_length=45, db_column='SIG_LOC', blank=True
+        max_length=45,
+        db_column='SIG_LOC',
+        blank=True,
+        help_text='Signer city and state',
     )
     sig_namf = fields.CharField(
-        max_length=45, db_column='SIG_NAMF', blank=True
+        max_length=45,
+        db_column='SIG_NAMF',
+        blank=True,
+        help_text='Signer first name',
     )
     sig_naml = fields.CharField(
-        max_length=200, db_column='SIG_NAML', blank=True
+        max_length=200,
+        db_column='SIG_NAML',
+        blank=True,
+        help_text='Signer last name',
     )
     sig_nams = fields.CharField(
-        max_length=10, db_column='SIG_NAMS', blank=True
+        max_length=10,
+        db_column='SIG_NAMS',
+        blank=True,
+        help_text='Signer suffix',
     )
     sig_namt = fields.CharField(
-        max_length=10, db_column='SIG_NAMT', blank=True
+        max_length=10,
+        db_column='SIG_NAMT',
+        blank=True,
+        help_text='Signer title or prefix',
     )
     sig_title = fields.CharField(
-        max_length=45, db_column='SIG_TITLE', blank=True
+        max_length=45,
+        db_column='SIG_TITLE',
+        blank=True,
+        help_text='Title of signer',
     )
     st_agency = fields.CharField(
-        max_length=100, db_column='ST_AGENCY', blank=True
+        max_length=100,
+        db_column='ST_AGENCY',
+        blank=True,
+        help_text='List of identified state agencies. Applies to Form 604.',
     )
-    st_leg_yn = fields.IntegerField(
-        null=True, db_column='ST_LEG_YN', blank=True
+    ST_LEG_YN_CHOICES = (
+        ('Y', 'Yes'),
+        ('N', 'No'),
+    )
+    st_leg_yn = fields.CharField(
+        max_length=1,
+        db_column='ST_LEG_YN',
+        choices=ST_LEG_YN_CHOICES,
+        blank=True,
+        help_text='Will lobby state legislature checkbox. \
+Applies to Form 604.',
     )
     stmt_firm = fields.CharField(
-        max_length=90, db_column='STMT_FIRM', blank=True
+        max_length=90,
+        db_column='STMT_FIRM',
+        blank=True,
+        help_text='Lobby firm named in \'Statement of Responsible Officer\'\
+This field only applies to Form 601.',
     )
     trade_cb = fields.CharField(
-        max_length=1, db_column='TRADE_CB', blank=True
+        max_length=1,
+        db_column='TRADE_CB',
+        null=True,
+        blank=True,
+        help_text="Industry, trade or professional checkbox",
     )
 
     class Meta:
