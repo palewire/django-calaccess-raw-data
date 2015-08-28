@@ -1274,15 +1274,13 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LccmCd(CalAccessBaseModel):
     """
-    Lobbying Campaign Contributions reported on forms
-
-        F615 Part 2
-        F625 Part 4B
-        F635 Part 4B
-        F645 Part 3B
+    Lobbying campaign contributions
     """
     # acct_name = fields.CharField(
-    #     max_length=90, db_column='ACCT_NAME', blank=True
+    #   max_length=90,
+    #   db_column='ACCT_NAME',
+    #   blank=True,
+    #   help_text='name of separate account'
     # )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1292,23 +1290,45 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amount = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AMOUNT'
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMOUNT',
+        help_text='amount of contribution',
     )
     bakref_tid = fields.CharField(
-        max_length=20, db_column='BAKREF_TID', blank=True
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True,
+        help_text='Back reference to transaction identifier of parent record',
     )
-    ctrib_date = fields.DateField(db_column='CTRIB_DATE', null=True)
+    ctrib_date = fields.DateField(
+        db_column='CTRIB_DATE',
+        null=True,
+        help_text='Date of contribution',
+    )
     ctrib_namf = fields.CharField(
-        max_length=45, db_column='CTRIB_NAMF', blank=True
+        max_length=45,
+        db_column='CTRIB_NAMF',
+        blank=True,
+        help_text='Contributor first name',
     )
     ctrib_naml = fields.CharField(
-        max_length=120, db_column='CTRIB_NAML', blank=True
+        max_length=120,
+        db_column='CTRIB_NAML',
+        blank=True,
+        help_text='Contributor last name or business name',
     )
     ctrib_nams = fields.CharField(
-        max_length=10, db_column='CTRIB_NAMS', blank=True
+        max_length=10,
+        db_column='CTRIB_NAMS',
+        blank=True,
+        help_text='Contributor suffix',
     )
     ctrib_namt = fields.CharField(
-        max_length=10, db_column='CTRIB_NAMT', blank=True
+        max_length=10,
+        db_column='CTRIB_NAMT',
+        blank=True,
+        help_text='Contributor prefix or title.',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -1351,10 +1371,16 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text='Reference to the text contained in the TEXT record',
     )
     REC_TYPE_CHOICES = (
         ("LCCM", "LCCM"),
@@ -1367,34 +1393,64 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
     )
     # recip_adr1 = fields.CharField(
-    #     max_length=55, db_column='RECIP_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='RECIP_ADR1',
+    #   blank=True,
+    #   help_text='First line of recipient street address'
     # )
     # recip_adr2 = fields.CharField(
-    #     max_length=55, db_column='RECIP_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='RECIP_ADR2',
+    #   blank=True,
+    #   help_text='Second line of recipient street address'
     # )
     recip_city = fields.CharField(
-        max_length=30, db_column='RECIP_CITY', blank=True
+        max_length=30,
+        db_column='RECIP_CITY',
+        blank=True,
+        help_text='Recipient city',
     )
     recip_id = fields.CharField(
-        max_length=9, db_column='RECIP_ID', blank=True
+        max_length=9,
+        db_column='RECIP_ID',
+        blank=True,
+        help_text='Recipient identification number',
     )
     recip_namf = fields.CharField(
-        max_length=45, db_column='RECIP_NAMF', blank=True
+        max_length=45,
+        db_column='RECIP_NAMF',
+        blank=True,
+        help_text='Recipient first name',
     )
     recip_naml = fields.CharField(
-        max_length=200, db_column='RECIP_NAML', blank=True
+        max_length=200,
+        db_column='RECIP_NAML',
+        blank=True,
+        help_text='Recipient last name',
     )
     recip_nams = fields.CharField(
-        max_length=10, db_column='RECIP_NAMS', blank=True
+        max_length=10,
+        db_column='RECIP_NAMS',
+        blank=True,
+        help_text='Recipient name suffix',
     )
     recip_namt = fields.CharField(
-        max_length=10, db_column='RECIP_NAMT', blank=True
+        max_length=10,
+        db_column='RECIP_NAMT',
+        blank=True,
+        help_text='Recipient name prefix or title',
     )
     recip_st = fields.CharField(
-        max_length=2, db_column='RECIP_ST', blank=True
+        max_length=2,
+        db_column='RECIP_ST',
+        blank=True,
+        help_text='Recipient state',
     )
     recip_zip4 = fields.CharField(
-        max_length=10, db_column='RECIP_ZIP4', blank=True
+        max_length=10,
+        db_column='RECIP_ZIP4',
+        blank=True,
+        help_text='Recipient ZIP Code',
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
