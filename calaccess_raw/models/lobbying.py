@@ -1091,22 +1091,41 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
     )
     entity_id = fields.CharField(
-        max_length=9, db_column='ENTITY_ID', blank=True
+        max_length=9,
+        db_column='ENTITY_ID',
+        blank=True,
+        help_text='Entity identification number',
     )
     enty_namf = fields.CharField(
-        max_length=45, db_column='ENTY_NAMF', blank=True
+        max_length=45,
+        db_column='ENTY_NAMF',
+        blank=True,
+        help_text='Entity first name',
     )
     enty_naml = fields.CharField(
-        max_length=200, db_column='ENTY_NAML', blank=True
+        max_length=200,
+        db_column='ENTY_NAML',
+        blank=True,
+        help_text='Entity last name or business name',
     )
     enty_nams = fields.CharField(
-        max_length=10, db_column='ENTY_NAMS', blank=True
+        max_length=10,
+        db_column='ENTY_NAMS',
+        blank=True,
+        help_text='Entity suffix',
     )
     enty_namt = fields.CharField(
-        max_length=10, db_column='ENTY_NAMT', blank=True
+        max_length=10,
+        db_column='ENTY_NAMT',
+        blank=True,
+        help_text='Entity title or prefix',
     )
     enty_title = fields.CharField(
-        max_length=45, db_column='ENTY_TITLE', blank=True
+        max_length=45,
+        db_column='ENTY_TITLE',
+        blank=True,
+        help_text='Title of partner, owner, officer, employer if the \
+entity is an individual. Only required by Form 635.',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
