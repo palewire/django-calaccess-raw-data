@@ -979,10 +979,6 @@ text description."
 class LattCd(CalAccessBaseModel):
     """
     Lobbyist disclosure attachment schedules for payments
-        F630 -- Payments made to Lobbying Coalitions (Attatchment)
-        F635C -- Payments received by Lobbying Coalitions (Attatchment)
-        F640 -- Government Agencies Reporting of "Other Payments to Influence
-                Legislative or Administrative Action" (Attatchment)
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -994,14 +990,20 @@ original filing and 1 to 999 amendments.",
     amount = fields.DecimalField(
         max_digits=16,
         decimal_places=2,
-        db_column='AMOUNT'
+        db_column='AMOUNT',
+        help_text='Amount of payment',
     )
     cum_amt = fields.DecimalField(
         max_digits=16,
         decimal_places=2,
-        db_column='CUM_AMT'
+        db_column='CUM_AMT',
+        help_text='Cumulative total to date',
     )
-    cumbeg_dt = fields.DateField(db_column='CUMBEG_DT', null=True)
+    cumbeg_dt = fields.DateField(
+        db_column='CUMBEG_DT',
+        null=True,
+        help_text='Cumulative period beginning to date',
+    )
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
@@ -1048,14 +1050,20 @@ original filing and 1 to 999 amendments.",
     memo_code = fields.CharField(
         max_length=1,
         db_column='MEMO_CODE',
-        blank=True
+        blank=True,
+        help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
         max_length=20,
         db_column='MEMO_REFNO',
-        blank=True
+        blank=True,
+        help_text='Reference to the text in a TEXT record',
     )
-    pmt_date = fields.DateField(db_column='PMT_DATE', null=True)
+    pmt_date = fields.DateField(
+        db_column='PMT_DATE',
+        null=True,
+        help_text='Date of payment',
+    )
     REC_TYPE_CHOICES = (
         ("LATT", "LATT"),
     )
@@ -1067,49 +1075,58 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
     )
     # recip_adr1 = fields.CharField(
-    #     max_length=55,
-    #     db_column='RECIP_ADR1',
-    #     blank=True
+    #   max_length=55,
+    #   db_column='RECIP_ADR1',
+    #   blank=True,
+    #   help_text='First line of the recipient street address',
     # )
     # recip_adr2 = fields.CharField(
-    #     max_length=55,
-    #     db_column='RECIP_ADR2',
-    #     blank=True
+    #   max_length=55,
+    #   db_column='RECIP_ADR2',
+    #   blank=True,
+    #   help_text='Second line of the recipient street address',
     # )
     recip_city = fields.CharField(
         max_length=30,
         db_column='RECIP_CITY',
-        blank=True
+        blank=True,
+        help_text='Recipient city',
     )
     recip_namf = fields.CharField(
         max_length=45,
         db_column='RECIP_NAMF',
-        blank=True
+        blank=True,
+        help_text='Recipient first name',
     )
     recip_naml = fields.CharField(
         max_length=200,
         db_column='RECIP_NAML',
-        blank=True
+        blank=True,
+        help_text='Recipient last name or business name',
     )
     recip_nams = fields.CharField(
         max_length=10,
         db_column='RECIP_NAMS',
-        blank=True
+        blank=True,
+        help_text='Recipient suffix',
     )
     recip_namt = fields.CharField(
         max_length=10,
         db_column='RECIP_NAMT',
-        blank=True
+        blank=True,
+        help_text='Recipient title or prefix',
     )
     recip_st = fields.CharField(
         max_length=2,
         db_column='RECIP_ST',
-        blank=True
+        blank=True,
+        help_text='Recipient state',
     )
     recip_zip4 = fields.CharField(
         max_length=10,
         db_column='RECIP_ZIP4',
-        blank=True
+        blank=True,
+        help_text='Recipient ZIP Code',
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
