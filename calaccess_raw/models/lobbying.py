@@ -1944,7 +1944,7 @@ original filing and 1 to 999 amendments.",
         max_digits=16,
         decimal_places=2,
         db_column='AMOUNT',
-        help_text='amount of contribution',
+        help_text='Amount of contribution',
     )
     bakref_tid = fields.CharField(
         max_length=20,

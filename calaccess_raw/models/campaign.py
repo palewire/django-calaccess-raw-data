@@ -12,7 +12,8 @@ class CvrSoCd(CalAccessBaseModel):
     """
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
-        null=True
+        null=True,
+        help_text='',
     )
     ACTIVITY_LEVEL_CHOICES = (
         ("CI", "City"),
@@ -38,87 +39,104 @@ original filing and 1 to 999 amendments.",
     bank_adr1 = fields.CharField(
         max_length=55,
         db_column="BANK_ADR1",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     bank_adr2 = fields.CharField(
         max_length=55,
         db_column="BANK_ADR2",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     bank_city = fields.CharField(
         max_length=30,
         db_column="BANK_CITY",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     bank_nam = fields.CharField(
         max_length=200,
         db_column="BANK_NAM",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     bank_phon = fields.CharField(
         max_length=20,
         db_column="BANK_PHON",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     bank_st = fields.CharField(
         max_length=2,
         db_column="BANK_ST",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     bank_zip4 = fields.CharField(
         max_length=10,
         db_column="BANK_ZIP4",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     brdbase_cb = fields.CharField(
         max_length=1,
         db_column="BRDBASE_CB",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     city = fields.CharField(
         max_length=30,
         db_column="CITY",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     cmte_email = fields.CharField(
         max_length=60,
         db_column="CMTE_EMAIL",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     cmte_fax = fields.CharField(
         max_length=20,
         db_column="CMTE_FAX",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     com82013id = fields.CharField(
         max_length=9,
         db_column="COM82013ID",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     com82013nm = fields.CharField(
         max_length=200,
         db_column="COM82013NM",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     com82013yn = fields.CharField(
         max_length=1,
         db_column="COM82013YN",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     control_cb = fields.CharField(
         max_length=1,
         db_column="CONTROL_CB",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     county_act = fields.CharField(
         max_length=20,
         db_column="COUNTY_ACT",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     county_res = fields.CharField(
         max_length=20,
         db_column="COUNTY_RES",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -193,37 +211,44 @@ slate mailer organization'),
     genpurp_cb = fields.CharField(
         max_length=1,
         db_column="GENPURP_CB",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     gpc_descr = fields.CharField(
         max_length=300,
         db_column="GPC_DESCR",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     mail_city = fields.CharField(
         max_length=30,
         db_column="MAIL_CITY",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     mail_st = fields.CharField(
         max_length=2,
         db_column="MAIL_ST",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     mail_zip4 = fields.CharField(
         max_length=10,
         db_column="MAIL_ZIP4",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     phone = fields.CharField(
         max_length=20,
         db_column="PHONE",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     primfc_cb = fields.CharField(
         max_length=1,
         db_column="PRIMFC_CB",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     qualfy_dt = fields.DateTimeField(
         db_column="QUALFY_DT",
@@ -234,7 +259,8 @@ slate mailer organization'),
     qual_cb = fields.CharField(
         max_length=1,
         db_column="QUAL_CB",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
@@ -249,34 +275,41 @@ slate mailer organization'),
     report_num = fields.CharField(
         max_length=3,
         db_column="REPORT_NUM",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     rpt_date = fields.DateTimeField(
         db_column="RPT_DATE",
-        null=True
+        null=True,
+        help_text='This field is undocumented',
     )
     smcont_qualdt = fields.DateTimeField(
         db_column="SMCONT_QUALDT",
-        null=True
+        null=True,
+        help_text='This field is undocumented',
     )
     sponsor_cb = fields.CharField(
         max_length=1,
         db_column="SPONSOR_CB",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     st = fields.CharField(
         max_length=2,
         db_column="ST",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     surplusdsp = fields.CharField(
         max_length=90,
         db_column="SURPLUSDSP",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
     term_date = fields.DateTimeField(
         db_column="TERM_DATE",
-        null=True
+        null=True,
+        help_text='This field is undocumented',
     )
     tres_city = fields.CharField(
         max_length=30,
@@ -329,7 +362,8 @@ slate mailer organization'),
     zip4 = fields.CharField(
         max_length=10,
         db_column="ZIP4",
-        blank=True
+        blank=True,
+        help_text='This field is undocumented',
     )
 
     class Meta:
