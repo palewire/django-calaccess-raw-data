@@ -580,7 +580,6 @@ original filing and 1 to 999 amendments.",
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
-        help_text='',
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "CVR2"),
@@ -676,13 +675,7 @@ the record',
 @python_2_unicode_compatible
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information for the lobbying disclosure forms
-
-        F615 -- Lobbyist Report
-        F625 -- Report of Lobbying Firm
-        F635 -- Report of Lobbyist Employer and Report of Lobbying Coalition
-        F645 -- Report of Person Spending $5,000 or more to influence
-                Legislative or administrative action
+    Cover page information for lobbying disclosure forms
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -692,13 +685,24 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     ctrib_n_cb = fields.CharField(
-        max_length=1, db_column='CTRIB_N_CB', blank=True
+        max_length=1,
+        db_column='CTRIB_N_CB',
+        blank=True,
+        help_text="'Campaign contribtions? P4 attached' checkbox. Applies \
+to forms 625, 635, 645.",
     )
     ctrib_y_cb = fields.CharField(
-        max_length=1, db_column='CTRIB_Y_CB', blank=True
+        max_length=1,
+        db_column='CTRIB_Y_CB',
+        blank=True,
+        help_text="'Campaign contribtions? P4 attached' checkbox. Applies \
+to forms 625, 635, 645.",
     )
     cum_beg_dt = fields.DateField(
-        null=True, db_column='CUM_BEG_DT', blank=True
+        null=True,
+        db_column='CUM_BEG_DT',
+        blank=True,
+        help_text='Cumulative period beginning date',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -729,14 +733,27 @@ original filing and 1 to 999 amendments.",
         help_text="Filer's unique identification number",
     )
     filer_namf = fields.CharField(
-        max_length=45, db_column='FILER_NAMF', blank=True
+        max_length=45,
+        db_column='FILER_NAMF',
+        blank=True,
+        help_text='Filer first name',
     )
-    filer_naml = fields.CharField(max_length=200, db_column='FILER_NAML')
+    filer_naml = fields.CharField(
+        max_length=200,
+        db_column='FILER_NAML',
+        help_text='Filer last name or business name',
+    )
     filer_nams = fields.CharField(
-        max_length=10, db_column='FILER_NAMS', blank=True
+        max_length=10,
+        db_column='FILER_NAMS',
+        blank=True,
+        help_text='Filer suffix',
     )
     filer_namt = fields.CharField(
-        max_length=10, db_column='FILER_NAMT', blank=True
+        max_length=10,
+        db_column='FILER_NAMT',
+        blank=True,
+        help_text='Filer title or prefix',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -745,32 +762,52 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     # firm_adr1 = fields.CharField(
-    #     max_length=55,
-    #     db_column='FIRM_ADR1',
-    #     blank=True
+    #   max_length=55,
+    #   db_column='FIRM_ADR1',
+    #   blank=True,
+    #   help_text='First line of Firm, employer or coalition address',',
     # )
     # firm_adr2 = fields.CharField(
-    #     max_length=55,
-    #     db_column='FIRM_ADR2',
-    #     blank=True
+    #   max_length=55,
+    #   db_column='FIRM_ADR2',
+    #   blank=True,
+    #   help_text='Second line of firm, employer or coalition address',
     # )
     firm_city = fields.CharField(
         max_length=30,
         db_column='FIRM_CITY',
-        blank=True
+        blank=True,
+        help_text='Firm, employer or coalition business city',
     )
-    firm_id = fields.CharField(max_length=9, db_column='FIRM_ID', blank=True)
+    firm_id = fields.CharField(
+        max_length=9,
+        db_column='FIRM_ID',
+        blank=True,
+        help_text='Identification number of firm, employer or coalition',
+    )
     firm_name = fields.CharField(
         max_length=200,
         db_column='FIRM_NAME',
-        blank=True
+        blank=True,
+        help_text='Name of firm, employer or coalition',
     )
     firm_phon = fields.CharField(
-        max_length=20, db_column='FIRM_PHON', blank=True
+        max_length=20,
+        db_column='FIRM_PHON',
+        blank=True,
+        help_text='Firm, employer or coalition business phone number',
     )
-    firm_st = fields.CharField(max_length=2, db_column='FIRM_ST', blank=True)
+    firm_st = fields.CharField(
+        max_length=2,
+        db_column='FIRM_ST',
+        blank=True,
+        help_text='Firm, employer or coalition business ZIP Code',
+    )
     firm_zip4 = fields.CharField(
-        max_length=10, db_column='FIRM_ZIP4', blank=True
+        max_length=10,
+        db_column='FIRM_ZIP4',
+        blank=True,
+        help_text='',
     )
     FORM_TYPE_CHOICES = (
         ('F615', ''),
@@ -785,75 +822,159 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    from_date = fields.DateField(db_column='FROM_DATE', null=True)
+    from_date = fields.DateField(
+        db_column='FROM_DATE',
+        null=True,
+        help_text='Reporting period from date',
+    )
     lby_actvty = fields.CharField(
-        max_length=400, db_column='LBY_ACTVTY', blank=True
+        max_length=400,
+        db_column='LBY_ACTVTY',
+        blank=True,
+        help_text='Description of lobbying activity. Applies to forms \
+635 and 645. Additional description may be provided in text records.',
     )
     lobby_n_cb = fields.CharField(
-        max_length=1, db_column='LOBBY_N_CB', blank=True
+        max_length=1,
+        db_column='LOBBY_N_CB',
+        blank=True,
+        help_text="'Lobbying activity none' checkbox. Applies \
+only to Form 625.",
     )
     lobby_y_cb = fields.CharField(
-        max_length=1, db_column='LOBBY_Y_CB', blank=True
+        max_length=1,
+        db_column='LOBBY_Y_CB',
+        blank=True,
+        help_text="'Lobbying activity Form 630 attached' checkbox. Applies \
+only to Form 625.",
     )
     # mail_adr1 = fields.CharField(
-    #     max_length=55, db_column='MAIL_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='MAIL_ADR1',
+    #   blank=True,
+    #   help_text='First line of filer mailing street address',
     # )
     # mail_adr2 = fields.CharField(
-    #     max_length=55, db_column='MAIL_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='MAIL_ADR2',
+    #   blank=True,
+    #   help_text='Second line of filer mailing street address',
     # )
     mail_city = fields.CharField(
-        max_length=30, db_column='MAIL_CITY', blank=True
+        max_length=30,
+        db_column='MAIL_CITY',
+        blank=True,
+        help_text='Filer mailing address city',
     )
     mail_phon = fields.CharField(
-        max_length=20, db_column='MAIL_PHON', blank=True
+        max_length=20,
+        db_column='MAIL_PHON',
+        blank=True,
+        help_text='Filer mailing address phone number',
     )
     mail_st = fields.CharField(
-        max_length=2, db_column='MAIL_ST', blank=True
+        max_length=2,
+        db_column='MAIL_ST',
+        blank=True,
+        help_text='Filer mailing address state',
     )
     mail_zip4 = fields.CharField(
-        max_length=10, db_column='MAIL_ZIP4', blank=True
+        max_length=10,
+        db_column='MAIL_ZIP4',
+        blank=True,
+        help_text='Filer mailing address ZIP Code',
     )
     major_namf = fields.CharField(
-        max_length=45, db_column='MAJOR_NAMF', blank=True
+        max_length=45,
+        db_column='MAJOR_NAMF',
+        blank=True,
+        help_text='Major donor first name. Applies only to \
+individuals and forms 625, 635, 645.',
     )
     major_naml = fields.CharField(
-        max_length=200, db_column='MAJOR_NAML', blank=True
+        max_length=200,
+        db_column='MAJOR_NAML',
+        blank=True,
+        help_text='Major donor last name. Applies only to \
+individuals and forms 625, 635, 645.',
     )
     major_nams = fields.CharField(
-        max_length=10, db_column='MAJOR_NAMS', blank=True
+        max_length=10,
+        db_column='MAJOR_NAMS',
+        blank=True,
+        help_text='Major donor suffix. Applies only to \
+individuals and forms 625, 635, 645.',
     )
     major_namt = fields.CharField(
-        max_length=10, db_column='MAJOR_NAMT', blank=True
+        max_length=10,
+        db_column='MAJOR_NAMT',
+        blank=True,
+        help_text='Major donor title or prefix. Applies only to \
+individuals and forms 625, 635, 645.',
     )
     nopart1_cb = fields.CharField(
-        max_length=1, db_column='NOPART1_CB', blank=True
+        max_length=1,
+        db_column='NOPART1_CB',
+        blank=True,
+        help_text="'No Part I information' checkbox. Applies only \
+to Form 615.",
     )
     nopart2_cb = fields.CharField(
-        max_length=1, db_column='NOPART2_CB', blank=True
+        max_length=1,
+        db_column='NOPART2_CB',
+        blank=True,
+        help_text="'No Part II information' checkbox. Applies only \
+to Form 615.",
     )
     part1_1_cb = fields.CharField(
-        max_length=1, db_column='PART1_1_CB', blank=True
+        max_length=1,
+        db_column='PART1_1_CB',
+        blank=True,
+        help_text="'Partners, owners Form 615 attached ...' checkbox. \
+Applies only to form 625.",
     )
     part1_2_cb = fields.CharField(
-        max_length=1, db_column='PART1_2_CB', blank=True
+        max_length=1,
+        db_column='PART1_2_CB',
+        blank=True,
+        help_text="'Partners, owners listed below ...' checkbox. Applies only \
+to Form 625.",
     )
     prn_namf = fields.CharField(
-        max_length=45, db_column='PRN_NAMF', blank=True
+        max_length=45,
+        db_column='PRN_NAMF',
+        blank=True,
+        help_text='Signer first name',
     )
     prn_naml = fields.CharField(
-        max_length=200, db_column='PRN_NAML', blank=True
+        max_length=200,
+        db_column='PRN_NAML',
+        blank=True,
+        help_text='Signer last name',
     )
     prn_nams = fields.CharField(
-        max_length=10, db_column='PRN_NAMS', blank=True
+        max_length=10,
+        db_column='PRN_NAMS',
+        blank=True,
+        help_text='Signer suffix',
     )
     prn_namt = fields.CharField(
-        max_length=10, db_column='PRN_NAMT', blank=True
+        max_length=10,
+        db_column='PRN_NAMT',
+        blank=True,
+        help_text='Signer title or prefix',
     )
     rcpcmte_id = fields.CharField(
-        max_length=9, db_column='RCPCMTE_ID', blank=True
+        max_length=9,
+        db_column='RCPCMTE_ID',
+        blank=True,
+        help_text='Recipient committee or major donor identification number',
     )
     rcpcmte_nm = fields.CharField(
-        max_length=200, db_column='RCPCMTE_NM', blank=True
+        max_length=200,
+        db_column='RCPCMTE_NM',
+        blank=True,
+        help_text='Recipient committee name',
     )
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
@@ -865,27 +986,70 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    report_num = fields.CharField(max_length=3, db_column='REPORT_NUM')
-    rpt_date = fields.DateField(db_column='RPT_DATE', null=True)
-    sender_id = fields.CharField(max_length=9, db_column='SENDER_ID')
-    sig_date = fields.DateField(db_column='SIG_DATE', null=True)
-    sig_loc = fields.CharField(max_length=45, db_column='SIG_LOC', blank=True)
+    report_num = fields.CharField(
+        max_length=3,
+        db_column='REPORT_NUM',
+        help_text='Amendment number. 000 is the original. \
+001-999 are amendments.',
+    )
+    rpt_date = fields.DateField(
+        db_column='RPT_DATE',
+        null=True,
+        help_text='Date this report was filed, as reported by the filer',
+    )
+    sender_id = fields.CharField(
+        max_length=9,
+        db_column='SENDER_ID',
+        help_text='Identification number of lobbyist entity that is \
+submitting this report. The field is used to authenticate the filer and \
+allows the firm to submit forms for its lobbyists.',
+    )
+    sig_date = fields.DateField(
+        db_column='SIG_DATE',
+        null=True,
+        help_text='Date when signed',
+    )
+    sig_loc = fields.CharField(
+        max_length=45,
+        db_column='SIG_LOC',
+        blank=True,
+        help_text='Signer city and state',
+    )
     sig_namf = fields.CharField(
-        max_length=45, db_column='SIG_NAMF', blank=True
+        max_length=45,
+        db_column='SIG_NAMF',
+        blank=True,
+        help_text='Signer first name',
     )
     sig_naml = fields.CharField(
-        max_length=200, db_column='SIG_NAML', blank=True
+        max_length=200,
+        db_column='SIG_NAML',
+        blank=True,
+        help_text='Signer last name',
     )
     sig_nams = fields.CharField(
-        max_length=10, db_column='SIG_NAMS', blank=True
+        max_length=10,
+        db_column='SIG_NAMS',
+        blank=True,
+        help_text='Signer suffix',
     )
     sig_namt = fields.CharField(
-        max_length=10, db_column='SIG_NAMT', blank=True
+        max_length=10,
+        db_column='SIG_NAMT',
+        blank=True,
+        help_text='Signer title or prefix',
     )
     sig_title = fields.CharField(
-        max_length=45, db_column='SIG_TITLE', blank=True
+        max_length=45,
+        db_column='SIG_TITLE',
+        blank=True,
+        help_text='Title of signer',
     )
-    thru_date = fields.DateField(db_column='THRU_DATE', null=True)
+    thru_date = fields.DateField(
+        db_column='THRU_DATE',
+        null=True,
+        help_text='Reporting period through date',
+    )
 
     class Meta:
         app_label = "calaccess_raw"
