@@ -1473,9 +1473,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LothCd(CalAccessBaseModel):
     """
-    Payment to other lobbying firms reported on form
-
-        F625 Part 3B
+    Payment to other lobbying firms
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1485,12 +1483,20 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amount = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='AMOUNT', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='AMOUNT',
+        blank=True,
+        help_text='Amount of payment',
     )
     cum_amt = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='CUM_AMT', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='CUM_AMT',
+        blank=True,
+        help_text='Cumulative total to date',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1499,25 +1505,46 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     # firm_adr1 = fields.CharField(
-    #     max_length=55, db_column='FIRM_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='FIRM_ADR1',
+    #   blank=True,
+    #   help_text='First line of firm, employer or coalition\'s address',
     # )
     # firm_adr2 = fields.CharField(
-    #     max_length=55, db_column='FIRM_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='FIRM_ADR2',
+    #   blank=True,
+    #   help_text='Second line of firm, employer or coalition\'s address',
     # )
     firm_city = fields.CharField(
-        max_length=30, db_column='FIRM_CITY', blank=True
+        max_length=30,
+        db_column='FIRM_CITY',
+        blank=True,
+        help_text='Firm, employer or coalition\'s city',
     )
     firm_name = fields.CharField(
-        max_length=200, db_column='FIRM_NAME', blank=True
+        max_length=200,
+        db_column='FIRM_NAME',
+        blank=True,
+        help_text='Firm, employer or coalition\'s name',
     )
     firm_phon = fields.CharField(
-        max_length=20, db_column='FIRM_PHON', blank=True
+        max_length=20,
+        db_column='FIRM_PHON',
+        blank=True,
+        help_text='Firm, employer or coalition\'s phone number',
     )
     firm_st = fields.CharField(
-        max_length=2, db_column='FIRM_ST', blank=True
+        max_length=2,
+        db_column='FIRM_ST',
+        blank=True,
+        help_text='Firm, employer or coalition\'s ZIP Code',
     )
     firm_zip4 = fields.CharField(
-        max_length=10, db_column='FIRM_ZIP4', blank=True
+        max_length=10,
+        db_column='FIRM_ZIP4',
+        blank=True,
+        help_text='',
     )
     FORM_TYPE_CHOICES = (
         ('F625P3B', ''),
@@ -1535,13 +1562,22 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text='Reference to text contained in a TEXT record',
     )
     pmt_date = fields.DateField(
-        null=True, db_column='PMT_DATE', blank=True
+        null=True,
+        db_column='PMT_DATE',
+        blank=True,
+        help_text='Date of payment',
     )
     REC_TYPE_CHOICES = (
         ("LOTH", "LOTH"),
@@ -1554,19 +1590,28 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
     )
     subj_namf = fields.CharField(
-        max_length=45, db_column='SUBJ_NAMF', blank=True
+        max_length=45,
+        db_column='SUBJ_NAMF',
+        blank=True,
+        help_text='First name of employer/client subject of lobbying',
     )
     subj_naml = fields.CharField(
-        max_length=200, db_column='SUBJ_NAML', blank=True
+        max_length=200,
+        db_column='SUBJ_NAML',
+        blank=True,
+        help_text='Last name of employer/client subject of lobbying',
     )
     subj_nams = fields.CharField(
-        max_length=45, db_column='SUBJ_NAMS', blank=True
+        max_length=45,
+        db_column='SUBJ_NAMS',
+        blank=True,
+        help_text='Suffix of employer/client subject of lobbying',
     )
     subj_namt = fields.CharField(
         max_length=45,
         db_column='SUBJ_NAMT',
         blank=True,
-        help_text="Prefix/Title of employer/client subject of lobbying"
+        help_text="Prefix or title of employer/client subject of lobbying"
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
