@@ -561,7 +561,7 @@ This field only applies to Form 601.',
 @python_2_unicode_compatible
 class Cvr2RegistrationCd(CalAccessBaseModel):
     """
-    Cover page of lobbying dislcosure forms
+    Cover page of lobbying disclosure forms
     """
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -580,6 +580,7 @@ original filing and 1 to 999 amendments.",
         db_column='LINE_ITEM',
         help_text="Line item number of this record",
         db_index=True,
+        help_text='',
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "CVR2"),
@@ -638,28 +639,28 @@ registration statement)'),
 the record',
     )
     enty_naml = fields.CharField(
-        verbose_name='last name',
         max_length=200,
         db_column='ENTY_NAML',
-        blank=True
+        blank=True,
+        help_text='Entity last name',
     )
     enty_namf = fields.CharField(
-        verbose_name='first name',
         max_length=45,
         db_column='ENTY_NAMF',
-        blank=True
+        blank=True,
+        help_text='Entity first name',
     )
     enty_namt = fields.CharField(
-        verbose_name='title',
         max_length=10,
         db_column='ENTY_NAMT',
-        blank=True
+        blank=True,
+        help_text='Entity title or suffix'
     )
     enty_nams = fields.CharField(
-        verbose_name='title',
         max_length=10,
         db_column='ENTY_NAMS',
-        blank=True
+        blank=True,
+        help_text='Entity suffix',
     )
 
     class Meta:
