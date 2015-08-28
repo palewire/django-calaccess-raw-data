@@ -3384,7 +3384,7 @@ original filing and 1 to 999 amendments.",
         db_column='DISTRICT_CD', blank=True, null=True
     )
     accept_limit_yn = fields.IntegerField(
-        db_column='ACCEPT_LIMIT_YN', blank=True, null=True
+        db_column='ACCEPT_LIMIT_YN', blank=True, null=True, help_text='this field is undocumented'
     )
     did_exceed_dt = fields.DateField(
         db_column='DID_EXCEED_DT', blank=True, null=True
