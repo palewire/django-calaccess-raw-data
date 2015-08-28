@@ -1064,13 +1064,7 @@ allows the firm to submit forms for its lobbyists.',
 @python_2_unicode_compatible
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
-    Additional names data for the lobbyist disclosure forms
-
-        F615 -- Lobbyist Report
-        F625 -- Report of Lobbying Firm
-        F635 -- Report of Lobbyist Employer and Report of Lobbying Coalition
-        F645 -- Report of Person Spending $5,000 or more to influence
-                Legislative or administrative action
+    Additional data from lobbyist disclosure forms
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
