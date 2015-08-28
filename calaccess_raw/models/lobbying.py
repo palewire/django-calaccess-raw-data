@@ -1893,17 +1893,21 @@ Part 2B Client/Employer"
 @python_2_unicode_compatible
 class LpayCd(CalAccessBaseModel):
     """
-    Payments made/received to/from Lobbying Firms reported on forms
-
-        F625 Part 2
-        F635 Part 3B
+    Payments made or received by lobbying firms
     """
     advan_amt = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='ADVAN_AMT', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='ADVAN_AMT',
+        blank=True,
+        help_text='Advance and other payments amount',
     )
     advan_dscr = fields.CharField(
-        max_length=100, db_column='ADVAN_DSCR', blank=True
+        max_length=100,
+        db_column='ADVAN_DSCR',
+        blank=True,
+        help_text='Description of advance and other payments',
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1913,41 +1917,81 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     bakref_tid = fields.CharField(
-        max_length=20, db_column='BAKREF_TID', blank=True
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True,
+        help_text='Backreference to transaction identifer of parent record',
     )
     cum_total = fields.DecimalField(
-        decimal_places=2, max_digits=14, db_column='CUM_TOTAL'
+        decimal_places=2,
+        max_digits=14,
+        db_column='CUM_TOTAL',
+        help_text='Cumulative total to date',
     )
     # emplr_adr1 = fields.CharField(
-    #     max_length=55, db_column='EMPLR_ADR1', blank=True
+    #   max_length=55,
+    #   db_column='EMPLR_ADR1',
+    #   blank=True,
+    #   help_text='First line of employer street address',
     # )
     # emplr_adr2 = fields.CharField(
-    #     max_length=55, db_column='EMPLR_ADR2', blank=True
+    #   max_length=55,
+    #   db_column='EMPLR_ADR2',
+    #   blank=True,
+    #   help_text='Second line of employer street address',
     # )
     emplr_city = fields.CharField(
-        max_length=30, db_column='EMPLR_CITY', blank=True
+        max_length=30,
+        db_column='EMPLR_CITY',
+        blank=True,
+        help_text='Employer city',
     )
     emplr_id = fields.CharField(
-        max_length=9, db_column='EMPLR_ID', blank=True
+        max_length=9,
+        db_column='EMPLR_ID',
+        blank=True,
+        help_text='This field is undocumented',
     )
     emplr_namf = fields.CharField(
-        max_length=45, db_column='EMPLR_NAMF', blank=True
+        max_length=45,
+        db_column='EMPLR_NAMF',
+        blank=True,
+        help_text='Employer first name',
     )
-    emplr_naml = fields.CharField(max_length=200, db_column='EMPLR_NAML')
+    emplr_naml = fields.CharField(
+        max_length=200,
+        db_column='EMPLR_NAML',
+        help_text='Name of firm, employer or coalition',
+    )
     emplr_nams = fields.CharField(
-        max_length=10, db_column='EMPLR_NAMS', blank=True
+        max_length=10,
+        db_column='EMPLR_NAMS',
+        blank=True,
+        help_text='Employer suffix',
     )
     emplr_namt = fields.CharField(
-        max_length=10, db_column='EMPLR_NAMT', blank=True
+        max_length=10,
+        db_column='EMPLR_NAMT',
+        blank=True,
+        help_text='Employer title or prefix',
     )
     emplr_phon = fields.CharField(
-        max_length=20, db_column='EMPLR_PHON', blank=True
+        max_length=20,
+        db_column='EMPLR_PHON',
+        blank=True,
+        help_text='Employer phone number',
     )
     emplr_st = fields.CharField(
-        max_length=2, db_column='EMPLR_ST', blank=True
+        max_length=2,
+        db_column='EMPLR_ST',
+        blank=True,
+        help_text='Employer state',
     )
     emplr_zip4 = fields.CharField(
-        max_length=10, db_column='EMPLR_ZIP4', blank=True
+        max_length=10,
+        db_column='EMPLR_ZIP4',
+        blank=True,
+        help_text='Employer ZIP Code',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -1968,8 +2012,12 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
     )
     fees_amt = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='FEES_AMT', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='FEES_AMT',
+        blank=True,
+        help_text='Fees and retainers amount',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1989,7 +2037,10 @@ original filing and 1 to 999 amendments.",
         choices=FORM_TYPE_CHOICES,
     )
     lby_actvty = fields.CharField(
-        max_length=200, db_column='LBY_ACTVTY', blank=True
+        max_length=200,
+        db_column='LBY_ACTVTY',
+        blank=True,
+        help_text='Description of lobbying activity',
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -1997,13 +2048,22 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text='Reference to the text contained in a TEXT record',
     )
     per_total = fields.DecimalField(
-        decimal_places=2, max_digits=14, db_column='PER_TOTAL'
+        decimal_places=2,
+        max_digits=14,
+        db_column='PER_TOTAL',
+        help_text='Total this reporting period',
     )
     REC_TYPE_CHOICES = (
         ("LPAY", "LPAY"),
@@ -2016,8 +2076,12 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
     )
     reimb_amt = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='REIMB_AMT', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='REIMB_AMT',
+        blank=True,
+        help_text='Reimbursements of expense amount',
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
