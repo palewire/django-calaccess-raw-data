@@ -2857,16 +2857,20 @@ Schedule F, accrued expenses (unpaid bills)'),
         max_length=30, db_column='TRES_CITY', blank=True
     )
     tres_namf = fields.CharField(
-        max_length=45, db_column='TRES_NAMF', blank=True
+        max_length=45, db_column='TRES_NAMF', blank=True,
+        help_text='Treasurer or responsible officer's first name.',
     )
     tres_naml = fields.CharField(
-        max_length=200, db_column='TRES_NAML', blank=True
+        max_length=200, db_column='TRES_NAML', blank=True,
+        help_text='Treasurer or responsible officer's last name.',
     )
     tres_nams = fields.CharField(
-        max_length=10, db_column='TRES_NAMS', blank=True
+        max_length=10, db_column='TRES_NAMS', blank=True,
+        help_text='Treasurer or responsible officer's suffix.',
     )
     tres_namt = fields.CharField(
-        max_length=100, db_column='TRES_NAMT', blank=True
+        max_length=100, db_column='TRES_NAMT', blank=True,
+        help_text='Treasurer or responsible officer's prefix or title.',
     )
     tres_st = fields.CharField(max_length=2, db_column='TRES_ST', blank=True)
     tres_zip4 = fields.CharField(
