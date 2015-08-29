@@ -702,13 +702,13 @@ original filing and 1 to 999 amendments.",
     #     max_length=55, db_column='CAND_ADR2', blank=True
     # )
     cand_city = fields.CharField(
-        max_length=30, db_column='CAND_CITY', blank=True
+        max_length=30, db_column='CAND_CITY', blank=True, help_text='candidate/officeholder city'
     )
     cand_email = fields.CharField(
         max_length=60, db_column='CAND_EMAIL', blank=True
     )
     cand_fax = fields.CharField(
-        max_length=20, db_column='CAND_FAX', blank=True
+        max_length=20, db_column='CAND_FAX', blank=True, help_text='candidate/officeholder fax'
     )
     cand_id = fields.CharField(max_length=9, db_column='CAND_ID', blank=True)
     cand_namf = fields.CharField(
@@ -724,7 +724,7 @@ original filing and 1 to 999 amendments.",
         max_length=10, db_column='CAND_NAMT', blank=True
     )
     cand_phon = fields.CharField(
-        max_length=20, db_column='CAND_PHON', blank=True
+        max_length=20, db_column='CAND_PHON', blank=True, help_text='candidate/officeholder phone'
     )
     cand_st = fields.CharField(
         max_length=4, db_column='CAND_ST', blank=True
@@ -3298,19 +3298,19 @@ original filing and 1 to 999 amendments.",
         db_column='CAND_CITY', max_length=22, blank=True
     )
     cand_st = fields.CharField(
-        db_column='CAND_ST', max_length=4, blank=True
+        db_column='CAND_ST', max_length=4, blank=True, help_text='candidate/officeholder state'
     )
     cand_zip4 = fields.CharField(
-        db_column='CAND_ZIP4', max_length=10, blank=True
+        db_column='CAND_ZIP4', max_length=10, blank=True, help_text='candidate officeholder zip +4'
     )
     cand_phon = fields.CharField(
-        db_column='CAND_PHON', max_length=14, blank=True
+        db_column='CAND_PHON', max_length=14, blank=True, help_text='candidate/officeholder phone number'
     )
     cand_fax = fields.CharField(
         db_column='CAND_FAX', max_length=14, blank=True
     )
     cand_email = fields.CharField(
-        db_column='CAND_EMAIL', max_length=37, blank=True
+        db_column='CAND_EMAIL', max_length=37, blank=True, help_text='candidate/officeholder email address'
     )
     fin_naml = fields.CharField(
         db_column='FIN_NAML', max_length=53, blank=True
