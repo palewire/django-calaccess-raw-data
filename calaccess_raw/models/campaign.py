@@ -3373,7 +3373,7 @@ original filing and 1 to 999 amendments.",
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR', max_length=14, blank=True, help_text='office jurisdiction description'
     )
-    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True, help_text="District number for office being sought. Populated for Senate, Assembly or Board of Equialization races.")
+    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
     party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
     yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
@@ -3500,7 +3500,7 @@ Part R: late payments received from')
         max_length=9, db_column='CMTE_ID', blank=True
     )
     payor_naml = fields.CharField(
-        max_length=200, db_column='PAYOR_NAML', blank=True
+        max_length=200, db_column='PAYOR_NAML', blank=True , help_text="Payor's last name or business name"
     )
     payor_namf = fields.CharField(
         max_length=45, 
