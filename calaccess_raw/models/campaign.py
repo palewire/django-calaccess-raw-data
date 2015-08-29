@@ -3369,7 +3369,7 @@ original filing and 1 to 999 amendments.",
         db_column='ELEC_TYPE', blank=True, null=True
     )
     execute_dt = fields.DateTimeField(
-        db_column='EXECUTE_DT', blank=True, null=True
+        db_column='EXECUTE_DT', blank=True, null=True, help_text='execution date'
     )
     can_sig = fields.CharField(
         db_column='CAN_SIG', max_length=13, blank=True
