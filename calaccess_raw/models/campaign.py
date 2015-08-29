@@ -3366,10 +3366,10 @@ original filing and 1 to 999 amendments.",
         db_column='AGENCY_NAM', max_length=63, blank=True
     )
     juris_cd = fields.IntegerField(
-        db_column='JURIS_CD', blank=True, null=True
+        db_column='JURIS_CD', blank=True, null=True, help_text='office jurisdiction code'
     )
     juris_dscr = fields.CharField(
-        db_column='JURIS_DSCR', max_length=14, blank=True
+        db_column='JURIS_DSCR', max_length=14, blank=True, help_text='office jurisdiction description'
     )
     dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True, help_text="District number for office being sought. Populated for Senate, Assembly or Board of Equialization races.")
     party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
