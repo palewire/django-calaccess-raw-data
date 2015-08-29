@@ -926,7 +926,10 @@ and major donor committee campaign statement)'),
         null=True, db_column='RPTTHRUDT', blank=True
     )
     selfemp_cb = fields.CharField(
-        max_length=1, db_column='SELFEMP_CB', blank=True
+        max_length=1, 
+        db_column='SELFEMP_CB', 
+        blank=True,
+        help_text="Self employed check-box"
     )
     sponsor_yn = fields.IntegerField(
         null=True, db_column='SPONSOR_YN', blank=True
