@@ -3545,7 +3545,8 @@ Part R: late payments received from')
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
     amt_attrib = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AMT_ATTRIB'
+        max_digits=16, decimal_places=2, db_column='AMT_ATTRIB',
+        help_text="Amount attributed (only if Form_type = 'F498-A')"
     )
     memo_code = fields.CharField(
         max_length=1, db_column='MEMO_CODE', blank=True
