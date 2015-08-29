@@ -3355,7 +3355,10 @@ original filing and 1 to 999 amendments.",
         db_column='FIN_ZIP4', max_length=9, blank=True
     )
     fin_phon = fields.CharField(
-        db_column='FIN_PHON', max_length=14, blank=True
+        db_column='FIN_PHON', 
+        max_length=14, 
+        blank=True,
+        help_text="Financial institution's phone number."
     )
     fin_fax = fields.CharField(
         db_column='FIN_FAX', max_length=10, blank=True
