@@ -3381,7 +3381,7 @@ original filing and 1 to 999 amendments.",
         db_column='CAN_SIG', max_length=13, blank=True
     )
     account_no = fields.CharField(
-        db_column='ACCOUNT_NO', max_length=22, blank=True
+        db_column='ACCOUNT_NO', max_length=22, blank=True, help_text='account number'
     )
     acct_op_dt = fields.DateField(
         db_column='ACCT_OP_DT', blank=True, null=True, help_text='account open date'
