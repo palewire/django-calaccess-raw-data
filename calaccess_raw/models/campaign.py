@@ -3508,7 +3508,10 @@ Part R: late payments received from')
         help_text="Payor's State."
     )
     payor_zip4 = fields.CharField(
-        max_length=10, db_column='PAYOR_ZIP4', blank=True
+        max_length=10, 
+        db_column='PAYOR_ZIP4', 
+        blank=True,
+        help_text="Payor's zip code."
     )
     date_rcvd = fields.DateField(db_column='DATE_RCVD', null=True)
     amt_rcvd = fields.DecimalField(
