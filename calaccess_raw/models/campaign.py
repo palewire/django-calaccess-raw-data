@@ -3400,7 +3400,10 @@ original filing and 1 to 999 amendments.",
         help_text="Financial institution's state."
     )
     fin_zip4 = fields.CharField(
-        db_column='FIN_ZIP4', max_length=9, blank=True
+        db_column='FIN_ZIP4', 
+        max_length=9, 
+        blank=True,
+        help_text="Financial institution's zip code."
     )
     fin_phon = fields.CharField(
         db_column='FIN_PHON', max_length=14, blank=True
