@@ -3515,7 +3515,8 @@ Part R: late payments received from')
         max_length=10, db_column='CAND_NAMS', blank=True
     )
     office_cd = fields.CharField(
-        max_length=3, db_column='OFFICE_CD', blank=True
+        max_length=3, db_column='OFFICE_CD', blank=True, help_text="Code that identifies the office being sought. See the
+CAL document for a list of valid codes."
     )
     offic_dscr = fields.CharField(
         max_length=40, db_column='OFFIC_DSCR', blank=True
