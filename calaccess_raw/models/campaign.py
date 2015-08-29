@@ -3524,7 +3524,8 @@ Part R: late payments received from')
         max_length=3, db_column='JURIS_CD', blank=True
     )
     juris_dscr = fields.CharField(
-        max_length=40, db_column='JURIS_DSCR', blank=True
+        max_length=40, db_column='JURIS_DSCR', blank=True,
+        help_text='office jursidiction description', 
     )
     dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
     off_s_h_cd = fields.CharField(
