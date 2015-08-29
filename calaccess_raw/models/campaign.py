@@ -3537,7 +3537,12 @@ Part R: late payments received from')
     bal_name = fields.CharField(
         max_length=200, db_column='BAL_NAME', blank=True
     )
-    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    bal_num = fields.CharField(
+        max_length=7, 
+        db_column='BAL_NUM', 
+        blank=True,
+        help_text="Ballot measure number or letter."
+    )
     bal_juris = fields.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
