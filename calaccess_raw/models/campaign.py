@@ -876,7 +876,10 @@ and major donor committee campaign statement)'),
         max_length=10, db_column='MAIL_ZIP4', blank=True
     )
     occupation = fields.CharField(
-        max_length=60, db_column='OCCUPATION', blank=True
+        max_length=60,
+        db_column='OCCUPATION',
+        blank=True,
+        help_text="Occupation"
     )
     off_s_h_cd = fields.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
@@ -3356,7 +3359,7 @@ original filing and 1 to 999 amendments.",
         db_column='JURIS_DSCR', max_length=14, blank=True
     )
     dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
-    party = fields.CharField(db_column='PARTY', max_length=20, blank=True, help_text="Political Party")
+    party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
     yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
         blank=True,
