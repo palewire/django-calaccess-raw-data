@@ -3343,7 +3343,10 @@ original filing and 1 to 999 amendments.",
         db_column='FIN_NAMT', max_length=32, blank=True
     )
     fin_nams = fields.CharField(
-        db_column='FIN_NAMS', max_length=32, blank=True
+        db_column='FIN_NAMS', 
+        max_length=32, 
+        blank=True,
+        help_text="Unused. Financial institution's suffix."
     )
     fin_city = fields.CharField(
         db_column='FIN_CITY', max_length=20, blank=True
