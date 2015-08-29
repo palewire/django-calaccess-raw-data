@@ -3551,10 +3551,12 @@ Part R: late payments received from')
         max_length=1, db_column='MEMO_CODE', blank=True
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20, db_column='MEMO_REFNO', blank=True,
+        help_text="Memo amount flag")
     )
     employer = fields.CharField(
-        max_length=200, db_column='EMPLOYER', blank=True
+        max_length=200, db_column='EMPLOYER', blank=True,
+        help_text="Employer"
     )
     occupation = fields.CharField(
         max_length=60, db_column='OCCUPATION', blank=True
