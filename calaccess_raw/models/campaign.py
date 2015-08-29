@@ -3280,7 +3280,7 @@ original filing and 1 to 999 amendments.",
         db_column='THRU_DATE', max_length=32, blank=True
     )
     elect_date = fields.CharField(
-        db_column='ELECT_DATE', max_length=32, blank=True
+        db_column='ELECT_DATE', max_length=32, blank=True, help_text='date of election'
     )
     cand_naml = fields.CharField(
         db_column='CAND_NAML', max_length=81, blank=True
@@ -3369,7 +3369,8 @@ original filing and 1 to 999 amendments.",
     yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
         blank=True,
-        null=True
+        null=True,
+        help_text='year of election'
     )
     elec_type = fields.IntegerField(
         db_column='ELEC_TYPE', blank=True, null=True
