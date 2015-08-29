@@ -929,13 +929,13 @@ and major donor committee campaign statement)'),
         null=True, db_column='SPONSOR_YN', blank=True
     )
     stmt_type = fields.CharField(
-        max_length=2, db_column='STMT_TYPE', blank=True
+        max_length=2, db_column='STMT_TYPE', blank=True, help_text='type of statement'
     )
     sup_opp_cd = fields.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
     thru_date = fields.DateTimeField(
-        null=True, db_column='THRU_DATE', blank=True
+        null=True, db_column='THRU_DATE', blank=True, help_text='reporting period through date'
     )
     # tres_adr1 = fields.CharField(
     #     max_length=55, db_column='TRES_ADR1', blank=True
@@ -3245,33 +3245,38 @@ original filing and 1 to 999 amendments.",
         db_column='COMMITTEE_ID',
         max_length=8,
         blank=True
+        help_text='committee identification number'
     )
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         blank=True,
         max_length=3,
+        help_text='entity code'
     )
     report_num = fields.IntegerField(
         db_column='REPORT_NUM',
         blank=True,
-        null=True
+        null=True,
+        help_text='Report Number; 000 Original; 001-999 Amended'
     )
     rpt_date = fields.DateTimeField(
         db_column='RPT_DATE',
         blank=True,
-        null=True
+        null=True,
+        help_text='date this report is filed'
     )
     stmt_type = fields.IntegerField(db_column='STMT_TYPE')
     from_date = fields.CharField(
         db_column='FROM_DATE',
         max_length=32,
-        blank=True
+        blank=True,
+        help_text='reporting period from date'
     )
     thru_date = fields.CharField(
         db_column='THRU_DATE', max_length=32, blank=True
     )
     elect_date = fields.CharField(
-        db_column='ELECT_DATE', max_length=32, blank=True
+        db_column='ELECT_DATE', max_length=32, blank=True, help_text='date of the general election'
     )
     cand_naml = fields.CharField(
         db_column='CAND_NAML', max_length=81, blank=True
@@ -3355,7 +3360,7 @@ original filing and 1 to 999 amendments.",
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR', max_length=14, blank=True
     )
-    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
+    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True, help_text='district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races.')
     party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
     yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
