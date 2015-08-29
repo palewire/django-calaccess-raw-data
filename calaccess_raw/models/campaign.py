@@ -3356,7 +3356,7 @@ original filing and 1 to 999 amendments.",
         db_column='JURIS_DSCR', max_length=14, blank=True
     )
     dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
-    party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
+    party = fields.CharField(db_column='PARTY', max_length=20, blank=True, help_text="Political Party")
     yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
         blank=True,
