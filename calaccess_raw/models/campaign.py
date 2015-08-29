@@ -3355,7 +3355,7 @@ original filing and 1 to 999 amendments.",
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR', max_length=14, blank=True
     )
-    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
+    dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True, help_text="District number for office being sought. Populated for Senate, Assembly or Board of Equialization races.")
     party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
     yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
