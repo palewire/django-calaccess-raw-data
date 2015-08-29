@@ -3498,7 +3498,10 @@ Part R: late payments received from')
         max_length=200, db_column='PAYOR_NAML', blank=True
     )
     payor_namf = fields.CharField(
-        max_length=45, db_column='PAYOR_NAMF', blank=True
+        max_length=45, 
+        db_column='PAYOR_NAMF', 
+        blank=True,
+        help_text="Payor's first name."
     )
     payor_namt = fields.CharField(
         max_length=10, db_column='PAYOR_NAMT', blank=True
