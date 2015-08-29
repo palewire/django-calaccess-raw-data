@@ -643,7 +643,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amendexp_1 = fields.CharField(
-        max_length=100, db_column='AMENDEXP_1', blank=True
+        max_length=100, db_column='AMENDEXP_1', blank=True , help_text='Amendment explanation line 1'
     )
     amendexp_2 = fields.CharField(
         max_length=100, db_column='AMENDEXP_2', blank=True
