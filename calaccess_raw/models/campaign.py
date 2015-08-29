@@ -3516,7 +3516,10 @@ Part R: late payments received from')
     )
     date_rcvd = fields.DateField(db_column='DATE_RCVD', null=True)
     amt_rcvd = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AMT_RCVD'
+        max_digits=16, 
+        decimal_places=2, 
+        db_column='AMT_RCVD',
+        help_text="Amount received"
     )
     cand_naml = fields.CharField(
         max_length=200, db_column='CAND_NAML', blank=True
