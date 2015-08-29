@@ -1012,7 +1012,7 @@ original filing and 1 to 999 amendments.",
         max_length=200, db_column='BAL_NAME', blank=True
     )
     bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
-    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True)
+    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True, help_text="Commitee Identification number.")
     control_yn = fields.IntegerField(
         null=True, db_column='CONTROL_YN', blank=True
     )
