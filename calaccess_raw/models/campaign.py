@@ -657,7 +657,7 @@ original filing and 1 to 999 amendments.",
     assoc_int = fields.CharField(
         max_length=90, db_column='ASSOC_INT', blank=True
     )
-    bal_id = fields.CharField(max_length=9, db_column='BAL_ID', blank=True)
+    bal_id = fields.CharField(max_length=9, db_column='BAL_ID', blank=True, help_text="This field is undocument")
     bal_juris = fields.CharField(
         max_length=40, db_column='BAL_JURIS', blank=True
     )
