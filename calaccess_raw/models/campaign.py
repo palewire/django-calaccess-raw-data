@@ -3396,7 +3396,10 @@ original filing and 1 to 999 amendments.",
         db_column='ACCT_OP_DT', blank=True, null=True, help_text='account open date'
     )
     party_cd = fields.IntegerField(
-        db_column='PARTY_CD', blank=True, null=True
+        db_column='PARTY_CD', 
+        blank=True, 
+        null=True,
+        help_text="Party code."
     )
     district_cd = fields.IntegerField(
         db_column='DISTRICT_CD', blank=True, null=True, help_text='District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.'
