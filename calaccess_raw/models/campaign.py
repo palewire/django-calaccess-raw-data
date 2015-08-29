@@ -3372,7 +3372,7 @@ original filing and 1 to 999 amendments.",
         db_column='EXECUTE_DT', blank=True, null=True
     )
     can_sig = fields.CharField(
-        db_column='CAN_SIG', max_length=13, blank=True
+        db_column='CAN_SIG', max_length=13, blank=True, help_text='candidate signature'
     )
     account_no = fields.CharField(
         db_column='ACCOUNT_NO', max_length=22, blank=True
@@ -3551,12 +3551,10 @@ Part R: late payments received from')
         max_length=1, db_column='MEMO_CODE', blank=True
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True,
-        help_text="Memo amount flag")
+        max_length=20, db_column='MEMO_REFNO', blank=True
     )
     employer = fields.CharField(
-        max_length=200, db_column='EMPLOYER', blank=True,
-        help_text="Employer"
+        max_length=200, db_column='EMPLOYER', blank=True
     )
     occupation = fields.CharField(
         max_length=60, db_column='OCCUPATION', blank=True
