@@ -3358,7 +3358,10 @@ original filing and 1 to 999 amendments.",
         db_column='FIN_FAX', max_length=10, blank=True
     )
     fin_email = fields.CharField(
-        db_column='FIN_EMAIL', max_length=15, blank=True
+        db_column='FIN_EMAIL', 
+        max_length=15, 
+        blank=True,
+        help_text="Financial institution's e-mail address."
     )
     office_cd = fields.IntegerField(db_column='OFFICE_CD')
     offic_dscr = fields.CharField(
