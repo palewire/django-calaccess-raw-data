@@ -705,17 +705,17 @@ original filing and 1 to 999 amendments.",
         max_length=30, db_column='CAND_CITY', blank=True, help_text='candidate/officeholder city'
     )
     cand_email = fields.CharField(
-        max_length=60, db_column='CAND_EMAIL', blank=True
+        max_length=60, db_column='CAND_EMAIL', blank=True, help_text='candidate/officeholder email'
     )
     cand_fax = fields.CharField(
         max_length=20, db_column='CAND_FAX', blank=True, help_text='candidate/officeholder fax'
     )
     cand_id = fields.CharField(max_length=9, db_column='CAND_ID', blank=True)
     cand_namf = fields.CharField(
-        max_length=45, db_column='CAND_NAMF', blank=True
+        max_length=45, db_column='CAND_NAMF', blank=True, help_text='candidate/officeholder first name'
     )
     cand_naml = fields.CharField(
-        max_length=200, db_column='CAND_NAML', blank=True
+        max_length=200, db_column='CAND_NAML', blank=True, help_text='candidate/officeholder last name'
     )
     cand_nams = fields.CharField(
         max_length=10, db_column='CAND_NAMS', blank=True
@@ -3280,7 +3280,7 @@ original filing and 1 to 999 amendments.",
         db_column='CAND_NAMF', max_length=25, blank=True
     )
     can_namm = fields.CharField(
-        db_column='CAN_NAMM', max_length=10, blank=True
+        db_column='CAN_NAMM', max_length=10, blank=True, help_text='candidate/officeholder middle name'
     )
     cand_namt = fields.CharField(
         db_column='CAND_NAMT', max_length=7, blank=True
