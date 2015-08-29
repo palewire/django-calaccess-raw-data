@@ -3390,7 +3390,7 @@ original filing and 1 to 999 amendments.",
         db_column='PARTY_CD', blank=True, null=True
     )
     district_cd = fields.IntegerField(
-        db_column='DISTRICT_CD', blank=True, null=True
+        db_column='DISTRICT_CD', blank=True, null=True, help_text='District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.'
     )
     accept_limit_yn = fields.IntegerField(
         db_column='ACCEPT_LIMIT_YN', blank=True, null=True, help_text='this field is undocumented'
