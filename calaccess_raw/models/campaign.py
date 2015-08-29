@@ -3515,7 +3515,10 @@ Part R: late payments received from')
         help_text="Payor's Prefix or title."
     )
     payor_nams = fields.CharField(
-        max_length=10, db_column='PAYOR_NAMS', blank=True
+        max_length=10, 
+        db_column='PAYOR_NAMS', 
+        blank=True,
+        help_text="Payor's suffix."
     )
     payor_city = fields.CharField(
         max_length=30, db_column='PAYOR_CITY', blank=True
