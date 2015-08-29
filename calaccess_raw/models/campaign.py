@@ -715,7 +715,10 @@ original filing and 1 to 999 amendments.",
         max_length=45, db_column='CAND_NAMF', blank=True
     )
     cand_naml = fields.CharField(
-        max_length=200, db_column='CAND_NAML', blank=True
+        max_length=200, 
+        db_column='CAND_NAML', 
+        blank=True,
+        help_text="Candidate/officeholder's last name."
     )
     cand_nams = fields.CharField(
         max_length=10, db_column='CAND_NAMS', blank=True
