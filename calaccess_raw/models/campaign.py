@@ -727,10 +727,7 @@ original filing and 1 to 999 amendments.",
         help_text="Candidate/officeholder's name suffix."
     )
     cand_namt = fields.CharField(
-        max_length=10, 
-        db_column='CAND_NAMT', 
-        blank=True,
-        help_text="Candidate/officeholder's prefix or title."
+        max_length=10, db_column='CAND_NAMT', blank=True
     )
     cand_phon = fields.CharField(
         max_length=20, db_column='CAND_PHON', blank=True
@@ -3016,6 +3013,7 @@ original filing and 1 to 999 amendments.",
         db_column='PFORM_TYPE',
         db_index=True,
         choices=PFORM_TYPE_CHOICES,
+        help_text='This field is undocumented',
     )
     ptran_id = fields.CharField(
         verbose_name='transaction ID',
