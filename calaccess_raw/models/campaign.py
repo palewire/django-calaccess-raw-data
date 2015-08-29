@@ -2738,22 +2738,28 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amt_incur = fields.DecimalField(
-        decimal_places=2, max_digits=14, db_column='AMT_INCUR'
+        decimal_places=2, max_digits=14, db_column='AMT_INCUR',
+        help_text='Amount incurred this period',
     )
     amt_paid = fields.DecimalField(
-        decimal_places=2, max_digits=14, db_column='AMT_PAID'
+        decimal_places=2, max_digits=14, db_column='AMT_PAID',
+        help_text='Amount paid this period.'
     )
     bakref_tid = fields.CharField(
-        max_length=20, db_column='BAKREF_TID', blank=True
+        max_length=20, db_column='BAKREF_TID', blank=True,
+        help_text='Back reference to a transaction identifier of a parent record.'
     )
     beg_bal = fields.DecimalField(
-        decimal_places=2, max_digits=14, db_column='BEG_BAL'
+        decimal_places=2, max_digits=14, db_column='BEG_BAL',
+        help_text='Outstanding balance at beginning of period',
     )
     cmte_id = fields.CharField(
-        max_length=9, db_column='CMTE_ID', blank=True
+        max_length=9, db_column='CMTE_ID', blank=True,
+        help_text='Committee identification number',
     )
     end_bal = fields.DecimalField(
-        decimal_places=2, max_digits=14, db_column='END_BAL'
+        decimal_places=2, max_digits=14, db_column='END_BAL',
+        help_text='Outstanding balance at close of this period',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -2774,18 +2780,21 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        help_text='Entity code of the payee',
     )
     expn_code = fields.CharField(
-        max_length=3, db_column='EXPN_CODE', blank=True
+        max_length=3, db_column='EXPN_CODE', blank=True,
+        help_text='Expense code. Refer to the CAL document for a list of legal codes for this column',
     )
     expn_dscr = fields.CharField(
-        max_length=400, db_column='EXPN_DSCR', blank=True
+        max_length=400, db_column='EXPN_DSCR', blank=True,
+        help_text='Purpose of expense and/or description/explanation',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identificiation number of the parent filing",
     )
     FORM_TYPE_CHOICES = (
        ('F', 'Form 460 (Recipient committee campaign statement): \
@@ -2795,18 +2804,20 @@ Schedule F, accrued expenses (unpaid bills)'),
         max_length=1,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Schedule Name/ID: (F - Sched F / Accrued Expenses)'
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
-        help_text="Line item number of this record",
+        help_text="Record line item number",
         db_index=True,
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1, db_column='MEMO_CODE', blank=True,
+        help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20, db_column='MEMO_REFNO', blank=True,
+        help_text='Reference to text contained in a TEXT record.'
     )
     # payee_adr1 = fields.CharField(
     #     max_length=55, db_column='PAYEE_ADR1', blank=True
@@ -2815,23 +2826,29 @@ Schedule F, accrued expenses (unpaid bills)'),
     #     max_length=55, db_column='PAYEE_ADR2', blank=True
     # )
     payee_city = fields.CharField(
-        max_length=30, db_column='PAYEE_CITY', blank=True
+        max_length=30, db_column='PAYEE_CITY', blank=True,
+        help_text='First line of the payee's street address',
     )
     payee_namf = fields.CharField(
-        max_length=45, db_column='PAYEE_NAMF', blank=True
+        max_length=45, db_column='PAYEE_NAMF', blank=True,
+        help_text='Payee's first name if the payee is an individual',
     )
     payee_naml = fields.CharField(max_length=200, db_column='PAYEE_NAML')
     payee_nams = fields.CharField(
-        max_length=10, db_column='PAYEE_NAMS', blank=True
+        max_length=10, db_column='PAYEE_NAMS', blank=True,
+        help_text='Payee's name suffix if the payee is an individual',
     )
     payee_namt = fields.CharField(
-        max_length=100, db_column='PAYEE_NAMT', blank=True
+        max_length=100, db_column='PAYEE_NAMT', blank=True,
+        help_text='Payee's prefix or title if the payee is an individual',
     )
     payee_st = fields.CharField(
-        max_length=2, db_column='PAYEE_ST', blank=True
+        max_length=2, db_column='PAYEE_ST', blank=True,
+        help_text='Payee/'s state',
     )
     payee_zip4 = fields.CharField(
-        max_length=10, db_column='PAYEE_ZIP4', blank=True
+        max_length=10, db_column='PAYEE_ZIP4', blank=True,
+        help_text='Payee/'s zip code',
     )
     REC_TYPE_CHOICES = (
         ("DEBT", "DEBT"),
@@ -2842,13 +2859,14 @@ Schedule F, accrued expenses (unpaid bills)'),
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text='Record type value: DEBT',
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
-        help_text='Permanent value unique to this item',
+        help_text='Transaction identifier - permanent value unique to this item',
     )
     # tres_adr1 = fields.CharField(
     #     max_length=55, db_column='TRES_ADR1', blank=True
@@ -2857,26 +2875,35 @@ Schedule F, accrued expenses (unpaid bills)'),
     #     max_length=55, db_column='TRES_ADR2', blank=True
     # )
     tres_city = fields.CharField(
-        max_length=30, db_column='TRES_CITY', blank=True
+        max_length=30, db_column='TRES_CITY', blank=True,
+        help_text='City portion of the treasurer or responsible officer/'s street address',
     )
     tres_namf = fields.CharField(
-        max_length=45, db_column='TRES_NAMF', blank=True
+        max_length=45, db_column='TRES_NAMF', blank=True,
+        help_text='Treasurer or responsible officer's first name'
     )
     tres_naml = fields.CharField(
-        max_length=200, db_column='TRES_NAML', blank=True
+        max_length=200, db_column='TRES_NAML', blank=True,
+        help_text='Treasurer or responsible officer's last name'
     )
     tres_nams = fields.CharField(
-        max_length=10, db_column='TRES_NAMS', blank=True
+        max_length=10, db_column='TRES_NAMS', blank=True,
+        help text='Treasurer or responsible officer's suffix',
     )
     tres_namt = fields.CharField(
-        max_length=100, db_column='TRES_NAMT', blank=True
+        max_length=100, db_column='TRES_NAMT', blank=True,
+        help text='Treasurer or responsible officer's prefix or title',
     )
-    tres_st = fields.CharField(max_length=2, db_column='TRES_ST', blank=True)
+    tres_st = fields.CharField(max_length=2, db_column='TRES_ST', blank=True,
+    help text='State portion of the treasurer or responsible officer's address',
+    )
     tres_zip4 = fields.CharField(
-        max_length=10, db_column='TRES_ZIP4', blank=True
+        max_length=10, db_column='TRES_ZIP4', blank=True,
+        help text='Zip code portion of the treasurer or respnnsible officer's address',
     )
     xref_match = fields.CharField(
-        max_length=1, db_column='XREF_MATCH', blank=True
+        max_length=1, db_column='XREF_MATCH', blank=True,
+        Related item on other schedule has same transaction identifier. /"X/" indicates this condition is true'
     )
     xref_schnm = fields.CharField(
         max_length=2, db_column='XREF_SCHNM', blank=True,
