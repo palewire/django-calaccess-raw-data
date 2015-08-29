@@ -351,7 +351,7 @@ slate mailer organization'),
         max_length=2,
         db_column="TRES_ST",
         blank=True,
-        verbose_name="Treasurer's street"
+        verbose_name="Treasurer's street",
     )
     tres_zip4 = fields.CharField(
         max_length=10,
@@ -2870,7 +2870,8 @@ Schedule F, accrued expenses (unpaid bills)'),
     )
     tres_st = fields.CharField(max_length=2, db_column='TRES_ST', blank=True)
     tres_zip4 = fields.CharField(
-        max_length=10, db_column='TRES_ZIP4', blank=True
+        max_length=10, db_column='TRES_ZIP4', blank=True,
+        help_text="Zip code portion of the treasurer or responsible officer's address.",
     )
     xref_match = fields.CharField(
         max_length=1, db_column='XREF_MATCH', blank=True
