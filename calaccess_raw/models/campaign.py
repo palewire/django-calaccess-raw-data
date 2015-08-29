@@ -357,7 +357,7 @@ slate mailer organization'),
         max_length=10,
         db_column="TRES_ZIP4",
         blank=True,
-        help_text="Treasurer's ZIP Code"
+        help_text="ZIP Code portion of the treasurer or responsible officer's address",
     )
     zip4 = fields.CharField(
         max_length=10,
