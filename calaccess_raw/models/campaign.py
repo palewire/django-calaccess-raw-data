@@ -854,7 +854,10 @@ and major donor committee campaign statement)'),
         blank=True
     )
     juris_cd = fields.CharField(
-        max_length=3, db_column='JURIS_CD', blank=True
+        max_length=3,
+        db_column='JURIS_CD',
+        blank=True,
+        help_text="Office jurisdiction code. See the CAL document for the list of legal values."
     )
     juris_dscr = fields.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
