@@ -888,10 +888,7 @@ and major donor committee campaign statement)'),
         max_length=10, db_column='MAIL_ZIP4', blank=True
     )
     occupation = fields.CharField(
-        max_length=60,
-        db_column='OCCUPATION',
-        blank=True,
-        help_text="Occupation"
+        max_length=60, db_column='OCCUPATION', blank=True
     )
     off_s_h_cd = fields.CharField(
         max_length=1, db_column='OFF_S_H_CD', blank=True
@@ -3377,7 +3374,7 @@ original filing and 1 to 999 amendments.",
         db_column='JURIS_DSCR', max_length=14, blank=True, help_text='office jurisdiction description'
     )
     dist_no = fields.CharField(db_column='DIST_NO', max_length=4, blank=True)
-    party = fields.CharField(db_column='PARTY', max_length=20, blank=True)
+    party = fields.CharField(db_column='PARTY', max_length=20, blank=True, help_text="Political Party")
     yr_of_elec = fields.IntegerField(
         db_column='YR_OF_ELEC',
         blank=True,
@@ -3415,7 +3412,7 @@ original filing and 1 to 999 amendments.",
         db_column='DID_EXCEED_DT', blank=True, null=True, help_text='this field is undocumented'
     )
     cntrb_prsnl_fnds_dt = fields.DateField(
-        db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True
+        db_column='CNTRB_PRSNL_FNDS_DT', blank=True, null=True, help_text="This field is undocumented"
     )
 
     def __str__(self):
@@ -3570,8 +3567,7 @@ Part R: late payments received from')
         max_length=3, db_column='JURIS_CD', blank=True
     )
     juris_dscr = fields.CharField(
-        max_length=40, db_column='JURIS_DSCR', blank=True,
-        help_text='office jursidiction description', 
+        max_length=40, db_column='JURIS_DSCR', blank=True
     )
     dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
     off_s_h_cd = fields.CharField(
