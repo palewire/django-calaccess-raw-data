@@ -2876,7 +2876,8 @@ Schedule F, accrued expenses (unpaid bills)'),
         max_length=1, db_column='XREF_MATCH', blank=True
     )
     xref_schnm = fields.CharField(
-        max_length=2, db_column='XREF_SCHNM', blank=True
+        max_length=2, db_column='XREF_SCHNM', blank=True,
+        help_text='Related record is included on Schedule C.'
     )
 
     class Meta:
