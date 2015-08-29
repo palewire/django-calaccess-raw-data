@@ -2985,7 +2985,8 @@ original filing and 1 to 999 amendments.",
         max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
     )
     elec_code = fields.CharField(
-        max_length=2, db_column='ELEC_CODE', blank=True
+        max_length=2, db_column='ELEC_CODE', blank=True,
+        help_text='This field is undocumented',
     )
     elec_date = fields.DateField(db_column='ELEC_DATE', null=True)
     filing_id = fields.IntegerField(
