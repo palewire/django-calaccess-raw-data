@@ -757,7 +757,7 @@ original filing and 1 to 999 amendments.",
         null=True, 
 	db_column='ELECT_DATE', 
 	blank=True,
-	help_text="Date of the General Election. This date will be the ame as on the filing's cover (CVR) record."
+	help_text="Date of the General Election. This date will be the same as on the filing's cover (CVR) record."
     )
     emplbus_cb = fields.CharField(
         max_length=4, db_column='EMPLBUS_CB', blank=True
