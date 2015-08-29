@@ -721,7 +721,10 @@ original filing and 1 to 999 amendments.",
         help_text="Candidate/officeholder's last name."
     )
     cand_nams = fields.CharField(
-        max_length=10, db_column='CAND_NAMS', blank=True
+        max_length=10, 
+        db_column='CAND_NAMS', 
+        blank=True,
+        help_text="Candidate/officeholder's name suffix."
     )
     cand_namt = fields.CharField(
         max_length=10, 
@@ -3540,8 +3543,7 @@ Part R: late payments received from')
         max_length=10, db_column='CAND_NAMS', blank=True
     )
     office_cd = fields.CharField(
-        max_length=3, db_column='OFFICE_CD', blank=True, help_text="Code that identifies the office being sought. See the
-CAL document for a list of valid codes."
+        max_length=3, db_column='OFFICE_CD', blank=True
     )
     offic_dscr = fields.CharField(
         max_length=40, db_column='OFFIC_DSCR', blank=True
