@@ -662,7 +662,10 @@ original filing and 1 to 999 amendments.",
         max_length=40, db_column='BAL_JURIS', blank=True
     )
     bal_name = fields.CharField(
-        max_length=200, db_column='BAL_NAME', blank=True
+        max_length=200, 
+        db_column='BAL_NAME', 
+        blank=True,
+        help_text="Ballot measure name."
     )
     bal_num = fields.CharField(
         max_length=4, db_column='BAL_NUM', blank=True
