@@ -965,25 +965,44 @@ and major donor committee campaign statement)'),
     #     max_length=55, db_column='TRES_ADR2', blank=True
     # )
     tres_city = fields.CharField(
-        max_length=30, db_column='TRES_CITY', blank=True
+        max_length=30, 
+        db_column='TRES_CITY', 
+        blank=True,
+        help_text="City portion of the treasurer or responsible officer's street address."
     )
     tres_email = fields.CharField(
-        max_length=60, db_column='TRES_EMAIL', blank=True
+        max_length=60, 
+        db_column='TRES_EMAIL', 
+        blank=True
     )
     tres_fax = fields.CharField(
-        max_length=20, db_column='TRES_FAX', blank=True
+        max_length=20, 
+        db_column='TRES_FAX', 
+        blank=True
     )
     tres_namf = fields.CharField(
-        max_length=45, db_column='TRES_NAMF', blank=True
+        max_length=45, 
+        db_column='TRES_NAMF', 
+        blank=True,
+        help_text="Treasurer or responsible officer's first name. Not used on Form 460 Schedule D."
     )
     tres_naml = fields.CharField(
-        max_length=200, db_column='TRES_NAML', blank=True
+        max_length=200, 
+        db_column='TRES_NAML', 
+        blank=True,
+        help_text="Treasurer or responsible officer's last name. Not used on Form 460 Schedule D."
     )
     tres_nams = fields.CharField(
-        max_length=10, db_column='TRES_NAMS', blank=True
+        max_length=10, 
+        db_column='TRES_NAMS', 
+        blank=True,
+        help_text="Treasurer or responsible officer's suffix. Not used on Form 460 Schedule D."
     )
     tres_namt = fields.CharField(
-        max_length=10, db_column='TRES_NAMT', blank=True
+        max_length=10, 
+        db_column='TRES_NAMT', 
+        blank=True,
+        help_text="Treasurer or responsible officer's prefix or title. Not used on Form 460 Schedule D."
     )
     tres_phon = fields.CharField(
         max_length=20, db_column='TRES_PHON', blank=True
