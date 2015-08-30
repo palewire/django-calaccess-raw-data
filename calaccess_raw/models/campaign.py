@@ -546,8 +546,8 @@ list of legal values."
         db_column='JURIS_DSCR',
         max_length=40,
         blank=True,
-        help_text="Office jurisdiction description provided if the jurisdiction \
-code (JURIS_CD) equals other (OTH)."
+        help_text="Office jurisdiction description provided if the \
+        jurisdiction code (JURIS_CD) equals other (OTH)."
     )
     dist_no = fields.CharField(
         db_column='DIST_NO',
@@ -643,7 +643,10 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     amendexp_1 = fields.CharField(
-        max_length=100, db_column='AMENDEXP_1', blank=True , help_text='Amendment explanation line 1'
+        max_length=100,
+        db_column='AMENDEXP_1',
+        blank=True,
+        help_text='Amendment explanation line 1'
     )
     amendexp_2 = fields.CharField(
         max_length=100, db_column='AMENDEXP_2', blank=True
@@ -657,9 +660,16 @@ original filing and 1 to 999 amendments.",
     assoc_int = fields.CharField(
         max_length=90, db_column='ASSOC_INT', blank=True
     )
-    bal_id = fields.CharField(max_length=9, db_column='BAL_ID', blank=True, help_text="This field is undocument")
+    bal_id = fields.CharField(
+        max_length=9,
+        db_column='BAL_ID',
+        blank=True,
+        help_text="This field is undocument"
+    )
     bal_juris = fields.CharField(
-        max_length=40, db_column='BAL_JURIS', blank=True
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True
     )
     bal_name = fields.CharField(
         max_length=200,
@@ -866,7 +876,7 @@ and major donor committee campaign statement)'),
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        help_text="Office jurisdiction code. See the CAL document for the list of legal values."
+        help_text="Office jurisdiction code."
     )
     juris_dscr = fields.CharField(
         max_length=40, db_column='JURIS_DSCR', blank=True
@@ -1012,13 +1022,22 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     bal_juris = fields.CharField(
-        max_length=40, db_column='BAL_JURIS', blank=True
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True
     )
     bal_name = fields.CharField(
-        max_length=200, db_column='BAL_NAME', blank=True
+        max_length=200,
+        db_column='BAL_NAME',
+        blank=True
     )
     bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
-    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True, help_text="Commitee Identification number.")
+    cmte_id = fields.CharField(
+        max_length=9,
+        db_column='CMTE_ID',
+        blank=True,
+        help_text="Commitee Identification number."
+    )
     control_yn = fields.IntegerField(
         null=True, db_column='CONTROL_YN', blank=True
     )
