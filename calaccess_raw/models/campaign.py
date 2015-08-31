@@ -3776,7 +3776,7 @@ Populated for Senate, Assembly, or Board of Equalization races.'
 @python_2_unicode_compatible
 class S498Cd(CalAccessBaseModel):
     """
-    Form 498 Slate Mailer Late Independent Expenditures Made
+    Form 498: Slate Mailer Late Independent Expenditures Made
     """
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3847,7 +3847,9 @@ Part R: late payments received from')
     cmte_id = fields.CharField(
         max_length=9,
         db_column='CMTE_ID',
-        blank=True
+        blank=True,
+        verbose_name="Committee ID",
+        help_text="Committee identification number"
     )
     payor_naml = fields.CharField(
         max_length=200,
@@ -3889,9 +3891,13 @@ Part R: late payments received from')
         max_length=10,
         db_column='PAYOR_ZIP4',
         blank=True,
-        help_text="Payor's zip code."
+        help_text="Payor's zip code"
     )
-    date_rcvd = fields.DateField(db_column='DATE_RCVD', null=True)
+    date_rcvd = fields.DateField(
+        db_column='DATE_RCVD',
+        null=True,
+        help_text="Date received"
+    )
     amt_rcvd = fields.DecimalField(
         max_digits=16,
         decimal_places=2,
@@ -3899,49 +3905,73 @@ Part R: late payments received from')
         help_text="Amount received"
     )
     cand_naml = fields.CharField(
-        max_length=200, db_column='CAND_NAML', blank=True
+        max_length=200,
+        db_column='CAND_NAML',
+        blank=True,
+        help_text="Candidate/officerholder last name"
     )
     cand_namf = fields.CharField(
-        max_length=45, db_column='CAND_NAMF', blank=True
+        max_length=45,
+        db_column='CAND_NAMF',
+        blank=True,
+        help_text="Candidate/officerholder first name"
     )
     cand_namt = fields.CharField(
-        max_length=10, db_column='CAND_NAMT', blank=True
+        max_length=10,
+        db_column='CAND_NAMT',
+        blank=True,
+        help_text="Candidate/officerholder title or prefix"
     )
     cand_nams = fields.CharField(
-        max_length=10, db_column='CAND_NAMS', blank=True
+        max_length=10,
+        db_column='CAND_NAMS',
+        blank=True,
+        help_text="Candidate/officerholder suffix"
     )
     office_cd = fields.CharField(
-        max_length=3, db_column='OFFICE_CD', blank=True
+        max_length=3,
+        db_column='OFFICE_CD',
+        blank=True,
+        verbose_name='Office code',
+        help_text="Code that identifies the office being sought"
     )
     offic_dscr = fields.CharField(
         max_length=40,
         db_column='OFFIC_DSCR',
-        blank=True
+        blank=True,
+        help_text="Description of office sought"
     )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
-        blank=True
+        blank=True,
+        help_text="Office jurisdiction code"
     )
     juris_dscr = fields.CharField(
         max_length=40,
         db_column='JURIS_DSCR',
-        blank=True
+        blank=True,
+        help_text="Office jurisdiction description"
     )
     dist_no = fields.CharField(
         max_length=3,
         db_column='DIST_NO',
-        blank=True
+        blank=True,
+        help_text="District number for the office being sought. \
+Populated for Senate, Assembly, or Board of Equalization races."
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
-        blank=True
+        blank=True,
+        help_text='Office Sought/Held Code. Legal values are "S" for \
+sought and "H" for held'
     )
     bal_name = fields.CharField(
         max_length=200,
         db_column='BAL_NAME',
-        blank=True
+        blank=True,
+        help_text="Ballot measure name"
     )
     bal_num = fields.CharField(
         max_length=7,
@@ -3952,12 +3982,15 @@ Part R: late payments received from')
     bal_juris = fields.CharField(
         max_length=40,
         db_column='BAL_JURIS',
-        blank=True
+        blank=True,
+        help_text="Jurisdiction of ballot measure"
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
-        blank=True
+        blank=True,
+        help_text='Support/oppose code. Legal values are "S" for support \
+or "O" for oppose.'
     )
     amt_attrib = fields.DecimalField(
         max_digits=16,
@@ -3968,27 +4001,32 @@ Part R: late payments received from')
     memo_code = fields.CharField(
         max_length=1,
         db_column='MEMO_CODE',
-        blank=True
+        blank=True,
+        help_text="Memo amount flat"
     )
     memo_refno = fields.CharField(
         max_length=20,
         db_column='MEMO_REFNO',
-        blank=True
+        blank=True,
+        help_text='Reference text contained in TEXT record'
     )
     employer = fields.CharField(
         max_length=200,
         db_column='EMPLOYER',
-        blank=True
+        blank=True,
+        help_text="This field is undocumented"
     )
     occupation = fields.CharField(
         max_length=60,
         db_column='OCCUPATION',
-        blank=True
+        blank=True,
+        help_text='This field is undocumented'
     )
     selfemp_cb = fields.CharField(
         max_length=1,
         db_column='SELFEMP_CB',
-        blank=True
+        blank=True,
+        help_text='Self-employed checkbox'
     )
 
     def __str__(self):
