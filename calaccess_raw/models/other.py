@@ -1101,14 +1101,46 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
     yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
-    qtr_1 = fields.FloatField(db_column='QTR_1')
-    qtr_2 = fields.FloatField(db_column='QTR_2')
-    qtr_3 = fields.FloatField(db_column='QTR_3')
-    qtr_4 = fields.FloatField(db_column='QTR_4')
-    qtr_5 = fields.FloatField(db_column='QTR_5')
-    qtr_6 = fields.FloatField(db_column='QTR_6')
-    qtr_7 = fields.FloatField(db_column='QTR_7')
-    qtr_8 = fields.FloatField(db_column='QTR_8')
+    qtr_1 = fields.FloatField(
+        db_column='QTR_1',
+        verbose_name="Quarter 1",
+        help_text="Quarter total amount",
+    )
+    qtr_2 = fields.FloatField(
+        db_column='QTR_2',
+        verbose_name="Quarter 2",
+        help_text="Quarter total amount",
+    )
+    qtr_3 = fields.FloatField(
+        db_column='QTR_3',
+        verbose_name="Quarter 3",
+        help_text="Quarter total amount",
+    )
+    qtr_4 = fields.FloatField(
+        db_column='QTR_4',
+        verbose_name="Quarter 4",
+        help_text="Quarter total amount",
+    )
+    qtr_5 = fields.FloatField(
+        db_column='QTR_5',
+        verbose_name="Quarter 5",
+        help_text="Quarter total amount",
+    )
+    qtr_6 = fields.FloatField(
+        db_column='QTR_6',
+        verbose_name="Quarter 6",
+        help_text="Quarter total amount",
+    )
+    qtr_7 = fields.FloatField(
+        db_column='QTR_7',
+        verbose_name="Quarter 7",
+        help_text="Quarter total amount",
+    )
+    qtr_8 = fields.FloatField(
+        db_column='QTR_8',
+        verbose_name="Quarter 8",
+        help_text="Quarter total amount",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1143,14 +1175,46 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
     yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
-    qtr_1 = fields.FloatField(db_column='QTR_1')
-    qtr_2 = fields.FloatField(db_column='QTR_2')
-    qtr_3 = fields.FloatField(db_column='QTR_3')
-    qtr_4 = fields.FloatField(db_column='QTR_4')
-    qtr_5 = fields.FloatField(db_column='QTR_5')
-    qtr_6 = fields.FloatField(db_column='QTR_6')
-    qtr_7 = fields.FloatField(db_column='QTR_7')
-    qtr_8 = fields.FloatField(db_column='QTR_8')
+    qtr_1 = fields.FloatField(
+        db_column='QTR_1',
+        verbose_name="Quarter 1",
+        help_text="Quarter total amount",
+    )
+    qtr_2 = fields.FloatField(
+        db_column='QTR_2',
+        verbose_name="Quarter 2",
+        help_text="Quarter total amount",
+    )
+    qtr_3 = fields.FloatField(
+        db_column='QTR_3',
+        verbose_name="Quarter 3",
+        help_text="Quarter total amount",
+    )
+    qtr_4 = fields.FloatField(
+        db_column='QTR_4',
+        verbose_name="Quarter 4",
+        help_text="Quarter total amount",
+    )
+    qtr_5 = fields.FloatField(
+        db_column='QTR_5',
+        verbose_name="Quarter 5",
+        help_text="Quarter total amount",
+    )
+    qtr_6 = fields.FloatField(
+        db_column='QTR_6',
+        verbose_name="Quarter 6",
+        help_text="Quarter total amount",
+    )
+    qtr_7 = fields.FloatField(
+        db_column='QTR_7',
+        verbose_name="Quarter 7",
+        help_text="Quarter total amount",
+    )
+    qtr_8 = fields.FloatField(
+        db_column='QTR_8',
+        verbose_name="Quarter 8",
+        help_text="Quarter total amount",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1185,14 +1249,46 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
     yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
-    qtr_1 = fields.FloatField(db_column='QTR_1')
-    qtr_2 = fields.FloatField(db_column='QTR_2')
-    qtr_3 = fields.FloatField(db_column='QTR_3')
-    qtr_4 = fields.FloatField(db_column='QTR_4')
-    qtr_5 = fields.FloatField(db_column='QTR_5')
-    qtr_6 = fields.FloatField(db_column='QTR_6')
-    qtr_7 = fields.FloatField(db_column='QTR_7')
-    qtr_8 = fields.FloatField(db_column='QTR_8')
+    qtr_1 = fields.FloatField(
+        db_column='QTR_1',
+        verbose_name="Quarter 1",
+        help_text="Quarter total amount",
+    )
+    qtr_2 = fields.FloatField(
+        db_column='QTR_2',
+        verbose_name="Quarter 2",
+        help_text="Quarter total amount",
+    )
+    qtr_3 = fields.FloatField(
+        db_column='QTR_3',
+        verbose_name="Quarter 3",
+        help_text="Quarter total amount",
+    )
+    qtr_4 = fields.FloatField(
+        db_column='QTR_4',
+        verbose_name="Quarter 4",
+        help_text="Quarter total amount",
+    )
+    qtr_5 = fields.FloatField(
+        db_column='QTR_5',
+        verbose_name="Quarter 5",
+        help_text="Quarter total amount",
+    )
+    qtr_6 = fields.FloatField(
+        db_column='QTR_6',
+        verbose_name="Quarter 6",
+        help_text="Quarter total amount",
+    )
+    qtr_7 = fields.FloatField(
+        db_column='QTR_7',
+        verbose_name="Quarter 7",
+        help_text="Quarter total amount",
+    )
+    qtr_8 = fields.FloatField(
+        db_column='QTR_8',
+        verbose_name="Quarter 8",
+        help_text="Quarter total amount",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1210,8 +1306,16 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     This is an undocumented model.
     """
     employer_id = fields.IntegerField(db_column='EMPLOYER_ID')
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=117)
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     session_id = fields.IntegerField(db_column='SESSION_ID')
     termination_dt = fields.CharField(
         db_column='TERMINATION_DT',
@@ -1232,8 +1336,16 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     employer_id = fields.IntegerField(db_column='EMPLOYER_ID')
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=117)
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     session_id = fields.IntegerField(db_column='SESSION_ID')
     termination_dt = fields.CharField(
         db_column='TERMINATION_DT',
@@ -1253,7 +1365,11 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
-    lobbyist_id = fields.IntegerField(db_column='LOBBYIST_ID')
+    lobbyist_id = fields.IntegerField(
+        db_column='LOBBYIST_ID',
+        verbose_name="Lobbyist ID",
+        help_text="Lobbyist identification number"
+    )
     employer_id = fields.IntegerField(db_column='EMPLOYER_ID')
     lobbyist_last_name = fields.CharField(
         db_column='LOBBYIST_LAST_NAME',
@@ -1281,7 +1397,11 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
-    lobbyist_id = fields.IntegerField(db_column='LOBBYIST_ID')
+    lobbyist_id = fields.IntegerField(
+        db_column='LOBBYIST_ID',
+        verbose_name="Lobbyist ID",
+        help_text="Lobbyist identification number"
+    )
     employer_id = fields.IntegerField(db_column='EMPLOYER_ID')
     lobbyist_last_name = fields.CharField(
         db_column='LOBBYIST_LAST_NAME',
@@ -1306,9 +1426,17 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistFirm1Cd(CalAccessBaseModel):
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
     session_id = fields.IntegerField(db_column='SESSION_ID')
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=60)
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
     contributor_id = fields.IntegerField(
@@ -1320,14 +1448,46 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
     session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
     yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
-    qtr_1 = fields.FloatField(db_column='QTR_1')
-    qtr_2 = fields.FloatField(db_column='QTR_2')
-    qtr_3 = fields.FloatField(db_column='QTR_3')
-    qtr_4 = fields.FloatField(db_column='QTR_4')
-    qtr_5 = fields.FloatField(db_column='QTR_5')
-    qtr_6 = fields.FloatField(db_column='QTR_6')
-    qtr_7 = fields.FloatField(db_column='QTR_7')
-    qtr_8 = fields.FloatField(db_column='QTR_8')
+    qtr_1 = fields.FloatField(
+        db_column='QTR_1',
+        verbose_name="Quarter 1",
+        help_text="Quarter total amount",
+    )
+    qtr_2 = fields.FloatField(
+        db_column='QTR_2',
+        verbose_name="Quarter 2",
+        help_text="Quarter total amount",
+    )
+    qtr_3 = fields.FloatField(
+        db_column='QTR_3',
+        verbose_name="Quarter 3",
+        help_text="Quarter total amount",
+    )
+    qtr_4 = fields.FloatField(
+        db_column='QTR_4',
+        verbose_name="Quarter 4",
+        help_text="Quarter total amount",
+    )
+    qtr_5 = fields.FloatField(
+        db_column='QTR_5',
+        verbose_name="Quarter 5",
+        help_text="Quarter total amount",
+    )
+    qtr_6 = fields.FloatField(
+        db_column='QTR_6',
+        verbose_name="Quarter 6",
+        help_text="Quarter total amount",
+    )
+    qtr_7 = fields.FloatField(
+        db_column='QTR_7',
+        verbose_name="Quarter 7",
+        help_text="Quarter total amount",
+    )
+    qtr_8 = fields.FloatField(
+        db_column='QTR_8',
+        verbose_name="Quarter 8",
+        help_text="Quarter total amount",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1344,9 +1504,17 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
     session_id = fields.IntegerField(db_column='SESSION_ID')
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=60)
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
     contributor_id = fields.IntegerField(
@@ -1358,14 +1526,46 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
     yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
-    qtr_1 = fields.FloatField(db_column='QTR_1')
-    qtr_2 = fields.FloatField(db_column='QTR_2')
-    qtr_3 = fields.FloatField(db_column='QTR_3')
-    qtr_4 = fields.FloatField(db_column='QTR_4')
-    qtr_5 = fields.FloatField(db_column='QTR_5')
-    qtr_6 = fields.FloatField(db_column='QTR_6')
-    qtr_7 = fields.FloatField(db_column='QTR_7')
-    qtr_8 = fields.FloatField(db_column='QTR_8')
+    qtr_1 = fields.FloatField(
+        db_column='QTR_1',
+        verbose_name="Quarter 1",
+        help_text="Quarter total amount",
+    )
+    qtr_2 = fields.FloatField(
+        db_column='QTR_2',
+        verbose_name="Quarter 2",
+        help_text="Quarter total amount",
+    )
+    qtr_3 = fields.FloatField(
+        db_column='QTR_3',
+        verbose_name="Quarter 3",
+        help_text="Quarter total amount",
+    )
+    qtr_4 = fields.FloatField(
+        db_column='QTR_4',
+        verbose_name="Quarter 4",
+        help_text="Quarter total amount",
+    )
+    qtr_5 = fields.FloatField(
+        db_column='QTR_5',
+        verbose_name="Quarter 5",
+        help_text="Quarter total amount",
+    )
+    qtr_6 = fields.FloatField(
+        db_column='QTR_6',
+        verbose_name="Quarter 6",
+        help_text="Quarter total amount",
+    )
+    qtr_7 = fields.FloatField(
+        db_column='QTR_7',
+        verbose_name="Quarter 7",
+        help_text="Quarter total amount",
+    )
+    qtr_8 = fields.FloatField(
+        db_column='QTR_8',
+        verbose_name="Quarter 8",
+        help_text="Quarter total amount",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1379,9 +1579,17 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistFirm3Cd(CalAccessBaseModel):
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
     session_id = fields.IntegerField(db_column='SESSION_ID')
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=60)
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
     contributor_id = fields.IntegerField(
@@ -1393,14 +1601,46 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
     yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
     yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
-    qtr_1 = fields.FloatField(db_column='QTR_1')
-    qtr_2 = fields.FloatField(db_column='QTR_2')
-    qtr_3 = fields.FloatField(db_column='QTR_3')
-    qtr_4 = fields.FloatField(db_column='QTR_4')
-    qtr_5 = fields.FloatField(db_column='QTR_5')
-    qtr_6 = fields.FloatField(db_column='QTR_6')
-    qtr_7 = fields.FloatField(db_column='QTR_7')
-    qtr_8 = fields.FloatField(db_column='QTR_8')
+    qtr_1 = fields.FloatField(
+        db_column='QTR_1',
+        verbose_name="Quarter 1",
+        help_text="Quarter total amount",
+    )
+    qtr_2 = fields.FloatField(
+        db_column='QTR_2',
+        verbose_name="Quarter 2",
+        help_text="Quarter total amount",
+    )
+    qtr_3 = fields.FloatField(
+        db_column='QTR_3',
+        verbose_name="Quarter 3",
+        help_text="Quarter total amount",
+    )
+    qtr_4 = fields.FloatField(
+        db_column='QTR_4',
+        verbose_name="Quarter 4",
+        help_text="Quarter total amount",
+    )
+    qtr_5 = fields.FloatField(
+        db_column='QTR_5',
+        verbose_name="Quarter 5",
+        help_text="Quarter total amount",
+    )
+    qtr_6 = fields.FloatField(
+        db_column='QTR_6',
+        verbose_name="Quarter 6",
+        help_text="Quarter total amount",
+    )
+    qtr_7 = fields.FloatField(
+        db_column='QTR_7',
+        verbose_name="Quarter 7",
+        help_text="Quarter total amount",
+    )
+    qtr_8 = fields.FloatField(
+        db_column='QTR_8',
+        verbose_name="Quarter 8",
+        help_text="Quarter total amount",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1414,10 +1654,14 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
-    '''
-    This is an undocumented model (Ask Matt)
-    '''
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
+    """
+    This is an undocumented model.
+    """
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -1425,7 +1669,11 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
         help_text="Unique filing identificiation number"
     )
     filing_sequence = fields.IntegerField(db_column='FILING_SEQUENCE')
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=58)
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=75)
     rpt_start = fields.DateField(db_column='RPT_START', null=True)
     rpt_end = fields.DateField(db_column='RPT_END', null=True)
@@ -1455,9 +1703,13 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     """
-    This is an undocumented model
+    This is an undocumented model.
     """
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -1465,7 +1717,11 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
         help_text="Unique filing identificiation number"
     )
     filing_sequence = fields.IntegerField(db_column='FILING_SEQUENCE')
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=58)
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=75)
     rpt_start = fields.DateField(db_column='RPT_START', null=True)
     rpt_end = fields.DateField(db_column='RPT_END', null=True)
@@ -1497,17 +1753,29 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     """
     It's an undocumented model.
     """
-    lobbyist_id = fields.IntegerField(db_column='LOBBYIST_ID')
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
+    lobbyist_id = fields.IntegerField(
+        db_column='LOBBYIST_ID',
+        verbose_name="Lobbyist ID",
+        help_text="Lobbyist identification number"
+    )
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
     lobbyist_last_name = fields.CharField(
         db_column='LOBBYIST_LAST_NAME',
-        max_length=15
+        max_length=15,
     )
     lobbyist_first_name = fields.CharField(
         db_column='LOBBYIST_FIRST_NAME',
         max_length=17
     )
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=60)
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     session_id = fields.IntegerField(db_column='SESSION_ID')
 
     class Meta:
@@ -1522,8 +1790,16 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
-    lobbyist_id = fields.IntegerField(db_column='LOBBYIST_ID')
-    firm_id = fields.IntegerField(db_column='FIRM_ID')
+    lobbyist_id = fields.IntegerField(
+        db_column='LOBBYIST_ID',
+        verbose_name="Lobbyist ID",
+        help_text="Lobbyist identification number"
+    )
+    firm_id = fields.IntegerField(
+        db_column='FIRM_ID',
+        verbose_name="Firm ID",
+        help_text="Identification number of the firm, employer or coalition"
+    )
     lobbyist_last_name = fields.CharField(
         db_column='LOBBYIST_LAST_NAME',
         max_length=15
@@ -1532,7 +1808,11 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
         db_column='LOBBYIST_FIRST_NAME',
         max_length=17
     )
-    firm_name = fields.CharField(db_column='FIRM_NAME', max_length=60)
+    firm_name = fields.CharField(
+        db_column='FIRM_NAME',
+        max_length=400,
+        help_text="Name of firm, employer or coalition",
+    )
     session_id = fields.IntegerField(db_column='SESSION_ID')
 
     class Meta:
@@ -1547,12 +1827,22 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LookupCode(CalAccessBaseModel):
-    code_type = fields.IntegerField(db_column='CODE_TYPE')
-    code_id = fields.IntegerField(db_column='CODE_ID')
+    """
+    The description of all lookup codes in the system.
+    """
+    code_type = fields.IntegerField(
+        db_column='CODE_TYPE',
+        help_text="This field is undocumented",
+    )
+    code_id = fields.IntegerField(
+        db_column='CODE_ID',
+        help_text="The code's identification number",
+    )
     code_desc = fields.CharField(
         db_column='CODE_DESC',
         max_length=100,
-        null=True
+        null=True,
+        help_text="Code description",
     )
 
     class Meta:
@@ -1567,20 +1857,64 @@ class LookupCode(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class NamesCd(CalAccessBaseModel):
-    namid = fields.IntegerField(db_column='NAMID')
-    naml = fields.CharField(max_length=200, db_column='NAML')
-    namf = fields.CharField(max_length=50, db_column='NAMF')
-    namt = fields.CharField(max_length=100, db_column='NAMT', blank=True)
-    nams = fields.CharField(max_length=30, db_column='NAMS', blank=True)
-    moniker = fields.CharField(max_length=30, db_column='MONIKER', blank=True)
+    """
+    The name of all entities in the system. Used for searches when
+    the name has an identification number.
+    """
+    namid = fields.IntegerField(
+        db_column='NAMID',
+        help_text="Identification number unique to the name",
+    )
+    naml = fields.CharField(
+        max_length=200,
+        db_column='NAML',
+        help_text="Last name",
+    )
+    namf = fields.CharField(
+        max_length=50,
+        db_column='NAMF',
+        help_text="First name",
+    )
+    namt = fields.CharField(
+        max_length=100,
+        db_column='NAMT',
+        blank=True,
+        help_text="Name title or prefix",
+    )
+    nams = fields.CharField(
+        max_length=30,
+        db_column='NAMS',
+        blank=True,
+        help_text="Name suffix",
+    )
+    moniker = fields.CharField(
+        max_length=30,
+        db_column='MONIKER',
+        blank=True,
+        help_text="Entity's moniker",
+    )
     moniker_pos = fields.CharField(
         max_length=9,
         db_column='MONIKER_POS',
-        blank=True
+        blank=True,
+        help_text="Location of the entity's moniker",
     )
-    namm = fields.CharField(max_length=20, db_column='NAMM', blank=True)
-    fullname = fields.CharField(max_length=200, db_column='FULLNAME')
-    naml_search = fields.CharField(max_length=200, db_column='NAML_SEARCH')
+    namm = fields.CharField(
+        max_length=20,
+        db_column='NAMM',
+        blank=True,
+        help_text="Middle name",
+    )
+    fullname = fields.CharField(
+        max_length=200,
+        db_column='FULLNAME',
+        help_text="Full name",
+    )
+    naml_search = fields.CharField(
+        max_length=200,
+        db_column='NAML_SEARCH',
+        help_text="Last name",
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1595,7 +1929,7 @@ class NamesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class ReceivedFilingsCd(CalAccessBaseModel):
     """
-    This is undocumented. J M needs to describe this table.
+    This table is undocumented.
     """
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -1606,12 +1940,18 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     )
     filing_file_name = fields.CharField(
         db_column='FILING_FILE_NAME',
-        max_length=14
+        max_length=14,
+        help_text="The field is undocumented"
     )
-    received_date = fields.DateField(db_column='RECEIVED_DATE', null=True)
+    received_date = fields.DateField(
+        db_column='RECEIVED_DATE',
+        null=True,
+        help_text="Date received",
+    )
     filing_directory = fields.CharField(
         db_column='FILING_DIRECTORY',
-        max_length=45
+        max_length=45,
+        help_text="This field is undocumented",
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1621,10 +1961,16 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         null=True,
         blank=True,
     )
-    form_id = fields.CharField(db_column='FORM_ID', max_length=4, blank=True)
+    form_id = fields.CharField(
+        db_column='FORM_ID',
+        max_length=4,
+        blank=True,
+        help_text="Form identification code"
+    )
     receive_comment = fields.CharField(
         db_column='RECEIVE_COMMENT',
-        max_length=51
+        max_length=51,
+        help_text="A comment"
     )
 
     class Meta:
@@ -1661,11 +2007,12 @@ class ReportsCd(CalAccessBaseModel):
         db_column='PATH',
         max_length=32,
         blank=True,
-        help_text="Reportpath"
+        help_text="Report path"
     )
     data_object = fields.CharField(
         db_column='DATA_OBJECT',
-        max_length=38
+        max_length=38,
+        help_text="This field is undocumented"
     )
     parms_flg_y_n = fields.IntegerField(
         db_column='PARMS_FLG_Y_N',
