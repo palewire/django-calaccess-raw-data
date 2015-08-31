@@ -649,16 +649,24 @@ original filing and 1 to 999 amendments.",
         help_text='Amendment explanation line 1'
     )
     amendexp_2 = fields.CharField(
-        max_length=100, db_column='AMENDEXP_2', blank=True
+        max_length=100,
+        db_column='AMENDEXP_2',
+        blank=True
     )
     amendexp_3 = fields.CharField(
-        max_length=100, db_column='AMENDEXP_3', blank=True
+        max_length=100,
+        db_column='AMENDEXP_3',
+        blank=True
     )
     assoc_cb = fields.CharField(
-        max_length=4, db_column='ASSOC_CB', blank=True
+        max_length=4,
+        db_column='ASSOC_CB',
+        blank=True
     )
     assoc_int = fields.CharField(
-        max_length=90, db_column='ASSOC_INT', blank=True
+        max_length=90,
+        db_column='ASSOC_INT',
+        blank=True
     )
     bal_id = fields.CharField(
         max_length=9,
