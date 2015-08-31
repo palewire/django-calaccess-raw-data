@@ -253,9 +253,10 @@ class FilerAddressCd(CalAccessBaseModel):
         null=True
     )
     session_id = fields.IntegerField(
+        verbose_name='session ID',
         db_column='SESSION_ID',
-        blank=True,
-        null=True
+        help_text='Legislative session identification number',
+        null=True,
     )
 
     class Meta:
@@ -280,7 +281,12 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     ethics_date = fields.DateTimeField(db_column='ETHICS_DATE', null=True)
 
     class Meta:
@@ -305,7 +311,12 @@ class FilerInterestsCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     interest_cd = fields.IntegerField(db_column='INTEREST_CD')
     effect_date = fields.DateTimeField(db_column='EFFECT_DATE', null=True)
 
@@ -347,7 +358,8 @@ in the relationship',
     session_id = fields.IntegerField(
         verbose_name='session ID',
         db_column='SESSION_ID',
-        help_text='Session identification number',
+        help_text='Legislative session identification number',
+        null=True,
     )
     LINK_TYPE_CHOICES = (
         (-12019, '-12019'),
@@ -474,8 +486,10 @@ running",
         db_column='RACE',
     )
     session_id = fields.IntegerField(
-        help_text="Legislative session identification number",
+        verbose_name='session ID',
         db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
     )
     category = fields.IntegerField(
         null=True,
@@ -858,7 +872,12 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     """
     Legislative session, begin and end dates look up table.
     """
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     begin_date = fields.DateField(db_column='BEGIN_DATE', null=True)
     end_date = fields.DateField(db_column='END_DATE', null=True)
 
@@ -882,7 +901,12 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
     change_no = fields.IntegerField(db_column='CHANGE_NO')
-    session_id = fields.IntegerField(db_column='SESSION_ID', null=True)
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     log_dt = fields.DateField(db_column="LOG_DT", null=True)
     filer_type = fields.IntegerField(db_column='FILER_TYPE')
     correction_flag = fields.CharField(
@@ -1084,7 +1108,12 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     This is an undocumented model.
     """
     employer_id = fields.IntegerField(db_column='EMPLOYER_ID')
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=162)
     current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
@@ -1158,7 +1187,12 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     This is an undocumented model.
     """
     employer_id = fields.IntegerField(db_column='EMPLOYER_ID')
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=162)
     current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
@@ -1232,7 +1266,12 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     This is an undocumented model.
     """
     employer_id = fields.IntegerField(db_column='EMPLOYER_ID')
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=162)
     current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
     session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
@@ -1316,7 +1355,12 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
         max_length=400,
         help_text="Name of firm, employer or coalition",
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     termination_dt = fields.CharField(
         db_column='TERMINATION_DT',
         max_length=32,
@@ -1346,7 +1390,12 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
         max_length=400,
         help_text="Name of firm, employer or coalition",
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     termination_dt = fields.CharField(
         db_column='TERMINATION_DT',
         max_length=32,
@@ -1380,7 +1429,12 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
         max_length=17
     )
     employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=117)
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1412,7 +1466,12 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
         max_length=17
     )
     employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=117)
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1431,7 +1490,12 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         verbose_name="Firm ID",
         help_text="Identification number of the firm, employer or coalition"
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     firm_name = fields.CharField(
         db_column='FIRM_NAME',
         max_length=400,
@@ -1509,7 +1573,12 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
         verbose_name="Firm ID",
         help_text="Identification number of the firm, employer or coalition"
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     firm_name = fields.CharField(
         db_column='FIRM_NAME',
         max_length=400,
@@ -1584,7 +1653,12 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
         verbose_name="Firm ID",
         help_text="Identification number of the firm, employer or coalition"
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
     firm_name = fields.CharField(
         db_column='FIRM_NAME',
         max_length=400,
@@ -1776,7 +1850,12 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
         max_length=400,
         help_text="Name of firm, employer or coalition",
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1813,7 +1892,12 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
         max_length=400,
         help_text="Name of firm, employer or coalition",
     )
-    session_id = fields.IntegerField(db_column='SESSION_ID')
+    session_id = fields.IntegerField(
+        verbose_name='session ID',
+        db_column='SESSION_ID',
+        help_text='Legislative session identification number',
+        null=True,
+    )
 
     class Meta:
         app_label = 'calaccess_raw'

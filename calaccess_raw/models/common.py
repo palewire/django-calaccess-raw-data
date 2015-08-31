@@ -256,8 +256,10 @@ reviewed or not reviewed.",
         choices=STATEMENT_STATUS_CHOICES,
     )
     session_id = fields.IntegerField(
+        verbose_name='session ID',
         db_column='SESSION_ID',
-        help_text="Legislative session that the filing applies to"
+        help_text='Legislative session identification number',
+        null=True,
     )
     user_id = fields.CharField(max_length=12, db_column='USER_ID')
     special_audit = fields.IntegerField(
