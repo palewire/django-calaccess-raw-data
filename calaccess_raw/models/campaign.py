@@ -723,17 +723,33 @@ original filing and 1 to 999 amendments.",
     #     max_length=55, db_column='CAND_ADR2', blank=True
     # )
     cand_city = fields.CharField(
-        max_length=30, db_column='CAND_CITY', blank=True, help_text='candidate/officeholder city'
+        max_length=30,
+        db_column='CAND_CITY',
+        blank=True,
+        help_text='candidate/officeholder city'
     )
     cand_email = fields.CharField(
-        max_length=60, db_column='CAND_EMAIL', blank=True, help_text='candidate/officeholder email'
+        max_length=60,
+        db_column='CAND_EMAIL',
+        blank=True,
+        help_text='candidate/officeholder email'
     )
     cand_fax = fields.CharField(
-        max_length=20, db_column='CAND_FAX', blank=True, help_text='candidate/officeholder fax'
+        max_length=20,
+        db_column='CAND_FAX',
+        blank=True,
+        help_text='candidate/officeholder fax'
     )
-    cand_id = fields.CharField(max_length=9, db_column='CAND_ID', blank=True)
+    cand_id = fields.CharField(
+        max_length=9,
+        db_column='CAND_ID',
+        blank=True
+    )
     cand_namf = fields.CharField(
-        max_length=45, db_column='CAND_NAMF', blank=True, help_text='candidate/officeholder first name'
+        max_length=45,
+        db_column='CAND_NAMF',
+        blank=True,
+        help_text='candidate/officeholder first name'
     )
     cand_naml = fields.CharField(
         max_length=200,
@@ -988,13 +1004,19 @@ and major donor committee campaign statement)'),
         null=True, db_column='SPONSOR_YN', blank=True
     )
     stmt_type = fields.CharField(
-        max_length=2, db_column='STMT_TYPE', blank=True, help_text='type of statement'
+        max_length=2,
+        db_column='STMT_TYPE',
+        blank=True,
+        help_text='type of statement'
     )
     sup_opp_cd = fields.CharField(
         max_length=1, db_column='SUP_OPP_CD', blank=True
     )
     thru_date = fields.DateTimeField(
-        null=True, db_column='THRU_DATE', blank=True, help_text='reporting period through date'
+        null=True,
+        db_column='THRU_DATE',
+        blank=True,
+        help_text='reporting period through date'
     )
     # tres_adr1 = fields.CharField(
     #     max_length=55, db_column='TRES_ADR1', blank=True
@@ -3488,7 +3510,7 @@ original filing and 1 to 999 amendments.",
     committee_id = fields.CharField(
         db_column='COMMITTEE_ID',
         max_length=8,
-        blank=True
+        blank=True,
         help_text='committee identification number'
     )
     entity_cd = fields.CharField(
@@ -3532,7 +3554,10 @@ original filing and 1 to 999 amendments.",
         db_column='CAND_NAMF', max_length=25, blank=True
     )
     can_namm = fields.CharField(
-        db_column='CAN_NAMM', max_length=10, blank=True, help_text='candidate/officeholder middle name'
+        db_column='CAN_NAMM',
+        max_length=10,
+        blank=True,
+        help_text='candidate/officeholder middle name'
     )
     cand_namt = fields.CharField(
         db_column='CAND_NAMT', max_length=7, blank=True
@@ -3550,19 +3575,33 @@ original filing and 1 to 999 amendments.",
         db_column='CAND_CITY', max_length=22, blank=True
     )
     cand_st = fields.CharField(
-        db_column='CAND_ST', max_length=4, blank=True, help_text='candidate/officeholder state'
+        db_column='CAND_ST',
+        max_length=4,
+        blank=True,
+        help_text='candidate/officeholder state'
     )
     cand_zip4 = fields.CharField(
-        db_column='CAND_ZIP4', max_length=10, blank=True, help_text='candidate officeholder zip +4'
+        db_column='CAND_ZIP4',
+        max_length=10,
+        blank=True,
+        help_text='candidate officeholder zip +4'
     )
     cand_phon = fields.CharField(
-        db_column='CAND_PHON', max_length=14, blank=True, help_text='candidate/officeholder phone number'
+        db_column='CAND_PHON',
+        max_length=14,
+        blank=True,
+        help_text='candidate/officeholder phone number'
     )
     cand_fax = fields.CharField(
-        db_column='CAND_FAX', max_length=14, blank=True
+        db_column='CAND_FAX',
+        max_length=14,
+        blank=True
     )
     cand_email = fields.CharField(
-        db_column='CAND_EMAIL', max_length=37, blank=True, help_text='candidate/officeholder email address'
+        db_column='CAND_EMAIL',
+        max_length=37,
+        blank=True,
+        help_text='candidate/officeholder email address'
     )
     fin_naml = fields.CharField(
         db_column='FIN_NAML', max_length=53, blank=True
@@ -3875,20 +3914,34 @@ Part R: late payments received from')
         max_length=3, db_column='OFFICE_CD', blank=True
     )
     offic_dscr = fields.CharField(
-        max_length=40, db_column='OFFIC_DSCR', blank=True
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True
     )
     juris_cd = fields.CharField(
-        max_length=3, db_column='JURIS_CD', blank=True
+        max_length=3,
+        db_column='JURIS_CD',
+        blank=True
     )
     juris_dscr = fields.CharField(
-        max_length=40, db_column='JURIS_DSCR', blank=True
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True
     )
-    dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
+    dist_no = fields.CharField(
+        max_length=3,
+        db_column='DIST_NO',
+        blank=True
+    )
     off_s_h_cd = fields.CharField(
-        max_length=1, db_column='OFF_S_H_CD', blank=True
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True
     )
     bal_name = fields.CharField(
-        max_length=200, db_column='BAL_NAME', blank=True
+        max_length=200,
+        db_column='BAL_NAME',
+        blank=True
     )
     bal_num = fields.CharField(
         max_length=7,
@@ -3897,29 +3950,45 @@ Part R: late payments received from')
         help_text="Ballot measure number or letter."
     )
     bal_juris = fields.CharField(
-        max_length=40, db_column='BAL_JURIS', blank=True
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True
     )
     sup_opp_cd = fields.CharField(
-        max_length=1, db_column='SUP_OPP_CD', blank=True
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True
     )
     amt_attrib = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AMT_ATTRIB',
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMT_ATTRIB',
         help_text="Amount attributed (only if Form_type = 'F498-A')"
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True
     )
     employer = fields.CharField(
-        max_length=200, db_column='EMPLOYER', blank=True
+        max_length=200,
+        db_column='EMPLOYER',
+        blank=True
     )
     occupation = fields.CharField(
-        max_length=60, db_column='OCCUPATION', blank=True
+        max_length=60,
+        db_column='OCCUPATION',
+        blank=True
     )
     selfemp_cb = fields.CharField(
-        max_length=1, db_column='SELFEMP_CB', blank=True
+        max_length=1,
+        db_column='SELFEMP_CB',
+        blank=True
     )
 
     def __str__(self):

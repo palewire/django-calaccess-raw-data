@@ -1,415 +1,614 @@
-Database table models
-=====================
+Models
+======
 
-The database models in this Django application, which are intended to serve
-as a mirror of the bulk dumps published by California's Secretary of State.
-
-They are grouped here in the same as manner as the state's `official documentation <officialdocumentation.html>`_.
+A crosswalk between the tables published by California's Secretary of State and the models in this Django application.
 
 Campaign
---------
+-------
 
 Cvr2CampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Record used to carry additional names for the campaign
 disclosure forms below.
 
-.. py:class:: Cvr2CampaignDisclosureCd
-
-    **Source data**
-
-        `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris*
-
-        .. py:attribute:: bal_name
-
-            *Bal name*
-
-        .. py:attribute:: bal_num
-
-            *Bal num*
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id*
-
-        .. py:attribute:: control_yn
-
-            *Control yn*
-
-        .. py:attribute:: dist_no
-
-            *Dist no*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: enty_city
-
-            *Enty city*
-
-        .. py:attribute:: enty_email
-
-            *Enty email*
-
-        .. py:attribute:: enty_fax
-
-            *Enty fax*
-
-        .. py:attribute:: enty_namf
-
-            *Enty namf*
-
-        .. py:attribute:: enty_naml
-
-            *Enty naml*
-
-        .. py:attribute:: enty_nams
-
-            *Enty nams*
-
-        .. py:attribute:: enty_namt
-
-            *Enty namt*
-
-        .. py:attribute:: enty_phon
-
-            *Enty phon*
-
-        .. py:attribute:: enty_st
-
-            *Enty st*
-
-        .. py:attribute:: enty_zip4
-
-            *Enty zip4*
-
-        .. py:attribute:: f460_part
-
-            *F460 part*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd*
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr*
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: mail_city
-
-            *Mail city*
-
-        .. py:attribute:: mail_st
-
-            *Mail st*
-
-        .. py:attribute:: mail_zip4
-
-            *Mail zip4*
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd*
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd*
-
-        .. py:attribute:: title
-
-            *Title*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: tres_namf
-
-            *Tres namf*
-
-        .. py:attribute:: tres_naml
-
-            *Tres naml*
-
-        .. py:attribute:: tres_nams
-
-            *Tres nams*
-
-        .. py:attribute:: tres_namt
-
-            *Tres namt*
-
-
+**Source**: `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>CharField</td>
+            <td>Commitee Identification number.</td>
+        </tr>
+    
+        <tr>
+            <td>control_yn</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_email</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_fax</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_phon</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>f460_part</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>mail_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>mail_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>title</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 Cvr2SoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Additional names and committees information included on the second page
 of a statement of organization creation form filed
 by a slate-mailer organization or recipient committee.
 
-.. py:class:: Cvr2SoCd
-
-    **Source data**
-
-        `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: enty_naml
-
-            *Enty naml*
-
-        .. py:attribute:: enty_namf
-
-            *Enty namf*
-
-        .. py:attribute:: enty_namt
-
-            *Enty namt*
-
-        .. py:attribute:: enty_nams
-
-            *Enty nams*
-
-        .. py:attribute:: item_cd
-
-            *Item cd*
-
-        .. py:attribute:: mail_city
-
-            *Mail city*
-
-        .. py:attribute:: mail_st
-
-            *Mail st*
-
-        .. py:attribute:: mail_zip4
-
-            *Mail zip4*
-
-        .. py:attribute:: day_phone
-
-            *Day phone*
-
-        .. py:attribute:: fax_phone
-
-            *Fax phone*
-
-        .. py:attribute:: email_adr
-
-            *Email adr*
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id*
-
-        .. py:attribute:: ind_group
-
-            *Ind group*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr*
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd*
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr*
-
-        .. py:attribute:: dist_no
-
-            *Dist no*
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd*
-
-        .. py:attribute:: non_pty_cb
-
-            *Non pty cb*
-
-        .. py:attribute:: party_name
-
-            *Party name*
-
-        .. py:attribute:: bal_num
-
-            *Bal num*
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd*
-
-        .. py:attribute:: year_elect
-
-            *Year elect*
-
-        .. py:attribute:: pof_title
-
-            *Pof title*
-
-
+**Source**: `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>CharField</td>
+            <td>Entity's business name or last name if the entity is an individual</td>
+        </tr>
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>CharField</td>
+            <td>Entity's first name if the entity is an individual</td>
+        </tr>
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>CharField</td>
+            <td>Entity's name prefix or title if the entity is an individual</td>
+        </tr>
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>CharField</td>
+            <td>Entity's name suffix if the entity is an individual</td>
+        </tr>
+    
+        <tr>
+            <td>item_cd</td>
+            <td>CharField</td>
+            <td>Section of the Statement of Organization this itemization relates to. See CAL document for the definition of legal values for this column.</td>
+        </tr>
+    
+        <tr>
+            <td>mail_city</td>
+            <td>CharField</td>
+            <td>City portion of the entity's mailing address</td>
+        </tr>
+    
+        <tr>
+            <td>mail_st</td>
+            <td>CharField</td>
+            <td>State portion of the entity's mailing address</td>
+        </tr>
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>CharField</td>
+            <td>Zipcode portion of the entity's mailing address</td>
+        </tr>
+    
+        <tr>
+            <td>day_phone</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>fax_phone</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>email_adr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ind_group</td>
+            <td>CharField</td>
+            <td>Industry group/affiliation description</td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td>Code that identifies the office being sought. See CAL document for a list of valid codes.</td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td>Office sought description used if the office sought code (OFFICE_CD) equals other (OTH).</td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td>Office jurisdiction code. See CAL document for a list of legal values.</td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td>Office jurisdiction description provided if the         jurisdiction code (JURIS_CD) equals other (OTH).</td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td>Office district number for Senate, Assembly, and Board of Equalization districts.</td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td>Office sought/held code. Legal values are 'S' for sought and 'H' for held.</td>
+        </tr>
+    
+        <tr>
+            <td>non_pty_cb</td>
+            <td>CharField</td>
+            <td>Non-partisan check-box. Legal values are 'X' and null.</td>
+        </tr>
+    
+        <tr>
+            <td>party_name</td>
+            <td>CharField</td>
+            <td>Name of party (if partisan)</td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td>Ballot measure number or letter</td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td>Jurisdiction of ballot measure</td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td>Support/oppose code (S/O). Legal values are 'S' for support and 'O' for oppose.</td>
+        </tr>
+    
+        <tr>
+            <td>year_elect</td>
+            <td>CharField</td>
+            <td>Year of election</td>
+        </tr>
+    
+        <tr>
+            <td>pof_title</td>
+            <td>CharField</td>
+            <td>Position/title of the principal officer</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 Cvr3VerificationInfoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Cover page verification information from campaign disclosure forms
 
-.. py:class:: Cvr3VerificationInfoCd
+**Source**: `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: sig_date
-
-            *Signed date* date when signed
-
-        .. py:attribute:: sig_loc
-
-            *Signed location* city and state where signed
-
-        .. py:attribute:: sig_naml
-
-            *Last name* last name of the signer
-
-        .. py:attribute:: sig_namf
-
-            *First name* first name of the signer
-
-        .. py:attribute:: sig_namt
-
-            *Title* title of the signer
-
-        .. py:attribute:: sig_nams
-
-            *Suffix* suffix of the signer
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sig_date</td>
+            <td>DateField</td>
+            <td>date when signed</td>
+        </tr>
+    
+        <tr>
+            <td>sig_loc</td>
+            <td>CharField</td>
+            <td>city and state where signed</td>
+        </tr>
+    
+        <tr>
+            <td>sig_naml</td>
+            <td>CharField</td>
+            <td>last name of the signer</td>
+        </tr>
+    
+        <tr>
+            <td>sig_namf</td>
+            <td>CharField</td>
+            <td>first name of the signer</td>
+        </tr>
+    
+        <tr>
+            <td>sig_namt</td>
+            <td>CharField</td>
+            <td>title of the signer</td>
+        </tr>
+    
+        <tr>
+            <td>sig_nams</td>
+            <td>CharField</td>
+            <td>suffix of the signer</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 CvrCampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Cover page information for the campaign disclosure forms below.
 This data comes from the electronic filing.
-The data contained herin is &quot;as filed&quot; by the entity making the filing.
+The data contained herin is "as filed" by the entity making the filing.
 
     F401 -- Slate Mailer Organization Campaign Statement
     F425 -- Semi-Annual Statement of No Activity
@@ -422,989 +621,1485 @@ The data contained herin is &quot;as filed&quot; by the entity making the filing
     F497 -- Late Contribution Report
     F498 -- Slate Mailer Late Payment Report
 
-.. py:class:: CvrCampaignDisclosureCd
-
-    **Source data**
-
-        `CVR_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amendexp_1
-
-            *Amendexp 1*
-
-        .. py:attribute:: amendexp_2
-
-            *Amendexp 2*
-
-        .. py:attribute:: amendexp_3
-
-            *Amendexp 3*
-
-        .. py:attribute:: assoc_cb
-
-            *Assoc cb*
-
-        .. py:attribute:: assoc_int
-
-            *Assoc int*
-
-        .. py:attribute:: bal_id
-
-            *Bal id*
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris*
-
-        .. py:attribute:: bal_name
-
-            *Bal name*
-
-        .. py:attribute:: bal_num
-
-            *Bal num*
-
-        .. py:attribute:: brdbase_yn
-
-            *Brdbase yn*
-
-        .. py:attribute:: bus_city
-
-            *Bus city*
-
-        .. py:attribute:: bus_inter
-
-            *Bus inter*
-
-        .. py:attribute:: bus_name
-
-            *Bus name*
-
-        .. py:attribute:: bus_st
-
-            *Bus st*
-
-        .. py:attribute:: bus_zip4
-
-            *Bus zip4*
-
-        .. py:attribute:: busact_cb
-
-            *Busact cb*
-
-        .. py:attribute:: busactvity
-
-            *Busactvity*
-
-        .. py:attribute:: cand_city
-
-            *Cand city*
-
-        .. py:attribute:: cand_email
-
-            *Cand email*
-
-        .. py:attribute:: cand_fax
-
-            *Cand fax*
-
-        .. py:attribute:: cand_id
-
-            *Cand id*
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf*
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml*
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams*
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt*
-
-        .. py:attribute:: cand_phon
-
-            *Cand phon*
-
-        .. py:attribute:: cand_st
-
-            *Cand st*
-
-        .. py:attribute:: cand_zip4
-
-            *Cand zip4*
-
-        .. py:attribute:: cmtte_id
-
-            *Cmtte id*
-
-        .. py:attribute:: cmtte_type
-
-            *Cmtte type*
-
-        .. py:attribute:: control_yn
-
-            *Control yn*
-
-        .. py:attribute:: dist_no
-
-            *Dist no*
-
-        .. py:attribute:: elect_date
-
-            *Elect date*
-
-        .. py:attribute:: emplbus_cb
-
-            *Emplbus cb*
-
-        .. py:attribute:: employer
-
-            *Employer*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: file_email
-
-            *File email*
-
-        .. py:attribute:: filer_city
-
-            *Filer city*
-
-        .. py:attribute:: filer_fax
-
-            *Filer fax*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filer_namf
-
-            *Filer namf*
-
-        .. py:attribute:: filer_naml
-
-            *Filer naml*
-
-        .. py:attribute:: filer_nams
-
-            *Filer nams*
-
-        .. py:attribute:: filer_namt
-
-            *Filer namt*
-
-        .. py:attribute:: filer_phon
-
-            *Filer phon*
-
-        .. py:attribute:: filer_st
-
-            *Filer st*
-
-        .. py:attribute:: filer_zip4
-
-            *Filer zip4*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: from_date
-
-            *From date*
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd*
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr*
-
-        .. py:attribute:: late_rptno
-
-            *Late rptno*
-
-        .. py:attribute:: mail_city
-
-            *Mail city*
-
-        .. py:attribute:: mail_st
-
-            *Mail st*
-
-        .. py:attribute:: mail_zip4
-
-            *Mail zip4*
-
-        .. py:attribute:: occupation
-
-            *Occupation*
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd*
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: other_cb
-
-            *Other cb*
-
-        .. py:attribute:: other_int
-
-            *Other int*
-
-        .. py:attribute:: primfrm_yn
-
-            *Primfrm yn*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: report_num
-
-            *Report num*
-
-        .. py:attribute:: reportname
-
-            *Reportname*
-
-        .. py:attribute:: rpt_att_cb
-
-            *Rpt att cb*
-
-        .. py:attribute:: rpt_date
-
-            *Rpt date*
-
-        .. py:attribute:: rptfromdt
-
-            *Rptfromdt*
-
-        .. py:attribute:: rptthrudt
-
-            *Rptthrudt*
-
-        .. py:attribute:: selfemp_cb
-
-            *Selfemp cb*
-
-        .. py:attribute:: sponsor_yn
-
-            *Sponsor yn*
-
-        .. py:attribute:: stmt_type
-
-            *Stmt type*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd*
-
-        .. py:attribute:: thru_date
-
-            *Thru date*
-
-        .. py:attribute:: tres_city
-
-            *Tres city*
-
-        .. py:attribute:: tres_email
-
-            *Tres email*
-
-        .. py:attribute:: tres_fax
-
-            *Tres fax*
-
-        .. py:attribute:: tres_namf
-
-            *Tres namf*
-
-        .. py:attribute:: tres_naml
-
-            *Tres naml*
-
-        .. py:attribute:: tres_nams
-
-            *Tres nams*
-
-        .. py:attribute:: tres_namt
-
-            *Tres namt*
-
-        .. py:attribute:: tres_phon
-
-            *Tres phon*
-
-        .. py:attribute:: tres_st
-
-            *Tres st*
-
-        .. py:attribute:: tres_zip4
-
-            *Tres zip4*
-
-
+**Source**: `CVR_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amendexp_1</td>
+            <td>CharField</td>
+            <td>Amendment explanation line 1</td>
+        </tr>
+    
+        <tr>
+            <td>amendexp_2</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amendexp_3</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>assoc_cb</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>assoc_int</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_id</td>
+            <td>CharField</td>
+            <td>This field is undocument</td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_name</td>
+            <td>CharField</td>
+            <td>Ballot measure name.</td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>brdbase_yn</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bus_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bus_inter</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bus_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bus_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bus_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>busact_cb</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>busactvity</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_city</td>
+            <td>CharField</td>
+            <td>candidate/officeholder city</td>
+        </tr>
+    
+        <tr>
+            <td>cand_email</td>
+            <td>CharField</td>
+            <td>candidate/officeholder email</td>
+        </tr>
+    
+        <tr>
+            <td>cand_fax</td>
+            <td>CharField</td>
+            <td>candidate/officeholder fax</td>
+        </tr>
+    
+        <tr>
+            <td>cand_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td>candidate/officeholder first name</td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td>Candidate/officeholder's last name.</td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td>Candidate/officeholder's name suffix.</td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td>Candidate/officeholder's prefix or title.</td>
+        </tr>
+    
+        <tr>
+            <td>cand_phon</td>
+            <td>CharField</td>
+            <td>candidate/officeholder phone</td>
+        </tr>
+    
+        <tr>
+            <td>cand_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cmtte_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cmtte_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>control_yn</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>elect_date</td>
+            <td>DateTimeField</td>
+            <td>Date of the General Election. This date will be the same as on the filing's cover (CVR) record.</td>
+        </tr>
+    
+        <tr>
+            <td>emplbus_cb</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>file_email</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_fax</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>CharField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filer_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_phon</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>from_date</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td>Office jurisdiction code.</td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>late_rptno</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>mail_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>mail_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>occupation</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>other_cb</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>other_int</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>primfrm_yn</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>report_num</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>reportname</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_att_cb</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_date</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rptfromdt</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rptthrudt</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>selfemp_cb</td>
+            <td>CharField</td>
+            <td>Self employed check-box</td>
+        </tr>
+    
+        <tr>
+            <td>sponsor_yn</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>stmt_type</td>
+            <td>CharField</td>
+            <td>type of statement</td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>thru_date</td>
+            <td>DateTimeField</td>
+            <td>reporting period through date</td>
+        </tr>
+    
+        <tr>
+            <td>tres_city</td>
+            <td>CharField</td>
+            <td>City portion of the treasurer or responsible officer's street address.</td>
+        </tr>
+    
+        <tr>
+            <td>tres_email</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_fax</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's first name. Not used on Form 460 Schedule D.</td>
+        </tr>
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's last name. Not used on Form 460 Schedule D.</td>
+        </tr>
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's suffix. Not used on Form 460 Schedule D.</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's prefix or title. Not used on Form 460 Schedule D.</td>
+        </tr>
+    
+        <tr>
+            <td>tres_phon</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 CvrSoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Cover page for a statement of organization creation or termination
 form filed by a slate-mailer organization or recipient committee.
 
-.. py:class:: CvrSoCd
-
-    **Source data**
-
-        `CVR_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: acct_opendt
-
-            *Acct opendt*
-
-        .. py:attribute:: actvty_lvl
-
-            *Activity level* Organization's level of activity
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: bank_adr1
-
-            *Bank adr1*
-
-        .. py:attribute:: bank_adr2
-
-            *Bank adr2*
-
-        .. py:attribute:: bank_city
-
-            *Bank city*
-
-        .. py:attribute:: bank_nam
-
-            *Bank nam*
-
-        .. py:attribute:: bank_phon
-
-            *Bank phon*
-
-        .. py:attribute:: bank_st
-
-            *Bank st*
-
-        .. py:attribute:: bank_zip4
-
-            *Bank zip4*
-
-        .. py:attribute:: brdbase_cb
-
-            *Brdbase cb*
-
-        .. py:attribute:: city
-
-            *City*
-
-        .. py:attribute:: cmte_email
-
-            *Cmte email*
-
-        .. py:attribute:: cmte_fax
-
-            *Cmte fax*
-
-        .. py:attribute:: com82013id
-
-            *Com82013id*
-
-        .. py:attribute:: com82013nm
-
-            *Com82013nm*
-
-        .. py:attribute:: com82013yn
-
-            *Com82013yn*
-
-        .. py:attribute:: control_cb
-
-            *Control cb*
-
-        .. py:attribute:: county_act
-
-            *County act*
-
-        .. py:attribute:: county_res
-
-            *County res*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filer_namf
-
-            *Filer first name*
-
-        .. py:attribute:: filer_naml
-
-            *Filer last name*
-
-        .. py:attribute:: filer_nams
-
-            *Filer name suffix*
-
-        .. py:attribute:: filer_namt
-
-            *Filer name title*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: genpurp_cb
-
-            *Genpurp cb*
-
-        .. py:attribute:: gpc_descr
-
-            *Gpc descr*
-
-        .. py:attribute:: mail_city
-
-            *Mail city*
-
-        .. py:attribute:: mail_st
-
-            *Mail st*
-
-        .. py:attribute:: mail_zip4
-
-            *Mail zip4*
-
-        .. py:attribute:: phone
-
-            *Phone*
-
-        .. py:attribute:: primfc_cb
-
-            *Primfc cb*
-
-        .. py:attribute:: qualfy_dt
-
-            *Date qualified* Date qualified as an organization
-
-        .. py:attribute:: qual_cb
-
-            *Qual cb*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: report_num
-
-            *Report num*
-
-        .. py:attribute:: rpt_date
-
-            *Rpt date*
-
-        .. py:attribute:: smcont_qualdt
-
-            *Smcont qualdt*
-
-        .. py:attribute:: sponsor_cb
-
-            *Sponsor cb*
-
-        .. py:attribute:: st
-
-            *St*
-
-        .. py:attribute:: surplusdsp
-
-            *Surplusdsp*
-
-        .. py:attribute:: term_date
-
-            *Term date*
-
-        .. py:attribute:: tres_city
-
-            *Treasurer&#39;s city*
-
-        .. py:attribute:: tres_namf
-
-            *Treasurer&#39;s first name*
-
-        .. py:attribute:: tres_naml
-
-            *Treasurer&#39;s last name*
-
-        .. py:attribute:: tres_nams
-
-            *Treasurer&#39;s name suffix*
-
-        .. py:attribute:: tres_namt
-
-            *Treasurer&#39;s name title*
-
-        .. py:attribute:: tres_phon
-
-            *Treasurer&#39;s phone number*
-
-        .. py:attribute:: tres_st
-
-            *Treasurer&#39;s street*
-
-        .. py:attribute:: tres_zip4
-
-            *Tres zip4* Treasurer's ZIP Code
-
-        .. py:attribute:: zip4
-
-            *Zip4*
-
-
+**Source**: `CVR_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>acct_opendt</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>actvty_lvl</td>
+            <td>CharField</td>
+            <td>Organization's level of activity</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>bank_adr1</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>bank_adr2</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>bank_city</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>bank_nam</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>bank_phon</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>bank_st</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>bank_zip4</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>brdbase_cb</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>city</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>cmte_email</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>cmte_fax</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>com82013id</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>com82013nm</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>com82013yn</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>control_cb</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>county_act</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>county_res</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>CharField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filer_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>genpurp_cb</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>gpc_descr</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>mail_city</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>mail_st</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>phone</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>primfc_cb</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>qualfy_dt</td>
+            <td>DateTimeField</td>
+            <td>Date qualified as an organization</td>
+        </tr>
+    
+        <tr>
+            <td>qual_cb</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>report_num</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_date</td>
+            <td>DateTimeField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>smcont_qualdt</td>
+            <td>DateTimeField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>sponsor_cb</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>st</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>surplusdsp</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>term_date</td>
+            <td>DateTimeField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>tres_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_phon</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_zip4</td>
+            <td>CharField</td>
+            <td>Treasurer's ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>zip4</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 DebtCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Form 460 (Recipient Committee Campaign Statement)
 Schedule (F) Accrued Expenses (Unpaid Bills) records
 
-.. py:class:: DebtCd
-
-    **Source data**
-
-        `DEBT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amt_incur
-
-            *Amt incur*
-
-        .. py:attribute:: amt_paid
-
-            *Amt paid*
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid*
-
-        .. py:attribute:: beg_bal
-
-            *Beg bal*
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id*
-
-        .. py:attribute:: end_bal
-
-            *End bal*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: expn_code
-
-            *Expn code*
-
-        .. py:attribute:: expn_dscr
-
-            *Expn dscr*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: payee_city
-
-            *Payee city*
-
-        .. py:attribute:: payee_namf
-
-            *Payee namf*
-
-        .. py:attribute:: payee_naml
-
-            *Payee naml*
-
-        .. py:attribute:: payee_nams
-
-            *Payee nams*
-
-        .. py:attribute:: payee_namt
-
-            *Payee namt*
-
-        .. py:attribute:: payee_st
-
-            *Payee st*
-
-        .. py:attribute:: payee_zip4
-
-            *Payee zip4*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: tres_city
-
-            *Tres city*
-
-        .. py:attribute:: tres_namf
-
-            *Tres namf*
-
-        .. py:attribute:: tres_naml
-
-            *Tres naml*
-
-        .. py:attribute:: tres_nams
-
-            *Tres nams*
-
-        .. py:attribute:: tres_namt
-
-            *Tres namt*
-
-        .. py:attribute:: tres_st
-
-            *Tres st*
-
-        .. py:attribute:: tres_zip4
-
-            *Tres zip4*
-
-        .. py:attribute:: xref_match
-
-            *Xref match*
-
-        .. py:attribute:: xref_schnm
-
-            *Xref schnm*
-
-
+**Source**: `DEBT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amt_incur</td>
+            <td>DecimalField</td>
+            <td>Amount incurred this period</td>
+        </tr>
+    
+        <tr>
+            <td>amt_paid</td>
+            <td>DecimalField</td>
+            <td>Amount paid this period.</td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td>Back reference to a transaction identifier of a parent record.</td>
+        </tr>
+    
+        <tr>
+            <td>beg_bal</td>
+            <td>DecimalField</td>
+            <td>Outstanding balance at beginning of period</td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>CharField</td>
+            <td>Committee identification number</td>
+        </tr>
+    
+        <tr>
+            <td>end_bal</td>
+            <td>DecimalField</td>
+            <td>Outstanding balance at close of this period</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td>Entity code of the payee</td>
+        </tr>
+    
+        <tr>
+            <td>expn_code</td>
+            <td>CharField</td>
+            <td>Expense code</td>
+        </tr>
+    
+        <tr>
+            <td>expn_dscr</td>
+            <td>CharField</td>
+            <td>Purpose of expense and/or description/explanation</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number of the parent filing</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Schedule Name/ID: (F - Sched F / Accrued Expenses)</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Record line item number</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo amount flag</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to text contained in a TEXT record.</td>
+        </tr>
+    
+        <tr>
+            <td>payee_city</td>
+            <td>CharField</td>
+            <td>First line of the payee's street address</td>
+        </tr>
+    
+        <tr>
+            <td>payee_namf</td>
+            <td>CharField</td>
+            <td>Payee's first name if the payee is an individual</td>
+        </tr>
+    
+        <tr>
+            <td>payee_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_nams</td>
+            <td>CharField</td>
+            <td>Payee's name suffix if the payee is an individual</td>
+        </tr>
+    
+        <tr>
+            <td>payee_namt</td>
+            <td>CharField</td>
+            <td>Payee's prefix or title if the payee is an individual</td>
+        </tr>
+    
+        <tr>
+            <td>payee_st</td>
+            <td>CharField</td>
+            <td>Payee's state</td>
+        </tr>
+    
+        <tr>
+            <td>payee_zip4</td>
+            <td>CharField</td>
+            <td>Payee's ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td>Record type value: DEBT</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Transaction identifier - permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>tres_city</td>
+            <td>CharField</td>
+            <td>City portion of the treasurer or responsible officer's street address</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's first name</td>
+        </tr>
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's last name</td>
+        </tr>
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's suffix</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's prefix or title</td>
+        </tr>
+    
+        <tr>
+            <td>tres_st</td>
+            <td>CharField</td>
+            <td>State portion of the treasurer or responsible officer's address</td>
+        </tr>
+    
+        <tr>
+            <td>tres_zip4</td>
+            <td>CharField</td>
+            <td>ZIP Code portion of the treasurer or responsible officer's address</td>
+        </tr>
+    
+        <tr>
+            <td>xref_match</td>
+            <td>CharField</td>
+            <td>Related item on other schedule has same transaction identifier. /"X/" indicates this condition is true</td>
+        </tr>
+    
+        <tr>
+            <td>xref_schnm</td>
+            <td>CharField</td>
+            <td>Related record is included on Schedule C.</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 ExpnCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Campaign expenditures from a variety of forms
 
-.. py:class:: ExpnCd
-
-    **Source data**
-
-        `EXPN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: agent_namf
-
-            *Agent namf* Agent of Ind. Contractor's First name
-
-        .. py:attribute:: agent_naml
-
-            *Agent naml* Agent of Ind. Contractor's Last name (Sched G)
-
-        .. py:attribute:: agent_nams
-
-            *Agent nams* Agent of Ind. Contractor's Suffix
-
-        .. py:attribute:: agent_namt
-
-            *Agent namt* Agent of Ind. Contractor's Prefix or Title
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amount
-
-            *Amount* Amount of Payment
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid* Back Reference to a Tran_ID of a 'parent' record
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris* Jurisdiction
-
-        .. py:attribute:: bal_name
-
-            *Bal name* Ballot Measure Name
-
-        .. py:attribute:: bal_num
-
-            *Bal num* Ballot Number or Letter
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf* Candidate's First name
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml* Candidate's Last name
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams* Candidate's Suffix
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt* Candidate's Prefix or Title
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id* Committee ID (If [COM|RCP] & no ID#, Treas info Req.)
-
-        .. py:attribute:: cum_oth
-
-            *Cum oth* Cumulative / 'Other' (No Cumulative on Sched E & G)
-
-        .. py:attribute:: cum_ytd
-
-            *Cum ytd* Cumulative / Year-to-date amount         (No Cumulative on Sched E & G)
-
-        .. py:attribute:: dist_no
-
-            *Dist no* Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: expn_chkno
-
-            *Expn chkno* Check Number (Optional)
-
-        .. py:attribute:: expn_code
-
-            *Expn code* Expense Code - Values: (Refer to list in Overview)         Note: CTB & IND need explanation & listing on Sched D         TRC & TRS require explanation.
-
-        .. py:attribute:: expn_date
-
-            *Expn date* Date of Expenditure (Note: Date not on Sched E & G)
-
-        .. py:attribute:: expn_dscr
-
-            *Expn dscr* Purpose of Expense and/or Description/explanation
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: g_from_e_f
-
-            *G from e f* Back Reference from Sched G to Sched 'E' or 'F'?
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd* Office Jurisdiction Code Values: STW=Statewide;         SEN=Senate District; ASM=Assembly District;         BOE=Board of Equalization District;         CIT=City; CTY=County; LOC=Local; OTH=Other
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr* Office Jurisdiction Description         (Req. if Juris_Cd=[CIT|CTY|LOC|OTH]
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code* Memo Amount? (Date/Amount are informational only)
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno* Reference to text contained in a TEXT record.
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd* Office Sought/Held Code: H=Held; S=Sought
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr* Office Sought Description (Req. if Office_Cd=OTH)
-
-        .. py:attribute:: office_cd
-
-            *Office cd* Office Sought (See table of code in Overview)
-
-        .. py:attribute:: payee_city
-
-            *Payee city* Payee City
-
-        .. py:attribute:: payee_namf
-
-            *Payee namf* Payee's First name
-
-        .. py:attribute:: payee_naml
-
-            *Payee naml* Payee's Last name
-
-        .. py:attribute:: payee_nams
-
-            *Payee nams* Payee's Suffix
-
-        .. py:attribute:: payee_namt
-
-            *Payee namt* Payee's Prefix or Title
-
-        .. py:attribute:: payee_st
-
-            *Payee st* State code
-
-        .. py:attribute:: payee_zip4
-
-            *Payee zip4* Zip+4
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd* Support/Oppose? Values: S; O (F450, F461)
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: tres_city
-
-            *Tres city* Treasurer City
-
-        .. py:attribute:: tres_namf
-
-            *Tres namf* Treasurer's First name (Req if [COM|RCP] & no ID#)
-
-        .. py:attribute:: tres_naml
-
-            *Tres naml* Treasurer's Last name (Req if [COM|RCP] & no ID#)
-
-        .. py:attribute:: tres_nams
-
-            *Tres nams* Treasurer's Suffix
-
-        .. py:attribute:: tres_namt
-
-            *Tres namt* Treasurer's Prefix or Title
-
-        .. py:attribute:: tres_st
-
-            *Tres st* Treasurer State
-
-        .. py:attribute:: tres_zip4
-
-            *Tres zip4* Treasurer ZIP+4
-
-        .. py:attribute:: xref_match
-
-            *Xref match* X = Related item on other Sched has same Tran_ID
-
-        .. py:attribute:: xref_schnm
-
-            *Xref schnm* Related item is included on Sched 'C' or 'H2'
-
-
+**Source**: `EXPN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>agent_namf</td>
+            <td>CharField</td>
+            <td>Agent of Ind. Contractor's First name</td>
+        </tr>
+    
+        <tr>
+            <td>agent_naml</td>
+            <td>CharField</td>
+            <td>Agent of Ind. Contractor's Last name (Sched G)</td>
+        </tr>
+    
+        <tr>
+            <td>agent_nams</td>
+            <td>CharField</td>
+            <td>Agent of Ind. Contractor's Suffix</td>
+        </tr>
+    
+        <tr>
+            <td>agent_namt</td>
+            <td>CharField</td>
+            <td>Agent of Ind. Contractor's Prefix or Title</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td>Amount of Payment</td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td>Back Reference to a Tran_ID of a 'parent' record</td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td>Jurisdiction</td>
+        </tr>
+    
+        <tr>
+            <td>bal_name</td>
+            <td>CharField</td>
+            <td>Ballot Measure Name</td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td>Ballot Number or Letter</td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td>Candidate's First name</td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td>Candidate's Last name</td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td>Candidate's Suffix</td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td>Candidate's Prefix or Title</td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>CharField</td>
+            <td>Committee ID (If [COM|RCP] & no ID#, Treas info Req.)</td>
+        </tr>
+    
+        <tr>
+            <td>cum_oth</td>
+            <td>DecimalField</td>
+            <td>Cumulative / 'Other' (No Cumulative on Sched E & G)</td>
+        </tr>
+    
+        <tr>
+            <td>cum_ytd</td>
+            <td>DecimalField</td>
+            <td>Cumulative / Year-to-date amount         (No Cumulative on Sched E & G)</td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td>Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>expn_chkno</td>
+            <td>CharField</td>
+            <td>Check Number (Optional)</td>
+        </tr>
+    
+        <tr>
+            <td>expn_code</td>
+            <td>CharField</td>
+            <td>Expense Code - Values: (Refer to list in Overview) Note: CTB & IND need explanation & listing on Sched D TRC & TRS require explanation.</td>
+        </tr>
+    
+        <tr>
+            <td>expn_date</td>
+            <td>DateField</td>
+            <td>Date of Expenditure (Note: Date not on Sched E & G)</td>
+        </tr>
+    
+        <tr>
+            <td>expn_dscr</td>
+            <td>CharField</td>
+            <td>Purpose of Expense and/or Description/explanation</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>g_from_e_f</td>
+            <td>CharField</td>
+            <td>Back Reference from Sched G to Sched 'E' or 'F'?</td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td>Office Jurisdiction Code Values: STW=Statewide;         SEN=Senate District; ASM=Assembly District;         BOE=Board of Equalization District;         CIT=City; CTY=County; LOC=Local; OTH=Other</td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td>Office Jurisdiction Description         (Req. if Juris_Cd=[CIT|CTY|LOC|OTH]</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo Amount? (Date/Amount are informational only)</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to text contained in a TEXT record.</td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td>Office Sought/Held Code: H=Held; S=Sought</td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td>Office Sought Description (Req. if Office_Cd=OTH)</td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td>Office Sought (See table of code in Overview)</td>
+        </tr>
+    
+        <tr>
+            <td>payee_city</td>
+            <td>CharField</td>
+            <td>Payee City</td>
+        </tr>
+    
+        <tr>
+            <td>payee_namf</td>
+            <td>CharField</td>
+            <td>Payee's First name</td>
+        </tr>
+    
+        <tr>
+            <td>payee_naml</td>
+            <td>CharField</td>
+            <td>Payee's Last name</td>
+        </tr>
+    
+        <tr>
+            <td>payee_nams</td>
+            <td>CharField</td>
+            <td>Payee's Suffix</td>
+        </tr>
+    
+        <tr>
+            <td>payee_namt</td>
+            <td>CharField</td>
+            <td>Payee's Prefix or Title</td>
+        </tr>
+    
+        <tr>
+            <td>payee_st</td>
+            <td>CharField</td>
+            <td>State code</td>
+        </tr>
+    
+        <tr>
+            <td>payee_zip4</td>
+            <td>CharField</td>
+            <td>Zip+4</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td>Support/Oppose? Values: S; O (F450, F461)</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>tres_city</td>
+            <td>CharField</td>
+            <td>Treasurer City</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>CharField</td>
+            <td>Treasurer's First name (Req if [COM|RCP] & no ID#)</td>
+        </tr>
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>CharField</td>
+            <td>Treasurer's Last name (Req if [COM|RCP] & no ID#)</td>
+        </tr>
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>CharField</td>
+            <td>Treasurer's Suffix</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>CharField</td>
+            <td>Treasurer's Prefix or Title</td>
+        </tr>
+    
+        <tr>
+            <td>tres_st</td>
+            <td>CharField</td>
+            <td>Treasurer State</td>
+        </tr>
+    
+        <tr>
+            <td>tres_zip4</td>
+            <td>CharField</td>
+            <td>Treasurer ZIP+4</td>
+        </tr>
+    
+        <tr>
+            <td>xref_match</td>
+            <td>CharField</td>
+            <td>X = Related item on other Sched has same Tran_ID</td>
+        </tr>
+    
+        <tr>
+            <td>xref_schnm</td>
+            <td>CharField</td>
+            <td>Related item is included on Sched 'C' or 'H2'</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 F495P2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 F495 Supplemental Preelection Campaign Statement
 
-It&#39;s attatchment to the forms below
+It's attatchment to the forms below
 
     F450 Recipient Committee Campaign Statement Short Form
     F460 Recipient Committee Campaign Statement
@@ -1419,508 +2114,763 @@ Form 450 or 460, the committee will report all
 contributions received and expenditures made since
 its last report.
 
-.. py:class:: F495P2Cd
+**Source**: `F495P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `F495P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: elect_date
-
-            *Elect date*
-
-        .. py:attribute:: electjuris
-
-            *Electjuris*
-
-        .. py:attribute:: contribamt
-
-            *Contribamt*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>elect_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>electjuris</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contribamt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 F501502Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Candidate Intention Statement
 
     -- F501
     -- F502
 
-.. py:class:: F501502Cd
-
-    **Source data**
-
-        `F501_502_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: committee_id
-
-            *Committee id*
-
-        .. py:attribute:: entity_cd
-
-            *Entity cd*
-
-        .. py:attribute:: report_num
-
-            *Report num*
-
-        .. py:attribute:: rpt_date
-
-            *Rpt date*
-
-        .. py:attribute:: stmt_type
-
-            *Stmt type*
-
-        .. py:attribute:: from_date
-
-            *From date*
-
-        .. py:attribute:: thru_date
-
-            *Thru date*
-
-        .. py:attribute:: elect_date
-
-            *Elect date*
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml*
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf*
-
-        .. py:attribute:: can_namm
-
-            *Can namm*
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt*
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams*
-
-        .. py:attribute:: moniker_pos
-
-            *Moniker pos*
-
-        .. py:attribute:: moniker
-
-            *Moniker*
-
-        .. py:attribute:: cand_city
-
-            *Cand city*
-
-        .. py:attribute:: cand_st
-
-            *Cand st*
-
-        .. py:attribute:: cand_zip4
-
-            *Cand zip4*
-
-        .. py:attribute:: cand_phon
-
-            *Cand phon*
-
-        .. py:attribute:: cand_fax
-
-            *Cand fax*
-
-        .. py:attribute:: cand_email
-
-            *Cand email*
-
-        .. py:attribute:: fin_naml
-
-            *Fin naml*
-
-        .. py:attribute:: fin_namf
-
-            *Fin namf*
-
-        .. py:attribute:: fin_namt
-
-            *Fin namt*
-
-        .. py:attribute:: fin_nams
-
-            *Fin nams*
-
-        .. py:attribute:: fin_city
-
-            *Fin city*
-
-        .. py:attribute:: fin_st
-
-            *Fin st*
-
-        .. py:attribute:: fin_zip4
-
-            *Fin zip4*
-
-        .. py:attribute:: fin_phon
-
-            *Fin phon*
-
-        .. py:attribute:: fin_fax
-
-            *Fin fax*
-
-        .. py:attribute:: fin_email
-
-            *Fin email*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr*
-
-        .. py:attribute:: agency_nam
-
-            *Agency nam*
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd*
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr*
-
-        .. py:attribute:: dist_no
-
-            *Dist no*
-
-        .. py:attribute:: party
-
-            *Party*
-
-        .. py:attribute:: yr_of_elec
-
-            *Yr of elec*
-
-        .. py:attribute:: elec_type
-
-            *Elec type*
-
-        .. py:attribute:: execute_dt
-
-            *Execute dt*
-
-        .. py:attribute:: can_sig
-
-            *Can sig*
-
-        .. py:attribute:: account_no
-
-            *Account no*
-
-        .. py:attribute:: acct_op_dt
-
-            *Acct op dt*
-
-        .. py:attribute:: party_cd
-
-            *Party cd*
-
-        .. py:attribute:: district_cd
-
-            *District cd*
-
-        .. py:attribute:: accept_limit_yn
-
-            *Accept limit yn*
-
-        .. py:attribute:: did_exceed_dt
-
-            *Did exceed dt*
-
-        .. py:attribute:: cntrb_prsnl_fnds_dt
-
-            *Cntrb prsnl fnds dt*
-
-
+**Source**: `F501_502_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>CharField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>committee_id</td>
+            <td>CharField</td>
+            <td>committee identification number</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td>entity code</td>
+        </tr>
+    
+        <tr>
+            <td>report_num</td>
+            <td>IntegerField</td>
+            <td>Report Number; 000 Original; 001-999 Amended</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_date</td>
+            <td>DateTimeField</td>
+            <td>date this report is filed</td>
+        </tr>
+    
+        <tr>
+            <td>stmt_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>from_date</td>
+            <td>CharField</td>
+            <td>reporting period from date</td>
+        </tr>
+    
+        <tr>
+            <td>thru_date</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>elect_date</td>
+            <td>CharField</td>
+            <td>date of election</td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>can_namm</td>
+            <td>CharField</td>
+            <td>candidate/officeholder middle name</td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>moniker_pos</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>moniker</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_st</td>
+            <td>CharField</td>
+            <td>candidate/officeholder state</td>
+        </tr>
+    
+        <tr>
+            <td>cand_zip4</td>
+            <td>CharField</td>
+            <td>candidate officeholder zip +4</td>
+        </tr>
+    
+        <tr>
+            <td>cand_phon</td>
+            <td>CharField</td>
+            <td>candidate/officeholder phone number</td>
+        </tr>
+    
+        <tr>
+            <td>cand_fax</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_email</td>
+            <td>CharField</td>
+            <td>candidate/officeholder email address</td>
+        </tr>
+    
+        <tr>
+            <td>fin_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>fin_namf</td>
+            <td>CharField</td>
+            <td>Unused. Financial institution's first name.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_namt</td>
+            <td>CharField</td>
+            <td>Unused. Financial institution's title.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_nams</td>
+            <td>CharField</td>
+            <td>Unused. Financial institution's suffix.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_city</td>
+            <td>CharField</td>
+            <td>Financial institution's city.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_st</td>
+            <td>CharField</td>
+            <td>Financial institution's state.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_zip4</td>
+            <td>CharField</td>
+            <td>Financial institution's zip code.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_phon</td>
+            <td>CharField</td>
+            <td>Financial institution's phone number.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_fax</td>
+            <td>CharField</td>
+            <td>Financial institution's FAX Number.</td>
+        </tr>
+    
+        <tr>
+            <td>fin_email</td>
+            <td>CharField</td>
+            <td>Financial institution's e-mail address.</td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>agency_nam</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>IntegerField</td>
+            <td>office jurisdiction code</td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td>office jurisdiction description</td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td>district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races.</td>
+        </tr>
+    
+        <tr>
+            <td>party</td>
+            <td>CharField</td>
+            <td>Political party</td>
+        </tr>
+    
+        <tr>
+            <td>yr_of_elec</td>
+            <td>IntegerField</td>
+            <td>year of election</td>
+        </tr>
+    
+        <tr>
+            <td>elec_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>execute_dt</td>
+            <td>DateTimeField</td>
+            <td>execution date</td>
+        </tr>
+    
+        <tr>
+            <td>can_sig</td>
+            <td>CharField</td>
+            <td>candidate signature</td>
+        </tr>
+    
+        <tr>
+            <td>account_no</td>
+            <td>CharField</td>
+            <td>account number</td>
+        </tr>
+    
+        <tr>
+            <td>acct_op_dt</td>
+            <td>DateField</td>
+            <td>account open date</td>
+        </tr>
+    
+        <tr>
+            <td>party_cd</td>
+            <td>IntegerField</td>
+            <td>Party code.</td>
+        </tr>
+    
+        <tr>
+            <td>district_cd</td>
+            <td>IntegerField</td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
+        </tr>
+    
+        <tr>
+            <td>accept_limit_yn</td>
+            <td>IntegerField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>did_exceed_dt</td>
+            <td>DateField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>cntrb_prsnl_fnds_dt</td>
+            <td>DateField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LoanCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Loans received and made.
 
-.. py:class:: LoanCd
-
-    **Source data**
-
-        `LOAN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid*
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: intr_city
-
-            *Intr city*
-
-        .. py:attribute:: intr_namf
-
-            *Intr namf*
-
-        .. py:attribute:: intr_naml
-
-            *Intr naml*
-
-        .. py:attribute:: intr_nams
-
-            *Intr nams*
-
-        .. py:attribute:: intr_namt
-
-            *Intr namt*
-
-        .. py:attribute:: intr_st
-
-            *Intr st*
-
-        .. py:attribute:: intr_zip4
-
-            *Intr zip4*
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: lndr_namf
-
-            *Lndr namf*
-
-        .. py:attribute:: lndr_naml
-
-            *Lndr naml*
-
-        .. py:attribute:: lndr_nams
-
-            *Lndr nams*
-
-        .. py:attribute:: lndr_namt
-
-            *Lndr namt*
-
-        .. py:attribute:: loan_amt1
-
-            *Loan amt1*
-
-        .. py:attribute:: loan_amt2
-
-            *Loan amt2*
-
-        .. py:attribute:: loan_amt3
-
-            *Loan amt3*
-
-        .. py:attribute:: loan_amt4
-
-            *Loan amt4*
-
-        .. py:attribute:: loan_amt5
-
-            *Loan amt5*
-
-        .. py:attribute:: loan_amt6
-
-            *Loan amt6*
-
-        .. py:attribute:: loan_amt7
-
-            *Loan amt7*
-
-        .. py:attribute:: loan_amt8
-
-            *Loan amt8*
-
-        .. py:attribute:: loan_city
-
-            *Loan city*
-
-        .. py:attribute:: loan_date1
-
-            *Loan date1*
-
-        .. py:attribute:: loan_date2
-
-            *Loan date2*
-
-        .. py:attribute:: loan_emp
-
-            *Loan emp*
-
-        .. py:attribute:: loan_occ
-
-            *Loan occ*
-
-        .. py:attribute:: loan_rate
-
-            *Loan rate*
-
-        .. py:attribute:: loan_self
-
-            *Loan self*
-
-        .. py:attribute:: loan_st
-
-            *Loan st*
-
-        .. py:attribute:: loan_type
-
-            *Loan type*
-
-        .. py:attribute:: loan_zip4
-
-            *Loan zip4*
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: tres_city
-
-            *Tres city*
-
-        .. py:attribute:: tres_namf
-
-            *Tres namf*
-
-        .. py:attribute:: tres_naml
-
-            *Tres naml*
-
-        .. py:attribute:: tres_nams
-
-            *Tres nams*
-
-        .. py:attribute:: tres_namt
-
-            *Tres namt*
-
-        .. py:attribute:: tres_st
-
-            *Tres st*
-
-        .. py:attribute:: tres_zip4
-
-            *Tres zip4*
-
-        .. py:attribute:: xref_match
-
-            *Xref match*
-
-        .. py:attribute:: xref_schnm
-
-            *Xref schnm*
-
-
+**Source**: `LOAN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>intr_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>lndr_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lndr_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lndr_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lndr_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt1</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt2</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt3</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt4</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt5</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt6</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt7</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_amt8</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_date1</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_date2</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_emp</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_occ</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_rate</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_self</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>loan_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>tres_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tres_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>xref_match</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>xref_schnm</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 RcptCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Receipts schedules for the following forms.
 
     Form 460 (Recipient Committee Campaign Statement)
@@ -1928,911 +2878,1372 @@ Receipts schedules for the following forms.
 
     Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
 
-.. py:class:: RcptCd
-
-    **Source data**
-
-        `RCPT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amount
-
-            *Amount* Amount Received (Monetary, Inkkind, Promise)
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid* Back Reference to a transaction identifier of a parent record
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris* Jurisdiction of ballot measure. Used on the Form 401 Schedule A
-
-        .. py:attribute:: bal_name
-
-            *Bal name* Ballot measure name. Used on the Form 401 Schedule A
-
-        .. py:attribute:: bal_num
-
-            *Bal num* Ballot measure number or letter. Used on the Form 401 Schedule A
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf* Candidate/officeholder's first name. Used on the Form 401 Schedule A
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml* Candidate/officeholder's last name. Used on the Form 401 Schedule A
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams* Candidate/officeholder's name suffix. Used on the Form 401 Schedule A
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt* Candidate/officeholder's name prefix or title. Used on the Form 401 Schedule A
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id* Committee Identification number
-
-        .. py:attribute:: ctrib_city
-
-            *Ctrib city* Contributor's City
-
-        .. py:attribute:: ctrib_dscr
-
-            *Ctrib dscr* Description of goods/services received
-
-        .. py:attribute:: ctrib_emp
-
-            *Ctrib emp* Employer
-
-        .. py:attribute:: ctrib_namf
-
-            *Ctrib namf* Contributor's First Name
-
-        .. py:attribute:: ctrib_naml
-
-            *Ctrib naml* Contributor's last name or business name
-
-        .. py:attribute:: ctrib_nams
-
-            *Ctrib nams* Contributor's Suffix
-
-        .. py:attribute:: ctrib_namt
-
-            *Ctrib namt* Contributor's Prefix or Title
-
-        .. py:attribute:: ctrib_occ
-
-            *Ctrib occ* Occupation
-
-        .. py:attribute:: ctrib_self
-
-            *Ctrib self* Self Employed Check-box
-
-        .. py:attribute:: ctrib_st
-
-            *Ctrib st* Contributor's State
-
-        .. py:attribute:: ctrib_zip4
-
-            *Ctrib zip4* Contributor's ZIP+4
-
-        .. py:attribute:: cum_oth
-
-            *Cum oth* Cumulative Other (Sched A, A-1)
-
-        .. py:attribute:: cum_ytd
-
-            *Cum ytd* Cumulative year to date amount (Form 460 Schedule A and Form 401 Schedule A, A-1)
-
-        .. py:attribute:: date_thru
-
-            *Date thru* End of date range for items received
-
-        .. py:attribute:: dist_no
-
-            *Dist no* Office District Number (used on F401A)
-
-        .. py:attribute:: entity_cd
-
-            *Entity cd* Entity code: Values [CMO|RCP|IND|OTH]
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: int_rate
-
-            *Int rate*
-
-        .. py:attribute:: intr_city
-
-            *Intr city* Intermediary's City
-
-        .. py:attribute:: intr_cmteid
-
-            *Intr cmteid*
-
-        .. py:attribute:: intr_emp
-
-            *Intr emp* Intermediary's Employer
-
-        .. py:attribute:: intr_namf
-
-            *Intr namf* Intermediary's First Name
-
-        .. py:attribute:: intr_naml
-
-            *Intr naml* Intermediary's Last Name
-
-        .. py:attribute:: intr_nams
-
-            *Intr nams* Intermediary's Suffix
-
-        .. py:attribute:: intr_namt
-
-            *Intr namt* Intermediary's Prefix or Title
-
-        .. py:attribute:: intr_occ
-
-            *Intr occ* Intermediary's Occupation
-
-        .. py:attribute:: intr_self
-
-            *Intr self* Intermediary's self employed check box
-
-        .. py:attribute:: intr_st
-
-            *Intr st* Intermediary's state
-
-        .. py:attribute:: intr_zip4
-
-            *Intr zip4* Intermediary's zip code
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd* Office jurisdiction code. See the CAL document for the list of legal values. Used on Form 401 Schedule A
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr* Office Jurisdiction Description (used on F401A)
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code* Memo amount flag (Date/Amount are informational only)
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno* Reference to text contained in a TEXT record
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd* Office Sought/Held Code. Used on the Form 401 Schedule A. Legal values are 'S' for sought and 'H' for held
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr* Office Sought Description (used on F401A)
-
-        .. py:attribute:: office_cd
-
-            *Office cd* Code that identifies the office being sought. See the CAL document for a list of valid codes. Used on the Form 401 Schedule A)
-
-        .. py:attribute:: rcpt_date
-
-            *Rcpt date* Date item received
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd* Support/oppose code. Legal values are 'S' for support or 'O' for oppose. Used on Form 401 Sechedule A. Transaction identifier - permanent value unique to this item
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: tran_type
-
-            *Tran type* Transaction Type: Values T- third party | F Forgiven loan | R Returned (Negative amount)
-
-        .. py:attribute:: tres_city
-
-            *Tres city* City portion of the treasurer or responsible officer's street address
-
-        .. py:attribute:: tres_namf
-
-            *Tres namf* Treasurer or responsible officer's first name
-
-        .. py:attribute:: tres_naml
-
-            *Tres naml* Treasurer or responsible officer's last name
-
-        .. py:attribute:: tres_nams
-
-            *Tres nams* Treasurer or responsible officer's suffix
-
-        .. py:attribute:: tres_namt
-
-            *Tres namt* Treasurer or responsible officer's prefix or title
-
-        .. py:attribute:: tres_st
-
-            *Tres st* State portion of the treasurer or responsible officer's address
-
-        .. py:attribute:: tres_zip4
-
-            *Tres zip4* Zip code portion of the treasurer or responsible officer's address
-
-        .. py:attribute:: xref_match
-
-            *Xref match* Related item on other schedule has same transaction identifier. 'X' indicates this condition is true
-
-        .. py:attribute:: xref_schnm
-
-            *Xref schnm* Related record is included on Sched 'B2' or 'F'
-
-
+**Source**: `RCPT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td>Amount Received (Monetary, Inkkind, Promise)</td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td>Back Reference to a transaction identifier of a parent record</td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td>Jurisdiction of ballot measure. Used on the Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>bal_name</td>
+            <td>CharField</td>
+            <td>Ballot measure name. Used on the Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td>Ballot measure number or letter. Used on the Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td>Candidate/officeholder's first name. Used on the Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td>Candidate/officeholder's last name. Used on the Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td>Candidate/officeholder's name suffix. Used on the Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td>Candidate/officeholder's name prefix or title. Used on the Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>CharField</td>
+            <td>Committee Identification number</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_city</td>
+            <td>CharField</td>
+            <td>Contributor's City</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_dscr</td>
+            <td>CharField</td>
+            <td>Description of goods/services received</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_emp</td>
+            <td>CharField</td>
+            <td>Employer</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_namf</td>
+            <td>CharField</td>
+            <td>Contributor's First Name</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_naml</td>
+            <td>CharField</td>
+            <td>Contributor's last name or business name</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_nams</td>
+            <td>CharField</td>
+            <td>Contributor's Suffix</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_namt</td>
+            <td>CharField</td>
+            <td>Contributor's Prefix or Title</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_occ</td>
+            <td>CharField</td>
+            <td>Occupation</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_self</td>
+            <td>CharField</td>
+            <td>Self Employed Check-box</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_st</td>
+            <td>CharField</td>
+            <td>Contributor's State</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_zip4</td>
+            <td>CharField</td>
+            <td>Contributor's ZIP+4</td>
+        </tr>
+    
+        <tr>
+            <td>cum_oth</td>
+            <td>DecimalField</td>
+            <td>Cumulative Other (Sched A, A-1)</td>
+        </tr>
+    
+        <tr>
+            <td>cum_ytd</td>
+            <td>DecimalField</td>
+            <td>Cumulative year to date amount (Form 460 Schedule A and Form 401 Schedule A, A-1)</td>
+        </tr>
+    
+        <tr>
+            <td>date_thru</td>
+            <td>DateField</td>
+            <td>End of date range for items received</td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td>Office District Number (used on F401A)</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td>Entity code: Values [CMO|RCP|IND|OTH]</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>int_rate</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_city</td>
+            <td>CharField</td>
+            <td>Intermediary's City</td>
+        </tr>
+    
+        <tr>
+            <td>intr_cmteid</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>intr_emp</td>
+            <td>CharField</td>
+            <td>Intermediary's Employer</td>
+        </tr>
+    
+        <tr>
+            <td>intr_namf</td>
+            <td>CharField</td>
+            <td>Intermediary's First Name</td>
+        </tr>
+    
+        <tr>
+            <td>intr_naml</td>
+            <td>CharField</td>
+            <td>Intermediary's Last Name</td>
+        </tr>
+    
+        <tr>
+            <td>intr_nams</td>
+            <td>CharField</td>
+            <td>Intermediary's Suffix</td>
+        </tr>
+    
+        <tr>
+            <td>intr_namt</td>
+            <td>CharField</td>
+            <td>Intermediary's Prefix or Title</td>
+        </tr>
+    
+        <tr>
+            <td>intr_occ</td>
+            <td>CharField</td>
+            <td>Intermediary's Occupation</td>
+        </tr>
+    
+        <tr>
+            <td>intr_self</td>
+            <td>CharField</td>
+            <td>Intermediary's self employed check box</td>
+        </tr>
+    
+        <tr>
+            <td>intr_st</td>
+            <td>CharField</td>
+            <td>Intermediary's state</td>
+        </tr>
+    
+        <tr>
+            <td>intr_zip4</td>
+            <td>CharField</td>
+            <td>Intermediary's zip code</td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td>Office jurisdiction code. See the CAL document for the list of legal values. Used on Form 401 Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td>Office Jurisdiction Description (used on F401A)</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo amount flag (Date/Amount are informational only)</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to text contained in a TEXT record</td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td>Office Sought/Held Code. Used on the Form 401 Schedule A. Legal values are 'S' for sought and 'H' for held</td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td>Office Sought Description (used on F401A)</td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td>Code that identifies the office being sought. See the CAL document for a list of valid codes. Used on the Form 401 Schedule A)</td>
+        </tr>
+    
+        <tr>
+            <td>rcpt_date</td>
+            <td>DateField</td>
+            <td>Date item received</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td>Support/oppose code. Legal values are 'S' for support or 'O' for oppose. Used on Form 401 Sechedule A. Transaction identifier - permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>tran_type</td>
+            <td>CharField</td>
+            <td>Transaction Type: Values T- third party | F Forgiven loan | R Returned (Negative amount)</td>
+        </tr>
+    
+        <tr>
+            <td>tres_city</td>
+            <td>CharField</td>
+            <td>City portion of the treasurer or responsible officer's street address</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's first name</td>
+        </tr>
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's last name</td>
+        </tr>
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's suffix</td>
+        </tr>
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>CharField</td>
+            <td>Treasurer or responsible officer's prefix or title</td>
+        </tr>
+    
+        <tr>
+            <td>tres_st</td>
+            <td>CharField</td>
+            <td>State portion of the treasurer or responsible officer's address</td>
+        </tr>
+    
+        <tr>
+            <td>tres_zip4</td>
+            <td>CharField</td>
+            <td>Zip code portion of the treasurer or responsible officer's address</td>
+        </tr>
+    
+        <tr>
+            <td>xref_match</td>
+            <td>CharField</td>
+            <td>Related item on other schedule has same transaction identifier. 'X' indicates this condition is true</td>
+        </tr>
+    
+        <tr>
+            <td>xref_schnm</td>
+            <td>CharField</td>
+            <td>Related record is included on Sched 'B2' or 'F'</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 S401Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table contains Form 401 (Slate Mailer Organization) payment and other
 disclosure schedule (F401B, F401B-1, F401C, F401D) information.
 
-.. py:class:: S401Cd
-
-    **Source data**
-
-        `S401_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: agent_naml
-
-            *Agent naml*
-
-        .. py:attribute:: agent_namf
-
-            *Agent namf*
-
-        .. py:attribute:: agent_namt
-
-            *Agent namt*
-
-        .. py:attribute:: agent_nams
-
-            *Agent nams*
-
-        .. py:attribute:: payee_naml
-
-            *Payee naml*
-
-        .. py:attribute:: payee_namf
-
-            *Payee namf*
-
-        .. py:attribute:: payee_namt
-
-            *Payee namt*
-
-        .. py:attribute:: payee_nams
-
-            *Payee nams*
-
-        .. py:attribute:: payee_city
-
-            *Payee city*
-
-        .. py:attribute:: payee_st
-
-            *Payee st*
-
-        .. py:attribute:: payee_zip4
-
-            *Payee zip4*
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-        .. py:attribute:: aggregate
-
-            *Aggregate*
-
-        .. py:attribute:: expn_dscr
-
-            *Expn dscr*
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml*
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf*
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt*
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr*
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd*
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr*
-
-        .. py:attribute:: dist_no
-
-            *Dist no*
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd*
-
-        .. py:attribute:: bal_name
-
-            *Bal name*
-
-        .. py:attribute:: bal_num
-
-            *Bal num*
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd*
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid*
-
-
+**Source**: `S401_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>agent_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>agent_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>agent_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>agent_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payee_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>aggregate</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>expn_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 S496Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Form 496 Late Independent Expenditures
 
-.. py:class:: S496Cd
+**Source**: `S496_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `S496_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-        .. py:attribute:: exp_date
-
-            *Exp date*
-
-        .. py:attribute:: expn_dscr
-
-            *Expn dscr*
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: date_thru
-
-            *Date thru*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>exp_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>expn_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>date_thru</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 S497Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Form 497 Late Contributions Received/Made
 
-.. py:class:: S497Cd
-
-    **Source data**
-
-        `S497_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: enty_naml
-
-            *Enty naml*
-
-        .. py:attribute:: enty_namf
-
-            *Enty namf*
-
-        .. py:attribute:: enty_namt
-
-            *Enty namt*
-
-        .. py:attribute:: enty_nams
-
-            *Enty nams*
-
-        .. py:attribute:: enty_city
-
-            *Enty city*
-
-        .. py:attribute:: enty_st
-
-            *Enty st*
-
-        .. py:attribute:: enty_zip4
-
-            *Enty zip4*
-
-        .. py:attribute:: ctrib_emp
-
-            *Ctrib emp*
-
-        .. py:attribute:: ctrib_occ
-
-            *Ctrib occ*
-
-        .. py:attribute:: ctrib_self
-
-            *Ctrib self*
-
-        .. py:attribute:: elec_date
-
-            *Elec date*
-
-        .. py:attribute:: ctrib_date
-
-            *Ctrib date*
-
-        .. py:attribute:: date_thru
-
-            *Date thru*
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id*
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml*
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf*
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt*
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr*
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd*
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr*
-
-        .. py:attribute:: dist_no
-
-            *Dist no*
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd*
-
-        .. py:attribute:: bal_name
-
-            *Bal name*
-
-        .. py:attribute:: bal_num
-
-            *Bal num*
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris*
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: bal_id
-
-            *Bal id*
-
-        .. py:attribute:: cand_id
-
-            *Cand id*
-
-        .. py:attribute:: sup_off_cd
-
-            *Sup off cd*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd*
-
-
+**Source**: `S497_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>enty_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_emp</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_occ</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_self</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>elec_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>date_thru</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sup_off_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 S498Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Form 498 Slate Mailer Late Independent Expenditures Made
 
-.. py:class:: S498Cd
-
-    **Source data**
-
-        `S498_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: cmte_id
-
-            *Cmte id*
-
-        .. py:attribute:: payor_naml
-
-            *Payor naml*
-
-        .. py:attribute:: payor_namf
-
-            *Payor namf*
-
-        .. py:attribute:: payor_namt
-
-            *Payor namt*
-
-        .. py:attribute:: payor_nams
-
-            *Payor nams*
-
-        .. py:attribute:: payor_city
-
-            *Payor city*
-
-        .. py:attribute:: payor_st
-
-            *Payor st*
-
-        .. py:attribute:: payor_zip4
-
-            *Payor zip4*
-
-        .. py:attribute:: date_rcvd
-
-            *Date rcvd*
-
-        .. py:attribute:: amt_rcvd
-
-            *Amt rcvd*
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml*
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf*
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt*
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: offic_dscr
-
-            *Offic dscr*
-
-        .. py:attribute:: juris_cd
-
-            *Juris cd*
-
-        .. py:attribute:: juris_dscr
-
-            *Juris dscr*
-
-        .. py:attribute:: dist_no
-
-            *Dist no*
-
-        .. py:attribute:: off_s_h_cd
-
-            *Off s h cd*
-
-        .. py:attribute:: bal_name
-
-            *Bal name*
-
-        .. py:attribute:: bal_num
-
-            *Bal num*
-
-        .. py:attribute:: bal_juris
-
-            *Bal juris*
-
-        .. py:attribute:: sup_opp_cd
-
-            *Sup opp cd*
-
-        .. py:attribute:: amt_attrib
-
-            *Amt attrib*
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: employer
-
-            *Employer*
-
-        .. py:attribute:: occupation
-
-            *Occupation*
-
-        .. py:attribute:: selfemp_cb
-
-            *Selfemp cb*
-
-
+**Source**: `S498_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>payor_naml</td>
+            <td>CharField</td>
+            <td>Payor's last name or business name</td>
+        </tr>
+    
+        <tr>
+            <td>payor_namf</td>
+            <td>CharField</td>
+            <td>Payor's first name.</td>
+        </tr>
+    
+        <tr>
+            <td>payor_namt</td>
+            <td>CharField</td>
+            <td>Payor's Prefix or title.</td>
+        </tr>
+    
+        <tr>
+            <td>payor_nams</td>
+            <td>CharField</td>
+            <td>Payor's suffix.</td>
+        </tr>
+    
+        <tr>
+            <td>payor_city</td>
+            <td>CharField</td>
+            <td>Payor's city.</td>
+        </tr>
+    
+        <tr>
+            <td>payor_st</td>
+            <td>CharField</td>
+            <td>Payor's State.</td>
+        </tr>
+    
+        <tr>
+            <td>payor_zip4</td>
+            <td>CharField</td>
+            <td>Payor's zip code.</td>
+        </tr>
+    
+        <tr>
+            <td>date_rcvd</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amt_rcvd</td>
+            <td>DecimalField</td>
+            <td>Amount received</td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>dist_no</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>bal_num</td>
+            <td>CharField</td>
+            <td>Ballot measure number or letter.</td>
+        </tr>
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amt_attrib</td>
+            <td>DecimalField</td>
+            <td>Amount attributed (only if Form_type = 'F498-A')</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>occupation</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>selfemp_cb</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 SpltCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Split Records
 
     -- F450P5
     -- F460 (A-B1-B2-C-D-H)
 
-.. py:class:: SpltCd
+**Source**: `SPLT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `SPLT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: elec_amount
-
-            *Elec amount*
-
-        .. py:attribute:: elec_code
-
-            *Elec code*
-
-        .. py:attribute:: elec_date
-
-            *Elec date*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: pform_type
-
-            *Pform type*
-
-        .. py:attribute:: ptran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>elec_amount</td>
+            <td>DecimalField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>elec_code</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>elec_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>pform_type</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>ptran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 
 Common
@@ -2840,238 +4251,357 @@ Common
 
 CvrE530Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table method is undocumented in the print docs.
 
-.. py:class:: CvrE530Cd
-
-    **Source data**
-
-        `CVR_E530_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: filer_naml
-
-            *Filer naml*
-
-        .. py:attribute:: filer_namf
-
-            *Filer namf*
-
-        .. py:attribute:: filer_namt
-
-            *Filer namt*
-
-        .. py:attribute:: filer_nams
-
-            *Filer nams*
-
-        .. py:attribute:: report_num
-
-            *Report num*
-
-        .. py:attribute:: rpt_date
-
-            *Rpt date*
-
-        .. py:attribute:: filer_city
-
-            *Filer city*
-
-        .. py:attribute:: filer_st
-
-            *Filer st*
-
-        .. py:attribute:: filer_zip4
-
-            *Filer zip4*
-
-        .. py:attribute:: occupation
-
-            *Occupation*
-
-        .. py:attribute:: employer
-
-            *Employer*
-
-        .. py:attribute:: cand_naml
-
-            *Cand naml*
-
-        .. py:attribute:: cand_namf
-
-            *Cand namf*
-
-        .. py:attribute:: cand_namt
-
-            *Cand namt*
-
-        .. py:attribute:: cand_nams
-
-            *Cand nams*
-
-        .. py:attribute:: district_cd
-
-            *District cd*
-
-        .. py:attribute:: office_cd
-
-            *Office cd*
-
-        .. py:attribute:: pmnt_dt
-
-            *Pmnt dt*
-
-        .. py:attribute:: pmnt_amount
-
-            *Pmnt amount*
-
-        .. py:attribute:: type_literature
-
-            *Type literature*
-
-        .. py:attribute:: type_printads
-
-            *Type printads*
-
-        .. py:attribute:: type_radio
-
-            *Type radio*
-
-        .. py:attribute:: type_tv
-
-            *Type tv*
-
-        .. py:attribute:: type_it
-
-            *Type it*
-
-        .. py:attribute:: type_billboards
-
-            *Type billboards*
-
-        .. py:attribute:: type_other
-
-            *Type other*
-
-        .. py:attribute:: other_desc
-
-            *Other desc*
-
-
+**Source**: `CVR_E530_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>report_num</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>occupation</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cand_nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>district_cd</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>office_cd</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>pmnt_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>pmnt_amount</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>type_literature</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>type_printads</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>type_radio</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>type_tv</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>type_it</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>type_billboards</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>type_other</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>other_desc</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerFilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Key table that links filers to their paper, key data entry, legacy,
 and electronic filings. This table is used as an index to locate
 filing information.
 
-.. py:class:: FilerFilingsCd
+**Source**: `FILER_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: period_id
-
-            *Period id* Identifies the period when the filing was recieved.
-
-        .. py:attribute:: form_id
-
-            *Form type* Form identification code
-
-        .. py:attribute:: filing_sequence
-
-            *Filing sequence* Amendment number where 0 is an original filing and 1 to 999 are amendments
-
-        .. py:attribute:: filing_date
-
-            *Filing date* Date the filing entered into the system
-
-        .. py:attribute:: stmnt_type
-
-            *Statement type* Type of statement
-
-        .. py:attribute:: stmnt_status
-
-            *Statement status* The status of the statement. If the filing has been reviewed or not reviewed.
-
-        .. py:attribute:: session_id
-
-            *Session id* Legislative session that the filing applies to
-
-        .. py:attribute:: user_id
-
-            *User id*
-
-        .. py:attribute:: special_audit
-
-            *Special audit* Denotes whether the filing has been audited for money laundering or other special condition.
-
-        .. py:attribute:: fine_audit
-
-            *Fine audit* Indicates whether a filing has been audited for a fine
-
-        .. py:attribute:: rpt_start
-
-            *Rpt start* Starting date for the period the filing represents
-
-        .. py:attribute:: rpt_end
-
-            *Rpt end* Ending date for the period the filing represents
-
-        .. py:attribute:: rpt_date
-
-            *Rpt date* Date filing received
-
-        .. py:attribute:: filing_type
-
-            *Filing type*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>period_id</td>
+            <td>IntegerField</td>
+            <td>Identifies the period when the filing was recieved.</td>
+        </tr>
+    
+        <tr>
+            <td>form_id</td>
+            <td>CharField</td>
+            <td>Form identification code</td>
+        </tr>
+    
+        <tr>
+            <td>filing_sequence</td>
+            <td>IntegerField</td>
+            <td>Amendment number where 0 is an original filing and 1 to 999 are amendments</td>
+        </tr>
+    
+        <tr>
+            <td>filing_date</td>
+            <td>DateField</td>
+            <td>Date the filing entered into the system</td>
+        </tr>
+    
+        <tr>
+            <td>stmnt_type</td>
+            <td>IntegerField</td>
+            <td>Type of statement</td>
+        </tr>
+    
+        <tr>
+            <td>stmnt_status</td>
+            <td>IntegerField</td>
+            <td>The status of the statement. If the filing has been reviewed or not reviewed.</td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td>Legislative session that the filing applies to</td>
+        </tr>
+    
+        <tr>
+            <td>user_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>special_audit</td>
+            <td>IntegerField</td>
+            <td>Denotes whether the filing has been audited for money laundering or other special condition.</td>
+        </tr>
+    
+        <tr>
+            <td>fine_audit</td>
+            <td>IntegerField</td>
+            <td>Indicates whether a filing has been audited for a fine</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_start</td>
+            <td>DateField</td>
+            <td>Starting date for the period the filing represents</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_end</td>
+            <td>DateField</td>
+            <td>Ending date for the period the filing represents</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_date</td>
+            <td>DateField</td>
+            <td>Date filing received</td>
+        </tr>
+    
+        <tr>
+            <td>filing_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilernameCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 A combination of CAL-ACCESS tables to provide the analyst with
 filer information.
 
@@ -3081,221 +4611,334 @@ name field.
 Major donors can be split between first and last name fields, but usually
 are contained in the last name field only. Individual names of lobbyists,
 candidates/officeholders, treasurers/responsible officers, and major donors
-(when they are only an individual&#39;s name) use both the first and last name
+(when they are only an individual's name) use both the first and last name
 fields in conjunction.
 
-.. py:class:: FilernameCd
+**Source**: `FILERNAME_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILERNAME_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: xref_filer_id
-
-            *Crossreference filer ID* Alternative filer ID found on many forms
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filer_type
-
-            *Filer type*
-
-        .. py:attribute:: status
-
-            *Status*
-
-        .. py:attribute:: effect_dt
-
-            *Effect dt* Effective date for status
-
-        .. py:attribute:: naml
-
-            *Naml* Last name, sometimes full name
-
-        .. py:attribute:: namf
-
-            *Namf* First name
-
-        .. py:attribute:: namt
-
-            *Namt* Name prefix or title
-
-        .. py:attribute:: nams
-
-            *Nams* Name suffix
-
-        .. py:attribute:: adr1
-
-            *Adr1*
-
-        .. py:attribute:: adr2
-
-            *Adr2*
-
-        .. py:attribute:: city
-
-            *City*
-
-        .. py:attribute:: st
-
-            *St*
-
-        .. py:attribute:: zip4
-
-            *Zip4*
-
-        .. py:attribute:: phon
-
-            *Phon*
-
-        .. py:attribute:: fax
-
-            *Fax*
-
-        .. py:attribute:: email
-
-            *Email*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>xref_filer_id</td>
+            <td>CharField</td>
+            <td>Alternative filer ID found on many forms</td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filer_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>status</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>DateField</td>
+            <td>Effective date for status</td>
+        </tr>
+    
+        <tr>
+            <td>naml</td>
+            <td>CharField</td>
+            <td>Last name, sometimes full name</td>
+        </tr>
+    
+        <tr>
+            <td>namf</td>
+            <td>CharField</td>
+            <td>First name</td>
+        </tr>
+    
+        <tr>
+            <td>namt</td>
+            <td>CharField</td>
+            <td>Name prefix or title</td>
+        </tr>
+    
+        <tr>
+            <td>nams</td>
+            <td>CharField</td>
+            <td>Name suffix</td>
+        </tr>
+    
+        <tr>
+            <td>adr1</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>adr2</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>phon</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>fax</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>email</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table is the parent table from which all links and association to
 a filing are derived.
 
-.. py:class:: FilingsCd
+**Source**: `FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: filing_type
-
-            *Filing type*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 SmryCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Summary totals from filings.
 
-.. py:class:: SmryCd
+**Source**: `SMRY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `SMRY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: amount_a
-
-            *Amount A* Summary amount from column A
-
-        .. py:attribute:: amount_b
-
-            *Amount B* Summary amount from column B
-
-        .. py:attribute:: amount_c
-
-            *Amount C* Summary amount from column C
-
-        .. py:attribute:: elec_dt
-
-            *Election date*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>CharField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>amount_a</td>
+            <td>DecimalField</td>
+            <td>Summary amount from column A</td>
+        </tr>
+    
+        <tr>
+            <td>amount_b</td>
+            <td>DecimalField</td>
+            <td>Summary amount from column B</td>
+        </tr>
+    
+        <tr>
+            <td>amount_c</td>
+            <td>DecimalField</td>
+            <td>Summary amount from column C</td>
+        </tr>
+    
+        <tr>
+            <td>elec_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 TextMemoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Text memos attached to electronic filings
 
-.. py:class:: TextMemoCd
+**Source**: `TEXT_MEMO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `TEXT_MEMO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: ref_no
-
-            *Reference number* Links text memo to a specific record
-
-        .. py:attribute:: text4000
-
-            *Text* Contents of the text memo
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>ref_no</td>
+            <td>CharField</td>
+            <td>Links text memo to a specific record</td>
+        </tr>
+    
+        <tr>
+            <td>text4000</td>
+            <td>CharField</td>
+            <td>Contents of the text memo</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 
 Lobbying
@@ -3303,1631 +4946,2405 @@ Lobbying
 
 Cvr2LobbyDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Additional names data for the lobbyist disclosure forms
 
-    F615 -- Lobbyist Report
-    F625 -- Report of Lobbying Firm
-    F635 -- Report of Lobbyist Employer and Report of Lobbying Coalition
-    F645 -- Report of Person Spending $5,000 or more to influence
-            Legislative or administrative action
+Additional data from lobbyist disclosure forms
 
-.. py:class:: Cvr2LobbyDisclosureCd
+**Source**: `CVR2_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `CVR2_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: entity_id
-
-            *Entity id*
-
-        .. py:attribute:: enty_namf
-
-            *Enty namf*
-
-        .. py:attribute:: enty_naml
-
-            *Enty naml*
-
-        .. py:attribute:: enty_nams
-
-            *Enty nams*
-
-        .. py:attribute:: enty_namt
-
-            *Enty namt*
-
-        .. py:attribute:: enty_title
-
-            *Enty title*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_id</td>
+            <td>CharField</td>
+            <td>Entity identification number</td>
+        </tr>
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>CharField</td>
+            <td>Entity first name</td>
+        </tr>
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>CharField</td>
+            <td>Entity last name or business name</td>
+        </tr>
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>CharField</td>
+            <td>Entity suffix</td>
+        </tr>
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>CharField</td>
+            <td>Entity title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>enty_title</td>
+            <td>CharField</td>
+            <td>Title of partner, owner, officer, employer if the entity is an individual. Only required by Form 635.</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 Cvr2RegistrationCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Cover page of lobbying dislcosure forms
 
-.. py:class:: Cvr2RegistrationCd
+Cover page of lobbying disclosure forms
 
-    **Source data**
+**Source**: `CVR2_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `CVR2_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: entity_id
-
-            *Entity ID* Identification number of the entity described by the record
-
-        .. py:attribute:: enty_naml
-
-            *Last name*
-
-        .. py:attribute:: enty_namf
-
-            *First name*
-
-        .. py:attribute:: enty_namt
-
-            *Title*
-
-        .. py:attribute:: enty_nams
-
-            *Title*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_id</td>
+            <td>CharField</td>
+            <td>Identification number of the entity described by the record</td>
+        </tr>
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>CharField</td>
+            <td>Entity last name</td>
+        </tr>
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>CharField</td>
+            <td>Entity first name</td>
+        </tr>
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>CharField</td>
+            <td>Entity title or suffix</td>
+        </tr>
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>CharField</td>
+            <td>Entity suffix</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 CvrLobbyDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Cover page information for the lobbying disclosure forms
 
-    F615 -- Lobbyist Report
-    F625 -- Report of Lobbying Firm
-    F635 -- Report of Lobbyist Employer and Report of Lobbying Coalition
-    F645 -- Report of Person Spending $5,000 or more to influence
-            Legislative or administrative action
-
-.. py:class:: CvrLobbyDisclosureCd
-
-    **Source data**
-
-        `CVR_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: ctrib_n_cb
-
-            *Ctrib n cb*
-
-        .. py:attribute:: ctrib_y_cb
-
-            *Ctrib y cb*
-
-        .. py:attribute:: cum_beg_dt
-
-            *Cum beg dt*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filer_namf
-
-            *Filer namf*
-
-        .. py:attribute:: filer_naml
-
-            *Filer naml*
-
-        .. py:attribute:: filer_nams
-
-            *Filer nams*
-
-        .. py:attribute:: filer_namt
-
-            *Filer namt*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: firm_city
-
-            *Firm city*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: firm_phon
-
-            *Firm phon*
-
-        .. py:attribute:: firm_st
-
-            *Firm st*
-
-        .. py:attribute:: firm_zip4
-
-            *Firm zip4*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: from_date
-
-            *From date*
-
-        .. py:attribute:: lby_actvty
-
-            *Lby actvty*
-
-        .. py:attribute:: lobby_n_cb
-
-            *Lobby n cb*
-
-        .. py:attribute:: lobby_y_cb
-
-            *Lobby y cb*
-
-        .. py:attribute:: mail_city
-
-            *Mail city*
-
-        .. py:attribute:: mail_phon
-
-            *Mail phon*
-
-        .. py:attribute:: mail_st
-
-            *Mail st*
-
-        .. py:attribute:: mail_zip4
-
-            *Mail zip4*
-
-        .. py:attribute:: major_namf
-
-            *Major namf*
-
-        .. py:attribute:: major_naml
-
-            *Major naml*
-
-        .. py:attribute:: major_nams
-
-            *Major nams*
-
-        .. py:attribute:: major_namt
-
-            *Major namt*
-
-        .. py:attribute:: nopart1_cb
-
-            *Nopart1 cb*
-
-        .. py:attribute:: nopart2_cb
-
-            *Nopart2 cb*
-
-        .. py:attribute:: part1_1_cb
-
-            *Part1 1 cb*
-
-        .. py:attribute:: part1_2_cb
-
-            *Part1 2 cb*
-
-        .. py:attribute:: prn_namf
-
-            *Prn namf*
-
-        .. py:attribute:: prn_naml
-
-            *Prn naml*
-
-        .. py:attribute:: prn_nams
-
-            *Prn nams*
-
-        .. py:attribute:: prn_namt
-
-            *Prn namt*
-
-        .. py:attribute:: rcpcmte_id
-
-            *Rcpcmte id*
-
-        .. py:attribute:: rcpcmte_nm
-
-            *Rcpcmte nm*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: report_num
-
-            *Report num*
-
-        .. py:attribute:: rpt_date
-
-            *Rpt date*
-
-        .. py:attribute:: sender_id
-
-            *Sender id*
-
-        .. py:attribute:: sig_date
-
-            *Sig date*
-
-        .. py:attribute:: sig_loc
-
-            *Sig loc*
-
-        .. py:attribute:: sig_namf
-
-            *Sig namf*
-
-        .. py:attribute:: sig_naml
-
-            *Sig naml*
-
-        .. py:attribute:: sig_nams
-
-            *Sig nams*
-
-        .. py:attribute:: sig_namt
-
-            *Sig namt*
-
-        .. py:attribute:: sig_title
-
-            *Sig title*
-
-        .. py:attribute:: thru_date
-
-            *Thru date*
-
-
+Cover page information for lobbying disclosure forms
+
+**Source**: `CVR_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_n_cb</td>
+            <td>CharField</td>
+            <td>'Campaign contribtions? P4 attached' checkbox. Applies to forms 625, 635, 645.</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_y_cb</td>
+            <td>CharField</td>
+            <td>'Campaign contribtions? P4 attached' checkbox. Applies to forms 625, 635, 645.</td>
+        </tr>
+    
+        <tr>
+            <td>cum_beg_dt</td>
+            <td>DateField</td>
+            <td>Cumulative period beginning date</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>CharField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filer_namf</td>
+            <td>CharField</td>
+            <td>Filer first name</td>
+        </tr>
+    
+        <tr>
+            <td>filer_naml</td>
+            <td>CharField</td>
+            <td>Filer last name or business name</td>
+        </tr>
+    
+        <tr>
+            <td>filer_nams</td>
+            <td>CharField</td>
+            <td>Filer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>filer_namt</td>
+            <td>CharField</td>
+            <td>Filer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>firm_city</td>
+            <td>CharField</td>
+            <td>Firm, employer or coalition business city</td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>CharField</td>
+            <td>Identification number of firm, employer or coalition</td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+        <tr>
+            <td>firm_phon</td>
+            <td>CharField</td>
+            <td>Firm, employer or coalition business phone number</td>
+        </tr>
+    
+        <tr>
+            <td>firm_st</td>
+            <td>CharField</td>
+            <td>Firm, employer or coalition business ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>firm_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>from_date</td>
+            <td>DateField</td>
+            <td>Reporting period from date</td>
+        </tr>
+    
+        <tr>
+            <td>lby_actvty</td>
+            <td>CharField</td>
+            <td>Description of lobbying activity. Applies to forms 635 and 645. Additional description may be provided in text records.</td>
+        </tr>
+    
+        <tr>
+            <td>lobby_n_cb</td>
+            <td>CharField</td>
+            <td>'Lobbying activity none' checkbox. Applies only to Form 625.</td>
+        </tr>
+    
+        <tr>
+            <td>lobby_y_cb</td>
+            <td>CharField</td>
+            <td>'Lobbying activity Form 630 attached' checkbox. Applies only to Form 625.</td>
+        </tr>
+    
+        <tr>
+            <td>mail_city</td>
+            <td>CharField</td>
+            <td>Filer mailing address city</td>
+        </tr>
+    
+        <tr>
+            <td>mail_phon</td>
+            <td>CharField</td>
+            <td>Filer mailing address phone number</td>
+        </tr>
+    
+        <tr>
+            <td>mail_st</td>
+            <td>CharField</td>
+            <td>Filer mailing address state</td>
+        </tr>
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>CharField</td>
+            <td>Filer mailing address ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>major_namf</td>
+            <td>CharField</td>
+            <td>Major donor first name. Applies only to individuals and forms 625, 635, 645.</td>
+        </tr>
+    
+        <tr>
+            <td>major_naml</td>
+            <td>CharField</td>
+            <td>Major donor last name. Applies only to individuals and forms 625, 635, 645.</td>
+        </tr>
+    
+        <tr>
+            <td>major_nams</td>
+            <td>CharField</td>
+            <td>Major donor suffix. Applies only to individuals and forms 625, 635, 645.</td>
+        </tr>
+    
+        <tr>
+            <td>major_namt</td>
+            <td>CharField</td>
+            <td>Major donor title or prefix. Applies only to individuals and forms 625, 635, 645.</td>
+        </tr>
+    
+        <tr>
+            <td>nopart1_cb</td>
+            <td>CharField</td>
+            <td>'No Part I information' checkbox. Applies only to Form 615.</td>
+        </tr>
+    
+        <tr>
+            <td>nopart2_cb</td>
+            <td>CharField</td>
+            <td>'No Part II information' checkbox. Applies only to Form 615.</td>
+        </tr>
+    
+        <tr>
+            <td>part1_1_cb</td>
+            <td>CharField</td>
+            <td>'Partners, owners Form 615 attached ...' checkbox. Applies only to form 625.</td>
+        </tr>
+    
+        <tr>
+            <td>part1_2_cb</td>
+            <td>CharField</td>
+            <td>'Partners, owners listed below ...' checkbox. Applies only to Form 625.</td>
+        </tr>
+    
+        <tr>
+            <td>prn_namf</td>
+            <td>CharField</td>
+            <td>Signer first name</td>
+        </tr>
+    
+        <tr>
+            <td>prn_naml</td>
+            <td>CharField</td>
+            <td>Signer last name</td>
+        </tr>
+    
+        <tr>
+            <td>prn_nams</td>
+            <td>CharField</td>
+            <td>Signer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>prn_namt</td>
+            <td>CharField</td>
+            <td>Signer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>rcpcmte_id</td>
+            <td>CharField</td>
+            <td>Recipient committee or major donor identification number</td>
+        </tr>
+    
+        <tr>
+            <td>rcpcmte_nm</td>
+            <td>CharField</td>
+            <td>Recipient committee name</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>report_num</td>
+            <td>CharField</td>
+            <td>Amendment number. 000 is the original. 001-999 are amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_date</td>
+            <td>DateField</td>
+            <td>Date this report was filed, as reported by the filer</td>
+        </tr>
+    
+        <tr>
+            <td>sender_id</td>
+            <td>CharField</td>
+            <td>Identification number of lobbyist entity that is submitting this report. The field is used to authenticate the filer and allows the firm to submit forms for its lobbyists.</td>
+        </tr>
+    
+        <tr>
+            <td>sig_date</td>
+            <td>DateField</td>
+            <td>Date when signed</td>
+        </tr>
+    
+        <tr>
+            <td>sig_loc</td>
+            <td>CharField</td>
+            <td>Signer city and state</td>
+        </tr>
+    
+        <tr>
+            <td>sig_namf</td>
+            <td>CharField</td>
+            <td>Signer first name</td>
+        </tr>
+    
+        <tr>
+            <td>sig_naml</td>
+            <td>CharField</td>
+            <td>Signer last name</td>
+        </tr>
+    
+        <tr>
+            <td>sig_nams</td>
+            <td>CharField</td>
+            <td>Signer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>sig_namt</td>
+            <td>CharField</td>
+            <td>Signer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>sig_title</td>
+            <td>CharField</td>
+            <td>Title of signer</td>
+        </tr>
+    
+        <tr>
+            <td>thru_date</td>
+            <td>DateField</td>
+            <td>Reporting period through date</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 CvrRegistrationCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Cover page of lobbying disclosure forms
 
-.. py:class:: CvrRegistrationCd
-
-    **Source data**
-
-        `CVR_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: a_b_city
-
-            *A b city*
-
-        .. py:attribute:: a_b_name
-
-            *A b name*
-
-        .. py:attribute:: a_b_st
-
-            *A b st*
-
-        .. py:attribute:: a_b_zip4
-
-            *A b zip4*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: auth_city
-
-            *Auth city*
-
-        .. py:attribute:: auth_name
-
-            *Auth name*
-
-        .. py:attribute:: auth_st
-
-            *Auth st*
-
-        .. py:attribute:: auth_zip4
-
-            *Auth zip4*
-
-        .. py:attribute:: bus_cb
-
-            *Bus cb*
-
-        .. py:attribute:: bus_city
-
-            *Bus city*
-
-        .. py:attribute:: bus_class
-
-            *Bus class*
-
-        .. py:attribute:: bus_descr
-
-            *Bus descr*
-
-        .. py:attribute:: bus_email
-
-            *Bus email*
-
-        .. py:attribute:: bus_fax
-
-            *Bus fax*
-
-        .. py:attribute:: bus_phon
-
-            *Bus phon*
-
-        .. py:attribute:: bus_st
-
-            *Bus st*
-
-        .. py:attribute:: bus_zip4
-
-            *Bus zip4*
-
-        .. py:attribute:: c_less50
-
-            *C less50*
-
-        .. py:attribute:: c_more50
-
-            *C more50*
-
-        .. py:attribute:: complet_dt
-
-            *Complet dt*
-
-        .. py:attribute:: descrip_1
-
-            *Descrip 1*
-
-        .. py:attribute:: descrip_2
-
-            *Descrip 2*
-
-        .. py:attribute:: eff_date
-
-            *Eff date*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filer_namf
-
-            *Filer namf*
-
-        .. py:attribute:: filer_naml
-
-            *Filer naml*
-
-        .. py:attribute:: filer_nams
-
-            *Filer nams*
-
-        .. py:attribute:: filer_namt
-
-            *Filer namt*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: ind_cb
-
-            *Ind cb*
-
-        .. py:attribute:: ind_class
-
-            *Ind class*
-
-        .. py:attribute:: ind_descr
-
-            *Ind descr*
-
-        .. py:attribute:: influen_yn
-
-            *Influen yn*
-
-        .. py:attribute:: l_firm_cb
-
-            *L firm cb*
-
-        .. py:attribute:: lby_604_cb
-
-            *Lby 604 cb*
-
-        .. py:attribute:: lby_reg_cb
-
-            *Lby reg cb*
-
-        .. py:attribute:: lobby_cb
-
-            *Lobby cb*
-
-        .. py:attribute:: lobby_int
-
-            *Lobby int*
-
-        .. py:attribute:: ls_beg_yr
-
-            *Ls beg yr*
-
-        .. py:attribute:: ls_end_yr
-
-            *Ls end yr*
-
-        .. py:attribute:: mail_city
-
-            *Mail city*
-
-        .. py:attribute:: mail_phon
-
-            *Mail phon*
-
-        .. py:attribute:: mail_st
-
-            *Mail st*
-
-        .. py:attribute:: mail_zip4
-
-            *Mail zip4*
-
-        .. py:attribute:: newcert_cb
-
-            *Newcert cb*
-
-        .. py:attribute:: oth_cb
-
-            *Oth cb*
-
-        .. py:attribute:: prn_namf
-
-            *Prn namf*
-
-        .. py:attribute:: prn_naml
-
-            *Prn naml*
-
-        .. py:attribute:: prn_nams
-
-            *Prn nams*
-
-        .. py:attribute:: prn_namt
-
-            *Prn namt*
-
-        .. py:attribute:: qual_date
-
-            *Qual date*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: rencert_cb
-
-            *Rencert cb*
-
-        .. py:attribute:: report_num
-
-            *Report num*
-
-        .. py:attribute:: rpt_date
-
-            *Rpt date*
-
-        .. py:attribute:: sender_id
-
-            *Sender id*
-
-        .. py:attribute:: sig_date
-
-            *Sig date*
-
-        .. py:attribute:: sig_loc
-
-            *Sig loc*
-
-        .. py:attribute:: sig_namf
-
-            *Sig namf*
-
-        .. py:attribute:: sig_naml
-
-            *Sig naml*
-
-        .. py:attribute:: sig_nams
-
-            *Sig nams*
-
-        .. py:attribute:: sig_namt
-
-            *Sig namt*
-
-        .. py:attribute:: sig_title
-
-            *Sig title*
-
-        .. py:attribute:: st_agency
-
-            *St agency*
-
-        .. py:attribute:: st_leg_yn
-
-            *St leg yn*
-
-        .. py:attribute:: stmt_firm
-
-            *Stmt firm*
-
-        .. py:attribute:: trade_cb
-
-            *Trade cb*
-
-
+**Source**: `CVR_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>a_b_city</td>
+            <td>CharField</td>
+            <td>Individual or business entity city</td>
+        </tr>
+    
+        <tr>
+            <td>a_b_name</td>
+            <td>CharField</td>
+            <td>Name of individual or business entity</td>
+        </tr>
+    
+        <tr>
+            <td>a_b_st</td>
+            <td>CharField</td>
+            <td>Individual or business entity state</td>
+        </tr>
+    
+        <tr>
+            <td>a_b_zip4</td>
+            <td>CharField</td>
+            <td>Individual or business entity ZIP Code.</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>auth_city</td>
+            <td>CharField</td>
+            <td>Authorized lobbying firm business address city</td>
+        </tr>
+    
+        <tr>
+            <td>auth_name</td>
+            <td>CharField</td>
+            <td>Authorized lobbying firm business name. Applies to Form 602.</td>
+        </tr>
+    
+        <tr>
+            <td>auth_st</td>
+            <td>CharField</td>
+            <td>Authorized lobbying firm business address state</td>
+        </tr>
+    
+        <tr>
+            <td>auth_zip4</td>
+            <td>CharField</td>
+            <td>Authorized lobbying firm business address ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>bus_cb</td>
+            <td>CharField</td>
+            <td>Business included activity checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>bus_city</td>
+            <td>CharField</td>
+            <td>Filer business address city</td>
+        </tr>
+    
+        <tr>
+            <td>bus_class</td>
+            <td>CharField</td>
+            <td>Classifiction values of business related entities. This field is exclusive of the business class field. One these must be populated but not both.</td>
+        </tr>
+    
+        <tr>
+            <td>bus_descr</td>
+            <td>CharField</td>
+            <td>Description of business classification if coded as other</td>
+        </tr>
+    
+        <tr>
+            <td>bus_email</td>
+            <td>CharField</td>
+            <td>Filer business address email</td>
+        </tr>
+    
+        <tr>
+            <td>bus_fax</td>
+            <td>CharField</td>
+            <td>Filer business address fax number</td>
+        </tr>
+    
+        <tr>
+            <td>bus_phon</td>
+            <td>CharField</td>
+            <td>Filer business address phone number</td>
+        </tr>
+    
+        <tr>
+            <td>bus_st</td>
+            <td>CharField</td>
+            <td>Filer business address state</td>
+        </tr>
+    
+        <tr>
+            <td>bus_zip4</td>
+            <td>CharField</td>
+            <td>Filer business address ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>c_less50</td>
+            <td>CharField</td>
+            <td>Industry associations with fewer than 50 members check this box</td>
+        </tr>
+    
+        <tr>
+            <td>c_more50</td>
+            <td>CharField</td>
+            <td>Industry associations with more than 50 check this box.</td>
+        </tr>
+    
+        <tr>
+            <td>complet_dt</td>
+            <td>DateField</td>
+            <td>Ethics orientation class completion date. Applies to Form 604. As filed by the lobbyist.</td>
+        </tr>
+    
+        <tr>
+            <td>descrip_1</td>
+            <td>CharField</td>
+            <td>Description of business activity, industry or other</td>
+        </tr>
+    
+        <tr>
+            <td>descrip_2</td>
+            <td>CharField</td>
+            <td>Description of specific or other lobbying interest</td>
+        </tr>
+    
+        <tr>
+            <td>eff_date</td>
+            <td>DateField</td>
+            <td>Effective date of authoarization or termination</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>CharField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filer_namf</td>
+            <td>CharField</td>
+            <td>Filer first name</td>
+        </tr>
+    
+        <tr>
+            <td>filer_naml</td>
+            <td>CharField</td>
+            <td>Filer last name</td>
+        </tr>
+    
+        <tr>
+            <td>filer_nams</td>
+            <td>CharField</td>
+            <td>Filer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>filer_namt</td>
+            <td>CharField</td>
+            <td>Filer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td>Name of the lobbyist employer or firm. Applies to Forms 604, 606, 607.</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>ind_cb</td>
+            <td>CharField</td>
+            <td>Individual checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>ind_class</td>
+            <td>CharField</td>
+            <td>Classification values to category industry related entities. This field is exclusive of the business class field. One these must be populated but not both.</td>
+        </tr>
+    
+        <tr>
+            <td>ind_descr</td>
+            <td>CharField</td>
+            <td>Description of industry classification if coded as other</td>
+        </tr>
+    
+        <tr>
+            <td>influen_yn</td>
+            <td>CharField</td>
+            <td>Attempt to influence state legislation</td>
+        </tr>
+    
+        <tr>
+            <td>l_firm_cb</td>
+            <td>CharField</td>
+            <td>'Lobbying firm within the ... ' checkbox. Applies to Form 607.</td>
+        </tr>
+    
+        <tr>
+            <td>lby_604_cb</td>
+            <td>CharField</td>
+            <td>'Lobbying Agency in this 604 statement' checkbox. Applies to Form 604.</td>
+        </tr>
+    
+        <tr>
+            <td>lby_reg_cb</td>
+            <td>CharField</td>
+            <td>'Lobbying Agency in form 601/603 registration statement' checkbox. Applies to Form 604.</td>
+        </tr>
+    
+        <tr>
+            <td>lobby_cb</td>
+            <td>CharField</td>
+            <td>'Lobbying within the meaning...' checkbox. Applies to Form 607.</td>
+        </tr>
+    
+        <tr>
+            <td>lobby_int</td>
+            <td>CharField</td>
+            <td>Description of Part III lobbying interests. Applies to Form 603</td>
+        </tr>
+    
+        <tr>
+            <td>ls_beg_yr</td>
+            <td>CharField</td>
+            <td>Year legislative session begins</td>
+        </tr>
+    
+        <tr>
+            <td>ls_end_yr</td>
+            <td>CharField</td>
+            <td>Year legislative sessions ends</td>
+        </tr>
+    
+        <tr>
+            <td>mail_city</td>
+            <td>CharField</td>
+            <td>Filer mailing address city</td>
+        </tr>
+    
+        <tr>
+            <td>mail_phon</td>
+            <td>CharField</td>
+            <td>Filer mailing address phone number</td>
+        </tr>
+    
+        <tr>
+            <td>mail_st</td>
+            <td>CharField</td>
+            <td>Filer mailing address state</td>
+        </tr>
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>CharField</td>
+            <td>Filer mailing address ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>newcert_cb</td>
+            <td>CharField</td>
+            <td>Will require a new certification checkbox. Applies to Form 604.</td>
+        </tr>
+    
+        <tr>
+            <td>oth_cb</td>
+            <td>CharField</td>
+            <td>Other checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>prn_namf</td>
+            <td>CharField</td>
+            <td>Signer first name</td>
+        </tr>
+    
+        <tr>
+            <td>prn_naml</td>
+            <td>CharField</td>
+            <td>Signer last name</td>
+        </tr>
+    
+        <tr>
+            <td>prn_nams</td>
+            <td>CharField</td>
+            <td>Signer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>prn_namt</td>
+            <td>CharField</td>
+            <td>Signer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>qual_date</td>
+            <td>DateField</td>
+            <td>Date qualified. Applies to forms 601 and 603. Only occurs once in lobbying filings.</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rencert_cb</td>
+            <td>CharField</td>
+            <td>Will take a renewel certification checkbox. Applies to Form 604.</td>
+        </tr>
+    
+        <tr>
+            <td>report_num</td>
+            <td>CharField</td>
+            <td>Amendment number as reported by the filer. 000 is the original. 001-999 are amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_date</td>
+            <td>DateField</td>
+            <td>Date this report or amendment is filed, as reported by the filer</td>
+        </tr>
+    
+        <tr>
+            <td>sender_id</td>
+            <td>CharField</td>
+            <td>Identification number of the lobbyist entity submitting this report. This is equal to the filer ID if the filer is the submitting the report and the firm or employer if they are submitting the report.</td>
+        </tr>
+    
+        <tr>
+            <td>sig_date</td>
+            <td>DateField</td>
+            <td>Date signed</td>
+        </tr>
+    
+        <tr>
+            <td>sig_loc</td>
+            <td>CharField</td>
+            <td>Signer city and state</td>
+        </tr>
+    
+        <tr>
+            <td>sig_namf</td>
+            <td>CharField</td>
+            <td>Signer first name</td>
+        </tr>
+    
+        <tr>
+            <td>sig_naml</td>
+            <td>CharField</td>
+            <td>Signer last name</td>
+        </tr>
+    
+        <tr>
+            <td>sig_nams</td>
+            <td>CharField</td>
+            <td>Signer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>sig_namt</td>
+            <td>CharField</td>
+            <td>Signer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>sig_title</td>
+            <td>CharField</td>
+            <td>Title of signer</td>
+        </tr>
+    
+        <tr>
+            <td>st_agency</td>
+            <td>CharField</td>
+            <td>List of identified state agencies. Applies to Form 604.</td>
+        </tr>
+    
+        <tr>
+            <td>st_leg_yn</td>
+            <td>CharField</td>
+            <td>Will lobby state legislature checkbox. Applies to Form 604.</td>
+        </tr>
+    
+        <tr>
+            <td>stmt_firm</td>
+            <td>CharField</td>
+            <td>Lobby firm named in 'Statement of Responsible Officer'This field only applies to Form 601.</td>
+        </tr>
+    
+        <tr>
+            <td>trade_cb</td>
+            <td>CharField</td>
+            <td>Industry, trade or professional checkbox</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 F690P2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Amends lobbying disclosure filings
 
     F690 Amendment to Lobbying Disclosure Report
 
-.. py:class:: F690P2Cd
+**Source**: `F690P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `F690P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: exec_date
-
-            *Exec date* date the original report (or prior amendment to the original report) was executed on.
-
-        .. py:attribute:: from_date
-
-            *From date* reporting period from date of original report
-
-        .. py:attribute:: thru_date
-
-            *Thru date* report period to/through date of original.
-
-        .. py:attribute:: chg_parts
-
-            *Chg parts* amended into affects items on part(s) text description.
-
-        .. py:attribute:: chg_sects
-
-            *Chg sects* amended into affects items on sections(s) text description.
-
-        .. py:attribute:: amend_txt1
-
-            *Amend txt1* description of changes to the filing
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>exec_date</td>
+            <td>DateField</td>
+            <td>date the original report (or prior amendment to the original report) was executed on.</td>
+        </tr>
+    
+        <tr>
+            <td>from_date</td>
+            <td>DateField</td>
+            <td>reporting period from date of original report</td>
+        </tr>
+    
+        <tr>
+            <td>thru_date</td>
+            <td>DateField</td>
+            <td>report period to/through date of original.</td>
+        </tr>
+    
+        <tr>
+            <td>chg_parts</td>
+            <td>CharField</td>
+            <td>amended into affects items on part(s) text description.</td>
+        </tr>
+    
+        <tr>
+            <td>chg_sects</td>
+            <td>CharField</td>
+            <td>amended into affects items on sections(s) text description.</td>
+        </tr>
+    
+        <tr>
+            <td>amend_txt1</td>
+            <td>CharField</td>
+            <td>description of changes to the filing</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LattCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Lobbyist disclosure attachment schedules for payments
-    F630 -- Payments made to Lobbying Coalitions (Attatchment)
-    F635C -- Payments received by Lobbying Coalitions (Attatchment)
-    F640 -- Government Agencies Reporting of &quot;Other Payments to Influence
-            Legislative or Administrative Action&quot; (Attatchment)
 
-.. py:class:: LattCd
+**Source**: `LATT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LATT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-        .. py:attribute:: cum_amt
-
-            *Cum amt*
-
-        .. py:attribute:: cumbeg_dt
-
-            *Cumbeg dt*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: pmt_date
-
-            *Pmt date*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: recip_city
-
-            *Recip city*
-
-        .. py:attribute:: recip_namf
-
-            *Recip namf*
-
-        .. py:attribute:: recip_naml
-
-            *Recip naml*
-
-        .. py:attribute:: recip_nams
-
-            *Recip nams*
-
-        .. py:attribute:: recip_namt
-
-            *Recip namt*
-
-        .. py:attribute:: recip_st
-
-            *Recip st*
-
-        .. py:attribute:: recip_zip4
-
-            *Recip zip4*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td>Amount of payment</td>
+        </tr>
+    
+        <tr>
+            <td>cum_amt</td>
+            <td>DecimalField</td>
+            <td>Cumulative total to date</td>
+        </tr>
+    
+        <tr>
+            <td>cumbeg_dt</td>
+            <td>DateField</td>
+            <td>Cumulative period beginning to date</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo amount flag</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to the text in a TEXT record</td>
+        </tr>
+    
+        <tr>
+            <td>pmt_date</td>
+            <td>DateField</td>
+            <td>Date of payment</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recip_city</td>
+            <td>CharField</td>
+            <td>Recipient city</td>
+        </tr>
+    
+        <tr>
+            <td>recip_namf</td>
+            <td>CharField</td>
+            <td>Recipient first name</td>
+        </tr>
+    
+        <tr>
+            <td>recip_naml</td>
+            <td>CharField</td>
+            <td>Recipient last name or business name</td>
+        </tr>
+    
+        <tr>
+            <td>recip_nams</td>
+            <td>CharField</td>
+            <td>Recipient suffix</td>
+        </tr>
+    
+        <tr>
+            <td>recip_namt</td>
+            <td>CharField</td>
+            <td>Recipient title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>recip_st</td>
+            <td>CharField</td>
+            <td>Recipient state</td>
+        </tr>
+    
+        <tr>
+            <td>recip_zip4</td>
+            <td>CharField</td>
+            <td>Recipient ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LccmCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Lobbying Campaign Contributions reported on forms
 
-    F615 Part 2
-    F625 Part 4B
-    F635 Part 4B
-    F645 Part 3B
+Lobbying campaign contributions
 
-.. py:class:: LccmCd
+**Source**: `LCCM_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LCCM_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid*
-
-        .. py:attribute:: ctrib_date
-
-            *Ctrib date*
-
-        .. py:attribute:: ctrib_namf
-
-            *Ctrib namf*
-
-        .. py:attribute:: ctrib_naml
-
-            *Ctrib naml*
-
-        .. py:attribute:: ctrib_nams
-
-            *Ctrib nams*
-
-        .. py:attribute:: ctrib_namt
-
-            *Ctrib namt*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: recip_city
-
-            *Recip city*
-
-        .. py:attribute:: recip_id
-
-            *Recip id*
-
-        .. py:attribute:: recip_namf
-
-            *Recip namf*
-
-        .. py:attribute:: recip_naml
-
-            *Recip naml*
-
-        .. py:attribute:: recip_nams
-
-            *Recip nams*
-
-        .. py:attribute:: recip_namt
-
-            *Recip namt*
-
-        .. py:attribute:: recip_st
-
-            *Recip st*
-
-        .. py:attribute:: recip_zip4
-
-            *Recip zip4*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td>Amount of contribution</td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td>Back reference to transaction identifier of parent record</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_date</td>
+            <td>DateField</td>
+            <td>Date of contribution</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_namf</td>
+            <td>CharField</td>
+            <td>Contributor first name</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_naml</td>
+            <td>CharField</td>
+            <td>Contributor last name or business name</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_nams</td>
+            <td>CharField</td>
+            <td>Contributor suffix</td>
+        </tr>
+    
+        <tr>
+            <td>ctrib_namt</td>
+            <td>CharField</td>
+            <td>Contributor prefix or title.</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo amount flag</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to the text contained in the TEXT record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recip_city</td>
+            <td>CharField</td>
+            <td>Recipient city</td>
+        </tr>
+    
+        <tr>
+            <td>recip_id</td>
+            <td>CharField</td>
+            <td>Recipient identification number</td>
+        </tr>
+    
+        <tr>
+            <td>recip_namf</td>
+            <td>CharField</td>
+            <td>Recipient first name</td>
+        </tr>
+    
+        <tr>
+            <td>recip_naml</td>
+            <td>CharField</td>
+            <td>Recipient last name</td>
+        </tr>
+    
+        <tr>
+            <td>recip_nams</td>
+            <td>CharField</td>
+            <td>Recipient name suffix</td>
+        </tr>
+    
+        <tr>
+            <td>recip_namt</td>
+            <td>CharField</td>
+            <td>Recipient name prefix or title</td>
+        </tr>
+    
+        <tr>
+            <td>recip_st</td>
+            <td>CharField</td>
+            <td>Recipient state</td>
+        </tr>
+    
+        <tr>
+            <td>recip_zip4</td>
+            <td>CharField</td>
+            <td>Recipient ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LempCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Lobbyist Employers/Subcontracted Clients data from
 
-    F601 -- Lobbying Firm Registration Statement
-    F601 Part 2 A
-    F601 Part 2 B
+Lobbyist employers and subcontracted clients
 
-.. py:class:: LempCd
+**Source**: `LEMP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LEMP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: agencylist
-
-            *Agencylist*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: cli_city
-
-            *Cli city*
-
-        .. py:attribute:: cli_namf
-
-            *Cli namf*
-
-        .. py:attribute:: cli_naml
-
-            *Cli naml*
-
-        .. py:attribute:: cli_nams
-
-            *Cli nams*
-
-        .. py:attribute:: cli_namt
-
-            *Cli namt*
-
-        .. py:attribute:: cli_phon
-
-            *Cli phon*
-
-        .. py:attribute:: cli_st
-
-            *Cli st*
-
-        .. py:attribute:: cli_zip4
-
-            *Cli zip4*
-
-        .. py:attribute:: client_id
-
-            *Client id*
-
-        .. py:attribute:: con_period
-
-            *Con period*
-
-        .. py:attribute:: descrip
-
-            *Descrip*
-
-        .. py:attribute:: eff_date
-
-            *Eff date*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: sub_city
-
-            *Sub city*
-
-        .. py:attribute:: sub_name
-
-            *Sub name*
-
-        .. py:attribute:: sub_phon
-
-            *Sub phon*
-
-        .. py:attribute:: sub_st
-
-            *Sub st*
-
-        .. py:attribute:: sub_zip4
-
-            *Sub zip4*
-
-        .. py:attribute:: subfirm_id
-
-            *Subfirm id*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>agencylist</td>
+            <td>CharField</td>
+            <td>Agencies to be lobbied</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>cli_city</td>
+            <td>CharField</td>
+            <td>Employing client city</td>
+        </tr>
+    
+        <tr>
+            <td>cli_namf</td>
+            <td>CharField</td>
+            <td>Employing client first name</td>
+        </tr>
+    
+        <tr>
+            <td>cli_naml</td>
+            <td>CharField</td>
+            <td>Employing client last name</td>
+        </tr>
+    
+        <tr>
+            <td>cli_nams</td>
+            <td>CharField</td>
+            <td>Employing client suffix</td>
+        </tr>
+    
+        <tr>
+            <td>cli_namt</td>
+            <td>CharField</td>
+            <td>Employing client prefix or title</td>
+        </tr>
+    
+        <tr>
+            <td>cli_phon</td>
+            <td>CharField</td>
+            <td>Employing client phone number</td>
+        </tr>
+    
+        <tr>
+            <td>cli_st</td>
+            <td>CharField</td>
+            <td>Employing client state</td>
+        </tr>
+    
+        <tr>
+            <td>cli_zip4</td>
+            <td>CharField</td>
+            <td>Employing client ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>client_id</td>
+            <td>CharField</td>
+            <td>Identification number of the Part 2A employer or Part 2B Client/Employer</td>
+        </tr>
+    
+        <tr>
+            <td>con_period</td>
+            <td>CharField</td>
+            <td>Period of the contract</td>
+        </tr>
+    
+        <tr>
+            <td>descrip</td>
+            <td>CharField</td>
+            <td>Description of employer/client lobbying interest</td>
+        </tr>
+    
+        <tr>
+            <td>eff_date</td>
+            <td>DateField</td>
+            <td>Effective Date of Lobbying Contract</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>sub_city</td>
+            <td>CharField</td>
+            <td>Subcontracting lobbying firm city</td>
+        </tr>
+    
+        <tr>
+            <td>sub_name</td>
+            <td>CharField</td>
+            <td>Subcontracting lobbying firms name</td>
+        </tr>
+    
+        <tr>
+            <td>sub_phon</td>
+            <td>CharField</td>
+            <td>Subcontracting lobbying firm phone number</td>
+        </tr>
+    
+        <tr>
+            <td>sub_st</td>
+            <td>CharField</td>
+            <td>Subcontracting lobbying firm state</td>
+        </tr>
+    
+        <tr>
+            <td>sub_zip4</td>
+            <td>CharField</td>
+            <td>Subcontracting lobbying firm ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>subfirm_id</td>
+            <td>CharField</td>
+            <td>Identification number of subcontracting lobbying firm</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LexpCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Lobbying Activity Expenditure Schedule information (Gifts)
-Reported in filings of the forms
 
-    F615 Part 1
-    F625 Part 3A
-    F635 Part 3C
-    F645 Part 2A
+Lobbying activity expenditures
 
-.. py:class:: LexpCd
+**Source**: `LEXP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LEXP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid*
-
-        .. py:attribute:: bene_amt
-
-            *Bene amt*
-
-        .. py:attribute:: bene_name
-
-            *Bene name*
-
-        .. py:attribute:: bene_posit
-
-            *Bene posit*
-
-        .. py:attribute:: credcardco
-
-            *Credcardco*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: expn_date
-
-            *Expn date*
-
-        .. py:attribute:: expn_dscr
-
-            *Expn dscr*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: payee_city
-
-            *Payee city*
-
-        .. py:attribute:: payee_namf
-
-            *Payee namf*
-
-        .. py:attribute:: payee_naml
-
-            *Payee naml*
-
-        .. py:attribute:: payee_nams
-
-            *Payee nams*
-
-        .. py:attribute:: payee_namt
-
-            *Payee namt*
-
-        .. py:attribute:: payee_st
-
-            *Payee st*
-
-        .. py:attribute:: payee_zip4
-
-            *Payee zip4*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: recsubtype
-
-            *Recsubtype*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td>Amount of payment</td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td>Backreference to the tranaction identifer of parent record</td>
+        </tr>
+    
+        <tr>
+            <td>bene_amt</td>
+            <td>CharField</td>
+            <td>Amount benefiting benficiary</td>
+        </tr>
+    
+        <tr>
+            <td>bene_name</td>
+            <td>CharField</td>
+            <td>Name of the person beneifiting</td>
+        </tr>
+    
+        <tr>
+            <td>bene_posit</td>
+            <td>CharField</td>
+            <td>Official position of the person beneifiting</td>
+        </tr>
+    
+        <tr>
+            <td>credcardco</td>
+            <td>CharField</td>
+            <td>Name of the credit card company, if paid using a card</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>expn_date</td>
+            <td>DateField</td>
+            <td>Date of expenditure</td>
+        </tr>
+    
+        <tr>
+            <td>expn_dscr</td>
+            <td>CharField</td>
+            <td>Purpose of the expense and a description or explanation</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo amount flag</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to the text in a TEXT record</td>
+        </tr>
+    
+        <tr>
+            <td>payee_city</td>
+            <td>CharField</td>
+            <td>Payee city</td>
+        </tr>
+    
+        <tr>
+            <td>payee_namf</td>
+            <td>CharField</td>
+            <td>Payee first name</td>
+        </tr>
+    
+        <tr>
+            <td>payee_naml</td>
+            <td>CharField</td>
+            <td>Payee last name or business name</td>
+        </tr>
+    
+        <tr>
+            <td>payee_nams</td>
+            <td>CharField</td>
+            <td>Payee suffix</td>
+        </tr>
+    
+        <tr>
+            <td>payee_namt</td>
+            <td>CharField</td>
+            <td>Payee title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>payee_st</td>
+            <td>CharField</td>
+            <td>Payee state</td>
+        </tr>
+    
+        <tr>
+            <td>payee_zip4</td>
+            <td>CharField</td>
+            <td>Payee ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recsubtype</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyAmendmentsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Lobbyist registration amendment information
 
-    Form 605 Part I
-
-.. py:class:: LobbyAmendmentsCd
-
-    **Source data**
-
-        `LOBBY_AMENDMENTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: exec_date
-
-            *Exec date*
-
-        .. py:attribute:: from_date
-
-            *From date*
-
-        .. py:attribute:: thru_date
-
-            *Thru date*
-
-        .. py:attribute:: add_l_cb
-
-            *Add l cb*
-
-        .. py:attribute:: add_l_eff
-
-            *Add l eff*
-
-        .. py:attribute:: a_l_naml
-
-            *A l naml*
-
-        .. py:attribute:: a_l_namf
-
-            *A l namf*
-
-        .. py:attribute:: a_l_namt
-
-            *A l namt*
-
-        .. py:attribute:: a_l_nams
-
-            *A l nams*
-
-        .. py:attribute:: del_l_cb
-
-            *Del l cb*
-
-        .. py:attribute:: del_l_eff
-
-            *Del l eff*
-
-        .. py:attribute:: d_l_naml
-
-            *D l naml*
-
-        .. py:attribute:: d_l_namf
-
-            *D l namf*
-
-        .. py:attribute:: d_l_namt
-
-            *D l namt*
-
-        .. py:attribute:: d_l_nams
-
-            *D l nams*
-
-        .. py:attribute:: add_le_cb
-
-            *Add le cb*
-
-        .. py:attribute:: add_le_eff
-
-            *Add le eff*
-
-        .. py:attribute:: a_le_naml
-
-            *A le naml*
-
-        .. py:attribute:: a_le_namf
-
-            *A le namf*
-
-        .. py:attribute:: a_le_namt
-
-            *A le namt*
-
-        .. py:attribute:: a_le_nams
-
-            *A le nams*
-
-        .. py:attribute:: del_le_cb
-
-            *Del le cb*
-
-        .. py:attribute:: del_le_eff
-
-            *Del le eff*
-
-        .. py:attribute:: d_le_naml
-
-            *D le naml*
-
-        .. py:attribute:: d_le_namf
-
-            *D le namf*
-
-        .. py:attribute:: d_le_namt
-
-            *D le namt*
-
-        .. py:attribute:: d_le_nams
-
-            *D le nams*
-
-        .. py:attribute:: add_lf_cb
-
-            *Add lf cb*
-
-        .. py:attribute:: add_lf_eff
-
-            *Add lf eff*
-
-        .. py:attribute:: a_lf_name
-
-            *A lf name*
-
-        .. py:attribute:: del_lf_cb
-
-            *Del lf cb*
-
-        .. py:attribute:: del_lf_eff
-
-            *Del lf eff*
-
-        .. py:attribute:: d_lf_name
-
-            *D lf name*
-
-        .. py:attribute:: other_cb
-
-            *Other cb*
-
-        .. py:attribute:: other_eff
-
-            *Other eff*
-
-        .. py:attribute:: other_desc
-
-            *Other desc*
-
-        .. py:attribute:: f606_yes
-
-            *F606 yes*
-
-        .. py:attribute:: f606_no
-
-            *F606 no*
-
-
+**Source**: `LOBBY_AMENDMENTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields**
+
+.. raw:: html
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>exec_date</td>
+            <td>CharField</td>
+            <td>Date this amendment executed on</td>
+        </tr>
+    
+        <tr>
+            <td>from_date</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>thru_date</td>
+            <td>CharField</td>
+            <td>Reporting date to/through date of original</td>
+        </tr>
+    
+        <tr>
+            <td>add_l_cb</td>
+            <td>CharField</td>
+            <td>Add lobbyist checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>add_l_eff</td>
+            <td>DateField</td>
+            <td>Add lobbyist effective date</td>
+        </tr>
+    
+        <tr>
+            <td>a_l_naml</td>
+            <td>CharField</td>
+            <td>Add lobbyist last name</td>
+        </tr>
+    
+        <tr>
+            <td>a_l_namf</td>
+            <td>CharField</td>
+            <td>Add lobbyist first name</td>
+        </tr>
+    
+        <tr>
+            <td>a_l_namt</td>
+            <td>CharField</td>
+            <td>Add lobbyist title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>a_l_nams</td>
+            <td>CharField</td>
+            <td>Add lobbyist suffix</td>
+        </tr>
+    
+        <tr>
+            <td>del_l_cb</td>
+            <td>CharField</td>
+            <td>Delete lobbyist checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>del_l_eff</td>
+            <td>CharField</td>
+            <td>Delete lobbyist effective date</td>
+        </tr>
+    
+        <tr>
+            <td>d_l_naml</td>
+            <td>CharField</td>
+            <td>Delete lobbyist last name</td>
+        </tr>
+    
+        <tr>
+            <td>d_l_namf</td>
+            <td>CharField</td>
+            <td>Delete lobbyist first name</td>
+        </tr>
+    
+        <tr>
+            <td>d_l_namt</td>
+            <td>CharField</td>
+            <td>Delete lobbyist title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>d_l_nams</td>
+            <td>CharField</td>
+            <td>Delete lobbyiest suffix</td>
+        </tr>
+    
+        <tr>
+            <td>add_le_cb</td>
+            <td>CharField</td>
+            <td>Add lobbyiest employer checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>add_le_eff</td>
+            <td>DateField</td>
+            <td>Add lobbyist employer effective date</td>
+        </tr>
+    
+        <tr>
+            <td>a_le_naml</td>
+            <td>CharField</td>
+            <td>Add lobbyist employer last name</td>
+        </tr>
+    
+        <tr>
+            <td>a_le_namf</td>
+            <td>CharField</td>
+            <td>Add lobbyist or employer first name</td>
+        </tr>
+    
+        <tr>
+            <td>a_le_namt</td>
+            <td>CharField</td>
+            <td>Add lobbyist employer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>a_le_nams</td>
+            <td>CharField</td>
+            <td>Add lobbyist employer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>del_le_cb</td>
+            <td>CharField</td>
+            <td>Delete lobbyist employer check box</td>
+        </tr>
+    
+        <tr>
+            <td>del_le_eff</td>
+            <td>CharField</td>
+            <td>Delete lobbyist employer effective date</td>
+        </tr>
+    
+        <tr>
+            <td>d_le_naml</td>
+            <td>CharField</td>
+            <td>Delete lobbyist employer last name</td>
+        </tr>
+    
+        <tr>
+            <td>d_le_namf</td>
+            <td>CharField</td>
+            <td>Delete lobbyiest employer first name</td>
+        </tr>
+    
+        <tr>
+            <td>d_le_namt</td>
+            <td>CharField</td>
+            <td>Delete lobbyist employer name title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>d_le_nams</td>
+            <td>CharField</td>
+            <td>Delete lobbyist employer name</td>
+        </tr>
+    
+        <tr>
+            <td>add_lf_cb</td>
+            <td>CharField</td>
+            <td>Add lobbying firm checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>add_lf_eff</td>
+            <td>DateField</td>
+            <td>Add lobbying firm effective date</td>
+        </tr>
+    
+        <tr>
+            <td>a_lf_name</td>
+            <td>CharField</td>
+            <td>Add lobbying firm name</td>
+        </tr>
+    
+        <tr>
+            <td>del_lf_cb</td>
+            <td>CharField</td>
+            <td>Delete lobbying firm checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>del_lf_eff</td>
+            <td>DateField</td>
+            <td>Delete lobbying firm effective date</td>
+        </tr>
+    
+        <tr>
+            <td>d_lf_name</td>
+            <td>CharField</td>
+            <td>Delete lobbying firm name</td>
+        </tr>
+    
+        <tr>
+            <td>other_cb</td>
+            <td>CharField</td>
+            <td>Other amendments checkbox</td>
+        </tr>
+    
+        <tr>
+            <td>other_eff</td>
+            <td>DateField</td>
+            <td>Other amendments effective date</td>
+        </tr>
+    
+        <tr>
+            <td>other_desc</td>
+            <td>CharField</td>
+            <td>Description of changes</td>
+        </tr>
+    
+        <tr>
+            <td>f606_yes</td>
+            <td>CharField</td>
+            <td>Lobbyist ceasing all activity</td>
+        </tr>
+    
+        <tr>
+            <td>f606_no</td>
+            <td>CharField</td>
+            <td>Lobbyist ceasing employment but staying active</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LothCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Payment to other lobbying firms reported on form
 
-    F625 Part 3B
+Payment to other lobbying firms
 
-.. py:class:: LothCd
+**Source**: `LOTH_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOTH_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-        .. py:attribute:: cum_amt
-
-            *Cum amt*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: firm_city
-
-            *Firm city*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: firm_phon
-
-            *Firm phon*
-
-        .. py:attribute:: firm_st
-
-            *Firm st*
-
-        .. py:attribute:: firm_zip4
-
-            *Firm zip4*
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: pmt_date
-
-            *Pmt date*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: subj_namf
-
-            *Subj namf*
-
-        .. py:attribute:: subj_naml
-
-            *Subj naml*
-
-        .. py:attribute:: subj_nams
-
-            *Subj nams*
-
-        .. py:attribute:: subj_namt
-
-            *Subj namt*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>DecimalField</td>
+            <td>Amount of payment</td>
+        </tr>
+    
+        <tr>
+            <td>cum_amt</td>
+            <td>DecimalField</td>
+            <td>Cumulative total to date</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>firm_city</td>
+            <td>CharField</td>
+            <td>Firm, employer or coalition's city</td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td>Firm, employer or coalition's name</td>
+        </tr>
+    
+        <tr>
+            <td>firm_phon</td>
+            <td>CharField</td>
+            <td>Firm, employer or coalition's phone number</td>
+        </tr>
+    
+        <tr>
+            <td>firm_st</td>
+            <td>CharField</td>
+            <td>Firm, employer or coalition's ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>firm_zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo amount flag</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to text contained in a TEXT record</td>
+        </tr>
+    
+        <tr>
+            <td>pmt_date</td>
+            <td>DateField</td>
+            <td>Date of payment</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>subj_namf</td>
+            <td>CharField</td>
+            <td>First name of employer/client subject of lobbying</td>
+        </tr>
+    
+        <tr>
+            <td>subj_naml</td>
+            <td>CharField</td>
+            <td>Last name of employer/client subject of lobbying</td>
+        </tr>
+    
+        <tr>
+            <td>subj_nams</td>
+            <td>CharField</td>
+            <td>Suffix of employer/client subject of lobbying</td>
+        </tr>
+    
+        <tr>
+            <td>subj_namt</td>
+            <td>CharField</td>
+            <td>Prefix or title of employer/client subject of lobbying</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LpayCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-Payments made/received to/from Lobbying Firms reported on forms
 
-    F625 Part 2
-    F635 Part 3B
+Payments made or received by lobbying firms
 
-.. py:class:: LpayCd
+**Source**: `LPAY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LPAY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: advan_amt
-
-            *Advan amt*
-
-        .. py:attribute:: advan_dscr
-
-            *Advan dscr*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: bakref_tid
-
-            *Bakref tid*
-
-        .. py:attribute:: cum_total
-
-            *Cum total*
-
-        .. py:attribute:: emplr_city
-
-            *Emplr city*
-
-        .. py:attribute:: emplr_id
-
-            *Emplr id*
-
-        .. py:attribute:: emplr_namf
-
-            *Emplr namf*
-
-        .. py:attribute:: emplr_naml
-
-            *Emplr naml*
-
-        .. py:attribute:: emplr_nams
-
-            *Emplr nams*
-
-        .. py:attribute:: emplr_namt
-
-            *Emplr namt*
-
-        .. py:attribute:: emplr_phon
-
-            *Emplr phon*
-
-        .. py:attribute:: emplr_st
-
-            *Emplr st*
-
-        .. py:attribute:: emplr_zip4
-
-            *Emplr zip4*
-
-        .. py:attribute:: entity_cd
-
-            *Entity code*
-
-        .. py:attribute:: fees_amt
-
-            *Fees amt*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: lby_actvty
-
-            *Lby actvty*
-
-        .. py:attribute:: line_item
-
-            *Line item* Line item number of this record
-
-        .. py:attribute:: memo_code
-
-            *Memo code*
-
-        .. py:attribute:: memo_refno
-
-            *Memo refno*
-
-        .. py:attribute:: per_total
-
-            *Per total*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: reimb_amt
-
-            *Reimb amt*
-
-        .. py:attribute:: tran_id
-
-            *Transaction ID* Permanent value unique to this item
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>advan_amt</td>
+            <td>DecimalField</td>
+            <td>Advance and other payments amount</td>
+        </tr>
+    
+        <tr>
+            <td>advan_dscr</td>
+            <td>CharField</td>
+            <td>Description of advance and other payments</td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>bakref_tid</td>
+            <td>CharField</td>
+            <td>Backreference to transaction identifer of parent record</td>
+        </tr>
+    
+        <tr>
+            <td>cum_total</td>
+            <td>DecimalField</td>
+            <td>Cumulative total to date</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_city</td>
+            <td>CharField</td>
+            <td>Employer city</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_id</td>
+            <td>CharField</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_namf</td>
+            <td>CharField</td>
+            <td>Employer first name</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_naml</td>
+            <td>CharField</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_nams</td>
+            <td>CharField</td>
+            <td>Employer suffix</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_namt</td>
+            <td>CharField</td>
+            <td>Employer title or prefix</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_phon</td>
+            <td>CharField</td>
+            <td>Employer phone number</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_st</td>
+            <td>CharField</td>
+            <td>Employer state</td>
+        </tr>
+    
+        <tr>
+            <td>emplr_zip4</td>
+            <td>CharField</td>
+            <td>Employer ZIP Code</td>
+        </tr>
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>fees_amt</td>
+            <td>DecimalField</td>
+            <td>Fees and retainers amount</td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>lby_actvty</td>
+            <td>CharField</td>
+            <td>Description of lobbying activity</td>
+        </tr>
+    
+        <tr>
+            <td>line_item</td>
+            <td>IntegerField</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+        <tr>
+            <td>memo_code</td>
+            <td>CharField</td>
+            <td>Memo amount flag</td>
+        </tr>
+    
+        <tr>
+            <td>memo_refno</td>
+            <td>CharField</td>
+            <td>Reference to the text contained in a TEXT record</td>
+        </tr>
+    
+        <tr>
+            <td>per_total</td>
+            <td>DecimalField</td>
+            <td>Total this reporting period</td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>reimb_amt</td>
+            <td>DecimalField</td>
+            <td>Reimbursements of expense amount</td>
+        </tr>
+    
+        <tr>
+            <td>tran_id</td>
+            <td>CharField</td>
+            <td>Permanent value unique to this item</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 
 Other
@@ -4935,2245 +7352,3419 @@ Other
 
 AcronymsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Contains acronyms and their meaning.
 
-.. py:class:: AcronymsCd
+**Source**: `ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: acronym
-
-            *Acronym* Acronym text value
-
-        .. py:attribute:: stands_for
-
-            *Stands for* Definition of the acronym
-
-        .. py:attribute:: effect_dt
-
-            *Effect dt* Effective date for the acronym
-
-        .. py:attribute:: a_desc
-
-            *A desc* Description of the acronym
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>acronym</td>
+            <td>CharField</td>
+            <td>Acronym text value</td>
+        </tr>
+    
+        <tr>
+            <td>stands_for</td>
+            <td>CharField</td>
+            <td>Definition of the acronym</td>
+        </tr>
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>DateField</td>
+            <td>Effective date for the acronym</td>
+        </tr>
+    
+        <tr>
+            <td>a_desc</td>
+            <td>CharField</td>
+            <td>Description of the acronym</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 AddressCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table holds all addresses for the system. This table can be used
 for address-based searches and formes the bases for address information
 desplayed by the AMS.
 
-.. py:class:: AddressCd
+**Source**: `ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: adrid
-
-            *Adrid* Address indentification number
-
-        .. py:attribute:: city
-
-            *City*
-
-        .. py:attribute:: st
-
-            *St*
-
-        .. py:attribute:: zip4
-
-            *Zip4*
-
-        .. py:attribute:: phon
-
-            *Phon*
-
-        .. py:attribute:: fax
-
-            *Fax*
-
-        .. py:attribute:: email
-
-            *Email*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>adrid</td>
+            <td>IntegerField</td>
+            <td>Address indentification number</td>
+        </tr>
+    
+        <tr>
+            <td>city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>zip4</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>phon</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>fax</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>email</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 BallotMeasuresCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Ballot measure dates and times
 
-.. py:class:: BallotMeasuresCd
+**Source**: `BALLOT_MEASURES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `BALLOT_MEASURES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: election_date
-
-            *Election date*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: measure_no
-
-            *Measure no*
-
-        .. py:attribute:: measure_name
-
-            *Measure name*
-
-        .. py:attribute:: measure_short_name
-
-            *Measure short name*
-
-        .. py:attribute:: jurisdiction
-
-            *Jurisdiction*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>election_date</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>measure_no</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>measure_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>measure_short_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>jurisdiction</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 EfsFilingLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: EfsFilingLogCd
+**Source**: `EFS_FILING_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `EFS_FILING_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filing_date
-
-            *Filing date*
-
-        .. py:attribute:: filingstatus
-
-            *Filingstatus*
-
-        .. py:attribute:: vendor
-
-            *Vendor*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: form_type
-
-            *Form type* Name of the source filing form or schedule
-
-        .. py:attribute:: error_no
-
-            *Error no*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_date</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filingstatus</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>vendor</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>CharField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>form_type</td>
+            <td>CharField</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+        <tr>
+            <td>error_no</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerAcronymsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 links acronyms to filers
 
-.. py:class:: FilerAcronymsCd
+**Source**: `FILER_ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: acronym
-
-            *Acronym*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>acronym</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerAddressCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Links filers and addresses. This table maintains a history of when
 addresses change.
 
-.. py:class:: FilerAddressCd
+**Source**: `FILER_ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: adrid
-
-            *Adrid*
-
-        .. py:attribute:: effect_dt
-
-            *Effect dt*
-
-        .. py:attribute:: add_type
-
-            *Add type*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>adrid</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>add_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerEthicsClassCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table stores lobbyist ethics training dates.
 
-.. py:class:: FilerEthicsClassCd
+**Source**: `FILER_ETHICS_CLASS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_ETHICS_CLASS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: ethics_date
-
-            *Ethics date*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ethics_date</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerInterestsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Links a filer to their interest codes.
 
-.. py:class:: FilerInterestsCd
+**Source**: `FILER_INTERESTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_INTERESTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: interest_cd
-
-            *Interest cd*
-
-        .. py:attribute:: effect_date
-
-            *Effect date*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>effect_date</td>
+            <td>DateTimeField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerLinksCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Links filers to each other and records their relationship type.
 
-.. py:class:: FilerLinksCd
+**Source**: `FILER_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id_a
-
-            *Filer ID A* Unique identification number for the first filer in the relationship
-
-        .. py:attribute:: filer_id_b
-
-            *Filer ID B* Unique identification number for the second filer in the relationship
-
-        .. py:attribute:: active_flg
-
-            *Active flag* Indicates if the link is active
-
-        .. py:attribute:: session_id
-
-            *Session ID* Session identification number
-
-        .. py:attribute:: link_type
-
-            *Link type* Denotes the type of the link
-
-        .. py:attribute:: link_desc
-
-            *Link description* Unused
-
-        .. py:attribute:: effect_dt
-
-            *Effective date* Date the link became active
-
-        .. py:attribute:: dominate_filer
-
-            *Dominate filer* Unused
-
-        .. py:attribute:: termination_dt
-
-            *Termination date* Date the relationship was terminated
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id_a</td>
+            <td>IntegerField</td>
+            <td>Unique identification number for the first filer in the relationship</td>
+        </tr>
+    
+        <tr>
+            <td>filer_id_b</td>
+            <td>IntegerField</td>
+            <td>Unique identification number for the second filer in the relationship</td>
+        </tr>
+    
+        <tr>
+            <td>active_flg</td>
+            <td>CharField</td>
+            <td>Indicates if the link is active</td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td>Session identification number</td>
+        </tr>
+    
+        <tr>
+            <td>link_type</td>
+            <td>IntegerField</td>
+            <td>Denotes the type of the link</td>
+        </tr>
+    
+        <tr>
+            <td>link_desc</td>
+            <td>CharField</td>
+            <td>Unused</td>
+        </tr>
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>DateField</td>
+            <td>Date the link became active</td>
+        </tr>
+    
+        <tr>
+            <td>dominate_filer</td>
+            <td>CharField</td>
+            <td>Unused</td>
+        </tr>
+    
+        <tr>
+            <td>termination_dt</td>
+            <td>DateField</td>
+            <td>Date the relationship was terminated</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerStatusTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: FilerStatusTypesCd
+**Source**: `FILER_STATUS_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_STATUS_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: status_type
-
-            *Status type*
-
-        .. py:attribute:: status_desc
-
-            *Status desc*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>status_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>status_desc</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerToFilerTypeCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table links a filer to a set of characteristics that describe the
 filer. This table maintains a history of changes and allows the filer
 to change characteristics over time.
 
-.. py:class:: FilerToFilerTypeCd
+**Source**: `FILER_TO_FILER_TYPE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_TO_FILER_TYPE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filer_type
-
-            *Filer type* Filer type identification number
-
-        .. py:attribute:: active
-
-            *Active* Indicates if the filer is currently active
-
-        .. py:attribute:: race
-
-            *Race* If applicable indicates the race in which the filer is running
-
-        .. py:attribute:: session_id
-
-            *Session id* Legislative session identification number
-
-        .. py:attribute:: category
-
-            *Category* Defines the filer's category such as controlled, jointly controlled, etc. (subset of filer's type)
-
-        .. py:attribute:: category_type
-
-            *Category type* When applicable, the category type specifies additional information about the category. (e.g. state, local, etc.)
-
-        .. py:attribute:: sub_category
-
-            *Sub category* When applicable specifies general purpose, primarily formed, etc.
-
-        .. py:attribute:: effect_dt
-
-            *Effect dt* The date the filer assumed the current class or type
-
-        .. py:attribute:: sub_category_type
-
-            *Sub category type* When applicable specifies broad based or small contributor
-
-        .. py:attribute:: election_type
-
-            *Election type* Indicates type of election (general, primary, special)
-
-        .. py:attribute:: sub_category_a
-
-            *Sub category a* Indicates if sponsored or not
-
-        .. py:attribute:: nyq_dt
-
-            *Nyq dt* Indicates the date when a committee reached its qualifying level of activity
-
-        .. py:attribute:: party_cd
-
-            *Party cd* Filer's political party
-
-        .. py:attribute:: county_cd
-
-            *County cd* Filer's county code
-
-        .. py:attribute:: district_cd
-
-            *District cd* Filer's district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filer_type</td>
+            <td>IntegerField</td>
+            <td>Filer type identification number</td>
+        </tr>
+    
+        <tr>
+            <td>active</td>
+            <td>CharField</td>
+            <td>Indicates if the filer is currently active</td>
+        </tr>
+    
+        <tr>
+            <td>race</td>
+            <td>IntegerField</td>
+            <td>If applicable indicates the race in which the filer is running</td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td>Legislative session identification number</td>
+        </tr>
+    
+        <tr>
+            <td>category</td>
+            <td>IntegerField</td>
+            <td>Defines the filer's category such as controlled, jointly controlled, etc. (subset of filer's type)</td>
+        </tr>
+    
+        <tr>
+            <td>category_type</td>
+            <td>IntegerField</td>
+            <td>When applicable, the category type specifies additional information about the category. (e.g. state, local, etc.)</td>
+        </tr>
+    
+        <tr>
+            <td>sub_category</td>
+            <td>IntegerField</td>
+            <td>When applicable specifies general purpose, primarily formed, etc.</td>
+        </tr>
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>DateField</td>
+            <td>The date the filer assumed the current class or type</td>
+        </tr>
+    
+        <tr>
+            <td>sub_category_type</td>
+            <td>IntegerField</td>
+            <td>When applicable specifies broad based or small contributor</td>
+        </tr>
+    
+        <tr>
+            <td>election_type</td>
+            <td>IntegerField</td>
+            <td>Indicates type of election (general, primary, special)</td>
+        </tr>
+    
+        <tr>
+            <td>sub_category_a</td>
+            <td>CharField</td>
+            <td>Indicates if sponsored or not</td>
+        </tr>
+    
+        <tr>
+            <td>nyq_dt</td>
+            <td>DateField</td>
+            <td>Indicates the date when a committee reached its qualifying level of activity</td>
+        </tr>
+    
+        <tr>
+            <td>party_cd</td>
+            <td>IntegerField</td>
+            <td>Filer's political party</td>
+        </tr>
+    
+        <tr>
+            <td>county_cd</td>
+            <td>IntegerField</td>
+            <td>Filer's county code</td>
+        </tr>
+    
+        <tr>
+            <td>district_cd</td>
+            <td>IntegerField</td>
+            <td>Filer's district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This lookup table describes filer types.
 
-.. py:class:: FilerTypesCd
+**Source**: `FILER_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_type
-
-            *Filer type* Filer type identification number
-
-        .. py:attribute:: description
-
-            *Description* Description of the filer type
-
-        .. py:attribute:: grp_type
-
-            *Grp type* Group type assocated with the filer type
-
-        .. py:attribute:: calc_use
-
-            *Calc use* Use checkbox flag
-
-        .. py:attribute:: grace_period
-
-            *Grace period*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_type</td>
+            <td>IntegerField</td>
+            <td>Filer type identification number</td>
+        </tr>
+    
+        <tr>
+            <td>description</td>
+            <td>CharField</td>
+            <td>Description of the filer type</td>
+        </tr>
+    
+        <tr>
+            <td>grp_type</td>
+            <td>IntegerField</td>
+            <td>Group type assocated with the filer type</td>
+        </tr>
+    
+        <tr>
+            <td>calc_use</td>
+            <td>CharField</td>
+            <td>Use checkbox flag</td>
+        </tr>
+    
+        <tr>
+            <td>grace_period</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilerXrefCd
 ~~~~~~~~~~~~~~~~~~~~~~~
-This table maps legacy filer identification numbers to the system&#39;s filer
+
+This table maps legacy filer identification numbers to the system's filer
 identification numbers.
 
-.. py:class:: FilerXrefCd
+**Source**: `FILER_XREF_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILER_XREF_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: xref_id
-
-            *Crossreference filer ID* Alternative filer ID found on many forms
-
-        .. py:attribute:: effect_dt
-
-            *Effect dt*
-
-        .. py:attribute:: migration_source
-
-            *Migration source*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>xref_id</td>
+            <td>CharField</td>
+            <td>Alternative filer ID found on many forms</td>
+        </tr>
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>migration_source</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilersCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table is the parent table from which all links and associations
 to a filer are derived.
 
-.. py:class:: FilersCd
+**Source**: `FILERS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `FILERS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 FilingPeriodCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: FilingPeriodCd
 
-    **Source data**
+**Source**: `FILING_PERIOD_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `FILING_PERIOD_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: period_id
-
-            *Period id* Unique period identification number
-
-        .. py:attribute:: start_date
-
-            *Start date* Starting date for period
-
-        .. py:attribute:: end_date
-
-            *End date* Ending date of period
-
-        .. py:attribute:: period_type
-
-            *Period type*
-
-        .. py:attribute:: per_grp_type
-
-            *Per grp type* Period group type
-
-        .. py:attribute:: period_desc
-
-            *Period desc* Period description
-
-        .. py:attribute:: deadline
-
-            *Deadline* Deadline date
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>period_id</td>
+            <td>IntegerField</td>
+            <td>Unique period identification number</td>
+        </tr>
+    
+        <tr>
+            <td>start_date</td>
+            <td>DateField</td>
+            <td>Starting date for period</td>
+        </tr>
+    
+        <tr>
+            <td>end_date</td>
+            <td>DateField</td>
+            <td>Ending date of period</td>
+        </tr>
+    
+        <tr>
+            <td>period_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>per_grp_type</td>
+            <td>IntegerField</td>
+            <td>Period group type</td>
+        </tr>
+    
+        <tr>
+            <td>period_desc</td>
+            <td>CharField</td>
+            <td>Period description</td>
+        </tr>
+    
+        <tr>
+            <td>deadline</td>
+            <td>DateField</td>
+            <td>Deadline date</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 GroupTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This lookup table stores group type information.
 
-.. py:class:: GroupTypesCd
+**Source**: `GROUP_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `GROUP_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: grp_id
-
-            *Grp id*
-
-        .. py:attribute:: grp_name
-
-            *Grp name*
-
-        .. py:attribute:: grp_desc
-
-            *Grp desc*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>grp_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>grp_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>grp_desc</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 HdrCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Electronic filing record header data
 
-.. py:class:: HdrCd
+**Source**: `HDR_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `HDR_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: amend_id
-
-            *Amendment ID* Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.
-
-        .. py:attribute:: cal_ver
-
-            *Cal ver*
-
-        .. py:attribute:: ef_type
-
-            *Ef type*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: hdr_comment
-
-            *Hdr comment*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: soft_name
-
-            *Soft name*
-
-        .. py:attribute:: soft_ver
-
-            *Soft ver*
-
-        .. py:attribute:: state_cd
-
-            *State cd*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amend_id</td>
+            <td>IntegerField</td>
+            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+        <tr>
+            <td>cal_ver</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ef_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>hdr_comment</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>soft_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>soft_ver</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>state_cd</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 HeaderCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Lookup table used to report form 460 information in the AMS.
 
-.. py:class:: HeaderCd
+**Source**: `HEADER_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `HEADER_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: line_number
-
-            *Line number*
-
-        .. py:attribute:: form_id
-
-            *Form id*
-
-        .. py:attribute:: rec_type
-
-            *Record type*
-
-        .. py:attribute:: section_label
-
-            *Section label*
-
-        .. py:attribute:: comments1
-
-            *Comments1*
-
-        .. py:attribute:: comments2
-
-            *Comments2*
-
-        .. py:attribute:: label
-
-            *Label*
-
-        .. py:attribute:: column_a
-
-            *Column a*
-
-        .. py:attribute:: column_b
-
-            *Column b*
-
-        .. py:attribute:: column_c
-
-            *Column c*
-
-        .. py:attribute:: show_c
-
-            *Show c*
-
-        .. py:attribute:: show_b
-
-            *Show b*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>line_number</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rec_type</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>section_label</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>comments1</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>comments2</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>label</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>column_a</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>column_b</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>column_c</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>show_c</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>show_b</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 ImageLinksCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This table links images to filers and accounts.
 
-.. py:class:: ImageLinksCd
+**Source**: `IMAGE_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `IMAGE_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: img_link_id
-
-            *Img link id*
-
-        .. py:attribute:: img_link_type
-
-            *Img link type*
-
-        .. py:attribute:: img_id
-
-            *Img id*
-
-        .. py:attribute:: img_type
-
-            *Img type*
-
-        .. py:attribute:: img_dt
-
-            *Img dt*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>img_link_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>img_link_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>img_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>img_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>img_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LegislativeSessionsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Legislative session, begin and end dates look up table.
 
-.. py:class:: LegislativeSessionsCd
+**Source**: `LEGISLATIVE_SESSIONS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LEGISLATIVE_SESSIONS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: begin_date
-
-            *Begin date*
-
-        .. py:attribute:: end_date
-
-            *End date*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>begin_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>end_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyingChgLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LobbyingChgLogCd
 
-    **Source data**
+**Source**: `LOBBYING_CHG_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYING_CHG_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: change_no
-
-            *Change no*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: log_dt
-
-            *Log dt*
-
-        .. py:attribute:: filer_type
-
-            *Filer type*
-
-        .. py:attribute:: correction_flag
-
-            *Correction flag*
-
-        .. py:attribute:: action
-
-            *Action*
-
-        .. py:attribute:: attribute_changed
-
-            *Attribute changed*
-
-        .. py:attribute:: ethics_dt
-
-            *Ethics dt*
-
-        .. py:attribute:: interests
-
-            *Interests*
-
-        .. py:attribute:: filer_full_name
-
-            *Filer full name*
-
-        .. py:attribute:: filer_city
-
-            *Filer city*
-
-        .. py:attribute:: filer_st
-
-            *Filer st*
-
-        .. py:attribute:: filer_zip
-
-            *Filer zip*
-
-        .. py:attribute:: filer_phone
-
-            *Filer phone*
-
-        .. py:attribute:: entity_type
-
-            *Entity type*
-
-        .. py:attribute:: entity_name
-
-            *Entity name*
-
-        .. py:attribute:: entity_city
-
-            *Entity city*
-
-        .. py:attribute:: entity_st
-
-            *Entity st*
-
-        .. py:attribute:: entity_zip
-
-            *Entity zip*
-
-        .. py:attribute:: entity_phone
-
-            *Entity phone*
-
-        .. py:attribute:: entity_id
-
-            *Entity id*
-
-        .. py:attribute:: responsible_officer
-
-            *Responsible officer*
-
-        .. py:attribute:: effect_dt
-
-            *Effect dt*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>change_no</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>log_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>correction_flag</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>action</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>attribute_changed</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ethics_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interests</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_full_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_zip</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_phone</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_city</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_st</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_zip</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_phone</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>entity_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>responsible_officer</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistContributions1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LobbyistContributions1Cd
 
-    **Source data**
+**Source**: `LOBBYIST_CONTRIBUTIONS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYIST_CONTRIBUTIONS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filing_period_start_dt
-
-            *Filing period start dt*
-
-        .. py:attribute:: filing_period_end_dt
-
-            *Filing period end dt*
-
-        .. py:attribute:: contribution_dt
-
-            *Contribution dt*
-
-        .. py:attribute:: recipient_name
-
-            *Recipient name*
-
-        .. py:attribute:: recipient_id
-
-            *Recipient id*
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_period_start_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_period_end_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contribution_dt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recipient_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recipient_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistContributions2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Lobbyist contribution disclosure table. Temporary table used to generate
 disclosure table (Lobbyist Contributions 3)
 
-.. py:class:: LobbyistContributions2Cd
+**Source**: `LOBBYIST_CONTRIBUTIONS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_CONTRIBUTIONS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filing_period_start_dt
-
-            *Filing period start dt*
-
-        .. py:attribute:: filing_period_end_dt
-
-            *Filing period end dt*
-
-        .. py:attribute:: contribution_dt
-
-            *Contribution dt*
-
-        .. py:attribute:: recipient_name
-
-            *Recipient name*
-
-        .. py:attribute:: recipient_id
-
-            *Recipient id*
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_period_start_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_period_end_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contribution_dt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recipient_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recipient_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistContributions3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 Lobbyist contribution disclosure table.
 
-.. py:class:: LobbyistContributions3Cd
+**Source**: `LOBBYIST_CONTRIBUTIONS3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_CONTRIBUTIONS3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filing_period_start_dt
-
-            *Filing period start dt*
-
-        .. py:attribute:: filing_period_end_dt
-
-            *Filing period end dt*
-
-        .. py:attribute:: contribution_dt
-
-            *Contribution dt*
-
-        .. py:attribute:: recipient_name
-
-            *Recipient name*
-
-        .. py:attribute:: recipient_id
-
-            *Recipient id*
-
-        .. py:attribute:: amount
-
-            *Amount*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_period_start_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_period_end_dt</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contribution_dt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recipient_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>recipient_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>amount</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistEmpLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LobbyistEmpLobbyist1Cd
 
-    **Source data**
+**Source**: `LOBBYIST_EMP_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYIST_EMP_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: lobbyist_id
-
-            *Lobbyist id*
-
-        .. py:attribute:: employer_id
-
-            *Employer id*
-
-        .. py:attribute:: lobbyist_last_name
-
-            *Lobbyist last name*
-
-        .. py:attribute:: lobbyist_first_name
-
-            *Lobbyist first name*
-
-        .. py:attribute:: employer_name
-
-            *Employer name*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistEmpLobbyist2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: LobbyistEmpLobbyist2Cd
+**Source**: `LOBBYIST_EMP_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_EMP_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: lobbyist_id
-
-            *Lobbyist id*
-
-        .. py:attribute:: employer_id
-
-            *Employer id*
-
-        .. py:attribute:: lobbyist_last_name
-
-            *Lobbyist last name*
-
-        .. py:attribute:: lobbyist_first_name
-
-            *Lobbyist first name*
-
-        .. py:attribute:: employer_name
-
-            *Employer name*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistEmployer1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: LobbyistEmployer1Cd
+**Source**: `LOBBYIST_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: employer_id
-
-            *Employer id*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: employer_name
-
-            *Employer name*
-
-        .. py:attribute:: current_qtr_amt
-
-            *Current qtr amt*
-
-        .. py:attribute:: session_total_amt
-
-            *Session total amt*
-
-        .. py:attribute:: contributor_id
-
-            *Contributor id*
-
-        .. py:attribute:: interest_cd
-
-            *Interest cd*
-
-        .. py:attribute:: interest_name
-
-            *Interest name*
-
-        .. py:attribute:: session_yr_1
-
-            *Session yr 1*
-
-        .. py:attribute:: session_yr_2
-
-            *Session yr 2*
-
-        .. py:attribute:: yr_1_ytd_amt
-
-            *Yr 1 ytd amt*
-
-        .. py:attribute:: yr_2_ytd_amt
-
-            *Yr 2 ytd amt*
-
-        .. py:attribute:: qtr_1
-
-            *Qtr 1*
-
-        .. py:attribute:: qtr_2
-
-            *Qtr 2*
-
-        .. py:attribute:: qtr_3
-
-            *Qtr 3*
-
-        .. py:attribute:: qtr_4
-
-            *Qtr 4*
-
-        .. py:attribute:: qtr_5
-
-            *Qtr 5*
-
-        .. py:attribute:: qtr_6
-
-            *Qtr 6*
-
-        .. py:attribute:: qtr_7
-
-            *Qtr 7*
-
-        .. py:attribute:: qtr_8
-
-            *Qtr 8*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interest_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistEmployer2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: LobbyistEmployer2Cd
+**Source**: `LOBBYIST_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: employer_id
-
-            *Employer id*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: employer_name
-
-            *Employer name*
-
-        .. py:attribute:: current_qtr_amt
-
-            *Current qtr amt*
-
-        .. py:attribute:: session_total_amt
-
-            *Session total amt*
-
-        .. py:attribute:: contributor_id
-
-            *Contributor id*
-
-        .. py:attribute:: interest_cd
-
-            *Interest cd*
-
-        .. py:attribute:: interest_name
-
-            *Interest name*
-
-        .. py:attribute:: session_yr_1
-
-            *Session yr 1*
-
-        .. py:attribute:: session_yr_2
-
-            *Session yr 2*
-
-        .. py:attribute:: yr_1_ytd_amt
-
-            *Yr 1 ytd amt*
-
-        .. py:attribute:: yr_2_ytd_amt
-
-            *Yr 2 ytd amt*
-
-        .. py:attribute:: qtr_1
-
-            *Qtr 1*
-
-        .. py:attribute:: qtr_2
-
-            *Qtr 2*
-
-        .. py:attribute:: qtr_3
-
-            *Qtr 3*
-
-        .. py:attribute:: qtr_4
-
-            *Qtr 4*
-
-        .. py:attribute:: qtr_5
-
-            *Qtr 5*
-
-        .. py:attribute:: qtr_6
-
-            *Qtr 6*
-
-        .. py:attribute:: qtr_7
-
-            *Qtr 7*
-
-        .. py:attribute:: qtr_8
-
-            *Qtr 8*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interest_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistEmployer3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: LobbyistEmployer3Cd
+**Source**: `LOBBYIST_EMPLOYER3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_EMPLOYER3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: employer_id
-
-            *Employer id*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: employer_name
-
-            *Employer name*
-
-        .. py:attribute:: current_qtr_amt
-
-            *Current qtr amt*
-
-        .. py:attribute:: session_total_amt
-
-            *Session total amt*
-
-        .. py:attribute:: contributor_id
-
-            *Contributor id*
-
-        .. py:attribute:: interest_cd
-
-            *Interest cd*
-
-        .. py:attribute:: interest_name
-
-            *Interest name*
-
-        .. py:attribute:: session_yr_1
-
-            *Session yr 1*
-
-        .. py:attribute:: session_yr_2
-
-            *Session yr 2*
-
-        .. py:attribute:: yr_1_ytd_amt
-
-            *Yr 1 ytd amt*
-
-        .. py:attribute:: yr_2_ytd_amt
-
-            *Yr 2 ytd amt*
-
-        .. py:attribute:: qtr_1
-
-            *Qtr 1*
-
-        .. py:attribute:: qtr_2
-
-            *Qtr 2*
-
-        .. py:attribute:: qtr_3
-
-            *Qtr 3*
-
-        .. py:attribute:: qtr_4
-
-            *Qtr 4*
-
-        .. py:attribute:: qtr_5
-
-            *Qtr 5*
-
-        .. py:attribute:: qtr_6
-
-            *Qtr 6*
-
-        .. py:attribute:: qtr_7
-
-            *Qtr 7*
-
-        .. py:attribute:: qtr_8
-
-            *Qtr 8*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>interest_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistEmployerFirms1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: LobbyistEmployerFirms1Cd
+**Source**: `LOBBYIST_EMPLOYER_FIRMS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_EMPLOYER_FIRMS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: employer_id
-
-            *Employer id*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: termination_dt
-
-            *Termination dt*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>termination_dt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistEmployerFirms2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LobbyistEmployerFirms2Cd
 
-    **Source data**
+**Source**: `LOBBYIST_EMPLOYER_FIRMS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYIST_EMPLOYER_FIRMS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: employer_id
-
-            *Employer id*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: termination_dt
-
-            *Termination dt*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>termination_dt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistFirm1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LobbyistFirm1Cd
 
-    **Source data**
+**Source**: `LOBBYIST_FIRM1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYIST_FIRM1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: current_qtr_amt
-
-            *Current qtr amt*
-
-        .. py:attribute:: session_total_amt
-
-            *Session total amt*
-
-        .. py:attribute:: contributor_id
-
-            *Contributor id*
-
-        .. py:attribute:: session_yr_1
-
-            *Session yr 1*
-
-        .. py:attribute:: session_yr_2
-
-            *Session yr 2*
-
-        .. py:attribute:: yr_1_ytd_amt
-
-            *Yr 1 ytd amt*
-
-        .. py:attribute:: yr_2_ytd_amt
-
-            *Yr 2 ytd amt*
-
-        .. py:attribute:: qtr_1
-
-            *Qtr 1*
-
-        .. py:attribute:: qtr_2
-
-            *Qtr 2*
-
-        .. py:attribute:: qtr_3
-
-            *Qtr 3*
-
-        .. py:attribute:: qtr_4
-
-            *Qtr 4*
-
-        .. py:attribute:: qtr_5
-
-            *Qtr 5*
-
-        .. py:attribute:: qtr_6
-
-            *Qtr 6*
-
-        .. py:attribute:: qtr_7
-
-            *Qtr 7*
-
-        .. py:attribute:: qtr_8
-
-            *Qtr 8*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistFirm2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: LobbyistFirm2Cd
+**Source**: `LOBBYIST_FIRM2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_FIRM2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: current_qtr_amt
-
-            *Current qtr amt*
-
-        .. py:attribute:: session_total_amt
-
-            *Session total amt*
-
-        .. py:attribute:: contributor_id
-
-            *Contributor id*
-
-        .. py:attribute:: session_yr_1
-
-            *Session yr 1*
-
-        .. py:attribute:: session_yr_2
-
-            *Session yr 2*
-
-        .. py:attribute:: yr_1_ytd_amt
-
-            *Yr 1 ytd amt*
-
-        .. py:attribute:: yr_2_ytd_amt
-
-            *Yr 2 ytd amt*
-
-        .. py:attribute:: qtr_1
-
-            *Qtr 1*
-
-        .. py:attribute:: qtr_2
-
-            *Qtr 2*
-
-        .. py:attribute:: qtr_3
-
-            *Qtr 3*
-
-        .. py:attribute:: qtr_4
-
-            *Qtr 4*
-
-        .. py:attribute:: qtr_5
-
-            *Qtr 5*
-
-        .. py:attribute:: qtr_6
-
-            *Qtr 6*
-
-        .. py:attribute:: qtr_7
-
-            *Qtr 7*
-
-        .. py:attribute:: qtr_8
-
-            *Qtr 8*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistFirm3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LobbyistFirm3Cd
 
-    **Source data**
+**Source**: `LOBBYIST_FIRM3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYIST_FIRM3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: current_qtr_amt
-
-            *Current qtr amt*
-
-        .. py:attribute:: session_total_amt
-
-            *Session total amt*
-
-        .. py:attribute:: contributor_id
-
-            *Contributor id*
-
-        .. py:attribute:: session_yr_1
-
-            *Session yr 1*
-
-        .. py:attribute:: session_yr_2
-
-            *Session yr 2*
-
-        .. py:attribute:: yr_1_ytd_amt
-
-            *Yr 1 ytd amt*
-
-        .. py:attribute:: yr_2_ytd_amt
-
-            *Yr 2 ytd amt*
-
-        .. py:attribute:: qtr_1
-
-            *Qtr 1*
-
-        .. py:attribute:: qtr_2
-
-            *Qtr 2*
-
-        .. py:attribute:: qtr_3
-
-            *Qtr 3*
-
-        .. py:attribute:: qtr_4
-
-            *Qtr 4*
-
-        .. py:attribute:: qtr_5
-
-            *Qtr 5*
-
-        .. py:attribute:: qtr_6
-
-            *Qtr 6*
-
-        .. py:attribute:: qtr_7
-
-            *Qtr 7*
-
-        .. py:attribute:: qtr_8
-
-            *Qtr 8*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistFirmEmployer1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model (Ask Matt)
 
-.. py:class:: LobbyistFirmEmployer1Cd
+**Source**: `LOBBYIST_FIRM_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_FIRM_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: filing_sequence
-
-            *Filing sequence*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: employer_name
-
-            *Employer name*
-
-        .. py:attribute:: rpt_start
-
-            *Rpt start*
-
-        .. py:attribute:: rpt_end
-
-            *Rpt end*
-
-        .. py:attribute:: per_total
-
-            *Per total*
-
-        .. py:attribute:: cum_total
-
-            *Cum total*
-
-        .. py:attribute:: lby_actvty
-
-            *Lby actvty*
-
-        .. py:attribute:: ext_lby_actvty
-
-            *Ext lby actvty*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_sequence</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_start</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_end</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>per_total</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cum_total</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lby_actvty</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ext_lby_actvty</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistFirmEmployer2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model
 
-.. py:class:: LobbyistFirmEmployer2Cd
+**Source**: `LOBBYIST_FIRM_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `LOBBYIST_FIRM_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: filing_sequence
-
-            *Filing sequence*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: employer_name
-
-            *Employer name*
-
-        .. py:attribute:: rpt_start
-
-            *Rpt start*
-
-        .. py:attribute:: rpt_end
-
-            *Rpt end*
-
-        .. py:attribute:: per_total
-
-            *Per total*
-
-        .. py:attribute:: cum_total
-
-            *Cum total*
-
-        .. py:attribute:: lby_actvty
-
-            *Lby actvty*
-
-        .. py:attribute:: ext_lby_actvty
-
-            *Ext lby actvty*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_sequence</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>employer_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_start</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_end</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>per_total</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>cum_total</td>
+            <td>FloatField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lby_actvty</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ext_lby_actvty</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistFirmLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
-It&#39;s an undocumented model.
 
-.. py:class:: LobbyistFirmLobbyist1Cd
+It's an undocumented model.
 
-    **Source data**
+**Source**: `LOBBYIST_FIRM_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYIST_FIRM_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: lobbyist_id
-
-            *Lobbyist id*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: lobbyist_last_name
-
-            *Lobbyist last name*
-
-        .. py:attribute:: lobbyist_first_name
-
-            *Lobbyist first name*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LobbyistFirmLobbyist2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LobbyistFirmLobbyist2Cd
 
-    **Source data**
+**Source**: `LOBBYIST_FIRM_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOBBYIST_FIRM_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: lobbyist_id
-
-            *Lobbyist id*
-
-        .. py:attribute:: firm_id
-
-            *Firm id*
-
-        .. py:attribute:: lobbyist_last_name
-
-            *Lobbyist last name*
-
-        .. py:attribute:: lobbyist_first_name
-
-            *Lobbyist first name*
-
-        .. py:attribute:: firm_name
-
-            *Firm name*
-
-        .. py:attribute:: session_id
-
-            *Session id*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>firm_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>session_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 LookupCode
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: LookupCode
 
-    **Source data**
+**Source**: `LOOKUP_CODES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `LOOKUP_CODES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: code_type
-
-            *Code type*
-
-        .. py:attribute:: code_id
-
-            *Code id*
-
-        .. py:attribute:: code_desc
-
-            *Code desc*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>code_type</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>code_id</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>code_desc</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 NamesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. py:class:: NamesCd
 
-    **Source data**
+**Source**: `NAMES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-        `NAMES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Fields**
 
-    **Fields**
+.. raw:: html
 
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: namid
-
-            *Namid*
-
-        .. py:attribute:: naml
-
-            *Naml*
-
-        .. py:attribute:: namf
-
-            *Namf*
-
-        .. py:attribute:: namt
-
-            *Namt*
-
-        .. py:attribute:: nams
-
-            *Nams*
-
-        .. py:attribute:: moniker
-
-            *Moniker*
-
-        .. py:attribute:: moniker_pos
-
-            *Moniker pos*
-
-        .. py:attribute:: namm
-
-            *Namm*
-
-        .. py:attribute:: fullname
-
-            *Fullname*
-
-        .. py:attribute:: naml_search
-
-            *Naml search*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>namid</td>
+            <td>IntegerField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>naml</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>namf</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>namt</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>nams</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>moniker</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>moniker_pos</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>namm</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>fullname</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>naml_search</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 ReceivedFilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is undocumented. J M needs to describe this table.
 
-.. py:class:: ReceivedFilingsCd
+**Source**: `RECEIVED_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `RECEIVED_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: filer_id
-
-            *Filer ID* Filer's unique identification number
-
-        .. py:attribute:: filing_file_name
-
-            *Filing file name*
-
-        .. py:attribute:: received_date
-
-            *Received date*
-
-        .. py:attribute:: filing_directory
-
-            *Filing directory*
-
-        .. py:attribute:: filing_id
-
-            *Filing ID* Unique filing identificiation number
-
-        .. py:attribute:: form_id
-
-            *Form id*
-
-        .. py:attribute:: receive_comment
-
-            *Receive comment*
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filer_id</td>
+            <td>IntegerField</td>
+            <td>Filer's unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>filing_file_name</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>received_date</td>
+            <td>DateField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_directory</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>filing_id</td>
+            <td>IntegerField</td>
+            <td>Unique filing identificiation number</td>
+        </tr>
+    
+        <tr>
+            <td>form_id</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>receive_comment</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 ReportsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is an undocumented model.
 
-.. py:class:: ReportsCd
+**Source**: `REPORTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-    **Source data**
+**Fields**
 
-        `REPORTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+.. raw:: html
 
-    **Fields**
-
-
-        .. py:attribute:: id
-
-            *ID*
-
-        .. py:attribute:: rpt_id
-
-            *Rpt id* Unique identification number
-
-        .. py:attribute:: rpt_name
-
-            *Rpt name* Name of the report
-
-        .. py:attribute:: rpt_desc_field
-
-            *Rpt desc field* Description of the report
-
-        .. py:attribute:: path
-
-            *Path* Reportpath
-
-        .. py:attribute:: data_object
-
-            *Data object*
-
-        .. py:attribute:: parms_flg_y_n
-
-            *Parms flg y n* Parameters indication flag
-
-        .. py:attribute:: rpt_type
-
-            *Rpt type* Type of the report
-
-        .. py:attribute:: parm_definition
-
-            *Parm definition* Parameter definition
-
-
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>id</td>
+            <td>AutoField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>rpt_id</td>
+            <td>IntegerField</td>
+            <td>Unique identification number</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_name</td>
+            <td>CharField</td>
+            <td>Name of the report</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_desc_field</td>
+            <td>CharField</td>
+            <td>Description of the report</td>
+        </tr>
+    
+        <tr>
+            <td>path</td>
+            <td>CharField</td>
+            <td>Reportpath</td>
+        </tr>
+    
+        <tr>
+            <td>data_object</td>
+            <td>CharField</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>parms_flg_y_n</td>
+            <td>IntegerField</td>
+            <td>Parameters indication flag</td>
+        </tr>
+    
+        <tr>
+            <td>rpt_type</td>
+            <td>IntegerField</td>
+            <td>Type of the report</td>
+        </tr>
+    
+        <tr>
+            <td>parm_definition</td>
+            <td>IntegerField</td>
+            <td>Parameter definition</td>
+        </tr>
+    
+    </tbody>
+    </table>
 
 
 
 Empty files
 -----------
 
-+------------------------------+--------------------------+
-| Source TSV                   | Django model             |
-+==============================+==========================+
-| FILER_TYPE_PERIODS_CD        |                          |
-+------------------------------+--------------------------+
-| LOBBYIST_EMPLOYER_HISTORY_CD |                          |
-+------------------------------+--------------------------+
-| LOBBYIST_FIRM_HISTORY_CD     |                          |
-+------------------------------+--------------------------+
++------------------------------+
+|Source TSV                    |
++==============================+
+| FILER_TYPE_PERIODS_CD        |
++------------------------------+
+| LOBBYIST_EMPLOYER_HISTORY_CD |
++------------------------------+
+| LOBBYIST_FIRM_HISTORY_CD     |
++------------------------------+
