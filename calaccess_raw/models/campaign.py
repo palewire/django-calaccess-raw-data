@@ -2202,93 +2202,159 @@ Schedule D, candidates or measures supported or opposed with < $100 payment'),
         help_text='Permanent value unique to this item',
     )
     agent_naml = fields.CharField(
-        max_length=200, db_column='AGENT_NAML', blank=True
+        max_length=200,
+        db_column='AGENT_NAML',
+        blank=True
     )
     agent_namf = fields.CharField(
-        max_length=45, db_column='AGENT_NAMF', blank=True
+        max_length=45,
+        db_column='AGENT_NAMF',
+        blank=True
     )
     agent_namt = fields.CharField(
-        max_length=200, db_column='AGENT_NAMT', blank=True
+        max_length=200,
+        db_column='AGENT_NAMT',
+        blank=True
     )
     agent_nams = fields.CharField(
-        max_length=10, db_column='AGENT_NAMS', blank=True
+        max_length=10,
+        db_column='AGENT_NAMS',
+        blank=True
     )
     payee_naml = fields.CharField(
-        max_length=200, db_column='PAYEE_NAML', blank=True
+        max_length=200,
+        db_column='PAYEE_NAML',
+        blank=True
     )
     payee_namf = fields.CharField(
-        max_length=45, db_column='PAYEE_NAMF', blank=True
+        max_length=45,
+        db_column='PAYEE_NAMF',
+        blank=True
     )
     payee_namt = fields.CharField(
-        max_length=10, db_column='PAYEE_NAMT', blank=True
+        max_length=10,
+        db_column='PAYEE_NAMT',
+        blank=True
     )
     payee_nams = fields.CharField(
-        max_length=10, db_column='PAYEE_NAMS', blank=True
+        max_length=10,
+        db_column='PAYEE_NAMS',
+        blank=True
     )
     payee_city = fields.CharField(
-        max_length=30, db_column='PAYEE_CITY', blank=True
+        max_length=30,
+        db_column='PAYEE_CITY',
+        blank=True
     )
     payee_st = fields.CharField(
-        max_length=2, db_column='PAYEE_ST', blank=True
+        max_length=2,
+        db_column='PAYEE_ST',
+        blank=True
     )
     payee_zip4 = fields.CharField(
-        max_length=10, db_column='PAYEE_ZIP4', blank=True
+        max_length=10,
+        db_column='PAYEE_ZIP4',
+        blank=True
     )
     amount = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AMOUNT'
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMOUNT'
     )
     aggregate = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AGGREGATE'
+        max_digits=16,
+        decimal_places=2,
+        db_column='AGGREGATE'
     )
     expn_dscr = fields.CharField(
-        max_length=90, db_column='EXPN_DSCR', blank=True
+        max_length=90,
+        db_column='EXPN_DSCR',
+        blank=True
     )
     cand_naml = fields.CharField(
-        max_length=200, db_column='CAND_NAML', blank=True
+        max_length=200,
+        db_column='CAND_NAML',
+        blank=True
     )
     cand_namf = fields.CharField(
-        max_length=45, db_column='CAND_NAMF', blank=True
+        max_length=45,
+        db_column='CAND_NAMF',
+        blank=True
     )
     cand_namt = fields.CharField(
-        max_length=10, db_column='CAND_NAMT', blank=True
+        max_length=10,
+        db_column='CAND_NAMT',
+        blank=True
     )
     cand_nams = fields.CharField(
-        max_length=10, db_column='CAND_NAMS', blank=True
+        max_length=10,
+        db_column='CAND_NAMS',
+        blank=True
     )
     office_cd = fields.CharField(
-        max_length=3, db_column='OFFICE_CD', blank=True
+        max_length=3,
+        db_column='OFFICE_CD',
+        blank=True
     )
     offic_dscr = fields.CharField(
-        max_length=40, db_column='OFFIC_DSCR', blank=True
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True
     )
     juris_cd = fields.CharField(
-        max_length=3, db_column='JURIS_CD', blank=True
+        max_length=3,
+        db_column='JURIS_CD',
+        blank=True
     )
     juris_dscr = fields.CharField(
-        max_length=40, db_column='JURIS_DSCR', blank=True
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True
     )
-    dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
+    dist_no = fields.CharField(
+        max_length=3,
+        db_column='DIST_NO',
+        blank=True
+    )
     off_s_h_cd = fields.CharField(
-        max_length=1, db_column='OFF_S_H_CD', blank=True
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True
     )
     bal_name = fields.CharField(
-        max_length=200, db_column='BAL_NAME', blank=True
+        max_length=200,
+        db_column='BAL_NAME',
+        blank=True
     )
-    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    bal_num = fields.CharField(
+        max_length=7,
+        db_column='BAL_NUM',
+        blank=True
+    )
     bal_juris = fields.CharField(
-        max_length=40, db_column='BAL_JURIS', blank=True
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True
     )
     sup_opp_cd = fields.CharField(
-        max_length=1, db_column='SUP_OPP_CD', blank=True
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True
     )
     bakref_tid = fields.CharField(
-        max_length=20, db_column='BAKREF_TID', blank=True
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True
     )
 
     class Meta:
