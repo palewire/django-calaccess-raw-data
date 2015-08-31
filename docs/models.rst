@@ -1,5 +1,5 @@
-Models
-======
+Database tables
+===============
 
 A crosswalk between the tables published by California's Secretary of State and the models in this Django application.
 
@@ -12,9 +12,9 @@ Cvr2CampaignDisclosureCd
 Record used to carry additional names for the campaign
 disclosure forms below.
 
-**Source**: `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -274,9 +274,9 @@ Additional names and committees information included on the second page
 of a statement of organization creation form filed
 by a slate-mailer organization or recipient committee.
 
-**Source**: `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -504,9 +504,9 @@ Cvr3VerificationInfoCd
 
 Cover page verification information from campaign disclosure forms
 
-**Source**: `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -627,9 +627,9 @@ The data contained herin is "as filed" by the entity making the filing.
     F497 -- Late Contribution Report
     F498 -- Slate Mailer Late Payment Report
 
-**Source**: `CVR_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -1176,9 +1176,9 @@ CvrSoCd
 Cover page for a statement of organization creation or termination
 form filed by a slate-mailer organization or recipient committee.
 
-**Source**: `CVR_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -1533,9 +1533,9 @@ DebtCd
 Form 460 (Recipient Committee Campaign Statement)
 Schedule (F) Accrued Expenses (Unpaid Bills) records
 
-**Source**: `DEBT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `DEBT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -1763,9 +1763,9 @@ ExpnCd
 
 Campaign expenditures from a variety of forms
 
-**Source**: `EXPN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `EXPN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -2128,9 +2128,9 @@ Form 450 or 460, the committee will report all
 contributions received and expenditures made since
 its last report.
 
-**Source**: `F495P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `F495P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -2211,9 +2211,9 @@ Candidate Intention Statement
     -- F501
     -- F502
 
-**Source**: `F501_502_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `F501_502_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -2567,9 +2567,9 @@ LoanCd
 
 Loans received and made.
 
-**Source**: `LOAN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOAN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -2898,9 +2898,9 @@ Receipts schedules for the following forms.
 
     Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
 
-**Source**: `RCPT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `RCPT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -3309,9 +3309,9 @@ S401Cd
 This table contains Form 401 (Slate Mailer Organization) payment and other
 disclosure schedule (F401B, F401B-1, F401C, F401D) information.
 
-**Source**: `S401_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `S401_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -3563,9 +3563,9 @@ S496Cd
 
 Form 496 Late Independent Expenditures
 
-**Source**: `S496_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `S496_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -3667,9 +3667,9 @@ S497Cd
 
 Form 497 Late Contributions Received/Made
 
-**Source**: `S497_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `S497_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -3945,9 +3945,9 @@ S498Cd
 
 Form 498 Slate Mailer Late Independent Expenditures Made
 
-**Source**: `S498_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `S498_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4202,9 +4202,9 @@ Split Records
     -- F450P5
     -- F460 (A-B1-B2-C-D-H)
 
-**Source**: `SPLT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `SPLT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4286,9 +4286,9 @@ CvrE530Cd
 
 This table method is undocumented in the print docs.
 
-**Source**: `CVR_E530_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR_E530_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4512,9 +4512,9 @@ Key table that links filers to their paper, key data entry, legacy,
 and electronic filings. This table is used as an index to locate
 filing information.
 
-**Source**: `FILER_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4650,9 +4650,9 @@ candidates/officeholders, treasurers/responsible officers, and major donors
 (when they are only an individual's name) use both the first and last name
 fields in conjunction.
 
-**Source**: `FILERNAME_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILERNAME_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4785,9 +4785,9 @@ FilingsCd
 This table is the parent table from which all links and association to
 a filing are derived.
 
-**Source**: `FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4829,9 +4829,9 @@ SmryCd
 
 Summary totals from filings.
 
-**Source**: `SMRY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `SMRY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4915,9 +4915,9 @@ TextMemoCd
 
 Text memos attached to electronic filings
 
-**Source**: `TEXT_MEMO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `TEXT_MEMO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -4993,9 +4993,9 @@ Cvr2LobbyDisclosureCd
 
 Additional data from lobbyist disclosure forms
 
-**Source**: `CVR2_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR2_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -5103,9 +5103,9 @@ Cvr2RegistrationCd
 
 Cover page of lobbying disclosure forms
 
-**Source**: `CVR2_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR2_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -5207,9 +5207,9 @@ CvrLobbyDisclosureCd
 
 Cover page information for lobbying disclosure forms
 
-**Source**: `CVR_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR_LOBBY_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -5551,9 +5551,9 @@ CvrRegistrationCd
 
 Cover page of lobbying disclosure forms
 
-**Source**: `CVR_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR_REGISTRATION_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -6011,9 +6011,9 @@ Amends lobbying disclosure filings
 
     F690 Amendment to Lobbying Disclosure Report
 
-**Source**: `F690P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `F690P2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -6109,9 +6109,9 @@ LattCd
 
 Lobbyist disclosure attachment schedules for payments
 
-**Source**: `LATT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LATT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -6261,9 +6261,9 @@ LccmCd
 
 Lobbying campaign contributions
 
-**Source**: `LCCM_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LCCM_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -6437,9 +6437,9 @@ LempCd
 
 Lobbyist employers and subcontracted clients
 
-**Source**: `LEMP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LEMP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -6613,9 +6613,9 @@ LexpCd
 
 Lobbying activity expenditures
 
-**Source**: `LEXP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LEXP_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -6795,9 +6795,9 @@ LobbyAmendmentsCd
 
 Lobbyist registration amendment information
 
-**Source**: `LOBBY_AMENDMENTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBY_AMENDMENTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7079,9 +7079,9 @@ LothCd
 
 Payment to other lobbying firms
 
-**Source**: `LOTH_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOTH_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7231,9 +7231,9 @@ LpayCd
 
 Payments made or received by lobbying firms
 
-**Source**: `LPAY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LPAY_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7423,9 +7423,9 @@ AcronymsCd
 
 Contains acronyms and their meaning.
 
-**Source**: `ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7481,9 +7481,9 @@ This table holds all addresses for the system. This table can be used
 for address-based searches and formes the bases for address information
 desplayed by the AMS.
 
-**Source**: `ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7555,9 +7555,9 @@ BallotMeasuresCd
 
 Ballot measure dates and times
 
-**Source**: `BALLOT_MEASURES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `BALLOT_MEASURES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7623,9 +7623,9 @@ EfsFilingLogCd
 
 This is an undocumented model.
 
-**Source**: `EFS_FILING_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `EFS_FILING_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7691,9 +7691,9 @@ FilerAcronymsCd
 
 links acronyms to filers
 
-**Source**: `FILER_ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7736,9 +7736,9 @@ FilerAddressCd
 Links filers and addresses. This table maintains a history of when
 addresses change.
 
-**Source**: `FILER_ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_ADDRESS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7798,9 +7798,9 @@ FilerEthicsClassCd
 
 This table stores lobbyist ethics training dates.
 
-**Source**: `FILER_ETHICS_CLASS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_ETHICS_CLASS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7848,9 +7848,9 @@ FilerInterestsCd
 
 Links a filer to their interest codes.
 
-**Source**: `FILER_INTERESTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_INTERESTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7904,9 +7904,9 @@ FilerLinksCd
 
 Links filers to each other and records their relationship type.
 
-**Source**: `FILER_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -7990,9 +7990,9 @@ FilerStatusTypesCd
 
 This is an undocumented model.
 
-**Source**: `FILER_STATUS_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_STATUS_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8036,9 +8036,9 @@ This table links a filer to a set of characteristics that describe the
 filer. This table maintains a history of changes and allows the filer
 to change characteristics over time.
 
-**Source**: `FILER_TO_FILER_TYPE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_TO_FILER_TYPE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8164,9 +8164,9 @@ FilerTypesCd
 
 This lookup table describes filer types.
 
-**Source**: `FILER_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8227,9 +8227,9 @@ FilerXrefCd
 This table maps legacy filer identification numbers to the system's filer
 identification numbers.
 
-**Source**: `FILER_XREF_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILER_XREF_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8284,9 +8284,9 @@ FilersCd
 This table is the parent table from which all links and associations
 to a filer are derived.
 
-**Source**: `FILERS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILERS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8322,9 +8322,9 @@ FilingPeriodCd
 
 
 
-**Source**: `FILING_PERIOD_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `FILING_PERIOD_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8396,9 +8396,9 @@ GroupTypesCd
 
 This lookup table stores group type information.
 
-**Source**: `GROUP_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `GROUP_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8446,9 +8446,9 @@ HdrCd
 
 Electronic filing record header data
 
-**Source**: `HDR_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `HDR_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8532,9 +8532,9 @@ HeaderCd
 
 Lookup table used to report form 460 information in the AMS.
 
-**Source**: `HEADER_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `HEADER_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8636,9 +8636,9 @@ ImageLinksCd
 
 This table links images to filers and accounts.
 
-**Source**: `IMAGE_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `IMAGE_LINKS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8698,9 +8698,9 @@ LegislativeSessionsCd
 
 Legislative session, begin and end dates look up table.
 
-**Source**: `LEGISLATIVE_SESSIONS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LEGISLATIVE_SESSIONS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8748,9 +8748,9 @@ LobbyingChgLogCd
 
 
 
-**Source**: `LOBBYING_CHG_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYING_CHG_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8924,9 +8924,9 @@ LobbyistContributions1Cd
 
 
 
-**Source**: `LOBBYIST_CONTRIBUTIONS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_CONTRIBUTIONS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -8999,9 +8999,9 @@ LobbyistContributions2Cd
 Lobbyist contribution disclosure table. Temporary table used to generate
 disclosure table (Lobbyist Contributions 3)
 
-**Source**: `LOBBYIST_CONTRIBUTIONS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_CONTRIBUTIONS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9073,9 +9073,9 @@ LobbyistContributions3Cd
 
 Lobbyist contribution disclosure table.
 
-**Source**: `LOBBYIST_CONTRIBUTIONS3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_CONTRIBUTIONS3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9147,9 +9147,9 @@ LobbyistEmpLobbyist1Cd
 
 
 
-**Source**: `LOBBYIST_EMP_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_EMP_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9215,9 +9215,9 @@ LobbyistEmpLobbyist2Cd
 
 This is an undocumented model.
 
-**Source**: `LOBBYIST_EMP_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_EMP_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9283,9 +9283,9 @@ LobbyistEmployer1Cd
 
 This is an undocumented model.
 
-**Source**: `LOBBYIST_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9435,9 +9435,9 @@ LobbyistEmployer2Cd
 
 This is an undocumented model.
 
-**Source**: `LOBBYIST_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9587,9 +9587,9 @@ LobbyistEmployer3Cd
 
 This is an undocumented model.
 
-**Source**: `LOBBYIST_EMPLOYER3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_EMPLOYER3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9739,9 +9739,9 @@ LobbyistEmployerFirms1Cd
 
 This is an undocumented model.
 
-**Source**: `LOBBYIST_EMPLOYER_FIRMS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_EMPLOYER_FIRMS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9801,9 +9801,9 @@ LobbyistEmployerFirms2Cd
 
 
 
-**Source**: `LOBBYIST_EMPLOYER_FIRMS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_EMPLOYER_FIRMS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -9863,9 +9863,9 @@ LobbyistFirm1Cd
 
 
 
-**Source**: `LOBBYIST_FIRM1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_FIRM1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10003,9 +10003,9 @@ LobbyistFirm2Cd
 
 This is an undocumented model.
 
-**Source**: `LOBBYIST_FIRM2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_FIRM2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10143,9 +10143,9 @@ LobbyistFirm3Cd
 
 
 
-**Source**: `LOBBYIST_FIRM3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_FIRM3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10283,9 +10283,9 @@ LobbyistFirmEmployer1Cd
 
 This is an undocumented model (Ask Matt)
 
-**Source**: `LOBBYIST_FIRM_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_FIRM_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10381,9 +10381,9 @@ LobbyistFirmEmployer2Cd
 
 This is an undocumented model
 
-**Source**: `LOBBYIST_FIRM_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_FIRM_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10479,9 +10479,9 @@ LobbyistFirmLobbyist1Cd
 
 It's an undocumented model.
 
-**Source**: `LOBBYIST_FIRM_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_FIRM_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10547,9 +10547,9 @@ LobbyistFirmLobbyist2Cd
 
 
 
-**Source**: `LOBBYIST_FIRM_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOBBYIST_FIRM_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10615,9 +10615,9 @@ LookupCode
 
 
 
-**Source**: `LOOKUP_CODES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `LOOKUP_CODES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10665,9 +10665,9 @@ NamesCd
 
 
 
-**Source**: `NAMES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `NAMES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10757,9 +10757,9 @@ ReceivedFilingsCd
 
 This is undocumented. J M needs to describe this table.
 
-**Source**: `RECEIVED_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `RECEIVED_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
@@ -10831,9 +10831,9 @@ ReportsCd
 
 This is an undocumented model.
 
-**Source**: `REPORTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `REPORTS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
