@@ -33,7 +33,7 @@ The {{ model_count }} tab-delimited database exports published by California's S
         <tr>
             <td>{{ field.name }}</td>
             <td>{{ field.get_internal_type }}</td>
-            <td>{{ field.help_text|safe }}</td>
+            <td>{{ field.help_text|capfirst }}</td>
         </tr>
     {% endif %}
     {% endfor %}

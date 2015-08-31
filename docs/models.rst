@@ -426,7 +426,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>enty_naml</td>
             <td>CharField</td>
-            <td>Entity's business name or last name if the entity is an individual</td>
+            <td>Entity&#39;s business name or last name if the entity is an individual</td>
         </tr>
     
     
@@ -434,7 +434,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>enty_namf</td>
             <td>CharField</td>
-            <td>Entity's first name if the entity is an individual</td>
+            <td>Entity&#39;s first name if the entity is an individual</td>
         </tr>
     
     
@@ -442,7 +442,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>enty_namt</td>
             <td>CharField</td>
-            <td>Entity's name prefix or title if the entity is an individual</td>
+            <td>Entity&#39;s name prefix or title if the entity is an individual</td>
         </tr>
     
     
@@ -450,7 +450,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>enty_nams</td>
             <td>CharField</td>
-            <td>Entity's name suffix if the entity is an individual</td>
+            <td>Entity&#39;s name suffix if the entity is an individual</td>
         </tr>
     
     
@@ -466,7 +466,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>mail_city</td>
             <td>CharField</td>
-            <td>City portion of the entity's mailing address</td>
+            <td>City portion of the entity&#39;s mailing address</td>
         </tr>
     
     
@@ -474,7 +474,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>mail_st</td>
             <td>CharField</td>
-            <td>State portion of the entity's mailing address</td>
+            <td>State portion of the entity&#39;s mailing address</td>
         </tr>
     
     
@@ -482,7 +482,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>mail_zip4</td>
             <td>CharField</td>
-            <td>Zipcode portion of the entity's mailing address</td>
+            <td>Zipcode portion of the entity&#39;s mailing address</td>
         </tr>
     
     
@@ -570,7 +570,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>off_s_h_cd</td>
             <td>CharField</td>
-            <td>Office sought/held code. Legal values are 'S' for sought and 'H' for held.</td>
+            <td>Office sought/held code. Legal values are &#39;S&#39; for sought and &#39;H&#39; for held.</td>
         </tr>
     
     
@@ -578,7 +578,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>non_pty_cb</td>
             <td>CharField</td>
-            <td>Non-partisan check-box. Legal values are 'X' and null.</td>
+            <td>Non-partisan check-box. Legal values are &#39;X&#39; and null.</td>
         </tr>
     
     
@@ -610,7 +610,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>sup_opp_cd</td>
             <td>CharField</td>
-            <td>Support/oppose code (S/O). Legal values are 'S' for support and 'O' for oppose.</td>
+            <td>Support/oppose code (S/O). Legal values are &#39;S&#39; for support and &#39;O&#39; for oppose.</td>
         </tr>
     
     
@@ -718,7 +718,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_date</td>
             <td>DateField</td>
-            <td>date when signed</td>
+            <td>Date when signed</td>
         </tr>
     
     
@@ -726,7 +726,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_loc</td>
             <td>CharField</td>
-            <td>city and state where signed</td>
+            <td>City and state where signed</td>
         </tr>
     
     
@@ -734,7 +734,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_naml</td>
             <td>CharField</td>
-            <td>last name of the signer</td>
+            <td>Last name of the signer</td>
         </tr>
     
     
@@ -742,7 +742,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_namf</td>
             <td>CharField</td>
-            <td>first name of the signer</td>
+            <td>First name of the signer</td>
         </tr>
     
     
@@ -750,7 +750,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_namt</td>
             <td>CharField</td>
-            <td>title of the signer</td>
+            <td>Title of the signer</td>
         </tr>
     
     
@@ -758,7 +758,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_nams</td>
             <td>CharField</td>
-            <td>suffix of the signer</td>
+            <td>Suffix of the signer</td>
         </tr>
     
     
@@ -951,7 +951,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_city</td>
             <td>CharField</td>
-            <td>candidate/officeholder city</td>
+            <td>Candidate/officeholder city</td>
         </tr>
     
     
@@ -959,7 +959,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_email</td>
             <td>CharField</td>
-            <td>candidate/officeholder email</td>
+            <td>Candidate/officeholder email</td>
         </tr>
     
     
@@ -967,7 +967,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_fax</td>
             <td>CharField</td>
-            <td>candidate/officeholder fax</td>
+            <td>Candidate/officeholder fax</td>
         </tr>
     
     
@@ -983,7 +983,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_namf</td>
             <td>CharField</td>
-            <td>candidate/officeholder first name</td>
+            <td>Candidate/officeholder first name</td>
         </tr>
     
     
@@ -991,7 +991,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_naml</td>
             <td>CharField</td>
-            <td>Candidate/officeholder's last name.</td>
+            <td>Candidate/officeholder&#39;s last name.</td>
         </tr>
     
     
@@ -999,7 +999,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_nams</td>
             <td>CharField</td>
-            <td>Candidate/officeholder's name suffix.</td>
+            <td>Candidate/officeholder&#39;s name suffix.</td>
         </tr>
     
     
@@ -1007,7 +1007,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_namt</td>
             <td>CharField</td>
-            <td>Candidate/officeholder's prefix or title.</td>
+            <td>Candidate/officeholder&#39;s prefix or title.</td>
         </tr>
     
     
@@ -1015,7 +1015,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_phon</td>
             <td>CharField</td>
-            <td>candidate/officeholder phone</td>
+            <td>Candidate/officeholder phone</td>
         </tr>
     
     
@@ -1071,7 +1071,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>elect_date</td>
             <td>DateTimeField</td>
-            <td>Date of the General Election. This date will be the same as on the filing's cover (CVR) record.</td>
+            <td>Date of the General Election. This date will be the same as on the filing&#39;s cover (CVR) record.</td>
         </tr>
     
     
@@ -1127,7 +1127,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_id</td>
             <td>CharField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -1391,7 +1391,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>stmt_type</td>
             <td>CharField</td>
-            <td>type of statement</td>
+            <td>Type of statement</td>
         </tr>
     
     
@@ -1407,7 +1407,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>thru_date</td>
             <td>DateTimeField</td>
-            <td>reporting period through date</td>
+            <td>Reporting period through date</td>
         </tr>
     
     
@@ -1415,7 +1415,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_city</td>
             <td>CharField</td>
-            <td>City portion of the treasurer or responsible officer's street address.</td>
+            <td>City portion of the treasurer or responsible officer&#39;s street address.</td>
         </tr>
     
     
@@ -1439,7 +1439,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_namf</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's first name. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s first name. Not used on Form 460 Schedule D.</td>
         </tr>
     
     
@@ -1447,7 +1447,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_naml</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's last name. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s last name. Not used on Form 460 Schedule D.</td>
         </tr>
     
     
@@ -1455,7 +1455,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_nams</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's suffix. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s suffix. Not used on Form 460 Schedule D.</td>
         </tr>
     
     
@@ -1463,7 +1463,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_namt</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's prefix or title. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s prefix or title. Not used on Form 460 Schedule D.</td>
         </tr>
     
     
@@ -1532,7 +1532,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>actvty_lvl</td>
             <td>CharField</td>
-            <td>Organization's level of activity</td>
+            <td>Organization&#39;s level of activity</td>
         </tr>
     
     
@@ -1692,7 +1692,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>filer_id</td>
             <td>CharField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -1940,7 +1940,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_zip4</td>
             <td>CharField</td>
-            <td>Treasurer's ZIP Code</td>
+            <td>Treasurer&#39;s ZIP Code</td>
         </tr>
     
     
@@ -2105,7 +2105,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>payee_city</td>
             <td>CharField</td>
-            <td>First line of the payee's street address</td>
+            <td>First line of the payee&#39;s street address</td>
         </tr>
     
     
@@ -2113,7 +2113,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>payee_namf</td>
             <td>CharField</td>
-            <td>Payee's first name if the payee is an individual</td>
+            <td>Payee&#39;s first name if the payee is an individual</td>
         </tr>
     
     
@@ -2129,7 +2129,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>payee_nams</td>
             <td>CharField</td>
-            <td>Payee's name suffix if the payee is an individual</td>
+            <td>Payee&#39;s name suffix if the payee is an individual</td>
         </tr>
     
     
@@ -2137,7 +2137,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>payee_namt</td>
             <td>CharField</td>
-            <td>Payee's prefix or title if the payee is an individual</td>
+            <td>Payee&#39;s prefix or title if the payee is an individual</td>
         </tr>
     
     
@@ -2145,7 +2145,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>payee_st</td>
             <td>CharField</td>
-            <td>Payee's state</td>
+            <td>Payee&#39;s state</td>
         </tr>
     
     
@@ -2153,7 +2153,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>payee_zip4</td>
             <td>CharField</td>
-            <td>Payee's ZIP Code</td>
+            <td>Payee&#39;s ZIP Code</td>
         </tr>
     
     
@@ -2177,7 +2177,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tres_city</td>
             <td>CharField</td>
-            <td>City portion of the treasurer or responsible officer's street address</td>
+            <td>City portion of the treasurer or responsible officer&#39;s street address</td>
         </tr>
     
     
@@ -2185,7 +2185,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tres_namf</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's first name</td>
+            <td>Treasurer or responsible officer&#39;s first name</td>
         </tr>
     
     
@@ -2193,7 +2193,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tres_naml</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's last name</td>
+            <td>Treasurer or responsible officer&#39;s last name</td>
         </tr>
     
     
@@ -2201,7 +2201,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tres_nams</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's suffix</td>
+            <td>Treasurer or responsible officer&#39;s suffix</td>
         </tr>
     
     
@@ -2209,7 +2209,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tres_namt</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's prefix or title</td>
+            <td>Treasurer or responsible officer&#39;s prefix or title</td>
         </tr>
     
     
@@ -2217,7 +2217,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tres_st</td>
             <td>CharField</td>
-            <td>State portion of the treasurer or responsible officer's address</td>
+            <td>State portion of the treasurer or responsible officer&#39;s address</td>
         </tr>
     
     
@@ -2225,7 +2225,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tres_zip4</td>
             <td>CharField</td>
-            <td>ZIP Code portion of the treasurer or responsible officer's address</td>
+            <td>ZIP Code portion of the treasurer or responsible officer&#39;s address</td>
         </tr>
     
     
@@ -2233,7 +2233,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>xref_match</td>
             <td>CharField</td>
-            <td>Related item on other schedule has same transaction identifier. /"X/" indicates this condition is true</td>
+            <td>Related item on other schedule has same transaction identifier. /&quot;X/&quot; indicates this condition is true</td>
         </tr>
     
     
@@ -2277,7 +2277,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>agent_namf</td>
             <td>CharField</td>
-            <td>Agent of Ind. Contractor's First name</td>
+            <td>Agent of Ind. Contractor&#39;s First name</td>
         </tr>
     
     
@@ -2285,7 +2285,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>agent_naml</td>
             <td>CharField</td>
-            <td>Agent of Ind. Contractor's Last name (Sched G)</td>
+            <td>Agent of Ind. Contractor&#39;s Last name (Sched G)</td>
         </tr>
     
     
@@ -2293,7 +2293,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>agent_nams</td>
             <td>CharField</td>
-            <td>Agent of Ind. Contractor's Suffix</td>
+            <td>Agent of Ind. Contractor&#39;s Suffix</td>
         </tr>
     
     
@@ -2301,7 +2301,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>agent_namt</td>
             <td>CharField</td>
-            <td>Agent of Ind. Contractor's Prefix or Title</td>
+            <td>Agent of Ind. Contractor&#39;s Prefix or Title</td>
         </tr>
     
     
@@ -2325,7 +2325,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>bakref_tid</td>
             <td>CharField</td>
-            <td>Back Reference to a Tran_ID of a 'parent' record</td>
+            <td>Back Reference to a Tran_ID of a &#39;parent&#39; record</td>
         </tr>
     
     
@@ -2357,7 +2357,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>cand_namf</td>
             <td>CharField</td>
-            <td>Candidate's First name</td>
+            <td>Candidate&#39;s First name</td>
         </tr>
     
     
@@ -2365,7 +2365,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>cand_naml</td>
             <td>CharField</td>
-            <td>Candidate's Last name</td>
+            <td>Candidate&#39;s Last name</td>
         </tr>
     
     
@@ -2373,7 +2373,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>cand_nams</td>
             <td>CharField</td>
-            <td>Candidate's Suffix</td>
+            <td>Candidate&#39;s Suffix</td>
         </tr>
     
     
@@ -2381,7 +2381,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>cand_namt</td>
             <td>CharField</td>
-            <td>Candidate's Prefix or Title</td>
+            <td>Candidate&#39;s Prefix or Title</td>
         </tr>
     
     
@@ -2389,7 +2389,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>cmte_id</td>
             <td>CharField</td>
-            <td>Committee ID (If [COM|RCP] & no ID#, Treas info Req.)</td>
+            <td>Committee ID (If [COM|RCP] &amp; no ID#, Treas info Req.)</td>
         </tr>
     
     
@@ -2397,7 +2397,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>cum_oth</td>
             <td>DecimalField</td>
-            <td>Cumulative / 'Other' (No Cumulative on Sched E & G)</td>
+            <td>Cumulative / &#39;Other&#39; (No Cumulative on Sched E &amp; G)</td>
         </tr>
     
     
@@ -2405,7 +2405,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>cum_ytd</td>
             <td>DecimalField</td>
-            <td>Cumulative / Year-to-date amount         (No Cumulative on Sched E & G)</td>
+            <td>Cumulative / Year-to-date amount         (No Cumulative on Sched E &amp; G)</td>
         </tr>
     
     
@@ -2437,7 +2437,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>expn_code</td>
             <td>CharField</td>
-            <td>Expense Code - Values: (Refer to list in Overview) Note: CTB & IND need explanation & listing on Sched D TRC & TRS require explanation.</td>
+            <td>Expense Code - Values: (Refer to list in Overview) Note: CTB &amp; IND need explanation &amp; listing on Sched D TRC &amp; TRS require explanation.</td>
         </tr>
     
     
@@ -2445,7 +2445,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>expn_date</td>
             <td>DateField</td>
-            <td>Date of Expenditure (Note: Date not on Sched E & G)</td>
+            <td>Date of Expenditure (Note: Date not on Sched E &amp; G)</td>
         </tr>
     
     
@@ -2477,7 +2477,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>g_from_e_f</td>
             <td>CharField</td>
-            <td>Back Reference from Sched G to Sched 'E' or 'F'?</td>
+            <td>Back Reference from Sched G to Sched &#39;E&#39; or &#39;F&#39;?</td>
         </tr>
     
     
@@ -2557,7 +2557,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>payee_namf</td>
             <td>CharField</td>
-            <td>Payee's First name</td>
+            <td>Payee&#39;s First name</td>
         </tr>
     
     
@@ -2565,7 +2565,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>payee_naml</td>
             <td>CharField</td>
-            <td>Payee's Last name</td>
+            <td>Payee&#39;s Last name</td>
         </tr>
     
     
@@ -2573,7 +2573,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>payee_nams</td>
             <td>CharField</td>
-            <td>Payee's Suffix</td>
+            <td>Payee&#39;s Suffix</td>
         </tr>
     
     
@@ -2581,7 +2581,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>payee_namt</td>
             <td>CharField</td>
-            <td>Payee's Prefix or Title</td>
+            <td>Payee&#39;s Prefix or Title</td>
         </tr>
     
     
@@ -2637,7 +2637,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>tres_namf</td>
             <td>CharField</td>
-            <td>Treasurer's First name (Req if [COM|RCP] & no ID#)</td>
+            <td>Treasurer&#39;s First name (Req if [COM|RCP] &amp; no ID#)</td>
         </tr>
     
     
@@ -2645,7 +2645,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>tres_naml</td>
             <td>CharField</td>
-            <td>Treasurer's Last name (Req if [COM|RCP] & no ID#)</td>
+            <td>Treasurer&#39;s Last name (Req if [COM|RCP] &amp; no ID#)</td>
         </tr>
     
     
@@ -2653,7 +2653,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>tres_nams</td>
             <td>CharField</td>
-            <td>Treasurer's Suffix</td>
+            <td>Treasurer&#39;s Suffix</td>
         </tr>
     
     
@@ -2661,7 +2661,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>tres_namt</td>
             <td>CharField</td>
-            <td>Treasurer's Prefix or Title</td>
+            <td>Treasurer&#39;s Prefix or Title</td>
         </tr>
     
     
@@ -2693,7 +2693,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>xref_schnm</td>
             <td>CharField</td>
-            <td>Related item is included on Sched 'C' or 'H2'</td>
+            <td>Related item is included on Sched &#39;C&#39; or &#39;H2&#39;</td>
         </tr>
     
     
@@ -2871,7 +2871,7 @@ Candidate Intention Statement
         <tr>
             <td>filer_id</td>
             <td>CharField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -2879,7 +2879,7 @@ Candidate Intention Statement
         <tr>
             <td>committee_id</td>
             <td>CharField</td>
-            <td>committee identification number</td>
+            <td>Committee identification number</td>
         </tr>
     
     
@@ -2887,7 +2887,7 @@ Candidate Intention Statement
         <tr>
             <td>entity_cd</td>
             <td>CharField</td>
-            <td>entity code</td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -2903,7 +2903,7 @@ Candidate Intention Statement
         <tr>
             <td>rpt_date</td>
             <td>DateTimeField</td>
-            <td>date this report is filed</td>
+            <td>Date this report is filed</td>
         </tr>
     
     
@@ -2919,7 +2919,7 @@ Candidate Intention Statement
         <tr>
             <td>from_date</td>
             <td>CharField</td>
-            <td>reporting period from date</td>
+            <td>Reporting period from date</td>
         </tr>
     
     
@@ -2935,7 +2935,7 @@ Candidate Intention Statement
         <tr>
             <td>elect_date</td>
             <td>CharField</td>
-            <td>date of election</td>
+            <td>Date of election</td>
         </tr>
     
     
@@ -2959,7 +2959,7 @@ Candidate Intention Statement
         <tr>
             <td>can_namm</td>
             <td>CharField</td>
-            <td>candidate/officeholder middle name</td>
+            <td>Candidate/officeholder middle name</td>
         </tr>
     
     
@@ -3007,7 +3007,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_st</td>
             <td>CharField</td>
-            <td>candidate/officeholder state</td>
+            <td>Candidate/officeholder state</td>
         </tr>
     
     
@@ -3015,7 +3015,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_zip4</td>
             <td>CharField</td>
-            <td>candidate officeholder zip +4</td>
+            <td>Candidate officeholder zip +4</td>
         </tr>
     
     
@@ -3023,7 +3023,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_phon</td>
             <td>CharField</td>
-            <td>candidate/officeholder phone number</td>
+            <td>Candidate/officeholder phone number</td>
         </tr>
     
     
@@ -3039,7 +3039,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_email</td>
             <td>CharField</td>
-            <td>candidate/officeholder email address</td>
+            <td>Candidate/officeholder email address</td>
         </tr>
     
     
@@ -3055,7 +3055,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_namf</td>
             <td>CharField</td>
-            <td>Unused. Financial institution's first name.</td>
+            <td>Unused. Financial institution&#39;s first name.</td>
         </tr>
     
     
@@ -3063,7 +3063,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_namt</td>
             <td>CharField</td>
-            <td>Unused. Financial institution's title.</td>
+            <td>Unused. Financial institution&#39;s title.</td>
         </tr>
     
     
@@ -3071,7 +3071,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_nams</td>
             <td>CharField</td>
-            <td>Unused. Financial institution's suffix.</td>
+            <td>Unused. Financial institution&#39;s suffix.</td>
         </tr>
     
     
@@ -3079,7 +3079,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_city</td>
             <td>CharField</td>
-            <td>Financial institution's city.</td>
+            <td>Financial institution&#39;s city.</td>
         </tr>
     
     
@@ -3087,7 +3087,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_st</td>
             <td>CharField</td>
-            <td>Financial institution's state.</td>
+            <td>Financial institution&#39;s state.</td>
         </tr>
     
     
@@ -3095,7 +3095,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_zip4</td>
             <td>CharField</td>
-            <td>Financial institution's zip code.</td>
+            <td>Financial institution&#39;s zip code.</td>
         </tr>
     
     
@@ -3103,7 +3103,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_phon</td>
             <td>CharField</td>
-            <td>Financial institution's phone number.</td>
+            <td>Financial institution&#39;s phone number.</td>
         </tr>
     
     
@@ -3111,7 +3111,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_fax</td>
             <td>CharField</td>
-            <td>Financial institution's FAX Number.</td>
+            <td>Financial institution&#39;s FAX Number.</td>
         </tr>
     
     
@@ -3119,7 +3119,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_email</td>
             <td>CharField</td>
-            <td>Financial institution's e-mail address.</td>
+            <td>Financial institution&#39;s e-mail address.</td>
         </tr>
     
     
@@ -3151,7 +3151,7 @@ Candidate Intention Statement
         <tr>
             <td>juris_cd</td>
             <td>IntegerField</td>
-            <td>office jurisdiction code</td>
+            <td>Office jurisdiction code</td>
         </tr>
     
     
@@ -3159,7 +3159,7 @@ Candidate Intention Statement
         <tr>
             <td>juris_dscr</td>
             <td>CharField</td>
-            <td>office jurisdiction description</td>
+            <td>Office jurisdiction description</td>
         </tr>
     
     
@@ -3167,7 +3167,7 @@ Candidate Intention Statement
         <tr>
             <td>dist_no</td>
             <td>CharField</td>
-            <td>district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races.</td>
+            <td>District number for the office being sought. Populated for Senate, Assembly or Board of Equalization races.</td>
         </tr>
     
     
@@ -3183,7 +3183,7 @@ Candidate Intention Statement
         <tr>
             <td>yr_of_elec</td>
             <td>IntegerField</td>
-            <td>year of election</td>
+            <td>Year of election</td>
         </tr>
     
     
@@ -3199,7 +3199,7 @@ Candidate Intention Statement
         <tr>
             <td>execute_dt</td>
             <td>DateTimeField</td>
-            <td>execution date</td>
+            <td>Execution date</td>
         </tr>
     
     
@@ -3207,7 +3207,7 @@ Candidate Intention Statement
         <tr>
             <td>can_sig</td>
             <td>CharField</td>
-            <td>candidate signature</td>
+            <td>Candidate signature</td>
         </tr>
     
     
@@ -3215,7 +3215,7 @@ Candidate Intention Statement
         <tr>
             <td>account_no</td>
             <td>CharField</td>
-            <td>account number</td>
+            <td>Account number</td>
         </tr>
     
     
@@ -3223,7 +3223,7 @@ Candidate Intention Statement
         <tr>
             <td>acct_op_dt</td>
             <td>DateField</td>
-            <td>account open date</td>
+            <td>Account open date</td>
         </tr>
     
     
@@ -3772,7 +3772,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>cand_namf</td>
             <td>CharField</td>
-            <td>Candidate/officeholder's first name. Used on the Form 401 Schedule A</td>
+            <td>Candidate/officeholder&#39;s first name. Used on the Form 401 Schedule A</td>
         </tr>
     
     
@@ -3780,7 +3780,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>cand_naml</td>
             <td>CharField</td>
-            <td>Candidate/officeholder's last name. Used on the Form 401 Schedule A</td>
+            <td>Candidate/officeholder&#39;s last name. Used on the Form 401 Schedule A</td>
         </tr>
     
     
@@ -3788,7 +3788,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>cand_nams</td>
             <td>CharField</td>
-            <td>Candidate/officeholder's name suffix. Used on the Form 401 Schedule A</td>
+            <td>Candidate/officeholder&#39;s name suffix. Used on the Form 401 Schedule A</td>
         </tr>
     
     
@@ -3796,7 +3796,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>cand_namt</td>
             <td>CharField</td>
-            <td>Candidate/officeholder's name prefix or title. Used on the Form 401 Schedule A</td>
+            <td>Candidate/officeholder&#39;s name prefix or title. Used on the Form 401 Schedule A</td>
         </tr>
     
     
@@ -3812,7 +3812,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>ctrib_city</td>
             <td>CharField</td>
-            <td>Contributor's City</td>
+            <td>Contributor&#39;s City</td>
         </tr>
     
     
@@ -3836,7 +3836,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>ctrib_namf</td>
             <td>CharField</td>
-            <td>Contributor's First Name</td>
+            <td>Contributor&#39;s First Name</td>
         </tr>
     
     
@@ -3844,7 +3844,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>ctrib_naml</td>
             <td>CharField</td>
-            <td>Contributor's last name or business name</td>
+            <td>Contributor&#39;s last name or business name</td>
         </tr>
     
     
@@ -3852,7 +3852,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>ctrib_nams</td>
             <td>CharField</td>
-            <td>Contributor's Suffix</td>
+            <td>Contributor&#39;s Suffix</td>
         </tr>
     
     
@@ -3860,7 +3860,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>ctrib_namt</td>
             <td>CharField</td>
-            <td>Contributor's Prefix or Title</td>
+            <td>Contributor&#39;s Prefix or Title</td>
         </tr>
     
     
@@ -3884,7 +3884,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>ctrib_st</td>
             <td>CharField</td>
-            <td>Contributor's State</td>
+            <td>Contributor&#39;s State</td>
         </tr>
     
     
@@ -3892,7 +3892,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>ctrib_zip4</td>
             <td>CharField</td>
-            <td>Contributor's ZIP+4</td>
+            <td>Contributor&#39;s ZIP+4</td>
         </tr>
     
     
@@ -3964,7 +3964,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_city</td>
             <td>CharField</td>
-            <td>Intermediary's City</td>
+            <td>Intermediary&#39;s City</td>
         </tr>
     
     
@@ -3980,7 +3980,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_emp</td>
             <td>CharField</td>
-            <td>Intermediary's Employer</td>
+            <td>Intermediary&#39;s Employer</td>
         </tr>
     
     
@@ -3988,7 +3988,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_namf</td>
             <td>CharField</td>
-            <td>Intermediary's First Name</td>
+            <td>Intermediary&#39;s First Name</td>
         </tr>
     
     
@@ -3996,7 +3996,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_naml</td>
             <td>CharField</td>
-            <td>Intermediary's Last Name</td>
+            <td>Intermediary&#39;s Last Name</td>
         </tr>
     
     
@@ -4004,7 +4004,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_nams</td>
             <td>CharField</td>
-            <td>Intermediary's Suffix</td>
+            <td>Intermediary&#39;s Suffix</td>
         </tr>
     
     
@@ -4012,7 +4012,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_namt</td>
             <td>CharField</td>
-            <td>Intermediary's Prefix or Title</td>
+            <td>Intermediary&#39;s Prefix or Title</td>
         </tr>
     
     
@@ -4020,7 +4020,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_occ</td>
             <td>CharField</td>
-            <td>Intermediary's Occupation</td>
+            <td>Intermediary&#39;s Occupation</td>
         </tr>
     
     
@@ -4028,7 +4028,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_self</td>
             <td>CharField</td>
-            <td>Intermediary's self employed check box</td>
+            <td>Intermediary&#39;s self employed check box</td>
         </tr>
     
     
@@ -4036,7 +4036,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_st</td>
             <td>CharField</td>
-            <td>Intermediary's state</td>
+            <td>Intermediary&#39;s state</td>
         </tr>
     
     
@@ -4044,7 +4044,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_zip4</td>
             <td>CharField</td>
-            <td>Intermediary's zip code</td>
+            <td>Intermediary&#39;s zip code</td>
         </tr>
     
     
@@ -4092,7 +4092,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>off_s_h_cd</td>
             <td>CharField</td>
-            <td>Office Sought/Held Code. Used on the Form 401 Schedule A. Legal values are 'S' for sought and 'H' for held</td>
+            <td>Office Sought/Held Code. Used on the Form 401 Schedule A. Legal values are &#39;S&#39; for sought and &#39;H&#39; for held</td>
         </tr>
     
     
@@ -4132,7 +4132,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>sup_opp_cd</td>
             <td>CharField</td>
-            <td>Support/oppose code. Legal values are 'S' for support or 'O' for oppose. Used on Form 401 Sechedule A. Transaction identifier - permanent value unique to this item</td>
+            <td>Support/oppose code. Legal values are &#39;S&#39; for support or &#39;O&#39; for oppose. Used on Form 401 Sechedule A. Transaction identifier - permanent value unique to this item</td>
         </tr>
     
     
@@ -4156,7 +4156,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tres_city</td>
             <td>CharField</td>
-            <td>City portion of the treasurer or responsible officer's street address</td>
+            <td>City portion of the treasurer or responsible officer&#39;s street address</td>
         </tr>
     
     
@@ -4164,7 +4164,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tres_namf</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's first name</td>
+            <td>Treasurer or responsible officer&#39;s first name</td>
         </tr>
     
     
@@ -4172,7 +4172,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tres_naml</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's last name</td>
+            <td>Treasurer or responsible officer&#39;s last name</td>
         </tr>
     
     
@@ -4180,7 +4180,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tres_nams</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's suffix</td>
+            <td>Treasurer or responsible officer&#39;s suffix</td>
         </tr>
     
     
@@ -4188,7 +4188,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tres_namt</td>
             <td>CharField</td>
-            <td>Treasurer or responsible officer's prefix or title</td>
+            <td>Treasurer or responsible officer&#39;s prefix or title</td>
         </tr>
     
     
@@ -4196,7 +4196,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tres_st</td>
             <td>CharField</td>
-            <td>State portion of the treasurer or responsible officer's address</td>
+            <td>State portion of the treasurer or responsible officer&#39;s address</td>
         </tr>
     
     
@@ -4204,7 +4204,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tres_zip4</td>
             <td>CharField</td>
-            <td>Zip code portion of the treasurer or responsible officer's address</td>
+            <td>Zip code portion of the treasurer or responsible officer&#39;s address</td>
         </tr>
     
     
@@ -4212,7 +4212,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>xref_match</td>
             <td>CharField</td>
-            <td>Related item on other schedule has same transaction identifier. 'X' indicates this condition is true</td>
+            <td>Related item on other schedule has same transaction identifier. &#39;X&#39; indicates this condition is true</td>
         </tr>
     
     
@@ -4220,7 +4220,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>xref_schnm</td>
             <td>CharField</td>
-            <td>Related record is included on Sched 'B2' or 'F'</td>
+            <td>Related record is included on Sched &#39;B2&#39; or &#39;F&#39;</td>
         </tr>
     
     
@@ -5125,7 +5125,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_naml</td>
             <td>CharField</td>
-            <td>Payor's last name or business name</td>
+            <td>Payor&#39;s last name or business name</td>
         </tr>
     
     
@@ -5133,7 +5133,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_namf</td>
             <td>CharField</td>
-            <td>Payor's first name.</td>
+            <td>Payor&#39;s first name.</td>
         </tr>
     
     
@@ -5141,7 +5141,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_namt</td>
             <td>CharField</td>
-            <td>Payor's Prefix or title.</td>
+            <td>Payor&#39;s Prefix or title.</td>
         </tr>
     
     
@@ -5149,7 +5149,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_nams</td>
             <td>CharField</td>
-            <td>Payor's suffix.</td>
+            <td>Payor&#39;s suffix.</td>
         </tr>
     
     
@@ -5157,7 +5157,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_city</td>
             <td>CharField</td>
-            <td>Payor's city.</td>
+            <td>Payor&#39;s city.</td>
         </tr>
     
     
@@ -5165,7 +5165,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_st</td>
             <td>CharField</td>
-            <td>Payor's State.</td>
+            <td>Payor&#39;s State.</td>
         </tr>
     
     
@@ -5173,7 +5173,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_zip4</td>
             <td>CharField</td>
-            <td>Payor's zip code.</td>
+            <td>Payor&#39;s zip code.</td>
         </tr>
     
     
@@ -5309,7 +5309,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>amt_attrib</td>
             <td>DecimalField</td>
-            <td>Amount attributed (only if Form_type = 'F498-A')</td>
+            <td>Amount attributed (only if Form_type = &#39;F498-A&#39;)</td>
         </tr>
     
     
@@ -5770,7 +5770,7 @@ filing information.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -5944,7 +5944,7 @@ fields in conjunction.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -6597,7 +6597,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>ctrib_n_cb</td>
             <td>CharField</td>
-            <td>'Campaign contribtions? P4 attached' checkbox. Applies to forms 625, 635, 645.</td>
+            <td>&#39;Campaign contribtions? P4 attached&#39; checkbox. Applies to forms 625, 635, 645.</td>
         </tr>
     
     
@@ -6605,7 +6605,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>ctrib_y_cb</td>
             <td>CharField</td>
-            <td>'Campaign contribtions? P4 attached' checkbox. Applies to forms 625, 635, 645.</td>
+            <td>&#39;Campaign contribtions? P4 attached&#39; checkbox. Applies to forms 625, 635, 645.</td>
         </tr>
     
     
@@ -6629,7 +6629,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>filer_id</td>
             <td>CharField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -6749,7 +6749,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>lobby_n_cb</td>
             <td>CharField</td>
-            <td>'Lobbying activity none' checkbox. Applies only to Form 625.</td>
+            <td>&#39;Lobbying activity none&#39; checkbox. Applies only to Form 625.</td>
         </tr>
     
     
@@ -6757,7 +6757,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>lobby_y_cb</td>
             <td>CharField</td>
-            <td>'Lobbying activity Form 630 attached' checkbox. Applies only to Form 625.</td>
+            <td>&#39;Lobbying activity Form 630 attached&#39; checkbox. Applies only to Form 625.</td>
         </tr>
     
     
@@ -6829,7 +6829,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>nopart1_cb</td>
             <td>CharField</td>
-            <td>'No Part I information' checkbox. Applies only to Form 615.</td>
+            <td>&#39;No Part I information&#39; checkbox. Applies only to Form 615.</td>
         </tr>
     
     
@@ -6837,7 +6837,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>nopart2_cb</td>
             <td>CharField</td>
-            <td>'No Part II information' checkbox. Applies only to Form 615.</td>
+            <td>&#39;No Part II information&#39; checkbox. Applies only to Form 615.</td>
         </tr>
     
     
@@ -6845,7 +6845,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>part1_1_cb</td>
             <td>CharField</td>
-            <td>'Partners, owners Form 615 attached ...' checkbox. Applies only to form 625.</td>
+            <td>&#39;Partners, owners Form 615 attached ...&#39; checkbox. Applies only to form 625.</td>
         </tr>
     
     
@@ -6853,7 +6853,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>part1_2_cb</td>
             <td>CharField</td>
-            <td>'Partners, owners listed below ...' checkbox. Applies only to Form 625.</td>
+            <td>&#39;Partners, owners listed below ...&#39; checkbox. Applies only to Form 625.</td>
         </tr>
     
     
@@ -7233,7 +7233,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>filer_id</td>
             <td>CharField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -7329,7 +7329,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>l_firm_cb</td>
             <td>CharField</td>
-            <td>'Lobbying firm within the ... ' checkbox. Applies to Form 607.</td>
+            <td>&#39;Lobbying firm within the ... &#39; checkbox. Applies to Form 607.</td>
         </tr>
     
     
@@ -7337,7 +7337,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>lby_604_cb</td>
             <td>CharField</td>
-            <td>'Lobbying Agency in this 604 statement' checkbox. Applies to Form 604.</td>
+            <td>&#39;Lobbying Agency in this 604 statement&#39; checkbox. Applies to Form 604.</td>
         </tr>
     
     
@@ -7345,7 +7345,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>lby_reg_cb</td>
             <td>CharField</td>
-            <td>'Lobbying Agency in form 601/603 registration statement' checkbox. Applies to Form 604.</td>
+            <td>&#39;Lobbying Agency in form 601/603 registration statement&#39; checkbox. Applies to Form 604.</td>
         </tr>
     
     
@@ -7353,7 +7353,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>lobby_cb</td>
             <td>CharField</td>
-            <td>'Lobbying within the meaning...' checkbox. Applies to Form 607.</td>
+            <td>&#39;Lobbying within the meaning...&#39; checkbox. Applies to Form 607.</td>
         </tr>
     
     
@@ -7585,7 +7585,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>stmt_firm</td>
             <td>CharField</td>
-            <td>Lobby firm named in 'Statement of Responsible Officer'This field only applies to Form 601.</td>
+            <td>Lobby firm named in &#39;Statement of Responsible Officer&#39;This field only applies to Form 601.</td>
         </tr>
     
     
@@ -7671,7 +7671,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>exec_date</td>
             <td>DateField</td>
-            <td>date the original report (or prior amendment to the original report) was executed on.</td>
+            <td>Date the original report (or prior amendment to the original report) was executed on.</td>
         </tr>
     
     
@@ -7679,7 +7679,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>from_date</td>
             <td>DateField</td>
-            <td>reporting period from date of original report</td>
+            <td>Reporting period from date of original report</td>
         </tr>
     
     
@@ -7687,7 +7687,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>thru_date</td>
             <td>DateField</td>
-            <td>report period to/through date of original.</td>
+            <td>Report period to/through date of original.</td>
         </tr>
     
     
@@ -7695,7 +7695,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>chg_parts</td>
             <td>CharField</td>
-            <td>amended into affects items on part(s) text description.</td>
+            <td>Amended into affects items on part(s) text description.</td>
         </tr>
     
     
@@ -7703,7 +7703,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>chg_sects</td>
             <td>CharField</td>
-            <td>amended into affects items on sections(s) text description.</td>
+            <td>Amended into affects items on sections(s) text description.</td>
         </tr>
     
     
@@ -7711,7 +7711,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>amend_txt1</td>
             <td>CharField</td>
-            <td>description of changes to the filing</td>
+            <td>Description of changes to the filing</td>
         </tr>
     
     
@@ -8999,7 +8999,7 @@ Payment to other lobbying firms
         <tr>
             <td>firm_city</td>
             <td>CharField</td>
-            <td>Firm, employer or coalition's city</td>
+            <td>Firm, employer or coalition&#39;s city</td>
         </tr>
     
     
@@ -9007,7 +9007,7 @@ Payment to other lobbying firms
         <tr>
             <td>firm_name</td>
             <td>CharField</td>
-            <td>Firm, employer or coalition's name</td>
+            <td>Firm, employer or coalition&#39;s name</td>
         </tr>
     
     
@@ -9015,7 +9015,7 @@ Payment to other lobbying firms
         <tr>
             <td>firm_phon</td>
             <td>CharField</td>
-            <td>Firm, employer or coalition's phone number</td>
+            <td>Firm, employer or coalition&#39;s phone number</td>
         </tr>
     
     
@@ -9023,7 +9023,7 @@ Payment to other lobbying firms
         <tr>
             <td>firm_st</td>
             <td>CharField</td>
-            <td>Firm, employer or coalition's ZIP Code</td>
+            <td>Firm, employer or coalition&#39;s ZIP Code</td>
         </tr>
     
     
@@ -9549,7 +9549,7 @@ Ballot measure dates and times
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9641,7 +9641,7 @@ This is an undocumented model.
         <tr>
             <td>filer_id</td>
             <td>CharField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9701,7 +9701,7 @@ links acronyms to filers
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9738,7 +9738,7 @@ addresses change.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9806,7 +9806,7 @@ This table stores lobbyist ethics training dates.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9858,7 +9858,7 @@ Links a filer to their interest codes.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10064,7 +10064,7 @@ to change characteristics over time.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10104,7 +10104,7 @@ to change characteristics over time.
         <tr>
             <td>category</td>
             <td>IntegerField</td>
-            <td>Defines the filer's category such as controlled, jointly controlled, etc. (subset of filer's type)</td>
+            <td>Defines the filer&#39;s category such as controlled, jointly controlled, etc. (subset of filer&#39;s type)</td>
         </tr>
     
     
@@ -10168,7 +10168,7 @@ to change characteristics over time.
         <tr>
             <td>party_cd</td>
             <td>IntegerField</td>
-            <td>Filer's political party</td>
+            <td>Filer&#39;s political party</td>
         </tr>
     
     
@@ -10176,7 +10176,7 @@ to change characteristics over time.
         <tr>
             <td>county_cd</td>
             <td>IntegerField</td>
-            <td>Filer's county code</td>
+            <td>Filer&#39;s county code</td>
         </tr>
     
     
@@ -10184,7 +10184,7 @@ to change characteristics over time.
         <tr>
             <td>district_cd</td>
             <td>IntegerField</td>
-            <td>Filer's district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races</td>
+            <td>Filer&#39;s district number for the office being sought. Populated for Senate, Assembly or Board of Equalization races</td>
         </tr>
     
     
@@ -10289,7 +10289,7 @@ identification numbers.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10350,7 +10350,7 @@ to a filer are derived.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10866,7 +10866,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -11086,7 +11086,7 @@ LobbyistContributions1Cd
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -11171,7 +11171,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -11255,7 +11255,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -13251,7 +13251,7 @@ This is undocumented. J M needs to describe this table.
         <tr>
             <td>filer_id</td>
             <td>IntegerField</td>
-            <td>Filer's unique identification number</td>
+            <td>Filer&#39;s unique identification number</td>
         </tr>
     
     
