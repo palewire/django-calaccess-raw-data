@@ -18,15 +18,16 @@ disclosure forms below.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -264,6 +265,7 @@ disclosure forms below.
     
     </tbody>
     </table>
+    </div>
 
 Cvr2SoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -278,15 +280,16 @@ by a slate-mailer organization or recipient committee.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -494,6 +497,7 @@ by a slate-mailer organization or recipient committee.
     
     </tbody>
     </table>
+    </div>
 
 Cvr3VerificationInfoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -506,15 +510,16 @@ Cover page verification information from campaign disclosure forms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -602,6 +607,7 @@ Cover page verification information from campaign disclosure forms
     
     </tbody>
     </table>
+    </div>
 
 CvrCampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -627,15 +633,16 @@ The data contained herin is "as filed" by the entity making the filing.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -1161,6 +1168,7 @@ The data contained herin is "as filed" by the entity making the filing.
     
     </tbody>
     </table>
+    </div>
 
 CvrSoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1174,15 +1182,16 @@ form filed by a slate-mailer organization or recipient committee.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -1516,6 +1525,7 @@ form filed by a slate-mailer organization or recipient committee.
     
     </tbody>
     </table>
+    </div>
 
 DebtCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1529,15 +1539,16 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -1745,6 +1756,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
     
     </tbody>
     </table>
+    </div>
 
 ExpnCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1757,15 +1769,16 @@ Campaign expenditures from a variety of forms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -2093,6 +2106,7 @@ Campaign expenditures from a variety of forms
     
     </tbody>
     </table>
+    </div>
 
 F495P2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -2120,15 +2134,16 @@ its last report.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -2186,6 +2201,7 @@ its last report.
     
     </tbody>
     </table>
+    </div>
 
 F501502Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -2201,15 +2217,16 @@ Candidate Intention Statement
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -2543,6 +2560,7 @@ Candidate Intention Statement
     
     </tbody>
     </table>
+    </div>
 
 LoanCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -2555,15 +2573,16 @@ Loans received and made.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -2867,6 +2886,7 @@ Loans received and made.
     
     </tbody>
     </table>
+    </div>
 
 RcptCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -2884,15 +2904,16 @@ Receipts schedules for the following forms.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -3280,6 +3301,7 @@ Receipts schedules for the following forms.
     
     </tbody>
     </table>
+    </div>
 
 S401Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -3293,15 +3315,16 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -3533,6 +3556,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
     
     </tbody>
     </table>
+    </div>
 
 S496Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -3545,15 +3569,16 @@ Form 496 Late Independent Expenditures
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -3635,6 +3660,7 @@ Form 496 Late Independent Expenditures
     
     </tbody>
     </table>
+    </div>
 
 S497Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -3647,15 +3673,16 @@ Form 497 Late Contributions Received/Made
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -3911,6 +3938,7 @@ Form 497 Late Contributions Received/Made
     
     </tbody>
     </table>
+    </div>
 
 S498Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -3923,15 +3951,16 @@ Form 498 Slate Mailer Late Independent Expenditures Made
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4163,6 +4192,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
     
     </tbody>
     </table>
+    </div>
 
 SpltCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -4178,15 +4208,16 @@ Split Records
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4244,6 +4275,7 @@ Split Records
     
     </tbody>
     </table>
+    </div>
 
 
 Common
@@ -4260,15 +4292,16 @@ This table method is undocumented in the print docs.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4470,6 +4503,7 @@ This table method is undocumented in the print docs.
     
     </tbody>
     </table>
+    </div>
 
 FilerFilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -4484,15 +4518,16 @@ filing information.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4598,6 +4633,7 @@ filing information.
     
     </tbody>
     </table>
+    </div>
 
 FilernameCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -4620,15 +4656,16 @@ fields in conjunction.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4740,6 +4777,7 @@ fields in conjunction.
     
     </tbody>
     </table>
+    </div>
 
 FilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -4753,15 +4791,16 @@ a filing are derived.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4783,6 +4822,7 @@ a filing are derived.
     
     </tbody>
     </table>
+    </div>
 
 SmryCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -4795,15 +4835,16 @@ Summary totals from filings.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4867,6 +4908,7 @@ Summary totals from filings.
     
     </tbody>
     </table>
+    </div>
 
 TextMemoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -4879,15 +4921,16 @@ Text memos attached to electronic filings
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -4939,6 +4982,7 @@ Text memos attached to electronic filings
     
     </tbody>
     </table>
+    </div>
 
 
 Lobbying
@@ -4955,15 +4999,16 @@ Additional data from lobbyist disclosure forms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -5051,6 +5096,7 @@ Additional data from lobbyist disclosure forms
     
     </tbody>
     </table>
+    </div>
 
 Cvr2RegistrationCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -5063,15 +5109,16 @@ Cover page of lobbying disclosure forms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -5153,6 +5200,7 @@ Cover page of lobbying disclosure forms
     
     </tbody>
     </table>
+    </div>
 
 CvrLobbyDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -5165,15 +5213,16 @@ Cover page information for lobbying disclosure forms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -5495,6 +5544,7 @@ Cover page information for lobbying disclosure forms
     
     </tbody>
     </table>
+    </div>
 
 CvrRegistrationCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -5507,15 +5557,16 @@ Cover page of lobbying disclosure forms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -5951,6 +6002,7 @@ Cover page of lobbying disclosure forms
     
     </tbody>
     </table>
+    </div>
 
 F690P2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -5965,15 +6017,16 @@ Amends lobbying disclosure filings
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -6049,6 +6102,7 @@ Amends lobbying disclosure filings
     
     </tbody>
     </table>
+    </div>
 
 LattCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -6061,15 +6115,16 @@ Lobbyist disclosure attachment schedules for payments
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -6199,6 +6254,7 @@ Lobbyist disclosure attachment schedules for payments
     
     </tbody>
     </table>
+    </div>
 
 LccmCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -6211,15 +6267,16 @@ Lobbying campaign contributions
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -6373,6 +6430,7 @@ Lobbying campaign contributions
     
     </tbody>
     </table>
+    </div>
 
 LempCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -6385,15 +6443,16 @@ Lobbyist employers and subcontracted clients
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -6547,6 +6606,7 @@ Lobbyist employers and subcontracted clients
     
     </tbody>
     </table>
+    </div>
 
 LexpCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -6559,15 +6619,16 @@ Lobbying activity expenditures
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -6727,6 +6788,7 @@ Lobbying activity expenditures
     
     </tbody>
     </table>
+    </div>
 
 LobbyAmendmentsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -6739,15 +6801,16 @@ Lobbyist registration amendment information
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7009,6 +7072,7 @@ Lobbyist registration amendment information
     
     </tbody>
     </table>
+    </div>
 
 LothCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7021,15 +7085,16 @@ Payment to other lobbying firms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7159,6 +7224,7 @@ Payment to other lobbying firms
     
     </tbody>
     </table>
+    </div>
 
 LpayCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7171,15 +7237,16 @@ Payments made or received by lobbying firms
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7345,6 +7412,7 @@ Payments made or received by lobbying firms
     
     </tbody>
     </table>
+    </div>
 
 
 Other
@@ -7361,15 +7429,16 @@ Contains acronyms and their meaning.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7403,6 +7472,7 @@ Contains acronyms and their meaning.
     
     </tbody>
     </table>
+    </div>
 
 AddressCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7417,15 +7487,16 @@ desplayed by the AMS.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7477,6 +7548,7 @@ desplayed by the AMS.
     
     </tbody>
     </table>
+    </div>
 
 BallotMeasuresCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7489,15 +7561,16 @@ Ballot measure dates and times
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7543,6 +7616,7 @@ Ballot measure dates and times
     
     </tbody>
     </table>
+    </div>
 
 EfsFilingLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7555,15 +7629,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7609,6 +7684,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 FilerAcronymsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7621,15 +7697,16 @@ links acronyms to filers
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7651,6 +7728,7 @@ links acronyms to filers
     
     </tbody>
     </table>
+    </div>
 
 FilerAddressCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7664,15 +7742,16 @@ addresses change.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7712,6 +7791,7 @@ addresses change.
     
     </tbody>
     </table>
+    </div>
 
 FilerEthicsClassCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7724,15 +7804,16 @@ This table stores lobbyist ethics training dates.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7760,6 +7841,7 @@ This table stores lobbyist ethics training dates.
     
     </tbody>
     </table>
+    </div>
 
 FilerInterestsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7772,15 +7854,16 @@ Links a filer to their interest codes.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7814,6 +7897,7 @@ Links a filer to their interest codes.
     
     </tbody>
     </table>
+    </div>
 
 FilerLinksCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7826,15 +7910,16 @@ Links filers to each other and records their relationship type.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7898,6 +7983,7 @@ Links filers to each other and records their relationship type.
     
     </tbody>
     </table>
+    </div>
 
 FilerStatusTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7910,15 +7996,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -7940,6 +8027,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 FilerToFilerTypeCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -7954,15 +8042,16 @@ to change characteristics over time.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8068,6 +8157,7 @@ to change characteristics over time.
     
     </tbody>
     </table>
+    </div>
 
 FilerTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8080,15 +8170,16 @@ This lookup table describes filer types.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8128,6 +8219,7 @@ This lookup table describes filer types.
     
     </tbody>
     </table>
+    </div>
 
 FilerXrefCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8141,15 +8233,16 @@ identification numbers.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8183,6 +8276,7 @@ identification numbers.
     
     </tbody>
     </table>
+    </div>
 
 FilersCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8196,15 +8290,16 @@ to a filer are derived.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8220,6 +8315,7 @@ to a filer are derived.
     
     </tbody>
     </table>
+    </div>
 
 FilingPeriodCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8232,15 +8328,16 @@ FilingPeriodCd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8292,6 +8389,7 @@ FilingPeriodCd
     
     </tbody>
     </table>
+    </div>
 
 GroupTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8304,15 +8402,16 @@ This lookup table stores group type information.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8340,6 +8439,7 @@ This lookup table stores group type information.
     
     </tbody>
     </table>
+    </div>
 
 HdrCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8352,15 +8452,16 @@ Electronic filing record header data
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8424,6 +8525,7 @@ Electronic filing record header data
     
     </tbody>
     </table>
+    </div>
 
 HeaderCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8436,15 +8538,16 @@ Lookup table used to report form 460 information in the AMS.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8526,6 +8629,7 @@ Lookup table used to report form 460 information in the AMS.
     
     </tbody>
     </table>
+    </div>
 
 ImageLinksCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8538,15 +8642,16 @@ This table links images to filers and accounts.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8586,6 +8691,7 @@ This table links images to filers and accounts.
     
     </tbody>
     </table>
+    </div>
 
 LegislativeSessionsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8598,15 +8704,16 @@ Legislative session, begin and end dates look up table.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8634,6 +8741,7 @@ Legislative session, begin and end dates look up table.
     
     </tbody>
     </table>
+    </div>
 
 LobbyingChgLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8646,15 +8754,16 @@ LobbyingChgLogCd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8808,6 +8917,7 @@ LobbyingChgLogCd
     
     </tbody>
     </table>
+    </div>
 
 LobbyistContributions1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8820,15 +8930,16 @@ LobbyistContributions1Cd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8880,6 +8991,7 @@ LobbyistContributions1Cd
     
     </tbody>
     </table>
+    </div>
 
 LobbyistContributions2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8893,15 +9005,16 @@ disclosure table (Lobbyist Contributions 3)
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -8953,6 +9066,7 @@ disclosure table (Lobbyist Contributions 3)
     
     </tbody>
     </table>
+    </div>
 
 LobbyistContributions3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -8965,15 +9079,16 @@ Lobbyist contribution disclosure table.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9025,6 +9140,7 @@ Lobbyist contribution disclosure table.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistEmpLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9037,15 +9153,16 @@ LobbyistEmpLobbyist1Cd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9091,6 +9208,7 @@ LobbyistEmpLobbyist1Cd
     
     </tbody>
     </table>
+    </div>
 
 LobbyistEmpLobbyist2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9103,15 +9221,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9157,6 +9276,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistEmployer1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9169,15 +9289,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9307,6 +9428,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistEmployer2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9319,15 +9441,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9457,6 +9580,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistEmployer3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9469,15 +9593,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9607,6 +9732,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistEmployerFirms1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9619,15 +9745,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9667,6 +9794,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistEmployerFirms2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9679,15 +9807,16 @@ LobbyistEmployerFirms2Cd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9727,6 +9856,7 @@ LobbyistEmployerFirms2Cd
     
     </tbody>
     </table>
+    </div>
 
 LobbyistFirm1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9739,15 +9869,16 @@ LobbyistFirm1Cd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -9865,6 +9996,7 @@ LobbyistFirm1Cd
     
     </tbody>
     </table>
+    </div>
 
 LobbyistFirm2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9877,15 +10009,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10003,6 +10136,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistFirm3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10015,15 +10149,16 @@ LobbyistFirm3Cd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10141,6 +10276,7 @@ LobbyistFirm3Cd
     
     </tbody>
     </table>
+    </div>
 
 LobbyistFirmEmployer1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10153,15 +10289,16 @@ This is an undocumented model (Ask Matt)
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10237,6 +10374,7 @@ This is an undocumented model (Ask Matt)
     
     </tbody>
     </table>
+    </div>
 
 LobbyistFirmEmployer2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10249,15 +10387,16 @@ This is an undocumented model
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10333,6 +10472,7 @@ This is an undocumented model
     
     </tbody>
     </table>
+    </div>
 
 LobbyistFirmLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10345,15 +10485,16 @@ It's an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10399,6 +10540,7 @@ It's an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 LobbyistFirmLobbyist2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10411,15 +10553,16 @@ LobbyistFirmLobbyist2Cd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10465,6 +10608,7 @@ LobbyistFirmLobbyist2Cd
     
     </tbody>
     </table>
+    </div>
 
 LookupCode
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10477,15 +10621,16 @@ LookupCode
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10513,6 +10658,7 @@ LookupCode
     
     </tbody>
     </table>
+    </div>
 
 NamesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10525,15 +10671,16 @@ NamesCd
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10603,6 +10750,7 @@ NamesCd
     
     </tbody>
     </table>
+    </div>
 
 ReceivedFilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10615,15 +10763,16 @@ This is undocumented. J M needs to describe this table.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10675,6 +10824,7 @@ This is undocumented. J M needs to describe this table.
     
     </tbody>
     </table>
+    </div>
 
 ReportsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -10687,15 +10837,16 @@ This is an undocumented model.
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     
         <tr>
             <td>id</td>
@@ -10753,6 +10904,7 @@ This is an undocumented model.
     
     </tbody>
     </table>
+    </div>
 
 
 

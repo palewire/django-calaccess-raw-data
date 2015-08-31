@@ -17,15 +17,16 @@ A crosswalk between the tables published by California's Secretary of State and 
 
 .. raw:: html
 
-    <table>
-    <thead>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Definition</th>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Definition</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody valign="top">
     {% for field in object.get_field_list %}
         <tr>
             <td>{{ field.name }}</td>
@@ -35,6 +36,7 @@ A crosswalk between the tables published by California's Secretary of State and 
     {% endfor %}
     </tbody>
     </table>
+    </div>
 {% endfor %}
 {% endfor %}
 
