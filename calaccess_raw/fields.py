@@ -4,9 +4,26 @@ when it is bulk loaded into the database with PostgreSQL's COPY command via
 django-postgres-copy.
 """
 from django.db.models import fields
+from django.template.defaultfilters import capfirst
 
 
-class CharField(fields.CharField):
+class CalAccessFieldMixin(fields.Field):
+
+    def definition(self):
+        """
+        A humanized definition of what's the in field for documentation.
+        """
+        s = ""
+        if self.__dict__['verbose_name']:
+            s += capfirst(self.verbose_name)
+        if self.help_text:
+            if self.__dict__['_verbose_name']:
+                s += ": "
+            s += capfirst(self.help_text)
+        return s.strip()
+
+
+class CharField(fields.CharField, CalAccessFieldMixin):
     copy_type = "text"
     copy_template = """
     CASE
@@ -17,7 +34,7 @@ class CharField(fields.CharField):
     """
 
 
-class DateField(fields.DateField):
+class DateField(fields.DateField, CalAccessFieldMixin):
     copy_type = "text"
     copy_template = """
     CASE
@@ -28,7 +45,7 @@ class DateField(fields.DateField):
     """
 
 
-class DateTimeField(fields.DateTimeField):
+class DateTimeField(fields.DateTimeField, CalAccessFieldMixin):
     copy_type = "text"
     copy_template = """
     CASE
@@ -39,7 +56,7 @@ class DateTimeField(fields.DateTimeField):
     """
 
 
-class DecimalField(fields.DecimalField):
+class DecimalField(fields.DecimalField, CalAccessFieldMixin):
     copy_type = "text"
     copy_template = """
     CASE
@@ -53,7 +70,7 @@ class DecimalField(fields.DecimalField):
     """
 
 
-class FloatField(fields.FloatField):
+class FloatField(fields.FloatField, CalAccessFieldMixin):
     copy_type = "text"
     copy_template = """
     CASE
@@ -67,7 +84,7 @@ class FloatField(fields.FloatField):
     """
 
 
-class IntegerField(fields.IntegerField):
+class IntegerField(fields.IntegerField, CalAccessFieldMixin):
     copy_type = "text"
     copy_template = """
     CASE
