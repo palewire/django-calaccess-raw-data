@@ -5834,7 +5834,7 @@ filing information.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session that the filing applies to</td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -9770,7 +9770,7 @@ addresses change.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -9814,7 +9814,7 @@ This table stores lobbyist ethics training dates.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -9866,7 +9866,7 @@ Links a filer to their interest codes.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -9942,7 +9942,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Session identification number</td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -10814,7 +10814,7 @@ Legislative session, begin and end dates look up table.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -10882,7 +10882,7 @@ LobbyingChgLogCd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -11339,7 +11339,7 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Lobbyist identification number</td>
         </tr>
     
     
@@ -11379,7 +11379,7 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -11415,7 +11415,7 @@ This is an undocumented model.
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Lobbyist identification number</td>
         </tr>
     
     
@@ -11455,7 +11455,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -11499,7 +11499,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -11555,7 +11555,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_1</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 1 of the session</td>
         </tr>
     
     
@@ -11563,7 +11563,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_2</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 2 of the session</td>
         </tr>
     
     
@@ -11587,7 +11587,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11595,7 +11595,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11603,7 +11603,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11611,7 +11611,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11619,7 +11619,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11627,7 +11627,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11635,7 +11635,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11643,7 +11643,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11687,7 +11687,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -11743,7 +11743,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_1</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 1 of the session</td>
         </tr>
     
     
@@ -11751,7 +11751,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_2</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 2 of the session</td>
         </tr>
     
     
@@ -11775,7 +11775,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11783,7 +11783,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11791,7 +11791,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11799,7 +11799,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11807,7 +11807,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11815,7 +11815,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11823,7 +11823,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11831,7 +11831,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11875,7 +11875,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -11931,7 +11931,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_1</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 1 of the session</td>
         </tr>
     
     
@@ -11939,7 +11939,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_2</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 2 of the session</td>
         </tr>
     
     
@@ -11963,7 +11963,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11971,7 +11971,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11979,7 +11979,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11987,7 +11987,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -11995,7 +11995,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12003,7 +12003,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12011,7 +12011,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12019,7 +12019,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12063,15 +12063,15 @@ This is an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 117)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12079,7 +12079,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -12131,15 +12131,15 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 117)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12147,7 +12147,7 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -12191,7 +12191,7 @@ LobbyistFirm1Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12199,15 +12199,15 @@ LobbyistFirm1Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 60)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12239,7 +12239,7 @@ LobbyistFirm1Cd
         <tr>
             <td>session_yr_1</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 1 of the session</td>
         </tr>
     
     
@@ -12247,7 +12247,7 @@ LobbyistFirm1Cd
         <tr>
             <td>session_yr_2</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 2 of the session</td>
         </tr>
     
     
@@ -12271,7 +12271,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12279,7 +12279,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12287,7 +12287,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12295,7 +12295,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12303,7 +12303,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12311,7 +12311,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12319,7 +12319,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12327,7 +12327,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12363,7 +12363,7 @@ This is an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12371,15 +12371,15 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 60)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12411,7 +12411,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_1</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 1 of the session</td>
         </tr>
     
     
@@ -12419,7 +12419,7 @@ This is an undocumented model.
         <tr>
             <td>session_yr_2</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 2 of the session</td>
         </tr>
     
     
@@ -12443,7 +12443,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12451,7 +12451,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12459,7 +12459,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12467,7 +12467,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12475,7 +12475,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12483,7 +12483,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12491,7 +12491,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12499,7 +12499,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12535,7 +12535,7 @@ LobbyistFirm3Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12543,15 +12543,15 @@ LobbyistFirm3Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 60)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12583,7 +12583,7 @@ LobbyistFirm3Cd
         <tr>
             <td>session_yr_1</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 1 of the session</td>
         </tr>
     
     
@@ -12591,7 +12591,7 @@ LobbyistFirm3Cd
         <tr>
             <td>session_yr_2</td>
             <td>Integer</td>
-            <td></td>
+            <td>Total amount of year 2 of the session</td>
         </tr>
     
     
@@ -12615,7 +12615,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12623,7 +12623,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12631,7 +12631,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12639,7 +12639,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12647,7 +12647,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12655,7 +12655,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12663,7 +12663,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12671,7 +12671,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Quarter total amount</td>
         </tr>
     
     
@@ -12682,7 +12682,7 @@ LobbyistFirm3Cd
 LobbyistFirmEmployer1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This is an undocumented model (Ask Matt)
+This is an undocumented model.
 
 **Source:** `LOBBYIST_FIRM_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -12707,7 +12707,7 @@ This is an undocumented model (Ask Matt)
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12730,8 +12730,8 @@ This is an undocumented model (Ask Matt)
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 58)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12798,7 +12798,7 @@ This is an undocumented model (Ask Matt)
 LobbyistFirmEmployer2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This is an undocumented model
+This is an undocumented model.
 
 **Source:** `LOBBYIST_FIRM_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -12823,7 +12823,7 @@ This is an undocumented model
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12846,8 +12846,8 @@ This is an undocumented model
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 58)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12939,7 +12939,7 @@ It's an undocumented model.
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Lobbyist identification number</td>
         </tr>
     
     
@@ -12947,7 +12947,7 @@ It's an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12970,8 +12970,8 @@ It's an undocumented model.
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 60)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -12979,7 +12979,7 @@ It's an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -13015,7 +13015,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Lobbyist identification number</td>
         </tr>
     
     
@@ -13023,7 +13023,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -13046,8 +13046,8 @@ LobbyistFirmLobbyist2Cd
     
         <tr>
             <td>firm_name</td>
-            <td>String (up to 60)</td>
-            <td></td>
+            <td>String (up to 400)</td>
+            <td>Name of firm, employer or coalition</td>
         </tr>
     
     
@@ -13055,7 +13055,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Legislative session identification number</td>
         </tr>
     
     
@@ -13066,7 +13066,7 @@ LobbyistFirmLobbyist2Cd
 LookupCode
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+The description of all lookup codes in the system.
 
 **Source:** `LOOKUP_CODES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -13091,7 +13091,7 @@ LookupCode
         <tr>
             <td>code_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -13099,7 +13099,7 @@ LookupCode
         <tr>
             <td>code_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>The code&#39;s identification number</td>
         </tr>
     
     
@@ -13107,7 +13107,7 @@ LookupCode
         <tr>
             <td>code_desc</td>
             <td>String (up to 100)</td>
-            <td></td>
+            <td>Code description</td>
         </tr>
     
     
@@ -13118,7 +13118,8 @@ LookupCode
 NamesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+The name of all entities in the system. Used for searches when
+the name has an identification number.
 
 **Source:** `NAMES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -13143,7 +13144,7 @@ NamesCd
         <tr>
             <td>namid</td>
             <td>Integer</td>
-            <td></td>
+            <td>Identification number unique to the name</td>
         </tr>
     
     
@@ -13151,7 +13152,7 @@ NamesCd
         <tr>
             <td>naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Last name</td>
         </tr>
     
     
@@ -13159,7 +13160,7 @@ NamesCd
         <tr>
             <td>namf</td>
             <td>String (up to 50)</td>
-            <td></td>
+            <td>First name</td>
         </tr>
     
     
@@ -13167,7 +13168,7 @@ NamesCd
         <tr>
             <td>namt</td>
             <td>String (up to 100)</td>
-            <td></td>
+            <td>Name title or prefix</td>
         </tr>
     
     
@@ -13175,7 +13176,7 @@ NamesCd
         <tr>
             <td>nams</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Name suffix</td>
         </tr>
     
     
@@ -13183,7 +13184,7 @@ NamesCd
         <tr>
             <td>moniker</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Entity&#39;s moniker</td>
         </tr>
     
     
@@ -13191,7 +13192,7 @@ NamesCd
         <tr>
             <td>moniker_pos</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>Location of the entity&#39;s moniker</td>
         </tr>
     
     
@@ -13199,7 +13200,7 @@ NamesCd
         <tr>
             <td>namm</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Middle name</td>
         </tr>
     
     
@@ -13207,7 +13208,7 @@ NamesCd
         <tr>
             <td>fullname</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Full name</td>
         </tr>
     
     
@@ -13215,7 +13216,7 @@ NamesCd
         <tr>
             <td>naml_search</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Last name</td>
         </tr>
     
     
@@ -13226,7 +13227,7 @@ NamesCd
 ReceivedFilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This is undocumented. J M needs to describe this table.
+This table is undocumented.
 
 **Source:** `RECEIVED_FILINGS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -13259,7 +13260,7 @@ This is undocumented. J M needs to describe this table.
         <tr>
             <td>filing_file_name</td>
             <td>String (up to 14)</td>
-            <td></td>
+            <td>The field is undocumented</td>
         </tr>
     
     
@@ -13267,7 +13268,7 @@ This is undocumented. J M needs to describe this table.
         <tr>
             <td>received_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Date received</td>
         </tr>
     
     
@@ -13275,7 +13276,7 @@ This is undocumented. J M needs to describe this table.
         <tr>
             <td>filing_directory</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -13291,7 +13292,7 @@ This is undocumented. J M needs to describe this table.
         <tr>
             <td>form_id</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Form identification code</td>
         </tr>
     
     
@@ -13299,7 +13300,7 @@ This is undocumented. J M needs to describe this table.
         <tr>
             <td>receive_comment</td>
             <td>String (up to 51)</td>
-            <td></td>
+            <td>A comment</td>
         </tr>
     
     
@@ -13359,7 +13360,7 @@ This is an undocumented model.
         <tr>
             <td>path</td>
             <td>String (up to 32)</td>
-            <td>Reportpath</td>
+            <td>Report path</td>
         </tr>
     
     
@@ -13367,7 +13368,7 @@ This is an undocumented model.
         <tr>
             <td>data_object</td>
             <td>String (up to 38)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
