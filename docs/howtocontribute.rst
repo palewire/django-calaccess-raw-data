@@ -17,11 +17,11 @@ the following:
 
     $ mkproject django-calaccess-raw-data
 
-That will jump into a new folder in your code directory, where you can clone our code repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_.
+That will jump into a new folder in your code directory, where you can clone our code repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_ after you make a fork of your own. Don't know what that means? `Read this <https://guides.github.com/activities/forking/>`_.
 
 .. code-block:: bash
 
-    $ git clone https://github.com/california-civic-data-coalition/django-calaccess-raw-data.git .
+    $ git clone https://github.com/<YOUR-USERNAME>/django-calaccess-raw-data.git .
 
 Next install the other Python libraries our code depends on.
 
