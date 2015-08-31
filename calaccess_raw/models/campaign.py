@@ -1931,7 +1931,7 @@ candidate campaign statement)'),
 @python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     """
-    Loans received and made.
+    Loans received and made
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1943,9 +1943,16 @@ original filing and 1 to 999 amendments.",
     bakref_tid = fields.CharField(
         max_length=20,
         db_column='BAKREF_TID',
-        blank=True
+        blank=True,
+        help_text="Back Reference to transaction identifier of parent record"
     )
-    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True)
+    cmte_id = fields.CharField(
+        max_length=9,
+        db_column='CMTE_ID',
+        blank=True,
+        verbose_name="Committee ID",
+        help_text="Committee identification number"
+    )
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
@@ -2000,23 +2007,46 @@ Schedule H3'),
     #     max_length=55, db_column='INTR_ADR2', blank=True
     # )
     intr_city = fields.CharField(
-        max_length=30, db_column='INTR_CITY', blank=True
+        max_length=30,
+        db_column='INTR_CITY',
+        blank=True,
+        help_text="Intermediary's city"
     )
     intr_namf = fields.CharField(
-        max_length=45, db_column='INTR_NAMF', blank=True
+        max_length=45,
+        db_column='INTR_NAMF',
+        blank=True,
+        help_text="Intermediary's first name"
     )
     intr_naml = fields.CharField(
-        max_length=200, db_column='INTR_NAML', blank=True
+        max_length=200,
+        db_column='INTR_NAML',
+        blank=True,
+        help_text="Intermediary's last name"
     )
     intr_nams = fields.CharField(
-        max_length=10, db_column='INTR_NAMS', blank=True
+        max_length=10,
+        db_column='INTR_NAMS',
+        blank=True,
+        help_text="Intermediary's suffix"
     )
     intr_namt = fields.CharField(
-        max_length=10, db_column='INTR_NAMT', blank=True
+        max_length=10,
+        db_column='INTR_NAMT',
+        blank=True,
+        help_text="Intermediary's title or prefix"
     )
-    intr_st = fields.CharField(max_length=2, db_column='INTR_ST', blank=True)
+    intr_st = fields.CharField(
+        max_length=2,
+        db_column='INTR_ST',
+        blank=True,
+        help_text="Intermediary's state"
+    )
     intr_zip4 = fields.CharField(
-        max_length=10, db_column='INTR_ZIP4', blank=True
+        max_length=10,
+        db_column='INTR_ZIP4',
+        blank=True,
+        help_text="Intermediary's ZIP Code"
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -2024,16 +2054,27 @@ Schedule H3'),
         db_index=True,
     )
     lndr_namf = fields.CharField(
-        max_length=45, db_column='LNDR_NAMF', blank=True
+        max_length=45,
+        db_column='LNDR_NAMF',
+        blank=True,
+        help_text="Lender's first name"
     )
     lndr_naml = fields.CharField(
-        max_length=200, db_column='LNDR_NAML'
+        max_length=200,
+        db_column='LNDR_NAML',
+        help_text="Lender's last name or business name"
     )
     lndr_nams = fields.CharField(
-        max_length=10, db_column='LNDR_NAMS', blank=True
+        max_length=10,
+        db_column='LNDR_NAMS',
+        blank=True,
+        help_text="Lender's suffix"
     )
     lndr_namt = fields.CharField(
-        max_length=10, db_column='LNDR_NAMT', blank=True
+        max_length=10,
+        db_column='LNDR_NAMT',
+        blank=True,
+        help_text="Lender's title or prefix"
     )
     # loan_adr1 = fields.CharField(
     #     max_length=55, db_column='LOAN_ADR1', blank=True
@@ -2042,68 +2083,160 @@ Schedule H3'),
     #     max_length=55, db_column='LOAN_ADR2', blank=True
     # )
     loan_amt1 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT1', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT1',
+        blank=True,
+        help_text="Repaid or forgiven amount; Original loan amount. The \
+content of this column varies based on the \
+schedule/part that the record applies to. See the CAL \
+document for a description of the value of this field."
     )
     loan_amt2 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT2', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT2',
+        blank=True,
+        help_text="Outstanding Principal; unpaid balance. The content of \
+this column varies based on the schedule/part that the \
+record applies to. See the CAL document for a \
+description of the value of this field."
     )
     loan_amt3 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT3', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT3',
+        blank=True,
+        help_text="Interest Paid; Unpaid interest; Interest received. The \
+content of this column varies based on the \
+schedule/part that the record applies to. See the CAL \
+document for a description of the value of this field."
     )
     loan_amt4 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT4', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT4',
+        blank=True,
+        help_text="Cumulative Amount/Other. The content of this column \
+varies based on the schedule/part that the record \
+applies to. See the CAL document for a description of the \
+value of this field."
     )
     loan_amt5 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT5', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT5',
+        blank=True,
+        help_text="This field is undocumented"
     )
     loan_amt6 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT6', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT6',
+        blank=True,
+        help_text="This field is undocumented"
     )
     loan_amt7 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT7', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT7',
+        blank=True,
+        help_text="This field is undocumented"
     )
     loan_amt8 = fields.DecimalField(
-        decimal_places=2, null=True, max_digits=14,
-        db_column='LOAN_AMT8', blank=True
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT8',
+        blank=True,
+        help_text="This field is undocumented"
     )
     loan_city = fields.CharField(
-        max_length=30, db_column='LOAN_CITY', blank=True
+        max_length=30,
+        db_column='LOAN_CITY',
+        blank=True,
+        help_text="Lender's city"
     )
-    loan_date1 = fields.DateField(db_column='LOAN_DATE1', null=True)
+    loan_date1 = fields.DateField(
+        db_column='LOAN_DATE1',
+        null=True,
+        help_text="Date the loan was made or recieved. The content of this \
+column varies based on the schedule/part that the \
+record applies to. See the CAL document for a description of the value."
+    )
     loan_date2 = fields.DateField(
-        null=True, db_column='LOAN_DATE2', blank=True
+        null=True,
+        db_column='LOAN_DATE2',
+        blank=True,
+        help_text="Date repaid/forgiven; date loan due. The content of this \
+column varies based on the schedule/part that the \
+record applies to. See the CAL document for a \
+description of the value of this field."
     )
     loan_emp = fields.CharField(
-        max_length=200, db_column='LOAN_EMP', blank=True
+        max_length=200,
+        db_column='LOAN_EMP',
+        blank=True,
+        help_text="Loan employer. Applies to the Form 460 Schedule B \
+Part 1."
     )
     loan_occ = fields.CharField(
-        max_length=60, db_column='LOAN_OCC', blank=True
+        max_length=60,
+        db_column='LOAN_OCC',
+        blank=True,
+        help_text="Loan occupation. Applies to the Form 460 Schedule B \
+Part 1."
     )
     loan_rate = fields.CharField(
-        max_length=30, db_column='LOAN_RATE', blank=True
+        max_length=30,
+        db_column='LOAN_RATE',
+        blank=True,
+        help_text="Interest Rate. The content of this column varies based \
+on the schedule/part that the record applies to. See the \
+CAL document for a description of the value of this field."
     )
     loan_self = fields.CharField(
-        max_length=1, db_column='LOAN_SELF', blank=True
+        max_length=1,
+        db_column='LOAN_SELF',
+        blank=True,
+        help_text="Self-employed checkbox"
     )
-    loan_st = fields.CharField(max_length=2, db_column='LOAN_ST', blank=True)
+    loan_st = fields.CharField(
+        max_length=2,
+        db_column='LOAN_ST',
+        blank=True,
+        help_text="Lender's state"
+    )
     loan_type = fields.CharField(
-        max_length=3, db_column='LOAN_TYPE', blank=True
+        max_length=3,
+        db_column='LOAN_TYPE',
+        blank=True,
+        help_text="Type of loan"
     )
     loan_zip4 = fields.CharField(
-        max_length=10, db_column='LOAN_ZIP4', blank=True
+        max_length=10,
+        db_column='LOAN_ZIP4',
+        blank=True,
+        help_text="Lender's ZIP Code"
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo amount flag"
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text="Reference to text contained in a TEXT record"
     )
     REC_TYPE_CHOICES = (
         ("LOAN", "LOAN"),
@@ -2129,31 +2262,59 @@ Schedule H3'),
     #     max_length=55, db_column='TRES_ADR2', blank=True
     # )
     tres_city = fields.CharField(
-        max_length=30, db_column='TRES_CITY', blank=True
+        max_length=30,
+        db_column='TRES_CITY',
+        blank=True,
+        help_text="Treasurer or responsible officer's city"
     )
     tres_namf = fields.CharField(
-        max_length=45, db_column='TRES_NAMF', blank=True
+        max_length=45,
+        db_column='TRES_NAMF',
+        blank=True,
+        help_text="Treasurer or responsible officer's first name"
     )
     tres_naml = fields.CharField(
-        max_length=200, db_column='TRES_NAML', blank=True
+        max_length=200,
+        db_column='TRES_NAML',
+        blank=True,
+        help_text="Treasurer or responsible officer's last name"
     )
     tres_nams = fields.CharField(
-        max_length=10, db_column='TRES_NAMS', blank=True
+        max_length=10,
+        db_column='TRES_NAMS',
+        blank=True,
+        help_text="Treasurer or responsible officer's suffix"
     )
     tres_namt = fields.CharField(
-        max_length=10, db_column='TRES_NAMT', blank=True
+        max_length=10,
+        db_column='TRES_NAMT',
+        blank=True,
+        help_text="Treasurer or responsible officer's title or prefix"
     )
     tres_st = fields.CharField(
-        max_length=2, db_column='TRES_ST', blank=True
+        max_length=2,
+        db_column='TRES_ST',
+        blank=True,
+        help_text="Treasurer or responsible officer's street address"
     )
     tres_zip4 = fields.CharField(
-        max_length=10, db_column='TRES_ZIP4', blank=True
+        max_length=10,
+        db_column='TRES_ZIP4',
+        blank=True,
+        help_text="Treasurer or responsible officer's ZIP Code"
     )
     xref_match = fields.CharField(
-        max_length=1, db_column='XREF_MATCH', blank=True
+        max_length=1,
+        db_column='XREF_MATCH',
+        blank=True,
+        help_text='Related item on other schedule has same transaction \
+identifier. "X" indicates this condition is true.'
     )
     xref_schnm = fields.CharField(
-        max_length=2, db_column='XREF_SCHNM', blank=True
+        max_length=2,
+        db_column='XREF_SCHNM',
+        blank=True,
+        help_text="Related record is included on Form 460 Schedule 'A' or 'E'"
     )
 
     class Meta:
