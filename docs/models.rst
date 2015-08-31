@@ -9982,7 +9982,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>termination_dt</td>
             <td>Date (without time)</td>
-            <td>Date the relationship was terminated</td>
+            <td>Termination effective date</td>
         </tr>
     
     
@@ -10874,7 +10874,7 @@ LobbyingChgLogCd
         <tr>
             <td>change_no</td>
             <td>Integer</td>
-            <td></td>
+            <td>Number of changes this session</td>
         </tr>
     
     
@@ -10890,7 +10890,7 @@ LobbyingChgLogCd
         <tr>
             <td>log_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10898,7 +10898,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>The type of filer</td>
         </tr>
     
     
@@ -10906,7 +10906,7 @@ LobbyingChgLogCd
         <tr>
             <td>correction_flag</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10914,7 +10914,7 @@ LobbyingChgLogCd
         <tr>
             <td>action</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10922,7 +10922,7 @@ LobbyingChgLogCd
         <tr>
             <td>attribute_changed</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10930,7 +10930,7 @@ LobbyingChgLogCd
         <tr>
             <td>ethics_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10938,7 +10938,7 @@ LobbyingChgLogCd
         <tr>
             <td>interests</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10946,7 +10946,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_full_name</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Filer full name</td>
         </tr>
     
     
@@ -10954,7 +10954,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_city</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Filer city</td>
         </tr>
     
     
@@ -10962,7 +10962,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_st</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Filer state</td>
         </tr>
     
     
@@ -10970,7 +10970,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_zip</td>
             <td>Integer</td>
-            <td></td>
+            <td>Filer ZIP Code</td>
         </tr>
     
     
@@ -10978,7 +10978,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_phone</td>
             <td>String (up to 12)</td>
-            <td></td>
+            <td>Filer phone number</td>
         </tr>
     
     
@@ -10986,7 +10986,7 @@ LobbyingChgLogCd
         <tr>
             <td>entity_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>Type of entity</td>
         </tr>
     
     
@@ -10994,7 +10994,7 @@ LobbyingChgLogCd
         <tr>
             <td>entity_name</td>
             <td>String (up to 500)</td>
-            <td></td>
+            <td>Entity name</td>
         </tr>
     
     
@@ -11002,7 +11002,7 @@ LobbyingChgLogCd
         <tr>
             <td>entity_city</td>
             <td>String (up to 500)</td>
-            <td></td>
+            <td>Entity city</td>
         </tr>
     
     
@@ -11010,7 +11010,7 @@ LobbyingChgLogCd
         <tr>
             <td>entity_st</td>
             <td>String (up to 500)</td>
-            <td></td>
+            <td>Entity state</td>
         </tr>
     
     
@@ -11018,7 +11018,7 @@ LobbyingChgLogCd
         <tr>
             <td>entity_zip</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Entity ZIP Code</td>
         </tr>
     
     
@@ -11026,7 +11026,7 @@ LobbyingChgLogCd
         <tr>
             <td>entity_phone</td>
             <td>String (up to 12)</td>
-            <td></td>
+            <td>Entity phone number</td>
         </tr>
     
     
@@ -11034,7 +11034,7 @@ LobbyingChgLogCd
         <tr>
             <td>entity_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Entity identification number</td>
         </tr>
     
     
@@ -11042,7 +11042,7 @@ LobbyingChgLogCd
         <tr>
             <td>responsible_officer</td>
             <td>String (up to 500)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -11050,7 +11050,7 @@ LobbyingChgLogCd
         <tr>
             <td>effect_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Effective date</td>
         </tr>
     
     
@@ -11347,7 +11347,7 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Employer identification number</td>
         </tr>
     
     
@@ -11355,7 +11355,7 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>lobbyist_last_name</td>
             <td>String (up to 17)</td>
-            <td></td>
+            <td>Lobbyist last name</td>
         </tr>
     
     
@@ -11363,15 +11363,15 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>lobbyist_first_name</td>
             <td>String (up to 17)</td>
-            <td></td>
+            <td>Lobbyist first name</td>
         </tr>
     
     
     
         <tr>
             <td>employer_name</td>
-            <td>String (up to 117)</td>
-            <td></td>
+            <td>String (up to 300)</td>
+            <td>Employer name</td>
         </tr>
     
     
@@ -11423,7 +11423,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Employer identification number</td>
         </tr>
     
     
@@ -11431,7 +11431,7 @@ This is an undocumented model.
         <tr>
             <td>lobbyist_last_name</td>
             <td>String (up to 17)</td>
-            <td></td>
+            <td>Lobbyist last name</td>
         </tr>
     
     
@@ -11439,15 +11439,15 @@ This is an undocumented model.
         <tr>
             <td>lobbyist_first_name</td>
             <td>String (up to 17)</td>
-            <td></td>
+            <td>Lobbyist first name</td>
         </tr>
     
     
     
         <tr>
             <td>employer_name</td>
-            <td>String (up to 117)</td>
-            <td></td>
+            <td>String (up to 300)</td>
+            <td>Employer name</td>
         </tr>
     
     
@@ -11491,7 +11491,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Employer identification number</td>
         </tr>
     
     
@@ -11506,8 +11506,8 @@ This is an undocumented model.
     
         <tr>
             <td>employer_name</td>
-            <td>String (up to 162)</td>
-            <td></td>
+            <td>String (up to 300)</td>
+            <td>Employer name</td>
         </tr>
     
     
@@ -11515,7 +11515,7 @@ This is an undocumented model.
         <tr>
             <td>current_qtr_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Current quarter amount</td>
         </tr>
     
     
@@ -11523,7 +11523,7 @@ This is an undocumented model.
         <tr>
             <td>session_total_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total amount for the session</td>
         </tr>
     
     
@@ -11531,7 +11531,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Contributor identification number</td>
         </tr>
     
     
@@ -11547,7 +11547,7 @@ This is an undocumented model.
         <tr>
             <td>interest_name</td>
             <td>String (up to 24)</td>
-            <td></td>
+            <td>Interest name</td>
         </tr>
     
     
@@ -11679,7 +11679,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Employer identification number</td>
         </tr>
     
     
@@ -11694,8 +11694,8 @@ This is an undocumented model.
     
         <tr>
             <td>employer_name</td>
-            <td>String (up to 162)</td>
-            <td></td>
+            <td>String (up to 300)</td>
+            <td>Employer name</td>
         </tr>
     
     
@@ -11703,7 +11703,7 @@ This is an undocumented model.
         <tr>
             <td>current_qtr_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Current quarter amount</td>
         </tr>
     
     
@@ -11711,7 +11711,7 @@ This is an undocumented model.
         <tr>
             <td>session_total_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total amount for the session</td>
         </tr>
     
     
@@ -11719,7 +11719,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Contributor identification number</td>
         </tr>
     
     
@@ -11735,7 +11735,7 @@ This is an undocumented model.
         <tr>
             <td>interest_name</td>
             <td>String (up to 24)</td>
-            <td></td>
+            <td>Interest name</td>
         </tr>
     
     
@@ -11867,7 +11867,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Employer identification number</td>
         </tr>
     
     
@@ -11882,8 +11882,8 @@ This is an undocumented model.
     
         <tr>
             <td>employer_name</td>
-            <td>String (up to 162)</td>
-            <td></td>
+            <td>String (up to 300)</td>
+            <td>Employer name</td>
         </tr>
     
     
@@ -11891,7 +11891,7 @@ This is an undocumented model.
         <tr>
             <td>current_qtr_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Current quarter amount</td>
         </tr>
     
     
@@ -11899,7 +11899,7 @@ This is an undocumented model.
         <tr>
             <td>session_total_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total amount for the session</td>
         </tr>
     
     
@@ -11907,7 +11907,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Contributor identification number</td>
         </tr>
     
     
@@ -11923,7 +11923,7 @@ This is an undocumented model.
         <tr>
             <td>interest_name</td>
             <td>String (up to 24)</td>
-            <td></td>
+            <td>Interest name</td>
         </tr>
     
     
@@ -12055,7 +12055,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Employer identification number</td>
         </tr>
     
     
@@ -12087,7 +12087,7 @@ This is an undocumented model.
         <tr>
             <td>termination_dt</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Termination effective date</td>
         </tr>
     
     
@@ -12123,7 +12123,7 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Employer identification number</td>
         </tr>
     
     
@@ -12155,7 +12155,7 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>termination_dt</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Termination effective date</td>
         </tr>
     
     
@@ -12215,7 +12215,7 @@ LobbyistFirm1Cd
         <tr>
             <td>current_qtr_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Current quarter amount</td>
         </tr>
     
     
@@ -12223,7 +12223,7 @@ LobbyistFirm1Cd
         <tr>
             <td>session_total_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total amount for the session</td>
         </tr>
     
     
@@ -12231,7 +12231,7 @@ LobbyistFirm1Cd
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Contributor identification number</td>
         </tr>
     
     
@@ -12387,7 +12387,7 @@ This is an undocumented model.
         <tr>
             <td>current_qtr_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Current quarter amount</td>
         </tr>
     
     
@@ -12395,7 +12395,7 @@ This is an undocumented model.
         <tr>
             <td>session_total_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total amount for the session</td>
         </tr>
     
     
@@ -12403,7 +12403,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Contributor identification number</td>
         </tr>
     
     
@@ -12559,7 +12559,7 @@ LobbyistFirm3Cd
         <tr>
             <td>current_qtr_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Current quarter amount</td>
         </tr>
     
     
@@ -12567,7 +12567,7 @@ LobbyistFirm3Cd
         <tr>
             <td>session_total_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total amount for the session</td>
         </tr>
     
     
@@ -12575,7 +12575,7 @@ LobbyistFirm3Cd
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Contributor identification number</td>
         </tr>
     
     
@@ -12723,7 +12723,7 @@ This is an undocumented model.
         <tr>
             <td>filing_sequence</td>
             <td>Integer</td>
-            <td></td>
+            <td>Amendment number. 0 is the original filing. 1 to 999 are amendments</td>
         </tr>
     
     
@@ -12738,8 +12738,8 @@ This is an undocumented model.
     
         <tr>
             <td>employer_name</td>
-            <td>String (up to 75)</td>
-            <td></td>
+            <td>String (up to 300)</td>
+            <td>Employer name</td>
         </tr>
     
     
@@ -12747,7 +12747,7 @@ This is an undocumented model.
         <tr>
             <td>rpt_start</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Starting date for the period the report covers</td>
         </tr>
     
     
@@ -12755,7 +12755,7 @@ This is an undocumented model.
         <tr>
             <td>rpt_end</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Ending date for the period the report covers</td>
         </tr>
     
     
@@ -12763,7 +12763,7 @@ This is an undocumented model.
         <tr>
             <td>per_total</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total this reporting period</td>
         </tr>
     
     
@@ -12771,7 +12771,7 @@ This is an undocumented model.
         <tr>
             <td>cum_total</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Cumulative total to date</td>
         </tr>
     
     
@@ -12779,7 +12779,7 @@ This is an undocumented model.
         <tr>
             <td>lby_actvty</td>
             <td>String (up to 182)</td>
-            <td></td>
+            <td>Description of lobbying activity</td>
         </tr>
     
     
@@ -12787,7 +12787,7 @@ This is an undocumented model.
         <tr>
             <td>ext_lby_actvty</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12839,7 +12839,7 @@ This is an undocumented model.
         <tr>
             <td>filing_sequence</td>
             <td>Integer</td>
-            <td></td>
+            <td>Amendment number. 0 is the original filing. 1 to 999 are amendments</td>
         </tr>
     
     
@@ -12854,8 +12854,8 @@ This is an undocumented model.
     
         <tr>
             <td>employer_name</td>
-            <td>String (up to 75)</td>
-            <td></td>
+            <td>String (up to 300)</td>
+            <td>Employer name</td>
         </tr>
     
     
@@ -12863,7 +12863,7 @@ This is an undocumented model.
         <tr>
             <td>rpt_start</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Starting date for the period the report covers</td>
         </tr>
     
     
@@ -12871,7 +12871,7 @@ This is an undocumented model.
         <tr>
             <td>rpt_end</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Ending date for the period the report covers</td>
         </tr>
     
     
@@ -12879,7 +12879,7 @@ This is an undocumented model.
         <tr>
             <td>per_total</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Total this reporting period</td>
         </tr>
     
     
@@ -12887,7 +12887,7 @@ This is an undocumented model.
         <tr>
             <td>cum_total</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Cumulative total to date</td>
         </tr>
     
     
@@ -12895,7 +12895,7 @@ This is an undocumented model.
         <tr>
             <td>lby_actvty</td>
             <td>String (up to 182)</td>
-            <td></td>
+            <td>Description of lobbying activity</td>
         </tr>
     
     
@@ -12903,7 +12903,7 @@ This is an undocumented model.
         <tr>
             <td>ext_lby_actvty</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12955,7 +12955,7 @@ It's an undocumented model.
         <tr>
             <td>lobbyist_last_name</td>
             <td>String (up to 15)</td>
-            <td></td>
+            <td>Lobbyist last name</td>
         </tr>
     
     
@@ -12963,7 +12963,7 @@ It's an undocumented model.
         <tr>
             <td>lobbyist_first_name</td>
             <td>String (up to 17)</td>
-            <td></td>
+            <td>Lobbyist first name</td>
         </tr>
     
     
@@ -13031,7 +13031,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>lobbyist_last_name</td>
             <td>String (up to 15)</td>
-            <td></td>
+            <td>Lobbyist last name</td>
         </tr>
     
     
@@ -13039,7 +13039,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>lobbyist_first_name</td>
             <td>String (up to 17)</td>
-            <td></td>
+            <td>Lobbyist first name</td>
         </tr>
     
     
