@@ -28,11 +28,13 @@ The tab-delimited database exports published by California's Secretary of State 
     </thead>
     <tbody valign="top">
     {% for field in object.get_field_list %}
+    {% if field.name != "id" %}
         <tr>
             <td>{{ field.name }}</td>
             <td>{{ field.get_internal_type }}</td>
             <td>{{ field.help_text|safe }}</td>
         </tr>
+    {% endif %}
     {% endfor %}
     </tbody>
     </table>
