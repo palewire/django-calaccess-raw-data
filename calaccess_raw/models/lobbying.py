@@ -828,13 +828,13 @@ to forms 625, 635, 645.",
         max_length=2,
         db_column='FIRM_ST',
         blank=True,
-        help_text='Firm, employer or coalition business ZIP Code',
+        help_text='Firm, employer or coalition business state',
     )
     firm_zip4 = fields.CharField(
         max_length=10,
         db_column='FIRM_ZIP4',
         blank=True,
-        help_text='',
+        help_text='Form, employer or coalition business ZIP Code',
     )
     FORM_TYPE_CHOICES = (
         ('F615', ''),
@@ -1251,7 +1251,7 @@ original filing and 1 to 999 amendments.",
     from_date = fields.CharField(
         max_length=22,
         db_column='FROM_DATE',
-        help_text='',
+        help_text='Reporting period from date of original report',
     )
     thru_date = fields.CharField(
         max_length=22,
@@ -2222,7 +2222,7 @@ original filing and 1 to 999 amendments.",
         max_length=10,
         db_column='FIRM_ZIP4',
         blank=True,
-        help_text='',
+        help_text='Firm ZIP Code',
     )
     FORM_TYPE_CHOICES = (
         ('F625P3B', ''),
