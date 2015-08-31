@@ -50,14 +50,44 @@ class AddressCd(CalAccessBaseModel):
     """
     adrid = fields.IntegerField(
         db_column="ADRID",
+        verbose_name="Address ID",
         help_text='Address indentification number'
     )
-    city = fields.CharField(max_length=500, db_column="CITY")
-    st = fields.CharField(max_length=500, db_column="ST")
-    zip4 = fields.CharField(db_column="ZIP4", null=True, max_length=10)
-    phon = fields.CharField(db_column="PHON", null=True, max_length=20)
-    fax = fields.CharField(db_column="FAX", null=True, max_length=20)
-    email = fields.CharField(max_length=500, db_column="EMAIL")
+    city = fields.CharField(
+        max_length=500,
+        db_column="CITY",
+        help_text='Address city'
+    )
+    st = fields.CharField(
+        max_length=500,
+        db_column="ST",
+        verbose_name='State',
+        help_text='Address state'
+    )
+    zip4 = fields.CharField(
+        db_column="ZIP4",
+        null=True,
+        max_length=10,
+        help_text='Address ZIP Code'
+    )
+    phon = fields.CharField(
+        db_column="PHON",
+        null=True,
+        max_length=20,
+        verbose_name='Phone',
+        help_text='Address phone number'
+    )
+    fax = fields.CharField(
+        db_column="FAX",
+        null=True,
+        max_length=20,
+        help_text='Address fax number'
+    )
+    email = fields.CharField(
+        max_length=500,
+        db_column="EMAIL",
+        help_text='Address email'
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -76,7 +106,8 @@ class BallotMeasuresCd(CalAccessBaseModel):
     """
     election_date = fields.DateTimeField(
         db_column='ELECTION_DATE',
-        null=True
+        null=True,
+        help_text="Ballot measure election date"
     )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -87,19 +118,24 @@ class BallotMeasuresCd(CalAccessBaseModel):
     )
     measure_no = fields.CharField(
         db_column='MEASURE_NO',
-        max_length=2
+        max_length=2,
+        help_text="Ballot measure number"
     )
     measure_name = fields.CharField(
         db_column='MEASURE_NAME',
-        max_length=163
+        max_length=163,
+        help_text="Ballot measure full name"
     )
     measure_short_name = fields.CharField(
         db_column='MEASURE_SHORT_NAME',
-        max_length=50, blank=True
+        max_length=50,
+        blank=True,
+        help_text="Ballot measure short name"
     )
     jurisdiction = fields.CharField(
         db_column='JURISDICTION',
-        max_length=9
+        max_length=9,
+        help_text="This field is undocumented"
     )
 
     class Meta:
@@ -123,9 +159,20 @@ class EfsFilingLogCd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
-    filing_date = fields.DateTimeField(db_column='FILING_DATE', null=True)
-    filingstatus = fields.IntegerField(db_column='FILINGSTATUS')
-    vendor = fields.CharField(db_column='VENDOR', max_length=250)
+    filing_date = fields.DateTimeField(
+        db_column='FILING_DATE',
+        null=True,
+        help_text="This field is undocumented"
+    )
+    filingstatus = fields.IntegerField(
+        db_column='FILINGSTATUS',
+        help_text="This field is undocumented"
+    )
+    vendor = fields.CharField(
+        db_column='VENDOR',
+        max_length=250,
+        help_text="This field is undocumented"
+    )
     filer_id = fields.CharField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -167,7 +214,11 @@ class EfsFilingLogCd(CalAccessBaseModel):
         db_index=True,
         choices=FORM_TYPE_CHOICES,
     )
-    error_no = fields.CharField(db_column='ERROR_NO', max_length=250)
+    error_no = fields.CharField(
+        db_column='ERROR_NO',
+        max_length=250,
+        help_text="This field is undocumented"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -206,9 +257,13 @@ class FilersCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerAcronymsCd(CalAccessBaseModel):
     """
-    links acronyms to filers
+    Links acronyms to filers
     """
-    acronym = fields.CharField(db_column='ACRONYM', max_length=32)
+    acronym = fields.CharField(
+        db_column='ACRONYM',
+        max_length=32,
+        help_text="AMS acronym"
+    )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -241,16 +296,23 @@ class FilerAddressCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    adrid = fields.IntegerField(db_column='ADRID')
+    adrid = fields.IntegerField(
+        db_column='ADRID',
+        verbose_name='Address ID',
+        help_text="Address identification number"
+    )
     effect_dt = fields.DateTimeField(
         db_column='EFFECT_DT',
         blank=True,
-        null=True
+        null=True,
+        help_text="Address effective date",
+        verbose_name='Effective date'
     )
     add_type = fields.IntegerField(
         db_column='ADD_TYPE',
         blank=True,
-        null=True
+        null=True,
+        verbose_name="Address type"
     )
     session_id = fields.IntegerField(
         verbose_name='session ID',
@@ -287,7 +349,11 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         help_text='Legislative session identification number',
         null=True,
     )
-    ethics_date = fields.DateTimeField(db_column='ETHICS_DATE', null=True)
+    ethics_date = fields.DateTimeField(
+        db_column='ETHICS_DATE',
+        null=True,
+        help_text="Date ethics training was accomplished"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -447,10 +513,12 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     status_type = fields.CharField(
         max_length=11,
         db_column='STATUS_TYPE',
+        help_text='This field is undocumented'
     )
     status_desc = fields.CharField(
         max_length=11,
-        db_column='STATUS_DESC'
+        db_column='STATUS_DESC',
+        help_text='This field is undocumented'
     )
 
     class Meta:
@@ -610,7 +678,8 @@ class FilerTypesCd(CalAccessBaseModel):
     grace_period = fields.CharField(
         max_length=12,
         db_column='GRACE_PERIOD',
-        blank=True
+        blank=True,
+        help_text="This field is undocumented"
     )
 
     class Meta:
@@ -644,10 +713,15 @@ class FilerXrefCd(CalAccessBaseModel):
         db_index=True,
         help_text="Alternative filer ID found on many forms"
     )
-    effect_dt = fields.DateField(db_column='EFFECT_DT', null=True)
+    effect_dt = fields.DateField(
+        db_column='EFFECT_DT',
+        null=True,
+        verbose_name="Effective date"
+    )
     migration_source = fields.CharField(
         max_length=50,
-        db_column='MIGRATION_SOURCE'
+        db_column='MIGRATION_SOURCE',
+        help_text="Source of the XREF_ID. Migration or generated by the AMS."
     )
 
     class Meta:
@@ -678,6 +752,7 @@ class FilingPeriodCd(CalAccessBaseModel):
     )
     period_type = fields.IntegerField(
         db_column='PERIOD_TYPE',
+        help_text='This field is undocumented'
     )
     per_grp_type = fields.IntegerField(
         db_column='PER_GRP_TYPE',
@@ -710,16 +785,22 @@ class GroupTypesCd(CalAccessBaseModel):
     """
     This lookup table stores group type information.
     """
-    grp_id = fields.IntegerField(db_column='GRP_ID')
+    grp_id = fields.IntegerField(
+        db_column='GRP_ID',
+        verbose_name="Group ID",
+        help_text="Group identification number"
+    )
     grp_name = fields.CharField(
         db_column='GRP_NAME',
         max_length=28,
-        blank=True
+        blank=True,
+        verbose_name="Group name"
     )
     grp_desc = fields.CharField(
         db_column='GRP_DESC',
         max_length=32,
-        blank=True
+        blank=True,
+        verbose_name="Group description"
     )
 
     class Meta:
@@ -737,8 +818,16 @@ class HeaderCd(CalAccessBaseModel):
     """
     Lookup table used to report form 460 information in the AMS.
     """
-    line_number = fields.IntegerField(db_column='LINE_NUMBER')
-    form_id = fields.CharField(db_column='FORM_ID', max_length=5)
+    line_number = fields.IntegerField(
+        db_column='LINE_NUMBER',
+        help_text="This field is undocumented"
+    )
+    form_id = fields.CharField(
+        db_column='FORM_ID',
+        max_length=5,
+        help_text="Form identification code",
+        verbose_name="Form ID"
+    )
     REC_TYPE_CHOICES = (
         ("AP1", "AP1"),
         ("AP2", "AP2"),
@@ -754,35 +843,56 @@ class HeaderCd(CalAccessBaseModel):
     section_label = fields.CharField(
         db_column='SECTION_LABEL',
         max_length=58,
-        blank=True
+        blank=True,
+        help_text="This field is undocumented"
     )
     comments1 = fields.CharField(
         db_column='COMMENTS1',
         max_length=48,
-        blank=True
+        blank=True,
+        help_text="This field is undocumented"
     )
     comments2 = fields.CharField(
         db_column='COMMENTS2',
         max_length=48,
-        blank=True
+        blank=True,
+        help_text="This field is undocumented"
     )
-    label = fields.CharField(db_column='LABEL', max_length=98)
+    label = fields.CharField(
+        db_column='LABEL',
+        max_length=98,
+        help_text="This field is undocumented"
+    )
     column_a = fields.IntegerField(
         db_column='COLUMN_A',
         blank=True,
-        null=True
+        null=True,
+        help_text="This field is undocumented"
     )
     column_b = fields.IntegerField(
         db_column='COLUMN_B',
         blank=True,
-        null=True
+        null=True,
+        help_text="This field is undocumented"
     )
     column_c = fields.IntegerField(
         db_column='COLUMN_C',
         blank=True,
-        null=True)
-    show_c = fields.IntegerField(db_column='SHOW_C', blank=True, null=True)
-    show_b = fields.IntegerField(db_column='SHOW_B', blank=True, null=True)
+        null=True,
+        help_text="This field is undocumented"
+    )
+    show_c = fields.IntegerField(
+        db_column='SHOW_C',
+        blank=True,
+        null=True,
+        help_text="This field is undocumented"
+    )
+    show_b = fields.IntegerField(
+        db_column='SHOW_B',
+        blank=True,
+        null=True,
+        help_text="This field is undocumented"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -806,8 +916,19 @@ class HdrCd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
-    cal_ver = fields.CharField(max_length=4, db_column='CAL_VER', blank=True)
-    ef_type = fields.CharField(max_length=3, db_column='EF_TYPE', blank=True)
+    cal_ver = fields.CharField(
+        max_length=4,
+        db_column='CAL_VER',
+        blank=True,
+        help_text="CAL Version number the filing was made using"
+    )
+    ef_type = fields.CharField(
+        max_length=3,
+        db_column='EF_TYPE',
+        blank=True,
+        help_text='Electronic filing type. This will always have the \
+        value of "CAL".'
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -817,7 +938,9 @@ original filing and 1 to 999 amendments.",
     hdr_comment = fields.CharField(
         max_length=200,
         db_column='HDRCOMMENT',
-        blank=True
+        blank=True,
+        verbose_name="Header comment",
+        help_text="Typically used for development and test filings"
     )
     REC_TYPE_CHOICES = (
         ("HDR", "HDR"),
@@ -832,17 +955,21 @@ original filing and 1 to 999 amendments.",
     soft_name = fields.CharField(
         max_length=90,
         db_column='SOFT_NAME',
-        blank=True
+        blank=True,
+        help_text="Filing software name used to electronically file"
     )
     soft_ver = fields.CharField(
         max_length=16,
         db_column='SOFT_VER',
-        blank=True
+        blank=True,
+        help_text="Filing software version number"
     )
     state_cd = fields.CharField(
         max_length=2,
         db_column='STATE_CD',
-        blank=True
+        blank=True,
+        verbose_name='State code',
+        help_text="The state code value entered in the electronic filing"
     )
 
     class Meta:
@@ -860,11 +987,29 @@ class ImageLinksCd(CalAccessBaseModel):
     """
     This table links images to filers and accounts.
     """
-    img_link_id = fields.IntegerField(db_column='IMG_LINK_ID')
-    img_link_type = fields.IntegerField(db_column='IMG_LINK_TYPE')
-    img_id = fields.IntegerField(db_column='IMG_ID')
-    img_type = fields.IntegerField(db_column='IMG_TYPE')
-    img_dt = fields.DateField(db_column='IMG_DT', null=True)
+    img_link_id = fields.IntegerField(
+        db_column='IMG_LINK_ID',
+        verbose_name="Image link ID",
+        help_text="Image link identification number"
+    )
+    img_link_type = fields.IntegerField(
+        db_column='IMG_LINK_TYPE',
+        verbose_name="Image link type"
+    )
+    img_id = fields.IntegerField(
+        db_column='IMG_ID',
+        verbose_name="Image ID",
+        help_text="Image identification number"
+    )
+    img_type = fields.IntegerField(
+        db_column='IMG_TYPE',
+        verbose_name="Image type"
+    )
+    img_dt = fields.DateField(
+        db_column='IMG_DT',
+        null=True,
+        verbose_name="Image date"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -887,8 +1032,16 @@ class LegislativeSessionsCd(CalAccessBaseModel):
         help_text='Legislative session identification number',
         null=True,
     )
-    begin_date = fields.DateField(db_column='BEGIN_DATE', null=True)
-    end_date = fields.DateField(db_column='END_DATE', null=True)
+    begin_date = fields.DateField(
+        db_column='BEGIN_DATE',
+        null=True,
+        help_text="Session start date"
+    )
+    end_date = fields.DateField(
+        db_column='END_DATE',
+        null=True,
+        help_text="Session end date"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1048,28 +1201,38 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     )
     filing_period_start_dt = fields.DateField(
         null=True,
-        db_column='FILING_PERIOD_START_DT'
+        db_column='FILING_PERIOD_START_DT',
+        verbose_name='Filing period start date'
     )
     filing_period_end_dt = fields.DateField(
         db_column='FILING_PERIOD_END_DT',
-        null=True
+        null=True,
+        verbose_name='Filing period end date'
     )
     contribution_dt = fields.CharField(
         db_column='CONTRIBUTION_DT',
         max_length=32,
-        blank=True
+        blank=True,
+        verbose_name='Contribution date'
     )
     recipient_name = fields.CharField(
         db_column='RECIPIENT_NAME',
         max_length=106,
-        blank=True
+        blank=True,
+        help_text="Recipient's name"
     )
     recipient_id = fields.IntegerField(
         db_column='RECIPIENT_ID',
         blank=True,
-        null=True
+        null=True,
+        help_text="Recipient's identification number"
     )
-    amount = fields.FloatField(db_column='AMOUNT', blank=True, null=True)
+    amount = fields.FloatField(
+        db_column='AMOUNT',
+        blank=True,
+        null=True,
+        help_text="Amount received"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1095,29 +1258,39 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
     filing_period_start_dt = fields.DateField(
+        null=True,
         db_column='FILING_PERIOD_START_DT',
-        null=True
+        verbose_name='Filing period start date'
     )
     filing_period_end_dt = fields.DateField(
         db_column='FILING_PERIOD_END_DT',
-        null=True
+        null=True,
+        verbose_name='Filing period end date'
     )
     contribution_dt = fields.CharField(
         db_column='CONTRIBUTION_DT',
         max_length=32,
-        blank=True
+        blank=True,
+        verbose_name='Contribution date'
     )
     recipient_name = fields.CharField(
         db_column='RECIPIENT_NAME',
         max_length=106,
-        blank=True
+        blank=True,
+        help_text="Recipient's name"
     )
     recipient_id = fields.IntegerField(
         db_column='RECIPIENT_ID',
         blank=True,
-        null=True
+        null=True,
+        help_text="Recipient's identification number"
     )
-    amount = fields.FloatField(db_column='AMOUNT', blank=True, null=True)
+    amount = fields.FloatField(
+        db_column='AMOUNT',
+        blank=True,
+        null=True,
+        help_text="Amount received"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -1142,29 +1315,39 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
     filing_period_start_dt = fields.DateField(
+        null=True,
         db_column='FILING_PERIOD_START_DT',
-        null=True
+        verbose_name='Filing period start date'
     )
     filing_period_end_dt = fields.DateField(
         db_column='FILING_PERIOD_END_DT',
-        null=True
+        null=True,
+        verbose_name='Filing period end date'
     )
     contribution_dt = fields.CharField(
         db_column='CONTRIBUTION_DT',
         max_length=32,
-        blank=True
+        blank=True,
+        verbose_name='Contribution date'
     )
     recipient_name = fields.CharField(
         db_column='RECIPIENT_NAME',
         max_length=106,
-        blank=True
+        blank=True,
+        help_text="Recipient's name"
     )
     recipient_id = fields.IntegerField(
         db_column='RECIPIENT_ID',
         blank=True,
-        null=True
+        null=True,
+        help_text="Recipient's identification number"
     )
-    amount = fields.FloatField(db_column='AMOUNT', blank=True, null=True)
+    amount = fields.FloatField(
+        db_column='AMOUNT',
+        blank=True,
+        null=True,
+        help_text="Amount received"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
