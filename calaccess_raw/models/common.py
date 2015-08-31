@@ -64,7 +64,8 @@ class FilernameCd(CalAccessBaseModel):
         max_length=45,
         db_column='FILER_TYPE',
         db_index=True,
-        choices=FILER_TYPE_CHOICES
+        choices=FILER_TYPE_CHOICES,
+        help_text='The type of filer'
     )
     STATUS_CHOICES = (
         ('', 'Undefined'),
@@ -83,6 +84,7 @@ class FilernameCd(CalAccessBaseModel):
         db_index=True,
         choices=STATUS_CHOICES,
         blank=True,
+        help_text='The status of the filer'
     )
     effect_dt = fields.DateField(
         db_column='EFFECT_DT',
@@ -105,14 +107,55 @@ class FilernameCd(CalAccessBaseModel):
         max_length=32, db_column='NAMS', blank=True,
         help_text="Name suffix"
     )
-    adr1 = fields.CharField(max_length=200, db_column='ADR1', blank=True)
-    adr2 = fields.CharField(max_length=200, db_column='ADR2', blank=True)
-    city = fields.CharField(max_length=55, db_column='CITY', blank=True)
-    st = fields.CharField(max_length=4, db_column='ST', blank=True)
-    zip4 = fields.CharField(max_length=10, db_column='ZIP4', blank=True)
-    phon = fields.CharField(max_length=60, db_column='PHON', blank=True)
-    fax = fields.CharField(max_length=60, db_column='FAX', blank=True)
-    email = fields.CharField(max_length=60, db_column='EMAIL', blank=True)
+    adr1 = fields.CharField(
+        max_length=200,
+        db_column='ADR1',
+        blank=True,
+        help_text="First line of street address"
+    )
+    adr2 = fields.CharField(
+        max_length=200,
+        db_column='ADR2',
+        blank=True,
+        help_text="Second line of street address"
+    )
+    city = fields.CharField(
+        max_length=55,
+        db_column='CITY',
+        blank=True,
+        help_text="City address"
+    )
+    st = fields.CharField(
+        max_length=4,
+        db_column='ST',
+        blank=True,
+        verbose_name="State"
+    )
+    zip4 = fields.CharField(
+        max_length=10,
+        db_column='ZIP4',
+        blank=True,
+        help_text="ZIP Code"
+    )
+    phon = fields.CharField(
+        max_length=60,
+        db_column='PHON',
+        blank=True,
+        verbose_name="Phone",
+        help_text="Phone number"
+    )
+    fax = fields.CharField(
+        max_length=60,
+        db_column='FAX',
+        blank=True,
+        help_text="Fax number"
+    )
+    email = fields.CharField(
+        max_length=60,
+        db_column='EMAIL',
+        blank=True,
+        help_text="Email address"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -261,7 +304,12 @@ reviewed or not reviewed.",
         help_text='Legislative session identification number',
         null=True,
     )
-    user_id = fields.CharField(max_length=12, db_column='USER_ID')
+    user_id = fields.CharField(
+        max_length=12,
+        db_column='USER_ID',
+        verbose_name="User ID",
+        help_text="User identifier of the PRD user who logged the filing"
+    )
     special_audit = fields.IntegerField(
         null=True,
         db_column='SPECIAL_AUDIT',
@@ -302,7 +350,8 @@ laundering or other special condition."
         db_column='FILING_TYPE',
         null=True,
         blank=True,
-        choices=FILING_TYPE_CHOICES
+        choices=FILING_TYPE_CHOICES,
+        help_text="The type of filing"
     )
 
     class Meta:
@@ -338,7 +387,8 @@ class FilingsCd(CalAccessBaseModel):
     filing_type = fields.IntegerField(
         db_column='FILING_TYPE',
         db_index=True,
-        choices=FILING_TYPE_CHOICES
+        choices=FILING_TYPE_CHOICES,
+        help_text="The type of filing"
     )
 
     class Meta:
@@ -540,7 +590,7 @@ influence legislative or administrative action attachment)'),
 @python_2_unicode_compatible
 class CvrE530Cd(CalAccessBaseModel):
     """
-    This table method is undocumented in the print docs.
+    This table method is undocumented.
     """
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -588,55 +638,143 @@ original filing and 1 to 999 amendments.",
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES
     )
-    filer_naml = fields.CharField(db_column='FILER_NAML', max_length=200)
+    filer_naml = fields.CharField(
+        db_column='FILER_NAML',
+        max_length=200,
+        help_text="Filer last name"
+    )
     filer_namf = fields.CharField(
-        db_column='FILER_NAMF', max_length=4, blank=True
+        db_column='FILER_NAMF',
+        max_length=4,
+        blank=True,
+        help_text="Filer first name"
     )
     filer_namt = fields.CharField(
-        db_column='FILER_NAMT', max_length=32, blank=True
+        db_column='FILER_NAMT',
+        max_length=32,
+        blank=True,
+        help_text="Filer title or prefix"
     )
     filer_nams = fields.CharField(
-        db_column='FILER_NAMS', max_length=32, blank=True
+        db_column='FILER_NAMS',
+        max_length=32,
+        blank=True,
+        help_text="Filer suffix"
     )
     report_num = fields.CharField(
-        db_column='REPORT_NUM', max_length=32, blank=True
+        db_column='REPORT_NUM',
+        max_length=32,
+        blank=True,
+        help_text="This field is undocumented"
     )
-    rpt_date = fields.DateField(db_column='RPT_DATE', null=True)
+    rpt_date = fields.DateField(
+        db_column='RPT_DATE',
+        null=True,
+        help_text="This field is undocumented"
+    )
     filer_city = fields.CharField(
-        db_column='FILER_CITY', max_length=16, blank=True
+        db_column='FILER_CITY',
+        max_length=16,
+        blank=True,
+        help_text='Filer city'
     )
-    filer_st = fields.CharField(db_column='FILER_ST', max_length=4, blank=True)
+    filer_st = fields.CharField(
+        db_column='FILER_ST',
+        max_length=4,
+        blank=True,
+        verbose_name='Filer state'
+    )
     filer_zip4 = fields.CharField(
-        db_column='FILER_ZIP4', max_length=10, blank=True
+        db_column='FILER_ZIP4',
+        max_length=10,
+        blank=True,
+        help_text='Filer ZIP Code'
     )
     occupation = fields.CharField(
-        db_column='OCCUPATION', max_length=15, blank=True
+        db_column='OCCUPATION',
+        max_length=15,
+        blank=True,
+        help_text="This field is undocumented"
     )
     employer = fields.CharField(
-        db_column='EMPLOYER', max_length=13, blank=True
+        db_column='EMPLOYER',
+        max_length=13,
+        blank=True,
+        help_text="This field is undocumented"
     )
-    cand_naml = fields.CharField(db_column='CAND_NAML', max_length=46)
+    cand_naml = fields.CharField(
+        db_column='CAND_NAML',
+        max_length=46,
+        help_text="Candidate last name"
+    )
     cand_namf = fields.CharField(
-        db_column='CAND_NAMF', max_length=21, blank=True
+        db_column='CAND_NAMF',
+        max_length=21,
+        blank=True,
+        help_text="Candidate first name"
     )
     cand_namt = fields.CharField(
-        db_column='CAND_NAMT', max_length=32, blank=True
+        db_column='CAND_NAMT',
+        max_length=32,
+        blank=True,
+        help_text="Candidate title or prefix"
     )
     cand_nams = fields.CharField(
-        db_column='CAND_NAMS', max_length=32, blank=True
+        db_column='CAND_NAMS',
+        max_length=32,
+        blank=True,
+        help_text="Candidate suffix"
     )
-    district_cd = fields.IntegerField(db_column='DISTRICT_CD')
-    office_cd = fields.IntegerField(db_column='OFFICE_CD')
-    pmnt_dt = fields.DateField(db_column='PMNT_DT', null=True)
-    pmnt_amount = fields.FloatField(db_column='PMNT_AMOUNT')
-    type_literature = fields.IntegerField(db_column='TYPE_LITERATURE')
-    type_printads = fields.IntegerField(db_column='TYPE_PRINTADS')
-    type_radio = fields.IntegerField(db_column='TYPE_RADIO')
-    type_tv = fields.IntegerField(db_column='TYPE_TV')
-    type_it = fields.IntegerField(db_column='TYPE_IT')
-    type_billboards = fields.IntegerField(db_column='TYPE_BILLBOARDS')
-    type_other = fields.IntegerField(db_column='TYPE_OTHER')
-    other_desc = fields.CharField(db_column='OTHER_DESC', max_length=49)
+    district_cd = fields.IntegerField(
+        db_column='DISTRICT_CD',
+        help_text="This field is undocumented"
+    )
+    office_cd = fields.IntegerField(
+        db_column='OFFICE_CD',
+        help_text="This field is undocumented"
+    )
+    pmnt_dt = fields.DateField(
+        db_column='PMNT_DT',
+        null=True,
+        help_text="This field is undocumented"
+    )
+    pmnt_amount = fields.FloatField(
+        db_column='PMNT_AMOUNT',
+        help_text="This field is undocumented"
+    )
+    type_literature = fields.IntegerField(
+        db_column='TYPE_LITERATURE',
+        help_text="This field is undocumented"
+    )
+    type_printads = fields.IntegerField(
+        db_column='TYPE_PRINTADS',
+        help_text="This field is undocumented"
+    )
+    type_radio = fields.IntegerField(
+        db_column='TYPE_RADIO',
+        help_text="This field is undocumented"
+    )
+    type_tv = fields.IntegerField(
+        db_column='TYPE_TV',
+        help_text="This field is undocumented"
+    )
+    type_it = fields.IntegerField(
+        db_column='TYPE_IT',
+        help_text="This field is undocumented"
+    )
+    type_billboards = fields.IntegerField(
+        db_column='TYPE_BILLBOARDS',
+        help_text="This field is undocumented"
+    )
+    type_other = fields.IntegerField(
+        db_column='TYPE_OTHER',
+        help_text="This field is undocumented"
+    )
+    other_desc = fields.CharField(
+        db_column='OTHER_DESC',
+        max_length=49,
+        help_text="This field is undocumented"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
