@@ -351,7 +351,7 @@ slate mailer organization'),
         max_length=2,
         db_column="TRES_ST",
         blank=True,
-        verbose_name="Treasurer's street"
+        verbose_name="Treasurer's street",
     )
     tres_zip4 = fields.CharField(
         max_length=10,
