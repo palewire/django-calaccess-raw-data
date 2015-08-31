@@ -24,6 +24,7 @@ class Command(CalAccessCommand):
         group_list = sorted(group_list.items(), key=lambda x:x[0])
         context = {
             'group_list': group_list,
+            'model_count': len(model_list),
         }
         rendered = render_to_string('toolbox/models.rst', context)
         with open(self.target_path, 'w') as target_file:
