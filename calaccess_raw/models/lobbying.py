@@ -112,18 +112,18 @@ Applies to Form 602.',
         db_column='BUS_CITY',
         help_text='Filer business address city',
     )
-    BUS_CLASS_CHOICES=(
-        ("ENT","Entertainment/Recreation"),
-        ("Esp","Unknown"),
-        ("FIN","Finance/Insurance"),
-        ("LOG","Lodging/Restaurants"),
-        ("MAN","Manufacturing/Industrial"),
-        ("MER","Merchandise/Retail"),
-        ("OIL","Oil and Gas"),
-        ("OTH","Other"),
-        ("PRO","Professional/Trade"),
-        ("REA","Real Estate"),
-        ("TRN","Transportation")
+    BUS_CLASS_CHOICES = (
+        ("ENT", "Entertainment/Recreation"),
+        ("Esp", "Unknown"),
+        ("FIN", "Finance/Insurance"),
+        ("LOG", "Lodging/Restaurants"),
+        ("MAN", "Manufacturing/Industrial"),
+        ("MER", "Merchandise/Retail"),
+        ("OIL", "Oil and Gas"),
+        ("OTH", "Other"),
+        ("PRO", "Professional/Trade"),
+        ("REA", "Real Estate"),
+        ("TRN", "Transportation")
     )
     bus_class = fields.CharField(
         max_length=3,
@@ -297,15 +297,15 @@ registration statement)'),
         help_text='Individual checkbox',
     )
     IND_CLASS_CHOICES = (
-        ("AGR","Agriculture"),
-        ("EDU","Education"),
-        ("GOV","Government"),
-        ("HEA","Health"),
-        ("LAB","Labor Unions"),
-        ("LEG","Legal"),
-        ("OTH","Other"),
-        ("POL","Political Organizations"),
-        ("PUB","Public Employees"),
+        ("AGR", "Agriculture"),
+        ("EDU", "Education"),
+        ("GOV", "Government"),
+        ("HEA", "Health"),
+        ("LAB", "Labor Unions"),
+        ("LEG", "Legal"),
+        ("OTH", "Other"),
+        ("POL", "Political Organizations"),
+        ("PUB", "Public Employees"),
         ("UTL", "Utilities")
     )
     ind_class = fields.CharField(
