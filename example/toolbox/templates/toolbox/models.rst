@@ -32,7 +32,7 @@ The {{ model_count }} tab-delimited database exports published by California's S
     {% if field.name != "id" %}
         <tr>
             <td>{{ field.name }}</td>
-            <td>{{ field.get_internal_type }}</td>
+            <td>{{ field.description }}</td>
             <td>{{ field.help_text|capfirst }}</td>
         </tr>
     {% endif %}

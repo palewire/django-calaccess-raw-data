@@ -33,6 +33,11 @@ class CharField(fields.CharField, CalAccessFieldMixin):
     END
     """
 
+    def description(self):
+        return super(CharField, self).description % dict(
+            max_length=self.max_length
+        )
+
 
 class DateField(fields.DateField, CalAccessFieldMixin):
     copy_type = "text"
