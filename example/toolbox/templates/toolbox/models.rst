@@ -1,5 +1,5 @@
-Models
-======
+Database tables
+===============
 
 A crosswalk between the tables published by California's Secretary of State and the models in this Django application.
 {% for group, model_list in group_list %}
@@ -11,9 +11,9 @@ A crosswalk between the tables published by California's Secretary of State and 
 
 {{ object.doc.strip|safe }}
 
-**Source**: `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
-**Fields**
+**Fields:**
 
 .. raw:: html
 
