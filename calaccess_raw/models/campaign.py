@@ -3461,10 +3461,7 @@ Part 2, late contributions made')
 @python_2_unicode_compatible
 class F501502Cd(CalAccessBaseModel):
     """
-    Candidate Intention Statement
-
-        -- F501
-        -- F502
+    Candidate intention statement
     """
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3511,13 +3508,14 @@ original filing and 1 to 999 amendments.",
         db_column='COMMITTEE_ID',
         max_length=8,
         blank=True,
-        help_text='committee identification number'
+        verbose_name="Committee ID",
+        help_text='Committee identification number'
     )
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         blank=True,
         max_length=3,
-        help_text='entity code'
+        help_text='Entity code'
     )
     report_num = fields.IntegerField(
         db_column='REPORT_NUM',
@@ -3531,80 +3529,111 @@ original filing and 1 to 999 amendments.",
         null=True,
         help_text='date this report is filed'
     )
-    stmt_type = fields.IntegerField(db_column='STMT_TYPE')
+    stmt_type = fields.IntegerField(
+        db_column='STMT_TYPE',
+        help_text="Type of statement"
+    )
     from_date = fields.CharField(
         db_column='FROM_DATE',
         max_length=32,
         blank=True,
-        help_text='reporting period from date'
+        help_text='Reporting period from date'
     )
     thru_date = fields.CharField(
-        db_column='THRU_DATE', max_length=32, blank=True
+        db_column='THRU_DATE',
+        max_length=32,
+        blank=True,
+        help_text="Reporting period through date"
     )
     elect_date = fields.CharField(
         db_column='ELECT_DATE',
         max_length=32,
         blank=True,
-        help_text='date of election'
+        help_text='Date of election'
     )
     cand_naml = fields.CharField(
-        db_column='CAND_NAML', max_length=81, blank=True
+        db_column='CAND_NAML',
+        max_length=81,
+        blank=True,
+        help_text="Candidate/officerholder last name"
     )
     cand_namf = fields.CharField(
-        db_column='CAND_NAMF', max_length=25, blank=True
+        db_column='CAND_NAMF',
+        max_length=25,
+        blank=True,
+        help_text="Candidate/officerholder first name"
     )
     can_namm = fields.CharField(
         db_column='CAN_NAMM',
         max_length=10,
         blank=True,
-        help_text='candidate/officeholder middle name'
+        help_text='Candidate/officeholder middle name'
     )
     cand_namt = fields.CharField(
-        db_column='CAND_NAMT', max_length=7, blank=True
+        db_column='CAND_NAMT',
+        max_length=7,
+        blank=True,
+        help_text="Candidate/officerholder title or prefix"
     )
     cand_nams = fields.CharField(
-        db_column='CAND_NAMS', max_length=7, blank=True
+        db_column='CAND_NAMS',
+        max_length=7,
+        blank=True,
+        help_text="Candidate/officeholder suffix"
     )
     moniker_pos = fields.CharField(
-        db_column='MONIKER_POS', max_length=32, blank=True
+        db_column='MONIKER_POS',
+        max_length=32,
+        blank=True,
+        help_text="Location of the candidate/officeholder's moniker"
     )
     moniker = fields.CharField(
-        db_column='MONIKER', max_length=4, blank=True
+        db_column='MONIKER',
+        max_length=4,
+        blank=True,
+        help_text="Candidate/officeholder's moniker"
     )
     cand_city = fields.CharField(
-        db_column='CAND_CITY', max_length=22, blank=True
+        db_column='CAND_CITY',
+        max_length=22,
+        blank=True,
+        help_text="Candidate/officerholder city"
     )
     cand_st = fields.CharField(
         db_column='CAND_ST',
         max_length=4,
         blank=True,
-        help_text='candidate/officeholder state'
+        help_text='Candidate/officeholder state'
     )
     cand_zip4 = fields.CharField(
         db_column='CAND_ZIP4',
         max_length=10,
         blank=True,
-        help_text='candidate officeholder zip +4'
+        help_text='Candidate/officeholder zip +4'
     )
     cand_phon = fields.CharField(
         db_column='CAND_PHON',
         max_length=14,
         blank=True,
-        help_text='candidate/officeholder phone number'
+        help_text='Candidate/officeholder phone number'
     )
     cand_fax = fields.CharField(
         db_column='CAND_FAX',
         max_length=14,
-        blank=True
+        blank=True,
+        help_text="Candidate/officerholder fax"
     )
     cand_email = fields.CharField(
         db_column='CAND_EMAIL',
         max_length=37,
         blank=True,
-        help_text='candidate/officeholder email address'
+        help_text='Candidate/officeholder email address'
     )
     fin_naml = fields.CharField(
-        db_column='FIN_NAML', max_length=53, blank=True
+        db_column='FIN_NAML',
+        max_length=53,
+        blank=True,
+        help_text="Financial institution's business name"
     )
     fin_namf = fields.CharField(
         db_column='FIN_NAMF',
@@ -3660,22 +3689,27 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Financial institution's e-mail address."
     )
-    office_cd = fields.IntegerField(db_column='OFFICE_CD')
+    office_cd = fields.IntegerField(
+        db_column='OFFICE_CD',
+        help_text="Office sought code"
+    )
     offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR',
         max_length=50,
-        blank=True
+        blank=True,
+        help_text="Office sought description"
     )
     agency_nam = fields.CharField(
         db_column='AGENCY_NAM',
         max_length=63,
-        blank=True
+        blank=True,
+        help_text="Agency name"
     )
     juris_cd = fields.IntegerField(
         db_column='JURIS_CD',
         blank=True,
         null=True,
-        help_text='office jurisdiction code'
+        help_text='Office jurisdiction code'
     )
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR',
@@ -3687,7 +3721,7 @@ original filing and 1 to 999 amendments.",
         db_column='DIST_NO',
         max_length=4,
         blank=True,
-        help_text='district number for the office being sought. \
+        help_text='District number for the office being sought. \
 Populated for Senate, Assembly or Board of Equalization races.'
     )
     party = fields.CharField(
@@ -3700,42 +3734,43 @@ Populated for Senate, Assembly or Board of Equalization races.'
         db_column='YR_OF_ELEC',
         blank=True,
         null=True,
-        help_text='year of election'
+        help_text='Year of election'
     )
     elec_type = fields.IntegerField(
         db_column='ELEC_TYPE',
         blank=True,
-        null=True
+        null=True,
+        verbose_name="Election type"
     )
     execute_dt = fields.DateTimeField(
         db_column='EXECUTE_DT',
         blank=True,
         null=True,
-        help_text='execution date'
+        help_text='Execution date'
     )
     can_sig = fields.CharField(
         db_column='CAN_SIG',
         max_length=13,
         blank=True,
-        help_text='candidate signature'
+        help_text='Candidate signature'
     )
     account_no = fields.CharField(
         db_column='ACCOUNT_NO',
         max_length=22,
         blank=True,
-        help_text='account number'
+        help_text='Account number'
     )
     acct_op_dt = fields.DateField(
         db_column='ACCT_OP_DT',
         blank=True,
         null=True,
-        help_text='account open date'
+        help_text='Account open date'
     )
     party_cd = fields.IntegerField(
         db_column='PARTY_CD',
         blank=True,
         null=True,
-        help_text="Party code."
+        help_text="Party code"
     )
     district_cd = fields.IntegerField(
         db_column='DISTRICT_CD',
