@@ -1114,22 +1114,47 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
         help_text='Legislative session identification number',
         null=True,
     )
-    employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=162)
-    current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
-    session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
+    employer_name = fields.CharField(
+        db_column='EMPLOYER_NAME',
+        max_length=162
+    )
+    current_qtr_amt = fields.FloatField(
+        db_column='CURRENT_QTR_AMT'
+    )
+    session_total_amt = fields.FloatField(
+        db_column='SESSION_TOTAL_AMT'
+    )
     contributor_id = fields.IntegerField(
-        db_column='CONTRIBUTOR_ID', blank=True, null=True
+        db_column='CONTRIBUTOR_ID',
+        blank=True,
+        null=True
     )
     interest_cd = fields.IntegerField(
-        db_column='INTEREST_CD', blank=True, null=True
+        db_column='INTEREST_CD',
+        blank=True,
+        null=True
     )
     interest_name = fields.CharField(
-        db_column='INTEREST_NAME', max_length=24, blank=True
+        db_column='INTEREST_NAME',
+        max_length=24,
+        blank=True
     )
-    session_yr_1 = fields.IntegerField(db_column='SESSION_YR_1')
-    session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
-    yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
-    yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
+    session_yr_1 = fields.IntegerField(
+        db_column='SESSION_YR_1',
+        help_text="Total amount of year 1 of the session",
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column='SESSION_YR_2',
+        help_text="Total amount of year 2 of the session",
+    )
+    yr_1_ytd_amt = fields.FloatField(
+        db_column='YR_1_YTD_AMT',
+        verbose_name="Year 1 year-to-date-amount",
+    )
+    yr_2_ytd_amt = fields.FloatField(
+        db_column='YR_2_YTD_AMT',
+        verbose_name="Year 2 year-to-date-amount",
+    )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
         verbose_name="Quarter 1",
@@ -1193,22 +1218,47 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         help_text='Legislative session identification number',
         null=True,
     )
-    employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=162)
-    current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
-    session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
+    employer_name = fields.CharField(
+        db_column='EMPLOYER_NAME',
+        max_length=162
+    )
+    current_qtr_amt = fields.FloatField(
+        db_column='CURRENT_QTR_AMT'
+    )
+    session_total_amt = fields.FloatField(
+        db_column='SESSION_TOTAL_AMT'
+    )
     contributor_id = fields.IntegerField(
-        db_column='CONTRIBUTOR_ID', blank=True, null=True
+        db_column='CONTRIBUTOR_ID',
+        blank=True,
+        null=True
     )
     interest_cd = fields.IntegerField(
-        db_column='INTEREST_CD', blank=True, null=True
+        db_column='INTEREST_CD',
+        blank=True,
+        null=True
     )
     interest_name = fields.CharField(
-        db_column='INTEREST_NAME', max_length=24, blank=True
+        db_column='INTEREST_NAME',
+        max_length=24,
+        blank=True
     )
-    session_yr_1 = fields.IntegerField(db_column='SESSION_YR_1')
-    session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
-    yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
-    yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
+    session_yr_1 = fields.IntegerField(
+        db_column='SESSION_YR_1',
+        help_text="Total amount of year 1 of the session",
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column='SESSION_YR_2',
+        help_text="Total amount of year 2 of the session",
+    )
+    yr_1_ytd_amt = fields.FloatField(
+        db_column='YR_1_YTD_AMT',
+        verbose_name="Year 1 year-to-date-amount",
+    )
+    yr_2_ytd_amt = fields.FloatField(
+        db_column='YR_2_YTD_AMT',
+        verbose_name="Year 2 year-to-date-amount",
+    )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
         verbose_name="Quarter 1",
@@ -1272,22 +1322,47 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         help_text='Legislative session identification number',
         null=True,
     )
-    employer_name = fields.CharField(db_column='EMPLOYER_NAME', max_length=162)
-    current_qtr_amt = fields.FloatField(db_column='CURRENT_QTR_AMT')
-    session_total_amt = fields.FloatField(db_column='SESSION_TOTAL_AMT')
+    employer_name = fields.CharField(
+        db_column='EMPLOYER_NAME',
+        max_length=162
+    )
+    current_qtr_amt = fields.FloatField(
+        db_column='CURRENT_QTR_AMT'
+    )
+    session_total_amt = fields.FloatField(
+        db_column='SESSION_TOTAL_AMT'
+    )
     contributor_id = fields.IntegerField(
-        db_column='CONTRIBUTOR_ID', blank=True, null=True
+        db_column='CONTRIBUTOR_ID',
+        blank=True,
+        null=True
     )
     interest_cd = fields.IntegerField(
-        db_column='INTEREST_CD', blank=True, null=True
+        db_column='INTEREST_CD',
+        blank=True,
+        null=True
     )
     interest_name = fields.CharField(
-        db_column='INTEREST_NAME', max_length=24, blank=True
+        db_column='INTEREST_NAME',
+        max_length=24,
+        blank=True
     )
-    session_yr_1 = fields.IntegerField(db_column='SESSION_YR_1')
-    session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
-    yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
-    yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
+    session_yr_1 = fields.IntegerField(
+        db_column='SESSION_YR_1',
+        help_text="Total amount of year 1 of the session",
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column='SESSION_YR_2',
+        help_text="Total amount of year 2 of the session",
+    )
+    yr_1_ytd_amt = fields.FloatField(
+        db_column='YR_1_YTD_AMT',
+        verbose_name="Year 1 year-to-date-amount",
+    )
+    yr_2_ytd_amt = fields.FloatField(
+        db_column='YR_2_YTD_AMT',
+        verbose_name="Year 2 year-to-date-amount",
+    )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
         verbose_name="Quarter 1",
@@ -1508,10 +1583,22 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         blank=True,
         null=True
     )
-    session_yr_1 = fields.IntegerField(db_column='SESSION_YR_1')
-    session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
-    yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
-    yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
+    session_yr_1 = fields.IntegerField(
+        db_column='SESSION_YR_1',
+        help_text="Total amount of year 1 of the session",
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column='SESSION_YR_2',
+        help_text="Total amount of year 2 of the session",
+    )
+    yr_1_ytd_amt = fields.FloatField(
+        db_column='YR_1_YTD_AMT',
+        verbose_name="Year 1 year-to-date-amount",
+    )
+    yr_2_ytd_amt = fields.FloatField(
+        db_column='YR_2_YTD_AMT',
+        verbose_name="Year 2 year-to-date-amount",
+    )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
         verbose_name="Quarter 1",
@@ -1591,10 +1678,22 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
         blank=True,
         null=True
     )
-    session_yr_1 = fields.IntegerField(db_column='SESSION_YR_1')
-    session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
-    yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
-    yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
+    session_yr_1 = fields.IntegerField(
+        db_column='SESSION_YR_1',
+        help_text="Total amount of year 1 of the session",
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column='SESSION_YR_2',
+        help_text="Total amount of year 2 of the session",
+    )
+    yr_1_ytd_amt = fields.FloatField(
+        db_column='YR_1_YTD_AMT',
+        verbose_name="Year 1 year-to-date-amount",
+    )
+    yr_2_ytd_amt = fields.FloatField(
+        db_column='YR_2_YTD_AMT',
+        verbose_name="Year 2 year-to-date-amount",
+    )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
         verbose_name="Quarter 1",
@@ -1671,10 +1770,22 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
         blank=True,
         null=True
     )
-    session_yr_1 = fields.IntegerField(db_column='SESSION_YR_1')
-    session_yr_2 = fields.IntegerField(db_column='SESSION_YR_2')
-    yr_1_ytd_amt = fields.FloatField(db_column='YR_1_YTD_AMT')
-    yr_2_ytd_amt = fields.FloatField(db_column='YR_2_YTD_AMT')
+    session_yr_1 = fields.IntegerField(
+        db_column='SESSION_YR_1',
+        help_text="Total amount of year 1 of the session",
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column='SESSION_YR_2',
+        help_text="Total amount of year 2 of the session",
+    )
+    yr_1_ytd_amt = fields.FloatField(
+        db_column='YR_1_YTD_AMT',
+        verbose_name="Year 1 year-to-date-amount",
+    )
+    yr_2_ytd_amt = fields.FloatField(
+        db_column='YR_2_YTD_AMT',
+        verbose_name="Year 2 year-to-date-amount",
+    )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
         verbose_name="Quarter 1",
