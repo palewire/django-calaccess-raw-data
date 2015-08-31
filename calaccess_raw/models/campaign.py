@@ -3286,7 +3286,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class S497Cd(CalAccessBaseModel):
     """
-    Form 497 Late Contributions Received/Made
+    Form 497: Late Contributions Received/Made
     """
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3360,88 +3360,210 @@ Part 2, late contributions made')
         choices=ENTITY_CODE_CHOICES,
     )
     enty_naml = fields.CharField(
-        max_length=200, db_column='ENTY_NAML', blank=True
+        max_length=200,
+        db_column='ENTY_NAML',
+        blank=True,
+        help_text="Entity's last name or business name"
     )
     enty_namf = fields.CharField(
-        max_length=45, db_column='ENTY_NAMF', blank=True
+        max_length=45,
+        db_column='ENTY_NAMF',
+        blank=True,
+        help_text="Entity's first name"
     )
     enty_namt = fields.CharField(
-        max_length=10, db_column='ENTY_NAMT', blank=True
+        max_length=10,
+        db_column='ENTY_NAMT',
+        blank=True,
+        help_text="Entity's title or prefix"
     )
     enty_nams = fields.CharField(
-        max_length=10, db_column='ENTY_NAMS', blank=True
+        max_length=10,
+        db_column='ENTY_NAMS',
+        blank=True,
+        help_text="Entity's suffix"
     )
     enty_city = fields.CharField(
-        max_length=30, db_column='ENTY_CITY', blank=True
+        max_length=30,
+        db_column='ENTY_CITY',
+        blank=True,
+        help_text="Filing committee's city address"
     )
-    enty_st = fields.CharField(max_length=2, db_column='ENTY_ST', blank=True)
+    enty_st = fields.CharField(
+        max_length=2,
+        db_column='ENTY_ST',
+        blank=True,
+        help_text="Filing committee's state address"
+    )
     enty_zip4 = fields.CharField(
-        max_length=10, db_column='ENTY_ZIP4', blank=True
+        max_length=10,
+        db_column='ENTY_ZIP4',
+        blank=True,
+        help_text="Filing committee's ZIP Code"
     )
     ctrib_emp = fields.CharField(
-        max_length=200, db_column='CTRIB_EMP', blank=True
+        max_length=200,
+        db_column='CTRIB_EMP',
+        blank=True,
+        help_text="Employer"
     )
     ctrib_occ = fields.CharField(
-        max_length=60, db_column='CTRIB_OCC', blank=True
+        max_length=60,
+        db_column='CTRIB_OCC',
+        blank=True,
+        help_text="Occupation"
     )
     ctrib_self = fields.CharField(
-        max_length=1, db_column='CTRIB_SELF', blank=True
+        max_length=1,
+        db_column='CTRIB_SELF',
+        blank=True,
+        help_text='Self employed checkbox. "X" indicates the contributor is \
+self-employed.'
     )
-    elec_date = fields.DateField(db_column='ELEC_DATE', null=True)
-    ctrib_date = fields.DateField(db_column='CTRIB_DATE', null=True)
-    date_thru = fields.DateField(db_column='DATE_THRU', null=True)
+    elec_date = fields.DateField(
+        db_column='ELEC_DATE',
+        null=True,
+        help_text="Date of election"
+    )
+    ctrib_date = fields.DateField(
+        db_column='CTRIB_DATE',
+        null=True,
+        help_text="Date item received/made"
+    )
+    date_thru = fields.DateField(
+        db_column='DATE_THRU',
+        null=True,
+        help_text="End of date range for items received"
+    )
     amount = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AMOUNT'
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMOUNT',
+        help_text="Amount received/made"
     )
-    cmte_id = fields.CharField(max_length=9, db_column='CMTE_ID', blank=True)
+    cmte_id = fields.CharField(
+        max_length=9,
+        db_column='CMTE_ID',
+        blank=True,
+        verbose_name="Committee ID",
+        help_text="Committee identification number"
+    )
     cand_naml = fields.CharField(
-        max_length=200, db_column='CAND_NAML', blank=True
+        max_length=200,
+        db_column='CAND_NAML',
+        blank=True,
+        help_text="Candidate/officeholder's last name"
     )
     cand_namf = fields.CharField(
-        max_length=45, db_column='CAND_NAMF', blank=True
+        max_length=45,
+        db_column='CAND_NAMF',
+        blank=True,
+        help_text="Candidate/officeholder's first name"
     )
     cand_namt = fields.CharField(
-        max_length=10, db_column='CAND_NAMT', blank=True
+        max_length=10,
+        db_column='CAND_NAMT',
+        blank=True,
+        help_text="Candidate/officeholder's title or prefix"
     )
     cand_nams = fields.CharField(
-        max_length=10, db_column='CAND_NAMS', blank=True
+        max_length=10,
+        db_column='CAND_NAMS',
+        blank=True,
+        help_text="Candidate/officeholder's suffix"
     )
     office_cd = fields.CharField(
-        max_length=3, db_column='OFFICE_CD', blank=True
+        max_length=3,
+        db_column='OFFICE_CD',
+        blank=True,
+        verbose_name="Office code",
+        help_text="Office sought code"
     )
     offic_dscr = fields.CharField(
-        max_length=40, db_column='OFFIC_DSCR', blank=True
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True,
+        help_text="Office sought description"
     )
     juris_cd = fields.CharField(
-        max_length=3, db_column='JURIS_CD', blank=True
+        max_length=3,
+        db_column='JURIS_CD',
+        blank=True,
+        verbose_name="Jurisdiction code"
     )
     juris_dscr = fields.CharField(
-        max_length=40, db_column='JURIS_DSCR', blank=True
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True,
+        help_text="Office jurisdiction description"
     )
-    dist_no = fields.CharField(max_length=3, db_column='DIST_NO', blank=True)
+    dist_no = fields.CharField(
+        max_length=3,
+        db_column='DIST_NO',
+        blank=True,
+        help_text="District number for the office being sought. Populated \
+for Senate, Assembly, or Board of Equalization races."
+    )
     off_s_h_cd = fields.CharField(
-        max_length=1, db_column='OFF_S_H_CD', blank=True
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True,
+        help_text='Office Sought/Held Code. Legal values are "S" for \
+sought and "H" for held.'
     )
     bal_name = fields.CharField(
-        max_length=200, db_column='BAL_NAME', blank=True
+        max_length=200,
+        db_column='BAL_NAME',
+        blank=True,
+        help_text="Ballot measure name"
     )
-    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    bal_num = fields.CharField(
+        max_length=7,
+        db_column='BAL_NUM',
+        blank=True,
+        help_text="Ballot measure number"
+    )
     bal_juris = fields.CharField(
-        max_length=40, db_column='BAL_JURIS', blank=True
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True,
+        help_text="Ballot measure jurisdiction"
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo amount flag"
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text="Reference to text contained in TEXT code"
     )
-    bal_id = fields.CharField(max_length=9, db_column='BAL_ID', blank=True)
-    cand_id = fields.CharField(max_length=9, db_column='CAND_ID', blank=True)
+    bal_id = fields.CharField(
+        max_length=9,
+        db_column='BAL_ID',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    cand_id = fields.CharField(
+        max_length=9,
+        db_column='CAND_ID',
+        blank=True,
+        help_text="This field is undocumented"
+    )
     sup_off_cd = fields.CharField(
-        max_length=1, db_column='SUP_OFF_CD', blank=True
+        max_length=1,
+        db_column='SUP_OFF_CD',
+        blank=True,
+        help_text="This field is undocumented"
     )
     sup_opp_cd = fields.CharField(
-        max_length=1, db_column='SUP_OPP_CD', blank=True
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True,
+        help_text="This field is undocumented"
     )
 
     def __str__(self):
