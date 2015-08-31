@@ -1,7 +1,7 @@
 Database tables
 ===============
 
-A crosswalk between the tables published by California's Secretary of State and the models in this Django application.
+The tab-delimited database exports published by California's Secretary of State and loaded by this Django application.
 {% for group, model_list in group_list %}
 {{ group|capfirst }}
 -------
