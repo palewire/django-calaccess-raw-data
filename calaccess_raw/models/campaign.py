@@ -3187,19 +3187,39 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
     amount = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='AMOUNT'
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMOUNT',
+        help_text="Expenditure amount"
     )
-    exp_date = fields.DateField(db_column='EXP_DATE', null=True)
+    exp_date = fields.DateField(
+        db_column='EXP_DATE',
+        null=True,
+        help_text="Expenditure dates"
+    )
     expn_dscr = fields.CharField(
-        max_length=90, db_column='EXPN_DSCR', blank=True
+        max_length=90,
+        db_column='EXPN_DSCR',
+        blank=True,
+        help_text="Purpose of expense and/or description/explanation"
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo amount flag"
     )
     memo_refno = fields.CharField(
-        max_length=20, db_column='MEMO_REFNO', blank=True
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text="Reference to text contained in a TEXT record"
     )
-    date_thru = fields.DateField(db_column='DATE_THRU', null=True)
+    date_thru = fields.DateField(
+        db_column='DATE_THRU',
+        null=True,
+        help_text="End of date range for items paid"
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
@@ -3218,10 +3238,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class SpltCd(CalAccessBaseModel):
     """
-    Split Records
-
-        -- F450P5
-        -- F460 (A-B1-B2-C-D-H)
+    Split records
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -3231,13 +3248,22 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     elec_amount = fields.DecimalField(
-        max_digits=16, decimal_places=2, db_column='ELEC_AMOUNT'
+        max_digits=16,
+        decimal_places=2,
+        db_column='ELEC_AMOUNT',
+        help_text="This field is undocumented"
     )
     elec_code = fields.CharField(
-        max_length=2, db_column='ELEC_CODE', blank=True,
+        max_length=2,
+        db_column='ELEC_CODE',
+        blank=True,
         help_text='This field is undocumented',
     )
-    elec_date = fields.DateField(db_column='ELEC_DATE', null=True)
+    elec_date = fields.DateField(
+        db_column='ELEC_DATE',
+        null=True,
+        help_text="This field is undocumented"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
