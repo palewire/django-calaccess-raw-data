@@ -1265,25 +1265,41 @@ original filing and 1 to 999 amendments.",
     bal_juris = fields.CharField(
         max_length=40,
         db_column='BAL_JURIS',
-        blank=True
+        blank=True,
+        help_text="Ballot measure jurisdiction"
     )
     bal_name = fields.CharField(
         max_length=200,
         db_column='BAL_NAME',
-        blank=True
+        blank=True,
+        help_text="Ballot measure name"
     )
-    bal_num = fields.CharField(max_length=7, db_column='BAL_NUM', blank=True)
+    bal_num = fields.CharField(
+        max_length=7,
+        db_column='BAL_NUM',
+        blank=True,
+        help_text="Ballot measure number or letter"
+    )
     cmte_id = fields.CharField(
         max_length=9,
         db_column='CMTE_ID',
         blank=True,
-        help_text="Commitee Identification number."
+        help_text="Commitee identification number, when the entity \
+is a committee"
     )
     control_yn = fields.IntegerField(
-        null=True, db_column='CONTROL_YN', blank=True
+        null=True,
+        db_column='CONTROL_YN',
+        blank=True,
+        help_text='Controlled Committee (yes/no) checkbox. Legal values \
+are "Y" or "N".'
     )
     dist_no = fields.CharField(
-        max_length=3, db_column='DIST_NO', blank=True
+        max_length=3,
+        db_column='DIST_NO',
+        blank=True,
+        help_text="District number for the office being sought. Populated \
+for Senate, Assembly, or Board of Equalization races."
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -1317,35 +1333,71 @@ original filing and 1 to 999 amendments.",
     #     max_length=55, db_column='ENTY_ADR2', blank=True
     # )
     enty_city = fields.CharField(
-        max_length=30, db_column='ENTY_CITY', blank=True
+        max_length=30,
+        db_column='ENTY_CITY',
+        blank=True,
+        help_text="Entity city"
     )
     enty_email = fields.CharField(
-        max_length=60, db_column='ENTY_EMAIL', blank=True
+        max_length=60,
+        db_column='ENTY_EMAIL',
+        blank=True,
+        help_text="Entity email address"
     )
     enty_fax = fields.CharField(
-        max_length=20, db_column='ENTY_FAX', blank=True
+        max_length=20,
+        db_column='ENTY_FAX',
+        blank=True,
+        help_text="Entity fax number"
     )
     enty_namf = fields.CharField(
-        max_length=45, db_column='ENTY_NAMF', blank=True
+        max_length=45,
+        db_column='ENTY_NAMF',
+        blank=True,
+        help_text="Entity first name, if an individual"
     )
     enty_naml = fields.CharField(
-        max_length=200, db_column='ENTY_NAML', blank=True
+        max_length=200,
+        db_column='ENTY_NAML',
+        blank=True,
+        help_text="Entity name, or last name if an individual"
     )
     enty_nams = fields.CharField(
-        max_length=10, db_column='ENTY_NAMS', blank=True
+        max_length=10,
+        db_column='ENTY_NAMS',
+        blank=True,
+        help_text="Entity suffix, if an individual"
     )
     enty_namt = fields.CharField(
-        max_length=10, db_column='ENTY_NAMT', blank=True
+        max_length=10,
+        db_column='ENTY_NAMT',
+        blank=True,
+        help_text="Entity prefix or title, if an individual"
     )
     enty_phon = fields.CharField(
-        max_length=20, db_column='ENTY_PHON', blank=True
+        max_length=20,
+        db_column='ENTY_PHON',
+        blank=True,
+        help_text="Entity phone number"
     )
-    enty_st = fields.CharField(max_length=2, db_column='ENTY_ST', blank=True)
+    enty_st = fields.CharField(
+        max_length=2,
+        db_column='ENTY_ST',
+        blank=True,
+        help_text="Entity state"
+    )
     enty_zip4 = fields.CharField(
-        max_length=10, db_column='ENTY_ZIP4', blank=True
+        max_length=10,
+        db_column='ENTY_ZIP4',
+        blank=True,
+        help_text="Entity ZIP code"
     )
     f460_part = fields.CharField(
-        max_length=2, db_column='F460_PART', blank=True
+        max_length=2,
+        db_column='F460_PART',
+        blank=True,
+        help_text="Part of 460 cover page coded on ths cvr2 record. Legal \
+values are 3, 4a, 4b, 5a, 5b, or 6."
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1368,10 +1420,16 @@ short form)'),
         help_text='Name of the source filing form or schedule'
     )
     juris_cd = fields.CharField(
-        max_length=3, db_column='JURIS_CD', blank=True
+        max_length=3,
+        db_column='JURIS_CD',
+        blank=True,
+        help_text="Office jurisdiction code"
     )
     juris_dscr = fields.CharField(
-        max_length=40, db_column='JURIS_DSCR', blank=True
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True,
+        help_text="Office jurisdiction description"
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -1385,23 +1443,45 @@ short form)'),
     #     max_length=55, db_column='MAIL_ADR2', blank=True
     # )
     mail_city = fields.CharField(
-        max_length=30, db_column='MAIL_CITY', blank=True
+        max_length=30,
+        db_column='MAIL_CITY',
+        blank=True,
+        help_text="Filer's mailing city"
     )
-    mail_st = fields.CharField(max_length=2, db_column='MAIL_ST', blank=True)
+    mail_st = fields.CharField(
+        max_length=2,
+        db_column='MAIL_ST',
+        blank=True,
+        help_text="Filer's mailing state"
+    )
     mail_zip4 = fields.CharField(
-        max_length=10, db_column='MAIL_ZIP4', blank=True
+        max_length=10,
+        db_column='MAIL_ZIP4',
+        blank=True,
+        help_text="Filer's mailing ZIP Code"
     )
     off_s_h_cd = fields.CharField(
-        max_length=1, db_column='OFF_S_H_CD', blank=True
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True,
+        help_text='Office sought/held code. Indicates if the candidate is an \
+incumbent. Legal values are "S" for sought and "H" for held.'
     )
     offic_dscr = fields.CharField(
-        max_length=40, db_column='OFFIC_DSCR', blank=True
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True,
+        help_text="Office sought description"
     )
     office_cd = fields.CharField(
-        max_length=3, db_column='OFFICE_CD', blank=True
+        max_length=3,
+        db_column='OFFICE_CD',
+        blank=True,
+        verbose_name="Office code",
+        help_text="Code that identifies the office being sought"
     )
     REC_TYPE_CHOICES = (
-        ("CVR2", "CVR2"),
+        ("CVR2", "Cover, Page 2"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -1411,9 +1491,18 @@ short form)'),
         choices=REC_TYPE_CHOICES,
     )
     sup_opp_cd = fields.CharField(
-        max_length=1, db_column='SUP_OPP_CD', blank=True
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True,
+        help_text='Support/Oppose (S/O) code for the ballot measure. \
+Legal values are "S" for support or "O" for oppose.'
     )
-    title = fields.CharField(max_length=90, db_column='TITLE', blank=True)
+    title = fields.CharField(
+        max_length=90,
+        db_column='TITLE',
+        blank=True,
+        help_text="Official title of filing officer. Applies to the form 465."
+    )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
         max_length=20,
@@ -1422,16 +1511,28 @@ short form)'),
         help_text='Permanent value unique to this item',
     )
     tres_namf = fields.CharField(
-        max_length=45, db_column='TRES_NAMF', blank=True
+        max_length=45,
+        db_column='TRES_NAMF',
+        blank=True,
+        help_text="Treasurer or responsible officer's first name"
     )
     tres_naml = fields.CharField(
-        max_length=200, db_column='TRES_NAML', blank=True
+        max_length=200,
+        db_column='TRES_NAML',
+        blank=True,
+        help_text="Treasurer or responsible officer's last name"
     )
     tres_nams = fields.CharField(
-        max_length=10, db_column='TRES_NAMS', blank=True
+        max_length=10,
+        db_column='TRES_NAMS',
+        blank=True,
+        help_text="Treasurer or responsible officer's suffix"
     )
     tres_namt = fields.CharField(
-        max_length=10, db_column='TRES_NAMT', blank=True
+        max_length=10,
+        db_column='TRES_NAMT',
+        blank=True,
+        help_text="Treasurer or responsible officer's prefix or title"
     )
 
     class Meta:
