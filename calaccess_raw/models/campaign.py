@@ -620,20 +620,7 @@ support and 'O' for oppose."
 @python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information for the campaign disclosure forms below.
-    This data comes from the electronic filing.
-    The data contained herin is "as filed" by the entity making the filing.
-
-        F401 -- Slate Mailer Organization Campaign Statement
-        F425 -- Semi-Annual Statement of No Activity
-        F450 -- Recipient Committee Campaign Statement (Short Form)
-        F460 -- Recipient Committee Campaign Statement
-        F461 -- Independent Expenditure and Major Donor Committee
-                Campaign Statement
-        F465 -- Supplemental Independent Expenditure Report
-        F496 -- Late Independent Expenditure Report
-        F497 -- Late Contribution Report
-        F498 -- Slate Mailer Late Payment Report
+    Cover page information from campaign disclosure forms
     """
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -651,45 +638,58 @@ original filing and 1 to 999 amendments.",
     amendexp_2 = fields.CharField(
         max_length=100,
         db_column='AMENDEXP_2',
-        blank=True
+        blank=True,
+        help_text="Amendment explanation line 2"
     )
     amendexp_3 = fields.CharField(
         max_length=100,
         db_column='AMENDEXP_3',
-        blank=True
+        blank=True,
+        help_text="Amendment explanation line 3"
     )
     assoc_cb = fields.CharField(
         max_length=4,
         db_column='ASSOC_CB',
-        blank=True
+        blank=True,
+        help_text="Association Interests info included check-box. Legal \
+values are 'X' and null."
     )
     assoc_int = fields.CharField(
         max_length=90,
         db_column='ASSOC_INT',
-        blank=True
+        blank=True,
+        help_text="Description of association interests"
     )
     bal_id = fields.CharField(
         max_length=9,
         db_column='BAL_ID',
         blank=True,
-        help_text="This field is undocument"
+        help_text="This field is undocumented"
     )
     bal_juris = fields.CharField(
         max_length=40,
         db_column='BAL_JURIS',
-        blank=True
+        blank=True,
+        help_text="Ballot measure jurisdiction"
     )
     bal_name = fields.CharField(
         max_length=200,
         db_column='BAL_NAME',
         blank=True,
-        help_text="Ballot measure name."
+        help_text="Ballot measure name"
     )
     bal_num = fields.CharField(
-        max_length=4, db_column='BAL_NUM', blank=True
+        max_length=4,
+        db_column='BAL_NUM',
+        blank=True,
+        help_text="Ballot measure number or letter"
     )
     brdbase_yn = fields.CharField(
-        max_length=1, db_column='BRDBASE_YN', blank=True
+        max_length=1,
+        db_column='BRDBASE_YN',
+        blank=True,
+        help_text="Broad Base Committee (yes/no) check box. Legal \
+values are 'Y' or 'N'."
     )
     # bus_adr1 = fields.CharField(
     #     max_length=55, db_column='BUS_ADR1', blank=True
@@ -698,23 +698,47 @@ original filing and 1 to 999 amendments.",
     #     max_length=55, db_column='BUS_ADR2', blank=True
     # )
     bus_city = fields.CharField(
-        max_length=30, db_column='BUS_CITY', blank=True
+        max_length=30,
+        db_column='BUS_CITY',
+        blank=True,
+        help_text="Employer/business address city"
     )
     bus_inter = fields.CharField(
-        max_length=40, db_column='BUS_INTER', blank=True
+        max_length=40,
+        db_column='BUS_INTER',
+        blank=True,
+        help_text="Employer/business interest description"
     )
     bus_name = fields.CharField(
-        max_length=200, db_column='BUS_NAME', blank=True
+        max_length=200,
+        db_column='BUS_NAME',
+        blank=True,
+        help_text="Name of employer/business. Applies to the form 461."
     )
-    bus_st = fields.CharField(max_length=2, db_column='BUS_ST', blank=True)
+    bus_st = fields.CharField(
+        max_length=2,
+        db_column='BUS_ST',
+        blank=True,
+        help_text="Employer/business address state"
+    )
     bus_zip4 = fields.CharField(
-        max_length=10, db_column='BUS_ZIP4', blank=True
+        max_length=10,
+        db_column='BUS_ZIP4',
+        blank=True,
+        help_text="Employer/business address ZIP Code"
     )
     busact_cb = fields.CharField(
-        max_length=10, db_column='BUSACT_CB', blank=True
+        max_length=10,
+        db_column='BUSACT_CB',
+        blank=True,
+        help_text="Business activity info included check-box. Valid values \
+are 'X' and null"
     )
     busactvity = fields.CharField(
-        max_length=90, db_column='BUSACTVITY', blank=True
+        max_length=90,
+        db_column='BUSACTVITY',
+        blank=True,
+        help_text="Business activity description"
     )
     # cand_adr1 = fields.CharField(
     #     max_length=55, db_column='CAND_ADR1', blank=True
@@ -726,101 +750,118 @@ original filing and 1 to 999 amendments.",
         max_length=30,
         db_column='CAND_CITY',
         blank=True,
-        help_text='candidate/officeholder city'
+        help_text='Candidate/officeholder city'
     )
     cand_email = fields.CharField(
         max_length=60,
         db_column='CAND_EMAIL',
         blank=True,
-        help_text='candidate/officeholder email'
+        help_text='Candidate/officeholder email. This field \
+is not contained on the forms.'
     )
     cand_fax = fields.CharField(
         max_length=20,
         db_column='CAND_FAX',
         blank=True,
-        help_text='candidate/officeholder fax'
+        help_text='Candidate/officeholder fax. This field \
+is not contained on the forms.'
     )
     cand_id = fields.CharField(
         max_length=9,
         db_column='CAND_ID',
-        blank=True
+        blank=True,
+        help_text="This field is not documented"
     )
     cand_namf = fields.CharField(
         max_length=45,
         db_column='CAND_NAMF',
         blank=True,
-        help_text='candidate/officeholder first name'
+        help_text='Candidate/officeholder first name'
     )
     cand_naml = fields.CharField(
         max_length=200,
         db_column='CAND_NAML',
         blank=True,
-        help_text="Candidate/officeholder's last name."
+        help_text="Candidate/officeholder's last name. Applies to forms \
+460, 465, and 496."
     )
     cand_nams = fields.CharField(
         max_length=10,
         db_column='CAND_NAMS',
         blank=True,
-        help_text="Candidate/officeholder's name suffix."
+        help_text="Candidate/officeholder's name suffix"
     )
     cand_namt = fields.CharField(
         max_length=10,
         db_column='CAND_NAMT',
         blank=True,
-        help_text="Candidate/officeholder's prefix or title."
+        help_text="Candidate/officeholder's prefix or title"
     )
     cand_phon = fields.CharField(
         max_length=20,
         db_column='CAND_PHON',
         blank=True,
-        help_text='candidate/officeholder phone'
+        help_text='Candidate/officeholder phone'
     )
     cand_st = fields.CharField(
         max_length=4,
         db_column='CAND_ST',
-        blank=True
+        blank=True,
+        help_text="Candidate/officeholder's state"
     )
     cand_zip4 = fields.CharField(
         max_length=10,
         db_column='CAND_ZIP4',
-        blank=True
+        blank=True,
+        help_text="Candidate/officeholder's ZIP Code"
     )
     cmtte_id = fields.CharField(
         max_length=9,
         db_column='CMTTE_ID',
-        blank=True
+        blank=True,
+        verbose_name="Committee ID",
+        help_text="Committee ID (Filer_id) of recipient Committee who's \
+campaign statement is attached. This field applies to the form 401."
     )
     cmtte_type = fields.CharField(
         max_length=1,
         db_column='CMTTE_TYPE',
-        blank=True
+        blank=True,
+        verbose_name="Committee type",
+        help_text="Type of Recipient Committee. Applies to the 450/460."
     )
     control_yn = fields.IntegerField(
         null=True,
         db_column='CONTROL_YN',
-        blank=True
+        blank=True,
+        help_text="Controlled Committee (yes/no) check box. Legal values \
+are 'Y' or 'N'."
     )
     dist_no = fields.CharField(
         max_length=4,
         db_column='DIST_NO',
-        blank=True
+        blank=True,
+        help_text="District number for the office being sought. Populated \
+for Senate, Assembly, or Board of Equalization races."
     )
     elect_date = fields.DateTimeField(
         null=True,
         db_column='ELECT_DATE',
         blank=True,
-        help_text="Date of the General Election. \
-This date will be the same as on the filing's cover (CVR) record."
+        help_text="Date of the General Election"
     )
     emplbus_cb = fields.CharField(
         max_length=4,
         db_column='EMPLBUS_CB',
-        blank=True
+        blank=True,
+        help_text="Employer/Business Info included check-box. Legal \
+values are 'X' or null. Applies to the Form 461."
     )
     employer = fields.CharField(
         max_length=200,
         db_column='EMPLOYER',
-        blank=True
+        blank=True,
+        help_text="Employer. This field is most likely unused."
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
@@ -847,7 +888,10 @@ This date will be the same as on the filing's cover (CVR) record."
         verbose_name='entity code'
     )
     file_email = fields.CharField(
-        max_length=60, db_column='FILE_EMAIL', blank=True
+        max_length=60,
+        db_column='FILE_EMAIL',
+        blank=True,
+        help_text="Filer's email address"
     )
     # filer_adr1 = fields.CharField(
     #     max_length=55, db_column='FILER_ADR1', blank=True
@@ -856,10 +900,16 @@ This date will be the same as on the filing's cover (CVR) record."
     #     max_length=55, db_column='FILER_ADR2', blank=True
     # )
     filer_city = fields.CharField(
-        max_length=30, db_column='FILER_CITY', blank=True
+        max_length=30,
+        db_column='FILER_CITY',
+        blank=True,
+        help_text="Filer's city"
     )
     filer_fax = fields.CharField(
-        max_length=20, db_column='FILER_FAX', blank=True
+        max_length=20,
+        db_column='FILER_FAX',
+        blank=True,
+        help_text="Filer's fax"
     )
     filer_id = fields.CharField(
         verbose_name='filer ID',
@@ -870,23 +920,46 @@ This date will be the same as on the filing's cover (CVR) record."
         help_text="Filer's unique identification number",
     )
     filer_namf = fields.CharField(
-        max_length=45, db_column='FILER_NAMF', blank=True
+        max_length=45,
+        db_column='FILER_NAMF',
+        blank=True,
+        help_text="Filer's first name, if an individual"
     )
-    filer_naml = fields.CharField(max_length=200, db_column='FILER_NAML')
+    filer_naml = fields.CharField(
+        max_length=200,
+        db_column='FILER_NAML',
+        help_text="The committee's or organization's name or if an \
+individual the filer's last name."
+    )
     filer_nams = fields.CharField(
-        max_length=10, db_column='FILER_NAMS', blank=True
+        max_length=10,
+        db_column='FILER_NAMS',
+        blank=True,
+        help_text="Filer's suffix, if an individual"
     )
     filer_namt = fields.CharField(
-        max_length=10, db_column='FILER_NAMT', blank=True
+        max_length=10,
+        db_column='FILER_NAMT',
+        blank=True,
+        help_text="Filer's title or prefix, if an individual"
     )
     filer_phon = fields.CharField(
-        max_length=20, db_column='FILER_PHON', blank=True
+        max_length=20,
+        db_column='FILER_PHON',
+        blank=True,
+        help_text="Filer phone number"
     )
     filer_st = fields.CharField(
-        max_length=4, db_column='FILER_ST', blank=True
+        max_length=4,
+        db_column='FILER_ST',
+        blank=True,
+        help_text="Filer state"
     )
     filer_zip4 = fields.CharField(
-        max_length=10, db_column='FILER_ZIP4', blank=True
+        max_length=10,
+        db_column='FILER_ZIP4',
+        blank=True,
+        help_text="Filer ZIP Code"
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -920,19 +993,31 @@ and major donor committee campaign statement)'),
     from_date = fields.DateTimeField(
         null=True,
         db_column='FROM_DATE',
-        blank=True
+        blank=True,
+        help_text="Reporting period from date"
     )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        help_text="Office jurisdiction code."
+        help_text="Office jurisdiction code"
     )
     juris_dscr = fields.CharField(
-        max_length=40, db_column='JURIS_DSCR', blank=True
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True,
+        help_text="Office Jurisdiction description if the field JURIS_CD is \
+set to city (CIT), county (CTY), local (LOC), or other \
+(OTH)."
     )
     late_rptno = fields.CharField(
-        max_length=30, db_column='LATE_RPTNO', blank=True
+        max_length=30,
+        db_column='LATE_RPTNO',
+        blank=True,
+        help_text="Identifying Report Number used to distinguish multiple \
+reports filed during the same filing period. For example, \
+this field allows for multiple form 497s to be filed on the \
+same day."
     )
     # mail_adr1 = fields.CharField(
     #     max_length=55, db_column='MAIL_ADR1', blank=True
@@ -941,35 +1026,72 @@ and major donor committee campaign statement)'),
     #     max_length=55, db_column='MAIL_ADR2', blank=True
     # )
     mail_city = fields.CharField(
-        max_length=30, db_column='MAIL_CITY', blank=True
+        max_length=30,
+        db_column='MAIL_CITY',
+        blank=True,
+        help_text="Filer mailing address city"
     )
-    mail_st = fields.CharField(max_length=4, db_column='MAIL_ST', blank=True)
+    mail_st = fields.CharField(
+        max_length=4,
+        db_column='MAIL_ST',
+        blank=True,
+        help_text="Filer mailing address state"
+    )
     mail_zip4 = fields.CharField(
-        max_length=10, db_column='MAIL_ZIP4', blank=True
+        max_length=10,
+        db_column='MAIL_ZIP4',
+        blank=True,
+        help_text="Filer mailing address ZIP Code"
     )
     occupation = fields.CharField(
-        max_length=60, db_column='OCCUPATION', blank=True
+        max_length=60,
+        db_column='OCCUPATION',
+        blank=True,
+        help_text="Occupation. This field is most likely unused."
     )
     off_s_h_cd = fields.CharField(
-        max_length=1, db_column='OFF_S_H_CD', blank=True
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True,
+        help_text='Office Sought/Held Code. Legal values are "S" for \
+sought and "H" for held.'
     )
     offic_dscr = fields.CharField(
-        max_length=40, db_column='OFFIC_DSCR', blank=True
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True,
+        help_text="Office sought description if the field OFFICE_CD is set \
+to other (OTH)"
     )
     office_cd = fields.CharField(
-        max_length=3, db_column='OFFICE_CD', blank=True
+        max_length=3,
+        db_column='OFFICE_CD',
+        blank=True,
+        verbose_name="Office code",
+        help_text="Code that identifies the office being sought"
     )
     other_cb = fields.CharField(
-        max_length=1, db_column='OTHER_CB', blank=True
+        max_length=1,
+        db_column='OTHER_CB',
+        blank=True,
+        help_text="Other entity interests info included check-box. Legal \
+values are 'X' and null."
     )
     other_int = fields.CharField(
-        max_length=90, db_column='OTHER_INT', blank=True
+        max_length=90,
+        db_column='OTHER_INT',
+        blank=True,
+        help_text="Other entity interests description"
     )
     primfrm_yn = fields.CharField(
-        max_length=1, db_column='PRIMFRM_YN', blank=True
+        max_length=1,
+        db_column='PRIMFRM_YN',
+        blank=True,
+        help_text="Primarily Formed Committee (yes/no) checkbox. Legal \
+values are 'Y' or 'N'."
     )
     REC_TYPE_CHOICES = (
-        ("CVR", "CVR"),
+        ("CVR", "Cover"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -979,20 +1101,43 @@ and major donor committee campaign statement)'),
         choices=REC_TYPE_CHOICES,
     )
     report_num = fields.CharField(
-        max_length=3, db_column='REPORT_NUM'
+        max_length=3,
+        db_column='REPORT_NUM',
+        help_text="Amendment number, as reported by the filer \
+Report Number 000 represents an original filing. 001-999 are amendments."
     )
     reportname = fields.CharField(
-        max_length=3, db_column='REPORTNAME', blank=True
+        max_length=3,
+        db_column='REPORTNAME',
+        blank=True,
+        help_text="Attached campaign disclosure statement type. Legal \
+values are 450, 460, and 461."
     )
     rpt_att_cb = fields.CharField(
-        max_length=4, db_column='RPT_ATT_CB', blank=True
+        max_length=4,
+        db_column='RPT_ATT_CB',
+        blank=True,
+        help_text="Committee Report Attached check-box. Legal values \
+are 'X' or null. This field applies to the form 401."
     )
-    rpt_date = fields.DateTimeField(db_column='RPT_DATE', null=True)
+    rpt_date = fields.DateTimeField(
+        db_column='RPT_DATE',
+        null=True,
+        help_text="Date this report was filed, according to the filer"
+    )
     rptfromdt = fields.DateTimeField(
-        null=True, db_column='RPTFROMDT', blank=True
+        null=True,
+        db_column='RPTFROMDT',
+        blank=True,
+        help_text="Attached campaign disclosure statement - Period from \
+date."
     )
     rptthrudt = fields.DateTimeField(
-        null=True, db_column='RPTTHRUDT', blank=True
+        null=True,
+        db_column='RPTTHRUDT',
+        blank=True,
+        help_text="Attached campaign disclosure statement - Period \
+through date."
     )
     selfemp_cb = fields.CharField(
         max_length=1,
@@ -1001,22 +1146,30 @@ and major donor committee campaign statement)'),
         help_text="Self employed check-box"
     )
     sponsor_yn = fields.IntegerField(
-        null=True, db_column='SPONSOR_YN', blank=True
+        null=True,
+        db_column='SPONSOR_YN',
+        blank=True,
+        help_text="Sponsored Committee (yes/no) checkbox. Legal values \
+are 'Y' or 'N'."
     )
     stmt_type = fields.CharField(
         max_length=2,
         db_column='STMT_TYPE',
         blank=True,
-        help_text='type of statement'
+        help_text='Type of statement'
     )
     sup_opp_cd = fields.CharField(
-        max_length=1, db_column='SUP_OPP_CD', blank=True
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True,
+        help_text='Support/oppose code. Legal values are "S" for support \
+or "O" for oppose.'
     )
     thru_date = fields.DateTimeField(
         null=True,
         db_column='THRU_DATE',
         blank=True,
-        help_text='reporting period through date'
+        help_text='Reporting period through date'
     )
     # tres_adr1 = fields.CharField(
     #     max_length=55, db_column='TRES_ADR1', blank=True
@@ -1034,48 +1187,56 @@ officer's street address."
     tres_email = fields.CharField(
         max_length=60,
         db_column='TRES_EMAIL',
-        blank=True
+        blank=True,
+        help_text="Treasurer or responsible officer's email"
     )
     tres_fax = fields.CharField(
         max_length=20,
         db_column='TRES_FAX',
-        blank=True
+        blank=True,
+        help_text="Treasurer or responsible officer's fax number"
     )
     tres_namf = fields.CharField(
         max_length=45,
         db_column='TRES_NAMF',
         blank=True,
-        help_text="Treasurer or responsible officer's first name. \
-Not used on Form 460 Schedule D."
+        help_text="Treasurer or responsible officer's first name"
     )
     tres_naml = fields.CharField(
         max_length=200,
         db_column='TRES_NAML',
         blank=True,
-        help_text="Treasurer or responsible officer's last name. \
-Not used on Form 460 Schedule D."
+        help_text="Treasurer or responsible officer's last name"
     )
     tres_nams = fields.CharField(
         max_length=10,
         db_column='TRES_NAMS',
         blank=True,
-        help_text="Treasurer or responsible officer's suffix. \
-Not used on Form 460 Schedule D."
+        help_text="Treasurer or responsible officer's suffix"
     )
     tres_namt = fields.CharField(
         max_length=10,
         db_column='TRES_NAMT',
         blank=True,
-        help_text="Treasurer or responsible officer's prefix or title. \
-Not used on Form 460 Schedule D."
+        help_text="Treasurer or responsible officer's prefix or title"
     )
     tres_phon = fields.CharField(
-        max_length=20, db_column='TRES_PHON', blank=True
+        max_length=20,
+        db_column='TRES_PHON',
+        blank=True,
+        help_text="Treasurer or responsible officer's phone number"
     )
-    tres_st = fields.CharField(max_length=2, db_column='TRES_ST', blank=True)
-
+    tres_st = fields.CharField(
+        max_length=2,
+        db_column='TRES_ST',
+        blank=True,
+        help_text="Treasurer or responsible officer's state"
+    )
     tres_zip4 = fields.CharField(
-        max_length=10, db_column='TRES_ZIP4', blank=True
+        max_length=10,
+        db_column='TRES_ZIP4',
+        blank=True,
+        help_text="Treasurer or responsible officer's ZIP Code"
     )
 
     class Meta:
@@ -1528,7 +1689,8 @@ Schedule A, monetary contributions received')
     int_rate = fields.CharField(
         max_length=9,
         db_column='INT_RATE',
-        blank=True
+        blank=True,
+        help_text="This field is undocumented"
     )
     # intr_adr1 = fields.CharField(
     #     max_length=55,
@@ -1552,7 +1714,7 @@ Schedule A, monetary contributions received')
         max_length=9,
         db_column='INTR_CMTEID',
         blank=True,
-        help_text=""
+        help_text="This field is undocumented"
     )
     intr_emp = fields.CharField(
         max_length=200,
