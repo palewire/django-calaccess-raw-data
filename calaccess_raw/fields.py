@@ -15,7 +15,7 @@ class CalAccessFieldMixin(fields.Field):
         """
         s = ""
         if self.__dict__['_verbose_name']:
-            s += capfirst(self.verbose_name)
+            s += capfirst(self.__dict__['_verbose_name'])
         if self.help_text:
             if self.__dict__['_verbose_name']:
                 s += ": "

@@ -47,7 +47,7 @@ disclosure forms below.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -103,7 +103,7 @@ disclosure forms below.
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -199,7 +199,7 @@ disclosure forms below.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -279,7 +279,7 @@ disclosure forms below.
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td>Code that identifies the office being sought</td>
+            <td>Office code: Code that identifies the office being sought</td>
         </tr>
     
     
@@ -287,7 +287,7 @@ disclosure forms below.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -311,7 +311,7 @@ disclosure forms below.
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -381,7 +381,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -389,7 +389,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -405,7 +405,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -421,7 +421,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -429,7 +429,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -525,7 +525,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>cmte_id</td>
             <td>Integer</td>
-            <td>Entity&#39;s identification number</td>
+            <td>Committee ID: Entity&#39;s identification number</td>
         </tr>
     
     
@@ -673,7 +673,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -681,7 +681,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -697,7 +697,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -713,7 +713,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -721,7 +721,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -729,7 +729,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_date</td>
             <td>Date (without time)</td>
-            <td>Date when signed</td>
+            <td>Signed date: Date when signed</td>
         </tr>
     
     
@@ -737,7 +737,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_loc</td>
             <td>String (up to 39)</td>
-            <td>City and state where signed</td>
+            <td>Signed location: City and state where signed</td>
         </tr>
     
     
@@ -745,7 +745,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_naml</td>
             <td>String (up to 56)</td>
-            <td>Last name of the signer</td>
+            <td>Last name: Last name of the signer</td>
         </tr>
     
     
@@ -753,7 +753,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_namf</td>
             <td>String (up to 45)</td>
-            <td>First name of the signer</td>
+            <td>First name: First name of the signer</td>
         </tr>
     
     
@@ -761,7 +761,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_namt</td>
             <td>String (up to 10)</td>
-            <td>Title of the signer</td>
+            <td>Title: Title of the signer</td>
         </tr>
     
     
@@ -769,7 +769,7 @@ Cover page verification information from campaign disclosure forms
         <tr>
             <td>sig_nams</td>
             <td>String (up to 8)</td>
-            <td>Suffix of the signer</td>
+            <td>Suffix: Suffix of the signer</td>
         </tr>
     
     
@@ -805,7 +805,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -1037,7 +1037,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>cmtte_id</td>
             <td>String (up to 9)</td>
-            <td>Committee ID (Filer_id) of recipient Committee who&#39;s campaign statement is attached. This field applies to the form 401.</td>
+            <td>Committee ID: Committee ID (Filer_id) of recipient Committee who&#39;s campaign statement is attached. This field applies to the form 401.</td>
         </tr>
     
     
@@ -1045,7 +1045,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>cmtte_type</td>
             <td>String (up to 1)</td>
-            <td>Type of Recipient Committee. Applies to the 450/460.</td>
+            <td>Committee type: Type of Recipient Committee. Applies to the 450/460.</td>
         </tr>
     
     
@@ -1093,7 +1093,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -1125,7 +1125,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>filer_id</td>
             <td>String (up to 15)</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -1189,7 +1189,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -1285,7 +1285,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td>Code that identifies the office being sought</td>
+            <td>Office code: Code that identifies the office being sought</td>
         </tr>
     
     
@@ -1317,7 +1317,7 @@ Cover page information from campaign disclosure forms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -1530,7 +1530,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>actvty_lvl</td>
             <td>String (up to 2)</td>
-            <td>Organization&#39;s level of activity</td>
+            <td>Activity level: Organization&#39;s level of activity</td>
         </tr>
     
     
@@ -1538,7 +1538,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -1682,7 +1682,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -1690,7 +1690,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>filer_id</td>
             <td>String (up to 9)</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -1698,7 +1698,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>filer_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Filer first name</td>
         </tr>
     
     
@@ -1706,7 +1706,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>filer_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Filer last name</td>
         </tr>
     
     
@@ -1714,7 +1714,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>filer_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer name suffix</td>
         </tr>
     
     
@@ -1722,7 +1722,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>filer_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer name title</td>
         </tr>
     
     
@@ -1730,7 +1730,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -1802,7 +1802,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>qualfy_dt</td>
             <td>Date (with time)</td>
-            <td>Date qualified as an organization</td>
+            <td>Date qualified: Date qualified as an organization</td>
         </tr>
     
     
@@ -1818,7 +1818,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -1882,7 +1882,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Treasurer&#39;s city</td>
         </tr>
     
     
@@ -1890,7 +1890,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Treasurer&#39;s first name</td>
         </tr>
     
     
@@ -1898,7 +1898,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Treasurer&#39;s last name</td>
         </tr>
     
     
@@ -1906,7 +1906,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer&#39;s name suffix</td>
         </tr>
     
     
@@ -1914,7 +1914,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer&#39;s name title</td>
         </tr>
     
     
@@ -1922,7 +1922,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_phon</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Treasurer&#39;s phone number</td>
         </tr>
     
     
@@ -1930,7 +1930,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>tres_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Treasurer&#39;s street</td>
         </tr>
     
     
@@ -1983,7 +1983,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -2039,7 +2039,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td>Entity code of the payee</td>
+            <td>Entity code: Entity code of the payee</td>
         </tr>
     
     
@@ -2063,7 +2063,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number of the parent filing</td>
+            <td>Filing ID: Unique filing identificiation number of the parent filing</td>
         </tr>
     
     
@@ -2159,7 +2159,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td>Record type value: DEBT</td>
+            <td>Record type: Record type value: DEBT</td>
         </tr>
     
     
@@ -2167,7 +2167,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Transaction identifier - permanent value unique to this item</td>
+            <td>Transaction ID: Transaction identifier - permanent value unique to this item</td>
         </tr>
     
     
@@ -2307,7 +2307,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -2419,7 +2419,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -2459,7 +2459,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -2603,7 +2603,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -2619,7 +2619,7 @@ Campaign expenditures from a variety of forms
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -2742,7 +2742,7 @@ its last report.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -2750,7 +2750,7 @@ its last report.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -2766,7 +2766,7 @@ its last report.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -2834,7 +2834,7 @@ Candidate intention statement
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -2842,7 +2842,7 @@ Candidate intention statement
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -2850,7 +2850,7 @@ Candidate intention statement
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -2866,7 +2866,7 @@ Candidate intention statement
         <tr>
             <td>filer_id</td>
             <td>String (up to 9)</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -2874,7 +2874,7 @@ Candidate intention statement
         <tr>
             <td>committee_id</td>
             <td>String (up to 8)</td>
-            <td>Committee identification number</td>
+            <td>Committee ID: Committee identification number</td>
         </tr>
     
     
@@ -3186,7 +3186,7 @@ Candidate intention statement
         <tr>
             <td>elec_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>Election type</td>
         </tr>
     
     
@@ -3294,7 +3294,7 @@ Loans received and made
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -3310,7 +3310,7 @@ Loans received and made
         <tr>
             <td>cmte_id</td>
             <td>String (up to 9)</td>
-            <td>Committee identification number</td>
+            <td>Committee ID: Committee identification number</td>
         </tr>
     
     
@@ -3318,7 +3318,7 @@ Loans received and made
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -3326,7 +3326,7 @@ Loans received and made
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -3598,7 +3598,7 @@ Loans received and made
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -3606,7 +3606,7 @@ Loans received and made
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -3719,7 +3719,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -3935,7 +3935,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -4119,7 +4119,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -4135,7 +4135,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -4252,7 +4252,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -4260,7 +4260,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -4276,7 +4276,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -4292,7 +4292,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -4444,7 +4444,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td>Code that identifies the office being sought</td>
+            <td>Office code: Code that identifies the office being sought</td>
         </tr>
     
     
@@ -4576,7 +4576,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -4584,7 +4584,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -4600,7 +4600,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -4616,7 +4616,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -4700,7 +4700,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -4708,7 +4708,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -4724,7 +4724,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -4740,7 +4740,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -4748,7 +4748,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -4868,7 +4868,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>cmte_id</td>
             <td>String (up to 9)</td>
-            <td>Committee identification number</td>
+            <td>Committee ID: Committee identification number</td>
         </tr>
     
     
@@ -4908,7 +4908,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td>Office sought code</td>
+            <td>Office code: Office sought code</td>
         </tr>
     
     
@@ -4924,7 +4924,7 @@ Form 497: Late Contributions Received/Made
         <tr>
             <td>juris_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Jurisdiction code</td>
         </tr>
     
     
@@ -5056,7 +5056,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -5064,7 +5064,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -5080,7 +5080,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -5096,7 +5096,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -5104,7 +5104,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -5112,7 +5112,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>cmte_id</td>
             <td>String (up to 9)</td>
-            <td>Committee identification number</td>
+            <td>Committee ID: Committee identification number</td>
         </tr>
     
     
@@ -5224,7 +5224,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td>Code that identifies the office being sought</td>
+            <td>Office code: Code that identifies the office being sought</td>
         </tr>
     
     
@@ -5380,7 +5380,7 @@ Split records
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -5412,7 +5412,7 @@ Split records
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -5436,7 +5436,7 @@ Split records
         <tr>
             <td>ptran_id</td>
             <td>String (up to 32)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -5477,7 +5477,7 @@ This table method is undocumented.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -5485,7 +5485,7 @@ This table method is undocumented.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -5493,7 +5493,7 @@ This table method is undocumented.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -5509,7 +5509,7 @@ This table method is undocumented.
         <tr>
             <td>entity_cd</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -5573,7 +5573,7 @@ This table method is undocumented.
         <tr>
             <td>filer_st</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Filer state</td>
         </tr>
     
     
@@ -5763,7 +5763,7 @@ filing information.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -5771,7 +5771,7 @@ filing information.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -5787,7 +5787,7 @@ filing information.
         <tr>
             <td>form_id</td>
             <td>String (up to 7)</td>
-            <td>Form identification code</td>
+            <td>Form type: Form identification code</td>
         </tr>
     
     
@@ -5811,7 +5811,7 @@ filing information.
         <tr>
             <td>stmnt_type</td>
             <td>Integer</td>
-            <td>Type of statement</td>
+            <td>Statement type: Type of statement</td>
         </tr>
     
     
@@ -5819,7 +5819,7 @@ filing information.
         <tr>
             <td>stmnt_status</td>
             <td>Integer</td>
-            <td>The status of the statement. If the filing has been reviewed or not reviewed.</td>
+            <td>Statement status: The status of the statement. If the filing has been reviewed or not reviewed.</td>
         </tr>
     
     
@@ -5827,7 +5827,7 @@ filing information.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -5835,7 +5835,7 @@ filing information.
         <tr>
             <td>user_id</td>
             <td>String (up to 12)</td>
-            <td>User identifier of the PRD user who logged the filing</td>
+            <td>User ID: User identifier of the PRD user who logged the filing</td>
         </tr>
     
     
@@ -5929,7 +5929,7 @@ fields in conjunction.
         <tr>
             <td>xref_filer_id</td>
             <td>String (up to 15)</td>
-            <td>Alternative filer ID found on many forms</td>
+            <td>Crossreference filer ID: Alternative filer ID found on many forms</td>
         </tr>
     
     
@@ -5937,7 +5937,7 @@ fields in conjunction.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -6025,7 +6025,7 @@ fields in conjunction.
         <tr>
             <td>st</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>State</td>
         </tr>
     
     
@@ -6041,7 +6041,7 @@ fields in conjunction.
         <tr>
             <td>phon</td>
             <td>String (up to 60)</td>
-            <td>Phone number</td>
+            <td>Phone: Phone number</td>
         </tr>
     
     
@@ -6094,7 +6094,7 @@ a filing are derived.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -6138,7 +6138,7 @@ Summary totals from filings.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -6146,7 +6146,7 @@ Summary totals from filings.
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -6162,7 +6162,7 @@ Summary totals from filings.
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -6178,7 +6178,7 @@ Summary totals from filings.
         <tr>
             <td>amount_a</td>
             <td>Decimal number</td>
-            <td>Summary amount from column A</td>
+            <td>Amount A: Summary amount from column A</td>
         </tr>
     
     
@@ -6186,7 +6186,7 @@ Summary totals from filings.
         <tr>
             <td>amount_b</td>
             <td>Decimal number</td>
-            <td>Summary amount from column B</td>
+            <td>Amount B: Summary amount from column B</td>
         </tr>
     
     
@@ -6194,7 +6194,7 @@ Summary totals from filings.
         <tr>
             <td>amount_c</td>
             <td>Decimal number</td>
-            <td>Summary amount from column C</td>
+            <td>Amount C: Summary amount from column C</td>
         </tr>
     
     
@@ -6202,7 +6202,7 @@ Summary totals from filings.
         <tr>
             <td>elec_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Election date</td>
         </tr>
     
     
@@ -6238,7 +6238,7 @@ Text memos attached to electronic filings
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -6246,7 +6246,7 @@ Text memos attached to electronic filings
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -6262,7 +6262,7 @@ Text memos attached to electronic filings
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -6278,7 +6278,7 @@ Text memos attached to electronic filings
         <tr>
             <td>ref_no</td>
             <td>String (up to 20)</td>
-            <td>Links text memo to a specific record</td>
+            <td>Reference number: Links text memo to a specific record</td>
         </tr>
     
     
@@ -6286,7 +6286,7 @@ Text memos attached to electronic filings
         <tr>
             <td>text4000</td>
             <td>String (up to 4000)</td>
-            <td>Contents of the text memo</td>
+            <td>Text: Contents of the text memo</td>
         </tr>
     
     
@@ -6327,7 +6327,7 @@ Additional data from lobbyist disclosure forms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -6335,7 +6335,7 @@ Additional data from lobbyist disclosure forms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -6391,7 +6391,7 @@ Additional data from lobbyist disclosure forms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -6415,7 +6415,7 @@ Additional data from lobbyist disclosure forms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -6423,7 +6423,7 @@ Additional data from lobbyist disclosure forms
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -6459,7 +6459,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -6467,7 +6467,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -6483,7 +6483,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -6499,7 +6499,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -6507,7 +6507,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -6515,7 +6515,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>entity_id</td>
             <td>String (up to 9)</td>
-            <td>Identification number of the entity described by the record</td>
+            <td>Entity ID: Identification number of the entity described by the record</td>
         </tr>
     
     
@@ -6583,7 +6583,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -6615,7 +6615,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -6623,7 +6623,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>filer_id</td>
             <td>String (up to 8)</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -6663,7 +6663,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -6903,7 +6903,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -7059,7 +7059,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -7219,7 +7219,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -7227,7 +7227,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>filer_id</td>
             <td>String (up to 8)</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -7267,7 +7267,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -7467,7 +7467,7 @@ Cover page of lobbying disclosure forms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -7625,7 +7625,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -7633,7 +7633,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -7649,7 +7649,7 @@ Amends lobbying disclosure filings
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -7741,7 +7741,7 @@ Lobbyist disclosure attachment schedules for payments
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -7773,7 +7773,7 @@ Lobbyist disclosure attachment schedules for payments
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -7781,7 +7781,7 @@ Lobbyist disclosure attachment schedules for payments
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -7829,7 +7829,7 @@ Lobbyist disclosure attachment schedules for payments
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -7893,7 +7893,7 @@ Lobbyist disclosure attachment schedules for payments
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -7929,7 +7929,7 @@ Lobbying campaign contributions
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -7993,7 +7993,7 @@ Lobbying campaign contributions
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -8001,7 +8001,7 @@ Lobbying campaign contributions
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -8041,7 +8041,7 @@ Lobbying campaign contributions
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -8113,7 +8113,7 @@ Lobbying campaign contributions
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -8157,7 +8157,7 @@ Lobbyist employers and subcontracted clients
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -8261,7 +8261,7 @@ Lobbyist employers and subcontracted clients
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -8285,7 +8285,7 @@ Lobbyist employers and subcontracted clients
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -8369,7 +8369,7 @@ Lobbying activity expenditures
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -8425,7 +8425,7 @@ Lobbying activity expenditures
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -8449,7 +8449,7 @@ Lobbying activity expenditures
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -8545,7 +8545,7 @@ Lobbying activity expenditures
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -8553,7 +8553,7 @@ Lobbying activity expenditures
         <tr>
             <td>recsubtype</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Record subtype</td>
         </tr>
     
     
@@ -8561,7 +8561,7 @@ Lobbying activity expenditures
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -8597,7 +8597,7 @@ Lobbyist registration amendment information
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -8605,7 +8605,7 @@ Lobbyist registration amendment information
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -8613,7 +8613,7 @@ Lobbyist registration amendment information
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -8961,7 +8961,7 @@ Payment to other lobbying firms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -8985,7 +8985,7 @@ Payment to other lobbying firms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -9073,7 +9073,7 @@ Payment to other lobbying firms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -9113,7 +9113,7 @@ Payment to other lobbying firms
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -9165,7 +9165,7 @@ Payments made or received by lobbying firms
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -9261,7 +9261,7 @@ Payments made or received by lobbying firms
         <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -9277,7 +9277,7 @@ Payments made or received by lobbying firms
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -9333,7 +9333,7 @@ Payments made or received by lobbying firms
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -9349,7 +9349,7 @@ Payments made or received by lobbying firms
         <tr>
             <td>tran_id</td>
             <td>String (up to 20)</td>
-            <td>Permanent value unique to this item</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -9452,7 +9452,7 @@ desplayed by the AMS.
         <tr>
             <td>adrid</td>
             <td>Integer</td>
-            <td>Address indentification number</td>
+            <td>Address ID: Address indentification number</td>
         </tr>
     
     
@@ -9468,7 +9468,7 @@ desplayed by the AMS.
         <tr>
             <td>st</td>
             <td>String (up to 500)</td>
-            <td>Address state</td>
+            <td>State: Address state</td>
         </tr>
     
     
@@ -9484,7 +9484,7 @@ desplayed by the AMS.
         <tr>
             <td>phon</td>
             <td>String (up to 20)</td>
-            <td>Address phone number</td>
+            <td>Phone: Address phone number</td>
         </tr>
     
     
@@ -9544,7 +9544,7 @@ Ballot measure dates and times
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9636,7 +9636,7 @@ This is an undocumented model.
         <tr>
             <td>filer_id</td>
             <td>String (up to 250)</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9696,7 +9696,7 @@ Links acronyms to filers
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9733,7 +9733,7 @@ addresses change.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9741,7 +9741,7 @@ addresses change.
         <tr>
             <td>adrid</td>
             <td>Integer</td>
-            <td>Address identification number</td>
+            <td>Address ID: Address identification number</td>
         </tr>
     
     
@@ -9749,7 +9749,7 @@ addresses change.
         <tr>
             <td>effect_dt</td>
             <td>Date (with time)</td>
-            <td>Address effective date</td>
+            <td>Effective date: Address effective date</td>
         </tr>
     
     
@@ -9757,7 +9757,7 @@ addresses change.
         <tr>
             <td>add_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>Address type</td>
         </tr>
     
     
@@ -9765,7 +9765,7 @@ addresses change.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -9801,7 +9801,7 @@ This table stores lobbyist ethics training dates.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9809,7 +9809,7 @@ This table stores lobbyist ethics training dates.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -9853,7 +9853,7 @@ Links a filer to their interest codes.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -9861,7 +9861,7 @@ Links a filer to their interest codes.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -9869,7 +9869,7 @@ Links a filer to their interest codes.
         <tr>
             <td>interest_cd</td>
             <td>Integer</td>
-            <td></td>
+            <td>Interest code</td>
         </tr>
     
     
@@ -9877,7 +9877,7 @@ Links a filer to their interest codes.
         <tr>
             <td>effect_date</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Effective date</td>
         </tr>
     
     
@@ -9913,7 +9913,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>filer_id_a</td>
             <td>Integer</td>
-            <td>Unique identification number for the first filer in the relationship</td>
+            <td>Filer ID A: Unique identification number for the first filer in the relationship</td>
         </tr>
     
     
@@ -9921,7 +9921,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>filer_id_b</td>
             <td>Integer</td>
-            <td>Unique identification number for the second filer in the relationship</td>
+            <td>Filer ID B: Unique identification number for the second filer in the relationship</td>
         </tr>
     
     
@@ -9929,7 +9929,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>active_flg</td>
             <td>String (up to 1)</td>
-            <td>Indicates if the link is active</td>
+            <td>Active flag: Indicates if the link is active</td>
         </tr>
     
     
@@ -9937,7 +9937,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -9953,7 +9953,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>link_desc</td>
             <td>String (up to 255)</td>
-            <td>Unused</td>
+            <td>Link description: Unused</td>
         </tr>
     
     
@@ -9961,7 +9961,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>effect_dt</td>
             <td>Date (without time)</td>
-            <td>Date the link became active</td>
+            <td>Effective date: Date the link became active</td>
         </tr>
     
     
@@ -9977,7 +9977,7 @@ Links filers to each other and records their relationship type.
         <tr>
             <td>termination_dt</td>
             <td>Date (without time)</td>
-            <td>Termination effective date</td>
+            <td>Termination date: Termination effective date</td>
         </tr>
     
     
@@ -10059,7 +10059,7 @@ to change characteristics over time.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10091,7 +10091,7 @@ to change characteristics over time.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -10284,7 +10284,7 @@ identification numbers.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10292,7 +10292,7 @@ identification numbers.
         <tr>
             <td>xref_id</td>
             <td>String (up to 32)</td>
-            <td>Alternative filer ID found on many forms</td>
+            <td>Crossreference filer ID: Alternative filer ID found on many forms</td>
         </tr>
     
     
@@ -10300,7 +10300,7 @@ identification numbers.
         <tr>
             <td>effect_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Effective date</td>
         </tr>
     
     
@@ -10345,7 +10345,7 @@ to a filer are derived.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10465,7 +10465,7 @@ This lookup table stores group type information.
         <tr>
             <td>grp_id</td>
             <td>Integer</td>
-            <td>Group identification number</td>
+            <td>Group ID: Group identification number</td>
         </tr>
     
     
@@ -10473,7 +10473,7 @@ This lookup table stores group type information.
         <tr>
             <td>grp_name</td>
             <td>String (up to 28)</td>
-            <td></td>
+            <td>Group name</td>
         </tr>
     
     
@@ -10481,7 +10481,7 @@ This lookup table stores group type information.
         <tr>
             <td>grp_desc</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Group description</td>
         </tr>
     
     
@@ -10517,7 +10517,7 @@ Electronic filing record header data
         <tr>
             <td>amend_id</td>
             <td>Integer</td>
-            <td>Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
         </tr>
     
     
@@ -10541,7 +10541,7 @@ Electronic filing record header data
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -10549,7 +10549,7 @@ Electronic filing record header data
         <tr>
             <td>hdr_comment</td>
             <td>String (up to 200)</td>
-            <td>Typically used for development and test filings</td>
+            <td>Header comment: Typically used for development and test filings</td>
         </tr>
     
     
@@ -10557,7 +10557,7 @@ Electronic filing record header data
         <tr>
             <td>rec_type</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -10581,7 +10581,7 @@ Electronic filing record header data
         <tr>
             <td>state_cd</td>
             <td>String (up to 2)</td>
-            <td>The state code value entered in the electronic filing</td>
+            <td>State code: The state code value entered in the electronic filing</td>
         </tr>
     
     
@@ -10625,7 +10625,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>form_id</td>
             <td>String (up to 5)</td>
-            <td>Form identification code</td>
+            <td>Form ID: Form identification code</td>
         </tr>
     
     
@@ -10633,7 +10633,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>rec_type</td>
             <td>String (up to 11)</td>
-            <td></td>
+            <td>Record type</td>
         </tr>
     
     
@@ -10741,7 +10741,7 @@ This table links images to filers and accounts.
         <tr>
             <td>img_link_id</td>
             <td>Integer</td>
-            <td>Image link identification number</td>
+            <td>Image link ID: Image link identification number</td>
         </tr>
     
     
@@ -10749,7 +10749,7 @@ This table links images to filers and accounts.
         <tr>
             <td>img_link_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>Image link type</td>
         </tr>
     
     
@@ -10757,7 +10757,7 @@ This table links images to filers and accounts.
         <tr>
             <td>img_id</td>
             <td>Integer</td>
-            <td>Image identification number</td>
+            <td>Image ID: Image identification number</td>
         </tr>
     
     
@@ -10765,7 +10765,7 @@ This table links images to filers and accounts.
         <tr>
             <td>img_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>Image type</td>
         </tr>
     
     
@@ -10773,7 +10773,7 @@ This table links images to filers and accounts.
         <tr>
             <td>img_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Image date</td>
         </tr>
     
     
@@ -10809,7 +10809,7 @@ Legislative session, begin and end dates look up table.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -10861,7 +10861,7 @@ LobbyingChgLogCd
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -10877,7 +10877,7 @@ LobbyingChgLogCd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -11081,7 +11081,7 @@ LobbyistContributions1Cd
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -11089,7 +11089,7 @@ LobbyistContributions1Cd
         <tr>
             <td>filing_period_start_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Filing period start date</td>
         </tr>
     
     
@@ -11097,7 +11097,7 @@ LobbyistContributions1Cd
         <tr>
             <td>filing_period_end_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Filing period end date</td>
         </tr>
     
     
@@ -11105,7 +11105,7 @@ LobbyistContributions1Cd
         <tr>
             <td>contribution_dt</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Contribution date</td>
         </tr>
     
     
@@ -11166,7 +11166,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -11174,7 +11174,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>filing_period_start_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Filing period start date</td>
         </tr>
     
     
@@ -11182,7 +11182,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>filing_period_end_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Filing period end date</td>
         </tr>
     
     
@@ -11190,7 +11190,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>contribution_dt</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Contribution date</td>
         </tr>
     
     
@@ -11250,7 +11250,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -11258,7 +11258,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>filing_period_start_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Filing period start date</td>
         </tr>
     
     
@@ -11266,7 +11266,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>filing_period_end_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Filing period end date</td>
         </tr>
     
     
@@ -11274,7 +11274,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>contribution_dt</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Contribution date</td>
         </tr>
     
     
@@ -11334,7 +11334,7 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td>Lobbyist identification number</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
         </tr>
     
     
@@ -11342,7 +11342,7 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td>Employer identification number</td>
+            <td>Employer ID: Employer identification number</td>
         </tr>
     
     
@@ -11374,7 +11374,7 @@ LobbyistEmpLobbyist1Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -11410,7 +11410,7 @@ This is an undocumented model.
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td>Lobbyist identification number</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
         </tr>
     
     
@@ -11418,7 +11418,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td>Employer identification number</td>
+            <td>Employer ID: Employer identification number</td>
         </tr>
     
     
@@ -11450,7 +11450,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -11486,7 +11486,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td>Employer identification number</td>
+            <td>Employer ID: Employer identification number</td>
         </tr>
     
     
@@ -11494,7 +11494,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -11526,7 +11526,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td>Contributor identification number</td>
+            <td>Contributor ID: Contributor identification number</td>
         </tr>
     
     
@@ -11534,7 +11534,7 @@ This is an undocumented model.
         <tr>
             <td>interest_cd</td>
             <td>Integer</td>
-            <td></td>
+            <td>Interest code</td>
         </tr>
     
     
@@ -11566,7 +11566,7 @@ This is an undocumented model.
         <tr>
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -11574,7 +11574,7 @@ This is an undocumented model.
         <tr>
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -11582,7 +11582,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 1: Quarter total amount</td>
         </tr>
     
     
@@ -11590,7 +11590,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 2: Quarter total amount</td>
         </tr>
     
     
@@ -11598,7 +11598,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 3: Quarter total amount</td>
         </tr>
     
     
@@ -11606,7 +11606,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 4: Quarter total amount</td>
         </tr>
     
     
@@ -11614,7 +11614,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 5: Quarter total amount</td>
         </tr>
     
     
@@ -11622,7 +11622,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 6: Quarter total amount</td>
         </tr>
     
     
@@ -11630,7 +11630,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 7: Quarter total amount</td>
         </tr>
     
     
@@ -11638,7 +11638,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 8: Quarter total amount</td>
         </tr>
     
     
@@ -11674,7 +11674,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td>Employer identification number</td>
+            <td>Employer ID: Employer identification number</td>
         </tr>
     
     
@@ -11682,7 +11682,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -11714,7 +11714,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td>Contributor identification number</td>
+            <td>Contributor ID: Contributor identification number</td>
         </tr>
     
     
@@ -11722,7 +11722,7 @@ This is an undocumented model.
         <tr>
             <td>interest_cd</td>
             <td>Integer</td>
-            <td></td>
+            <td>Interest code</td>
         </tr>
     
     
@@ -11754,7 +11754,7 @@ This is an undocumented model.
         <tr>
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -11762,7 +11762,7 @@ This is an undocumented model.
         <tr>
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -11770,7 +11770,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 1: Quarter total amount</td>
         </tr>
     
     
@@ -11778,7 +11778,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 2: Quarter total amount</td>
         </tr>
     
     
@@ -11786,7 +11786,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 3: Quarter total amount</td>
         </tr>
     
     
@@ -11794,7 +11794,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 4: Quarter total amount</td>
         </tr>
     
     
@@ -11802,7 +11802,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 5: Quarter total amount</td>
         </tr>
     
     
@@ -11810,7 +11810,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 6: Quarter total amount</td>
         </tr>
     
     
@@ -11818,7 +11818,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 7: Quarter total amount</td>
         </tr>
     
     
@@ -11826,7 +11826,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 8: Quarter total amount</td>
         </tr>
     
     
@@ -11862,7 +11862,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td>Employer identification number</td>
+            <td>Employer ID: Employer identification number</td>
         </tr>
     
     
@@ -11870,7 +11870,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -11902,7 +11902,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td>Contributor identification number</td>
+            <td>Contributor ID: Contributor identification number</td>
         </tr>
     
     
@@ -11910,7 +11910,7 @@ This is an undocumented model.
         <tr>
             <td>interest_cd</td>
             <td>Integer</td>
-            <td></td>
+            <td>Interest code</td>
         </tr>
     
     
@@ -11942,7 +11942,7 @@ This is an undocumented model.
         <tr>
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -11950,7 +11950,7 @@ This is an undocumented model.
         <tr>
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -11958,7 +11958,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 1: Quarter total amount</td>
         </tr>
     
     
@@ -11966,7 +11966,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 2: Quarter total amount</td>
         </tr>
     
     
@@ -11974,7 +11974,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 3: Quarter total amount</td>
         </tr>
     
     
@@ -11982,7 +11982,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 4: Quarter total amount</td>
         </tr>
     
     
@@ -11990,7 +11990,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 5: Quarter total amount</td>
         </tr>
     
     
@@ -11998,7 +11998,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 6: Quarter total amount</td>
         </tr>
     
     
@@ -12006,7 +12006,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 7: Quarter total amount</td>
         </tr>
     
     
@@ -12014,7 +12014,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 8: Quarter total amount</td>
         </tr>
     
     
@@ -12050,7 +12050,7 @@ This is an undocumented model.
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td>Employer identification number</td>
+            <td>Employer ID: Employer identification number</td>
         </tr>
     
     
@@ -12058,7 +12058,7 @@ This is an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12074,7 +12074,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -12082,7 +12082,7 @@ This is an undocumented model.
         <tr>
             <td>termination_dt</td>
             <td>String (up to 32)</td>
-            <td>Termination effective date</td>
+            <td>Termination date: Termination effective date</td>
         </tr>
     
     
@@ -12118,7 +12118,7 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>employer_id</td>
             <td>Integer</td>
-            <td>Employer identification number</td>
+            <td>Employer ID: Employer identification number</td>
         </tr>
     
     
@@ -12126,7 +12126,7 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12142,7 +12142,7 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -12150,7 +12150,7 @@ LobbyistEmployerFirms2Cd
         <tr>
             <td>termination_dt</td>
             <td>String (up to 32)</td>
-            <td>Termination effective date</td>
+            <td>Termination date: Termination effective date</td>
         </tr>
     
     
@@ -12186,7 +12186,7 @@ LobbyistFirm1Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12194,7 +12194,7 @@ LobbyistFirm1Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -12226,7 +12226,7 @@ LobbyistFirm1Cd
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td>Contributor identification number</td>
+            <td>Contributor ID: Contributor identification number</td>
         </tr>
     
     
@@ -12250,7 +12250,7 @@ LobbyistFirm1Cd
         <tr>
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -12258,7 +12258,7 @@ LobbyistFirm1Cd
         <tr>
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -12266,7 +12266,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 1: Quarter total amount</td>
         </tr>
     
     
@@ -12274,7 +12274,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 2: Quarter total amount</td>
         </tr>
     
     
@@ -12282,7 +12282,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 3: Quarter total amount</td>
         </tr>
     
     
@@ -12290,7 +12290,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 4: Quarter total amount</td>
         </tr>
     
     
@@ -12298,7 +12298,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 5: Quarter total amount</td>
         </tr>
     
     
@@ -12306,7 +12306,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 6: Quarter total amount</td>
         </tr>
     
     
@@ -12314,7 +12314,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 7: Quarter total amount</td>
         </tr>
     
     
@@ -12322,7 +12322,7 @@ LobbyistFirm1Cd
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 8: Quarter total amount</td>
         </tr>
     
     
@@ -12358,7 +12358,7 @@ This is an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12366,7 +12366,7 @@ This is an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -12398,7 +12398,7 @@ This is an undocumented model.
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td>Contributor identification number</td>
+            <td>Contributor ID: Contributor identification number</td>
         </tr>
     
     
@@ -12422,7 +12422,7 @@ This is an undocumented model.
         <tr>
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -12430,7 +12430,7 @@ This is an undocumented model.
         <tr>
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -12438,7 +12438,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 1: Quarter total amount</td>
         </tr>
     
     
@@ -12446,7 +12446,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 2: Quarter total amount</td>
         </tr>
     
     
@@ -12454,7 +12454,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 3: Quarter total amount</td>
         </tr>
     
     
@@ -12462,7 +12462,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 4: Quarter total amount</td>
         </tr>
     
     
@@ -12470,7 +12470,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 5: Quarter total amount</td>
         </tr>
     
     
@@ -12478,7 +12478,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 6: Quarter total amount</td>
         </tr>
     
     
@@ -12486,7 +12486,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 7: Quarter total amount</td>
         </tr>
     
     
@@ -12494,7 +12494,7 @@ This is an undocumented model.
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 8: Quarter total amount</td>
         </tr>
     
     
@@ -12530,7 +12530,7 @@ LobbyistFirm3Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12538,7 +12538,7 @@ LobbyistFirm3Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -12570,7 +12570,7 @@ LobbyistFirm3Cd
         <tr>
             <td>contributor_id</td>
             <td>Integer</td>
-            <td>Contributor identification number</td>
+            <td>Contributor ID: Contributor identification number</td>
         </tr>
     
     
@@ -12594,7 +12594,7 @@ LobbyistFirm3Cd
         <tr>
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -12602,7 +12602,7 @@ LobbyistFirm3Cd
         <tr>
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -12610,7 +12610,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_1</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 1: Quarter total amount</td>
         </tr>
     
     
@@ -12618,7 +12618,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_2</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 2: Quarter total amount</td>
         </tr>
     
     
@@ -12626,7 +12626,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_3</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 3: Quarter total amount</td>
         </tr>
     
     
@@ -12634,7 +12634,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_4</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 4: Quarter total amount</td>
         </tr>
     
     
@@ -12642,7 +12642,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_5</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 5: Quarter total amount</td>
         </tr>
     
     
@@ -12650,7 +12650,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_6</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 6: Quarter total amount</td>
         </tr>
     
     
@@ -12658,7 +12658,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_7</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 7: Quarter total amount</td>
         </tr>
     
     
@@ -12666,7 +12666,7 @@ LobbyistFirm3Cd
         <tr>
             <td>qtr_8</td>
             <td>Floating point number</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 8: Quarter total amount</td>
         </tr>
     
     
@@ -12702,7 +12702,7 @@ This is an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12710,7 +12710,7 @@ This is an undocumented model.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -12818,7 +12818,7 @@ This is an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12826,7 +12826,7 @@ This is an undocumented model.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     
@@ -12934,7 +12934,7 @@ It's an undocumented model.
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td>Lobbyist identification number</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
         </tr>
     
     
@@ -12942,7 +12942,7 @@ It's an undocumented model.
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -12974,7 +12974,7 @@ It's an undocumented model.
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -13010,7 +13010,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>lobbyist_id</td>
             <td>Integer</td>
-            <td>Lobbyist identification number</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
         </tr>
     
     
@@ -13018,7 +13018,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>firm_id</td>
             <td>Integer</td>
-            <td>Identification number of the firm, employer or coalition</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
         </tr>
     
     
@@ -13050,7 +13050,7 @@ LobbyistFirmLobbyist2Cd
         <tr>
             <td>session_id</td>
             <td>Integer</td>
-            <td>Legislative session identification number</td>
+            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -13247,7 +13247,7 @@ This table is undocumented.
         <tr>
             <td>filer_id</td>
             <td>Integer</td>
-            <td>Filer&#39;s unique identification number</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
     
     
@@ -13279,7 +13279,7 @@ This table is undocumented.
         <tr>
             <td>filing_id</td>
             <td>Integer</td>
-            <td>Unique filing identificiation number</td>
+            <td>Filing ID: Unique filing identificiation number</td>
         </tr>
     
     

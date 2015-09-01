@@ -44,7 +44,7 @@ The {{ model_count }} tab-delimited database exports published by California's S
         <tr>
             <td>{{ field.name }}</td>
             <td>{{ field.description }}</td>
-            <td>{{ field.help_text|capfirst }}</td>
+            <td>{{ field.definition|capfirst }}</td>
         </tr>
     {% endif %}
     {% endfor %}
