@@ -3,9 +3,20 @@ Database tables
 
 The {{ model_count }} tab-delimited database exports published by California's Secretary of State and loaded by this Django application.
 
+.. warning::
+
+    Most definitions below are drawn from the spotty and incomplete
+    `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim. As we continue our research, we plan to improve the descriptions.
+
+    For the time being, to be absolutely certain about
+    what each table and field contains, you should compare the electronic data back to
+    the original paper records published by the state.
+
+
 {% for group, model_list in group_list %}
 {{ group|capfirst }}
 -------
+
 {% for object in model_list %}
 {{ object.klass_name }}
 ~~~~~~~~~~~~~~~~~~~~~~~

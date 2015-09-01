@@ -3,6 +3,18 @@ Database tables
 
 The 76 tab-delimited database exports published by California's Secretary of State and loaded by this Django application.
 
+.. warning::
+
+    Most definitions below are drawn from the spotty and incomplete
+    `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim.
+
+    As we continue our research, we plan to improve the descriptions.
+
+    For the time being, to be absolutely certain about
+    what each table and field contains, you should compare the electronic data back to
+    the original paper records published by the state.
+
+
 
 Campaign
 -------
@@ -44,7 +56,7 @@ disclosure forms below.
         <tr>
             <td>bal_juris</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Ballot measure jurisdiction</td>
         </tr>
     
     
@@ -52,7 +64,7 @@ disclosure forms below.
         <tr>
             <td>bal_name</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Ballot measure name</td>
         </tr>
     
     
@@ -60,7 +72,7 @@ disclosure forms below.
         <tr>
             <td>bal_num</td>
             <td>String (up to 7)</td>
-            <td></td>
+            <td>Ballot measure number or letter</td>
         </tr>
     
     
@@ -68,7 +80,7 @@ disclosure forms below.
         <tr>
             <td>cmte_id</td>
             <td>String (up to 9)</td>
-            <td>Commitee Identification number.</td>
+            <td>Commitee identification number, when the entity is a committee</td>
         </tr>
     
     
@@ -76,7 +88,7 @@ disclosure forms below.
         <tr>
             <td>control_yn</td>
             <td>Integer</td>
-            <td></td>
+            <td>Controlled Committee (yes/no) checkbox. Legal values are &quot;Y&quot; or &quot;N&quot;.</td>
         </tr>
     
     
@@ -84,7 +96,7 @@ disclosure forms below.
         <tr>
             <td>dist_no</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
         </tr>
     
     
@@ -100,7 +112,7 @@ disclosure forms below.
         <tr>
             <td>enty_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Entity city</td>
         </tr>
     
     
@@ -108,7 +120,7 @@ disclosure forms below.
         <tr>
             <td>enty_email</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Entity email address</td>
         </tr>
     
     
@@ -116,7 +128,7 @@ disclosure forms below.
         <tr>
             <td>enty_fax</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Entity fax number</td>
         </tr>
     
     
@@ -124,7 +136,7 @@ disclosure forms below.
         <tr>
             <td>enty_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Entity first name, if an individual</td>
         </tr>
     
     
@@ -132,7 +144,7 @@ disclosure forms below.
         <tr>
             <td>enty_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Entity name, or last name if an individual</td>
         </tr>
     
     
@@ -140,7 +152,7 @@ disclosure forms below.
         <tr>
             <td>enty_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Entity suffix, if an individual</td>
         </tr>
     
     
@@ -148,7 +160,7 @@ disclosure forms below.
         <tr>
             <td>enty_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Entity prefix or title, if an individual</td>
         </tr>
     
     
@@ -156,7 +168,7 @@ disclosure forms below.
         <tr>
             <td>enty_phon</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Entity phone number</td>
         </tr>
     
     
@@ -164,7 +176,7 @@ disclosure forms below.
         <tr>
             <td>enty_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Entity state</td>
         </tr>
     
     
@@ -172,7 +184,7 @@ disclosure forms below.
         <tr>
             <td>enty_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Entity ZIP code</td>
         </tr>
     
     
@@ -180,7 +192,7 @@ disclosure forms below.
         <tr>
             <td>f460_part</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Part of 460 cover page coded on ths cvr2 record. Legal values are 3, 4a, 4b, 5a, 5b, or 6.</td>
         </tr>
     
     
@@ -204,7 +216,7 @@ disclosure forms below.
         <tr>
             <td>juris_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Office jurisdiction code</td>
         </tr>
     
     
@@ -212,7 +224,7 @@ disclosure forms below.
         <tr>
             <td>juris_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office jurisdiction description</td>
         </tr>
     
     
@@ -228,7 +240,7 @@ disclosure forms below.
         <tr>
             <td>mail_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Filer&#39;s mailing city</td>
         </tr>
     
     
@@ -236,7 +248,7 @@ disclosure forms below.
         <tr>
             <td>mail_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Filer&#39;s mailing state</td>
         </tr>
     
     
@@ -244,7 +256,7 @@ disclosure forms below.
         <tr>
             <td>mail_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer&#39;s mailing ZIP Code</td>
         </tr>
     
     
@@ -252,7 +264,7 @@ disclosure forms below.
         <tr>
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Office sought/held code. Indicates if the candidate is an incumbent. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held.</td>
         </tr>
     
     
@@ -260,7 +272,7 @@ disclosure forms below.
         <tr>
             <td>offic_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office sought description</td>
         </tr>
     
     
@@ -268,7 +280,7 @@ disclosure forms below.
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Code that identifies the office being sought</td>
         </tr>
     
     
@@ -284,7 +296,7 @@ disclosure forms below.
         <tr>
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Support/Oppose (S/O) code for the ballot measure. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose.</td>
         </tr>
     
     
@@ -292,7 +304,7 @@ disclosure forms below.
         <tr>
             <td>title</td>
             <td>String (up to 90)</td>
-            <td></td>
+            <td>Official title of filing officer. Applies to the form 465.</td>
         </tr>
     
     
@@ -308,7 +320,7 @@ disclosure forms below.
         <tr>
             <td>tres_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s first name</td>
         </tr>
     
     
@@ -316,7 +328,7 @@ disclosure forms below.
         <tr>
             <td>tres_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s last name</td>
         </tr>
     
     
@@ -324,7 +336,7 @@ disclosure forms below.
         <tr>
             <td>tres_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s suffix</td>
         </tr>
     
     
@@ -332,7 +344,7 @@ disclosure forms below.
         <tr>
             <td>tres_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s prefix or title</td>
         </tr>
     
     
@@ -490,7 +502,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>day_phone</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Entity&#39;s daytime phone number</td>
         </tr>
     
     
@@ -498,7 +510,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>fax_phone</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Entity&#39;s fax number</td>
         </tr>
     
     
@@ -506,7 +518,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>email_adr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Email address. Not contained in current forms.</td>
         </tr>
     
     
@@ -514,7 +526,7 @@ by a slate-mailer organization or recipient committee.
         <tr>
             <td>cmte_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Entity&#39;s identification number</td>
         </tr>
     
     
@@ -769,20 +781,7 @@ Cover page verification information from campaign disclosure forms
 CvrCampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Cover page information for the campaign disclosure forms below.
-This data comes from the electronic filing.
-The data contained herin is "as filed" by the entity making the filing.
-
-    F401 -- Slate Mailer Organization Campaign Statement
-    F425 -- Semi-Annual Statement of No Activity
-    F450 -- Recipient Committee Campaign Statement (Short Form)
-    F460 -- Recipient Committee Campaign Statement
-    F461 -- Independent Expenditure and Major Donor Committee
-            Campaign Statement
-    F465 -- Supplemental Independent Expenditure Report
-    F496 -- Late Independent Expenditure Report
-    F497 -- Late Contribution Report
-    F498 -- Slate Mailer Late Payment Report
+Cover page information from campaign disclosure forms
 
 **Source:** `CVR_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -823,7 +822,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>amendexp_2</td>
             <td>String (up to 100)</td>
-            <td></td>
+            <td>Amendment explanation line 2</td>
         </tr>
     
     
@@ -831,7 +830,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>amendexp_3</td>
             <td>String (up to 100)</td>
-            <td></td>
+            <td>Amendment explanation line 3</td>
         </tr>
     
     
@@ -839,7 +838,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>assoc_cb</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Association Interests info included check-box. Legal values are &#39;X&#39; and null.</td>
         </tr>
     
     
@@ -847,7 +846,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>assoc_int</td>
             <td>String (up to 90)</td>
-            <td></td>
+            <td>Description of association interests</td>
         </tr>
     
     
@@ -855,7 +854,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bal_id</td>
             <td>String (up to 9)</td>
-            <td>This field is undocument</td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -863,7 +862,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bal_juris</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Ballot measure jurisdiction</td>
         </tr>
     
     
@@ -871,7 +870,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bal_name</td>
             <td>String (up to 200)</td>
-            <td>Ballot measure name.</td>
+            <td>Ballot measure name</td>
         </tr>
     
     
@@ -879,7 +878,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bal_num</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Ballot measure number or letter</td>
         </tr>
     
     
@@ -887,7 +886,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>brdbase_yn</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Broad Base Committee (yes/no) check box. Legal values are &#39;Y&#39; or &#39;N&#39;.</td>
         </tr>
     
     
@@ -895,7 +894,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bus_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Employer/business address city</td>
         </tr>
     
     
@@ -903,7 +902,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bus_inter</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Employer/business interest description</td>
         </tr>
     
     
@@ -911,7 +910,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bus_name</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Name of employer/business. Applies to the form 461.</td>
         </tr>
     
     
@@ -919,7 +918,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bus_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Employer/business address state</td>
         </tr>
     
     
@@ -927,7 +926,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>bus_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Employer/business address ZIP Code</td>
         </tr>
     
     
@@ -935,7 +934,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>busact_cb</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Business activity info included check-box. Valid values are &#39;X&#39; and null</td>
         </tr>
     
     
@@ -943,7 +942,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>busactvity</td>
             <td>String (up to 90)</td>
-            <td></td>
+            <td>Business activity description</td>
         </tr>
     
     
@@ -959,7 +958,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_email</td>
             <td>String (up to 60)</td>
-            <td>Candidate/officeholder email</td>
+            <td>Candidate/officeholder email. This field is not contained on the forms.</td>
         </tr>
     
     
@@ -967,7 +966,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_fax</td>
             <td>String (up to 20)</td>
-            <td>Candidate/officeholder fax</td>
+            <td>Candidate/officeholder fax. This field is not contained on the forms.</td>
         </tr>
     
     
@@ -975,7 +974,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_id</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>This field is not documented</td>
         </tr>
     
     
@@ -991,7 +990,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_naml</td>
             <td>String (up to 200)</td>
-            <td>Candidate/officeholder&#39;s last name.</td>
+            <td>Candidate/officeholder&#39;s last name. Applies to forms 460, 465, and 496.</td>
         </tr>
     
     
@@ -999,7 +998,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_nams</td>
             <td>String (up to 10)</td>
-            <td>Candidate/officeholder&#39;s name suffix.</td>
+            <td>Candidate/officeholder&#39;s name suffix</td>
         </tr>
     
     
@@ -1007,7 +1006,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_namt</td>
             <td>String (up to 10)</td>
-            <td>Candidate/officeholder&#39;s prefix or title.</td>
+            <td>Candidate/officeholder&#39;s prefix or title</td>
         </tr>
     
     
@@ -1023,7 +1022,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_st</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Candidate/officeholder&#39;s state</td>
         </tr>
     
     
@@ -1031,7 +1030,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cand_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Candidate/officeholder&#39;s ZIP Code</td>
         </tr>
     
     
@@ -1039,7 +1038,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cmtte_id</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>Committee ID (Filer_id) of recipient Committee who&#39;s campaign statement is attached. This field applies to the form 401.</td>
         </tr>
     
     
@@ -1047,7 +1046,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>cmtte_type</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Type of Recipient Committee. Applies to the 450/460.</td>
         </tr>
     
     
@@ -1055,7 +1054,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>control_yn</td>
             <td>Integer</td>
-            <td></td>
+            <td>Controlled Committee (yes/no) check box. Legal values are &#39;Y&#39; or &#39;N&#39;.</td>
         </tr>
     
     
@@ -1063,7 +1062,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>dist_no</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
         </tr>
     
     
@@ -1071,7 +1070,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>elect_date</td>
             <td>Date (with time)</td>
-            <td>Date of the General Election. This date will be the same as on the filing&#39;s cover (CVR) record.</td>
+            <td>Date of the General Election</td>
         </tr>
     
     
@@ -1079,7 +1078,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>emplbus_cb</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Employer/Business Info included check-box. Legal values are &#39;X&#39; or null. Applies to the Form 461.</td>
         </tr>
     
     
@@ -1087,7 +1086,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>employer</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Employer. This field is most likely unused.</td>
         </tr>
     
     
@@ -1103,7 +1102,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>file_email</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Filer&#39;s email address</td>
         </tr>
     
     
@@ -1111,7 +1110,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Filer&#39;s city</td>
         </tr>
     
     
@@ -1119,7 +1118,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_fax</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Filer&#39;s fax</td>
         </tr>
     
     
@@ -1135,7 +1134,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Filer&#39;s first name, if an individual</td>
         </tr>
     
     
@@ -1143,7 +1142,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>The committee&#39;s or organization&#39;s name or if an individual the filer&#39;s last name.</td>
         </tr>
     
     
@@ -1151,7 +1150,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer&#39;s suffix, if an individual</td>
         </tr>
     
     
@@ -1159,7 +1158,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer&#39;s title or prefix, if an individual</td>
         </tr>
     
     
@@ -1167,7 +1166,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_phon</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Filer phone number</td>
         </tr>
     
     
@@ -1175,7 +1174,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_st</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Filer state</td>
         </tr>
     
     
@@ -1183,7 +1182,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>filer_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer ZIP Code</td>
         </tr>
     
     
@@ -1207,7 +1206,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>from_date</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Reporting period from date</td>
         </tr>
     
     
@@ -1215,7 +1214,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>juris_cd</td>
             <td>String (up to 3)</td>
-            <td>Office jurisdiction code.</td>
+            <td>Office jurisdiction code</td>
         </tr>
     
     
@@ -1223,7 +1222,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>juris_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office Jurisdiction description if the field JURIS_CD is set to city (CIT), county (CTY), local (LOC), or other (OTH).</td>
         </tr>
     
     
@@ -1231,7 +1230,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>late_rptno</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Identifying Report Number used to distinguish multiple reports filed during the same filing period. For example, this field allows for multiple form 497s to be filed on the same day.</td>
         </tr>
     
     
@@ -1239,7 +1238,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>mail_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Filer mailing address city</td>
         </tr>
     
     
@@ -1247,7 +1246,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>mail_st</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Filer mailing address state</td>
         </tr>
     
     
@@ -1255,7 +1254,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>mail_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer mailing address ZIP Code</td>
         </tr>
     
     
@@ -1263,7 +1262,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>occupation</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Occupation. This field is most likely unused.</td>
         </tr>
     
     
@@ -1271,7 +1270,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Office Sought/Held Code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held.</td>
         </tr>
     
     
@@ -1279,7 +1278,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>offic_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office sought description if the field OFFICE_CD is set to other (OTH)</td>
         </tr>
     
     
@@ -1287,7 +1286,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Code that identifies the office being sought</td>
         </tr>
     
     
@@ -1295,7 +1294,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>other_cb</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Other entity interests info included check-box. Legal values are &#39;X&#39; and null.</td>
         </tr>
     
     
@@ -1303,7 +1302,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>other_int</td>
             <td>String (up to 90)</td>
-            <td></td>
+            <td>Other entity interests description</td>
         </tr>
     
     
@@ -1311,7 +1310,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>primfrm_yn</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Primarily Formed Committee (yes/no) checkbox. Legal values are &#39;Y&#39; or &#39;N&#39;.</td>
         </tr>
     
     
@@ -1327,7 +1326,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>report_num</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Amendment number, as reported by the filer Report Number 000 represents an original filing. 001-999 are amendments.</td>
         </tr>
     
     
@@ -1335,7 +1334,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>reportname</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Attached campaign disclosure statement type. Legal values are 450, 460, and 461.</td>
         </tr>
     
     
@@ -1343,7 +1342,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>rpt_att_cb</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Committee Report Attached check-box. Legal values are &#39;X&#39; or null. This field applies to the form 401.</td>
         </tr>
     
     
@@ -1351,7 +1350,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>rpt_date</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Date this report was filed, according to the filer</td>
         </tr>
     
     
@@ -1359,7 +1358,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>rptfromdt</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Attached campaign disclosure statement - Period from date.</td>
         </tr>
     
     
@@ -1367,7 +1366,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>rptthrudt</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Attached campaign disclosure statement - Period through date.</td>
         </tr>
     
     
@@ -1383,7 +1382,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>sponsor_yn</td>
             <td>Integer</td>
-            <td></td>
+            <td>Sponsored Committee (yes/no) checkbox. Legal values are &#39;Y&#39; or &#39;N&#39;.</td>
         </tr>
     
     
@@ -1399,7 +1398,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Support/oppose code. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose.</td>
         </tr>
     
     
@@ -1423,7 +1422,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_email</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s email</td>
         </tr>
     
     
@@ -1431,7 +1430,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_fax</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s fax number</td>
         </tr>
     
     
@@ -1439,7 +1438,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_namf</td>
             <td>String (up to 45)</td>
-            <td>Treasurer or responsible officer&#39;s first name. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s first name</td>
         </tr>
     
     
@@ -1447,7 +1446,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_naml</td>
             <td>String (up to 200)</td>
-            <td>Treasurer or responsible officer&#39;s last name. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s last name</td>
         </tr>
     
     
@@ -1455,7 +1454,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_nams</td>
             <td>String (up to 10)</td>
-            <td>Treasurer or responsible officer&#39;s suffix. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s suffix</td>
         </tr>
     
     
@@ -1463,7 +1462,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_namt</td>
             <td>String (up to 10)</td>
-            <td>Treasurer or responsible officer&#39;s prefix or title. Not used on Form 460 Schedule D.</td>
+            <td>Treasurer or responsible officer&#39;s prefix or title</td>
         </tr>
     
     
@@ -1471,7 +1470,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_phon</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s phone number</td>
         </tr>
     
     
@@ -1479,7 +1478,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s state</td>
         </tr>
     
     
@@ -1487,7 +1486,7 @@ The data contained herin is "as filed" by the entity making the filing.
         <tr>
             <td>tres_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s ZIP Code</td>
         </tr>
     
     
@@ -1524,7 +1523,7 @@ form filed by a slate-mailer organization or recipient committee.
         <tr>
             <td>acct_opendt</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -2121,7 +2120,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
         <tr>
             <td>payee_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Payee&#39;s business name or last name if the payee is an individual.</td>
         </tr>
     
     
@@ -2784,7 +2783,7 @@ its last report.
         <tr>
             <td>elect_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Date of the General Election This date will be the same as on the filing&#39;s cover (CVR) record.</td>
         </tr>
     
     
@@ -2792,7 +2791,7 @@ its last report.
         <tr>
             <td>electjuris</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Jurisdiction of the election</td>
         </tr>
     
     
@@ -2800,7 +2799,7 @@ its last report.
         <tr>
             <td>contribamt</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Contribution amount (For the period of 6 months prior to 17 days before the election)</td>
         </tr>
     
     
@@ -2811,10 +2810,7 @@ its last report.
 F501502Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Candidate Intention Statement
-
-    -- F501
-    -- F502
+Candidate intention statement
 
 **Source:** `F501_502_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -2911,7 +2907,7 @@ Candidate Intention Statement
         <tr>
             <td>stmt_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>Type of statement</td>
         </tr>
     
     
@@ -2927,7 +2923,7 @@ Candidate Intention Statement
         <tr>
             <td>thru_date</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Reporting period through date</td>
         </tr>
     
     
@@ -2943,7 +2939,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_naml</td>
             <td>String (up to 81)</td>
-            <td></td>
+            <td>Candidate/officerholder last name</td>
         </tr>
     
     
@@ -2951,7 +2947,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_namf</td>
             <td>String (up to 25)</td>
-            <td></td>
+            <td>Candidate/officerholder first name</td>
         </tr>
     
     
@@ -2967,7 +2963,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_namt</td>
             <td>String (up to 7)</td>
-            <td></td>
+            <td>Candidate/officerholder title or prefix</td>
         </tr>
     
     
@@ -2975,7 +2971,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_nams</td>
             <td>String (up to 7)</td>
-            <td></td>
+            <td>Candidate/officeholder suffix</td>
         </tr>
     
     
@@ -2983,7 +2979,7 @@ Candidate Intention Statement
         <tr>
             <td>moniker_pos</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Location of the candidate/officeholder&#39;s moniker</td>
         </tr>
     
     
@@ -2991,7 +2987,7 @@ Candidate Intention Statement
         <tr>
             <td>moniker</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Candidate/officeholder&#39;s moniker</td>
         </tr>
     
     
@@ -2999,7 +2995,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_city</td>
             <td>String (up to 22)</td>
-            <td></td>
+            <td>Candidate/officerholder city</td>
         </tr>
     
     
@@ -3015,7 +3011,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_zip4</td>
             <td>String (up to 10)</td>
-            <td>Candidate officeholder zip +4</td>
+            <td>Candidate/officeholder zip +4</td>
         </tr>
     
     
@@ -3031,7 +3027,7 @@ Candidate Intention Statement
         <tr>
             <td>cand_fax</td>
             <td>String (up to 14)</td>
-            <td></td>
+            <td>Candidate/officerholder fax</td>
         </tr>
     
     
@@ -3047,7 +3043,7 @@ Candidate Intention Statement
         <tr>
             <td>fin_naml</td>
             <td>String (up to 53)</td>
-            <td></td>
+            <td>Financial institution&#39;s business name</td>
         </tr>
     
     
@@ -3127,7 +3123,7 @@ Candidate Intention Statement
         <tr>
             <td>office_cd</td>
             <td>Integer</td>
-            <td></td>
+            <td>Office sought code</td>
         </tr>
     
     
@@ -3135,7 +3131,7 @@ Candidate Intention Statement
         <tr>
             <td>offic_dscr</td>
             <td>String (up to 50)</td>
-            <td></td>
+            <td>Office sought description</td>
         </tr>
     
     
@@ -3143,7 +3139,7 @@ Candidate Intention Statement
         <tr>
             <td>agency_nam</td>
             <td>String (up to 63)</td>
-            <td></td>
+            <td>Agency name</td>
         </tr>
     
     
@@ -3231,7 +3227,7 @@ Candidate Intention Statement
         <tr>
             <td>party_cd</td>
             <td>Integer</td>
-            <td>Party code.</td>
+            <td>Party code</td>
         </tr>
     
     
@@ -3274,7 +3270,7 @@ Candidate Intention Statement
 LoanCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Loans received and made.
+Loans received and made
 
 **Source:** `LOAN_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -3307,7 +3303,7 @@ Loans received and made.
         <tr>
             <td>bakref_tid</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Back Reference to transaction identifier of parent record</td>
         </tr>
     
     
@@ -3315,7 +3311,7 @@ Loans received and made.
         <tr>
             <td>cmte_id</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>Committee identification number</td>
         </tr>
     
     
@@ -3347,7 +3343,7 @@ Loans received and made.
         <tr>
             <td>intr_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Intermediary&#39;s city</td>
         </tr>
     
     
@@ -3355,7 +3351,7 @@ Loans received and made.
         <tr>
             <td>intr_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Intermediary&#39;s first name</td>
         </tr>
     
     
@@ -3363,7 +3359,7 @@ Loans received and made.
         <tr>
             <td>intr_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Intermediary&#39;s last name</td>
         </tr>
     
     
@@ -3371,7 +3367,7 @@ Loans received and made.
         <tr>
             <td>intr_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Intermediary&#39;s suffix</td>
         </tr>
     
     
@@ -3379,7 +3375,7 @@ Loans received and made.
         <tr>
             <td>intr_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Intermediary&#39;s title or prefix</td>
         </tr>
     
     
@@ -3387,7 +3383,7 @@ Loans received and made.
         <tr>
             <td>intr_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Intermediary&#39;s state</td>
         </tr>
     
     
@@ -3395,7 +3391,7 @@ Loans received and made.
         <tr>
             <td>intr_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Intermediary&#39;s ZIP Code</td>
         </tr>
     
     
@@ -3411,7 +3407,7 @@ Loans received and made.
         <tr>
             <td>lndr_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Lender&#39;s first name</td>
         </tr>
     
     
@@ -3419,7 +3415,7 @@ Loans received and made.
         <tr>
             <td>lndr_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Lender&#39;s last name or business name</td>
         </tr>
     
     
@@ -3427,7 +3423,7 @@ Loans received and made.
         <tr>
             <td>lndr_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Lender&#39;s suffix</td>
         </tr>
     
     
@@ -3435,7 +3431,7 @@ Loans received and made.
         <tr>
             <td>lndr_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Lender&#39;s title or prefix</td>
         </tr>
     
     
@@ -3443,7 +3439,7 @@ Loans received and made.
         <tr>
             <td>loan_amt1</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Repaid or forgiven amount; Original loan amount. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value of this field.</td>
         </tr>
     
     
@@ -3451,7 +3447,7 @@ Loans received and made.
         <tr>
             <td>loan_amt2</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Outstanding Principal; unpaid balance. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value of this field.</td>
         </tr>
     
     
@@ -3459,7 +3455,7 @@ Loans received and made.
         <tr>
             <td>loan_amt3</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Interest Paid; Unpaid interest; Interest received. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value of this field.</td>
         </tr>
     
     
@@ -3467,7 +3463,7 @@ Loans received and made.
         <tr>
             <td>loan_amt4</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Cumulative Amount/Other. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value of this field.</td>
         </tr>
     
     
@@ -3475,7 +3471,7 @@ Loans received and made.
         <tr>
             <td>loan_amt5</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -3483,7 +3479,7 @@ Loans received and made.
         <tr>
             <td>loan_amt6</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -3491,7 +3487,7 @@ Loans received and made.
         <tr>
             <td>loan_amt7</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -3499,7 +3495,7 @@ Loans received and made.
         <tr>
             <td>loan_amt8</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -3507,7 +3503,7 @@ Loans received and made.
         <tr>
             <td>loan_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Lender&#39;s city</td>
         </tr>
     
     
@@ -3515,7 +3511,7 @@ Loans received and made.
         <tr>
             <td>loan_date1</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Date the loan was made or recieved. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value.</td>
         </tr>
     
     
@@ -3523,7 +3519,7 @@ Loans received and made.
         <tr>
             <td>loan_date2</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Date repaid/forgiven; date loan due. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value of this field.</td>
         </tr>
     
     
@@ -3531,7 +3527,7 @@ Loans received and made.
         <tr>
             <td>loan_emp</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Loan employer. Applies to the Form 460 Schedule B Part 1.</td>
         </tr>
     
     
@@ -3539,7 +3535,7 @@ Loans received and made.
         <tr>
             <td>loan_occ</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Loan occupation. Applies to the Form 460 Schedule B Part 1.</td>
         </tr>
     
     
@@ -3547,7 +3543,7 @@ Loans received and made.
         <tr>
             <td>loan_rate</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Interest Rate. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value of this field.</td>
         </tr>
     
     
@@ -3555,7 +3551,7 @@ Loans received and made.
         <tr>
             <td>loan_self</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Self-employed checkbox</td>
         </tr>
     
     
@@ -3563,7 +3559,7 @@ Loans received and made.
         <tr>
             <td>loan_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Lender&#39;s state</td>
         </tr>
     
     
@@ -3571,7 +3567,7 @@ Loans received and made.
         <tr>
             <td>loan_type</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Type of loan</td>
         </tr>
     
     
@@ -3579,7 +3575,7 @@ Loans received and made.
         <tr>
             <td>loan_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Lender&#39;s ZIP Code</td>
         </tr>
     
     
@@ -3587,7 +3583,7 @@ Loans received and made.
         <tr>
             <td>memo_code</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Memo amount flag</td>
         </tr>
     
     
@@ -3595,7 +3591,7 @@ Loans received and made.
         <tr>
             <td>memo_refno</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Reference to text contained in a TEXT record</td>
         </tr>
     
     
@@ -3619,7 +3615,7 @@ Loans received and made.
         <tr>
             <td>tres_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s city</td>
         </tr>
     
     
@@ -3627,7 +3623,7 @@ Loans received and made.
         <tr>
             <td>tres_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s first name</td>
         </tr>
     
     
@@ -3635,7 +3631,7 @@ Loans received and made.
         <tr>
             <td>tres_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s last name</td>
         </tr>
     
     
@@ -3643,7 +3639,7 @@ Loans received and made.
         <tr>
             <td>tres_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s suffix</td>
         </tr>
     
     
@@ -3651,7 +3647,7 @@ Loans received and made.
         <tr>
             <td>tres_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s title or prefix</td>
         </tr>
     
     
@@ -3659,7 +3655,7 @@ Loans received and made.
         <tr>
             <td>tres_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s street address</td>
         </tr>
     
     
@@ -3667,7 +3663,7 @@ Loans received and made.
         <tr>
             <td>tres_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Treasurer or responsible officer&#39;s ZIP Code</td>
         </tr>
     
     
@@ -3675,7 +3671,7 @@ Loans received and made.
         <tr>
             <td>xref_match</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Related item on other schedule has same transaction identifier. &quot;X&quot; indicates this condition is true.</td>
         </tr>
     
     
@@ -3683,7 +3679,7 @@ Loans received and made.
         <tr>
             <td>xref_schnm</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Related record is included on Form 460 Schedule &#39;A&#39; or &#39;E&#39;</td>
         </tr>
     
     
@@ -3956,7 +3952,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>int_rate</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -3972,7 +3968,7 @@ Receipts schedules for the following forms.
         <tr>
             <td>intr_cmteid</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -4305,7 +4301,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>agent_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Agent or independent contractor&#39;s last name</td>
         </tr>
     
     
@@ -4313,7 +4309,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>agent_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Agent or independent contractor&#39;s first name</td>
         </tr>
     
     
@@ -4321,7 +4317,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>agent_namt</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Agent or independent contractor&#39;s title or prefix</td>
         </tr>
     
     
@@ -4329,7 +4325,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>agent_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Agent or independent contractor&#39;s suffix</td>
         </tr>
     
     
@@ -4337,7 +4333,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>payee_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Payee&#39;s business name or last name if the payee is an individual</td>
         </tr>
     
     
@@ -4345,7 +4341,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>payee_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Payee&#39;s first name if the payee is an individual</td>
         </tr>
     
     
@@ -4353,7 +4349,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>payee_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Payee&#39;s title or prefix if the payee is an individual</td>
         </tr>
     
     
@@ -4361,7 +4357,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>payee_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Payee&#39;s suffix if the payee is an individual</td>
         </tr>
     
     
@@ -4369,7 +4365,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>payee_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Payee&#39;s city address</td>
         </tr>
     
     
@@ -4377,7 +4373,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>payee_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Payee state address</td>
         </tr>
     
     
@@ -4385,7 +4381,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>payee_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Payee ZIP Code</td>
         </tr>
     
     
@@ -4393,7 +4389,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>amount</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Amount (Sched F401B, 401B-1, 401C)</td>
         </tr>
     
     
@@ -4401,7 +4397,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>aggregate</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Aggregate year-to-date amount (Sched 401C)</td>
         </tr>
     
     
@@ -4409,7 +4405,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>expn_dscr</td>
             <td>String (up to 90)</td>
-            <td></td>
+            <td>Purpose of expense and/or description/explanation</td>
         </tr>
     
     
@@ -4417,7 +4413,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>cand_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Candidate/officeholder last name</td>
         </tr>
     
     
@@ -4425,7 +4421,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>cand_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Candidate/officeholder first name</td>
         </tr>
     
     
@@ -4433,7 +4429,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>cand_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Candidate/officeholder title or prefix</td>
         </tr>
     
     
@@ -4441,7 +4437,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>cand_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Candidate/officeholder suffix</td>
         </tr>
     
     
@@ -4449,7 +4445,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Code that identifies the office being sought</td>
         </tr>
     
     
@@ -4457,7 +4453,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>offic_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office sought description</td>
         </tr>
     
     
@@ -4465,7 +4461,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>juris_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Office jurisdiction code</td>
         </tr>
     
     
@@ -4473,7 +4469,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>juris_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office jurisdiction description</td>
         </tr>
     
     
@@ -4481,7 +4477,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>dist_no</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
         </tr>
     
     
@@ -4489,7 +4485,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Office sought/held code</td>
         </tr>
     
     
@@ -4497,7 +4493,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>bal_name</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Ballot measure name</td>
         </tr>
     
     
@@ -4505,7 +4501,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>bal_num</td>
             <td>String (up to 7)</td>
-            <td></td>
+            <td>Ballot measure number or letter</td>
         </tr>
     
     
@@ -4513,7 +4509,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>bal_juris</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Ballot measure jurisdiction</td>
         </tr>
     
     
@@ -4521,7 +4517,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Support/oppose code. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose. Used on Form 401.</td>
         </tr>
     
     
@@ -4529,7 +4525,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>memo_code</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Memo amount flag</td>
         </tr>
     
     
@@ -4537,7 +4533,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>memo_refno</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Reference to text contained in the TEXT record</td>
         </tr>
     
     
@@ -4545,7 +4541,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
         <tr>
             <td>bakref_tid</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Back reference to transaction identifier of parent record</td>
         </tr>
     
     
@@ -4629,7 +4625,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>amount</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Expenditure amount</td>
         </tr>
     
     
@@ -4637,7 +4633,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>exp_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Expenditure dates</td>
         </tr>
     
     
@@ -4645,7 +4641,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>expn_dscr</td>
             <td>String (up to 90)</td>
-            <td></td>
+            <td>Purpose of expense and/or description/explanation</td>
         </tr>
     
     
@@ -4653,7 +4649,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>memo_code</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Memo amount flag</td>
         </tr>
     
     
@@ -4661,7 +4657,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>memo_refno</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Reference to text contained in a TEXT record</td>
         </tr>
     
     
@@ -4669,7 +4665,7 @@ Form 496 Late Independent Expenditures
         <tr>
             <td>date_thru</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>End of date range for items paid</td>
         </tr>
     
     
@@ -4680,7 +4676,7 @@ Form 496 Late Independent Expenditures
 S497Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Form 497 Late Contributions Received/Made
+Form 497: Late Contributions Received/Made
 
 **Source:** `S497_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -4761,7 +4757,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>enty_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Entity&#39;s last name or business name</td>
         </tr>
     
     
@@ -4769,7 +4765,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>enty_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Entity&#39;s first name</td>
         </tr>
     
     
@@ -4777,7 +4773,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>enty_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Entity&#39;s title or prefix</td>
         </tr>
     
     
@@ -4785,7 +4781,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>enty_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Entity&#39;s suffix</td>
         </tr>
     
     
@@ -4793,7 +4789,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>enty_city</td>
             <td>String (up to 30)</td>
-            <td></td>
+            <td>Filing committee&#39;s city address</td>
         </tr>
     
     
@@ -4801,7 +4797,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>enty_st</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Filing committee&#39;s state address</td>
         </tr>
     
     
@@ -4809,7 +4805,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>enty_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filing committee&#39;s ZIP Code</td>
         </tr>
     
     
@@ -4817,7 +4813,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>ctrib_emp</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Employer</td>
         </tr>
     
     
@@ -4825,7 +4821,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>ctrib_occ</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Occupation</td>
         </tr>
     
     
@@ -4833,7 +4829,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>ctrib_self</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Self employed checkbox. &quot;X&quot; indicates the contributor is self-employed.</td>
         </tr>
     
     
@@ -4841,7 +4837,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>elec_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Date of election</td>
         </tr>
     
     
@@ -4849,7 +4845,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>ctrib_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Date item received/made</td>
         </tr>
     
     
@@ -4857,7 +4853,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>date_thru</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>End of date range for items received</td>
         </tr>
     
     
@@ -4865,7 +4861,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>amount</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>Amount received/made</td>
         </tr>
     
     
@@ -4873,7 +4869,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>cmte_id</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>Committee identification number</td>
         </tr>
     
     
@@ -4881,7 +4877,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>cand_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Candidate/officeholder&#39;s last name</td>
         </tr>
     
     
@@ -4889,7 +4885,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>cand_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Candidate/officeholder&#39;s first name</td>
         </tr>
     
     
@@ -4897,7 +4893,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>cand_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Candidate/officeholder&#39;s title or prefix</td>
         </tr>
     
     
@@ -4905,7 +4901,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>cand_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Candidate/officeholder&#39;s suffix</td>
         </tr>
     
     
@@ -4913,7 +4909,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Office sought code</td>
         </tr>
     
     
@@ -4921,7 +4917,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>offic_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office sought description</td>
         </tr>
     
     
@@ -4937,7 +4933,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>juris_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office jurisdiction description</td>
         </tr>
     
     
@@ -4945,7 +4941,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>dist_no</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
         </tr>
     
     
@@ -4953,7 +4949,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Office Sought/Held Code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held.</td>
         </tr>
     
     
@@ -4961,7 +4957,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>bal_name</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Ballot measure name</td>
         </tr>
     
     
@@ -4969,7 +4965,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>bal_num</td>
             <td>String (up to 7)</td>
-            <td></td>
+            <td>Ballot measure number</td>
         </tr>
     
     
@@ -4977,7 +4973,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>bal_juris</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Ballot measure jurisdiction</td>
         </tr>
     
     
@@ -4985,7 +4981,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>memo_code</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Memo amount flag</td>
         </tr>
     
     
@@ -4993,7 +4989,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>memo_refno</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Reference to text contained in TEXT code</td>
         </tr>
     
     
@@ -5001,7 +4997,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>bal_id</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5009,7 +5005,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>cand_id</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5017,7 +5013,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>sup_off_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5025,7 +5021,7 @@ Form 497 Late Contributions Received/Made
         <tr>
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5036,7 +5032,7 @@ Form 497 Late Contributions Received/Made
 S498Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Form 498 Slate Mailer Late Independent Expenditures Made
+Form 498: Slate Mailer Late Independent Expenditures Made
 
 **Source:** `S498_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -5117,7 +5113,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>cmte_id</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>Committee identification number</td>
         </tr>
     
     
@@ -5173,7 +5169,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>payor_zip4</td>
             <td>String (up to 10)</td>
-            <td>Payor&#39;s zip code.</td>
+            <td>Payor&#39;s zip code</td>
         </tr>
     
     
@@ -5181,7 +5177,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>date_rcvd</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Date received</td>
         </tr>
     
     
@@ -5197,7 +5193,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>cand_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Candidate/officerholder last name</td>
         </tr>
     
     
@@ -5205,7 +5201,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>cand_namf</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>Candidate/officerholder first name</td>
         </tr>
     
     
@@ -5213,7 +5209,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>cand_namt</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Candidate/officerholder title or prefix</td>
         </tr>
     
     
@@ -5221,7 +5217,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>cand_nams</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Candidate/officerholder suffix</td>
         </tr>
     
     
@@ -5229,7 +5225,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>office_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Code that identifies the office being sought</td>
         </tr>
     
     
@@ -5237,7 +5233,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>offic_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Description of office sought</td>
         </tr>
     
     
@@ -5245,7 +5241,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>juris_cd</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Office jurisdiction code</td>
         </tr>
     
     
@@ -5253,7 +5249,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>juris_dscr</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Office jurisdiction description</td>
         </tr>
     
     
@@ -5261,7 +5257,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>dist_no</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
         </tr>
     
     
@@ -5269,7 +5265,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Office Sought/Held Code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held</td>
         </tr>
     
     
@@ -5277,7 +5273,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>bal_name</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Ballot measure name</td>
         </tr>
     
     
@@ -5293,7 +5289,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>bal_juris</td>
             <td>String (up to 40)</td>
-            <td></td>
+            <td>Jurisdiction of ballot measure</td>
         </tr>
     
     
@@ -5301,7 +5297,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Support/oppose code. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose.</td>
         </tr>
     
     
@@ -5317,7 +5313,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>memo_code</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Memo amount flat</td>
         </tr>
     
     
@@ -5325,7 +5321,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>memo_refno</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Reference text contained in TEXT record</td>
         </tr>
     
     
@@ -5333,7 +5329,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>employer</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5341,7 +5337,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>occupation</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5349,7 +5345,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
         <tr>
             <td>selfemp_cb</td>
             <td>String (up to 1)</td>
-            <td></td>
+            <td>Self-employed checkbox</td>
         </tr>
     
     
@@ -5360,10 +5356,7 @@ Form 498 Slate Mailer Late Independent Expenditures Made
 SpltCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Split Records
-
-    -- F450P5
-    -- F460 (A-B1-B2-C-D-H)
+Split records
 
 **Source:** `SPLT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -5396,7 +5389,7 @@ Split Records
         <tr>
             <td>elec_amount</td>
             <td>Decimal number</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5412,7 +5405,7 @@ Split Records
         <tr>
             <td>elec_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5459,7 +5452,7 @@ Common
 CvrE530Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This table method is undocumented in the print docs.
+This table method is undocumented.
 
 **Source:** `CVR_E530_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -5524,7 +5517,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>filer_naml</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Filer last name</td>
         </tr>
     
     
@@ -5532,7 +5525,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>filer_namf</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>Filer first name</td>
         </tr>
     
     
@@ -5540,7 +5533,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>filer_namt</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Filer title or prefix</td>
         </tr>
     
     
@@ -5548,7 +5541,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>filer_nams</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Filer suffix</td>
         </tr>
     
     
@@ -5556,7 +5549,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>report_num</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5564,7 +5557,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>rpt_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5572,7 +5565,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>filer_city</td>
             <td>String (up to 16)</td>
-            <td></td>
+            <td>Filer city</td>
         </tr>
     
     
@@ -5588,7 +5581,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>filer_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Filer ZIP Code</td>
         </tr>
     
     
@@ -5596,7 +5589,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>occupation</td>
             <td>String (up to 15)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5604,7 +5597,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>employer</td>
             <td>String (up to 13)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5612,7 +5605,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>cand_naml</td>
             <td>String (up to 46)</td>
-            <td></td>
+            <td>Candidate last name</td>
         </tr>
     
     
@@ -5620,7 +5613,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>cand_namf</td>
             <td>String (up to 21)</td>
-            <td></td>
+            <td>Candidate first name</td>
         </tr>
     
     
@@ -5628,7 +5621,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>cand_namt</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Candidate title or prefix</td>
         </tr>
     
     
@@ -5636,7 +5629,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>cand_nams</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>Candidate suffix</td>
         </tr>
     
     
@@ -5644,7 +5637,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>district_cd</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5652,7 +5645,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>office_cd</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5660,7 +5653,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>pmnt_dt</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5668,7 +5661,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>pmnt_amount</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5676,7 +5669,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>type_literature</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5684,7 +5677,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>type_printads</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5692,7 +5685,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>type_radio</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5700,7 +5693,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>type_tv</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5708,7 +5701,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>type_it</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5716,7 +5709,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>type_billboards</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5724,7 +5717,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>type_other</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5732,7 +5725,7 @@ This table method is undocumented in the print docs.
         <tr>
             <td>other_desc</td>
             <td>String (up to 49)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -5842,7 +5835,7 @@ filing information.
         <tr>
             <td>user_id</td>
             <td>String (up to 12)</td>
-            <td></td>
+            <td>User identifier of the PRD user who logged the filing</td>
         </tr>
     
     
@@ -5890,7 +5883,7 @@ filing information.
         <tr>
             <td>filing_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>The type of filing</td>
         </tr>
     
     
@@ -5952,7 +5945,7 @@ fields in conjunction.
         <tr>
             <td>filer_type</td>
             <td>String (up to 45)</td>
-            <td></td>
+            <td>The type of filer</td>
         </tr>
     
     
@@ -5960,7 +5953,7 @@ fields in conjunction.
         <tr>
             <td>status</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>The status of the filer</td>
         </tr>
     
     
@@ -6008,7 +6001,7 @@ fields in conjunction.
         <tr>
             <td>adr1</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>First line of street address</td>
         </tr>
     
     
@@ -6016,7 +6009,7 @@ fields in conjunction.
         <tr>
             <td>adr2</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Second line of street address</td>
         </tr>
     
     
@@ -6024,7 +6017,7 @@ fields in conjunction.
         <tr>
             <td>city</td>
             <td>String (up to 55)</td>
-            <td></td>
+            <td>City address</td>
         </tr>
     
     
@@ -6040,7 +6033,7 @@ fields in conjunction.
         <tr>
             <td>zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>ZIP Code</td>
         </tr>
     
     
@@ -6048,7 +6041,7 @@ fields in conjunction.
         <tr>
             <td>phon</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Phone number</td>
         </tr>
     
     
@@ -6056,7 +6049,7 @@ fields in conjunction.
         <tr>
             <td>fax</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Fax number</td>
         </tr>
     
     
@@ -6064,7 +6057,7 @@ fields in conjunction.
         <tr>
             <td>email</td>
             <td>String (up to 60)</td>
-            <td></td>
+            <td>Email address</td>
         </tr>
     
     
@@ -6109,7 +6102,7 @@ a filing are derived.
         <tr>
             <td>filing_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>The type of filing</td>
         </tr>
     
     
@@ -6709,7 +6702,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>firm_st</td>
             <td>String (up to 2)</td>
-            <td>Firm, employer or coalition business ZIP Code</td>
+            <td>Firm, employer or coalition business state</td>
         </tr>
     
     
@@ -6717,7 +6710,7 @@ Cover page information for lobbying disclosure forms
         <tr>
             <td>firm_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Form, employer or coalition business ZIP Code</td>
         </tr>
     
     
@@ -8643,7 +8636,7 @@ Lobbyist registration amendment information
         <tr>
             <td>from_date</td>
             <td>String (up to 22)</td>
-            <td></td>
+            <td>Reporting period from date of original report</td>
         </tr>
     
     
@@ -9031,7 +9024,7 @@ Payment to other lobbying firms
         <tr>
             <td>firm_zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Firm ZIP Code</td>
         </tr>
     
     
@@ -9465,7 +9458,7 @@ desplayed by the AMS.
         <tr>
             <td>city</td>
             <td>String (up to 500)</td>
-            <td></td>
+            <td>Address city</td>
         </tr>
     
     
@@ -9473,7 +9466,7 @@ desplayed by the AMS.
         <tr>
             <td>st</td>
             <td>String (up to 500)</td>
-            <td></td>
+            <td>Address state</td>
         </tr>
     
     
@@ -9481,7 +9474,7 @@ desplayed by the AMS.
         <tr>
             <td>zip4</td>
             <td>String (up to 10)</td>
-            <td></td>
+            <td>Address ZIP Code</td>
         </tr>
     
     
@@ -9489,7 +9482,7 @@ desplayed by the AMS.
         <tr>
             <td>phon</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Address phone number</td>
         </tr>
     
     
@@ -9497,7 +9490,7 @@ desplayed by the AMS.
         <tr>
             <td>fax</td>
             <td>String (up to 20)</td>
-            <td></td>
+            <td>Address fax number</td>
         </tr>
     
     
@@ -9505,7 +9498,7 @@ desplayed by the AMS.
         <tr>
             <td>email</td>
             <td>String (up to 500)</td>
-            <td></td>
+            <td>Address email</td>
         </tr>
     
     
@@ -9541,7 +9534,7 @@ Ballot measure dates and times
         <tr>
             <td>election_date</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Ballot measure election date</td>
         </tr>
     
     
@@ -9557,7 +9550,7 @@ Ballot measure dates and times
         <tr>
             <td>measure_no</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>Ballot measure number</td>
         </tr>
     
     
@@ -9565,7 +9558,7 @@ Ballot measure dates and times
         <tr>
             <td>measure_name</td>
             <td>String (up to 163)</td>
-            <td></td>
+            <td>Ballot measure full name</td>
         </tr>
     
     
@@ -9573,7 +9566,7 @@ Ballot measure dates and times
         <tr>
             <td>measure_short_name</td>
             <td>String (up to 50)</td>
-            <td></td>
+            <td>Ballot measure short name</td>
         </tr>
     
     
@@ -9581,7 +9574,7 @@ Ballot measure dates and times
         <tr>
             <td>jurisdiction</td>
             <td>String (up to 9)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -9617,7 +9610,7 @@ This is an undocumented model.
         <tr>
             <td>filing_date</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -9625,7 +9618,7 @@ This is an undocumented model.
         <tr>
             <td>filingstatus</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -9633,7 +9626,7 @@ This is an undocumented model.
         <tr>
             <td>vendor</td>
             <td>String (up to 250)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -9657,7 +9650,7 @@ This is an undocumented model.
         <tr>
             <td>error_no</td>
             <td>String (up to 250)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -9668,7 +9661,7 @@ This is an undocumented model.
 FilerAcronymsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-links acronyms to filers
+Links acronyms to filers
 
 **Source:** `FILER_ACRONYMS_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -9693,7 +9686,7 @@ links acronyms to filers
         <tr>
             <td>acronym</td>
             <td>String (up to 32)</td>
-            <td></td>
+            <td>AMS acronym</td>
         </tr>
     
     
@@ -9746,7 +9739,7 @@ addresses change.
         <tr>
             <td>adrid</td>
             <td>Integer</td>
-            <td></td>
+            <td>Address identification number</td>
         </tr>
     
     
@@ -9754,7 +9747,7 @@ addresses change.
         <tr>
             <td>effect_dt</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Address effective date</td>
         </tr>
     
     
@@ -9822,7 +9815,7 @@ This table stores lobbyist ethics training dates.
         <tr>
             <td>ethics_date</td>
             <td>Date (with time)</td>
-            <td></td>
+            <td>Date ethics training was accomplished</td>
         </tr>
     
     
@@ -10018,7 +10011,7 @@ This is an undocumented model.
         <tr>
             <td>status_type</td>
             <td>String (up to 11)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10026,7 +10019,7 @@ This is an undocumented model.
         <tr>
             <td>status_desc</td>
             <td>String (up to 11)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10252,7 +10245,7 @@ This lookup table describes filer types.
         <tr>
             <td>grace_period</td>
             <td>String (up to 12)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10313,7 +10306,7 @@ identification numbers.
         <tr>
             <td>migration_source</td>
             <td>String (up to 50)</td>
-            <td></td>
+            <td>Source of the XREF_ID. Migration or generated by the AMS.</td>
         </tr>
     
     
@@ -10410,7 +10403,7 @@ FilingPeriodCd
         <tr>
             <td>period_type</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10470,7 +10463,7 @@ This lookup table stores group type information.
         <tr>
             <td>grp_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Group identification number</td>
         </tr>
     
     
@@ -10530,7 +10523,7 @@ Electronic filing record header data
         <tr>
             <td>cal_ver</td>
             <td>String (up to 4)</td>
-            <td></td>
+            <td>CAL Version number the filing was made using</td>
         </tr>
     
     
@@ -10538,7 +10531,7 @@ Electronic filing record header data
         <tr>
             <td>ef_type</td>
             <td>String (up to 3)</td>
-            <td></td>
+            <td>Electronic filing type. This will always have the         value of &quot;CAL&quot;.</td>
         </tr>
     
     
@@ -10554,7 +10547,7 @@ Electronic filing record header data
         <tr>
             <td>hdr_comment</td>
             <td>String (up to 200)</td>
-            <td></td>
+            <td>Typically used for development and test filings</td>
         </tr>
     
     
@@ -10570,7 +10563,7 @@ Electronic filing record header data
         <tr>
             <td>soft_name</td>
             <td>String (up to 90)</td>
-            <td></td>
+            <td>Filing software name used to electronically file</td>
         </tr>
     
     
@@ -10578,7 +10571,7 @@ Electronic filing record header data
         <tr>
             <td>soft_ver</td>
             <td>String (up to 16)</td>
-            <td></td>
+            <td>Filing software version number</td>
         </tr>
     
     
@@ -10586,7 +10579,7 @@ Electronic filing record header data
         <tr>
             <td>state_cd</td>
             <td>String (up to 2)</td>
-            <td></td>
+            <td>The state code value entered in the electronic filing</td>
         </tr>
     
     
@@ -10622,7 +10615,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>line_number</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10630,7 +10623,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>form_id</td>
             <td>String (up to 5)</td>
-            <td></td>
+            <td>Form identification code</td>
         </tr>
     
     
@@ -10646,7 +10639,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>section_label</td>
             <td>String (up to 58)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10654,7 +10647,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>comments1</td>
             <td>String (up to 48)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10662,7 +10655,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>comments2</td>
             <td>String (up to 48)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10670,7 +10663,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>label</td>
             <td>String (up to 98)</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10678,7 +10671,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>column_a</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10686,7 +10679,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>column_b</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10694,7 +10687,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>column_c</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10702,7 +10695,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>show_c</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10710,7 +10703,7 @@ Lookup table used to report form 460 information in the AMS.
         <tr>
             <td>show_b</td>
             <td>Integer</td>
-            <td></td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -10746,7 +10739,7 @@ This table links images to filers and accounts.
         <tr>
             <td>img_link_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Image link identification number</td>
         </tr>
     
     
@@ -10762,7 +10755,7 @@ This table links images to filers and accounts.
         <tr>
             <td>img_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Image identification number</td>
         </tr>
     
     
@@ -10822,7 +10815,7 @@ Legislative session, begin and end dates look up table.
         <tr>
             <td>begin_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Session start date</td>
         </tr>
     
     
@@ -10830,7 +10823,7 @@ Legislative session, begin and end dates look up table.
         <tr>
             <td>end_date</td>
             <td>Date (without time)</td>
-            <td></td>
+            <td>Session end date</td>
         </tr>
     
     
@@ -11118,7 +11111,7 @@ LobbyistContributions1Cd
         <tr>
             <td>recipient_name</td>
             <td>String (up to 106)</td>
-            <td></td>
+            <td>Recipient&#39;s name</td>
         </tr>
     
     
@@ -11126,7 +11119,7 @@ LobbyistContributions1Cd
         <tr>
             <td>recipient_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Recipient&#39;s identification number</td>
         </tr>
     
     
@@ -11134,7 +11127,7 @@ LobbyistContributions1Cd
         <tr>
             <td>amount</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Amount received</td>
         </tr>
     
     
@@ -11203,7 +11196,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>recipient_name</td>
             <td>String (up to 106)</td>
-            <td></td>
+            <td>Recipient&#39;s name</td>
         </tr>
     
     
@@ -11211,7 +11204,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>recipient_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Recipient&#39;s identification number</td>
         </tr>
     
     
@@ -11219,7 +11212,7 @@ disclosure table (Lobbyist Contributions 3)
         <tr>
             <td>amount</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Amount received</td>
         </tr>
     
     
@@ -11287,7 +11280,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>recipient_name</td>
             <td>String (up to 106)</td>
-            <td></td>
+            <td>Recipient&#39;s name</td>
         </tr>
     
     
@@ -11295,7 +11288,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>recipient_id</td>
             <td>Integer</td>
-            <td></td>
+            <td>Recipient&#39;s identification number</td>
         </tr>
     
     
@@ -11303,7 +11296,7 @@ Lobbyist contribution disclosure table.
         <tr>
             <td>amount</td>
             <td>Floating point number</td>
-            <td></td>
+            <td>Amount received</td>
         </tr>
     
     
