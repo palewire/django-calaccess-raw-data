@@ -6,9 +6,7 @@ The 76 tab-delimited database exports published by California's Secretary of Sta
 .. warning::
 
     Most definitions below are drawn from the spotty and incomplete
-    `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim.
-
-    As we continue our research, we plan to improve the descriptions.
+    `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim. As we continue our research, we plan to improve the descriptions.
 
     For the time being, to be absolutely certain about
     what each table and field contains, you should compare the electronic data back to
@@ -18,6 +16,7 @@ The 76 tab-delimited database exports published by California's Secretary of Sta
 
 Campaign
 -------
+
 
 Cvr2CampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -5449,6 +5448,7 @@ Split records
 Common
 -------
 
+
 CvrE530Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6297,6 +6297,7 @@ Text memos attached to electronic filings
 
 Lobbying
 -------
+
 
 Cvr2LobbyDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -9359,6 +9360,7 @@ Payments made or received by lobbying firms
 
 Other
 -------
+
 
 AcronymsCd
 ~~~~~~~~~~~~~~~~~~~~~~~
