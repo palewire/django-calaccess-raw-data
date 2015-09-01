@@ -14,8 +14,8 @@ The {{ model_count }} tab-delimited database exports published by California's S
 
 
 {% for group, model_list in group_list %}
-{{ group|capfirst }}
-------------
+{{ group|capfirst }} tables
+---------------------------
 
 {% for object in model_list %}
 {{ object.klass_name }}
