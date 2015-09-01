@@ -15,7 +15,7 @@ The 76 tab-delimited database exports published by California's Secretary of Sta
 
 
 Campaign
--------
+------------
 
 
 Cvr2CampaignDisclosureCd
@@ -5446,7 +5446,7 @@ Split records
 
 
 Common
--------
+------------
 
 
 CvrE530Cd
@@ -6296,7 +6296,7 @@ Text memos attached to electronic filings
 
 
 Lobbying
--------
+------------
 
 
 Cvr2LobbyDisclosureCd
@@ -9359,7 +9359,7 @@ Payments made or received by lobbying firms
 
 
 Other
--------
+------------
 
 
 AcronymsCd

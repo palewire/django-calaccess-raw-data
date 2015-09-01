@@ -14,7 +14,7 @@ class CalAccessFieldMixin(fields.Field):
         A humanized definition of what's the in field for documentation.
         """
         s = ""
-        if self.__dict__['verbose_name']:
+        if self.__dict__['_verbose_name']:
             s += capfirst(self.verbose_name)
         if self.help_text:
             if self.__dict__['_verbose_name']:
