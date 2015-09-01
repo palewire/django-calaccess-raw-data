@@ -13,7 +13,7 @@ class CvrSoCd(CalAccessBaseModel):
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
         null=True,
-        help_text='',
+        help_text='This field is undocumented',
     )
     ACTIVITY_LEVEL_CHOICES = (
         ("CI", "City"),
@@ -506,15 +506,30 @@ of legal values for this column."
         help_text="Zipcode portion of the entity's mailing address"
     )
     day_phone = fields.CharField(
-        db_column='DAY_PHONE', max_length=20, blank=True
+        db_column='DAY_PHONE',
+        max_length=20,
+        blank=True,
+        help_text="Entity's daytime phone number"
     )
     fax_phone = fields.CharField(
-        db_column='FAX_PHONE', max_length=20, blank=True
+        db_column='FAX_PHONE',
+        max_length=20,
+        blank=True,
+        help_text="Entity's fax number"
     )
     email_adr = fields.CharField(
-        db_column='EMAIL_ADR', max_length=40, blank=True
+        db_column='EMAIL_ADR',
+        max_length=40,
+        blank=True,
+        help_text="Email address. Not contained in current forms."
     )
-    cmte_id = fields.IntegerField(db_column='CMTE_ID', blank=True, null=True)
+    cmte_id = fields.IntegerField(
+        db_column='CMTE_ID',
+        blank=True,
+        null=True,
+        verbose_name="Committee ID",
+        help_text="Entity's identification number"
+    )
     ind_group = fields.CharField(
         db_column='IND_GROUP',
         max_length=87,
