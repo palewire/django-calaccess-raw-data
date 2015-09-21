@@ -10,6 +10,13 @@ class CvrSoCd(CalAccessBaseModel):
     Cover page for a statement of organization creation or termination
     form filed by a slate-mailer organization or recipient committee.
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE",
+    )
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
         null=True,
