@@ -390,6 +390,13 @@ class Cvr2SoCd(CalAccessBaseModel):
     of a statement of organization creation form filed
     by a slate-mailer organization or recipient committee.
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
