@@ -3397,6 +3397,13 @@ class DebtCd(CalAccessBaseModel):
     Form 460 (Recipient Committee Campaign Statement)
     Schedule (F) Accrued Expenses (Unpaid Bills) records
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
