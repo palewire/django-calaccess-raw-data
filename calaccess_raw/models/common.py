@@ -406,6 +406,13 @@ class SmryCd(CalAccessBaseModel):
     """
     Summary totals from filings.
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE",
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
