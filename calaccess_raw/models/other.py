@@ -911,6 +911,7 @@ class HdrCd(CalAccessBaseModel):
     """
     Electronic filing record header data
     """
+    UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
