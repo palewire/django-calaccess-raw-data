@@ -2424,6 +2424,7 @@ class LookupCode(CalAccessBaseModel):
     """
     The description of all lookup codes in the system.
     """
+    UNIQUE_KEY = ( "CODE_ID", "CODE_TYPE" )
     code_type = fields.IntegerField(
         db_column='CODE_TYPE',
         help_text="This field is undocumented",
