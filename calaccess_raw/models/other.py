@@ -736,6 +736,7 @@ class FilerXrefCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class FilingPeriodCd(CalAccessBaseModel):
+    UNIQUE_KEY = "PERIOD_ID"
     period_id = fields.IntegerField(
         db_column='PERIOD_ID',
         help_text="Unique period identification number"
