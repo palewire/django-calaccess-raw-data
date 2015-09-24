@@ -2581,6 +2581,7 @@ class ReportsCd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = "RPT_ID"
     rpt_id = fields.IntegerField(
         db_column='RPT_ID',
         help_text="Unique identification number"
