@@ -786,6 +786,7 @@ class GroupTypesCd(CalAccessBaseModel):
     """
     This lookup table stores group type information.
     """
+    UNIQUE_KEY = "GRP_ID"
     grp_id = fields.IntegerField(
         db_column='GRP_ID',
         verbose_name="Group ID",
