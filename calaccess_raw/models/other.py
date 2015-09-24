@@ -2454,6 +2454,8 @@ class NamesCd(CalAccessBaseModel):
     The name of all entities in the system. Used for searches when
     the name has an identification number.
     """
+    UNIQUE_KEY = "NAMID"
+    
     namid = fields.IntegerField(
         db_column='NAMID',
         help_text="Identification number unique to the name",
@@ -2581,7 +2583,6 @@ class ReportsCd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
-    UNIQUE_KEY = "RPT_ID"
     rpt_id = fields.IntegerField(
         db_column='RPT_ID',
         help_text="Unique identification number"
