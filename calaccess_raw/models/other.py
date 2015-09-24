@@ -699,6 +699,7 @@ class FilerXrefCd(CalAccessBaseModel):
     This table maps legacy filer identification numbers to the system's filer
     identification numbers.
     """
+    UNIQUE_KEY = ("FILER_ID", "XREF_ID")
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
