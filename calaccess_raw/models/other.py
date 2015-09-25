@@ -259,6 +259,7 @@ class FilerAcronymsCd(CalAccessBaseModel):
     """
     Links acronyms to filers
     """
+    UNIQUE_KEY = ("ACRONYM", "FILER_ID")
     acronym = fields.CharField(
         db_column='ACRONYM',
         max_length=32,
