@@ -2314,6 +2314,7 @@ class LempCd(CalAccessBaseModel):
     """
     Lobbyist employers and subcontracted clients
     """
+    UNIQUE_KEY = ("FILING_ID", "AMEND_ID", "LINE_ITEM", "REC_TYPE", "FORM_TYPE")
     agencylist = fields.CharField(
         max_length=200,
         db_column='AGENCYLIST',
