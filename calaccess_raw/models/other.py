@@ -336,6 +336,7 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     """
     This table stores lobbyist ethics training dates.
     """
+    UNIQUE_KEY = "FILER_ID", "SESSION_ID", "ETHICS_DATE"
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -370,7 +371,6 @@ class FilerInterestsCd(CalAccessBaseModel):
     """
     Links a filer to their interest codes.
     """
-    UNIQUE_KEY = "FILER_ID", "INTEREST_CD", "EFFECT_DATE", "SESSION_ID"
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
