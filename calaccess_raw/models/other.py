@@ -512,6 +512,7 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = "STATUS_TYPE"
     status_type = fields.CharField(
         max_length=11,
         db_column='STATUS_TYPE',
