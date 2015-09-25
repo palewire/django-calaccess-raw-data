@@ -2493,6 +2493,13 @@ class LpayCd(CalAccessBaseModel):
     """
     Payments made or received by lobbying firms
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
     advan_amt = fields.DecimalField(
         decimal_places=2,
         null=True,
