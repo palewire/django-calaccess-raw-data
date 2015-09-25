@@ -992,7 +992,7 @@ class ImageLinksCd(CalAccessBaseModel):
     """
     This table links images to filers and accounts.
     """
-    UNIQUE_KEY = ["IMG_LINK_ID","IMG_ID"]
+    UNIQUE_KEY = ("IMG_LINK_ID", "IMG_ID")
     img_link_id = fields.IntegerField(
         db_column='IMG_LINK_ID',
         verbose_name="Image link ID",
@@ -2429,7 +2429,7 @@ class LookupCode(CalAccessBaseModel):
     """
     The description of all lookup codes in the system.
     """
-    UNIQUE_KEY = ( "CODE_ID", "CODE_TYPE" )
+    UNIQUE_KEY = ("CODE_ID", "CODE_TYPE")
     code_type = fields.IntegerField(
         db_column='CODE_TYPE',
         help_text="This field is undocumented",

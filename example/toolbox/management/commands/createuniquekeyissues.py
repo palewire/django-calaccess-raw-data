@@ -61,7 +61,7 @@ class Command(CalAccessCommand):
                 calculate.percentage(missing_count, model_count)
             )
         )
-        for model in missing_list:
+        for model in missing_list[1:]:
             self.create_issue(model)
 
     def create_issue(self, model):
@@ -97,13 +97,13 @@ Add a ``UNIQUE_KEY`` setting to the ``%s`` database model.
 
 **Step 1**: Claim this ticket by leaving a comment below. Tell everyone you're ON IT!
 
-**Step 2**: In a separate tab, open up the <a href="Quilmes">official state documentation</a> and find the page that defines all the fields in this model.
+**Step 2**: In a separate tab, open up the <a href="http://www.documentcloud.org/documents/1308002-cal-access-about.html#document/p100">official state documentation</a> and find the page that defines this table. They are listed there in alphabetical order.
 
 ![The docs](https://dl.dropboxusercontent.com/u/3640647/ScreenCloud/1440367001.08.png)
 
-**Step 3**: Find the row in that table's definition table that spells out what this field contains. If it lacks documentation. Note that in the ticket and close it now.
+**Step 3**: Find the "PK_" row in the index list included with the table's definition that spells out the list of "column codes" that make up the unique key for each row. If it lacks that documentation. Note that in the ticket and close it now.
 
-![The definition](https://dl.dropboxusercontent.com/u/3640647/ScreenCloud/1440367068.59.png)
+![The definition](https://dl.dropboxusercontent.com/u/3640647/ScreenCloud/1442811831.94.png)
 
 **Step 4**: Return to this tab.
 
@@ -113,7 +113,7 @@ Add a ``UNIQUE_KEY`` setting to the ``%s`` database model.
 
 ![Edit](https://dl.dropboxusercontent.com/u/3640647/ScreenCloud/1440367320.67.png)
 
-**Step 7**: Find this model and field in the file. (Clicking into the box and searching with CTRL-F can help you here.) Once you find it, we expect the field to lack the ``help_text`` field typically used in Django to explain what a field contains.
+**Step 7**: Find this model in the file. (Clicking into the box and searching with CTRL-F can help you here.) Once you find it, we expect the model to lack a ``UNIQUE_KEY`` attribute indented just under the documentation.
 
 ```python
 class WhateverYourModel(CalAccessBaseModel):
@@ -122,24 +122,20 @@ class WhateverYourModel(CalAccessBaseModel):
     '''
     field1 = models.CharField(blah='blah')
 ```
-**Step 8**: Add the state's label explaining what's in the field, to our field definition by inserting it a ``help_text`` argument. That should look something like this:
+**Step 8**: Add this model's ``UNIQUE_KEY`` list of column codes, to our field definition by inserting it under the documentation. That should look something like this:
 
 ```python
 class WhateverYourModel(CalAccessBaseModel):
     '''
     There will be some documentation here but don't touch it.
     '''
-    UNIQUE_KEY = ['field1', 'field2', 'field3']
+    UNIQUE_KEY = ['FIELD1', 'FIELD2', 'FIELD3']
     field1 = models.CharField(blah='blah')
 ```
 
 **Step 9**: Scroll down below the code box and describe the change you've made in the commit message. Press the button below.
 
-![Commit](https://dl.dropboxusercontent.com/u/3640647/ScreenCloud/1440367511.66.png)
-
 **Step 10**:  Review your changes and create a pull request submitting them to the core team for inclusion.
-
-![Pull request](https://dl.dropboxusercontent.com/u/3640647/ScreenCloud/1440368058.52.png)
 
 That's it! Mission accomplished!
 """
