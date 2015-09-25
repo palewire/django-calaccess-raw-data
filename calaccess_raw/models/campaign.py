@@ -2890,6 +2890,13 @@ class ExpnCd(CalAccessBaseModel):
     """
     Campaign expenditures from a variety of forms
     """
+    UNIQUE_KEY = (
+        'FILING_ID',
+        'AMEND_ID',
+        'LINE_ITEM',
+        'REC_TYPE',
+        'FORM_TYPE'
+    )
     agent_namf = fields.CharField(
         max_length=45,
         db_column='AGENT_NAMF',
