@@ -651,6 +651,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
     Cover page information from campaign disclosure forms
     """
+    UNIQUE_KEY = ['filing_id', 'amend_id']
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
