@@ -1043,6 +1043,7 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     """
     Legislative session, begin and end dates look up table.
     """
+    UNIQUE_KEY = "SESSION_ID"
     session_id = fields.IntegerField(
         verbose_name='session ID',
         db_column='SESSION_ID',
