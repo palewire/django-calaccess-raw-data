@@ -599,6 +599,7 @@ class CvrE530Cd(CalAccessBaseModel):
     """
     This table method is undocumented.
     """
+    UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
