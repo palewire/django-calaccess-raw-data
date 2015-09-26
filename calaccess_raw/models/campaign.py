@@ -1292,7 +1292,7 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
         )
-    
+
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
@@ -3341,7 +3341,13 @@ class F495P2Cd(CalAccessBaseModel):
     contributions received and expenditures made since
     its last report.
     """
-    UNIQUE_KEY = ("FILING_ID","AMEND_ID","LINE_ITEM","REC_ITEM","FORM_TYPE")
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_ITEM",
+        "FORM_TYPE"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,

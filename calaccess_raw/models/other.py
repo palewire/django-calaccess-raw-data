@@ -412,7 +412,13 @@ class FilerLinksCd(CalAccessBaseModel):
     """
     Links filers to each other and records their relationship type.
     """
-    UNIQUE_KEY = ("FILER_ID_A", "FILER_ID_B", "ACTIVE_FLG", "SESSION_ID", "LINK_TYPE")
+    UNIQUE_KEY = (
+        "FILER_ID_A",
+        "FILER_ID_B",
+        "ACTIVE_FLG",
+        "SESSION_ID",
+        "LINK_TYPE"
+    )
     filer_id_a = fields.IntegerField(
         verbose_name='Filer ID A',
         db_column='FILER_ID_A',
