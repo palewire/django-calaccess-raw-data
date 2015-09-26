@@ -670,6 +670,7 @@ class FilerTypesCd(CalAccessBaseModel):
     """
     This lookup table describes filer types.
     """
+    UNIQUE_KEY = "FILTER_TYPE"
     filer_type = fields.IntegerField(
         db_column='FILER_TYPE',
         help_text="Filer type identification number"
