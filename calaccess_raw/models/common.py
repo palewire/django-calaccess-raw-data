@@ -175,6 +175,12 @@ class FilerFilingsCd(CalAccessBaseModel):
     and electronic filings. This table is used as an index to locate
     filing information.
     """
+    UNIQUE_KEYS = (
+        "FILER_ID",
+        "FILING_ID",
+        "FORM_ID",
+        "FILING_SEQUENCE"
+        )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
