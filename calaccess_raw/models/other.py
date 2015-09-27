@@ -106,7 +106,7 @@ class BallotMeasuresCd(CalAccessBaseModel):
     """
     Ballot measure dates and times
     """
-    UNIQUE_KEY = ("FILER_ID")
+    UNIQUE_KEY = "FILER_ID"
     election_date = fields.DateTimeField(
         db_column='ELECTION_DATE',
         null=True,
