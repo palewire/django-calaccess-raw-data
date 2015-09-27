@@ -14,15 +14,15 @@ class Command(CalAccessCommand):
 
     def set_options(self, *args, **kwargs):
         """
-        Hook up with the GitHub API and prepare to create issues.
+        Hook up with the GitHub API.
         """
         self.gh = Github(os.getenv('GITHUB_TOKEN'))
         self.org = self.gh.get_organization("california-civic-data-coalition")
         self.repo_list = [
             self.org.get_repo("django-calaccess-raw-data"),
         ]
-        self.start = datetime(2015, 8, 17, 0, 0, 0)
-        self.end = datetime(2015, 9, 1, 0, 0, 0)
+        self.start = datetime(2015, 9, 22, 0, 0, 0)
+        self.end = datetime(2015, 10, 1, 0, 0, 0)
 
     def handle(self, *args, **kwargs):
         """
