@@ -380,7 +380,7 @@ class FilingsCd(CalAccessBaseModel):
     This table is the parent table from which all links and association to
     a filing are derived.
     """
-    UNIQUE_KEYS = ("FILING_ID")
+    UNIQUE_KEY = "FILING_ID"
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
