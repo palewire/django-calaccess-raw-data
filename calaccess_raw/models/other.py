@@ -49,6 +49,7 @@ class AddressCd(CalAccessBaseModel):
     for address-based searches and formes the bases for address information
     desplayed by the AMS.
     """
+    UNIQUE_KEY = "ADRID"
     adrid = fields.IntegerField(
         db_column="ADRID",
         verbose_name="Address ID",
