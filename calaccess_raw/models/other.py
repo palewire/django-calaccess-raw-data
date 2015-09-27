@@ -552,6 +552,12 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
     filer. This table maintains a history of changes and allows the filer
     to change characteristics over time.
     """
+    UNIQUE_KEY = (
+        "FILER_ID",
+        "FILER_TYPE",
+        "SESSION_ID",
+        "EFFECT_DT"
+    )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         null=True,
