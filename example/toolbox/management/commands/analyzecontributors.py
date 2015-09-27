@@ -1,4 +1,5 @@
 import os
+import csv
 import time
 import calculate
 from github import Github
@@ -27,6 +28,8 @@ class Command(CalAccessCommand):
             self.org.get_repo("django-calaccess-docker"),
             self.org.get_repo("django-calaccess-project-template"),
         )
+        self.outfile = csv.writer(open("./contributors.csv", 'wb'))
+        self.outfile.writerow(['username'])
 
     def handle(self, *args, **kwargs):
         """
@@ -40,6 +43,8 @@ class Command(CalAccessCommand):
             self.log(" - Sifting through %s" % repo.name)
             for contrib in repo.get_contributors():
                 if contrib.id not in author_list:
+                    username = contrib.url.split("/")[-1]
+                    self.outfile.writerow([username])
                     author_list.append(contrib.id)
                 time.sleep(0.5)
         self.log("- Contributors: %s" % len(author_list))
