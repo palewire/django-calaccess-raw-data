@@ -9,6 +9,7 @@ class AcronymsCd(CalAccessBaseModel):
     """
     Contains acronyms and their meaning.
     """
+    UNIQUE_KEY = "ACRONYM"
     acronym = fields.CharField(
         max_length=40,
         db_column="ACRONYM",
