@@ -557,7 +557,7 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         "FILER_TYPE",
         "SESSION_ID",
         "EFFECT_DT"
-        )
+    )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         null=True,
