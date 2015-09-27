@@ -18,10 +18,15 @@ class Command(CalAccessCommand):
         """
         self.gh = Github(os.getenv('GITHUB_TOKEN'))
         self.org = self.gh.get_organization("california-civic-data-coalition")
-        self.repo_list = [
+        self.repo_list = (
             self.org.get_repo("django-calaccess-raw-data"),
             self.org.get_repo("django-calaccess-campaign-browser"),
-        ]
+            self.org.get_repo("django-calaccess-lobbying-browser"),
+            self.org.get_repo("django-postgres-copy"),
+            self.org.get_repo("django-calaccess-cookbook"),
+            self.org.get_repo("django-calaccess-docker"),
+            self.org.get_repo("django-calaccess-project-template"),
+        )
 
     def handle(self, *args, **kwargs):
         """
@@ -34,8 +39,7 @@ class Command(CalAccessCommand):
         for repo in self.repo_list:
             self.log(" - Sifting through %s" % repo.name)
             for contrib in repo.get_contributors():
-                if contrib.name not in author_list:
-                    self.log("  - Adding %s" % contrib.name)
-                    author_list.append(contrib.name)
+                if contrib.id not in author_list:
+                    author_list.append(contrib.id)
                 time.sleep(0.5)
         self.log("- Contributors: %s" % len(author_list))
