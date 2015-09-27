@@ -23,14 +23,14 @@ class Command(CalAccessCommand, LabelCommand):
         self.cursor = connection.cursor()
         self.load(label)
 
-    def load(self, model_name):
+    def load(self, model_name, app='calaccess_raw'):
         """
         Loads the source CSV for the provided model.
         """
         if self.verbosity > 2:
             self.log(" Loading %s" % model_name)
 
-        model = get_model("calaccess_raw", model_name)
+        model = get_model(app, model_name)
         csv_path = model.objects.get_csv_path()
 
         if settings.DATABASES.get('dat') and six.PY2:
