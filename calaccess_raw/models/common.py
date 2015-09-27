@@ -21,10 +21,7 @@ class FilernameCd(CalAccessBaseModel):
     (when they are only an individual's name) use both the first and last name
     fields in conjunction.
     """
-    UNIQUE_KEYS = (
-        "FILER_ID",
-        "NAMID"
-    )
+    UNIQUE_KEY = ("FILER_ID", "NAMID")
     xref_filer_id = fields.CharField(
         verbose_name='crossreference filer ID',
         max_length=15,
@@ -179,7 +176,7 @@ class FilerFilingsCd(CalAccessBaseModel):
     and electronic filings. This table is used as an index to locate
     filing information.
     """
-    UNIQUE_KEYS = (
+    UNIQUE_KEY = (
         "FILER_ID",
         "FILING_ID",
         "FORM_ID",
