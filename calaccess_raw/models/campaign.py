@@ -4163,6 +4163,10 @@ class F501502Cd(CalAccessBaseModel):
     """
     Candidate intention statement
     """
+    UNIQUE_KEY = (
+        "FILING_ID", 
+        "AMEND_ID"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
