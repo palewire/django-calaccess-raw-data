@@ -238,6 +238,7 @@ class FilersCd(CalAccessBaseModel):
     This table is the parent table from which all links and associations
     to a filer are derived.
     """
+    UNIQUE_KEYS = ("FILER_ID")
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
