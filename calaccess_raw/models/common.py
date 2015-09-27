@@ -184,7 +184,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         "FILING_ID",
         "FORM_ID",
         "FILING_SEQUENCE"
-        )
+    )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -810,11 +810,11 @@ class TextMemoCd(CalAccessBaseModel):
     Text memos attached to electronic filings
     """
     UNIQUE_KEY = (
-        "FILING_ID", 
-        "AMEND_ID", 
-        "LINE_ITEM", 
-        "REC_TYPE", 
-        "FORM_TYPE"   
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
