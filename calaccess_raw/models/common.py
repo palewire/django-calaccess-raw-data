@@ -21,6 +21,10 @@ class FilernameCd(CalAccessBaseModel):
     (when they are only an individual's name) use both the first and last name
     fields in conjunction.
     """
+    UNIQUE_KEYS = (
+        "FILER_ID",
+        "NAMID"
+    )
     xref_filer_id = fields.CharField(
         verbose_name='crossreference filer ID',
         max_length=15,
