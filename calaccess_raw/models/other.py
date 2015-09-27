@@ -292,10 +292,7 @@ class FilerAddressCd(CalAccessBaseModel):
     Links filers and addresses. This table maintains a history of when
     addresses change.
     """
-    UNIQUE_KEY = (
-        "FILER_ID",
-        "ADRID",
-        )
+    UNIQUE_KEY = ("FILER_ID", "ADRID")
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
