@@ -3785,6 +3785,12 @@ class SpltCd(CalAccessBaseModel):
     """
     Split records
     """
+    UNIQUE_KEY = (
+        "FILING_ID", 
+        "AMEND_ID", 
+        "LINE_ITEM", 
+        "PFORM_TYPE"
+    )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
