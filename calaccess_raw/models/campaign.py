@@ -2242,10 +2242,10 @@ class LoanCd(CalAccessBaseModel):
     Loans received and made
     """
     UNIQUE_KEY = (
-        "FILING_ID", 
-        "AMEND_ID", 
-        "LINE_ITEM", 
-        "REC_TYPE", 
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
         "FORM_TYPE"
     )
     amend_id = fields.IntegerField(
@@ -3793,9 +3793,9 @@ class SpltCd(CalAccessBaseModel):
     Split records
     """
     UNIQUE_KEY = (
-        "FILING_ID", 
-        "AMEND_ID", 
-        "LINE_ITEM", 
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
         "PFORM_TYPE"
     )
     amend_id = fields.IntegerField(
@@ -4177,7 +4177,7 @@ class F501502Cd(CalAccessBaseModel):
     Candidate intention statement
     """
     UNIQUE_KEY = (
-        "FILING_ID", 
+        "FILING_ID",
         "AMEND_ID"
     )
     filing_id = fields.IntegerField(

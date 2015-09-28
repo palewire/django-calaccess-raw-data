@@ -10,9 +10,9 @@ class CvrRegistrationCd(CalAccessBaseModel):
     Cover page of lobbying disclosure forms
     """
     UNIQUE_KEY = (
-        "FILING_ID", 
-        "AMEND_ID", 
-        "REC_TYPE", 
+        "FILING_ID",
+        "AMEND_ID",
+        "REC_TYPE",
         "FORM_TYPE"
     )
     # a_b_adr1 = fields.CharField(
@@ -597,10 +597,10 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
     Cover page of lobbying disclosure forms
     """
     UNIQUE_KEY = (
-        "FILING_ID", 
-        "AMEND_ID", 
-        "LINE_ITEM", 
-        "REC_TYPE", 
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
         "FORM_TYPE"
     )
     filing_id = fields.IntegerField(
@@ -1107,10 +1107,10 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     Additional data from lobbyist disclosure forms
     """
     UNIQUE_KEY = (
-        "FILING_ID", 
-        "AMEND_ID", 
-        "LINE_ITEM", 
-        "REC_TYPE", 
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
         "FORM_TYPE"
     )
     amend_id = fields.IntegerField(
