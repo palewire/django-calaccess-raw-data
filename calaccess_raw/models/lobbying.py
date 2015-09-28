@@ -9,6 +9,12 @@ class CvrRegistrationCd(CalAccessBaseModel):
     """
     Cover page of lobbying disclosure forms
     """
+    UNIQUE_KEY = (
+        "FILING_ID", 
+        "AMEND_ID", 
+        "REC_TYPE", 
+        "FORM_TYPE"
+    )
     # a_b_adr1 = fields.CharField(
     #   max_length=55,
     #   db_column='A_B_ADR1',
