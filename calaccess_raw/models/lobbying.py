@@ -717,10 +717,10 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     """
     Cover page information for lobbying disclosure forms
     """
-    UNIQUE_ID = (
-        "FILING_ID", 
-        "AMEND_ID", 
-        "REC_TYPE", 
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "REC_TYPE",
         "FORM_TYPE"
     )
     amend_id = fields.IntegerField(
