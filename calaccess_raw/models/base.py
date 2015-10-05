@@ -23,6 +23,11 @@ class CalAccessBaseModel(models.Model):
     # should be listed as tuple like:
 
     #   UNIQUE_KEY = ('field_one', 'field_two')
+
+    # If the unique key does not exist or cannot be determined it will be
+    # set to False
+
+    #   UNIQUE_KEY = False
     UNIQUE_KEY = None
 
     # Default manager
