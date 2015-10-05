@@ -1094,6 +1094,10 @@ class LegislativeSessionsCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
+    UNIQUE_KEY = (
+        "FILER_ID",
+        "CHANGE_NO"
+    )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
