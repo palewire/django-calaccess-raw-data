@@ -162,6 +162,10 @@ class EfsFilingLogCd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = (
+        "FILING_DATE",
+        "VENDOR"
+    )
     filing_date = fields.DateTimeField(
         db_column='FILING_DATE',
         null=True,
