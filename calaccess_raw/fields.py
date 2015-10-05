@@ -22,6 +22,11 @@ class CalAccessFieldMixin(fields.Field):
             s += capfirst(self.help_text)
         return s.strip()
 
+    def is_unique_key(self):
+        if self.__dict__['db_column'] in self.model().get_unique_key_list():
+            return True
+        return False
+
 
 class CharField(fields.CharField, CalAccessFieldMixin):
     copy_type = "text"

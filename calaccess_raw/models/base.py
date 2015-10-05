@@ -92,5 +92,18 @@ class CalAccessBaseModel(models.Model):
         """
         return self.__class__.objects.get_tsv_path()
 
+    def get_unique_key_list(self):
+        """
+        Return UNIQUE_KEY setting as a list regardless of its data type
+        """
+        if self.__class__.UNIQUE_KEY is None:
+            return []
+        elif self.__class__.UNIQUE_KEY is False:
+            return []
+        elif isinstance(self.__class__.UNIQUE_KEY, (list, tuple)):
+            return self.__class__.UNIQUE_KEY
+        else:
+            return [self.__class__.UNIQUE_KEY]
+
     class Meta:
         abstract = True

@@ -35,6 +35,7 @@ The {{ model_count }} tab-delimited database exports published by California's S
         <tr>
             <th class="head">Name</th>
             <th class="head">Type</th>
+            <th class="head">Unique key</th>
             <th class="head">Definition</th>
         </tr>
     </thead>
@@ -44,6 +45,7 @@ The {{ model_count }} tab-delimited database exports published by California's S
         <tr>
             <td>{{ field.name }}</td>
             <td>{{ field.description }}</td>
+            <td>{% if field.is_unique_key %}Yes{% else %}No{% endif %}</td>
             <td>{{ field.definition|capfirst }}</td>
         </tr>
     {% endif %}
@@ -53,6 +55,11 @@ The {{ model_count }} tab-delimited database exports published by California's S
     </div>
 {% endfor %}
 {% endfor %}
+
+{% if object.klass.get_unique_key_list %}
+**Fields:**
+{{ object.klass.get_unique_key_list|pprint }}
+{% endif %}
 
 Empty files
 -----------
