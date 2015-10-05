@@ -1235,6 +1235,12 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
     """
     Lobbyist registration amendment information
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
