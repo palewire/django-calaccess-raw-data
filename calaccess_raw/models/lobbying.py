@@ -2211,6 +2211,13 @@ class LothCd(CalAccessBaseModel):
     """
     Payment to other lobbying firms
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
