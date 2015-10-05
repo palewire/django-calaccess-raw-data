@@ -2005,6 +2005,13 @@ class LccmCd(CalAccessBaseModel):
     """
     Lobbying campaign contributions
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
     # acct_name = fields.CharField(
     #   max_length=90,
     #   db_column='ACCT_NAME',
