@@ -56,11 +56,6 @@ The {{ model_count }} tab-delimited database exports published by California's S
 {% endfor %}
 {% endfor %}
 
-{% if object.klass.get_unique_key_list %}
-**Fields:**
-{{ object.klass.get_unique_key_list|pprint }}
-{% endif %}
-
 Empty files
 -----------
 
