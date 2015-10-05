@@ -20,7 +20,7 @@ class Command(CalAccessCommand):
         model_count = 0
         for m in get_model_list():
             model_count += 1
-            if not m.UNIQUE_KEY:
+            if m.UNIQUE_KEY is None:
                 self.log("Missing: %s.%s" % (
                         m().klass_group,
                         m().klass_name,

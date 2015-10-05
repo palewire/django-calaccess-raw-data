@@ -2498,6 +2498,7 @@ class NamesCd(CalAccessBaseModel):
     The name of all entities in the system. Used for searches when
     the name has an identification number.
     """
+    UNIQUE_KEY = False
     namid = fields.IntegerField(
         db_column='NAMID',
         help_text="Identification number unique to the name",
