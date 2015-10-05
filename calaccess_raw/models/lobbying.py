@@ -1515,9 +1515,14 @@ original filing and 1 to 999 amendments.",
 class F690P2Cd(CalAccessBaseModel):
     """
     Amends lobbying disclosure filings
-
-        F690 Amendment to Lobbying Disclosure Report
     """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
