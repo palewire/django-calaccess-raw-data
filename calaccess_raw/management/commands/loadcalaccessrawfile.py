@@ -3,14 +3,30 @@ import six
 from csvkit import CSVKitReader
 from django.db import connection
 from django.conf import settings
+from optparse import make_option
 from postgres_copy import CopyMapping
 from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
 
 
+custom_options = (
+    make_option(
+        "-a",
+        "--app-name",
+        action="store",
+        type="string",
+        dest="app_name",
+        default="calaccess_raw",
+        help="Name of the Django application where the model will be \
+imported from"
+    ),
+)
+
+
 class Command(CalAccessCommand, LabelCommand):
     help = 'Load clean CAL-ACCESS file into its corresponding database model'
+    option_list = CalAccessCommand.option_list + custom_options
     args = '<model name>'
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
@@ -20,6 +36,7 @@ class Command(CalAccessCommand, LabelCommand):
 
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
+        self.app_name = options.get("app_name")
         self.cursor = connection.cursor()
         self.load(label)
 
@@ -30,7 +47,7 @@ class Command(CalAccessCommand, LabelCommand):
         if self.verbosity > 2:
             self.log(" Loading %s" % model_name)
 
-        model = get_model("calaccess_raw", model_name)
+        model = get_model(self.app_name, model_name)
         csv_path = model.objects.get_csv_path()
 
         if settings.DATABASES.get('dat') and six.PY2:
