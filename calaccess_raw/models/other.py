@@ -1235,6 +1235,7 @@ class LobbyingChgLogCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
+    UNIQUE_KEY = False
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -1293,6 +1294,7 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     Lobbyist contribution disclosure table. Temporary table used to generate
     disclosure table (Lobbyist Contributions 3)
     """
+    UNIQUE_KEY = False
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -1350,6 +1352,7 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     """
     Lobbyist contribution disclosure table.
     """
+    UNIQUE_KEY = False
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -1407,6 +1410,7 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
         help_text="Employer identification number",
@@ -1522,6 +1526,7 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
         help_text="Employer identification number",
@@ -1637,6 +1642,7 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
         help_text="Employer identification number",
@@ -1752,6 +1758,7 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
         help_text="Employer identification number",
@@ -1793,6 +1800,7 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
+    UNIQUE_KEY = False
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
         help_text="Employer identification number",
@@ -1834,6 +1842,7 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
+    UNIQUE_KEY = False
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
         verbose_name="Lobbyist ID",
@@ -1881,6 +1890,7 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
         verbose_name="Lobbyist ID",
@@ -1925,6 +1935,7 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistFirm1Cd(CalAccessBaseModel):
+    UNIQUE_KEY = False
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
         verbose_name="Firm ID",
@@ -2028,6 +2039,7 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
         verbose_name="Firm ID",
@@ -2128,6 +2140,7 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistFirm3Cd(CalAccessBaseModel):
+    UNIQUE_KEY = False
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
         verbose_name="Firm ID",
@@ -2231,6 +2244,7 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
         verbose_name="Firm ID",
@@ -2303,6 +2317,7 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     """
     This is an undocumented model.
     """
+    UNIQUE_KEY = False
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
         verbose_name="Firm ID",
@@ -2375,6 +2390,7 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     """
     It's an undocumented model.
     """
+    UNIQUE_KEY = False
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
         verbose_name="Lobbyist ID",
@@ -2419,6 +2435,7 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
+    UNIQUE_KEY = False
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
         verbose_name="Lobbyist ID",
@@ -2569,6 +2586,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     """
     This table is undocumented.
     """
+    UNIQUE_KEY = False
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
