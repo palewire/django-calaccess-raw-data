@@ -381,6 +381,12 @@ class FilerInterestsCd(CalAccessBaseModel):
     """
     Links a filer to their interest codes.
     """
+    UNIQUE_KEY = (
+        "FILER_ID",
+        "INTEREST_CD",
+        "EFFECT_DATE",
+        "SESSION_ID"
+    )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
