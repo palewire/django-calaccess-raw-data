@@ -858,10 +858,10 @@ campaign statement is attached. This field applies to the form 401."
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
         # format.html#document/p20
         ('', 'Unknown'),
-        ('C', 'Cand/Officeholder Controlled Cmtte'),
-        ('P', 'Cand/Officeholder Primarily Formed'),
-        ('B', 'Ballot Measure Committee'),
-        ('G', 'General Purpose Committee'),
+        ('C', 'Candidate or officeholder controlled committee'),
+        ('P', 'Candidate or officeholder primarily formed committee'),
+        ('B', 'Ballot-measure committee'),
+        ('G', 'General-purpose committee'),
     )
     cmtte_type = fields.CharField(
         max_length=1,
