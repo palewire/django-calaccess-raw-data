@@ -853,10 +853,21 @@ is not contained on the forms.'
         help_text="Committee ID (Filer_id) of recipient Committee who's \
 campaign statement is attached. This field applies to the form 401."
     )
+    CMTTE_TYPE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p20
+        ('', 'Unknown'),
+        ('C', 'Candidate or officeholder controlled committee'),
+        ('P', 'Candidate or officeholder primarily formed committee'),
+        ('B', 'Ballot-measure committee'),
+        ('G', 'General-purpose committee'),
+    )
     cmtte_type = fields.CharField(
         max_length=1,
         db_column='CMTTE_TYPE',
         blank=True,
+        choices=CMTTE_TYPE_CHOICES,
         verbose_name="Committee type",
         help_text="Type of Recipient Committee. Applies to the 450/460."
     )
