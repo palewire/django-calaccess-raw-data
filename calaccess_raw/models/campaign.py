@@ -1147,10 +1147,22 @@ values are 'Y' or 'N'."
         help_text="Amendment number, as reported by the filer \
 Report Number 000 represents an original filing. 001-999 are amendments."
     )
+    REPORTNAME_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p21
+        ('', 'Unknown'),
+        ('450', 'Form 450 (Recipient committee campaign statement, \
+short form)'),
+        ('460', 'Form 460 (Recipient committee campaign statement)'),
+        ('461', 'Form 461 (Independent expenditure and major donor \
+committee campaign statement)'),
+    )
     reportname = fields.CharField(
         max_length=3,
         db_column='REPORTNAME',
         blank=True,
+        choices=REPORTNAME_CHOICES,
         help_text="Attached campaign disclosure statement type. Legal \
 values are 450, 460, and 461."
     )
@@ -2547,10 +2559,25 @@ CAL document for a description of the value of this field."
         blank=True,
         help_text="Lender's state"
     )
+    LOAN_TYPE_CHOICES = (
+        # Defined here:
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
+        # format.html#document/p36
+        ("H2T", "Third party payment"),
+        ("H2F", "Forgiven"),
+        ("H2R", "Repay"),
+        ("B2T", "Third party payment"),
+        ("B2F", "Forgiven"),
+        ("B2R", "Repay"),
+        ("B1G", "Guarantor"),
+        ("B1L", "Lender"),
+        ("", "Unknown"),
+    )
     loan_type = fields.CharField(
         max_length=3,
         db_column='LOAN_TYPE',
         blank=True,
+        choices=LOAN_TYPE_CHOICES,
         help_text="Type of loan"
     )
     loan_zip4 = fields.CharField(
