@@ -87,12 +87,11 @@ custom_options = (
         help="Skip prepping of the unzipped archive"
     ),
     make_option(
-        "--clear",
-        action="store",
-        type="int",
-        dest="clear",
-        default=1,
-        help="Level of clearing (0=none, 1=zip,unusued unzipped files; 2=tsv/csv)"
+        "--skip-clear",
+        action="store_false",
+        dest="skip_clear",
+        default=False,
+        help="Skip delete files (same as --clear 0)"
     ),
     make_option(
         "--skip-clean",
@@ -107,6 +106,14 @@ custom_options = (
         dest="load",
         default=True,
         help="Skip loading up the raw data files"
+    ),
+    make_option(
+        "--clear",
+        action="store",
+        type="int",
+        dest="clear",
+        default=1,
+        help="Level of clearing (0=none, 1=zip, 2=zip/tsv/csv)"
     ),
     make_option(
         "--noinput",
@@ -126,13 +133,15 @@ custom_options = (
 
 
 class Command(CalAccessCommand):
-    help = 'Download, unzip, clean and load the latest snapshot of the \
-CAL-ACCESS database'
+    help = ("Download, unzip, clean and load the latest snapshot of the "
+            "CAL-ACCESS database")
     option_list = CalAccessCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(kwargs['verbosity'])
+        if kwargs.get('skip_clear'):
+            kwargs['clear'] = 0
 
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
