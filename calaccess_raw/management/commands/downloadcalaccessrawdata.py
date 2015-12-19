@@ -24,6 +24,37 @@ from calaccess_raw import (
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
+def download_file(url, out_path, resume=False, verbosity=1,
+                  output_stream=sys.stdout, expected_size=None,
+                  chunk_size=1024):
+
+    if verbosity and output_stream:
+        output_stream("Downloading ZIP file")
+
+    if expected_size is None:
+        resp = requests.head(url)
+        expected_size = int(resp.headers.get('content-length', 0))
+
+    # Prep
+    headers = dict()
+    if os.path.exists(out_path):
+        if resume:
+            cur_sz = os.path.getsize(out_path)
+            headers['Range'] = 'bytes=%d-' % cur_sz
+            expected_size = expected_size - cur_sz
+        else:
+            os.remove(out_path)
+
+    # Stream the download
+    req = requests.get(url, stream=True, headers=headers)
+    n_iters = float(expected_size) / chunk_size + 1
+    with open(out_path, 'ab') as fp:
+        for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
+                                  expected_size=n_iters):
+            fp.write(chunk)
+            fp.flush()
+
+
 custom_options = (
     make_option(
         "--resume-download",
@@ -229,27 +260,10 @@ CAL-ACCESS database'
         """
         Download the ZIP file in pieces.
         """
-        if self.verbosity:
-            self.header("Downloading ZIP file")
 
-        length = float(self.download_metadata['content-length'])
-        headers = dict()
-        if os.path.exists(self.zip_path):
-            if resume:
-                cur_sz = os.path.getsize(self.zip_path)
-                headers['Range'] = 'bytes=%d-' % cur_sz
-                length = length - cur_sz
-            else:
-                os.remove(self.zip_path)
-
-        r = requests.get(self.url, stream=True, headers=headers)
-        with open(self.zip_path, 'ab') as f:
-            for chunk in progress.bar(
-                r.iter_content(chunk_size=1024),
-                expected_size=(length/1024)+1,
-            ):
-                f.write(chunk)
-                f.flush()
+        download_file(self.url, self.zip_path, resume=resume,
+                      verbosity=self.verbosity, output_stream=self.header,
+                      expected_size=self.download_metadata['content-length'])
         self.set_local_metadata()
 
     def unzip(self):
