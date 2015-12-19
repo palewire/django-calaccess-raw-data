@@ -92,7 +92,7 @@ custom_options = (
         type="int",
         dest="clear",
         default=1,
-        help="Level of clearing (1=zip,unusued unzipped files; 2=tsv/csv)"
+        help="Level of clearing (0=none, 1=zip,unusued unzipped files; 2=tsv/csv)"
     ),
     make_option(
         "--skip-clean",
@@ -212,13 +212,13 @@ CAL-ACCESS database'
             self.download(resume=self.resume_download)
 
         if options['unzip']:
-            self.unzip(clear=options['clear'])
+            self.unzip(clear=options['clear'] > 0)
         if options['prep']:
-            self.prep(clear=options['clear'])
+            self.prep(clear=options['clear'] > 0)
         if options['clean']:
-            self.clean(clear=options['clear'])
+            self.clean(clear=options['clear'] > 1)
         if options['load']:
-            self.load(clear=options['clear'])
+            self.load(clear=options['clear'] > 1)
 
         if self.verbosity:
             self.success("Done!")
@@ -281,7 +281,7 @@ CAL-ACCESS database'
                       expected_size=self.download_metadata['content-length'])
         self.set_local_metadata()
 
-    def unzip(self, clear=None):
+    def unzip(self, clear=False):
         """
         Unzip the snapshot file.
         """
@@ -299,11 +299,11 @@ CAL-ACCESS database'
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-        if clear > 0:
+        if clear:
             os.remove(self.zip_path)
             os.remove(self.zip_metadata_path)
 
-    def prep(self, clear=None):
+    def prep(self, clear=False):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
@@ -328,10 +328,10 @@ CAL-ACCESS database'
             self.tsv_dir,
         )
 
-        if clear > 0:
+        if clear:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-    def clean(self, clear=None):
+    def clean(self, clear=False):
         """
         Clean up the raw data files from the state so they are
         ready to get loaded into the database.
@@ -349,10 +349,10 @@ CAL-ACCESS database'
                 name,
                 verbosity=self.verbosity
             )
-            if clear > 1:
+            if clear:
                 os.remove(os.path.join(self.tsv_dir, name))
 
-    def load(self, clear=None):
+    def load(self, clear=False):
         """
         Loads the cleaned up csv files into the database
         """
@@ -371,5 +371,5 @@ CAL-ACCESS database'
                 model.__name__,
                 verbosity=self.verbosity,
             )
-            if clear > 1:
+            if clear:
                 os.remove(csv_path)
