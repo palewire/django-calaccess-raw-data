@@ -87,11 +87,12 @@ custom_options = (
         help="Skip prepping of the unzipped archive"
     ),
     make_option(
-        "--skip-clear",
-        action="store_false",
+        "--clear",
+        action="store",
+        type="int",
         dest="clear",
-        default=True,
-        help="Skip clearing out ZIP archive and extra files"
+        default=1,
+        help="Level of clearing (1=zip,unusued unzipped files; 2=tsv/csv)"
     ),
     make_option(
         "--skip-clean",
@@ -164,7 +165,7 @@ CAL-ACCESS database'
             cur_size = 0
 
             self.resume_download = (kwargs['resume-download'] and
-                                    os.path.exists(self.zip_path)) 
+                                    os.path.exists(self.zip_path))
 
             if self.resume_download:
                 # Make sure the downloaded chunk is newer than the
@@ -178,7 +179,7 @@ CAL-ACCESS database'
 
             prompt_context = dict(
                 resuming=self.resume_download,
-                already_downloaded=last_modified==last_download,
+                already_downloaded=last_modified == last_download,
                 last_modified=last_modified,
                 last_download=last_download,
                 time_ago=naturaltime(last_download),
@@ -209,15 +210,14 @@ CAL-ACCESS database'
             self.download(resume=self.resume_download)
 
         if options['unzip']:
-            self.unzip()
+            self.unzip(clear=options['clear'])
         if options['prep']:
-            self.prep()
-        if options['clear']:
-            self.clear()
+            self.prep(clear=options['clear'])
         if options['clean']:
-            self.clean()
+            self.clean(clear=options['clear'])
         if options['load']:
-            self.load()
+            self.load(clear=options['clear'])
+
         if self.verbosity:
             self.success("Done!")
 
@@ -281,7 +281,7 @@ CAL-ACCESS database'
                       expected_size=self.download_metadata['content-length'])
         self.set_local_metadata()
 
-    def unzip(self):
+    def unzip(self, clear=None):
         """
         Unzip the snapshot file.
         """
@@ -299,7 +299,10 @@ CAL-ACCESS database'
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-    def prep(self):
+        if clear > 0:
+            os.remove(self.zip_path)
+
+    def prep(self, clear=None):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
@@ -324,16 +327,10 @@ CAL-ACCESS database'
             self.tsv_dir,
         )
 
-    def clear(self):
-        """
-        Delete ZIP archive and files we don't need.
-        """
-        if self.verbosity:
-            self.log(" Clearing out unneeded files")
-        shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
-        os.remove(self.zip_path)
+        if clear > 0:
+            shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-    def clean(self):
+    def clean(self, clear=None):
         """
         Clean up the raw data files from the state so they are
         ready to get loaded into the database.
@@ -351,20 +348,27 @@ CAL-ACCESS database'
                 name,
                 verbosity=self.verbosity
             )
+            if clear > 1:
+                os.remove(os.path.join(self.tsv_dir, name))
 
-    def load(self):
+    def load(self, clear=None):
         """
         Loads the cleaned up csv files into the database
         """
         if self.verbosity:
             self.header("Loading data files")
 
-        model_list = get_model_list()
+        # This check enables resuming partially completed load with clear
+        csv_list = [(model, model.objects.get_csv_path())
+                    for model in get_model_list()
+                    if os.path.exists(model.objects.get_csv_path())]
         if self.verbosity:
-            model_list = progress.bar(model_list)
-        for model in model_list:
+            csv_list = progress.bar(csv_list)
+        for model, csv_path in csv_list:
             call_command(
                 "loadcalaccessrawfile",
                 model.__name__,
                 verbosity=self.verbosity,
             )
+            if clear > 1:
+                os.remove(csv_path)
