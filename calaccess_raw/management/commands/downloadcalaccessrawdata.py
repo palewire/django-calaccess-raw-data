@@ -135,14 +135,21 @@ CAL-ACCESS database'
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
             settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
-            if self.verbosity:
-                self.log("Using test data")
         else:
             self.data_dir = get_download_directory()
 
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
+
+        # Immediately check that the tsv directory exists when using test data,
+        #   so we can stop immediately.
+        if kwargs['test_data']:
+            if not os.path.exists(self.tsv_dir):
+                raise CommandError("Data tsv directory does not exist at %s" % self.tsv_dir)
+            elif self.verbosity:
+                self.log("Using test data")
+
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
         if kwargs['download']:
@@ -190,12 +197,7 @@ CAL-ACCESS database'
         self.set_options(*args, **options)
 
         # Get the data
-        if not options['download']:
-            # if the directory doesn't exist, abort
-            if not os.path.exists(self.tsv_dir):
-                self.failure("Data tsv directory does not exist at %s" % self.tsv_dir)
-                return
-        else:
+        if options['download']:
             if not options['noinput'] and self.confirm_download() != 'yes':
                 self.failure("Download cancelled")
                 return
