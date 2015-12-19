@@ -11,6 +11,7 @@ from optparse import make_option
 from django.conf import settings
 from clint.textui import progress
 from django.utils.six.moves import input
+from datetime import datetime
 from dateutil.parser import parse as dateparse
 from django.core.management import call_command
 from django.template.loader import render_to_string
@@ -24,6 +25,13 @@ from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
 custom_options = (
+    make_option(
+        "--resume-download",
+        action="store_true",
+        dest="resume-download",
+        default=False,
+        help="Resume downloading of the ZIP archive from a previous attempt"
+    ),
     make_option(
         "--skip-download",
         action="store_false",
@@ -108,11 +116,24 @@ CAL-ACCESS database'
         if kwargs['download']:
             self.download_metadata = self.get_download_metadata()
             self.local_metadata = self.get_local_metadata()
+
+            self.resume_download = kwargs['resume-download'] and os.path.exists(self.zip_path)
+            total_size = self.download_metadata['content-length']
+
+            if self.resume_download:
+                cur_size = os.path.getsize(self.zip_path)
+                last_download = datetime.fromtimestamp(os.path.getctime(self.zip_path))
+            else:
+                cur_size = 0
+                last_download = self.local_metadata['last-download']
+
             prompt_context = dict(
+                resuming=self.resume_download,
                 last_updated=self.download_metadata['last-modified'],
                 time_ago=naturaltime(self.download_metadata['last-modified']),
-                size=size(self.download_metadata['content-length']),
-                last_download=self.local_metadata['last-download'],
+                total_size=size(total_size),
+                cur_size=size(cur_size),
+                last_download=last_download,
                 download_dir=self.data_dir,
             )
             self.prompt = render_to_string(
@@ -139,7 +160,7 @@ CAL-ACCESS database'
             if not options['noinput'] and self.confirm_download() != 'yes':
                 self.failure("Download cancelled")
                 return
-            self.download()
+            self.download(resume=self.resume_download)
 
         if options['unzip']:
             self.unzip()
@@ -204,16 +225,25 @@ CAL-ACCESS database'
         with open(file_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
-    def download(self):
+    def download(self, resume=False):
         """
         Download the ZIP file in pieces.
         """
         if self.verbosity:
             self.header("Downloading ZIP file")
 
-        r = requests.get(self.url, stream=True)
         length = float(self.download_metadata['content-length'])
-        with open(self.zip_path, 'wb') as f:
+        headers = dict()
+        if os.path.exists(self.zip_path):
+            if resume:
+                cur_sz = os.path.getsize(self.zip_path)
+                headers['Range'] = 'bytes=%d-' % cur_sz
+                length = length - cur_sz
+            else:
+                os.remove(self.zip_path)
+
+        r = requests.get(self.url, stream=True, headers=headers)
+        with open(self.zip_path, 'ab') as f:
             for chunk in progress.bar(
                 r.iter_content(chunk_size=1024),
                 expected_size=(length/1024)+1,
