@@ -130,7 +130,7 @@ class Command(CalAccessCommand, LabelCommand):
         Log any errors to a csv file
         """
         # Make sure the log directory exists
-        os.path.exists(self.log_dir) or os.mkdir(self.log_dir)
+        os.path.exists(self.log_dir) or os.makedirs(self.log_dir)
 
         # Log writer
         log_path = os.path.join(
