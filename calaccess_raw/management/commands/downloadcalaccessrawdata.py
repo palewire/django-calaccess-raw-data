@@ -100,11 +100,11 @@ CAL-ACCESS database'
         else:
             self.data_dir = get_download_directory()
 
-        os.path.exists(self.data_dir) or os.mkdir(self.data_dir)
+        os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
-        os.path.exists(self.csv_dir) or os.mkdir(self.csv_dir)
+        os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
         if kwargs['download']:
             self.download_metadata = self.get_download_metadata()
             self.local_metadata = self.get_local_metadata()

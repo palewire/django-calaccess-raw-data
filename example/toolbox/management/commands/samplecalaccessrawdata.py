@@ -40,9 +40,9 @@ class Command(CalAccessCommand):
         ))
 
         # Make sure sample dir exists and is empty
-        os.path.exists(self.test_data_dir) or os.mkdir(self.test_data_dir)
+        os.path.exists(self.test_data_dir) or os.makedirs(self.test_data_dir)
         os.path.exists(self.sample_dir) and shutil.rmtree(self.sample_dir)
-        os.mkdir(self.sample_dir)
+        os.makedirs(self.sample_dir)
 
         # Loop through all the files in the source directory
         for name in progress.bar(self.tsv_list):
