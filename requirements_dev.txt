@@ -16,3 +16,5 @@ csvkit
 subsample
 django-postgres-copy
 datpy
+pytz
+tzlocal

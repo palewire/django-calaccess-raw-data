@@ -22,6 +22,7 @@ from calaccess_raw import (
     get_model_list
 )
 from django.contrib.humanize.templatetags.humanize import naturaltime
+from tzlocal import get_localzone
 
 
 def download_file(url, out_path, resume=False, verbosity=1,
@@ -149,11 +150,18 @@ CAL-ACCESS database'
             self.local_metadata = self.get_local_metadata()
 
             self.resume_download = kwargs['resume-download'] and os.path.exists(self.zip_path)
+            if self.resume_download:
+                # Make sure the downloaded chunk is newer than the
+                # last update to the remote data.
+                timestamp = os.path.getmtime(self.zip_path)
+                last_download = datetime.fromtimestamp(timestamp, get_localzone())
+                self.resume_download = last_download >= self.download_metadata['last-modified']
+
             total_size = self.download_metadata['content-length']
 
             if self.resume_download:
                 cur_size = os.path.getsize(self.zip_path)
-                last_download = datetime.fromtimestamp(os.path.getctime(self.zip_path))
+                # last_download was set above.
             else:
                 cur_size = 0
                 last_download = self.local_metadata['last-download']
@@ -227,7 +235,7 @@ CAL-ACCESS database'
         request = requests.head(self.url)
         return {
             'content-length': int(request.headers['content-length']),
-            'last-modified': dateparse(request.headers['last-modified'])
+            'last-modified': dateparse(request.headers['last-modified']).astimezone(get_localzone())
         }
 
     def get_local_metadata(self):
@@ -244,7 +252,7 @@ CAL-ACCESS database'
         }
         if os.path.isfile(file_path):
             with open(file_path) as f:
-                metadata['last-download'] = dateparse(f.readline())
+                metadata['last-download'] = dateparse(f.readline()).astimezone(get_localzone())
         return metadata
 
     def set_local_metadata(self):
