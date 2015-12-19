@@ -142,6 +142,8 @@ CAL-ACCESS database'
 
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
+        self.zip_metadata_path = os.path.join(self.data_dir,
+                                              'download_metadata.txt')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         # Immediately check that the tsv directory exists when using test data,
@@ -253,12 +255,11 @@ CAL-ACCESS database'
 
         If no file exists it returns the dictionary with null values.
         """
-        file_path = os.path.join(self.data_dir, 'download_metadata.txt')
         metadata = {
             'last-download': None
         }
-        if os.path.isfile(file_path):
-            with open(file_path) as f:
+        if os.path.isfile(self.zip_metadata_path):
+            with open(self.zip_metadata_path) as f:
                 metadata['last-download'] = datetime_parse(f.readline())
         return metadata
 
@@ -267,8 +268,7 @@ CAL-ACCESS database'
         Creates a file that stories the date and time vintage of the last
         CAL-ACCESS archive download.
         """
-        file_path = os.path.join(self.data_dir, 'download_metadata.txt')
-        with open(file_path, 'w') as f:
+        with open(self.zip_metadata_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
     def download(self, resume=False):
@@ -301,6 +301,7 @@ CAL-ACCESS database'
 
         if clear > 0:
             os.remove(self.zip_path)
+            os.remove(self.zip_metadata_path)
 
     def prep(self, clear=None):
         """
