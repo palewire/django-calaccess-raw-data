@@ -127,36 +127,20 @@ CAL-ACCESS database'
             options["unzip"] = False
             options["prep"] = False
             options["clear"] = False
-
-            tsv_dir = os.path.join(get_test_download_directory(), "tsv/")
-
-            # if the directory doesn't exist, abort
-            if not os.path.exists(tsv_dir):
-                self.failure("Sampled data tsv directory does not \
-exist at %s" % tsv_dir)
-                return
-
-        # Set the options
         self.set_options(*args, **options)
-        # Get to work
-        if options['download']:
-            if options['noinput']:
-                self.download()
-            else:
-                # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
-                locale_encoding = locale.getpreferredencoding()
-                old_stdout = sys.stdout
-                sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
 
-                confirm = input(self.prompt)
+        # Get the data
+        if not options['download']:
+            # if the directory doesn't exist, abort
+            if not os.path.exists(self.tsv_dir):
+                self.failure("Data tsv directory does not exist at %s" % self.tsv_dir)
+                return
+        else:
+            if not options['noinput'] and self.confirm_download() != 'yes':
+                self.failure("Download cancelled")
+                return
+            self.download()
 
-                # Set things back to the way they were before continuing.
-                sys.stdout = old_stdout
-
-                if confirm != 'yes':
-                    self.failure("Download cancelled")
-                    return
-                self.download()
         if options['unzip']:
             self.unzip()
         if options['prep']:
@@ -169,6 +153,18 @@ exist at %s" % tsv_dir)
             self.load()
         if self.verbosity:
             self.success("Done!")
+
+    def confirm_download(self):
+        # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
+        locale_encoding = locale.getpreferredencoding()
+        old_stdout = sys.stdout
+        sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
+
+        confirm = input(self.prompt)
+
+        # Set things back to the way they were before continuing.
+        sys.stdout = old_stdout
+        return confirm.lower()
 
     def get_download_metadata(self):
         """
