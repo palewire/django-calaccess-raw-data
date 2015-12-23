@@ -152,7 +152,7 @@ class Command(CalAccessCommand):
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.zip_metadata_path = os.path.join(self.data_dir,
-                                              'download_metadata.txt')
+                                              '.lastdownload')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         # Immediately check that the tsv directory exists when using test data,
@@ -284,7 +284,6 @@ class Command(CalAccessCommand):
         """
         Download the ZIP file in pieces.
         """
-
         download_file(self.url, self.zip_path, resume=resume,
                       verbosity=self.verbosity, output_stream=self.header,
                       expected_size=self.download_metadata['content-length'])
@@ -309,8 +308,11 @@ class Command(CalAccessCommand):
                 zf.extract(member, path)
 
         if clear:
+            # TODO: We intentionally leave behind zip_metadata_path,
+            # to keep track of the last download. This cycle should be
+            # kept in the database; when it is, we should delete
+            # that file. (note: cron may be enough?)
             os.remove(self.zip_path)
-            os.remove(self.zip_metadata_path)
 
     def prep(self, clear=False):
         """
