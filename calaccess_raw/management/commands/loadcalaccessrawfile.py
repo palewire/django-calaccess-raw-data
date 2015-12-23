@@ -62,7 +62,7 @@ class Command(CalAccessCommand, LabelCommand):
         elif engine in (
             'django.db.backends.postgresql_psycopg2'
             'django.contrib.gis.db.backends.postgis'
-                ):
+        ):
             self.load_postgresql(model, csv_path)
         else:
             self.failure("Sorry your database engine is unsupported")

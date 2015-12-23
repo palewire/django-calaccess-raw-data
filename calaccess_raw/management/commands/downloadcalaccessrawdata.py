@@ -164,7 +164,7 @@ CAL-ACCESS database'
             cur_size = 0
 
             self.resume_download = (kwargs['resume-download'] and
-                                    os.path.exists(self.zip_path)) 
+                                    os.path.exists(self.zip_path))
 
             if self.resume_download:
                 # Make sure the downloaded chunk is newer than the
@@ -178,7 +178,7 @@ CAL-ACCESS database'
 
             prompt_context = dict(
                 resuming=self.resume_download,
-                already_downloaded=last_modified==last_download,
+                already_downloaded=last_modified == last_download,
                 last_modified=last_modified,
                 last_download=last_download,
                 time_ago=naturaltime(last_download),
