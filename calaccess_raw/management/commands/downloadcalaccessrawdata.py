@@ -87,13 +87,6 @@ custom_options = (
         help="Skip prepping of the unzipped archive"
     ),
     make_option(
-        "--skip-clear",
-        action="store_false",
-        dest="skip_clear",
-        default=False,
-        help="Skip delete files (same as --clear 0)"
-    ),
-    make_option(
         "--skip-clean",
         action="store_false",
         dest="clean",
@@ -108,12 +101,11 @@ custom_options = (
         help="Skip loading up the raw data files"
     ),
     make_option(
-        "--clear",
-        action="store",
-        type="int",
-        dest="clear",
-        default=1,
-        help="Level of clearing (0=none, 1=zip, 2=zip/tsv/csv)"
+        "--keep-files",
+        action="store_true",
+        dest="keep_files",
+        default=False,
+        help="Skip delete files"
     ),
     make_option(
         "--noinput",
@@ -140,8 +132,6 @@ class Command(CalAccessCommand):
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(kwargs['verbosity'])
-        if kwargs.get('skip_clear'):
-            kwargs['clear'] = 0
 
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
@@ -210,6 +200,7 @@ class Command(CalAccessCommand):
             options["download"] = False
             options["unzip"] = False
             options["prep"] = False
+            options["keep_files"] = True
             options["clear"] = False
         self.set_options(*args, **options)
 
@@ -221,13 +212,13 @@ class Command(CalAccessCommand):
             self.download(resume=self.resume_download)
 
         if options['unzip']:
-            self.unzip(clear=options['clear'] > 0)
+            self.unzip(clear=not options['keep_files'])
         if options['prep']:
-            self.prep(clear=options['clear'] > 0)
+            self.prep(clear=not options['keep_files'])
         if options['clean']:
-            self.clean(clear=options['clear'] > 1)
+            self.clean(clear=not options['keep_files'])
         if options['load']:
-            self.load(clear=options['clear'] > 1)
+            self.load(clear=not options['keep_files'])
 
         if self.verbosity:
             self.success("Done!")

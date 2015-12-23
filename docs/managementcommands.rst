@@ -54,10 +54,9 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
       --skip-download       Skip downloading of the ZIP archive
       --skip-unzip          Skip unzipping of the archive
       --skip-prep           Skip prepping of the unzipped archive
-      --skip-clear          Skip deleting files (same as --clear 0)
       --skip-clean          Skip cleaning up the raw data files
       --skip-load           Skip loading up the raw data files
-      --clear <int>         Delete files (0=none, 1=zip, 2=zip,tsv,csv)
+      --keep-files          Skip deleting files
       --noinput             Download the ZIP archive without asking permission
       --version             show program's version number and exit
       -h, --help            show this help message and exit

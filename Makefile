@@ -13,7 +13,7 @@ docs:
 	cd docs && make livehtml
 
 load:
-	python  example/manage.py downloadcalaccessrawdata --skip-download --skip-unzip --skip-prep --skip-clear --skip-clean
+	python  example/manage.py downloadcalaccessrawdata --skip-download --skip-unzip --skip-prep --skip-clean --keep-files
 
 testload:
 	dropdb calaccess_raw
