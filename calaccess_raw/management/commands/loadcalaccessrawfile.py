@@ -186,8 +186,7 @@ class Command(CalAccessCommand, LabelCommand):
         Returns the number of rows in the file, not counting headers.
         """
         with open(csv_path) as infile:
-            row_count = len(infile.readlines()) - 1
-        return row_count
+            return sum(1 for line in infile) - 1
 
     def finish_load_message(self, model_count, csv_count):
         """

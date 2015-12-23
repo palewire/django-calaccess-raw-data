@@ -19,9 +19,9 @@ class Command(CalAccessCommand, LabelCommand):
 
         # Get the CSV total
         csv_path = model.objects.get_csv_path()
-        infile = open(csv_path)
-        csv_record_cnt = len(infile.readlines()) - 1
-        infile.close()
+
+        with open(csv_path) as f:
+            csv_record_cnt = sum(1 for l in f) - 1
 
         # Report back on how we did
         if cnt == csv_record_cnt:
