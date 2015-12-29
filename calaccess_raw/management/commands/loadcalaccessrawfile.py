@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 import six
 from csvkit import CSVKitReader
-from django.db import connection
+from django.db import connections, router
 from django.conf import settings
 from optparse import make_option
 from postgres_copy import CopyMapping
@@ -20,6 +20,16 @@ custom_options = (
         help="Name of the Django application where the model will be \
 imported from"
     ),
+    make_option(
+        "-d",
+        "--database",
+        action="store",
+        type="string",
+        dest="database",
+        default=None,
+        help=("Name of the database where the data will be stored."
+              "(default: get it from the model)")
+    ),
 )
 
 
@@ -35,8 +45,8 @@ class Command(CalAccessCommand, LabelCommand):
 
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
-        self.app_name = options.get("app_name")
-        self.cursor = connection.cursor()
+        self.app_name = options["app_name"]
+        self.database = options["database"]
         self.load(label)
 
     def load(self, model_name):
@@ -49,20 +59,21 @@ class Command(CalAccessCommand, LabelCommand):
             self.log(" Loading %s" % model_name)
 
         model = apps.get_model(self.app_name, model_name)
-
         csv_path = model.objects.get_csv_path()
 
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat(model, csv_path)
-
-        engine = settings.DATABASES['default']['ENGINE']
+        self.database = self.database or router.db_for_write(model=model)
+        engine = settings.DATABASES[self.database]['ENGINE']
+        self.connection = connections[self.database]
+        self.cursor = self.connection.cursor()
 
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
         elif engine in (
             'django.db.backends.postgresql_psycopg2'
             'django.contrib.gis.db.backends.postgis'
-                ):
+        ):
             self.load_postgresql(model, csv_path)
         else:
             self.failure("Sorry your database engine is unsupported")
@@ -120,7 +131,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         header_sql_list = []
         field_types = dict(
-            (f.db_column, f.db_type(connection))
+            (f.db_column, f.db_type(self.connection))
             for f in model._meta.fields
         )
         date_set_list = []
