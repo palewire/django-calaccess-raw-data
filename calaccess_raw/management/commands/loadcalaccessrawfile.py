@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 import six
 from csvkit import CSVKitReader
+from django.apps import apps
 from django.db import connections, router
 from django.conf import settings
 from optparse import make_option
@@ -49,17 +50,16 @@ class Command(CalAccessCommand, LabelCommand):
         self.database = options["database"]
         self.load(label)
 
-    def load(self, model_name):
+    def load(self, model_name, csv_path=None):
         """
         Loads the source CSV for the provided model.
         """
-        from django.apps import apps
 
         if self.verbosity > 2:
             self.log(" Loading %s" % model_name)
 
         model = apps.get_model(self.app_name, model_name)
-        csv_path = model.objects.get_csv_path()
+        csv_path = csv_path or model.objects.get_csv_path()
 
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat(model, csv_path)
