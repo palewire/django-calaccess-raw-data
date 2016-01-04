@@ -1,6 +1,9 @@
 import os
 from django.conf import settings
-from django.db.models.loading import get_models, get_app
+try:
+    from django.apps.apps import get_models, get_app
+except ImportError:
+    from django.db.models.loading import get_models, get_app
 default_app_config = 'calaccess_raw.apps.CalAccessRawConfig'
 
 
