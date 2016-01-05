@@ -1,5 +1,4 @@
 import os
-from django.apps import apps
 from django.conf import settings
 default_app_config = 'calaccess_raw.apps.CalAccessRawConfig'
 
@@ -32,4 +31,5 @@ def get_model_list():
     """
     Returns a model list with all the data tables in this application
     """
+    from django.apps import apps
     return apps.get_app_config("calaccess_raw").models.values()
