@@ -32,4 +32,4 @@ def get_model_list():
     """
     Returns a model list with all the data tables in this application
     """
-    return apps.get_app_config("calaccess_raw"),models.values()
+    return apps.get_app_config("calaccess_raw").models.values()
