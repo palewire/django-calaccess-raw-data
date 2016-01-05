@@ -300,6 +300,7 @@ class FilerFilingsCd(CalAccessBaseModel):
     stmnt_status = fields.IntegerField(
         db_column='STMNT_STATUS',
         db_index=True,
+        null=True,
         help_text="The status of the statement. If the filing has been \
 reviewed or not reviewed.",
         verbose_name='statement status',

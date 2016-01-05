@@ -90,7 +90,13 @@ Create a file at ``example/project/settings_local.py`` to save your custom datab
 Once the database is configured
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create the tables and get to work.
+Since you may end up making changes to calaccess_raw's data model, you'll need an initial migration file based on the current data model.
+
+.. code-block:: bash
+
+    $ python example/manage.py makemigrations calaccess_raw
+
+Now create the tables and get to work.
 
 .. code-block:: bash
 
