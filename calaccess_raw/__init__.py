@@ -1,9 +1,6 @@
 import os
+from django.apps import apps
 from django.conf import settings
-try:
-    from django.apps.apps import get_models, get_app
-except ImportError:
-    from django.db.models.loading import get_models, get_app
 default_app_config = 'calaccess_raw.apps.CalAccessRawConfig'
 
 
@@ -35,4 +32,4 @@ def get_model_list():
     """
     Returns a model list with all the data tables in this application
     """
-    return get_models(get_app("calaccess_raw"))
+    return apps.get_app_config("calaccess_raw").values()
