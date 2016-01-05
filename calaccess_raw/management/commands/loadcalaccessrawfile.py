@@ -5,7 +5,6 @@ from django.db import connection
 from django.conf import settings
 from optparse import make_option
 from postgres_copy import CopyMapping
-from django.db.models.loading import get_model
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
 
@@ -44,10 +43,13 @@ class Command(CalAccessCommand, LabelCommand):
         """
         Loads the source CSV for the provided model.
         """
+        from django.apps import apps
+
         if self.verbosity > 2:
             self.log(" Loading %s" % model_name)
 
-        model = get_model(self.app_name, model_name)
+        model = apps.get_model(self.app_name, model_name)
+
         csv_path = model.objects.get_csv_path()
 
         if settings.DATABASES.get('dat') and six.PY2:
