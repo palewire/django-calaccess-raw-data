@@ -34,7 +34,7 @@ Connecting to a local database
 
 Unlike a typical Django project, this application only supports the MySQL and PostgreSQL database backends. This is because we enlist specialized tools to load the immense amount of source data more quickly than Django typically allows.
 
-We haven't developer similar routines for SQLite and the other Django backends yet, but we're working on it. This might be something you could work on!
+We haven't developed similar routines for SQLite and the other Django backends yet, but we're working on it. This might be something you could work on!
 
 If you choose MySQL
 ~~~~~~~~~~~~~~~~~~~
