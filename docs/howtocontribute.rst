@@ -10,14 +10,16 @@ Preparing a development environment
 It is not required, but it is recommended that development of the library
 be done from within a contained virtual environment.
 
-One way to accomplish is with Python's ``virtualenv`` tool and its helpful companion ``virtualenvwrapper``. If you have that installed a new project can be started with
+One way to accomplish is with Python's ``virtualenv`` tool and its helpful
+companion ``virtualenvwrapper``. If you have that installed a new project can be started with
 the following:
 
 .. code-block:: bash
 
     $ mkproject django-calaccess-raw-data
 
-That will jump into a new folder in your code directory, where you can clone our code repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_ after you make a fork of your own. Don't know what that means? `Read this <https://guides.github.com/activities/forking/>`_.
+That will jump into a new folder in your code directory, where you can clone
+our code repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_ after you make a fork of your own. Don't know what that means? `Read this <https://guides.github.com/activities/forking/>`_.
 
 .. code-block:: bash
 
@@ -32,9 +34,12 @@ Next install the other Python libraries our code depends on.
 Connecting to a local database
 ------------------------------
 
-Unlike a typical Django project, this application only supports the MySQL and PostgreSQL database backends. This is because we enlist specialized tools to load the immense amount of source data more quickly than Django typically allows.
+Unlike a typical Django project, this application only supports the MySQL and
+PostgreSQL database backends. This is because we enlist specialized tools to
+load the immense amount of source data more quickly than Django typically allows.
 
-We haven't developed similar routines for SQLite and the other Django backends yet, but we're working on it. This might be something you could work on!
+We haven't developed similar routines for SQLite and the other Django backends
+yet, but we're working on it. This might be something you could work on!
 
 If you choose MySQL
 ~~~~~~~~~~~~~~~~~~~
@@ -90,17 +95,20 @@ Create a file at ``example/project/settings_local.py`` to save your custom datab
 Once the database is configured
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Since you may end up making changes to calaccess_raw's data model, you'll need an initial migration file based on the current data model.
-
-.. code-block:: bash
-
-    $ python example/manage.py makemigrations calaccess_raw
-
 Now create the tables and get to work.
 
 .. code-block:: bash
 
     $ python example/manage.py migrate
+
+.. note::
+
+    We also haven't finalized the database schema, so you should not expect
+    it to remain consistent from version to version. At this early stage, many
+    small changes are still routinely necessary as we explore the state data. Once
+    we have a stable release, we plan to ship migration instructions with each
+    version. For the time being, you will need to create and maintain your own
+    migration files if you edit the models.
 
 You might start by loading the data dump from the web.
 
