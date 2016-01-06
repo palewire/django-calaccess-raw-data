@@ -103,9 +103,9 @@ Now create the tables and get to work.
 
 .. note::
 
-    We also haven't finalized the database schema, so you should not expect
-    it to remain consistent from version to version. At this early stage, many
-    small changes are still routinely necessary as we explore the state data. Once
+    We haven't finalized the database schema, so you should not expect
+    it to remain consistent from version to version. As we explore the state data at this early stage, many
+    small changes are still routinely necessary. Once
     we have a stable release, we plan to ship migration instructions with each
     version. For the time being, you will need to create and maintain your own
     migration files if you edit the models.
