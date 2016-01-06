@@ -108,7 +108,7 @@ Now create the tables and get to work.
     small changes are still routinely necessary. Once
     we have a stable release, we plan to ship migration instructions with each
     version. For the time being, you will need to create and maintain your own
-    migration files if you edit the models.
+    `migration files <https://docs.djangoproject.com/en/1.9/topics/migrations/>`_ if you edit the models.
 
 You might start by loading the data dump from the web.
 
