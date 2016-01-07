@@ -99,6 +99,7 @@ Now create the tables and get to work.
 
 .. code-block:: bash
 
+    $ python example/manage.py makemigrations calaccess_raw
     $ python example/manage.py migrate
 
 .. note::
