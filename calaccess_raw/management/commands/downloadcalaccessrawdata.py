@@ -21,6 +21,7 @@ from calaccess_raw import (
     get_test_download_directory,
     get_model_list
 )
+from django.core.management.base import CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from tzlocal import get_localzone
 
@@ -131,6 +132,7 @@ CAL-ACCESS database'
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(kwargs['verbosity'])
+        self.tz = get_localzone()
 
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
@@ -146,7 +148,8 @@ CAL-ACCESS database'
         #   so we can stop immediately.
         if kwargs['test_data']:
             if not os.path.exists(self.tsv_dir):
-                raise CommandError("Data tsv directory does not exist at %s" % self.tsv_dir)
+                raise CommandError("Data tsv directory does not exist "
+                                   "at %s" % self.tsv_dir)
             elif self.verbosity:
                 self.log("Using test data")
 
@@ -156,22 +159,21 @@ CAL-ACCESS database'
             self.download_metadata = self.get_download_metadata()
             self.local_metadata = self.get_local_metadata()
 
-            self.resume_download = kwargs['resume-download'] and os.path.exists(self.zip_path)
+            total_size = self.download_metadata['content-length']
+            last_download = self.download_metadata['last-modified']
+            cur_size = 0
+
+            self.resume_download = (kwargs['resume-download'] and
+                                    os.path.exists(self.zip_path))
             if self.resume_download:
                 # Make sure the downloaded chunk is newer than the
                 # last update to the remote data.
                 timestamp = os.path.getmtime(self.zip_path)
-                last_download = datetime.fromtimestamp(timestamp, get_localzone())
-                self.resume_download = last_download >= self.download_metadata['last-modified']
-
-            total_size = self.download_metadata['content-length']
-
-            if self.resume_download:
-                cur_size = os.path.getsize(self.zip_path)
-                # last_download was set above.
-            else:
-                cur_size = 0
-                last_download = self.local_metadata['last-download']
+                chunk_datetime = datetime.fromtimestamp(timestamp, self.tz)
+                self.resume_download = chunk_datetime > last_download
+                if self.resume_download:
+                    last_download = chunk_datetime
+                    cur_size = os.path.getsize(self.zip_path)
 
             prompt_context = dict(
                 resuming=self.resume_download,
@@ -235,9 +237,10 @@ CAL-ACCESS database'
         short of actually downloading it.
         """
         request = requests.head(self.url)
+        last_modified = dateparse(request.headers['last-modified'])
         return {
             'content-length': int(request.headers['content-length']),
-            'last-modified': dateparse(request.headers['last-modified']).astimezone(get_localzone())
+            'last-modified': last_modified.astimezone(self.tz)
         }
 
     def get_local_metadata(self):
@@ -254,7 +257,8 @@ CAL-ACCESS database'
         }
         if os.path.isfile(file_path):
             with open(file_path) as f:
-                metadata['last-download'] = dateparse(f.readline()).astimezone(get_localzone())
+                last_download = dateparse(f.readline())
+            metadata['last-download'] = last_download.astimezone(self.tz)
         return metadata
 
     def set_local_metadata(self):
