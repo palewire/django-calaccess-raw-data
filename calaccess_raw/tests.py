@@ -113,6 +113,7 @@ class CalAccessTest(TestCase):
             'party_cd',
             'sup_opp_cd',
             'elec_type',
+            'reportname',
         ]
         [self._test_choices(f) for f in fields]
 
