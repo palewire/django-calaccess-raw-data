@@ -616,12 +616,17 @@ and 'H' for held."
         blank=True,
         help_text="Jurisdiction of ballot measure"
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
+        max_length=1,
         db_column='SUP_OPP_CD',
-        max_length=4,
         blank=True,
-        help_text="Support/oppose code (S/O). Legal values are 'S' for \
-support and 'O' for oppose."
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
     year_elect = fields.CharField(
         db_column='YEAR_ELECT',
@@ -1211,12 +1216,19 @@ are 'Y' or 'N'."
         blank=True,
         help_text='Type of statement'
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('s', 'SUPPORT'),
+        ('o', 'OPPOSITION'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text='Support/oppose code. Legal values are "S" for support \
-or "O" for oppose.'
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
     thru_date = fields.DateTimeField(
         null=True,
@@ -1551,12 +1563,19 @@ incumbent. Legal values are "S" for sought and "H" for held.'
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('s', 'SUPPORT'),
+        ('o', 'OPPOSITION'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text='Support/Oppose (S/O) code for the ballot measure. \
-Legal values are "S" for support or "O" for oppose.'
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
     title = fields.CharField(
         max_length=90,
@@ -2007,13 +2026,18 @@ Form 401 Schedule A)"
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('F', 'UNKNOWN'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text="Support/oppose code. Legal values are 'S' for support \
-or 'O' for oppose. Used on Form 401 Sechedule A. \
-Transaction identifier - permanent value unique to this item"
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -2911,12 +2935,18 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="Ballot measure jurisdiction"
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('F', 'UNKNOWN'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text='Support/oppose code. Legal values are "S" for support \
-or "O" for oppose. Used on Form 401.'
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
     memo_code = fields.CharField(
         max_length=1,
@@ -3283,11 +3313,23 @@ Campaign Statement), Schedule B, expenditures made'),
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('s', 'SUPPORT'),
+        ('o', 'OPPOSITION'),
+        ('H', 'UNKNOWN'),
+        ('N', 'UNKNOWN'),
+        ('X', 'UNKNOWN'),
+        ('Y', 'UNKNOWN'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text="Support/Oppose? Values: S; O (F450, F461)"
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -4195,11 +4237,17 @@ sought and "H" for held.'
         blank=True,
         help_text="This field is undocumented"
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text="This field is undocumented"
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
 
     def __str__(self):
@@ -4825,12 +4873,17 @@ sought and "H" for held'
         blank=True,
         help_text="Jurisdiction of ballot measure"
     )
+    SUPP_OPP_CODE = (
+        ('S', 'SUPPORT'),
+        ('O', 'OPPOSITION'),
+        ('', 'NONE'),
+    )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
-        help_text='Support/oppose code. Legal values are "S" for support \
-or "O" for oppose.'
+        help_text="Support or opposition code",
+        choices=SUPP_OPP_CODE
     )
     amt_attrib = fields.DecimalField(
         max_digits=16,
