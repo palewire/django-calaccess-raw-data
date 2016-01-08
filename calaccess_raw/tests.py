@@ -91,41 +91,30 @@ class CalAccessTest(TestCase):
                     ))
                     # self.assertIn(value, slug_list)
 
-    def test_form_type_choices(self):
-        self._test_choices('form_type')
-
-    def test_form_id_choices(self):
-        self._test_choices('form_id')
-
-    def test_entity_code_choices(self):
-        self._test_choices('entity_code')
-
-    def test_filer_type_choices(self):
-        self._test_choices('filer_type')
-
-    def test_filing_type_choices(self):
-        self._test_choices('filing_type')
-
-    def test_activity_type_choices(self):
-        self._test_choices('activity_type')
-
-    def test_status_choices(self):
-        self._test_choices('status')
-
-    def test_off_s_h_cd_choices(self):
-        self._test_choices('off_s_h_cd')
-
-    def test_pform_type_choices(self):
-        self._test_choices('pform_type')
-
-    def test_statement_type_choices(self):
-        self._test_choices('stmnt_type')
-
-    def test_statement_status_choices(self):
-        self._test_choices('stmnt_status')
-
-    def test_record_type_choices(self):
-        self._test_choices('rec_type')
+    def test_choices(self):
+        """
+        Verify that valid choices are available for all expected fields
+        on all models.
+        """
+        # List of fields that we expect there to be valid choices defined
+        fields = [
+            'form_type',
+            'form_id',
+            'entity_code',
+            'filer_type',
+            'filing_type',
+            'activity_type',
+            'status',
+            'off_s_h_cd',
+            'pform_type',
+            'stmnt_type',
+            'stmnt_status',
+            'rec_type',
+            'party_cd',
+            'sup_opp_cd',
+            'elec_type',
+        ]
+        [self._test_choices(f) for f in fields]
 
     def test_field_docs(self):
         """
