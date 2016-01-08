@@ -4498,11 +4498,25 @@ Populated for Senate, Assembly or Board of Equalization races.'
         null=True,
         help_text='Year of election'
     )
+    ELEC_TYPE_CHOICES = (
+        (3001, "GENERAL"),
+        (3002, "PRIMARY"),
+        (3003, "RECALL"),
+        (3004, "SPECIAL ELECTION"),
+        (3005, "OFFICEHOLDER"),
+        (3006, "SPECIAL RUNOFF"),
+        # The codes below appear in the database
+        # but are not documented in the lookupcodes table
+        (3007, "UNKNOWN"),
+        (0, 'UNKNOWN'),
+        (None, 'NONE'),
+    )
     elec_type = fields.IntegerField(
         db_column='ELEC_TYPE',
         blank=True,
         null=True,
-        verbose_name="Election type"
+        verbose_name="Election type",
+        choices=ELEC_TYPE_CHOICES,
     )
     execute_dt = fields.DateTimeField(
         db_column='EXECUTE_DT',
