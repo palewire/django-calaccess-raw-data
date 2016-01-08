@@ -585,12 +585,18 @@ list of legal values."
         help_text="Office district number for Senate, Assembly, and Board \
 of Equalization districts."
     )
+    OFF_S_H_CD_CHOICES = (
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        # The codes below appear in the database but are undocumented
+        ("", "NONE"),
+    )
     off_s_h_cd = fields.CharField(
+        max_length=1,
         db_column='OFF_S_H_CD',
-        max_length=4,
         blank=True,
-        help_text="Office sought/held code. Legal values are 'S' for sought \
-and 'H' for held."
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     non_pty_cb = fields.CharField(
         db_column='NON_PTY_CB',
@@ -1095,12 +1101,22 @@ same day."
         blank=True,
         help_text="Occupation. This field is most likely unused."
     )
+    OFF_S_H_CD_CHOICES = (
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        ("s", "SOUGHT"),
+        ("h", "HELD"),
+        # The codes below appear in the database but are undocumented
+        ("F", "UNKNOWN"),
+        ("O", "UNKNOWN"),
+        ("", "NONE"),
+    )
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text='Office Sought/Held Code. Legal values are "S" for \
-sought and "H" for held.'
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -1533,12 +1549,21 @@ short form)'),
         blank=True,
         help_text="Filer's mailing ZIP Code"
     )
+    OFF_S_H_CD_CHOICES = (
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        ("s", "SOUGHT"),
+        # The codes below appear in the database but are undocumented
+        ("F", "UNKNOWN"),
+        ("T", "UNKNOWN"),
+        ("", "NONE"),
+    )
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text='Office sought/held code. Indicates if the candidate is an \
-incumbent. Legal values are "S" for sought and "H" for held.'
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -1988,13 +2013,18 @@ list of legal values. Used on Form 401 Schedule A"
         blank=True,
         help_text="Reference to text contained in a TEXT record"
     )
+    OFF_S_H_CD_CHOICES = (
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        # The codes below appear in the database but are undocumented
+        ("", "NONE"),
+    )
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text="Office Sought/Held Code. Used on the Form 401 \
-Schedule A. Legal values are 'S' for sought and 'H' for \
-held"
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -2911,11 +2941,18 @@ individual"
         help_text="District number for the office being sought. Populated \
 for Senate, Assembly, or Board of Equalization races."
     )
+    OFF_S_H_CD_CHOICES = (
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        # The codes below appear in the database but are undocumented
+        ("", "NONE"),
+    )
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text="Office sought/held code"
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     bal_name = fields.CharField(
         max_length=200,
@@ -3224,18 +3261,23 @@ Campaign Statement), Schedule B, expenditures made'),
         help_text="Reference to text contained in a TEXT record."
     )
     OFF_S_H_CD_CHOICES = (
-        ('H', 'Office Held'),
-        ('S', 'Office Sought'),
-        ('A', 'A - Unknown'),
-        ('8', '8 - Unknown'),
-        ('O', 'O - Unknown'),
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        ("s", "SOUGHT"),
+        ("h", "HELD"),
+        # The codes below appear in the database but are undocumented
+        ('A', 'UNKNOWN'),
+        ('a', 'UNKNOWN'),
+        ('8', 'UNKNOWN'),
+        ('O', 'UNKNOWN'),
+        ("", "NONE"),
     )
     off_s_h_cd = fields.CharField(
-        choices=OFF_S_H_CD_CHOICES,
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text="Office Sought/Held Code: H=Held; S=Sought"
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -4182,12 +4224,22 @@ self-employed.'
         help_text="District number for the office being sought. Populated \
 for Senate, Assembly, or Board of Equalization races."
     )
+    OFF_S_H_CD_CHOICES = (
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        ("s", "SOUGHT"),
+        ("h", "HELD"),
+        # The codes below appear in the database but are undocumented
+        ('F', 'UNKNOWN'),
+        ('T', 'UNKNOWN'),
+        ("", "NONE"),
+    )
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text='Office Sought/Held Code. Legal values are "S" for \
-sought and "H" for held.'
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     bal_name = fields.CharField(
         max_length=200,
@@ -4848,12 +4900,18 @@ Part R: late payments received from')
         help_text="District number for the office being sought. \
 Populated for Senate, Assembly, or Board of Equalization races."
     )
+    OFF_S_H_CD_CHOICES = (
+        ("S", "SOUGHT"),
+        ("H", "HELD"),
+        # The codes below appear in the database but are undocumented
+        ("", "NONE"),
+    )
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text='Office Sought/Held Code. Legal values are "S" for \
-sought and "H" for held'
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
     )
     bal_name = fields.CharField(
         max_length=200,
