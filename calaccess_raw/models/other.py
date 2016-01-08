@@ -650,11 +650,33 @@ formed, etc.",
 level of activity",
         db_column='NYQ_DT',
     )
+    PARTY_CODE_CHOICES = (
+        (16001, 'DEMOCRATIC'),
+        (16002, 'REPUBLICAN'),
+        (16003, 'GREEN PARTY'),
+        (16004, 'REFORM PARTY'),
+        (16005, 'AMERICAN INDEPENDENT PARTY'),
+        (16006, 'PEACE AND FREEDOM'),
+        (16007, 'INDEPENDENT'),
+        (16008, 'LIBERTARIAN'),
+        (16009, 'NON PARTISAN'),
+        (16010, 'NATURAL LAW'),
+        (16011, 'UNKNOWN'),
+        (16012, 'NO PARTY PREFERENCE'),
+        (16013, 'AMERICANS ELECT'),
+        # The codes below occur in the database but are
+        # undocumented in the lookup table
+        (16020, 'UNKNOWN'),
+        (16014, 'UNKNOWN'),
+        (0, 'UNKNOWN'),
+        (None, 'NONE'),
+    )
     party_cd = fields.IntegerField(
         null=True,
         blank=True,
         help_text="Filer's political party",
         db_column='PARTY_CD',
+        choices=PARTY_CODE_CHOICES,
     )
     county_cd = fields.IntegerField(
         null=True,

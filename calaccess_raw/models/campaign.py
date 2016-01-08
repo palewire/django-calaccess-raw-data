@@ -4546,6 +4546,8 @@ Populated for Senate, Assembly or Board of Equalization races.'
         # undocumented in the lookup table
         (16020, 'UNKNOWN'),
         (16014, 'UNKNOWN'),
+        (0, 'UNKNOWN'),
+        (None, 'NONE'),
     )
     party_cd = fields.IntegerField(
         db_column='PARTY_CD',
