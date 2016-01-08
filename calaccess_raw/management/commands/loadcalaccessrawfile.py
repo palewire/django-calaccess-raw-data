@@ -52,7 +52,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         csv_path = model.objects.get_csv_path()
 
-        if settings.DATABASES.get('dat') and six.PY2:
+        if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat(model, csv_path)
 
         engine = settings.DATABASES['default']['ENGINE']
@@ -75,7 +75,7 @@ class Command(CalAccessCommand, LabelCommand):
         Takes a model and a csv_path and loads it into dat
         """
         import datpy
-        dat_source = settings.DATABASES.get('dat')
+        dat_source = settings.CALACCESS_DAT_SOURCE
         self.dat = datpy.Dat(dat_source['source'])
         dataset = self.dat.dataset(model._meta.db_table)
         try:

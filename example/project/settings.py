@@ -45,10 +45,8 @@ DATABASES = {
             'local_infile': 1,
         }
     },
-    'dat': {
-        'source': 'YOUR_LOCAL_DAT_PATH_HERE'
-    }
 }
+CALACCESS_DAT_SOURCE = ''
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
