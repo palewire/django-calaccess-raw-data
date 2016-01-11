@@ -791,6 +791,10 @@ class FilerXrefCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class FilingPeriodCd(CalAccessBaseModel):
+    """
+    An undocumented table that contains metadata for a variety
+    of filing periods.
+    """
     UNIQUE_KEY = "PERIOD_ID"
     period_id = fields.IntegerField(
         db_column='PERIOD_ID',
@@ -806,9 +810,13 @@ class FilingPeriodCd(CalAccessBaseModel):
         null=True,
         help_text="Ending date of period"
     )
+    PERIOD_TYPE_CHOICES = (
+        (1500, 'Standard period'),
+        (1501, 'Non-standard period'),
+    )
     period_type = fields.IntegerField(
         db_column='PERIOD_TYPE',
-        help_text='This field is undocumented'
+        choices=PERIOD_TYPE_CHOICES
     )
     per_grp_type = fields.IntegerField(
         db_column='PER_GRP_TYPE',
