@@ -644,8 +644,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
     )
     entity_cd = fields.CharField(

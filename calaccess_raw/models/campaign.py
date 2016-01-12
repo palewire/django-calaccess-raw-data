@@ -147,8 +147,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('BMC', 'Ballot measure committee'),
         ('CAO', 'Candidate/officeholder'),
@@ -445,8 +444,7 @@ slate mailer organization)'),
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('ATH', 'Authorizing individual'),
         ('ATR', 'Assistant treasurer'),
@@ -552,8 +550,7 @@ of legal values for this column."
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -923,8 +920,7 @@ campaign statement is attached. This field applies to the form 401."
     )
     CMTTE_TYPE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p20
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p20
         ('', 'Unknown'),
         ('C', 'Candidate or officeholder controlled committee'),
         ('P', 'Candidate or officeholder primarily formed committee'),
@@ -974,8 +970,7 @@ values are 'X' or null. Applies to the Form 461."
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('BMC', 'Ballot measure committee'),
         ('CAO', 'Candidate/officeholder'),
@@ -1184,8 +1179,7 @@ to other (OTH)"
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -1284,8 +1278,7 @@ Report Number 000 represents an original filing. 001-999 are amendments."
     )
     REPORTNAME_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p21
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p21
         ('', 'Unknown'),
         ('450', 'Form 450 (Recipient committee campaign statement, \
 short form)'),
@@ -1506,8 +1499,7 @@ for Senate, Assembly, or Board of Equalization races."
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('ATR', 'Assistant treasurer'),
         ('BNM', 'Ballot measure\'s name/title'),
@@ -1687,8 +1679,7 @@ short form)'),
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -2021,8 +2012,7 @@ and Form 401 Schedule A, A-1)"
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ("", "None"),
         ("0", "0 (Unknown)"),
         ("BNM", "Ballot measure\'s name/title"),
@@ -2205,8 +2195,7 @@ list of legal values. Used on Form 401 Schedule A"
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -2469,8 +2458,7 @@ candidate campaign statement)'),
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('0', '0 (Unknown)'),
         ('ATR', 'Assistant treasurer'),
@@ -2581,8 +2569,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('COM', "Committee"),
         ("IND", "Person (spending > $5,000)"),
@@ -2842,8 +2829,7 @@ CAL document for a description of the value of this field."
     )
     LOAN_TYPE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p36
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p36
         ("H2T", "Third party payment"),
         ("H2F", "Forgiven"),
         ("H2R", "Repay"),
@@ -3138,8 +3124,7 @@ individual"
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -3426,8 +3411,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('0', '0 (Unknown)'),
         ('COM', 'Committee'),
@@ -3571,8 +3555,7 @@ Campaign Statement), Schedule B, expenditures made'),
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -3952,8 +3935,7 @@ of a parent record.'
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('BNM', 'Ballot measure\'s name/title'),
         ('COM', 'Committee'),
@@ -4399,8 +4381,7 @@ Part 2, late contributions made')
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('0', '0 (Unknown)'),
         ('BNM', 'Ballot measure\'s name/title'),
@@ -4536,8 +4517,7 @@ self-employed.'
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -5315,8 +5295,7 @@ Part R: late payments received from')
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('CAO', 'Candidate/officerholder'),
         ('COM', 'Committee'),
@@ -5417,8 +5396,7 @@ Part R: late payments received from')
     )
     OFFICE_CODE_CHOICES = (
         # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-\
-        # cal-format.html#document/p11
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
