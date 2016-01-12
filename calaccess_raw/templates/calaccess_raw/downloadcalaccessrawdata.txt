@@ -2,7 +2,7 @@
 {% timezone "America/Los_Angeles" %}
 The CAL-ACCESS snapshot published by the California Secretary of State online was last modified on {{ last_modified|date:'N j, Y' }}, at {{ last_modified|date:'P' }} Pacific Time.{% endtimezone %}
 
-It is {{ total_size }} in size. {% if last_download %}{% if resuming %}You downloaded up to {{ cur_size }} as of {{ time_ago }}{% else %}{% if already_downloaded %}You have already downloaded this file{% else %}The last file you finished downloading was posted {{ time_ago }}{% endif %}{% endif %}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
+It is {{ total_size }} in size. {% if last_download %}{% if resuming %}You downloaded up to {{ cur_size }} as of {{ time_ago }}{% else %}{% if already_downloaded %}You have already downloaded this entire file{% else %}The last file you finished downloading was posted {{ time_ago }}{% endif %}{% endif %}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
 
 Do you want to download it to {{ download_dir }}{% if already_downloaded %} (again){% endif %} and update your local database?
 
