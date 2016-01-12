@@ -12,7 +12,7 @@ from django.conf import settings
 from clint.textui import progress
 from django.utils.six.moves import input
 from datetime import datetime
-from dateutil.parser import parse as dateparse
+from dateutil.parser import parse as datetime_parse
 from django.core.management import call_command
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
@@ -23,7 +23,7 @@ from calaccess_raw import (
 )
 from django.core.management.base import CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from tzlocal import get_localzone
+from django.utils.timezone import utc
 
 
 def download_file(url, out_path, resume=False, verbosity=1,
@@ -132,7 +132,6 @@ CAL-ACCESS database'
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(kwargs['verbosity'])
-        self.tz = get_localzone()
 
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
@@ -160,30 +159,63 @@ CAL-ACCESS database'
             self.local_metadata = self.get_local_metadata()
 
             total_size = self.download_metadata['content-length']
-            last_download = self.download_metadata['last-modified']
+            last_modified = self.download_metadata['last-modified']
+            last_download = self.local_metadata['last-download']
             cur_size = 0
 
             self.resume_download = (kwargs['resume-download'] and
-                                    os.path.exists(self.zip_path))
+                                    os.path.exists(self.zip_path)) 
+
             if self.resume_download:
                 # Make sure the downloaded chunk is newer than the
                 # last update to the remote data.
                 timestamp = os.path.getmtime(self.zip_path)
-                chunk_datetime = datetime.fromtimestamp(timestamp, self.tz)
-                self.resume_download = chunk_datetime > last_download
+                chunk_datetime = datetime.fromtimestamp(timestamp, utc)
+                self.resume_download = chunk_datetime > last_modified
                 if self.resume_download:
                     last_download = chunk_datetime
                     cur_size = os.path.getsize(self.zip_path)
 
             prompt_context = dict(
                 resuming=self.resume_download,
-                last_updated=self.download_metadata['last-modified'],
-                time_ago=naturaltime(self.download_metadata['last-modified']),
+                already_downloaded=last_modified==last_download,
+                last_modified=last_modified,
+                last_download=last_download,
+                time_ago=naturaltime(last_download),
                 total_size=size(total_size),
                 cur_size=size(cur_size),
-                last_download=last_download,
                 download_dir=self.data_dir,
             )
+
+            # self.download_metadata = self.get_download_metadata()
+            # self.local_metadata = self.get_local_metadata()
+
+            # total_size = self.download_metadata['content-length']
+            # last_download = self.download_metadata['last-modified']
+            # cur_size = 0
+
+            # self.resume_download = (kwargs['resume-download'] and
+            #                         os.path.exists(self.zip_path))
+            # if self.resume_download:
+            #     # Make sure the downloaded chunk is newer than the
+            #     # last update to the remote data.
+            #     timestamp = os.path.getmtime(self.zip_path)
+            #     chunk_datetime = datetime.fromtimestamp(timestamp, self.tz)
+            #     self.resume_download = chunk_datetime > last_download
+            #     if self.resume_download:
+            #         last_download = chunk_datetime
+            #         cur_size = os.path.getsize(self.zip_path)
+
+            # prompt_context = dict(
+            #     resuming=self.resume_download,
+            #     last_updated=self.download_metadata['last-modified'],
+            #     time_ago=naturaltime(self.download_metadata['last-modified']),
+            #     total_size=size(total_size),
+            #     cur_size=size(cur_size),
+            #     last_download=last_download,
+            #     download_dir=self.data_dir,
+            # )
+
             self.prompt = render_to_string(
                 'calaccess_raw/downloadcalaccessrawdata.txt',
                 prompt_context,
@@ -237,10 +269,9 @@ CAL-ACCESS database'
         short of actually downloading it.
         """
         request = requests.head(self.url)
-        last_modified = dateparse(request.headers['last-modified'])
         return {
             'content-length': int(request.headers['content-length']),
-            'last-modified': last_modified.astimezone(self.tz)
+            'last-modified': datetime_parse(request.headers['last-modified'])
         }
 
     def get_local_metadata(self):
@@ -257,8 +288,7 @@ CAL-ACCESS database'
         }
         if os.path.isfile(file_path):
             with open(file_path) as f:
-                last_download = dateparse(f.readline())
-            metadata['last-download'] = last_download.astimezone(self.tz)
+                metadata['last-download'] = datetime_parse(f.readline())
         return metadata
 
     def set_local_metadata(self):
