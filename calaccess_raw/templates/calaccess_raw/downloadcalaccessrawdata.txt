@@ -1,7 +1,9 @@
-The CAL-ACCESS snapshot published by the California Secretary of State online was last updated on {{ last_updated|date:'N j, Y' }} at {{ last_updated|date:'P' }}, {{ time_ago }}.
+{% load tz %}
+{% timezone "America/Los_Angeles" %}
+The CAL-ACCESS snapshot published by the California Secretary of State online was last modified on {{ last_modified|date:'N j, Y' }}, at {{ last_modified|date:'P' }} Pacific Time.{% endtimezone %}
 
-It is {{ total_size }} in size. {% if last_download %}You {% if resuming %}downloaded {{ cur_size }}{% else %} last downloaded it{% endif %} on {{ last_download|date:'N j, Y' }} at {{ last_download|date:'P' }}.{% else %}We couldn't find any sign you've downloaded it before.{% endif %}
+It is {{ total_size }} in size. {% if last_download %}{% if resuming %}You downloaded up to {{ cur_size }} as of {{ time_ago }}{% else %}{% if already_downloaded %}You have already downloaded this file{% else %}The last file you finished downloading was posted {{ time_ago }}{% endif %}{% endif %}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
 
-Do you want to download it to {{ download_dir }} and update your local database?
+Do you want to download it to {{ download_dir }}{% if already_downloaded %} (again){% endif %} and update your local database?
 
 Type 'yes' to do it, or 'no' to back out:
