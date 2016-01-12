@@ -187,35 +187,6 @@ CAL-ACCESS database'
                 download_dir=self.data_dir,
             )
 
-            # self.download_metadata = self.get_download_metadata()
-            # self.local_metadata = self.get_local_metadata()
-
-            # total_size = self.download_metadata['content-length']
-            # last_download = self.download_metadata['last-modified']
-            # cur_size = 0
-
-            # self.resume_download = (kwargs['resume-download'] and
-            #                         os.path.exists(self.zip_path))
-            # if self.resume_download:
-            #     # Make sure the downloaded chunk is newer than the
-            #     # last update to the remote data.
-            #     timestamp = os.path.getmtime(self.zip_path)
-            #     chunk_datetime = datetime.fromtimestamp(timestamp, self.tz)
-            #     self.resume_download = chunk_datetime > last_download
-            #     if self.resume_download:
-            #         last_download = chunk_datetime
-            #         cur_size = os.path.getsize(self.zip_path)
-
-            # prompt_context = dict(
-            #     resuming=self.resume_download,
-            #     last_updated=self.download_metadata['last-modified'],
-            #     time_ago=naturaltime(self.download_metadata['last-modified']),
-            #     total_size=size(total_size),
-            #     cur_size=size(cur_size),
-            #     last_download=last_download,
-            #     download_dir=self.data_dir,
-            # )
-
             self.prompt = render_to_string(
                 'calaccess_raw/downloadcalaccessrawdata.txt',
                 prompt_context,
