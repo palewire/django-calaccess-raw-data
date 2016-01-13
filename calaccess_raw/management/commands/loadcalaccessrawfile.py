@@ -22,6 +22,16 @@ custom_options = (
 imported from"
     ),
     make_option(
+        "-c",
+        "--csv",
+        action="store",
+        type="string",
+        dest="csv",
+        default=None,
+        help=("Name of the csv file where the data will be downloaded/read."
+              "(default: get it from the model)")
+    ),
+    make_option(
         "-d",
         "--database",
         action="store",
@@ -47,6 +57,7 @@ class Command(CalAccessCommand, LabelCommand):
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
         self.app_name = options["app_name"]
+        self.csv = options["csv"]
         self.database = options["database"]
         self.load(label)
 
@@ -59,7 +70,7 @@ class Command(CalAccessCommand, LabelCommand):
             self.log(" Loading %s" % model_name)
 
         model = apps.get_model(self.app_name, model_name)
-        csv_path = csv_path or model.objects.get_csv_path()
+        csv_path = csv_path or self.csv or model.objects.get_csv_path()
 
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat(model, csv_path)
