@@ -2,7 +2,7 @@
 
 bootstrap:
 	mysqladmin -h localhost -u root -p create calaccess
-	python example/manage.py makemigrations
+	python example/manage.py makemigrations calaccess_raw
 	python example/manage.py migrate
 	python example/manage.py downloadcalaccessrawdata
 	python example/manage.py collectstatic --noinput
