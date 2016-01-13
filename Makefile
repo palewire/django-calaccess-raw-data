@@ -1,7 +1,7 @@
 .PHONY: bootstrap docs load rs sh test
 
 bootstrap:
-	mysqladmin -h localhost -u root -p create calaccess
+	mysqladmin -h localhost -u root -p create calaccess_raw
 	python example/manage.py makemigrations calaccess_raw
 	python example/manage.py migrate
 	python example/manage.py downloadcalaccessrawdata
