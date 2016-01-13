@@ -177,7 +177,7 @@ class Command(CalAccessCommand, LabelCommand):
             model,
             csv_path,
             dict((f.name, f.db_column) for f in model._meta.fields),
-            using = self.database,
+            using=self.database,
         )
         c.save(silent=True)
 
