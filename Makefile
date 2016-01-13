@@ -1,9 +1,8 @@
 .PHONY: bootstrap docs load rs sh test
 
 bootstrap:
-	mysqladmin -h localhost -u root -pmysql drop calaccess
-	mysqladmin -h localhost -u root -pmysql create calaccess
-	python example/manage.py syncdb
+	mysqladmin -h localhost -u root -p create calaccess
+	python example/manage.py migrate --run-syncdb
 	python example/manage.py downloadcalaccessrawdata
 	python example/manage.py collectstatic --noinput
 	python example/manage.py runserver
