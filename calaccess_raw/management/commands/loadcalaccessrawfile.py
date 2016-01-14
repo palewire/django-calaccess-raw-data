@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 import six
+from django.apps import apps
 from csvkit import CSVKitReader
-from django.db import connection
 from django.conf import settings
 from optparse import make_option
 from postgres_copy import CopyMapping
+from django.db import connections, router
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
 
@@ -17,8 +18,25 @@ custom_options = (
         type="string",
         dest="app_name",
         default="calaccess_raw",
-        help="Name of the Django application where the model will be \
-imported from"
+        help="Name of Django app where model will be imported from"
+    ),
+    make_option(
+        "-c",
+        "--csv",
+        action="store",
+        type="string",
+        dest="csv",
+        default=None,
+        help="Path to comma-delimited file to be loaded. Defaults to one associated the model."
+    ),
+    make_option(
+        "-d",
+        "--database",
+        action="store",
+        type="string",
+        dest="database",
+        default=None,
+        help="Name of database where data will be inserted. Defaults to the 'default' database."
     ),
 )
 
@@ -35,34 +53,35 @@ class Command(CalAccessCommand, LabelCommand):
 
     def handle_label(self, label, **options):
         self.verbosity = options.get("verbosity")
-        self.app_name = options.get("app_name")
-        self.cursor = connection.cursor()
+        self.app_name = options["app_name"]
+        self.csv = options["csv"]
+        self.database = options["database"]
         self.load(label)
 
-    def load(self, model_name):
+    def load(self, model_name, csv_path=None):
         """
         Loads the source CSV for the provided model.
         """
-        from django.apps import apps
 
         if self.verbosity > 2:
             self.log(" Loading %s" % model_name)
 
         model = apps.get_model(self.app_name, model_name)
-
-        csv_path = model.objects.get_csv_path()
+        csv_path = csv_path or self.csv or model.objects.get_csv_path()
 
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat(model, csv_path)
-
-        engine = settings.DATABASES['default']['ENGINE']
+        self.database = self.database or router.db_for_write(model=model)
+        engine = settings.DATABASES[self.database]['ENGINE']
+        self.connection = connections[self.database]
+        self.cursor = self.connection.cursor()
 
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
         elif engine in (
             'django.db.backends.postgresql_psycopg2'
             'django.contrib.gis.db.backends.postgis'
-                ):
+        ):
             self.load_postgresql(model, csv_path)
         else:
             self.failure("Sorry your database engine is unsupported")
@@ -120,7 +139,7 @@ class Command(CalAccessCommand, LabelCommand):
 
         header_sql_list = []
         field_types = dict(
-            (f.db_column, f.db_type(connection))
+            (f.db_column, f.db_type(self.connection))
             for f in model._meta.fields
         )
         date_set_list = []
@@ -166,6 +185,7 @@ class Command(CalAccessCommand, LabelCommand):
             model,
             csv_path,
             dict((f.name, f.db_column) for f in model._meta.fields),
+            using=self.database,
         )
         c.save(silent=True)
 

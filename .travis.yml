@@ -13,8 +13,10 @@ python:
 env:
  - DJANGO_VERSION=1.8.8 DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.8.8 DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=1.8.8 DATABASE_SETTINGS='settings_test_multi_dbs.py'
  - DJANGO_VERSION=1.9.1 DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.9.1 DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=1.9.1 DATABASE_SETTINGS='settings_test_multi_dbs.py'
 
 install:
  - export XDG_CACHE_HOME=$HOME/.cache/

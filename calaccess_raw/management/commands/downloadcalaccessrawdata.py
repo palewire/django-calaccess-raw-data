@@ -11,7 +11,8 @@ from optparse import make_option
 from django.conf import settings
 from clint.textui import progress
 from django.utils.six.moves import input
-from dateutil.parser import parse as dateparse
+from datetime import datetime
+from dateutil.parser import parse as datetime_parse
 from django.core.management import call_command
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
@@ -20,10 +21,50 @@ from calaccess_raw import (
     get_test_download_directory,
     get_model_list
 )
+from django.core.management.base import CommandError
 from django.contrib.humanize.templatetags.humanize import naturaltime
+from django.utils.timezone import utc
+
+
+def download_file(url, out_path, resume=False, verbosity=1,
+                  output_stream=sys.stdout, expected_size=None,
+                  chunk_size=1024):
+
+    if verbosity and output_stream:
+        output_stream("Downloading ZIP file")
+
+    if expected_size is None:
+        resp = requests.head(url)
+        expected_size = int(resp.headers.get('content-length', 0))
+
+    # Prep
+    headers = dict()
+    if os.path.exists(out_path):
+        if resume:
+            cur_sz = os.path.getsize(out_path)
+            headers['Range'] = 'bytes=%d-' % cur_sz
+            expected_size = expected_size - cur_sz
+        else:
+            os.remove(out_path)
+
+    # Stream the download
+    req = requests.get(url, stream=True, headers=headers)
+    n_iters = float(expected_size) / chunk_size + 1
+    with open(out_path, 'ab') as fp:
+        for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
+                                  expected_size=n_iters):
+            fp.write(chunk)
+            fp.flush()
 
 
 custom_options = (
+    make_option(
+        "--resume-download",
+        action="store_true",
+        dest="resume-download",
+        default=False,
+        help="Resume downloading of the ZIP archive from a previous attempt"
+    ),
     make_option(
         "--skip-download",
         action="store_false",
@@ -95,26 +136,57 @@ CAL-ACCESS database'
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
             settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
-            if self.verbosity:
-                self.log("Using test data")
         else:
             self.data_dir = get_download_directory()
 
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
+
+        # Immediately check that the tsv directory exists when using test data,
+        #   so we can stop immediately.
+        if kwargs['test_data']:
+            if not os.path.exists(self.tsv_dir):
+                raise CommandError("Data tsv directory does not exist "
+                                   "at %s" % self.tsv_dir)
+            elif self.verbosity:
+                self.log("Using test data")
+
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
         if kwargs['download']:
             self.download_metadata = self.get_download_metadata()
             self.local_metadata = self.get_local_metadata()
+
+            total_size = self.download_metadata['content-length']
+            last_modified = self.download_metadata['last-modified']
+            last_download = self.local_metadata['last-download']
+            cur_size = 0
+
+            self.resume_download = (kwargs['resume-download'] and
+                                    os.path.exists(self.zip_path))
+
+            if self.resume_download:
+                # Make sure the downloaded chunk is newer than the
+                # last update to the remote data.
+                timestamp = os.path.getmtime(self.zip_path)
+                chunk_datetime = datetime.fromtimestamp(timestamp, utc)
+                self.resume_download = chunk_datetime > last_modified
+                if self.resume_download:
+                    last_download = chunk_datetime
+                    cur_size = os.path.getsize(self.zip_path)
+
             prompt_context = dict(
-                last_updated=self.download_metadata['last-modified'],
-                time_ago=naturaltime(self.download_metadata['last-modified']),
-                size=size(self.download_metadata['content-length']),
-                last_download=self.local_metadata['last-download'],
+                resuming=self.resume_download,
+                already_downloaded=last_modified == last_download,
+                last_modified=last_modified,
+                last_download=last_download,
+                time_ago=naturaltime(last_download),
+                total_size=size(total_size),
+                cur_size=size(cur_size),
                 download_dir=self.data_dir,
             )
+
             self.prompt = render_to_string(
                 'calaccess_raw/downloadcalaccessrawdata.txt',
                 prompt_context,
@@ -127,36 +199,15 @@ CAL-ACCESS database'
             options["unzip"] = False
             options["prep"] = False
             options["clear"] = False
-
-            tsv_dir = os.path.join(get_test_download_directory(), "tsv/")
-
-            # if the directory doesn't exist, abort
-            if not os.path.exists(tsv_dir):
-                self.failure("Sampled data tsv directory does not \
-exist at %s" % tsv_dir)
-                return
-
-        # Set the options
         self.set_options(*args, **options)
-        # Get to work
+
+        # Get the data
         if options['download']:
-            if options['noinput']:
-                self.download()
-            else:
-                # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
-                locale_encoding = locale.getpreferredencoding()
-                old_stdout = sys.stdout
-                sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
+            if not options['noinput'] and self.confirm_download() != 'yes':
+                self.failure("Download cancelled")
+                return
+            self.download(resume=self.resume_download)
 
-                confirm = input(self.prompt)
-
-                # Set things back to the way they were before continuing.
-                sys.stdout = old_stdout
-
-                if confirm != 'yes':
-                    self.failure("Download cancelled")
-                    return
-                self.download()
         if options['unzip']:
             self.unzip()
         if options['prep']:
@@ -170,6 +221,18 @@ exist at %s" % tsv_dir)
         if self.verbosity:
             self.success("Done!")
 
+    def confirm_download(self):
+        # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
+        locale_encoding = locale.getpreferredencoding()
+        old_stdout = sys.stdout
+        sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
+
+        confirm = input(self.prompt)
+
+        # Set things back to the way they were before continuing.
+        sys.stdout = old_stdout
+        return confirm.lower()
+
     def get_download_metadata(self):
         """
         Returns basic metadata about the current CAL-ACCESS snapshot,
@@ -179,7 +242,7 @@ exist at %s" % tsv_dir)
         request = requests.head(self.url)
         return {
             'content-length': int(request.headers['content-length']),
-            'last-modified': dateparse(request.headers['last-modified'])
+            'last-modified': datetime_parse(request.headers['last-modified'])
         }
 
     def get_local_metadata(self):
@@ -196,7 +259,7 @@ exist at %s" % tsv_dir)
         }
         if os.path.isfile(file_path):
             with open(file_path) as f:
-                metadata['last-download'] = dateparse(f.readline())
+                metadata['last-download'] = datetime_parse(f.readline())
         return metadata
 
     def set_local_metadata(self):
@@ -208,22 +271,14 @@ exist at %s" % tsv_dir)
         with open(file_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
-    def download(self):
+    def download(self, resume=False):
         """
         Download the ZIP file in pieces.
         """
-        if self.verbosity:
-            self.header("Downloading ZIP file")
 
-        r = requests.get(self.url, stream=True)
-        length = float(self.download_metadata['content-length'])
-        with open(self.zip_path, 'wb') as f:
-            for chunk in progress.bar(
-                r.iter_content(chunk_size=1024),
-                expected_size=(length/1024)+1,
-            ):
-                f.write(chunk)
-                f.flush()
+        download_file(self.url, self.zip_path, resume=resume,
+                      verbosity=self.verbosity, output_stream=self.header,
+                      expected_size=self.download_metadata['content-length'])
         self.set_local_metadata()
 
     def unzip(self):

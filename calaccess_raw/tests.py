@@ -130,7 +130,6 @@ class CalAccessTest(TestCase):
                 if f.__dict__['_verbose_name']:
                     continue
                 warnings.warn("%s.%s field undocumented" % (
-                        m().klass_name,
-                        f.name
-                    )
-                )
+                    m().klass_name,
+                    f.name
+                ))

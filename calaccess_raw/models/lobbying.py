@@ -217,8 +217,7 @@ Form 604. As filed by the lobbyist.',
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('BUS', 'BUS (Unknown)'),
         ('FRM', 'Lobbying firm'),
@@ -652,8 +651,7 @@ registration statement)'),
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('AGY', 'State agency'),
         ('EMP', 'Employer'),
@@ -752,8 +750,7 @@ to forms 625, 635, 645.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('CLI', 'CLI (Unknown)'),
         ('FRM', 'Lobbying firm'),
@@ -1128,8 +1125,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('EMP', 'Employer'),
         ('OFF', 'Officer (responsible)'),
@@ -1648,8 +1644,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('FRM', 'Lobbying firm'),
         ('IND', 'Person (Spending > $5,000'),
@@ -1847,8 +1842,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('IND', 'Person (Spending > $5,000'),
         ('OTH', 'Other'),
@@ -2068,8 +2062,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('COM', 'Committee'),
         ('CTL', 'Controlling committee'),
@@ -2672,8 +2665,7 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-\
-        # format.html#document/p9
+        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('128', '128 (Unknown)'),
         ('FRM', 'Lobbying firm'),
