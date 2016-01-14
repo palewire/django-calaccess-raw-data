@@ -51,6 +51,7 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
                             A directory to add to the Python path, e.g.
                             "/home/djangoprojects/myproject".
       --traceback           Raise on exception
+      --resume-download     Resume a previously interrupted download of the zip file
       --skip-download       Skip downloading of the ZIP archive
       --skip-unzip          Skip unzipping of the archive
       --skip-prep           Skip prepping of the unzipped archive
