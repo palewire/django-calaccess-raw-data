@@ -36,7 +36,7 @@ custom_options = (
         type="string",
         dest="database",
         default=None,
-        help="Name of database where data will be inserted. Defaults to the 'default' database."
+        help="Alias of database where data will be inserted. Defaults to the 'default' database."
     ),
 )
 
