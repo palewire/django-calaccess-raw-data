@@ -27,7 +27,7 @@ custom_options = (
         type="string",
         dest="csv",
         default=None,
-        help="Path to comma-delimited file to be loaded. Defaults to one associated the model."
+        help="Path to comma-delimited file to be loaded. Defaults to one associated with model."
     ),
     make_option(
         "-d",
