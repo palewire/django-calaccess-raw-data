@@ -1,11 +1,11 @@
 from __future__ import unicode_literals
 import six
-from csvkit import CSVKitReader
 from django.apps import apps
-from django.db import connections, router
+from csvkit import CSVKitReader
 from django.conf import settings
 from optparse import make_option
 from postgres_copy import CopyMapping
+from django.db import connections, router
 from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import LabelCommand, CommandError
 
@@ -18,8 +18,7 @@ custom_options = (
         type="string",
         dest="app_name",
         default="calaccess_raw",
-        help="Name of the Django application where the model will be \
-imported from"
+        help="Name of Django app where model will be imported from"
     ),
     make_option(
         "-c",
@@ -28,8 +27,7 @@ imported from"
         type="string",
         dest="csv",
         default=None,
-        help=("Name of the csv file where the data will be downloaded/read."
-              "(default: get it from the model)")
+        help="Path to comma-delimited file to be loaded. Defaults to one associated the model."
     ),
     make_option(
         "-d",
@@ -38,8 +36,7 @@ imported from"
         type="string",
         dest="database",
         default=None,
-        help=("Name of the database where the data will be stored."
-              "(default: get it from the model)")
+        help="Name of database where data will be inserted. Defaults to the 'default' database."
     ),
 )
 
