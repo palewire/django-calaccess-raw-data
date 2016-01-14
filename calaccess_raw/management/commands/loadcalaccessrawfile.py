@@ -72,7 +72,12 @@ class Command(CalAccessCommand, LabelCommand):
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat(model, csv_path)
         self.database = self.database or router.db_for_write(model=model)
-        engine = settings.DATABASES[self.database]['ENGINE']
+
+        try:
+            engine = settings.DATABASES[self.database]['ENGINE']
+        except KeyError:
+            raise TypeError("{} not configured in DATABASES settings.".format(self.database))
+
         self.connection = connections[self.database]
         self.cursor = self.connection.cursor()
 
