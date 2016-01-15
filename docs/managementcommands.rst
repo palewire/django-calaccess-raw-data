@@ -59,6 +59,9 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
       --skip-load           Skip loading up the raw data files
       --keep-files          Keep downloaded, unzipped and cleaned raw data files
       --noinput             Download the ZIP archive without asking permission
+      --d, --database       Alias of database where data will be inserted, if DATABASES 
+                            in settings is configured for multiple databases. Defaults to 
+                            the 'default' database.
       --version             show program's version number and exit
       -h, --help            show this help message and exit
 
@@ -86,6 +89,9 @@ Load a cleaned CAL-ACCESS file for a model into the database
                             A directory to add to the Python path, e.g.
                             "/home/djangoprojects/myproject".
       --traceback           Raise on exception
+      --d, --database       Alias of database where data will be inserted, if DATABASES 
+                            in settings is configured for multiple databases. Defaults to 
+                            the 'default' database.
       --version             show program's version number and exit
       -h, --help            show this help message and exit
 

@@ -121,6 +121,15 @@ custom_options = (
         default=False,
         help="Use sampled test data (skips download, unzip, prep, clear)"
     ),
+    make_option(
+        "-d",
+        "--database",
+        action="store",
+        type="string",
+        dest="database",
+        default=None,
+        help=("Alias of database where data will be inserted. Defaults to the 'default' database.")
+    ),
 )
 
 
@@ -132,6 +141,7 @@ class Command(CalAccessCommand):
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(kwargs['verbosity'])
+        self.database = kwargs['database']
 
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
@@ -358,6 +368,9 @@ class Command(CalAccessCommand):
         """
         Loads the cleaned up csv files into the database
         """
+
+        print self.database
+
         if self.verbosity:
             self.header("Loading data files")
 
@@ -372,6 +385,7 @@ class Command(CalAccessCommand):
                 "loadcalaccessrawfile",
                 model.__name__,
                 verbosity=self.verbosity,
+                database=self.database,
             )
             if clear:
                 os.remove(csv_path)
