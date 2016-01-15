@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+import logging
 import warnings
 from django.conf import settings
 from django.test import TestCase
@@ -6,6 +7,7 @@ from django.db.models import Count
 from calaccess_raw import get_model_list
 from django.test.utils import override_settings
 from django.core.management import call_command
+logger = logging.getLogger(__name__)
 
 
 class CalAccessTest(TestCase):
@@ -22,6 +24,7 @@ class CalAccessTest(TestCase):
         )
         if settings.DATABASES.get("alt", None):
             kwargs['database'] = 'alt'
+            logger.debug("Loading into 'alt' database")
         call_command("downloadcalaccessrawdata", **kwargs)
 
     @override_settings(BASE_DIR='example/')
