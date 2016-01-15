@@ -128,7 +128,7 @@ verifycalaccessrawfile
 
 Compare the number of records in a model against its source CSV
 
-.. code-block: bash
+.. code-block:: bash
 
     Usage: example/manage.py verifycalaccessrawfile [options] <model name>
 
