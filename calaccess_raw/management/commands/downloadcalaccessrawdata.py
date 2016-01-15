@@ -87,13 +87,6 @@ custom_options = (
         help="Skip prepping of the unzipped archive"
     ),
     make_option(
-        "--skip-clear",
-        action="store_false",
-        dest="clear",
-        default=True,
-        help="Skip clearing out ZIP archive and extra files"
-    ),
-    make_option(
         "--skip-clean",
         action="store_false",
         dest="clean",
@@ -106,6 +99,13 @@ custom_options = (
         dest="load",
         default=True,
         help="Skip loading up the raw data files"
+    ),
+    make_option(
+        "--keep-files",
+        action="store_true",
+        dest="keep_files",
+        default=False,
+        help="Skip delete files"
     ),
     make_option(
         "--noinput",
@@ -121,17 +121,27 @@ custom_options = (
         default=False,
         help="Use sampled test data (skips download, unzip, prep, clear)"
     ),
+    make_option(
+        "-d",
+        "--database",
+        action="store",
+        type="string",
+        dest="database",
+        default=None,
+        help=("Alias of database where data will be inserted. Defaults to the 'default' database.")
+    ),
 )
 
 
 class Command(CalAccessCommand):
-    help = 'Download, unzip, clean and load the latest snapshot of the \
-CAL-ACCESS database'
+    help = ("Download, unzip, clean and load the latest snapshot of the "
+            "CAL-ACCESS database")
     option_list = CalAccessCommand.option_list + custom_options
 
     def set_options(self, *args, **kwargs):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(kwargs['verbosity'])
+        self.database = kwargs['database']
 
         if kwargs['test_data']:
             self.data_dir = get_test_download_directory()
@@ -141,6 +151,8 @@ CAL-ACCESS database'
 
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
+        self.zip_metadata_path = os.path.join(self.data_dir,
+                                              '.lastdownload')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         # Immediately check that the tsv directory exists when using test data,
@@ -198,6 +210,7 @@ CAL-ACCESS database'
             options["download"] = False
             options["unzip"] = False
             options["prep"] = False
+            options["keep_files"] = True
             options["clear"] = False
         self.set_options(*args, **options)
 
@@ -209,15 +222,14 @@ CAL-ACCESS database'
             self.download(resume=self.resume_download)
 
         if options['unzip']:
-            self.unzip()
+            self.unzip(clear=not options['keep_files'])
         if options['prep']:
-            self.prep()
-        if options['clear']:
-            self.clear()
+            self.prep(clear=not options['keep_files'])
         if options['clean']:
-            self.clean()
+            self.clean(clear=not options['keep_files'])
         if options['load']:
-            self.load()
+            self.load(clear=not options['keep_files'])
+
         if self.verbosity:
             self.success("Done!")
 
@@ -253,12 +265,11 @@ CAL-ACCESS database'
 
         If no file exists it returns the dictionary with null values.
         """
-        file_path = os.path.join(self.data_dir, 'download_metadata.txt')
         metadata = {
             'last-download': None
         }
-        if os.path.isfile(file_path):
-            with open(file_path) as f:
+        if os.path.isfile(self.zip_metadata_path):
+            with open(self.zip_metadata_path) as f:
                 metadata['last-download'] = datetime_parse(f.readline())
         return metadata
 
@@ -267,21 +278,19 @@ CAL-ACCESS database'
         Creates a file that stories the date and time vintage of the last
         CAL-ACCESS archive download.
         """
-        file_path = os.path.join(self.data_dir, 'download_metadata.txt')
-        with open(file_path, 'w') as f:
+        with open(self.zip_metadata_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
     def download(self, resume=False):
         """
         Download the ZIP file in pieces.
         """
-
         download_file(self.url, self.zip_path, resume=resume,
                       verbosity=self.verbosity, output_stream=self.header,
                       expected_size=self.download_metadata['content-length'])
         self.set_local_metadata()
 
-    def unzip(self):
+    def unzip(self, clear=False):
         """
         Unzip the snapshot file.
         """
@@ -299,7 +308,14 @@ CAL-ACCESS database'
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-    def prep(self):
+        if clear:
+            # TODO: We intentionally leave behind zip_metadata_path,
+            # to keep track of the last download. This cycle should be
+            # kept in the database; when it is, we should delete
+            # that file. (note: cron may be enough?)
+            os.remove(self.zip_path)
+
+    def prep(self, clear=False):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
@@ -324,16 +340,10 @@ CAL-ACCESS database'
             self.tsv_dir,
         )
 
-    def clear(self):
-        """
-        Delete ZIP archive and files we don't need.
-        """
-        if self.verbosity:
-            self.log(" Clearing out unneeded files")
-        shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
-        os.remove(self.zip_path)
+        if clear:
+            shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-    def clean(self):
+    def clean(self, clear=False):
         """
         Clean up the raw data files from the state so they are
         ready to get loaded into the database.
@@ -351,20 +361,29 @@ CAL-ACCESS database'
                 name,
                 verbosity=self.verbosity
             )
+            if clear:
+                os.remove(os.path.join(self.tsv_dir, name))
 
-    def load(self):
+    def load(self, clear=False):
         """
         Loads the cleaned up csv files into the database
         """
+
         if self.verbosity:
             self.header("Loading data files")
 
-        model_list = get_model_list()
+        # This check enables resuming partially completed load with clear
+        csv_list = [(model, model.objects.get_csv_path())
+                    for model in get_model_list()
+                    if os.path.exists(model.objects.get_csv_path())]
         if self.verbosity:
-            model_list = progress.bar(model_list)
-        for model in model_list:
+            csv_list = progress.bar(csv_list)
+        for model, csv_path in csv_list:
             call_command(
                 "loadcalaccessrawfile",
                 model.__name__,
                 verbosity=self.verbosity,
+                database=self.database,
             )
+            if clear:
+                os.remove(csv_path)

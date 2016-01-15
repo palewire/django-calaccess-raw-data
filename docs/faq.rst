@@ -29,8 +29,8 @@ According to `the official state documentation <http://www.documentcloud.org/doc
 started being filed in CAL-ACCESS on Jan. 1, 2000. Historical analysis of the database,
 should start from that date, the documentation says.
 
-Who is the California Civic Data Coalition?
--------------------------------------------
+What is the California Civic Data Coalition?
+--------------------------------------------
 
 The California Civic Data Coalition is a loosely coupled team of journalists from the Los Angeles Times Data Desk,
 the San Francisco Chronicle, The Center for Investigative Reporting and Stanford's Computational Journalism Lab.
