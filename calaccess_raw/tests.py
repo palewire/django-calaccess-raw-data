@@ -120,6 +120,7 @@ class CalAccessTest(TestCase):
             'sup_opp_cd',
             'elec_type',
             'reportname',
+            'expn_code',
         ]
         [self._test_choices(f) for f in fields]
 
