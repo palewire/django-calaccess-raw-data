@@ -4158,7 +4158,7 @@ of a parent record.'
         ("WEB", "information technology costs (internet, e-mail)"),
         # Other codes observed in the table that are not documented by the state
         ("", "Unknown"),
-        (*"", "Unknown"),
+        ("*", "Unknown"),
         ("AIR", "UnknownUnknown"),
         ("BUS", "Unknown"),
         ("C", "Unknown"),
