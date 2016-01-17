@@ -533,7 +533,7 @@ in the relationship',
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
     This is an undocumented model that contains a small number
-    of codes and definitions. 
+    of codes and definitions.
     """
     UNIQUE_KEY = "STATUS_TYPE"
     STATUS_TYPE_CHOICES = (
@@ -1137,6 +1137,9 @@ class LegislativeSessionsCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
+    """
+    This is an undocumented table.
+    """
     UNIQUE_KEY = (
         "FILER_ID",
         "CHANGE_NO"
@@ -1165,7 +1168,7 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     )
     filer_type = fields.IntegerField(
         db_column='FILER_TYPE',
-        help_text="The type of filer"
+        help_text="This field is undocumented"
     )
     correction_flag = fields.CharField(
         max_length=200,
@@ -1194,55 +1197,65 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     )
     filer_full_name = fields.CharField(
         max_length=200,
-        db_column="FILER_FULL_NAME",
-        help_text="Filer full name"
+        db_column="FILER_FULL_NAME"
     )
     filer_city = fields.CharField(
         max_length=200,
-        db_column="FILER_CITY",
-        help_text="Filer city"
+        db_column="FILER_CITY"
     )
     filer_st = fields.CharField(
         max_length=200,
         db_column="FILER_ST",
-        help_text="Filer state"
+        verbose_name="Filer state"
     )
     filer_zip = fields.IntegerField(
         db_column="FILER_ZIP",
         null=True,
-        help_text="Filer ZIP Code"
+        verbose_name="Filer ZIP Code"
     )
     filer_phone = fields.CharField(
         db_column="FILER_PHONE",
         null=True,
         max_length=12,
-        help_text="Filer phone number"
+        verbose_name="Filer phone number"
+    )
+    ENTITY_TYPE_CHOICES = (
+        (0, 'Unknown'),
+        (1, 'Unknown'),
+        (2, 'Unknown'),
+        (3, 'Unknown'),
+        (4, 'Unknown'),
+        (10, 'Unknown'),
+        (16, 'Unknown'),
+        (20, 'Unknown'),
+        (None, 'Unknown'),
     )
     entity_type = fields.IntegerField(
         db_column="ENTITY_TYPE",
         null=True,
-        help_text="Type of entity"
+        choices=ENTITY_TYPE_CHOICES,
+        help_text="This field is undocumented"
     )
     entity_name = fields.CharField(
         max_length=500,
         db_column="ENTITY_NAME",
-        help_text="Entity name"
+        help_text="This field is undocumented"
     )
     entity_city = fields.CharField(
         max_length=500,
         db_column="ENTITY_CITY",
-        help_text="Entity city"
+        help_text="This field is undocumented"
     )
     entity_st = fields.CharField(
         max_length=500,
         db_column="ENTITY_ST",
-        help_text="Entity state"
+        help_text="This field is undocumented"
     )
     entity_zip = fields.CharField(
         db_column="ENTITY_ZIP",
         blank=True,
         max_length=10,
-        help_text="Entity ZIP Code"
+        help_text="This field is undocumented"
     )
     entity_phone = fields.CharField(
         db_column="ENTITY_PHONE",
@@ -1263,7 +1276,8 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     effect_dt = fields.DateField(
         db_column="EFFECT_DT",
         null=True,
-        help_text="Effective date"
+        verbose_name="Effective date",
+        help_text="This field is undocumented"
     )
 
     class Meta:
