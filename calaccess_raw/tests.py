@@ -121,6 +121,7 @@ class CalAccessTest(TestCase):
             'elec_type',
             'reportname',
             'expn_code',
+            'status_type',
         ]
         [self._test_choices(f) for f in fields]
 

@@ -532,17 +532,30 @@ in the relationship',
 @python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This is an undocumented model that contains a small number
+    of codes and definitions. 
     """
     UNIQUE_KEY = "STATUS_TYPE"
+    STATUS_TYPE_CHOICES = (
+        ("A", "ACTIVE"),
+        ("N", "INACTIVE"),
+        ("P", "PENDING"),
+        ("R", "REVOKED"),
+        ("S", "SUSPENDED"),
+        ("T", "TERMINATED"),
+        ("W", "WITHDRAWN"),
+        ("Y", "ACTIVE"),
+    )
     status_type = fields.CharField(
         max_length=11,
         db_column='STATUS_TYPE',
-        help_text='This field is undocumented'
+        help_text='This field is undocumented',
+        choices=STATUS_TYPE_CHOICES
     )
     status_desc = fields.CharField(
         max_length=11,
         db_column='STATUS_DESC',
+        verbose_name="status description",
         help_text='This field is undocumented'
     )
 
