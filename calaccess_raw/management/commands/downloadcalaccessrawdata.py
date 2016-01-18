@@ -144,7 +144,7 @@ class Command(CalAccessCommand):
 
     def handle(self, **options):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
-        self.verbosity = options.get("verbosity")
+        self.verbosity = int(options.get("verbosity"))
         self.database = options["database"]
 
         if options['test_data']:
