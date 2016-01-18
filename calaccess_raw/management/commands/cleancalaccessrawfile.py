@@ -5,15 +5,17 @@ from io import StringIO
 from django.utils import six
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
-from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
 
 
-class Command(CalAccessCommand, LabelCommand):
+class Command(CalAccessCommand):
     help = 'Clean a source CAL-ACCESS file and reformat it as a CSV'
-    args = '<file name>'
 
-    def handle_label(self, label, **options):
+    def add_arguments(self, parser):
+
+        parser.add_argument('file_name')
+
+    def handle(self, **options):
         # Set options
         self.verbosity = int(options.get("verbosity"))
         self.data_dir = get_download_directory()
@@ -21,7 +23,7 @@ class Command(CalAccessCommand, LabelCommand):
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         self.log_dir = os.path.join(self.data_dir, "log/")
         # Do it
-        self.clean(label)
+        self.clean(options['file_name'])
 
     def clean(self, name):
         """
