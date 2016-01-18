@@ -139,7 +139,8 @@ class Command(CalAccessCommand):
             "--database",
             dest="database",
             default=None,
-            help="Alias of database where data will be inserted. Defaults to the 'default' database."
+            help="Alias of database where data will be inserted. Defaults to the "
+                 "'default' in DATABASE settings."
         )
 
     def handle(self, **options):
@@ -167,7 +168,7 @@ class Command(CalAccessCommand):
         self.zip_metadata_path = os.path.join(self.data_dir,
                                               '.lastdownload')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-            
+
         # Immediately check that the tsv directory exists when using test data,
         #   so we can stop immediately.
         if options['test_data']:
@@ -179,7 +180,7 @@ class Command(CalAccessCommand):
 
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
-        
+
         if options['download']:
             self.download_metadata = self.get_download_metadata()
             self.local_metadata = self.get_local_metadata()

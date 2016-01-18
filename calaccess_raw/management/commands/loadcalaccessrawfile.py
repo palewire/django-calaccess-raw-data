@@ -25,7 +25,7 @@ class Command(CalAccessCommand):
         )
 
         parser.add_argument(
-            "--c", 
+            "--c",
             "--csv",
             dest='csv',
             default=None,
@@ -33,11 +33,12 @@ class Command(CalAccessCommand):
         )
 
         parser.add_argument(
-            "--d", 
+            "--d",
             "--database",
             dest="database",
             default=None,
-            help="Alias of database where data will be inserted. Defaults to the 'default' database."
+            help="Alias of database where data will be inserted. Defaults to the "
+                 "'default' in DATABASE settings."
         )
 
     # Trick for reformating date strings in source data so that they can
