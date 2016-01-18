@@ -1333,11 +1333,40 @@ through date."
         help_text="Sponsored Committee (yes/no) checkbox. Legal values \
 are 'Y' or 'N'."
     )
+    STMT_TYPE_CHOICES = (
+        ("", "Unknown"),
+        ("*", "Unknown"),
+        ("1", "Unknown"),
+        ("2", "Unknown"),
+        ("CA", "Unknown"),
+        ("MD", "Unknown"),
+        ("NA", "Unknown"),
+        ("pe", "Unknown"),
+        ("PE", "Unknown"),
+        ("PR", "Unknown"),
+        ("QS", "Unknown"),
+        ("qt", "Unknown"),
+        ("QT", "Unknown"),
+        ("S", "Unknown"),
+        ("S1", "Unknown"),
+        ("S2", "Unknown"),
+        ("sa", "Unknown"),
+        ("SA", "Unknown"),
+        ("se", "Unknown"),
+        ("SE", "Unknown"),
+        ("sy", "Unknown"),
+        ("SY", "Unknown"),
+        ("ts", "Unknown"),
+        ("TS", "Unknown"),
+        ("x", "Unknown"),
+        ("YE", "Unknown"),
+    )
     stmt_type = fields.CharField(
         max_length=2,
         db_column='STMT_TYPE',
         blank=True,
-        help_text='Type of statement'
+        help_text='Type of statement',
+        choices=STMT_TYPE_CHOICES
     )
     SUPP_OPP_CODE = (
         ('S', 'SUPPORT'),
