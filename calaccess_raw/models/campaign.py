@@ -5047,9 +5047,19 @@ original filing and 1 to 999 amendments.",
         null=True,
         help_text='date this report is filed'
     )
+    STMT_TYPE_CHOICES = (
+        (10001, 'ORIGINAL/INITIAL'),
+        (10002, 'AMENDMENT'),
+        (10003, 'TERMINATION'),
+        (10004, 'REDESIGNATE THE ACCOUNT FOR FUTURE ELECTION TO THE SAME OFFICE'),
+        (10005, 'LOG'),
+        (10006, 'LOG/AMENDMENT'),
+        (10007, 'AS FILED BY COMMITTEE')
+    )
     stmt_type = fields.IntegerField(
         db_column='STMT_TYPE',
-        help_text="Type of statement"
+        verbose_name="statement type",
+        choices=STMT_TYPE_CHOICES
     )
     from_date = fields.CharField(
         db_column='FROM_DATE',
