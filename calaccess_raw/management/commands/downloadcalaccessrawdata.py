@@ -146,13 +146,15 @@ class Command(CalAccessCommand):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(options.get("verbosity"))
         self.database = options["database"]
+        self.keep_files = options["keep_files"]
 
         if options['test_data']:
             # disable the steps that don't apply to test data
             options["download"] = False
             options["unzip"] = False
             options["prep"] = False
-            options["keep_files"] = True
+            # always keep files when running test data
+            self.keep_files = True
 
         if options['test_data']:
             self.data_dir = get_test_download_directory()
@@ -220,17 +222,16 @@ class Command(CalAccessCommand):
             if not options['noinput'] and self.confirm_download() != 'yes':
                 self.failure("Download cancelled")
                 return
-            self.download(resume=self.resume_download)
+            self.download()
 
-        # wtf is up with the clear options?
         if options['unzip']:
-            self.unzip(clear=not options['keep_files'])
+            self.unzip()
         if options['prep']:
-            self.prep(clear=not options['keep_files'])
+            self.prep()
         if options['clean']:
-            self.clean(clear=not options['keep_files'])
+            self.clean()
         if options['load']:
-            self.load(clear=not options['keep_files'])
+            self.load()
 
         if self.verbosity:
             self.success("Done!")
@@ -283,16 +284,16 @@ class Command(CalAccessCommand):
         with open(self.zip_metadata_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
-    def download(self, resume=False):
+    def download(self):
         """
         Download the ZIP file in pieces.
         """
-        download_file(self.url, self.zip_path, resume=resume,
+        download_file(self.url, self.zip_path, resume=self.resume_download,
                       verbosity=self.verbosity, output_stream=self.header,
                       expected_size=self.download_metadata['content-length'])
         self.set_local_metadata()
 
-    def unzip(self, clear=False):
+    def unzip(self):
         """
         Unzip the snapshot file.
         """
@@ -310,14 +311,14 @@ class Command(CalAccessCommand):
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-        if clear:
+        if not self.keep_files:
             # TODO: We intentionally leave behind zip_metadata_path,
             # to keep track of the last download. This cycle should be
             # kept in the database; when it is, we should delete
             # that file. (note: cron may be enough?)
             os.remove(self.zip_path)
 
-    def prep(self, clear=False):
+    def prep(self):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
@@ -342,10 +343,10 @@ class Command(CalAccessCommand):
             self.tsv_dir,
         )
 
-        if clear:
+        if not self.keep_files:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-    def clean(self, clear=False):
+    def clean(self):
         """
         Clean up the raw data files from the state so they are
         ready to get loaded into the database.
@@ -363,10 +364,10 @@ class Command(CalAccessCommand):
                 name,
                 verbosity=self.verbosity
             )
-            if clear:
+            if not self.keep_files:
                 os.remove(os.path.join(self.tsv_dir, name))
 
-    def load(self, clear=False):
+    def load(self):
         """
         Loads the cleaned up csv files into the database
         """
@@ -387,5 +388,5 @@ class Command(CalAccessCommand):
                 verbosity=self.verbosity,
                 database=self.database,
             )
-            if clear:
+            if not self.keep_files:
                 os.remove(csv_path)
