@@ -25,37 +25,6 @@ from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.utils.timezone import utc
 
 
-def download_file(url, out_path, resume=False, verbosity=1,
-                  output_stream=sys.stdout, expected_size=None,
-                  chunk_size=1024):
-
-    if verbosity and output_stream:
-        output_stream("Downloading ZIP file")
-
-    if expected_size is None:
-        resp = requests.head(url)
-        expected_size = int(resp.headers.get('content-length', 0))
-
-    # Prep
-    headers = dict()
-    if os.path.exists(out_path):
-        if resume:
-            cur_sz = os.path.getsize(out_path)
-            headers['Range'] = 'bytes=%d-' % cur_sz
-            expected_size = expected_size - cur_sz
-        else:
-            os.remove(out_path)
-
-    # Stream the download
-    req = requests.get(url, stream=True, headers=headers)
-    n_iters = float(expected_size) / chunk_size + 1
-    with open(out_path, 'ab') as fp:
-        for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
-                                  expected_size=n_iters):
-            fp.write(chunk)
-            fp.flush()
-
-
 class Command(CalAccessCommand):
     help = ("Download, unzip, clean and load the latest snapshot of the "
             "CAL-ACCESS database")
@@ -148,6 +117,7 @@ class Command(CalAccessCommand):
     def handle(self, **options):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
         self.verbosity = int(options.get("verbosity"))
+        self.app_name = options["app_name"]
         self.database = options["database"]
         self.keep_files = options["keep_files"]
 
@@ -291,9 +261,36 @@ class Command(CalAccessCommand):
         """
         Download the ZIP file in pieces.
         """
-        download_file(self.url, self.zip_path, resume=self.resume_download,
-                      verbosity=self.verbosity, output_stream=self.header,
-                      expected_size=self.download_metadata['content-length'])
+
+        if self.verbosity:
+            self.header("Downloading ZIP file")
+
+        expected_size = self.download_metadata['content-length']
+
+        if expected_size is None:
+            resp = requests.head(self.url)
+            expected_size = int(resp.headers.get('content-length', 0))
+
+        # Prep
+        headers = dict()
+        if os.path.exists(self.zip_path):
+            if self.resume_download:
+                cur_sz = os.path.getsize(self.zip_path)
+                headers['Range'] = 'bytes=%d-' % cur_sz
+                expected_size = expected_size - cur_sz
+            else:
+                os.remove(self.zip_path)
+
+        # Stream the download
+        chunk_size=1024
+        req = requests.get(self.url, stream=True, headers=headers)
+        n_iters = float(expected_size) / chunk_size + 1
+        with open(self.zip_path, 'ab') as fp:
+            for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
+                                      expected_size=n_iters):
+                fp.write(chunk)
+                fp.flush()
+
         self.set_local_metadata()
 
     def unzip(self):
@@ -302,6 +299,7 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             self.log(" Unzipping archive")
+            
         with zipfile.ZipFile(self.zip_path) as zf:
             for member in zf.infolist():
                 words = member.filename.split('/')
@@ -390,6 +388,7 @@ class Command(CalAccessCommand):
                 model.__name__,
                 verbosity=self.verbosity,
                 database=self.database,
+                app_name=self.app_name,
             )
             if not self.keep_files:
                 os.remove(csv_path)

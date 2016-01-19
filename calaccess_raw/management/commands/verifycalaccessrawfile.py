@@ -6,7 +6,6 @@ from calaccess_raw.management.commands import CalAccessCommand
 class Command(CalAccessCommand):
     help = 'Compare the number of records in a model against its source CSV'
 
-
     def add_arguments(self, parser):
 
         super(Command, self).add_arguments(parser)
@@ -17,8 +16,7 @@ class Command(CalAccessCommand):
         self.log(" Verifying %s" % options['model_name'])
 
         # Get the model
-        app = apps.get_app_config("calaccess_raw")
-        model = app.get_model(options['model_name'])
+        model = apps.get_model(options['app_name'], options['model_name'])
 
         # Get the db total
         cnt = model.objects.count()

@@ -19,14 +19,6 @@ class Command(CalAccessCommand):
         parser.add_argument('model_name')
 
         parser.add_argument(
-            "-a",
-            "--app-name",
-            dest="app_name",
-            default="calaccess_raw",
-            help="Name of Django app where model will be imported from"
-        )
-
-        parser.add_argument(
             "--c",
             "--csv",
             dest='csv',
