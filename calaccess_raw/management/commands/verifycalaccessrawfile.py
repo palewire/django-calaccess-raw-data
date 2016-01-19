@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from django.db.models.loading import get_model
+from django.apps import apps
 from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
 
@@ -12,7 +12,8 @@ class Command(CalAccessCommand, LabelCommand):
         self.log(" Verifying %s" % label)
 
         # Get the model
-        model = get_model("calaccess_raw", label)
+        app = apps.get_app_config("calaccess_raw")
+        model = app.get_model(label)
 
         # Get the db total
         cnt = model.objects.count()
