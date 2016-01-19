@@ -13,6 +13,8 @@ class Command(CalAccessCommand):
 
     def add_arguments(self, parser):
 
+        super(Command, self).add_arguments(parser)
+
         parser.add_argument('file_name')
 
     def handle(self, **options):

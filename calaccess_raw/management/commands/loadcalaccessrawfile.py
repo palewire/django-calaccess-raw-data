@@ -14,6 +14,8 @@ class Command(CalAccessCommand):
 
     def add_arguments(self, parser):
 
+        super(Command, self).add_arguments(parser)
+
         parser.add_argument('model_name')
 
         parser.add_argument(
