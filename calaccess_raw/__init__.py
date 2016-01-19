@@ -1,6 +1,4 @@
 import os
-import warnings
-warnings.simplefilter('ignore', DeprecationWarning)  # noqa
 from django.conf import settings
 default_app_config = 'calaccess_raw.apps.CalAccessRawConfig'
 
