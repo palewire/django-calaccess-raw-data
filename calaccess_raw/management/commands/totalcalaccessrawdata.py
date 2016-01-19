@@ -8,7 +8,7 @@ class Command(CalAccessCommand):
     help = "Print out the total count tables and rows in the CAL-ACCESS \
 raw database"
 
-    def handle(self, *args, **kwargs):
+    def handle(self, **options):
         self.header("Totaling CAL-ACCESS tables and rows")
         model_list = get_model_list()
         self.log(" %s total tables" % len(model_list))

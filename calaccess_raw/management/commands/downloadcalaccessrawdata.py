@@ -7,7 +7,6 @@ import shutil
 import zipfile
 import requests
 from hurry.filesize import size
-from optparse import make_option
 from django.conf import settings
 from clint.textui import progress
 from django.utils.six.moves import input
@@ -57,93 +56,110 @@ def download_file(url, out_path, resume=False, verbosity=1,
             fp.flush()
 
 
-custom_options = (
-    make_option(
-        "--resume-download",
-        action="store_true",
-        dest="resume-download",
-        default=False,
-        help="Resume downloading of the ZIP archive from a previous attempt"
-    ),
-    make_option(
-        "--skip-download",
-        action="store_false",
-        dest="download",
-        default=True,
-        help="Skip downloading of the ZIP archive"
-    ),
-    make_option(
-        "--skip-unzip",
-        action="store_false",
-        dest="unzip",
-        default=True,
-        help="Skip unzipping of the archive"
-    ),
-    make_option(
-        "--skip-prep",
-        action="store_false",
-        dest="prep",
-        default=True,
-        help="Skip prepping of the unzipped archive"
-    ),
-    make_option(
-        "--skip-clean",
-        action="store_false",
-        dest="clean",
-        default=True,
-        help="Skip cleaning up the raw data files"
-    ),
-    make_option(
-        "--skip-load",
-        action="store_false",
-        dest="load",
-        default=True,
-        help="Skip loading up the raw data files"
-    ),
-    make_option(
-        "--keep-files",
-        action="store_true",
-        dest="keep_files",
-        default=False,
-        help="Skip delete files"
-    ),
-    make_option(
-        "--noinput",
-        action="store_true",
-        dest="noinput",
-        default=False,
-        help="Download the ZIP archive without asking permission"
-    ),
-    make_option(
-        "--use-test-data",
-        action="store_true",
-        dest="test_data",
-        default=False,
-        help="Use sampled test data (skips download, unzip, prep, clear)"
-    ),
-    make_option(
-        "-d",
-        "--database",
-        action="store",
-        type="string",
-        dest="database",
-        default=None,
-        help=("Alias of database where data will be inserted. Defaults to the 'default' database.")
-    ),
-)
-
-
 class Command(CalAccessCommand):
     help = ("Download, unzip, clean and load the latest snapshot of the "
             "CAL-ACCESS database")
-    option_list = CalAccessCommand.option_list + custom_options
 
-    def set_options(self, *args, **kwargs):
+    def add_arguments(self, parser):
+
+        super(Command, self).add_arguments(parser)
+
+        parser.add_argument(
+            "--resume-download",
+            action="store_true",
+            dest="resume",
+            default=False,
+            help="Resume downloading of the ZIP archive from a previous attempt"
+        )
+
+        parser.add_argument(
+            "--skip-download",
+            action="store_false",
+            dest="download",
+            default=True,
+            help="Skip downloading of the ZIP archive"
+        )
+
+        parser.add_argument(
+            "--skip-unzip",
+            action="store_false",
+            dest="unzip",
+            default=True,
+            help="Skip unzipping of the archive"
+        )
+
+        parser.add_argument(
+            "--skip-prep",
+            action="store_false",
+            dest="prep",
+            default=True,
+            help="Skip prepping of the unzipped archive"
+        )
+
+        parser.add_argument(
+            "--skip-clean",
+            action="store_false",
+            dest="clean",
+            default=True,
+            help="Skip cleaning up the raw data files"
+        )
+
+        parser.add_argument(
+            "--skip-load",
+            action="store_false",
+            dest="load",
+            default=True,
+            help="Skip loading up the raw data files"
+        )
+
+        parser.add_argument(
+            "--keep-files",
+            action="store_true",
+            dest="keep_files",
+            default=False,
+            help="Skip delete files"
+        )
+
+        parser.add_argument(
+            "--noinput",
+            action="store_true",
+            dest="noinput",
+            default=False,
+            help="Download the ZIP archive without asking permission"
+        )
+
+        parser.add_argument(
+            "--use-test-data",
+            action="store_true",
+            dest="test_data",
+            default=False,
+            help="Use sampled test data (skips download, unzip, prep, clear)"
+        )
+
+        parser.add_argument(
+            "-d",
+            "--database",
+            dest="database",
+            default=None,
+            help="Alias of database where data will be inserted. Defaults to the "
+                 "'default' in DATABASE settings."
+        )
+
+    def handle(self, **options):
         self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
-        self.verbosity = int(kwargs['verbosity'])
-        self.database = kwargs['database']
+        self.verbosity = int(options.get("verbosity"))
+        self.database = options["database"]
+        self.keep_files = options["keep_files"]
 
-        if kwargs['test_data']:
+        if options['test_data']:
+            # disable the steps that don't apply to test data
+            options["download"] = False
+            options["unzip"] = False
+            options["prep"] = False
+            # always keep files when running test data
+            self.keep_files = True
+
+        if options['test_data']:
             self.data_dir = get_test_download_directory()
             settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
         else:
@@ -157,7 +173,7 @@ class Command(CalAccessCommand):
 
         # Immediately check that the tsv directory exists when using test data,
         #   so we can stop immediately.
-        if kwargs['test_data']:
+        if options['test_data']:
             if not os.path.exists(self.tsv_dir):
                 raise CommandError("Data tsv directory does not exist "
                                    "at %s" % self.tsv_dir)
@@ -166,7 +182,8 @@ class Command(CalAccessCommand):
 
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
-        if kwargs['download']:
+
+        if options['download']:
             self.download_metadata = self.get_download_metadata()
             self.local_metadata = self.get_local_metadata()
 
@@ -175,8 +192,8 @@ class Command(CalAccessCommand):
             last_download = self.local_metadata['last-download']
             cur_size = 0
 
-            self.resume_download = (kwargs['resume-download'] and
-                                    os.path.exists(self.zip_path))
+            # if the user tries to resume, also have to make sure there is a zip file
+            self.resume_download = (options['resume'] and os.path.exists(self.zip_path))
 
             if self.resume_download:
                 # Make sure the downloaded chunk is newer than the
@@ -204,31 +221,20 @@ class Command(CalAccessCommand):
                 prompt_context,
             )
 
-    def handle(self, *args, **options):
-        if options['test_data']:
-            # disable the steps that don't apply to test data
-            options["download"] = False
-            options["unzip"] = False
-            options["prep"] = False
-            options["keep_files"] = True
-            options["clear"] = False
-        self.set_options(*args, **options)
-
-        # Get the data
-        if options['download']:
+            # Get the data
             if not options['noinput'] and self.confirm_download() != 'yes':
                 self.failure("Download cancelled")
                 return
-            self.download(resume=self.resume_download)
+            self.download()
 
         if options['unzip']:
-            self.unzip(clear=not options['keep_files'])
+            self.unzip()
         if options['prep']:
-            self.prep(clear=not options['keep_files'])
+            self.prep()
         if options['clean']:
-            self.clean(clear=not options['keep_files'])
+            self.clean()
         if options['load']:
-            self.load(clear=not options['keep_files'])
+            self.load()
 
         if self.verbosity:
             self.success("Done!")
@@ -281,16 +287,16 @@ class Command(CalAccessCommand):
         with open(self.zip_metadata_path, 'w') as f:
             f.write(str(self.download_metadata['last-modified']))
 
-    def download(self, resume=False):
+    def download(self):
         """
         Download the ZIP file in pieces.
         """
-        download_file(self.url, self.zip_path, resume=resume,
+        download_file(self.url, self.zip_path, resume=self.resume_download,
                       verbosity=self.verbosity, output_stream=self.header,
                       expected_size=self.download_metadata['content-length'])
         self.set_local_metadata()
 
-    def unzip(self, clear=False):
+    def unzip(self):
         """
         Unzip the snapshot file.
         """
@@ -308,14 +314,14 @@ class Command(CalAccessCommand):
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-        if clear:
+        if not self.keep_files:
             # TODO: We intentionally leave behind zip_metadata_path,
             # to keep track of the last download. This cycle should be
             # kept in the database; when it is, we should delete
             # that file. (note: cron may be enough?)
             os.remove(self.zip_path)
 
-    def prep(self, clear=False):
+    def prep(self):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
@@ -340,10 +346,10 @@ class Command(CalAccessCommand):
             self.tsv_dir,
         )
 
-        if clear:
+        if not self.keep_files:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-    def clean(self, clear=False):
+    def clean(self):
         """
         Clean up the raw data files from the state so they are
         ready to get loaded into the database.
@@ -361,10 +367,10 @@ class Command(CalAccessCommand):
                 name,
                 verbosity=self.verbosity
             )
-            if clear:
+            if not self.keep_files:
                 os.remove(os.path.join(self.tsv_dir, name))
 
-    def load(self, clear=False):
+    def load(self):
         """
         Loads the cleaned up csv files into the database
         """
@@ -385,5 +391,5 @@ class Command(CalAccessCommand):
                 verbosity=self.verbosity,
                 database=self.database,
             )
-            if clear:
+            if not self.keep_files:
                 os.remove(csv_path)

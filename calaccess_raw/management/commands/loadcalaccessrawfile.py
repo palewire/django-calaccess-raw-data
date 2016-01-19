@@ -3,60 +3,58 @@ import six
 from django.apps import apps
 from csvkit import CSVKitReader
 from django.conf import settings
-from optparse import make_option
 from postgres_copy import CopyMapping
 from django.db import connections, router
 from calaccess_raw.management.commands import CalAccessCommand
-from django.core.management.base import LabelCommand, CommandError
+from django.core.management.base import CommandError
 
 
-custom_options = (
-    make_option(
-        "-a",
-        "--app-name",
-        action="store",
-        type="string",
-        dest="app_name",
-        default="calaccess_raw",
-        help="Name of Django app where model will be imported from"
-    ),
-    make_option(
-        "-c",
-        "--csv",
-        action="store",
-        type="string",
-        dest="csv",
-        default=None,
-        help="Path to comma-delimited file to be loaded. Defaults to one associated with model."
-    ),
-    make_option(
-        "-d",
-        "--database",
-        action="store",
-        type="string",
-        dest="database",
-        default=None,
-        help="Alias of database where data will be inserted. Defaults to the 'default' database."
-    ),
-)
-
-
-class Command(CalAccessCommand, LabelCommand):
+class Command(CalAccessCommand):
     help = 'Load clean CAL-ACCESS file into its corresponding database model'
-    option_list = CalAccessCommand.option_list + custom_options
-    args = '<model name>'
+
+    def add_arguments(self, parser):
+
+        super(Command, self).add_arguments(parser)
+
+        parser.add_argument('model_name')
+
+        parser.add_argument(
+            "-a",
+            "--app-name",
+            dest="app_name",
+            default="calaccess_raw",
+            help="Name of Django app where model will be imported from"
+        )
+
+        parser.add_argument(
+            "--c",
+            "--csv",
+            dest='csv',
+            default=None,
+            help="Path to comma-delimited file to be loaded. Defaults to one associated with model."
+        )
+
+        parser.add_argument(
+            "--d",
+            "--database",
+            dest="database",
+            default=None,
+            help="Alias of database where data will be inserted. Defaults to the "
+                 "'default' in DATABASE settings."
+        )
+
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
     datetime_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y \
 %%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%H:%%i:%%s')"
 
-    def handle_label(self, label, **options):
-        self.verbosity = options.get("verbosity")
+    def handle(self, **options):
+        self.verbosity = int(options.get("verbosity"))
         self.app_name = options["app_name"]
         self.csv = options["csv"]
         self.database = options["database"]
-        self.load(label)
+        self.load(options['model_name'])
 
     def load(self, model_name, csv_path=None):
         """
