@@ -44,12 +44,12 @@ class Command(CalAccessCommand):
             name.lower().replace("tsv", "csv")
         )
 
+        # Reader
+        tsv_file = open(tsv_path, 'rb')
+
         # Writer
         csv_file = open(csv_path, 'w')
         csv_writer = CSVKitWriter(csv_file, quoting=csv.QUOTE_ALL)
-
-        # Reader
-        tsv_file = open(tsv_path, 'rb')
 
         # Pull and clean the headers
         try:
