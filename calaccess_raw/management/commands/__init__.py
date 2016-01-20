@@ -7,12 +7,12 @@ class CalAccessCommand(BaseCommand):
     def add_arguments(self, parser):
             # allow any CalAccessCommand to be performed on other apps
             parser.add_argument(
-            "-a",
-            "--app-name",
-            dest="app_name",
-            default="calaccess_raw",
-            help="Name of Django app where model will be imported from"
-        )
+                "-a",
+                "--app-name",
+                dest="app_name",
+                default="calaccess_raw",
+                help="Name of Django app where model will be imported from"
+            )
 
     def header(self, string):
         self.stdout.write(

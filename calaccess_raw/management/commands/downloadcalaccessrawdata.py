@@ -118,7 +118,7 @@ class Command(CalAccessCommand):
                  "'default' in DATABASE settings."
         )
 
-    # all BaseCommand subclasses require a handle() method that includes 
+    # all BaseCommand subclasses require a handle() method that includes
     #   the actual logic of the command
     def handle(self, **options):
 
@@ -138,7 +138,7 @@ class Command(CalAccessCommand):
 
         if options['test_data']:
             self.data_dir = get_test_download_directory()
-            # need to set this app-wide because cleancalaccessrawfile 
+            # need to set this app-wide because cleancalaccessrawfile
             #   also calls get_download_directory
             settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
         else:
@@ -299,7 +299,7 @@ class Command(CalAccessCommand):
                 os.remove(self.zip_path)
 
         # Stream the download
-        chunk_size=1024
+        chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
         n_iters = float(expected_size) / chunk_size + 1
         with open(self.zip_path, 'ab') as fp:
@@ -317,7 +317,7 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             self.log(" Unzipping archive")
-            
+
         with zipfile.ZipFile(self.zip_path) as zf:
             for member in zf.infolist():
                 words = member.filename.split('/')
