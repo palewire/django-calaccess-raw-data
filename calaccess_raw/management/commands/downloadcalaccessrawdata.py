@@ -28,11 +28,15 @@ from django.utils.timezone import utc
 class Command(CalAccessCommand):
     help = ("Download, unzip, clean and load the latest snapshot of the "
             "CAL-ACCESS database")
+    url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
+    # define the command's options
     def add_arguments(self, parser):
 
+        # include args from CalAccessCommand
         super(Command, self).add_arguments(parser)
 
+        # keyword (optional) arguments
         parser.add_argument(
             "--resume-download",
             action="store_true",
@@ -114,8 +118,11 @@ class Command(CalAccessCommand):
                  "'default' in DATABASE settings."
         )
 
+    # all BaseCommand subclasses require a handle() method that includes 
+    #   the actual logic of the command
     def handle(self, **options):
-        self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
+
+        # set / compute any attributes that multiple class methods need
         self.verbosity = int(options.get("verbosity"))
         self.app_name = options["app_name"]
         self.database = options["database"]
@@ -131,6 +138,8 @@ class Command(CalAccessCommand):
 
         if options['test_data']:
             self.data_dir = get_test_download_directory()
+            # need to set this app-wide because cleancalaccessrawfile 
+            #   also calls get_download_directory
             settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
         else:
             self.data_dir = get_download_directory()
@@ -154,6 +163,7 @@ class Command(CalAccessCommand):
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
         if options['download']:
+
             self.download_metadata = self.get_download_metadata()
             self.local_metadata = self.get_local_metadata()
 
@@ -167,14 +177,16 @@ class Command(CalAccessCommand):
 
             if self.resume_download:
                 # Make sure the downloaded chunk is newer than the
-                # last update to the remote data.
+                #   last update to the remote data.
                 timestamp = os.path.getmtime(self.zip_path)
                 chunk_datetime = datetime.fromtimestamp(timestamp, utc)
                 self.resume_download = chunk_datetime > last_modified
+                # reset this vars if still resuming
                 if self.resume_download:
                     last_download = chunk_datetime
                     cur_size = os.path.getsize(self.zip_path)
 
+            # setting up the prompt
             prompt_context = dict(
                 resuming=self.resume_download,
                 already_downloaded=last_modified == last_download,
@@ -191,12 +203,14 @@ class Command(CalAccessCommand):
                 prompt_context,
             )
 
-            # Get the data
+            # If we're taking user input, make sure the user says exactly 'yes'
             if not options['noinput'] and self.confirm_download() != 'yes':
                 self.failure("Download cancelled")
                 return
+            # Then get the data
             self.download()
 
+        # execute the other steps that haven't been skipped
         if options['unzip']:
             self.unzip()
         if options['prep']:
@@ -210,6 +224,9 @@ class Command(CalAccessCommand):
             self.success("Done!")
 
     def confirm_download(self):
+        """
+        Prompts the user to confirm they wish to download.
+        """
         # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
         locale_encoding = locale.getpreferredencoding()
         old_stdout = sys.stdout
@@ -291,6 +308,7 @@ class Command(CalAccessCommand):
                 fp.write(chunk)
                 fp.flush()
 
+        # store the last completed download
         self.set_local_metadata()
 
     def unzip(self):
