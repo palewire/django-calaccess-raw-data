@@ -54,22 +54,6 @@ class Command(CalAccessCommand):
         )
 
         parser.add_argument(
-            "--skip-unzip",
-            action="store_false",
-            dest="unzip",
-            default=True,
-            help="Skip unzipping of the archive"
-        )
-
-        parser.add_argument(
-            "--skip-prep",
-            action="store_false",
-            dest="prep",
-            default=True,
-            help="Skip prepping of the unzipped archive"
-        )
-
-        parser.add_argument(
             "--skip-clean",
             action="store_false",
             dest="clean",
@@ -129,11 +113,9 @@ class Command(CalAccessCommand):
         self.keep_files = options["keep_files"]
 
         if options['test_data']:
-            # disable the steps that don't apply to test data
+            # if using test data, we don't need to download
             options["download"] = False
-            options["unzip"] = False
-            options["prep"] = False
-            # always keep files when running test data
+            # and always keep files when running test data
             self.keep_files = True
 
         if options['test_data']:
@@ -209,12 +191,10 @@ class Command(CalAccessCommand):
                 return
             # Then get the data
             self.download()
+            self.unzip()
+            self.prep()
 
         # execute the other steps that haven't been skipped
-        if options['unzip']:
-            self.unzip()
-        if options['prep']:
-            self.prep()
         if options['clean']:
             self.clean()
         if options['load']:
