@@ -42,7 +42,7 @@ class Command(CalAccessCommand):
 %%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%H:%%i:%%s')"
 
     def handle(self, **options):
-        self.verbosity = int(options.get("verbosity"))
+        self.verbosity = options["verbosity"]
         self.app_name = options["app_name"]
         self.csv = options["csv"]
         self.database = options["database"]
