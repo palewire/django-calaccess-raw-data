@@ -1,4 +1,4 @@
-from __future__ import unicode_literals # keep in download
+from __future__ import unicode_literals
 import os
 import sys
 import codecs
@@ -69,7 +69,7 @@ class Command(CalAccessCommand):
         # so will the file where we track the last download
         self.zip_metadata_path = os.path.join(self.data_dir,
                                               '.lastdownload')
-        
+
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         self.csv_dir = os.path.join(self.data_dir, "csv/")
@@ -124,8 +124,8 @@ class Command(CalAccessCommand):
         self.unzip()
 
         if not options['keep_files']:
-            os.remove(self.zip_path)        
-        
+            os.remove(self.zip_path)
+
         self.prep()
 
         if not options['keep_files']:

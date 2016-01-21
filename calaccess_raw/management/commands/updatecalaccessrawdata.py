@@ -11,6 +11,7 @@ from calaccess_raw import (
 from django.core.management.base import CommandError
 from clint.textui import progress
 
+
 class Command(CalAccessCommand):
     help = ("Download, unzip, clean and load the latest snapshot of the "
             "CAL-ACCESS database")
@@ -93,7 +94,7 @@ class Command(CalAccessCommand):
             dest="app_name",
             default="calaccess_raw",
             help="Name of Django app where model will be imported from"
-        )        
+        )
 
     # all BaseCommand subclasses require a handle() method that includes
     #   the actual logic of the command
