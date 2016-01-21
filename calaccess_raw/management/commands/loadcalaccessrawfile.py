@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+import os
 import six
 from django.apps import apps
 from csvkit import CSVKitReader
@@ -27,6 +28,14 @@ class Command(CalAccessCommand):
         )
 
         parser.add_argument(
+            "--keep-files",
+            action="store_true",
+            dest="keep_files",
+            default=False,
+            help="Keep original .tsv files"
+        )
+
+        parser.add_argument(
             "--d",
             "--database",
             dest="database",
@@ -41,7 +50,7 @@ class Command(CalAccessCommand):
             dest="app_name",
             default="calaccess_raw",
             help="Name of Django app where model will be imported from"
-        )        
+        )
 
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
@@ -52,6 +61,7 @@ class Command(CalAccessCommand):
     def handle(self, **options):
         self.verbosity = options["verbosity"]
         self.app_name = options["app_name"]
+        self.keep_files = options["keep_files"]
         self.csv = options["csv"]
         self.database = options["database"]
         self.load(options['model_name'])
@@ -91,6 +101,9 @@ class Command(CalAccessCommand):
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
             )
+
+        if not self.keep_files:
+            os.remove(csv_path)
 
     def load_dat(self, model, csv_path):
         """

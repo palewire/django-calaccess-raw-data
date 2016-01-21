@@ -17,6 +17,14 @@ class Command(CalAccessCommand):
 
         parser.add_argument('file_name')
 
+        parser.add_argument(
+            "--keep-files",
+            action="store_true",
+            dest="keep_files",
+            default=False,
+            help="Keep original .tsv files"
+        )
+
     def handle(self, **options):
         # Set options
         self.verbosity = int(options.get("verbosity"))
@@ -26,6 +34,9 @@ class Command(CalAccessCommand):
         self.log_dir = os.path.join(self.data_dir, "log/")
         # Do it
         self.clean(options['file_name'])
+
+        if not options['keep_files']:
+            os.remove(os.path.join(self.tsv_dir, options['file_name']))
 
     def clean(self, name):
         """

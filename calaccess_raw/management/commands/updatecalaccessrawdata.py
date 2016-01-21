@@ -59,7 +59,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Skip delete files"
+            help="Keep zip, unzipped, .tsv and .csv files"
         )
 
         parser.add_argument(
@@ -172,10 +172,9 @@ class Command(CalAccessCommand):
             call_command(
                 "cleancalaccessrawfile",
                 name,
-                verbosity=self.verbosity
+                verbosity=self.verbosity,
+                keep_files=self.keep_files
             )
-            if not self.keep_files:
-                os.remove(os.path.join(self.tsv_dir, name))
 
     def load(self):
         """
@@ -197,7 +196,6 @@ class Command(CalAccessCommand):
                 model.__name__,
                 verbosity=self.verbosity,
                 database=self.database,
+                keep_files=self.keep_files,
                 app_name=self.app_name,
             )
-            if not self.keep_files:
-                os.remove(csv_path)
