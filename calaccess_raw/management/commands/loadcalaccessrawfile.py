@@ -84,7 +84,7 @@ class Command(CalAccessCommand):
 
         # get the model using the model name
         model = apps.get_model(self.app_name, model_name)
-        # either use the csv_path passed to the load() method 
+        # either use the csv_path passed to the load() method
         #   or the one passed to the command or the model's csv_path
         csv_path = csv_path or self.csv or model.objects.get_csv_path()
 
