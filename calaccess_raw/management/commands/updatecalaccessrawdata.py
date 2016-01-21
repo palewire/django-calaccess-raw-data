@@ -1,5 +1,4 @@
 import os
-import sys
 from django.core.management import call_command
 from django.conf import settings
 from calaccess_raw.management.commands import CalAccessCommand
