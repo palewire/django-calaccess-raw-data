@@ -35,6 +35,14 @@ class Command(CalAccessCommand):
                  "'default' in DATABASE settings."
         )
 
+        parser.add_argument(
+            "-a",
+            "--app-name",
+            dest="app_name",
+            default="calaccess_raw",
+            help="Name of Django app where model will be imported from"
+        )        
+
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"

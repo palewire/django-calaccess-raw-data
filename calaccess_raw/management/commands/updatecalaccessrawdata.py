@@ -87,6 +87,14 @@ class Command(CalAccessCommand):
                  "'default' in DATABASE settings."
         )
 
+        parser.add_argument(
+            "-a",
+            "--app-name",
+            dest="app_name",
+            default="calaccess_raw",
+            help="Name of Django app where model will be imported from"
+        )        
+
     # all BaseCommand subclasses require a handle() method that includes
     #   the actual logic of the command
     def handle(self, **options):

@@ -42,7 +42,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Skip delete files"
+            help="Keep downloaded zip and unzipped files"
         )
 
         parser.add_argument(
