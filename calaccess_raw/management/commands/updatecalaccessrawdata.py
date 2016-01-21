@@ -71,6 +71,7 @@ class Command(CalAccessCommand):
         )
 
         parser.add_argument(
+            "--test",
             "--use-test-data",
             action="store_true",
             dest="test_data",
