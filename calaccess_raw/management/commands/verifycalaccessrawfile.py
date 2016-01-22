@@ -1,19 +1,25 @@
 from __future__ import unicode_literals
 from django.apps import apps
-from django.core.management.base import LabelCommand
 from calaccess_raw.management.commands import CalAccessCommand
 
 
-class Command(CalAccessCommand, LabelCommand):
+class Command(CalAccessCommand):
     help = 'Compare the number of records in a model against its source CSV'
-    args = '<model name>'
 
-    def handle_label(self, label, **options):
-        self.log(" Verifying %s" % label)
+    def add_arguments(self, parser):
+
+        super(Command, self).add_arguments(parser)
+
+        parser.add_argument(
+            'model_name',
+            help="Name of the model to verify"
+        )
+
+    def handle(self, **options):
+        self.log(" Verifying %s" % options['model_name'])
 
         # Get the model
-        app = apps.get_app_config("calaccess_raw")
-        model = app.get_model(label)
+        model = apps.get_model(options['app_name'], options['model_name'])
 
         # Get the db total
         cnt = model.objects.count()

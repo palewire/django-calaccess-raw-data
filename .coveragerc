@@ -12,7 +12,7 @@ include =
     calaccess_raw/admin/other.py
     calaccess_raw/managers.py
     calaccess_raw/apps.py
-    calaccess_raw/management/commands/downloadcalaccessrawdata.py
+    calaccess_raw/management/commands/updatecalaccessrawdata.py
     calaccess_raw/management/commands/cleancalaccessrawfile.py
     calaccess_raw/management/commands/loadcalaccessrawfile.py
     calaccess_raw/management/commands/totalcalaccessrawfile.py

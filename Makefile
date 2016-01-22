@@ -4,7 +4,7 @@ bootstrap:
 	mysqladmin -h localhost -u root -p create calaccess_raw
 	python example/manage.py makemigrations calaccess_raw
 	python example/manage.py migrate
-	python example/manage.py downloadcalaccessrawdata
+	python example/manage.py update
 	python example/manage.py collectstatic --noinput
 	python example/manage.py runserver
 
@@ -13,7 +13,7 @@ docs:
 	cd docs && make livehtml
 
 load:
-	python  example/manage.py downloadcalaccessrawdata --skip-download --skip-unzip --skip-prep --skip-clean --keep-files
+	python  example/manage.py updatecalaccessrawdata --skip-download --skip-clean --keep-files
 
 testload:
 	dropdb calaccess_raw

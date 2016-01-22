@@ -25,7 +25,7 @@ class CalAccessTest(TestCase):
         if settings.DATABASES.get("alt", None):
             kwargs['database'] = 'alt'
             logger.debug("Loading into 'alt' database")
-        call_command("downloadcalaccessrawdata", **kwargs)
+        call_command("updatecalaccessrawdata", **kwargs)
 
     @override_settings(BASE_DIR='example/')
     def test_csv_gettrs(self):

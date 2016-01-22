@@ -7,65 +7,30 @@ import shutil
 import zipfile
 import requests
 from hurry.filesize import size
-from django.conf import settings
 from clint.textui import progress
 from django.utils.six.moves import input
 from datetime import datetime
 from dateutil.parser import parse as datetime_parse
-from django.core.management import call_command
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw import (
-    get_download_directory,
-    get_test_download_directory,
-    get_model_list
-)
-from django.core.management.base import CommandError
+from calaccess_raw import get_download_directory
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.utils.timezone import utc
 
 
-def download_file(url, out_path, resume=False, verbosity=1,
-                  output_stream=sys.stdout, expected_size=None,
-                  chunk_size=1024):
-
-    if verbosity and output_stream:
-        output_stream("Downloading ZIP file")
-
-    if expected_size is None:
-        resp = requests.head(url)
-        expected_size = int(resp.headers.get('content-length', 0))
-
-    # Prep
-    headers = dict()
-    if os.path.exists(out_path):
-        if resume:
-            cur_sz = os.path.getsize(out_path)
-            headers['Range'] = 'bytes=%d-' % cur_sz
-            expected_size = expected_size - cur_sz
-        else:
-            os.remove(out_path)
-
-    # Stream the download
-    req = requests.get(url, stream=True, headers=headers)
-    n_iters = float(expected_size) / chunk_size + 1
-    with open(out_path, 'ab') as fp:
-        for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
-                                  expected_size=n_iters):
-            fp.write(chunk)
-            fp.flush()
-
-
 class Command(CalAccessCommand):
-    help = ("Download, unzip, clean and load the latest snapshot of the "
-            "CAL-ACCESS database")
+    help = ("Download, unzip and prepare the latest snapshot of the CAL-ACCESS database")
+    url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
+    # define the command's options
     def add_arguments(self, parser):
 
+        # include args from CalAccessCommand
         super(Command, self).add_arguments(parser)
 
+        # keyword (optional) arguments
         parser.add_argument(
-            "--resume-download",
+            "--resume",
             action="store_true",
             dest="resume",
             default=False,
@@ -73,51 +38,11 @@ class Command(CalAccessCommand):
         )
 
         parser.add_argument(
-            "--skip-download",
-            action="store_false",
-            dest="download",
-            default=True,
-            help="Skip downloading of the ZIP archive"
-        )
-
-        parser.add_argument(
-            "--skip-unzip",
-            action="store_false",
-            dest="unzip",
-            default=True,
-            help="Skip unzipping of the archive"
-        )
-
-        parser.add_argument(
-            "--skip-prep",
-            action="store_false",
-            dest="prep",
-            default=True,
-            help="Skip prepping of the unzipped archive"
-        )
-
-        parser.add_argument(
-            "--skip-clean",
-            action="store_false",
-            dest="clean",
-            default=True,
-            help="Skip cleaning up the raw data files"
-        )
-
-        parser.add_argument(
-            "--skip-load",
-            action="store_false",
-            dest="load",
-            default=True,
-            help="Skip loading up the raw data files"
-        )
-
-        parser.add_argument(
             "--keep-files",
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Skip delete files"
+            help="Keep downloaded zip and unzipped files"
         )
 
         parser.add_argument(
@@ -128,118 +53,88 @@ class Command(CalAccessCommand):
             help="Download the ZIP archive without asking permission"
         )
 
-        parser.add_argument(
-            "--use-test-data",
-            action="store_true",
-            dest="test_data",
-            default=False,
-            help="Use sampled test data (skips download, unzip, prep, clear)"
-        )
-
-        parser.add_argument(
-            "-d",
-            "--database",
-            dest="database",
-            default=None,
-            help="Alias of database where data will be inserted. Defaults to the "
-                 "'default' in DATABASE settings."
-        )
-
+    # all BaseCommand subclasses require a handle() method that includes
+    #   the actual logic of the command
     def handle(self, **options):
-        self.url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
-        self.verbosity = int(options.get("verbosity"))
-        self.database = options["database"]
-        self.keep_files = options["keep_files"]
 
-        if options['test_data']:
-            # disable the steps that don't apply to test data
-            options["download"] = False
-            options["unzip"] = False
-            options["prep"] = False
-            # always keep files when running test data
-            self.keep_files = True
+        self.verbosity = options["verbosity"]
 
-        if options['test_data']:
-            self.data_dir = get_test_download_directory()
-            settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
-        else:
-            self.data_dir = get_download_directory()
-
+        # get the dir were data goes from app settings
+        self.data_dir = get_download_directory()
+        # if data_dir doesn't exist, create it
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
+
+        # downloaded zipfile will go in data_dir
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
+        # so will the file where we track the last download
         self.zip_metadata_path = os.path.join(self.data_dir,
                                               '.lastdownload')
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
-        # Immediately check that the tsv directory exists when using test data,
-        #   so we can stop immediately.
-        if options['test_data']:
-            if not os.path.exists(self.tsv_dir):
-                raise CommandError("Data tsv directory does not exist "
-                                   "at %s" % self.tsv_dir)
-            elif self.verbosity:
-                self.log("Using test data")
+        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
-        if options['download']:
-            self.download_metadata = self.get_download_metadata()
-            self.local_metadata = self.get_local_metadata()
+        self.download_metadata = self.get_download_metadata()
+        self.local_metadata = self.get_local_metadata()
 
-            total_size = self.download_metadata['content-length']
-            last_modified = self.download_metadata['last-modified']
-            last_download = self.local_metadata['last-download']
-            cur_size = 0
+        total_size = self.download_metadata['content-length']
+        last_modified = self.download_metadata['last-modified']
+        last_download = self.local_metadata['last-download']
+        cur_size = 0
 
-            # if the user tries to resume, also have to make sure there is a zip file
-            self.resume_download = (options['resume'] and os.path.exists(self.zip_path))
+        # if the user tries to resume, also have to make sure there is a zip file
+        self.resume_download = (options['resume'] and os.path.exists(self.zip_path))
 
+        if self.resume_download:
+            # Make sure the downloaded chunk is newer than the
+            #   last update to the remote data.
+            timestamp = os.path.getmtime(self.zip_path)
+            chunk_datetime = datetime.fromtimestamp(timestamp, utc)
+            self.resume_download = chunk_datetime > last_modified
+            # reset this vars if still resuming
             if self.resume_download:
-                # Make sure the downloaded chunk is newer than the
-                # last update to the remote data.
-                timestamp = os.path.getmtime(self.zip_path)
-                chunk_datetime = datetime.fromtimestamp(timestamp, utc)
-                self.resume_download = chunk_datetime > last_modified
-                if self.resume_download:
-                    last_download = chunk_datetime
-                    cur_size = os.path.getsize(self.zip_path)
+                last_download = chunk_datetime
+                cur_size = os.path.getsize(self.zip_path)
 
-            prompt_context = dict(
-                resuming=self.resume_download,
-                already_downloaded=last_modified == last_download,
-                last_modified=last_modified,
-                last_download=last_download,
-                time_ago=naturaltime(last_download),
-                total_size=size(total_size),
-                cur_size=size(cur_size),
-                download_dir=self.data_dir,
-            )
+        # setting up the prompt
+        prompt_context = dict(
+            resuming=self.resume_download,
+            already_downloaded=last_modified == last_download,
+            last_modified=last_modified,
+            last_download=last_download,
+            time_ago=naturaltime(last_download),
+            total_size=size(total_size),
+            cur_size=size(cur_size),
+            download_dir=self.data_dir,
+        )
 
-            self.prompt = render_to_string(
-                'calaccess_raw/downloadcalaccessrawdata.txt',
-                prompt_context,
-            )
+        self.prompt = render_to_string(
+            'calaccess_raw/downloadcalaccessrawdata.txt',
+            prompt_context,
+        )
 
-            # Get the data
-            if not options['noinput'] and self.confirm_download() != 'yes':
-                self.failure("Download cancelled")
-                return
-            self.download()
+        # If we're taking user input, make sure the user says exactly 'yes'
+        if not options['noinput'] and self.confirm_download() != 'yes':
+            self.failure("Download cancelled")
+            return
 
-        if options['unzip']:
-            self.unzip()
-        if options['prep']:
-            self.prep()
-        if options['clean']:
-            self.clean()
-        if options['load']:
-            self.load()
+        self.download()
 
-        if self.verbosity:
-            self.success("Done!")
+        self.unzip()
+
+        if not options['keep_files']:
+            os.remove(self.zip_path)
+
+        self.prep()
+
+        if not options['keep_files']:
+            shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
     def confirm_download(self):
+        """
+        Prompts the user to confirm they wish to download.
+        """
         # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
         locale_encoding = locale.getpreferredencoding()
         old_stdout = sys.stdout
@@ -291,9 +186,37 @@ class Command(CalAccessCommand):
         """
         Download the ZIP file in pieces.
         """
-        download_file(self.url, self.zip_path, resume=self.resume_download,
-                      verbosity=self.verbosity, output_stream=self.header,
-                      expected_size=self.download_metadata['content-length'])
+
+        if self.verbosity:
+            self.header("Downloading ZIP file")
+
+        expected_size = self.download_metadata['content-length']
+
+        if expected_size is None:
+            resp = requests.head(self.url)
+            expected_size = int(resp.headers.get('content-length', 0))
+
+        # Prep
+        headers = dict()
+        if os.path.exists(self.zip_path):
+            if self.resume_download:
+                cur_sz = os.path.getsize(self.zip_path)
+                headers['Range'] = 'bytes=%d-' % cur_sz
+                expected_size = expected_size - cur_sz
+            else:
+                os.remove(self.zip_path)
+
+        # Stream the download
+        chunk_size = 1024
+        req = requests.get(self.url, stream=True, headers=headers)
+        n_iters = float(expected_size) / chunk_size + 1
+        with open(self.zip_path, 'ab') as fp:
+            for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
+                                      expected_size=n_iters):
+                fp.write(chunk)
+                fp.flush()
+
+        # store the last completed download
         self.set_local_metadata()
 
     def unzip(self):
@@ -302,6 +225,7 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             self.log(" Unzipping archive")
+
         with zipfile.ZipFile(self.zip_path) as zf:
             for member in zf.infolist():
                 words = member.filename.split('/')
@@ -313,13 +237,6 @@ class Command(CalAccessCommand):
                         continue
                     path = os.path.join(path, word)
                 zf.extract(member, path)
-
-        if not self.keep_files:
-            # TODO: We intentionally leave behind zip_metadata_path,
-            # to keep track of the last download. This cycle should be
-            # kept in the database; when it is, we should delete
-            # that file. (note: cron may be enough?)
-            os.remove(self.zip_path)
 
     def prep(self):
         """
@@ -345,51 +262,3 @@ class Command(CalAccessCommand):
             os.path.join(self.data_dir, "DATA/"),
             self.tsv_dir,
         )
-
-        if not self.keep_files:
-            shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
-
-    def clean(self):
-        """
-        Clean up the raw data files from the state so they are
-        ready to get loaded into the database.
-        """
-        if self.verbosity:
-            self.header("Cleaning data files")
-
-        # Loop through all the files in the source directory
-        tsv_list = os.listdir(self.tsv_dir)
-        if self.verbosity:
-            tsv_list = progress.bar(tsv_list)
-        for name in tsv_list:
-            call_command(
-                "cleancalaccessrawfile",
-                name,
-                verbosity=self.verbosity
-            )
-            if not self.keep_files:
-                os.remove(os.path.join(self.tsv_dir, name))
-
-    def load(self):
-        """
-        Loads the cleaned up csv files into the database
-        """
-
-        if self.verbosity:
-            self.header("Loading data files")
-
-        # This check enables resuming partially completed load with clear
-        csv_list = [(model, model.objects.get_csv_path())
-                    for model in get_model_list()
-                    if os.path.exists(model.objects.get_csv_path())]
-        if self.verbosity:
-            csv_list = progress.bar(csv_list)
-        for model, csv_path in csv_list:
-            call_command(
-                "loadcalaccessrawfile",
-                model.__name__,
-                verbosity=self.verbosity,
-                database=self.database,
-            )
-            if not self.keep_files:
-                os.remove(csv_path)

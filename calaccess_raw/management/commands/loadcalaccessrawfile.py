@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+import os
 import six
 from django.apps import apps
 from csvkit import CSVKitReader
@@ -12,26 +13,33 @@ from django.core.management.base import CommandError
 class Command(CalAccessCommand):
     help = 'Load clean CAL-ACCESS file into its corresponding database model'
 
+    # define the command's options
     def add_arguments(self, parser):
 
+        # include args from CalAccessCommand
         super(Command, self).add_arguments(parser)
 
-        parser.add_argument('model_name')
-
+        # positional (required) arg
         parser.add_argument(
-            "-a",
-            "--app-name",
-            dest="app_name",
-            default="calaccess_raw",
-            help="Name of Django app where model will be imported from"
+            'model_name',
+            help="Name of the model into which data will be loaded"
         )
 
+        # keyword (optional) args
         parser.add_argument(
             "--c",
             "--csv",
             dest='csv',
             default=None,
             help="Path to comma-delimited file to be loaded. Defaults to one associated with model."
+        )
+
+        parser.add_argument(
+            "--keep-files",
+            action="store_true",
+            dest="keep_files",
+            default=False,
+            help="Keep CSV file after loading"
         )
 
         parser.add_argument(
@@ -43,15 +51,28 @@ class Command(CalAccessCommand):
                  "'default' in DATABASE settings."
         )
 
+        parser.add_argument(
+            "-a",
+            "--app-name",
+            dest="app_name",
+            default="calaccess_raw",
+            help="Name of Django app where model will be imported from"
+        )
+
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
     datetime_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y \
 %%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%H:%%i:%%s')"
 
+    # all BaseCommand subclasses require a handle() method that includes
+    #   the actual logic of the command
     def handle(self, **options):
-        self.verbosity = int(options.get("verbosity"))
+
+        # set / compute any attributes that multiple class methods need
+        self.verbosity = options["verbosity"]
         self.app_name = options["app_name"]
+        self.keep_files = options["keep_files"]
         self.csv = options["csv"]
         self.database = options["database"]
         self.load(options['model_name'])
@@ -64,21 +85,27 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Loading %s" % model_name)
 
+        # get the model using the model name
         model = apps.get_model(self.app_name, model_name)
+        # either use the csv_path passed to the load() method
+        #   or the one passed to the command or the model's csv_path
         csv_path = csv_path or self.csv or model.objects.get_csv_path()
 
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat(model, csv_path)
         self.database = self.database or router.db_for_write(model=model)
 
+        # make sure the database is set up in django's settings
         try:
             engine = settings.DATABASES[self.database]['ENGINE']
         except KeyError:
             raise TypeError("{} not configured in DATABASES settings.".format(self.database))
 
+        # set up database connection
         self.connection = connections[self.database]
         self.cursor = self.connection.cursor()
 
+        # check the kind of database before calling db-specific load method
         if engine == 'django.db.backends.mysql':
             self.load_mysql(model, csv_path)
         elif engine in (
@@ -91,6 +118,9 @@ class Command(CalAccessCommand):
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
             )
+
+        if not self.keep_files:
+            os.remove(csv_path)
 
     def load_dat(self, model, csv_path):
         """
