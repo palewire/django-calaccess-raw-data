@@ -15,14 +15,17 @@ class Command(CalAccessCommand):
 
         super(Command, self).add_arguments(parser)
 
-        parser.add_argument('file_name')
+        parser.add_argument(
+            'file_name',
+            help="Name of the TSV file to be cleaned"
+        )
 
         parser.add_argument(
             "--keep-files",
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Keep original .tsv files"
+            help="Keep original TSV file"
         )
 
     def handle(self, **options):

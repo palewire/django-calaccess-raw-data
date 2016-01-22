@@ -59,7 +59,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Keep zip, unzipped, .tsv and .csv files"
+            help="Keep zip, unzipped, TSV and CSV files"
         )
 
         parser.add_argument(

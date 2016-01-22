@@ -20,7 +20,10 @@ class Command(CalAccessCommand):
         super(Command, self).add_arguments(parser)
 
         # positional (required) arg
-        parser.add_argument('model_name')
+        parser.add_argument(
+            'model_name',
+            help="Name of the model into which data will be loaded"
+        )
 
         # keyword (optional) args
         parser.add_argument(
@@ -36,7 +39,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Keep original .tsv files"
+            help="Keep CSV file after loading"
         )
 
         parser.add_argument(

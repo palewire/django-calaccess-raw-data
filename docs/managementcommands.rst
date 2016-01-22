@@ -17,7 +17,7 @@ Clean a source CAL-ACCESS file and reformat it as a CSV
     Clean a source CAL-ACCESS file and reformat it as a CSV
 
     positional arguments:
-      file_name
+      file_name             Name of the TSV file to be cleaned
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -34,7 +34,7 @@ Clean a source CAL-ACCESS file and reformat it as a CSV
                             "/home/djangoprojects/myproject".
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
-      --keep-files          Keep original .tsv files
+      --keep-files          Keep original TSV file
 
 
 downloadcalaccessrawdata
@@ -91,7 +91,7 @@ Load a cleaned CAL-ACCESS file for a model into the database
     Load clean CAL-ACCESS file into its corresponding database model
 
     positional arguments:
-      model_name
+      model_name            Name of the model into which data will be loaded
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -110,7 +110,7 @@ Load a cleaned CAL-ACCESS file for a model into the database
       --no-color            Don't colorize the command output.
       --c CSV, --csv CSV    Path to comma-delimited file to be loaded. Defaults to
                             one associated with model.
-      --keep-files          Keep original .tsv files
+      --keep-files          Keep CSV file after loading
       --d DATABASE, --database DATABASE
                             Alias of database where data will be inserted.
                             Defaults to the 'default' in DATABASE settings.
@@ -162,9 +162,8 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
                                             [--traceback] [--no-color]
                                             [--resume-download] [--skip-download]
                                             [--skip-clean] [--skip-load]
-                                            [--keep-files] [--noinput]
-                                            [--use-test-data] [-d DATABASE]
-                                            [-a APP_NAME]
+                                            [--keep-files] [--noinput] [--test]
+                                            [-d DATABASE] [-a APP_NAME]
 
     Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
 
@@ -188,7 +187,7 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
       --skip-download       Skip downloading of the ZIP archive
       --skip-clean          Skip cleaning up the raw data files
       --skip-load           Skip loading up the raw data files
-      --keep-files          Keep zip, unzipped, .tsv and .csv files
+      --keep-files          Keep zip, unzipped, TSV and CSV files
       --noinput             Download the ZIP archive without asking permission
       --test, --use-test-data
                             Use sampled test data (skips download, clean a load)
@@ -199,7 +198,7 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
                             Name of Django app where model will be imported from
 
 verifycalaccessrawfile
-----------------------
+------------------------
 
 Compare the number of records in a model against its source CSV
 
@@ -214,7 +213,7 @@ Compare the number of records in a model against its source CSV
     Compare the number of records in a model against its source CSV
 
     positional arguments:
-      model_name
+      model_name            Name of the model to verify
 
     optional arguments:
       -h, --help            show this help message and exit

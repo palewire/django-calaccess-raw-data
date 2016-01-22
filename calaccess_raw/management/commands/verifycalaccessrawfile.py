@@ -10,7 +10,10 @@ class Command(CalAccessCommand):
 
         super(Command, self).add_arguments(parser)
 
-        parser.add_argument('model_name')
+        parser.add_argument(
+            'model_name',
+            help="Name of the model to verify"
+        )
 
     def handle(self, **options):
         self.log(" Verifying %s" % options['model_name'])
