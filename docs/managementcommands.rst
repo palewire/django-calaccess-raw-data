@@ -190,8 +190,8 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
       --skip-load           Skip loading up the raw data files
       --keep-files          Keep zip, unzipped, .tsv and .csv files
       --noinput             Download the ZIP archive without asking permission
-      --use-test-data       Use sampled test data (skips download, unzip, prep,
-                            clear)
+      --test, --use-test-data
+                            Use sampled test data (skips download, clean a load)
       -d DATABASE, --database DATABASE
                             Alias of database where data will be inserted.
                             Defaults to the 'default' in DATABASE settings.

@@ -76,7 +76,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="test_data",
             default=False,
-            help="Use sampled test data (skips download, unzip, prep, clear)"
+            help="Use sampled test data (skips download, clean a load)"
         )
 
         parser.add_argument(
