@@ -11,7 +11,7 @@ from django.core.management.base import CommandError
 
 
 class Command(CalAccessCommand):
-    help = 'Load clean CAL-ACCESS file into its corresponding database model'
+    help = 'Load clean CAL-ACCESS CSV file into its corresponding database model'
 
     # define the command's options
     def add_arguments(self, parser):
@@ -71,29 +71,16 @@ class Command(CalAccessCommand):
 
         # set / compute any attributes that multiple class methods need
         self.verbosity = options["verbosity"]
-        self.app_name = options["app_name"]
         self.keep_files = options["keep_files"]
-        self.csv = options["csv"]
-        self.database = options["database"]
-        self.load(options['model_name'])
-
-    def load(self, model_name, csv_path=None):
-        """
-        Loads the source CSV for the provided model.
-        """
+        self.model = apps.get_model(options["app_name"], options['model_name'])
+        self.database = options["database"] or router.db_for_write(self.model)
+        self.csv = options["csv"] or self.model.objects.get_csv_path()
 
         if self.verbosity > 2:
-            self.log(" Loading %s" % model_name)
-
-        # get the model using the model name
-        model = apps.get_model(self.app_name, model_name)
-        # either use the csv_path passed to the load() method
-        #   or the one passed to the command or the model's csv_path
-        csv_path = csv_path or self.csv or model.objects.get_csv_path()
+            self.log(" Loading %s" % options['model_name'])
 
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
-            self.load_dat(model, csv_path)
-        self.database = self.database or router.db_for_write(model=model)
+            self.load_dat()
 
         # make sure the database is set up in django's settings
         try:
@@ -107,50 +94,51 @@ class Command(CalAccessCommand):
 
         # check the kind of database before calling db-specific load method
         if engine == 'django.db.backends.mysql':
-            self.load_mysql(model, csv_path)
+            self.load_mysql()
         elif engine in (
             'django.db.backends.postgresql_psycopg2'
             'django.contrib.gis.db.backends.postgis'
         ):
-            self.load_postgresql(model, csv_path)
+            self.load_postgresql()
         else:
             self.failure("Sorry your database engine is unsupported")
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
             )
 
+        # if not keeping files, remove the csv file
         if not self.keep_files:
-            os.remove(csv_path)
+            os.remove(self.csv)
 
-    def load_dat(self, model, csv_path):
+    def load_dat(self):
         """
-        Takes a model and a csv_path and loads it into dat
+        Takes a model and a csv file and loads it into dat
         """
         import datpy
         dat_source = settings.CALACCESS_DAT_SOURCE
         self.dat = datpy.Dat(dat_source['source'])
-        dataset = self.dat.dataset(model._meta.db_table)
+        dataset = self.dat.dataset(self.model._meta.db_table)
         try:
-            dataset.import_file(csv_path, format='csv')
+            dataset.import_file(self.csv, format='csv')
             dat_status = self.dat.status()
             model_count = dat_status['rows']
-            csv_count = self.get_row_count(csv_path)
+            csv_count = self.get_row_count(self.csv)
             self.finish_load_message(model_count, csv_count)
         except datpy.DatException:
             raise CommandError(
                 'Failed to load dat for %s, %s' % (
-                    model._meta.db_table,
-                    csv_path
+                    self.model._meta.db_table,
+                    self.csv
                 )
             )
 
-    def load_mysql(self, model, csv_path):
+    def load_mysql(self):
         import warnings
         import MySQLdb
         warnings.filterwarnings("ignore", category=MySQLdb.Warning)
 
         # Flush the target model
-        self.cursor.execute('TRUNCATE TABLE %s' % model._meta.db_table)
+        self.cursor.execute('TRUNCATE TABLE %s' % self.model._meta.db_table)
 
         # Build the MySQL LOAD DATA INFILE command
         bulk_sql_load_part_1 = """
@@ -162,18 +150,18 @@ class Command(CalAccessCommand):
             IGNORE 1 LINES
             (
         """ % (
-            csv_path,
-            model._meta.db_table
+            self.csv,
+            self.model._meta.db_table
         )
 
         # Get the headers and the row count from the source CSV
-        csv_headers = self.get_headers(csv_path)
-        csv_record_cnt = self.get_row_count(csv_path)
+        csv_headers = self.get_headers()
+        csv_record_cnt = self.get_row_count()
 
         header_sql_list = []
         field_types = dict(
             (f.db_column, f.db_type(self.connection))
-            for f in model._meta.fields
+            for f in self.model._meta.fields
         )
         date_set_list = []
 
@@ -205,42 +193,42 @@ class Command(CalAccessCommand):
         # Report back on how we did
         self.finish_load_message(cnt, csv_record_cnt)
 
-    def load_postgresql(self, model, csv_path):
+    def load_postgresql(self):
         """
-        Takes a model and a csv_path and loads it into postgresql
+        Takes a model and a csv file and loads it into postgresql
         """
         # Drop all the records from the target model's real table
         self.cursor.execute('TRUNCATE TABLE "%s" CASCADE' % (
-            model._meta.db_table
+            self.model._meta.db_table
         ))
 
         c = CopyMapping(
-            model,
-            csv_path,
-            dict((f.name, f.db_column) for f in model._meta.fields),
+            self.model,
+            self.csv,
+            dict((f.name, f.db_column) for f in self.model._meta.fields),
             using=self.database,
         )
         c.save(silent=True)
 
         # Print out the results
-        csv_count = self.get_row_count(csv_path)
-        model_count = model.objects.count()
+        csv_count = self.get_row_count()
+        model_count = self.model.objects.count()
         self.finish_load_message(model_count, csv_count)
 
-    def get_headers(self, csv_path):
+    def get_headers(self):
         """
         Returns the column headers from the csv as a list.
         """
-        with open(csv_path, 'r') as infile:
+        with open(self.csv, 'r') as infile:
             csv_reader = CSVKitReader(infile)
             headers = next(csv_reader)
         return headers
 
-    def get_row_count(self, csv_path):
+    def get_row_count(self):
         """
         Returns the number of rows in the file, not counting headers.
         """
-        with open(csv_path) as infile:
+        with open(self.csv) as infile:
             return sum(1 for line in infile) - 1
 
     def finish_load_message(self, model_count, csv_count):

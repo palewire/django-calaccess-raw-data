@@ -9,7 +9,7 @@ from calaccess_raw.management.commands import CalAccessCommand
 
 
 class Command(CalAccessCommand):
-    help = 'Clean a source CAL-ACCESS file and reformat it as a CSV'
+    help = 'Clean a source CAL-ACCESS TSV file and reformat it as a CSV'
 
     def add_arguments(self, parser):
 
@@ -31,31 +31,23 @@ class Command(CalAccessCommand):
     def handle(self, **options):
         # Set options
         self.verbosity = int(options.get("verbosity"))
+        self.file_name = options['file_name']
         self.data_dir = get_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         self.log_dir = os.path.join(self.data_dir, "log/")
-        # Do it
-        self.clean(options['file_name'])
 
-        if not options['keep_files']:
-            os.remove(os.path.join(self.tsv_dir, options['file_name']))
-
-    def clean(self, name):
-        """
-        Cleans the provided source TSV file and writes it out in CSV format
-        """
         if self.verbosity > 2:
-            self.log(" Cleaning %s" % name)
+            self.log(" Cleaning %s" % self.file_name)
 
         # Up the CSV data limit
         csv.field_size_limit(1000000000)
 
         # Input and output paths
-        tsv_path = os.path.join(self.tsv_dir, name)
+        tsv_path = os.path.join(self.tsv_dir, self.file_name)
         csv_path = os.path.join(
             self.csv_dir,
-            name.lower().replace("tsv", "csv")
+            self.file_name.lower().replace("tsv", "csv")
         )
 
         # Reader
@@ -137,13 +129,17 @@ class Command(CalAccessCommand):
             if self.verbosity > 1:
                 msg = '  %s errors'
                 self.failure(msg % (len(log_rows) - 1))
-            self.log_errors(name, log_rows)
+            self.log_errors(log_rows)
 
         # Shut it down
         tsv_file.close()
         csv_file.close()
 
-    def log_errors(self, name, rows):
+        # unless keeping files, remove tsv files
+        if not options['keep_files']:
+            os.remove(os.path.join(self.tsv_dir, options['file_name']))
+
+    def log_errors(self, rows):
         """
         Log any errors to a csv file
         """
@@ -153,7 +149,7 @@ class Command(CalAccessCommand):
         # Log writer
         log_path = os.path.join(
             self.log_dir,
-            name.lower().replace("tsv", "errors.csv")
+            self.file_name.lower().replace("tsv", "errors.csv")
         )
         log_file = open(log_path, 'w')
         log_writer = CSVKitWriter(log_file, quoting=csv.QUOTE_ALL)
