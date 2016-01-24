@@ -11,20 +11,20 @@ from django.core.management.base import CommandError
 
 
 class Command(CalAccessCommand):
-    help = 'Load clean CAL-ACCESS CSV file into its corresponding database model'
+    help = 'Load clean CAL-ACCESS CSV file into database model'
+    # Trick for reformating date strings in source data so that they can
+    # be gobbled up by MySQL. You'll see how below.
+    date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
+    datetime_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y \
+%%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%H:%%i:%%s')"
 
-    # define the command's options
     def add_arguments(self, parser):
-
-        # include args from CalAccessCommand
         super(Command, self).add_arguments(parser)
-
         # positional (required) arg
         parser.add_argument(
             'model_name',
             help="Name of the model into which data will be loaded"
         )
-
         # keyword (optional) args
         parser.add_argument(
             "--c",
@@ -33,7 +33,6 @@ class Command(CalAccessCommand):
             default=None,
             help="Path to comma-delimited file to be loaded. Defaults to one associated with model."
         )
-
         parser.add_argument(
             "--keep-files",
             action="store_true",
@@ -41,7 +40,6 @@ class Command(CalAccessCommand):
             default=False,
             help="Keep CSV file after loading"
         )
-
         parser.add_argument(
             "--d",
             "--database",
@@ -50,7 +48,6 @@ class Command(CalAccessCommand):
             help="Alias of database where data will be inserted. Defaults to the "
                  "'default' in DATABASE settings."
         )
-
         parser.add_argument(
             "-a",
             "--app-name",
@@ -58,12 +55,6 @@ class Command(CalAccessCommand):
             default="calaccess_raw",
             help="Name of Django app where model will be imported from"
         )
-
-    # Trick for reformating date strings in source data so that they can
-    # be gobbled up by MySQL. You'll see how below.
-    date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
-    datetime_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y \
-%%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%H:%%i:%%s')"
 
     # all BaseCommand subclasses require a handle() method that includes
     #   the actual logic of the command
@@ -86,7 +77,9 @@ class Command(CalAccessCommand):
         try:
             engine = settings.DATABASES[self.database]['ENGINE']
         except KeyError:
-            raise TypeError("{} not configured in DATABASES settings.".format(self.database))
+            raise TypeError(
+                "{} not configured in DATABASES settings.".format(self.database)
+            )
 
         # set up database connection
         self.connection = connections[self.database]

@@ -15,21 +15,15 @@ class Command(CalAccessCommand):
     help = ("Download, unzip, clean and load the latest snapshot of the "
             "CAL-ACCESS database")
 
-    # define the command's options
     def add_arguments(self, parser):
-
-        # include args from CalAccessCommand
         super(Command, self).add_arguments(parser)
-
-        # keyword (optional) arguments
         parser.add_argument(
             "--resume-download",
             action="store_true",
             dest="resume",
             default=False,
-            help="Resume downloading of the ZIP archive from a previous attempt"
+            help="Resume downloading of ZIP archive from a previous attempt"
         )
-
         parser.add_argument(
             "--skip-download",
             action="store_false",
@@ -37,7 +31,6 @@ class Command(CalAccessCommand):
             default=True,
             help="Skip downloading of the ZIP archive"
         )
-
         parser.add_argument(
             "--skip-clean",
             action="store_false",
@@ -45,7 +38,6 @@ class Command(CalAccessCommand):
             default=True,
             help="Skip cleaning up the raw data files"
         )
-
         parser.add_argument(
             "--skip-load",
             action="store_false",
@@ -53,7 +45,6 @@ class Command(CalAccessCommand):
             default=True,
             help="Skip loading up the raw data files"
         )
-
         parser.add_argument(
             "--keep-files",
             action="store_true",
@@ -61,7 +52,6 @@ class Command(CalAccessCommand):
             default=False,
             help="Keep zip, unzipped, TSV and CSV files"
         )
-
         parser.add_argument(
             "--noinput",
             action="store_true",
@@ -69,7 +59,6 @@ class Command(CalAccessCommand):
             default=False,
             help="Download the ZIP archive without asking permission"
         )
-
         parser.add_argument(
             "--test",
             "--use-test-data",
@@ -78,7 +67,6 @@ class Command(CalAccessCommand):
             default=False,
             help="Use sampled test data (skips download, clean a load)"
         )
-
         parser.add_argument(
             "-d",
             "--database",
@@ -87,7 +75,6 @@ class Command(CalAccessCommand):
             help="Alias of database where data will be inserted. Defaults to the "
                  "'default' in DATABASE settings."
         )
-
         parser.add_argument(
             "-a",
             "--app-name",
@@ -96,10 +83,7 @@ class Command(CalAccessCommand):
             help="Name of Django app where model will be imported from"
         )
 
-    # all BaseCommand subclasses require a handle() method that includes
-    #   the actual logic of the command
     def handle(self, **options):
-
         # set / compute any attributes that multiple class methods need
         self.verbosity = options.get("verbosity")
         self.app_name = options["app_name"]

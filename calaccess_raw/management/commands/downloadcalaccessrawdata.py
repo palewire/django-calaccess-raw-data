@@ -19,16 +19,11 @@ from django.utils.timezone import utc
 
 
 class Command(CalAccessCommand):
-    help = ("Download, unzip and prepare the latest snapshot of the CAL-ACCESS database")
+    help = "Download, clean and load the latest CAL-ACCESS database ZIP"
     url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
-    # define the command's options
     def add_arguments(self, parser):
-
-        # include args from CalAccessCommand
         super(Command, self).add_arguments(parser)
-
-        # keyword (optional) arguments
         parser.add_argument(
             "--resume",
             action="store_true",
@@ -36,7 +31,6 @@ class Command(CalAccessCommand):
             default=False,
             help="Resume downloading of the ZIP archive from a previous attempt"
         )
-
         parser.add_argument(
             "--keep-files",
             action="store_true",
@@ -44,7 +38,6 @@ class Command(CalAccessCommand):
             default=False,
             help="Keep downloaded zip and unzipped files"
         )
-
         parser.add_argument(
             "--noinput",
             action="store_true",
@@ -53,10 +46,7 @@ class Command(CalAccessCommand):
             help="Download the ZIP archive without asking permission"
         )
 
-    # all BaseCommand subclasses require a handle() method that includes
-    #   the actual logic of the command
     def handle(self, **options):
-
         self.verbosity = options["verbosity"]
 
         # get the dir were data goes from app settings
@@ -67,8 +57,10 @@ class Command(CalAccessCommand):
         # downloaded zipfile will go in data_dir
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         # so will the file where we track the last download
-        self.zip_metadata_path = os.path.join(self.data_dir,
-                                              '.lastdownload')
+        self.zip_metadata_path = os.path.join(
+            self.data_dir,
+            '.lastdownload'
+        )
 
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
@@ -120,7 +112,6 @@ class Command(CalAccessCommand):
             return
 
         self.download()
-
         self.unzip()
 
         if not options['keep_files']:

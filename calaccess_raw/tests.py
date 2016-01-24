@@ -18,10 +18,7 @@ class CalAccessTest(TestCase):
         Load data into the database before running other tests.
         """
         super(CalAccessTest, cls).setUpClass()
-        kwargs = dict(
-            verbosity=1,
-            test_data=True
-        )
+        kwargs = dict(verbosity=1, test_data=True)
         if settings.DATABASES.get("alt", None):
             kwargs['database'] = 'alt'
             logger.debug("Loading into 'alt' database")

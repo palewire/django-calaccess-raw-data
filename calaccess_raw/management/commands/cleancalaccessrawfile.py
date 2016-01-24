@@ -12,14 +12,11 @@ class Command(CalAccessCommand):
     help = 'Clean a source CAL-ACCESS TSV file and reformat it as a CSV'
 
     def add_arguments(self, parser):
-
         super(Command, self).add_arguments(parser)
-
         parser.add_argument(
             'file_name',
             help="Name of the TSV file to be cleaned"
         )
-
         parser.add_argument(
             "--keep-files",
             action="store_true",
