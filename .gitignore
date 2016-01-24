@@ -19,6 +19,6 @@ docs/_build
 .tox
 example/data
 example/test-data/csv
-example/project/settings_local.py
+example/settings_local.py
 example/.static/
 calaccess_raw/migrations/
