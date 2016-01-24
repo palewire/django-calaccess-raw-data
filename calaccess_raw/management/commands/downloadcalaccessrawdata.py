@@ -6,16 +6,16 @@ import locale
 import shutil
 import zipfile
 import requests
+from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
+from django.utils.timezone import utc
 from django.utils.six.moves import input
-from datetime import datetime
+from calaccess_raw import get_download_directory
 from dateutil.parser import parse as datetime_parse
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw import get_download_directory
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from django.utils.timezone import utc
 
 
 class Command(CalAccessCommand):

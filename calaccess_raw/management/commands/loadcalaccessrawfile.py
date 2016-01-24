@@ -6,8 +6,8 @@ from csvkit import CSVKitReader
 from django.conf import settings
 from postgres_copy import CopyMapping
 from django.db import connections, router
-from calaccess_raw.management.commands import CalAccessCommand
 from django.core.management.base import CommandError
+from calaccess_raw.management.commands import CalAccessCommand
 
 
 class Command(CalAccessCommand):

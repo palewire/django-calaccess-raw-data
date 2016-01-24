@@ -1,14 +1,14 @@
 import os
-from django.core.management import call_command
 from django.conf import settings
+from clint.textui import progress
+from django.core.management import call_command
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import (
     get_download_directory,
     get_test_download_directory,
     get_model_list
 )
-from django.core.management.base import CommandError
-from clint.textui import progress
 
 
 class Command(CalAccessCommand):
