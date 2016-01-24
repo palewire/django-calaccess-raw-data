@@ -25,9 +25,10 @@ class Command(CalAccessCommand):
             help="Keep original TSV file"
         )
 
-    def handle(self, **options):
+    def handle(self, *args, **options):
+        super(Command, self).handle(*args, **options)
+
         # Set options
-        self.verbosity = int(options.get("verbosity"))
         self.file_name = options['file_name']
         self.data_dir = get_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")

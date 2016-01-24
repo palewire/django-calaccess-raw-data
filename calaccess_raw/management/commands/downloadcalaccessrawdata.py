@@ -46,8 +46,8 @@ class Command(CalAccessCommand):
             help="Download the ZIP archive without asking permission"
         )
 
-    def handle(self, **options):
-        self.verbosity = options["verbosity"]
+    def handle(self, *args, **options):
+        super(Command, self).handle(*args, **options)
 
         # get the dir were data goes from app settings
         self.data_dir = get_download_directory()

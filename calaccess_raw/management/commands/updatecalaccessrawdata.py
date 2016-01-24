@@ -82,9 +82,9 @@ class Command(CalAccessCommand):
             help="Name of Django app where model will be imported from"
         )
 
-    def handle(self, **options):
+    def handle(self, *args, **options):
+        super(Command, self).handle(*args, **options)
         # set / compute any attributes that multiple class methods need
-        self.verbosity = options.get("verbosity")
         self.app_name = options["app_name"]
         self.database = options["database"]
         self.keep_files = options["keep_files"]

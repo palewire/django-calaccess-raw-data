@@ -58,10 +58,10 @@ class Command(CalAccessCommand):
 
     # all BaseCommand subclasses require a handle() method that includes
     #   the actual logic of the command
-    def handle(self, **options):
+    def handle(self, *args, **options):
+        super(Command, self).handle(*args, **options)
 
         # set / compute any attributes that multiple class methods need
-        self.verbosity = options["verbosity"]
         self.keep_files = options["keep_files"]
         self.model = apps.get_model(options["app_name"], options['model_name'])
         self.database = options["database"] or router.db_for_write(self.model)

@@ -7,7 +7,8 @@ from django.contrib.humanize.templatetags.humanize import intcomma
 class Command(CalAccessCommand):
     help = "Print table and record counts from the CAL-ACCESS raw database"
 
-    def handle(self, **options):
+    def handle(self, *args, **options):
+        super(Command, self).handle(*args, **options)
         self.header("Totaling CAL-ACCESS tables and rows")
         model_list = get_model_list()
         self.log(" %s total tables" % len(model_list))

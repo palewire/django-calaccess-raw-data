@@ -18,7 +18,9 @@ class Command(CalAccessCommand):
             help="Name of Django app where model will be imported from"
         )
 
-    def handle(self, **options):
+    def handle(self, *args, **options):
+        super(Command, self).handle(*args, **options)
+
         self.log(" Verifying %s" % options['model_name'])
 
         # Get the model total

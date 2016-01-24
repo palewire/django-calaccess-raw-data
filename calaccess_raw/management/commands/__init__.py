@@ -4,6 +4,9 @@ from django.core.management.base import BaseCommand
 
 class CalAccessCommand(BaseCommand):
 
+    def handle(self, *args, **options):
+        self.verbosity = int(options.get("verbosity"))
+
     def header(self, string):
         self.stdout.write(
             colorize(string, fg="cyan", opts=("bold",))
