@@ -19,7 +19,7 @@ from django.utils.timezone import utc
 
 
 class Command(CalAccessCommand):
-    help = "Download, clean and load the latest CAL-ACCESS database ZIP"
+    help = "Download, unzip and prep the latest CAL-ACCESS database ZIP"
     url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
     def add_arguments(self, parser):
