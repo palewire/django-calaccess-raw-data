@@ -12,8 +12,7 @@ from clint.textui import progress
 
 
 class Command(CalAccessCommand):
-    help = "Download, unzip, clean and load the latest snapshot of the "
-            "CAL-ACCESS database")
+    help = "Download, unzip, clean and load the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
         super(Command, self).add_arguments(parser)
