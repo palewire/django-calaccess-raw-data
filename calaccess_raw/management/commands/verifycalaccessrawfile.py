@@ -33,6 +33,8 @@ class Command(CalAccessCommand):
         # Report back on how we did
         if model_count == csv_count:
             self.success("  Record count matches CSV")
+            self.success("  - Model: %s" % intcomma(model_count))
+            self.success("  - CSV: %s" % intcomma(csv_count))
         else:
             self.failure("  Record count does not match CSV")
             self.failure("  - Model: %s" % intcomma(model_count))

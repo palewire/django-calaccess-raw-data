@@ -146,4 +146,4 @@ class CalAccessTest(TestCase):
         """
         Test that verifycalaccessrawfile management command is working.
         """
-        call_command("verifycalaccessrawfile", ['RcptCd'])
+        call_command("verifycalaccessrawfile", 'RcptCd')
