@@ -141,3 +141,9 @@ class CalAccessTest(TestCase):
                     m().klass_name,
                     f.name
                 ))
+
+    def test_verifycalacessrawfile(self):
+        """
+        Test that verifycalaccessrawfile management command is working.
+        """
+        call_command("verifycalaccessrawfile", ['RcptCd'])
