@@ -20,20 +20,20 @@ class Command(CalAccessCommand):
         model = apps.get_model(options['app_name'], options['model_name'])
 
         # Get the db total
-        cnt = model.objects.count()
+        model_count = model.objects.count()
 
         # Get the CSV total
         csv_path = model.objects.get_csv_path()
 
         with open(csv_path) as f:
-            csv_record_cnt = sum(1 for l in f) - 1
+            csv_count = sum(1 for l in f) - 1
 
         # Report back on how we did
-        if cnt == csv_record_cnt:
+        if model_count == csv_count:
             self.success("  Table record count matches CSV")
         else:
             self.failure('  Table Record count doesn\'t match CSV. \
 Table: %s\tCSV: %s' % (
-                cnt,
-                csv_record_cnt,
+                model_count,
+                csv_count,
             ))
