@@ -1,22 +1,29 @@
 [run]
 include =
-    calaccess_raw/models/base.py
-    calaccess_raw/models/campaign.py
-    calaccess_raw/models/common.py
-    calaccess_raw/models/lobbying.py
-    calaccess_raw/models/other.py
+    calaccess_raw/__init__.py
+    calaccess_raw/apps.py
+    calaccess_raw/fields.py
+    calaccess_raw/managers.py
+    calaccess_raw/admin/__init__.py
     calaccess_raw/admin/base.py
     calaccess_raw/admin/campaign.py
     calaccess_raw/admin/common.py
     calaccess_raw/admin/lobbying.py
     calaccess_raw/admin/other.py
-    calaccess_raw/managers.py
-    calaccess_raw/apps.py
-    calaccess_raw/management/commands/updatecalaccessrawdata.py
+    calaccess_raw/management/__init__.py
+    calaccess_raw/management/commands/__init__.py
     calaccess_raw/management/commands/cleancalaccessrawfile.py
+    calaccess_raw/management/commands/downloadcalaccessrawdata.py
     calaccess_raw/management/commands/loadcalaccessrawfile.py
-    calaccess_raw/management/commands/totalcalaccessrawfile.py
+    calaccess_raw/management/commands/totalcalaccessrawdata.py
+    calaccess_raw/management/commands/updatecalaccessrawdata.py
     calaccess_raw/management/commands/verifycalaccessrawfile.py
+    calaccess_raw/models/__init__.py
+    calaccess_raw/models/base.py
+    calaccess_raw/models/campaign.py
+    calaccess_raw/models/common.py
+    calaccess_raw/models/lobbying.py
+    calaccess_raw/models/other.py
 
 [report]
 exclude_lines =

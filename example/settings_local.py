@@ -3,7 +3,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'calaccess_raw',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'mysql',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
