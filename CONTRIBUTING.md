@@ -41,4 +41,4 @@ Its primary focus is refining CAL-ACCESS, the jumbled, dirty and difficult gover
 
 In 2015 the coalition was named a winner of the Knight News Challenge and awarded $250,000 in philanthropic funding from the Knight Foundation, the Democracy Fund, the William and Flora Hewlett Foundation and the Rita Allen Foundation.
 
-Read more at [californiacivicdata.org](http://www.californiacivicdata.org]
+Read more at [californiacivicdata.org](http://www.californiacivicdata.org)
