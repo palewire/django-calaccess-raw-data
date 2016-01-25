@@ -16,6 +16,13 @@ guide enforcement tools.
 When a commit or pull request is made with our repository, those tests are rerun with the latest code.
 We try not to be too uptight, but we generally expect the tests to be pass before we will merge a request.
 
+## How can I contribute documentation?
+
+The [documentation](http://django-calaccess-raw-data.californiacivicdata.org/en/latest/) for this
+repository is published online by ReadTheDocs using the files found in the [./docs/](https://github.com/california-civic-data-coalition/django-calaccess-raw-data/tree/master/docs) directory.
+
+Those files are compiled using Python's [Sphinx](http://www.sphinx-doc.org/en/stable/) documentation framework, which is written in [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html) format.
+
 ## Who is in charge of the repository?
 
 Maintaining the code and handling outside pull requests is managed by the leadership
