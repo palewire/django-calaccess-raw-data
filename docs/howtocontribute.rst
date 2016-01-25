@@ -50,7 +50,7 @@ Create a new database named ``calaccess`` like this:
 
     mysqladmin -h localhost -u root -p create calaccess
 
-Create a file at ``example/project/settings_local.py`` to save your custom database credentials. That might look something like this.
+Create a file at ``example/settings_local.py`` to save your custom database credentials. That might look something like this.
 
 .. code-block:: python
 
@@ -115,4 +115,4 @@ You might start by loading the data dump from the web.
 
 .. code-block:: bash
 
-    $ python example/manage.py downloadcalaccessrawdata
+    $ python example/manage.py updatecalaccessrawdata

@@ -111,13 +111,14 @@ Now you're ready to create the database tables with Django using its ``manage.py
 
 .. code-block:: bash
 
+    $ python manage.py makemigrations calaccess_raw
     $ python manage.py migrate
 
 Once everything is set up, this management command will download the latest bulk data release from the state and load it in the database. It'll take a while. Go grab some coffee.
 
 .. code-block:: bash
 
-    $ python manage.py downloadcalaccessrawdata
+    $ python manage.py updatecalaccessrawdata
 
 Exploring the data
 ------------------
