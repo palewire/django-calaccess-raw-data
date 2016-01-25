@@ -23,6 +23,9 @@ repository is published online by ReadTheDocs using the files found in the [./do
 
 Those files are compiled using Python's [Sphinx](http://www.sphinx-doc.org/en/stable/) documentation framework, which is written in [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html) format.
 
+To make edits to the documentation, change the ``.rst`` files found in that directory, commit
+your changes and submit them as a pull request.
+
 ## Who is in charge of the repository?
 
 Maintaining the code and handling outside pull requests is managed by the leadership
