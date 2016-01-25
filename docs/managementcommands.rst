@@ -10,6 +10,9 @@ updatecalaccessrawdata
 This master command. It brings together all of the other update commands to
 download, unzip, clean and load the latest snapshot of the CAL-ACCESS database.
 
+Options
+```````
+
 .. code-block:: bash
 
     usage: manage.py updatecalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
