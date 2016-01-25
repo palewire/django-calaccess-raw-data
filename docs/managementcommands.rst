@@ -343,7 +343,7 @@ The command expects to be provided with the name of a Django model to analyze.
 Options
 ```````
 
-.. code-block:: bash'
+.. code-block:: bash
 
     usage: manage.py verifycalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
                                             [--settings SETTINGS]
