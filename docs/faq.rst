@@ -33,7 +33,7 @@ What is the California Civic Data Coalition?
 --------------------------------------------
 
 The California Civic Data Coalition is a loosely coupled team of journalists from the Los Angeles Times Data Desk,
-the San Francisco Chronicle, The Center for Investigative Reporting and Stanford's Computational Journalism Lab.
+the Washington Post, The Center for Investigative Reporting and Stanford's Computational Journalism Lab.
 
 The coalition was formed in 2014 by Ben Welsh and Agustin Armendariz to lead the development of open-source software
 that makes California's public data easier to access and analyze. The effort has drawn hundreds of contributions
