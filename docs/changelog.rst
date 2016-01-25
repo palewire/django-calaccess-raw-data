@@ -1,6 +1,23 @@
 Changelog
 =========
 
+0.2.0 (January 2016)
+---------------------
+
+* Support for Python 3.5
+* Support for Django 1.9
+* Simplified downloadcalaccessrawdata. Now only downloads, unzips and preps
+* Introduced updatecalaccessrawdata, which downloads, cleans and loads data
+* Added --resume-download option in case download is interrupted
+* Added --csv option to loadcalaccessrawfile so that users can load from a file other than the one specified for the given calaccess_raw model
+* Added --keep-files option. Unless the option is invoked downloadcalaccessrawdata, cleancalaccessrawfile, loadcalaccessrawfile and updatecalaccessrawdata now clear out original and intermediate files  
+* Support for multiple databases configured in Django DATABASE settings. Users can now load into a specified database using --database option
+* Fixed verifycalaccessrawfile
+* Updated management command options to most recent Django style, using argparse instead of optparse
+* Hundreds of unique keys, field defs and choices patched by Code Rushers
+* Automatically generated table documentation page
+* Expanded documentation
+
 0.1.2 (February 2015)
 ---------------------
 
