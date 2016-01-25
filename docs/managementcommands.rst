@@ -300,6 +300,8 @@ Examples
 Options
 ```````
 
+.. code-block:: bash
+
     usage: manage.py totalcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
                                            [--settings SETTINGS]
                                            [--pythonpath PYTHONPATH] [--traceback]
