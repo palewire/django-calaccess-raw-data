@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='django-calaccess-raw-data',
-    version='0.1.2',
+    version='0.2.0',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
@@ -21,18 +21,23 @@ finance and lobbying activity data from the California \
 Secretary of State\'s CAL-ACCESS database',
     url='http://django-calaccess-raw-data.californiacivicdata.org/',
     author='California Civic Data Coalition',
-    author_email='ben.welsh@latimes.com',
+    author_email='cacivicdata@gmail.com',
     install_requires=(
-        'django>=1.7',
+        'django>=1.8',
         'csvkit',
         'requests',
         'clint',
         'hurry.filesize',
         'django-postgres-copy',
+        'python-dateutil',
+        'pytz',
     ),
     classifiers=(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
+        'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.9',
+        'License :: OSI Approved :: MIT License',
     ),
 )
