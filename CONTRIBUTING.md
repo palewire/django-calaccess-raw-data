@@ -1,6 +1,6 @@
 # How to contribute
 
-We welcome pull requests for all parties. If you're looking for a place to plug in,
+We welcome issues and pull requests for all parties. If you're looking for a place to plug in,
 work through our [getting started guide of new contributors](http://django-calaccess-raw-data.californiacivicdata.org/en/latest/howtocontribute.html)
 and then check out [our open issues list](https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues) to see if anything interests you. If this repository isn't your cup of tea, check out our other projects [on GitHub](https://github.com/california-civic-data-coalition/).
 
