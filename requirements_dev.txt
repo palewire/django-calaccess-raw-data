@@ -8,6 +8,7 @@ psycopg2
 pyflakes
 python-coveralls
 python-dateutil
+pytz
 requests
 sphinx-autobuild
 tox
@@ -15,4 +16,4 @@ clint
 csvkit
 subsample
 django-postgres-copy
-datpy
+datpy        
