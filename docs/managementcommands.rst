@@ -63,6 +63,9 @@ cleancalaccessrawfile
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV. A component of the
 master ``updatecalaccessrawdata`` command.
 
+Options
+```````
+
 .. code-block:: bash
 
     usage: manage.py cleancalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
@@ -101,6 +104,9 @@ downloadcalaccessrawdata
 Download, unzip and prep the latest CAL-ACCESS database ZIP. A component of the
 master ``updatecalaccessrawdata`` command.
 
+Options
+```````
+
 .. code-block:: bash
 
     usage: manage.py downloadcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
@@ -138,6 +144,9 @@ loadcalaccessrawfile
 
 Load clean CAL-ACCESS CSV file into a database model. A component of the
 master ``updatecalaccessrawdata`` command.
+
+Options
+```````
 
 .. code-block:: bash
 
@@ -186,6 +195,9 @@ totalcalaccessrawdata
 
 Print table and record counts from the CAL-ACCESS raw database
 
+Options
+```````
+
     usage: manage.py totalcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
                                            [--settings SETTINGS]
                                            [--pythonpath PYTHONPATH] [--traceback]
@@ -214,6 +226,9 @@ verifycalaccessrawfile
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Compare the number of records in a model against its source CSV
+
+Options
+```````
 
 .. code-block:: bash'
 
