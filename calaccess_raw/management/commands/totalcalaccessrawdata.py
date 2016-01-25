@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import get_model_list
 from calaccess_raw.management.commands import CalAccessCommand

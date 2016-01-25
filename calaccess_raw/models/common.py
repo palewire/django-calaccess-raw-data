@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
 from django.utils.encoding import python_2_unicode_compatible

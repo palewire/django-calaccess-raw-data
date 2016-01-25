@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from calaccess_raw.models.base import CalAccessBaseModel
 from calaccess_raw.models.campaign import (
     CvrSoCd,

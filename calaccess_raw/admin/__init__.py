@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from calaccess_raw.admin.base import BaseAdmin
 from calaccess_raw.admin.campaign import (
     CvrSoCdAdmin,

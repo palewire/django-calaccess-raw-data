@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 from django.conf import settings
 default_app_config = 'calaccess_raw.apps.CalAccessRawConfig'

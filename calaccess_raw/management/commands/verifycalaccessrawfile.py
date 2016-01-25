@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.apps import apps
 from calaccess_raw.management.commands import CalAccessCommand

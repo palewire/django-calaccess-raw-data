@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 Custom field overrides that allow for cleaning and transforming the data
 when it is bulk loaded into the database with PostgreSQL's COPY command via
