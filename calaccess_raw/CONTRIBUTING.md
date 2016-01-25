@@ -4,6 +4,23 @@ We welcome pull requests for all parties. If you're looking for a place to plug 
 work through our [getting started guide of new contributors](http://django-calaccess-raw-data.californiacivicdata.org/en/latest/howtocontribute.html)
 and then check out [our open issues list](https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues) to see if anything interests you. If this repository isn't your cup of tea, check out our other projects [on GitHub](https://github.com/california-civic-data-coalition/).
 
+## How do the tests work?
+
+Our code is tested using [Django's built-in unittesting](https://docs.djangoproject.com/en/1.9/topics/testing/) system via the [TravisCI](https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data)
+continuous integration service.
+
+In addition, prior to the Django unittests code is evaluated using Python's
+[pep8](https://pypi.python.org/pypi/pep8) and [pyflakes](https://pypi.python.org/pypi/pyflakes) style
+guide enforcement tools.
+
+When a commit or pull request is made with our repository, those tests are rerun with the latest code.
+We try not to be too uptight, but we generally expect the tests to be pass before we will merge a request.
+
+## Who is in charge of the repository?
+
+Maintaining the code and handling outside pull requests is managed by the leadership
+team at the California Civic Data Coalition.
+
 ## What is the California Civic Data Coalition?
 
 The California Civic Data Coalition is a loosely coupled team of journalists from the Los Angeles Times Data Desk, the Washington Post, The Center for Investigative Reporting and Stanford's Computational Journalism Lab.
