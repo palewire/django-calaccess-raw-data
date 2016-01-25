@@ -171,7 +171,7 @@ Here is how to run the command.
 
     $ python manage.py downloadcalaccessrawdata
 
-    If your download crashes, there's a way to restart it.
+If your download crashes, there's a way to restart it.
 
 .. code-block:: bash
 
