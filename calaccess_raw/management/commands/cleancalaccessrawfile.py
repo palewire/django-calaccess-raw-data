@@ -12,6 +12,9 @@ class Command(CalAccessCommand):
     help = 'Clean a source CAL-ACCESS TSV file and reformat it as a CSV'
 
     def add_arguments(self, parser):
+        """
+        Adds custom arguments specific to this command.
+        """
         super(Command, self).add_arguments(parser)
         parser.add_argument(
             'file_name',

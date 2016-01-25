@@ -8,6 +8,9 @@ class Command(CalAccessCommand):
     help = 'Compare the number of records in a model against its source CSV'
 
     def add_arguments(self, parser):
+        """
+        Adds custom arguments specific to this command.
+        """
         super(Command, self).add_arguments(parser)
         parser.add_argument('model_name', help="Name of model to verify")
         parser.add_argument(

@@ -19,6 +19,9 @@ class Command(CalAccessCommand):
 %%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%H:%%i:%%s')"
 
     def add_arguments(self, parser):
+        """
+        Adds custom arguments specific to this command.
+        """
         super(Command, self).add_arguments(parser)
         # positional (required) arg
         parser.add_argument(

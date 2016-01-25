@@ -15,6 +15,9 @@ class Command(CalAccessCommand):
     help = "Download, unzip, clean and load the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
+        """
+        Adds custom arguments specific to this command.
+        """
         super(Command, self).add_arguments(parser)
         parser.add_argument(
             "--resume-download",

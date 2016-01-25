@@ -23,6 +23,9 @@ class Command(CalAccessCommand):
     url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
     def add_arguments(self, parser):
+        """
+        Adds custom arguments specific to this command.
+        """
         super(Command, self).add_arguments(parser)
         parser.add_argument(
             "--resume",
