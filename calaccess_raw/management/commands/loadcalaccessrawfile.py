@@ -116,10 +116,11 @@ class Command(CalAccessCommand):
         dataset = self.dat.dataset(self.model._meta.db_table)
         try:
             dataset.import_file(self.csv, format='csv')
-            dat_status = self.dat.status()
-            model_count = dat_status['rows']
-            csv_count = self.get_row_count(self.csv)
-            self.finish_load_message(model_count, csv_count)
+            if self.verbosity > 2:
+                dat_status = self.dat.status()
+                model_count = dat_status['rows']
+                csv_count = self.get_row_count(self.csv)
+                self.finish_load_message(model_count, csv_count)
         except datpy.DatException:
             raise CommandError(
                 'Failed to load dat for %s, %s' % (
@@ -129,6 +130,9 @@ class Command(CalAccessCommand):
             )
 
     def load_mysql(self):
+        """
+        Load the file into a MySQL database using LOAD DATA INFILE
+        """
         import warnings
         import MySQLdb
         warnings.filterwarnings("ignore", category=MySQLdb.Warning)
@@ -187,11 +191,12 @@ class Command(CalAccessCommand):
         cnt = self.cursor.execute(bulk_sql_load)
 
         # Report back on how we did
-        self.finish_load_message(cnt, csv_record_cnt)
+        if self.verbosity > 2:
+            self.finish_load_message(cnt, csv_record_cnt)
 
     def load_postgresql(self):
         """
-        Takes a model and a csv file and loads it into postgresql
+        Load the file into a PostgreSQL database using COPY
         """
         # Drop all the records from the target model's real table
         self.cursor.execute('TRUNCATE TABLE "%s" CASCADE' % (
@@ -207,9 +212,10 @@ class Command(CalAccessCommand):
         c.save(silent=True)
 
         # Print out the results
-        csv_count = self.get_row_count()
-        model_count = self.model.objects.count()
-        self.finish_load_message(model_count, csv_count)
+        if self.verbosity > 2:
+            csv_count = self.get_row_count()
+            model_count = self.model.objects.count()
+            self.finish_load_message(model_count, csv_count)
 
     def get_headers(self):
         """
@@ -232,11 +238,10 @@ class Command(CalAccessCommand):
         The message displayed about whether or not a load finished
         successfully.
         """
-        if self.verbosity:
-            if model_count != csv_count and self.verbosity > 2:
-                msg = '  Table record count doesn\'t match CSV. \
+        if model_count != csv_count:
+            msg = '  Table record count doesn\'t match CSV. \
 Table: %s\tCSV: %s'
-                self.failure(msg % (
-                    model_count,
-                    csv_count,
-                ))
+            self.failure(msg % (
+                model_count,
+                csv_count,
+            ))

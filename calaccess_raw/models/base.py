@@ -6,7 +6,7 @@ from calaccess_raw import managers
 
 class CalAccessBaseModel(models.Model):
     """
-    An abstract model with some tricks we'll reuse below.
+    An abstract model with some tricks we'll reuse.
     """
     # The UNIQUE_KEY is one or more fields that, taken together, are unique
     # within the database. https://en.wikipedia.org/wiki/Unique_key
