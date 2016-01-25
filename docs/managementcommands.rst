@@ -1,156 +1,14 @@
 Management commands
 ===================
 
-
-cleancalaccessrawfile
+Updating the database
 ---------------------
-
-Clean a source CAL-ACCESS TSV file and reformat it as a CSV
-
-.. code-block:: bash
-
-    usage: manage.py cleancalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
-                                           [--settings SETTINGS]
-                                           [--pythonpath PYTHONPATH] [--traceback]
-                                           [--no-color] [--keep-files]
-                                           file_name
-
-    Clean a source CAL-ACCESS TSV file and reformat it as a CSV
-
-    positional arguments:
-      file_name             Name of the TSV file to be cleaned and discarded for a
-                            CSV
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      --version             show program's version number and exit
-      -v {0,1,2,3}, --verbosity {0,1,2,3}
-                            Verbosity level; 0=minimal output, 1=normal output,
-                            2=verbose output, 3=very verbose output
-      --settings SETTINGS   The Python path to a settings module, e.g.
-                            "myproject.settings.main". If this isn't provided, the
-                            DJANGO_SETTINGS_MODULE environment variable will be
-                            used.
-      --pythonpath PYTHONPATH
-                            A directory to add to the Python path, e.g.
-                            "/home/djangoprojects/myproject".
-      --traceback           Raise on CommandError exceptions
-      --no-color            Don't colorize the command output.
-      --keep-files          Keep original TSV file
-
-
-downloadcalaccessrawdata
-------------------------
-
-Download, unzip and prep the latest CAL-ACCESS database ZIP
-
-.. code-block:: bash
-
-    usage: manage.py downloadcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
-                                              [--settings SETTINGS]
-                                              [--pythonpath PYTHONPATH]
-                                              [--traceback] [--no-color]
-                                              [--resume] [--keep-files]
-                                              [--noinput]
-
-    Download, unzip and prep the latest CAL-ACCESS database ZIP
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      --version             show program's version number and exit
-      -v {0,1,2,3}, --verbosity {0,1,2,3}
-                            Verbosity level; 0=minimal output, 1=normal output,
-                            2=verbose output, 3=very verbose output
-      --settings SETTINGS   The Python path to a settings module, e.g.
-                            "myproject.settings.main". If this isn't provided, the
-                            DJANGO_SETTINGS_MODULE environment variable will be
-                            used.
-      --pythonpath PYTHONPATH
-                            A directory to add to the Python path, e.g.
-                            "/home/djangoprojects/myproject".
-      --traceback           Raise on CommandError exceptions
-      --no-color            Don't colorize the command output.
-      --resume              Resume downloading of the ZIP archive from a previous
-                            attempt
-      --keep-files          Keep downloaded zip and unzipped files
-      --noinput             Download the ZIP archive without asking permission
-
-
-loadcalaccessrawfile
---------------------
-
-Load clean CAL-ACCESS CSV file into a database model
-
-.. code-block:: bash
-
-    usage: manage.py loadcalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
-                                          [--settings SETTINGS]
-                                          [--pythonpath PYTHONPATH] [--traceback]
-                                          [--no-color] [--c CSV] [--keep-files]
-                                          [--d DATABASE] [-a APP_NAME]
-                                          model_name
-
-    Load clean CAL-ACCESS CSV file into a database model
-
-    positional arguments:
-      model_name            Name of the model into which data will be loaded
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      --version             show program's version number and exit
-      -v {0,1,2,3}, --verbosity {0,1,2,3}
-                            Verbosity level; 0=minimal output, 1=normal output,
-                            2=verbose output, 3=very verbose output
-      --settings SETTINGS   The Python path to a settings module, e.g.
-                            "myproject.settings.main". If this isn't provided, the
-                            DJANGO_SETTINGS_MODULE environment variable will be
-                            used.
-      --pythonpath PYTHONPATH
-                            A directory to add to the Python path, e.g.
-                            "/home/djangoprojects/myproject".
-      --traceback           Raise on CommandError exceptions
-      --no-color            Don't colorize the command output.
-      --c CSV, --csv CSV    Path to comma-delimited file to be loaded. Defaults to
-                            one associated with model.
-      --keep-files          Keep CSV file after loading
-      --d DATABASE, --database DATABASE
-                            Alias of database where data will be inserted.
-                            Defaults to the 'default' in DATABASE settings.
-      -a APP_NAME, --app-name APP_NAME
-                            Name of Django app where model will be imported from
-
-
-totalcalaccessrawdata
----------------------
-
-    usage: manage.py totalcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
-                                           [--settings SETTINGS]
-                                           [--pythonpath PYTHONPATH] [--traceback]
-                                           [--no-color]
-
-    Print table and record counts from the CAL-ACCESS raw database
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      --version             show program's version number and exit
-      -v {0,1,2,3}, --verbosity {0,1,2,3}
-                            Verbosity level; 0=minimal output, 1=normal output,
-                            2=verbose output, 3=very verbose output
-      --settings SETTINGS   The Python path to a settings module, e.g.
-                            "myproject.settings.main". If this isn't provided, the
-                            DJANGO_SETTINGS_MODULE environment variable will be
-                            used.
-      --pythonpath PYTHONPATH
-                            A directory to add to the Python path, e.g.
-                            "/home/djangoprojects/myproject".
-      --traceback           Raise on CommandError exceptions
-      --no-color            Don't colorize the command output.
-
 
 updatecalaccessrawdata
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
-Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
+This master command. It brings together all of the other update commands to
+download, unzip, clean and load the latest snapshot of the CAL-ACCESS database.
 
 .. code-block:: bash
 
@@ -196,8 +54,161 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
                             Name of Django app where model will be imported from
 
 
+cleancalaccessrawfile
+~~~~~~~~~~~~~~~~~~~~~
+
+Clean a source CAL-ACCESS TSV file and reformat it as a CSV. A component of the
+master ``updatecalaccessrawdata`` command.
+
+.. code-block:: bash
+
+    usage: manage.py cleancalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
+                                           [--settings SETTINGS]
+                                           [--pythonpath PYTHONPATH] [--traceback]
+                                           [--no-color] [--keep-files]
+                                           file_name
+
+    Clean a source CAL-ACCESS TSV file and reformat it as a CSV
+
+    positional arguments:
+      file_name             Name of the TSV file to be cleaned and discarded for a
+                            CSV
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --version             show program's version number and exit
+      -v {0,1,2,3}, --verbosity {0,1,2,3}
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on CommandError exceptions
+      --no-color            Don't colorize the command output.
+      --keep-files          Keep original TSV file
+
+
+downloadcalaccessrawdata
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Download, unzip and prep the latest CAL-ACCESS database ZIP. A component of the
+master ``updatecalaccessrawdata`` command.
+
+.. code-block:: bash
+
+    usage: manage.py downloadcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
+                                              [--settings SETTINGS]
+                                              [--pythonpath PYTHONPATH]
+                                              [--traceback] [--no-color]
+                                              [--resume] [--keep-files]
+                                              [--noinput]
+
+    Download, unzip and prep the latest CAL-ACCESS database ZIP
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --version             show program's version number and exit
+      -v {0,1,2,3}, --verbosity {0,1,2,3}
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on CommandError exceptions
+      --no-color            Don't colorize the command output.
+      --resume              Resume downloading of the ZIP archive from a previous
+                            attempt
+      --keep-files          Keep downloaded zip and unzipped files
+      --noinput             Download the ZIP archive without asking permission
+
+
+loadcalaccessrawfile
+~~~~~~~~~~~~~~~~~~~~
+
+Load clean CAL-ACCESS CSV file into a database model. A component of the
+master ``updatecalaccessrawdata`` command.
+
+.. code-block:: bash
+
+    usage: manage.py loadcalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
+                                          [--settings SETTINGS]
+                                          [--pythonpath PYTHONPATH] [--traceback]
+                                          [--no-color] [--c CSV] [--keep-files]
+                                          [--d DATABASE] [-a APP_NAME]
+                                          model_name
+
+    Load clean CAL-ACCESS CSV file into a database model
+
+    positional arguments:
+      model_name            Name of the model into which data will be loaded
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --version             show program's version number and exit
+      -v {0,1,2,3}, --verbosity {0,1,2,3}
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on CommandError exceptions
+      --no-color            Don't colorize the command output.
+      --c CSV, --csv CSV    Path to comma-delimited file to be loaded. Defaults to
+                            one associated with model.
+      --keep-files          Keep CSV file after loading
+      --d DATABASE, --database DATABASE
+                            Alias of database where data will be inserted.
+                            Defaults to the 'default' in DATABASE settings.
+      -a APP_NAME, --app-name APP_NAME
+                            Name of Django app where model will be imported from
+
+
+Inspecting the data
+-------------------
+
+totalcalaccessrawdata
+~~~~~~~~~~~~~~~~~~~~~
+
+Print table and record counts from the CAL-ACCESS raw database
+
+    usage: manage.py totalcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
+                                           [--settings SETTINGS]
+                                           [--pythonpath PYTHONPATH] [--traceback]
+                                           [--no-color]
+
+    Print table and record counts from the CAL-ACCESS raw database
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --version             show program's version number and exit
+      -v {0,1,2,3}, --verbosity {0,1,2,3}
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on CommandError exceptions
+      --no-color            Don't colorize the command output.
+
+
 verifycalaccessrawfile
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Compare the number of records in a model against its source CSV
 
