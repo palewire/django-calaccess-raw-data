@@ -17,7 +17,7 @@ class CalAccessCommand(BaseCommand):
         handle method, as is standard in Django, and run this method
         via a super call to inherit its functionality.
         """
-        self.verbosity = int(options.get("verbosity"))
+        self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
 
     #
