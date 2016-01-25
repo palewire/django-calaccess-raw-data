@@ -25,7 +25,7 @@ If your download crashes, there's a way to restart it.
 
     $ python manage.py updatecalaccessrawdata --resume-download
 
-You can skip the download's confirmation prompt using Django's standard ``--no-input`` option.
+You can skip the download's confirmation prompt using Django's standard ``--noinput`` option.
 
 .. code-block:: bash
 
@@ -177,7 +177,7 @@ Here is how to run the command.
 
     $ python manage.py updatecalaccessrawdata --resume-download
 
-You can skip the download's confirmation prompt using Django's standard ``--no-input`` option.
+You can skip the download's confirmation prompt using Django's standard ``--noinput`` option.
 
 .. code-block:: bash
 
