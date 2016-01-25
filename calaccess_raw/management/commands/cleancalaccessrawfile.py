@@ -18,7 +18,7 @@ class Command(CalAccessCommand):
         super(Command, self).add_arguments(parser)
         parser.add_argument(
             'file_name',
-            help="Name of the TSV file to be cleaned"
+            help="Name of the TSV file to be cleaned and discarded for a CSV"
         )
         parser.add_argument(
             "--keep-files",

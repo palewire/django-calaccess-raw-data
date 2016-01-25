@@ -292,7 +292,7 @@ disclosure forms below.
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office sought/held code. Indicates if the candidate is an incumbent. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held.</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -310,7 +310,7 @@ disclosure forms below.
             <td>office_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Office code: Code that identifies the office being sought</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -328,7 +328,7 @@ disclosure forms below.
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support/Oppose (S/O) code for the ballot measure. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose.</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -600,9 +600,9 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>office_cd</td>
-            <td>String (up to 4)</td>
+            <td>String (up to 3)</td>
             <td>No</td>
-            <td>Code that identifies the office being sought. See CAL document for a list of valid codes.</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -645,9 +645,9 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>off_s_h_cd</td>
-            <td>String (up to 4)</td>
+            <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office sought/held code. Legal values are &#39;S&#39; for sought and &#39;H&#39; for held.</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -690,9 +690,9 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>sup_opp_cd</td>
-            <td>String (up to 4)</td>
+            <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support/oppose code (S/O). Legal values are &#39;S&#39; for support and &#39;O&#39; for oppose.</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -1416,7 +1416,7 @@ Cover page information from campaign disclosure forms
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office Sought/Held Code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held.</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -1434,7 +1434,7 @@ Cover page information from campaign disclosure forms
             <td>office_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Office code: Code that identifies the office being sought</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -1560,7 +1560,7 @@ Cover page information from campaign disclosure forms
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support/oppose code. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose.</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -2295,7 +2295,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
             <td>expn_dscr</td>
             <td>String (up to 400)</td>
             <td>No</td>
-            <td>Purpose of expense and/or description/explanation</td>
+            <td>Expense description: Purpose of expense and/or description/explanation</td>
         </tr>
     
     
@@ -2720,7 +2720,7 @@ Campaign expenditures from a variety of forms
             <td>expn_code</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Expense Code - Values: (Refer to list in Overview) Note: CTB &amp; IND need explanation &amp; listing on Sched D TRC &amp; TRS require explanation.</td>
+            <td>Expense code: CTB &amp; IND need explanation &amp; listing on Sched D TRC &amp; TRS require explanation</td>
         </tr>
     
     
@@ -2729,7 +2729,7 @@ Campaign expenditures from a variety of forms
             <td>expn_date</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td>Date of Expenditure (Note: Date not on Sched E &amp; G)</td>
+            <td>Expense date: Date of Expenditure (Note: Date not on Sched E &amp; G)</td>
         </tr>
     
     
@@ -2738,7 +2738,7 @@ Campaign expenditures from a variety of forms
             <td>expn_dscr</td>
             <td>String (up to 400)</td>
             <td>No</td>
-            <td>Purpose of Expense and/or Description/explanation</td>
+            <td>Espense description: Purpose of expense and/or description/explanation</td>
         </tr>
     
     
@@ -2819,7 +2819,7 @@ Campaign expenditures from a variety of forms
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office Sought/Held Code: H=Held; S=Sought</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -2837,7 +2837,7 @@ Campaign expenditures from a variety of forms
             <td>office_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Office Sought (See table of code in Overview)</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -2918,7 +2918,7 @@ Campaign expenditures from a variety of forms
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support/Oppose? Values: S; O (F450, F461)</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -3243,7 +3243,7 @@ Candidate intention statement
             <td>stmt_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Type of statement</td>
+            <td>Statement type</td>
         </tr>
     
     
@@ -3486,7 +3486,7 @@ Candidate intention statement
             <td>office_cd</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Office sought code</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -4566,7 +4566,7 @@ Receipts schedules for the following forms.
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office Sought/Held Code. Used on the Form 401 Schedule A. Legal values are &#39;S&#39; for sought and &#39;H&#39; for held</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -4584,7 +4584,7 @@ Receipts schedules for the following forms.
             <td>office_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Code that identifies the office being sought. See the CAL document for a list of valid codes. Used on the Form 401 Schedule A)</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -4611,7 +4611,7 @@ Receipts schedules for the following forms.
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support/oppose code. Legal values are &#39;S&#39; for support or &#39;O&#39; for oppose. Used on Form 401 Sechedule A. Transaction identifier - permanent value unique to this item</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -4965,7 +4965,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
             <td>office_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Office code: Code that identifies the office being sought</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -5010,7 +5010,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office sought/held code</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -5046,7 +5046,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support/oppose code. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose. Used on Form 401.</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -5482,7 +5482,7 @@ Form 497: Late Contributions Received/Made
             <td>office_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Office code: Office sought code</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -5527,7 +5527,7 @@ Form 497: Late Contributions Received/Made
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office Sought/Held Code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held.</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -5608,7 +5608,7 @@ Form 497: Late Contributions Received/Made
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -5833,9 +5833,9 @@ Form 498: Slate Mailer Late Independent Expenditures Made
     
         <tr>
             <td>office_cd</td>
-            <td>String (up to 3)</td>
+            <td>String (up to 4)</td>
             <td>No</td>
-            <td>Office code: Code that identifies the office being sought</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -5880,7 +5880,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office Sought/Held Code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held</td>
+            <td>Office is sought or held code</td>
         </tr>
     
     
@@ -5916,7 +5916,7 @@ Form 498: Slate Mailer Late Independent Expenditures Made
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support/oppose code. Legal values are &quot;S&quot; for support or &quot;O&quot; for oppose.</td>
+            <td>Support or opposition code</td>
         </tr>
     
     
@@ -6303,7 +6303,7 @@ This table method is undocumented.
             <td>office_cd</td>
             <td>Integer</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td>Office code: Identifies the office being sought</td>
         </tr>
     
     
@@ -11117,7 +11117,8 @@ Links filers to each other and records their relationship type.
 FilerStatusTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This is an undocumented model.
+This is an undocumented model that contains a small number
+of codes and definitions.
 
 **Source:** `FILER_STATUS_TYPES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -11153,7 +11154,7 @@ This is an undocumented model.
             <td>status_desc</td>
             <td>String (up to 11)</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td>Status description: This field is undocumented</td>
         </tr>
     
     
@@ -11518,7 +11519,8 @@ to a filer are derived.
 FilingPeriodCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+An undocumented table that contains metadata for a variety
+of filing periods.
 
 **Source:** `FILING_PERIOD_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -11572,7 +11574,7 @@ FilingPeriodCd
             <td>period_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td></td>
         </tr>
     
     
@@ -12043,7 +12045,7 @@ Legislative session, begin and end dates look up table.
 LobbyingChgLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+This is an undocumented table.
 
 **Source:** `LOBBYING_CHG_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -12106,7 +12108,7 @@ LobbyingChgLogCd
             <td>filer_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td>The type of filer</td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12160,7 +12162,7 @@ LobbyingChgLogCd
             <td>filer_full_name</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Filer full name</td>
+            <td></td>
         </tr>
     
     
@@ -12169,7 +12171,7 @@ LobbyingChgLogCd
             <td>filer_city</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Filer city</td>
+            <td></td>
         </tr>
     
     
@@ -12205,7 +12207,7 @@ LobbyingChgLogCd
             <td>entity_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Type of entity</td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12214,7 +12216,7 @@ LobbyingChgLogCd
             <td>entity_name</td>
             <td>String (up to 500)</td>
             <td>No</td>
-            <td>Entity name</td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12223,7 +12225,7 @@ LobbyingChgLogCd
             <td>entity_city</td>
             <td>String (up to 500)</td>
             <td>No</td>
-            <td>Entity city</td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12232,7 +12234,7 @@ LobbyingChgLogCd
             <td>entity_st</td>
             <td>String (up to 500)</td>
             <td>No</td>
-            <td>Entity state</td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12241,7 +12243,7 @@ LobbyingChgLogCd
             <td>entity_zip</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Entity ZIP Code</td>
+            <td>This field is undocumented</td>
         </tr>
     
     
@@ -12277,7 +12279,7 @@ LobbyingChgLogCd
             <td>effect_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td>Effective date</td>
+            <td>Effective date: This field is undocumented</td>
         </tr>
     
     
@@ -12565,7 +12567,7 @@ Lobbyist contribution disclosure table.
 LobbyistEmpLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+This is an undocumented model.
 
 **Source:** `LOBBYIST_EMP_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -13432,7 +13434,7 @@ This is an undocumented model.
 LobbyistEmployerFirms2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+This is an undocumented model.
 
 **Source:** `LOBBYIST_EMPLOYER_FIRMS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -13506,7 +13508,7 @@ LobbyistEmployerFirms2Cd
 LobbyistFirm1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+This is an undocumented model.
 
 **Source:** `LOBBYIST_FIRM1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -13888,7 +13890,7 @@ This is an undocumented model.
 LobbyistFirm3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+This is an undocumented model.
 
 **Source:** `LOBBYIST_FIRM3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -14418,7 +14420,7 @@ It's an undocumented model.
 LobbyistFirmLobbyist2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+It's an undocumented model.
 
 **Source:** `LOBBYIST_FIRM_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -14501,7 +14503,7 @@ LobbyistFirmLobbyist2Cd
 LookupCode
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The description of all lookup codes in the system.
+The description of some lookup codes in the system.
 
 **Source:** `LOOKUP_CODES_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -14869,8 +14871,6 @@ This is an undocumented model.
 
 
 
-
-
 Empty files
 -----------
 
@@ -14883,7 +14883,3 @@ Empty files
 +------------------------------+
 | LOBBYIST_FIRM_HISTORY_CD     |
 +------------------------------+
-| CVR_F470_CD                  |
-+------------------------------+
-
-

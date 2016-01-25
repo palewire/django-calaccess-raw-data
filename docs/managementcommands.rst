@@ -1,23 +1,25 @@
 Management commands
 ===================
 
+
 cleancalaccessrawfile
 ---------------------
 
-Clean a source CAL-ACCESS file and reformat it as a CSV
+Clean a source CAL-ACCESS TSV file and reformat it as a CSV
 
 .. code-block:: bash
 
-    Usage: manage.py cleancalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py cleancalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
                                            [--settings SETTINGS]
                                            [--pythonpath PYTHONPATH] [--traceback]
                                            [--no-color] [--keep-files]
                                            file_name
 
-    Clean a source CAL-ACCESS file and reformat it as a CSV
+    Clean a source CAL-ACCESS TSV file and reformat it as a CSV
 
     positional arguments:
-      file_name             Name of the TSV file to be cleaned
+      file_name             Name of the TSV file to be cleaned and discarded for a
+                            CSV
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -40,18 +42,18 @@ Clean a source CAL-ACCESS file and reformat it as a CSV
 downloadcalaccessrawdata
 ------------------------
 
-Download, unzip and prepare the latest snapshot of the CAL-ACCESS database
+Download, unzip and prep the latest CAL-ACCESS database ZIP
 
 .. code-block:: bash
 
-    Usage: manage.py downloadcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py downloadcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
                                               [--settings SETTINGS]
                                               [--pythonpath PYTHONPATH]
                                               [--traceback] [--no-color]
                                               [--resume] [--keep-files]
                                               [--noinput]
 
-    Download, unzip and prepare the latest snapshot of the CAL-ACCESS database
+    Download, unzip and prep the latest CAL-ACCESS database ZIP
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -77,18 +79,18 @@ Download, unzip and prepare the latest snapshot of the CAL-ACCESS database
 loadcalaccessrawfile
 --------------------
 
-Load a cleaned CAL-ACCESS file for a model into the database
+Load clean CAL-ACCESS CSV file into a database model
 
 .. code-block:: bash
 
-    Usage: manage.py loadcalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py loadcalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
                                           [--settings SETTINGS]
                                           [--pythonpath PYTHONPATH] [--traceback]
                                           [--no-color] [--c CSV] [--keep-files]
                                           [--d DATABASE] [-a APP_NAME]
                                           model_name
 
-    Load clean CAL-ACCESS file into its corresponding database model
+    Load clean CAL-ACCESS CSV file into a database model
 
     positional arguments:
       model_name            Name of the model into which data will be loaded
@@ -121,16 +123,12 @@ Load a cleaned CAL-ACCESS file for a model into the database
 totalcalaccessrawdata
 ---------------------
 
-Print out the total of CAL-ACCESS tables and rows in the database
-
-.. code-block:: bash
-
-    Usage: manage.py totalcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py totalcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
                                            [--settings SETTINGS]
                                            [--pythonpath PYTHONPATH] [--traceback]
                                            [--no-color]
 
-    Print out the total count tables and rows in the CAL-ACCESS raw database
+    Print table and record counts from the CAL-ACCESS raw database
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -150,13 +148,13 @@ Print out the total of CAL-ACCESS tables and rows in the database
 
 
 updatecalaccessrawdata
-------------------------
+----------------------
 
 Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
 
 .. code-block:: bash
 
-    Usage: manage.py updatecalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py updatecalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
                                             [--settings SETTINGS]
                                             [--pythonpath PYTHONPATH]
                                             [--traceback] [--no-color]
@@ -165,7 +163,7 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
                                             [--keep-files] [--noinput] [--test]
                                             [-d DATABASE] [-a APP_NAME]
 
-    Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
+    Download, unzip, clean and load the latest CAL-ACCESS database ZIP
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -182,7 +180,7 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
                             "/home/djangoprojects/myproject".
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
-      --resume-download     Resume downloading of the ZIP archive from a previous
+      --resume-download     Resume downloading of ZIP archive from a previous
                             attempt
       --skip-download       Skip downloading of the ZIP archive
       --skip-clean          Skip cleaning up the raw data files
@@ -197,23 +195,25 @@ Download, unzip, clean and load the latest snapshot of the CAL-ACCESS database
       -a APP_NAME, --app-name APP_NAME
                             Name of Django app where model will be imported from
 
+
 verifycalaccessrawfile
-------------------------
+----------------------
 
 Compare the number of records in a model against its source CSV
 
-.. code-block:: bash
+.. code-block:: bash'
 
-    Usage: manage.py verifycalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
+    usage: manage.py verifycalaccessrawfile [-h] [--version] [-v {0,1,2,3}]
                                             [--settings SETTINGS]
                                             [--pythonpath PYTHONPATH]
                                             [--traceback] [--no-color]
+                                            [-a APP_NAME]
                                             model_name
 
     Compare the number of records in a model against its source CSV
 
     positional arguments:
-      model_name            Name of the model to verify
+      model_name            Name of model to verify
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -230,4 +230,5 @@ Compare the number of records in a model against its source CSV
                             "/home/djangoprojects/myproject".
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
-
+      -a APP_NAME, --app-name APP_NAME
+                            Name of Django app where model will be imported from

@@ -11,7 +11,7 @@ from calaccess_raw.management.commands import CalAccessCommand
 
 
 class Command(CalAccessCommand):
-    help = 'Load clean CAL-ACCESS CSV file into database model'
+    help = 'Load clean CAL-ACCESS CSV file into a database model'
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
     date_sql = "DATE_FORMAT(str_to_date(@`%s`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
