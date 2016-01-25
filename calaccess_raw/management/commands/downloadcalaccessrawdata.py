@@ -31,6 +31,7 @@ class Command(CalAccessCommand):
         super(Command, self).add_arguments(parser)
         parser.add_argument(
             "--resume",
+            "--resume-download",
             action="store_true",
             dest="resume",
             default=False,

@@ -212,11 +212,11 @@ Options
                             "/home/djangoprojects/myproject".
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
-      --resume              Resume downloading of the ZIP archive from a previous
+      --resume, --resume-download
+                            Resume downloading of the ZIP archive from a previous
                             attempt
       --keep-files          Keep downloaded zip and unzipped files
       --noinput             Download the ZIP archive without asking permission
-
 
 loadcalaccessrawfile
 ~~~~~~~~~~~~~~~~~~~~
