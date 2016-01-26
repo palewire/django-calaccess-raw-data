@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 from setuptools import setup
 
 
 setup(
     name='django-calaccess-raw-data',
-    version='0.2.0',
+    version='0.2.2',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
