@@ -64,4 +64,4 @@ class CalAccessCommand(BaseCommand):
         Calculates how long the command has been running and writes a readable duration to stdout.
         """
         duration = datetime.now() - self.start_datetime
-        self.stdout.write(  'Duration: {}'.format(str(duration)))
+        self.stdout.write('Duration: {}'.format(str(duration)))

@@ -8,8 +8,9 @@ from calaccess_raw import get_download_directory, get_model_list
 from clint.textui import progress
 from django.contrib.humanize.templatetags.humanize import intcomma
 
+
 class Command(CalAccessCommand):
-    help = 'Generate a report outlining the number / proportion of files / records cleaned and loaded'
+    help = 'Generate report outlining the number / proportion of files / records cleaned and loaded'
 
     def add_arguments(self, parser):
         """
@@ -46,7 +47,7 @@ class Command(CalAccessCommand):
 
             # add each to the total count of source files
             self.num_source_files += 1
-        
+
             # get the count of original records
             with open(os.path.join(tsv_dir, file_name)) as f:
                 row_count = sum(1 for l in f)
@@ -64,14 +65,14 @@ class Command(CalAccessCommand):
 
         csv_list = []
 
-        # ignore any file that isn't a .TSV file (e.g., .DS_Store)
+        # ignore any file that isn't a .TSV file e.g., .DS_Store
         for i in os.listdir(csv_dir):
             if '.CSV' in i.upper():
                 csv_list.append(i)
 
         # iterate through the cleaned csv files
         for file_name in progress.bar(csv_list):
-            
+
             # add each to the total count of clean files
             self.num_clean_files += 1
 
@@ -85,6 +86,8 @@ class Command(CalAccessCommand):
 
             # store count of clean records for each source file
             self.results[file_name.upper().replace('.CSV', '')]['clean_records_count'] = row_count
+            # go ahead and add this for source files without models
+            self.results[file_name.upper().replace('.CSV', '')]['model_records_count'] = 0
 
         self.log("Analyzing models")
 
@@ -98,7 +101,6 @@ class Command(CalAccessCommand):
                 self.results[model._meta.db_table]['model_records_count'] = row_count
             except IndexError:
                 self.missing_source_files.append(model._meta.db_table)
-                self.results[model._meta.db_table]['model_records_count'] = 0
 
         for k, v in self.results.iteritems():
             print k
