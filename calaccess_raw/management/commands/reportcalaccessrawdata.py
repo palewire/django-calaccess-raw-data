@@ -4,8 +4,10 @@ from __future__ import unicode_literals
 import os
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_download_directory, get_model_list
-from clint.textui import progress
+from django.conf import settings
 from django.contrib.humanize.templatetags.humanize import intcomma
+from clint.textui import progress
+from csv import DictWriter
 
 
 class Command(CalAccessCommand):
@@ -83,10 +85,11 @@ class Command(CalAccessCommand):
             if row_count > 0:
                 row_count -= 1
 
+            source_file = file_name.upper().replace('.CSV', '') 
+            
             # store count of clean records for each source file
-            self.results[file_name.upper().replace('.CSV', '')]['clean_records_count'] = row_count
-            # go ahead and add this for source files without models
-            self.results[file_name.upper().replace('.CSV', '')]['model_records_count'] = 0
+            self.results[source_file]['clean_records_count'] = row_count
+            self.results[source_file]['model_records_count'] = 0
 
         self.log("Analyzing models")
 
@@ -101,9 +104,32 @@ class Command(CalAccessCommand):
             except IndexError:
                 self.missing_source_files.append(model._meta.db_table)
 
-        for ak, av in self.results.iteritems():
-            print ak
-            for bk, bv in av.iteritems():
-                print '  {0}: {1}'.format(bk, intcomma(bv))
+        self.write_csv_results()
 
-        print self.duration()
+        self.duration()
+
+    def write_csv_results(self):
+        """
+        Write .csv file to the docs directory
+        """
+        file_name = os.path.join(getattr(settings, 'REPO_DIR'), 'docs/calaccess_report.csv')
+        # os.path.exists(file_name) or os.makedirs(file_name)
+
+        with open(file_name, 'w') as f:
+
+            fieldnames = [
+                    'source',
+                    'orig_records_count',
+                    'clean_records_count',
+                    'model_records_count'
+                ]
+            writer = DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+
+            for source, data in self.results.iteritems():
+
+                data.update({'source':source})
+
+                writer.writerow(data)
+
+
