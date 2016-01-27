@@ -5,7 +5,6 @@ import os
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_download_directory, get_model_list
 from django.conf import settings
-from django.contrib.humanize.templatetags.humanize import intcomma
 from clint.textui import progress
 from csv import DictWriter
 
@@ -57,8 +56,10 @@ class Command(CalAccessCommand):
             if row_count > 0:
                 row_count -= 1
 
+            source_file = file_name.upper().replace('.TSV', '')
+
             # add the source file name to results with the record count
-            self.results[file_name.replace('.TSV', '')] = {'orig_records_count': row_count}
+            self.results[source_file] = {'orig_records_count': row_count}
 
         self.log("Analyzing cleaned files")
 
@@ -85,8 +86,8 @@ class Command(CalAccessCommand):
             if row_count > 0:
                 row_count -= 1
 
-            source_file = file_name.upper().replace('.CSV', '') 
-            
+            source_file = file_name.upper().replace('.CSV', '')
+
             # store count of clean records for each source file
             self.results[source_file]['clean_records_count'] = row_count
             self.results[source_file]['model_records_count'] = 0
@@ -128,8 +129,6 @@ class Command(CalAccessCommand):
 
             for source, data in self.results.iteritems():
 
-                data.update({'source':source})
+                data.update({'source': source})
 
                 writer.writerow(data)
-
-
