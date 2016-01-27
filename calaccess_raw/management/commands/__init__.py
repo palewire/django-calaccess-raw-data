@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
+from datetime import datetime
 
 
 class CalAccessCommand(BaseCommand):
@@ -17,6 +18,7 @@ class CalAccessCommand(BaseCommand):
         handle method, as is standard in Django, and run this method
         via a super call to inherit its functionality.
         """
+        self.start_datetime = datetime.now()
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
 
@@ -56,3 +58,10 @@ class CalAccessCommand(BaseCommand):
         if not self.no_color:
             string = colorize(string, fg="red")
         self.stdout.write(string)
+
+    def duration(self):
+        """
+        Calculates how long the command has been running and writes a readable duration to stdout.
+        """
+        duration = datetime.now() - self.start_datetime
+        self.stdout.write(  'Duration: {}'.format(str(duration)))

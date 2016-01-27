@@ -135,12 +135,15 @@ class Command(CalAccessCommand):
                 resume=options['resume'],
                 noinput=options['noinput']
             )
+            self.duration()
 
         # execute the other steps that haven't been skipped
         if options['clean']:
             self.clean()
+            self.duration()
         if options['load']:
             self.load()
+            self.duration()
 
         if self.verbosity:
             self.success("Done!")
