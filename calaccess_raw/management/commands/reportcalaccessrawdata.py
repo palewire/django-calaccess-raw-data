@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import os
-from django.apps import apps
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_download_directory, get_model_list
 from clint.textui import progress
@@ -65,7 +64,7 @@ class Command(CalAccessCommand):
 
         csv_list = []
 
-        # ignore any file that isn't a .TSV file e.g., .DS_Store
+        # ignore any file that isn't a .TSV file (e.g., .DS_Store)
         for i in os.listdir(csv_dir):
             if '.CSV' in i.upper():
                 csv_list.append(i)
@@ -102,10 +101,9 @@ class Command(CalAccessCommand):
             except IndexError:
                 self.missing_source_files.append(model._meta.db_table)
 
-        for k, v in self.results.iteritems():
-            print k
-            print '  Original record count: {}'.format(v['orig_records_count'])
-            print '  Clean record count: {}'.format(v['clean_records_count'])
-            print '  Model record count: {}'.format(v['model_records_count'])
+        for ak, av in self.results.iteritems():
+            print ak
+            for bk, bv in av.iteritems():
+                print '  {0}: {1}'.format(bk, intcomma(bv))
 
         print self.duration()
