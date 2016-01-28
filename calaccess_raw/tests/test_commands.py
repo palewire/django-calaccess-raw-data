@@ -14,6 +14,8 @@ class CommandTestCase(TestCase):
     """
     Tests related to the management commands that update the database.
     """
+    multi_db = True
+
     @classmethod
     def setUpClass(cls):
         """
