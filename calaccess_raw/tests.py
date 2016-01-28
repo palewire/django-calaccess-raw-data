@@ -12,14 +12,16 @@ from django.core.management import call_command
 logger = logging.getLogger(__name__)
 
 
-class CalAccessTest(TestCase):
-
+class UpdateTest(TestCase):
+    """
+    Tests related to the management commands that update the database.
+    """
     @classmethod
     def setUpClass(cls):
         """
         Load data into the database before running other tests.
         """
-        super(CalAccessTest, cls).setUpClass()
+        super(UpdateTest, cls).setUpClass()
         kwargs = dict(verbosity=3, test_data=True)
         if settings.DATABASES.get("alt", None):
             kwargs['database'] = 'alt'
@@ -34,6 +36,36 @@ class CalAccessTest(TestCase):
         for m in get_model_list():
             self.assertEqual(m.objects.get_csv_name(), m().get_csv_name())
             self.assertEqual(m.objects.get_csv_path(), m().get_csv_path())
+
+    def test_verifycalacessrawfile(self):
+        """
+        Test that verifycalaccessrawfile management command is working.
+        """
+        call_command("verifycalaccessrawfile", 'RcptCd')
+        call_command("verifycalaccessrawfile", 'AcronymsCd')
+
+    def test_totalcalacessrawdata(self):
+        """
+        Test that verifycalaccessrawfile management command is working.
+        """
+        call_command("totalcalaccessrawdata")
+
+
+class DocumentationTest(TestCase):
+    """
+    Tests related to the documentation of models, fields and values
+    """
+    @classmethod
+    def setUpClass(cls):
+        """
+        Load data into the database before running other tests.
+        """
+        super(DocumentationTest, cls).setUpClass()
+        kwargs = dict(verbosity=3, test_data=True)
+        if settings.DATABASES.get("alt", None):
+            kwargs['database'] = 'alt'
+            logger.debug("Loading into 'alt' database")
+        call_command("updatecalaccessrawdata", **kwargs)
 
     def test_model_str(self):
         """
@@ -140,16 +172,3 @@ class CalAccessTest(TestCase):
                     m().klass_name,
                     f.name
                 ))
-
-    def test_verifycalacessrawfile(self):
-        """
-        Test that verifycalaccessrawfile management command is working.
-        """
-        call_command("verifycalaccessrawfile", 'RcptCd')
-        call_command("verifycalaccessrawfile", 'AcronymsCd')
-
-    def test_totalcalacessrawdata(self):
-        """
-        Test that verifycalaccessrawfile management command is working.
-        """
-        call_command("totalcalaccessrawdata")
