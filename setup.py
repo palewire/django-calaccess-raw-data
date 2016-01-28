@@ -31,6 +31,7 @@ Secretary of State\'s CAL-ACCESS database',
         'pytz',
     ),
     classifiers=(
+        'Development Status :: 4 - Beta',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
