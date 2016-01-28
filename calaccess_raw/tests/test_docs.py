@@ -51,14 +51,29 @@ class DocumentationTestCase(TestCase):
         else:
             print("Win: All %s models have __str__" % len(table.rows))
 
-    # def test_model_doc(self):
-    #     """
-    #     Verify that __doc__ methods exist and work for all models.
-    #     """
-    #     for m in get_model_list():
-    #         if m().__doc__.startswith(m.__name__):
-    #             warnings.warn("%s __doc__ undefined" % (m.__name__))
-    #         # self.assertNotEqual(m().__doc__, '')
+    def test_model_doc(self):
+        """
+        Verify that __doc__ methods exist and work for all models.
+        """
+        results = []
+        for m in get_model_list():
+            if m().__doc__.startswith(m.__name__):
+                exists = False
+            else:
+                exists = True
+            results.append([m.__name__, exists])
+
+        # Load the data
+        table = agate.Table(results, ['model', '__doc__'])
+
+        # Count the number with no __str__
+        fails = table.where(lambda row: row['__doc__'] is False)
+        if fails.rows:
+            print("Fail: %s models are missing __doc__" % len(fails.rows))
+            fails.select(["model"]).print_table()
+        else:
+            print("Win: All %s models have __doc__" % len(table.rows))
+
     #
     # def _test_choices(self, field_name):
     #     """
