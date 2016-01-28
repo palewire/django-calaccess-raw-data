@@ -32,3 +32,6 @@ test:
 	pyflakes calaccess_raw
 	coverage run example/manage.py test calaccess_raw
 	coverage report -m
+
+testdocs:
+	python example/manage.py test calaccess_raw.tests.test_docs.DocumentationTestCase

@@ -11,7 +11,7 @@ from django.core.management import call_command
 logger = logging.getLogger(__name__)
 
 
-class DocumentationTest(TestCase):
+class DocumentationTestCase(TestCase):
     """
     Tests related to the documentation of models, fields and values
     """
@@ -20,7 +20,7 @@ class DocumentationTest(TestCase):
         """
         Load data into the database before running other tests.
         """
-        super(DocumentationTest, cls).setUpClass()
+        super(DocumentationTestCase, cls).setUpClass()
         kwargs = dict(verbosity=3, test_data=True)
         if settings.DATABASES.get("alt", None):
             kwargs['database'] = 'alt'
