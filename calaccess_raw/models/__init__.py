@@ -85,7 +85,11 @@ from calaccess_raw.models.other import (
     ReceivedFilingsCd,
     ReportsCd,
 )
-
+from calaccess_raw.models.tracking import (
+    RawDataVersion,
+    RawDataTaskLog,
+    RawDataFile
+)
 __all__ = [
     'CalAccessBaseModel',
     'CvrSoCd',
