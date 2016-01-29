@@ -1294,6 +1294,9 @@ class LobbyingChgLogCd(CalAccessBaseModel):
 
 @python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
+    """
+    Lobbyist contribution disclosure table.
+    """
     UNIQUE_KEY = False
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
