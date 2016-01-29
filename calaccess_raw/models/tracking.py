@@ -20,7 +20,6 @@ class RawDataVersion(models.Model):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = 'RAW_DATA_VERSIONS'
         verbose_name = 'raw data version'
         verbose_name_plural = 'raw data versions'
         ordering = ['-release_datetime']
@@ -60,7 +59,6 @@ class RawDataTaskLog(models.Model):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = 'RAW_DATA_TASK_LOG'
         verbose_name = 'raw data task log'
         verbose_name_plural = 'raw data task log'
         ordering = ['-id']
@@ -134,7 +132,6 @@ class RawDataFile(models.Model):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = 'RAW_DATA_FILES'
         verbose_name = 'raw data file'
         verbose_name_plural = 'raw data files'
         ordering = ['-version_id', 'file_name']
