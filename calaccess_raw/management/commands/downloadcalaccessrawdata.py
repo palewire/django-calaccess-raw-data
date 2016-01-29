@@ -11,8 +11,10 @@ import requests
 from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
+from django.db.utils import IntegrityError
 from django.utils.timezone import utc
 from django.utils.six.moves import input
+from calaccess_raw.models.tracking import RawDataVersion, RawDataTaskLog
 from calaccess_raw import get_download_directory
 from dateutil.parser import parse as datetime_parse
 from django.template.loader import render_to_string
@@ -74,12 +76,13 @@ class Command(CalAccessCommand):
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
         self.download_metadata = self.get_download_metadata()
+
         self.local_metadata = self.get_local_metadata()
 
         total_size = self.download_metadata['content-length']
         last_modified = self.download_metadata['last-modified']
         last_download = self.local_metadata['last-download']
-        cur_size = 0
+        cur_size = 0      
 
         # if the user tries to resume, also have to make sure there is a zip file
         self.resume_download = (options['resume'] and os.path.exists(self.zip_path))
@@ -90,7 +93,7 @@ class Command(CalAccessCommand):
             timestamp = os.path.getmtime(self.zip_path)
             chunk_datetime = datetime.fromtimestamp(timestamp, utc)
             self.resume_download = chunk_datetime > last_modified
-            # reset this vars if still resuming
+            # reset this var if still resuming
             if self.resume_download:
                 last_download = chunk_datetime
                 cur_size = os.path.getsize(self.zip_path)
@@ -117,6 +120,31 @@ class Command(CalAccessCommand):
             self.failure("Download cancelled")
             return
 
+        
+        # TODO: incorporate this into other resume checks
+        # resume should probably be automatic, and user can opt out with in prompt
+        if self.resume_download:
+            # get the most recent download task
+            task = RawDataTaskLog.objects.get(
+                version=self.raw_data_version,
+                task_name='download'                
+            ).latest('start_datetime')
+        else:
+            # if not resuming, try creating a new release
+            try:
+                self.raw_data_version = RawDataVersion.objects.create(
+                    release_datetime=last_modified
+                )
+            except IntegrityError:
+                # if release is already stored, continue using latest raw data version
+                pass
+            # and make a new task
+            task = RawDataTaskLog.objects.create(
+                version=self.raw_data_version,
+                task_name='download',
+                start_datetime=datetime.now()
+            )
+
         self.download()
         self.unzip()
 
@@ -127,6 +155,9 @@ class Command(CalAccessCommand):
 
         if not options['keep_files']:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
+
+        task.finish_datetime = datetime.now()
+        task.save()
 
     def confirm_download(self):
         """

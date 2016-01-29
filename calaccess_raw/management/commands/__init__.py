@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
+from calaccess_raw.models.tracking import RawDataVersion
 from datetime import datetime
 
 
@@ -21,6 +22,11 @@ class CalAccessCommand(BaseCommand):
         self.start_datetime = datetime.now()
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
+
+        try:
+            self.raw_data_version = RawDataVersion.objects.latest('release_datetime')
+        except:
+            self.raw_data_version = None
 
     #
     # Logging methods

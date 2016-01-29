@@ -11,7 +11,8 @@ from calaccess_raw import (
     get_test_download_directory,
     get_model_list
 )
-
+from calaccess_raw.models.tracking import RawDataVersion, RawDataTaskLog
+from datetime import datetime
 
 class Command(CalAccessCommand):
     help = "Download, unzip, clean and load the latest CAL-ACCESS database ZIP"
@@ -139,10 +140,33 @@ class Command(CalAccessCommand):
 
         # execute the other steps that haven't been skipped
         if options['clean']:
+
+            clean_task = RawDataTaskLog.objects.create(
+                version=self.raw_data_version,
+                task_name='clean',
+                start_datetime=datetime.now()
+            )
+            
             self.clean()
+            
+            clean_task.finish_datetime = datetime.now()
+            clean_task.save()
+
             self.duration()
+        
         if options['load']:
+            
+            load_task = RawDataTaskLog.objects.create(
+                version=self.raw_data_version,
+                task_name='load',
+                start_datetime=datetime.now()
+            )
+            
             self.load()
+            
+            load_task.finish_datetime = datetime.now()
+            load_task.save()
+
             self.duration()
 
         if self.verbosity:
