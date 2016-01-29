@@ -28,6 +28,24 @@ class DocumentationTestCase(TestCase):
     #         logger.debug("Loading into 'alt' database")
     #     call_command("updatecalaccessrawdata", **kwargs)
 
+    def attr_test_output(self, attr_name, results):
+        # Load the data
+        table = agate.Table(results, ['model', attr_name])
+
+        # Count the number with no __str__
+        fails = table.where(lambda row: row[attr_name] is False)
+        if fails.rows:
+            print("Fail: %s models are missing %s" % (
+                len(fails.rows),
+                attr_name
+            ))
+            fails.select(["model"]).print_table()
+        else:
+            print("Win: All %s models have %s" % (
+                len(table.rows),
+                attr_name
+            ))
+
     def test_model_str(self):
         """
         Verify that __str__ methods exist and work for all models.
@@ -40,16 +58,7 @@ class DocumentationTestCase(TestCase):
             is_custom = m().__str__() != '%s object' % m.__name__
             results.append([m.__name__, is_custom])
 
-        # Load the data
-        table = agate.Table(results, ['model', '__str__'])
-
-        # Count the number with no __str__
-        fails = table.where(lambda row: row['__str__'] is False)
-        if fails.rows:
-            print("Fail: %s models are missing __str__" % len(fails.rows))
-            fails.select(["model"]).print_table()
-        else:
-            print("Win: All %s models have __str__" % len(table.rows))
+        self.attr_test_output("__str__", results)
 
     def test_model_doc(self):
         """
@@ -63,16 +72,7 @@ class DocumentationTestCase(TestCase):
                 exists = True
             results.append([m.__name__, exists])
 
-        # Load the data
-        table = agate.Table(results, ['model', '__doc__'])
-
-        # Count the number with no __str__
-        fails = table.where(lambda row: row['__doc__'] is False)
-        if fails.rows:
-            print("Fail: %s models are missing __doc__" % len(fails.rows))
-            fails.select(["model"]).print_table()
-        else:
-            print("Win: All %s models have __doc__" % len(table.rows))
+        self.attr_test_output("__str__", results)
 
     #
     # def _test_choices(self, field_name):
