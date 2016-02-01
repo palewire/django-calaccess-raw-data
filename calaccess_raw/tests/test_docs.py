@@ -72,7 +72,7 @@ class DocumentationTestCase(TestCase):
                 exists = True
             results.append([m.__name__, exists])
 
-        self.attr_test_output("__str__", results)
+        self.attr_test_output("__doc__", results)
 
     #
     # def _test_choices(self, field_name):
