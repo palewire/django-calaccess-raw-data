@@ -7,7 +7,7 @@ from clint.textui import progress
 from django.core.management import call_command
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion, CalAccessCommandLog, RawDataFile
+from calaccess_raw.models.tracking import RawDataVersion, CalAccessCommandLog
 from calaccess_raw import (
     get_download_directory,
     get_test_download_directory,
@@ -230,11 +230,6 @@ class Command(CalAccessCommand):
                 name,
                 verbosity=self.verbosity,
                 keep_files=self.keep_files
-            )
-
-            raw_file_record = RawDataFile.objects.get(
-                version=self.log_record.version,
-                file_name=name.upper().replace('.TSV', '')
             )
 
     def load(self):
