@@ -8,73 +8,115 @@ from django.db import models
 @python_2_unicode_compatible
 class RawDataVersion(models.Model):
     """
-    Version of CAL-ACCESS raw source data, typically released every day.
+    Versions of CAL-ACCESS raw source data, typically released every day
     """
     release_datetime = models.DateTimeField(
         db_column='RELEASE_DATETIME',
         unique=True,
         null=False,
         verbose_name='date and time of release',
-        help_text="Date and time the version of the CAL-ACCESS database was released"
+        help_text='Date and time the version of the CAL-ACCESS database was released '
+                  '(value of last-modified field in HTTP response header)'
+    )
+    size = models.IntegerField(
+        db_column='SIZE',
+        null=False,
+        verbose_name='size of raw data version in bytes',
+        help_text='Size of the .ZIP file for this version of the CAL-ACCESS raw source data '
+                  '(value of content-length field in HTTP response header)'
     )
 
     class Meta:
         app_label = 'calaccess_raw'
-        verbose_name = 'raw data version'
-        verbose_name_plural = 'raw data versions'
+        db_table = 'calaccess_raw_data_versions'
+        verbose_name = 'calaccess_raw data version'
+        verbose_name_plural = 'calaccess raw data versions'
         ordering = ['-release_datetime']
 
     def __str__(self):
         return str(self.release_datetime)
 
+
 @python_2_unicode_compatible
-class RawDataTaskLog(models.Model):
+class CalAccessCommandLog(models.Model):
+    """
+    Start and finish times for calls to CalAccessCommands
+    """
     version = models.ForeignKey(
         'RawDataVersion',
         on_delete=models.CASCADE,
         null=False,
+        related_name='command_log',
         db_column='VERSION_ID',
         verbose_name='raw data version',
-        help_text='Foreign key referencing the version of the raw source data on which the processing task was performed' 
+        help_text='Foreign key referencing the version of the raw '
+                  'source data on which the command was performed'
     )
-    task_name = models.CharField(
+    command = models.CharField(
         max_length=50,
         null=False,
-        db_column='TASK_NAME',
-        verbose_name='task name',
-        help_text='Name of the task performed on the given version of the raw source data'
+        db_column='COMMAND',
+        verbose_name='command name',
+        help_text='Name of the command performed on the given version of the raw source data'
+    )
+    called_by = models.ForeignKey(
+        'self',
+        related_name="called",
+        null=True,
+        on_delete=models.SET_NULL,
+        db_column='CALLED_BY',
+        verbose_name='called by',
+        help_text='Foreign key refencing log of the CalAccessCommand that '
+                  'called this command. Null represents call from command line'
+    )
+    file_name = models.CharField(
+        max_length=100,
+        null=False,
+        db_column='FILE_NAME',
+        verbose_name='raw data file name',
+        help_text='Name of the raw source data file without extension',
     )
     start_datetime = models.DateTimeField(
         db_column='START_DATETIME',
+        auto_now_add=True,
         null=False,
-        verbose_name='date and time task started',
-        help_text="Date and time when the given task started on the given version of the raw source data"
-    )    
+        verbose_name='date and time command started',
+        help_text='Date and time when the given command started on the '
+                  'given version of the raw source data'
+    )
     finish_datetime = models.DateTimeField(
         db_column='FINISH_DATETIME',
         null=True,
-        verbose_name='date and time task_name finished',
-        help_text="Date and time when the given task finished on the given version of the raw source data"
+        verbose_name='date and time command finished',
+        help_text='Date and time when the given command finished on '
+                  'the given version of the raw source data'
     )
 
     class Meta:
         app_label = 'calaccess_raw'
-        verbose_name = 'raw data task log'
-        verbose_name_plural = 'raw data task log'
+        db_table = 'calaccess_raw_command_log'
+        verbose_name = 'calaccess raw data command log'
+        verbose_name_plural = 'raw data command log'
         ordering = ['-id']
 
     def __str__(self):
-        return str(self.task_name)
+        return str(self.command)
+
 
 @python_2_unicode_compatible
 class RawDataFile(models.Model):
+    """
+    Data files included in the given version of the CAL-ACCESS raw source data
+    """
     version = models.ForeignKey(
         'RawDataVersion',
         on_delete=models.CASCADE,
         null=False,
+        related_name='files',
         db_column='VERSION_ID',
         verbose_name='raw data version',
-        help_text='Foreign key referencing the version of the raw source data in which the file was included' 
+        help_text='Foreign key referencing the version of the raw '
+                  'source data in which the file was included'
     )
     UNIQUE_KEY = (
         "VERSION_ID",
@@ -84,8 +126,8 @@ class RawDataFile(models.Model):
         max_length=100,
         null=False,
         db_column='FILE_NAME',
-        verbose_name='file name',
-        help_text='Name of the raw source file without extension',
+        verbose_name='raw data file name',
+        help_text='Name of the raw source data file without extension',
     )
     download_records_count = models.IntegerField(
         null=False,
@@ -106,7 +148,8 @@ class RawDataFile(models.Model):
         default=0,
         db_column='LOAD_RECORDS_COUNT',
         verbose_name='load records count',
-        help_text='Count of records in the loaded from cleaned file into calaccess_raw\'s data model'
+        help_text="Count of records in the loaded from cleaned file into "
+                  "calaccess_raw's data model"
     )
     download_columns_count = models.IntegerField(
         null=False,
@@ -132,8 +175,9 @@ class RawDataFile(models.Model):
 
     class Meta:
         app_label = 'calaccess_raw'
-        verbose_name = 'raw data file'
-        verbose_name_plural = 'raw data files'
+        db_table = 'calaccess_raw_data_files'
+        verbose_name = 'calaccess raw data file'
+        verbose_name_plural = 'calaccess raw data files'
         ordering = ['-version_id', 'file_name']
 
     def __str__(self):
