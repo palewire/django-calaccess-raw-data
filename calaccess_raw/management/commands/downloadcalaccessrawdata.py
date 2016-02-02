@@ -14,9 +14,12 @@ from clint.textui import progress
 from django.db.utils import IntegrityError
 from django.utils.timezone import utc
 from django.utils.six.moves import input
-from calaccess_raw.models.tracking import RawDataVersion, RawDataTaskLog
+from calaccess_raw.models.tracking import (
+    RawDataVersion,
+    RawDataFile,
+    CalAccessCommandLog
+)
 from calaccess_raw import get_download_directory
-from dateutil.parser import parse as datetime_parse
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
@@ -24,7 +27,6 @@ from django.contrib.humanize.templatetags.humanize import naturaltime
 
 class Command(CalAccessCommand):
     help = "Download, unzip and prep the latest CAL-ACCESS database ZIP"
-    url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
     def add_arguments(self, parser):
         """
@@ -57,57 +59,62 @@ class Command(CalAccessCommand):
     def handle(self, *args, **options):
         super(Command, self).handle(*args, **options)
 
-        # get the dir were data goes from app settings
+        # get the dir where data goes from app settings
         self.data_dir = get_download_directory()
         # if data_dir doesn't exist, create it
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
 
-        # downloaded zipfile will go in data_dir
+        # downloaded zip file will go in data_dir
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
-        # so will the file where we track the last download
-        self.zip_metadata_path = os.path.join(
-            self.data_dir,
-            '.lastdownload'
-        )
-
+        # raw tsv files go in same data_dir in tsv/
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
-        self.csv_dir = os.path.join(self.data_dir, "csv/")
-        os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
-
-        self.download_metadata = self.get_download_metadata()
-
-        self.local_metadata = self.get_local_metadata()
-
-        total_size = self.download_metadata['content-length']
-        last_modified = self.download_metadata['last-modified']
-        last_download = self.local_metadata['last-download']
-        cur_size = 0      
-
-        # if the user tries to resume, also have to make sure there is a zip file
+        # if the user tries to resume, check for existing zip file
         self.resume_download = (options['resume'] and os.path.exists(self.zip_path))
 
+        self.last_download = self.get_last_download()
+        last_release_datetime = self.last_download.version.release_datetime
+
+        if self.last_download:
+            since_prev_version = naturaltime(last_release_datetime)
+        else:
+            since_prev_version = None
+
+        download_metadata = self.get_download_metadata()
+
+        self.current_release_datetime = download_metadata['last-modified']
+        self.current_release_size = download_metadata['content-length']
+
+        self.local_file_size = 0
+        self.local_file_datetime = None
+        already_downloaded = False
+
         if self.resume_download:
-            # Make sure the downloaded chunk is newer than the
-            #   last update to the remote data.
-            timestamp = os.path.getmtime(self.zip_path)
-            chunk_datetime = datetime.fromtimestamp(timestamp, utc)
-            self.resume_download = chunk_datetime > last_modified
-            # reset this var if still resuming
-            if self.resume_download:
-                last_download = chunk_datetime
-                cur_size = os.path.getsize(self.zip_path)
+            # Make sure the last release datetime is the current download meta_data
+            if last_release_datetime == self.current_release_datetime:
+                # set current size to partially downloaded zip
+                self.local_file_size = os.path.getsize(self.zip_path)
+                # set the datetime of last download to last modified date
+                # of zip file
+                timestamp = os.path.getmtime(self.zip_path)
+                self.local_file_datetime = datetime.fromtimestamp(timestamp, utc)
+
+                if self.last_download.finish_datetime:
+                    already_downloaded = True
+            else:
+                # can't resume if there's a newer release
+                self.resume_download = False
 
         # setting up the prompt
         prompt_context = dict(
+            current_release_datetime=self.current_release_datetime,
             resuming=self.resume_download,
-            already_downloaded=last_modified == last_download,
-            last_modified=last_modified,
-            last_download=last_download,
-            time_ago=naturaltime(last_download),
-            total_size=size(total_size),
-            cur_size=size(cur_size),
+            already_downloaded=already_downloaded,
+            expected_size=size(self.current_release_size),
+            local_file_size=size(self.local_file_size),
             download_dir=self.data_dir,
+            since_prev_version=since_prev_version,
+            since_local_file_modified=naturaltime(self.local_file_datetime)
         )
 
         self.prompt = render_to_string(
@@ -120,29 +127,15 @@ class Command(CalAccessCommand):
             self.failure("Download cancelled")
             return
 
-        
-        # TODO: incorporate this into other resume checks
-        # resume should probably be automatic, and user can opt out with in prompt
         if self.resume_download:
-            # get the most recent download task
-            task = RawDataTaskLog.objects.get(
-                version=self.raw_data_version,
-                task_name='download'                
-            ).latest('start_datetime')
+            self.log_record = self.last_download
         else:
-            # if not resuming, try creating a new release
-            try:
-                self.raw_data_version = RawDataVersion.objects.create(
-                    release_datetime=last_modified
-                )
-            except IntegrityError:
-                # if release is already stored, continue using latest raw data version
-                pass
-            # and make a new task
-            task = RawDataTaskLog.objects.create(
-                version=self.raw_data_version,
-                task_name='download',
-                start_datetime=datetime.now()
+            self.log_record = CalAccessCommandLog.objects.create(
+                version=RawDataVersion.objects.get_or_create(
+                    release_datetime=self.current_release_datetime,
+                    size=self.current_release_size
+                )[0],
+                command=self.command_name
             )
 
         self.download()
@@ -156,8 +149,20 @@ class Command(CalAccessCommand):
         if not options['keep_files']:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-        task.finish_datetime = datetime.now()
-        task.save()
+        self.log_record.finish_datetime = datetime.now()
+        self.log_record.save()
+
+    def get_last_download(self):
+        """
+        Returns a CalAccessCommandLog object for the most recent download
+        """
+        try:
+            last_log = CalAccessCommandLog.objects.filter(
+                    command=self.command_name
+            ).order_by('-start_datetime')[0]
+        except IndexError:
+            last_log = None
+        return last_log
 
     def confirm_download(self):
         """
@@ -174,42 +179,6 @@ class Command(CalAccessCommand):
         sys.stdout = old_stdout
         return confirm.lower()
 
-    def get_download_metadata(self):
-        """
-        Returns basic metadata about the current CAL-ACCESS snapshot,
-        like its size and the last time it was updated while stopping
-        short of actually downloading it.
-        """
-        request = requests.head(self.url)
-        return {
-            'content-length': int(request.headers['content-length']),
-            'last-modified': datetime_parse(request.headers['last-modified'])
-        }
-
-    def get_local_metadata(self):
-        """
-        Retrieves a local file that records past downloads and returns
-        a dictionary that includes a timestamp with a timestamp marking
-        the last update.
-
-        If no file exists it returns the dictionary with null values.
-        """
-        metadata = {
-            'last-download': None
-        }
-        if os.path.isfile(self.zip_metadata_path):
-            with open(self.zip_metadata_path) as f:
-                metadata['last-download'] = datetime_parse(f.readline())
-        return metadata
-
-    def set_local_metadata(self):
-        """
-        Creates a file that stories the date and time vintage of the last
-        CAL-ACCESS archive download.
-        """
-        with open(self.zip_metadata_path, 'w') as f:
-            f.write(str(self.download_metadata['last-modified']))
-
     def download(self):
         """
         Download the ZIP file in pieces.
@@ -218,19 +187,15 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.header("Downloading ZIP file")
 
-        expected_size = self.download_metadata['content-length']
-
-        if expected_size is None:
-            resp = requests.head(self.url)
-            expected_size = int(resp.headers.get('content-length', 0))
+        expected_size = self.current_release_size
 
         # Prep
         headers = dict()
         if os.path.exists(self.zip_path):
             if self.resume_download:
-                cur_sz = os.path.getsize(self.zip_path)
-                headers['Range'] = 'bytes=%d-' % cur_sz
-                expected_size = expected_size - cur_sz
+
+                headers['Range'] = 'bytes=%d-' % self.local_file_size
+                expected_size = expected_size - self.local_file_size
             else:
                 os.remove(self.zip_path)
 
@@ -243,9 +208,6 @@ class Command(CalAccessCommand):
                                       expected_size=n_iters):
                 fp.write(chunk)
                 fp.flush()
-
-        # store the last completed download
-        self.set_local_metadata()
 
     def unzip(self):
         """
@@ -277,7 +239,7 @@ class Command(CalAccessCommand):
         shutil.move(
             os.path.join(
                 self.data_dir,
-                'CalAccess/DATA/CalAccess/DATA/'
+                'CalAccess/DATA/'
             ),
             self.data_dir
         )
@@ -290,3 +252,15 @@ class Command(CalAccessCommand):
             os.path.join(self.data_dir, "DATA/"),
             self.tsv_dir,
         )
+
+        # make the RawDataFile records
+        for f in os.listdir(self.tsv_dir):
+            try:
+                RawDataFile.objects.create(
+                    version=self.log_record.version,
+                    file_name=f.upper().replace('.TSV', ''),
+                )
+            except IntegrityError:
+                pass
+
+

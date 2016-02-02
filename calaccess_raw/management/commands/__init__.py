@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import sys
+from re import sub
+from datetime import datetime
+from dateutil.parser import parse as datetime_parse
+import requests
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
-from calaccess_raw.models.tracking import RawDataVersion
-from datetime import datetime
 
 
 class CalAccessCommand(BaseCommand):
@@ -11,6 +14,8 @@ class CalAccessCommand(BaseCommand):
     A base management command that provides common functionality
     for the other commands in this application.
     """
+    url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
+
     def handle(self, *args, **options):
         """
         Sets options common to all commands.
@@ -19,14 +24,32 @@ class CalAccessCommand(BaseCommand):
         handle method, as is standard in Django, and run this method
         via a super call to inherit its functionality.
         """
-        self.start_datetime = datetime.now()
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
 
-        try:
-            self.raw_data_version = RawDataVersion.objects.latest('release_datetime')
-        except:
-            self.raw_data_version = None
+        self.start_datetime = datetime.now()
+
+        # TODO: see if there's another way to identify caller
+        # in (edge) case when update is not called from command line
+        # if called from command line
+        if self._called_from_command_line:
+            # use the arg passed to manage.py as command name
+            self.command_name = sys.argv[1]
+        else:
+            # or take the end of the command's full module name
+            self.command_name = sub(r'(.+\.)*', '', self.__class__.__module__)
+
+    def get_download_metadata(self):
+        """
+        Returns basic metadata about the current CAL-ACCESS snapshot,
+        like its size and the last time it was updated while stopping
+        short of actually downloading it.
+        """
+        request = requests.head(self.url)
+        return {
+            'content-length': int(request.headers['content-length']),
+            'last-modified': datetime_parse(request.headers['last-modified'])
+        }
 
     #
     # Logging methods

@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+from datetime import datetime
 from django.conf import settings
 from clint.textui import progress
 from django.core.management import call_command
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw.models.tracking import RawDataVersion, CalAccessCommandLog, RawDataFile
 from calaccess_raw import (
     get_download_directory,
     get_test_download_directory,
     get_model_list
 )
-from calaccess_raw.models.tracking import RawDataVersion, RawDataTaskLog
-from datetime import datetime
+
 
 class Command(CalAccessCommand):
     help = "Download, unzip, clean and load the latest CAL-ACCESS database ZIP"
@@ -22,13 +23,13 @@ class Command(CalAccessCommand):
         Adds custom arguments specific to this command.
         """
         super(Command, self).add_arguments(parser)
-        parser.add_argument(
-            "--resume-download",
-            action="store_true",
-            dest="resume",
-            default=False,
-            help="Resume downloading of ZIP archive from a previous attempt"
-        )
+        # parser.add_argument(
+        #     "--resume-download",
+        #     action="store_true",
+        #     dest="resume",
+        #     default=False,
+        #     help="Resume downloading of ZIP archive from a previous attempt"
+        # )
         parser.add_argument(
             "--skip-download",
             action="store_false",
@@ -90,6 +91,7 @@ class Command(CalAccessCommand):
 
     def handle(self, *args, **options):
         super(Command, self).handle(*args, **options)
+
         # set / compute any attributes that multiple class methods need
         self.app_name = options["app_name"]
         self.database = options["database"]
@@ -111,8 +113,6 @@ class Command(CalAccessCommand):
 
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
-        self.zip_metadata_path = os.path.join(self.data_dir,
-                                              '.lastdownload')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         # Immediately check that the tsv directory exists when using test data,
@@ -127,13 +127,50 @@ class Command(CalAccessCommand):
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
+        download_metadata = self.get_download_metadata()
+        current_release_datetime = download_metadata['last-modified']
+
+        last_update = self.get_last_update()
+        self.log_record = None
+
+        self.resume_download = False
+
+        # if there's a previous update
+        if last_update:
+            # and it didn't finish
+            if not last_update.finish_datetime:
+
+                last_release_datetime = last_update.version.release_datetime
+
+                # and we aren't skipping downloading
+                if options["download"]:
+                    # and the last version matches the current one
+                    if current_release_datetime == last_release_datetime:
+                        # complete the last update
+                        self.log_record = last_update
+                        # and resume the download
+                        self.resume_download = True
+
+        # if we don't have a log record yet
+        if not self.log_record:
+            # and we aren't using test data
+            if not options['test_data']:
+                # create a new log record
+                self.log_record = CalAccessCommandLog.objects.create(
+                    version=RawDataVersion.objects.get_or_create(
+                        release_datetime=current_release_datetime,
+                        size=download_metadata['content-length']
+                    )[0],
+                    command=self.command_name
+                )
+
         if options['download']:
 
             call_command(
                 "downloadcalaccessrawdata",
                 keep_files=self.keep_files,
                 verbosity=self.verbosity,
-                resume=options['resume'],
+                resume=self.resume_download,
                 noinput=options['noinput']
             )
             self.duration()
@@ -141,36 +178,39 @@ class Command(CalAccessCommand):
         # execute the other steps that haven't been skipped
         if options['clean']:
 
-            clean_task = RawDataTaskLog.objects.create(
-                version=self.raw_data_version,
-                task_name='clean',
-                start_datetime=datetime.now()
-            )
-            
             self.clean()
-            
-            clean_task.finish_datetime = datetime.now()
-            clean_task.save()
 
             self.duration()
-        
+
         if options['load']:
-            
-            load_task = RawDataTaskLog.objects.create(
-                version=self.raw_data_version,
-                task_name='load',
-                start_datetime=datetime.now()
-            )
-            
+
             self.load()
-            
-            load_task.finish_datetime = datetime.now()
-            load_task.save()
 
             self.duration()
 
         if self.verbosity:
             self.success("Done!")
+
+        self.log_record.finish_datetime = datetime.now()
+        self.log_record.save()
+
+    def get_last_update(self):
+        """
+        Returns a CalAccessCommandLog object for the most recent update
+        """
+        try:
+            last_log = CalAccessCommandLog.objects.filter(
+                    command=self.command_name
+            ).order_by('-start_datetime')[0]
+        except IndexError:
+            last_log = None
+        return last_log
+
+    def check_can_resume(self):
+        """
+        Runs a series of checks to see if download can be resumed.
+        If so, returns True, else False.
+        """
 
     def clean(self):
         """
@@ -190,6 +230,11 @@ class Command(CalAccessCommand):
                 name,
                 verbosity=self.verbosity,
                 keep_files=self.keep_files
+            )
+
+            raw_file_record = RawDataFile.objects.get(
+                version=self.log_record.version,
+                file_name=name.upper().replace('.TSV', '')
             )
 
     def load(self):
