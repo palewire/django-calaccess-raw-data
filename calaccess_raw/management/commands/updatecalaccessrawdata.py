@@ -23,13 +23,7 @@ class Command(CalAccessCommand):
         Adds custom arguments specific to this command.
         """
         super(Command, self).add_arguments(parser)
-        # parser.add_argument(
-        #     "--resume-download",
-        #     action="store_true",
-        #     dest="resume",
-        #     default=False,
-        #     help="Resume downloading of ZIP archive from a previous attempt"
-        # )
+
         parser.add_argument(
             "--skip-download",
             action="store_false",
@@ -191,8 +185,9 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.success("Done!")
 
-        self.log_record.finish_datetime = datetime.now()
-        self.log_record.save()
+        if not options['test_data']:
+            self.log_record.finish_datetime = datetime.now()
+            self.log_record.save()
 
     def get_last_update(self):
         """
