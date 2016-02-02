@@ -46,6 +46,6 @@ class CommandTestCase(TestCase):
 
     def test_totalcalacessrawdata(self):
         """
-        Test that totalcalaccessrawfile management command is working.
+        Test that totalcalaccessrawdata management command is working.
         """
         call_command("totalcalaccessrawdata")
