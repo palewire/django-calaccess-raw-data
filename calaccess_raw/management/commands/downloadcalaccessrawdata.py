@@ -262,5 +262,3 @@ class Command(CalAccessCommand):
                 )
             except IntegrityError:
                 pass
-
-

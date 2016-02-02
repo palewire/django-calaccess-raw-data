@@ -12,6 +12,7 @@ from clint.textui import progress
 from csv import DictWriter
 from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
+
 class Command(CalAccessCommand):
     help = 'Generate report outlining the number / proportion of files / records cleaned and loaded'
 
@@ -28,12 +29,12 @@ class Command(CalAccessCommand):
         self.empty_raw_files = []
         self.unknown_raw_files = []
 
-        self.version=RawDataVersion.objects.latest('release_datetime')
+        self.version = RawDataVersion.objects.latest('release_datetime')
 
         self.raw_file_records = RawDataFile.objects.filter(
             version=self.version
         )
-        
+
         self.log("Analyzing loaded models")
 
         if self.verbosity == 1:
@@ -44,7 +45,7 @@ class Command(CalAccessCommand):
         for model in model_list:
 
             call_command(
-                'verifycalaccessrawfile', 
+                'verifycalaccessrawfile',
                 model.__name__,
                 verbosity=self.verbosity
             )
@@ -60,10 +61,10 @@ class Command(CalAccessCommand):
         # ).count()
 
         total_raw_records = self.sum_count_column('download_records_count')
-        
+
         total_clean_records = self.sum_count_column('clean_records_count')
-        
-        total_loaded_records = self.sum_count_column('load_records_count')     
+
+        total_loaded_records = self.sum_count_column('load_records_count')
 
         self.log(
             '{0:.4%} of records cleaned'.format(
@@ -96,7 +97,7 @@ class Command(CalAccessCommand):
         Write .csv file to the docs directory
         """
         file_name = os.path.join(
-            getattr(settings, 'REPO_DIR'), 
+            getattr(settings, 'REPO_DIR'),
             'docs/calaccess_report.csv'
         )
 
@@ -131,7 +132,7 @@ class Command(CalAccessCommand):
                     })
                 except ZeroDivisionError:
                     row.update({'pct_cleaned': None})
-                
+
                 try:
                     row.update({
                         'pct_loaded': '{0:.2%}'.format(
