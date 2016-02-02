@@ -34,15 +34,21 @@ class Command(CalAccessCommand):
         model = apps.get_model(options['app_name'], options['model_name'])
         model_count = model.objects.count()
 
-        raw_file_record = RawDataFile.objects.get(
-            version=RawDataVersion.objects.latest('release_datetime'),
-            file_name=model._meta.db_table
-        )
-
-        # add load counts to raw_file_record
-        raw_file_record.load_columns_count = len(model._meta.fields)
-        raw_file_record.load_records_count = model_count
-        raw_file_record.save()
+        # only update raw_file_record if there's version logged
+        # otherwise, test wil fail
+        try:
+            version = RawDataVersion.objects.latest('release_datetime')
+        except RawDataVersion.DoesNotExist:
+            version = None
+        else:
+            raw_file_record = RawDataFile.objects.get(
+                version=version,
+                file_name=model._meta.db_table
+            )
+            # add load counts to raw_file_record
+            raw_file_record.load_columns_count = len(model._meta.fields)
+            raw_file_record.load_records_count = model_count
+            raw_file_record.save()
 
         # Get the CSV total
         csv_path = model.objects.get_csv_path()

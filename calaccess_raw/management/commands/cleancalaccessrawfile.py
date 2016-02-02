@@ -47,33 +47,35 @@ class Command(CalAccessCommand):
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         self.log_dir = os.path.join(self.data_dir, "log/")
 
-        version = RawDataVersion.objects.latest('release_datetime')
-
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
 
-        # always create a log record
-        # TODO: figure out how to handle test data
-        self.log_record = CalAccessCommandLog.objects.create(
-            version=version,
-            command=self.command_name,
-            file_name=self.file_name.upper().replace('.TSV', '')
-        )
+        # only create log records if a version has been logged
+        # otherwise test will fail
+        try:
+            version = RawDataVersion.objects.latest('release_datetime')
+        except RawDataVersion.DoesNotExist:
+            version = None
+        else:
+            self.log_record = CalAccessCommandLog.objects.create(
+                version=version,
+                command=self.command_name,
+                file_name=self.file_name.upper().replace('.TSV', '')
+            )
+            # if not called from command line
+            if not self._called_from_command_line:
+                # TODO: see if there's another way to identify caller
+                # in (edge) case when update is not called from command line
 
-        # if not called from command line
-        if not self._called_from_command_line:
-            # TODO: see if there's another way to identify caller
-            # in (edge) case when update is not called from command line
-
-            # for now, assume the caller is the arg passed to manage.py
-            # get the most recent log of this command for the version
-            caller = CalAccessCommandLog.objects.filter(
-                command=sys.argv[1],
-                version=version
-            ).order_by('-start_datetime')[0]
-            # update the log_record
-            self.log_record.called_by = caller
-            self.log_record.save()
+                # for now, assume the caller is the arg passed to manage.py
+                # get the most recent log of this command for the version
+                caller = CalAccessCommandLog.objects.filter(
+                    command=sys.argv[1],
+                    version=version
+                ).order_by('-start_datetime')[0]
+                # update the log_record
+                self.log_record.called_by = caller
+                self.log_record.save()
 
         # Up the CSV data limit
         csv.field_size_limit(1000000000)
@@ -166,15 +168,20 @@ class Command(CalAccessCommand):
                 self.failure(msg % (len(log_rows) - 1))
             self.log_errors(log_rows)
 
-        raw_file_record = RawDataFile.objects.get(
-            version=version,
-            file_name=self.file_name.upper().replace('.TSV', '')
-        )
+        if version:
+            raw_file_record = RawDataFile.objects.get(
+                version=version,
+                file_name=self.file_name.upper().replace('.TSV', '')
+            )
 
-        # add download counts to raw_file_record
-        raw_file_record.download_columns_count = headers_count
-        raw_file_record.download_records_count = line_number
-        raw_file_record.save()
+            # add download counts to raw_file_record
+            raw_file_record.download_columns_count = headers_count
+            raw_file_record.download_records_count = line_number
+            raw_file_record.save()
+
+            # save the log record
+            self.log_record.finish_datetime = datetime.now()
+            self.log_record.save()
 
         # Shut it down
         tsv_file.close()
@@ -183,10 +190,6 @@ class Command(CalAccessCommand):
         # unless keeping files, remove tsv files
         if not options['keep_files']:
             os.remove(os.path.join(self.tsv_dir, options['file_name']))
-
-        # save the log record
-        self.log_record.finish_datetime = datetime.now()
-        self.log_record.save()
 
     def log_errors(self, rows):
         """

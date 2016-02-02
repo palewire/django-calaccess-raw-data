@@ -82,30 +82,32 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Loading %s" % options['model_name'])
 
-        version = RawDataVersion.objects.latest('release_datetime')
+        # only update raw_file_record if there's version logged
+        # otherwise, test wil fail
+        try:
+            version = RawDataVersion.objects.latest('release_datetime')
+        except RawDataVersion.DoesNotExist:
+            version = None
+        else:
+            self.log_record = CalAccessCommandLog.objects.create(
+                version=version,
+                command=self.command_name,
+                file_name=self.model._meta.db_table,
+            )
+            # if not called from command line
+            if not self._called_from_command_line:
+                # TODO: see if there's another way to identify caller
+                # in (edge) case when update is not called from command line
 
-        # always create a log record
-        # TODO: figure out how to handle test data
-        self.log_record = CalAccessCommandLog.objects.create(
-            version=version,
-            command=self.command_name,
-            file_name=self.model._meta.db_table,
-        )
-
-        # if not called from command line
-        if not self._called_from_command_line:
-            # TODO: see if there's another way to identify caller
-            # in (edge) case when update is not called from command line
-
-            # for now, assume the caller is the arg passed to manage.py
-            # get the most recent log of this command for the version
-            caller = CalAccessCommandLog.objects.filter(
-                command=sys.argv[1],
-                version=version
-            ).order_by('-start_datetime')[0]
-            # update the log_record
-            self.log_record.called_by = caller
-            self.log_record.save()
+                # for now, assume the caller is the arg passed to manage.py
+                # get the most recent log of this command for the version
+                caller = CalAccessCommandLog.objects.filter(
+                    command=sys.argv[1],
+                    version=version
+                ).order_by('-start_datetime')[0]
+                # update the log_record
+                self.log_record.called_by = caller
+                self.log_record.save()
 
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat()
@@ -136,23 +138,24 @@ class Command(CalAccessCommand):
                 "Only MySQL and PostgresSQL backends supported."
             )
 
-        raw_file_record = RawDataFile.objects.get(
-            version=version,
-            file_name=self.log_record.file_name
-        )
+        if version:
+            raw_file_record = RawDataFile.objects.get(
+                version=version,
+                file_name=self.log_record.file_name
+            )
 
-        # add clean counts to raw_file_record
-        raw_file_record.clean_columns_count = len(self.get_headers())
-        raw_file_record.clean_records_count = self.get_row_count()
-        raw_file_record.save()
+            # add clean counts to raw_file_record
+            raw_file_record.clean_columns_count = len(self.get_headers())
+            raw_file_record.clean_records_count = self.get_row_count()
+            raw_file_record.save()
+
+            # save the log record
+            self.log_record.finish_datetime = datetime.now()
+            self.log_record.save()
 
         # if not keeping files, remove the csv file
         if not self.keep_files:
             os.remove(self.csv)
-
-        # save the log record
-        self.log_record.finish_datetime = datetime.now()
-        self.log_record.save()
 
     def load_dat(self):
         """
