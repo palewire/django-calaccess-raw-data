@@ -5,7 +5,7 @@ from django.apps import apps
 from django.db import router
 from django.contrib.humanize.templatetags.humanize import intcomma
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataFile
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
@@ -38,7 +38,10 @@ class Command(CalAccessCommand):
         # Get the model total
         model_count = model.objects.count()
 
-        version = self.get_or_copy_raw_latest_version()
+        try:
+            version = self.get_or_copy_raw_latest_version()
+        except RawDataVersion.DoesNotExist:
+            version = None
 
         try:
             raw_file = self.get_or_copy_raw_file(
