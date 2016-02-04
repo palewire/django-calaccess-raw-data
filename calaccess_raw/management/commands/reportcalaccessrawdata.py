@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from __future__ import division
 import os
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_model_list
@@ -10,7 +11,20 @@ from django.db.models import Sum
 from django.forms.models import model_to_dict
 from clint.textui import progress
 from csv import DictWriter
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+from calaccess_raw.models.tracking import RawDataFile
+
+
+def calc_percent(whole, total):
+    """
+    """
+    try:
+        pct = whole / total
+    except ZeroDivisionError:
+        pct = 0
+    else:
+        pct * 100
+
+    return pct
 
 
 class Command(CalAccessCommand):
@@ -29,10 +43,10 @@ class Command(CalAccessCommand):
         self.empty_raw_files = []
         self.unknown_raw_files = []
 
-        self.version = RawDataVersion.objects.latest('release_datetime')
-
-        self.raw_file_records = RawDataFile.objects.filter(
-            version=self.version
+        self.raw_data_files = RawDataFile.objects.using(
+            self.database
+        ).filter(
+            version=self.raw_data_versions.latest('release_datetime')
         )
 
         self.log("Analyzing loaded models")
@@ -47,18 +61,19 @@ class Command(CalAccessCommand):
             call_command(
                 'verifycalaccessrawfile',
                 model.__name__,
-                verbosity=self.verbosity
+                verbosity=self.verbosity,
+                self.database
             )
 
-        self.num_download_files = self.raw_file_records.count()
+        self.num_download_files = self.raw_data_files.count()
 
-        # self.num_clean_files = self.raw_file_records.filter(
-        #     clean_records_count>0
-        # ).count()
+        self.num_clean_files = self.raw_data_files.filter(
+            clean_records_count__gt=0
+        ).count()
 
-        # self.num_loaded_files = self.raw_file_records.filter(
-        #     load_records_count>0
-        # ).count()
+        self.num_loaded_files = self.raw_data_files.filter(
+            load_records_count__gt=0
+        ).count()
 
         total_raw_records = self.sum_count_column('download_records_count')
 
@@ -68,13 +83,13 @@ class Command(CalAccessCommand):
 
         self.log(
             '{0:.4%} of records cleaned'.format(
-                float(total_clean_records) / float(total_raw_records)
+                calc_percent(total_clean_records, total_raw_records)
             )
         )
 
         self.log(
             '{0:.4%} of records loaded'.format(
-                float(total_loaded_records) / float(total_raw_records)
+                calc_percent(total_loaded_records, total_raw_records)
             )
         )
 
@@ -87,7 +102,7 @@ class Command(CalAccessCommand):
         Takes the name of a RawDataFile count column.
         Returns a sum of its values
         """
-        result = self.raw_file_records.aggregate(
+        result = self.raw_data_files.aggregate(
             the_sum=Sum(column_name)
         )
         return result['the_sum']
@@ -117,29 +132,23 @@ class Command(CalAccessCommand):
             writer = DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
 
-            for i in self.raw_file_records:
+            for i in self.raw_data_files:
 
                 row = model_to_dict(i)
 
                 del row['id']
                 del row['version']
 
-                try:
-                    row.update({
+                row.update({
                         'pct_cleaned': '{0:.2%}'.format(
-                            float(i.clean_records_count) / float(i.download_records_count)
+                            calc_percent(i.clean_records_count, i.download_records_count)
                         )
                     })
-                except ZeroDivisionError:
-                    row.update({'pct_cleaned': None})
 
-                try:
-                    row.update({
+                row.update({
                         'pct_loaded': '{0:.2%}'.format(
-                            float(i.load_records_count) / float(i.load_records_count)
+                            calc_percent(i.load_records_count, i.download_records_count)
                         )
                     })
-                except ZeroDivisionError:
-                    row.update({'pct_loaded': None})
 
                 writer.writerow(row)
