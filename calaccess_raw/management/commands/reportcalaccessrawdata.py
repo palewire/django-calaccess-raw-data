@@ -62,7 +62,7 @@ class Command(CalAccessCommand):
                 'verifycalaccessrawfile',
                 model.__name__,
                 verbosity=self.verbosity,
-                self.database
+                database=self.database
             )
 
         self.num_download_files = self.raw_data_files.count()
