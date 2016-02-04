@@ -7,6 +7,11 @@ from dateutil.parser import parse as datetime_parse
 import requests
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
+from calaccess_raw.models.tracking import (
+    RawDataVersion,
+    RawDataFile,
+    CalAccessCommandLog
+)
 
 
 class CalAccessCommand(BaseCommand):
@@ -15,6 +20,19 @@ class CalAccessCommand(BaseCommand):
     for the other commands in this application.
     """
     url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
+
+    def add_arguments(self, parser):
+        """
+        Adds custom arguments that will be available to all subclasses.
+        """
+        parser.add_argument(
+            "--d",
+            "--database",
+            dest="database",
+            default=None,
+            help="Alias of database where data will be inserted. Defaults to the "
+                 "'default' in DATABASE settings."
+        )
 
     def handle(self, *args, **options):
         """
@@ -39,6 +57,12 @@ class CalAccessCommand(BaseCommand):
             # or take the end of the command's full module name
             self.command_name = sub(r'(.+\.)*', '', self.__class__.__module__)
 
+        self.database = options["database"] or 'default'
+
+        self.raw_data_versions = RawDataVersion.objects.using(self.database)
+        self.raw_data_files = RawDataFile.objects.using(self.database)
+        self.command_logs = CalAccessCommandLog.objects.using(self.database)
+
     def get_download_metadata(self):
         """
         Returns basic metadata about the current CAL-ACCESS snapshot,
@@ -50,6 +74,79 @@ class CalAccessCommand(BaseCommand):
             'content-length': int(request.headers['content-length']),
             'last-modified': datetime_parse(request.headers['last-modified'])
         }
+
+    def get_or_copy_raw_latest_version(self):
+        """
+        Returns a RawDataVersion object with the most recent release_datetime.
+
+        If the version doesn't exist in the db in the command's scope,
+        look up the version in the default db and copy it to the db
+        in the command's scope.
+
+        If the default db doesn't have a version with the given release_datetime,
+        return None.
+        """
+        # check for raw_data_version in the active db
+        try:
+            version = self.raw_data_versions.latest('release_datetime')
+        except RawDataVersion.DoesNotExist:
+            # if does not exist and we aren't using default db...
+            if self.database != 'default':
+                # check the default db next
+                try:
+                    version = self.raw_data_versions.using(
+                        'default'
+                    ).latest('release_datetime')
+                except RawDataVersion.DoesNotExist:
+                    raise
+                else:
+                    # if there's version in default, copy to active db
+                    # use first option in Django docs http://bit.ly/1SYgWnJ
+                    version.pk = None
+                    version.save(using=self.database)
+            else:
+                raise
+
+        return version
+
+    def get_or_copy_raw_file(self, version, file_name):
+        """
+        Returns a RawDataFile object with given version and file_name.
+
+        If the file doesn't exist in the db in the command's scope,
+        look up the file in the default db and copy it to db
+        in the command's scope.
+
+        If the default db doesn't have a file with the given release_datetime,
+        return None.
+        """
+        try:
+            raw_file = self.raw_data_files.get(
+                version=version,
+                file_name=file_name
+            )
+        except RawDataFile.DoesNotExist:
+            # if does not exist and we aren't using default db...
+            if self.database != 'default':
+                # check the default db next
+                try:
+                    raw_file = self.raw_data_files.using(
+                        'default'
+                    ).get(
+                        version=version,
+                        file_name=file_name
+                    )
+                except RawDataFile.DoesNotExist:
+                    raise
+                else:
+                    # if there's file in default, copy to active db
+                    # use first option in Django docs http://bit.ly/1SYgWnJ
+                    raw_file.pk = None
+                    raw_file.save(using=self.database)
+            else:
+                raise
+
+        return raw_file
 
     #
     # Logging methods

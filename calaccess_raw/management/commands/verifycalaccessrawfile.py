@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.apps import apps
-from calaccess_raw.management.commands import CalAccessCommand
+from django.db import router
 from django.contrib.humanize.templatetags.humanize import intcomma
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw.models.tracking import RawDataFile
 
 
 class Command(CalAccessCommand):
@@ -30,25 +31,30 @@ class Command(CalAccessCommand):
         if self.verbosity > 1:
             self.log(" Verifying %s" % options['model_name'])
 
-        # Get the model total
         model = apps.get_model(options['app_name'], options['model_name'])
+
+        self.database = options["database"] or router.db_for_write(model)
+
+        # Get the model total
         model_count = model.objects.count()
 
-        # only update raw_file_record if there's version logged
-        # otherwise, test wil fail
+        version = self.get_or_copy_raw_latest_version()
+
         try:
-            version = RawDataVersion.objects.latest('release_datetime')
-        except RawDataVersion.DoesNotExist:
-            version = None
-        else:
-            raw_file_record = RawDataFile.objects.get(
+            raw_file = self.get_or_copy_raw_file(
+                version,
+                model._meta.db_table
+            )
+        except RawDataFile.DoesNotExist:
+            raw_file = self.raw_data_files.create(
                 version=version,
                 file_name=model._meta.db_table
             )
-            # add load counts to raw_file_record
-            raw_file_record.load_columns_count = len(model._meta.fields)
-            raw_file_record.load_records_count = model_count
-            raw_file_record.save()
+
+        # add load counts to raw_file_record
+        raw_file.load_columns_count = len(model._meta.fields)
+        raw_file.load_records_count = model_count
+        raw_file.save()
 
         # Get the CSV total
         csv_path = model.objects.get_csv_path()

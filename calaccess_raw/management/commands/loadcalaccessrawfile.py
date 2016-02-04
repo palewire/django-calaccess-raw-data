@@ -12,11 +12,7 @@ from postgres_copy import CopyMapping
 from django.db import connections, router
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import (
-    RawDataVersion,
-    RawDataFile,
-    CalAccessCommandLog
-)
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
@@ -53,14 +49,6 @@ class Command(CalAccessCommand):
             help="Keep CSV file after loading"
         )
         parser.add_argument(
-            "--d",
-            "--database",
-            dest="database",
-            default=None,
-            help="Alias of database where data will be inserted. Defaults to the "
-                 "'default' in DATABASE settings."
-        )
-        parser.add_argument(
             "-a",
             "--app-name",
             dest="app_name",
@@ -82,14 +70,14 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Loading %s" % options['model_name'])
 
-        # only update raw_file_record if there's version logged
-        # otherwise, test wil fail
+        # if there's no version, assume this is a test and do not log
+        # TODO: Figure out a more direct way to handle this
         try:
-            version = RawDataVersion.objects.latest('release_datetime')
+            version = self.get_or_copy_raw_latest_version()
         except RawDataVersion.DoesNotExist:
             version = None
         else:
-            self.log_record = CalAccessCommandLog.objects.create(
+            self.log_record = self.command_logs.create(
                 version=version,
                 command=self.command_name,
                 file_name=self.model._meta.db_table,
@@ -101,7 +89,7 @@ class Command(CalAccessCommand):
 
                 # for now, assume the caller is the arg passed to manage.py
                 # get the most recent log of this command for the version
-                caller = CalAccessCommandLog.objects.filter(
+                caller = self.command_logs.filter(
                     command=sys.argv[1],
                     version=version
                 ).order_by('-start_datetime')[0]
@@ -139,15 +127,21 @@ class Command(CalAccessCommand):
             )
 
         if version:
-            raw_file_record = RawDataFile.objects.get(
-                version=version,
-                file_name=self.log_record.file_name
-            )
+            try:
+                raw_file = self.get_or_copy_raw_file(
+                    version,
+                    self.log_record.file_name
+                )
+            except RawDataFile.DoesNotExist:
+                raw_file = self.raw_data_files.create(
+                    version=version,
+                    file_name=self.log_record.file_name
+                )
 
             # add clean counts to raw_file_record
-            raw_file_record.clean_columns_count = len(self.get_headers())
-            raw_file_record.clean_records_count = self.get_row_count()
-            raw_file_record.save()
+            raw_file.clean_columns_count = len(self.get_headers())
+            raw_file.clean_records_count = self.get_row_count()
+            raw_file.save()
 
             # save the log record
             self.log_record.finish_datetime = datetime.now()

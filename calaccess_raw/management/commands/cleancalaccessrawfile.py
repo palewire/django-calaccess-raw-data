@@ -10,11 +10,7 @@ from django.utils import six
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import (
-    RawDataVersion,
-    RawDataFile,
-    CalAccessCommandLog
-)
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
@@ -50,14 +46,14 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
 
-        # only create log records if a version has been logged
-        # otherwise test will fail
+        # if there's no version, assume this is a test and do not log
+        # TODO: Figure out a more direct way to handle this
         try:
-            version = RawDataVersion.objects.latest('release_datetime')
+            version = self.get_or_copy_raw_latest_version()
         except RawDataVersion.DoesNotExist:
             version = None
         else:
-            self.log_record = CalAccessCommandLog.objects.create(
+            self.log_record = self.command_logs.create(
                 version=version,
                 command=self.command_name,
                 file_name=self.file_name.upper().replace('.TSV', '')
@@ -69,7 +65,7 @@ class Command(CalAccessCommand):
 
                 # for now, assume the caller is the arg passed to manage.py
                 # get the most recent log of this command for the version
-                caller = CalAccessCommandLog.objects.filter(
+                caller = self.command_logs.filter(
                     command=sys.argv[1],
                     version=version
                 ).order_by('-start_datetime')[0]
@@ -169,15 +165,21 @@ class Command(CalAccessCommand):
             self.log_errors(log_rows)
 
         if version:
-            raw_file_record = RawDataFile.objects.get(
-                version=version,
-                file_name=self.file_name.upper().replace('.TSV', '')
-            )
+            try:
+                raw_file = self.get_or_copy_raw_file(
+                    version,
+                    self.file_name.upper().replace('.TSV', '')
+                )
+            except RawDataFile.DoesNotExist:
+                raw_file = self.raw_data_files.create(
+                    version=version,
+                    file_name=self.file_name.upper().replace('.TSV', '')
+                )
 
             # add download counts to raw_file_record
-            raw_file_record.download_columns_count = headers_count
-            raw_file_record.download_records_count = line_number
-            raw_file_record.save()
+            raw_file.download_columns_count = headers_count
+            raw_file.download_records_count = line_number
+            raw_file.save()
 
             # save the log record
             self.log_record.finish_datetime = datetime.now()

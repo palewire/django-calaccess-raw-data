@@ -14,15 +14,11 @@ from clint.textui import progress
 from django.db.utils import IntegrityError
 from django.utils.timezone import utc
 from django.utils.six.moves import input
-from calaccess_raw.models.tracking import (
-    RawDataVersion,
-    RawDataFile,
-    CalAccessCommandLog
-)
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
@@ -73,11 +69,12 @@ class Command(CalAccessCommand):
         self.resume_download = (options['resume'] and os.path.exists(self.zip_path))
 
         self.last_download = self.get_last_download()
-        last_release_datetime = self.last_download.version.release_datetime
 
         if self.last_download:
+            last_release_datetime = self.last_download.version.release_datetime
             since_prev_version = naturaltime(last_release_datetime)
         else:
+            last_release_datetime = None
             since_prev_version = None
 
         download_metadata = self.get_download_metadata()
@@ -130,11 +127,20 @@ class Command(CalAccessCommand):
         if self.resume_download:
             self.log_record = self.last_download
         else:
-            self.log_record = CalAccessCommandLog.objects.create(
-                version=RawDataVersion.objects.get_or_create(
+            # get or create a version record
+            # .get_or_create() throws IntegrityError
+            try:
+                version = self.raw_data_versions.get(
+                    release_datetime=self.current_release_datetime
+                )
+            except RawDataVersion.DoesNotExist:
+                version = self.raw_data_versions.create(
                     release_datetime=self.current_release_datetime,
-                    size=self.current_release_size
-                )[0],
+                    size=download_metadata['content-length']
+                )
+            # create a log record
+            self.log_record = self.command_logs.create(
+                version=version,
                 command=self.command_name
             )
 
@@ -157,8 +163,8 @@ class Command(CalAccessCommand):
         Returns a CalAccessCommandLog object for the most recent download
         """
         try:
-            last_log = CalAccessCommandLog.objects.filter(
-                    command=self.command_name
+            last_log = self.command_logs.filter(
+                command=self.command_name
             ).order_by('-start_datetime')[0]
         except IndexError:
             last_log = None
@@ -239,7 +245,7 @@ class Command(CalAccessCommand):
         shutil.move(
             os.path.join(
                 self.data_dir,
-                'CalAccess/DATA/'
+                'CalAccess/DATA/CalAccess/DATA/'
             ),
             self.data_dir
         )
@@ -256,7 +262,7 @@ class Command(CalAccessCommand):
         # make the RawDataFile records
         for f in os.listdir(self.tsv_dir):
             try:
-                RawDataFile.objects.create(
+                self.raw_data_files.create(
                     version=self.log_record.version,
                     file_name=f.upper().replace('.TSV', ''),
                 )

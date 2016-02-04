@@ -7,12 +7,12 @@ from clint.textui import progress
 from django.core.management import call_command
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion, CalAccessCommandLog
 from calaccess_raw import (
     get_download_directory,
     get_test_download_directory,
     get_model_list
 )
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
@@ -68,14 +68,6 @@ class Command(CalAccessCommand):
             help="Use sampled test data (skips download, clean a load)"
         )
         parser.add_argument(
-            "-d",
-            "--database",
-            dest="database",
-            default=None,
-            help="Alias of database where data will be inserted. Defaults to the "
-                 "'default' in DATABASE settings."
-        )
-        parser.add_argument(
             "-a",
             "--app-name",
             dest="app_name",
@@ -88,7 +80,6 @@ class Command(CalAccessCommand):
 
         # set / compute any attributes that multiple class methods need
         self.app_name = options["app_name"]
-        self.database = options["database"]
         self.keep_files = options["keep_files"]
 
         if options['test_data']:
@@ -149,12 +140,20 @@ class Command(CalAccessCommand):
         if not self.log_record:
             # and we aren't using test data
             if not options['test_data']:
-                # create a new log record
-                self.log_record = CalAccessCommandLog.objects.create(
-                    version=RawDataVersion.objects.get_or_create(
+                # get or create a version
+                # .get_or_create() throws IntegrityError
+                try:
+                    version = self.raw_data_versions.get(
+                        release_datetime=current_release_datetime
+                    )
+                except RawDataVersion.DoesNotExist:
+                    version = self.raw_data_versions.create(
                         release_datetime=current_release_datetime,
                         size=download_metadata['content-length']
-                    )[0],
+                    )
+                # create a new log record
+                self.log_record = self.command_logs.create(
+                    version=version,
                     command=self.command_name
                 )
 
@@ -165,7 +164,8 @@ class Command(CalAccessCommand):
                 keep_files=self.keep_files,
                 verbosity=self.verbosity,
                 resume=self.resume_download,
-                noinput=options['noinput']
+                noinput=options['noinput'],
+                database=self.database
             )
             self.duration()
 
@@ -194,18 +194,12 @@ class Command(CalAccessCommand):
         Returns a CalAccessCommandLog object for the most recent update
         """
         try:
-            last_log = CalAccessCommandLog.objects.filter(
-                    command=self.command_name
+            last_log = self.command_logs.filter(
+                command=self.command_name
             ).order_by('-start_datetime')[0]
         except IndexError:
             last_log = None
         return last_log
-
-    def check_can_resume(self):
-        """
-        Runs a series of checks to see if download can be resumed.
-        If so, returns True, else False.
-        """
 
     def clean(self):
         """
@@ -224,7 +218,8 @@ class Command(CalAccessCommand):
                 "cleancalaccessrawfile",
                 name,
                 verbosity=self.verbosity,
-                keep_files=self.keep_files
+                keep_files=self.keep_files,
+                database=self.database
             )
 
     def load(self):
