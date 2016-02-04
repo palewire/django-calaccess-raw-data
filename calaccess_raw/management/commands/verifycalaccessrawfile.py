@@ -42,22 +42,23 @@ class Command(CalAccessCommand):
             version = self.get_or_copy_raw_latest_version()
         except RawDataVersion.DoesNotExist:
             version = None
+        else:
 
-        try:
-            raw_file = self.get_or_copy_raw_file(
-                version,
-                model._meta.db_table
-            )
-        except RawDataFile.DoesNotExist:
-            raw_file = self.raw_data_files.create(
-                version=version,
-                file_name=model._meta.db_table
-            )
-
-        # add load counts to raw_file_record
-        raw_file.load_columns_count = len(model._meta.fields)
-        raw_file.load_records_count = model_count
-        raw_file.save()
+            try:
+                raw_file = self.get_or_copy_raw_file(
+                    version,
+                    model._meta.db_table
+                )
+            except RawDataFile.DoesNotExist:
+                raw_file = self.raw_data_files.create(
+                    version=version,
+                    file_name=model._meta.db_table
+                )
+            else:
+                # add load counts to raw_file_record
+                raw_file.load_columns_count = len(model._meta.fields)
+                raw_file.load_records_count = model_count
+                raw_file.save()
 
         # Get the CSV total
         csv_path = model.objects.get_csv_path()
