@@ -57,11 +57,16 @@ class CalAccessCommand(BaseCommand):
             # or take the end of the command's full module name
             self.command_name = sub(r'(.+\.)*', '', self.__class__.__module__)
 
-        self.database = options["database"] or 'default'
+        self.database = options["database"]
 
-        self.raw_data_versions = RawDataVersion.objects.using(self.database)
-        self.raw_data_files = RawDataFile.objects.using(self.database)
-        self.command_logs = CalAccessCommandLog.objects.using(self.database)
+        if self.database:
+            self.raw_data_versions = RawDataVersion.objects.using(self.database)
+            self.raw_data_files = RawDataFile.objects.using(self.database)
+            self.command_logs = CalAccessCommandLog.objects.using(self.database)
+        else:
+            self.raw_data_versions = RawDataVersion.objects
+            self.raw_data_files = RawDataFile.objects
+            self.command_logs = CalAccessCommandLog.objects
 
     def get_download_metadata(self):
         """

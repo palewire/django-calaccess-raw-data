@@ -12,7 +12,7 @@ from postgres_copy import CopyMapping
 from django.db import connections, router
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile, CalAccessCommandLog
 
 
 class Command(CalAccessCommand):
@@ -64,7 +64,13 @@ class Command(CalAccessCommand):
         # set / compute any attributes that multiple class methods need
         self.keep_files = options["keep_files"]
         self.model = apps.get_model(options["app_name"], options['model_name'])
-        self.database = options["database"] or router.db_for_write(self.model)
+
+        self.database = self.database or router.db_for_write(model=self.model)
+
+        self.raw_data_versions = RawDataVersion.objects.using(self.database)
+        self.raw_data_files = RawDataFile.objects.using(self.database)
+        self.command_logs = CalAccessCommandLog.objects.using(self.database)
+
         self.csv = options["csv"] or self.model.objects.get_csv_path()
 
         if self.verbosity > 2:
@@ -100,15 +106,17 @@ class Command(CalAccessCommand):
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat()
 
-        # make sure the database is set up in django's settings
-        try:
-            engine = settings.DATABASES[self.database]['ENGINE']
-        except KeyError:
-            raise TypeError(
-                "{} not configured in DATABASES settings.".format(self.database)
-            )
+        # if not using default db, make sure the database is set up in django's settings
+        if self.database:
+            try:
+                engine = settings.DATABASES[self.database]['ENGINE']
+            except KeyError:
+                raise TypeError(
+                    "{} not configured in DATABASES settings.".format(self.database)
+                )
 
         # set up database connection
+
         self.connection = connections[self.database]
         self.cursor = self.connection.cursor()
 
@@ -141,11 +149,11 @@ class Command(CalAccessCommand):
             # add clean counts to raw_file_record
             raw_file.clean_columns_count = len(self.get_headers())
             raw_file.clean_records_count = self.get_row_count()
-            raw_file.save()
+            raw_file.save(using=self.database)
 
             # save the log record
             self.log_record.finish_datetime = datetime.now()
-            self.log_record.save()
+            self.log_record.save(using=self.database)
 
         # if not keeping files, remove the csv file
         if not self.keep_files:
