@@ -482,7 +482,7 @@ individual"
     )
     enty_namt = fields.CharField(
         db_column='ENTY_NAMT',
-        max_length=9,
+        max_length=10,
         blank=True,
         help_text="Entity's name prefix or title if the entity is an \
 individual"
