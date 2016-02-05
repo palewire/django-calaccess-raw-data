@@ -49,12 +49,12 @@ class Command(CalAccessCommand):
         # if there's no version, assume this is a test and do not log
         # TODO: Figure out a more direct way to handle this
         try:
-            version = self.get_or_copy_raw_latest_version()
+            self.version = self.get_or_copy_raw_latest_version()
         except RawDataVersion.DoesNotExist:
-            version = None
+            self.version = None
         else:
             self.log_record = self.command_logs.create(
-                version=version,
+                version=self.version,
                 command=self.command_name,
                 file_name=self.file_name.upper().replace('.TSV', '')
             )
@@ -67,11 +67,27 @@ class Command(CalAccessCommand):
                 # get the most recent log of this command for the version
                 caller = self.command_logs.filter(
                     command=sys.argv[1],
-                    version=version
+                    version=self.version
                 ).order_by('-start_datetime')[0]
                 # update the log_record
                 self.log_record.called_by = caller
                 self.log_record.save()
+
+        self.clean(options['file_name'])
+
+        # unless keeping files, remove tsv files
+        if not options['keep_files']:
+            os.remove(os.path.join(self.tsv_dir, options['file_name']))
+
+        if self.version:
+            # save the log record
+            self.log_record.finish_datetime = datetime.now()
+            self.log_record.save()
+
+    def clean(self, name):     
+        """       
+        Cleans the provided source TSV file and writes it out in CSV format       
+        """
 
         # Up the CSV data limit
         csv.field_size_limit(1000000000)
@@ -164,15 +180,15 @@ class Command(CalAccessCommand):
                 self.failure(msg % (len(log_rows) - 1))
             self.log_errors(log_rows)
 
-        if version:
+        if self.version:
             try:
                 raw_file = self.get_or_copy_raw_file(
-                    version,
+                    self.version,
                     self.file_name.upper().replace('.TSV', '')
                 )
             except RawDataFile.DoesNotExist:
                 raw_file = self.raw_data_files.create(
-                    version=version,
+                    version=self.version,
                     file_name=self.file_name.upper().replace('.TSV', '')
                 )
 
@@ -181,17 +197,9 @@ class Command(CalAccessCommand):
             raw_file.download_records_count = line_number
             raw_file.save()
 
-            # save the log record
-            self.log_record.finish_datetime = datetime.now()
-            self.log_record.save()
-
         # Shut it down
         tsv_file.close()
         csv_file.close()
-
-        # unless keeping files, remove tsv files
-        if not options['keep_files']:
-            os.remove(os.path.join(self.tsv_dir, options['file_name']))
 
     def log_errors(self, rows):
         """
