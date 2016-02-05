@@ -35,15 +35,12 @@ WSGI_APPLICATION = 'wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'calaccess_raw',
+        'USER': 'postgres',
         'PASSWORD': '',
-        'ENGINE': 'django.db.backends.mysql',
-        'USER': 'root',
         'HOST': 'localhost',
-        'PORT': '3306',
-        'OPTIONS': {
-            'local_infile': 1,
-        }
+        'PORT': '5432'
     },
 }
 CALACCESS_DAT_SOURCE = ''
