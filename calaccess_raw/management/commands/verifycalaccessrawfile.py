@@ -5,7 +5,11 @@ from django.apps import apps
 from django.db import router
 from django.contrib.humanize.templatetags.humanize import intcomma
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+from calaccess_raw.models.tracking import (
+    RawDataVersion,
+    RawDataFile,
+    CalAccessCommandLog
+)
 
 
 class Command(CalAccessCommand):
@@ -33,7 +37,11 @@ class Command(CalAccessCommand):
 
         model = apps.get_model(options['app_name'], options['model_name'])
 
-        self.database = options["database"] or router.db_for_write(model)
+        self.database = self.database or router.db_for_write(model=model)
+
+        self.raw_data_versions = RawDataVersion.objects.using(self.database)
+        self.raw_data_files = RawDataFile.objects.using(self.database)
+        self.command_logs = CalAccessCommandLog.objects.using(self.database)
 
         # Get the model total
         model_count = model.objects.count()
@@ -61,9 +69,7 @@ class Command(CalAccessCommand):
                 raw_file.save()
 
         # Get the CSV total
-        csv_path = model.objects.get_csv_path()
-        with open(csv_path) as f:
-            csv_count = sum(1 for l in f) - 1
+        csv_count = raw_file.clean_records_count
 
         if self.verbosity > 1:
             # Report back on how we did
