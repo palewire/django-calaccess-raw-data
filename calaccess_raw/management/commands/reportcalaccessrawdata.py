@@ -113,7 +113,7 @@ class Command(CalAccessCommand):
         """
         file_name = os.path.join(
             getattr(settings, 'REPO_DIR'),
-            'docs/calaccess_report.csv'
+            'docs/calaccess_raw_files_report.csv'
         )
 
         with open(file_name, 'w') as f:

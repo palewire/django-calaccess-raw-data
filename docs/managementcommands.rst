@@ -99,6 +99,7 @@ Options
                             Name of Django app where model will be imported from
 
 
+
 cleancalaccessrawfile
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -155,6 +156,9 @@ Options
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
       --keep-files          Keep original TSV file
+
+.. note::
+    The ``cleancalaccessrawfile`` command overwrites the .CSV files previously processed from the original .TSV files.
 
 downloadcalaccessrawdata
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -217,6 +221,9 @@ Options
                             attempt
       --keep-files          Keep downloaded zip and unzipped files
       --noinput             Download the ZIP archive without asking permission
+
+.. note::
+    The ``downloadcalaccessrawdata`` command overwrites the previously downloaded files.
 
 loadcalaccessrawfile
 ~~~~~~~~~~~~~~~~~~~~
@@ -281,9 +288,55 @@ Options
       -a APP_NAME, --app-name APP_NAME
                             Name of Django app where model will be imported from
 
+.. note::
+    The ``loadcalaccessrawfile`` command deletes any data previously loaded into the calaccess models before loading in the current data.
+
 
 Inspecting the data
 -------------------
+
+reportcalaccessrawdata
+~~~~~~~~~~~~~~~~~~~~~~
+
+Generate report outlining the number / proportion of files / records cleaned and loaded
+
+Examples
+````````
+
+.. code-block:: bash
+
+    $ python manage.py reportcalaccessrawfile
+
+Options
+```````
+
+.. code-block:: bash
+
+    usage: manage.py reportcalaccessrawdata [-h] [--version] [-v {0,1,2,3}]
+                                            [--settings SETTINGS]
+                                            [--pythonpath PYTHONPATH]
+                                            [--traceback] [--no-color]
+                                            [--d DATABASE]
+
+    Generate report outlining the number / proportion of files / records cleaned
+    and loaded
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --version             show program's version number and exit
+      -v {0,1,2,3}, --verbosity {0,1,2,3}
+                            Verbosity level; 0=minimal output, 1=normal output,
+                            2=verbose output, 3=very verbose output
+      --settings SETTINGS   The Python path to a settings module, e.g.
+                            "myproject.settings.main". If this isn't provided, the
+                            DJANGO_SETTINGS_MODULE environment variable will be
+                            used.
+      --pythonpath PYTHONPATH
+                            A directory to add to the Python path, e.g.
+                            "/home/djangoprojects/myproject".
+      --traceback           Raise on CommandError exceptions
+      --no-color            Don't colorize the command output.
+
 
 totalcalaccessrawdata
 ~~~~~~~~~~~~~~~~~~~~~
