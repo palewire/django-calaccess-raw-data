@@ -48,7 +48,10 @@ class CalAccessCommandLogAdmin(BaseAdmin):
         "finish_datetime",
         "version__release_datetime",
     )
-    search_fields = ("command","file_name")
+    search_fields = (
+        "command",
+        "file_name",
+    )
 
 admin.site.register(models.RawDataVersion, RawDataVersionAdmin)
 admin.site.register(models.RawDataFile, RawDataFileAdmin)

@@ -84,9 +84,9 @@ class Command(CalAccessCommand):
             self.log_record.finish_datetime = datetime.now()
             self.log_record.save()
 
-    def clean(self, name):     
-        """       
-        Cleans the provided source TSV file and writes it out in CSV format       
+    def clean(self, name):
+        """
+        Cleans the provided source TSV file and writes it out in CSV format
         """
 
         # Up the CSV data limit
