@@ -5,11 +5,7 @@ from django.apps import apps
 from django.db import router
 from django.contrib.humanize.templatetags.humanize import intcomma
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import (
-    RawDataVersion,
-    RawDataFile,
-    CalAccessCommandLog
-)
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
@@ -58,7 +54,12 @@ class Command(CalAccessCommand):
             raw_file.save()
 
         # Get the CSV total
-        csv_count = raw_file.clean_records_count
+        try:
+            csv_count = raw_file.clean_records_count
+        except UnboundLocalError:
+            csv_path = model.objects.get_csv_path()
+            with open(csv_path) as f:
+                csv_count = sum(1 for l in f) - 1
 
         if self.verbosity > 1:
             # Report back on how we did
