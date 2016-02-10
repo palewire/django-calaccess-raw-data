@@ -118,10 +118,6 @@ class RawDataFile(models.Model):
         help_text='Foreign key referencing the version of the raw '
                   'source data in which the file was included'
     )
-    UNIQUE_KEY = (
-        "VERSION_ID",
-        "FILE_NAME",
-    )
     file_name = models.CharField(
         max_length=100,
         null=False,
@@ -176,6 +172,7 @@ class RawDataFile(models.Model):
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'calaccess_raw_data_files'
+        unique_together = (('version', 'file_name'),)
         verbose_name = 'calaccess raw data file'
         verbose_name_plural = 'calaccess raw data files'
         ordering = ['-version_id', 'file_name']
