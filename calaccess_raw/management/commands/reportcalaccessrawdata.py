@@ -43,9 +43,7 @@ class Command(CalAccessCommand):
         self.empty_raw_files = []
         self.unknown_raw_files = []
 
-        self.raw_data_files = RawDataFile.objects.using(
-            self.database
-        ).filter(
+        self.raw_data_files = self.raw_data_files.filter(
             version=self.raw_data_versions.latest('release_datetime')
         )
 
@@ -61,8 +59,7 @@ class Command(CalAccessCommand):
             call_command(
                 'verifycalaccessrawfile',
                 model.__name__,
-                verbosity=self.verbosity,
-                database=self.database
+                verbosity=self.verbosity
             )
 
         self.num_download_files = self.raw_data_files.count()

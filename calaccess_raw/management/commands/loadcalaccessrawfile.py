@@ -65,11 +65,7 @@ class Command(CalAccessCommand):
         self.keep_files = options["keep_files"]
         self.model = apps.get_model(options["app_name"], options['model_name'])
 
-        self.database = self.database or router.db_for_write(model=self.model)
-
-        self.raw_data_versions = RawDataVersion.objects.using(self.database)
-        self.raw_data_files = RawDataFile.objects.using(self.database)
-        self.command_logs = CalAccessCommandLog.objects.using(self.database)
+        self.database = router.db_for_write(model=self.model)
 
         self.csv = options["csv"] or self.model.objects.get_csv_path()
 
@@ -79,7 +75,7 @@ class Command(CalAccessCommand):
         # if there's no version, assume this is a test and do not log
         # TODO: Figure out a more direct way to handle this
         try:
-            version = self.get_or_copy_raw_latest_version()
+            version = self.raw_data_versions.latest('release_datetime')
         except RawDataVersion.DoesNotExist:
             version = None
         else:
@@ -135,25 +131,19 @@ class Command(CalAccessCommand):
             )
 
         if version:
-            try:
-                raw_file = self.get_or_copy_raw_file(
-                    version,
-                    self.log_record.file_name
-                )
-            except RawDataFile.DoesNotExist:
-                raw_file = self.raw_data_files.create(
-                    version=version,
-                    file_name=self.log_record.file_name
-                )
+            raw_file = self.raw_data_files.get_or_create(
+                version=version,
+                file_name=self.log_record
+            )[0]
 
             # add clean counts to raw_file_record
             raw_file.clean_columns_count = len(self.get_headers())
             raw_file.clean_records_count = self.get_row_count()
-            raw_file.save(using=self.database)
+            raw_file.save()
 
             # save the log record
             self.log_record.finish_datetime = datetime.now()
-            self.log_record.save(using=self.database)
+            self.log_record.save()
 
         # if not keeping files, remove the csv file
         if not self.keep_files:

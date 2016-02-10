@@ -21,19 +21,6 @@ class CalAccessCommand(BaseCommand):
     """
     url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
-    def add_arguments(self, parser):
-        """
-        Adds custom arguments that will be available to all subclasses.
-        """
-        parser.add_argument(
-            "--d",
-            "--database",
-            dest="database",
-            default=None,
-            help="Alias of database where data will be inserted. Defaults to the "
-                 "'default' in DATABASE settings."
-        )
-
     def handle(self, *args, **options):
         """
         Sets options common to all commands.
@@ -57,16 +44,9 @@ class CalAccessCommand(BaseCommand):
             # or take the end of the command's full module name
             self.command_name = sub(r'(.+\.)*', '', self.__class__.__module__)
 
-        self.database = options["database"]
-
-        if self.database:
-            self.raw_data_versions = RawDataVersion.objects.using(self.database)
-            self.raw_data_files = RawDataFile.objects.using(self.database)
-            self.command_logs = CalAccessCommandLog.objects.using(self.database)
-        else:
-            self.raw_data_versions = RawDataVersion.objects
-            self.raw_data_files = RawDataFile.objects
-            self.command_logs = CalAccessCommandLog.objects
+        self.raw_data_versions = RawDataVersion.objects
+        self.raw_data_files = RawDataFile.objects
+        self.command_logs = CalAccessCommandLog.objects
 
     def get_download_metadata(self):
         """
@@ -80,78 +60,35 @@ class CalAccessCommand(BaseCommand):
             'last-modified': datetime_parse(request.headers['last-modified'])
         }
 
-    def get_or_copy_raw_latest_version(self):
+    def get_last_log(self, file_name=None, finished=False):
         """
-        Returns a RawDataVersion object with the most recent release_datetime.
+        Execute query for the given command most recently started CalAccessCommandLog,
+        unless finished=True, in which case query for the most recently finished.
 
-        If the version doesn't exist in the db in the command's scope,
-        look up the version in the default db and copy it to the db
-        in the command's scope.
+        Commands that require a file / model as a positional argument should
+        pass the file_name keyword argument.
 
-        If the default db doesn't have a version with the given release_datetime,
-        return None.
+        Returns a CalAccessCommandLog object or None, if no results.
         """
-        # check for raw_data_version in the active db
+        if file_name:
+            q = self.command_logs.filter(file_name=file_name)
+        else:
+            q = self.command_logs
+
+        if finished:
+            order_by_field = '-finish_datetime'
+            q = q.filter(finish_datetime__isnull=False)
+        else:
+            order_by_field = '-start_datetime'
+
         try:
-            version = self.raw_data_versions.latest('release_datetime')
-        except RawDataVersion.DoesNotExist:
-            # if does not exist and we aren't using default db...
-            if self.database != 'default':
-                # check the default db next
-                try:
-                    version = self.raw_data_versions.using(
-                        'default'
-                    ).latest('release_datetime')
-                except RawDataVersion.DoesNotExist:
-                    raise
-                else:
-                    # if there's version in default, copy to active db
-                    # use first option in Django docs http://bit.ly/1SYgWnJ
-                    version.pk = None
-                    version.save(using=self.database)
-            else:
-                raise
+            last_log = q.filter(
+                command=self.command_name
+            ).order_by(order_by_field)[0]
+        except IndexError:
+            last_log = None
 
-        return version
-
-    def get_or_copy_raw_file(self, version, file_name):
-        """
-        Returns a RawDataFile object with given version and file_name.
-
-        If the file doesn't exist in the db in the command's scope,
-        look up the file in the default db and copy it to db
-        in the command's scope.
-
-        If the default db doesn't have a file with the given release_datetime,
-        return None.
-        """
-        try:
-            raw_file = self.raw_data_files.get(
-                version=version,
-                file_name=file_name
-            )
-        except RawDataFile.DoesNotExist:
-            # if does not exist and we aren't using default db...
-            if self.database != 'default':
-                # check the default db next
-                try:
-                    raw_file = self.raw_data_files.using(
-                        'default'
-                    ).get(
-                        version=version,
-                        file_name=file_name
-                    )
-                except RawDataFile.DoesNotExist:
-                    raise
-                else:
-                    # if there's file in default, copy to active db
-                    # use first option in Django docs http://bit.ly/1SYgWnJ
-                    raw_file.pk = None
-                    raw_file.save(using=self.database)
-            else:
-                raise
-
-        return raw_file
+        return last_log
 
     #
     # Logging methods

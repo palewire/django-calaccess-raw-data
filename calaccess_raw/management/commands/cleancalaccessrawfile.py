@@ -49,7 +49,7 @@ class Command(CalAccessCommand):
         # if there's no version, assume this is a test and do not log
         # TODO: Figure out a more direct way to handle this
         try:
-            self.version = self.get_or_copy_raw_latest_version()
+            self.version = self.raw_data_versions.latest('release_datetime')
         except RawDataVersion.DoesNotExist:
             self.version = None
         else:
@@ -181,16 +181,10 @@ class Command(CalAccessCommand):
             self.log_errors(log_rows)
 
         if self.version:
-            try:
-                raw_file = self.get_or_copy_raw_file(
-                    self.version,
-                    self.file_name.upper().replace('.TSV', '')
-                )
-            except RawDataFile.DoesNotExist:
-                raw_file = self.raw_data_files.create(
-                    version=self.version,
-                    file_name=self.file_name.upper().replace('.TSV', '')
-                )
+            raw_file = self.raw_data_files.get_or_create(
+                version=self.version,
+                file_name=self.log_record
+            )[0]
 
             # add download counts to raw_file_record
             raw_file.download_columns_count = headers_count

@@ -37,36 +37,25 @@ class Command(CalAccessCommand):
 
         model = apps.get_model(options['app_name'], options['model_name'])
 
-        self.database = self.database or router.db_for_write(model=model)
-
-        self.raw_data_versions = RawDataVersion.objects.using(self.database)
-        self.raw_data_files = RawDataFile.objects.using(self.database)
-        self.command_logs = CalAccessCommandLog.objects.using(self.database)
+        self.database = router.db_for_write(model=model)
 
         # Get the model total
         model_count = model.objects.count()
 
         try:
-            version = self.get_or_copy_raw_latest_version()
+            version = self.raw_data_versions.latest('release_datetime')
         except RawDataVersion.DoesNotExist:
             version = None
         else:
+            raw_file = self.raw_data_files.get_or_create(
+                version=version,
+                file_name=model._meta.db_table
+            )[0]
 
-            try:
-                raw_file = self.get_or_copy_raw_file(
-                    version,
-                    model._meta.db_table
-                )
-            except RawDataFile.DoesNotExist:
-                raw_file = self.raw_data_files.create(
-                    version=version,
-                    file_name=model._meta.db_table
-                )
-            else:
-                # add load counts to raw_file_record
-                raw_file.load_columns_count = len(model._meta.fields)
-                raw_file.load_records_count = model_count
-                raw_file.save()
+            # add load counts to raw_file_record
+            raw_file.load_columns_count = len(model._meta.fields)
+            raw_file.load_records_count = model_count
+            raw_file.save()
 
         # Get the CSV total
         csv_count = raw_file.clean_records_count

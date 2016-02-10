@@ -115,7 +115,7 @@ class Command(CalAccessCommand):
         download_metadata = self.get_download_metadata()
         current_release_datetime = download_metadata['last-modified']
 
-        last_update = self.get_last_update()
+        last_update = self.get_last_log()
         self.log_record = None
 
         self.resume_download = False
@@ -165,7 +165,6 @@ class Command(CalAccessCommand):
                 verbosity=self.verbosity,
                 resume=self.resume_download,
                 noinput=options['noinput'],
-                database=self.database
             )
             self.duration()
 
@@ -189,18 +188,6 @@ class Command(CalAccessCommand):
             self.log_record.finish_datetime = datetime.now()
             self.log_record.save()
 
-    def get_last_update(self):
-        """
-        Returns a CalAccessCommandLog object for the most recent update
-        """
-        try:
-            last_log = self.command_logs.filter(
-                command=self.command_name
-            ).order_by('-start_datetime')[0]
-        except IndexError:
-            last_log = None
-        return last_log
-
     def clean(self):
         """
         Clean up the raw data files from the state so they are
@@ -219,7 +206,6 @@ class Command(CalAccessCommand):
                 name,
                 verbosity=self.verbosity,
                 keep_files=self.keep_files,
-                database=self.database
             )
 
     def load(self):
@@ -241,7 +227,6 @@ class Command(CalAccessCommand):
                 "loadcalaccessrawfile",
                 model.__name__,
                 verbosity=self.verbosity,
-                database=self.database,
                 keep_files=self.keep_files,
                 app_name=self.app_name,
             )

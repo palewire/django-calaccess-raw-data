@@ -65,42 +65,39 @@ class Command(CalAccessCommand):
         # raw tsv files go in same data_dir in tsv/
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
-        # if the user tries to resume, check for existing zip file
-        self.resume_download = (options['resume'] and os.path.exists(self.zip_path))
-
-        self.last_download = self.get_last_download()
-
-        if self.last_download:
-            last_release_datetime = self.last_download.version.release_datetime
-            since_prev_version = naturaltime(last_release_datetime)
-        else:
-            last_release_datetime = None
-            since_prev_version = None
-
         download_metadata = self.get_download_metadata()
 
         self.current_release_datetime = download_metadata['last-modified']
         self.current_release_size = download_metadata['content-length']
 
-        self.local_file_size = 0
-        self.local_file_datetime = None
-        already_downloaded = False
+        self.last_started_download = self.get_last_log()
+        self.last_finished_download = self.get_last_log(finished=True)
+
+        if self.last_finished_download:
+            last_release_datetime = self.last_finished_download.version.release_datetime
+            since_prev_version = naturaltime(last_release_datetime)
+        else:
+            last_release_datetime = None
+            since_prev_version = None
+
+        if last_release_datetime == self.current_release_datetime:
+            already_downloaded = True
+        else:
+            already_downloaded = False
+
+        # if the user tries to resume, check to see if possible
+        self.resume_download = (options['resume'] and self.check_can_resume())
 
         if self.resume_download:
-            # Make sure the last release datetime is the current download meta_data
-            if last_release_datetime == self.current_release_datetime:
-                # set current size to partially downloaded zip
-                self.local_file_size = os.path.getsize(self.zip_path)
-                # set the datetime of last download to last modified date
-                # of zip file
-                timestamp = os.path.getmtime(self.zip_path)
-                self.local_file_datetime = datetime.fromtimestamp(timestamp, utc)
-
-                if self.last_download.finish_datetime:
-                    already_downloaded = True
-            else:
-                # can't resume if there's a newer release
-                self.resume_download = False
+            # set current size to partially downloaded zip
+            self.local_file_size = os.path.getsize(self.zip_path)
+            # set the datetime of last download to last modified date
+            # of zip file
+            timestamp = os.path.getmtime(self.zip_path)
+            self.local_file_datetime = datetime.fromtimestamp(timestamp, utc)
+        else:
+            self.local_file_size = 0
+            self.local_file_datetime = None
 
         # setting up the prompt
         prompt_context = dict(
@@ -125,7 +122,7 @@ class Command(CalAccessCommand):
             return
 
         if self.resume_download:
-            self.log_record = self.last_download
+            self.log_record = self.last_started_download
         else:
             # get or create a version record
             # .get_or_create() throws IntegrityError
@@ -158,17 +155,30 @@ class Command(CalAccessCommand):
         self.log_record.finish_datetime = datetime.now()
         self.log_record.save()
 
-    def get_last_download(self):
+    def check_can_resume(self):
         """
-        Returns a CalAccessCommandLog object for the most recent download
+        Run a series of checks to see if the previous download can be resumed
+
+        If so, return True, else False.
         """
-        try:
-            last_log = self.command_logs.filter(
-                command=self.command_name
-            ).order_by('-start_datetime')[0]
-        except IndexError:
-            last_log = None
-        return last_log
+
+        result = False
+
+        # if there's a zip file
+        if os.path.exists(self.zip_path):
+            # and there's a previous download
+            if self.last_started_download:
+                # that did not finish
+                if not self.last_started_download.finish_datetime:
+
+                    prev_release = self.last_started_download.version.release_datetime
+
+                    # and the current release datetime is the same as
+                    #  the one on the last complete download
+                    if self.current_release_datetime == prev_release:
+                        result = True
+
+        return result
 
     def confirm_download(self):
         """
