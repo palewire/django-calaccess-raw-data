@@ -21,4 +21,5 @@ example/data
 example/test-data/csv
 example/settings_local.py
 example/.static/
+example/routers.py
 calaccess_raw/migrations/
