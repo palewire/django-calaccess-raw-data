@@ -92,6 +92,17 @@ Create a file at ``example/project/settings_local.py`` to save your custom datab
         }
     }
 
+Developing with multiple database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As explained in `how-to guide for end users <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/howtouseit.html#multi-database-django-projects>`_, this app supports automatic database routing in order to cover cases where users don't want all CAL-ACCESS data stored in their Django project's ``default`` database.
+
+If your interested in developing under these conditions, first of all, read carefully through Django's `Multiple database <https://docs.djangoproject.com/en/1.9/topics/db/multi-db/>`_ topic guide.
+
+You'll then need to configure each database in ``DATABASES`` in ``settings_local.py`` (which is ignored by git), rather than ``settings.py`` (which isn't). You can also configure your ``DATABASE_ROUTERS`` in ``settings_local.py``.
+
+You can still define your router classes in ``routers.py`` (as in the `end user example <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/howtouseit.html#multi-database-django-projects>`_ ), since git is set to ignore this file as well.
+
 Once the database is configured
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
