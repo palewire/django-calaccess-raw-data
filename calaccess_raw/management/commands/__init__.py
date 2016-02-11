@@ -34,16 +34,6 @@ class CalAccessCommand(BaseCommand):
 
         self.start_datetime = datetime.now()
 
-        # TODO: see if there's another way to identify caller
-        # in (edge) case when update is not called from command line
-        # if called from command line
-        if self._called_from_command_line:
-            # use the arg passed to manage.py as command name
-            self.command_name = sys.argv[1]
-        else:
-            # or take the end of the command's full module name
-            self.command_name = sub(r'(.+\.)*', '', self.__class__.__module__)
-
         self.raw_data_versions = RawDataVersion.objects
         self.raw_data_files = RawDataFile.objects
         self.command_logs = CalAccessCommandLog.objects
@@ -83,12 +73,34 @@ class CalAccessCommand(BaseCommand):
 
         try:
             last_log = q.filter(
-                command=self.command_name
+                command=self
             ).order_by(order_by_field)[0]
         except IndexError:
             last_log = None
 
         return last_log
+
+    def get_caller(self):
+        """
+        If the command was called by another command, return the caller's
+        RawDataCommandLog object. Else, return None.
+        """
+        caller = None
+
+        if not self._called_from_command_line:
+            # TODO: see if there's another way to identify caller
+            # in (edge) case when update is not called from command line
+
+            # for now, assume the caller is the arg passed to manage.py
+            # try getting the most recent log of this command for the version
+            try:
+                caller = self.command_logs.filter(
+                    command=sys.argv[1]
+                ).order_by('-start_datetime')[0]
+            except IndexError:
+                pass
+
+        return caller
 
     #
     # Logging methods
@@ -133,3 +145,6 @@ class CalAccessCommand(BaseCommand):
         """
         duration = datetime.now() - self.start_datetime
         self.stdout.write('Duration: {}'.format(str(duration)))
+
+    def __str__(self):
+        return sub(r'(.+\.)*', '', self.__class__.__module__)

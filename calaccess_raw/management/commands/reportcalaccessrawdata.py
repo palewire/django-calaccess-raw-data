@@ -9,9 +9,9 @@ from django.conf import settings
 from django.core.management import call_command
 from django.db.models import Sum
 from django.forms.models import model_to_dict
+from django.contrib.humanize.templatetags.humanize import naturaltime
 from clint.textui import progress
 from csv import DictWriter
-from calaccess_raw.models.tracking import RawDataFile
 
 
 def calc_percent(whole, total):
@@ -43,9 +43,28 @@ class Command(CalAccessCommand):
         self.empty_raw_files = []
         self.unknown_raw_files = []
 
-        self.raw_data_files = self.raw_data_files.filter(
-            version=self.raw_data_versions.latest('release_datetime')
-        )
+        try:
+            last_complete_download = self.command_logs.filter(
+                command='downloadcalaccessrawdata',
+                finish_datetime__isnull=False
+            ).order_by('-finish_datetime')[0]
+        except IndexError:
+            self.failure("No complete downloads yet.")
+            self.log("Try: python manage.py updatecalaccessrawdata")
+            return
+        else:
+            self.raw_data_files = self.raw_data_files.filter(
+                version=last_complete_download.version
+            )
+
+            downloaded_release_datetime = last_complete_download.version.release_datetime
+            current_release_datetime = self.get_download_metadata()['last-modified']
+
+            if current_release_datetime != downloaded_release_datetime:
+                since_new_release = naturaltime(current_release_datetime)
+                self.failure("A new version of CAL-ACCESS was "
+                             "released {}.".format(since_new_release))
+                self.log("Try: python manage.py updatecalaccessrawdata")
 
         self.log("Analyzing loaded models")
 

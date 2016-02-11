@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import os
-import sys
 import csv
 from datetime import datetime
 from io import StringIO
@@ -10,7 +9,7 @@ from django.utils import six
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
@@ -46,32 +45,32 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
 
-        # if there's no version, assume this is a test and do not log
-        # TODO: Figure out a more direct way to handle this
-        try:
-            self.version = self.raw_data_versions.latest('release_datetime')
-        except RawDataVersion.DoesNotExist:
-            self.version = None
-        else:
+        caller = self.get_caller()
+
+        if caller:
+            # if called by another command, use it's version
+            self.version = caller.version
             self.log_record = self.command_logs.create(
                 version=self.version,
-                command=self.command_name,
+                command=self,
+                called_by=caller,
                 file_name=self.file_name.upper().replace('.TSV', '')
             )
-            # if not called from command line
-            if not self._called_from_command_line:
-                # TODO: see if there's another way to identify caller
-                # in (edge) case when update is not called from command line
-
-                # for now, assume the caller is the arg passed to manage.py
-                # get the most recent log of this command for the version
-                caller = self.command_logs.filter(
-                    command=sys.argv[1],
-                    version=self.version
-                ).order_by('-start_datetime')[0]
-                # update the log_record
-                self.log_record.called_by = caller
-                self.log_record.save()
+        else:
+            # try getting the most recent version
+            try:
+                self.version = self.raw_data_versions.latest('release_datetime')
+            except RawDataVersion.DoesNotExist:
+                # if there's no version, assume this is a test and do not log
+                # TODO: Figure out a more direct way to handle this
+                self.version = None
+            else:
+                self.log_record = self.command_logs.create(
+                    # if called by another command, use it's version
+                    version=self.version,
+                    command=self,
+                    file_name=self.file_name.upper().replace('.TSV', '')
+                )
 
         self.clean(options['file_name'])
 
@@ -183,7 +182,7 @@ class Command(CalAccessCommand):
         if self.version:
             raw_file = self.raw_data_files.get_or_create(
                 version=self.version,
-                file_name=self.log_record
+                file_name=self.log_record.file_name
             )[0]
 
             # add download counts to raw_file_record

@@ -138,7 +138,8 @@ class Command(CalAccessCommand):
             # create a log record
             self.log_record = self.command_logs.create(
                 version=version,
-                command=self.command_name
+                command=self,
+                called_by=self.get_caller()
             )
 
         self.download()
@@ -174,7 +175,7 @@ class Command(CalAccessCommand):
                     prev_release = self.last_started_download.version.release_datetime
 
                     # and the current release datetime is the same as
-                    #  the one on the last complete download
+                    #  the one on the last incomplete download
                     if self.current_release_datetime == prev_release:
                         result = True
 

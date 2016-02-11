@@ -84,7 +84,7 @@ class Command(CalAccessCommand):
 
         if options['test_data']:
             # if using test data, we don't need to download
-            options["download"] = False
+            options['download'] = False
             # and always keep files when running test data
             self.keep_files = True
 
@@ -115,31 +115,25 @@ class Command(CalAccessCommand):
         download_metadata = self.get_download_metadata()
         current_release_datetime = download_metadata['last-modified']
 
-        last_update = self.get_last_log()
+        self.last_update = self.get_last_log()
+
+        self.resume_download = self.check_can_resume_download()
+
         self.log_record = None
 
-        self.resume_download = False
+        # if this isn't a test
+        if not options['test_data']:
+            # and there's a previous update
+            if self.last_update:
+                # which did not finish
+                if not self.last_update.finish_datetime:
+                    # and either can resume download or skipping it altogether
+                    if self.resume_download or not options['download']:
+                        # can resume
+                        self.log_record = self.last_update
 
-        # if there's a previous update
-        if last_update:
-            # and it didn't finish
-            if not last_update.finish_datetime:
-
-                last_release_datetime = last_update.version.release_datetime
-
-                # and we aren't skipping downloading
-                if options["download"]:
-                    # and the last version matches the current one
-                    if current_release_datetime == last_release_datetime:
-                        # complete the last update
-                        self.log_record = last_update
-                        # and resume the download
-                        self.resume_download = True
-
-        # if we don't have a log record yet
-        if not self.log_record:
-            # and we aren't using test data
-            if not options['test_data']:
+            # if not testing, but can't resume
+            if not self.log_record:
                 # get or create a version
                 # .get_or_create() throws IntegrityError
                 try:
@@ -154,7 +148,8 @@ class Command(CalAccessCommand):
                 # create a new log record
                 self.log_record = self.command_logs.create(
                     version=version,
-                    command=self.command_name
+                    command=self,
+                    called_by=self.get_caller()
                 )
 
         if options['download']:
@@ -187,6 +182,39 @@ class Command(CalAccessCommand):
         if not options['test_data']:
             self.log_record.finish_datetime = datetime.now()
             self.log_record.save()
+
+    def check_can_resume_download(self):
+        """
+        Run a series of checks to see if the previous download can be resumed
+
+        If so, return True, else False.
+        """
+
+        result = False
+
+        # if there's a zip file
+        if os.path.exists(self.zip_path):
+
+            # and there's a previous incomplete download
+            try:
+                last_download = self.command_logs.filter(
+                    command='downloadcalaccessrawdata'
+                ).order_by('-start_datetime')[0]
+            except IndexError:
+                # can't resume
+                pass
+            else:
+                # and the last download did not finish
+                if not last_download.finish_datetime:
+
+                    prev_release = last_download.version.release_datetime
+
+                    # and the current release datetime is the same as
+                    #  the one on the last incomplete download
+                    if self.current_release_datetime == prev_release:
+                        result = True
+
+        return result
 
     def clean(self):
         """
