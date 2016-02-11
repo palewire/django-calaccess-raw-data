@@ -150,7 +150,6 @@ class Command(CalAccessCommand):
                 )
 
         if options['download']:
-
             call_command(
                 "downloadcalaccessrawdata",
                 keep_files=self.keep_files,
@@ -158,6 +157,8 @@ class Command(CalAccessCommand):
                 resume=self.resume_download,
                 noinput=options['noinput'],
             )
+            if result is False:
+                self.failure("Updated cancelled")
             self.duration()
 
         # execute the other steps that haven't been skipped

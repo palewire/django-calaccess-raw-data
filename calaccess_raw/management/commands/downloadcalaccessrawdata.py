@@ -16,6 +16,7 @@ from django.utils.timezone import utc
 from django.utils.six.moves import input
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from calaccess_raw.models.tracking import RawDataVersion
@@ -118,8 +119,7 @@ class Command(CalAccessCommand):
 
         # If we're taking user input, make sure the user says exactly 'yes'
         if not options['noinput'] and self.confirm_download() != 'yes':
-            self.failure("Download cancelled")
-            return
+            raise CommandError("Download cancelled")
 
         if self.resume_download:
             self.log_record = self.last_started_download
