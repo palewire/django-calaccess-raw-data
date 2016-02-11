@@ -70,6 +70,16 @@ class DocumentationTestCase(TestCase):
             results.append([m.__name__, exists])
         self.attr_test_output("model", "__doc__", results)
 
+    def test_model_unique_key(self):
+        """
+        Verify that each model has a UNIQUE_KEY attribute set.
+        """
+        results = []
+        for m in get_model_list():
+            exists = m().UNIQUE_KEY is not None
+            results.append([m.__name__, exists])
+        self.attr_test_output("model", "UNIQUE_KEY", results)
+
     def test_field_verbose_name(self):
         """
         Verify that all fields have verbose_name documentation.
