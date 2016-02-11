@@ -157,8 +157,6 @@ class Command(CalAccessCommand):
                 resume=self.resume_download,
                 noinput=options['noinput'],
             )
-            if result is False:
-                self.failure("Updated cancelled")
             if self.verbosity:
                 self.duration()
 
