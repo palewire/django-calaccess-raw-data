@@ -38,7 +38,7 @@ def get_model_list():
 
     for model in apps.get_app_config("calaccess_raw").models.values():
         # ignore models that don't inherit from CalAccessBaseModel
-        if str(model.__base__) == "<class 'calaccess_raw.models.base.CalAccessBaseModel'>":
+        if "CalAccessBaseModel" in str(model.__base__):
             models.append(model)
 
     return models
