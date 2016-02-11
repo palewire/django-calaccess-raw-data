@@ -72,7 +72,7 @@ class DocumentationTestCase(TestCase):
 
     def test_field_verbose_name(self):
         """
-        Verify that all fields have verbose_name or help_text documentation.
+        Verify that all fields have verbose_name documentation.
         """
         results = []
         for m in get_model_list():
@@ -86,6 +86,21 @@ class DocumentationTestCase(TestCase):
                 results.append(("%s.%s" % (m.__name__, f.name), exists))
         self.attr_test_output("field", "verbose_name", results)
 
+    def test_field_help_text(self):
+        """
+        Verify that all fields have help_text documentation.
+        """
+        results = []
+        for m in get_model_list():
+            for f in m().get_field_list():
+                if f.name == 'id':
+                    continue
+                if f.help_text:
+                    exists = True
+                else:
+                    exists = False
+                results.append(("%s.%s" % (m.__name__, f.name), exists))
+        self.attr_test_output("field", "help_text", results)
 
     #
     # def _test_choices(self, field_name):
