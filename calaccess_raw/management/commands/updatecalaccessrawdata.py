@@ -23,7 +23,6 @@ class Command(CalAccessCommand):
         Adds custom arguments specific to this command.
         """
         super(Command, self).add_arguments(parser)
-
         parser.add_argument(
             "--skip-download",
             action="store_false",
@@ -114,12 +113,9 @@ class Command(CalAccessCommand):
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
         download_metadata = self.get_download_metadata()
-        current_release_datetime = download_metadata['last-modified']
-
+        self.current_release_datetime = download_metadata['last-modified']
         self.last_update = self.get_last_log()
-
         self.resume_download = self.check_can_resume_download()
-
         self.log_record = None
 
         # if this isn't a test
@@ -190,9 +186,7 @@ class Command(CalAccessCommand):
 
         If so, return True, else False.
         """
-
         result = False
-
         # if there's a zip file
         if os.path.exists(self.zip_path):
 

@@ -87,7 +87,7 @@ from calaccess_raw.models.other import (
 )
 from calaccess_raw.models.tracking import (
     RawDataVersion,
-    CalAccessCommandLog,
+    RawDataCommand,
     RawDataFile
 )
 __all__ = [
@@ -169,6 +169,6 @@ __all__ = [
     'ReceivedFilingsCd',
     'ReportsCd',
     'RawDataVersion',
-    'CalAccessCommandLog',
+    'RawDataCommand',
     'RawDataFile'
 ]

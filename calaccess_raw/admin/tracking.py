@@ -33,7 +33,7 @@ class RawDataFileAdmin(BaseAdmin):
     search_fields = ("file_name",)
 
 
-class CalAccessCommandLogAdmin(BaseAdmin):
+class RawDataCommandAdmin(BaseAdmin):
     list_display = (
         "id",
         "version",
@@ -47,6 +47,7 @@ class CalAccessCommandLogAdmin(BaseAdmin):
         "start_datetime",
         "finish_datetime",
         "version__release_datetime",
+        "command",
     )
     search_fields = (
         "command",
@@ -55,4 +56,4 @@ class CalAccessCommandLogAdmin(BaseAdmin):
 
 admin.site.register(models.RawDataVersion, RawDataVersionAdmin)
 admin.site.register(models.RawDataFile, RawDataFileAdmin)
-admin.site.register(models.CalAccessCommandLog, CalAccessCommandLogAdmin)
+admin.site.register(models.RawDataCommand, RawDataCommandAdmin)
