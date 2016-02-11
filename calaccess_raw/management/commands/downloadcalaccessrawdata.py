@@ -162,9 +162,7 @@ class Command(CalAccessCommand):
 
         If so, return True, else False.
         """
-
         result = False
-
         # if there's a zip file
         if os.path.exists(self.zip_path):
             # and there's a previous download
@@ -178,7 +176,6 @@ class Command(CalAccessCommand):
                     #  the one on the last incomplete download
                     if self.current_release_datetime == prev_release:
                         result = True
-
         return result
 
     def confirm_download(self):

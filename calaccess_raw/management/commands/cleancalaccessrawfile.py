@@ -48,7 +48,7 @@ class Command(CalAccessCommand):
         caller = self.get_caller()
 
         if caller:
-            # if called by another command, use it's version
+            # if called by another command, use its version record
             self.version = caller.version
             self.log_record = self.command_logs.create(
                 version=self.version,

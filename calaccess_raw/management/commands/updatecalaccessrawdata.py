@@ -231,7 +231,6 @@ class Command(CalAccessCommand):
         """
         Loads the cleaned up csv files into the database
         """
-
         if self.verbosity:
             self.header("Loading data files")
 
