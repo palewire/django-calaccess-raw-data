@@ -10,7 +10,9 @@ from django.template.defaultfilters import capfirst
 
 
 class CalAccessFieldMixin(fields.Field):
-
+    """
+    A set of common helpers for all of our custom fields.
+    """
     def definition(self):
         """
         A humanized definition of what's the in field for documentation.
@@ -30,7 +32,36 @@ class CalAccessFieldMixin(fields.Field):
         return False
 
 
-class CharField(fields.CharField, CalAccessFieldMixin):
+class DocumentCloudMixin(fields.Field):
+    """
+    Adds a documentcloud_pages_urls keyword argument to the Field
+    so it can include links to JPG pages that document the contents
+    of the field.
+    """
+    def __init__(self, documentcloud_page_urls=[], *args, **kwargs):
+        """
+        Overrides the standard __init__ to add our documentcloud_page_urls
+        option.
+        """
+        self.documentcloud_page_urls = documentcloud_page_urls
+        super(DocumentCloudMixin, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        """
+        Overrides the standard deconstruct method to add our
+        documentcloud_page_urls option.
+        """
+        name, path, args, kwargs = super(
+            DocumentCloudMixin,
+            self
+        ).deconstruct()
+        # Only include kwarg if it's not the default
+        if self.documentcloud_page_urls != []:
+            kwargs['documentcloud_page_urls'] = self.documentcloud_page_urls
+        return name, path, args, kwargs
+
+
+class CharField(fields.CharField, CalAccessFieldMixin, DocumentCloudMixin):
     copy_type = "text"
     copy_template = """
     CASE
@@ -96,7 +127,7 @@ class FloatField(fields.FloatField, CalAccessFieldMixin):
     """
 
 
-class IntegerField(fields.IntegerField, CalAccessFieldMixin):
+class IntegerField(fields.IntegerField, CalAccessFieldMixin, DocumentCloudMixin):
     copy_type = "text"
     copy_template = """
     CASE

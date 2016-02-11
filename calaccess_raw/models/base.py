@@ -34,7 +34,7 @@ class CalAccessBaseModel(models.Model):
 
     # A list of URL strings that point to JPG pages hosted on DocumentCloud.org
     # that contain documentation for this model. Once assembled they can be
-    # embedded in our user-facing documentation as images. 
+    # embedded in our user-facing documentation as images.
     DOCUMENTCLOUD_PAGE_URLS = []
 
     # Default manager

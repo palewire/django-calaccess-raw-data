@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
-from django.utils.encoding import python_2_unicode_compatible
-from django.template.defaultfilters import floatformat
-from django.contrib.humanize.templatetags.humanize import intcomma
 from .base import CalAccessBaseModel
+from django.template.defaultfilters import floatformat
+from django.utils.encoding import python_2_unicode_compatible
+from django.contrib.humanize.templatetags.humanize import intcomma
 
 
 @python_2_unicode_compatible
