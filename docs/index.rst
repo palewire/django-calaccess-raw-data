@@ -13,6 +13,7 @@ Documentation
    howtouseit
    managementcommands
    models
+   tracking
    faq
    officialdocumentation
    howtocontribute

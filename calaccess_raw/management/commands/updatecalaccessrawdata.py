@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+from datetime import datetime
 from django.conf import settings
 from clint.textui import progress
 from django.core.management import call_command
@@ -11,6 +12,7 @@ from calaccess_raw import (
     get_test_download_directory,
     get_model_list
 )
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
@@ -21,13 +23,7 @@ class Command(CalAccessCommand):
         Adds custom arguments specific to this command.
         """
         super(Command, self).add_arguments(parser)
-        parser.add_argument(
-            "--resume-download",
-            action="store_true",
-            dest="resume",
-            default=False,
-            help="Resume downloading of ZIP archive from a previous attempt"
-        )
+
         parser.add_argument(
             "--skip-download",
             action="store_false",
@@ -72,31 +68,24 @@ class Command(CalAccessCommand):
             help="Use sampled test data (skips download, clean a load)"
         )
         parser.add_argument(
-            "-d",
-            "--database",
-            dest="database",
-            default=None,
-            help="Alias of database where data will be inserted. Defaults to the "
-                 "'default' in DATABASE settings."
-        )
-        parser.add_argument(
             "-a",
             "--app-name",
             dest="app_name",
             default="calaccess_raw",
-            help="Name of Django app where model will be imported from"
+            help="Name of Django app with models into which data will "
+                 "be imported (if other not calaccess_raw)"
         )
 
     def handle(self, *args, **options):
         super(Command, self).handle(*args, **options)
+
         # set / compute any attributes that multiple class methods need
         self.app_name = options["app_name"]
-        self.database = options["database"]
         self.keep_files = options["keep_files"]
 
         if options['test_data']:
             # if using test data, we don't need to download
-            options["download"] = False
+            options['download'] = False
             # and always keep files when running test data
             self.keep_files = True
 
@@ -110,8 +99,6 @@ class Command(CalAccessCommand):
 
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
-        self.zip_metadata_path = os.path.join(self.data_dir,
-                                              '.lastdownload')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         # Immediately check that the tsv directory exists when using test data,
@@ -126,24 +113,109 @@ class Command(CalAccessCommand):
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
+        download_metadata = self.get_download_metadata()
+        current_release_datetime = download_metadata['last-modified']
+
+        self.last_update = self.get_last_log()
+
+        self.resume_download = self.check_can_resume_download()
+
+        self.log_record = None
+
+        # if this isn't a test
+        if not options['test_data']:
+            # and there's a previous update
+            if self.last_update:
+                # which did not finish
+                if not self.last_update.finish_datetime:
+                    # and either can resume download or skipping it altogether
+                    if self.resume_download or not options['download']:
+                        # can resume
+                        self.log_record = self.last_update
+
+            # if not testing, but can't resume
+            if not self.log_record:
+                # get or create a version
+                # .get_or_create() throws IntegrityError
+                try:
+                    version = self.raw_data_versions.get(
+                        release_datetime=current_release_datetime
+                    )
+                except RawDataVersion.DoesNotExist:
+                    version = self.raw_data_versions.create(
+                        release_datetime=current_release_datetime,
+                        size=download_metadata['content-length']
+                    )
+                # create a new log record
+                self.log_record = self.command_logs.create(
+                    version=version,
+                    command=self,
+                    called_by=self.get_caller()
+                )
+
         if options['download']:
 
             call_command(
                 "downloadcalaccessrawdata",
                 keep_files=self.keep_files,
                 verbosity=self.verbosity,
-                resume=options['resume'],
-                noinput=options['noinput']
+                resume=self.resume_download,
+                noinput=options['noinput'],
             )
+            self.duration()
 
         # execute the other steps that haven't been skipped
         if options['clean']:
+
             self.clean()
+
+            self.duration()
+
         if options['load']:
+
             self.load()
+
+            self.duration()
 
         if self.verbosity:
             self.success("Done!")
+
+        if not options['test_data']:
+            self.log_record.finish_datetime = datetime.now()
+            self.log_record.save()
+
+    def check_can_resume_download(self):
+        """
+        Run a series of checks to see if the previous download can be resumed
+
+        If so, return True, else False.
+        """
+
+        result = False
+
+        # if there's a zip file
+        if os.path.exists(self.zip_path):
+
+            # and there's a previous incomplete download
+            try:
+                last_download = self.command_logs.filter(
+                    command='downloadcalaccessrawdata'
+                ).order_by('-start_datetime')[0]
+            except IndexError:
+                # can't resume
+                pass
+            else:
+                # and the last download did not finish
+                if not last_download.finish_datetime:
+
+                    prev_release = last_download.version.release_datetime
+
+                    # and the current release datetime is the same as
+                    #  the one on the last incomplete download
+                    if self.current_release_datetime == prev_release:
+                        result = True
+
+        return result
 
     def clean(self):
         """
@@ -162,7 +234,7 @@ class Command(CalAccessCommand):
                 "cleancalaccessrawfile",
                 name,
                 verbosity=self.verbosity,
-                keep_files=self.keep_files
+                keep_files=self.keep_files,
             )
 
     def load(self):
@@ -184,7 +256,6 @@ class Command(CalAccessCommand):
                 "loadcalaccessrawfile",
                 model.__name__,
                 verbosity=self.verbosity,
-                database=self.database,
                 keep_files=self.keep_files,
                 app_name=self.app_name,
             )
