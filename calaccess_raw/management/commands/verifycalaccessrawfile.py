@@ -22,7 +22,8 @@ class Command(CalAccessCommand):
             "--app-name",
             dest="app_name",
             default="calaccess_raw",
-            help="Name of Django app where model will be imported from"
+            help="Name of Django app with models into which data will "
+                 "be imported (if other not calaccess_raw)"
         )
 
     def handle(self, *args, **options):

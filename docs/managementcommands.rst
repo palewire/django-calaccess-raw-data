@@ -19,11 +19,10 @@ Running the entire routine is as simple as this.
 
     $ python manage.py updatecalaccessrawdata
 
-If your download crashes, there's a way to restart it.
+This command will either:
 
-.. code-block:: bash
-
-    $ python manage.py updatecalaccessrawdata --resume-download
+* Update your copy of the CAL-ACCESS data to the version currently available on the California Secretary of State's website
+* Or complete your previously interrputed update, if possible.
 
 You can skip the download's confirmation prompt using Django's standard ``--noinput`` option.
 
@@ -61,10 +60,9 @@ Options
                                             [--settings SETTINGS]
                                             [--pythonpath PYTHONPATH]
                                             [--traceback] [--no-color]
-                                            [--resume-download] [--skip-download]
-                                            [--skip-clean] [--skip-load]
-                                            [--keep-files] [--noinput] [--test]
-                                            [-d DATABASE] [-a APP_NAME]
+                                            [--skip-download] [--skip-clean]
+                                            [--skip-load] [--keep-files]
+                                            [--noinput] [--test] [-a APP_NAME]
 
     Download, unzip, clean and load the latest CAL-ACCESS database ZIP
 
@@ -83,8 +81,6 @@ Options
                             "/home/djangoprojects/myproject".
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
-      --resume-download     Resume downloading of ZIP archive from a previous
-                            attempt
       --skip-download       Skip downloading of the ZIP archive
       --skip-clean          Skip cleaning up the raw data files
       --skip-load           Skip loading up the raw data files
@@ -92,12 +88,9 @@ Options
       --noinput             Download the ZIP archive without asking permission
       --test, --use-test-data
                             Use sampled test data (skips download, clean a load)
-      -d DATABASE, --database DATABASE
-                            Alias of database where data will be inserted.
-                            Defaults to the 'default' in DATABASE settings.
       -a APP_NAME, --app-name APP_NAME
-                            Name of Django app where model will be imported from
-
+                            Name of Django app with models into which data will be
+                            imported (if other not calaccess_raw)
 
 
 cleancalaccessrawfile
@@ -256,7 +249,7 @@ Options
                                           [--settings SETTINGS]
                                           [--pythonpath PYTHONPATH] [--traceback]
                                           [--no-color] [--c CSV] [--keep-files]
-                                          [--d DATABASE] [-a APP_NAME]
+                                          [-a APP_NAME]
                                           model_name
 
     Load clean CAL-ACCESS CSV file into a database model
@@ -282,11 +275,9 @@ Options
       --c CSV, --csv CSV    Path to comma-delimited file to be loaded. Defaults to
                             one associated with model.
       --keep-files          Keep CSV file after loading
-      --d DATABASE, --database DATABASE
-                            Alias of database where data will be inserted.
-                            Defaults to the 'default' in DATABASE settings.
       -a APP_NAME, --app-name APP_NAME
-                            Name of Django app where model will be imported from
+                            Name of Django app with models into which data will be
+                            imported (if other not calaccess_raw)
 
 .. note::
     The ``loadcalaccessrawfile`` command deletes any data previously loaded into the calaccess models before loading in the current data.
@@ -405,7 +396,7 @@ Options
                                             [-a APP_NAME]
                                             model_name
 
-    Compare the number of records in a model against its source CSV
+    Logs given model's row count and compares against line count in cleaned CSV
 
     positional arguments:
       model_name            Name of model to verify
@@ -426,4 +417,5 @@ Options
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
       -a APP_NAME, --app-name APP_NAME
-                            Name of Django app where model will be imported from
+                            Name of Django app with models into which data will be
+                            imported (if other not calaccess_raw)
