@@ -1,8 +1,8 @@
 {% load tz %}
 {% timezone "America/Los_Angeles" %}
-The CAL-ACCESS snapshot published by the California Secretary of State online was last modified on {{ last_modified|date:'N j, Y' }}, at {{ last_modified|date:'P' }} Pacific Time.{% endtimezone %}
+The currently available CAL-ACCESS snapshot was released by the California Secretary of State on {{ current_release_datetime|date:'N j, Y' }}, at {{ current_release_datetime|date:'P' }} Pacific Time.{% endtimezone %}
 
-It is {{ total_size }} in size. {% if last_download %}{% if resuming %}You downloaded up to {{ cur_size }} as of {{ time_ago }}{% else %}{% if already_downloaded %}You have already downloaded this entire file{% else %}The last file you finished downloading was posted {{ time_ago }}{% endif %}{% endif %}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
+It is {{ expected_size }} in size. {% if resuming %}You downloaded up to {{ local_file_size }} as of {{ since_local_file_modified }}{% elif already_downloaded %}You have already downloaded this entire file{% elif since_prev_version %}The last file you finished downloading was posted {{ since_prev_version }}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
 
 Do you want to download it to {{ download_dir }}{% if already_downloaded %} (again){% endif %} and update your local database?
 

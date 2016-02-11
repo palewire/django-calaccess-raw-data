@@ -17,10 +17,19 @@ platform for investigative analysis.
 
 .. image:: /_static/application-layers.png
 
-However, the raw data provided by the state contains some errors in how values are escaped,
-quoted and delimited. The result is that a small number of records we
+Will django-calaccess-raw-data load *all* of the CAL-ACCESS data?
+-----------------------------------------------------------------
+
+No. The raw data provided by the state contains some errors in how values are escaped, quoted and delimited. The result is that a small number of records we
 cannot yet automatically parse are lost during the loading process.
 
+However, according to our own `tracking information <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/tracking.html>`_, 99.9998 percent of records in the downloaded source file will be loaded into the database.
+
+For information checkout:
+
+* The ```reportcalaccessrawdata`` <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/managementcommands.html#reportcalaccessrawdata>`_ command, which runs a several checks and produces a report on the current state of the CAL-ACCESS data
+* The `list <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/calaccess_raw_files_report.csv>`_ of all CAL-ACCESS raw data files, including record and column counts at each stage of the process (this .CSV file is one of the outputs of ``reportcalaccessrawdata``)
+* Records that could not be parsed by the ``cleancalaccessrawfile`` command are in <myproject>/data/log
 
 How far back does the CAL-ACCESS database go?
 ---------------------------------------------

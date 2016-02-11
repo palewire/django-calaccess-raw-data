@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 import os
 import six
+from datetime import datetime
 from django.apps import apps
 from csvkit import CSVKitReader
 from django.conf import settings
@@ -10,6 +11,7 @@ from postgres_copy import CopyMapping
 from django.db import connections, router
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
@@ -46,19 +48,12 @@ class Command(CalAccessCommand):
             help="Keep CSV file after loading"
         )
         parser.add_argument(
-            "--d",
-            "--database",
-            dest="database",
-            default=None,
-            help="Alias of database where data will be inserted. Defaults to the "
-                 "'default' in DATABASE settings."
-        )
-        parser.add_argument(
             "-a",
             "--app-name",
             dest="app_name",
             default="calaccess_raw",
-            help="Name of Django app where model will be imported from"
+            help="Name of Django app with models into which data will "
+                 "be imported (if other not calaccess_raw)"
         )
 
     # all BaseCommand subclasses require a handle() method that includes
@@ -68,23 +63,58 @@ class Command(CalAccessCommand):
 
         # set / compute any attributes that multiple class methods need
         self.keep_files = options["keep_files"]
+        # get model based on strings of app_name and model_name
         self.model = apps.get_model(options["app_name"], options['model_name'])
-        self.database = options["database"] or router.db_for_write(self.model)
+
+        # load from provided csv or csv mapped to model
         self.csv = options["csv"] or self.model.objects.get_csv_path()
+
+        # load into database suggested for model by router
+        self.database = router.db_for_write(model=self.model)
 
         if self.verbosity > 2:
             self.log(" Loading %s" % options['model_name'])
 
+        # set up version and log records
+        caller = self.get_caller()
+
+        if caller:
+            # if called by another command, use it's version
+            self.version = caller.version
+            self.log_record = self.command_logs.create(
+                version=self.version,
+                command=self,
+                called_by=caller,
+                file_name=self.model._meta.db_table
+            )
+        else:
+            # try getting the most recent version
+            try:
+                self.version = self.raw_data_versions.latest('release_datetime')
+            except RawDataVersion.DoesNotExist:
+                # if there's no version, assume this is a test and do not log
+                # TODO: Figure out a more direct way to handle this
+                self.version = None
+            else:
+                self.log_record = self.command_logs.create(
+                    # if called by another command, use it's version
+                    version=self.version,
+                    command=self,
+                    file_name=self.model._meta.db_table
+                )
+
+        # check if can load into dat
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat()
 
-        # make sure the database is set up in django's settings
-        try:
-            engine = settings.DATABASES[self.database]['ENGINE']
-        except KeyError:
-            raise TypeError(
-                "{} not configured in DATABASES settings.".format(self.database)
-            )
+        # if not using default db, make sure the database is set up in django's settings
+        if self.database:
+            try:
+                engine = settings.DATABASES[self.database]['ENGINE']
+            except KeyError:
+                raise TypeError(
+                    "{} not configured in DATABASES settings.".format(self.database)
+                )
 
         # set up database connection
         self.connection = connections[self.database]
@@ -103,6 +133,22 @@ class Command(CalAccessCommand):
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
             )
+
+        # handle tracking data
+        if self.version:
+            raw_file = self.raw_data_files.get_or_create(
+                version=self.version,
+                file_name=self.log_record.file_name
+            )[0]
+
+            # add clean counts to raw_file_record
+            raw_file.clean_columns_count = len(self.get_headers())
+            raw_file.clean_records_count = self.get_row_count()
+            raw_file.save()
+
+            # save the log record
+            self.log_record.finish_datetime = datetime.now()
+            self.log_record.save()
 
         # if not keeping files, remove the csv file
         if not self.keep_files:

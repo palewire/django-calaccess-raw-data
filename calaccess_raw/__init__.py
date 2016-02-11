@@ -34,4 +34,11 @@ def get_model_list():
     Returns a model list with all the data tables in this application
     """
     from django.apps import apps
-    return apps.get_app_config("calaccess_raw").models.values()
+    models = []
+
+    for model in apps.get_app_config("calaccess_raw").models.values():
+        # ignore models that don't inherit from CalAccessBaseModel
+        if str(model.__base__) == "<class 'calaccess_raw.models.base.CalAccessBaseModel'>":
+            models.append(model)
+
+    return models
