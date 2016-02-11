@@ -75,6 +75,19 @@ class DocumentationTestCase(TestCase):
             results.append([m.__name__, exists])
         self.attr_test_output("model", "UNIQUE_KEY", results)
 
+    def test_model_documentcloud_page_urls(self):
+        """
+        Verify that each model has DOCUMENTCLOUD_PAGE_URLS defined
+        """
+        results = []
+        for m in get_model_list():
+            if m().DOCUMENTCLOUD_PAGE_URLS:
+                exists = True
+            else:
+                exists = False
+            results.append([m.__name__, exists])
+        self.attr_test_output("model", "DOCUMENTCLOUD_PAGE_URLS", results)
+
     def test_field_verbose_name(self):
         """
         Verify that all fields have verbose_name documentation.
@@ -122,14 +135,22 @@ class DocumentationTestCase(TestCase):
                 if not f.name == field_name:
                     continue
 
-                # Pull out all the choices in that field
-                slug_list = []
                 if not f.choices:
                     message_list.append((
                         m.__name__,
                         field_name,
                         "Has no CHOICES defined"
                     ))
+
+                if not f.documentcloud_page_urls:
+                    message_list.append((
+                        m.__name__,
+                        field_name,
+                        "Has no `documentcloud_pages_urls` defined"
+                    ))
+
+                # Pull out all the choices in that field
+                slug_list = []
                 for slug, name in f.choices:
                     # Make sure that each has a definition
                     if not name:
