@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 import agate
 import logging
 from django.test import TestCase
+from django.db.models import Count
 from calaccess_raw import get_model_list
 logger = logging.getLogger(__name__)
 
@@ -37,12 +38,6 @@ class DocumentationTestCase(TestCase):
                 attr_name
             ))
             fails.select(["model"]).print_table()
-        else:
-            print("Win: All %s %ss have %s" % (
-                len(table.rows),
-                obj_type,
-                attr_name
-            ))
 
     def test_model_str(self):
         """
@@ -112,75 +107,79 @@ class DocumentationTestCase(TestCase):
                 results.append(("%s.%s" % (m.__name__, f.name), exists))
         self.attr_test_output("field", "help_text", results)
 
-    #
-    # def _test_choices(self, field_name):
-    #     """
-    #     Verify that proper choices appear for the provided field.
-    #     """
-    #     # Loop through the models
-    #     for m in get_model_list():
-    #
-    #         # And then through the fields
-    #         for f in m._meta.fields:
-    #
-    #             # Only test against the provided field name
-    #             if not f.name == field_name:
-    #                 continue
-    #
-    #             # Pull out all the choices in that field
-    #             slug_list = []
-    #             if not f.choices:
-    #                 warnings.warn("%s %s has no choices defined" % (
-    #                     m.__name__,
-    #                     field_name
-    #                 ))
-    #             for slug, name in f.choices:
-    #                 # Make sure that each has a definition
-    #                 # self.assertIsNot(name, '')
-    #                 if not name:
-    #                     warnings.warn("%s %s '%s' undefined" % (
-    #                         m.__name__,
-    #                         field_name,
-    #                         slug,
-    #                     ))
-    #                 slug_list.append(slug)
-    #
-    #             # The query the database and make sure everything in
-    #             # there has a matching definition in the choices
-    #             for value, count in m.objects.values_list(
-    #                 field_name,
-    #             ).annotate(Count(field_name)):
-    #                 warnings.warn("'%s' %s code undefined on %s model" % (
-    #                     value,
-    #                     field_name,
-    #                     m.__name__
-    #                 ))
-    #                 # self.assertIn(value, slug_list)
-    #
-    # def test_choices(self):
-    #     """
-    #     Verify that valid choices are available for all expected fields
-    #     on all models.
-    #     """
-    #     # List of fields that we expect there to be valid choices defined
-    #     fields = [
-    #         'form_type',
-    #         'form_id',
-    #         'entity_code',
-    #         'filer_type',
-    #         'filing_type',
-    #         'activity_type',
-    #         'status',
-    #         'off_s_h_cd',
-    #         'pform_type',
-    #         'stmnt_type',
-    #         'stmnt_status',
-    #         'rec_type',
-    #         'party_cd',
-    #         'sup_opp_cd',
-    #         'elec_type',
-    #         'reportname',
-    #         'expn_code',
-    #         'status_type',
-    #     ]
-    #     [self._test_choices(f) for f in fields]
+    def _test_choices(self, field_name):
+        """
+        Verify that proper choices appear for the provided field.
+        """
+        message_list = []
+        # Loop through the models
+        for m in get_model_list():
+
+            # And then through the fields
+            for f in m._meta.fields:
+
+                # Only test against the provided field name
+                if not f.name == field_name:
+                    continue
+
+                # Pull out all the choices in that field
+                slug_list = []
+                if not f.choices:
+                    message_list.append((
+                        m.__name__,
+                        field_name,
+                        "Has no CHOICES defined"
+                    ))
+                for slug, name in f.choices:
+                    # Make sure that each has a definition
+                    if not name:
+                        message_list.append((
+                            m.__name__,
+                            field_name,
+                            "Value '%s' undefined in CHOICES" % slug
+                        ))
+                    slug_list.append(slug)
+
+                # The query the database and make sure everything in
+                # there has a matching definition in the choices
+                for value, count in m.objects.values_list(
+                    field_name,
+                ).annotate(Count(field_name)):
+                    message_list.append((
+                        m.__name__,
+                        field_name,
+                        "Value '%s' in database but not in CHOICES" % value
+                    ))
+        return message_list
+
+    def test_choices(self):
+        """
+        Verify that valid choices are available for all expected fields
+        on all models.
+        """
+        # List of fields that we expect there to be valid choices defined
+        fields = [
+            'form_type',
+            'form_id',
+            'entity_code',
+            'filer_type',
+            'filing_type',
+            'activity_type',
+            'status',
+            'off_s_h_cd',
+            'pform_type',
+            'stmnt_type',
+            'stmnt_status',
+            'rec_type',
+            'party_cd',
+            'sup_opp_cd',
+            'elec_type',
+            'reportname',
+            'expn_code',
+            'status_type',
+        ]
+        results = []
+        for f in fields:
+            results.extend(self._test_choices(f))
+        table = agate.Table(results, ['model', 'field', 'message'])
+        table.print_table()
