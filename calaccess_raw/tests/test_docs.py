@@ -3,12 +3,8 @@
 from __future__ import unicode_literals
 import agate
 import logging
-import warnings
-from django.conf import settings
 from django.test import TestCase
-from django.db.models import Count
 from calaccess_raw import get_model_list
-from django.core.management import call_command
 logger = logging.getLogger(__name__)
 
 
