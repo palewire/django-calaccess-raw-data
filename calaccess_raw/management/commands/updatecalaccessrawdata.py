@@ -135,11 +135,11 @@ class Command(CalAccessCommand):
                 # .get_or_create() throws IntegrityError
                 try:
                     version = self.raw_data_versions.get(
-                        release_datetime=current_release_datetime
+                        release_datetime=self.current_release_datetime
                     )
                 except RawDataVersion.DoesNotExist:
                     version = self.raw_data_versions.create(
-                        release_datetime=current_release_datetime,
+                        release_datetime=self.current_release_datetime,
                         size=download_metadata['content-length']
                     )
                 # create a new log record
