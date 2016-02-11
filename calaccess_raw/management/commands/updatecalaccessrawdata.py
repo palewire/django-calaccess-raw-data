@@ -23,7 +23,6 @@ class Command(CalAccessCommand):
         Adds custom arguments specific to this command.
         """
         super(Command, self).add_arguments(parser)
-
         parser.add_argument(
             "--skip-download",
             action="store_false",
@@ -114,12 +113,9 @@ class Command(CalAccessCommand):
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
         download_metadata = self.get_download_metadata()
-        current_release_datetime = download_metadata['last-modified']
-
+        self.current_release_datetime = download_metadata['last-modified']
         self.last_update = self.get_last_log()
-
         self.resume_download = self.check_can_resume_download()
-
         self.log_record = None
 
         # if this isn't a test
@@ -139,11 +135,11 @@ class Command(CalAccessCommand):
                 # .get_or_create() throws IntegrityError
                 try:
                     version = self.raw_data_versions.get(
-                        release_datetime=current_release_datetime
+                        release_datetime=self.current_release_datetime
                     )
                 except RawDataVersion.DoesNotExist:
                     version = self.raw_data_versions.create(
-                        release_datetime=current_release_datetime,
+                        release_datetime=self.current_release_datetime,
                         size=download_metadata['content-length']
                     )
                 # create a new log record
@@ -154,7 +150,6 @@ class Command(CalAccessCommand):
                 )
 
         if options['download']:
-
             call_command(
                 "downloadcalaccessrawdata",
                 keep_files=self.keep_files,
@@ -162,20 +157,19 @@ class Command(CalAccessCommand):
                 resume=self.resume_download,
                 noinput=options['noinput'],
             )
-            self.duration()
+            if self.verbosity:
+                self.duration()
 
         # execute the other steps that haven't been skipped
         if options['clean']:
-
             self.clean()
-
-            self.duration()
+            if self.verbosity:
+                self.duration()
 
         if options['load']:
-
             self.load()
-
-            self.duration()
+            if self.verbosity:
+                self.duration()
 
         if self.verbosity:
             self.success("Done!")
@@ -190,12 +184,9 @@ class Command(CalAccessCommand):
 
         If so, return True, else False.
         """
-
         result = False
-
         # if there's a zip file
         if os.path.exists(self.zip_path):
-
             # and there's a previous incomplete download
             try:
                 last_download = self.command_logs.filter(
@@ -207,14 +198,11 @@ class Command(CalAccessCommand):
             else:
                 # and the last download did not finish
                 if not last_download.finish_datetime:
-
                     prev_release = last_download.version.release_datetime
-
                     # and the current release datetime is the same as
                     #  the one on the last incomplete download
                     if self.current_release_datetime == prev_release:
                         result = True
-
         return result
 
     def clean(self):
@@ -241,7 +229,6 @@ class Command(CalAccessCommand):
         """
         Loads the cleaned up csv files into the database
         """
-
         if self.verbosity:
             self.header("Loading data files")
 

@@ -6,16 +6,18 @@ from calaccess_raw import models
 from .base import BaseAdmin
 
 
+@admin.register(models.RawDataVersion)
 class RawDataVersionAdmin(BaseAdmin):
     list_display = (
         "id",
         "release_datetime",
-        "size",
+        "pretty_size",
     )
     list_display_links = ('release_datetime',)
     list_filter = ("release_datetime",)
 
 
+@admin.register(models.RawDataFile)
 class RawDataFileAdmin(BaseAdmin):
     list_display = (
         "id",
@@ -33,7 +35,8 @@ class RawDataFileAdmin(BaseAdmin):
     search_fields = ("file_name",)
 
 
-class CalAccessCommandLogAdmin(BaseAdmin):
+@admin.register(models.RawDataCommand)
+class RawDataCommandAdmin(BaseAdmin):
     list_display = (
         "id",
         "version",
@@ -47,12 +50,9 @@ class CalAccessCommandLogAdmin(BaseAdmin):
         "start_datetime",
         "finish_datetime",
         "version__release_datetime",
+        "command",
     )
     search_fields = (
         "command",
         "file_name",
     )
-
-admin.site.register(models.RawDataVersion, RawDataVersionAdmin)
-admin.site.register(models.RawDataFile, RawDataFileAdmin)
-admin.site.register(models.CalAccessCommandLog, CalAccessCommandLogAdmin)

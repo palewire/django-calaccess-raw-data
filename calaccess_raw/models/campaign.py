@@ -22,7 +22,7 @@ class CvrSoCd(CalAccessBaseModel):
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
         null=True,
-        help_text='This field is undocumented',
+        help_text='This field is undocumented'
     )
     ACTIVITY_LEVEL_CHOICES = (
         ("CI", "City"),
@@ -36,7 +36,7 @@ class CvrSoCd(CalAccessBaseModel):
         blank=True,
         choices=ACTIVITY_LEVEL_CHOICES,
         verbose_name="Activity level",
-        help_text="Organization's level of activity"
+        help_text="Organization's level of activity",
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',

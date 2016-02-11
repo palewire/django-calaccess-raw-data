@@ -89,7 +89,7 @@ from calaccess_raw.admin.other import (
 from calaccess_raw.admin.tracking import (
     RawDataVersionAdmin,
     RawDataFileAdmin,
-    CalAccessCommandLogAdmin
+    RawDataCommandAdmin
 )
 
 __all__ = [
@@ -172,5 +172,5 @@ __all__ = [
     'ReportsCdAdmin',
     'RawDataVersionAdmin',
     'RawDataFileAdmin',
-    'CalAccessCommandLogAdmin',
+    'RawDataCommandAdmin',
 ]

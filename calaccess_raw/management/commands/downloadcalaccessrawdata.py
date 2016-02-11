@@ -16,6 +16,7 @@ from django.utils.timezone import utc
 from django.utils.six.moves import input
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from calaccess_raw.models.tracking import RawDataVersion
@@ -118,8 +119,7 @@ class Command(CalAccessCommand):
 
         # If we're taking user input, make sure the user says exactly 'yes'
         if not options['noinput'] and self.confirm_download() != 'yes':
-            self.failure("Download cancelled")
-            return
+            raise CommandError("Download cancelled")
 
         if self.resume_download:
             self.log_record = self.last_started_download
@@ -162,9 +162,7 @@ class Command(CalAccessCommand):
 
         If so, return True, else False.
         """
-
         result = False
-
         # if there's a zip file
         if os.path.exists(self.zip_path):
             # and there's a previous download
@@ -178,7 +176,6 @@ class Command(CalAccessCommand):
                     #  the one on the last incomplete download
                     if self.current_release_datetime == prev_release:
                         result = True
-
         return result
 
     def confirm_download(self):
@@ -190,17 +187,19 @@ class Command(CalAccessCommand):
         old_stdout = sys.stdout
         sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
 
+        # Send the confirmation prompt out to the user
         confirm = input(self.prompt)
 
         # Set things back to the way they were before continuing.
         sys.stdout = old_stdout
+
+        # Pass back what the user typed
         return confirm.lower()
 
     def download(self):
         """
         Download the ZIP file in pieces.
         """
-
         if self.verbosity:
             self.header("Downloading ZIP file")
 

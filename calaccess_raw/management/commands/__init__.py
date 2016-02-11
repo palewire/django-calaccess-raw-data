@@ -10,7 +10,7 @@ from django.core.management.base import BaseCommand
 from calaccess_raw.models.tracking import (
     RawDataVersion,
     RawDataFile,
-    CalAccessCommandLog
+    RawDataCommand
 )
 
 
@@ -29,14 +29,17 @@ class CalAccessCommand(BaseCommand):
         handle method, as is standard in Django, and run this method
         via a super call to inherit its functionality.
         """
+        # Set global options
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
 
+        # Start the clock
         self.start_datetime = datetime.now()
 
+        # Set the logger models for later use
         self.raw_data_versions = RawDataVersion.objects
         self.raw_data_files = RawDataFile.objects
-        self.command_logs = CalAccessCommandLog.objects
+        self.command_logs = RawDataCommand.objects
 
     def get_download_metadata(self):
         """
@@ -141,7 +144,8 @@ class CalAccessCommand(BaseCommand):
 
     def duration(self):
         """
-        Calculates how long the command has been running and writes a readable duration to stdout.
+        Calculates how long the command has been running and writes a
+        readable duration to stdout.
         """
         duration = datetime.now() - self.start_datetime
         self.stdout.write('Duration: {}'.format(str(duration)))
