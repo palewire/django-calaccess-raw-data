@@ -24,21 +24,23 @@ class DocumentationTestCase(TestCase):
     #         logger.debug("Loading into 'alt' database")
     #     call_command("updatecalaccessrawdata", **kwargs)
 
-    def attr_test_output(self, attr_name, results):
+    def attr_test_output(self, obj_type, attr_name, results):
         # Load the data
         table = agate.Table(results, ['model', attr_name])
 
         # Count the number with no __str__
         fails = table.where(lambda row: row[attr_name] is False)
         if fails.rows:
-            print("Fail: %s models are missing %s" % (
+            print("Fail: %s %ss are missing %s" % (
                 len(fails.rows),
+                obj_type,
                 attr_name
             ))
             fails.select(["model"]).print_table()
         else:
-            print("Win: All %s models have %s" % (
+            print("Win: All %s %ss have %s" % (
                 len(table.rows),
+                obj_type,
                 attr_name
             ))
 
@@ -53,8 +55,7 @@ class DocumentationTestCase(TestCase):
             # Make sure that it is customized and not the Django defalult
             is_custom = m().__str__() != '%s object' % m.__name__
             results.append([m.__name__, is_custom])
-
-        self.attr_test_output("__str__", results)
+        self.attr_test_output("model", "__str__", results)
 
     def test_model_doc(self):
         """
@@ -67,8 +68,24 @@ class DocumentationTestCase(TestCase):
             else:
                 exists = True
             results.append([m.__name__, exists])
+        self.attr_test_output("model", "__doc__", results)
 
-        self.attr_test_output("__doc__", results)
+    def test_field_verbose_name(self):
+        """
+        Verify that all fields have verbose_name or help_text documentation.
+        """
+        results = []
+        for m in get_model_list():
+            for f in m().get_field_list():
+                if f.name == 'id':
+                    continue
+                if f.__dict__['_verbose_name']:
+                    exists = True
+                else:
+                    exists = False
+                results.append(("%s.%s" % (m.__name__, f.name), exists))
+        self.attr_test_output("field", "verbose_name", results)
+
 
     #
     # def _test_choices(self, field_name):
@@ -142,20 +159,3 @@ class DocumentationTestCase(TestCase):
     #         'status_type',
     #     ]
     #     [self._test_choices(f) for f in fields]
-    #
-    # def test_field_docs(self):
-    #     """
-    #     Verify that all fields have verbose_name or help_text documentation.
-    #     """
-    #     for m in get_model_list():
-    #         for f in m().get_field_list():
-    #             if f.name == 'id':
-    #                 continue
-    #             if f.help_text:
-    #                 continue
-    #             if f.__dict__['_verbose_name']:
-    #                 continue
-    #             warnings.warn("%s.%s field undocumented" % (
-    #                 m().klass_name,
-    #                 f.name
-    #             ))
