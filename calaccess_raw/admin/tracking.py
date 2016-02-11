@@ -11,7 +11,7 @@ class RawDataVersionAdmin(BaseAdmin):
     list_display = (
         "id",
         "release_datetime",
-        "size",
+        "pretty_size",
     )
     list_display_links = ('release_datetime',)
     list_filter = ("release_datetime",)
