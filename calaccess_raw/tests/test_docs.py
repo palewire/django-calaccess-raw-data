@@ -138,6 +138,12 @@ class DocumentationTestCase(TestCase):
                             field_name,
                             "Value '%s' undefined in CHOICES" % slug
                         ))
+                    if name.lower() == 'unknown':
+                        message_list.append((
+                            m.__name__,
+                            field_name,
+                            "Value '%s' defined as 'Unknown'" % slug
+                        ))
                     slug_list.append(slug)
 
                 # The query the database and make sure everything in
