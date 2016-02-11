@@ -163,15 +163,11 @@ class Command(CalAccessCommand):
 
         # execute the other steps that haven't been skipped
         if options['clean']:
-
             self.clean()
-
             self.duration()
 
         if options['load']:
-
             self.load()
-
             self.duration()
 
         if self.verbosity:
@@ -190,7 +186,6 @@ class Command(CalAccessCommand):
         result = False
         # if there's a zip file
         if os.path.exists(self.zip_path):
-
             # and there's a previous incomplete download
             try:
                 last_download = self.command_logs.filter(
@@ -202,14 +197,11 @@ class Command(CalAccessCommand):
             else:
                 # and the last download did not finish
                 if not last_download.finish_datetime:
-
                     prev_release = last_download.version.release_datetime
-
                     # and the current release datetime is the same as
                     #  the one on the last incomplete download
                     if self.current_release_datetime == prev_release:
                         result = True
-
         return result
 
     def clean(self):
