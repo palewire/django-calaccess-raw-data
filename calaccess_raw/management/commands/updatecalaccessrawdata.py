@@ -159,16 +159,19 @@ class Command(CalAccessCommand):
             )
             if result is False:
                 self.failure("Updated cancelled")
-            self.duration()
+            if self.verbosity:
+                self.duration()
 
         # execute the other steps that haven't been skipped
         if options['clean']:
             self.clean()
-            self.duration()
+            if self.verbosity:
+                self.duration()
 
         if options['load']:
             self.load()
-            self.duration()
+            if self.verbosity:
+                self.duration()
 
         if self.verbosity:
             self.success("Done!")

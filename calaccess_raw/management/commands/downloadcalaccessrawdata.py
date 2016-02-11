@@ -190,17 +190,19 @@ class Command(CalAccessCommand):
         old_stdout = sys.stdout
         sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
 
+        # Send the confirmation prompt out to the user
         confirm = input(self.prompt)
 
         # Set things back to the way they were before continuing.
         sys.stdout = old_stdout
+
+        # Pass back what the user typed
         return confirm.lower()
 
     def download(self):
         """
         Download the ZIP file in pieces.
         """
-
         if self.verbosity:
             self.header("Downloading ZIP file")
 
