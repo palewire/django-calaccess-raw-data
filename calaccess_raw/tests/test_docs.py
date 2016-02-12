@@ -81,7 +81,7 @@ class DocumentationTestCase(TestCase):
         """
         results = []
         for m in get_model_list():
-            if m().DOCUMENTCLOUD_PAGESS:
+            if m().DOCUMENTCLOUD_PAGES:
                 exists = True
             else:
                 exists = False
@@ -142,7 +142,7 @@ class DocumentationTestCase(TestCase):
                         "Has no CHOICES defined"
                     ))
 
-                if not f.documentcloud_page_urls:
+                if not f.documentcloud_pages:
                     message_list.append((
                         m.__name__,
                         field_name,
