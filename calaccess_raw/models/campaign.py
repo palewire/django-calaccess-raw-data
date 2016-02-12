@@ -5772,8 +5772,11 @@ Part R: late payments received from')
         choices=OFFICE_CODE_CHOICES,
         help_text="Identifies the office being sought",
         documentcloud_pages=[
+            # .CAL Format 201
             DocumentCloud(id=2712034, start_page=12, end_page=12),
+            # .CAL Format 1-05-02
             DocumentCloud(id=2712033, start_page=10, end_page=10),
+            # .CAL Errata 201
             DocumentCloud(id=2712032, start_page=2, end_page=2),
         ]
     )
