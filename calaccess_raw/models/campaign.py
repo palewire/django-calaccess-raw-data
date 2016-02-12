@@ -4995,6 +4995,8 @@ class F501502Cd(CalAccessBaseModel):
     """
     Candidate intention statement
     """
+    # CalAccessTablesWeb
+    DocumentCloud(id=2711614, start_page=57, end_page=59)
     UNIQUE_KEY = (
         "FILING_ID",
         "AMEND_ID"
@@ -5042,7 +5044,7 @@ original filing and 1 to 999 amendments.",
     )
     committee_id = fields.CharField(
         db_column='COMMITTEE_ID',
-        max_length=8,
+        max_length=9,
         blank=True,
         verbose_name="Committee ID",
         help_text='Committee identification number'
@@ -5050,13 +5052,14 @@ original filing and 1 to 999 amendments.",
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         blank=True,
-        max_length=3,
+        max_length=9,
         help_text='Entity code'
     )
-    report_num = fields.IntegerField(
+    report_num = fields.CharField(
         db_column='REPORT_NUM',
         blank=True,
         null=True,
+        max_length=3,
         help_text='Report Number; 000 Original; 001-999 Amended'
     )
     rpt_date = fields.DateTimeField(
@@ -5099,31 +5102,31 @@ original filing and 1 to 999 amendments.",
     )
     cand_naml = fields.CharField(
         db_column='CAND_NAML',
-        max_length=81,
+        max_length=200,
         blank=True,
         help_text="Candidate/officerholder last name"
     )
     cand_namf = fields.CharField(
         db_column='CAND_NAMF',
-        max_length=25,
+        max_length=45,
         blank=True,
         help_text="Candidate/officerholder first name"
     )
     can_namm = fields.CharField(
         db_column='CAN_NAMM',
-        max_length=10,
+        max_length=20,
         blank=True,
         help_text='Candidate/officeholder middle name'
     )
     cand_namt = fields.CharField(
         db_column='CAND_NAMT',
-        max_length=7,
+        max_length=100,
         blank=True,
         help_text="Candidate/officerholder title or prefix"
     )
     cand_nams = fields.CharField(
         db_column='CAND_NAMS',
-        max_length=7,
+        max_length=10,
         blank=True,
         help_text="Candidate/officeholder suffix"
     )
@@ -5135,13 +5138,13 @@ original filing and 1 to 999 amendments.",
     )
     moniker = fields.CharField(
         db_column='MONIKER',
-        max_length=4,
+        max_length=20,
         blank=True,
         help_text="Candidate/officeholder's moniker"
     )
     cand_city = fields.CharField(
         db_column='CAND_CITY',
-        max_length=22,
+        max_length=30,
         blank=True,
         help_text="Candidate/officerholder city"
     )
@@ -5159,37 +5162,37 @@ original filing and 1 to 999 amendments.",
     )
     cand_phon = fields.CharField(
         db_column='CAND_PHON',
-        max_length=14,
+        max_length=20,
         blank=True,
         help_text='Candidate/officeholder phone number'
     )
     cand_fax = fields.CharField(
         db_column='CAND_FAX',
-        max_length=14,
+        max_length=20,
         blank=True,
         help_text="Candidate/officerholder fax"
     )
     cand_email = fields.CharField(
         db_column='CAND_EMAIL',
-        max_length=37,
+        max_length=60,
         blank=True,
         help_text='Candidate/officeholder email address'
     )
     fin_naml = fields.CharField(
         db_column='FIN_NAML',
-        max_length=53,
+        max_length=200,
         blank=True,
         help_text="Financial institution's business name"
     )
     fin_namf = fields.CharField(
         db_column='FIN_NAMF',
-        max_length=32,
+        max_length=45,
         blank=True,
         help_text="Unused. Financial institution's first name."
     )
     fin_namt = fields.CharField(
         db_column='FIN_NAMT',
-        max_length=32,
+        max_length=100,
         blank=True,
         help_text="Unused. Financial institution's title."
     )
@@ -5201,7 +5204,7 @@ original filing and 1 to 999 amendments.",
     )
     fin_city = fields.CharField(
         db_column='FIN_CITY',
-        max_length=20,
+        max_length=30,
         blank=True,
         help_text="Financial institution's city."
     )
@@ -5213,25 +5216,25 @@ original filing and 1 to 999 amendments.",
     )
     fin_zip4 = fields.CharField(
         db_column='FIN_ZIP4',
-        max_length=9,
+        max_length=10,
         blank=True,
         help_text="Financial institution's zip code."
     )
     fin_phon = fields.CharField(
         db_column='FIN_PHON',
-        max_length=14,
+        max_length=20,
         blank=True,
         help_text="Financial institution's phone number."
     )
     fin_fax = fields.CharField(
         db_column='FIN_FAX',
-        max_length=10,
+        max_length=20,
         blank=True,
         help_text="Financial institution's FAX Number."
     )
     fin_email = fields.CharField(
         db_column='FIN_EMAIL',
-        max_length=15,
+        max_length=60,
         blank=True,
         help_text="Financial institution's e-mail address."
     )
@@ -5389,13 +5392,13 @@ original filing and 1 to 999 amendments.",
     )
     offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR',
-        max_length=50,
+        max_length=80,
         blank=True,
         help_text="Office sought description"
     )
     agency_nam = fields.CharField(
         db_column='AGENCY_NAM',
-        max_length=63,
+        max_length=200,
         blank=True,
         help_text="Agency name"
     )
@@ -5407,7 +5410,7 @@ original filing and 1 to 999 amendments.",
     )
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR',
-        max_length=14,
+        max_length=30,
         blank=True,
         help_text='office jurisdiction description'
     )
@@ -5420,7 +5423,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
     )
     party = fields.CharField(
         db_column='PARTY',
-        max_length=20,
+        max_length=200,
         blank=True,
         help_text="Political party"
     )
@@ -5458,13 +5461,13 @@ Populated for Senate, Assembly or Board of Equalization races.'
     )
     can_sig = fields.CharField(
         db_column='CAN_SIG',
-        max_length=13,
+        max_length=200,
         blank=True,
         help_text='Candidate signature'
     )
     account_no = fields.CharField(
         db_column='ACCOUNT_NO',
-        max_length=22,
+        max_length=32,
         blank=True,
         help_text='Account number'
     )
