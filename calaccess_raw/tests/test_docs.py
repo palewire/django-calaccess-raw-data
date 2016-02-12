@@ -37,7 +37,7 @@ class DocumentationTestCase(TestCase):
                 obj_type,
                 attr_name
             ))
-            fails.select(["model"]).print_table()
+            fails.select(["model"]).print_table(max_column_width=50)
 
     def test_model_str(self):
         """
@@ -209,4 +209,4 @@ class DocumentationTestCase(TestCase):
         for f in fields:
             results.extend(self._test_choices(f))
         table = agate.Table(results, ['model', 'field', 'message'])
-        table.print_table()
+        table.print_table(max_column_width=50)

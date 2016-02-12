@@ -48,7 +48,7 @@ Once that's handled, add a database connection string like this to your ``settin
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'calaccess',
+            'NAME': 'calaccess_raw',
             'USER': 'your-username-here',
             'PASSWORD': 'your-password-here',
             'HOST': 'localhost',
@@ -64,7 +64,7 @@ Return the command line. This will create a MySQL database to store the data.
 
 .. code-block:: bash
 
-    $ mysqladmin -h localhost -u your-username-here -p create calaccess
+    $ mysqladmin -h localhost -u your-username-here -p create calaccess_raw
 
 And, if you don't have it already, you'll need to install a Python library that can access MySQL via Django. That can be done with `pip <https://pip.pypa.io/en/latest/installing.html>`_, a Python package management tool.
 
@@ -83,7 +83,7 @@ Once that's handled, add a database connection string like this to your ``settin
 
     DATABASES = {
         'default': {
-            'NAME': 'calaccess',
+            'NAME': 'calaccess_raw',
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'USER': 'your-username-here',
             'PASSWORD': 'your-password-here',
@@ -96,7 +96,7 @@ Return to the command line. This will create a PostgreSQL database to store the 
 
 .. code-block:: bash
 
-    $ createdb calaccess
+    $ createdb calaccess_raw
 
 If you don't have it already, you'll need to install a Python library that can access PostgreSQL via Django. That can be done with `pip <https://pip.pypa.io/en/latest/installing.html>`_, a Python package management tool.
 

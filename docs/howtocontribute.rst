@@ -44,11 +44,11 @@ yet, but we're working on it. This might be something you could work on!
 If you choose MySQL
 ~~~~~~~~~~~~~~~~~~~
 
-Create a new database named ``calaccess`` like this:
+Create a new database named ``calaccess_raw`` like this:
 
 .. code-block:: bash
 
-    mysqladmin -h localhost -u root -p create calaccess
+    mysqladmin -h localhost -u root -p create calaccess_raw
 
 Create a file at ``example/settings_local.py`` to save your custom database credentials. That might look something like this.
 
@@ -57,7 +57,7 @@ Create a file at ``example/settings_local.py`` to save your custom database cred
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'calaccess',
+            'NAME': 'calaccess_raw',
             'USER': 'yourusername', # <-- This
             'PASSWORD': 'yourpassword', # <-- And this
             'HOST': 'localhost',
@@ -83,7 +83,7 @@ Create a file at ``example/project/settings_local.py`` to save your custom datab
 
     DATABASES = {
         'default': {
-            'NAME': 'calaccess',
+            'NAME': 'calaccess_raw',
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'USER': 'username',
             'PASSWORD': 'password',
