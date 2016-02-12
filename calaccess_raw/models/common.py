@@ -416,6 +416,177 @@ class FilingsCd(CalAccessBaseModel):
 
 
 @python_2_unicode_compatible
+class HdrCd(CalAccessBaseModel):
+    """
+    Electronic filing record header data
+    """
+    UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
+    amend_id = fields.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments.",
+        verbose_name="amendment ID"
+    )
+    cal_ver = fields.CharField(
+        max_length=4,
+        db_column='CAL_VER',
+        blank=True,
+        help_text="CAL Version number the filing was made using"
+    )
+    ef_type = fields.CharField(
+        max_length=3,
+        db_column='EF_TYPE',
+        blank=True,
+        help_text='Electronic filing type. This will always have the \
+        value of "CAL".'
+    )
+    filing_id = fields.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
+    hdr_comment = fields.CharField(
+        max_length=200,
+        db_column='HDRCOMMENT',
+        blank=True,
+        verbose_name="Header comment",
+        help_text="Typically used for development and test filings"
+    )
+    REC_TYPE_CHOICES = (
+        ("HDR", "HDR"),
+    )
+    rec_type = fields.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
+    soft_name = fields.CharField(
+        max_length=90,
+        db_column='SOFT_NAME',
+        blank=True,
+        help_text="Filing software name used to electronically file"
+    )
+    soft_ver = fields.CharField(
+        max_length=16,
+        db_column='SOFT_VER',
+        blank=True,
+        help_text="Filing software version number"
+    )
+    state_cd = fields.CharField(
+        max_length=2,
+        db_column='STATE_CD',
+        blank=True,
+        verbose_name='State code',
+        help_text="The state code value entered in the electronic filing"
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'HDR_CD'
+        verbose_name = 'HDR_CD'
+        verbose_name_plural = 'HDR_CD'
+
+    def __str__(self):
+        return str(self.filing_id)
+
+
+@python_2_unicode_compatible
+class HeaderCd(CalAccessBaseModel):
+    """
+    Lookup table used to report form 460 information in the AMS.
+    """
+    UNIQUE_KEY = ("LINE_NUMBER", "FORM_ID", "REC_TYPE")
+    line_number = fields.IntegerField(
+        db_column='LINE_NUMBER',
+        help_text="This field is undocumented"
+    )
+    form_id = fields.CharField(
+        db_column='FORM_ID',
+        max_length=5,
+        help_text="Form identification code",
+        verbose_name="Form ID"
+    )
+    REC_TYPE_CHOICES = (
+        ("AP1", "AP1"),
+        ("AP2", "AP2"),
+        ("SMRY_HEADER", "SMRY_HEADER"),
+    )
+    rec_type = fields.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=11,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+    )
+    section_label = fields.CharField(
+        db_column='SECTION_LABEL',
+        max_length=58,
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    comments1 = fields.CharField(
+        db_column='COMMENTS1',
+        max_length=48,
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    comments2 = fields.CharField(
+        db_column='COMMENTS2',
+        max_length=48,
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    label = fields.CharField(
+        db_column='LABEL',
+        max_length=98,
+        help_text="This field is undocumented"
+    )
+    column_a = fields.IntegerField(
+        db_column='COLUMN_A',
+        blank=True,
+        null=True,
+        help_text="This field is undocumented"
+    )
+    column_b = fields.IntegerField(
+        db_column='COLUMN_B',
+        blank=True,
+        null=True,
+        help_text="This field is undocumented"
+    )
+    column_c = fields.IntegerField(
+        db_column='COLUMN_C',
+        blank=True,
+        null=True,
+        help_text="This field is undocumented"
+    )
+    show_c = fields.IntegerField(
+        db_column='SHOW_C',
+        blank=True,
+        null=True,
+        help_text="This field is undocumented"
+    )
+    show_b = fields.IntegerField(
+        db_column='SHOW_B',
+        blank=True,
+        null=True,
+        help_text="This field is undocumented"
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'HEADER_CD'
+        verbose_name = 'HEADER_CD'
+        verbose_name_plural = 'HEADER_CD'
+
+    def __str__(self):
+        return str(self.form_id)
+
+
+@python_2_unicode_compatible
 class SmryCd(CalAccessBaseModel):
     """
     Summary totals from filings.
@@ -950,6 +1121,86 @@ original filing and 1 to 999 amendments.",
         db_table = 'CVR_E530_CD'
         verbose_name = 'CVR_E530_CD'
         verbose_name_plural = 'CVR_E530_CD'
+
+    def __str__(self):
+        return str(self.filing_id)
+
+
+@python_2_unicode_compatible
+class SpltCd(CalAccessBaseModel):
+    """
+    Split records
+    """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "PFORM_TYPE"
+    )
+    amend_id = fields.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments.",
+        verbose_name="amendment ID"
+    )
+    elec_amount = fields.DecimalField(
+        max_digits=16,
+        decimal_places=2,
+        db_column='ELEC_AMOUNT',
+        help_text="This field is undocumented"
+    )
+    elec_code = fields.CharField(
+        max_length=2,
+        db_column='ELEC_CODE',
+        blank=True,
+        help_text='This field is undocumented',
+    )
+    elec_date = fields.DateField(
+        db_column='ELEC_DATE',
+        null=True,
+        help_text="This field is undocumented"
+    )
+    filing_id = fields.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
+    line_item = fields.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
+    PFORM_TYPE_CHOICES = (
+        ('A', ''),
+        ('B1', ''),
+        ('B2', ''),
+        ('C', ''),
+        ('D', ''),
+        ('F450P5', ''),
+        ('H', ''),
+    )
+    pform_type = fields.CharField(
+        max_length=7,
+        db_column='PFORM_TYPE',
+        db_index=True,
+        choices=PFORM_TYPE_CHOICES,
+        help_text='This field is undocumented',
+    )
+    ptran_id = fields.CharField(
+        verbose_name='transaction ID',
+        max_length=32,
+        db_column='PTRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'SPLT_CD'
+        verbose_name = 'SPLT_CD'
+        verbose_name_plural = 'SPLT_CD'
 
     def __str__(self):
         return str(self.filing_id)
