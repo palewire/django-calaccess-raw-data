@@ -75,18 +75,18 @@ class DocumentationTestCase(TestCase):
             results.append([m.__name__, exists])
         self.attr_test_output("model", "UNIQUE_KEY", results)
 
-    def test_model_documentcloud_page_urls(self):
+    def test_model_documentcloud_pages(self):
         """
-        Verify that each model has DOCUMENTCLOUD_PAGE_URLS defined
+        Verify that each model has DOCUMENTCLOUD_PAGES defined
         """
         results = []
         for m in get_model_list():
-            if m().DOCUMENTCLOUD_PAGE_URLS:
+            if m().DOCUMENTCLOUD_PAGESS:
                 exists = True
             else:
                 exists = False
             results.append([m.__name__, exists])
-        self.attr_test_output("model", "DOCUMENTCLOUD_PAGE_URLS", results)
+        self.attr_test_output("model", "DOCUMENTCLOUD_PAGES", results)
 
     def test_field_verbose_name(self):
         """

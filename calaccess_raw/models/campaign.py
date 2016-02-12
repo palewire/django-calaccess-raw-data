@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
+from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
-from .base import CalAccessBaseModel
+
 
 
 @python_2_unicode_compatible
@@ -19,6 +20,14 @@ class CvrSoCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE",
     )
+    DOCUMENTCLOUD_PAGES = [
+        # Form 400 statement of organization slate mailer organization form sample
+        DocumentCloud(id=1308004, start_page=3, end_page=7),
+        # Form 402 statement of termination form sample
+        DocumentCloud(id=1308004, start_page=21, end_page=22),
+        # Form 410 statement of organization for recipient committee form sample
+        DocumentCloud(id=1308004, start_page=25, end_page=31),
+    ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
         null=True,
@@ -35,7 +44,7 @@ class CvrSoCd(CalAccessBaseModel):
         db_column="ACTVTY_LVL",
         blank=True,
         choices=ACTIVITY_LEVEL_CHOICES,
-        verbose_name="Activity level",
+        verbose_name="activity level",
         help_text="Organization's level of activity",
     )
     amend_id = fields.IntegerField(
@@ -214,7 +223,15 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_column="FORM_TYPE",
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            # Form 400 statement of organization slate mailer organization form sample
+            DocumentCloud(id=1308004, start_page=3, end_page=7),
+            # Form 402 statement of termination form sample
+            DocumentCloud(id=1308004, start_page=21, end_page=22),
+            # Form 410 statement of organization for recipient committee form sample
+            DocumentCloud(id=1308004, start_page=25, end_page=31),
+        ]
     )
     genpurp_cb = fields.CharField(
         max_length=1,

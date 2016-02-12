@@ -32,10 +32,14 @@ class CalAccessBaseModel(models.Model):
     #   UNIQUE_KEY = False
     UNIQUE_KEY = None
 
-    # A list of URL strings that point to JPG pages hosted on DocumentCloud.org
+    # A list of URL strings that point to pages hosted on DocumentCloud.org
     # that contain documentation for this model. Once assembled they can be
     # embedded in our user-facing documentation as images.
-    DOCUMENTCLOUD_PAGE_URLS = []
+
+    # Should be filled with instances of our DocumentCloud class below
+    # which accepts a unique DocumentCloud id along with start and/or end
+    # page numbers
+    DOCUMENTCLOUD_PAGES = []
 
     # Default manager
     objects = managers.CalAccessManager()
@@ -114,3 +118,15 @@ class CalAccessBaseModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+class DocumentCloud(object):
+    """
+    A page or set of pages hosted on DocumentCloud.
+
+    Cited in our Python code and then republished in our HTML documentation.
+    """
+    def __init__(self, id, start_page, end_page=None):
+        self.id = id
+        self.start_page = start_page
+        self.end_page = end_page

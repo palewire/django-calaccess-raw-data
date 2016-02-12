@@ -38,12 +38,12 @@ class DocumentCloudMixin(fields.Field):
     so it can include links to JPG pages that document the contents
     of the field.
     """
-    def __init__(self, documentcloud_page_urls=[], *args, **kwargs):
+    def __init__(self, documentcloud_pages=[], *args, **kwargs):
         """
         Overrides the standard __init__ to add our documentcloud_page_urls
         option.
         """
-        self.documentcloud_page_urls = documentcloud_page_urls
+        self.documentcloud_pages = documentcloud_pages
         super(DocumentCloudMixin, self).__init__(*args, **kwargs)
 
     def deconstruct(self):
@@ -56,8 +56,8 @@ class DocumentCloudMixin(fields.Field):
             self
         ).deconstruct()
         # Only include kwarg if it's not the default
-        if self.documentcloud_page_urls != []:
-            kwargs['documentcloud_page_urls'] = self.documentcloud_page_urls
+        if self.documentcloud_pages != []:
+            kwargs['documentcloud_pages'] = self.documentcloud_pages
         return name, path, args, kwargs
 
 
