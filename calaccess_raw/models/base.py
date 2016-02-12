@@ -116,6 +116,18 @@ class CalAccessBaseModel(models.Model):
         else:
             return [self.__class__.UNIQUE_KEY]
 
+    def get_documentcloud_page_urls(self):
+        """
+        Return canonical urls for each page in the DOCUMENTCLOUD_PAGES
+        attribute.
+        """
+        url_list = []
+        for dc in self.DOCUMENTCLOUD_PAGES:
+            if not isinstance(dc, DocumentCloud):
+                raise TypeError("Values must be instances of DocumentCloud")
+            url_list.extend(dc.get_page_urls())
+        return url_list
+
     class Meta:
         abstract = True
 
@@ -130,3 +142,23 @@ class DocumentCloud(object):
         self.id = id
         self.start_page = start_page
         self.end_page = end_page
+
+    def get_pages(self):
+        """
+        Return a list of all the pages in the object
+        """
+        if self.end_page:
+            return range(self.start_page, self.end_page+1)
+        else:
+            return [self.start_page]
+
+    def get_page_urls(self):
+        """
+        Return a list of canonical URLs for each page in the object.
+        """
+        url_pattern = 'https://www.documentcloud.org/documents/%(id)s/pages/%(page)s.html'
+        url_list = []
+        for page in self.get_pages():
+            url = url_pattern % dict(id=self.id, page=page)
+            url_list.append(url)
+        return url_list
