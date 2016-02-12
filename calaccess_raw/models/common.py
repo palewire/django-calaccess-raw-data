@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
-from .base import CalAccessBaseModel
+from .base import CalAccessBaseModel, DocumentCloud
 from django.template.defaultfilters import floatformat
 from django.utils.encoding import python_2_unicode_compatible
 from django.contrib.humanize.templatetags.humanize import intcomma
@@ -31,6 +31,9 @@ class FilernameCd(CalAccessBaseModel):
         db_index=True,
         help_text="Alternative filer ID found on many forms"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711615, start_page=2, end_page=2)
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',

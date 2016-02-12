@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 from calaccess_raw import fields
 from django.utils.encoding import python_2_unicode_compatible
-from .base import CalAccessBaseModel
+from .base import CalAccessBaseModel, DocumentCloud
 
 
 @python_2_unicode_compatible
@@ -17,6 +17,10 @@ class CvrRegistrationCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=8, end_page=8),
+        DocumentCloud(id=2711614, start_page=35, end_page=39),
+    ]
     # a_b_adr1 = fields.CharField(
     #   max_length=55,
     #   db_column='A_B_ADR1',

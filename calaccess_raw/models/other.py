@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 from calaccess_raw import fields
 from django.utils.encoding import python_2_unicode_compatible
-from .base import CalAccessBaseModel
+from .base import CalAccessBaseModel, DocumentCloud
 
 
 @python_2_unicode_compatible
@@ -12,6 +12,10 @@ class AcronymsCd(CalAccessBaseModel):
     Contains acronyms and their meaning.
     """
     UNIQUE_KEY = "ACRONYM"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=7, end_page=7),
+        DocumentCloud(id=2711614, start_page=16, end_page=16),
+    ]
     acronym = fields.CharField(
         max_length=40,
         db_column="ACRONYM",
