@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
+import requests
 from re import sub
 from datetime import datetime
-from dateutil.parser import parse as datetime_parse
-import requests
+from email.utils import parsedate
+from django.utils import timezone
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
 from calaccess_raw.models.tracking import (
@@ -48,9 +49,11 @@ class CalAccessCommand(BaseCommand):
         short of actually downloading it.
         """
         request = requests.head(self.url)
+        last_modified = request.headers['last-modified']
+        dt = datetime(*parsedate(last_modified)[:6])
         return {
             'content-length': int(request.headers['content-length']),
-            'last-modified': datetime_parse(request.headers['last-modified'])
+            'last-modified': timezone.utc.localize(dt)
         }
 
     def get_last_log(self, file_name=None, finished=False):
