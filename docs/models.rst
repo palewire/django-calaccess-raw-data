@@ -483,7 +483,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>enty_naml</td>
-            <td>String (up to 194)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Entity&#39;s business name or last name if the entity is an individual</td>
         </tr>
@@ -492,7 +492,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>enty_namf</td>
-            <td>String (up to 34)</td>
+            <td>String (up to 45)</td>
             <td>No</td>
             <td>Entity&#39;s first name if the entity is an individual</td>
         </tr>
@@ -501,7 +501,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>enty_namt</td>
-            <td>String (up to 9)</td>
+            <td>String (up to 10)</td>
             <td>No</td>
             <td>Entity&#39;s name prefix or title if the entity is an individual</td>
         </tr>
@@ -528,7 +528,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>mail_city</td>
-            <td>String (up to 25)</td>
+            <td>String (up to 30)</td>
             <td>No</td>
             <td>City portion of the entity&#39;s mailing address</td>
         </tr>
@@ -573,7 +573,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>email_adr</td>
-            <td>String (up to 40)</td>
+            <td>String (up to 60)</td>
             <td>No</td>
             <td>Email address. Not contained in current forms.</td>
         </tr>
@@ -591,7 +591,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>ind_group</td>
-            <td>String (up to 87)</td>
+            <td>String (up to 90)</td>
             <td>No</td>
             <td>Industry group/affiliation description</td>
         </tr>
@@ -663,7 +663,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>party_name</td>
-            <td>String (up to 63)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Name of party (if partisan)</td>
         </tr>
@@ -708,7 +708,7 @@ by a slate-mailer organization or recipient committee.
     
         <tr>
             <td>pof_title</td>
-            <td>String (up to 44)</td>
+            <td>String (up to 45)</td>
             <td>No</td>
             <td>Position/title of the principal officer</td>
         </tr>
@@ -7379,7 +7379,7 @@ Cover page information for lobbying disclosure forms
     
         <tr>
             <td>filer_id</td>
-            <td>String (up to 8)</td>
+            <td>String (up to 9)</td>
             <td>No</td>
             <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
@@ -8056,7 +8056,7 @@ Cover page of lobbying disclosure forms
     
         <tr>
             <td>filer_id</td>
-            <td>String (up to 8)</td>
+            <td>String (up to 9)</td>
             <td>No</td>
             <td>Filer ID: Filer&#39;s unique identification number</td>
         </tr>
@@ -8881,7 +8881,7 @@ Lobbying campaign contributions
     
         <tr>
             <td>ctrib_naml</td>
-            <td>String (up to 120)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Contributor last name or business name</td>
         </tr>
@@ -9715,7 +9715,7 @@ Lobbyist registration amendment information
     
         <tr>
             <td>d_l_naml</td>
-            <td>String (up to 56)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Delete lobbyist last name</td>
         </tr>
@@ -9724,7 +9724,7 @@ Lobbyist registration amendment information
     
         <tr>
             <td>d_l_namf</td>
-            <td>String (up to 35)</td>
+            <td>String (up to 45)</td>
             <td>No</td>
             <td>Delete lobbyist first name</td>
         </tr>
@@ -9742,7 +9742,7 @@ Lobbyist registration amendment information
     
         <tr>
             <td>d_l_nams</td>
-            <td>String (up to 8)</td>
+            <td>String (up to 10)</td>
             <td>No</td>
             <td>Delete lobbyiest suffix</td>
         </tr>
@@ -9823,7 +9823,7 @@ Lobbyist registration amendment information
     
         <tr>
             <td>d_le_naml</td>
-            <td>String (up to 160)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Delete lobbyist employer last name</td>
         </tr>
@@ -9850,7 +9850,7 @@ Lobbyist registration amendment information
     
         <tr>
             <td>d_le_nams</td>
-            <td>String (up to 9)</td>
+            <td>String (up to 10)</td>
             <td>No</td>
             <td>Delete lobbyist employer name</td>
         </tr>
@@ -12290,7 +12290,7 @@ This is an undocumented table.
 LobbyistContributions1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-
+Lobbyist contribution disclosure table.
 
 **Source:** `LOBBYIST_CONTRIBUTIONS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
