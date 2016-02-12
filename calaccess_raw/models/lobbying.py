@@ -237,7 +237,7 @@ Form 604. As filed by the lobbyist.',
     filer_id = fields.CharField(
         verbose_name='filer ID',
         db_column='FILER_ID',
-        max_length=8,
+        max_length=9,
         blank=True,
         db_index=True,
         help_text="Filer's unique identification number",
@@ -772,7 +772,7 @@ to forms 625, 635, 645.",
     filer_id = fields.CharField(
         verbose_name='filer ID',
         db_column='FILER_ID',
-        max_length=8,
+        max_length=9,
         blank=True,
         db_index=True,
         help_text="Filer's unique identification number",
@@ -1337,13 +1337,13 @@ original filing and 1 to 999 amendments.",
         help_text='Delete lobbyist effective date',
     )
     d_l_naml = fields.CharField(
-        max_length=56,
+        max_length=200,
         db_column='D_L_NAML',
         blank=True,
         help_text='Delete lobbyist last name',
     )
     d_l_namf = fields.CharField(
-        max_length=35,
+        max_length=45,
         db_column='D_L_NAMF',
         blank=True,
         help_text='Delete lobbyist first name',
@@ -1355,7 +1355,7 @@ original filing and 1 to 999 amendments.",
         help_text='Delete lobbyist title or prefix',
     )
     d_l_nams = fields.CharField(
-        max_length=8,
+        max_length=10,
         db_column='D_L_NAMS',
         blank=True,
         help_text='Delete lobbyiest suffix',
@@ -1409,7 +1409,7 @@ original filing and 1 to 999 amendments.",
         help_text='Delete lobbyist employer effective date',
     )
     d_le_naml = fields.CharField(
-        max_length=160,
+        max_length=200,
         db_column='D_LE_NAML',
         blank=True,
         help_text='Delete lobbyist employer last name',
@@ -1427,7 +1427,7 @@ original filing and 1 to 999 amendments.",
         help_text='Delete lobbyist employer name title or prefix',
     )
     d_le_nams = fields.CharField(
-        max_length=9,
+        max_length=10,
         db_column='D_LE_NAMS',
         blank=True,
         help_text='Delete lobbyist employer name',
@@ -2045,7 +2045,7 @@ original filing and 1 to 999 amendments.",
         help_text='Contributor first name',
     )
     ctrib_naml = fields.CharField(
-        max_length=120,
+        max_length=200,
         db_column='CTRIB_NAML',
         blank=True,
         help_text='Contributor last name or business name',

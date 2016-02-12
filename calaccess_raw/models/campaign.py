@@ -469,14 +469,14 @@ slate mailer organization)'),
     )
     enty_naml = fields.CharField(
         db_column='ENTY_NAML',
-        max_length=194,
+        max_length=200,
         blank=True,
         help_text="Entity's business name or last name if the entity is an \
 individual"
     )
     enty_namf = fields.CharField(
         db_column='ENTY_NAMF',
-        max_length=34,
+        max_length=45,
         blank=True,
         help_text="Entity's first name if the entity is an individual"
     )
@@ -503,7 +503,7 @@ of legal values for this column."
     )
     mail_city = fields.CharField(
         db_column='MAIL_CITY',
-        max_length=25,
+        max_length=30,
         blank=True,
         help_text="City portion of the entity's mailing address"
     )
@@ -533,7 +533,7 @@ of legal values for this column."
     )
     email_adr = fields.CharField(
         db_column='EMAIL_ADR',
-        max_length=40,
+        max_length=60,
         blank=True,
         help_text="Email address. Not contained in current forms."
     )
@@ -546,7 +546,7 @@ of legal values for this column."
     )
     ind_group = fields.CharField(
         db_column='IND_GROUP',
-        max_length=87,
+        max_length=90,
         blank=True,
         help_text="Industry group/affiliation description"
     )
@@ -662,7 +662,7 @@ of Equalization districts."
     )
     party_name = fields.CharField(
         db_column='PARTY_NAME',
-        max_length=63,
+        max_length=200,
         blank=True,
         help_text="Name of party (if partisan)"
     )
@@ -698,7 +698,7 @@ of Equalization districts."
     )
     pof_title = fields.CharField(
         db_column='POF_TITLE',
-        max_length=44,
+        max_length=45,
         blank=True,
         help_text="Position/title of the principal officer"
     )
