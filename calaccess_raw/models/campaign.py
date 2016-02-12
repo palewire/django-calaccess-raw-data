@@ -4995,12 +4995,14 @@ class F501502Cd(CalAccessBaseModel):
     """
     Candidate intention statement
     """
-    # CalAccessTablesWeb
-    DocumentCloud(id=2711614, start_page=57, end_page=59)
     UNIQUE_KEY = (
         "FILING_ID",
         "AMEND_ID"
     )
+    DOCUMENTCLOUD_PAGES = [
+        # CalAccessTablesWeb
+        DocumentCloud(id=2711614, start_page=57, end_page=59)
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -5703,8 +5705,7 @@ Part R: late payments received from')
         help_text="Candidate/officerholder suffix"
     )
     OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
+        ("APP", "State Appellate Court Justice"),
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -5720,6 +5721,7 @@ Part R: late payments received from')
         ('COU', 'County Counsel'),
         ('CSU', 'County Supervisor'),
         ("csu", "County Supervisor"),
+        ("CTL", "Local Controller"),
         ('CTR', 'Local Controller'),
         ('DAT', 'District Attorney'),
         ('GOV', 'Governor'),
@@ -5730,31 +5732,36 @@ Part R: late payments received from')
         ('OTH', 'Other'),
         ("oth", "Other"),
         ("OTh", "Other"),
+        ("PER", "Public Employees Retirement System"),
         ('PDR', 'Public Defender'),
         ('PLN', 'Planning Commissioner'),
         ('SCJ', 'Superior Court Judge'),
         ('SEN', 'State Senator'),
         ('SHC', 'Sheriff-Coroner'),
         ('SOS', 'Secretary of State'),
+        ("SPM", "Supreme Court Justice"),
         ('SUP', 'Superintendent of Public Instruction'),
         ('TRE', 'State Treasurer'),
         ('TRS', 'Local Treasurer'),
         # Other codes observed the database but undocumented
         ("05", "Unknown"),
-        ("APP", "Unknown"),
+        # assessor? state assembly person?
         ("ASS", "Unknown"),
+        # "City" Juris_Cd?
         ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
         ("F", "Unknown"),
+        # house?
         ("H", "Unknown"),
+        # house?
         ("HOU", "Unknown"),
+        # legistlative? "Legal Defense" Expn_Cd? "Legal" Ind_Class?
         ("LEG", "Unknown"),
         ("OF", "Unknown"),
         ("PAC", "Unknown"),
-        ("PER", "Unknown"),
+        # "Proponent" Entity_Cd?
         ("PRO", "Unknown"),
+        # representative?
         ("REP", "Unknown"),
-        ("SPM", "Unknown"),
         ("ST", "Unknown"),
     )
     office_cd = fields.CharField(
@@ -5762,8 +5769,13 @@ Part R: late payments received from')
         max_length=4,
         blank=True,
         verbose_name="office code",
-        help_text="Identifies the office being sought",
         choices=OFFICE_CODE_CHOICES,
+        help_text="Identifies the office being sought",
+        documentcloud_pages=[
+            DocumentCloud(id=2712034, start_page=12, end_page=12),
+            DocumentCloud(id=2712033, start_page=10, end_page=10),
+            DocumentCloud(id=2712032, start_page=2, end_page=2),
+        ]
     )
     offic_dscr = fields.CharField(
         max_length=40,
