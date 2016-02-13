@@ -89,8 +89,6 @@ Top 10 Frequently asked questions about navigating the CAL-ACCESS database.
       <a href="http://s3.documentcloud.org/documents/2711615/FAQ.txt">CAL-ACCESS: FAQ (Text)</a>
     </noscript>
 
-2711614-CalAccessTablesWeb
-
 CalAccessTablesWeb
 ~~~~~~~~~~~~~~~~~~
 
