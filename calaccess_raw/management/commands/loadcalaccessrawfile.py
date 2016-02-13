@@ -105,6 +105,36 @@ class Command(CalAccessCommand):
 
         row_count = self.get_row_count()
 
+        if row_count > 0:
+            self.load()
+        else:
+            if self.verbosity > 2:
+                self.failure("File is empty.")
+
+        # handle tracking data
+        if self.version:
+            raw_file = self.raw_data_files.get_or_create(
+                version=self.version,
+                file_name=self.log_record.file_name
+            )[0]
+
+            # add clean counts to raw_file_record
+            raw_file.clean_columns_count = len(self.get_headers())
+            raw_file.clean_records_count = self.get_row_count()
+            raw_file.save()
+
+            # save the log record
+            self.log_record.finish_datetime = datetime.now()
+            self.log_record.save()
+
+        # if not keeping files, remove the csv file
+        if not self.keep_files:
+            os.remove(self.csv)
+
+    def load(self):
+        """
+        Loads the source CSV for the provided model based on settings and database connections.
+        """
         # check if can load into dat
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat()
@@ -135,26 +165,6 @@ class Command(CalAccessCommand):
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
             )
-
-        # handle tracking data
-        if self.version:
-            raw_file = self.raw_data_files.get_or_create(
-                version=self.version,
-                file_name=self.log_record.file_name
-            )[0]
-
-            # add clean counts to raw_file_record
-            raw_file.clean_columns_count = len(self.get_headers())
-            raw_file.clean_records_count = self.get_row_count()
-            raw_file.save()
-
-            # save the log record
-            self.log_record.finish_datetime = datetime.now()
-            self.log_record.save()
-
-        # if not keeping files, remove the csv file
-        if not self.keep_files:
-            os.remove(self.csv)
 
     def load_dat(self):
         """
@@ -273,7 +283,10 @@ class Command(CalAccessCommand):
         """
         with open(self.csv, 'r') as infile:
             csv_reader = CSVKitReader(infile)
-            headers = next(csv_reader)
+            try:
+                headers = next(csv_reader)
+            except StopIteration:
+                headers = []
         return headers
 
     def get_row_count(self):
