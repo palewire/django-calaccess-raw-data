@@ -1186,3 +1186,43 @@ class ReportsCd(CalAccessBaseModel):
 
     def __str__(self):
         return str(self.rpt_id)
+
+
+@python_2_unicode_compatible
+class FilerTypePeriods(CalAccessBaseModel):
+    """
+    J M needs to document. This is in his list of tables designed for future enhancements.
+    """
+    UNIQUE_KEY = (
+        "ELECTION_TYPE",
+        "FILER_TYPE",
+        "PERIOD_ID",
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=8, end_page=8),
+        DocumentCloud(id=2711614, start_page=71, end_page=71),
+    ]
+    election_type = fields.IntegerField(
+        db_column="ELECTION_TYPE",
+        db_index=True,
+        help_text="Election type"
+    )
+    filer_type = fields.IntegerField(
+        db_column="FILER_TYPE",
+        db_index=True,
+        help_text="Filer type identification number."
+    )
+    period_id = fields.IntegerField(
+        db_column="PERIOD_ID",
+        db_index=True,
+        help_text="Period identification number."
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'FILER_TYPE_PERIODS'
+        verbose_name = 'FILER_TYPE_PERIODS'
+        verbose_name_plural = 'FILER_TYPE_PERIODS'
+
+    def __str__(self):
+        return str(self.filer_type)

@@ -4192,3 +4192,204 @@ original filing and 1 to 999 amendments.",
 
     def __str__(self):
         return str(self.filing_id)
+
+
+@python_2_unicode_compatible
+class LobbyistEmployerHistory(CalAccessBaseModel):
+    """
+    Matt needs to describe the relationship between the multiple tables.
+    Documentation should be cloned from D H's documentation on these tables. Cox 5/11/2000
+    """
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=11, end_page=11),
+        DocumentCloud(id=2711614, start_page=96, end_page=97),
+    ]
+    contributor_id = fields.IntegerField(
+        db_column="CONTRIBUTOR_ID",
+        help_text="Contributor identification number."
+    )
+    current_qtr_amt = fields.IntegerField(
+        db_column="CURRENT_QTR_AMT",
+        help_text="Current Quarter Amount"
+    )
+    employer_id = fields.IntegerField(
+        db_column="EMPLOYER_ID",
+        help_text="Employer identification number."
+    )
+    employer_name = fields.CharField(
+        db_column="EMPLOYER_NAME",
+        max_length=300,
+        blank=True,
+        help_text="Employer Name"
+    )
+    interest_cd = fields.IntegerField(
+        db_column="INTEREST_CD",
+        help_text="Interest code."
+    )
+    interest_name = fields.CharField(
+        db_column="INTEREST_NAME",
+        max_length=300,
+        blank=True,
+        help_text="Interest name."
+    )
+    qtr_1 = fields.IntegerField(
+        db_column="QTR_1",
+        help_text="Quarter total amount."
+    )
+    qtr_2 = fields.IntegerField(
+        db_column="QTR_2",
+        help_text="Quarter total amount."
+    )
+    qtr_3 = fields.IntegerField(
+        db_column="QTR_3",
+        help_text="Quarter total amount."
+    )
+    qtr_4 = fields.IntegerField(
+        db_column="QTR_4",
+        help_text="Quarter total amount."
+    )
+    qtr_5 = fields.IntegerField(
+        db_column="QTR_5",
+        help_text="Quarter total amount."
+    )
+    qtr_6 = fields.IntegerField(
+        db_column="QTR_6",
+        help_text="Quarter total amount."
+    )
+    qtr_7 = fields.IntegerField(
+        db_column="QTR_7",
+        help_text="Quarter total amount."
+    )
+    qtr_8 = fields.IntegerField(
+        db_column="QTR_8",
+        help_text="Quarter total amount."
+    )
+    session_id = fields.IntegerField(
+        db_column="SESSION_ID",
+        help_text="Session identification number."
+    )
+    session_total_amt = fields.IntegerField(
+        db_column="SESSION_TOTAL_AMT",
+        help_text="Total amount for the session."
+    )
+    session_yr_1 = fields.IntegerField(
+        db_column="SESSION_YR_1",
+        help_text="Total amount for year 1 of the session."
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column="SESSION_YR_2",
+        help_text="Total amount for year 2 of the session."
+    )
+    yr_1_ytd_amt = fields.IntegerField(
+        db_column="YR_1_YTD_AMT",
+        help_text="Year 1 year to date amount."
+    )
+    yr_2_ytd_amt = fields.IntegerField(
+        db_column="YR_2_YTD_AMT",
+        help_text="Year 2 year to date amount."
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'LOBBYIST_EMPLOYER_HISTORY'
+        verbose_name = 'LOBBYIST_EMPLOYER_HISTORY'
+        verbose_name_plural = 'LOBBYIST_EMPLOYER_HISTORY'
+
+    def __str__(self):
+        return str(self.contributor_id)
+
+
+@python_2_unicode_compatible
+class LobbyistFirmHistory(CalAccessBaseModel):
+    """
+    Matt needs to describe the relationship between the multiple tables. Documentation should be
+    cloned from D H's documentation on these tables. Cox 5/11/2000
+    """
+    UNIQUE_KEY = (
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=12, end_page=12),
+        DocumentCloud(id=2711614, start_page=101, end_page=102),
+    ]
+    contributor_id = fields.IntegerField(
+        db_column="CONTRIBUTOR_ID",
+        help_text="Contributor identification number."
+    )
+    current_qtr_amt = fields.IntegerField(
+        db_column="CURRENT_QTR_AMT",
+        help_text="Current Quarter Amount"
+    )
+    firm_id = fields.IntegerField(
+        db_column="FIRM_ID",
+        help_text="Identification number of the Firm/Employer/Coalition."
+    )
+    firm_name = fields.CharField(
+        db_column="FIRM_NAME",
+        max_length=300,
+        help_text="Name of Firm/Employer/Coalition"
+    )
+    qtr_1 = fields.IntegerField(
+        db_column="QTR_1",
+        help_text="Quarter total amount."
+    )
+    qtr_2 = fields.IntegerField(
+        db_column="QTR_2",
+        help_text="Quarter total amount."
+    )
+    qtr_3 = fields.IntegerField(
+        db_column="QTR_3",
+        help_text="Quarter total amount."
+    )
+    qtr_4 = fields.IntegerField(
+        db_column="QTR_4",
+        help_text="Quarter total amount."
+    )
+    qtr_5 = fields.IntegerField(
+        db_column="QTR_5",
+        help_text="Quarter total amount."
+    )
+    qtr_6 = fields.IntegerField(
+        db_column="QTR_6",
+        help_text="Quarter total amount."
+    )
+    qtr_7 = fields.IntegerField(
+        db_column="QTR_7",
+        help_text="Quarter total amount."
+    )
+    qtr_8 = fields.IntegerField(
+        db_column="QTR_8",
+        help_text="Quarter total amount."
+    )
+    session_id = fields.IntegerField(
+        db_column="SESSION_ID",
+        help_text="Session identification number."
+    )
+    session_total_amt = fields.IntegerField(
+        db_column="SESSION_TOTAL_AMT",
+        help_text="Total amount for the session."
+    )
+    session_yr_1 = fields.IntegerField(
+        db_column="SESSION_YR_1",
+        help_text="Total amount for year 1 of the session."
+    )
+    session_yr_2 = fields.IntegerField(
+        db_column="SESSION_YR_2",
+        help_text="Total amount for year 2 of the session."
+    )
+    yr_1_ytd_amt = fields.IntegerField(
+        db_column="YR_1_YTD_AMT",
+        help_text="YR_1_YTD_AMT"
+    )
+    yr_2_ytd_amt = fields.IntegerField(
+        db_column="YR_2_YTD_AMT",
+        help_text="Year 2 year to date amount."
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'LOBBYIST_FIRM_HISTORY'
+        verbose_name = 'LOBBYIST_FIRM_HISTORY'
+        verbose_name_plural = 'LOBBYIST_FIRM_HISTORY'
+
+    def __str__(self):
+        return str(self.contributor_id)

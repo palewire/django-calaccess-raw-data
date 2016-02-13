@@ -5813,3 +5813,198 @@ Populated for Senate, Assembly, or Board of Equalization races."
         db_table = 'S498_CD'
         verbose_name = 'S498_CD'
         verbose_name_plural = 'S498_CD'
+
+
+@python_2_unicode_compatible
+class CvrF470(CalAccessBaseModel):
+    """
+    Cover page layout for F470 Officeholder/Candidate Short Supplement
+    """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "REC_TYPE",
+        "FORM_TYPE",
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=30, end_page=32),
+    ]
+    amend_id = fields.IntegerField(
+        db_column="AMEND_ID",
+        db_index=True,
+        help_text="Amendment Identification number. A number of 0 is an original filing and 1 "
+                  "to 999 amendments."
+    )
+    cand_adr1 = fields.CharField(
+        db_column="CAND_ADR1",
+        blank=True,
+        max_length=55,
+        help_text="First line of the filer's street address."
+    )
+    cand_adr2 = fields.CharField(
+        db_column="CAND_ADR2",
+        blank=True,
+        max_length=55,
+        help_text="Second line of the filer's street address. "
+    )
+    cand_city = fields.CharField(
+        db_column="CAND_CITY",
+        blank=True,
+        max_length=30,
+        help_text="Candidate/Officeholder's City."
+    )
+    cand_email = fields.CharField(
+        db_column="CAND_EMAIL",
+        blank=True,
+        max_length=60,
+        help_text="Candidate/Officeholder's EMail address. Not required by the form."
+    )
+    cand_fax = fields.CharField(
+        db_column="CAND_FAX",
+        blank=True,
+        max_length=20,
+        help_text="Candidate/Officeholder's FAX Phone Number. Not required by the form."
+    )
+    cand_phon = fields.CharField(
+        db_column="CAND_PHON",
+        blank=True,
+        max_length=20,
+        help_text="Candidate/Officeholder's phone number."
+    )
+    cand_st = fields.CharField(
+        db_column="CAND_ST",
+        blank=True,
+        max_length=2,
+        help_text="Filer's State"
+    )
+    cand_zip4 = fields.CharField(
+        db_column="CAND_ZIP4",
+        blank=True,
+        max_length=10,
+        help_text="Filer's zipcode"
+    )
+    date_1000 = fields.DateField(
+        db_column="DATE_1000",
+        help_text="Date contributions totaling $1,000 or more. (For the 470-S)"
+    )
+    dist_no = fields.CharField(
+        db_column="DIST_NO",
+        blank=True,
+        max_length=3,
+        help_text="District number for the office being sought. Populated for Senate, Assembly, "
+                  "or Board of Equalization races."
+    )
+    elect_date = fields.DateField(
+        db_column="ELECT_DATE",
+        help_text="Date of the general election. Required for filings in even years."
+    )
+    entity_cd = fields.CharField(
+        db_column="ENTITY_CD",
+        blank=True,
+        max_length=3,
+        help_text="The filer's entity code. The value of this column will always be "
+                  "Candidate/Office Holder (CAO) for this table."
+    )
+    filer_id = fields.CharField(
+        db_column="FILER_ID",
+        blank=True,
+        max_length=9,
+        help_text="Filer's unique identification number."
+    )
+    filer_namf = fields.CharField(
+        db_column="FILER_NAMF",
+        blank=True,
+        max_length=45,
+        help_text="Filer's First Name(s) - required for individuals"
+    )
+    filer_naml = fields.CharField(
+        db_column="FILER_NAML",
+        blank=True,
+        max_length=200,
+        help_text="Filer's Last Name/Committee name"
+    )
+    filer_nams = fields.CharField(
+        db_column="FILER_NAMS",
+        blank=True,
+        max_length=10,
+        help_text="Filer's Name Suffix"
+    )
+    filer_namt = fields.CharField(
+        db_column="FILER_NAMT",
+        blank=True,
+        max_length=10,
+        help_text="The filer's prefix or title that preceeds their name if they are an individual."
+    )
+    filing_id = fields.IntegerField(
+        db_column="FILING_ID",
+        db_index=True,
+        help_text="Unique filing identification number."
+    )
+    form_type = fields.CharField(
+        db_column="FORM_TYPE",
+        db_index=True,
+        max_length=4,
+        help_text="Type of Filing or Formset. The value of this column will always "
+                  "be equal to F470."
+    )
+    juris_cd = fields.CharField(
+        db_column="JURIS_CD",
+        blank=True,
+        max_length=3,
+        help_text="Office Jurisdiction Code. The legal values are Senate (SEN), Assembly (ASM), "
+                  "Board of Equalization (BOE), City (CIT), County (CTY), Local (LOC) and "
+                  "Other (OTH)."
+    )
+    juris_dscr = fields.CharField(
+        db_column="JURIS_DSCR",
+        blank=True,
+        max_length=40,
+        help_text="Office jurisdiction description text reqired if the jurisdiction code "
+                  "(Juris_cd) is equal to CIT, CTY, LOC, or OTH."
+    )
+    off_s_h_cd = fields.CharField(
+        db_column="OFF_S_H_CD",
+        blank=True,
+        max_length=1,
+        help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.'
+    )
+    offic_dscr = fields.CharField(
+        db_column="OFFIC_DSCR",
+        blank=True,
+        max_length=40,
+        help_text="Office sought description used if the office code is other (OTH)."
+    )
+    office_cd = fields.CharField(
+        db_column="OFFICE_CD",
+        blank=True,
+        max_length=3,
+        help_text="Code that identifies the office being sought. See the CAL document for "
+                  "a list of valid codes."
+    )
+    rec_type = fields.CharField(
+        db_column="REC_TYPE",
+        blank=True,
+        max_length=3,
+        help_text="Type of CAL record. This column will always contain CVR."
+    )
+    report_num = fields.CharField(
+        db_column="REPORT_NUM",
+        blank=True,
+        max_length=3,
+        help_text="Report Number; 000 Original; 001-999 Amended as reported in the filing."
+    )
+    rpt_date = fields.DateField(
+        db_column="RPT_DATE",
+        db_index=True,
+        null=True,
+        help_text="Date this report is filed as reported by the filer."
+    )
+
+    def __str__(self):
+        return str(self.amend_id)
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'CVR_F470_CD'
+        verbose_name = 'CVR_F470_CD'
+        verbose_name_plural = 'CVR_F470_CD'
