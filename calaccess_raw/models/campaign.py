@@ -5816,7 +5816,7 @@ Populated for Senate, Assembly, or Board of Equalization races."
 
 
 @python_2_unicode_compatible
-class CvrF470(CalAccessBaseModel):
+class CvrF470Cd(CalAccessBaseModel):
     """
     Cover page layout for F470 Officeholder/Candidate Short Supplement
     """

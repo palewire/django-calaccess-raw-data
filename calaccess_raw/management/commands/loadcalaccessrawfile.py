@@ -103,6 +103,8 @@ class Command(CalAccessCommand):
                     file_name=self.model._meta.db_table
                 )
 
+        row_count = self.get_row_count()
+
         # check if can load into dat
         if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
             self.load_dat()

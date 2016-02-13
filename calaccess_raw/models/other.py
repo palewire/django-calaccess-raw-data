@@ -1189,7 +1189,7 @@ class ReportsCd(CalAccessBaseModel):
 
 
 @python_2_unicode_compatible
-class FilerTypePeriods(CalAccessBaseModel):
+class FilerTypePeriodsCd(CalAccessBaseModel):
     """
     J M needs to document. This is in his list of tables designed for future enhancements.
     """

@@ -4195,7 +4195,7 @@ original filing and 1 to 999 amendments.",
 
 
 @python_2_unicode_compatible
-class LobbyistEmployerHistory(CalAccessBaseModel):
+class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     """
     Matt needs to describe the relationship between the multiple tables.
     Documentation should be cloned from D H's documentation on these tables. Cox 5/11/2000
@@ -4300,7 +4300,7 @@ class LobbyistEmployerHistory(CalAccessBaseModel):
 
 
 @python_2_unicode_compatible
-class LobbyistFirmHistory(CalAccessBaseModel):
+class LobbyistFirmHistoryCd(CalAccessBaseModel):
     """
     Matt needs to describe the relationship between the multiple tables. Documentation should be
     cloned from D H's documentation on these tables. Cox 5/11/2000
