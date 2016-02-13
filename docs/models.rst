@@ -11,8 +11,857 @@ The 80 tab-delimited database exports published by California's Secretary of Sta
 
 The categories for these tables are based on what's found in the `ReadMe <_http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#readme-zip>`_ file for the .ZIP database export file and the `mapping <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#mapcalformat2fields>`_ of .CAL format to database fields. However, in cases where this official documentation was incomplete or inconsistent, we've either listed the table under whichever category is most obviously relevant or listed it under "Other".
 
+
+
 Campaign tables
 ---------------------------
+
+
+Cvr2CampaignDisclosureCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Record used to carry additional names for the campaign
+disclosure forms below.
+
+**Source:** `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Ballot measure jurisdiction</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_name</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Ballot measure name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_num</td>
+            <td>String (up to 7)</td>
+            <td>No</td>
+            <td>Ballot measure number or letter</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>String (up to 9)</td>
+            <td>No</td>
+            <td>Commitee identification number, when the entity is a committee</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>control_yn</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Controlled Committee (yes/no) checkbox. Legal values are &quot;Y&quot; or &quot;N&quot;.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>dist_no</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Entity code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_city</td>
+            <td>String (up to 30)</td>
+            <td>No</td>
+            <td>Entity city</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_email</td>
+            <td>String (up to 60)</td>
+            <td>No</td>
+            <td>Entity email address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_fax</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity fax number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Entity first name, if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Entity name, or last name if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity suffix, if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity prefix or title, if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_phon</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity phone number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_st</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>Entity state</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_zip4</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity ZIP code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>f460_part</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>Part of 460 cover page coded on ths cvr2 record. Legal values are 3, 4a, 4b, 5a, 5b, or 6.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>form_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Office jurisdiction code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office jurisdiction description</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>line_item</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_city</td>
+            <td>String (up to 30)</td>
+            <td>No</td>
+            <td>Filer&#39;s mailing city</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_st</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>Filer&#39;s mailing state</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Filer&#39;s mailing ZIP Code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Office is sought or held code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office sought description</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>office_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Office code: Identifies the office being sought</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Support or opposition code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>title</td>
+            <td>String (up to 90)</td>
+            <td>No</td>
+            <td>Official title of filing officer. Applies to the form 465.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tran_id</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s first name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s last name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s suffix</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s prefix or title</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+Cvr2SoCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Additional names and committees information included on the second page
+of a statement of organization creation form filed
+by a slate-mailer organization or recipient committee.
+
+**Source:** `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>line_item</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>form_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tran_id</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Entity code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Entity&#39;s business name or last name if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Entity&#39;s first name if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity&#39;s name prefix or title if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity&#39;s name suffix if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>item_cd</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Section of the Statement of Organization this itemization relates to. See CAL document for the definition of legal values for this column.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_city</td>
+            <td>String (up to 30)</td>
+            <td>No</td>
+            <td>City portion of the entity&#39;s mailing address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_st</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>State portion of the entity&#39;s mailing address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Zipcode portion of the entity&#39;s mailing address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>day_phone</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity&#39;s daytime phone number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>fax_phone</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity&#39;s fax number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>email_adr</td>
+            <td>String (up to 60)</td>
+            <td>No</td>
+            <td>Email address. Not contained in current forms.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Committee ID: Entity&#39;s identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>ind_group</td>
+            <td>String (up to 90)</td>
+            <td>No</td>
+            <td>Industry group/affiliation description</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>office_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Office code: Identifies the office being sought</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office sought description used if the office sought code (OFFICE_CD) equals other (OTH).</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Office jurisdiction code. See CAL document for a list of legal values.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office jurisdiction description provided if the         jurisdiction code (JURIS_CD) equals other (OTH).</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>dist_no</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Office district number for Senate, Assembly, and Board of Equalization districts.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Office is sought or held code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>non_pty_cb</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Non-partisan check-box. Legal values are &#39;X&#39; and null.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>party_name</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Name of party (if partisan)</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_num</td>
+            <td>String (up to 7)</td>
+            <td>No</td>
+            <td>Ballot measure number or letter</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Jurisdiction of ballot measure</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Support or opposition code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>year_elect</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Year of election</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>pof_title</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Position/title of the principal officer</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+Cvr3VerificationInfoCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Cover page verification information from campaign disclosure forms
+
+**Source:** `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>line_item</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>form_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tran_id</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Entity code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_date</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Signed date: Date when signed</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_loc</td>
+            <td>String (up to 39)</td>
+            <td>No</td>
+            <td>Signed location: City and state where signed</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_naml</td>
+            <td>String (up to 56)</td>
+            <td>No</td>
+            <td>Last name: Last name of the signer</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>First name: First name of the signer</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Title: Title of the signer</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_nams</td>
+            <td>String (up to 8)</td>
+            <td>No</td>
+            <td>Suffix: Suffix of the signer</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
 
 CvrCampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -817,13 +1666,12 @@ Cover page information from campaign disclosure forms
     </table>
     </div>
 
-Cvr2CampaignDisclosureCd
-~~~~~~~~~~~~~~~~~~~~~~~~
+CvrF470Cd
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Record used to carry additional names for the campaign
-disclosure forms below.
+Cover page layout for F470 Officeholder/Candidate Short Supplement
 
-**Source:** `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `CVR_F470_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
 **Fields:**
 
@@ -848,52 +1696,88 @@ disclosure forms below.
             <td>amend_id</td>
             <td>Integer</td>
             <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+            <td>Amendment Identification number. A number of 0 is an original filing and 1 to 999 amendments.</td>
         </tr>
     
     
     
         <tr>
-            <td>bal_juris</td>
-            <td>String (up to 40)</td>
+            <td>cand_adr1</td>
+            <td>String (up to 55)</td>
             <td>No</td>
-            <td>Ballot measure jurisdiction</td>
+            <td>First line of the filer&#39;s street address.</td>
         </tr>
     
     
     
         <tr>
-            <td>bal_name</td>
-            <td>String (up to 200)</td>
+            <td>cand_adr2</td>
+            <td>String (up to 55)</td>
             <td>No</td>
-            <td>Ballot measure name</td>
+            <td>Second line of the filer&#39;s street address.</td>
         </tr>
     
     
     
         <tr>
-            <td>bal_num</td>
-            <td>String (up to 7)</td>
+            <td>cand_city</td>
+            <td>String (up to 30)</td>
             <td>No</td>
-            <td>Ballot measure number or letter</td>
+            <td>Candidate/Officeholder&#39;s City.</td>
         </tr>
     
     
     
         <tr>
-            <td>cmte_id</td>
-            <td>String (up to 9)</td>
+            <td>cand_email</td>
+            <td>String (up to 60)</td>
             <td>No</td>
-            <td>Commitee identification number, when the entity is a committee</td>
+            <td>Candidate/Officeholder&#39;s EMail address. Not required by the form.</td>
         </tr>
     
     
     
         <tr>
-            <td>control_yn</td>
-            <td>Integer</td>
+            <td>cand_fax</td>
+            <td>String (up to 20)</td>
             <td>No</td>
-            <td>Controlled Committee (yes/no) checkbox. Legal values are &quot;Y&quot; or &quot;N&quot;.</td>
+            <td>Candidate/Officeholder&#39;s FAX Phone Number. Not required by the form.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cand_phon</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Candidate/Officeholder&#39;s phone number.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cand_st</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>Filer&#39;s State</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cand_zip4</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Filer&#39;s zipcode</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>date_1000</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Date contributions totaling $1,000 or more. (For the 470-S)</td>
         </tr>
     
     
@@ -908,109 +1792,64 @@ disclosure forms below.
     
     
         <tr>
+            <td>elect_date</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Date of the general election. Required for filings in even years.</td>
+        </tr>
+    
+    
+    
+        <tr>
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Entity code</td>
+            <td>The filer&#39;s entity code. The value of this column will always be Candidate/Office Holder (CAO) for this table.</td>
         </tr>
     
     
     
         <tr>
-            <td>enty_city</td>
-            <td>String (up to 30)</td>
+            <td>filer_id</td>
+            <td>String (up to 9)</td>
             <td>No</td>
-            <td>Entity city</td>
+            <td>Filer&#39;s unique identification number.</td>
         </tr>
     
     
     
         <tr>
-            <td>enty_email</td>
-            <td>String (up to 60)</td>
-            <td>No</td>
-            <td>Entity email address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_fax</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity fax number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_namf</td>
+            <td>filer_namf</td>
             <td>String (up to 45)</td>
             <td>No</td>
-            <td>Entity first name, if an individual</td>
+            <td>Filer&#39;s First Name(s) - required for individuals</td>
         </tr>
     
     
     
         <tr>
-            <td>enty_naml</td>
+            <td>filer_naml</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Entity name, or last name if an individual</td>
+            <td>Filer&#39;s Last Name/Committee name</td>
         </tr>
     
     
     
         <tr>
-            <td>enty_nams</td>
+            <td>filer_nams</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Entity suffix, if an individual</td>
+            <td>Filer&#39;s Name Suffix</td>
         </tr>
     
     
     
         <tr>
-            <td>enty_namt</td>
+            <td>filer_namt</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Entity prefix or title, if an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_phon</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity phone number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_st</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>Entity state</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_zip4</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity ZIP code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>f460_part</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>Part of 460 cover page coded on ths cvr2 record. Legal values are 3, 4a, 4b, 5a, 5b, or 6.</td>
+            <td>The filer&#39;s prefix or title that preceeds their name if they are an individual.</td>
         </tr>
     
     
@@ -1019,7 +1858,7 @@ disclosure forms below.
             <td>filing_id</td>
             <td>Integer</td>
             <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
+            <td>Unique filing identification number.</td>
         </tr>
     
     
@@ -1028,7 +1867,7 @@ disclosure forms below.
             <td>form_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
+            <td>Type of Filing or Formset. The value of this column will always be equal to F470.</td>
         </tr>
     
     
@@ -1037,7 +1876,7 @@ disclosure forms below.
             <td>juris_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Office jurisdiction code</td>
+            <td>Office Jurisdiction Code. The legal values are Senate (SEN), Assembly (ASM), Board of Equalization (BOE), City (CIT), County (CTY), Local (LOC) and Other (OTH).</td>
         </tr>
     
     
@@ -1046,43 +1885,7 @@ disclosure forms below.
             <td>juris_dscr</td>
             <td>String (up to 40)</td>
             <td>No</td>
-            <td>Office jurisdiction description</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>line_item</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Line item number of this record</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_city</td>
-            <td>String (up to 30)</td>
-            <td>No</td>
-            <td>Filer&#39;s mailing city</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_st</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>Filer&#39;s mailing state</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_zip4</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Filer&#39;s mailing ZIP Code</td>
+            <td>Office jurisdiction description text reqired if the jurisdiction code (Juris_cd) is equal to CIT, CTY, LOC, or OTH.</td>
         </tr>
     
     
@@ -1091,7 +1894,7 @@ disclosure forms below.
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office is sought or held code</td>
+            <td>Office Sought/Held code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held.</td>
         </tr>
     
     
@@ -1100,7 +1903,7 @@ disclosure forms below.
             <td>offic_dscr</td>
             <td>String (up to 40)</td>
             <td>No</td>
-            <td>Office sought description</td>
+            <td>Office sought description used if the office code is other (OTH).</td>
         </tr>
     
     
@@ -1109,225 +1912,34 @@ disclosure forms below.
             <td>office_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Office code: Identifies the office being sought</td>
+            <td>Code that identifies the office being sought. See the CAL document for a list of valid codes.</td>
         </tr>
     
     
     
         <tr>
             <td>rec_type</td>
-            <td>String (up to 4)</td>
+            <td>String (up to 3)</td>
             <td>Yes</td>
-            <td>Record type</td>
+            <td>Type of CAL record. This column will always contain CVR.</td>
         </tr>
     
     
     
         <tr>
-            <td>sup_opp_cd</td>
-            <td>String (up to 1)</td>
-            <td>No</td>
-            <td>Support or opposition code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>title</td>
-            <td>String (up to 90)</td>
-            <td>No</td>
-            <td>Official title of filing officer. Applies to the form 465.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tran_id</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Transaction ID: Permanent value unique to this item</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_namf</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s first name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_naml</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s last name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_nams</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s suffix</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_namt</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s prefix or title</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-Cvr3VerificationInfoCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Cover page verification information from campaign disclosure forms
-
-**Source:** `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>amend_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>line_item</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Line item number of this record</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rec_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Record type</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>form_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tran_id</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Transaction ID: Permanent value unique to this item</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_cd</td>
+            <td>report_num</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Entity code</td>
+            <td>Report Number; 000 Original; 001-999 Amended as reported in the filing.</td>
         </tr>
     
     
     
         <tr>
-            <td>sig_date</td>
+            <td>rpt_date</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td>Signed date: Date when signed</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_loc</td>
-            <td>String (up to 39)</td>
-            <td>No</td>
-            <td>Signed location: City and state where signed</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_naml</td>
-            <td>String (up to 56)</td>
-            <td>No</td>
-            <td>Last name: Last name of the signer</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_namf</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>First name: First name of the signer</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_namt</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Title: Title of the signer</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_nams</td>
-            <td>String (up to 8)</td>
-            <td>No</td>
-            <td>Suffix: Suffix of the signer</td>
+            <td>Date this report is filed as reported by the filer.</td>
         </tr>
     
     
@@ -1850,342 +2462,6 @@ form filed by a slate-mailer organization or recipient committee.
     </tbody>
     </table>
     </div>
-
-Cvr2SoCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Additional names and committees information included on the second page
-of a statement of organization creation form filed
-by a slate-mailer organization or recipient committee.
-
-**Source:** `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>amend_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>line_item</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Line item number of this record</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rec_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Record type</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>form_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tran_id</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Transaction ID: Permanent value unique to this item</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Entity code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_naml</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Entity&#39;s business name or last name if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_namf</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>Entity&#39;s first name if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_namt</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity&#39;s name prefix or title if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_nams</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity&#39;s name suffix if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>item_cd</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Section of the Statement of Organization this itemization relates to. See CAL document for the definition of legal values for this column.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_city</td>
-            <td>String (up to 30)</td>
-            <td>No</td>
-            <td>City portion of the entity&#39;s mailing address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_st</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>State portion of the entity&#39;s mailing address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_zip4</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Zipcode portion of the entity&#39;s mailing address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>day_phone</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity&#39;s daytime phone number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>fax_phone</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity&#39;s fax number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>email_adr</td>
-            <td>String (up to 60)</td>
-            <td>No</td>
-            <td>Email address. Not contained in current forms.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>cmte_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Committee ID: Entity&#39;s identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>ind_group</td>
-            <td>String (up to 90)</td>
-            <td>No</td>
-            <td>Industry group/affiliation description</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>office_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Office code: Identifies the office being sought</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>offic_dscr</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Office sought description used if the office sought code (OFFICE_CD) equals other (OTH).</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>juris_cd</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Office jurisdiction code. See CAL document for a list of legal values.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>juris_dscr</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Office jurisdiction description provided if the         jurisdiction code (JURIS_CD) equals other (OTH).</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>dist_no</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Office district number for Senate, Assembly, and Board of Equalization districts.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>off_s_h_cd</td>
-            <td>String (up to 1)</td>
-            <td>No</td>
-            <td>Office is sought or held code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>non_pty_cb</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Non-partisan check-box. Legal values are &#39;X&#39; and null.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>party_name</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Name of party (if partisan)</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>bal_num</td>
-            <td>String (up to 7)</td>
-            <td>No</td>
-            <td>Ballot measure number or letter</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>bal_juris</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Jurisdiction of ballot measure</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sup_opp_cd</td>
-            <td>String (up to 1)</td>
-            <td>No</td>
-            <td>Support or opposition code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>year_elect</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Year of election</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>pof_title</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>Position/title of the principal officer</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-CvrF470
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Cover page layout for F470 Officeholder/Candidate Short Supplement
-
-.. note::
-    This file is empty
 
 DebtCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -3209,7 +3485,7 @@ Candidate intention statement
     
         <tr>
             <td>committee_id</td>
-            <td>String (up to 8)</td>
+            <td>String (up to 9)</td>
             <td>No</td>
             <td>Committee ID: Committee identification number</td>
         </tr>
@@ -3218,7 +3494,7 @@ Candidate intention statement
     
         <tr>
             <td>entity_cd</td>
-            <td>String (up to 3)</td>
+            <td>String (up to 9)</td>
             <td>No</td>
             <td>Entity code</td>
         </tr>
@@ -3227,7 +3503,7 @@ Candidate intention statement
     
         <tr>
             <td>report_num</td>
-            <td>Integer</td>
+            <td>String (up to 3)</td>
             <td>No</td>
             <td>Report Number; 000 Original; 001-999 Amended</td>
         </tr>
@@ -3281,7 +3557,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_naml</td>
-            <td>String (up to 81)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Candidate/officerholder last name</td>
         </tr>
@@ -3290,7 +3566,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_namf</td>
-            <td>String (up to 25)</td>
+            <td>String (up to 45)</td>
             <td>No</td>
             <td>Candidate/officerholder first name</td>
         </tr>
@@ -3299,7 +3575,7 @@ Candidate intention statement
     
         <tr>
             <td>can_namm</td>
-            <td>String (up to 10)</td>
+            <td>String (up to 20)</td>
             <td>No</td>
             <td>Candidate/officeholder middle name</td>
         </tr>
@@ -3308,7 +3584,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_namt</td>
-            <td>String (up to 7)</td>
+            <td>String (up to 100)</td>
             <td>No</td>
             <td>Candidate/officerholder title or prefix</td>
         </tr>
@@ -3317,7 +3593,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_nams</td>
-            <td>String (up to 7)</td>
+            <td>String (up to 10)</td>
             <td>No</td>
             <td>Candidate/officeholder suffix</td>
         </tr>
@@ -3335,7 +3611,7 @@ Candidate intention statement
     
         <tr>
             <td>moniker</td>
-            <td>String (up to 4)</td>
+            <td>String (up to 20)</td>
             <td>No</td>
             <td>Candidate/officeholder&#39;s moniker</td>
         </tr>
@@ -3344,7 +3620,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_city</td>
-            <td>String (up to 22)</td>
+            <td>String (up to 30)</td>
             <td>No</td>
             <td>Candidate/officerholder city</td>
         </tr>
@@ -3371,7 +3647,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_phon</td>
-            <td>String (up to 14)</td>
+            <td>String (up to 20)</td>
             <td>No</td>
             <td>Candidate/officeholder phone number</td>
         </tr>
@@ -3380,7 +3656,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_fax</td>
-            <td>String (up to 14)</td>
+            <td>String (up to 20)</td>
             <td>No</td>
             <td>Candidate/officerholder fax</td>
         </tr>
@@ -3389,7 +3665,7 @@ Candidate intention statement
     
         <tr>
             <td>cand_email</td>
-            <td>String (up to 37)</td>
+            <td>String (up to 60)</td>
             <td>No</td>
             <td>Candidate/officeholder email address</td>
         </tr>
@@ -3398,7 +3674,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_naml</td>
-            <td>String (up to 53)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Financial institution&#39;s business name</td>
         </tr>
@@ -3407,7 +3683,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_namf</td>
-            <td>String (up to 32)</td>
+            <td>String (up to 45)</td>
             <td>No</td>
             <td>Unused. Financial institution&#39;s first name.</td>
         </tr>
@@ -3416,7 +3692,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_namt</td>
-            <td>String (up to 32)</td>
+            <td>String (up to 100)</td>
             <td>No</td>
             <td>Unused. Financial institution&#39;s title.</td>
         </tr>
@@ -3434,7 +3710,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_city</td>
-            <td>String (up to 20)</td>
+            <td>String (up to 30)</td>
             <td>No</td>
             <td>Financial institution&#39;s city.</td>
         </tr>
@@ -3452,7 +3728,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_zip4</td>
-            <td>String (up to 9)</td>
+            <td>String (up to 10)</td>
             <td>No</td>
             <td>Financial institution&#39;s zip code.</td>
         </tr>
@@ -3461,7 +3737,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_phon</td>
-            <td>String (up to 14)</td>
+            <td>String (up to 20)</td>
             <td>No</td>
             <td>Financial institution&#39;s phone number.</td>
         </tr>
@@ -3470,7 +3746,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_fax</td>
-            <td>String (up to 10)</td>
+            <td>String (up to 20)</td>
             <td>No</td>
             <td>Financial institution&#39;s FAX Number.</td>
         </tr>
@@ -3479,7 +3755,7 @@ Candidate intention statement
     
         <tr>
             <td>fin_email</td>
-            <td>String (up to 15)</td>
+            <td>String (up to 60)</td>
             <td>No</td>
             <td>Financial institution&#39;s e-mail address.</td>
         </tr>
@@ -3497,7 +3773,7 @@ Candidate intention statement
     
         <tr>
             <td>offic_dscr</td>
-            <td>String (up to 50)</td>
+            <td>String (up to 80)</td>
             <td>No</td>
             <td>Office sought description</td>
         </tr>
@@ -3506,7 +3782,7 @@ Candidate intention statement
     
         <tr>
             <td>agency_nam</td>
-            <td>String (up to 63)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Agency name</td>
         </tr>
@@ -3524,7 +3800,7 @@ Candidate intention statement
     
         <tr>
             <td>juris_dscr</td>
-            <td>String (up to 14)</td>
+            <td>String (up to 30)</td>
             <td>No</td>
             <td>Office jurisdiction description</td>
         </tr>
@@ -3542,7 +3818,7 @@ Candidate intention statement
     
         <tr>
             <td>party</td>
-            <td>String (up to 20)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Political party</td>
         </tr>
@@ -3578,7 +3854,7 @@ Candidate intention statement
     
         <tr>
             <td>can_sig</td>
-            <td>String (up to 13)</td>
+            <td>String (up to 200)</td>
             <td>No</td>
             <td>Candidate signature</td>
         </tr>
@@ -3587,7 +3863,7 @@ Candidate intention statement
     
         <tr>
             <td>account_no</td>
-            <td>String (up to 22)</td>
+            <td>String (up to 32)</td>
             <td>No</td>
             <td>Account number</td>
         </tr>
@@ -11525,12 +11801,6 @@ This is an undocumented model.
     </table>
     </div>
 
-LobbyistEmployerHistory
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-    This file is empty
-
 LobbyistEmployerFirms1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11672,6 +11942,216 @@ This is an undocumented model.
             <td>String (up to 32)</td>
             <td>No</td>
             <td>Termination date: Termination effective date</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmployerHistoryCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Matt needs to describe the relationship between the multiple tables.
+Documentation should be cloned from D H's documentation on these tables. Cox 5/11/2000
+
+**Source:** `LOBBYIST_EMPLOYER_HISTORY.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor identification number.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Current Quarter Amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer identification number.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer Name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Interest code.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Interest name.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session identification number.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount for the session.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount for year 1 of the session.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount for year 2 of the session.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Year 1 year to date amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Year 2 year to date amount.</td>
         </tr>
     
     
@@ -12508,6 +12988,198 @@ This is an undocumented model.
     </table>
     </div>
 
+LobbyistFirmHistoryCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Matt needs to describe the relationship between the multiple tables. Documentation should be
+cloned from D H's documentation on these tables. Cox 5/11/2000
+
+**Source:** `LOBBYIST_FIRM_HISTORY.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor identification number.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Current Quarter Amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Identification number of the Firm/Employer/Coalition.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Name of Firm/Employer/Coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Quarter total amount.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session identification number.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount for the session.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount for year 1 of the session.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount for year 2 of the session.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>YR_1_YTD_AMT</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Year 2 year to date amount.</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
 LobbyistFirmLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12673,12 +13345,6 @@ It's an undocumented model.
     </tbody>
     </table>
     </div>
-
-LobbyistFirmHistory
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-    This file is empty
 
 LothCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -14058,6 +14724,62 @@ to change characteristics over time.
     </table>
     </div>
 
+FilerTypePeriodsCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+J M needs to document. This is in his list of tables designed for future enhancements.
+
+**Source:** `FILER_TYPE_PERIODS.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>election_type</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Election type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filer_type</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filer type identification number.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>period_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Period identification number.</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
 FilerTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14131,12 +14853,6 @@ This lookup table describes filer types.
     </tbody>
     </table>
     </div>
-
-FilerTypePeriods
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-    This file is empty
 
 FilerXrefCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -14896,10 +15612,12 @@ This is an undocumented model.
 Empty files
 -----------
 
+While the following tables are described in the documentation, but the downloaded raw data files are empty.
+
 +------------------------------+
 |Source TSV                    |
 +==============================+
-| CVR_F470                     |
+| CVR_F470_CD                  |
 +------------------------------+
 | FILER_TYPE_PERIODS_CD        |
 +------------------------------+

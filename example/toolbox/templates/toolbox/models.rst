@@ -5,12 +5,11 @@ The {{ model_count }} tab-delimited database exports published by California's S
 
 .. warning::
 
-    Most definitions below are drawn from the spotty and incomplete
-    `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim. As we continue our research, we plan to improve the descriptions.
+    Most definitions below are drawn from the spotty and incomplete `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim. As we continue our research, we plan to improve the descriptions.
 
-    For the time being, to be absolutely certain about
-    what each table and field contains, you should compare the electronic data back to
-    the original paper records published by the state.
+    For the time being, to be absolutely certain about what each table and field contains, you should compare the electronic data back to the original paper records published by the state.
+
+The categories for these tables are based on what's found in the `ReadMe <_http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#readme-zip>`_ file for the .ZIP database export file and the `mapping <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#mapcalformat2fields>`_ of .CAL format to database fields. However, in cases where this official documentation was incomplete or inconsistent, we've either listed the table under whichever category is most obviously relevant or listed it under "Other".
 
 
 {% for group, model_list in group_list %}
@@ -59,9 +58,13 @@ The {{ model_count }} tab-delimited database exports published by California's S
 Empty files
 -----------
 
+While the following tables are described in the documentation, but the downloaded raw data files are empty.
+
 +------------------------------+
 |Source TSV                    |
 +==============================+
+| CVR_F470_CD                  |
++------------------------------+
 | FILER_TYPE_PERIODS_CD        |
 +------------------------------+
 | LOBBYIST_EMPLOYER_HISTORY_CD |
