@@ -60,14 +60,23 @@ Empty files
 
 While the following tables are described in the documentation, but the downloaded raw data files are empty.
 
-+------------------------------+
-|Source TSV                    |
-+==============================+
-| CVR_F470_CD                  |
-+------------------------------+
-| FILER_TYPE_PERIODS_CD        |
-+------------------------------+
-| LOBBYIST_EMPLOYER_HISTORY_CD |
-+------------------------------+
-| LOBBYIST_FIRM_HISTORY_CD     |
-+------------------------------+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Group</th>
+            <th class="head">File Name</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    {% for object in empty_files %}
+        <tr>
+            <td>{{ object.klass_group }}</td>
+            <td>{{ object.klass_name }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>

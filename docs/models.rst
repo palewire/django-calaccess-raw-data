@@ -15614,14 +15614,38 @@ Empty files
 
 While the following tables are described in the documentation, but the downloaded raw data files are empty.
 
-+------------------------------+
-|Source TSV                    |
-+==============================+
-| CVR_F470_CD                  |
-+------------------------------+
-| FILER_TYPE_PERIODS_CD        |
-+------------------------------+
-| LOBBYIST_EMPLOYER_HISTORY_CD |
-+------------------------------+
-| LOBBYIST_FIRM_HISTORY_CD     |
-+------------------------------+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Group</th>
+            <th class="head">File Name</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>campaign</td>
+            <td>CvrF470Cd</td>
+        </tr>
+    
+        <tr>
+            <td>other</td>
+            <td>FilerTypePeriodsCd</td>
+        </tr>
+    
+        <tr>
+            <td>lobbying</td>
+            <td>LobbyistEmployerHistoryCd</td>
+        </tr>
+    
+        <tr>
+            <td>lobbying</td>
+            <td>LobbyistFirmHistoryCd</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
