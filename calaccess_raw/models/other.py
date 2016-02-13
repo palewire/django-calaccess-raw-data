@@ -13,8 +13,8 @@ class AcronymsCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "ACRONYM"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=7, end_page=7),
-        DocumentCloud(id=2711614, start_page=16, end_page=16),
+        DocumentCloud(id=2711614, start_page=7),
+        DocumentCloud(id=2711614, start_page=16),
     ]
     acronym = fields.CharField(
         max_length=40,
@@ -1199,8 +1199,8 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         "PERIOD_ID",
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=8, end_page=8),
-        DocumentCloud(id=2711614, start_page=71, end_page=71),
+        DocumentCloud(id=2711614, start_page=8),
+        DocumentCloud(id=2711614, start_page=71),
     ]
     election_type = fields.IntegerField(
         db_column="ELECTION_TYPE",

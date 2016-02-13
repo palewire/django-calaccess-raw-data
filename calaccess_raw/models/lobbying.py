@@ -18,7 +18,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=8, end_page=8),
+        DocumentCloud(id=2711614, start_page=8),
         DocumentCloud(id=2711614, start_page=35, end_page=39),
     ]
     # a_b_adr1 = fields.CharField(
@@ -4201,7 +4201,7 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     Documentation should be cloned from D H's documentation on these tables. Cox 5/11/2000
     """
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=11, end_page=11),
+        DocumentCloud(id=2711614, start_page=11),
         DocumentCloud(id=2711614, start_page=96, end_page=97),
     ]
     contributor_id = fields.IntegerField(
@@ -4308,7 +4308,7 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
     UNIQUE_KEY = (
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=12, end_page=12),
+        DocumentCloud(id=2711614, start_page=12),
         DocumentCloud(id=2711614, start_page=101, end_page=102),
     ]
     contributor_id = fields.IntegerField(
