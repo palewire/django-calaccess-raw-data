@@ -1,7 +1,7 @@
 Tracking updates
 ================
 
-This app also keeps track of the release dates and volume of each version of the CAL-ACCESS database released by the California Secretary of State, as well as the activity of the `management commands <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/managementcommands.html>`_ process this data.
+This app also keeps track of each version of the CAL-ACCESS database released by the California Secretary of State, including its release date and byte size, as well as the activity of the `management commands <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/managementcommands.html>`_ that process this data.
 
 .. note::
 

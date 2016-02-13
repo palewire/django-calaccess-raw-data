@@ -1,868 +1,18 @@
 Database tables
 ===============
 
-The 76 tab-delimited database exports published by California's Secretary of State and loaded by this Django application.
+The 80 tab-delimited database exports published by California's Secretary of State and loaded by this Django application.
 
 .. warning::
 
-    Most definitions below are drawn from the spotty and incomplete
-    `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim. As we continue our research, we plan to improve the descriptions.
+    Most definitions below are drawn from the spotty and incomplete `official documentation <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html>`_ verbatim. As we continue our research, we plan to improve the descriptions.
 
-    For the time being, to be absolutely certain about
-    what each table and field contains, you should compare the electronic data back to
-    the original paper records published by the state.
+    For the time being, to be absolutely certain about what each table and field contains, you should compare the electronic data back to the original paper records published by the state.
 
-
+The categories for these tables are based on what's found in the `ReadMe <_http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#readme-zip>`_ file for the .ZIP database export file and the `mapping <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#mapcalformat2fields>`_ of .CAL format to database fields. However, in cases where this official documentation was incomplete or inconsistent, we've either listed the table under whichever category is most obviously relevant or listed it under "Other".
 
 Campaign tables
 ---------------------------
-
-
-Cvr2CampaignDisclosureCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Record used to carry additional names for the campaign
-disclosure forms below.
-
-**Source:** `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>amend_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>bal_juris</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Ballot measure jurisdiction</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>bal_name</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Ballot measure name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>bal_num</td>
-            <td>String (up to 7)</td>
-            <td>No</td>
-            <td>Ballot measure number or letter</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>cmte_id</td>
-            <td>String (up to 9)</td>
-            <td>No</td>
-            <td>Commitee identification number, when the entity is a committee</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>control_yn</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Controlled Committee (yes/no) checkbox. Legal values are &quot;Y&quot; or &quot;N&quot;.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>dist_no</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Entity code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_city</td>
-            <td>String (up to 30)</td>
-            <td>No</td>
-            <td>Entity city</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_email</td>
-            <td>String (up to 60)</td>
-            <td>No</td>
-            <td>Entity email address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_fax</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity fax number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_namf</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>Entity first name, if an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_naml</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Entity name, or last name if an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_nams</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity suffix, if an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_namt</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity prefix or title, if an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_phon</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity phone number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_st</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>Entity state</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_zip4</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity ZIP code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>f460_part</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>Part of 460 cover page coded on ths cvr2 record. Legal values are 3, 4a, 4b, 5a, 5b, or 6.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>form_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>juris_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Office jurisdiction code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>juris_dscr</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Office jurisdiction description</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>line_item</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Line item number of this record</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_city</td>
-            <td>String (up to 30)</td>
-            <td>No</td>
-            <td>Filer&#39;s mailing city</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_st</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>Filer&#39;s mailing state</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_zip4</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Filer&#39;s mailing ZIP Code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>off_s_h_cd</td>
-            <td>String (up to 1)</td>
-            <td>No</td>
-            <td>Office is sought or held code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>offic_dscr</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Office sought description</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>office_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Office code: Identifies the office being sought</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rec_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Record type</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sup_opp_cd</td>
-            <td>String (up to 1)</td>
-            <td>No</td>
-            <td>Support or opposition code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>title</td>
-            <td>String (up to 90)</td>
-            <td>No</td>
-            <td>Official title of filing officer. Applies to the form 465.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tran_id</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Transaction ID: Permanent value unique to this item</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_namf</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s first name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_naml</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s last name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_nams</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s suffix</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tres_namt</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Treasurer or responsible officer&#39;s prefix or title</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-Cvr2SoCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Additional names and committees information included on the second page
-of a statement of organization creation form filed
-by a slate-mailer organization or recipient committee.
-
-**Source:** `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>amend_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>line_item</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Line item number of this record</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rec_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Record type</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>form_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tran_id</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Transaction ID: Permanent value unique to this item</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Entity code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_naml</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Entity&#39;s business name or last name if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_namf</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>Entity&#39;s first name if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_namt</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity&#39;s name prefix or title if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>enty_nams</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Entity&#39;s name suffix if the entity is an individual</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>item_cd</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Section of the Statement of Organization this itemization relates to. See CAL document for the definition of legal values for this column.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_city</td>
-            <td>String (up to 30)</td>
-            <td>No</td>
-            <td>City portion of the entity&#39;s mailing address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_st</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>State portion of the entity&#39;s mailing address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>mail_zip4</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Zipcode portion of the entity&#39;s mailing address</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>day_phone</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity&#39;s daytime phone number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>fax_phone</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Entity&#39;s fax number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>email_adr</td>
-            <td>String (up to 60)</td>
-            <td>No</td>
-            <td>Email address. Not contained in current forms.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>cmte_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Committee ID: Entity&#39;s identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>ind_group</td>
-            <td>String (up to 90)</td>
-            <td>No</td>
-            <td>Industry group/affiliation description</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>office_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Office code: Identifies the office being sought</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>offic_dscr</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Office sought description used if the office sought code (OFFICE_CD) equals other (OTH).</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>juris_cd</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Office jurisdiction code. See CAL document for a list of legal values.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>juris_dscr</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Office jurisdiction description provided if the         jurisdiction code (JURIS_CD) equals other (OTH).</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>dist_no</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Office district number for Senate, Assembly, and Board of Equalization districts.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>off_s_h_cd</td>
-            <td>String (up to 1)</td>
-            <td>No</td>
-            <td>Office is sought or held code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>non_pty_cb</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Non-partisan check-box. Legal values are &#39;X&#39; and null.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>party_name</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Name of party (if partisan)</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>bal_num</td>
-            <td>String (up to 7)</td>
-            <td>No</td>
-            <td>Ballot measure number or letter</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>bal_juris</td>
-            <td>String (up to 40)</td>
-            <td>No</td>
-            <td>Jurisdiction of ballot measure</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sup_opp_cd</td>
-            <td>String (up to 1)</td>
-            <td>No</td>
-            <td>Support or opposition code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>year_elect</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Year of election</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>pof_title</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>Position/title of the principal officer</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-Cvr3VerificationInfoCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Cover page verification information from campaign disclosure forms
-
-**Source:** `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>amend_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>line_item</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Line item number of this record</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rec_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Record type</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>form_type</td>
-            <td>String (up to 4)</td>
-            <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>tran_id</td>
-            <td>String (up to 20)</td>
-            <td>No</td>
-            <td>Transaction ID: Permanent value unique to this item</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_cd</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Entity code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_date</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Signed date: Date when signed</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_loc</td>
-            <td>String (up to 39)</td>
-            <td>No</td>
-            <td>Signed location: City and state where signed</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_naml</td>
-            <td>String (up to 56)</td>
-            <td>No</td>
-            <td>Last name: Last name of the signer</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_namf</td>
-            <td>String (up to 45)</td>
-            <td>No</td>
-            <td>First name: First name of the signer</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_namt</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>Title: Title of the signer</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>sig_nams</td>
-            <td>String (up to 8)</td>
-            <td>No</td>
-            <td>Suffix: Suffix of the signer</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
 
 CvrCampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1667,6 +817,524 @@ Cover page information from campaign disclosure forms
     </table>
     </div>
 
+Cvr2CampaignDisclosureCd
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Record used to carry additional names for the campaign
+disclosure forms below.
+
+**Source:** `CVR2_CAMPAIGN_DISCLOSURE_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Ballot measure jurisdiction</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_name</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Ballot measure name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_num</td>
+            <td>String (up to 7)</td>
+            <td>No</td>
+            <td>Ballot measure number or letter</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>String (up to 9)</td>
+            <td>No</td>
+            <td>Commitee identification number, when the entity is a committee</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>control_yn</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Controlled Committee (yes/no) checkbox. Legal values are &quot;Y&quot; or &quot;N&quot;.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>dist_no</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>District number for the office being sought. Populated for Senate, Assembly, or Board of Equalization races.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Entity code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_city</td>
+            <td>String (up to 30)</td>
+            <td>No</td>
+            <td>Entity city</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_email</td>
+            <td>String (up to 60)</td>
+            <td>No</td>
+            <td>Entity email address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_fax</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity fax number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Entity first name, if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Entity name, or last name if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity suffix, if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity prefix or title, if an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_phon</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity phone number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_st</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>Entity state</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_zip4</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity ZIP code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>f460_part</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>Part of 460 cover page coded on ths cvr2 record. Legal values are 3, 4a, 4b, 5a, 5b, or 6.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>form_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Office jurisdiction code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office jurisdiction description</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>line_item</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_city</td>
+            <td>String (up to 30)</td>
+            <td>No</td>
+            <td>Filer&#39;s mailing city</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_st</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>Filer&#39;s mailing state</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Filer&#39;s mailing ZIP Code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Office is sought or held code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office sought description</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>office_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Office code: Identifies the office being sought</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Support or opposition code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>title</td>
+            <td>String (up to 90)</td>
+            <td>No</td>
+            <td>Official title of filing officer. Applies to the form 465.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tran_id</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s first name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_naml</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s last name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_nams</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s suffix</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tres_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Treasurer or responsible officer&#39;s prefix or title</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+Cvr3VerificationInfoCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Cover page verification information from campaign disclosure forms
+
+**Source:** `CVR3_VERIFICATION_INFO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>line_item</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>form_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tran_id</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Entity code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_date</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Signed date: Date when signed</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_loc</td>
+            <td>String (up to 39)</td>
+            <td>No</td>
+            <td>Signed location: City and state where signed</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_naml</td>
+            <td>String (up to 56)</td>
+            <td>No</td>
+            <td>Last name: Last name of the signer</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>First name: First name of the signer</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Title: Title of the signer</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sig_nams</td>
+            <td>String (up to 8)</td>
+            <td>No</td>
+            <td>Suffix: Suffix of the signer</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
 CvrSoCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -2182,6 +1850,342 @@ form filed by a slate-mailer organization or recipient committee.
     </tbody>
     </table>
     </div>
+
+Cvr2SoCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Additional names and committees information included on the second page
+of a statement of organization creation form filed
+by a slate-mailer organization or recipient committee.
+
+**Source:** `CVR2_SO_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>line_item</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>form_type</td>
+            <td>String (up to 4)</td>
+            <td>Yes</td>
+            <td>Name of the source filing form or schedule</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>tran_id</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Entity code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_naml</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Entity&#39;s business name or last name if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namf</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Entity&#39;s first name if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_namt</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity&#39;s name prefix or title if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>enty_nams</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Entity&#39;s name suffix if the entity is an individual</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>item_cd</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Section of the Statement of Organization this itemization relates to. See CAL document for the definition of legal values for this column.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_city</td>
+            <td>String (up to 30)</td>
+            <td>No</td>
+            <td>City portion of the entity&#39;s mailing address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_st</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>State portion of the entity&#39;s mailing address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>mail_zip4</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>Zipcode portion of the entity&#39;s mailing address</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>day_phone</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity&#39;s daytime phone number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>fax_phone</td>
+            <td>String (up to 20)</td>
+            <td>No</td>
+            <td>Entity&#39;s fax number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>email_adr</td>
+            <td>String (up to 60)</td>
+            <td>No</td>
+            <td>Email address. Not contained in current forms.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cmte_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Committee ID: Entity&#39;s identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>ind_group</td>
+            <td>String (up to 90)</td>
+            <td>No</td>
+            <td>Industry group/affiliation description</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>office_cd</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Office code: Identifies the office being sought</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>offic_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office sought description used if the office sought code (OFFICE_CD) equals other (OTH).</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_cd</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Office jurisdiction code. See CAL document for a list of legal values.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>juris_dscr</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Office jurisdiction description provided if the         jurisdiction code (JURIS_CD) equals other (OTH).</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>dist_no</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Office district number for Senate, Assembly, and Board of Equalization districts.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>off_s_h_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Office is sought or held code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>non_pty_cb</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Non-partisan check-box. Legal values are &#39;X&#39; and null.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>party_name</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Name of party (if partisan)</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_num</td>
+            <td>String (up to 7)</td>
+            <td>No</td>
+            <td>Ballot measure number or letter</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>bal_juris</td>
+            <td>String (up to 40)</td>
+            <td>No</td>
+            <td>Jurisdiction of ballot measure</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>sup_opp_cd</td>
+            <td>String (up to 1)</td>
+            <td>No</td>
+            <td>Support or opposition code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>year_elect</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Year of election</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>pof_title</td>
+            <td>String (up to 45)</td>
+            <td>No</td>
+            <td>Position/title of the principal officer</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+CvrF470
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Cover page layout for F470 Officeholder/Candidate Short Supplement
+
+.. note::
+    This file is empty
 
 DebtCd
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -5978,107 +5982,6 @@ Form 498: Slate Mailer Late Independent Expenditures Made
     </table>
     </div>
 
-SpltCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Split records
-
-**Source:** `SPLT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>amend_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>elec_amount</td>
-            <td>Decimal number</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>elec_code</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>elec_date</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>line_item</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Line item number of this record</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>pform_type</td>
-            <td>String (up to 7)</td>
-            <td>Yes</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>ptran_id</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>Transaction ID: Permanent value unique to this item</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
 
 Common tables
 ---------------------------
@@ -6816,6 +6719,253 @@ a filing are derived.
     </table>
     </div>
 
+HdrCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Electronic filing record header data
+
+**Source:** `HDR_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cal_ver</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>CAL Version number the filing was made using</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>ef_type</td>
+            <td>String (up to 3)</td>
+            <td>No</td>
+            <td>Electronic filing type. This will always have the         value of &quot;CAL&quot;.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>hdr_comment</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Header comment: Typically used for development and test filings</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 4)</td>
+            <td>No</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>soft_name</td>
+            <td>String (up to 90)</td>
+            <td>No</td>
+            <td>Filing software name used to electronically file</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>soft_ver</td>
+            <td>String (up to 16)</td>
+            <td>No</td>
+            <td>Filing software version number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>state_cd</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>State code: The state code value entered in the electronic filing</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+HeaderCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Lookup table used to report form 460 information in the AMS.
+
+**Source:** `HEADER_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>line_number</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>form_id</td>
+            <td>String (up to 5)</td>
+            <td>Yes</td>
+            <td>Form ID: Form identification code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rec_type</td>
+            <td>String (up to 11)</td>
+            <td>Yes</td>
+            <td>Record type</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>section_label</td>
+            <td>String (up to 58)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>comments1</td>
+            <td>String (up to 48)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>comments2</td>
+            <td>String (up to 48)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>label</td>
+            <td>String (up to 98)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>column_a</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>column_b</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>column_c</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>show_c</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>show_b</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
 SmryCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6919,6 +7069,107 @@ Summary totals from filings.
             <td>Date (without time)</td>
             <td>No</td>
             <td>Election date</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+SpltCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Split records
+
+**Source:** `SPLT_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>amend_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>elec_amount</td>
+            <td>Decimal number</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>elec_code</td>
+            <td>String (up to 2)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>elec_date</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>line_item</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Line item number of this record</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>pform_type</td>
+            <td>String (up to 7)</td>
+            <td>Yes</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>ptran_id</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>Transaction ID: Permanent value unique to this item</td>
         </tr>
     
     
@@ -9959,6 +10210,2476 @@ Lobbyist registration amendment information
     </table>
     </div>
 
+LobbyingChgLogCd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented table.
+
+**Source:** `LOBBYING_CHG_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filer_id</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>change_no</td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Number of changes this session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>log_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filer_type</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>correction_flag</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>action</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>attribute_changed</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>ethics_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interests</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filer_full_name</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filer_city</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filer_st</td>
+            <td>String (up to 200)</td>
+            <td>No</td>
+            <td>Filer state</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filer_zip</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Filer ZIP Code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filer_phone</td>
+            <td>String (up to 12)</td>
+            <td>No</td>
+            <td>Filer phone number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_type</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_name</td>
+            <td>String (up to 500)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_city</td>
+            <td>String (up to 500)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_st</td>
+            <td>String (up to 500)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_zip</td>
+            <td>String (up to 10)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_phone</td>
+            <td>String (up to 12)</td>
+            <td>No</td>
+            <td>Entity phone number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>entity_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Entity identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>responsible_officer</td>
+            <td>String (up to 500)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>effect_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Effective date: This field is undocumented</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistContributions1Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Lobbyist contribution disclosure table.
+
+**Source:** `LOBBYIST_CONTRIBUTIONS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_period_start_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Filing period start date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_period_end_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Filing period end date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contribution_dt</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>Contribution date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>recipient_name</td>
+            <td>String (up to 106)</td>
+            <td>No</td>
+            <td>Recipient&#39;s name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>recipient_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Recipient&#39;s identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>amount</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Amount received</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistContributions2Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Lobbyist contribution disclosure table. Temporary table used to generate
+disclosure table (Lobbyist Contributions 3)
+
+**Source:** `LOBBYIST_CONTRIBUTIONS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_period_start_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Filing period start date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_period_end_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Filing period end date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contribution_dt</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>Contribution date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>recipient_name</td>
+            <td>String (up to 106)</td>
+            <td>No</td>
+            <td>Recipient&#39;s name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>recipient_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Recipient&#39;s identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>amount</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Amount received</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistContributions3Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Lobbyist contribution disclosure table.
+
+**Source:** `LOBBYIST_CONTRIBUTIONS3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>filer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Filer ID: Filer&#39;s unique identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_period_start_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Filing period start date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_period_end_dt</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Filing period end date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contribution_dt</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>Contribution date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>recipient_name</td>
+            <td>String (up to 106)</td>
+            <td>No</td>
+            <td>Recipient&#39;s name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>recipient_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Recipient&#39;s identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>amount</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Amount received</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmpLobbyist1Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_EMP_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer ID: Employer identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>String (up to 17)</td>
+            <td>No</td>
+            <td>Lobbyist last name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>String (up to 17)</td>
+            <td>No</td>
+            <td>Lobbyist first name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmpLobbyist2Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_EMP_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer ID: Employer identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>String (up to 17)</td>
+            <td>No</td>
+            <td>Lobbyist last name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>String (up to 17)</td>
+            <td>No</td>
+            <td>Lobbyist first name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmployer1Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer ID: Employer identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Current quarter amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total amount for the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor ID: Contributor identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Interest code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_name</td>
+            <td>String (up to 24)</td>
+            <td>No</td>
+            <td>Interest name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 1 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 2 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 1 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 2 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 1: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 2: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 3: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 4: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 5: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 6: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 7: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 8: Quarter total amount</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmployer2Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer ID: Employer identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Current quarter amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total amount for the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor ID: Contributor identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Interest code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_name</td>
+            <td>String (up to 24)</td>
+            <td>No</td>
+            <td>Interest name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 1 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 2 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 1 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 2 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 1: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 2: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 3: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 4: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 5: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 6: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 7: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 8: Quarter total amount</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmployer3Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_EMPLOYER3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer ID: Employer identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Current quarter amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total amount for the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor ID: Contributor identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_cd</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Interest code</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>interest_name</td>
+            <td>String (up to 24)</td>
+            <td>No</td>
+            <td>Interest name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 1 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 2 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 1 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 2 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 1: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 2: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 3: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 4: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 5: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 6: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 7: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 8: Quarter total amount</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmployerHistory
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+    This file is empty
+
+LobbyistEmployerFirms1Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_EMPLOYER_FIRMS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer ID: Employer identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>termination_dt</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>Termination date: Termination effective date</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistEmployerFirms2Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_EMPLOYER_FIRMS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>employer_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Employer ID: Employer identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>termination_dt</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>Termination date: Termination effective date</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirm1Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_FIRM1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Current quarter amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total amount for the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor ID: Contributor identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 1 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 2 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 1 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 2 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 1: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 2: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 3: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 4: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 5: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 6: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 7: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 8: Quarter total amount</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirm2Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_FIRM2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Current quarter amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total amount for the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor ID: Contributor identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 1 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 2 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 1 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 2 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 1: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 2: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 3: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 4: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 5: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 6: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 7: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 8: Quarter total amount</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirm3Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_FIRM3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>current_qtr_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Current quarter amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_total_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total amount for the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>contributor_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Contributor ID: Contributor identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_1</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 1 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_yr_2</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Total amount of year 2 of the session</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_1_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 1 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>yr_2_ytd_amt</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Year 2 year-to-date-amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_1</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 1: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_2</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 2: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_3</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 3: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_4</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 4: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_5</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 5: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_6</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 6: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_7</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 7: Quarter total amount</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>qtr_8</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Quarter 8: Quarter total amount</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirmEmployer1Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_FIRM_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_sequence</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Amendment number. 0 is the original filing. 1 to 999 are amendments</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rpt_start</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Starting date for the period the report covers</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rpt_end</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Ending date for the period the report covers</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>per_total</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total this reporting period</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cum_total</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Cumulative total to date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lby_actvty</td>
+            <td>String (up to 182)</td>
+            <td>No</td>
+            <td>Description of lobbying activity</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>ext_lby_actvty</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirmEmployer2Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is an undocumented model.
+
+**Source:** `LOBBYIST_FIRM_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Filing ID: Unique filing identificiation number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>filing_sequence</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Amendment number. 0 is the original filing. 1 to 999 are amendments</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>employer_name</td>
+            <td>String (up to 300)</td>
+            <td>No</td>
+            <td>Employer name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rpt_start</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Starting date for the period the report covers</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>rpt_end</td>
+            <td>Date (without time)</td>
+            <td>No</td>
+            <td>Ending date for the period the report covers</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>per_total</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Total this reporting period</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>cum_total</td>
+            <td>Floating point number</td>
+            <td>No</td>
+            <td>Cumulative total to date</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lby_actvty</td>
+            <td>String (up to 182)</td>
+            <td>No</td>
+            <td>Description of lobbying activity</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>ext_lby_actvty</td>
+            <td>String (up to 32)</td>
+            <td>No</td>
+            <td>This field is undocumented</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirmLobbyist1Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+It's an undocumented model.
+
+**Source:** `LOBBYIST_FIRM_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>String (up to 15)</td>
+            <td>No</td>
+            <td>Lobbyist last name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>String (up to 17)</td>
+            <td>No</td>
+            <td>Lobbyist first name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirmLobbyist2Cd
+~~~~~~~~~~~~~~~~~~~~~~~
+
+It's an undocumented model.
+
+**Source:** `LOBBYIST_FIRM_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+
+**Fields:**
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Name</th>
+            <th class="head">Type</th>
+            <th class="head">Unique key</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+    
+    
+    
+        <tr>
+            <td>lobbyist_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Lobbyist ID: Lobbyist identification number</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Firm ID: Identification number of the firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_last_name</td>
+            <td>String (up to 15)</td>
+            <td>No</td>
+            <td>Lobbyist last name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>lobbyist_first_name</td>
+            <td>String (up to 17)</td>
+            <td>No</td>
+            <td>Lobbyist first name</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>firm_name</td>
+            <td>String (up to 400)</td>
+            <td>No</td>
+            <td>Name of firm, employer or coalition</td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td>session_id</td>
+            <td>Integer</td>
+            <td>No</td>
+            <td>Session ID: Legislative session identification number</td>
+        </tr>
+    
+    
+    </tbody>
+    </table>
+    </div>
+
+LobbyistFirmHistory
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+    This file is empty
+
 LothCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11411,6 +14132,12 @@ This lookup table describes filer types.
     </table>
     </div>
 
+FilerTypePeriods
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+    This file is empty
+
 FilerXrefCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11665,253 +14392,6 @@ This lookup table stores group type information.
     </table>
     </div>
 
-HdrCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Electronic filing record header data
-
-**Source:** `HDR_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>amend_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Amendment ID: Amendment identification number. A number of 0 is the original filing and 1 to 999 amendments.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>cal_ver</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>CAL Version number the filing was made using</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>ef_type</td>
-            <td>String (up to 3)</td>
-            <td>No</td>
-            <td>Electronic filing type. This will always have the         value of &quot;CAL&quot;.</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>hdr_comment</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Header comment: Typically used for development and test filings</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rec_type</td>
-            <td>String (up to 4)</td>
-            <td>No</td>
-            <td>Record type</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>soft_name</td>
-            <td>String (up to 90)</td>
-            <td>No</td>
-            <td>Filing software name used to electronically file</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>soft_ver</td>
-            <td>String (up to 16)</td>
-            <td>No</td>
-            <td>Filing software version number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>state_cd</td>
-            <td>String (up to 2)</td>
-            <td>No</td>
-            <td>State code: The state code value entered in the electronic filing</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-HeaderCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Lookup table used to report form 460 information in the AMS.
-
-**Source:** `HEADER_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>line_number</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>form_id</td>
-            <td>String (up to 5)</td>
-            <td>Yes</td>
-            <td>Form ID: Form identification code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rec_type</td>
-            <td>String (up to 11)</td>
-            <td>Yes</td>
-            <td>Record type</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>section_label</td>
-            <td>String (up to 58)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>comments1</td>
-            <td>String (up to 48)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>comments2</td>
-            <td>String (up to 48)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>label</td>
-            <td>String (up to 98)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>column_a</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>column_b</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>column_c</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>show_c</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>show_b</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
 ImageLinksCd
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12035,2464 +14515,6 @@ Legislative session, begin and end dates look up table.
             <td>Date (without time)</td>
             <td>No</td>
             <td>Session end date</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyingChgLogCd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented table.
-
-**Source:** `LOBBYING_CHG_LOG_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filer_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filer ID: Filer&#39;s unique identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>change_no</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Number of changes this session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>log_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filer_type</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>correction_flag</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>action</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>attribute_changed</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>ethics_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>interests</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filer_full_name</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td></td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filer_city</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td></td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filer_st</td>
-            <td>String (up to 200)</td>
-            <td>No</td>
-            <td>Filer state</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filer_zip</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Filer ZIP Code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filer_phone</td>
-            <td>String (up to 12)</td>
-            <td>No</td>
-            <td>Filer phone number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_type</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_name</td>
-            <td>String (up to 500)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_city</td>
-            <td>String (up to 500)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_st</td>
-            <td>String (up to 500)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_zip</td>
-            <td>String (up to 10)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_phone</td>
-            <td>String (up to 12)</td>
-            <td>No</td>
-            <td>Entity phone number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>entity_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Entity identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>responsible_officer</td>
-            <td>String (up to 500)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>effect_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Effective date: This field is undocumented</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistContributions1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Lobbyist contribution disclosure table.
-
-**Source:** `LOBBYIST_CONTRIBUTIONS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Filer ID: Filer&#39;s unique identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_period_start_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Filing period start date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_period_end_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Filing period end date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contribution_dt</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>Contribution date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>recipient_name</td>
-            <td>String (up to 106)</td>
-            <td>No</td>
-            <td>Recipient&#39;s name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>recipient_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Recipient&#39;s identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>amount</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Amount received</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistContributions2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Lobbyist contribution disclosure table. Temporary table used to generate
-disclosure table (Lobbyist Contributions 3)
-
-**Source:** `LOBBYIST_CONTRIBUTIONS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Filer ID: Filer&#39;s unique identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_period_start_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Filing period start date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_period_end_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Filing period end date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contribution_dt</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>Contribution date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>recipient_name</td>
-            <td>String (up to 106)</td>
-            <td>No</td>
-            <td>Recipient&#39;s name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>recipient_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Recipient&#39;s identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>amount</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Amount received</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistContributions3Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Lobbyist contribution disclosure table.
-
-**Source:** `LOBBYIST_CONTRIBUTIONS3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>filer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Filer ID: Filer&#39;s unique identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_period_start_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Filing period start date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_period_end_dt</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Filing period end date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contribution_dt</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>Contribution date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>recipient_name</td>
-            <td>String (up to 106)</td>
-            <td>No</td>
-            <td>Recipient&#39;s name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>recipient_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Recipient&#39;s identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>amount</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Amount received</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistEmpLobbyist1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_EMP_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>lobbyist_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Lobbyist ID: Lobbyist identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Employer ID: Employer identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_last_name</td>
-            <td>String (up to 17)</td>
-            <td>No</td>
-            <td>Lobbyist last name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_first_name</td>
-            <td>String (up to 17)</td>
-            <td>No</td>
-            <td>Lobbyist first name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_name</td>
-            <td>String (up to 300)</td>
-            <td>No</td>
-            <td>Employer name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistEmpLobbyist2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_EMP_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>lobbyist_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Lobbyist ID: Lobbyist identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Employer ID: Employer identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_last_name</td>
-            <td>String (up to 17)</td>
-            <td>No</td>
-            <td>Lobbyist last name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_first_name</td>
-            <td>String (up to 17)</td>
-            <td>No</td>
-            <td>Lobbyist first name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_name</td>
-            <td>String (up to 300)</td>
-            <td>No</td>
-            <td>Employer name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistEmployer1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>employer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Employer ID: Employer identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_name</td>
-            <td>String (up to 300)</td>
-            <td>No</td>
-            <td>Employer name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>current_qtr_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Current quarter amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_total_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total amount for the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contributor_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Contributor ID: Contributor identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>interest_cd</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Interest code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>interest_name</td>
-            <td>String (up to 24)</td>
-            <td>No</td>
-            <td>Interest name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_1</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 1 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_2</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 2 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_1_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 1 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_2_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 2 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_1</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 1: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_2</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 2: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_3</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 3: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_4</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 4: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_5</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 5: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_6</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 6: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_7</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 7: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_8</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 8: Quarter total amount</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistEmployer2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>employer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Employer ID: Employer identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_name</td>
-            <td>String (up to 300)</td>
-            <td>No</td>
-            <td>Employer name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>current_qtr_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Current quarter amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_total_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total amount for the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contributor_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Contributor ID: Contributor identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>interest_cd</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Interest code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>interest_name</td>
-            <td>String (up to 24)</td>
-            <td>No</td>
-            <td>Interest name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_1</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 1 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_2</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 2 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_1_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 1 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_2_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 2 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_1</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 1: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_2</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 2: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_3</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 3: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_4</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 4: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_5</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 5: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_6</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 6: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_7</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 7: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_8</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 8: Quarter total amount</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistEmployer3Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_EMPLOYER3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>employer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Employer ID: Employer identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_name</td>
-            <td>String (up to 300)</td>
-            <td>No</td>
-            <td>Employer name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>current_qtr_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Current quarter amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_total_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total amount for the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contributor_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Contributor ID: Contributor identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>interest_cd</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Interest code</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>interest_name</td>
-            <td>String (up to 24)</td>
-            <td>No</td>
-            <td>Interest name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_1</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 1 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_2</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 2 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_1_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 1 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_2_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 2 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_1</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 1: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_2</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 2: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_3</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 3: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_4</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 4: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_5</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 5: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_6</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 6: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_7</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 7: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_8</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 8: Quarter total amount</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistEmployerFirms1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_EMPLOYER_FIRMS1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>employer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Employer ID: Employer identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>termination_dt</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>Termination date: Termination effective date</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistEmployerFirms2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_EMPLOYER_FIRMS2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>employer_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Employer ID: Employer identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>termination_dt</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>Termination date: Termination effective date</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistFirm1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_FIRM1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>current_qtr_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Current quarter amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_total_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total amount for the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contributor_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Contributor ID: Contributor identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_1</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 1 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_2</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 2 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_1_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 1 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_2_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 2 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_1</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 1: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_2</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 2: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_3</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 3: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_4</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 4: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_5</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 5: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_6</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 6: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_7</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 7: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_8</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 8: Quarter total amount</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistFirm2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_FIRM2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>current_qtr_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Current quarter amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_total_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total amount for the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contributor_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Contributor ID: Contributor identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_1</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 1 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_2</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 2 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_1_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 1 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_2_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 2 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_1</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 1: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_2</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 2: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_3</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 3: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_4</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 4: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_5</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 5: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_6</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 6: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_7</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 7: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_8</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 8: Quarter total amount</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistFirm3Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_FIRM3_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>current_qtr_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Current quarter amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_total_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total amount for the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>contributor_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Contributor ID: Contributor identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_1</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 1 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_yr_2</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Total amount of year 2 of the session</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_1_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 1 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>yr_2_ytd_amt</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Year 2 year-to-date-amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_1</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 1: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_2</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 2: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_3</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 3: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_4</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 4: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_5</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 5: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_6</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 6: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_7</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 7: Quarter total amount</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>qtr_8</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Quarter 8: Quarter total amount</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistFirmEmployer1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_FIRM_EMPLOYER1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_sequence</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Amendment number. 0 is the original filing. 1 to 999 are amendments</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_name</td>
-            <td>String (up to 300)</td>
-            <td>No</td>
-            <td>Employer name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rpt_start</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Starting date for the period the report covers</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rpt_end</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Ending date for the period the report covers</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>per_total</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total this reporting period</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>cum_total</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Cumulative total to date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lby_actvty</td>
-            <td>String (up to 182)</td>
-            <td>No</td>
-            <td>Description of lobbying activity</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>ext_lby_actvty</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistFirmEmployer2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is an undocumented model.
-
-**Source:** `LOBBYIST_FIRM_EMPLOYER2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Filing ID: Unique filing identificiation number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>filing_sequence</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Amendment number. 0 is the original filing. 1 to 999 are amendments</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>employer_name</td>
-            <td>String (up to 300)</td>
-            <td>No</td>
-            <td>Employer name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rpt_start</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Starting date for the period the report covers</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>rpt_end</td>
-            <td>Date (without time)</td>
-            <td>No</td>
-            <td>Ending date for the period the report covers</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>per_total</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Total this reporting period</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>cum_total</td>
-            <td>Floating point number</td>
-            <td>No</td>
-            <td>Cumulative total to date</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lby_actvty</td>
-            <td>String (up to 182)</td>
-            <td>No</td>
-            <td>Description of lobbying activity</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>ext_lby_actvty</td>
-            <td>String (up to 32)</td>
-            <td>No</td>
-            <td>This field is undocumented</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistFirmLobbyist1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-It's an undocumented model.
-
-**Source:** `LOBBYIST_FIRM_LOBBYIST1_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>lobbyist_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Lobbyist ID: Lobbyist identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_last_name</td>
-            <td>String (up to 15)</td>
-            <td>No</td>
-            <td>Lobbyist last name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_first_name</td>
-            <td>String (up to 17)</td>
-            <td>No</td>
-            <td>Lobbyist first name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
-        </tr>
-    
-    
-    </tbody>
-    </table>
-    </div>
-
-LobbyistFirmLobbyist2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
-
-It's an undocumented model.
-
-**Source:** `LOBBYIST_FIRM_LOBBYIST2_CD.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
-
-**Fields:**
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Name</th>
-            <th class="head">Type</th>
-            <th class="head">Unique key</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-    
-    
-    
-        <tr>
-            <td>lobbyist_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Lobbyist ID: Lobbyist identification number</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Firm ID: Identification number of the firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_last_name</td>
-            <td>String (up to 15)</td>
-            <td>No</td>
-            <td>Lobbyist last name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>lobbyist_first_name</td>
-            <td>String (up to 17)</td>
-            <td>No</td>
-            <td>Lobbyist first name</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>firm_name</td>
-            <td>String (up to 400)</td>
-            <td>No</td>
-            <td>Name of firm, employer or coalition</td>
-        </tr>
-    
-    
-    
-        <tr>
-            <td>session_id</td>
-            <td>Integer</td>
-            <td>No</td>
-            <td>Session ID: Legislative session identification number</td>
         </tr>
     
     
@@ -14877,6 +14899,8 @@ Empty files
 +------------------------------+
 |Source TSV                    |
 +==============================+
+| CVR_F470                     |
++------------------------------+
 | FILER_TYPE_PERIODS_CD        |
 +------------------------------+
 | LOBBYIST_EMPLOYER_HISTORY_CD |

@@ -1,9 +1,11 @@
 Official CAL-ACCESS documentation
 =================================
 
-The California Secretary of State has `published <http://www.sos.ca.gov/prd/cal-access/>`_ the following documents related to the CAL-ACCESS raw data export and the .CAL file format, which defines the order and contents of acceptable electronic campaign and lobbyist filings in California.
+The California Secretary of State `has published <http://www.sos.ca.gov/prd/cal-access/>`_ the following documents related to CAL-ACCESS. You'll also find these .PDF files in various sub-directories of the database export .ZIP file.
 
-You'll also find these .PDF files in various sub-directories of the database export .ZIP file.
+Generally speaking, much of this documentation is incomplete, inconsistent and outdated. While it won't serve as an authoritative guide to CAL-ACCESS data, it does provide helpful details for parsing and piecing together the data.
+
+Much of what ends up in CAL-ACCESS is submitted in an electronic file format known as .CAL, which is specifically designed to interface with CAL-ACCESS. These .CAL specifications, along with the required campaign and lobbyist disclosure forms, are also helpful in understanding the lifecycle of information flowing into CAL-ACCESS.
 
 Overview
 --------
@@ -152,7 +154,7 @@ Includes a mapping of .CAL file format fields to the CAL-ACCESS database fields.
 
 This file format was "the basis for the design of the CAL-ACCESS system", according to the documentation provided by the Political Reform Divison of the Secretary of State. 
 
-These documents describe changes to the .CAL file format, including changes to look-up code values. They can also be found in the CalFormat directory inside either the CAL-ACCESS documentation and database export ZIP files.
+The following documents can also be found in the CalFormat directory inside either the CAL-ACCESS documentation and database export ZIP files.
 
 Cal Readme
 ~~~~~~~~~~
@@ -184,6 +186,8 @@ v2.01 Errata and Format
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 **Updated on 11/05/2001**
+
+Describes changes to the .CAL file format, including changes to look-up code values, that came about in version 2.01 (current version).
 
 .. raw:: html
 
@@ -228,6 +232,8 @@ v1.05.02 Errata and Format
 
 **Updated on 05/10/2000**
 
+Describes changes to the .CAL file format, including changes to look-up code values, that came about in version 1.05.02.
+
 .. raw:: html
 
     <div style="margin-bottom:35px;" id="DV-viewer-2712031-Cal-Errata-1-05-02" class="DV-container"></div>
@@ -268,6 +274,8 @@ v1.05.02 Errata and Format
 
 Forms
 -----
+
+These docs are all found in the Forms directory inside either the CAL-ACCESS documentation and database export ZIP files.
 
 .. raw:: html
 
