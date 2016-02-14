@@ -27,7 +27,8 @@ before_script:
 script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw
- - python example/manage.py migrate --run-syncdb
+ - python example/manage.py makemigrations calaccess_raw
+ - python example/manage.py migrate
  - python example/manage.py createcalaccessrawmodeldocs
  - cd docs && make html && cd ..
  - coverage run example/manage.py test calaccess_raw
