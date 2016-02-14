@@ -23,13 +23,39 @@ Will django-calaccess-raw-data load *all* of the CAL-ACCESS data?
 No. The raw data provided by the state contains some errors in how values are escaped, quoted and delimited. The result is that a small number of records we
 cannot yet automatically parse are lost during the loading process.
 
-However, according to our own `tracking information <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/tracking.html>`_, 99.9998 percent of records in the downloaded source file will be loaded into the database.
+However, according to our own `tracking information <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/tracking.html>`_,
+99.9998% of records in the downloaded source file will be loaded into the database.
 
-For information checkout:
+For more information checkout:
 
 * The ```reportcalaccessrawdata`` <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/managementcommands.html#reportcalaccessrawdata>`_ command, which runs a several checks and produces a report on the current state of the CAL-ACCESS data
 * The `list <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/calaccess_raw_files_report.csv>`_ of all CAL-ACCESS raw data files, including record and column counts at each stage of the process (this .CSV file is one of the outputs of ``reportcalaccessrawdata``)
 * Records that could not be parsed by the ``cleancalaccessrawfile`` command are in <myproject>/data/log
+
+Why does django-calaccess-raw-data use data loading techniques not supported by Django?
+---------------------------------------------------------------------------------------
+
+Because the CAL-ACCESS database is huge. With more than 35 million records sprawled across 76 tables,
+it can take a long time to load into a database using `the standard Django tools <https://docs.djangoproject.com/es/1.9/topics/db/queries/#creating-objects>`,
+which insert one record at a time. In our early testing, it ook as long as 24 hours to load all of CAL-ACCESS
+into a database on a standard laptop computer.
+
+To speed things up, our loading commands take advantage of the built-in bulk loading tools offered by PostgreSQL and MySQL,
+which are not currently included in Django's system. These tools (``COPY`` in PostgreSQL and ``LOAD DATA INFILE`` in MySQL) insert CSV files from the file system
+directly into the database in a small fraction of the time it would take to load them row by row.
+
+As part of developing these tools we released `django-postgres-copy <http://django-postgres-copy.californiacivicdata.org/en/latest/>`_, a Django extension
+that makes it easier for us and other developers to work with these valuable tools.
+
+Why doesn't django-calaccess-raw-data only work with PostgreSQL and MySQL databases?
+------------------------------------------------------------------------------------
+
+Because of the answer above. To run our loading routines in a acceptable amount of time, we
+need to take advantage of bulk file loading tools not currently supported by Django.
+
+So far, we have only written custom loading routines for MySQL and PostgreSQL. We would
+welcome contributions that would expand our database support to other systems, like SQLite
+and Microsoft SQL Server. But we haven't got there yet.
 
 How far back does the CAL-ACCESS database go?
 ---------------------------------------------
