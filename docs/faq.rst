@@ -28,9 +28,9 @@ However, according to our own `tracking information <http://django-calaccess-raw
 
 For more information checkout:
 
-* The ```reportcalaccessrawdata`` <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/managementcommands.html#reportcalaccessrawdata>`_ command, which runs a several checks and produces a report on the current state of the CAL-ACCESS data
+* The `reportcalaccessrawdata <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/managementcommands.html#reportcalaccessrawdata>`_ command, which runs a several checks and produces a report on the current state of the CAL-ACCESS data
 * The `list <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/calaccess_raw_files_report.csv>`_ of all CAL-ACCESS raw data files, including record and column counts at each stage of the process (this .CSV file is one of the outputs of ``reportcalaccessrawdata``)
-* Records that could not be parsed by the ``cleancalaccessrawfile`` command are in <myproject>/data/log
+* Records that could not be parsed by the ``cleancalaccessrawfile`` command are in ``<myproject>/data/log``
 
 Why does django-calaccess-raw-data use data loading techniques not supported by Django?
 ---------------------------------------------------------------------------------------
