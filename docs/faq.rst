@@ -36,7 +36,7 @@ Why does django-calaccess-raw-data use data loading techniques not supported by 
 ---------------------------------------------------------------------------------------
 
 Because the CAL-ACCESS database is huge. With more than 35 million records sprawled across 76 tables,
-it can take a long time to load into a database using `the standard Django tools <https://docs.djangoproject.com/es/1.9/topics/db/queries/#creating-objects>`,
+it can take a long time to load into a database using `the standard Django tools <https://docs.djangoproject.com/es/1.9/topics/db/queries/#creating-objects>`_,
 which insert one record at a time. In our early testing, it ook as long as 24 hours to load all of CAL-ACCESS
 into a database on a standard laptop computer.
 
