@@ -2,10 +2,6 @@ language: python
 
 sudo: false
 
-cache:
-  directories:
-    - $HOME/.cache/pip
-
 python:
  - "2.7"
  - "3.5"
@@ -19,7 +15,6 @@ env:
  - DJANGO_VERSION=1.9.1 DATABASE_SETTINGS='settings_test_multi_dbs.py'
 
 install:
- - export XDG_CACHE_HOME=$HOME/.cache/
  - pip install -r requirements_dev.txt
  - pip uninstall -y Django
  - pip install -q Django==$DJANGO_VERSION
@@ -32,6 +27,7 @@ before_script:
 script:
  - pep8 calaccess_raw
  - pyflakes calaccess_raw
+ - python example/manage.py migrate --run-syncdb
  - python example/manage.py createcalaccessrawmodeldocs
  - cd docs && make html && cd ..
  - coverage run example/manage.py test calaccess_raw
