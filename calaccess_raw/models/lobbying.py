@@ -4197,8 +4197,10 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     """
-    Matt needs to describe the relationship between the multiple tables.
-    Documentation should be cloned from D H's documentation on these tables. Cox 5/11/2000
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id=2711614, start_page=11),
@@ -4302,8 +4304,10 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmHistoryCd(CalAccessBaseModel):
     """
-    Matt needs to describe the relationship between the multiple tables. Documentation should be
-    cloned from D H's documentation on these tables. Cox 5/11/2000
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = (
     )

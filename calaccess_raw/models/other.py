@@ -1191,7 +1191,9 @@ class ReportsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerTypePeriodsCd(CalAccessBaseModel):
     """
-    J M needs to document. This is in his list of tables designed for future enhancements.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "J M needs
+    to document. This is in his list of tables designed for future enhancements."
     """
     UNIQUE_KEY = (
         "ELECTION_TYPE",

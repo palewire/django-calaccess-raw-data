@@ -18,7 +18,7 @@ Campaign tables
 
 
 Cvr2CampaignDisclosureCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Record used to carry additional names for the campaign
 disclosure forms below.
@@ -390,7 +390,7 @@ disclosure forms below.
     </div>
 
 Cvr2SoCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Additional names and committees information included on the second page
 of a statement of organization creation form filed
@@ -718,7 +718,7 @@ by a slate-mailer organization or recipient committee.
     </div>
 
 Cvr3VerificationInfoCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cover page verification information from campaign disclosure forms
 
@@ -864,7 +864,7 @@ Cover page verification information from campaign disclosure forms
     </div>
 
 CvrCampaignDisclosureCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cover page information from campaign disclosure forms
 
@@ -1667,7 +1667,7 @@ Cover page information from campaign disclosure forms
     </div>
 
 CvrF470Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cover page layout for F470 Officeholder/Candidate Short Supplement
 
@@ -1948,7 +1948,7 @@ Cover page layout for F470 Officeholder/Candidate Short Supplement
     </div>
 
 CvrSoCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cover page for a statement of organization creation or termination
 form filed by a slate-mailer organization or recipient committee.
@@ -2464,7 +2464,7 @@ form filed by a slate-mailer organization or recipient committee.
     </div>
 
 DebtCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Form 460 (Recipient Committee Campaign Statement)
 Schedule (F) Accrued Expenses (Unpaid Bills) records
@@ -2791,7 +2791,7 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
     </div>
 
 ExpnCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Campaign expenditures from a variety of forms
 
@@ -3297,7 +3297,7 @@ Campaign expenditures from a variety of forms
     </div>
 
 F495P2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 F495 Supplemental Preelection Campaign Statement
 
@@ -3413,7 +3413,7 @@ its last report.
     </div>
 
 F501502Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Candidate intention statement
 
@@ -3928,7 +3928,7 @@ Candidate intention statement
     </div>
 
 LoanCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Loans received and made
 
@@ -4398,7 +4398,7 @@ Loans received and made
     </div>
 
 RcptCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Receipts schedules for the following forms.
 
@@ -4999,7 +4999,7 @@ Receipts schedules for the following forms.
     </div>
 
 S401Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table contains Form 401 (Slate Mailer Organization) payment and other
 disclosure schedule (F401B, F401B-1, F401C, F401D) information.
@@ -5362,7 +5362,7 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
     </div>
 
 S496Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Form 496 Late Independent Expenditures
 
@@ -5499,7 +5499,7 @@ Form 496 Late Independent Expenditures
     </div>
 
 S497Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Form 497: Late Contributions Received/Made
 
@@ -5897,7 +5897,7 @@ Form 497: Late Contributions Received/Made
     </div>
 
 S498Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Form 498: Slate Mailer Late Independent Expenditures Made
 
@@ -6264,7 +6264,7 @@ Common tables
 
 
 CvrE530Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table method is undocumented.
 
@@ -6581,7 +6581,7 @@ This table method is undocumented.
     </div>
 
 FilerFilingsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Key table that links filers to their paper, key data entry, legacy,
 and electronic filings. This table is used as an index to locate
@@ -6756,7 +6756,7 @@ filing information.
     </div>
 
 FilernameCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A combination of CAL-ACCESS tables to provide the analyst with
 filer information.
@@ -6948,7 +6948,7 @@ fields in conjunction.
     </div>
 
 FilingsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table is the parent table from which all links and association to
 a filing are derived.
@@ -6996,7 +6996,7 @@ a filing are derived.
     </div>
 
 HdrCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Electronic filing record header data
 
@@ -7106,7 +7106,7 @@ Electronic filing record header data
     </div>
 
 HeaderCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lookup table used to report form 460 information in the AMS.
 
@@ -7243,7 +7243,7 @@ Lookup table used to report form 460 information in the AMS.
     </div>
 
 SmryCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Summary totals from filings.
 
@@ -7353,7 +7353,7 @@ Summary totals from filings.
     </div>
 
 SpltCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Split records
 
@@ -7454,7 +7454,7 @@ Split records
     </div>
 
 TextMemoCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Text memos attached to electronic filings
 
@@ -7551,7 +7551,7 @@ Lobbying tables
 
 
 Cvr2LobbyDisclosureCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Additional data from lobbyist disclosure forms
 
@@ -7697,7 +7697,7 @@ Additional data from lobbyist disclosure forms
     </div>
 
 Cvr2RegistrationCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cover page of lobbying disclosure forms
 
@@ -7834,7 +7834,7 @@ Cover page of lobbying disclosure forms
     </div>
 
 CvrLobbyDisclosureCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cover page information for lobbying disclosure forms
 
@@ -8331,7 +8331,7 @@ Cover page information for lobbying disclosure forms
     </div>
 
 CvrRegistrationCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cover page of lobbying disclosure forms
 
@@ -8999,7 +8999,7 @@ Cover page of lobbying disclosure forms
     </div>
 
 F690P2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Amends lobbying disclosure filings
 
@@ -9127,7 +9127,7 @@ Amends lobbying disclosure filings
     </div>
 
 LattCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbyist disclosure attachment schedules for payments
 
@@ -9336,7 +9336,7 @@ Lobbyist disclosure attachment schedules for payments
     </div>
 
 LccmCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbying campaign contributions
 
@@ -9581,7 +9581,7 @@ Lobbying campaign contributions
     </div>
 
 LempCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbyist employers and subcontracted clients
 
@@ -9826,7 +9826,7 @@ Lobbyist employers and subcontracted clients
     </div>
 
 LexpCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbying activity expenditures
 
@@ -10080,7 +10080,7 @@ Lobbying activity expenditures
     </div>
 
 LobbyAmendmentsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbyist registration amendment information
 
@@ -10487,7 +10487,7 @@ Lobbyist registration amendment information
     </div>
 
 LobbyingChgLogCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented table.
 
@@ -10732,7 +10732,7 @@ This is an undocumented table.
     </div>
 
 LobbyistContributions1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbyist contribution disclosure table.
 
@@ -10824,7 +10824,7 @@ Lobbyist contribution disclosure table.
     </div>
 
 LobbyistContributions2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbyist contribution disclosure table. Temporary table used to generate
 disclosure table (Lobbyist Contributions 3)
@@ -10917,7 +10917,7 @@ disclosure table (Lobbyist Contributions 3)
     </div>
 
 LobbyistContributions3Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lobbyist contribution disclosure table.
 
@@ -11009,7 +11009,7 @@ Lobbyist contribution disclosure table.
     </div>
 
 LobbyistEmpLobbyist1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -11092,7 +11092,7 @@ This is an undocumented model.
     </div>
 
 LobbyistEmpLobbyist2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -11175,7 +11175,7 @@ This is an undocumented model.
     </div>
 
 LobbyistEmployer1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -11384,7 +11384,7 @@ This is an undocumented model.
     </div>
 
 LobbyistEmployer2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -11593,7 +11593,7 @@ This is an undocumented model.
     </div>
 
 LobbyistEmployer3Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -11802,7 +11802,7 @@ This is an undocumented model.
     </div>
 
 LobbyistEmployerFirms1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -11876,7 +11876,7 @@ This is an undocumented model.
     </div>
 
 LobbyistEmployerFirms2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -11950,10 +11950,12 @@ This is an undocumented model.
     </div>
 
 LobbyistEmployerHistoryCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Matt needs to describe the relationship between the multiple tables.
-Documentation should be cloned from D H's documentation on these tables. Cox 5/11/2000
+This table and its fields are listed in the official CAL-ACCESS documentation,
+but is not fully explained. The table's description contains this note: "Matt
+needs to describe the relationship between the multiple tables. Documentation
+should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
 **Source:** `LOBBYIST_EMPLOYER_HISTORY.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -12160,7 +12162,7 @@ Documentation should be cloned from D H's documentation on these tables. Cox 5/1
     </div>
 
 LobbyistFirm1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -12351,7 +12353,7 @@ This is an undocumented model.
     </div>
 
 LobbyistFirm2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -12542,7 +12544,7 @@ This is an undocumented model.
     </div>
 
 LobbyistFirm3Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -12733,7 +12735,7 @@ This is an undocumented model.
     </div>
 
 LobbyistFirmEmployer1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -12861,7 +12863,7 @@ This is an undocumented model.
     </div>
 
 LobbyistFirmEmployer2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -12989,10 +12991,12 @@ This is an undocumented model.
     </div>
 
 LobbyistFirmHistoryCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Matt needs to describe the relationship between the multiple tables. Documentation should be
-cloned from D H's documentation on these tables. Cox 5/11/2000
+This table and its fields are listed in the official CAL-ACCESS documentation,
+but is not fully explained. The table's description contains this note: "Matt
+needs to describe the relationship between the multiple tables. Documentation
+should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
 **Source:** `LOBBYIST_FIRM_HISTORY.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -13181,7 +13185,7 @@ cloned from D H's documentation on these tables. Cox 5/11/2000
     </div>
 
 LobbyistFirmLobbyist1Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It's an undocumented model.
 
@@ -13264,7 +13268,7 @@ It's an undocumented model.
     </div>
 
 LobbyistFirmLobbyist2Cd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It's an undocumented model.
 
@@ -13347,7 +13351,7 @@ It's an undocumented model.
     </div>
 
 LothCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Payment to other lobbying firms
 
@@ -13556,7 +13560,7 @@ Payment to other lobbying firms
     </div>
 
 LpayCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Payments made or received by lobbying firms
 
@@ -13824,7 +13828,7 @@ Other tables
 
 
 AcronymsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Contains acronyms and their meaning.
 
@@ -13889,7 +13893,7 @@ Contains acronyms and their meaning.
     </div>
 
 AddressCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table holds all addresses for the system. This table can be used
 for address-based searches and formes the bases for address information
@@ -13983,7 +13987,7 @@ desplayed by the AMS.
     </div>
 
 BallotMeasuresCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ballot measure dates and times
 
@@ -14066,7 +14070,7 @@ Ballot measure dates and times
     </div>
 
 EfsFilingLogCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -14149,7 +14153,7 @@ This is an undocumented model.
     </div>
 
 FilerAcronymsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Links acronyms to filers
 
@@ -14196,7 +14200,7 @@ Links acronyms to filers
     </div>
 
 FilerAddressCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Links filers and addresses. This table maintains a history of when
 addresses change.
@@ -14271,7 +14275,7 @@ addresses change.
     </div>
 
 FilerEthicsClassCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table stores lobbyist ethics training dates.
 
@@ -14327,7 +14331,7 @@ This table stores lobbyist ethics training dates.
     </div>
 
 FilerInterestsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Links a filer to their interest codes.
 
@@ -14392,7 +14396,7 @@ Links a filer to their interest codes.
     </div>
 
 FilerLinksCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Links filers to each other and records their relationship type.
 
@@ -14502,7 +14506,7 @@ Links filers to each other and records their relationship type.
     </div>
 
 FilerStatusTypesCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model that contains a small number
 of codes and definitions.
@@ -14550,7 +14554,7 @@ of codes and definitions.
     </div>
 
 FilerToFilerTypeCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table links a filer to a set of characteristics that describe the
 filer. This table maintains a history of changes and allows the filer
@@ -14725,9 +14729,11 @@ to change characteristics over time.
     </div>
 
 FilerTypePeriodsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-J M needs to document. This is in his list of tables designed for future enhancements.
+This table and its fields are listed in the official CAL-ACCESS documentation,
+but is not fully explained. The table's description contains this note: "J M needs
+to document. This is in his list of tables designed for future enhancements."
 
 **Source:** `FILER_TYPE_PERIODS.tsv <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
@@ -14781,7 +14787,7 @@ J M needs to document. This is in his list of tables designed for future enhance
     </div>
 
 FilerTypesCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This lookup table describes filer types.
 
@@ -14855,7 +14861,7 @@ This lookup table describes filer types.
     </div>
 
 FilerXrefCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table maps legacy filer identification numbers to the system's filer
 identification numbers.
@@ -14921,7 +14927,7 @@ identification numbers.
     </div>
 
 FilersCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table is the parent table from which all links and associations
 to a filer are derived.
@@ -14960,7 +14966,7 @@ to a filer are derived.
     </div>
 
 FilingPeriodCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 An undocumented table that contains metadata for a variety
 of filing periods.
@@ -15053,7 +15059,7 @@ of filing periods.
     </div>
 
 GroupTypesCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This lookup table stores group type information.
 
@@ -15109,7 +15115,7 @@ This lookup table stores group type information.
     </div>
 
 ImageLinksCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table links images to filers and accounts.
 
@@ -15183,7 +15189,7 @@ This table links images to filers and accounts.
     </div>
 
 LegislativeSessionsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Legislative session, begin and end dates look up table.
 
@@ -15239,7 +15245,7 @@ Legislative session, begin and end dates look up table.
     </div>
 
 LookupCode
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The description of some lookup codes in the system.
 
@@ -15295,7 +15301,7 @@ The description of some lookup codes in the system.
     </div>
 
 NamesCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The name of all entities in the system. Used for searches when
 the name has an identification number.
@@ -15415,7 +15421,7 @@ the name has an identification number.
     </div>
 
 ReceivedFilingsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table is undocumented.
 
@@ -15507,7 +15513,7 @@ This table is undocumented.
     </div>
 
 ReportsCd
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model.
 
@@ -15612,7 +15618,7 @@ This is an undocumented model.
 Empty files
 -----------
 
-While the following tables are described in the documentation, but the downloaded raw data files are empty.
+The following tables are described in the official documentation, but the .TSV files of the same name are empty.
 
 .. raw:: html
 

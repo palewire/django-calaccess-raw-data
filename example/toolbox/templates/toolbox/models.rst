@@ -18,7 +18,7 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 
 {% for object in model_list %}
 {{ object.klass_name }}
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {{ object.doc.strip|safe }}
 
@@ -58,7 +58,7 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 Empty files
 -----------
 
-While the following tables are described in the documentation, but the downloaded raw data files are empty.
+The following tables are described in the official documentation, but the .TSV files of the same name are empty.
 
 .. raw:: html
 
