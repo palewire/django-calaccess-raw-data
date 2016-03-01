@@ -24,6 +24,15 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 
 **Source:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
+{% if object.get_documentcloud_page_urls|length > 0 %}
+**Source Docs**
+{% for page in object.get_documentcloud_page_urls %}
+
+.. image:: {{ page.1 }}
+    :target: {{ page.0 }}
+{% endfor %}
+{% endif %}
+
 **Fields:**
 
 .. raw:: html
