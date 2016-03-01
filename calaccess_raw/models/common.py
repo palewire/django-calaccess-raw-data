@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
-from .base import CalAccessBaseModel, DocumentCloud
+from .base import CalAccessBaseModel
+from calaccess_raw.managers import DocumentCloud
 from django.template.defaultfilters import floatformat
 from django.utils.encoding import python_2_unicode_compatible
 from django.contrib.humanize.templatetags.humanize import intcomma
