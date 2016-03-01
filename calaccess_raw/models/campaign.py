@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
-from .base import CalAccessBaseModel
-from calaccess_raw.managers import DocumentCloud
+from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
 
 
