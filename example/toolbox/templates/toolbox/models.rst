@@ -22,7 +22,7 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 
 {{ object.doc.strip|safe }}
 
-**Source:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
+**Source:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/{{ object.get_tsv_name }}>`_
 
 {% if object.get_documentcloud_page_urls|length > 0 %}
 **Source Docs**

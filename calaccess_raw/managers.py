@@ -19,7 +19,7 @@ class CalAccessManager(models.Manager):
         )
 
     def get_tsv_name(self):
-        return "%s.tsv" % self.model._meta.db_table
+        return "%s.TSV" % self.model._meta.db_table
 
     def get_tsv_path(self):
         return os.path.join(
