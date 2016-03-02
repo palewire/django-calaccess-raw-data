@@ -4,6 +4,6 @@ The currently available CAL-ACCESS snapshot was released by the California Secre
 
 It is {{ expected_size }} in size. {% if resuming %}You downloaded up to {{ local_file_size }} as of {{ since_local_file_modified }}{% elif already_downloaded %}You have already downloaded this entire file{% elif since_prev_version %}The last file you finished downloading was posted {{ since_prev_version }}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
 
-Do you want to download it to {{ download_dir }}{% if already_downloaded %} (again){% endif %} and update your local database?
+Do you want to download it to {{ download_dir }}{% if already_downloaded %} (again){% endif %}?
 
 Type 'yes' to do it, or 'no' to back out:
