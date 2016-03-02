@@ -6,9 +6,6 @@ from django.db import models
 from calaccess_raw import managers
 import requests
 import json
-import django.db.models.options as options
-
-options.DEFAULT_NAMES += ('UNIQUE_KEY', 'DOCUMENTCLOUD_PAGES')
 
 
 class CalAccessBaseModel(models.Model):
