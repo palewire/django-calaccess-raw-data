@@ -6,6 +6,7 @@ from django.db import models
 from calaccess_raw import managers
 import requests
 import json
+from django.utils.deconstruct import deconstructible
 
 
 class CalAccessBaseModel(models.Model):
@@ -136,6 +137,7 @@ class CalAccessBaseModel(models.Model):
         abstract = True
 
 
+@deconstructible
 class DocumentCloud(object):
     """
     A page or set of pages hosted on DocumentCloud.
