@@ -168,12 +168,6 @@ Here is how to run the command.
 
     $ python manage.py downloadcalaccessrawdata
 
-If your download crashes, there's a way to restart it.
-
-.. code-block:: bash
-
-    $ python manage.py updatecalaccessrawdata --resume-download
-
 You can skip the download's confirmation prompt using Django's standard ``--noinput`` option.
 
 .. code-block:: bash
@@ -189,8 +183,7 @@ Options
                                               [--settings SETTINGS]
                                               [--pythonpath PYTHONPATH]
                                               [--traceback] [--no-color]
-                                              [--resume] [--keep-files]
-                                              [--noinput]
+                                              [--keep-files] [--noinput]
 
     Download, unzip and prep the latest CAL-ACCESS database ZIP
 
@@ -209,9 +202,6 @@ Options
                             "/home/djangoprojects/myproject".
       --traceback           Raise on CommandError exceptions
       --no-color            Don't colorize the command output.
-      --resume, --resume-download
-                            Resume downloading of the ZIP archive from a previous
-                            attempt
       --keep-files          Keep downloaded zip and unzipped files
       --noinput             Download the ZIP archive without asking permission
 

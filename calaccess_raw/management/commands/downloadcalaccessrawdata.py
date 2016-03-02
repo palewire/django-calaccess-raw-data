@@ -31,14 +31,6 @@ class Command(CalAccessCommand):
         """
         super(Command, self).add_arguments(parser)
         parser.add_argument(
-            "--resume",
-            "--resume-download",
-            action="store_true",
-            dest="resume",
-            default=False,
-            help="Resume downloading of the ZIP archive from a previous attempt"
-        )
-        parser.add_argument(
             "--keep-files",
             action="store_true",
             dest="keep_files",
@@ -87,7 +79,7 @@ class Command(CalAccessCommand):
             already_downloaded = False
 
         # if the user tries to resume, check to see if possible
-        self.resume_download = (options['resume'] and self.check_can_resume())
+        self.resume_download = self.check_can_resume()
 
         if self.resume_download:
             # set current size to partially downloaded zip

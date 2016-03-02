@@ -154,7 +154,6 @@ class Command(CalAccessCommand):
                 "downloadcalaccessrawdata",
                 keep_files=self.keep_files,
                 verbosity=self.verbosity,
-                resume=self.resume_download,
                 noinput=options['noinput'],
             )
             if self.verbosity:
