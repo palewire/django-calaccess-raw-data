@@ -113,7 +113,7 @@ class RawDataCommand(models.Model):
     version = models.ForeignKey(
         'RawDataVersion',
         on_delete=models.CASCADE,
-        related_name='command',
+        related_name='command_logs',
         verbose_name='raw data version',
         help_text='Foreign key referencing the version of the raw '
                   'source data on which the command was performed'
