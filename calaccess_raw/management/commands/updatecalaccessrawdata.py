@@ -146,7 +146,7 @@ class Command(CalAccessCommand):
                 self.log_record = self.command_logs.create(
                     version=version,
                     command=self,
-                    called_by=self.get_caller()
+                    called_by=self.get_caller_log()
                 )
 
         if options['download']:

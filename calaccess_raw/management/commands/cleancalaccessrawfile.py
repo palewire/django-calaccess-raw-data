@@ -45,7 +45,7 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
 
-        caller = self.get_caller()
+        caller = self.get_caller_log()
 
         if caller:
             # if called by another command, use its version record

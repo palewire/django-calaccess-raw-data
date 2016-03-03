@@ -76,7 +76,7 @@ class Command(CalAccessCommand):
             self.log(" Loading %s" % options['model_name'])
 
         # set up version and log records
-        caller = self.get_caller()
+        caller = self.get_caller_log()
 
         if caller:
             # if called by another command, use it's version

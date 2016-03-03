@@ -86,7 +86,7 @@ class CalAccessCommand(BaseCommand):
 
         return last_log
 
-    def get_caller(self):
+    def get_caller_log(self):
         """
         If the command was called by another command, return the caller's
         RawDataCommandLog object. Else, return None.
