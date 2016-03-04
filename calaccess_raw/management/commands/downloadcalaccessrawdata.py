@@ -3,8 +3,6 @@
 from __future__ import unicode_literals
 import os
 import sys
-import codecs
-import locale
 import shutil
 import zipfile
 import requests
@@ -104,13 +102,13 @@ class Command(CalAccessCommand):
             since_local_file_modified=naturaltime(self.local_file_datetime)
         )
 
-        self.prompt = render_to_string(
+        prompt = render_to_string(
             'calaccess_raw/downloadcalaccessrawdata.txt',
             prompt_context,
         )
 
         # If we're taking user input, make sure the user says exactly 'yes'
-        if not options['noinput'] and self.confirm_download() != 'yes':
+        if not options['noinput'] and not self.confirm_proceed(prompt):
             raise CommandError("Download cancelled")
 
         if self.resume_download:
@@ -169,24 +167,6 @@ class Command(CalAccessCommand):
                     if self.current_release_datetime == prev_release:
                         result = True
         return result
-
-    def confirm_download(self):
-        """
-        Prompts the user to confirm they wish to download.
-        """
-        # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
-        locale_encoding = locale.getpreferredencoding()
-        old_stdout = sys.stdout
-        sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
-
-        # Send the confirmation prompt out to the user
-        confirm = input(self.prompt)
-
-        # Set things back to the way they were before continuing.
-        sys.stdout = old_stdout
-
-        # Pass back what the user typed
-        return confirm.lower()
 
     def download(self):
         """

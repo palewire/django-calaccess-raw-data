@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
+import codecs
+import locale
 import requests
 from re import sub
 from datetime import datetime
 from email.utils import parsedate
 from django.utils import timezone
+from django.utils.six.moves import input
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
 from calaccess_raw.models.tracking import (
@@ -152,6 +155,34 @@ class CalAccessCommand(BaseCommand):
         """
         duration = datetime.now() - self.start_datetime
         self.stdout.write('Duration: {}'.format(str(duration)))
+
+    def confirm_proceed(self, prompt):
+        """
+        Prompts the user for yes/no confirmation to proceed.
+        """
+        # Ensure stdout can handle Unicode data: http://bit.ly/1C3l4eV
+        locale_encoding = locale.getpreferredencoding()
+        old_stdout = sys.stdout
+        sys.stdout = codecs.getwriter(locale_encoding)(sys.stdout)
+
+        # Send the confirmation prompt out to the user
+        user_input = input(prompt)
+
+        confirm = None
+
+        while confirm is None:
+            if user_input.lower() in ['y', 'yes']:
+                confirm = True
+            elif user_input.lower() in ['n', 'no']:
+                confirm = False
+            else:
+                user_input = input("Invalid input. Please type 'yes', 'no', 'y' or 'n':\n")
+
+        # Set things back to the way they were before continuing.
+        sys.stdout = old_stdout
+
+        # Pass back what the user typed
+        return confirm
 
     def __str__(self):
         return sub(r'(.+\.)*', '', self.__class__.__module__)
