@@ -18,6 +18,7 @@ Documentation
    officialdocumentation
    howtocontribute
    changelog
+   releasechecklist
 
 Open-source resources
 ---------------------
