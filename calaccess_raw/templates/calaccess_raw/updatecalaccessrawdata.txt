@@ -1,0 +1,11 @@
+{% load tz %}
+{% timezone "America/Los_Angeles" %}
+The currently available CAL-ACCESS snapshot was released by the California Secretary of State on {{ current_release_datetime|date:'N j, Y' }}, at {{ current_release_datetime|date:'P' }} Pacific Time.{% endtimezone %}
+
+It is {{ expected_size }} in size.
+
+{% if up_to_date %}Your database has already been updated to the current version of CAL-ACCESS.{% elif can_resume %}You're previous update did not complete.{% elif since_loaded_version %}The last data snapshot you loaded was posted {{ since_loaded_version }}.{% else %}We couldn't find any sign of a previous update.{% endif %}
+
+{% if up_to_date %}Do you want to repeat this update?{% elif can_resume %}Do you want to resume your update?{% else %}Do you want to update your database to the currently available snapshot?{% endif %}
+
+Type 'yes' to do it, or 'no' to back out:
