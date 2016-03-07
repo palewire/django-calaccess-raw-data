@@ -94,8 +94,6 @@ class Command(CalAccessCommand):
             self.downloading = False
             # and always keep files when running test data
             self.keep_files = True
-
-        if self.test_mode:
             self.data_dir = get_test_download_directory()
             # need to set this app-wide because cleancalaccessrawfile
             #   also calls get_download_directory
