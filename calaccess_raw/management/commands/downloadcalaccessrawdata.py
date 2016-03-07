@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import os
-import sys
 import shutil
 import zipfile
 import requests
@@ -11,7 +10,6 @@ from hurry.filesize import size
 from clint.textui import progress
 from django.db.utils import IntegrityError
 from django.utils.timezone import utc
-from django.utils.six.moves import input
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
