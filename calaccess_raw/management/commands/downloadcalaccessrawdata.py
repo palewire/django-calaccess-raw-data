@@ -40,6 +40,14 @@ class Command(CalAccessCommand):
             default=False,
             help="Download the ZIP archive without asking permission"
         )
+        parser.add_argument(
+            "--force-restart",
+            "--restart",
+            action="store_true",
+            dest="restart",
+            default=False,
+            help="Force re-start (overrides auto-resume)."
+        )
 
     def handle(self, *args, **options):
         super(Command, self).handle(*args, **options)
@@ -74,8 +82,8 @@ class Command(CalAccessCommand):
         else:
             already_downloaded = False
 
-        # if the user tries to resume, check to see if possible
-        self.resume_download = self.check_can_resume()
+        # can resume only if possible and not forcing re-start
+        self.resume_download = self.check_can_resume() and not options['restart']
 
         if self.resume_download:
             # set current size to partially downloaded zip
@@ -88,26 +96,27 @@ class Command(CalAccessCommand):
             self.local_file_size = 0
             self.local_file_datetime = None
 
-        # setting up the prompt
-        prompt_context = dict(
-            current_release_datetime=self.current_release_datetime,
-            resuming=self.resume_download,
-            already_downloaded=already_downloaded,
-            expected_size=size(self.current_release_size),
-            local_file_size=size(self.local_file_size),
-            download_dir=self.data_dir,
-            since_prev_version=since_prev_version,
-            since_local_file_modified=naturaltime(self.local_file_datetime)
-        )
+        if not options['noinput'] and not options['restart']:
 
-        prompt = render_to_string(
-            'calaccess_raw/downloadcalaccessrawdata.txt',
-            prompt_context,
-        )
+            # setting up the prompt
+            prompt_context = dict(
+                current_release_datetime=self.current_release_datetime,
+                resuming=self.resume_download,
+                already_downloaded=already_downloaded,
+                expected_size=size(self.current_release_size),
+                local_file_size=size(self.local_file_size),
+                download_dir=self.data_dir,
+                since_prev_version=since_prev_version,
+                since_local_file_modified=naturaltime(self.local_file_datetime)
+            )
 
-        # If we're taking user input, make sure the user says exactly 'yes'
-        if not options['noinput'] and not self.confirm_proceed(prompt):
-            raise CommandError("Download cancelled")
+            prompt = render_to_string(
+                'calaccess_raw/downloadcalaccessrawdata.txt',
+                prompt_context,
+            )
+
+            if not self.confirm_proceed(prompt):
+                raise CommandError("Download cancelled")
 
         if self.resume_download:
             self.log_record = self.last_started_download
@@ -171,7 +180,10 @@ class Command(CalAccessCommand):
         Download the ZIP file in pieces.
         """
         if self.verbosity:
-            self.header("Downloading ZIP file")
+            if self.resume_download:
+                self.header("Resuming download of ZIP file")
+            else:
+                self.header("Downloading of ZIP file")
 
         expected_size = self.current_release_size
 

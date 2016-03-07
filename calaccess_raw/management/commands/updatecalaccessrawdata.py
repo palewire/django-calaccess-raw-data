@@ -141,30 +141,32 @@ class Command(CalAccessCommand):
         up_to_date = False
         can_resume = False
 
-        if version_loaded:
-            if version_loaded.release_datetime == current_release_datetime:
-                up_to_date = True
-            else:
-                # if there's an update started
-                if last_started_update:
-                    # that didn't finish
-                    if not last_started_update.finish_datetime:
-                        # can resume it's for the current version
-                        if last_started_update.version.release_datetime == current_release_datetime:
+        # if there's a previously started update
+        if last_started_update:
+            # if current release datetime matches version of last started update
+            if current_release_datetime == last_started_update.version.release_datetime:
+                # if the last update finished
+                if last_started_update.finish_datetime:
+                    up_to_date = True
+                else:
+                    # if the last update didn't finish
+                    # (but is still for the current version)
+                    can_resume = True
+            # if the last started update didn't finish
+            elif not last_started_update.finish_datetime:
+                # can resume updates of old versions as long as skipping download
+                if not self.downloading:
+                    can_resume = True
+                # or there is a last download
+                elif last_download:
+                    # and last download's version matches the outstanding update version
+                    if last_download.version == last_started_update.version:
+                        # and last download completed
+                        if last_download.finish_datetime:
                             can_resume = True
-                        # can also resume if skipping download
-                        elif not self.downloading:
-                            can_resume = True
-                        # if can't otherwise resume, but there's a previous download
-                        elif last_download:
-                            # which did finish
-                            if last_download.finish_datetime:
-                                # can resume as long as the versions
-                                # of last download and update are the same
-                                if last_download.version == last_started_update.version:
-                                    can_resume = True
 
         if options['noinput']:
+            # if not taking input and can resume, automatically go into resume mode
             self.resume_mode = can_resume
         else:
             prompt_context = dict(
@@ -214,18 +216,27 @@ class Command(CalAccessCommand):
                     called_by=self.get_caller_log()
                 )
 
-        # check if download is complete
-        if self.resume_mode:
-            if self.downloading:
-                if last_download.finish_datetime:
-                    self.log("Already downloaded")
-                    self.downloading = False
+        # if the user could have resumed but didn't
+        force_restart_download = can_resume and not self.resume_mode
+
+        # if not skipping download, and there's a previous download
+        if self.downloading and last_download:
+            # if not forcing a restart
+            if not force_restart_download:
+                # check if version we are updating is last one being downloaded
+                if self.log_record.version == last_download.version:
+                    # if it finished
+                    if last_download.finish_datetime:
+                        self.log('Already downloaded.')
+                        self.downloading = False
 
         if self.downloading:
             call_command(
                 "downloadcalaccessrawdata",
                 keep_files=self.keep_files,
                 verbosity=self.verbosity,
+                noinput=True,
+                restart=force_restart_download,
             )
             if self.verbosity:
                 self.duration()
