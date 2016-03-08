@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import logging
-from django.conf import settings
 from django.test import TestCase
 from calaccess_raw import get_model_list
 from django.test.utils import override_settings
@@ -22,11 +21,8 @@ class CommandTestCase(TestCase):
         Load data into the database before running other tests.
         """
         super(CommandTestCase, cls).setUpClass()
-        kwargs = dict(verbosity=3, test_data=True)
-        if settings.DATABASES.get("alt", None):
-            kwargs['database'] = 'alt'
-            logger.debug("Loading into 'alt' database")
-        call_command("updatecalaccessrawdata", noinput=True, **kwargs)
+        kwargs = dict(verbosity=3, test_data=True, noinput=True)
+        call_command("updatecalaccessrawdata", **kwargs)
 
     @override_settings(BASE_DIR='example/')
     def test_csv_gettrs(self):
