@@ -391,6 +391,514 @@ disclosure forms below.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ATR</td>
+            <td>Assistant treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>BNM</td>
+            <td>Ballot measure&#39;s name/title</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Controlled committee</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>FIL</td>
+            <td>Candidate filing/ballot fees</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Officer (Responsible)</td>
+        </tr>
+    
+        <tr>
+            <td>PEX</td>
+            <td>PEX (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>POF</td>
+            <td>Principal officer</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Proponent</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+        <tr>
+            <td>RDP</td>
+            <td>RDP (Unknown)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F425</td>
+            <td>Form 425 (Semi-annual statement of no activity, non-controlled committees)</td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450 (Recipient committee campaign statement, short form)</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460 (Recipient committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465 (Supplemental independent expenditure report)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td>s</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>T</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR2</td>
+            <td>Cover, Page 2</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td>s</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>o</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 Cvr2SoCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -721,6 +1229,474 @@ by a slate-mailer organization or recipient committee.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR2</td>
+            <td>CVR2</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F400</td>
+            <td>Form 400 (Statement of organization, slate mailer organization)</td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td>Form 410 (Statement of organization, recipient committee)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ATH</td>
+            <td>Authorizing individual</td>
+        </tr>
+    
+        <tr>
+            <td>ATR</td>
+            <td>Assistant treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>BMN</td>
+            <td>BMN (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>BNM</td>
+            <td>Ballot measure&#39;s name/title</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Controlled committee</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Officer</td>
+        </tr>
+    
+        <tr>
+            <td>POF</td>
+            <td>Principal officer</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Proponent</td>
+        </tr>
+    
+        <tr>
+            <td>SPO</td>
+            <td>Sponsor</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 Cvr3VerificationInfoCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -868,6 +1844,200 @@ Cover page verification information from campaign disclosure forms
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR3</td>
+            <td>CVR3</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F400</td>
+            <td>Form 400 (Statement of organization, slate mailer organization)</td>
+        </tr>
+    
+        <tr>
+            <td>F401</td>
+            <td>Form 401 (Slate mailer organization campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F402</td>
+            <td>Form 402 (Statement of termination, slate mailer organization</td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td>Form 410 (Statement of organization, recipient committee)</td>
+        </tr>
+    
+        <tr>
+            <td>F425</td>
+            <td>Form 425 (Semi-annual statement of no activity, non-controlled committees)</td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450 (Recipient committee campaign statement, short form)</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460 (Recipient committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Form 461 (Independent expenditure and major donor committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465 (Supplemental independent expenditure report)</td>
+        </tr>
+    
+        <tr>
+            <td>F511</td>
+            <td>Form 511 (Paid spokesman report)</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>Form 900 (Public employee&#39;s retirement board, candidate campaign statement)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>0 (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>ATR</td>
+            <td>Assistant treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>BBB</td>
+            <td>BBB (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>COA</td>
+            <td>COA (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State controller</td>
+        </tr>
+    
+        <tr>
+            <td>MAI</td>
+            <td>MAI (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>MDI</td>
+            <td>Major donor/independent expenditure</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Officer (Responsible)</td>
+        </tr>
+    
+        <tr>
+            <td>POF</td>
+            <td>Principal officer</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Proponent</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+        <tr>
+            <td>SPO</td>
+            <td>Sponsor</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>Treasurer</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 CvrCampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1674,6 +2844,778 @@ Cover page information from campaign disclosure forms
     </table>
     </div>
 
+**Look-up Codes:**
+
+*cmtte_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td>Candidate or officeholder controlled committee</td>
+        </tr>
+    
+        <tr>
+            <td>P</td>
+            <td>Candidate or officeholder primarily formed committee</td>
+        </tr>
+    
+        <tr>
+            <td>B</td>
+            <td>Ballot-measure committee</td>
+        </tr>
+    
+        <tr>
+            <td>G</td>
+            <td>General-purpose committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BMC</td>
+            <td>Ballot measure committee</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Controlled committee</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (Spending &gt; $5,000)</td>
+        </tr>
+    
+        <tr>
+            <td>MDI</td>
+            <td>Major donor/independent expenditure</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PTY</td>
+            <td>Political party</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+        <tr>
+            <td>SCC</td>
+            <td>Small contributor committee</td>
+        </tr>
+    
+        <tr>
+            <td>SMO</td>
+            <td>Slate mailer organization</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F511</td>
+            <td>Form 511 (Paid spokesman report)</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>Form 900 (Public employee&#39;s retirement board, candidate campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F425</td>
+            <td>Form 425 (Semi-annual statement of no activity, non-controlled recipient committee)</td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450 (Recipient committee campaign statement, short form)</td>
+        </tr>
+    
+        <tr>
+            <td>F401</td>
+            <td>Form 401 (Slate mailer organization campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F498</td>
+            <td>Form 498 (Late payment report, slate mailer organizations</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465 (Supplemental independent expenditure report</td>
+        </tr>
+    
+        <tr>
+            <td>F496</td>
+            <td>Form 496 (Late independent expenditure report)</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Form 461 (Independent expenditure committee and major donor committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460 (Recipient committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F497</td>
+            <td>Form 497 (Late contribution report)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td>s</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>h</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR</td>
+            <td>Cover</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*reportname*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>450</td>
+            <td>Form 450 (Recipient committee campaign statement, short form)</td>
+        </tr>
+    
+        <tr>
+            <td>460</td>
+            <td>Form 460 (Recipient committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>461</td>
+            <td>Form 461 (Independent expenditure and major donor committee campaign statement)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*stmt_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>*</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MD</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>NA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>pe</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PR</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>QS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>qt</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>QT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S1</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S2</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>sa</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>se</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>sy</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SY</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ts</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>x</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>YE</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td>s</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>o</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 CvrF470Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1682,19 +3624,25 @@ Cover page layout for F470 Officeholder/Candidate Short Supplement
 **Source:** `CVR_F470_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/CVR_F470_CD.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CalAccessTablesWeb*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p30-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/30.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p31-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/31.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p32-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/32.html
+
+
 
 
 
@@ -1972,6 +3920,7 @@ Cover page layout for F470 Officeholder/Candidate Short Supplement
     </table>
     </div>
 
+
 CvrSoCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1981,63 +3930,80 @@ form filed by a slate-mailer organization or recipient committee.
 **Source:** `CVR_SO_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/CVR_SO_CD.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CAL-ACCESS: Forms*
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/3.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/4.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/5.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/6.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/7.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/21.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/22.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/25.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/26.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/27.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/28.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/29.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/30.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/31.html
+
+
 
 
 
@@ -2549,6 +4515,233 @@ form filed by a slate-mailer organization or recipient committee.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*actvty_lvl*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CI</td>
+            <td>City</td>
+        </tr>
+    
+        <tr>
+            <td>CO</td>
+            <td>County</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>State</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BMC</td>
+            <td>Ballot measure committee</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Controlled committee</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+        <tr>
+            <td>SMO</td>
+            <td>Slate-mailer organization</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+
+*CAL-ACCESS: Forms*
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/3.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/4.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/5.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/6.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/7.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/21.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/22.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/25.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/26.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/27.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/28.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/29.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/30.html
+
+
+
+.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/1308004/pages/31.html
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F400</td>
+            <td>Form 400 (Statement of organization, slate mailer organization)</td>
+        </tr>
+    
+        <tr>
+            <td>F402</td>
+            <td>Form 402 (Statement of termination, slate mailer organization</td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td>Form 410 (Statement of organization, recipient committee)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR</td>
+            <td>CVR</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 DebtCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -2877,6 +5070,458 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BNM</td>
+            <td>Ballot measure&#39;s name/title</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (spending &gt; $5,000)</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PTY</td>
+            <td>Political party</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient Committee</td>
+        </tr>
+    
+        <tr>
+            <td>SCC</td>
+            <td>Small contributor committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*expn_code*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CMP</td>
+            <td>campaign paraphernalia/miscellaneous</td>
+        </tr>
+    
+        <tr>
+            <td>CNS</td>
+            <td>campaign consultants</td>
+        </tr>
+    
+        <tr>
+            <td>CTB</td>
+            <td>contribution (if nonmonetary, explain)*</td>
+        </tr>
+    
+        <tr>
+            <td>CVC</td>
+            <td>civic donations</td>
+        </tr>
+    
+        <tr>
+            <td>FIL</td>
+            <td>candidate filing/ballot fees</td>
+        </tr>
+    
+        <tr>
+            <td>FND</td>
+            <td>fundraising events</td>
+        </tr>
+    
+        <tr>
+            <td>IKD</td>
+            <td>in-kind contribution (nonmonetary)</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>independent expenditure supporting/opposing others (explain)*</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>legal defense</td>
+        </tr>
+    
+        <tr>
+            <td>LIT</td>
+            <td>campaign literature and mailings</td>
+        </tr>
+    
+        <tr>
+            <td>MBR</td>
+            <td>member communications</td>
+        </tr>
+    
+        <tr>
+            <td>MTG</td>
+            <td>meetings and appearances</td>
+        </tr>
+    
+        <tr>
+            <td>OFC</td>
+            <td>office expenses</td>
+        </tr>
+    
+        <tr>
+            <td>PET</td>
+            <td>petition circulating</td>
+        </tr>
+    
+        <tr>
+            <td>PHO</td>
+            <td>phone banks</td>
+        </tr>
+    
+        <tr>
+            <td>POL</td>
+            <td>polling and survey research</td>
+        </tr>
+    
+        <tr>
+            <td>POS</td>
+            <td>postage, delivery and messenger services</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>professional services (legal, accounting)</td>
+        </tr>
+    
+        <tr>
+            <td>PRT</td>
+            <td>print ads</td>
+        </tr>
+    
+        <tr>
+            <td>RAD</td>
+            <td>radio airtime and production costs</td>
+        </tr>
+    
+        <tr>
+            <td>RFD</td>
+            <td>returned contributions</td>
+        </tr>
+    
+        <tr>
+            <td>SAL</td>
+            <td>campaign workers salaries</td>
+        </tr>
+    
+        <tr>
+            <td>TEL</td>
+            <td>T.V. or cable airtime and production costs</td>
+        </tr>
+    
+        <tr>
+            <td>TRC</td>
+            <td>candidate travel, lodging and meals (explain)</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>staff/spouse travel, lodging and meals (explain)</td>
+        </tr>
+    
+        <tr>
+            <td>TSF</td>
+            <td>transfer between committees of the same candidate/sponsor</td>
+        </tr>
+    
+        <tr>
+            <td>VOT</td>
+            <td>voter registration</td>
+        </tr>
+    
+        <tr>
+            <td>WEB</td>
+            <td>information technology costs (internet, e-mail)</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>*</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>AIR</td>
+            <td>UnknownUnknown</td>
+        </tr>
+    
+        <tr>
+            <td>BUS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CAM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>&#39;CN&#39;</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CSN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>DEP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>EVE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FED</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Fnd</td>
+            <td>fundraising events</td>
+        </tr>
+    
+        <tr>
+            <td>fns</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>G</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>GGG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>L</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LDF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MEE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>N</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ofc</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>P</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PEN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>STA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>T</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TAX</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TRA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>V</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>X</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule F, accrued expenses (unpaid bills)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>DEBT</td>
+            <td>DEBT</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 ExpnCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3386,6 +6031,1452 @@ Campaign expenditures from a variety of forms
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>0 (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient Committee</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (spending &gt; $5,000)</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PTY</td>
+            <td>Political party</td>
+        </tr>
+    
+        <tr>
+            <td>SCC</td>
+            <td>Small contributor committee</td>
+        </tr>
+    
+        <tr>
+            <td>BNM</td>
+            <td>Ballot measure&#39;s name/title</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Officer</td>
+        </tr>
+    
+        <tr>
+            <td>PTH</td>
+            <td>PTH (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>RFD</td>
+            <td>RFD (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>MBR</td>
+            <td>MBR (Unknown)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*expn_code*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CMP</td>
+            <td>campaign paraphernalia/miscellaneous</td>
+        </tr>
+    
+        <tr>
+            <td>CNS</td>
+            <td>campaign consultants</td>
+        </tr>
+    
+        <tr>
+            <td>CTB</td>
+            <td>contribution (if nonmonetary, explain)*</td>
+        </tr>
+    
+        <tr>
+            <td>CVC</td>
+            <td>civic donations</td>
+        </tr>
+    
+        <tr>
+            <td>FIL</td>
+            <td>candidate filing/ballot feeds</td>
+        </tr>
+    
+        <tr>
+            <td>FND</td>
+            <td>fundraising events</td>
+        </tr>
+    
+        <tr>
+            <td>IKD</td>
+            <td>In-kind contribution (nonmonetary)</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>independent expenditure supporting/opposing others (explain)*</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>legal defense</td>
+        </tr>
+    
+        <tr>
+            <td>LIT</td>
+            <td>campaign literature and mailings</td>
+        </tr>
+    
+        <tr>
+            <td>LON</td>
+            <td>loan</td>
+        </tr>
+    
+        <tr>
+            <td>MBR</td>
+            <td>member communications</td>
+        </tr>
+    
+        <tr>
+            <td>MON</td>
+            <td>monetary contribution</td>
+        </tr>
+    
+        <tr>
+            <td>MTG</td>
+            <td>meetings and appearances</td>
+        </tr>
+    
+        <tr>
+            <td>OFC</td>
+            <td>office expenses</td>
+        </tr>
+    
+        <tr>
+            <td>PET</td>
+            <td>petition circulating</td>
+        </tr>
+    
+        <tr>
+            <td>PHO</td>
+            <td>phone banks</td>
+        </tr>
+    
+        <tr>
+            <td>POL</td>
+            <td>polling and survey research</td>
+        </tr>
+    
+        <tr>
+            <td>POS</td>
+            <td>postage, delivery and messenger services</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>professional services (legal, accounting)</td>
+        </tr>
+    
+        <tr>
+            <td>PRT</td>
+            <td>print ads</td>
+        </tr>
+    
+        <tr>
+            <td>RAD</td>
+            <td>radio airtime and production costs</td>
+        </tr>
+    
+        <tr>
+            <td>RFD</td>
+            <td>returned contributions</td>
+        </tr>
+    
+        <tr>
+            <td>SAL</td>
+            <td>campaign workers salaries</td>
+        </tr>
+    
+        <tr>
+            <td>TEL</td>
+            <td>T.V. or cable airtime and production costs</td>
+        </tr>
+    
+        <tr>
+            <td>TRC</td>
+            <td>candidate travel, lodging and meals (explain)</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>staff/spouse travel, lodging and meals (explain)</td>
+        </tr>
+    
+        <tr>
+            <td>TSF</td>
+            <td>transfer between committees of the same candidate/sponsor</td>
+        </tr>
+    
+        <tr>
+            <td>VOT</td>
+            <td>voter registration</td>
+        </tr>
+    
+        <tr>
+            <td>WEB</td>
+            <td>information technology costs (internet, e-mail)</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>*</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>001</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>011</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>200</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>401</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ADV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ANN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APR</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>AUG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>AUT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Ban</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BAN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BOO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BOX</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CHE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CNT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>COP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CRE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CSN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>,CT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>.CT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ctb</td>
+            <td>contribution (if nonmonetary, explain)*</td>
+        </tr>
+    
+        <tr>
+            <td>CTN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CVD</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>DEC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Dem</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>DIN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Don</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>DON</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Ear</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>EIM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>EMP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FAX</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FDN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FED</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FEE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FIN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Fun</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FUN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>G</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>GEN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>GGG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>GOT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>IEs</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ikd</td>
+            <td>In-kind contribution (nonmonetary)</td>
+        </tr>
+    
+        <tr>
+            <td>IN-</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Ina</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>INK</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ITE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>JAN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>JUL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>JUN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>KIC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>L</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Lit</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LN#</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LOG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>M</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MAI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Mar</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MAR</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MED</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MEE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>MGT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Mis</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Mon</td>
+            <td>monetary contribution</td>
+        </tr>
+    
+        <tr>
+            <td>MRB</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>NGP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>NON</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>NOT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>NOV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OCT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>.OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ofc</td>
+            <td>office expenses</td>
+        </tr>
+    
+        <tr>
+            <td>OFc</td>
+            <td>office expenses</td>
+        </tr>
+    
+        <tr>
+            <td>Ofc</td>
+            <td>office expenses</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OPE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>P</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Pac</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAR</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAY</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PEN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PMT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>.PO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Pos</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>R</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>.Re</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>.RE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>RFP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S-A</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Sal</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S C</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S.C</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SCU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SEE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SEP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S.M.</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SOF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SWI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>T</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TAX</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TB</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TB,</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TIC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Tor</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TRA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TRF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>TRV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>UN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>UTI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>V</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>VEN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>-VO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>VOI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>VOY</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>WI</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>x</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>X</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>D</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule D, summary of expenditure supporting/opposing other candidates, measures and committees</td>
+        </tr>
+    
+        <tr>
+            <td>E</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule E, payments made</td>
+        </tr>
+    
+        <tr>
+            <td>G</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule G, payments made by agent of independent contractor</td>
+        </tr>
+    
+        <tr>
+            <td>F450P5</td>
+            <td>Form 450 (Recipient Committee Campaign Statement Short Form): Part 5, payments made</td>
+        </tr>
+    
+        <tr>
+            <td>F461P5</td>
+            <td>Form 461 (Independent expenditure and major donor committee campaign statement): Part 5, contributions and expenditures made</td>
+        </tr>
+    
+        <tr>
+            <td>F465P3</td>
+            <td>Form 465 (Supplemental independent expenditure report): Part 3, independent expenditures made</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>Form 900 (Public Employee&#39;s Retirement Board Candidate Campaign Statement), Schedule B, expenditures made</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td>s</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>h</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td>A</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>a</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>8</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>EXPN</td>
+            <td>EXPN</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td>s</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>o</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>N</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>X</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>Y</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 F495P2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -3504,6 +7595,62 @@ its last report.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F495</td>
+            <td>F495</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450 (Recipient committee campaign statement, short form)</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460 (Recipient committee campaign statement)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 F501502Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -3512,19 +7659,25 @@ Candidate intention statement
 **Source:** `F501_502_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/F501_502_CD.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CalAccessTablesWeb*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p57-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/57.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p58-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/58.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p59-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/59.html
+
+
 
 
 
@@ -4036,6 +8189,1019 @@ Candidate intention statement
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR</td>
+            <td>CVR</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F501</td>
+            <td>Form 501 (Candidate intention statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F502</td>
+            <td>Form 502 (Campaign bank account statement)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*stmt_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>10001</td>
+            <td>ORIGINAL/INITIAL</td>
+        </tr>
+    
+        <tr>
+            <td>10002</td>
+            <td>AMENDMENT</td>
+        </tr>
+    
+        <tr>
+            <td>10003</td>
+            <td>TERMINATION</td>
+        </tr>
+    
+        <tr>
+            <td>10004</td>
+            <td>REDESIGNATE THE ACCOUNT FOR FUTURE ELECTION TO THE SAME OFFICE</td>
+        </tr>
+    
+        <tr>
+            <td>10005</td>
+            <td>LOG</td>
+        </tr>
+    
+        <tr>
+            <td>10006</td>
+            <td>LOG/AMENDMENT</td>
+        </tr>
+    
+        <tr>
+            <td>10007</td>
+            <td>AS FILED BY COMMITTEE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>30001</td>
+            <td>PRESIDENT</td>
+        </tr>
+    
+        <tr>
+            <td>30002</td>
+            <td>GOVERNOR</td>
+        </tr>
+    
+        <tr>
+            <td>30003</td>
+            <td>LIEUTENANT GOVERNOR</td>
+        </tr>
+    
+        <tr>
+            <td>30004</td>
+            <td>SECRETARY OF STATE</td>
+        </tr>
+    
+        <tr>
+            <td>30005</td>
+            <td>CONTROLLER</td>
+        </tr>
+    
+        <tr>
+            <td>30006</td>
+            <td>TREASURER</td>
+        </tr>
+    
+        <tr>
+            <td>30007</td>
+            <td>ATTORNEY GENERAL</td>
+        </tr>
+    
+        <tr>
+            <td>30008</td>
+            <td>SUPERINTENDENT OF PUBLIC INSTRUCTION</td>
+        </tr>
+    
+        <tr>
+            <td>30009</td>
+            <td>MEMBER BOARD OF EQUALIZATION</td>
+        </tr>
+    
+        <tr>
+            <td>30010</td>
+            <td>OXNARD HARBOR COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30011</td>
+            <td>CITY CONTROLLER</td>
+        </tr>
+    
+        <tr>
+            <td>30012</td>
+            <td>STATE SENATE</td>
+        </tr>
+    
+        <tr>
+            <td>30013</td>
+            <td>ASSEMBLY</td>
+        </tr>
+    
+        <tr>
+            <td>30014</td>
+            <td>INSURANCE COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30015</td>
+            <td>JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30016</td>
+            <td>BOARD MEMBER</td>
+        </tr>
+    
+        <tr>
+            <td>30017</td>
+            <td>TAX COLLECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30018</td>
+            <td>TRUSTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30019</td>
+            <td>SUPERVISOR</td>
+        </tr>
+    
+        <tr>
+            <td>30020</td>
+            <td>SHERIFF</td>
+        </tr>
+    
+        <tr>
+            <td>30021</td>
+            <td>CORONER</td>
+        </tr>
+    
+        <tr>
+            <td>30022</td>
+            <td>MARSHALL</td>
+        </tr>
+    
+        <tr>
+            <td>30023</td>
+            <td>CITY CLERK</td>
+        </tr>
+    
+        <tr>
+            <td>30024</td>
+            <td>SCHOOL BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30025</td>
+            <td>HARBOR COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30026</td>
+            <td>DISTRICT ATTORNEY</td>
+        </tr>
+    
+        <tr>
+            <td>30027</td>
+            <td>COUNTY CLERK</td>
+        </tr>
+    
+        <tr>
+            <td>30028</td>
+            <td>AUDITOR</td>
+        </tr>
+    
+        <tr>
+            <td>30029</td>
+            <td>MAYOR</td>
+        </tr>
+    
+        <tr>
+            <td>30030</td>
+            <td>CITY ATTORNEY</td>
+        </tr>
+    
+        <tr>
+            <td>30031</td>
+            <td>DEMOCRATIC COUNTY CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30032</td>
+            <td>TOWN COUNCIL</td>
+        </tr>
+    
+        <tr>
+            <td>30033</td>
+            <td>ASSESSOR</td>
+        </tr>
+    
+        <tr>
+            <td>30034</td>
+            <td>CITY TREASURER</td>
+        </tr>
+    
+        <tr>
+            <td>30035</td>
+            <td>CITY COUNCIL</td>
+        </tr>
+    
+        <tr>
+            <td>30036</td>
+            <td>COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30037</td>
+            <td>REPUBLICAN COUNTY CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30038</td>
+            <td>DIRECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30039</td>
+            <td>DIRECTOR OF ZONE 7</td>
+        </tr>
+    
+        <tr>
+            <td>30040</td>
+            <td>COMMUNITY COLLEGE BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30041</td>
+            <td>POLICE CHIEF</td>
+        </tr>
+    
+        <tr>
+            <td>30042</td>
+            <td>CHIEF OF POLICE</td>
+        </tr>
+    
+        <tr>
+            <td>30043</td>
+            <td>CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30044</td>
+            <td>BOARD OF EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>30045</td>
+            <td>BOARD OF DIRECTORS</td>
+        </tr>
+    
+        <tr>
+            <td>30046</td>
+            <td>COLLEGE BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30047</td>
+            <td>BART BOARD DIRECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30048</td>
+            <td>BOARD OF TRUSTEES</td>
+        </tr>
+    
+        <tr>
+            <td>30049</td>
+            <td>IRRIGATION</td>
+        </tr>
+    
+        <tr>
+            <td>30050</td>
+            <td>WATER BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30051</td>
+            <td>COMMUNITY PLANNING GROUP</td>
+        </tr>
+    
+        <tr>
+            <td>30052</td>
+            <td>BOARD OF SUPERVISORS</td>
+        </tr>
+    
+        <tr>
+            <td>30053</td>
+            <td>SUPERIOR COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30054</td>
+            <td>DISTRICT ATTORNEY/PUBLIC DEFENDER</td>
+        </tr>
+    
+        <tr>
+            <td>30055</td>
+            <td>MEASURE</td>
+        </tr>
+    
+        <tr>
+            <td>30056</td>
+            <td>CITY PROSECUTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30057</td>
+            <td>SUPREME COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30058</td>
+            <td>PUBLIC EMPLOYEES RETIREMENT BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30059</td>
+            <td>APPELLATE COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>50001</td>
+            <td>Ag</td>
+        </tr>
+    
+        <tr>
+            <td>50002</td>
+            <td>Assembly</td>
+        </tr>
+    
+        <tr>
+            <td>50003</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>50004</td>
+            <td>Assessor/Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50005</td>
+            <td>Assessor/County Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50006</td>
+            <td>Assessor/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50007</td>
+            <td>Associate Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50008</td>
+            <td>Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50009</td>
+            <td>Auditor/Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50010</td>
+            <td>Auditor/Controller/Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50011</td>
+            <td>Auditor/Controller/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50012</td>
+            <td>Auditor/Controller/Treasurer/Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50013</td>
+            <td>Auditor/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50014</td>
+            <td>Board Member</td>
+        </tr>
+    
+        <tr>
+            <td>50015</td>
+            <td>Board Of Director</td>
+        </tr>
+    
+        <tr>
+            <td>50016</td>
+            <td>Board Of Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>50017</td>
+            <td>Boe</td>
+        </tr>
+    
+        <tr>
+            <td>50018</td>
+            <td>Chief Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50019</td>
+            <td>City</td>
+        </tr>
+    
+        <tr>
+            <td>50020</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>50021</td>
+            <td>City Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50022</td>
+            <td>City Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50023</td>
+            <td>City Council</td>
+        </tr>
+    
+        <tr>
+            <td>50024</td>
+            <td>City Of Los Angeles</td>
+        </tr>
+    
+        <tr>
+            <td>50025</td>
+            <td>City Of South El Monte</td>
+        </tr>
+    
+        <tr>
+            <td>50026</td>
+            <td>City Prosecutor</td>
+        </tr>
+    
+        <tr>
+            <td>50027</td>
+            <td>City Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>50028</td>
+            <td>Clerk/Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50029</td>
+            <td>Clerk/Record/Public Admin</td>
+        </tr>
+    
+        <tr>
+            <td>50030</td>
+            <td>Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50031</td>
+            <td>Clerk/Recorder/Registar</td>
+        </tr>
+    
+        <tr>
+            <td>50032</td>
+            <td>Clerk/Recorder/Registrar</td>
+        </tr>
+    
+        <tr>
+            <td>50033</td>
+            <td>Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>50034</td>
+            <td>Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50035</td>
+            <td>Costa Mesa</td>
+        </tr>
+    
+        <tr>
+            <td>50036</td>
+            <td>Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>50037</td>
+            <td>County Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50038</td>
+            <td>County Clerk/Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50039</td>
+            <td>County Clerk/Auditor/Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50040</td>
+            <td>County Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50041</td>
+            <td>County Clerk/Recorder/Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>50042</td>
+            <td>County Clerk/Recorder/Public Admin</td>
+        </tr>
+    
+        <tr>
+            <td>50043</td>
+            <td>Democratic County Central Committee</td>
+        </tr>
+    
+        <tr>
+            <td>50044</td>
+            <td>Director</td>
+        </tr>
+    
+        <tr>
+            <td>50045</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>50046</td>
+            <td>District Attorney/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50047</td>
+            <td>Gccc</td>
+        </tr>
+    
+        <tr>
+            <td>50048</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>50049</td>
+            <td>Harbor Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>50050</td>
+            <td>Ic</td>
+        </tr>
+    
+        <tr>
+            <td>50051</td>
+            <td>Irrigation Dist</td>
+        </tr>
+    
+        <tr>
+            <td>50052</td>
+            <td>Judge</td>
+        </tr>
+    
+        <tr>
+            <td>50053</td>
+            <td>Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50054</td>
+            <td>Legislature</td>
+        </tr>
+    
+        <tr>
+            <td>50055</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>50056</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>50057</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>50058</td>
+            <td>Placentia</td>
+        </tr>
+    
+        <tr>
+            <td>50059</td>
+            <td>Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50060</td>
+            <td>Public Administrator/Guardian</td>
+        </tr>
+    
+        <tr>
+            <td>50061</td>
+            <td>Rent Stabilization Board</td>
+        </tr>
+    
+        <tr>
+            <td>50062</td>
+            <td>Republican Central Committee</td>
+        </tr>
+    
+        <tr>
+            <td>50063</td>
+            <td>San Francisco Dccc</td>
+        </tr>
+    
+        <tr>
+            <td>50064</td>
+            <td>Sanger</td>
+        </tr>
+    
+        <tr>
+            <td>50065</td>
+            <td>School Board</td>
+        </tr>
+    
+        <tr>
+            <td>50066</td>
+            <td>Secretary Of State</td>
+        </tr>
+    
+        <tr>
+            <td>50067</td>
+            <td>Senator</td>
+        </tr>
+    
+        <tr>
+            <td>50068</td>
+            <td>Sheriff</td>
+        </tr>
+    
+        <tr>
+            <td>50069</td>
+            <td>Sheriff/Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>50070</td>
+            <td>Sheriff/Coroner/Marshall</td>
+        </tr>
+    
+        <tr>
+            <td>50071</td>
+            <td>Sheriff/Coroner/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50072</td>
+            <td>Solana Beach</td>
+        </tr>
+    
+        <tr>
+            <td>50073</td>
+            <td>Superintendent</td>
+        </tr>
+    
+        <tr>
+            <td>50074</td>
+            <td>Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>50075</td>
+            <td>Supt Of Schools</td>
+        </tr>
+    
+        <tr>
+            <td>50076</td>
+            <td>Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50077</td>
+            <td>Town Council</td>
+        </tr>
+    
+        <tr>
+            <td>50078</td>
+            <td>Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>50079</td>
+            <td>Treasurer/Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50080</td>
+            <td>Treasurer/Tax Collector/Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50081</td>
+            <td>Treasurer/Tax Collector/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50082</td>
+            <td>Treasurer/Tax Collector/Public Administrator/County Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50083</td>
+            <td>Treasurer/Tax Collector/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50084</td>
+            <td>Trustee</td>
+        </tr>
+    
+        <tr>
+            <td>50085</td>
+            <td>Weed Recreation Board Member</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*elec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>3001</td>
+            <td>GENERAL</td>
+        </tr>
+    
+        <tr>
+            <td>3002</td>
+            <td>PRIMARY</td>
+        </tr>
+    
+        <tr>
+            <td>3003</td>
+            <td>RECALL</td>
+        </tr>
+    
+        <tr>
+            <td>3004</td>
+            <td>SPECIAL ELECTION</td>
+        </tr>
+    
+        <tr>
+            <td>3005</td>
+            <td>OFFICEHOLDER</td>
+        </tr>
+    
+        <tr>
+            <td>3006</td>
+            <td>SPECIAL RUNOFF</td>
+        </tr>
+    
+        <tr>
+            <td>3007</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>None</td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*party_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>16001</td>
+            <td>DEMOCRATIC</td>
+        </tr>
+    
+        <tr>
+            <td>16002</td>
+            <td>REPUBLICAN</td>
+        </tr>
+    
+        <tr>
+            <td>16003</td>
+            <td>GREEN PARTY</td>
+        </tr>
+    
+        <tr>
+            <td>16004</td>
+            <td>REFORM PARTY</td>
+        </tr>
+    
+        <tr>
+            <td>16005</td>
+            <td>AMERICAN INDEPENDENT PARTY</td>
+        </tr>
+    
+        <tr>
+            <td>16006</td>
+            <td>PEACE AND FREEDOM</td>
+        </tr>
+    
+        <tr>
+            <td>16007</td>
+            <td>INDEPENDENT</td>
+        </tr>
+    
+        <tr>
+            <td>16008</td>
+            <td>LIBERTARIAN</td>
+        </tr>
+    
+        <tr>
+            <td>16009</td>
+            <td>NON PARTISAN</td>
+        </tr>
+    
+        <tr>
+            <td>16010</td>
+            <td>NATURAL LAW</td>
+        </tr>
+    
+        <tr>
+            <td>16011</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>16012</td>
+            <td>NO PARTY PREFERENCE</td>
+        </tr>
+    
+        <tr>
+            <td>16013</td>
+            <td>AMERICANS ELECT</td>
+        </tr>
+    
+        <tr>
+            <td>16020</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>16014</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>None</td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 LoanCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -4507,6 +9673,203 @@ Loans received and made
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (spending &gt; $5,000)</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PTY</td>
+            <td>Political party</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+        <tr>
+            <td>SCC</td>
+            <td>Small contributor committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>B1</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule B1</td>
+        </tr>
+    
+        <tr>
+            <td>B2</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule B2</td>
+        </tr>
+    
+        <tr>
+            <td>B3</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule B3</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H</td>
+        </tr>
+    
+        <tr>
+            <td>H1</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H1</td>
+        </tr>
+    
+        <tr>
+            <td>H2</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H2</td>
+        </tr>
+    
+        <tr>
+            <td>H3</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H3</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*loan_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>H2T</td>
+            <td>Third party payment</td>
+        </tr>
+    
+        <tr>
+            <td>H2F</td>
+            <td>Forgiven</td>
+        </tr>
+    
+        <tr>
+            <td>H2R</td>
+            <td>Repay</td>
+        </tr>
+    
+        <tr>
+            <td>B2T</td>
+            <td>Third party payment</td>
+        </tr>
+    
+        <tr>
+            <td>B2F</td>
+            <td>Forgiven</td>
+        </tr>
+    
+        <tr>
+            <td>B2R</td>
+            <td>Repay</td>
+        </tr>
+    
+        <tr>
+            <td>B1G</td>
+            <td>Guarantor</td>
+        </tr>
+    
+        <tr>
+            <td>B1L</td>
+            <td>Lender</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>LOAN</td>
+            <td>LOAN</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 RcptCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -5111,6 +10474,504 @@ Receipts schedules for the following forms.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>None</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>0 (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>BNM</td>
+            <td>Ballot measure&#39;s name/title</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Individual</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Officer (Responsible)</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PTY</td>
+            <td>Political party</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient commmittee</td>
+        </tr>
+    
+        <tr>
+            <td>SCC</td>
+            <td>Small contributor committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F900</td>
+            <td>Form 900 (Public employee&#39;s retirement board, candidate campaign statement): Schedule A</td>
+        </tr>
+    
+        <tr>
+            <td>A-1</td>
+            <td>Form 460: Schedule A-1, contributions transferred to special election committees</td>
+        </tr>
+    
+        <tr>
+            <td>E530</td>
+            <td>Form E530 (Issue advocacy receipts)</td>
+        </tr>
+    
+        <tr>
+            <td>F496P3</td>
+            <td>Form 496 (Late independent expenditure): Part 3, contributions &gt; $100 received</td>
+        </tr>
+    
+        <tr>
+            <td>F401A</td>
+            <td>Form 401 (Slate mailer organization): Schedule A, payments received</td>
+        </tr>
+    
+        <tr>
+            <td>I</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule I, miscellanous increases to cash</td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule C, non-monetary contributions received</td>
+        </tr>
+    
+        <tr>
+            <td>A</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule A, monetary contributions received</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>E530</td>
+            <td>E530</td>
+        </tr>
+    
+        <tr>
+            <td>RCPT</td>
+            <td>RCPT</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 S401Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -5476,6 +11337,411 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S401</td>
+            <td>S401</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F401B</td>
+            <td>Form 401 (Slate mailer organization campaign statement): Schedule B, payments made</td>
+        </tr>
+    
+        <tr>
+            <td>F401B-1</td>
+            <td>Form 401 (Slate mailer organization campaign statement): Schedule B-1, payments made by agent or independent contractor</td>
+        </tr>
+    
+        <tr>
+            <td>F401C</td>
+            <td>Form 401 (Slate mailer organization campaign statement): Schedule C, persons receiving $1,000 or more</td>
+        </tr>
+    
+        <tr>
+            <td>F401D</td>
+            <td>Form 401 (Slate mailer organization campaign statement): Schedule D, candidates or measures supported or opposed with &lt; $100 payment</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 S496Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -5614,6 +11880,57 @@ Form 496 Late Independent Expenditures
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S496</td>
+            <td>S496</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F496</td>
+            <td>F496 (Late independent expenditure report)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 S497Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -6015,6 +12332,494 @@ Form 497: Late Contributions Received/Made
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S497</td>
+            <td>S497</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F497P1</td>
+            <td>Form 497 (Late contribution report): Part 1, late contributions received</td>
+        </tr>
+    
+        <tr>
+            <td>F497P2</td>
+            <td>Form 497 (Late contribution report): Part 2, late contributions made</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>0 (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>BNM</td>
+            <td>Ballot measure&#39;s name/title</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officerholder</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Controlled committee</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (spending &gt; $5,000)</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Officer</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PTY</td>
+            <td>Political party</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient Committee</td>
+        </tr>
+    
+        <tr>
+            <td>SCC</td>
+            <td>Small contributor committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>APP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td>s</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>h</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>T</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 S498Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6379,6 +13184,470 @@ Form 498: Slate Mailer Late Independent Expenditures Made
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S498</td>
+            <td>S498</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F498-A</td>
+            <td>Form 498 (Slate mailer late payment report): Part A: late payments attributed to</td>
+        </tr>
+    
+        <tr>
+            <td>F498-R</td>
+            <td>Form 498 (Slate mailer late payment report): Part R: late payments received from</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CAO</td>
+            <td>Candidate/officerholder</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (spending &gt; $5,000)</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient Committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+
+*Cal-Errata-201*
+
+
+.. image:: https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/2712032/pages/2.html
+
+
+
+*Cal-Format-201*
+
+
+.. image:: https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/2712034/pages/12.html
+
+
+
+*Cal-Format-1-05-02*
+
+
+.. image:: https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif
+    :target: https://www.documentcloud.org/documents/2712033/pages/10.html
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>APP</td>
+            <td>State Appellate Court Justice</td>
+        </tr>
+    
+        <tr>
+            <td>ASM</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ASR</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>ATT</td>
+            <td>Attorney General</td>
+        </tr>
+    
+        <tr>
+            <td>BED</td>
+            <td>Board of Education</td>
+        </tr>
+    
+        <tr>
+            <td>BOE</td>
+            <td>Board of Equalization Member</td>
+        </tr>
+    
+        <tr>
+            <td>BSU</td>
+            <td>Board of Supervisors</td>
+        </tr>
+    
+        <tr>
+            <td>CAT</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>CCB</td>
+            <td>Community College Board</td>
+        </tr>
+    
+        <tr>
+            <td>CCM</td>
+            <td>City Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>State Controller</td>
+        </tr>
+    
+        <tr>
+            <td>COU</td>
+            <td>County Counsel</td>
+        </tr>
+    
+        <tr>
+            <td>CSU</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>csu</td>
+            <td>County Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>CTR</td>
+            <td>Local Controller</td>
+        </tr>
+    
+        <tr>
+            <td>DAT</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>INS</td>
+            <td>Insurance Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>LTG</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>MAY</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>OTh</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PER</td>
+            <td>Public Employees Retirement System</td>
+        </tr>
+    
+        <tr>
+            <td>PDR</td>
+            <td>Public Defender</td>
+        </tr>
+    
+        <tr>
+            <td>PLN</td>
+            <td>Planning Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>SCJ</td>
+            <td>Superior Court Judge</td>
+        </tr>
+    
+        <tr>
+            <td>SEN</td>
+            <td>State Senator</td>
+        </tr>
+    
+        <tr>
+            <td>SHC</td>
+            <td>Sheriff-Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>SOS</td>
+            <td>Secretary of State</td>
+        </tr>
+    
+        <tr>
+            <td>SPM</td>
+            <td>Supreme Court Justice</td>
+        </tr>
+    
+        <tr>
+            <td>SUP</td>
+            <td>Superintendent of Public Instruction</td>
+        </tr>
+    
+        <tr>
+            <td>TRE</td>
+            <td>State Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>TRS</td>
+            <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*off_s_h_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SOUGHT</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>HELD</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sup_opp_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S</td>
+            <td>SUPPORT</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>OPPOSITION</td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 
 Common tables
 ---------------------------
@@ -6703,6 +13972,818 @@ This table method is undocumented.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR</td>
+            <td>CVR</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>E530</td>
+            <td>Form 530 (Issue advocacy report)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*office_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>30001</td>
+            <td>PRESIDENT</td>
+        </tr>
+    
+        <tr>
+            <td>30002</td>
+            <td>GOVERNOR</td>
+        </tr>
+    
+        <tr>
+            <td>30003</td>
+            <td>LIEUTENANT GOVERNOR</td>
+        </tr>
+    
+        <tr>
+            <td>30004</td>
+            <td>SECRETARY OF STATE</td>
+        </tr>
+    
+        <tr>
+            <td>30005</td>
+            <td>CONTROLLER</td>
+        </tr>
+    
+        <tr>
+            <td>30006</td>
+            <td>TREASURER</td>
+        </tr>
+    
+        <tr>
+            <td>30007</td>
+            <td>ATTORNEY GENERAL</td>
+        </tr>
+    
+        <tr>
+            <td>30008</td>
+            <td>SUPERINTENDENT OF PUBLIC INSTRUCTION</td>
+        </tr>
+    
+        <tr>
+            <td>30009</td>
+            <td>MEMBER BOARD OF EQUALIZATION</td>
+        </tr>
+    
+        <tr>
+            <td>30010</td>
+            <td>OXNARD HARBOR COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30011</td>
+            <td>CITY CONTROLLER</td>
+        </tr>
+    
+        <tr>
+            <td>30012</td>
+            <td>STATE SENATE</td>
+        </tr>
+    
+        <tr>
+            <td>30013</td>
+            <td>ASSEMBLY</td>
+        </tr>
+    
+        <tr>
+            <td>30014</td>
+            <td>INSURANCE COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30015</td>
+            <td>JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30016</td>
+            <td>BOARD MEMBER</td>
+        </tr>
+    
+        <tr>
+            <td>30017</td>
+            <td>TAX COLLECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30018</td>
+            <td>TRUSTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30019</td>
+            <td>SUPERVISOR</td>
+        </tr>
+    
+        <tr>
+            <td>30020</td>
+            <td>SHERIFF</td>
+        </tr>
+    
+        <tr>
+            <td>30021</td>
+            <td>CORONER</td>
+        </tr>
+    
+        <tr>
+            <td>30022</td>
+            <td>MARSHALL</td>
+        </tr>
+    
+        <tr>
+            <td>30023</td>
+            <td>CITY CLERK</td>
+        </tr>
+    
+        <tr>
+            <td>30024</td>
+            <td>SCHOOL BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30025</td>
+            <td>HARBOR COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30026</td>
+            <td>DISTRICT ATTORNEY</td>
+        </tr>
+    
+        <tr>
+            <td>30027</td>
+            <td>COUNTY CLERK</td>
+        </tr>
+    
+        <tr>
+            <td>30028</td>
+            <td>AUDITOR</td>
+        </tr>
+    
+        <tr>
+            <td>30029</td>
+            <td>MAYOR</td>
+        </tr>
+    
+        <tr>
+            <td>30030</td>
+            <td>CITY ATTORNEY</td>
+        </tr>
+    
+        <tr>
+            <td>30031</td>
+            <td>DEMOCRATIC COUNTY CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30032</td>
+            <td>TOWN COUNCIL</td>
+        </tr>
+    
+        <tr>
+            <td>30033</td>
+            <td>ASSESSOR</td>
+        </tr>
+    
+        <tr>
+            <td>30034</td>
+            <td>CITY TREASURER</td>
+        </tr>
+    
+        <tr>
+            <td>30035</td>
+            <td>CITY COUNCIL</td>
+        </tr>
+    
+        <tr>
+            <td>30036</td>
+            <td>COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30037</td>
+            <td>REPUBLICAN COUNTY CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30038</td>
+            <td>DIRECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30039</td>
+            <td>DIRECTOR OF ZONE 7</td>
+        </tr>
+    
+        <tr>
+            <td>30040</td>
+            <td>COMMUNITY COLLEGE BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30041</td>
+            <td>POLICE CHIEF</td>
+        </tr>
+    
+        <tr>
+            <td>30042</td>
+            <td>CHIEF OF POLICE</td>
+        </tr>
+    
+        <tr>
+            <td>30043</td>
+            <td>CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30044</td>
+            <td>BOARD OF EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>30045</td>
+            <td>BOARD OF DIRECTORS</td>
+        </tr>
+    
+        <tr>
+            <td>30046</td>
+            <td>COLLEGE BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30047</td>
+            <td>BART BOARD DIRECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30048</td>
+            <td>BOARD OF TRUSTEES</td>
+        </tr>
+    
+        <tr>
+            <td>30049</td>
+            <td>IRRIGATION</td>
+        </tr>
+    
+        <tr>
+            <td>30050</td>
+            <td>WATER BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30051</td>
+            <td>COMMUNITY PLANNING GROUP</td>
+        </tr>
+    
+        <tr>
+            <td>30052</td>
+            <td>BOARD OF SUPERVISORS</td>
+        </tr>
+    
+        <tr>
+            <td>30053</td>
+            <td>SUPERIOR COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30054</td>
+            <td>DISTRICT ATTORNEY/PUBLIC DEFENDER</td>
+        </tr>
+    
+        <tr>
+            <td>30055</td>
+            <td>MEASURE</td>
+        </tr>
+    
+        <tr>
+            <td>30056</td>
+            <td>CITY PROSECUTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30057</td>
+            <td>SUPREME COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30058</td>
+            <td>PUBLIC EMPLOYEES RETIREMENT BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30059</td>
+            <td>APPELLATE COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>50001</td>
+            <td>Ag</td>
+        </tr>
+    
+        <tr>
+            <td>50002</td>
+            <td>Assembly</td>
+        </tr>
+    
+        <tr>
+            <td>50003</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>50004</td>
+            <td>Assessor/Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50005</td>
+            <td>Assessor/County Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50006</td>
+            <td>Assessor/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50007</td>
+            <td>Associate Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50008</td>
+            <td>Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50009</td>
+            <td>Auditor/Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50010</td>
+            <td>Auditor/Controller/Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50011</td>
+            <td>Auditor/Controller/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50012</td>
+            <td>Auditor/Controller/Treasurer/Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50013</td>
+            <td>Auditor/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50014</td>
+            <td>Board Member</td>
+        </tr>
+    
+        <tr>
+            <td>50015</td>
+            <td>Board Of Director</td>
+        </tr>
+    
+        <tr>
+            <td>50016</td>
+            <td>Board Of Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>50017</td>
+            <td>Boe</td>
+        </tr>
+    
+        <tr>
+            <td>50018</td>
+            <td>Chief Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50019</td>
+            <td>City</td>
+        </tr>
+    
+        <tr>
+            <td>50020</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>50021</td>
+            <td>City Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50022</td>
+            <td>City Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50023</td>
+            <td>City Council</td>
+        </tr>
+    
+        <tr>
+            <td>50024</td>
+            <td>City Of Los Angeles</td>
+        </tr>
+    
+        <tr>
+            <td>50025</td>
+            <td>City Of South El Monte</td>
+        </tr>
+    
+        <tr>
+            <td>50026</td>
+            <td>City Prosecutor</td>
+        </tr>
+    
+        <tr>
+            <td>50027</td>
+            <td>City Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>50028</td>
+            <td>Clerk/Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50029</td>
+            <td>Clerk/Record/Public Admin</td>
+        </tr>
+    
+        <tr>
+            <td>50030</td>
+            <td>Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50031</td>
+            <td>Clerk/Recorder/Registar</td>
+        </tr>
+    
+        <tr>
+            <td>50032</td>
+            <td>Clerk/Recorder/Registrar</td>
+        </tr>
+    
+        <tr>
+            <td>50033</td>
+            <td>Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>50034</td>
+            <td>Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50035</td>
+            <td>Costa Mesa</td>
+        </tr>
+    
+        <tr>
+            <td>50036</td>
+            <td>Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>50037</td>
+            <td>County Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50038</td>
+            <td>County Clerk/Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50039</td>
+            <td>County Clerk/Auditor/Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50040</td>
+            <td>County Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50041</td>
+            <td>County Clerk/Recorder/Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>50042</td>
+            <td>County Clerk/Recorder/Public Admin</td>
+        </tr>
+    
+        <tr>
+            <td>50043</td>
+            <td>Democratic County Central Committee</td>
+        </tr>
+    
+        <tr>
+            <td>50044</td>
+            <td>Director</td>
+        </tr>
+    
+        <tr>
+            <td>50045</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>50046</td>
+            <td>District Attorney/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50047</td>
+            <td>Gccc</td>
+        </tr>
+    
+        <tr>
+            <td>50048</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>50049</td>
+            <td>Harbor Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>50050</td>
+            <td>Ic</td>
+        </tr>
+    
+        <tr>
+            <td>50051</td>
+            <td>Irrigation Dist</td>
+        </tr>
+    
+        <tr>
+            <td>50052</td>
+            <td>Judge</td>
+        </tr>
+    
+        <tr>
+            <td>50053</td>
+            <td>Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50054</td>
+            <td>Legislature</td>
+        </tr>
+    
+        <tr>
+            <td>50055</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>50056</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>50057</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>50058</td>
+            <td>Placentia</td>
+        </tr>
+    
+        <tr>
+            <td>50059</td>
+            <td>Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50060</td>
+            <td>Public Administrator/Guardian</td>
+        </tr>
+    
+        <tr>
+            <td>50061</td>
+            <td>Rent Stabilization Board</td>
+        </tr>
+    
+        <tr>
+            <td>50062</td>
+            <td>Republican Central Committee</td>
+        </tr>
+    
+        <tr>
+            <td>50063</td>
+            <td>San Francisco Dccc</td>
+        </tr>
+    
+        <tr>
+            <td>50064</td>
+            <td>Sanger</td>
+        </tr>
+    
+        <tr>
+            <td>50065</td>
+            <td>School Board</td>
+        </tr>
+    
+        <tr>
+            <td>50066</td>
+            <td>Secretary Of State</td>
+        </tr>
+    
+        <tr>
+            <td>50067</td>
+            <td>Senator</td>
+        </tr>
+    
+        <tr>
+            <td>50068</td>
+            <td>Sheriff</td>
+        </tr>
+    
+        <tr>
+            <td>50069</td>
+            <td>Sheriff/Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>50070</td>
+            <td>Sheriff/Coroner/Marshall</td>
+        </tr>
+    
+        <tr>
+            <td>50071</td>
+            <td>Sheriff/Coroner/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50072</td>
+            <td>Solana Beach</td>
+        </tr>
+    
+        <tr>
+            <td>50073</td>
+            <td>Superintendent</td>
+        </tr>
+    
+        <tr>
+            <td>50074</td>
+            <td>Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>50075</td>
+            <td>Supt Of Schools</td>
+        </tr>
+    
+        <tr>
+            <td>50076</td>
+            <td>Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50077</td>
+            <td>Town Council</td>
+        </tr>
+    
+        <tr>
+            <td>50078</td>
+            <td>Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>50079</td>
+            <td>Treasurer/Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50080</td>
+            <td>Treasurer/Tax Collector/Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50081</td>
+            <td>Treasurer/Tax Collector/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50082</td>
+            <td>Treasurer/Tax Collector/Public Administrator/County Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50083</td>
+            <td>Treasurer/Tax Collector/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50084</td>
+            <td>Trustee</td>
+        </tr>
+    
+        <tr>
+            <td>50085</td>
+            <td>Weed Recreation Board Member</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 FilerFilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6880,6 +14961,418 @@ filing information.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*form_id*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>E530</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F111</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F400</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F401</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F402</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F405</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F410 AT</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F410ATR</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F415</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F416</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F419</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F420</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F421</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F425</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F430</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F440</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F470</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F470S</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F480</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F490</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F495</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F496</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F497</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F498</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F500</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F501</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F501502</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F502</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F555</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F601</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F602</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F604</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F605</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F606</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F607</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F615</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F666</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F690</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F700</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F777</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F888</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F999</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*stmnt_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>10001</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>10002</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>10003</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>10004</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>10005</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>10006</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>10007</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*stmnt_status*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>11001</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>11002</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>11003</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*filing_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>0 (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>22001</td>
+            <td>Electronic</td>
+        </tr>
+    
+        <tr>
+            <td>22006</td>
+            <td>Cal Online</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 FilernameCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6898,11 +15391,15 @@ fields in conjunction.
 **Source:** `FILERNAME_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/FILERNAME_CD.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*FAQ*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711615/pages/2.html
+
+
 
 
 
@@ -7081,6 +15578,177 @@ fields in conjunction.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*filer_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td> NOT DEFINED</td>
+            <td>Undefined</td>
+        </tr>
+    
+        <tr>
+            <td>ALL FILERS</td>
+            <td>All filers</td>
+        </tr>
+    
+        <tr>
+            <td>CANDIDATE/OFFICEHOLDER</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
+            <td>CLIENT</td>
+            <td>Client</td>
+        </tr>
+    
+        <tr>
+            <td>EMPLOYER</td>
+            <td>Employer</td>
+        </tr>
+    
+        <tr>
+            <td>FIRM</td>
+            <td>Firm</td>
+        </tr>
+    
+        <tr>
+            <td>INDIVIDUAL</td>
+            <td>Individual</td>
+        </tr>
+    
+        <tr>
+            <td>INITIATIVE</td>
+            <td>Initiative</td>
+        </tr>
+    
+        <tr>
+            <td>LOBBYIST</td>
+            <td>Lobbyist</td>
+        </tr>
+    
+        <tr>
+            <td>MAJOR DONOR/INDEPENDENT EXPENDITURE COMMITTEE</td>
+            <td>Major donor or indenpendent expenditure committee</td>
+        </tr>
+    
+        <tr>
+            <td>PAYMENT TO INFLUENCE</td>
+            <td>Payment to influence</td>
+        </tr>
+    
+        <tr>
+            <td>PREPAID ACCOUNT</td>
+            <td>Prepaid account</td>
+        </tr>
+    
+        <tr>
+            <td>PROPONENT</td>
+            <td>Proponent</td>
+        </tr>
+    
+        <tr>
+            <td>PROPOSITION</td>
+            <td>Proposition</td>
+        </tr>
+    
+        <tr>
+            <td>RECIPIENT COMMITTEE</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+        <tr>
+            <td>SLATE MAILER ORGANIZATIONS</td>
+            <td>Slate mailer organization</td>
+        </tr>
+    
+        <tr>
+            <td>TREASURER/RESPONSIBLE OFFICER</td>
+            <td>Treasurer/responsible officer</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*status*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Undefined</td>
+        </tr>
+    
+        <tr>
+            <td>A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>ACTIVE</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>INACTIVE</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>P</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>R</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>TERMINATED</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>W</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 FilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -7130,6 +15798,59 @@ a filing are derived.
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*filing_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>22001</td>
+            <td>Electronic</td>
+        </tr>
+    
+        <tr>
+            <td>22002</td>
+            <td>Key data entry</td>
+        </tr>
+    
+        <tr>
+            <td>22003</td>
+            <td>Historical lobby</td>
+        </tr>
+    
+        <tr>
+            <td>22004</td>
+            <td>Historical campaign</td>
+        </tr>
+    
+        <tr>
+            <td>22005</td>
+            <td>AMS</td>
+        </tr>
+    
+        <tr>
+            <td>22006</td>
+            <td>Cal Online</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 HdrCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -7242,6 +15963,34 @@ Electronic filing record header data
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>HDR</td>
+            <td>HDR</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 HeaderCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -7382,6 +16131,44 @@ Lookup table used to report form 460 information in the AMS.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>AP1</td>
+            <td>AP1</td>
+        </tr>
+    
+        <tr>
+            <td>AP2</td>
+            <td>AP2</td>
+        </tr>
+    
+        <tr>
+            <td>SMRY_HEADER</td>
+            <td>SMRY_HEADER</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 SmryCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -7494,6 +16281,242 @@ Summary totals from filings.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>SMRY</td>
+            <td>SMRY</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>401A</td>
+            <td>Form 401 (Slate mailer organization campaign statement): Schedule A, payments received</td>
+        </tr>
+    
+        <tr>
+            <td>401B</td>
+            <td>Form 401 (Slate mailer organization campaign statement): Schedule B, payments made</td>
+        </tr>
+    
+        <tr>
+            <td>401B-1</td>
+            <td>Form 401 (Slate mailer organization campaign statement): Schedule B1, payments made by agent or independent contractor</td>
+        </tr>
+    
+        <tr>
+            <td>A</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule A, </td>
+        </tr>
+    
+        <tr>
+            <td>B1</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule B1, </td>
+        </tr>
+    
+        <tr>
+            <td>B2</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule B2, </td>
+        </tr>
+    
+        <tr>
+            <td>B3</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule B3, </td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule C, </td>
+        </tr>
+    
+        <tr>
+            <td>D</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule D, </td>
+        </tr>
+    
+        <tr>
+            <td>E</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule E, </td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule F, </td>
+        </tr>
+    
+        <tr>
+            <td>G</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule G, </td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H, </td>
+        </tr>
+    
+        <tr>
+            <td>H1</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H1, </td>
+        </tr>
+    
+        <tr>
+            <td>H2</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H2, </td>
+        </tr>
+    
+        <tr>
+            <td>H3</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule H3, </td>
+        </tr>
+    
+        <tr>
+            <td>I</td>
+            <td>Form 460 (Recipient committee campaign statement): Schedule I, </td>
+        </tr>
+    
+        <tr>
+            <td>F401</td>
+            <td>Form 401 (Slate mailer organization campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450 (Recipient committee campaign statement, short form)</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460 (Recipient committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Form 461 (Independent expenditure and major donor committee campaign statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465 ()</td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td>Form 625 (Report of lobbying firm)</td>
+        </tr>
+    
+        <tr>
+            <td>F625P2</td>
+            <td>Form 625 (Report of lobbying firm): Part 2, payments received in connection with lobbying activity</td>
+        </tr>
+    
+        <tr>
+            <td>F625P3A</td>
+            <td>Form 625 (Report of lobbying firm): Part 3A, payments for activity expenses made in connection with lobbying activities</td>
+        </tr>
+    
+        <tr>
+            <td>F625P3B</td>
+            <td>Form 625 (Report of lobbying firm): Part 3B, payments to other lobbying firms made in connection with lobbying activities</td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td>Form 635 (Report of lobbyist employer and lobbying coalition)</td>
+        </tr>
+    
+        <tr>
+            <td>F635P3A</td>
+            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3A, payments in in-house employee lobbyists</td>
+        </tr>
+    
+        <tr>
+            <td>F635P3B</td>
+            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3B, payments to lobbying firms</td>
+        </tr>
+    
+        <tr>
+            <td>F635P3C</td>
+            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3C, activity expenses</td>
+        </tr>
+    
+        <tr>
+            <td>F635P3D</td>
+            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3D, other payments to influence legislative or administrative action</td>
+        </tr>
+    
+        <tr>
+            <td>F635P3E</td>
+            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3E, payments in connection with administrative testimony in ratemaking proceedings before the California Public Utilities Commission</td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action)</td>
+        </tr>
+    
+        <tr>
+            <td>F645P2A</td>
+            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2A, activity expenses</td>
+        </tr>
+    
+        <tr>
+            <td>F645P2B</td>
+            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2B, other payments to influence legislative or administrative action</td>
+        </tr>
+    
+        <tr>
+            <td>F645P2C</td>
+            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2C, payments in connection with administrative testimony in ratemaking proceedings before the California Public Utilities Commission</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>Form 900 (Form 900 (Public Employee&#39;s Retirement Board          Candidate Campaign Statement)</td>
+        </tr>
+    
+        <tr>
+            <td>S640</td>
+            <td>Form 640 (Governmental agencies reporting ther payments to influence legislative or administrative action attachment)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 SpltCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -7597,6 +16620,64 @@ Split records
     </table>
     </div>
 
+**Look-up Codes:**
+
+*pform_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>B1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>B2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>D</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F450P5</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 TextMemoCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -7690,6 +16771,532 @@ Text memos attached to electronic filings
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>i</td>
+            <td>i</td>
+        </tr>
+    
+        <tr>
+            <td>MEMO</td>
+            <td>MEMO</td>
+        </tr>
+    
+        <tr>
+            <td>TEXT</td>
+            <td>TEXT</td>
+        </tr>
+    
+        <tr>
+            <td>trun</td>
+            <td>trun</td>
+        </tr>
+    
+        <tr>
+            <td>Unde</td>
+            <td>Unde</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td> E</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>410</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>460</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>461</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>465</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>496</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>497</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>497P1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>497P2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>A4</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>A6</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>B1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>B2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>B3</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>COMMENTS</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>CVR</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>D</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>DEBTF</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>E</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>EXPNT</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F401</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F401A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F401B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F401B-1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F405</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F425</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F450P5</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F461P1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F461P2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F461P5</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F465P3</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F496</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F496P3</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F497</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F497P1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F497P2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F498-A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F498-R</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F601</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F601P2A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F601P2B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F602</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F604</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F605</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F606</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F607</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F615</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F615P1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F615P2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625P2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625P3A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625P3B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625P4B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635P3B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635P3C</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635P4B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645P2A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645P3B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>G</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>H1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>H2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>H3</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>I</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>PT5</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>RCPTB1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>RCPTC</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>RCPTI</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S497</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S630</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S635-C</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S635C</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S640</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>SCH A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>SF</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>SMRY</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>SPLT</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>SUM</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>SUMMARY</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 
 Lobbying tables
@@ -7844,6 +17451,105 @@ Additional data from lobbyist disclosure forms
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>EMP</td>
+            <td>Employer</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Officer (responsible)</td>
+        </tr>
+    
+        <tr>
+            <td>OWN</td>
+            <td>Owner</td>
+        </tr>
+    
+        <tr>
+            <td>PTM</td>
+            <td>PTM (Unknown)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F625</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR2</td>
+            <td>CVR2</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 Cvr2RegistrationCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -7982,6 +17688,120 @@ Cover page of lobbying disclosure forms
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR2</td>
+            <td>CVR2</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F601</td>
+            <td>Form 601 (Lobbying firm registration statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F602</td>
+            <td>Form 602 (Lobbying firm activity authorization)</td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td>Form 603 (Lobbyist employer or lobbying coalition registration statement)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>AGY</td>
+            <td>State agency</td>
+        </tr>
+    
+        <tr>
+            <td>EMP</td>
+            <td>Employer</td>
+        </tr>
+    
+        <tr>
+            <td>FRM</td>
+            <td>Lobbying firm</td>
+        </tr>
+    
+        <tr>
+            <td>LBY</td>
+            <td>Lobbyist (an individual)</td>
+        </tr>
+    
+        <tr>
+            <td>MBR</td>
+            <td>Member of association</td>
+        </tr>
+    
+        <tr>
+            <td>SCL</td>
+            <td>Subcontracted client</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 CvrLobbyDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -8482,6 +18302,130 @@ Cover page information for lobbying disclosure forms
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CLI</td>
+            <td>CLI (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>FRM</td>
+            <td>Lobbying firm</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (Spending &gt; $5,000</td>
+        </tr>
+    
+        <tr>
+            <td>LBY</td>
+            <td>Lobbyist (an individual)</td>
+        </tr>
+    
+        <tr>
+            <td>LCO</td>
+            <td>Lobbying coalition</td>
+        </tr>
+    
+        <tr>
+            <td>LEM</td>
+            <td>Lobbying employer</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F615</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR</td>
+            <td>CVR</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 CvrRegistrationCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -8490,31 +18434,40 @@ Cover page of lobbying disclosure forms
 **Source:** `CVR_REGISTRATION_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/CVR_REGISTRATION_CD.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CalAccessTablesWeb*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p8-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/8.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p35-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/35.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p36-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/36.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p37-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/37.html
+
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p38-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/38.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p39-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/39.html
+
+
 
 
 
@@ -9179,6 +19132,327 @@ Cover page of lobbying disclosure forms
     </table>
     </div>
 
+**Look-up Codes:**
+
+*bus_class*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>ENT</td>
+            <td>Entertainment/Recreation</td>
+        </tr>
+    
+        <tr>
+            <td>Esp</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FIN</td>
+            <td>Finance/Insurance</td>
+        </tr>
+    
+        <tr>
+            <td>LOG</td>
+            <td>Lodging/Restaurants</td>
+        </tr>
+    
+        <tr>
+            <td>MAN</td>
+            <td>Manufacturing/Industrial</td>
+        </tr>
+    
+        <tr>
+            <td>MER</td>
+            <td>Merchandise/Retail</td>
+        </tr>
+    
+        <tr>
+            <td>OIL</td>
+            <td>Oil and Gas</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>Professional/Trade</td>
+        </tr>
+    
+        <tr>
+            <td>REA</td>
+            <td>Real Estate</td>
+        </tr>
+    
+        <tr>
+            <td>TRN</td>
+            <td>Transportation</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BUS</td>
+            <td>BUS (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>FRM</td>
+            <td>Lobbying firm</td>
+        </tr>
+    
+        <tr>
+            <td>LBY</td>
+            <td>Lobbyist (an individual)</td>
+        </tr>
+    
+        <tr>
+            <td>LCO</td>
+            <td>Lobbying coalition</td>
+        </tr>
+    
+        <tr>
+            <td>LEM</td>
+            <td>Lobbying employer</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F601</td>
+            <td>Form 601 (Lobbying firm registration statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F602</td>
+            <td>Form 602 (Lobbying firm activity authorization)</td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td>Form 603 (Lobbyist employer or lobbying coalition registration statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F604</td>
+            <td>Form 604 (Lobbyist certification statement)</td>
+        </tr>
+    
+        <tr>
+            <td>F606</td>
+            <td>Form 606 (Notice of termination)</td>
+        </tr>
+    
+        <tr>
+            <td>F607</td>
+            <td>Form 607 (Notice of withdrawal)</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*ind_class*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>AGR</td>
+            <td>Agriculture</td>
+        </tr>
+    
+        <tr>
+            <td>EDU</td>
+            <td>Education</td>
+        </tr>
+    
+        <tr>
+            <td>GOV</td>
+            <td>Government</td>
+        </tr>
+    
+        <tr>
+            <td>HEA</td>
+            <td>Health</td>
+        </tr>
+    
+        <tr>
+            <td>LAB</td>
+            <td>Labor Unions</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Legal</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>POL</td>
+            <td>Political Organizations</td>
+        </tr>
+    
+        <tr>
+            <td>PUB</td>
+            <td>Public Employees</td>
+        </tr>
+    
+        <tr>
+            <td>UTL</td>
+            <td>Utilities</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*influen_yn*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>Y</td>
+            <td>Yes</td>
+        </tr>
+    
+        <tr>
+            <td>N</td>
+            <td>No</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>CVR</td>
+            <td>CVR</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*st_leg_yn*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>Y</td>
+            <td>Yes</td>
+        </tr>
+    
+        <tr>
+            <td>N</td>
+            <td>No</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 F690P2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -9308,6 +19582,72 @@ Amends lobbying disclosure filings
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F690</td>
+            <td>F690</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F615</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 LattCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -9519,6 +19859,125 @@ Lobbyist disclosure attachment schedules for payments
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FRM</td>
+            <td>Lobbying firm</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (Spending &gt; $5,000</td>
+        </tr>
+    
+        <tr>
+            <td>LBY</td>
+            <td>Lobbyist (an individual)</td>
+        </tr>
+    
+        <tr>
+            <td>LCO</td>
+            <td>Lobbying coalition</td>
+        </tr>
+    
+        <tr>
+            <td>LEM</td>
+            <td>Lobbying employer</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>S630</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S635-C</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>S640</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>LATT</td>
+            <td>LATT</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 LccmCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -9767,6 +20226,110 @@ Lobbying campaign contributions
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>Controlling committee</td>
+        </tr>
+    
+        <tr>
+            <td>RCP</td>
+            <td>Recipient committee</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F615P2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625P4B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635P4B</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645P3B</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>LCCM</td>
+            <td>LCCM</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 LempCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -10013,6 +20576,62 @@ Lobbyist employers and subcontracted clients
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F601P2A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F601P2B</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>LEMP</td>
+            <td>LEMP</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 LexpCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -10269,6 +20888,133 @@ Lobbying activity expenditures
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>IND</td>
+            <td>Person (Spending &gt; $5,000</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F615P1</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625P3A</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635P3C</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645P2A</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>LEXP</td>
+            <td>LEXP</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*recsubtype*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>1</td>
+            <td>Main</td>
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Detail</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 LobbyAmendmentsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -10679,6 +21425,62 @@ Lobbyist registration amendment information
     </table>
     </div>
 
+**Look-up Codes:**
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F605</td>
+            <td>F605</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F601</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 LobbyingChgLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -10926,6 +21728,74 @@ This is an undocumented table.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>3</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>4</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>10</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>16</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>20</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>None</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 LobbyistContributions1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11019,6 +21889,7 @@ Lobbyist contribution disclosure table.
     </tbody>
     </table>
     </div>
+
 
 LobbyistContributions2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -11115,6 +21986,7 @@ disclosure table (Lobbyist Contributions 3)
     </table>
     </div>
 
+
 LobbyistContributions3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11209,6 +22081,7 @@ Lobbyist contribution disclosure table.
     </table>
     </div>
 
+
 LobbyistEmpLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11294,6 +22167,7 @@ This is an undocumented model.
     </table>
     </div>
 
+
 LobbyistEmpLobbyist2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11378,6 +22252,7 @@ This is an undocumented model.
     </tbody>
     </table>
     </div>
+
 
 LobbyistEmployer1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -11590,6 +22465,7 @@ This is an undocumented model.
     </table>
     </div>
 
+
 LobbyistEmployer2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11800,6 +22676,7 @@ This is an undocumented model.
     </tbody>
     </table>
     </div>
+
 
 LobbyistEmployer3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12012,6 +22889,7 @@ This is an undocumented model.
     </table>
     </div>
 
+
 LobbyistEmployerFirms1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12087,6 +22965,7 @@ This is an undocumented model.
     </tbody>
     </table>
     </div>
+
 
 LobbyistEmployerFirms2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12164,6 +23043,7 @@ This is an undocumented model.
     </table>
     </div>
 
+
 LobbyistEmployerHistoryCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12175,19 +23055,25 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 **Source:** `LOBBYIST_EMPLOYER_HISTORY.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/LOBBYIST_EMPLOYER_HISTORY.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CalAccessTablesWeb*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p11-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/11.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p96-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/96.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p97-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/97.html
+
+
 
 
 
@@ -12393,6 +23279,7 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     </table>
     </div>
 
+
 LobbyistFirm1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12585,6 +23472,7 @@ This is an undocumented model.
     </tbody>
     </table>
     </div>
+
 
 LobbyistFirm2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12779,6 +23667,7 @@ This is an undocumented model.
     </table>
     </div>
 
+
 LobbyistFirm3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12972,6 +23861,7 @@ This is an undocumented model.
     </table>
     </div>
 
+
 LobbyistFirmEmployer1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -13101,6 +23991,7 @@ This is an undocumented model.
     </tbody>
     </table>
     </div>
+
 
 LobbyistFirmEmployer2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -13232,6 +24123,7 @@ This is an undocumented model.
     </table>
     </div>
 
+
 LobbyistFirmHistoryCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -13243,19 +24135,25 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 **Source:** `LOBBYIST_FIRM_HISTORY.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/LOBBYIST_FIRM_HISTORY.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CalAccessTablesWeb*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p12-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/12.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p101-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/101.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p102-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/102.html
+
+
 
 
 
@@ -13443,6 +24341,7 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     </table>
     </div>
 
+
 LobbyistFirmLobbyist1Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -13528,6 +24427,7 @@ It's an undocumented model.
     </table>
     </div>
 
+
 LobbyistFirmLobbyist2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -13612,6 +24512,7 @@ It's an undocumented model.
     </tbody>
     </table>
     </div>
+
 
 LothCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -13823,6 +24724,57 @@ Payment to other lobbying firms
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F625P3B</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>LOTH</td>
+            <td>LOTH</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 LpayCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14089,6 +25041,110 @@ Payments made or received by lobbying firms
     </table>
     </div>
 
+**Look-up Codes:**
+
+*entity_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td></td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>128</td>
+            <td>128 (Unknown)</td>
+        </tr>
+    
+        <tr>
+            <td>FRM</td>
+            <td>Lobbying firm</td>
+        </tr>
+    
+        <tr>
+            <td>LCO</td>
+            <td>Lobbying coalition</td>
+        </tr>
+    
+        <tr>
+            <td>LEM</td>
+            <td>Lobbying employer</td>
+        </tr>
+    
+        <tr>
+            <td>OTH</td>
+            <td>Other</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>F625P2</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635P3B</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*rec_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>LPAY</td>
+            <td>LPAY</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 
 Other tables
 ---------------------------
@@ -14102,15 +25158,20 @@ Contains acronyms and their meaning.
 **Source:** `ACRONYMS_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/ACRONYMS_CD.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CalAccessTablesWeb*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p7-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/7.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p16-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/16.html
+
+
 
 
 
@@ -14171,6 +25232,7 @@ Contains acronyms and their meaning.
     </tbody>
     </table>
     </div>
+
 
 AddressCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14268,6 +25330,7 @@ desplayed by the AMS.
     </table>
     </div>
 
+
 BallotMeasuresCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14352,6 +25415,7 @@ Ballot measure dates and times
     </tbody>
     </table>
     </div>
+
 
 EfsFilingLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14438,6 +25502,149 @@ This is an undocumented model.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*form_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>BADFORMAT 253</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F400</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F401</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F402</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F425</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F496</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F497</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F498</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F601</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F602</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F604</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F606</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F607</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F615</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>form</td>
+            <td></td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 FilerAcronymsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14486,6 +25693,7 @@ Links acronyms to filers
     </tbody>
     </table>
     </div>
+
 
 FilerAddressCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14564,6 +25772,7 @@ addresses change.
     </table>
     </div>
 
+
 FilerEthicsClassCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14621,6 +25830,7 @@ This table stores lobbyist ethics training dates.
     </tbody>
     </table>
     </div>
+
 
 FilerInterestsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14688,6 +25898,7 @@ Links a filer to their interest codes.
     </tbody>
     </table>
     </div>
+
 
 FilerLinksCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14801,6 +26012,154 @@ Links filers to each other and records their relationship type.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*link_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>-12019</td>
+            <td>-12019</td>
+        </tr>
+    
+        <tr>
+            <td>-12018</td>
+            <td>-12018</td>
+        </tr>
+    
+        <tr>
+            <td>-12016</td>
+            <td>-12016</td>
+        </tr>
+    
+        <tr>
+            <td>-12015</td>
+            <td>-12015</td>
+        </tr>
+    
+        <tr>
+            <td>-12014</td>
+            <td>-12014</td>
+        </tr>
+    
+        <tr>
+            <td>-12013</td>
+            <td>-12013</td>
+        </tr>
+    
+        <tr>
+            <td>-12011</td>
+            <td>-12011</td>
+        </tr>
+    
+        <tr>
+            <td>-12008</td>
+            <td>-12008</td>
+        </tr>
+    
+        <tr>
+            <td>-12005</td>
+            <td>-12005</td>
+        </tr>
+    
+        <tr>
+            <td>-12004</td>
+            <td>-12004</td>
+        </tr>
+    
+        <tr>
+            <td>-12002</td>
+            <td>-12002</td>
+        </tr>
+    
+        <tr>
+            <td>-12001</td>
+            <td>-12001</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    
+        <tr>
+            <td>12001</td>
+            <td>12001</td>
+        </tr>
+    
+        <tr>
+            <td>12002</td>
+            <td>12002</td>
+        </tr>
+    
+        <tr>
+            <td>12004</td>
+            <td>12004</td>
+        </tr>
+    
+        <tr>
+            <td>12005</td>
+            <td>12005</td>
+        </tr>
+    
+        <tr>
+            <td>12008</td>
+            <td>12008</td>
+        </tr>
+    
+        <tr>
+            <td>12011</td>
+            <td>12011</td>
+        </tr>
+    
+        <tr>
+            <td>12013</td>
+            <td>12013</td>
+        </tr>
+    
+        <tr>
+            <td>12014</td>
+            <td>12014</td>
+        </tr>
+    
+        <tr>
+            <td>12015</td>
+            <td>12015</td>
+        </tr>
+    
+        <tr>
+            <td>12016</td>
+            <td>12016</td>
+        </tr>
+    
+        <tr>
+            <td>12018</td>
+            <td>12018</td>
+        </tr>
+    
+        <tr>
+            <td>12019</td>
+            <td>12019</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 FilerStatusTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14850,6 +26209,69 @@ of codes and definitions.
     </tbody>
     </table>
     </div>
+
+**Look-up Codes:**
+
+*status_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>A</td>
+            <td>ACTIVE</td>
+        </tr>
+    
+        <tr>
+            <td>N</td>
+            <td>INACTIVE</td>
+        </tr>
+    
+        <tr>
+            <td>P</td>
+            <td>PENDING</td>
+        </tr>
+    
+        <tr>
+            <td>R</td>
+            <td>REVOKED</td>
+        </tr>
+    
+        <tr>
+            <td>S</td>
+            <td>SUSPENDED</td>
+        </tr>
+    
+        <tr>
+            <td>T</td>
+            <td>TERMINATED</td>
+        </tr>
+    
+        <tr>
+            <td>W</td>
+            <td>WITHDRAWN</td>
+        </tr>
+    
+        <tr>
+            <td>Y</td>
+            <td>ACTIVE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 FilerToFilerTypeCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15028,6 +26450,114 @@ to change characteristics over time.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*party_cd*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>16001</td>
+            <td>DEMOCRATIC</td>
+        </tr>
+    
+        <tr>
+            <td>16002</td>
+            <td>REPUBLICAN</td>
+        </tr>
+    
+        <tr>
+            <td>16003</td>
+            <td>GREEN PARTY</td>
+        </tr>
+    
+        <tr>
+            <td>16004</td>
+            <td>REFORM PARTY</td>
+        </tr>
+    
+        <tr>
+            <td>16005</td>
+            <td>AMERICAN INDEPENDENT PARTY</td>
+        </tr>
+    
+        <tr>
+            <td>16006</td>
+            <td>PEACE AND FREEDOM</td>
+        </tr>
+    
+        <tr>
+            <td>16007</td>
+            <td>INDEPENDENT</td>
+        </tr>
+    
+        <tr>
+            <td>16008</td>
+            <td>LIBERTARIAN</td>
+        </tr>
+    
+        <tr>
+            <td>16009</td>
+            <td>NON PARTISAN</td>
+        </tr>
+    
+        <tr>
+            <td>16010</td>
+            <td>NATURAL LAW</td>
+        </tr>
+    
+        <tr>
+            <td>16011</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>16012</td>
+            <td>NO PARTY PREFERENCE</td>
+        </tr>
+    
+        <tr>
+            <td>16013</td>
+            <td>AMERICANS ELECT</td>
+        </tr>
+    
+        <tr>
+            <td>16020</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>16014</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>UNKNOWN</td>
+        </tr>
+    
+        <tr>
+            <td>None</td>
+            <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 FilerTypePeriodsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15038,15 +26568,20 @@ to document. This is in his list of tables designed for future enhancements."
 **Source:** `FILER_TYPE_PERIODS.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/FILER_TYPE_PERIODS.TSV>`_
 
 
-**Source Docs**
+**Source Docs:**
+
+*CalAccessTablesWeb*
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p8-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/8.html
 
 
+
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p71-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/71.html
+
+
 
 
 
@@ -15098,6 +26633,7 @@ to document. This is in his list of tables designed for future enhancements."
     </tbody>
     </table>
     </div>
+
 
 FilerTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15175,6 +26711,7 @@ This lookup table describes filer types.
     </table>
     </div>
 
+
 FilerXrefCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15243,6 +26780,7 @@ identification numbers.
     </table>
     </div>
 
+
 FilersCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15283,6 +26821,7 @@ to a filer are derived.
     </tbody>
     </table>
     </div>
+
 
 FilingPeriodCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15379,6 +26918,39 @@ of filing periods.
     </table>
     </div>
 
+**Look-up Codes:**
+
+*period_type*
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>1500</td>
+            <td>Standard period</td>
+        </tr>
+    
+        <tr>
+            <td>1501</td>
+            <td>Non-standard period</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
+
 GroupTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15436,6 +27008,7 @@ This lookup table stores group type information.
     </tbody>
     </table>
     </div>
+
 
 ImageLinksCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15513,6 +27086,7 @@ This table links images to filers and accounts.
     </table>
     </div>
 
+
 LegislativeSessionsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15571,6 +27145,7 @@ Legislative session, begin and end dates look up table.
     </table>
     </div>
 
+
 LookupCode
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15628,6 +27203,7 @@ The description of some lookup codes in the system.
     </tbody>
     </table>
     </div>
+
 
 NamesCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15751,6 +27327,7 @@ the name has an identification number.
     </table>
     </div>
 
+
 ReceivedFilingsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15844,6 +27421,7 @@ This table is undocumented.
     </tbody>
     </table>
     </div>
+
 
 ReportsCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15947,6 +27525,7 @@ This is an undocumented model.
     </tbody>
     </table>
     </div>
+
 
 
 

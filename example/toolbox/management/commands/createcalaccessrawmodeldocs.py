@@ -18,6 +18,39 @@ class Command(CalAccessCommand):
         group_list = {}
         empty_files = []
         for m in model_list:
+            # add doc_id, page_url list to each model
+            m.docs = {}
+            for doc in m.DOCUMENTCLOUD_PAGES:
+                doc_title = doc.get_doc_data()['title']
+                try:
+                    m.docs[doc_title].extend(
+                        zip(
+                            doc.get_page_urls(), doc.get_thumbnail_urls()
+                        )
+                    )
+                except KeyError:
+                    m.docs[doc_title] = zip(
+                        doc.get_page_urls(), doc.get_thumbnail_urls()
+                    )
+            # add choice field list to model
+            m.choice_fields = []
+            for field in m._meta.fields:
+                if len(field.choices) > 0:
+                    # add doc_id, page_url list to each choice field
+                    field.docs = {}
+                    for doc in field.documentcloud_pages:
+                        doc_title = doc.get_doc_data()['title']
+                        try:
+                            field.docs[doc_title].extend(
+                                zip(
+                                    doc.get_page_urls(), doc.get_thumbnail_urls()
+                                )
+                            )
+                        except KeyError:
+                            field.docs[doc_title] = zip(
+                                doc.get_page_urls(), doc.get_thumbnail_urls()
+                            )
+                    m.choice_fields.append(field)
             try:
                 group_list[m().klass_group].append(m)
             except KeyError:

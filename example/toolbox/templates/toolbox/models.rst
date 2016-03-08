@@ -25,11 +25,15 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 **Source:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/{{ object.get_tsv_name }}>`_
 
 {% if object.get_documentcloud_page_urls|length > 0 %}
-**Source Docs**
-{% for page in object.get_documentcloud_page_urls %}
+**Source Docs:**
+{% for doc, pages in object.docs.items %}
+*{{ doc }}*
+{% for page in pages %}
 
 .. image:: {{ page.1 }}
     :target: {{ page.0 }}
+
+{% endfor %}
 {% endfor %}
 {% endif %}
 
@@ -61,6 +65,44 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
     </tbody>
     </table>
     </div>
+{% if object.choice_fields|length > 0 %}
+**Look-up Codes:**
+{% for field in object.choice_fields %}
+*{{ field.name }}*
+{% if field.documentcloud_pages|length > 0%}
+{% for doc, pages in field.docs.items %}
+*{{ doc }}*
+{% for page in pages %}
+
+.. image:: {{ page.1 }}
+    :target: {{ page.0 }}
+
+{% endfor %}
+{% endfor %}
+{% endif %}
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    {% for choice in field.choices %}
+        <tr>
+            <td>{{ choice.0 }}</td>
+            <td>{{ choice.1 }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+{% endfor %}
+
+{% endif %}
 {% endfor %}
 {% endfor %}
 
