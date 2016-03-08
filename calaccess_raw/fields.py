@@ -34,7 +34,7 @@ class CalAccessFieldMixin(fields.Field):
 
 class DocumentCloudMixin(fields.Field):
     """
-    Adds a documentcloud_pages_urls keyword argument to the Field
+    Adds a documentcloud_pages keyword argument to the Field
     so it can include links to JPG pages that document the contents
     of the field.
     """
