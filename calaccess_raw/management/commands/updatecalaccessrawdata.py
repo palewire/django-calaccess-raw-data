@@ -131,13 +131,6 @@ class Command(CalAccessCommand):
         except IndexError:
             last_download = None
 
-        if last_finished_update:
-            version_loaded = last_finished_update.version
-            since_loaded_version = naturaltime(version_loaded.release_datetime)
-        else:
-            version_loaded = None
-            since_loaded_version = None
-
         up_to_date = False
         can_resume = False
 
@@ -174,8 +167,13 @@ class Command(CalAccessCommand):
                 expected_size=size(download_metadata['content-length']),
                 up_to_date=up_to_date,
                 can_resume=can_resume,
-                since_loaded_version=since_loaded_version,
             )
+
+            if last_finished_update:
+                loaded_v = last_finished_update.version
+                prompt_context['since_loaded_version'] = naturaltime(loaded_v.release_datetime)
+            else:
+                prompt_context['since_loaded_version'] = None
 
             prompt = render_to_string(
                 'calaccess_raw/updatecalaccessrawdata.txt',
