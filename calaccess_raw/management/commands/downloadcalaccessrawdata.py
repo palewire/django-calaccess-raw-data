@@ -183,7 +183,7 @@ class Command(CalAccessCommand):
             if self.resume_download:
                 self.header("Resuming download of ZIP file")
             else:
-                self.header("Downloading of ZIP file")
+                self.header("Downloading ZIP file")
 
         expected_size = self.current_release_size
 
