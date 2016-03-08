@@ -32,7 +32,6 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 
 .. image:: {{ page.1 }}
     :target: {{ page.0 }}
-
 {% endfor %}
 {% endfor %}
 {% endif %}
@@ -73,11 +72,10 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 {% for doc, pages in field.docs.items %}
 *{{ doc }}*
 {% for page in pages %}
-
 .. image:: {{ page.1 }}
     :target: {{ page.0 }}
-
 {% endfor %}
+
 {% endfor %}
 {% endif %}
 .. raw:: html

@@ -3633,15 +3633,12 @@ Cover page layout for F470 Officeholder/Candidate Short Supplement
     :target: https://www.documentcloud.org/documents/2711614/pages/30.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p31-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/31.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p32-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/32.html
-
 
 
 
@@ -3939,70 +3936,56 @@ form filed by a slate-mailer organization or recipient committee.
     :target: https://www.documentcloud.org/documents/1308004/pages/3.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/4.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/5.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/6.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/7.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/21.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/22.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/25.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/26.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/27.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/28.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/29.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/30.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/31.html
-
 
 
 
@@ -4613,71 +4596,44 @@ form filed by a slate-mailer organization or recipient committee.
 
 *CAL-ACCESS: Forms*
 
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/3.html
-
-
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/4.html
 
-
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/5.html
-
-
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/6.html
 
-
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/7.html
-
-
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/21.html
 
-
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/22.html
-
-
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/25.html
 
-
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/26.html
-
-
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/27.html
 
-
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/28.html
-
-
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/29.html
 
-
-
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/30.html
-
-
 
 .. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif
     :target: https://www.documentcloud.org/documents/1308004/pages/31.html
@@ -7668,15 +7624,12 @@ Candidate intention statement
     :target: https://www.documentcloud.org/documents/2711614/pages/57.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p58-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/58.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p59-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/59.html
-
 
 
 
@@ -13290,7 +13243,6 @@ Form 498: Slate Mailer Late Independent Expenditures Made
 
 *Cal-Errata-201*
 
-
 .. image:: https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2712032/pages/2.html
 
@@ -13298,14 +13250,12 @@ Form 498: Slate Mailer Late Independent Expenditures Made
 
 *Cal-Format-201*
 
-
 .. image:: https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2712034/pages/12.html
 
 
 
 *Cal-Format-1-05-02*
-
 
 .. image:: https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2712033/pages/10.html
@@ -15398,7 +15348,6 @@ fields in conjunction.
 
 .. image:: https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711615/pages/2.html
-
 
 
 
@@ -18443,30 +18392,24 @@ Cover page of lobbying disclosure forms
     :target: https://www.documentcloud.org/documents/2711614/pages/8.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p35-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/35.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p36-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/36.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p37-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/37.html
-
 
 
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p38-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/38.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p39-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/39.html
-
 
 
 
@@ -23064,15 +23007,12 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     :target: https://www.documentcloud.org/documents/2711614/pages/11.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p96-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/96.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p97-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/97.html
-
 
 
 
@@ -24144,15 +24084,12 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     :target: https://www.documentcloud.org/documents/2711614/pages/12.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p101-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/101.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p102-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/102.html
-
 
 
 
@@ -25167,10 +25104,8 @@ Contains acronyms and their meaning.
     :target: https://www.documentcloud.org/documents/2711614/pages/7.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p16-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/16.html
-
 
 
 
@@ -26577,10 +26512,8 @@ to document. This is in his list of tables designed for future enhancements."
     :target: https://www.documentcloud.org/documents/2711614/pages/8.html
 
 
-
 .. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p71-thumbnail.gif
     :target: https://www.documentcloud.org/documents/2711614/pages/71.html
-
 
 
 

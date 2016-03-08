@@ -164,7 +164,7 @@ class DocumentCloud(object):
         GET /api/documents/[id].json method.
         """
         r = requests.get('https://www.documentcloud.org/documents/{}.json'.format(self.id))
-        return json.loads(r.content)
+        return json.loads(r.content.decode('utf-8'))
 
     def get_page_urls(self):
         """
