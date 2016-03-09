@@ -29,9 +29,9 @@ class Command(CalAccessCommand):
                         )
                     )
                 except KeyError:
-                    m.docs[doc_title] = zip(
+                    m.docs[doc_title] = list(zip(
                         doc.get_page_urls(), doc.get_thumbnail_urls()
-                    )
+                    ))
             # add choice field list to model
             m.choice_fields = []
             for field in m._meta.fields:
@@ -47,9 +47,9 @@ class Command(CalAccessCommand):
                                 )
                             )
                         except KeyError:
-                            field.docs[doc_title] = zip(
+                            field.docs[doc_title] = list(zip(
                                 doc.get_page_urls(), doc.get_thumbnail_urls()
-                            )
+                            ))
                     m.choice_fields.append(field)
             try:
                 group_list[m().klass_group].append(m)
