@@ -56,6 +56,9 @@ class AddressCd(CalAccessBaseModel):
     desplayed by the AMS.
     """
     UNIQUE_KEY = "ADRID"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=16)
+    ]
     adrid = fields.IntegerField(
         db_column="ADRID",
         verbose_name="Address ID",

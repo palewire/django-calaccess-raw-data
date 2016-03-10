@@ -1249,6 +1249,9 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=90, end_page=91),
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
