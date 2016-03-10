@@ -118,11 +118,8 @@ class Command(CalAccessCommand):
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
         download_metadata = self.get_download_metadata()
-
         current_release_datetime = download_metadata['last-modified']
-
         last_started_update = self.get_last_log()
-        last_finished_update = self.get_last_log(finished=True)
 
         try:
             last_download = self.command_logs.filter(
@@ -147,10 +144,10 @@ class Command(CalAccessCommand):
                     can_resume = True
             # if the last started update didn't finish
             elif not last_started_update.finish_datetime:
-                # can resume updates of old versions as long as skipping download
+                # can resume update of old version as long as skipping download
                 if not self.downloading:
                     can_resume = True
-                # or there is a last download
+                # or if there is a last download
                 elif last_download:
                     # and last download's version matches the outstanding update version
                     if last_download.version == last_started_update.version:
@@ -168,6 +165,8 @@ class Command(CalAccessCommand):
                 up_to_date=up_to_date,
                 can_resume=can_resume,
             )
+
+            last_finished_update = self.get_last_log(finished=True)
 
             if last_finished_update:
                 loaded_v = last_finished_update.version
