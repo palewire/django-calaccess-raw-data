@@ -187,6 +187,9 @@ class FilerFilingsCd(CalAccessBaseModel):
         "FORM_ID",
         "FILING_SEQUENCE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=61, end_page=62),
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
