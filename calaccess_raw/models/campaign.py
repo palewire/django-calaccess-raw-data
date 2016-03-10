@@ -3352,7 +3352,7 @@ class ExpnCd(CalAccessBaseModel):
         'REC_TYPE',
         'FORM_TYPE'
     )
-     DOCUMENTCLOUD_PAGES = [
+    DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=53, end_page=56),
     ]
     agent_namf = fields.CharField(

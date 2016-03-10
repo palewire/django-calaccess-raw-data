@@ -5545,6 +5545,28 @@ Campaign expenditures from a variety of forms
 **Source:** `EXPN_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/EXPN_CD.TSV>`_
 
 
+**Source Docs:**
+
+*CalAccessTablesWeb*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p53-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/54.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p54-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/55.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p55-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/56.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p56-thumbnail.gif'></a>
+
+
+
 
 **Fields:**
 
