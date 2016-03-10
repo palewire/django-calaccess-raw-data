@@ -608,6 +608,9 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=44, end_page=45)
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -1122,6 +1125,9 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=43, end_page=44)
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,

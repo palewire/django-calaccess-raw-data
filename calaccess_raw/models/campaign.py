@@ -735,6 +735,9 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     Cover page information from campaign disclosure forms
     """
     UNIQUE_KEY = ['filing_id', 'amend_id']
+     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=25, end_page=29),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
@@ -2594,6 +2597,9 @@ class LoanCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=87, end_page=90),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
