@@ -1534,6 +1534,9 @@ class F690P2Cd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=59, end_page=60),
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
