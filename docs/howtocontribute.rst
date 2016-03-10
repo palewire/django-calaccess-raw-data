@@ -16,7 +16,7 @@ the following:
 
 .. code-block:: bash
 
-    $ mkproject django-calaccess-raw-data
+    $ mkvritualenv django-calaccess-raw-data
 
 That will jump into a new folder in your code directory, where you can clone
 our code repository from `GitHub <https://github.com/california-civic-data-coalition/django-calaccess-raw-data>`_ after you make a fork of your own. Don't know what that means? `Read this <https://guides.github.com/activities/forking/>`_.
