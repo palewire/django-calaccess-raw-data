@@ -18,8 +18,8 @@ class CvrRegistrationCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=8),
-        DocumentCloud(id=2711614, start_page=35, end_page=39),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=35, end_page=39),
     ]
     # a_b_adr1 = fields.CharField(
     #   max_length=55,
@@ -4203,8 +4203,8 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=11),
-        DocumentCloud(id=2711614, start_page=96, end_page=97),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96, end_page=97),
     ]
     contributor_id = fields.IntegerField(
         db_column="CONTRIBUTOR_ID",
@@ -4312,8 +4312,8 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
     UNIQUE_KEY = (
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=12),
-        DocumentCloud(id=2711614, start_page=101, end_page=102),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=101, end_page=102),
     ]
     contributor_id = fields.IntegerField(
         db_column="CONTRIBUTOR_ID",

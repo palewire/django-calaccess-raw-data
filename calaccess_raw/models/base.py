@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import textwrap
-from django.db import models
-from calaccess_raw import managers
 import requests
 import json
+from django.db import models
 from django.utils.deconstruct import deconstructible
+from calaccess_raw import managers
 
 
 class CalAccessBaseModel(models.Model):
@@ -181,11 +181,11 @@ class DocumentCloud(object):
         """
         Return a list of thumbnail URLs for each page in the object.
         """
-        title = self.get_doc_data()['id'].split('-', 1)[1]
         url_pattern = 'https://assets.documentcloud.org/documents/%(id)s/pages/\
-%(title)s-p%(page)s-thumbnail.gif'
+%(slug)s-p%(page)s-thumbnail.gif'
         url_list = []
         for page in self.get_pages():
-            url = url_pattern % dict(id=self.id, title=title, page=page)
+            split_id = self.id.split('-', 1)
+            url = url_pattern % dict(id=split_id[0], slug=split_id[1], page=page)
             url_list.append(url)
         return url_list

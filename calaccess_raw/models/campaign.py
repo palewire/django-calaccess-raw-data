@@ -21,11 +21,11 @@ class CvrSoCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         # Form 400 statement of organization slate mailer organization form sample
-        DocumentCloud(id=1308004, start_page=3, end_page=7),
+        DocumentCloud(id='1308004-cal-access-forms', start_page=3, end_page=7),
         # Form 402 statement of termination form sample
-        DocumentCloud(id=1308004, start_page=21, end_page=22),
+        DocumentCloud(id='1308004-cal-access-forms', start_page=21, end_page=22),
         # Form 410 statement of organization for recipient committee form sample
-        DocumentCloud(id=1308004, start_page=25, end_page=31),
+        DocumentCloud(id='1308004-cal-access-forms', start_page=25, end_page=31),
     ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
@@ -225,11 +225,11 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         documentcloud_pages=[
             # Form 400 statement of organization slate mailer organization form sample
-            DocumentCloud(id=1308004, start_page=3, end_page=7),
+            DocumentCloud(id='1308004-cal-access-forms', start_page=3, end_page=7),
             # Form 402 statement of termination form sample
-            DocumentCloud(id=1308004, start_page=21, end_page=22),
+            DocumentCloud(id='1308004-cal-access-forms', start_page=21, end_page=22),
             # Form 410 statement of organization for recipient committee form sample
-            DocumentCloud(id=1308004, start_page=25, end_page=31),
+            DocumentCloud(id='1308004-cal-access-forms', start_page=25, end_page=31),
         ]
     )
     genpurp_cb = fields.CharField(
@@ -4921,7 +4921,7 @@ class F501502Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         # CalAccessTablesWeb
-        DocumentCloud(id=2711614, start_page=57, end_page=59)
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=57, end_page=59)
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5693,11 +5693,11 @@ Part R: late payments received from')
         help_text="Identifies the office being sought",
         documentcloud_pages=[
             # .CAL Format 201
-            DocumentCloud(id=2712034, start_page=12, end_page=12),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12, end_page=12),
             # .CAL Format 1-05-02
-            DocumentCloud(id=2712033, start_page=10, end_page=10),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10, end_page=10),
             # .CAL Errata 201
-            DocumentCloud(id=2712032, start_page=2, end_page=2),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2, end_page=2),
         ]
     )
     offic_dscr = fields.CharField(
@@ -5827,7 +5827,7 @@ class CvrF470Cd(CalAccessBaseModel):
         "FORM_TYPE",
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=30, end_page=32),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
     ]
     amend_id = fields.IntegerField(
         db_column="AMEND_ID",
