@@ -27,7 +27,6 @@ disclosure forms below.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -911,7 +910,6 @@ by a slate-mailer organization or recipient committee.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -1708,7 +1706,6 @@ Cover page verification information from campaign disclosure forms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -2077,7 +2074,6 @@ Cover page information from campaign disclosure forms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -3673,7 +3669,6 @@ Cover page layout for F470 Officeholder/Candidate Short Supplement
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -4021,7 +4016,6 @@ form filed by a slate-mailer organization or recipient committee.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -4754,7 +4748,6 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -5535,7 +5528,6 @@ Campaign expenditures from a variety of forms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -7505,7 +7497,6 @@ its last report.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -7683,7 +7674,6 @@ Candidate intention statement
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -9236,7 +9226,6 @@ Loans received and made
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -9937,7 +9926,6 @@ Receipts schedules for the following forms.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -11035,7 +11023,6 @@ disclosure schedule (F401B, F401B-1, F401C, F401D) information.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -11805,7 +11792,6 @@ Form 496 Late Independent Expenditures
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -11996,7 +11982,6 @@ Form 497: Late Contributions Received/Made
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -12903,7 +12888,6 @@ Form 498: Slate Mailer Late Independent Expenditures Made
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -13737,7 +13721,6 @@ This table method is undocumented.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -14871,7 +14854,6 @@ filing information.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -15479,7 +15461,6 @@ fields in conjunction.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -15836,7 +15817,6 @@ a filing are derived.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -15939,7 +15919,6 @@ Electronic filing record header data
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -16080,7 +16059,6 @@ Lookup table used to report form 460 information in the AMS.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -16258,7 +16236,6 @@ Summary totals from filings.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -16607,7 +16584,6 @@ Split records
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -16769,7 +16745,6 @@ Text memos attached to electronic filings
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -17409,7 +17384,6 @@ Additional data from lobbyist disclosure forms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -17671,7 +17645,6 @@ Cover page of lobbying disclosure forms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -17925,7 +17898,6 @@ Cover page information for lobbying disclosure forms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -18579,7 +18551,6 @@ Cover page of lobbying disclosure forms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -19571,7 +19542,6 @@ Amends lobbying disclosure filings
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -19768,7 +19738,6 @@ Lobbyist disclosure attachment schedules for payments
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -20099,7 +20068,6 @@ Lobbying campaign contributions
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -20451,7 +20419,6 @@ Lobbyist employers and subcontracted clients
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -20755,7 +20722,6 @@ Lobbying activity expenditures
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -21153,7 +21119,6 @@ Lobbyist registration amendment information
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -21619,7 +21584,6 @@ This is an undocumented table.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -21935,7 +21899,6 @@ Lobbyist contribution disclosure table.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -22032,7 +21995,6 @@ disclosure table (Lobbyist Contributions 3)
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -22128,7 +22090,6 @@ Lobbyist contribution disclosure table.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -22224,7 +22185,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -22311,7 +22271,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -22398,7 +22357,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -22611,7 +22569,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -22824,7 +22781,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -23037,7 +22993,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -23115,7 +23070,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -23214,7 +23168,6 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -23427,7 +23380,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -23622,7 +23574,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -23817,7 +23768,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -24012,7 +23962,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -24144,7 +24093,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -24297,7 +24245,6 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -24492,7 +24439,6 @@ It's an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -24579,7 +24525,6 @@ It's an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -24666,7 +24611,6 @@ Payment to other lobbying firms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -24929,7 +24873,6 @@ Payments made or received by lobbying firms
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -25318,7 +25261,6 @@ Contains acronyms and their meaning.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -25399,7 +25341,6 @@ desplayed by the AMS.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -25495,7 +25436,6 @@ Ballot measure dates and times
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -25582,7 +25522,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -25811,7 +25750,6 @@ Links acronyms to filers
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -25863,7 +25801,6 @@ addresses change.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -25941,7 +25878,6 @@ This table stores lobbyist ethics training dates.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26001,7 +25937,6 @@ Links a filer to their interest codes.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26070,7 +26005,6 @@ Links filers to each other and records their relationship type.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26332,7 +26266,6 @@ of codes and definitions.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26447,7 +26380,6 @@ to change characteristics over time.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26747,7 +26679,6 @@ to document. This is in his list of tables designed for future enhancements."
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26807,7 +26738,6 @@ This lookup table describes filer types.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26886,7 +26816,6 @@ identification numbers.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26956,7 +26885,6 @@ to a filer are derived.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -26999,7 +26927,6 @@ of filing periods.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -27127,7 +27054,6 @@ This lookup table stores group type information.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -27187,7 +27113,6 @@ This table links images to filers and accounts.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -27265,7 +27190,6 @@ Legislative session, begin and end dates look up table.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -27325,7 +27249,6 @@ The description of some lookup codes in the system.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -27386,7 +27309,6 @@ the name has an identification number.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -27509,7 +27431,6 @@ This table is undocumented.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
@@ -27605,7 +27526,6 @@ This is an undocumented model.
 
 
 
- 
 **Fields:**
 
 .. raw:: html
