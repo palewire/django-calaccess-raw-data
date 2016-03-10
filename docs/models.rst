@@ -4747,6 +4747,24 @@ Schedule (F) Accrued Expenses (Unpaid Bills) records
 **Source:** `DEBT_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/DEBT_CD.TSV>`_
 
 
+**Source Docs:**
+
+*CalAccessTablesWeb*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/47.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p47-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/48.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p48-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/49.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p49-thumbnail.gif'></a>
+
+
+
 
 **Fields:**
 
@@ -19539,6 +19557,20 @@ F690P2Cd
 Amends lobbying disclosure filings
 
 **Source:** `F690P2_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/F690P2_CD.TSV>`_
+
+
+**Source Docs:**
+
+*CalAccessTablesWeb*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p59-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/60.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p60-thumbnail.gif'></a>
+
 
 
 
