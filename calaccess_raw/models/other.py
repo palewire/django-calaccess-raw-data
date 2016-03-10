@@ -872,7 +872,7 @@ class GroupTypesCd(CalAccessBaseModel):
     This lookup table stores group type information.
     """
     UNIQUE_KEY = "GRP_ID"
-     DOCUMENTCLOUD_PAGES = [
+    DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=78, end_page=79),
     ]
     grp_id = fields.IntegerField(
