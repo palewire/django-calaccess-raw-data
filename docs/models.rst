@@ -3628,17 +3628,17 @@ Cover page layout for F470 Officeholder/Candidate Short Supplement
 
 *CalAccessTablesWeb*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p30-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/30.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p30-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p31-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/31.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p31-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p32-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/32.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p32-thumbnail.gif'></a>
 
 
 
@@ -3931,61 +3931,61 @@ form filed by a slate-mailer organization or recipient committee.
 
 *CAL-ACCESS: Forms*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/3.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/4.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/5.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/5.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/6.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/7.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/7.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/21.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/22.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/25.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/26.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/27.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/27.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/28.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/29.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/30.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/31.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif'></a>
 
 
 
@@ -4596,47 +4596,61 @@ form filed by a slate-mailer organization or recipient committee.
 
 *CAL-ACCESS: Forms*
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/3.html
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/4.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif'></a>
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/5.html
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/6.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif'></a>
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/7.html
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/21.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/5.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif'></a>
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/22.html
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/25.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif'></a>
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/26.html
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/27.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/7.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif'></a>
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/28.html
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/29.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif'></a>
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/30.html
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/31.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/27.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif'></a>
 
 
 
@@ -7619,17 +7633,17 @@ Candidate intention statement
 
 *CalAccessTablesWeb*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p57-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/57.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p57-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p58-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/58.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p58-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p59-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/59.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p59-thumbnail.gif'></a>
 
 
 
@@ -13243,22 +13257,25 @@ Form 498: Slate Mailer Late Independent Expenditures Made
 
 *Cal-Errata-201*
 
-.. image:: https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a>
 
 
 
 *Cal-Format-201*
 
-.. image:: https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a>
 
 
 
 *Cal-Format-1-05-02*
 
-.. image:: https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a>
 
 
 
@@ -15345,9 +15362,9 @@ fields in conjunction.
 
 *FAQ*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711615-FAQ/pages/2.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711615-FAQ/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif'></a>
 
 
 
@@ -18387,29 +18404,29 @@ Cover page of lobbying disclosure forms
 
 *CalAccessTablesWeb*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p8-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/8.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p8-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p35-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/35.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p35-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p36-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/36.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/36.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p36-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p37-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/37.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p37-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p38-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/38.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/38.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p38-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p39-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/39.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p39-thumbnail.gif'></a>
 
 
 
@@ -23002,17 +23019,17 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
 *CalAccessTablesWeb*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p11-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/11.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p11-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p96-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/96.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/96.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p96-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p97-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/97.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/97.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p97-thumbnail.gif'></a>
 
 
 
@@ -24079,17 +24096,17 @@ should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
 *CalAccessTablesWeb*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p12-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/12.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p12-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p101-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/101.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/101.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p101-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p102-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/102.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/102.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p102-thumbnail.gif'></a>
 
 
 
@@ -25099,13 +25116,13 @@ Contains acronyms and their meaning.
 
 *CalAccessTablesWeb*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p7-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/7.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/7.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p7-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p16-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/16.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/16.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p16-thumbnail.gif'></a>
 
 
 
@@ -26507,13 +26524,13 @@ to document. This is in his list of tables designed for future enhancements."
 
 *CalAccessTablesWeb*
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p8-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/8.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p8-thumbnail.gif'></a>
 
+.. raw:: html
 
-.. image:: https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p71-thumbnail.gif
-    :target: https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/71.html
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/71.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p71-thumbnail.gif'></a>
 
 
 

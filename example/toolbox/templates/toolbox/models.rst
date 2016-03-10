@@ -29,9 +29,9 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 {% for doc, pages in object.docs.items %}
 *{{ doc }}*
 {% for page in pages %}
+.. raw:: html
 
-.. image:: {{ page.1 }}
-    :target: {{ page.0 }}
+    <a class="reference external image-reference" href="{{ page.0 }}"><img class='doc_page' src='{{ page.1 }}'></a>
 {% endfor %}
 {% endfor %}
 {% endif %}
@@ -72,8 +72,9 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 {% for doc, pages in field.docs.items %}
 *{{ doc }}*
 {% for page in pages %}
-.. image:: {{ page.1 }}
-    :target: {{ page.0 }}
+.. raw:: html
+
+    <a class="reference external image-reference" href="{{ page.0 }}"><img class='doc_page' src='{{ page.1 }}'></a>
 {% endfor %}
 
 {% endfor %}
