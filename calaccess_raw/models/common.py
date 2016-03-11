@@ -797,6 +797,9 @@ class CvrE530Cd(CalAccessBaseModel):
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=29, end_page=30),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
