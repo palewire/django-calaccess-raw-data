@@ -3319,6 +3319,9 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         verbose_name="Firm ID",
         help_text="Identification number of the firm, employer or coalition"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=102, end_page=103),
+    ]
     session_id = fields.IntegerField(
         verbose_name='session ID',
         db_column='SESSION_ID',
