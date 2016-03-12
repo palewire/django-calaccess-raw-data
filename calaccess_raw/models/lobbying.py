@@ -4226,6 +4226,9 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text='Permanent value unique to this item',
     )
+     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
+    ]
 
     class Meta:
         app_label = 'calaccess_raw'
