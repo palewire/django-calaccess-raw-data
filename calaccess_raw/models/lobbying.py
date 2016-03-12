@@ -3169,11 +3169,6 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     This is an undocumented model.
     """
     UNIQUE_KEY = False
-    
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96, end_page=96),
-    ]
-
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
         help_text="Employer identification number",
@@ -3642,6 +3637,9 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     This is an undocumented model.
     """
     UNIQUE_KEY = False
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=95, end_page=96),
+    ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
         verbose_name="Firm ID",
@@ -3715,6 +3713,9 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     This is an undocumented model.
     """
     UNIQUE_KEY = False
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96),
+    ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
         verbose_name="Firm ID",
