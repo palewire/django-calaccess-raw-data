@@ -8,6 +8,7 @@ import requests
 from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
+from django.core.files import File
 from django.db.utils import IntegrityError
 from django.utils.timezone import utc
 from calaccess_raw import get_download_directory
@@ -32,6 +33,13 @@ class Command(CalAccessCommand):
             dest="keep_files",
             default=False,
             help="Keep downloaded zip and unzipped files"
+        )
+        parser.add_argument(
+            "--archive",
+            action="store_true",
+            dest="archive",
+            default=True,
+            help="Store an archive the downloaded zip file on the version model"
         )
         parser.add_argument(
             "--noinput",
@@ -141,6 +149,15 @@ class Command(CalAccessCommand):
 
         self.download()
         self.unzip()
+        
+        if options['archive']:
+            # Open up the zipped file so we can wrap it in the Django File obj
+            zipped_file = open(self.zip_path)
+            # Save the zip on the raw data version
+            version.archive.save(
+                str(version.release_datetime) + '.zip',
+                File(zipped_file)
+            )
 
         if not options['keep_files']:
             os.remove(self.zip_path)
