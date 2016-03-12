@@ -116,6 +116,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
     Ballot measure dates and times
     """
     UNIQUE_KEY = "FILER_ID"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=19, end_page=19),
+    ]
     election_date = fields.DateTimeField(
         db_column='ELECTION_DATE',
         null=True,
