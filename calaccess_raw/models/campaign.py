@@ -2609,6 +2609,7 @@ class LoanCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=87, end_page=90),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60, end_page=63)
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
