@@ -2629,6 +2629,9 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     disclosure table (Lobbyist Contributions 3)
     """
     UNIQUE_KEY = False
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614', start_page=9, end_page=10),
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
