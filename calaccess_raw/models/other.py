@@ -175,6 +175,9 @@ class EfsFilingLogCd(CalAccessBaseModel):
         "FILING_DATE",
         "VENDOR"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50)
+    ]
     filing_date = fields.DateTimeField(
         db_column='FILING_DATE',
         null=True,
