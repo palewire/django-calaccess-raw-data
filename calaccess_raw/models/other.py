@@ -733,6 +733,9 @@ class FilerTypesCd(CalAccessBaseModel):
     This lookup table describes filer types.
     """
     UNIQUE_KEY = "FILTER_TYPE"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=70, end_page=71),
+    ]
     filer_type = fields.IntegerField(
         db_column='FILER_TYPE',
         help_text="Filer type identification number"
