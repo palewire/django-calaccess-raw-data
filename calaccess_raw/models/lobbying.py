@@ -609,7 +609,8 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=44, end_page=45)
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=44, end_page=45),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=37, end_page=37),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
