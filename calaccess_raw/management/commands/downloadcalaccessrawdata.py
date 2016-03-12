@@ -280,6 +280,6 @@ class Command(CalAccessCommand):
                     # Open up the zipped file so we can wrap it in the Django File obj
                     f = open(self.zip_path)
                     # Save the zip on the raw data version
-                    version.archive.save(file_name, File(f))
+                    raw_file_obj.archive.save(file_name, File(f))
             except IntegrityError:
                 pass
