@@ -2760,9 +2760,13 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer1Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    Information for lobbyist's primary employer
     """
     UNIQUE_KEY = False
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=97, end_page=98),
+    ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
         help_text="Employer identification number",
