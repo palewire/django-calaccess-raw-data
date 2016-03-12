@@ -26,6 +26,7 @@ class CvrSoCd(CalAccessBaseModel):
         DocumentCloud(id='1308004-cal-access-forms', start_page=21, end_page=22),
         # Form 410 statement of organization for recipient committee form sample
         DocumentCloud(id='1308004-cal-access-forms', start_page=25, end_page=31),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=28, end_page=31)
     ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
@@ -4067,6 +4068,9 @@ class F495P2Cd(CalAccessBaseModel):
         "REC_ITEM",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49)
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -4149,6 +4153,7 @@ class DebtCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=47, end_page=49),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49, end_page=48)
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4481,6 +4486,7 @@ class S496Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=124, end_page=125),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=79)
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4586,6 +4592,9 @@ class S497Cd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=80, end_page=82)
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -5516,6 +5525,7 @@ class S498Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=127, end_page=129),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=83, end_page=85)
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5870,6 +5880,7 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16)
     ]
     amend_id = fields.IntegerField(
         db_column="AMEND_ID",
