@@ -4481,6 +4481,7 @@ class S496Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=124, end_page=125),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=79, end_page=79),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
