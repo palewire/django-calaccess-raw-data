@@ -592,6 +592,9 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         "SESSION_ID",
         "EFFECT_DT"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=68, end_page=69),
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         null=True,
