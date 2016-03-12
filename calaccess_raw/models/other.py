@@ -277,6 +277,9 @@ class FilerAcronymsCd(CalAccessBaseModel):
     Links acronyms to filers
     """
     UNIQUE_KEY = ("ACRONYM", "FILER_ID")
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=61, end_page=61),
+    ]
     acronym = fields.CharField(
         db_column='ACRONYM',
         max_length=32,
