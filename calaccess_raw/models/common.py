@@ -1374,7 +1374,10 @@ original filing and 1 to 999 amendments.",
         help_text='Contents of the text memo',
         verbose_name='text'
     )
-
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=14),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133),
+    ]
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'TEXT_MEMO_CD'
