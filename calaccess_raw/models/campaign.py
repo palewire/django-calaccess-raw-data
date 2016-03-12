@@ -413,7 +413,10 @@ class Cvr2SoCd(CalAccessBaseModel):
         "LINE_ITEM",
         "REC_TYPE",
         "FORM_TYPE"
-    )
+    )    
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=39, end_page=41),
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
