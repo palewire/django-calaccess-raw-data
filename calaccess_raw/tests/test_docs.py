@@ -148,7 +148,7 @@ class DocumentationTestCase(TestCase):
                         m().klass_group,
                         m.__name__,
                         field_name,
-                        "Has no `documentcloud_pages_urls` defined"
+                        "Has no `documentcloud_pages` defined"
                     ))
 
                 # Pull out all the choices in that field
