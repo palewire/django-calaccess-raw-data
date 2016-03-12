@@ -2232,7 +2232,6 @@ class LempCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
-    
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=85, end_page=86),
     ]
