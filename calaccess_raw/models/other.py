@@ -443,6 +443,9 @@ class FilerLinksCd(CalAccessBaseModel):
         "SESSION_ID",
         "LINK_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=67, end_page=67),
+    ]
     filer_id_a = fields.IntegerField(
         verbose_name='Filer ID A',
         db_column='FILER_ID_A',
