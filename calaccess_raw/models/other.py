@@ -1041,6 +1041,9 @@ class NamesCd(CalAccessBaseModel):
     the name has an identification number.
     """
     UNIQUE_KEY = False
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=112, end_page=112),
+    ]
     namid = fields.IntegerField(
         db_column='NAMID',
         help_text="Identification number unique to the name",
@@ -1112,6 +1115,9 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     This table is undocumented.
     """
     UNIQUE_KEY = False
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=121, end_page=121),
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -1170,6 +1176,9 @@ class ReportsCd(CalAccessBaseModel):
     This is an undocumented model.
     """
     UNIQUE_KEY = "RPT_ID"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=122, end_page=122),
+    ]
     rpt_id = fields.IntegerField(
         db_column='RPT_ID',
         help_text="Unique identification number"
