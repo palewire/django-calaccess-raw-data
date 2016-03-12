@@ -368,6 +368,9 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     This table stores lobbyist ethics training dates.
     """
     UNIQUE_KEY = "FILER_ID", "SESSION_ID", "ETHICS_DATE"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=64, end_page=64),
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
