@@ -398,6 +398,9 @@ class FilingsCd(CalAccessBaseModel):
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=75, end_page=75),
+    ]
     FILING_TYPE_CHOICES = (
         (22001, 'Electronic'),
         (22002, 'Key data entry'),
