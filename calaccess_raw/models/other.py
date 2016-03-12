@@ -924,6 +924,9 @@ class ImageLinksCd(CalAccessBaseModel):
     This table links images to filers and accounts.
     """
     UNIQUE_KEY = ("IMG_LINK_ID", "IMG_ID")
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=80),
+    ]
     img_link_id = fields.IntegerField(
         db_column='IMG_LINK_ID',
         verbose_name="Image link ID",
