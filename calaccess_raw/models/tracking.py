@@ -102,6 +102,13 @@ class RawDataFile(models.Model):
         verbose_name='load columns count',
         help_text='Count of columns on the loaded calaccess_raw data model'
     )
+    archive = models.FileField(
+        blank=True,
+        upload_to=settings.MEDIA_ROOT,
+        verbose_name='archive of zip file',
+        help_text='An archive of the original zipped file downloaded from '
+                     'CAL-ACCESS.'
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
