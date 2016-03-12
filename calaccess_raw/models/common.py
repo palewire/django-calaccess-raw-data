@@ -508,6 +508,9 @@ class HeaderCd(CalAccessBaseModel):
     Lookup table used to report form 460 information in the AMS.
     """
     UNIQUE_KEY = ("LINE_NUMBER", "FORM_ID", "REC_TYPE")
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=79, end_page=80),
+    ]
     line_number = fields.IntegerField(
         db_column='LINE_NUMBER',
         help_text="This field is undocumented"
