@@ -2568,7 +2568,9 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         db_table = 'LOBBYING_CHG_LOG_CD'
         verbose_name = 'LOBBYING_CHG_LOG_CD'
         verbose_name_plural = 'LOBBYING_CHG_LOG_CD'
-
+        DOCUMENTCLOUD_PAGES = [
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92),
+        ]
     def __str__(self):
         return str(self.filer_id)
 
