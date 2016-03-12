@@ -740,7 +740,6 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     UNIQUE_KEY = ['filing_id', 'amend_id']
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=25, end_page=29),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6, end_page=14)
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1504,10 +1503,6 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
-    
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32, end_page=35)
-    ]
 
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1890,6 +1885,7 @@ class RcptCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=118, end_page=121),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71, end_page=75)
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2459,6 +2455,7 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id=2711614, start_page=46, end_page=47),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=41, end_page=42)
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2614,6 +2611,7 @@ class LoanCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=87, end_page=90),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60, end_page=63)
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -3037,6 +3035,7 @@ class S401Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id=2711614, start_page=123, end_page=124),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=76, end_page=78)
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3374,6 +3373,7 @@ class ExpnCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=53, end_page=56),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=45, end_page=48)
     ]
     agent_namf = fields.CharField(
         max_length=45,
@@ -4067,6 +4067,9 @@ class F495P2Cd(CalAccessBaseModel):
         "REC_ITEM",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=56, end_page=57),
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
