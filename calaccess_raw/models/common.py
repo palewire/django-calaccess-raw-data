@@ -387,6 +387,11 @@ class FilingsCd(CalAccessBaseModel):
     a filing are derived.
     """
     UNIQUE_KEY = "FILING_ID"
+    
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=75),
+    ]
+    
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
