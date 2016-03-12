@@ -806,6 +806,9 @@ class FilerXrefCd(CalAccessBaseModel):
     identification numbers.
     """
     UNIQUE_KEY = ("FILER_ID", "XREF_ID")
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71, end_page=71),
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
