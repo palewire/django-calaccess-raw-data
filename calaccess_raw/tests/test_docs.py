@@ -137,6 +137,7 @@ class DocumentationTestCase(TestCase):
 
                 if not f.choices:
                     message_list.append((
+                        m().klass_group,
                         m.__name__,
                         field_name,
                         "Has no CHOICES defined"
@@ -144,6 +145,7 @@ class DocumentationTestCase(TestCase):
 
                 if not f.documentcloud_pages:
                     message_list.append((
+                        m().klass_group,
                         m.__name__,
                         field_name,
                         "Has no `documentcloud_pages_urls` defined"
@@ -155,12 +157,14 @@ class DocumentationTestCase(TestCase):
                     # Make sure that each has a definition
                     if not name:
                         message_list.append((
+                            m().klass_group,
                             m.__name__,
                             field_name,
                             "Value '%s' undefined in CHOICES" % slug
                         ))
                     if name.lower() == 'unknown':
                         message_list.append((
+                            m().klass_group,
                             m.__name__,
                             field_name,
                             "Value '%s' defined as 'Unknown'" % slug
@@ -173,6 +177,7 @@ class DocumentationTestCase(TestCase):
                     field_name,
                 ).annotate(Count(field_name)):
                     message_list.append((
+                        m().klass_group,
                         m.__name__,
                         field_name,
                         "Value '%s' in database but not in CHOICES" % value
@@ -208,5 +213,5 @@ class DocumentationTestCase(TestCase):
         results = []
         for f in fields:
             results.extend(self._test_choices(f))
-        table = agate.Table(results, ['model', 'field', 'message'])
+        table = agate.Table(results, ['group', 'model', 'field', 'message'])
         table.print_table(max_column_width=50)
