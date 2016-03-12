@@ -35,10 +35,10 @@ class Command(CalAccessCommand):
             help="Keep downloaded zip and unzipped files"
         )
         parser.add_argument(
-            "--archive",
+            "--no-archive",
             action="store_true",
-            dest="archive",
-            default=True,
+            dest="no_archive",
+            default=False,
             help="Store an archive the downloaded zip file on the version model"
         )
         parser.add_argument(
@@ -150,7 +150,7 @@ class Command(CalAccessCommand):
         self.download()
         self.unzip()
         
-        if options['archive']:
+        if not options['no_archive']:
             # Open up the zipped file so we can wrap it in the Django File obj
             zipped_file = open(self.zip_path)
             # Save the zip on the raw data version
@@ -276,7 +276,7 @@ class Command(CalAccessCommand):
                     version=self.log_record.version,
                     file_name=file_name,
                 )
-                if options['archive']:
+                if not options['no_archive']:
                     # Open up the zipped file so we can wrap it in the Django File obj
                     f = open(self.zip_path)
                     # Save the zip on the raw data version
