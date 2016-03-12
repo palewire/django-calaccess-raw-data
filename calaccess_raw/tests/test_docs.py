@@ -27,7 +27,7 @@ class DocumentationTestCase(TestCase):
 
     def attr_test_output(self, obj_type, attr_name, results):
         # Load the data
-        table = agate.Table(results, ['model', attr_name])
+        table = agate.Table(results, ['group', 'model', attr_name])
 
         # Count the number with no __str__
         fails = table.where(lambda row: row[attr_name] is False)
@@ -37,7 +37,7 @@ class DocumentationTestCase(TestCase):
                 obj_type,
                 attr_name
             ))
-            fails.select(["model"]).print_table(max_column_width=50)
+            fails.select(["group", "model"]).print_table(max_column_width=50)
 
     def test_model_str(self):
         """
@@ -85,7 +85,7 @@ class DocumentationTestCase(TestCase):
                 exists = True
             else:
                 exists = False
-            results.append([m.__name__, exists])
+            results.append([m().klass_group, m.__name__, exists])
         self.attr_test_output("model", "DOCUMENTCLOUD_PAGES", results)
 
     def test_field_verbose_name(self):
