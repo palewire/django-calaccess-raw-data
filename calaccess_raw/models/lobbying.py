@@ -732,6 +732,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id=2711614, start_page=42, end_page=44),
+        DocumentCloud(id=2711616, start_page=17, end_page=21),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2643,9 +2644,6 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     disclosure table (Lobbyist Contributions 3)
     """
     UNIQUE_KEY = False
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9, end_page=10),
-    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -3861,7 +3859,7 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LothCd(CalAccessBaseModel):
     """
-    Payment to other lobbying firms listed of Form 625 Part 3B 
+    Payment to other lobbying firms
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -3870,9 +3868,6 @@ class LothCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=107),
-        ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
