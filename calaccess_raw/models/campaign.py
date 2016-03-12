@@ -3369,6 +3369,7 @@ class ExpnCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=53, end_page=56),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=45, end_page=48)
     ]
     agent_namf = fields.CharField(
         max_length=45,
