@@ -3740,6 +3740,9 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     It's an undocumented model.
     """
     UNIQUE_KEY = False
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=102),
+    ]
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
         verbose_name="Lobbyist ID",
