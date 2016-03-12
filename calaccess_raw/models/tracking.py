@@ -27,6 +27,7 @@ class RawDataVersion(models.Model):
                   '(value of content-length field in HTTP response header)'
     )
     archive = models.FileField(
+        blank=True,
         upload_to=settings.MEDIA_ROOT,
         verbose_name='archive of zip file',
         help_text='An archive of the original zipped file downloaded from '
