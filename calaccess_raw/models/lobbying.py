@@ -2630,7 +2630,7 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614', start_page=9, end_page=10),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9, end_page=10),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
