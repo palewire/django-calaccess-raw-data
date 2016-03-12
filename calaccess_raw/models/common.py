@@ -1157,6 +1157,9 @@ class SpltCd(CalAccessBaseModel):
         "LINE_ITEM",
         "PFORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=132, end_page=132),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
