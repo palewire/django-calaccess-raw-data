@@ -1636,6 +1636,9 @@ class LattCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=81, end_page=82),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
