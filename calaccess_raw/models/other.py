@@ -545,6 +545,9 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     of codes and definitions.
     """
     UNIQUE_KEY = "STATUS_TYPE"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=69),
+    ]
     STATUS_TYPE_CHOICES = (
         ("A", "ACTIVE"),
         ("N", "INACTIVE"),
