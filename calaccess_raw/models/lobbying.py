@@ -2030,6 +2030,9 @@ class LccmCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=83, end_page=84),
+    ]
     # acct_name = fields.CharField(
     #   max_length=90,
     #   db_column='ACCT_NAME',
