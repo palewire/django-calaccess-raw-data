@@ -3023,7 +3023,16 @@ class S401Cd(CalAccessBaseModel):
     This table contains Form 401 (Slate Mailer Organization) payment and other
     disclosure schedule (F401B, F401B-1, F401C, F401D) information.
     """
-    UNIQUE_KEY = ['FILING_ID', 'AMEND_ID', 'LINE_ID', 'REC_TYPE', 'FORM_TYPE']
+    UNIQUE_KEY = (
+        'FILING_ID', 
+        'AMEND_ID', 
+        'LINE_ID', 
+        'REC_TYPE', 
+        'FORM_TYPE'
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id=2711614, start_page=123, end_page=124),
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
