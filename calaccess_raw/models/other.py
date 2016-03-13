@@ -985,6 +985,10 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     Legislative session, begin and end dates look up table.
     """
     UNIQUE_KEY = "SESSION_ID"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=84),
+    ]
+
     session_id = fields.IntegerField(
         verbose_name='session ID',
         db_column='SESSION_ID',
