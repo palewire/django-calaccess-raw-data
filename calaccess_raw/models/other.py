@@ -1024,6 +1024,11 @@ class LookupCode(CalAccessBaseModel):
     The description of some lookup codes in the system.
     """
     UNIQUE_KEY = ("CODE_ID", "CODE_TYPE")
+    
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=106),
+    ]
+    
     code_type = fields.IntegerField(
         db_column='CODE_TYPE',
         help_text="This field is undocumented",
