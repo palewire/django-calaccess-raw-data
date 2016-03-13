@@ -20,6 +20,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=35, end_page=39),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92)
     ]
     # a_b_adr1 = fields.CharField(
     #   max_length=55,
