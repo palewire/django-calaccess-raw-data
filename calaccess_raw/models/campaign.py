@@ -413,7 +413,7 @@ class Cvr2SoCd(CalAccessBaseModel):
         "LINE_ITEM",
         "REC_TYPE",
         "FORM_TYPE"
-    )    
+    )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=39, end_page=41),
     ]
@@ -3027,10 +3027,10 @@ class S401Cd(CalAccessBaseModel):
     disclosure schedule (F401B, F401B-1, F401C, F401D) information.
     """
     UNIQUE_KEY = (
-        'FILING_ID', 
-        'AMEND_ID', 
-        'LINE_ID', 
-        'REC_TYPE', 
+        'FILING_ID',
+        'AMEND_ID',
+        'LINE_ID',
+        'REC_TYPE',
         'FORM_TYPE'
     )
     DOCUMENTCLOUD_PAGES = [

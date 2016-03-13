@@ -2571,9 +2571,10 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         db_table = 'LOBBYING_CHG_LOG_CD'
         verbose_name = 'LOBBYING_CHG_LOG_CD'
         verbose_name_plural = 'LOBBYING_CHG_LOG_CD'
-        DOCUMENTCLOUD_PAGES = [
-            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92),
-        ]
+        # not in the right place
+        # documentcloud_pages = [
+        #     DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92),
+        # ]
     def __str__(self):
         return str(self.filer_id)
 
@@ -4264,7 +4265,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text='Permanent value unique to this item',
     )
-     DOCUMENTCLOUD_PAGES = [
+    DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
     ]
 

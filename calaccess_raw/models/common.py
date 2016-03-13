@@ -387,11 +387,9 @@ class FilingsCd(CalAccessBaseModel):
     a filing are derived.
     """
     UNIQUE_KEY = "FILING_ID"
-    
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=75),
     ]
-    
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -1398,6 +1396,7 @@ original filing and 1 to 999 amendments.",
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=14),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133),
     ]
+
     class Meta:
         app_label = 'calaccess_raw'
         db_table = 'TEXT_MEMO_CD'
