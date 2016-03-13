@@ -994,6 +994,7 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     UNIQUE_KEY = "SESSION_ID"
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=84),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
     ]
 
     session_id = fields.IntegerField(
