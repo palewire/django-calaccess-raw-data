@@ -2432,7 +2432,8 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92) ]
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92)
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -2578,6 +2579,7 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         # documentcloud_pages = [
         #     DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92),
         # ]
+
     def __str__(self):
         return str(self.filer_id)
 
@@ -3899,7 +3901,7 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LothCd(CalAccessBaseModel):
     """
-    Payment to other lobbying firms listed of Form 625 Part 3B 
+    Payment to other lobbying firms listed of Form 625 Part 3B
     """
     UNIQUE_KEY = (
         "FILING_ID",
