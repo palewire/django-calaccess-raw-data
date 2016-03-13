@@ -857,6 +857,7 @@ class FilingPeriodCd(CalAccessBaseModel):
     UNIQUE_KEY = "PERIOD_ID"
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=74, end_page=75),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
     ]
     period_id = fields.IntegerField(
         db_column='PERIOD_ID',
