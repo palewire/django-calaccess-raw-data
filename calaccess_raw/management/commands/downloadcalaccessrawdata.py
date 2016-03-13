@@ -128,6 +128,7 @@ class Command(CalAccessCommand):
 
         if self.resume_download:
             self.log_record = self.last_started_download
+            version = self.log_record.version
         else:
             # get or create a version record
             # .get_or_create() throws IntegrityError
@@ -158,11 +159,12 @@ class Command(CalAccessCommand):
                 str(version.release_datetime) + '.zip',
                 File(zipped_file)
             )
+            zipped_file.close()
 
         if not options['keep_files']:
             os.remove(self.zip_path)
 
-        self.prep()
+        self.prep(no_archive=options['no_archive'])
 
         if not options['keep_files']:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
@@ -208,7 +210,6 @@ class Command(CalAccessCommand):
         headers = dict()
         if os.path.exists(self.zip_path):
             if self.resume_download:
-
                 headers['Range'] = 'bytes=%d-' % self.local_file_size
                 expected_size = expected_size - self.local_file_size
             else:
@@ -243,7 +244,7 @@ class Command(CalAccessCommand):
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-    def prep(self):
+    def prep(self, no_archive=False):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
@@ -276,10 +277,17 @@ class Command(CalAccessCommand):
                     version=self.log_record.version,
                     file_name=file_name,
                 )
-                if not options['no_archive']:
+                if not no_archive:
                     # Open up the zipped file so we can wrap it in the Django File obj
                     f = open(self.zip_path)
                     # Save the zip on the raw data version
-                    raw_file_obj.archive.save(file_name, File(f))
+                    raw_file_obj.archive.save(
+                        "%s_%s.tsv" % (
+                            str(self.log_record.version.release_datetime),
+                            file_name
+                        ),
+                        File(f)
+                    )
+                    f.close()
             except IntegrityError:
                 pass
