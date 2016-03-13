@@ -2893,7 +2893,8 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=98, end_page=99)
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=98, end_page=99),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -3013,6 +3014,7 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=99),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
