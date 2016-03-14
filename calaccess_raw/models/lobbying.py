@@ -2659,6 +2659,9 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9, end_page=10),
+    ]
     filing_period_start_dt = fields.DateField(
         null=True,
         db_column='FILING_PERIOD_START_DT',
@@ -3910,6 +3913,9 @@ class LothCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=107),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
