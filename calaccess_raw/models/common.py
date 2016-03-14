@@ -24,6 +24,9 @@ class FilernameCd(CalAccessBaseModel):
     fields in conjunction.
     """
     UNIQUE_KEY = ("FILER_ID", "NAMID")
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711615-FAQ', start_page=2)
+    ]
     xref_filer_id = fields.CharField(
         verbose_name='crossreference filer ID',
         max_length=15,
@@ -31,9 +34,6 @@ class FilernameCd(CalAccessBaseModel):
         db_index=True,
         help_text="Alternative filer ID found on many forms"
     )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711615-FAQ', start_page=2)
-    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -432,6 +432,7 @@ class HdrCd(CalAccessBaseModel):
     UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=79),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=51),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -615,6 +616,7 @@ class SmryCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=131, end_page=132),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=86, end_page=87),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1160,6 +1162,7 @@ class SpltCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id=2711614, start_page=132, end_page=132),
+        DocumentCloud(id="2711616-MapCalFormat2Fields", start_page=88),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1244,6 +1247,7 @@ class TextMemoCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=89, end_page=90),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
