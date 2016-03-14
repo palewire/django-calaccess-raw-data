@@ -2458,7 +2458,7 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=46, end_page=47),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46, end_page=47),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=41, end_page=42)
     ]
     filing_id = fields.IntegerField(
@@ -3038,7 +3038,7 @@ class S401Cd(CalAccessBaseModel):
         'FORM_TYPE'
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=123, end_page=124),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=123, end_page=124),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=76, end_page=78)
     ]
     filing_id = fields.IntegerField(
