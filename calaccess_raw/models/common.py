@@ -1161,7 +1161,7 @@ class SpltCd(CalAccessBaseModel):
         "PFORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id=2711614, start_page=132, end_page=132),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=132),
         DocumentCloud(id="2711616-MapCalFormat2Fields", start_page=88),
     ]
     amend_id = fields.IntegerField(
