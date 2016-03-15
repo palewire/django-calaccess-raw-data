@@ -103,9 +103,9 @@ class DocumentationTestCase(TestCase):
                  #cycle through objs, checking for IDs
                 for doc_pages in m().DOCUMENTCLOUD_PAGES:
                     #is this how you reference id?
-                    if doc_pages.id is '2711614-CalAccessTablesWeb'
+                    if doc_pages.id is '2711614-CalAccessTablesWeb':
                         cal_access_tables = True
-                    elif doc_pages.id is '2711616-MapCalFormat2Fields'
+                    elif doc_pages.id is '2711616-MapCalFormat2Fields':
                         map_cal_format = True
                 
                 #if both exist, return True, if both don't exist return false
