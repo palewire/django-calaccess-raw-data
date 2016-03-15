@@ -27,6 +27,7 @@ class RawDataVersion(models.Model):
     )
     archive = models.FileField(
         blank=True,
+        max_length=255,
         upload_to=settings.MEDIA_ROOT,
         verbose_name='archive of zip file',
         help_text='An archive of the original zipped file downloaded from '
@@ -103,6 +104,7 @@ class RawDataFile(models.Model):
     )
     archive = models.FileField(
         blank=True,
+        max_length=255,
         upload_to=settings.MEDIA_ROOT,
         verbose_name='archive of zip file',
         help_text='An archive of the original zipped file downloaded from '
