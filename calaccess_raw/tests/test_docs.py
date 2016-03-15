@@ -88,6 +88,39 @@ class DocumentationTestCase(TestCase):
             results.append([m().klass_group, m.__name__, exists])
         self.attr_test_output("model", "DOCUMENTCLOUD_PAGES", results)
 
+    def test_model_documentcloud_pages_for_both_links(self):
+        """
+        Verify that each model has both DOCUMENTCLOUD_PAGES
+        """
+        results = []
+        for m in get_model_list():
+            # check if exists -- not sure if this is actually neccessary?
+            if m().DOCUMENTCLOUD_PAGES:
+
+                cal_access_tables = False
+                map_cal_format = False
+
+                # cycle through objs, checking for IDs
+                for doc_pages in m().DOCUMENTCLOUD_PAGES:
+                    # is this how you reference id?
+                    if doc_pages.id == '2711614-CalAccessTablesWeb':
+                        cal_access_tables = True
+                    elif doc_pages.id == '2711616-MapCalFormat2Fields':
+                        map_cal_format = True
+
+                # if both exist, return True, if both don't exist return false
+                if cal_access_tables and map_cal_format:
+                    complete = True
+                else:
+                    complete = False
+
+            # if the object doesn't exist at all, will fail test
+            else:
+                complete = False
+
+            results.append([m().klass_group, m.__name__, complete])
+        self.attr_test_output("model", "DOCUMENTCLOUD_PAGES_COMPLETE", results)
+
     def test_field_verbose_name(self):
         """
         Verify that all fields have verbose_name documentation.
