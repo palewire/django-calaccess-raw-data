@@ -156,7 +156,7 @@ class Command(CalAccessCommand):
             zipped_file = open(self.zip_path)
             # Save the zip on the raw data version
             version.archive.save(
-                str(version.release_datetime) + '.zip',
+                version.release_datetime.strftime('%Y-%m-%d_%H%M%S') + '.zip',
                 File(zipped_file)
             )
             zipped_file.close()
@@ -283,7 +283,7 @@ class Command(CalAccessCommand):
                     # Save the zip on the raw data version
                     raw_file_obj.archive.save(
                         "%s_%s.tsv" % (
-                            str(self.log_record.version.release_datetime),
+                            str(self.log_record.version.release_datetime.strftime('%Y-%m-%d_%H%M%S')),
                             file_name
                         ),
                         File(f)
