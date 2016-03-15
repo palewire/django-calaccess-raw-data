@@ -150,7 +150,7 @@ class Command(CalAccessCommand):
 
         self.download()
         self.unzip()
-        
+
         if not options['no_archive']:
             # Open up the zipped file so we can wrap it in the Django File obj
             zipped_file = open(self.zip_path)
