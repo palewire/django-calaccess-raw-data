@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+from django.conf import settings
 from hurry.filesize import size as sizeformat
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -24,7 +25,13 @@ class RawDataVersion(models.Model):
         help_text='Size of the .ZIP file for this version of the CAL-ACCESS raw source data '
                   '(value of content-length field in HTTP response header)'
     )
-
+    archive = models.FileField(
+        blank=True,
+        upload_to=settings.MEDIA_ROOT,
+        verbose_name='archive of zip file',
+        help_text='An archive of the original zipped file downloaded from '
+                     'CAL-ACCESS.'
+    )
     class Meta:
         app_label = 'calaccess_raw'
         verbose_name = 'CAL-ACCESS raw data version'
@@ -93,6 +100,13 @@ class RawDataFile(models.Model):
         default=0,
         verbose_name='load columns count',
         help_text='Count of columns on the loaded calaccess_raw data model'
+    )
+    archive = models.FileField(
+        blank=True,
+        upload_to=settings.MEDIA_ROOT,
+        verbose_name='archive of zip file',
+        help_text='An archive of the original zipped file downloaded from '
+                     'CAL-ACCESS.'
     )
 
     class Meta:
