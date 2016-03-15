@@ -271,23 +271,20 @@ class Command(CalAccessCommand):
 
         # make the RawDataFile records
         for f in os.listdir(self.tsv_dir):
-            try:
-                file_name = f.upper().replace('.TSV', '')
-                raw_file_obj = self.raw_data_files.create(
-                    version=self.log_record.version,
-                    file_name=file_name,
+            file_name = f.upper().replace('.TSV', '')
+            raw_file_obj = self.raw_data_files.get_or_create(
+                version=self.log_record.version,
+                file_name=file_name,
+            )[0]
+            if not no_archive:
+                # Open up the zipped file so we can wrap it in the Django File obj
+                f = open(self.zip_path)
+                # Save the zip on the raw data version
+                raw_file_obj.archive.save(
+                    "%s_%s.tsv" % (
+                        str(self.log_record.version.release_datetime.strftime('%Y-%m-%d_%H%M%S')),
+                        file_name
+                    ),
+                    File(f)
                 )
-                if not no_archive:
-                    # Open up the zipped file so we can wrap it in the Django File obj
-                    f = open(self.zip_path)
-                    # Save the zip on the raw data version
-                    raw_file_obj.archive.save(
-                        "%s_%s.tsv" % (
-                            str(self.log_record.version.release_datetime.strftime('%Y-%m-%d_%H%M%S')),
-                            file_name
-                        ),
-                        File(f)
-                    )
-                    f.close()
-            except IntegrityError:
-                pass
+                f.close()
