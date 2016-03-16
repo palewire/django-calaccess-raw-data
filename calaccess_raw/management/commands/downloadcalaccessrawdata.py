@@ -9,7 +9,6 @@ from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
 from django.core.files import File
-from django.db.utils import IntegrityError
 from django.utils.timezone import utc
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
