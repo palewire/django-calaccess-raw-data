@@ -33,6 +33,7 @@ class RawDataVersion(models.Model):
         help_text='An archive of the original zipped file downloaded from '
                      'CAL-ACCESS.'
     )
+
     class Meta:
         app_label = 'calaccess_raw'
         verbose_name = 'CAL-ACCESS raw data version'
