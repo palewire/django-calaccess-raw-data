@@ -277,8 +277,8 @@ class Command(CalAccessCommand):
                 file_name=file_name,
             )[0]
             if not no_archive:
-                # Open up the zipped file so we can wrap it in the Django File obj
-                f = open(self.zip_path)
+                # Open up the .TSV file so we can wrap it in the Django File obj
+                f = open(self.tsv_dir + file_name + '.TSV')
                 # Save the zip on the raw data version
                 raw_file_obj.archive.save(
                     "%s_%s.tsv" % (
