@@ -75,7 +75,7 @@ Create the database the PostgreSQL way.
 
 .. code-block:: bash
 
-    $ createdb calaccess -U postgres
+    $ createdb calaccess_raw -U postgres
 
 Create a file at ``example/project/settings_local.py`` to save your custom database credentials. That might look something like this.
 
