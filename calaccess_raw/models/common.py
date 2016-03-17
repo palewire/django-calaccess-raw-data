@@ -25,7 +25,9 @@ class FilernameCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ("FILER_ID", "NAMID")
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711615-FAQ', start_page=2)
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=67, end_page=68),
+        DocumentCloud(id='2711615-FAQ', start_page=2),
     ]
     xref_filer_id = fields.CharField(
         verbose_name='crossreference filer ID',
@@ -188,7 +190,8 @@ class FilerFilingsCd(CalAccessBaseModel):
         "FILING_SEQUENCE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=61, end_page=62),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=64, end_page=66),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -388,6 +391,7 @@ class FilingsCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "FILING_ID"
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=75),
     ]
     filing_id = fields.IntegerField(
@@ -427,11 +431,14 @@ class FilingsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class HdrCd(CalAccessBaseModel):
     """
-    Electronic filing record header data
+    Electronic filing record header data. Contains information
+    identifying vendor and Cal Format version.
     """
     UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=79),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=1),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=51),
     ]
     amend_id = fields.IntegerField(
@@ -514,6 +521,7 @@ class HeaderCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ("LINE_NUMBER", "FORM_ID", "REC_TYPE")
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=79, end_page=80),
     ]
     line_number = fields.IntegerField(
@@ -1246,8 +1254,9 @@ class TextMemoCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=89, end_page=90),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=14),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133, end_page=134),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=89, end_page=90)
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1396,10 +1405,6 @@ original filing and 1 to 999 amendments.",
         help_text='Contents of the text memo',
         verbose_name='text'
     )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=14),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133),
-    ]
 
     class Meta:
         app_label = 'calaccess_raw'

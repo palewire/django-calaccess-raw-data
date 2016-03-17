@@ -93,7 +93,14 @@ class DocumentationTestCase(TestCase):
         Verify that each model has both DOCUMENTCLOUD_PAGES
         """
         results = []
-        excluded_models = ['F501502Cd']
+        excluded_models = [
+            'F501502Cd',
+            'FilernameCd',
+            'FilerFilingsCd',
+            'FilingsCd',
+            'HeaderCd',
+            'CvrE530Cd',
+        ]
         model_list = [
             x for x in get_model_list() if x.__name__ not in excluded_models
         ]
