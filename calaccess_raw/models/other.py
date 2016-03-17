@@ -57,7 +57,8 @@ class AddressCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "ADRID"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=16)
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=7),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=16),
     ]
     adrid = fields.IntegerField(
         db_column="ADRID",
@@ -117,7 +118,8 @@ class BallotMeasuresCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "FILER_ID"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=19, end_page=19),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=7),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=19),
     ]
     election_date = fields.DateTimeField(
         db_column='ELECTION_DATE',
@@ -260,8 +262,8 @@ class FilersCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "FILER_ID"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=73),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=73),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -288,7 +290,8 @@ class FilerAcronymsCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ("ACRONYM", "FILER_ID")
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=61, end_page=61),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=61),
     ]
     acronym = fields.CharField(
         db_column='ACRONYM',
@@ -322,6 +325,7 @@ class FilerAddressCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ("FILER_ID", "ADRID")
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=61, end_page=62),
     ]
     filer_id = fields.IntegerField(
@@ -373,7 +377,8 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "FILER_ID", "SESSION_ID", "ETHICS_DATE"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=64, end_page=64),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=64),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -416,7 +421,8 @@ class FilerInterestsCd(CalAccessBaseModel):
         "SESSION_ID"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=66, end_page=66),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=66),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -466,7 +472,8 @@ class FilerLinksCd(CalAccessBaseModel):
         "LINK_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=67, end_page=67),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=67),
     ]
     filer_id_a = fields.IntegerField(
         verbose_name='Filer ID A',
@@ -571,6 +578,7 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "STATUS_TYPE"
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=69),
     ]
     STATUS_TYPE_CHOICES = (
@@ -621,7 +629,8 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         "EFFECT_DT"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=68, end_page=69),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=69, end_page=70),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -762,7 +771,8 @@ class FilerTypesCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "FILTER_TYPE"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=70, end_page=71),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71, end_page=72),
     ]
     filer_type = fields.IntegerField(
         db_column='FILER_TYPE',
@@ -811,7 +821,8 @@ class FilerXrefCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ("FILER_ID", "XREF_ID")
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71, end_page=71),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=72),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -856,8 +867,8 @@ class FilingPeriodCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "PERIOD_ID"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=74, end_page=75),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=74, end_page=75),
     ]
     period_id = fields.IntegerField(
         db_column='PERIOD_ID',
@@ -914,6 +925,7 @@ class GroupTypesCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "GRP_ID"
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=78, end_page=79),
     ]
     grp_id = fields.IntegerField(
@@ -951,6 +963,7 @@ class ImageLinksCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ("IMG_LINK_ID", "IMG_ID")
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=80),
     ]
     img_link_id = fields.IntegerField(
@@ -994,8 +1007,8 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "SESSION_ID"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=84),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=84),
     ]
 
     session_id = fields.IntegerField(
@@ -1032,6 +1045,7 @@ class LookupCode(CalAccessBaseModel):
     """
     UNIQUE_KEY = ("CODE_ID", "CODE_TYPE")
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=106),
     ]
     code_type = fields.IntegerField(
@@ -1067,7 +1081,8 @@ class NamesCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=112, end_page=112),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=112),
     ]
     namid = fields.IntegerField(
         db_column='NAMID',
@@ -1141,7 +1156,8 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=121, end_page=121),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=121),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -1202,7 +1218,8 @@ class ReportsCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "RPT_ID"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=122, end_page=122),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=122),
     ]
     rpt_id = fields.IntegerField(
         db_column='RPT_ID',

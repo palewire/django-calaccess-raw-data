@@ -94,12 +94,38 @@ class DocumentationTestCase(TestCase):
         """
         results = []
         excluded_models = [
+            # campaign models
             'F501502Cd',
+            # "common" models
             'FilernameCd',
             'FilerFilingsCd',
             'FilingsCd',
             'HeaderCd',
             'CvrE530Cd',
+            # "other" models (this is indeed all of them)
+            'AcronymsCd',
+            'AddressCd',
+            'BallotMeasuresCd',
+            'EfsFilingLogCd',
+            'FilersCd',
+            'FilerAcronymsCd',
+            'FilerAddressCd',
+            'FilerEthicsClassCd',
+            'FilerInterestsCd',
+            'FilerLinksCd',
+            'FilerStatusTypesCd',
+            'FilerToFilerTypeCd',
+            'FilerTypesCd',
+            'FilerXrefCd',
+            'FilerTypePeriodsCd',
+            'FilingPeriodCd',
+            'GroupTypesCd',
+            'ImageLinksCd',
+            'LegislativeSessionsCd',
+            'LookupCode',
+            'NamesCd',
+            'ReceivedFilingsCd',
+            'ReportsCd',
         ]
         model_list = [
             x for x in get_model_list() if x.__name__ not in excluded_models
