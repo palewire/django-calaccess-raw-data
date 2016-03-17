@@ -8,7 +8,8 @@ import requests
 from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
-from django.db.utils import IntegrityError
+from django.conf import settings
+from django.core.files import File
 from django.utils.timezone import utc
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
@@ -58,7 +59,7 @@ class Command(CalAccessCommand):
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
 
         # downloaded zip file will go in data_dir
-        self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
+        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
         # raw tsv files go in same data_dir in tsv/
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
@@ -120,6 +121,7 @@ class Command(CalAccessCommand):
 
         if self.resume_download:
             self.log_record = self.last_started_download
+            version = self.log_record.version
         else:
             # get or create a version record
             # .get_or_create() throws IntegrityError
@@ -141,6 +143,18 @@ class Command(CalAccessCommand):
 
         self.download()
         self.unzip()
+
+        if settings.CALACCESS_STORE_ARCHIVE:
+            # Remove previous zip file
+            version.zip_file_archive.delete()
+            # Open up the zipped file so we can wrap it in the Django File obj
+            zipped_file = open(self.zip_path)
+            # Save the zip on the raw data version
+            version.zip_file_archive.save(
+                self.url.split('/')[-1],
+                File(zipped_file)
+            )
+            zipped_file.close()
 
         if not options['keep_files']:
             os.remove(self.zip_path)
@@ -191,7 +205,6 @@ class Command(CalAccessCommand):
         headers = dict()
         if os.path.exists(self.zip_path):
             if self.resume_download:
-
                 headers['Range'] = 'bytes=%d-' % self.local_file_size
                 expected_size = expected_size - self.local_file_size
             else:
@@ -253,10 +266,16 @@ class Command(CalAccessCommand):
 
         # make the RawDataFile records
         for f in os.listdir(self.tsv_dir):
-            try:
-                self.raw_data_files.create(
-                    version=self.log_record.version,
-                    file_name=f.upper().replace('.TSV', ''),
-                )
-            except IntegrityError:
-                pass
+            file_name = f.upper().replace('.TSV', '')
+            raw_file_obj = self.raw_data_files.get_or_create(
+                version=self.log_record.version,
+                file_name=file_name,
+            )[0]
+            if settings.CALACCESS_STORE_ARCHIVE:
+                # Remove previous .TSV file
+                raw_file_obj.download_file_archive.delete()
+                # Open up the .TSV file so we can wrap it in the Django File obj
+                f = open(self.tsv_dir + file_name + '.TSV')
+                # Save the .TSV on the raw data file
+                raw_file_obj.download_file_archive.save(file_name + '.TSV', File(f))
+                f.close()
