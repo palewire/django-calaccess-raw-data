@@ -26,6 +26,9 @@ class CvrSoCd(CalAccessBaseModel):
         DocumentCloud(id='1308004-cal-access-forms', start_page=21, end_page=22),
         # Form 410 statement of organization for recipient committee form sample
         DocumentCloud(id='1308004-cal-access-forms', start_page=25, end_page=31),
+        # CAL-ACCESS record layout
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=39, end_page=41),
+        # Mapping of .CAL format to CAL-ACCESS database table / fields
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=28, end_page=31)
     ]
     acct_opendt = fields.DateTimeField(
@@ -416,7 +419,9 @@ class Cvr2SoCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=39, end_page=41),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=45, end_page=46),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38, end_page=40),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -740,7 +745,9 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ['filing_id', 'amend_id']
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=7, end_page=29),
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=25, end_page=29),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6, end_page=14)
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1505,8 +1512,9 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=41, end_page=43),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=41, end_page=43),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32, end_page=35),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4967,15 +4975,16 @@ for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class F501502Cd(CalAccessBaseModel):
     """
-    Candidate intention statement
+    Candidate intention statement (Forms 501 and 502)
     """
     UNIQUE_KEY = (
         "FILING_ID",
         "AMEND_ID"
     )
     DOCUMENTCLOUD_PAGES = [
-        # CalAccessTablesWeb
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=57, end_page=59)
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=57, end_page=59),
+
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
