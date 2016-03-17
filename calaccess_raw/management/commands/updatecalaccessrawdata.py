@@ -55,13 +55,6 @@ class Command(CalAccessCommand):
             help="Keep zip, unzipped, TSV and CSV files"
         )
         parser.add_argument(
-            "--no-archive",
-            action="store_true",
-            dest="no_archive",
-            default=False,
-            help="Store an archive the downloaded zip file on the version model"
-        )
-        parser.add_argument(
             "--noinput",
             action="store_true",
             dest="noinput",
@@ -91,7 +84,6 @@ class Command(CalAccessCommand):
         # set / compute any attributes that multiple class methods need
         self.app_name = options["app_name"]
         self.keep_files = options["keep_files"]
-        self.no_archive = options["no_archive"]
         self.test_mode = options['test_data']
         self.downloading = options['download']
         self.cleaning = options['clean']
@@ -239,7 +231,6 @@ class Command(CalAccessCommand):
             call_command(
                 "downloadcalaccessrawdata",
                 keep_files=self.keep_files,
-                no_archive=self.no_archive,
                 verbosity=self.verbosity,
                 noinput=True,
                 restart=force_restart_download,

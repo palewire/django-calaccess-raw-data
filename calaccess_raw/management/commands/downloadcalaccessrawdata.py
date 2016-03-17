@@ -35,13 +35,6 @@ class Command(CalAccessCommand):
             help="Keep downloaded zip and unzipped files"
         )
         parser.add_argument(
-            "--no-archive",
-            action="store_true",
-            dest="no_archive",
-            default=False,
-            help="Store an archive the downloaded zip file on the version model"
-        )
-        parser.add_argument(
             "--noinput",
             action="store_true",
             dest="noinput",
@@ -151,7 +144,7 @@ class Command(CalAccessCommand):
         self.download()
         self.unzip()
 
-        if not options['no_archive']:
+        if settings.CALACCESS_STORE_ARCHIVE:
             # Remove previous zip file
             version.archive.delete()
             # Open up the zipped file so we can wrap it in the Django File obj
@@ -166,7 +159,7 @@ class Command(CalAccessCommand):
         if not options['keep_files']:
             os.remove(self.zip_path)
 
-        self.prep(no_archive=options['no_archive'])
+        self.prep()
 
         if not options['keep_files']:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
@@ -246,7 +239,7 @@ class Command(CalAccessCommand):
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-    def prep(self, no_archive=False):
+    def prep(self):
         """
         Rearrange the unzipped files and get rid of the stuff we don't want.
         """
@@ -278,7 +271,7 @@ class Command(CalAccessCommand):
                 version=self.log_record.version,
                 file_name=file_name,
             )[0]
-            if not no_archive:
+            if settings.CALACCESS_STORE_ARCHIVE:
                 # Remove previous .TSV file
                 raw_file_obj.archive.delete()
                 # Open up the .TSV file so we can wrap it in the Django File obj
