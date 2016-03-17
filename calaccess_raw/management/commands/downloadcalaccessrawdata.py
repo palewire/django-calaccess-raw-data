@@ -8,6 +8,7 @@ import requests
 from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
+from django.conf import settings
 from django.core.files import File
 from django.utils.timezone import utc
 from calaccess_raw import get_download_directory
@@ -283,11 +284,5 @@ class Command(CalAccessCommand):
                 # Open up the .TSV file so we can wrap it in the Django File obj
                 f = open(self.tsv_dir + file_name + '.TSV')
                 # Save the zip on the raw data version
-                raw_file_obj.archive.save(
-                    "%s_%s.tsv" % (
-                        str(self.log_record.version.release_datetime.strftime('%Y-%m-%d_%H-%M-%S')),
-                        file_name
-                    ),
-                    File(f)
-                )
+                raw_file_obj.archive.save(file_name + '.TSV', File(f))
                 f.close()

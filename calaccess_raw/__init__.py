@@ -29,6 +29,16 @@ def get_test_download_directory():
 Set either CALACCESS_TEST_DOWNLOAD_DIR or BASE_DIR in settings.py")
 
 
+def archive_directory_path(instance, filename):
+    """
+    Returns a path to an archived file (e.g., MEDIA_ROOT/YYYY-MM-DD_HH-MM-SS/filename.ext)
+    """
+    return '{dt.year}-{dt.month}-{dt.day}_{dt.hour}-{dt.minute}-{dt.second}/{f}'.format(
+            dt=instance.version.release_datetime,
+            f=filename
+        )
+
+
 def get_model_list():
     """
     Returns a model list with all the data tables in this application

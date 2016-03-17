@@ -5,6 +5,7 @@ from django.db import models
 from django.conf import settings
 from hurry.filesize import size as sizeformat
 from django.utils.encoding import python_2_unicode_compatible
+from calaccess_raw import archive_directory_path
 
 
 @python_2_unicode_compatible
@@ -28,7 +29,7 @@ class RawDataVersion(models.Model):
     archive = models.FileField(
         blank=True,
         max_length=255,
-        upload_to=settings.MEDIA_ROOT,
+        upload_to='dbwebexports/',
         verbose_name='archive of zip file',
         help_text='An archive of the original zipped file downloaded from '
                      'CAL-ACCESS.'
@@ -106,7 +107,7 @@ class RawDataFile(models.Model):
     archive = models.FileField(
         blank=True,
         max_length=255,
-        upload_to=settings.MEDIA_ROOT,
+        upload_to=archive_directory_path,
         verbose_name='archive of zip file',
         help_text='An archive of the original zipped file downloaded from '
                      'CAL-ACCESS.'
