@@ -72,7 +72,7 @@ class Command(CalAccessCommand):
                     file_name=self.file_name.upper().replace('.TSV', '')
                 )
 
-        self.clean(options['file_name'])
+        self.clean()
 
         # unless keeping files, remove tsv files
         if not options['keep_files']:
@@ -83,7 +83,7 @@ class Command(CalAccessCommand):
             self.log_record.finish_datetime = datetime.now()
             self.log_record.save()
 
-    def clean(self, name):
+    def clean(self):
         """
         Cleans the provided source TSV file and writes it out in CSV format
         """
