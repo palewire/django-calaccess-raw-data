@@ -276,6 +276,6 @@ class Command(CalAccessCommand):
                 raw_file_obj.download_file_archive.delete()
                 # Open up the .TSV file so we can wrap it in the Django File obj
                 f = open(self.tsv_dir + file_name + '.TSV')
-                # Save the .TSV on the raw data version
+                # Save the .TSV on the raw data file
                 raw_file_obj.download_file_archive.save(file_name + '.TSV', File(f))
                 f.close()
