@@ -29,12 +29,22 @@ def get_test_download_directory():
 Set either CALACCESS_TEST_DOWNLOAD_DIR or BASE_DIR in settings.py")
 
 
-def rawdatafile_archive_path(instance, filename):
+def archive_directory_path(instance, filename):
     """
-    Returns a path to an archived RawDataFile (e.g., MEDIA_ROOT/YYYY-MM-DD_HH-MM-SS/filename.ext)
+    Returns a path to an archived RawDataFile (e.g.,
+    MEDIA_ROOT/YYYY-MM-DD_HH-MM-SS/filename.ext)
     """
+    from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+
+    if isinstance(instance, RawDataVersion):
+        release_datetime = instance.release_datetime
+    elif isinstance(instance, RawDataFile):
+        release_datetime = instance.version.release_datetime
+    else:
+        raise TypeError("Must be called on an instance of RawDataVersion "
+                        "or RawDataFile.")
     return '{dt.year}-{dt.month}-{dt.day}_{dt.hour}-{dt.minute}-{dt.second}/{f}'.format(
-            dt=instance.version.release_datetime,
+            dt=release_datetime,
             f=filename
         )
 

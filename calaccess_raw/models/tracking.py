@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-from django.conf import settings
 from hurry.filesize import size as sizeformat
 from django.utils.encoding import python_2_unicode_compatible
-from calaccess_raw import rawdatafile_archive_path
+from calaccess_raw import archive_directory_path
 
 
 @python_2_unicode_compatible
@@ -29,7 +28,7 @@ class RawDataVersion(models.Model):
     zip_file_archive = models.FileField(
         blank=True,
         max_length=255,
-        upload_to='dbwebexports/',
+        upload_to=archive_directory_path,
         verbose_name='archive of zip file',
         help_text='An archive of the original zipped file downloaded from '
                      'CAL-ACCESS.'
@@ -107,7 +106,7 @@ class RawDataFile(models.Model):
     download_file_archive = models.FileField(
         blank=True,
         max_length=255,
-        upload_to=rawdatafile_archive_path,
+        upload_to=archive_directory_path,
         verbose_name='archive of download file',
         help_text='An archive of the original raw data file downloaded '
                      'from CAL-ACCESS.'
@@ -115,7 +114,7 @@ class RawDataFile(models.Model):
     clean_file_archive = models.FileField(
         blank=True,
         max_length=255,
-        upload_to=rawdatafile_archive_path,
+        upload_to=archive_directory_path,
         verbose_name='archive of download file',
         help_text='An archive of the raw data file after being cleaned.'
     )
