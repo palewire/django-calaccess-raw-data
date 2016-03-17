@@ -5,6 +5,8 @@ import os
 import csv
 from datetime import datetime
 from io import StringIO
+from django.conf import settings
+from django.core.files import File
 from django.utils import six
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
@@ -193,6 +195,18 @@ class Command(CalAccessCommand):
         # Shut it down
         tsv_file.close()
         csv_file.close()
+
+        if self.version:
+            if settings.CALACCESS_STORE_ARCHIVE:
+                # Remove previous .CSV file
+                raw_file.clean_file_archive.delete()
+                # Open up the .CSV file so we can wrap it in the Django File obj
+                f = open(csv_path)
+                # Save the .CSV on the raw data file
+                raw_file.clean_file_archive.save(
+                    self.file_name.lower().replace("tsv", "csv"),
+                    File(f)
+                )
 
     def log_errors(self, rows):
         """
