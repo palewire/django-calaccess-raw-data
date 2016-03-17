@@ -59,7 +59,7 @@ class Command(CalAccessCommand):
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
 
         # downloaded zip file will go in data_dir
-        self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
+        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
         # raw tsv files go in same data_dir in tsv/
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
@@ -151,7 +151,7 @@ class Command(CalAccessCommand):
             zipped_file = open(self.zip_path)
             # Save the zip on the raw data version
             version.zip_file_archive.save(
-                version.release_datetime.strftime('%Y-%m-%d_%H-%M-%S') + '.zip',
+                self.url.split('/')[-1],
                 File(zipped_file)
             )
             zipped_file.close()
