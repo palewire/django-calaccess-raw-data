@@ -93,7 +93,12 @@ class DocumentationTestCase(TestCase):
         Verify that each model has both DOCUMENTCLOUD_PAGES
         """
         results = []
-        for m in get_model_list():
+        excluded_models = ['F501502Cd']
+        model_list = [
+            x for x in get_model_list() if x.__name__ not in excluded_models
+        ]
+
+        for m in model_list:
 
             if m().DOCUMENTCLOUD_PAGES:
                 cal_access_tables = False
