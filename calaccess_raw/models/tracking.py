@@ -5,7 +5,7 @@ from django.db import models
 from django.conf import settings
 from hurry.filesize import size as sizeformat
 from django.utils.encoding import python_2_unicode_compatible
-from calaccess_raw import archive_directory_path
+from calaccess_raw import rawdatafile_archive_path
 
 
 @python_2_unicode_compatible
@@ -107,7 +107,7 @@ class RawDataFile(models.Model):
     download_file_archive = models.FileField(
         blank=True,
         max_length=255,
-        upload_to=archive_directory_path,
+        upload_to=rawdatafile_archive_path,
         verbose_name='archive of download file',
         help_text='An archive of the original raw data file downloaded '
                      'from CAL-ACCESS.'
@@ -115,7 +115,7 @@ class RawDataFile(models.Model):
     clean_file_archive = models.FileField(
         blank=True,
         max_length=255,
-        upload_to=archive_directory_path,
+        upload_to=rawdatafile_archive_path,
         verbose_name='archive of download file',
         help_text='An archive of the raw data file after being cleaned.'
     )

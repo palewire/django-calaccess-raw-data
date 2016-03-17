@@ -29,9 +29,9 @@ def get_test_download_directory():
 Set either CALACCESS_TEST_DOWNLOAD_DIR or BASE_DIR in settings.py")
 
 
-def archive_directory_path(instance, filename):
+def rawdatafile_archive_path(instance, filename):
     """
-    Returns a path to an archived file (e.g., MEDIA_ROOT/YYYY-MM-DD_HH-MM-SS/filename.ext)
+    Returns a path to an archived RawDataFile (e.g., MEDIA_ROOT/YYYY-MM-DD_HH-MM-SS/filename.ext)
     """
     return '{dt.year}-{dt.month}-{dt.day}_{dt.hour}-{dt.minute}-{dt.second}/{f}'.format(
             dt=instance.version.release_datetime,
