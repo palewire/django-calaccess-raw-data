@@ -146,11 +146,11 @@ class Command(CalAccessCommand):
 
         if settings.CALACCESS_STORE_ARCHIVE:
             # Remove previous zip file
-            version.archive.delete()
+            version.zip_file_archive.delete()
             # Open up the zipped file so we can wrap it in the Django File obj
             zipped_file = open(self.zip_path)
             # Save the zip on the raw data version
-            version.archive.save(
+            version.zip_file_archive.save(
                 version.release_datetime.strftime('%Y-%m-%d_%H-%M-%S') + '.zip',
                 File(zipped_file)
             )
@@ -273,9 +273,9 @@ class Command(CalAccessCommand):
             )[0]
             if settings.CALACCESS_STORE_ARCHIVE:
                 # Remove previous .TSV file
-                raw_file_obj.archive.delete()
+                raw_file_obj.download_file_archive.delete()
                 # Open up the .TSV file so we can wrap it in the Django File obj
                 f = open(self.tsv_dir + file_name + '.TSV')
                 # Save the .TSV on the raw data version
-                raw_file_obj.archive.save(file_name + '.TSV', File(f))
+                raw_file_obj.download_file_archive.save(file_name + '.TSV', File(f))
                 f.close()
