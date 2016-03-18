@@ -4305,6 +4305,9 @@ of a parent record.'
         blank=True,
         verbose_name='expense code',
         choices=EXPN_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2756977-Lookup-Codes-Cd', start_page=3, end_page=3),
+        ]
     )
     expn_dscr = fields.CharField(
         max_length=400,
