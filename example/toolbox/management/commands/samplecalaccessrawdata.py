@@ -73,6 +73,16 @@ class Command(CalAccessCommand):
 
         self.header("Compressing zip file...")
         self.save_zip()
+
+        # Stash the release_datetime and size of the last completed download
+        version = self.command_logs.filter(
+            command='downloadcalaccessrawdata',
+            finish_datetime__isnull=False
+        ).order_by('-start_datetime')[0].version
+
+        with open(self.test_data_dir + '/sampled_version.txt', 'w') as f:
+            f.write(str(version.release_datetime) + '\n')
+            f.write(str(version.size))
     
     def save_zip(self):
         """
