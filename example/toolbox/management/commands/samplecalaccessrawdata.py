@@ -1,5 +1,6 @@
 import os
 import shutil
+import zipfile
 from itertools import chain
 from optparse import make_option
 from clint.textui import progress
@@ -69,3 +70,18 @@ class Command(CalAccessCommand):
                 # Write it out
                 for line in chain(fi.header, sample):
                     out.write(line)
+
+        self.header("Compressing zip file...")
+        self.save_zip()
+    
+    def save_zip(self):
+        """
+        Save a zip file containing all the sampled .TSV files
+        """
+        with zipfile.ZipFile(
+                self.test_data_dir + "/dbwebexport_sample.zip", 
+                'w'
+            ) as zf:
+            for name in os.listdir(self.sample_dir):
+                f = os.path.join(self.sample_dir, name)
+                zf.write(f, name)

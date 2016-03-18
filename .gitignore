@@ -24,3 +24,4 @@ example/.static/
 example/routers.py
 calaccess_raw/migrations/
 */.media/*
+*dbwebexport_sample/
