@@ -64,8 +64,8 @@ class Command(CalAccessCommand):
             sample = two_pass_sample(fi, sample_size=self.sample_rows)
 
             # Open our output file
-            out = open(out_file, 'wb')
+            with open(out_file, 'wb') as out:
 
-            # Write it out
-            for line in chain(fi.header, sample):
-                out.write(line)
+                # Write it out
+                for line in chain(fi.header, sample):
+                    out.write(line)
