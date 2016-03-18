@@ -8,22 +8,27 @@ from subsample.algorithms import two_pass_sample
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_download_directory, get_test_download_directory
 
-custom_options = (
-    make_option(
-        "--sample-rows",
-        action="store",
-        dest="samplerows",
-        default=1000,
-        help="Number of rows to grab from each table"
-    ),
-)
-
 
 class Command(CalAccessCommand):
     help = 'Create smaller sampled TSV files for unit tests'
-    option_list = CalAccessCommand.option_list + custom_options
 
-    def set_config(self, *args, **options):
+    def add_arguments(self, parser):
+        """
+        Adds custom arguments specific to this command.
+        """
+        super(Command, self).add_arguments(parser)
+        parser.add_argument(
+            "--sample-rows",
+            action="store",
+            dest="samplerows",
+            default=1000,
+            help="Number of rows to grab from each table"
+        )
+    
+    def handle(self, *args, **options):
+        super(Command, self).handle(*args, **options)
+
+        # Set options
         self.data_dir = get_download_directory()
         self.test_data_dir = get_test_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
@@ -32,8 +37,6 @@ class Command(CalAccessCommand):
         self.tsv_list = os.listdir(self.tsv_dir)
         self.verbosity = int(options['verbosity'])
 
-    def handle(self, *args, **options):
-        self.set_config(*args, **options)
         self.header("Sampling %i rows from %s source files" % (
             self.sample_rows,
             len(self.tsv_list),
