@@ -9,7 +9,7 @@ from .base import CalAccessBaseModel, DocumentCloud
 @python_2_unicode_compatible
 class CvrRegistrationCd(CalAccessBaseModel):
     """
-    Cover page of lobbying disclosure forms
+    Cover page of lobbying disclosure forms (601, 602, 603, 604, 606, and 607)
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -20,6 +20,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=35, end_page=39),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=22, end_page=27)
     ]
     # a_b_adr1 = fields.CharField(
     #   max_length=55,
@@ -1121,7 +1122,7 @@ allows the firm to submit forms for its lobbyists.',
 @python_2_unicode_compatible
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
-    Additional data from lobbyist disclosure forms
+    Additional data from lobbyist disclosure forms (615, 625, 635, and 645)
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1131,7 +1132,9 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=43, end_page=44),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=36),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1246,7 +1249,7 @@ entity is an individual. Only required by Form 635.',
 @python_2_unicode_compatible
 class LobbyAmendmentsCd(CalAccessBaseModel):
     """
-    Lobbyist registration amendment information
+    Lobbyist registration amendment information (Form 605 Part I).
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1255,7 +1258,9 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=90, end_page=91),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=64, end_page=66)
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1530,7 +1535,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class F690P2Cd(CalAccessBaseModel):
     """
-    Amends lobbying disclosure filings
+    Amends lobbying disclosure filings (Form 690)
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1540,7 +1545,9 @@ class F690P2Cd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=59, end_page=60),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=50, end_page=51),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1813,7 +1820,8 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LexpCd(CalAccessBaseModel):
     """
-    Lobbying activity expenditures
+    Lobbying activity expenditures schedule information, reported in
+    Forms 615 Part 1, 625 Part 3A, 635 Part 3C, and 645 Part 2A.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1823,7 +1831,9 @@ class LexpCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=86, end_page=87),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=58, end_page=59)
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2027,7 +2037,8 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LccmCd(CalAccessBaseModel):
     """
-    Lobbying campaign contributions
+    Lobbying campaign contributions reported on Forms 615 Part 2,
+    625 Part 4B, 635 Part 4B and the 645 Part 3B.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2037,7 +2048,9 @@ class LccmCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=83, end_page=84),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=54, end_page=55)
     ]
     # acct_name = fields.CharField(
     #   max_length=90,
@@ -2235,7 +2248,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LempCd(CalAccessBaseModel):
     """
-    Lobbyist employers and subcontracted clients
+    Lobbyist employers and subcontracted clients (Form 601)
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2245,7 +2258,9 @@ class LempCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=85, end_page=86),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=56, end_page=57)
     ]
     agencylist = fields.CharField(
         max_length=200,
@@ -2424,7 +2439,7 @@ Part 2B Client/Employer"
 @python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
     """
-    This is an undocumented table.
+    Holds lobbyist log data for web display
     """
     UNIQUE_KEY = (
         "FILER_ID",
@@ -2591,6 +2606,7 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=10),
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=92, end_page=93),
     ]
     filer_id = fields.IntegerField(
@@ -2660,7 +2676,8 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9, end_page=10),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10, end_page=11),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=93, end_page=94),
     ]
     filing_period_start_dt = fields.DateField(
         null=True,
@@ -2714,6 +2731,7 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=94),
     ]
     filer_id = fields.IntegerField(
@@ -2891,12 +2909,15 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=98, end_page=99),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=98, end_page=99),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -3011,12 +3032,15 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer3Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=99),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=99),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -3131,10 +3155,14 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=95, end_page=96),
     ]
     employer_id = fields.IntegerField(
@@ -3179,10 +3207,14 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96),
     ]
     employer_id = fields.IntegerField(
@@ -3227,11 +3259,15 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=97, end_page=98),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=94, end_page=95),
     ]
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
@@ -3278,10 +3314,14 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=95),
     ]
     lobbyist_id = fields.IntegerField(
@@ -3329,7 +3369,10 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirm1Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     firm_id = fields.IntegerField(
@@ -3338,7 +3381,8 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         help_text="Identification number of the firm, employer or coalition"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=102, end_page=103),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=103, end_page=104),
     ]
     session_id = fields.IntegerField(
         verbose_name='session ID',
@@ -3436,11 +3480,15 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirm2Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=104)
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=104),
     ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
@@ -3543,10 +3591,14 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirm3Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=105),
     ]
     firm_id = fields.IntegerField(
@@ -3650,11 +3702,15 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=95, end_page=96),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=100),
     ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
@@ -3726,11 +3782,15 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11, end_page=12),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=100, end_page=101),
     ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
@@ -3802,10 +3862,14 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     """
-    It's an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=102),
     ]
     lobbyist_id = fields.IntegerField(
@@ -3853,10 +3917,14 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     """
-    It's an undocumented model.
+    This table and its fields are listed in the official CAL-ACCESS documentation,
+    but is not fully explained. The table's description contains this note: "Matt
+    needs to describe the relationship between the multiple tables. Documentation
+    should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=102, end_page=103),
     ]
     lobbyist_id = fields.IntegerField(
@@ -3915,6 +3983,7 @@ class LothCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=107),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=67, end_page=68),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4075,7 +4144,8 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LpayCd(CalAccessBaseModel):
     """
-    Payments made or received by lobbying firms
+    Payments made or received by lobbying firms, reported on
+    Form 625 Part 2 and 635 Part 3B
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4084,6 +4154,10 @@ class LpayCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=69, end_page=70)
+    ]
     advan_amt = fields.DecimalField(
         decimal_places=2,
         null=True,
@@ -4278,9 +4352,6 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
-    ]
 
     class Meta:
         app_label = 'calaccess_raw'
