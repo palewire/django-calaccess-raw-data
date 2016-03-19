@@ -269,6 +269,8 @@ class Command(CalAccessCommand):
         Save a copy of the download zip file on RawDataVersion and a copy of
         each .TSV file on the associated RawDataFile.
         """
+        if self.verbosity:
+            self.log(" Archiving original files")
         # Remove previous zip file
         self.version.zip_file_archive.delete()
         # Open up the zipped file so we can wrap it in the Django File obj
@@ -288,6 +290,6 @@ class Command(CalAccessCommand):
             with open(self.tsv_dir + raw_data_file.file_name + '.TSV') as f:
                 # Save the .TSV on the raw data file
                 raw_data_file.download_file_archive.save(
-                    raw_data_file.file_name + '.TSV', 
+                    raw_data_file.file_name + '.TSV',
                     File(f)
                 )
