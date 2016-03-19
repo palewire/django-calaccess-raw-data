@@ -1324,7 +1324,10 @@ committee campaign statement)'),
         blank=True,
         choices=REPORTNAME_CHOICES,
         help_text="Attached campaign disclosure statement type. Legal \
-values are 450, 460, and 461."
+values are 450, 460, and 461.",
+        documentcloud_pages = [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=15, end_page=15),
+        ]
     )
     rpt_att_cb = fields.CharField(
         max_length=4,
