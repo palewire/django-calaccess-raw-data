@@ -160,6 +160,7 @@ class Command(CalAccessCommand):
             os.remove(self.zip_path)
 
         self.prep()
+        self.track_files()
 
         if not options['keep_files']:
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
@@ -264,13 +265,16 @@ class Command(CalAccessCommand):
             self.tsv_dir,
         )
 
-        # make the RawDataFile records
+    def track_files(self):
+        """
+        Create a RawDataFile for each download .TSV file
+        """
         for f in os.listdir(self.tsv_dir):
             file_name = f.upper().replace('.TSV', '')
-            raw_file_obj = self.raw_data_files.get_or_create(
+            raw_file_obj = self.raw_data_files.create(
                 version=self.version,
                 file_name=file_name,
-            )[0]
+            )
             if settings.CALACCESS_STORE_ARCHIVE:
                 # Remove previous .TSV file
                 raw_file_obj.download_file_archive.delete()
