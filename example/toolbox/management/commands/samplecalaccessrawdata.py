@@ -89,7 +89,7 @@ class Command(CalAccessCommand):
         Save a zip file containing all the sampled .TSV files
         """
         with zipfile.ZipFile(
-                self.test_data_dir + "/dbwebexport_sample.zip", 
+                self.test_data_dir + "/dbwebexport.zip", 
                 'w'
             ) as zf:
             for name in os.listdir(self.sample_dir):
