@@ -3714,7 +3714,10 @@ original filing and 1 to 999 amendments.",
         blank=True,
         choices=EXPN_CODE_CHOICES,
         verbose_name="expense code",
-        help_text="CTB & IND need explanation & listing on Sched D TRC & TRS require explanation"
+        help_text="CTB & IND need explanation & listing on Sched D TRC & TRS require explanation",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11, end_page=11),
+        ]
     )
     expn_date = fields.DateField(
         null=True,
@@ -4305,6 +4308,9 @@ of a parent record.'
         blank=True,
         verbose_name='expense code',
         choices=EXPN_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11, end_page=11),
+        ]
     )
     expn_dscr = fields.CharField(
         max_length=400,
