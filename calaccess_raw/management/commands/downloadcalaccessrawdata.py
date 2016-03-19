@@ -259,7 +259,7 @@ class Command(CalAccessCommand):
         """
         for f in os.listdir(self.tsv_dir):
             file_name = f.upper().replace('.TSV', '')
-            raw_file_obj = self.raw_data_files.create(
+            self.raw_data_files.create(
                 version=self.version,
                 file_name=file_name,
             )
