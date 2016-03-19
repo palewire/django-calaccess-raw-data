@@ -121,22 +121,22 @@ class Command(CalAccessCommand):
 
         if self.resume_download:
             self.log_record = self.last_started_download
-            version = self.log_record.version
+            self.version = self.log_record.version
         else:
             # get or create a version record
             # .get_or_create() throws IntegrityError
             try:
-                version = self.raw_data_versions.get(
+                self.version = self.raw_data_versions.get(
                     release_datetime=self.current_release_datetime
                 )
             except RawDataVersion.DoesNotExist:
-                version = self.raw_data_versions.create(
+                self.version = self.raw_data_versions.create(
                     release_datetime=self.current_release_datetime,
                     size=download_metadata['content-length']
                 )
             # create a log record
             self.log_record = self.command_logs.create(
-                version=version,
+                version=self.version,
                 command=self,
                 called_by=self.get_caller_log()
             )
@@ -146,11 +146,11 @@ class Command(CalAccessCommand):
 
         if settings.CALACCESS_STORE_ARCHIVE:
             # Remove previous zip file
-            version.zip_file_archive.delete()
+            self.version.zip_file_archive.delete()
             # Open up the zipped file so we can wrap it in the Django File obj
             zipped_file = open(self.zip_path)
             # Save the zip on the raw data version
-            version.zip_file_archive.save(
+            self.version.zip_file_archive.save(
                 self.url.split('/')[-1],
                 File(zipped_file)
             )
@@ -268,7 +268,7 @@ class Command(CalAccessCommand):
         for f in os.listdir(self.tsv_dir):
             file_name = f.upper().replace('.TSV', '')
             raw_file_obj = self.raw_data_files.get_or_create(
-                version=self.log_record.version,
+                version=self.version,
                 file_name=file_name,
             )[0]
             if settings.CALACCESS_STORE_ARCHIVE:
