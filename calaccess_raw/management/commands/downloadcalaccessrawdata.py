@@ -258,11 +258,12 @@ class Command(CalAccessCommand):
         Create a RawDataFile for each download .TSV file
         """
         for f in os.listdir(self.tsv_dir):
-            file_name = f.upper().replace('.TSV', '')
-            self.raw_data_files.create(
-                version=self.version,
-                file_name=file_name,
-            )
+            if '.TSV' in f:
+                file_name = f.upper().replace('.TSV', '')
+                self.raw_data_files.get_or_create(
+                    version=self.version,
+                    file_name=file_name,
+                )
 
     def archive(self):
         """
