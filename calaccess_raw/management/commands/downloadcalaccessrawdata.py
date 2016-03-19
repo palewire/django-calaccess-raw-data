@@ -143,26 +143,14 @@ class Command(CalAccessCommand):
 
         self.download()
         self.unzip()
-
-        if settings.CALACCESS_STORE_ARCHIVE:
-            # Remove previous zip file
-            self.version.zip_file_archive.delete()
-            # Open up the zipped file so we can wrap it in the Django File obj
-            zipped_file = open(self.zip_path)
-            # Save the zip on the raw data version
-            self.version.zip_file_archive.save(
-                self.url.split('/')[-1],
-                File(zipped_file)
-            )
-            zipped_file.close()
-
-        if not options['keep_files']:
-            os.remove(self.zip_path)
-
         self.prep()
         self.track_files()
 
+        if settings.CALACCESS_STORE_ARCHIVE:
+            self.archive()
+
         if not options['keep_files']:
+            os.remove(self.zip_path)
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
         self.log_record.finish_datetime = datetime.now()
@@ -275,11 +263,31 @@ class Command(CalAccessCommand):
                 version=self.version,
                 file_name=file_name,
             )
-            if settings.CALACCESS_STORE_ARCHIVE:
-                # Remove previous .TSV file
-                raw_file_obj.download_file_archive.delete()
-                # Open up the .TSV file so we can wrap it in the Django File obj
-                f = open(self.tsv_dir + file_name + '.TSV')
+
+    def archive(self):
+        """
+        Save a copy of the download zip file on RawDataVersion and a copy of
+        each .TSV file on the associated RawDataFile.
+        """
+        # Remove previous zip file
+        self.version.zip_file_archive.delete()
+        # Open up the zipped file so we can wrap it in the Django File obj
+        zipped_file = open(self.zip_path)
+        # Save the zip on the raw data version
+        self.version.zip_file_archive.save(
+            self.url.split('/')[-1],
+            File(zipped_file)
+        )
+        zipped_file.close()
+
+        # make the RawDataFile records
+        for raw_data_file in self.raw_data_files.filter(version=self.version):
+            # Remove previous .TSV file
+            raw_data_file.download_file_archive.delete()
+            # Open up the .TSV file so we can wrap it in the Django File obj
+            with open(self.tsv_dir + raw_data_file.file_name + '.TSV') as f:
                 # Save the .TSV on the raw data file
-                raw_file_obj.download_file_archive.save(file_name + '.TSV', File(f))
-                f.close()
+                raw_data_file.download_file_archive.save(
+                    raw_data_file.file_name + '.TSV', 
+                    File(f)
+                )
