@@ -1309,8 +1309,6 @@ values are 'Y' or 'N'."
 Report Number 000 represents an original filing. 001-999 are amendments."
     )
     REPORTNAME_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p21
         ('', 'Unknown'),
         ('450', 'Form 450 (Recipient committee campaign statement, \
 short form)'),
@@ -1325,9 +1323,9 @@ committee campaign statement)'),
         choices=REPORTNAME_CHOICES,
         help_text="Attached campaign disclosure statement type. Legal \
 values are 450, 460, and 461.",
-        documentcloud_pages = [
+        documentcloud_pages=(
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=15, end_page=15),
-        ]
+        )
     )
     rpt_att_cb = fields.CharField(
         max_length=4,
