@@ -1,5 +1,17 @@
 @import url("theme.css");
 
 .doc_page {
-    border: 1px solid #aaa;
+    border: 2px solid #aaa;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.5);
+    box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.5);
+    margin-right: 1em;
+}
+
+.doc_page:hover { 
+    border: 2px solid #3399ff;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 4px 4px rgba(51,153,255,0.5);
+    -moz-box-shadow: 2px 2px 4px 4px rgba(51,153,255,0.5);
+    box-shadow: 2px 2px 4px 4px rgba(51,153,255,0.5);
 }
