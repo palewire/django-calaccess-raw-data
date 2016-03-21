@@ -10,7 +10,7 @@ from hurry.filesize import size
 from clint.textui import progress
 from django.conf import settings
 from django.core.files import File
-from django.utils.timezone import utc
+from django.utils.timezone import utc, now
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
@@ -153,7 +153,7 @@ class Command(CalAccessCommand):
             os.remove(self.zip_path)
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-        self.log_record.finish_datetime = datetime.now()
+        self.log_record.finish_datetime = now()
         self.log_record.save()
 
     def check_can_resume(self):

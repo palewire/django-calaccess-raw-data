@@ -3,13 +3,13 @@
 from __future__ import unicode_literals
 import os
 import six
-from datetime import datetime
 from django.apps import apps
 from csvkit import CSVKitReader
 from django.conf import settings
 from postgres_copy import CopyMapping
 from django.db import connections, router
 from django.core.management.base import CommandError
+from django.utils.timezone import now
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion
 
@@ -112,20 +112,19 @@ class Command(CalAccessCommand):
                 self.failure("File is empty.")
 
         # handle tracking data
-        if self.version:
-            raw_file = self.raw_data_files.get_or_create(
-                version=self.version,
-                file_name=self.log_record.file_name
-            )[0]
+        raw_file = self.raw_data_files.get_or_create(
+            version=self.version,
+            file_name=self.log_record.file_name
+        )[0]
 
-            # add clean counts to raw_file_record
-            raw_file.clean_columns_count = len(self.get_headers())
-            raw_file.clean_records_count = self.get_row_count()
-            raw_file.save()
+        # add clean counts to raw_file_record
+        raw_file.clean_columns_count = len(self.get_headers())
+        raw_file.clean_records_count = self.get_row_count()
+        raw_file.save()
 
-            # save the log record
-            self.log_record.finish_datetime = datetime.now()
-            self.log_record.save()
+        # save the log record
+        self.log_record.finish_datetime = now()
+        self.log_record.save()
 
         # if not keeping files, remove the csv file
         if not self.keep_files:

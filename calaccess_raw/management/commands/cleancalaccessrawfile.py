@@ -3,11 +3,11 @@
 from __future__ import unicode_literals
 import os
 import csv
-from datetime import datetime
 from io import StringIO
 from django.conf import settings
 from django.core.files import File
 from django.utils import six
+from django.utils.timezone import now
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
@@ -81,7 +81,7 @@ class Command(CalAccessCommand):
             os.remove(os.path.join(self.tsv_dir, options['file_name']))
 
         # save the log record
-        self.log_record.finish_datetime = datetime.now()
+        self.log_record.finish_datetime = now()
         self.log_record.save()
 
     def clean(self):
