@@ -146,7 +146,7 @@ class Command(CalAccessCommand):
         self.prep()
         self.track_files()
 
-        if settings.CALACCESS_STORE_ARCHIVE:
+        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
 
         if not options['keep_files']:

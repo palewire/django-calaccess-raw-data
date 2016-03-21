@@ -42,5 +42,5 @@ for the purposes of unit testing."
         self.unzip()
         self.track_files()
 
-        if settings.CALACCESS_STORE_ARCHIVE:
+        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()

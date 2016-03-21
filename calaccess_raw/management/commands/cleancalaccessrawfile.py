@@ -194,7 +194,7 @@ class Command(CalAccessCommand):
         tsv_file.close()
         csv_file.close()
 
-        if settings.CALACCESS_STORE_ARCHIVE:
+        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             # Remove previous .CSV file
             raw_file.clean_file_archive.delete()
             # Open up the .CSV file so we can wrap it in the Django File obj
