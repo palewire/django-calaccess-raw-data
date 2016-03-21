@@ -80,10 +80,9 @@ class Command(CalAccessCommand):
         if not options['keep_files']:
             os.remove(os.path.join(self.tsv_dir, options['file_name']))
 
-        if self.version:
-            # save the log record
-            self.log_record.finish_datetime = datetime.now()
-            self.log_record.save()
+        # save the log record
+        self.log_record.finish_datetime = datetime.now()
+        self.log_record.save()
 
     def clean(self):
         """
@@ -181,32 +180,30 @@ class Command(CalAccessCommand):
                 self.failure(msg % (len(log_rows) - 1))
             self.log_errors(log_rows)
 
-        if self.version:
-            raw_file = self.raw_data_files.get_or_create(
-                version=self.version,
-                file_name=self.log_record.file_name
-            )[0]
+        raw_file = self.raw_data_files.get_or_create(
+            version=self.version,
+            file_name=self.log_record.file_name
+        )[0]
 
-            # add download counts to raw_file_record
-            raw_file.download_columns_count = headers_count
-            raw_file.download_records_count = line_number
-            raw_file.save()
+        # add download counts to raw_file_record
+        raw_file.download_columns_count = headers_count
+        raw_file.download_records_count = line_number
+        raw_file.save()
 
         # Shut it down
         tsv_file.close()
         csv_file.close()
 
-        if self.version:
-            if settings.CALACCESS_STORE_ARCHIVE:
-                # Remove previous .CSV file
-                raw_file.clean_file_archive.delete()
-                # Open up the .CSV file so we can wrap it in the Django File obj
-                f = open(csv_path)
-                # Save the .CSV on the raw data file
-                raw_file.clean_file_archive.save(
-                    self.file_name.lower().replace("tsv", "csv"),
-                    File(f)
-                )
+        if settings.CALACCESS_STORE_ARCHIVE:
+            # Remove previous .CSV file
+            raw_file.clean_file_archive.delete()
+            # Open up the .CSV file so we can wrap it in the Django File obj
+            f = open(csv_path)
+            # Save the .CSV on the raw data file
+            raw_file.clean_file_archive.save(
+                self.file_name.lower().replace("tsv", "csv"),
+                File(f)
+            )
 
     def log_errors(self, rows):
         """
