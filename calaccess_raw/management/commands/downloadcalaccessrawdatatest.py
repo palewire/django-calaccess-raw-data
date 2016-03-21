@@ -10,7 +10,7 @@ from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 class Command(downloadcalaccessrawdata.Command):
     help = "Simulates downloading and unzipping of CAL-ACCESS raw data \
 for the purposes of unit testing."
-    
+
     def add_arguments(self, parser):
         """
         Adds custom arguments specific to this command.

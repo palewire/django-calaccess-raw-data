@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
 from django.conf import settings
@@ -9,6 +8,7 @@ from django.core.management import call_command
 from django.core.management.base import CommandError
 from django.template.loader import render_to_string
 from django.contrib.humanize.templatetags.humanize import naturaltime
+from django.utils.timezone import now
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import (
     get_download_directory,
@@ -118,13 +118,13 @@ class Command(CalAccessCommand):
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
         download_metadata = self.get_download_metadata()
-        
-        if self.test_mode: 
+
+        if self.test_mode:
             with open(self.data_dir + "/sampled_version.txt", "r") as f:
-                current_release_datetime = f.readline()    
+                current_release_datetime = f.readline()
         else:
             current_release_datetime = download_metadata['last-modified']
-        
+
         last_started_update = self.get_last_log()
 
         if self.test_mode:
@@ -265,8 +265,8 @@ class Command(CalAccessCommand):
 
         if self.verbosity:
             self.success("Done!")
-        
-        self.log_record.finish_datetime = datetime.now()
+
+        self.log_record.finish_datetime = now()
         self.log_record.save()
 
     def clean(self):
