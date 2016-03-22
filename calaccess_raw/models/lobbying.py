@@ -4462,9 +4462,9 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = 'LOBBYIST_EMPLOYER_HISTORY'
-        verbose_name = 'LOBBYIST_EMPLOYER_HISTORY'
-        verbose_name_plural = 'LOBBYIST_EMPLOYER_HISTORY'
+        db_table = 'LOBBYIST_EMPLOYER_HISTORY_CD'
+        verbose_name = 'LOBBYIST_EMPLOYER_HISTORY_CD'
+        verbose_name_plural = 'LOBBYIST_EMPLOYER_HISTORY_CD'
 
     def __str__(self):
         return str(self.contributor_id)
@@ -4560,9 +4560,9 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = 'LOBBYIST_FIRM_HISTORY'
-        verbose_name = 'LOBBYIST_FIRM_HISTORY'
-        verbose_name_plural = 'LOBBYIST_FIRM_HISTORY'
+        db_table = 'LOBBYIST_FIRM_HISTORY_CD'
+        verbose_name = 'LOBBYIST_FIRM_HISTORY_CD'
+        verbose_name_plural = 'LOBBYIST_FIRM_HISTORY_CD'
 
     def __str__(self):
         return str(self.contributor_id)

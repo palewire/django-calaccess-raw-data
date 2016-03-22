@@ -1298,9 +1298,9 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = 'FILER_TYPE_PERIODS'
-        verbose_name = 'FILER_TYPE_PERIODS'
-        verbose_name_plural = 'FILER_TYPE_PERIODS'
+        db_table = 'FILER_TYPE_PERIODS_CD'
+        verbose_name = 'FILER_TYPE_PERIODS_CD'
+        verbose_name_plural = 'FILER_TYPE_PERIODS_CD'
 
     def __str__(self):
         return str(self.filer_type)
