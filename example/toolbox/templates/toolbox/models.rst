@@ -22,10 +22,11 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 
 {{ object.doc.strip|safe }}
 
-**Source:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/{{ object.get_tsv_name }}>`_
+**Sample:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/{{ object.get_tsv_name }}>`_
 
 {% if object.get_documentcloud_page_urls|length > 0 %}
-**Source Docs:**
+Source Docs
+^^^^^^^^^^^
 {% for doc, pages in object.docs.items %}
 *{{ doc }}*
 {% for page in pages %}
@@ -36,7 +37,8 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 {% endfor %}
 {% endif %}
 
-**Fields:**
+Fields
+^^^^^^
 
 .. raw:: html
 
@@ -65,7 +67,8 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
     </table>
     </div>
 {% if object.choice_fields|length > 0 %}
-**Look-up Codes:**
+Look-up Codes
+^^^^^^^^^^^^^
 {% for field in object.choice_fields %}
 *{{ field.name }}*
 {% if field.documentcloud_pages|length > 0%}
