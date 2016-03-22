@@ -77,14 +77,17 @@ class FilernameCd(CalAccessBaseModel):
     )
     STATUS_CHOICES = (
         ('', 'Undefined'),
-        ('A', ''),
-        ('ACTIVE', ''),
-        ('INACTIVE', ''),
-        ('P', ''),
-        ('R', ''),
-        ('S', ''),
-        ('TERMINATED', ''),
-        ('W', ''),
+        ('A', 'ACTIVE'),
+        ('P', 'PENDING'),
+        ('R', 'REVOKED'),
+        ('S', 'SUSPENDED'),
+        ('W', 'WITHDRAWN'),
+        ('Y', 'ACTIVE'),
+        ('N', 'INACTIVE'),
+        ('T', 'TERMINATED'),
+        ('ACTIVE', 'ACTIVE'),
+        ('INACTIVE', 'INACTIVE'),
+        ('TERMINATED', 'TERMINATED'),
     )
     status = fields.CharField(
         max_length=10,
@@ -92,7 +95,8 @@ class FilernameCd(CalAccessBaseModel):
         db_index=True,
         choices=STATUS_CHOICES,
         blank=True,
-        help_text='The status of the filer'
+        help_text='The status of the filer. Includes a mixture of values found \
+in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD'
     )
     effect_dt = fields.DateField(
         db_column='EFFECT_DT',

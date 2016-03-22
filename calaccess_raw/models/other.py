@@ -190,7 +190,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
     )
     filingstatus = fields.IntegerField(
         db_column='FILINGSTATUS',
-        help_text="This field is undocumented"
+        help_text="This field is undocumented",
     )
     vendor = fields.CharField(
         db_column='VENDOR',
@@ -574,28 +574,17 @@ in the relationship',
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
     This is an undocumented model that contains a small number
-    of codes and definitions.
+    of codes and definitions that map to values in FILERNAME_CD.STATUS.
     """
     UNIQUE_KEY = "STATUS_TYPE"
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=69),
     ]
-    STATUS_TYPE_CHOICES = (
-        ("A", "ACTIVE"),
-        ("N", "INACTIVE"),
-        ("P", "PENDING"),
-        ("R", "REVOKED"),
-        ("S", "SUSPENDED"),
-        ("T", "TERMINATED"),
-        ("W", "WITHDRAWN"),
-        ("Y", "ACTIVE"),
-    )
     status_type = fields.CharField(
         max_length=11,
         db_column='STATUS_TYPE',
         help_text='This field is undocumented',
-        choices=STATUS_TYPE_CHOICES
     )
     status_desc = fields.CharField(
         max_length=11,
@@ -728,7 +717,7 @@ level of activity",
         (16013, 'AMERICANS ELECT'),
         # The codes below occur in the database but are
         # undocumented in the lookup table
-        (16020, 'UNKNOWN'),
+        (16020, 'PEACE AND FREEDOM'),
         (16014, 'UNKNOWN'),
         (0, 'UNKNOWN'),
         (None, 'NONE'),
@@ -736,9 +725,12 @@ level of activity",
     party_cd = fields.IntegerField(
         null=True,
         blank=True,
-        help_text="Filer's political party",
-        db_column='PARTY_CD',
         choices=PARTY_CODE_CHOICES,
+        db_column='PARTY_CD',
+        help_text="Filer's political party",
+        documentcloud_pages=[
+            DocumentCloud(id='2756977-Lookup-Codes-Cd', start_page=10, end_page=11),
+        ]
     )
     county_cd = fields.IntegerField(
         null=True,

@@ -5485,7 +5485,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
         (16013, 'AMERICANS ELECT'),
         # The codes below occur in the database but are
         # undocumented in the lookup table
-        (16020, 'UNKNOWN'),
+        (16020, 'PEACE AND FREEDOM'),
         (16014, 'UNKNOWN'),
         (0, 'UNKNOWN'),
         (None, 'NONE'),
@@ -5494,8 +5494,11 @@ Populated for Senate, Assembly or Board of Equalization races.'
         db_column='PARTY_CD',
         blank=True,
         null=True,
+        choices=PARTY_CODE_CHOICES,
         help_text="Party code",
-        choices=PARTY_CODE_CHOICES
+        documentcloud_pages=[
+            DocumentCloud(id='2756977-Lookup-Codes-Cd', start_page=10, end_page=11),
+        ]
     )
     district_cd = fields.IntegerField(
         db_column='DISTRICT_CD',
