@@ -1324,7 +1324,10 @@ committee campaign statement)'),
         help_text="Attached campaign disclosure statement type. Legal \
 values are 450, 460, and 461.",
         documentcloud_pages=(
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=15, end_page=15),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=15),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=20),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=19),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=26),
         )
     )
     rpt_att_cb = fields.CharField(
@@ -5445,7 +5448,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
         # The codes below appear in the database
         # but are not documented in the lookupcodes table
         (3007, "UNKNOWN"),
-        (0, 'UNKNOWN'),
+        (0, 'N/A'),
         (None, 'NONE'),
     )
     elec_type = fields.IntegerField(
@@ -5497,7 +5500,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
         # undocumented in the lookup table
         (16020, 'PEACE AND FREEDOM'),
         (16014, 'UNKNOWN'),
-        (0, 'UNKNOWN'),
+        (0, 'N/A'),
         (None, 'NONE'),
     )
     party_cd = fields.IntegerField(
