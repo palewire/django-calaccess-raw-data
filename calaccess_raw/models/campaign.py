@@ -4991,7 +4991,6 @@ class F501502Cd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=57, end_page=59),
-
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5497,7 +5496,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
         choices=PARTY_CODE_CHOICES,
         help_text="Party code",
         documentcloud_pages=[
-            DocumentCloud(id='22774529-Lookup-Codes-Cd', start_page=10, end_page=11),
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=10, end_page=11),
         ]
     )
     district_cd = fields.IntegerField(
