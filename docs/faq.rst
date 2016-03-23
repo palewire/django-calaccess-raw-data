@@ -60,7 +60,7 @@ and Microsoft SQL Server. But we haven't got there yet.
 How far back does the CAL-ACCESS database go?
 ---------------------------------------------
 
-According to `the official state documentation <http://www.documentcloud.org/documents/1308002-cal-access-about.html#document/p235>`_, electronic disclosure documents
+According to an `FAQ document <https://www.documentcloud.org/documents/2711615-FAQ/pages/1.html>`_ provided by the Secretary of State, electronic disclosure documents
 started being filed in CAL-ACCESS on Jan. 1, 2000. Historical analysis of the database,
 should start from that date, the documentation says.
 
