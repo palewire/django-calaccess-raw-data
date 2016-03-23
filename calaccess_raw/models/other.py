@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
+from django.db.models import ForeignKey
 from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel, DocumentCloud
 
@@ -628,8 +629,12 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
         db_column='FILER_ID',
     )
-    filer_type = fields.IntegerField(
-        help_text="Filer type identification number",
+    filer_type = ForeignKey(
+        'FilerTypesCd',
+        related_name='filers',
+        db_constraint=False,
+        help_text="Filer type identification number. Foreign key referencing \
+FilerTypesCd.FILER_TYPE",
         db_column='FILER_TYPE',
     )
     active = fields.CharField(
@@ -768,7 +773,8 @@ class FilerTypesCd(CalAccessBaseModel):
     ]
     filer_type = fields.IntegerField(
         db_column='FILER_TYPE',
-        help_text="Filer type identification number"
+        help_text="Filer type identification number",
+        primary_key=True,
     )
     description = fields.CharField(
         max_length=255,
