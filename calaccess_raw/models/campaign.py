@@ -1805,6 +1805,10 @@ short form)'),
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=12),
+        ],
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "Cover, Page 2"),
@@ -3718,6 +3722,7 @@ original filing and 1 to 999 amendments.",
         help_text="CTB & IND need explanation & listing on Sched D TRC & TRS require explanation",
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11, end_page=11),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=13, end_page=14),
         ]
     )
     expn_date = fields.DateField(
@@ -5071,7 +5076,10 @@ original filing and 1 to 999 amendments.",
     stmt_type = fields.IntegerField(
         db_column='STMT_TYPE',
         verbose_name="statement type",
-        choices=STMT_TYPE_CHOICES
+        choices=STMT_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=6)
+        ]
     )
     from_date = fields.CharField(
         db_column='FROM_DATE',
@@ -5379,7 +5387,10 @@ original filing and 1 to 999 amendments.",
         db_column='OFFICE_CD',
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES
+        choices=OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=20, end_page=22),
+        ]
     )
     offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR',
