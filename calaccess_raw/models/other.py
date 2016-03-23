@@ -1031,7 +1031,7 @@ class LegislativeSessionsCd(CalAccessBaseModel):
 
 
 @python_2_unicode_compatible
-class LookupCode(CalAccessBaseModel):
+class LookupCodesCd(CalAccessBaseModel):
     """
     The description of some lookup codes in the system.
     """

@@ -321,7 +321,7 @@ admin.site.register(
     models.LobbyistFirmLobbyist2Cd,
     LobbyistFirmLobbyist2CdAdmin
 )
-admin.site.register(models.LookupCode, LookupCodeAdmin)
+admin.site.register(models.LookupCodesCd, LookupCodeAdmin)
 admin.site.register(models.NamesCd, NamesCdAdmin)
 admin.site.register(models.ReceivedFilingsCd, ReceivedFilingsCdAdmin)
 admin.site.register(models.ReportsCd, ReportsCdAdmin)
