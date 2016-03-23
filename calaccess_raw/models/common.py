@@ -73,7 +73,10 @@ class FilernameCd(CalAccessBaseModel):
         db_column='FILER_TYPE',
         db_index=True,
         choices=FILER_TYPE_CHOICES,
-        help_text='The type of filer. '
+        help_text='The type of filer. These values are found FILER_TYPES_CD.DESCRIPTION',
+        documentcloud_pages=[
+            DocumentCloud(id='2774536-Filer-Types-Cd', start_page=1),
+        ],
     )
     STATUS_CHOICES = (
         ('', 'Undefined'),
@@ -98,7 +101,7 @@ class FilernameCd(CalAccessBaseModel):
         help_text='The status of the filer. Includes a mixture of values found \
 in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
         documentcloud_pages=[
-            DocumentCloud(id='2774527-Filer-Status-Types-Cd', start_page=1)
+            DocumentCloud(id='2774537-Filer-Status-Types-Cd', start_page=1)
         ]
     )
     effect_dt = fields.DateField(
