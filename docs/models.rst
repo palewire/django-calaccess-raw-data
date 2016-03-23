@@ -608,6 +608,24 @@ Look-up Codes
 
 *office_cd*
 
+
+*Cal-Errata-201*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p12-thumbnail.gif'></a>
+
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -6500,6 +6518,18 @@ Look-up Codes
 *expn_code*
 
 
+*Cal-Errata-201*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p13-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/14.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p14-thumbnail.gif'></a>
+
+
+
 *Cal-Format-1-05-02*
 
 .. raw:: html
@@ -8658,6 +8688,16 @@ Look-up Codes
 
 *stmt_type*
 
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p6-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -8710,6 +8750,24 @@ Look-up Codes
     </div>
 
 *office_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p20-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p21-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p22-thumbnail.gif'></a>
+
+
+
 
 .. raw:: html
 
@@ -9512,6 +9570,20 @@ Look-up Codes
 
 *party_cd*
 
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p10-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p11-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -9591,7 +9663,7 @@ Look-up Codes
     
         <tr>
             <td>16020</td>
-            <td>UNKNOWN</td>
+            <td>PEACE AND FREEDOM</td>
         </tr>
     
         <tr>
@@ -15923,6 +15995,16 @@ Look-up Codes
 
 *stmnt_type*
 
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p6-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -15937,42 +16019,42 @@ Look-up Codes
     
         <tr>
             <td>0</td>
-            <td></td>
+            <td>N/A</td>
         </tr>
     
         <tr>
             <td>10001</td>
-            <td></td>
+            <td>ORIGINAL/INITIAL</td>
         </tr>
     
         <tr>
             <td>10002</td>
-            <td></td>
+            <td>AMENDMENT</td>
         </tr>
     
         <tr>
             <td>10003</td>
-            <td></td>
+            <td>TERMINATION</td>
         </tr>
     
         <tr>
             <td>10004</td>
-            <td></td>
+            <td>REDESIGNATE THE ACCOUNT FOR FUTURE ELECTION TO THE SAME OFFICE</td>
         </tr>
     
         <tr>
             <td>10005</td>
-            <td></td>
+            <td>LOG</td>
         </tr>
     
         <tr>
             <td>10006</td>
-            <td></td>
+            <td>LOG/AMENDMENT</td>
         </tr>
     
         <tr>
             <td>10007</td>
-            <td></td>
+            <td>AS FILED BY COMMITTEE</td>
         </tr>
     
     </tbody>
@@ -15981,6 +16063,16 @@ Look-up Codes
 
 *stmnt_status*
 
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p6-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -15995,22 +16087,22 @@ Look-up Codes
     
         <tr>
             <td>0</td>
-            <td></td>
+            <td>N/A</td>
         </tr>
     
         <tr>
             <td>11001</td>
-            <td></td>
+            <td>COMPLETE</td>
         </tr>
     
         <tr>
             <td>11002</td>
-            <td></td>
+            <td>INCOMPLETE</td>
         </tr>
     
         <tr>
             <td>11003</td>
-            <td></td>
+            <td>NEEDS REVIEW</td>
         </tr>
     
     </tbody>
@@ -16018,6 +16110,16 @@ Look-up Codes
     </div>
 
 *filing_type*
+
+
+*FAQ*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711615-FAQ/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif'></a>
+
+
+
 
 .. raw:: html
 
@@ -16140,7 +16242,7 @@ Fields
             <td>filer_type</td>
             <td>String (up to 45)</td>
             <td>No</td>
-            <td>The type of filer</td>
+            <td>The type of filer. These values are found FILER_TYPES_CD.DESCRIPTION</td>
         </tr>
     
     
@@ -16149,7 +16251,7 @@ Fields
             <td>status</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>The status of the filer</td>
+            <td>The status of the filer. Includes a mixture of values found in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD</td>
         </tr>
     
     
@@ -16279,6 +16381,16 @@ Look-up Codes
 
 *filer_type*
 
+
+*Filer-Types-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774536-Filer-Types-Cd/pages/1.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774536/pages/Filer-Types-Cd-p1-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -16382,6 +16494,16 @@ Look-up Codes
 
 *status*
 
+
+*Filer-Status-Types-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774537-Filer-Status-Types-Cd/pages/1.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774537/pages/Filer-Status-Types-Cd-p1-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -16401,42 +16523,57 @@ Look-up Codes
     
         <tr>
             <td>A</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>ACTIVE</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>INACTIVE</td>
-            <td></td>
         </tr>
     
         <tr>
             <td>P</td>
-            <td></td>
+            <td>PENDING</td>
         </tr>
     
         <tr>
             <td>R</td>
-            <td></td>
+            <td>REVOKED</td>
         </tr>
     
         <tr>
             <td>S</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>TERMINATED</td>
-            <td></td>
+            <td>SUSPENDED</td>
         </tr>
     
         <tr>
             <td>W</td>
-            <td></td>
+            <td>WITHDRAWN</td>
+        </tr>
+    
+        <tr>
+            <td>Y</td>
+            <td>ACTIVE</td>
+        </tr>
+    
+        <tr>
+            <td>N</td>
+            <td>INACTIVE</td>
+        </tr>
+    
+        <tr>
+            <td>T</td>
+            <td>TERMINATED</td>
+        </tr>
+    
+        <tr>
+            <td>ACTIVE</td>
+            <td>ACTIVE</td>
+        </tr>
+    
+        <tr>
+            <td>INACTIVE</td>
+            <td>INACTIVE</td>
+        </tr>
+    
+        <tr>
+            <td>TERMINATED</td>
+            <td>TERMINATED</td>
         </tr>
     
     </tbody>
@@ -16512,6 +16649,16 @@ Look-up Codes
 ^^^^^^^^^^^^^
 
 *filing_type*
+
+
+*FAQ*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711615-FAQ/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif'></a>
+
+
+
 
 .. raw:: html
 
@@ -24437,7 +24584,7 @@ but is not fully explained. The table's description contains this note: "Matt
 needs to describe the relationship between the multiple tables. Documentation
 should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
-**Sample:** `LOBBYIST_EMPLOYER_HISTORY.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/LOBBYIST_EMPLOYER_HISTORY.TSV>`_
+**Sample:** `LOBBYIST_EMPLOYER_HISTORY_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/LOBBYIST_EMPLOYER_HISTORY_CD.TSV>`_
 
 
 Source Docs
@@ -25623,7 +25770,7 @@ but is not fully explained. The table's description contains this note: "Matt
 needs to describe the relationship between the multiple tables. Documentation
 should be cloned from D H's documentation on these tables. Cox 5/11/2000"
 
-**Sample:** `LOBBYIST_FIRM_HISTORY.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/LOBBYIST_FIRM_HISTORY.TSV>`_
+**Sample:** `LOBBYIST_FIRM_HISTORY_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/LOBBYIST_FIRM_HISTORY_CD.TSV>`_
 
 
 Source Docs
@@ -27891,7 +28038,7 @@ FilerStatusTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an undocumented model that contains a small number
-of codes and definitions.
+of codes and definitions that map to values in FILERNAME_CD.STATUS.
 
 **Sample:** `FILER_STATUS_TYPES_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/FILER_STATUS_TYPES_CD.TSV>`_
 
@@ -27952,69 +28099,6 @@ Fields
     </tbody>
     </table>
     </div>
-
-Look-up Codes
-^^^^^^^^^^^^^
-
-*status_type*
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Code</th>
-            <th class="head">Definition</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td>A</td>
-            <td>ACTIVE</td>
-        </tr>
-    
-        <tr>
-            <td>N</td>
-            <td>INACTIVE</td>
-        </tr>
-    
-        <tr>
-            <td>P</td>
-            <td>PENDING</td>
-        </tr>
-    
-        <tr>
-            <td>R</td>
-            <td>REVOKED</td>
-        </tr>
-    
-        <tr>
-            <td>S</td>
-            <td>SUSPENDED</td>
-        </tr>
-    
-        <tr>
-            <td>T</td>
-            <td>TERMINATED</td>
-        </tr>
-    
-        <tr>
-            <td>W</td>
-            <td>WITHDRAWN</td>
-        </tr>
-    
-        <tr>
-            <td>Y</td>
-            <td>ACTIVE</td>
-        </tr>
-    
-    </tbody>
-    </table>
-    </div>
-
-
 
 
 FilerToFilerTypeCd
@@ -28219,6 +28303,20 @@ Look-up Codes
 
 *party_cd*
 
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p10-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p11-thumbnail.gif'></a>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -28298,7 +28396,7 @@ Look-up Codes
     
         <tr>
             <td>16020</td>
-            <td>UNKNOWN</td>
+            <td>PEACE AND FREEDOM</td>
         </tr>
     
         <tr>
@@ -28330,7 +28428,7 @@ This table and its fields are listed in the official CAL-ACCESS documentation,
 but is not fully explained. The table's description contains this note: "J M needs
 to document. This is in his list of tables designed for future enhancements."
 
-**Sample:** `FILER_TYPE_PERIODS.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/FILER_TYPE_PERIODS.TSV>`_
+**Sample:** `FILER_TYPE_PERIODS_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/FILER_TYPE_PERIODS_CD.TSV>`_
 
 
 Source Docs
@@ -29518,11 +29616,6 @@ The following tables are described in the official documentation, but the .TSV f
         <tr>
             <td>lobbying</td>
             <td>LobbyistFirmHistoryCd</td>
-        </tr>
-    
-        <tr>
-            <td>common</td>
-            <td>SmryCd</td>
         </tr>
     
     </tbody>
