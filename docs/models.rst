@@ -3673,11 +3673,27 @@ Look-up Codes
 *reportname*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p19-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p26-thumbnail.gif'></a>
+
+
+
 *Cal-Format-1-05-02*
 
 .. raw:: html
 
     <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/15.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p15-thumbnail.gif'></a>
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p20-thumbnail.gif'></a>
 
 
 
@@ -9556,7 +9572,7 @@ Look-up Codes
     
         <tr>
             <td>0</td>
-            <td>UNKNOWN</td>
+            <td>N/A</td>
         </tr>
     
         <tr>
@@ -9673,7 +9689,7 @@ Look-up Codes
     
         <tr>
             <td>0</td>
-            <td>UNKNOWN</td>
+            <td>N/A</td>
         </tr>
     
         <tr>
@@ -29134,7 +29150,7 @@ Fields
     </div>
 
 
-LookupCode
+LookupCodesCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The description of some lookup codes in the system.
