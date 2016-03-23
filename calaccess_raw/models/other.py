@@ -729,7 +729,7 @@ level of activity",
         db_column='PARTY_CD',
         help_text="Filer's political party",
         documentcloud_pages=[
-            DocumentCloud(id='2756977-Lookup-Codes-Cd', start_page=10, end_page=11),
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=10, end_page=11),
         ]
     )
     county_cd = fields.IntegerField(

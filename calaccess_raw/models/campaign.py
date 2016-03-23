@@ -5497,7 +5497,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
         choices=PARTY_CODE_CHOICES,
         help_text="Party code",
         documentcloud_pages=[
-            DocumentCloud(id='2756977-Lookup-Codes-Cd', start_page=10, end_page=11),
+            DocumentCloud(id='22774529-Lookup-Codes-Cd', start_page=10, end_page=11),
         ]
     )
     district_cd = fields.IntegerField(
