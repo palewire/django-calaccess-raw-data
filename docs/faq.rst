@@ -64,6 +64,50 @@ According to an `FAQ document <https://www.documentcloud.org/documents/2711615-F
 started being filed in CAL-ACCESS on Jan. 1, 2000. Historical analysis of the database,
 should start from that date, the documentation says.
 
+Do the daily exports include *all* tables in the CAL-ACCESS database?
+---------------------------------------------------------------------
+
+No. We've compared the list of tables in the daily exports to what's described in the `official documentation <https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb.html#document/p2>`_ provided by the Secretary of State, there as many 73 tables excluded from the daily exports.
+
+Some of these missing tables have names or descriptions suggesting they could contain sensitive information, such as user credentials and bank account numbers. It's understandable that these tables would not be released.
+
+However, many of these tables contain information that should be publicly available. For instance, there's a series of tables that describe elections, races and candidates that are not included in the daily exports, even though the list of candidates for the current election is `published <http://cal-access.ss.ca.gov/Campaign/Candidates/#assembly>`_ on the CAL-ACCESS website.
+
+When we `reached out <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues/62#issuecomment-58655390>`_ to the Secretary of State, asking that they include any elections-related tables in the daily exports, we were told that "[g]iven our current resource constraints, staff cannot modify the database export to include that other data."
+
+Here's a sampling of missing tables we think should be made public:
+
+* CASH_RECON_REPORT_WRK - Table description contains this mysterious comment: "J M needs to describe this table. Cox - 4/28/2000"
+* CODE_LIST - This table contains a list of CAL file codes. Examples include entity codes, office codes and expense codes
+* CORRESPONDENCE - Table description contains this mysterious comment: "J M needs to describe this table. Cox - 4/28/2000"
+* DISCLOSURE_PROCEDURES - Table description contains this mysterious comment: "J M needs to describe this table."
+* ELECTION_CANDIDATES - This table indicates if a candidate for a given race is an incumbent.
+* ELECTION_LINKS - No description
+* ELECTION_RACES - No description
+* ELECTION_TYPES - This table links election types and their descriptions. 
+* ELECTIONS - No description
+* ERRORS_AND_OMISSIONS - This table contains results of audit checks and the validation process.
+* FEDERAL_FORMS - Table used to log reciept of federal filings. 
+* FEES - Fees, descriptions and their value
+* FILER_CORRESPONDENCE_BUILD2 - Table description contains this mysterious comment: "J M needs to describe this table."
+* FILER_ELECTIONS - Table description contains this mysterious comment: "J M needs to describe this table. He indicates it is for future use."
+* FILER_NOTICE_GENERATION_DEF - "J M needs to describe this table. He indicates it is for future use."
+* FILER_OBLIGATIONS - Table description contains this mysterious comment: "J M needs to describe this table. He indicates it is for future use."
+* FILER_TYPES_TO_FORMS - Table description contains this mysterious comment: "J M needs to describe this table. It is in his list of tables designed for future releases."
+* FILING_ERROR_TYPES - This lookup table provides a cross reference for errors and their and messages.
+* FILING_ERRORS - This table contains the errors assocated with a given filing and each of it's amendments.
+* FILING_ID_TEMP - No description
+* FORM_CODES - This lookup table assocates record types to forms. 
+* FORMS - This table describes the form set.
+* LATE_CONT_IND_EXP_REPORT - Table description contains this mysterious comment: "J M needs to describe this table."
+* LOCAL_FORMS This table is used to log reciept of local paper filings.
+* PRD_DATA_AUDIT - No description
+* PRD_FINE_DETAIL - Detail information on how a fine was calculated.
+* PRD_FINES - Fine summary data table.
+* PRD_LIMITS - Table description contains this mysterious comment: "J M needs to describe this table."
+* PRD_WAIVERS - Table description contains this mysterious comment: "J Mo needs to describe this table."
+* TVIEW_CONTRIBUTIONS3 - Campaign Disclosure reporting tables. "Need to get DH's Documentation to describe."
+
 What is the California Civic Data Coalition?
 --------------------------------------------
 
