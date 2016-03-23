@@ -282,24 +282,25 @@ class DocumentationTestCase(TestCase):
         """
         # List of fields that we expect there to be valid choices defined
         fields = [
-            'form_type',
-            'form_id',
+            'activity_type',
+            'elec_type',
             'entity_code',
+            'expn_code',
             'filer_type',
             'filing_type',
-            'activity_type',
-            'status',
+            'form_id',
+            'form_type',
+            'office_cd',
             'off_s_h_cd',
-            'pform_type',
-            'stmnt_type',
-            'stmnt_status',
-            'rec_type',
             'party_cd',
-            'sup_opp_cd',
-            'elec_type',
+            'pform_type',
+            'rec_type',
             'reportname',
-            'expn_code',
+            'status',
             'status_type',
+            'stmnt_status',
+            'stmnt_type',
+            'sup_opp_cd',
         ]
         results = []
         for f in fields:
