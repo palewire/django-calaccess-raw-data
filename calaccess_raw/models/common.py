@@ -73,7 +73,7 @@ class FilernameCd(CalAccessBaseModel):
         db_column='FILER_TYPE',
         db_index=True,
         choices=FILER_TYPE_CHOICES,
-        help_text='The type of filer'
+        help_text='The type of filer. '
     )
     STATUS_CHOICES = (
         ('', 'Undefined'),
@@ -96,7 +96,10 @@ class FilernameCd(CalAccessBaseModel):
         choices=STATUS_CHOICES,
         blank=True,
         help_text='The status of the filer. Includes a mixture of values found \
-in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD'
+in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
+        documentcloud_pages=[
+            DocumentCloud(id='2774527-Filer-Status-Types-Cd', start_page=1)
+        ]
     )
     effect_dt = fields.DateField(
         db_column='EFFECT_DT',
@@ -290,27 +293,30 @@ class FilerFilingsCd(CalAccessBaseModel):
         null=True
     )
     STATEMENT_TYPE_CHOICES = (
-        (0, ''),
-        (10001, ''),
-        (10002, ''),
-        (10003, ''),
-        (10004, ''),
-        (10005, ''),
-        (10006, ''),
-        (10007, ''),
+        (0, 'N/A'),
+        (10001, 'ORIGINAL/INITIAL'),
+        (10002, 'AMENDMENT'),
+        (10003, 'TERMINATION'),
+        (10004, 'REDESIGNATE THE ACCOUNT FOR FUTURE ELECTION TO THE SAME OFFICE'),
+        (10005, 'LOG'),
+        (10006, 'LOG/AMENDMENT'),
+        (10007, 'AS FILED BY COMMITTEE'),
     )
     stmnt_type = fields.IntegerField(
         db_column='STMNT_TYPE',
         verbose_name="statement type",
         db_index=True,
         choices=STATEMENT_TYPE_CHOICES,
-        help_text="Type of statement"
+        help_text="Type of statement",
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=6),
+        ]
     )
     STATEMENT_STATUS_CHOICES = (
-        (0, ''),
-        (11001, ''),
-        (11002, ''),
-        (11003, ''),
+        (0, 'N/A'),
+        (11001, 'COMPLETE'),
+        (11002, 'INCOMPLETE'),
+        (11003, 'NEEDS REVIEW'),
     )
     stmnt_status = fields.IntegerField(
         db_column='STMNT_STATUS',
@@ -320,6 +326,9 @@ class FilerFilingsCd(CalAccessBaseModel):
 reviewed or not reviewed.",
         verbose_name='statement status',
         choices=STATEMENT_STATUS_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=6),
+        ]
     )
     session_id = fields.IntegerField(
         verbose_name='session ID',
@@ -374,7 +383,10 @@ laundering or other special condition."
         null=True,
         blank=True,
         choices=FILING_TYPE_CHOICES,
-        help_text="The type of filing"
+        help_text="The type of filing",
+        documentcloud_pages=[
+            DocumentCloud(id='2711615-FAQ', start_page=2),
+        ],
     )
 
     class Meta:
@@ -419,7 +431,10 @@ class FilingsCd(CalAccessBaseModel):
         db_column='FILING_TYPE',
         db_index=True,
         choices=FILING_TYPE_CHOICES,
-        help_text="The type of filing"
+        help_text="The type of filing",
+        documentcloud_pages=[
+            DocumentCloud(id='2711615-FAQ', start_page=2),
+        ],
     )
 
     class Meta:
