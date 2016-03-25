@@ -261,7 +261,6 @@ class DocumentationTestCase(TestCase):
                         ))
 
                     # Pull out all the choices in that field
-                    slug_list = []
                     for slug, name in f.choices:
                         # Make sure that each has a definition
                         if not name:
@@ -277,20 +276,6 @@ class DocumentationTestCase(TestCase):
                                 m.__name__,
                                 f.name,
                                 "Value '%s' defined as 'Unknown'" % slug
-                            ))
-                        slug_list.append(slug)
-
-                    # The query the database and make sure everything in
-                    # there has a matching definition in the choices
-                    for value, count in m.objects.values_list(
-                        f.name,
-                    ).annotate(models.Count(f.name)):
-                        if value not in slug_list:
-                            results.append((
-                                m().klass_group,
-                                m.__name__,
-                                f.name,
-                                "Value '%s' in database but not in CHOICES" % value
                             ))
 
         table = agate.Table(results, ['group', 'model', 'field', 'message'])
