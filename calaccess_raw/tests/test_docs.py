@@ -227,20 +227,22 @@ class DocumentationTestCase(TestCase):
             'form_id',
         ]
         excluded_fields = [
-            ('LookupCodesCd', 'code_type'),
+            'LookupCodesCd.code_type',
         ]
 
         results = []
-        
-        model_list = sorted(get_model_list(), key=lambda x:(x().klass_group, x().klass_name))
+        model_list = sorted(
+            get_model_list(),
+            key=lambda x: (x().klass_group, x().klass_name)
+        )
 
-        for m in get_model_list():
+        for m in model_list:
             for f in m._meta.fields:
                 if (
                     any(x in f.name for x in choice_field_strs) and
                     f.name != 'memo_code' and
                     f.__class__ is not models.ForeignKey and
-                    (m().klass_name, f.name) not in excluded_fields
+                    '{}.{}'.format(m().klass_name, f.name) not in excluded_fields
                 ):
                     if not f.choices:
                         results.append((
@@ -259,6 +261,7 @@ class DocumentationTestCase(TestCase):
                         ))
 
                     # Pull out all the choices in that field
+                    slug_list = []
                     for slug, name in f.choices:
                         # Make sure that each has a definition
                         if not name:
@@ -275,18 +278,20 @@ class DocumentationTestCase(TestCase):
                                 f.name,
                                 "Value '%s' defined as 'Unknown'" % slug
                             ))
+                        slug_list.append(slug)
 
                     # The query the database and make sure everything in
                     # there has a matching definition in the choices
                     for value, count in m.objects.values_list(
                         f.name,
                     ).annotate(models.Count(f.name)):
-                        results.append((
-                            m().klass_group,
-                            m.__name__,
-                            f.name,
-                            "Value '%s' in database but not in CHOICES" % value
-                        ))
+                        if value not in slug_list:
+                            results.append((
+                                m().klass_group,
+                                m.__name__,
+                                f.name,
+                                "Value '%s' in database but not in CHOICES" % value
+                            ))
 
         table = agate.Table(results, ['group', 'model', 'field', 'message'])
         table.print_table(max_column_width=50)
