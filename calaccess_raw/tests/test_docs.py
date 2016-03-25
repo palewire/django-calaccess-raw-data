@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import agate
 import logging
 from django.test import TestCase
-from django.db.models import Count
+from django.db import models
 from calaccess_raw import get_model_list
 logger = logging.getLogger(__name__)
 
@@ -143,7 +143,7 @@ class DocumentationTestCase(TestCase):
             'GroupTypesCd',
             'ImageLinksCd',
             'LegislativeSessionsCd',
-            'LookupCode',
+            'LookupCodesCd',
             'NamesCd',
             'ReceivedFilingsCd',
             'ReportsCd',
@@ -211,99 +211,82 @@ class DocumentationTestCase(TestCase):
                 results.append(("%s.%s" % (m.__name__, f.name), exists))
         self.attr_test_output("field", "help_text", results)
 
-    def _test_choices(self, field_name):
-        """
-        Verify that proper choices appear for the provided field.
-        """
-        message_list = []
-        # Loop through the models
-        for m in get_model_list():
-
-            # And then through the fields
-            for f in m._meta.fields:
-
-                # Only test against the provided field name
-                if not f.name == field_name:
-                    continue
-
-                if not f.choices:
-                    message_list.append((
-                        m().klass_group,
-                        m.__name__,
-                        field_name,
-                        "Has no CHOICES defined"
-                    ))
-
-                if not f.documentcloud_pages:
-                    message_list.append((
-                        m().klass_group,
-                        m.__name__,
-                        field_name,
-                        "Has no `documentcloud_pages` defined"
-                    ))
-
-                # Pull out all the choices in that field
-                slug_list = []
-                for slug, name in f.choices:
-                    # Make sure that each has a definition
-                    if not name:
-                        message_list.append((
-                            m().klass_group,
-                            m.__name__,
-                            field_name,
-                            "Value '%s' undefined in CHOICES" % slug
-                        ))
-                    if name.lower() == 'unknown':
-                        message_list.append((
-                            m().klass_group,
-                            m.__name__,
-                            field_name,
-                            "Value '%s' defined as 'Unknown'" % slug
-                        ))
-                    slug_list.append(slug)
-
-                # The query the database and make sure everything in
-                # there has a matching definition in the choices
-                for value, count in m.objects.values_list(
-                    field_name,
-                ).annotate(Count(field_name)):
-                    message_list.append((
-                        m().klass_group,
-                        m.__name__,
-                        field_name,
-                        "Value '%s' in database but not in CHOICES" % value
-                    ))
-        return message_list
-
     def test_choices(self):
         """
         Verify that valid choices are available for all expected fields
         on all models.
         """
-        # List of fields that we expect there to be valid choices defined
-        fields = [
-            'activity_type',
-            'elec_type',
-            'entity_code',
-            'expn_code',
-            'filer_type',
-            'filing_type',
-            'form_id',
-            'form_type',
-            'office_cd',
-            'off_s_h_cd',
-            'party_cd',
-            'pform_type',
-            'rec_type',
-            'reportname',
+        # substrings that appear in choice fields
+        choice_field_strs = [
+            '_cd',
+            '_code',
+            'type',
             'status',
-            'status_type',
-            'stmnt_status',
-            'stmnt_type',
-            'sup_opp_cd',
+            '_lvl',
+            'reportname',
+            'form_id',
         ]
+        excluded_fields = [
+            ('LookupCodesCd', 'code_type'),
+        ]
+
         results = []
-        for f in fields:
-            results.extend(self._test_choices(f))
+        
+        model_list = sorted(get_model_list(), key=lambda x:(x().klass_group, x().klass_name))
+
+        for m in get_model_list():
+            for f in m._meta.fields:
+                if (
+                    any(x in f.name for x in choice_field_strs) and
+                    f.name != 'memo_code' and
+                    f.__class__ is not models.ForeignKey and
+                    (m().klass_name, f.name) not in excluded_fields
+                ):
+                    if not f.choices:
+                        results.append((
+                            m().klass_group,
+                            m.__name__,
+                            f.name,
+                            "Has no CHOICES defined"
+                        ))
+
+                    if not f.documentcloud_pages:
+                        results.append((
+                            m().klass_group,
+                            m.__name__,
+                            f.name,
+                            "Has no `documentcloud_pages` defined"
+                        ))
+
+                    # Pull out all the choices in that field
+                    for slug, name in f.choices:
+                        # Make sure that each has a definition
+                        if not name:
+                            results.append((
+                                m().klass_group,
+                                m.__name__,
+                                f.name,
+                                "Value '%s' undefined in CHOICES" % slug
+                            ))
+                        if name.lower() == 'unknown':
+                            results.append((
+                                m().klass_group,
+                                m.__name__,
+                                f.name,
+                                "Value '%s' defined as 'Unknown'" % slug
+                            ))
+
+                    # The query the database and make sure everything in
+                    # there has a matching definition in the choices
+                    for value, count in m.objects.values_list(
+                        f.name,
+                    ).annotate(models.Count(f.name)):
+                        results.append((
+                            m().klass_group,
+                            m.__name__,
+                            f.name,
+                            "Value '%s' in database but not in CHOICES" % value
+                        ))
+
         table = agate.Table(results, ['group', 'model', 'field', 'message'])
         table.print_table(max_column_width=50)
