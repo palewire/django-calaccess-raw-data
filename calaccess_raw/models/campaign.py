@@ -29,12 +29,16 @@ class CvrSoCd(CalAccessBaseModel):
         # CAL-ACCESS record layout
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=39, end_page=41),
         # Mapping of .CAL format to CAL-ACCESS database table / fields
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=28, end_page=31)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=28, end_page=31),
+        # .CAL Format v1.05.02
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46, end_page=47),
+        # .CAL Formate v2.01
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=59, end_page=61),
     ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
         null=True,
-        help_text='This field is undocumented'
+        help_text='Date Account Opened'
     )
     ACTIVITY_LEVEL_CHOICES = (
         ("CI", "City"),
@@ -49,6 +53,11 @@ class CvrSoCd(CalAccessBaseModel):
         choices=ACTIVITY_LEVEL_CHOICES,
         verbose_name="activity level",
         help_text="Organization's level of activity",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=30),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=47),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=60),
+        ]
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -61,107 +70,105 @@ original filing and 1 to 999 amendments.",
         max_length=55,
         db_column="BANK_ADR1",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Street 1 of Financial Institution',
     )
     bank_adr2 = fields.CharField(
         max_length=55,
         db_column="BANK_ADR2",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Street 2 of Financial Institution',
     )
     bank_city = fields.CharField(
         max_length=30,
         db_column="BANK_CITY",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='City of Financial Institution',
     )
     bank_nam = fields.CharField(
         max_length=200,
         db_column="BANK_NAM",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Name of Financial Institution',
     )
     bank_phon = fields.CharField(
         max_length=20,
         db_column="BANK_PHON",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Phone of Financial Institution',
     )
     bank_st = fields.CharField(
         max_length=2,
         db_column="BANK_ST",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='State of Financial Institution',
     )
     bank_zip4 = fields.CharField(
         max_length=10,
         db_column="BANK_ZIP4",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='ZIP+4 of Financial Institution',
     )
     brdbase_cb = fields.CharField(
         max_length=1,
         db_column="BRDBASE_CB",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Broad Based Committee Check-box',
     )
     city = fields.CharField(
         max_length=30,
         db_column="CITY",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='City of Org / Committee / Candidate or Office holder',
     )
     cmte_email = fields.CharField(
         max_length=60,
         db_column="CMTE_EMAIL",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Optional Committee EMAIL address',
     )
     cmte_fax = fields.CharField(
         max_length=20,
         db_column="CMTE_FAX",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Optional Committee FAX number',
     )
     com82013id = fields.CharField(
         max_length=9,
         db_column="COM82013ID",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='ID of 82013 Committee (if Com82013Nm is a RCP cmtte)',
     )
     com82013nm = fields.CharField(
         max_length=200,
         db_column="COM82013NM",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Name of 82013 Committee (F400; when Com82013YN=Y)',
     )
     com82013yn = fields.CharField(
         max_length=1,
         db_column="COM82013YN",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Is this SMO a 82013 "Committee"? (Yes/No) (F400)',
     )
     control_cb = fields.CharField(
         max_length=1,
         db_column="CONTROL_CB",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Controlled Committee Check-box',
     )
     county_act = fields.CharField(
         max_length=20,
         db_column="COUNTY_ACT",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='County where Active (F410)',
     )
     county_res = fields.CharField(
         max_length=20,
         db_column="COUNTY_RES",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='County of Domicile, Residence, or Location',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('BMC', 'Ballot measure committee'),
         ('CAO', 'Candidate/officeholder'),
@@ -175,7 +182,13 @@ original filing and 1 to 999 amendments.",
         db_column="ENTITY_CD",
         blank=True,
         choices=ENTITY_CODE_CHOICES,
-        verbose_name="Entity code"
+        verbose_name="Entity code",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=9, end_page=11),
+        ],
+        help_text="Entity Code of the Filer. Values: \
+SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410)"
     )
     filer_id = fields.CharField(
         verbose_name='filer ID',
@@ -240,43 +253,43 @@ original filing and 1 to 999 amendments.",
         max_length=1,
         db_column="GENPURP_CB",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='General Purpose Committee Check-box',
     )
     gpc_descr = fields.CharField(
         max_length=300,
         db_column="GPC_DESCR",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Brief description of Activity of GPC',
     )
     mail_city = fields.CharField(
         max_length=30,
         db_column="MAIL_CITY",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Mailing Address of Filing Committee - City',
     )
     mail_st = fields.CharField(
         max_length=2,
         db_column="MAIL_ST",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Mailing Address of Filing Committee - State',
     )
     mail_zip4 = fields.CharField(
         max_length=10,
         db_column="MAIL_ZIP4",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Mailing Address of Filing Committee - ZIP+4',
     )
     phone = fields.CharField(
         max_length=20,
         db_column="PHONE",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Phone Number of Org / Committee / Candidate or Office holder',
     )
     primfc_cb = fields.CharField(
         max_length=1,
         db_column="PRIMFC_CB",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Primarily Formed Committee Check-box',
     )
     qualfy_dt = fields.DateTimeField(
         db_column="QUALFY_DT",
@@ -288,7 +301,7 @@ original filing and 1 to 999 amendments.",
         max_length=1,
         db_column="QUAL_CB",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Qualified Committee check-box (Req. if SMO)',
     )
     REC_TYPE_CHOICES = (
         ("CVR", "CVR"),
@@ -299,45 +312,52 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=28),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
+        ],
+        help_text='Record Type Value: CVR'
     )
     report_num = fields.CharField(
         max_length=3,
         db_column="REPORT_NUM",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Report Number - Values: \
+000 - Original Report 001 thru 999 - Amended Rpt #1-#999',
     )
     rpt_date = fields.DateTimeField(
         db_column="RPT_DATE",
         null=True,
-        help_text='This field is undocumented',
+        help_text='Date this report is filed',
     )
     smcont_qualdt = fields.DateTimeField(
         db_column="SMCONT_QUALDT",
         null=True,
-        help_text='This field is undocumented',
+        help_text='Date Small Contributor Committee Qualified',
     )
     sponsor_cb = fields.CharField(
         max_length=1,
         db_column="SPONSOR_CB",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Sponsored Committee Check-box',
     )
     st = fields.CharField(
         max_length=2,
         db_column="ST",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='State of Org / Committee / Candidate or Office holder',
     )
     surplusdsp = fields.CharField(
         max_length=90,
         db_column="SURPLUSDSP",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Disposition of Surplus Funds',
     )
     term_date = fields.DateTimeField(
         db_column="TERM_DATE",
         null=True,
-        help_text='This field is undocumented',
+        help_text='Termination Effective Date (Req. if F402)',
     )
     tres_city = fields.CharField(
         max_length=30,
@@ -391,7 +411,7 @@ original filing and 1 to 999 amendments.",
         max_length=10,
         db_column="ZIP4",
         blank=True,
-        help_text='This field is undocumented',
+        help_text='ZIP+4 for Org / Committee / Candidate or Office holder',
     )
 
     class Meta:
@@ -450,6 +470,10 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
+        ]
     )
     FORM_TYPE_CHOICES = (
         ('F400', 'Form 400 (Statement of organization, \
@@ -461,6 +485,11 @@ slate mailer organization)'),
         db_column='FORM_TYPE',
         max_length=4,
         help_text='Name of the source filing form or schedule'
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=45, end_page=46),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=58, end_page=59),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -470,8 +499,6 @@ slate mailer organization)'),
         help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('ATH', 'Authorizing individual'),
         ('ATR', 'Assistant treasurer'),
@@ -491,6 +518,11 @@ slate mailer organization)'),
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=10, end_page=11),
+        ]
     )
     enty_naml = fields.CharField(
         db_column='ENTY_NAML',
@@ -518,10 +550,30 @@ individual"
         blank=True,
         help_text="Entity's name suffix if the entity is an individual"
     )
+    ITEM_CODE_CHOICES = (
+        ('ATR', 'Assistant Treasurer (F410)'),
+        ('CAO', 'Unknown'),
+        ('CON', 'Unknown'),
+        ('CST', 'Unknown'),
+        ('CTL', 'Controlled Committee (F410)'),
+        ('P5B', 'Unknown'),
+        ('PFC', 'Primarily Formed Committee Item (F410)'),
+        ('POF', 'Principal Officer (F400, F410'),
+        ('PRO', 'Unknown'),
+        ('Pfc', 'Primarily Formed Committee Item (F410)'),
+        ('SMA', 'Slate Mailer Authorizer (F400)'),
+        ('SPO', 'Sponsored Committee Itemization (F410)'),
+        ('n/a', 'Not Applicable'),
+    )
     item_cd = fields.CharField(
         db_column='ITEM_CD',
         max_length=4,
         blank=True,
+        choices=ITEM_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=10),
+        ],
         help_text="Section of the Statement of Organization this \
 itemization relates to. See CAL document for the definition \
 of legal values for this column."
@@ -576,8 +628,6 @@ of legal values for this column."
         help_text="Industry group/affiliation description"
     )
     OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
         ('ASM', 'State Assembly Person'),
         ("Asm", "State Assembly Person"),
         ("asm", "State Assembly Person"),
@@ -637,6 +687,10 @@ of legal values for this column."
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+        ]
     )
     offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR',
@@ -645,12 +699,29 @@ of legal values for this column."
         help_text="Office sought description used if the office sought code \
 (OFFICE_CD) equals other (OTH)."
     )
+    JURIS_CODE_CHOICES = (
+        ('', 'Unknown'),
+        ('ASM', 'Assembly District'),
+        ('BOE', 'Board of Equalization District'),
+        ('CIT', 'City'),
+        ('CTY', 'County'),
+        ('LOC', 'Local'),
+        ('OTH', 'Other'),
+        ('SEN', 'Senate District'),
+        ('STW', 'Statewide'),
+    )
     juris_cd = fields.CharField(
         db_column='JURIS_CD',
         max_length=4,
         blank=True,
+        choices=None,
         help_text="Office jurisdiction code. See CAL document for a \
 list of legal values."
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=39),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
+        ]
     )
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR',
@@ -669,7 +740,6 @@ of Equalization districts."
     OFF_S_H_CD_CHOICES = (
         ("S", "SOUGHT"),
         ("H", "HELD"),
-        # The codes below appear in the database but are undocumented
         ("", "NONE"),
     )
     off_s_h_cd = fields.CharField(
@@ -678,6 +748,12 @@ of Equalization districts."
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=39),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
+        ]
     )
     non_pty_cb = fields.CharField(
         db_column='NON_PTY_CB',
@@ -713,7 +789,13 @@ of Equalization districts."
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUPP_OPP_CODE,
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=40),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
+        ]
     )
     year_elect = fields.CharField(
         db_column='YEAR_ELECT',
@@ -951,8 +1033,6 @@ is not contained on the forms.'
 campaign statement is attached. This field applies to the form 401."
     )
     CMTTE_TYPE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p20
         ('', 'Unknown'),
         ('C', 'Candidate or officeholder controlled committee'),
         ('P', 'Candidate or officeholder primarily formed committee'),
@@ -965,7 +1045,10 @@ campaign statement is attached. This field applies to the form 401."
         blank=True,
         choices=CMTTE_TYPE_CHOICES,
         verbose_name="Committee type",
-        help_text="Type of Recipient Committee. Applies to the 450/460."
+        help_text="Type of Recipient Committee. Applies to the 450/460.",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=10),
+        ]
     )
     control_yn = fields.IntegerField(
         null=True,
@@ -1022,6 +1105,7 @@ values are 'X' or null. Applies to the Form 461."
         blank=True,
         choices=ENTITY_CODE_CHOICES,
         verbose_name='entity code'
+
     )
     file_email = fields.CharField(
         max_length=60,
@@ -1134,6 +1218,7 @@ and major donor committee campaign statement)'),
     )
     juris_cd = fields.CharField(
         max_length=3,
+        choices=None,
         db_column='JURIS_CD',
         blank=True,
         help_text="Office jurisdiction code"
@@ -1371,29 +1456,29 @@ are 'Y' or 'N'."
     )
     STMT_TYPE_CHOICES = (
         ("", "Unknown"),
+        ('PE', 'Pre-Election (F450, F460)'),
+        ('pe', 'Pre-Election (F450, F460)'),
+        ('QT', 'Quarterly Stmt (F450,F460)'),
+        ('qt', 'Quarterly Stmt (F450,F460)'),
+        ('SA', 'Semi-annual (F450, F460)'),
+        ('sa', 'Semi-annual (F450, F460)'),
+        ('SE', 'Supplemental Pre-elect (F450, F460, F495)'),
+        ('se', 'Supplemental Pre-elect (F450, F460, F495)'),
+        ('SY', 'Special Odd-Yr. Campaign (F450, F460)'),
+        ('sy', 'Special Odd-Yr. Campaign (F450, F460)'),
+        ('S1', 'Semi-Annual (Jan1-Jun30) (F425)'),
+        ('S2', 'Semi-Annual (Jul1-Dec31) (F425)'),
+        ('TS', 'Termination Statement (F450, F460)'),
+        ('ts', 'Termination Statement (F450, F460)'),
         ("*", "Unknown"),
         ("1", "Unknown"),
         ("2", "Unknown"),
         ("CA", "Unknown"),
         ("MD", "Unknown"),
         ("NA", "Unknown"),
-        ("pe", "Unknown"),
-        ("PE", "Unknown"),
         ("PR", "Unknown"),
         ("QS", "Unknown"),
-        ("qt", "Unknown"),
-        ("QT", "Unknown"),
         ("S", "Unknown"),
-        ("S1", "Unknown"),
-        ("S2", "Unknown"),
-        ("sa", "Unknown"),
-        ("SA", "Unknown"),
-        ("se", "Unknown"),
-        ("SE", "Unknown"),
-        ("sy", "Unknown"),
-        ("SY", "Unknown"),
-        ("ts", "Unknown"),
-        ("TS", "Unknown"),
         ("x", "Unknown"),
         ("YE", "Unknown"),
     )
@@ -1567,21 +1652,19 @@ are "Y" or "N".'
 for Senate, Assembly, or Board of Equalization races."
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('ATR', 'Assistant treasurer'),
         ('BNM', 'Ballot measure\'s name/title'),
         ('CAO', 'Candidate/officeholder'),
-        ('CTL', 'Controlled committee'),
         ('COM', 'Committee'),
+        ('CTL', 'Controlled committee'),
         ('FIL', 'Candidate filing/ballot fees'),
         ('OFF', 'Officer (Responsible)'),
         ('PEX', 'PEX (Unknown)'),
         ('POF', 'Principal officer'),
         ('PRO', 'Proponent'),
         ('RCP', 'Recipient committee'),
-        ('RDP', 'RDP (Unknown)'),
+        ('RDP', 'Unknown'),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -1589,6 +1672,11 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=9, end_page=11),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
+        ]
     )
     # enty_adr1 = fields.CharField(
     #     max_length=55, db_column='ENTY_ADR1', blank=True
@@ -1683,11 +1771,27 @@ short form)'),
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
     )
+    JURIS_CODE_CHOICES = (
+        ('', 'Unknown'),
+        ('ASM', 'Assembly District'),
+        ('BOE', 'Board of Equalization District'),
+        ('CIT', 'City'),
+        ('CTY', 'County'),
+        ('LOC', 'Local'),
+        ('SEN', 'Senate District'),
+        ('STW', 'Statewide'),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        help_text="Office jurisdiction code"
+        help_text="Office jurisdiction code",
+        choices=JURIS_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=35),
+        ]
     )
     juris_dscr = fields.CharField(
         max_length=40,
@@ -1725,13 +1829,13 @@ short form)'),
         help_text="Filer's mailing ZIP Code"
     )
     OFF_S_H_CD_CHOICES = (
+        ("", "Unknown"),
         ("S", "SOUGHT"),
         ("H", "HELD"),
         ("s", "SOUGHT"),
         # The codes below appear in the database but are undocumented
         ("F", "UNKNOWN"),
         ("T", "UNKNOWN"),
-        ("", "NONE"),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -1739,6 +1843,11 @@ short form)'),
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=35),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=21),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+        ]
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -1810,7 +1919,8 @@ short form)'),
         choices=OFFICE_CODE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=12),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
         ],
     )
     REC_TYPE_CHOICES = (
@@ -1822,6 +1932,10 @@ short form)'),
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=41),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
+        ]
     )
     SUPP_OPP_CODE = (
         ('S', 'SUPPORT'),
@@ -1835,7 +1949,11 @@ short form)'),
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUPP_OPP_CODE,
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=41),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=35),
+        ]
     )
     title = fields.CharField(
         max_length=90,
@@ -2095,6 +2213,7 @@ and Form 401 Schedule A, A-1)"
         ("0", "0 (Unknown)"),
         ("BNM", "Ballot measure\'s name/title"),
         ("COM", "Committee"),
+        ("Com", "Committee"),
         ("IND", "Individual"),
         ("OFF", "Officer (Responsible)"),
         ("OTH", "Other"),
@@ -2107,7 +2226,10 @@ and Form 401 Schedule A, A-1)"
         db_column='ENTITY_CD',
         blank=True,
         help_text="Entity code: Values [CMO|RCP|IND|OTH]",
-        choices=ENTITY_CODE_CHOICES
+        choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60),
+        ]
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2226,6 +2348,7 @@ Schedule A, monetary contributions received')
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
+        choices=None,
         help_text="Office jurisdiction code. See the CAL document for the \
 list of legal values. Used on Form 401 Schedule A"
     )
@@ -2374,6 +2497,7 @@ list of legal values. Used on Form 401 Schedule A"
         max_length=1,
         db_column='TRAN_TYPE',
         blank=True,
+        choices=None,
         help_text="Transaction Type: Values T- third party | F Forgiven \
 loan | R Returned (Negative amount)"
     )
@@ -2654,8 +2778,6 @@ original filing and 1 to 999 amendments.",
         help_text="Committee identification number"
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('COM', "Committee"),
         ("IND", "Person (spending > $5,000)"),
@@ -2670,6 +2792,9 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name="entity code",
         choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=11),
+        ]
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2914,8 +3039,6 @@ CAL document for a description of the value of this field."
         help_text="Lender's state"
     )
     LOAN_TYPE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p36
         ("H2T", "Third party payment"),
         ("H2F", "Forgiven"),
         ("H2R", "Repay"),
@@ -2931,7 +3054,12 @@ CAL document for a description of the value of this field."
         db_column='LOAN_TYPE',
         blank=True,
         choices=LOAN_TYPE_CHOICES,
-        help_text="Type of loan"
+        help_text="Type of loan",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            # this field may no longer be in use, CAL format v2 instructs to leave NULL
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        ]
     )
     loan_zip4 = fields.CharField(
         max_length=10,
@@ -3781,6 +3909,7 @@ Campaign Statement), Schedule B, expenditures made'),
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
+        choices=None,
         help_text="Office Jurisdiction Code Values: STW=Statewide; \
         SEN=Senate District; ASM=Assembly District; \
         BOE=Board of Equalization District; \
@@ -4298,7 +4427,7 @@ of a parent record.'
         ("MEE", "Unknown"),
         ("N", "Unknown"),
         ("O", "Unknown"),
-        ("ofc", "Unknown"),
+        ("ofc", "office expenses"),
         ("OTH", "Unknown"),
         ("P", "Unknown"),
         ("PEN", "Unknown"),
@@ -4318,7 +4447,8 @@ of a parent record.'
         verbose_name='expense code',
         choices=EXPN_CODE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11, end_page=11),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=13, end_page=14),
         ]
     )
     expn_dscr = fields.CharField(
@@ -4350,7 +4480,9 @@ of a parent record.'
         db_index=True,
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True,
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
         help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
@@ -5050,6 +5182,7 @@ original filing and 1 to 999 amendments.",
     )
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
+        choices=None,
         blank=True,
         max_length=9,
         help_text='Entity code'
@@ -5411,6 +5544,7 @@ original filing and 1 to 999 amendments.",
         db_column='JURIS_CD',
         blank=True,
         null=True,
+        choices=None,
         help_text='Office jurisdiction code'
     )
     juris_dscr = fields.CharField(
@@ -5496,10 +5630,8 @@ Populated for Senate, Assembly or Board of Equalization races.'
         (16011, 'UNKNOWN'),
         (16012, 'NO PARTY PREFERENCE'),
         (16013, 'AMERICANS ELECT'),
-        # The codes below occur in the database but are
-        # undocumented in the lookup table
-        (16020, 'PEACE AND FREEDOM'),
         (16014, 'UNKNOWN'),
+        (16020, 'PEACE AND FREEDOM'),
         (0, 'N/A'),
         (None, 'NONE'),
     )
@@ -5517,6 +5649,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
         db_column='DISTRICT_CD',
         blank=True,
         null=True,
+        choices=None,
         help_text='District number for the office being sought. \
 Populated for Senate, Assembly, or Board of Equalization races.'
     )
@@ -5992,6 +6125,7 @@ class CvrF470Cd(CalAccessBaseModel):
     entity_cd = fields.CharField(
         db_column="ENTITY_CD",
         blank=True,
+        choices=None,
         max_length=3,
         help_text="The filer's entity code. The value of this column will always be "
                   "Candidate/Office Holder (CAO) for this table."
@@ -6033,6 +6167,7 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     form_type = fields.CharField(
         db_column="FORM_TYPE",
+        choices=None,
         db_index=True,
         max_length=4,
         help_text="Type of Filing or Formset. The value of this column will always "
@@ -6040,6 +6175,7 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     juris_cd = fields.CharField(
         db_column="JURIS_CD",
+        choices=None,
         blank=True,
         max_length=3,
         help_text="Office Jurisdiction Code. The legal values are Senate (SEN), Assembly (ASM), "
@@ -6055,6 +6191,7 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     off_s_h_cd = fields.CharField(
         db_column="OFF_S_H_CD",
+        choices=None,
         blank=True,
         max_length=1,
         help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.'
@@ -6067,6 +6204,7 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     office_cd = fields.CharField(
         db_column="OFFICE_CD",
+        choices=None,
         blank=True,
         max_length=3,
         help_text="Code that identifies the office being sought. See the CAL document for "
@@ -6074,6 +6212,7 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     rec_type = fields.CharField(
         db_column="REC_TYPE",
+        choices=None,
         blank=True,
         max_length=3,
         help_text="Type of CAL record. This column will always contain CVR."

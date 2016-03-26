@@ -1182,7 +1182,8 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class SpltCd(CalAccessBaseModel):
     """
-    Split records
+    Split Transaction Record - Used as a child record for schedules:
+    A, B1, B2, C, D, H and/or F450P5 when disclosing Per Election to Date information.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1193,6 +1194,7 @@ class SpltCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=132),
         DocumentCloud(id="2711616-MapCalFormat2Fields", start_page=88),
+        DocumentCloud(id="2712034-Cal-Format-201", start_page=28),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
