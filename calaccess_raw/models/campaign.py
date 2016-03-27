@@ -773,12 +773,12 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = ['filing_id', 'amend_id']
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=7, end_page=29),
+        DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=7),
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=25, end_page=29),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6, end_page=14),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=18, end_page=22),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=22, end_page=30),
-    ],
+        DocumentCloud(id="2711616-MapCalFormat2Fields", start_page=6, end_page=14),
+        DocumentCloud(id="2712033-Cal-Format-1-05-02", start_page=18, end_page=22),
+        DocumentCloud(id="2712034-Cal-Format-201", start_page=22, end_page=30),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
