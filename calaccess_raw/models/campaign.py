@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from calaccess_raw import fields
+from calaccess_raw import fields, look_ups
 from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -185,7 +185,9 @@ original filing and 1 to 999 amendments.",
         verbose_name="Entity code",
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=9, end_page=11),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=46),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
         ],
         help_text="Entity Code of the Filer. Values: \
 SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410)"
@@ -304,7 +306,8 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         help_text='Qualified Committee check-box (Req. if SMO)',
     )
     REC_TYPE_CHOICES = (
-        ("CVR", "CVR"),
+        ("CVR", "Cover Page for Stmt of Organization / Slate Mailer Org, Stmt of \
+Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -314,8 +317,8 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=28),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=45, end_page=46),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=58, end_page=59),
         ],
         help_text='Record Type Value: CVR'
     )
@@ -442,6 +445,8 @@ class Cvr2SoCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=45, end_page=46),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38, end_page=40),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48, end_page=49),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=62, end_page=64),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -462,7 +467,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("CVR2", "CVR2"),
+        ("CVR2", "Cover Page; Additional Names & Addresses"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -473,6 +478,8 @@ original filing and 1 to 999 amendments.",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=45),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=58),
         ]
     )
     FORM_TYPE_CHOICES = (
@@ -484,7 +491,7 @@ slate mailer organization)'),
         choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
         max_length=4,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=45, end_page=46),
@@ -521,7 +528,9 @@ slate mailer organization)'),
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=10, end_page=11),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=62),
         ]
     )
     enty_naml = fields.CharField(
@@ -573,10 +582,11 @@ individual"
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=10),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=62),
         ],
-        help_text="Section of the Statement of Organization this \
-itemization relates to. See CAL document for the definition \
-of legal values for this column."
+        help_text="Section of the Statement of Organization this itemization \
+relates to. See CAL document for the definition of legal values for this column."
     )
     mail_city = fields.CharField(
         db_column='MAIL_CITY',
@@ -627,66 +637,13 @@ of legal values for this column."
         blank=True,
         help_text="Industry group/affiliation description"
     )
-    OFFICE_CODE_CHOICES = (
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        ("APP", "Unknown"),
-        ("ASS", "Unknown"),
-        ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
-        ("F", "Unknown"),
-        ("H", "Unknown"),
-        ("HOU", "Unknown"),
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        ("PER", "Unknown"),
-        ("PRO", "Unknown"),
-        ("REP", "Unknown"),
-        ("SPM", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
@@ -699,29 +656,18 @@ of legal values for this column."
         help_text="Office sought description used if the office sought code \
 (OFFICE_CD) equals other (OTH)."
     )
-    JURIS_CODE_CHOICES = (
-        ('', 'Unknown'),
-        ('ASM', 'Assembly District'),
-        ('BOE', 'Board of Equalization District'),
-        ('CIT', 'City'),
-        ('CTY', 'County'),
-        ('LOC', 'Local'),
-        ('OTH', 'Other'),
-        ('SEN', 'Senate District'),
-        ('STW', 'Statewide'),
-    )
     juris_cd = fields.CharField(
         db_column='JURIS_CD',
         max_length=4,
         blank=True,
-        choices=None,
+        choices=look_ups.JURIS_CODE_CHOICES,
         help_text="Office jurisdiction code. See CAL document for a \
-list of legal values."
+list of legal values.",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=39),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=49),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
-        ]
+        ],
     )
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR',
@@ -751,7 +697,7 @@ of Equalization districts."
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=39),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=49),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
         ]
     )
@@ -793,7 +739,7 @@ of Equalization districts."
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=40),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=49),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
         ]
     )
@@ -829,8 +775,10 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=7, end_page=29),
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=25, end_page=29),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6, end_page=14)
-    ]
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6, end_page=14),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=18, end_page=22),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=22, end_page=30),
+    ],
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
@@ -873,7 +821,7 @@ values are 'X' and null."
         max_length=9,
         db_column='BAL_ID',
         blank=True,
-        help_text="This field is undocumented"
+        help_text='.CAL format to db tables doc says: "Not Used-AMS KDE"'
     )
     bal_juris = fields.CharField(
         max_length=40,
@@ -900,11 +848,20 @@ values are 'X' and null."
         help_text="Broad Base Committee (yes/no) check box. Legal \
 values are 'Y' or 'N'."
     )
+    # these fields are described in the following docs:
+    # https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/25.html
+    # but are not included on the .tsv file
     # bus_adr1 = fields.CharField(
-    #     max_length=55, db_column='BUS_ADR1', blank=True
+    #     max_length=55,
+    #     db_column='BUS_ADR1',
+    #     blank=True,
+    #     help_text="First line of the employer/business street address. Applies to the form 461.",
     # )
     # bus_adr2 = fields.CharField(
-    #     max_length=55, db_column='BUS_ADR2', blank=True
+    #     max_length=55,
+    #     db_column='BUS_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the employer/business street address. Applies to the form 461.",
     # )
     bus_city = fields.CharField(
         max_length=30,
@@ -949,11 +906,21 @@ are 'X' and null"
         blank=True,
         help_text="Business activity description"
     )
+    # these fields are described in the following docs:
+    # https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/25.html
+    # but are not included on the .tsv file
     # cand_adr1 = fields.CharField(
-    #     max_length=55, db_column='CAND_ADR1', blank=True
+    #     max_length=55,
+    #     db_column='CAND_ADR1',
+    #     blank=True,
+    #     help_text="First line of the candidate/officeholder's street address. \
+# Applies to form 460, 465, and 496.",
     # )
     # cand_adr2 = fields.CharField(
-    #     max_length=55, db_column='CAND_ADR2', blank=True
+    #     max_length=55,
+    #     db_column='CAND_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the candidate/officeholder's street address.",
     # )
     cand_city = fields.CharField(
         max_length=30,
@@ -979,7 +946,7 @@ is not contained on the forms.'
         max_length=9,
         db_column='CAND_ID',
         blank=True,
-        help_text="This field is not documented"
+        help_text='.CAL format to db tables doc says: "Not Used-AMS KDE"',
     )
     cand_namf = fields.CharField(
         max_length=45,
@@ -1048,6 +1015,8 @@ campaign statement is attached. This field applies to the form 401."
         help_text="Type of Recipient Committee. Applies to the 450/460.",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=10),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=19),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=24),
         ]
     )
     control_yn = fields.IntegerField(
@@ -1084,8 +1053,6 @@ values are 'X' or null. Applies to the Form 461."
         help_text="Employer. This field is most likely unused."
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('', 'Unknown'),
         ('BMC', 'Ballot measure committee'),
         ('CAO', 'Candidate/officeholder'),
@@ -1104,8 +1071,15 @@ values are 'X' or null. Applies to the Form 461."
         db_column='ENTITY_CD',
         blank=True,
         choices=ENTITY_CODE_CHOICES,
-        verbose_name='entity code'
-
+        verbose_name='entity code',
+        help_text="The entity type of the filer. These codes vary by form type. \
+See the CAL document for the list of legal values for each form type.",
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=25),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=18),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=22),
+        ]
     )
     file_email = fields.CharField(
         max_length=60,
@@ -1113,11 +1087,20 @@ values are 'X' or null. Applies to the Form 461."
         blank=True,
         help_text="Filer's email address"
     )
+    # these fields are described in the following docs:
+    # https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/26.html
+    # but are not included on the .tsv file
     # filer_adr1 = fields.CharField(
-    #     max_length=55, db_column='FILER_ADR1', blank=True
+    #     max_length=55,
+    #     db_column='FILER_ADR1',
+    #     blank=True,
+    #     help_text="First line of the filer's address",
     # )
     # filer_adr2 = fields.CharField(
-    #     max_length=55, db_column='FILER_ADR2', blank=True
+    #     max_length=55,
+    #     db_column='FILER_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the filer's address",
     # )
     filer_city = fields.CharField(
         max_length=30,
@@ -1218,10 +1201,15 @@ and major donor committee campaign statement)'),
     )
     juris_cd = fields.CharField(
         max_length=3,
-        choices=None,
+        choices=look_ups.JURIS_CODE_CHOICES,
         db_column='JURIS_CD',
         blank=True,
-        help_text="Office jurisdiction code"
+        help_text="Office jurisdiction code",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=13),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=21, end_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=28, end_page=29),
+        ]
     )
     juris_dscr = fields.CharField(
         max_length=40,
@@ -1240,11 +1228,21 @@ reports filed during the same filing period. For example, \
 this field allows for multiple form 497s to be filed on the \
 same day."
     )
+    # these fields are described in the following docs:
+    # https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/27.html
+    # but are not included on the .tsv file
     # mail_adr1 = fields.CharField(
-    #     max_length=55, db_column='MAIL_ADR1', blank=True
+    #     max_length=55,
+    #     db_column='MAIL_ADR1',
+    #     blank=True,
+    #     help_text="First line of the filer's mailing address. Required if \
+    #                different than the filer's street address.",
     # )
     # mail_adr2 = fields.CharField(
-    #     max_length=55, db_column='MAIL_ADR2', blank=True
+    #     max_length=55,
+    #     db_column='MAIL_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the filer's mailing address.",
     # )
     mail_city = fields.CharField(
         max_length=30,
@@ -1286,6 +1284,10 @@ same day."
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=21),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+        ]
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -1294,68 +1296,17 @@ same day."
         help_text="Office sought description if the field OFFICE_CD is set \
 to other (OTH)"
     )
-    OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        ("APP", "Unknown"),
-        ("ASS", "Unknown"),
-        ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
-        ("F", "Unknown"),
-        ("H", "Unknown"),
-        ("HOU", "Unknown"),
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        ("PER", "Unknown"),
-        ("PRO", "Unknown"),
-        ("REP", "Unknown"),
-        ("SPM", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+        ]
     )
     other_cb = fields.CharField(
         max_length=1,
@@ -1378,7 +1329,7 @@ values are 'X' and null."
 values are 'Y' or 'N'."
     )
     REC_TYPE_CHOICES = (
-        ("CVR", "Cover"),
+        ("CVR", "Cover Page"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -1386,6 +1337,10 @@ values are 'Y' or 'N'."
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=25),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6),
+        ]
     )
     report_num = fields.CharField(
         max_length=3,
@@ -1445,7 +1400,8 @@ through date."
         max_length=1,
         db_column='SELFEMP_CB',
         blank=True,
-        help_text="Self employed check-box"
+        help_text='Self employed check-box. CAL format to db tables doc says: \
+"Not Used-AMS KDE"',
     )
     sponsor_yn = fields.IntegerField(
         null=True,
@@ -1487,7 +1443,12 @@ are 'Y' or 'N'."
         db_column='STMT_TYPE',
         blank=True,
         help_text='Type of statement',
-        choices=STMT_TYPE_CHOICES
+        choices=STMT_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=7),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=18),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=23),
+        ]
     )
     SUPP_OPP_CODE = (
         ('S', 'SUPPORT'),
@@ -1501,7 +1462,13 @@ are 'Y' or 'N'."
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUPP_OPP_CODE,
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=28),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=14),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=21),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+        ]
     )
     thru_date = fields.DateTimeField(
         null=True,
@@ -1509,11 +1476,20 @@ are 'Y' or 'N'."
         blank=True,
         help_text='Reporting period through date'
     )
+    # these fields are described in the following docs:
+    # https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/28.html
+    # but are not included on the .tsv file
     # tres_adr1 = fields.CharField(
-    #     max_length=55, db_column='TRES_ADR1', blank=True
+    #     max_length=55,
+    #     db_column='TRES_ADR1',
+    #     blank=True,
+    #     help_text="First line of the treasurer or responsible officer's street address."
     # )
     # tres_adr2 = fields.CharField(
-    #     max_length=55, db_column='TRES_ADR2', blank=True
+    #     max_length=55,
+    #     db_column='TRES_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the treasurer or responsible officer's street address."
     # )
     tres_city = fields.CharField(
         max_length=30,
@@ -1604,6 +1580,8 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=41, end_page=43),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32, end_page=35),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23, end_page=24),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=31, end_page=34),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1673,9 +1651,11 @@ for Senate, Assembly, or Board of Equalization races."
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=9, end_page=11),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23, end_page=24),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=9, end_page=11),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=32),
         ]
     )
     # enty_adr1 = fields.CharField(
@@ -1771,25 +1751,15 @@ short form)'),
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule'
     )
-    JURIS_CODE_CHOICES = (
-        ('', 'Unknown'),
-        ('ASM', 'Assembly District'),
-        ('BOE', 'Board of Equalization District'),
-        ('CIT', 'City'),
-        ('CTY', 'County'),
-        ('LOC', 'Local'),
-        ('SEN', 'Senate District'),
-        ('STW', 'Statewide'),
-    )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
         help_text="Office jurisdiction code",
-        choices=JURIS_CODE_CHOICES,
+        choices=look_ups.JURIS_CODE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=33),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=35),
         ]
     )
@@ -1845,8 +1815,8 @@ short form)'),
         choices=OFF_S_H_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=35),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=21),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=34),
         ]
     )
     offic_dscr = fields.CharField(
@@ -1855,72 +1825,17 @@ short form)'),
         blank=True,
         help_text="Office sought description"
     )
-    OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        ("APP", "Unknown"),
-        ("ASS", "Unknown"),
-        ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
-        ("F", "Unknown"),
-        ("H", "Unknown"),
-        ("HOU", "Unknown"),
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        ("PER", "Unknown"),
-        ("PRO", "Unknown"),
-        ("REP", "Unknown"),
-        ("SPM", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
         ],
     )
     REC_TYPE_CHOICES = (
@@ -2348,7 +2263,7 @@ Schedule A, monetary contributions received')
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        choices=None,
+        choices=look_ups.JURIS_CODE_CHOICES,
         help_text="Office jurisdiction code. See the CAL document for the \
 list of legal values. Used on Form 401 Schedule A"
     )
@@ -2394,68 +2309,18 @@ list of legal values. Used on Form 401 Schedule A"
         blank=True,
         help_text="Office Sought Description (used on F401A)"
     )
-    OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        ("APP", "Unknown"),
-        ("ASS", "Unknown"),
-        ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
-        ("F", "Unknown"),
-        ("H", "Unknown"),
-        ("HOU", "Unknown"),
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        ("PER", "Unknown"),
-        ("PRO", "Unknown"),
-        ("REP", "Unknown"),
-        ("SPM", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
+        ],
     )
     rcpt_date = fields.DateField(
         db_column='RCPT_DATE',
@@ -3346,68 +3211,18 @@ individual"
         blank=True,
         help_text="Candidate/officeholder suffix"
     )
-    OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        ("APP", "Unknown"),
-        ("ASS", "Unknown"),
-        ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
-        ("F", "Unknown"),
-        ("H", "Unknown"),
-        ("HOU", "Unknown"),
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        ("PER", "Unknown"),
-        ("PRO", "Unknown"),
-        ("REP", "Unknown"),
-        ("SPM", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
+        ]
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -3964,68 +3779,18 @@ Campaign Statement), Schedule B, expenditures made'),
         blank=True,
         help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
-    OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        ("APP", "Unknown"),
-        ("ASS", "Unknown"),
-        ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
-        ("F", "Unknown"),
-        ("H", "Unknown"),
-        ("HOU", "Unknown"),
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        ("PER", "Unknown"),
-        ("PRO", "Unknown"),
-        ("REP", "Unknown"),
-        ("SPM", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
+        ]
     )
     # payee_adr1 = fields.CharField(
     #     max_length=55,
@@ -4939,68 +4704,18 @@ self-employed.'
         blank=True,
         help_text="Candidate/officeholder's suffix"
     )
-    OFFICE_CODE_CHOICES = (
-        # Defined in the official .CAL documentation
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p11
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        ("APP", "Unknown"),
-        ("ASS", "Unknown"),
-        ("CIT", "Unknown"),
-        ("CTL", "Unknown"),
-        ("F", "Unknown"),
-        ("H", "Unknown"),
-        ("HOU", "Unknown"),
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        ("PER", "Unknown"),
-        ("PRO", "Unknown"),
-        ("REP", "Unknown"),
-        ("SPM", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
+        ]
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -5847,72 +5562,12 @@ Part R: late payments received from')
         blank=True,
         help_text="Candidate/officerholder suffix"
     )
-    OFFICE_CODE_CHOICES = (
-        ("APP", "State Appellate Court Justice"),
-        ('ASM', 'State Assembly Person'),
-        ("Asm", "State Assembly Person"),
-        ("asm", "State Assembly Person"),
-        ('ASR', 'Assessor'),
-        ('ATT', 'Attorney General'),
-        ('BED', 'Board of Education'),
-        ('BOE', 'Board of Equalization Member'),
-        ('BSU', 'Board of Supervisors'),
-        ('CAT', 'City Attorney'),
-        ('CCB', 'Community College Board'),
-        ('CCM', 'City Council Member'),
-        ('CON', 'State Controller'),
-        ('COU', 'County Counsel'),
-        ('CSU', 'County Supervisor'),
-        ("csu", "County Supervisor"),
-        ("CTL", "Local Controller"),
-        ('CTR', 'Local Controller'),
-        ('DAT', 'District Attorney'),
-        ('GOV', 'Governor'),
-        ("gov", "Governor"),
-        ('INS', 'Insurance Commissioner'),
-        ('LTG', 'Lieutenant Governor'),
-        ('MAY', 'Mayor'),
-        ('OTH', 'Other'),
-        ("oth", "Other"),
-        ("OTh", "Other"),
-        ("PER", "Public Employees Retirement System"),
-        ('PDR', 'Public Defender'),
-        ('PLN', 'Planning Commissioner'),
-        ('SCJ', 'Superior Court Judge'),
-        ('SEN', 'State Senator'),
-        ('SHC', 'Sheriff-Coroner'),
-        ('SOS', 'Secretary of State'),
-        ("SPM", "Supreme Court Justice"),
-        ('SUP', 'Superintendent of Public Instruction'),
-        ('TRE', 'State Treasurer'),
-        ('TRS', 'Local Treasurer'),
-        # Other codes observed the database but undocumented
-        ("05", "Unknown"),
-        # assessor? state assembly person?
-        ("ASS", "Unknown"),
-        # "City" Juris_Cd?
-        ("CIT", "Unknown"),
-        ("F", "Unknown"),
-        # house?
-        ("H", "Unknown"),
-        # house?
-        ("HOU", "Unknown"),
-        # legistlative? "Legal Defense" Expn_Cd? "Legal" Ind_Class?
-        ("LEG", "Unknown"),
-        ("OF", "Unknown"),
-        ("PAC", "Unknown"),
-        # "Proponent" Entity_Cd?
-        ("PRO", "Unknown"),
-        # representative?
-        ("REP", "Unknown"),
-        ("ST", "Unknown"),
-    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=4,
         blank=True,
         verbose_name="office code",
-        choices=OFFICE_CODE_CHOICES,
+        choices=look_ups.OFFICE_CODE_CHOICES,
         help_text="Identifies the office being sought",
         documentcloud_pages=[
             # .CAL Format 201
