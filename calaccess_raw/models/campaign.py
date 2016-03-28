@@ -1938,7 +1938,9 @@ class RcptCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=118, end_page=121),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71, end_page=75)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71, end_page=75),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29, end_page=30),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=37, end_page=41),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2122,19 +2124,24 @@ and Form 401 Schedule A, A-1)"
         help_text="Office District Number (used on F401A)"
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
+        # Codes explicitly allowed for this field, according to documentation
         ("", "None"),
-        ("0", "0 (Unknown)"),
-        ("BNM", "Ballot measure\'s name/title"),
         ("COM", "Committee"),
         ("Com", "Committee"),
         ("IND", "Individual"),
-        ("OFF", "Officer (Responsible)"),
         ("OTH", "Other"),
         ("PTY", "Political party"),
         ("RCP", "Recipient commmittee"),
         ("SCC", "Small contributor committee"),
+        # Other known codes observed in this field
+        ("BNM", "Ballot measure\'s name/title"),
+        ("OFF", "Officer (Responsible)"),
+        # Other unknown values observed
+        ("0", "Unknown"),
+        ('CAO', 'Candidate/officeholder'),
+        ('PTH', 'Unknown'),
+        ('RFD', 'Unknown'),  # Request for Development?
+        ('MBR', 'Unknown'),  # Member?
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -2143,7 +2150,9 @@ and Form 401 Schedule A, A-1)"
         help_text="Entity code: Values [CMO|RCP|IND|OTH]",
         choices=ENTITY_CODE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60),
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
         ]
     )
     filing_id = fields.IntegerField(
@@ -2265,7 +2274,12 @@ Schedule A, monetary contributions received')
         blank=True,
         choices=look_ups.JURIS_CODE_CHOICES,
         help_text="Office jurisdiction code. See the CAL document for the \
-list of legal values. Used on Form 401 Schedule A"
+list of legal values. Used on Form 401 Schedule A",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=74),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
+        ]
     )
     juris_dscr = fields.CharField(
         max_length=40,
@@ -2302,6 +2316,11 @@ list of legal values. Used on Form 401 Schedule A"
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=75),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
+        ]
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -2329,7 +2348,7 @@ list of legal values. Used on Form 401 Schedule A"
     )
     REC_TYPE_CHOICES = (
         ("E530", "E530"),
-        ("RCPT", "RCPT"),
+        ("RCPT", "Receipt"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -2337,19 +2356,31 @@ list of legal values. Used on Form 401 Schedule A"
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=37),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
     )
     SUPP_OPP_CODE = (
+        # Codes explicitly allowed for this field, according to documentation
         ('S', 'SUPPORT'),
         ('O', 'OPPOSITION'),
-        ('F', 'UNKNOWN'),
-        ('', 'NONE'),
+        ('', 'None'),
+        # Other unknown values observed
+        ('F', 'Unknown'),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUPP_OPP_CODE,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=74),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -2358,13 +2389,32 @@ list of legal values. Used on Form 401 Schedule A"
         blank=True,
         help_text='Permanent value unique to this item',
     )
+    TRAN_TYPE_CHOICES = [
+        # Codes explicitly allowed for this field, according to documentation
+        ('F', 'Forgiven Loan'),
+        ('I', 'Intermediary'),
+        ('R', 'Returned (Negative Amount?)'),
+        ('T', 'Third Party Repayment'),
+        ('X', 'Transfer'),
+        # Other unknown values observed
+        ('0', 'Unknown'),
+        ('I', 'Unknown'),
+        ('M', 'Unknown'),
+        ('N', 'Unknown'),
+        ('R', 'Unknown'),
+        ('T', 'Unknown'),
+    ]
     tran_type = fields.CharField(
         max_length=1,
         db_column='TRAN_TYPE',
         blank=True,
-        choices=None,
-        help_text="Transaction Type: Values T- third party | F Forgiven \
-loan | R Returned (Negative amount)"
+        choices=TRAN_TYPE_CHOICES,
+        help_text="Transaction Type",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=72),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=38),
+        ]
     )
 #     tres_adr1 = fields.CharField(
 #         max_length=55,
@@ -3232,9 +3282,15 @@ individual"
     )
     juris_cd = fields.CharField(
         max_length=3,
+        choices=look_ups.JURIS_CODE_CHOICES,
         db_column='JURIS_CD',
         blank=True,
-        help_text="Office jurisdiction code"
+        help_text="Office jurisdiction code",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=77),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
+        ]
     )
     juris_dscr = fields.CharField(
         max_length=40,
