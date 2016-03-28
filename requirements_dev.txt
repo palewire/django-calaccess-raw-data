@@ -1,6 +1,7 @@
 Django
 mysqlclient
 Sphinx
+sphinx_rtd_theme
 coverage
 hurry.filesize
 pep8
