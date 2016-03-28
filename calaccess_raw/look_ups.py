@@ -3,10 +3,8 @@
 # DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
 # DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
 OFFICE_CODE_CHOICES = (
-    ("APP", "State Appellate Court Justice"),
+    ('APP', "State Appellate Court Justice"),
     ('ASM', 'State Assembly Person'),
-    ("Asm", "State Assembly Person"),
-    ("asm", "State Assembly Person"),
     ('ASR', 'Assessor'),
     ('ATT', 'Attorney General'),
     ('BED', 'Board of Education'),
@@ -18,42 +16,58 @@ OFFICE_CODE_CHOICES = (
     ('CON', 'State Controller'),
     ('COU', 'County Counsel'),
     ('CSU', 'County Supervisor'),
-    ("csu", "County Supervisor"),
     ('CTR', 'Local Controller'),
     ('DAT', 'District Attorney'),
     ('GOV', 'Governor'),
-    ("gov", "Governor"),
     ('INS', 'Insurance Commissioner'),
     ('LTG', 'Lieutenant Governor'),
     ('MAY', 'Mayor'),
     ('OTH', 'Other'),
-    ("oth", "Other"),
-    ("OTh", "Other"),
     ('PDR', 'Public Defender'),
-    ("PER", "Public Employees Retirement System"),
+    ('PER', "Public Employees Retirement System"),
     ('PLN', 'Planning Commissioner'),
     ('SCJ', 'Superior Court Judge'),
     ('SEN', 'State Senator'),
     ('SHC', 'Sheriff-Coroner'),
     ('SOS', 'Secretary of State'),
-    ("SPM", "Supreme Court Justice"),
+    ('SPM', "Supreme Court Justice"),
     ('SUP', 'Superintendent of Public Instruction'),
     ('TRE', 'State Treasurer'),
     ('TRS', 'Local Treasurer'),
+    # observed lower case versions
+    ('asm', "State Assembly Person"),
+    ('att', 'Attorney General'),
+    ('boe', 'Board of Equalization Member'),
+    ('con', 'State Controller'),
+    ('csu', "County Supervisor"),
+    ('gov', "Governor"),
+    ('ltg', 'Lieutenant Governor'),
+    ('oth', "Other"),
+    ('sos', 'Secretary of State'),
+    ('sup', 'Secretary of State'),
+    ('tre', 'State Treasurer'),
+    # observed capital case versions
+    ('Asm', "State Assembly Person"),
+    ('Gov', 'Governor'),
+    ('Sen', 'State Senator'),
+    ('OTh', "Other"),
     # Other codes observed the database but undocumented
-    ("05", "Unknown"),
-    ("ASS", "Unknown"),  # assessor? state assembly person?
-    ("CIT", "Unknown"),  # "City" Juris_Cd?
-    ("CTL", "Unknown"),  # Local Controller? "Controlled Committee (F410)" Item_Cd?
-    ("F", "Unknown"),
-    ("H", "Unknown"),    # State House?
-    ("HOU", "Unknown"),  # State House?
-    ("LEG", "Unknown"),  # Legislature? "Legal Defense" Expn_Cd? "Legal" Ind_Class?
-    ("OF", "Unknown"),
-    ("PAC", "Unknown"),
-    ("PRO", "Unknown"),  # "Proponent" Entity_Cd?
-    ("REP", "Unknown"),  # State Rep?
-    ("ST", "Unknown"),
+    ('05', "Unknown"),
+    ('ASS', "Unknown"),  # assessor? state assembly person?
+    ('CIT', "Unknown"),  # "City" Juris_Cd?
+    ('COM', 'Unknown'),   # Misspelling of 'CON' ('Controller')?
+    ('CTL', "Unknown"),  # Local Controller? "Controlled Committee (F410)" Item_Cd?
+    ('F', "Unknown"),
+    ('H', "Unknown"),    # State House?
+    ('HOU', "Unknown"),  # State House?
+    ('LEG', "Unknown"),  # Legislature? "Legal Defense" Expn_Cd? "Legal" Ind_Class?
+    ('LOC', "Unknown"),  # 'LOC' ('Local') from Juris_Cd?
+    ('Mem', 'Unknown'),
+    ('OF', "Unknown"),
+    ('PAC', "Unknown"),
+    ('PRO', "Unknown"),  # "Proponent" Entity_Cd?
+    ('REP', "Unknown"),  # State Rep?
+    ('ST', "Unknown"),
 )
 
 JURIS_CODE_CHOICES = (

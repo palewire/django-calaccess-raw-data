@@ -2514,7 +2514,11 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46, end_page=47),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=41, end_page=42)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=41, end_page=42),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=50),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2535,7 +2539,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ("CVR3", "CVR3"),
+        ("CVR3", "Cover Page 3, Verification Information"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -2543,6 +2547,12 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=50),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
+        ]
     )
     FORM_TYPE_CHOICES = (
         ('F400', 'Form 400 (Statement of organization, \
@@ -2578,23 +2588,24 @@ candidate campaign statement)'),
         help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('0', '0 (Unknown)'),
+        # Codes explicitly allowed for this field, according to documentation
+        ('', 'None'),
         ('ATR', 'Assistant treasurer'),
-        ('BBB', 'BBB (Unknown)'),
-        ('COA', 'COA (Unknown)'),
         ('CAO', 'Candidate/officeholder'),
-        ('CON', 'State controller'),
-        ('MAI', 'MAI (Unknown)'),
-        ('MDI', 'Major donor/independent expenditure'),
-        ('OFF', 'Officer (Responsible)'),
-        ('POF', 'Principal officer'),
-        ('PRO', 'Proponent'),
-        ('RCP', 'Recipient committee'),
-        ('SPO', 'Sponsor'),
         ('TRE', 'Treasurer'),
+        ('OFF', 'Officer (Responsible)'),
+        ('PRO', 'Proponent'),
+        ('SPO', 'Sponsor'),
+        # Other known codes observed in this field
+        ('CON', 'State controller'),
+        ('MDI', 'Major donor/independent expenditure'),
+        ('POF', 'Principal officer'),
+        ('RCP', 'Recipient committee'),
+        # Other unknown values observed
+        ('0', 'Unknown'),
+        ('BBB', 'Unknown'),
+        ('COA', 'Unknown'),  # Misspelling of 'CAO', 'Candidate/officeholder'?
+        ('MAI', 'Unknown'),
     )
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
@@ -2602,6 +2613,12 @@ candidate campaign statement)'),
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=9),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=11),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=34),
+        ]
     )
     sig_date = fields.DateField(
         verbose_name='signed date',
@@ -5762,7 +5779,9 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
     ]
     amend_id = fields.IntegerField(
         db_column="AMEND_ID",
@@ -5915,7 +5934,7 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     office_cd = fields.CharField(
         db_column="OFFICE_CD",
-        choices=None,
+        choices=look_ups.OFFICE_CODE_CHOICES,
         blank=True,
         max_length=3,
         help_text="Code that identifies the office being sought. See the CAL document for "
