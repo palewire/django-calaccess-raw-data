@@ -66,6 +66,6 @@ JURIS_CODE_CHOICES = (
     ('OTH', 'Other'),
     ('SEN', 'Senate District'),
     ('STW', 'Statewide'),
-    ('FED', 'Unknown'), # Federal?
+    ('FED', 'Unknown'),  # Federal?
     ('JR', 'Unknown'),
 )
