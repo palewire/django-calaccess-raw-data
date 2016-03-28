@@ -235,9 +235,9 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         max_length=4,
         db_column="FORM_TYPE",
         choices=(
-            CALACCESS_FORMS['F400'].tuple,
-            CALACCESS_FORMS['F402'].tuple,
-            CALACCESS_FORMS['F410'].tuple,
+            ('F400', CALACCESS_FORMS['400'].description),
+            ('F402', CALACCESS_FORMS['402'].description),
+            ('F410', CALACCESS_FORMS['410'].description),
         ),
         help_text='Name of the source filing form or schedule',
         documentcloud_pages=[

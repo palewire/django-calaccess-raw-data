@@ -202,9 +202,5 @@ class CalAccessForm(object):
         self.group = group
         self.document_cloud_id = document_cloud_id
 
-    @property
-    def tuple(self):
-        return (self.id, self.description)
-
     def __str__(self):
         return str(self.id)
