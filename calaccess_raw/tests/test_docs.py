@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 import agate
 import logging
 from django.test import TestCase
+from django.core.management import call_command
 from django.db import models
 from calaccess_raw import get_model_list
 logger = logging.getLogger(__name__)
@@ -13,17 +14,14 @@ class DocumentationTestCase(TestCase):
     """
     Tests related to the documentation of models, fields and values
     """
-    # @classmethod
-    # def setUpClass(cls):
-    #     """
-    #     Load data into the database before running other tests.
-    #     """
-    #     super(DocumentationTestCase, cls).setUpClass()
-    #     kwargs = dict(verbosity=3, test_data=True)
-    #     if settings.DATABASES.get("alt", None):
-    #         kwargs['database'] = 'alt'
-    #         logger.debug("Loading into 'alt' database")
-    #     call_command("updatecalaccessrawdata", **kwargs)
+    @classmethod
+    def setUpClass(cls):
+        """
+        Load data into the database before running other tests.
+        """
+        super(DocumentationTestCase, cls).setUpClass()
+        kwargs = dict(verbosity=3, test_data=True)
+        call_command("updatecalaccessrawdata", **kwargs)
 
     def attr_test_output(self, obj_type, attr_name, results):
         # Load the data
@@ -280,3 +278,5 @@ class DocumentationTestCase(TestCase):
 
         table = agate.Table(results, ['group', 'model', 'field', 'message'])
         table.print_table(max_column_width=50)
+
+        call_command("verifycalaccesschoicefields", verbosity=2)
