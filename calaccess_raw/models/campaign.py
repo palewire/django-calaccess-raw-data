@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields, look_ups
+from calaccess_raw.calaccess_forms import CALACCESS_FORMS
 from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -230,17 +231,14 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F400', 'Form 400 (Statement of organization, '
-                 'slate mailer organization)'),
-        ('F402', 'Form 402 (Statement of termination, '
-                 'slate mailer organization'),
-        ('F410', 'Form 410 (Statement of organization, recipient committee)'),
-    )
     form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
-        choices=FORM_TYPE_CHOICES,
+        choices=(
+            CALACCESS_FORMS['F400'].tuple,
+            CALACCESS_FORMS['F402'].tuple,
+            CALACCESS_FORMS['F410'].tuple,
+        ),
         help_text='Name of the source filing form or schedule',
         documentcloud_pages=[
             # Form 400 statement of organization slate mailer organization form sample

@@ -189,3 +189,22 @@ class DocumentCloud(object):
             url = url_pattern % dict(id=split_id[0], slug=split_id[1], page=page)
             url_list.append(url)
         return url_list
+
+
+class CalAccessForm(object):
+    """
+    A form used by the California Secretary of State to collection information
+    which ends up in the CAL-ACCESS database
+    """
+    def __init__(self, id, description, group=None, document_cloud_id=None):
+        self.id = id
+        self.description = description
+        self.group = group
+        self.document_cloud_id = document_cloud_id
+
+    @property
+    def tuple(self):
+        return (self.id, self.description)
+
+    def __str__(self):
+        return str(self.id)
