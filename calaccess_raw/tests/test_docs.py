@@ -261,7 +261,7 @@ class DocumentationTestCase(TestCase):
                     # Pull out all the choices in that field
                     for slug, name in f.choices:
                         # Make sure that each has a definition
-                        if not name:
+                        if not name or name == '':
                             results.append((
                                 m().klass_group,
                                 m.__name__,
