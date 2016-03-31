@@ -269,13 +269,6 @@ class DocumentationTestCase(TestCase):
                                 f.name,
                                 "Value '%s' undefined in CHOICES" % slug
                             ))
-                        if name.lower() == 'unknown':
-                            results.append((
-                                m().klass_group,
-                                m.__name__,
-                                f.name,
-                                "Value '%s' defined as 'Unknown'" % slug
-                            ))
 
         table = agate.Table(results, ['group', 'model', 'field', 'message'])
         table.print_table(max_column_width=50)
