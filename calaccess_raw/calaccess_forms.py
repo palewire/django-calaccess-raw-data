@@ -3,152 +3,181 @@
 from calaccess_raw.models.base import CalAccessForm
 
 CALACCESS_FORMS = {
-    '400': CalAccessForm(
-            '400',
+    'F400': CalAccessForm(
+            'F400',
             'Statement of Organization (Slate Mailer Organization)',
             group='CAMPAIGN'
         ),
-    '401': CalAccessForm(
-            '401',
+    'F401': CalAccessForm(
+            'F401',
             'Slate Mailer Organization Campaign Statement',
             group='CAMPAIGN'
         ),
-    '402': CalAccessForm(
-            '402',
+    'F402': CalAccessForm(
+            'F402',
             'Statement of Termination (Slate Mailer Organization)',
             group='CAMPAIGN'
         ),
-    '410': CalAccessForm(
-            '410',
+    'F410': CalAccessForm(
+            'F410',
             'Statement of Organization Recipient Committee',
             group='CAMPAIGN'
         ),
-    '425': CalAccessForm(
-            '425',
+    'F425': CalAccessForm(
+            'F425',
             'Semi-Annual Statement of no Activity',
             group='CAMPAIGN'
         ),
-    '450': CalAccessForm(
-            '450',
+    'F450': CalAccessForm(
+            'F450',
             'Recipient Committee Campaign Disclosure Statement - Short Form',
             group='CAMPAIGN'
         ),
-    '460': CalAccessForm(
-            '460',
+    'F460': CalAccessForm(
+            'F460',
             'Recipient Committee Campaign Statement',
             group='CAMPAIGN'
         ),
-    '461': CalAccessForm(
-            '461',
+    'F461': CalAccessForm(
+            'F461',
             'Independent Expenditure Committee & Major Donor Committee \
 Campaign Statement',
             group='CAMPAIGN'
         ),
-    '465': CalAccessForm(
-            '465',
+    'F465': CalAccessForm(
+            'F465',
             'Supplemental Independent Expenditure Report',
             group='CAMPAIGN'
         ),
-    '470': CalAccessForm(
-            '470',
-            'Officeholder and Candidate Campaign Statement - \
-Short Form 470S OfficerandCandidateCampaignStatement(Supplement)',
+    'F470': CalAccessForm(
+            'F470',
+            'Officeholder and Candidate Campaign Statement, Short Form',
             group='CAMPAIGN'
         ),
-    '495': CalAccessForm(
-            '495',
+    'F470S': CalAccessForm(
+            'F470S',
+            'Officeholder and Candidate Campaign Statement (Supplement)',
+            group='CAMPAIGN'
+        ),
+    'F495': CalAccessForm(
+            'F495',
             'Supplemental Pre-Election Campaign Statement',
             group='CAMPAIGN'
         ),
-    '496': CalAccessForm(
-            '496',
+    'F496': CalAccessForm(
+            'F496',
             'Late Independent Expenditure Report',
             group='CAMPAIGN'
         ),
-    '497': CalAccessForm(
-            '497',
+    'F497': CalAccessForm(
+            'F497',
             'Late Contribution Report',
             group='CAMPAIGN'
         ),
-    '498': CalAccessForm(
-            '498',
+    'F498': CalAccessForm(
+            'F498',
             'Slate Mailer Late Payment Report',
             group='CAMPAIGN'
         ),
-    '601': CalAccessForm(
-            '601',
+    'F501': CalAccessForm(
+            'F501',
+            'Candidate Intention Statement',
+            group='CAMPAIGN'
+        ),
+    'F502': CalAccessForm(
+            'F502',
+            'Campaign bank account statement',
+            group='CAMPAIGN'
+    ),
+    'F511': CalAccessForm(
+            'F511',
+            'Paid Spokesperson Report',
+            group='CAMPAIGN'
+        ),
+    'E530': CalAccessForm(
+            'E350',
+            'Electronic Issue Advocacy Report',
+            group='CAMPAIGN'
+        ),
+    'F601': CalAccessForm(
+            'F601',
             'Lobbying Firm Registration Statement',
             group='LOBBYIST'
         ),
-    '602': CalAccessForm(
-            '602',
+    'F602': CalAccessForm(
+            'F602',
             'Lobbying Firm Activity Authorization',
             group='LOBBYIST'
         ),
-    '603': CalAccessForm(
-            '603',
+    'F603': CalAccessForm(
+            'F603',
             'Lobbyist Employer or Lobbying Coalition Registration Statement',
             group='LOBBYIST'
         ),
-    '604': CalAccessForm(
-            '604',
+    'F604': CalAccessForm(
+            'F604',
             'Lobbyist Certification Statement',
             group='LOBBYIST'
         ),
-    '605': CalAccessForm(
-            '605',
+    'F605': CalAccessForm(
+            'F605',
             'Amendment to Registration, Lobbying Firm, Lobbyist Employer, \
 Lobbying Coalition',
             group='LOBBYIST'
         ),
-    '606': CalAccessForm(
-            '606',
+    'F606': CalAccessForm(
+            'F606',
             'Notice of Termination',
             group='LOBBYIST'
         ),
-    '607': CalAccessForm(
-            '607',
+    'F607': CalAccessForm(
+            'F607',
             'Notice of Withdrawal',
             group='LOBBYIST'
         ),
-    '615': CalAccessForm(
-            '615',
+    'F615': CalAccessForm(
+            'F615',
             'Lobbyist Report',
             group='LOBBYIST'
         ),
-    '625': CalAccessForm(
-            '625',
+    'F625': CalAccessForm(
+            'F625',
             'Report of Lobbying Firm',
             group='LOBBYIST'
         ),
-    '630': CalAccessForm(
-            '630',
+    'F630': CalAccessForm(
+            'F630',
             'Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) ',
             group='LOBBYIST'
         ),
-    '635': CalAccessForm(
-            '635',
+    'F635': CalAccessForm(
+            'F635',
             'Report of Lobbyist Employer or Report of Lobbying Coalition',
             group='LOBBYIST'
         ),
-    '635C': CalAccessForm(
-            '635C',
+    'F635C': CalAccessForm(
+            'F635C',
             'Payments Received by Lobbying Coalitions',
             group='LOBBYIST'
         ),
-    '640': CalAccessForm(
-            '640',
-            'Governmental Agencies Reporting (Attachment to Form 635 or Form 645) ',
+    'F640': CalAccessForm(
+            'F640',
+            'Governmental Agencies Reporting (Attachment to Form 635 or Form 645)',
             group='LOBBYIST'
         ),
-    '645': CalAccessForm(
-            '645',
+    'F645': CalAccessForm(
+            'F645',
             'Report of Person Spending $5,000 or More',
             group='LOBBYIST'
         ),
-    '690': CalAccessForm(
-            '690',
+    'F690': CalAccessForm(
+            'F690',
             'Amendment to Lobbying Disclosure Report',
             group='LOBBYIST'
+        ),
+    'F900': CalAccessForm(
+            'F900',
+            'Public employee\'s retirement board, candidate campaign statement',
+            group='CAMPAIGN'
         ),
 }
