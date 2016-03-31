@@ -2,6 +2,28 @@
 # -*- coding: utf-8 -*-
 from calaccess_raw.models.base import DocumentCloud
 
+"""
+Includes dicts of cannonical look-up / choice field values (e.g., 'codes' and 'types').
+
+The keys of each look up dict are the valid values for the corresponding database
+columns, and the values are the full descriptions. This allows for mapping of invalid
+values observed in db columns to their valid equivalents in the _CHOICES attrs of our
+models, like so:
+
+    OFFICE_CD_CHOICES = (
+        ('gov', look_ups.OFFICE_CODES['GOV']),
+        ('GUV', look_ups.OFFICE_CODES['GOV']),
+        # ...
+    ),
+
+DOCS is a dict of look-up set names to sets of DocumentCloud objects referencing
+where the look-ups are defined. This allows for easy referencing to these document
+pages in our models, like so:
+
+    documentcloud_pages=look_ups.DOCS['office_codes'],
+
+"""
+
 DOCS = {
     'entity_codes': [
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
@@ -150,9 +172,6 @@ JURIS_CODES = {
     'SEN': 'Senate District',
     'STW': 'Statewide',
 }
-
-# ('FED', 'Unknown'),  # Federal?
-# ('JR', 'Unknown'),
 
 STMT_TYPES = {
     'PE': 'Pre-Election (F450, F460)',
