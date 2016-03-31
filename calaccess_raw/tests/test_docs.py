@@ -226,6 +226,7 @@ class DocumentationTestCase(TestCase):
         ]
         excluded_fields = [
             'LookupCodesCd.code_type',
+            'S497Cd.sup_off_cd',
         ]
 
         results = []
