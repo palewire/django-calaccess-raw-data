@@ -47,7 +47,10 @@ that aren't defined in the choices attr"
                     for value, count in m.objects.order_by().values_list(
                         f.name,
                     ).annotate(Count(f.name)):
-                        if value not in [x[0] for x in f.choices]:
+                        if (
+                            value not in [x[0] for x in f.choices] and
+                            value != ''
+                        ):
                             if self.verbosity > 2:
                                 self.failure(
                                     "  Undefined value for {0}: {1} ({2} occurrences)".format(
