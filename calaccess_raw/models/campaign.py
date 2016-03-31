@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from calaccess_raw import fields, look_ups
+from calaccess_raw import fields, look_ups, get_sorted_choices
 from calaccess_raw.calaccess_forms import CALACCESS_FORMS
 from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
@@ -41,17 +41,16 @@ class CvrSoCd(CalAccessBaseModel):
         null=True,
         help_text='Date Account Opened'
     )
-    ACTIVITY_LEVEL_CHOICES = (
+    ACTIVITY_LVL_CHOICES = (
         ("CI", "City"),
         ("CO", "County"),
         ("ST", "State"),
-        ("", "Unknown"),
     )
     actvty_lvl = fields.CharField(
         max_length=2,
         db_column="ACTVTY_LVL",
         blank=True,
-        choices=ACTIVITY_LEVEL_CHOICES,
+        choices=ACTIVITY_LVL_CHOICES,
         verbose_name="activity level",
         help_text="Organization's level of activity",
         documentcloud_pages=[
@@ -169,25 +168,22 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text='County of Domicile, Residence, or Location',
     )
-    ENTITY_CODE_CHOICES = (
-        ('', 'Unknown'),
-        ('BMC', 'Ballot measure committee'),
-        ('CAO', 'Candidate/officeholder'),
-        ('COM', 'Committee'),
-        ('CTL', 'Controlled committee'),
-        ('RCP', 'Recipient committee'),
-        ('SMO', 'Slate-mailer organization'),
+    ENTITY_CD_CHOICES = (
+        ('BMC', look_ups.CAMPAIGN_ENTITY_CODES['BMC']),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', look_ups.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SMO', look_ups.CAMPAIGN_ENTITY_CODES['SMO']),
     )
     entity_cd = fields.CharField(
         max_length=3,
         db_column="ENTITY_CD",
         blank=True,
-        choices=ENTITY_CODE_CHOICES,
+        choices=ENTITY_CD_CHOICES,
         verbose_name="Entity code",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=46),
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
         ],
         help_text="Entity Code of the Filer. Values: \
@@ -231,14 +227,15 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
+    FORM_TYPE_CHOICES = (
+        ('F400', CALACCESS_FORMS['F400'].description),
+        ('F402', CALACCESS_FORMS['F402'].description),
+        ('F410', CALACCESS_FORMS['F410'].description),
+    )
     form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
-        choices=(
-            ('F400', CALACCESS_FORMS['400'].description),
-            ('F402', CALACCESS_FORMS['402'].description),
-            ('F410', CALACCESS_FORMS['410'].description),
-        ),
+        choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule',
         documentcloud_pages=[
             # Form 400 statement of organization slate mailer organization form sample
@@ -480,13 +477,11 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=58),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F400', 'Form 400 (Statement of organization, \
-slate mailer organization)'),
-        ('F410', 'Form 410 (Statement of organization, recipient committee)'),
-    )
     form_type = fields.CharField(
-        choices=FORM_TYPE_CHOICES,
+        choices=(
+            ('F400', CALACCESS_FORMS['F400'].description),
+            ('F410', CALACCESS_FORMS['F410'].description),
+        ),
         db_column='FORM_TYPE',
         max_length=4,
         help_text='Name of the source filing form or schedule',
@@ -503,31 +498,28 @@ slate mailer organization)'),
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    ENTITY_CODE_CHOICES = (
-        ('', 'Unknown'),
-        ('ATH', 'Authorizing individual'),
-        ('ATR', 'Assistant treasurer'),
-        ('BMN', 'BMN (Unknown)'),
-        ('BNM', 'Ballot measure\'s name/title'),
-        ('CAO', 'Candidate/officeholder'),
-        ('COM', 'Committee'),
-        ('CTL', 'Controlled committee'),
-        ('OFF', 'Officer'),
-        ('POF', 'Principal officer'),
-        ('PRO', 'Proponent'),
-        ('SPO', 'Sponsor'),
+    ENTITY_CD_CHOICES = (
+        ('ATH', look_ups.CAMPAIGN_ENTITY_CODES['ATH']),
+        ('ATR', look_ups.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('BNM', look_ups.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', look_ups.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('OFF', look_ups.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('POF', look_ups.CAMPAIGN_ENTITY_CODES['POF']),
+        ('PRO', look_ups.CAMPAIGN_ENTITY_CODES['PRO']),
+        ('SPO', look_ups.CAMPAIGN_ENTITY_CODES['SPO']),
+        ('BMN', 'Unknown'),  # Misspelling of 'BNM'?
     )
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         max_length=3,
         blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CODE_CHOICES,
-        documentcloud_pages=[
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=10, end_page=11),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=62),
         ]
     )
@@ -557,26 +549,26 @@ individual"
         blank=True,
         help_text="Entity's name suffix if the entity is an individual"
     )
-    ITEM_CODE_CHOICES = (
+    ITEM_CD_CHOICES = (
         ('ATR', 'Assistant Treasurer (F410)'),
-        ('CAO', 'Unknown'),
-        ('CON', 'Unknown'),
-        ('CST', 'Unknown'),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
         ('CTL', 'Controlled Committee (F410)'),
         ('P5B', 'Unknown'),
         ('PFC', 'Primarily Formed Committee Item (F410)'),
-        ('POF', 'Principal Officer (F400, F410'),
-        ('PRO', 'Unknown'),
         ('Pfc', 'Primarily Formed Committee Item (F410)'),
+        ('POF', 'Principal Officer (F400, F410'),
+        ('PRO', look_ups.CAMPAIGN_ENTITY_CODES['PRO']),
         ('SMA', 'Slate Mailer Authorizer (F400)'),
         ('SPO', 'Sponsored Committee Itemization (F410)'),
         ('n/a', 'Not Applicable'),
+        ('CON', 'Unknown'),
+        ('CST', 'Unknown'),
     )
     item_cd = fields.CharField(
         db_column='ITEM_CD',
         max_length=4,
         blank=True,
-        choices=ITEM_CODE_CHOICES,
+        choices=ITEM_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=10),
@@ -635,14 +627,15 @@ relates to. See CAL document for the definition of legal values for this column.
         blank=True,
         help_text="Industry group/affiliation description"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=look_ups.OFFICE_CODE_CHOICES,
-        documentcloud_pages=[
+        choices=OFFICE_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['office_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
         ]
@@ -654,11 +647,12 @@ relates to. See CAL document for the definition of legal values for this column.
         help_text="Office sought description used if the office sought code \
 (OFFICE_CD) equals other (OTH)."
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         db_column='JURIS_CD',
         max_length=4,
         blank=True,
-        choices=look_ups.JURIS_CODE_CHOICES,
+        choices=JURIS_CD_CHOICES,
         help_text="Office jurisdiction code. See CAL document for a \
 list of legal values.",
         documentcloud_pages=[
@@ -681,11 +675,7 @@ list of legal values.",
         help_text="Office district number for Senate, Assembly, and Board \
 of Equalization districts."
     )
-    OFF_S_H_CD_CHOICES = (
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        ("", "NONE"),
-    )
+    OFF_S_H_CD_CHOICES = get_sorted_choices(look_ups.OFF_S_H_CODES)
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
@@ -723,17 +713,13 @@ of Equalization districts."
         blank=True,
         help_text="Jurisdiction of ballot measure"
     )
-    SUPP_OPP_CODE = (
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('', 'NONE'),
-    )
+    SUP_OPP_CD_CHOICES = get_sorted_choices(look_ups.SUP_OPP_CODES)
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE,
+        choices=SUP_OPP_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=40),
@@ -767,7 +753,10 @@ of Equalization districts."
 @python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information from campaign disclosure forms
+    Cover page information from campaign disclosure forms:
+    (F401, F450, F460, F461, F425, F465, F496, F497, F498).
+    This data comes from the electronic filing.
+    The data contained herein is "as filed" by the entity making the filing.
     """
     UNIQUE_KEY = ['filing_id', 'amend_id']
     DOCUMENTCLOUD_PAGES = [
@@ -998,7 +987,6 @@ is not contained on the forms.'
 campaign statement is attached. This field applies to the form 401."
     )
     CMTTE_TYPE_CHOICES = (
-        ('', 'Unknown'),
         ('C', 'Candidate or officeholder controlled committee'),
         ('P', 'Candidate or officeholder primarily formed committee'),
         ('B', 'Ballot-measure committee'),
@@ -1050,30 +1038,27 @@ values are 'X' or null. Applies to the Form 461."
         blank=True,
         help_text="Employer. This field is most likely unused."
     )
-    ENTITY_CODE_CHOICES = (
-        ('', 'Unknown'),
-        ('BMC', 'Ballot measure committee'),
-        ('CAO', 'Candidate/officeholder'),
-        ('COM', 'Committee'),
-        ('CTL', 'Controlled committee'),
-        ('IND', 'Person (Spending > $5,000)'),
-        ('MDI', 'Major donor/independent expenditure'),
-        ('OTH', 'Other'),
-        ('PTY', 'Political party'),
-        ('RCP', 'Recipient committee'),
-        ('SCC', 'Small contributor committee'),
-        ('SMO', 'Slate mailer organization'),
+    ENTITY_CD_CHOICES = (
+        ('BMC', look_ups.CAMPAIGN_ENTITY_CODES['BMC']),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', look_ups.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('IND', look_ups.CAMPAIGN_ENTITY_CODES['IND']),
+        ('MDI', look_ups.CAMPAIGN_ENTITY_CODES['MDI']),
+        ('OTH', look_ups.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', look_ups.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', look_ups.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('SMO', look_ups.CAMPAIGN_ENTITY_CODES['SMO']),
     )
     entity_cd = fields.CharField(
         max_length=4,
         db_column='ENTITY_CD',
         blank=True,
-        choices=ENTITY_CODE_CHOICES,
         verbose_name='entity code',
-        help_text="The entity type of the filer. These codes vary by form type. \
-See the CAL document for the list of legal values for each form type.",
-        documentcloud_pages=[
-            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=25),
+        help_text="The entity type of the filer. These codes vary by form type.",
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=18),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=22),
@@ -1169,27 +1154,28 @@ individual the filer's last name."
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('F511', 'Form 511 (Paid spokesman report)'),
-        ('F900', 'Form 900 (Public employee\'s retirement board, '
-                 'candidate campaign statement)'),
-        ('F425', 'Form 425 (Semi-annual statement of no activity, \
-non-controlled recipient committee)'),
-        ('F450', 'Form 450 (Recipient committee campaign statement, \
-short form)'),
-        ('F401', 'Form 401 (Slate mailer organization campaign statement)'),
-        ('F498', 'Form 498 (Late payment report, slate mailer organizations'),
-        ('F465', 'Form 465 (Supplemental independent expenditure report'),
-        ('F496', 'Form 496 (Late independent expenditure report)'),
-        ('F461', 'Form 461 (Independent expenditure committee \
-and major donor committee campaign statement)'),
-        ('F460', 'Form 460 (Recipient committee campaign statement)'),
-        ('F497', 'Form 497 (Late contribution report)')
+
+        ('F511', CALACCESS_FORMS['F511'].description),
+        ('F900', CALACCESS_FORMS['F900'].description),
+        ('F425', CALACCESS_FORMS['F425'].description),
+        ('F450', CALACCESS_FORMS['F450'].description),
+        ('F401', CALACCESS_FORMS['F401'].description),
+        ('F498', CALACCESS_FORMS['F498'].description),
+        ('F465', CALACCESS_FORMS['F465'].description),
+        ('F496', CALACCESS_FORMS['F496'].description),
+        ('F461', CALACCESS_FORMS['F461'].description),
+        ('F460', CALACCESS_FORMS['F460'].description),
+        ('F497', CALACCESS_FORMS['F497'].description),
     )
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=18),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=22),
+        ]
     )
     from_date = fields.DateTimeField(
         null=True,
@@ -1197,9 +1183,10 @@ and major donor committee campaign statement)'),
         blank=True,
         help_text="Reporting period from date"
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         max_length=3,
-        choices=look_ups.JURIS_CODE_CHOICES,
+        choices=JURIS_CD_CHOICES,
         db_column='JURIS_CD',
         blank=True,
         help_text="Office jurisdiction code",
@@ -1267,14 +1254,13 @@ same day."
         help_text="Occupation. This field is most likely unused."
     )
     OFF_S_H_CD_CHOICES = (
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        ("s", "SOUGHT"),
-        ("h", "HELD"),
+        ('S', look_ups.OFF_S_H_CODES['S']),
+        ('H', look_ups.OFF_S_H_CODES['H']),
+        ('s', look_ups.OFF_S_H_CODES['S']),
+        ('h', look_ups.OFF_S_H_CODES['H']),
         # The codes below appear in the database but are undocumented
-        ("F", "UNKNOWN"),
-        ("O", "UNKNOWN"),
-        ("", "NONE"),
+        ('F', 'UNKNOWN'),
+        ('O', 'UNKNOWN'),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -1294,13 +1280,14 @@ same day."
         help_text="Office sought description if the field OFFICE_CD is set \
 to other (OTH)"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=look_ups.OFFICE_CODE_CHOICES,
+        choices=OFFICE_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
@@ -1347,12 +1334,9 @@ values are 'Y' or 'N'."
 Report Number 000 represents an original filing. 001-999 are amendments."
     )
     REPORTNAME_CHOICES = (
-        ('', 'Unknown'),
-        ('450', 'Form 450 (Recipient committee campaign statement, \
-short form)'),
-        ('460', 'Form 460 (Recipient committee campaign statement)'),
-        ('461', 'Form 461 (Independent expenditure and major donor \
-committee campaign statement)'),
+        ('450', CALACCESS_FORMS['F450'].description),
+        ('460', CALACCESS_FORMS['F460'].description),
+        ('461', CALACCESS_FORMS['F461'].description),
     )
     reportname = fields.CharField(
         max_length=3,
@@ -1409,21 +1393,20 @@ through date."
 are 'Y' or 'N'."
     )
     STMT_TYPE_CHOICES = (
-        ("", "Unknown"),
-        ('PE', 'Pre-Election (F450, F460)'),
-        ('pe', 'Pre-Election (F450, F460)'),
-        ('QT', 'Quarterly Stmt (F450,F460)'),
-        ('qt', 'Quarterly Stmt (F450,F460)'),
-        ('SA', 'Semi-annual (F450, F460)'),
-        ('sa', 'Semi-annual (F450, F460)'),
-        ('SE', 'Supplemental Pre-elect (F450, F460, F495)'),
-        ('se', 'Supplemental Pre-elect (F450, F460, F495)'),
-        ('SY', 'Special Odd-Yr. Campaign (F450, F460)'),
-        ('sy', 'Special Odd-Yr. Campaign (F450, F460)'),
-        ('S1', 'Semi-Annual (Jan1-Jun30) (F425)'),
-        ('S2', 'Semi-Annual (Jul1-Dec31) (F425)'),
-        ('TS', 'Termination Statement (F450, F460)'),
-        ('ts', 'Termination Statement (F450, F460)'),
+        ('PE', look_ups.STMT_TYPES['PE']),
+        ('QT', look_ups.STMT_TYPES['QT']),
+        ('SA', look_ups.STMT_TYPES['SA']),
+        ('SE', look_ups.STMT_TYPES['SE']),
+        ('SY', look_ups.STMT_TYPES['SY']),
+        ('S1', look_ups.STMT_TYPES['S1']),
+        ('S2', look_ups.STMT_TYPES['S2']),
+        ('TS', look_ups.STMT_TYPES['TS']),
+        ('pe', look_ups.STMT_TYPES['PE']),
+        ('qt', look_ups.STMT_TYPES['QT']),
+        ('sa', look_ups.STMT_TYPES['SA']),
+        ('se', look_ups.STMT_TYPES['SE']),
+        ('sy', look_ups.STMT_TYPES['SY']),
+        ('ts', look_ups.STMT_TYPES['TS']),
         ("*", "Unknown"),
         ("1", "Unknown"),
         ("2", "Unknown"),
@@ -1448,19 +1431,18 @@ are 'Y' or 'N'."
             DocumentCloud(id='2712034-Cal-Format-201', start_page=23),
         ]
     )
-    SUPP_OPP_CODE = (
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('s', 'SUPPORT'),
-        ('o', 'OPPOSITION'),
-        ('', 'NONE'),
+    SUP_OPP_CD_CHOICES = (
+        ('S', look_ups.SUP_OPP_CODES['S']),
+        ('O', look_ups.SUP_OPP_CODES['O']),
+        ('s', look_ups.SUP_OPP_CODES['S']),
+        ('o', look_ups.SUP_OPP_CODES['O']),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE,
+        choices=SUP_OPP_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=28),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=14),
@@ -1627,32 +1609,30 @@ are "Y" or "N".'
         help_text="District number for the office being sought. Populated \
 for Senate, Assembly, or Board of Equalization races."
     )
-    ENTITY_CODE_CHOICES = (
-        ('', 'Unknown'),
-        ('ATR', 'Assistant treasurer'),
-        ('BNM', 'Ballot measure\'s name/title'),
-        ('CAO', 'Candidate/officeholder'),
-        ('COM', 'Committee'),
-        ('CTL', 'Controlled committee'),
-        ('FIL', 'Candidate filing/ballot fees'),
-        ('OFF', 'Officer (Responsible)'),
-        ('PEX', 'PEX (Unknown)'),
-        ('POF', 'Principal officer'),
-        ('PRO', 'Proponent'),
-        ('RCP', 'Recipient committee'),
-        ('RDP', 'Unknown'),
+    ENTITY_CD_CHOICES = (
+        ('ATR', look_ups.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('BNM', look_ups.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', look_ups.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('OFF', look_ups.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('POF', look_ups.CAMPAIGN_ENTITY_CODES['POF']),
+        ('PRO', look_ups.CAMPAIGN_ENTITY_CODES['PRO']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        # Values observed in this field but not found in docs
+        ('FIL', 'Unknown'),
+        ('PEX', 'Unknown'),
+        ('RDP', 'Unknown'),  # Misspelling of RCP?
     )
     entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CODE_CHOICES,
-        documentcloud_pages=[
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23, end_page=24),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=9, end_page=11),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=32),
         ]
     )
@@ -1722,12 +1702,34 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="Entity ZIP code"
     )
+    F460_PART_CHOICES = (
+        ('3', '3'),
+        ('4a', '4a'),
+        ('4b', '4b'),
+        ('4A', '4A'),
+        ('4B', '4B'),
+        ('5a', '5a'),
+        ('5b', '5b'),
+        ('5A', '5A'),
+        ('5B', '5B'),
+        ('6', '6'),
+        ('6a', '6a'),
+        ('6b', '6b'),
+        ('6A', '6A'),
+        ('6B', '6B'),
+        ('7', '7'),
+    )
     f460_part = fields.CharField(
         max_length=2,
         db_column='F460_PART',
         blank=True,
-        help_text="Part of 460 cover page coded on ths cvr2 record. Legal \
-values are 3, 4a, 4b, 5a, 5b, or 6."
+        choices=F460_PART_CHOICES,
+        help_text="Part of 460 cover page coded on ths cvr2 record",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=32),
+        ]
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1736,25 +1738,28 @@ values are 3, 4a, 4b, 5a, 5b, or 6."
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('F425', 'Form 425 (Semi-annual statement of no activity, \
-non-controlled committees)'),
-        ('F450', 'Form 450 (Recipient committee campaign statement, \
-short form)'),
-        ('F460', 'Form 460 (Recipient committee campaign statement)'),
-        ('F465', 'Form 465 (Supplemental independent expenditure report)'),
+        ('F425', CALACCESS_FORMS['F425'].description),
+        ('F450', CALACCESS_FORMS['F450'].description),
+        ('F460', CALACCESS_FORMS['F460'].description),
+        ('F465', CALACCESS_FORMS['F465'].description),
     )
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=31),
+        ]
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
         help_text="Office jurisdiction code",
-        choices=look_ups.JURIS_CODE_CHOICES,
+        choices=JURIS_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=24),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=33),
@@ -1797,10 +1802,9 @@ short form)'),
         help_text="Filer's mailing ZIP Code"
     )
     OFF_S_H_CD_CHOICES = (
-        ("", "Unknown"),
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        ("s", "SOUGHT"),
+        ('S', look_ups.OFF_S_H_CODES['S']),
+        ('H', look_ups.OFF_S_H_CODES['H']),
+        ('s', look_ups.OFF_S_H_CODES['S']),
         # The codes below appear in the database but are undocumented
         ("F", "UNKNOWN"),
         ("T", "UNKNOWN"),
@@ -1823,18 +1827,15 @@ short form)'),
         blank=True,
         help_text="Office sought description"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=look_ups.OFFICE_CODE_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
-        ],
+        choices=OFFICE_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['office_codes'],
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "Cover, Page 2"),
@@ -1850,19 +1851,18 @@ short form)'),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
         ]
     )
-    SUPP_OPP_CODE = (
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('s', 'SUPPORT'),
-        ('o', 'OPPOSITION'),
-        ('', 'NONE'),
+    SUP_OPP_CD_CHOICES = (
+        ('S', look_ups.SUP_OPP_CODES['S']),
+        ('O', look_ups.SUP_OPP_CODES['O']),
+        ('s', look_ups.SUP_OPP_CODES['S']),
+        ('o', look_ups.SUP_OPP_CODES['O']),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE,
+        choices=SUP_OPP_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=41),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=35),
@@ -2121,22 +2121,21 @@ and Form 401 Schedule A, A-1)"
         blank=True,
         help_text="Office District Number (used on F401A)"
     )
-    ENTITY_CODE_CHOICES = (
+    ENTITY_CD_CHOICES = (
         # Codes explicitly allowed for this field, according to documentation
-        ("", "None"),
-        ("COM", "Committee"),
-        ("Com", "Committee"),
-        ("IND", "Individual"),
-        ("OTH", "Other"),
-        ("PTY", "Political party"),
-        ("RCP", "Recipient commmittee"),
-        ("SCC", "Small contributor committee"),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', look_ups.CAMPAIGN_ENTITY_CODES['IND']),
+        ('PTY', look_ups.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('OTH', look_ups.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', look_ups.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('Com', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
         # Other known codes observed in this field
-        ("BNM", "Ballot measure\'s name/title"),
-        ("OFF", "Officer (Responsible)"),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('BNM', look_ups.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('OFF', look_ups.CAMPAIGN_ENTITY_CODES['OFF']),
         # Other unknown values observed
-        ("0", "Unknown"),
-        ('CAO', 'Candidate/officeholder'),
+        ('0', "Unknown"),
         ('PTH', 'Unknown'),
         ('RFD', 'Unknown'),  # Request for Development?
         ('MBR', 'Unknown'),  # Member?
@@ -2145,13 +2144,13 @@ and Form 401 Schedule A, A-1)"
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
-        help_text="Entity code: Values [CMO|RCP|IND|OTH]",
-        choices=ENTITY_CODE_CHOICES,
+        help_text="Entity code",
+        choices=ENTITY_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
-        ]
+        ] + look_ups.DOCS['entity_codes']
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2160,11 +2159,10 @@ and Form 401 Schedule A, A-1)"
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('F900', 'Form 900 (Public employee\'s retirement board, \
-candidate campaign statement): Schedule A'),
+        ('F900', CALACCESS_FORMS['F900'].description),
+        ('E530', CALACCESS_FORMS['E530'].description),
         ('A-1', 'Form 460: Schedule A-1, contributions transferred \
 to special election committees'),
-        ('E530', 'Form E530 (Issue advocacy receipts)'),
         ('F496P3', 'Form 496 (Late independent expenditure): \
 Part 3, contributions > $100 received'),
         ('F401A', 'Form 401 (Slate mailer organization): Schedule A, \
@@ -2180,7 +2178,11 @@ Schedule A, monetary contributions received')
         choices=FORM_TYPE_CHOICES,
         max_length=9,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
+        ]
     )
     int_rate = fields.CharField(
         max_length=9,
@@ -2266,11 +2268,12 @@ Schedule A, monetary contributions received')
         blank=True,
         help_text="Intermediary's zip code"
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        choices=look_ups.JURIS_CODE_CHOICES,
+        choices=JURIS_CD_CHOICES,
         help_text="Office jurisdiction code. See the CAL document for the \
 list of legal values. Used on Form 401 Schedule A",
         documentcloud_pages=[
@@ -2303,10 +2306,8 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Reference to text contained in a TEXT record"
     )
     OFF_S_H_CD_CHOICES = (
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        # The codes below appear in the database but are undocumented
-        ("", "NONE"),
+        ('S', look_ups.OFF_S_H_CODES['S']),
+        ('H', look_ups.OFF_S_H_CODES['H']),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -2326,13 +2327,14 @@ list of legal values. Used on Form 401 Schedule A",
         blank=True,
         help_text="Office Sought Description (used on F401A)"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=look_ups.OFFICE_CODE_CHOICES,
+        choices=OFFICE_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
@@ -2345,7 +2347,7 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Date item received"
     )
     REC_TYPE_CHOICES = (
-        ("E530", "E530"),
+        ('E530', CALACCESS_FORMS['E530'].description),
         ("RCPT", "Receipt"),
     )
     rec_type = fields.CharField(
@@ -2360,11 +2362,10 @@ list of legal values. Used on Form 401 Schedule A",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
         ]
     )
-    SUPP_OPP_CODE = (
+    SUP_OPP_CD_CHOICES = (
         # Codes explicitly allowed for this field, according to documentation
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('', 'None'),
+        ('S', look_ups.SUP_OPP_CODES['S']),
+        ('O', look_ups.SUP_OPP_CODES['O']),
         # Other unknown values observed
         ('F', 'Unknown'),
     )
@@ -2373,7 +2374,7 @@ list of legal values. Used on Form 401 Schedule A",
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE,
+        choices=SUP_OPP_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=74),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
@@ -2516,7 +2517,7 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=50),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2549,27 +2550,21 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=50),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=63),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
         ]
     )
     FORM_TYPE_CHOICES = (
-        ('F400', 'Form 400 (Statement of organization, \
-slate mailer organization)'),
-        ('F401', 'Form 401 (Slate mailer organization campaign statement)'),
-        ('F402', 'Form 402 (Statement of termination, \
-slate mailer organization'),
-        ('F410', 'Form 410 (Statement of organization, recipient committee)'),
-        ('F425', 'Form 425 (Semi-annual statement of no activity, \
-non-controlled committees)'),
-        ('F450', 'Form 450 (Recipient committee campaign statement, \
-short form)'),
-        ('F460', 'Form 460 (Recipient committee campaign statement)'),
-        ('F461', 'Form 461 (Independent expenditure and major donor \
-committee campaign statement)'),
-        ('F465', 'Form 465 (Supplemental independent expenditure report)'),
-        ('F511', 'Form 511 (Paid spokesman report)'),
-        ('F900', 'Form 900 (Public employee\'s retirement board, \
-candidate campaign statement)'),
+        ('F400', CALACCESS_FORMS['F400'].description),
+        ('F401', CALACCESS_FORMS['F401'].description),
+        ('F402', CALACCESS_FORMS['F402'].description),
+        ('F410', CALACCESS_FORMS['F410'].description),
+        ('F425', CALACCESS_FORMS['F425'].description),
+        ('F450', CALACCESS_FORMS['F450'].description),
+        ('F460', CALACCESS_FORMS['F460'].description),
+        ('F461', CALACCESS_FORMS['F461'].description),
+        ('F465', CALACCESS_FORMS['F465'].description),
+        ('F511', CALACCESS_FORMS['F511'].description),
+        ('F900', CALACCESS_FORMS['F900'].description),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
@@ -2577,6 +2572,10 @@ candidate campaign statement)'),
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=50),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -2585,24 +2584,23 @@ candidate campaign statement)'),
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    ENTITY_CODE_CHOICES = (
+    ENTITY_CD_CHOICES = (
         # Codes explicitly allowed for this field, according to documentation
-        ('', 'None'),
-        ('ATR', 'Assistant treasurer'),
-        ('CAO', 'Candidate/officeholder'),
-        ('TRE', 'Treasurer'),
-        ('OFF', 'Officer (Responsible)'),
-        ('PRO', 'Proponent'),
-        ('SPO', 'Sponsor'),
+        ('ATR', look_ups.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('TRE', look_ups.CAMPAIGN_ENTITY_CODES['TRE']),
+        ('OFF', look_ups.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('PRO', look_ups.CAMPAIGN_ENTITY_CODES['PRO']),
+        ('SPO', look_ups.CAMPAIGN_ENTITY_CODES['SPO']),
         # Other known codes observed in this field
-        ('CON', 'State controller'),
-        ('MDI', 'Major donor/independent expenditure'),
-        ('POF', 'Principal officer'),
-        ('RCP', 'Recipient committee'),
+        ('MDI', look_ups.CAMPAIGN_ENTITY_CODES['MDI']),
+        ('POF', look_ups.CAMPAIGN_ENTITY_CODES['POF']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
         # Other unknown values observed
         ('0', 'Unknown'),
         ('BBB', 'Unknown'),
         ('COA', 'Unknown'),  # Misspelling of 'CAO', 'Candidate/officeholder'?
+        ('CON', 'Unknown'),
         ('MAI', 'Unknown'),
     )
     entity_cd = fields.CharField(
@@ -2610,7 +2608,7 @@ candidate campaign statement)'),
         max_length=3,
         blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CODE_CHOICES,
+        choices=ENTITY_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=9),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
@@ -2685,7 +2683,9 @@ class LoanCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=87, end_page=90),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60, end_page=63)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60, end_page=63),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35, end_page=39),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=47, end_page=50),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2707,21 +2707,20 @@ original filing and 1 to 999 amendments.",
         verbose_name="Committee ID",
         help_text="Committee identification number"
     )
-    ENTITY_CODE_CHOICES = (
-        ('', 'Unknown'),
-        ('COM', "Committee"),
-        ("IND", "Person (spending > $5,000)"),
-        ("OTH", "Other"),
-        ("PTY", "Political party"),
-        ('RCP', 'Recipient committee'),
-        ('SCC', 'Small contributor committee'),
+    ENTITY_CD_CHOICES = (
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', look_ups.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', look_ups.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', look_ups.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', look_ups.CAMPAIGN_ENTITY_CODES['SCC']),
     )
     entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name="entity code",
-        choices=ENTITY_CODE_CHOICES,
+        choices=ENTITY_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712034-Cal-Format-201', start_page=11),
         ]
@@ -2752,7 +2751,11 @@ Schedule H3'),
         max_length=2,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        ]
     )
     # intr_adr1 = fields.CharField(
     #     max_length=55, db_column='INTR_ADR1', blank=True
@@ -2977,7 +2980,6 @@ CAL document for a description of the value of this field."
         ("B2R", "Repay"),
         ("B1G", "Guarantor"),
         ("B1L", "Lender"),
-        ("", "Unknown"),
     )
     loan_type = fields.CharField(
         max_length=3,
@@ -3018,6 +3020,10 @@ CAL document for a description of the value of this field."
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -3113,7 +3119,10 @@ class S401Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=123, end_page=124),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=76, end_page=78)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=76, end_page=78),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=51, end_page=52),
+
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3142,6 +3151,10 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=51),
+        ]
     )
     FORM_TYPE_CHOICES = (
         ('F401B', 'Form 401 (Slate mailer organization campaign statement): \
@@ -3158,7 +3171,11 @@ Schedule D, candidates or measures supported or opposed with < $100 payment'),
         db_column='FORM_TYPE',
         blank=True,
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=51),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -3276,18 +3293,15 @@ individual"
         blank=True,
         help_text="Candidate/officeholder suffix"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=look_ups.OFFICE_CODE_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
-        ]
+        choices=OFFICE_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['office_codes'],
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -3295,9 +3309,10 @@ individual"
         blank=True,
         help_text="Office sought description"
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         max_length=3,
-        choices=look_ups.JURIS_CODE_CHOICES,
+        choices=JURIS_CD_CHOICES,
         db_column='JURIS_CD',
         blank=True,
         help_text="Office jurisdiction code",
@@ -3321,10 +3336,8 @@ individual"
 for Senate, Assembly, or Board of Equalization races."
     )
     OFF_S_H_CD_CHOICES = (
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        # The codes below appear in the database but are undocumented
-        ("", "NONE"),
+        ('S', look_ups.OFF_S_H_CODES['S']),
+        ('H', look_ups.OFF_S_H_CODES['H']),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -3332,6 +3345,10 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
+        ]
     )
     bal_name = fields.CharField(
         max_length=200,
@@ -3351,18 +3368,20 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="Ballot measure jurisdiction"
     )
-    SUPP_OPP_CODE = (
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('F', 'UNKNOWN'),
-        ('', 'NONE'),
+    SUP_OPP_CD_CHOICES = (
+        ('S', look_ups.SUP_OPP_CODES['S']),
+        ('O', look_ups.SUP_OPP_CODES['O']),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUP_OPP_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
+        ]
     )
     memo_code = fields.CharField(
         max_length=1,
@@ -3407,7 +3426,9 @@ class ExpnCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=53, end_page=56),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=45, end_page=48)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=45, end_page=48),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31, end_page=32),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=42, end_page=44),
     ]
     agent_namf = fields.CharField(
         max_length=45,
@@ -3523,30 +3544,34 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Office District Number (Req. if Juris_Cd=[SEN|ASM|BOE]"
     )
-    ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('0', '0 (Unknown)'),
-        ('COM', 'Committee'),
-        ('RCP', 'Recipient Committee'),
-        ('IND', 'Person (spending > $5,000)'),
-        ('OTH', 'Other'),
-        ('PTY', 'Political party'),
-        ('SCC', 'Small contributor committee'),
-        ('BNM', 'Ballot measure\'s name/title'),
-        ('CAO', 'Candidate/officeholder'),
-        ('OFF', 'Officer'),
-        ('PTH', 'PTH (Unknown)'),
-        ('RFD', 'RFD (Unknown)'),
-        ('MBR', 'MBR (Unknown)'),
+    ENTITY_CD_CHOICES = (
+        # Codes explicitly allowed for this field, according to documentation
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', look_ups.CAMPAIGN_ENTITY_CODES['IND']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('OTH', look_ups.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', look_ups.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('SCC', look_ups.CAMPAIGN_ENTITY_CODES['SCC']),
+        # Other known codes observed in this field
+        ('BNM', look_ups.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('MBR', look_ups.LOBBYING_ENTITY_CODES['MBR']),
+        ('OFF', look_ups.CAMPAIGN_ENTITY_CODES['OFF']),
+        # Unknown codes observed in this field
+        ('0', 'Unknown'),
+        ('PTH', 'Unknown'),
+        ('RFD', 'Unknown'),  # 'RFD' from EXPN_CD? Request For Development?
     )
     entity_cd = fields.CharField(
-        choices=ENTITY_CODE_CHOICES,
+        choices=ENTITY_CD_CHOICES,
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=42),
+        ]
     )
     expn_chkno = fields.CharField(
         max_length=20,
@@ -3554,38 +3579,14 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Check Number (Optional)"
     )
-    EXPN_CODE_CHOICES = (
-        ("CMP", "campaign paraphernalia/miscellaneous"),
-        ("CNS", "campaign consultants"),
-        ("CTB", "contribution (if nonmonetary, explain)*"),
-        ("CVC", "civic donations"),
-        ("FIL", "candidate filing/ballot feeds"),
-        ("FND", "fundraising events"),
-        ("IKD", "In-kind contribution (nonmonetary)"),
-        ("IND", "independent expenditure supporting/opposing others (explain)*"),
-        ("LEG", "legal defense"),
-        ("LIT", "campaign literature and mailings"),
-        ("LON", "loan"),
-        ("MBR", "member communications"),
-        ("MON", "monetary contribution"),
-        ("MTG", "meetings and appearances"),
-        ("OFC", "office expenses"),
-        ("PET", "petition circulating"),
-        ("PHO", "phone banks"),
-        ("POL", "polling and survey research"),
-        ("POS", "postage, delivery and messenger services"),
-        ("PRO", "professional services (legal, accounting)"),
-        ("PRT", "print ads"),
-        ("RAD", "radio airtime and production costs"),
-        ("RFD", "returned contributions"),
-        ("SAL", "campaign workers salaries"),
-        ("TEL", "T.V. or cable airtime and production costs"),
-        ("TRC", "candidate travel, lodging and meals (explain)"),
-        ("TRS", "staff/spouse travel, lodging and meals (explain)"),
-        ("TSF", "transfer between committees of the same candidate/sponsor"),
-        ("VOT", "voter registration"),
-        ("WEB", "information technology costs (internet, e-mail)"),
-        # Other codes observed in the table that are undocumented by the state
+    EXPN_CODE_CHOICES = get_sorted_choices(look_ups.EXPENSE_CODES) + (
+        ('ctb', look_ups.EXPENSE_CODES['CTB']),
+        ('ikd', look_ups.EXPENSE_CODES['IKD']),
+        ('Mon', look_ups.EXPENSE_CODES['MON']),
+        ('ofc', look_ups.EXPENSE_CODES['OFC']),
+        ('OFc', look_ups.EXPENSE_CODES['OFC']),
+        ('Ofc', look_ups.EXPENSE_CODES['OFC']),
+        # Codes observed in this field, but not found in docs
         ("", "Unknown"),
         ("*", "Unknown"),
         ("0", "Unknown"),
@@ -3615,7 +3616,6 @@ original filing and 1 to 999 amendments.",
         ("CT", "Unknown"),
         (",CT", "Unknown"),
         (".CT", "Unknown"),
-        ("ctb", "contribution (if nonmonetary, explain)*"),
         ("CTN", "Unknown"),
         ("CVD", "Unknown"),
         ("DAT", "Unknown"),
@@ -3640,10 +3640,9 @@ original filing and 1 to 999 amendments.",
         ("GGG", "Unknown"),
         ("GOT", "Unknown"),
         ("IEs", "Unknown"),
-        ("ikd", "In-kind contribution (nonmonetary)"),
         ("IN-", "Unknown"),
         ("Ina", "Unknown"),
-        ("INK", "Unknown"),
+        ("INK", "Unknown"),  # Misspelling of 'IKD' ('In-kind')?
         ("INS", "Unknown"),
         ("ITE", "Unknown"),
         ("JAN", "Unknown"),
@@ -3664,21 +3663,17 @@ original filing and 1 to 999 amendments.",
         ("MEE", "Unknown"),
         ("MGT", "Unknown"),
         ("Mis", "Unknown"),
-        ("Mon", "monetary contribution"),
         ("MRB", "Unknown"),
-        ("NGP", "Unknown"),
+        ("NGP", "Unknown"),  # Nathaniel G. Pearlman?
         ("NON", "Unknown"),
         ("NOT", "Unknown"),
         ("NOV", "Unknown"),
         ("O", "Unknown"),
         ("OCT", "Unknown"),
         (".OF", "Unknown"),
-        ("ofc", "office expenses"),
-        ("OFc", "office expenses"),
-        ("Ofc", "office expenses"),
-        ("OFF", "Unknown"),
+        ("OFF", "Unknown"),  # Misspelling 'OFC' ('Office expenses')?
         ("OPE", "Unknown"),
-        ("OTH", "Unknown"),
+        ("OTH", "Unknown"),  # Other?
         ("P", "Unknown"),
         ("Pac", "Unknown"),
         ("PAI", "Unknown"),
@@ -3737,10 +3732,7 @@ original filing and 1 to 999 amendments.",
         choices=EXPN_CODE_CHOICES,
         verbose_name="expense code",
         help_text="CTB & IND need explanation & listing on Sched D TRC & TRS require explanation",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11, end_page=11),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=13, end_page=14),
-        ]
+        documentcloud_pages=look_ups.DOCS['expense_codes']
     )
     expn_date = fields.DateField(
         null=True,
@@ -3763,6 +3755,7 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
+        ('F900', CALACCESS_FORMS['F900'].description),
         ('D', 'Form 460 (Recipient committee campaign statement): \
 Schedule D, summary of expenditure supporting/opposing other candidates, \
 measures and committees'),
@@ -3776,14 +3769,16 @@ Short Form): Part 5, payments made'),
 committee campaign statement): Part 5, contributions and expenditures made'),
         ('F465P3', 'Form 465 (Supplemental independent expenditure \
 report): Part 3, independent expenditures made'),
-        ('F900', 'Form 900 (Public Employee\'s Retirement Board Candidate \
-Campaign Statement), Schedule B, expenditures made'),
     )
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=6,
         db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=42),
+        ]
     )
     g_from_e_f = fields.CharField(
         max_length=1,
@@ -3791,15 +3786,17 @@ Campaign Statement), Schedule B, expenditures made'),
         blank=True,
         help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        choices=None,
-        help_text="Office Jurisdiction Code Values: STW=Statewide; \
-        SEN=Senate District; ASM=Assembly District; \
-        BOE=Board of Equalization District; \
-        CIT=City; CTY=County; LOC=Local; OTH=Other"
+        choices=JURIS_CD_CHOICES,
+        help_text="Office Jurisdiction Code",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=32),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=44),
+        ]
     )
     juris_dscr = fields.CharField(
         max_length=40,
@@ -3825,17 +3822,14 @@ Campaign Statement), Schedule B, expenditures made'),
         blank=True,
         help_text="Reference to text contained in a TEXT record."
     )
-    OFF_S_H_CD_CHOICES = (
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        ("s", "SOUGHT"),
-        ("h", "HELD"),
+    OFF_S_H_CD_CHOICES = get_sorted_choices(look_ups.OFF_S_H_CODES) + (
+        ('s', look_ups.OFF_S_H_CODES['S']),
+        ('h', look_ups.OFF_S_H_CODES['H']),
         # The codes below appear in the database but are undocumented
         ('A', 'UNKNOWN'),
         ('a', 'UNKNOWN'),
         ('8', 'UNKNOWN'),
         ('O', 'UNKNOWN'),
-        ("", "NONE"),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -3843,6 +3837,10 @@ Campaign Statement), Schedule B, expenditures made'),
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=32),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=44),
+        ]
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -3850,18 +3848,15 @@ Campaign Statement), Schedule B, expenditures made'),
         blank=True,
         help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=look_ups.OFFICE_CODE_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
-        ]
+        choices=OFFICE_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['office_codes']
     )
     # payee_adr1 = fields.CharField(
     #     max_length=55,
@@ -3918,7 +3913,7 @@ Campaign Statement), Schedule B, expenditures made'),
         help_text="Zip+4"
     )
     REC_TYPE_CHOICES = (
-        ("EXPN", "EXPN"),
+        ("EXPN", "Expense"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -3926,24 +3921,29 @@ Campaign Statement), Schedule B, expenditures made'),
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=42),
+        ]
     )
-    SUPP_OPP_CODE = (
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('s', 'SUPPORT'),
-        ('o', 'OPPOSITION'),
+    SUP_OPP_CD_CHOICES = get_sorted_choices(look_ups.SUP_OPP_CODES) + (
+        ('s', look_ups.SUP_OPP_CODES['S']),
+        ('o', look_ups.SUP_OPP_CODES['O']),
         ('H', 'UNKNOWN'),
         ('N', 'UNKNOWN'),
         ('X', 'UNKNOWN'),
         ('Y', 'UNKNOWN'),
-        ('', 'NONE'),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUP_OPP_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=32),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=44),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -4059,6 +4059,8 @@ class F495P2Cd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=56, end_page=57),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=26),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4087,17 +4089,25 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=26),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
+        ]
     )
     FORM_TYPE_CHOICES = (
-        ('F450', 'Form 450 (Recipient committee campaign statement, \
-short form)'),
-        ('F460', 'Form 460 (Recipient committee campaign statement)'),
+        ('F450', CALACCESS_FORMS['F450'].description),
+        ('F460', CALACCESS_FORMS['F460'].description),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=26),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
+        ],
+        help_text='Name of the source filing form or schedule \
+(must equal Form_Type in CVR record)',
     )
     elect_date = fields.DateField(
         db_column='ELECT_DATE',
@@ -4142,7 +4152,9 @@ class DebtCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=47, end_page=49),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49, end_page=48)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49, end_page=48),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33, end_page=34),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4188,59 +4200,33 @@ of a parent record.'
         db_column='END_BAL',
         help_text='Outstanding balance at close of this period',
     )
-    ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('BNM', 'Ballot measure\'s name/title'),
-        ('COM', 'Committee'),
-        ('IND', 'Person (spending > $5,000)'),
-        ('OTH', 'Other'),
-        ('PTY', 'Political party'),
-        ('RCP', 'Recipient Committee'),
-        ('SCC', 'Small contributor committee'),
+    ENTITY_CD_CHOICES = (
+        ('BNM', look_ups.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', look_ups.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', look_ups.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', look_ups.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', look_ups.CAMPAIGN_ENTITY_CODES['SCC']),
     )
     entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CODE_CHOICES,
+        choices=ENTITY_CD_CHOICES,
         help_text='Entity code of the payee',
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
+        ]
     )
-    EXPN_CODE_CHOICES = (
-        ("CMP", "campaign paraphernalia/miscellaneous"),
-        ("CNS", "campaign consultants"),
-        ("CTB", "contribution (if nonmonetary, explain)*"),
-        ("CVC", "civic donations"),
-        ("FIL", "candidate filing/ballot fees"),
-        ("FND", "fundraising events"),
-        ("IKD", "in-kind contribution (nonmonetary)"),
-        ("IND", "independent expenditure supporting/opposing others (explain)*"),
-        ("LEG", "legal defense"),
-        ("LIT", "campaign literature and mailings"),
-        ("MBR", "member communications"),
-        ("MTG", "meetings and appearances"),
-        ("OFC", "office expenses"),
-        ("PET", "petition circulating"),
-        ("PHO", "phone banks"),
-        ("POL", "polling and survey research"),
-        ("POS", "postage, delivery and messenger services"),
-        ("PRO", "professional services (legal, accounting)"),
-        ("PRT", "print ads"),
-        ("RAD", "radio airtime and production costs"),
-        ("RFD", "returned contributions"),
-        ("SAL", "campaign workers salaries"),
-        ("TEL", "T.V. or cable airtime and production costs"),
-        ("TRC", "candidate travel, lodging and meals (explain)"),
-        ("TRS", "staff/spouse travel, lodging and meals (explain)"),
-        ("TSF", "transfer between committees of the same candidate/sponsor"),
-        ("VOT", "voter registration"),
-        ("WEB", "information technology costs (internet, e-mail)"),
+    EXPN_CODE_CHOICES = get_sorted_choices(look_ups.EXPENSE_CODES) + (
+        ('Fnd', look_ups.EXPENSE_CODES['FND']),
+        ('ofc', look_ups.EXPENSE_CODES['OFC']),
         # Other codes observed in the table that are not documented by the state
-        ("", "Unknown"),
         ("*", "Unknown"),
-        ("AIR", "UnknownUnknown"),
+        ("AIR", "Unknown"),
         ("BUS", "Unknown"),
         ("C", "Unknown"),
         ("CAM", "Unknown"),
@@ -4253,7 +4239,6 @@ of a parent record.'
         ("EVE", "Unknown"),
         ("F", "Unknown"),
         ("FED", "Unknown"),
-        ("Fnd", "fundraising events"),
         ("fns", "Unknown"),
         ("G", "Unknown"),
         ("GGG", "Unknown"),
@@ -4263,8 +4248,7 @@ of a parent record.'
         ("MEE", "Unknown"),
         ("N", "Unknown"),
         ("O", "Unknown"),
-        ("ofc", "office expenses"),
-        ("OTH", "Unknown"),
+        ("OTH", "Unknown"),  # Other?
         ("P", "Unknown"),
         ("PEN", "Unknown"),
         ("S", "Unknown"),
@@ -4282,10 +4266,7 @@ of a parent record.'
         blank=True,
         verbose_name='expense code',
         choices=EXPN_CODE_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=13, end_page=14),
-        ]
+        documentcloud_pages=look_ups.DOCS['expense_codes']
     )
     expn_dscr = fields.CharField(
         max_length=400,
@@ -4308,7 +4289,11 @@ of a parent record.'
         max_length=1,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
-        help_text='Schedule Name/ID: (F - Sched F / Accrued Expenses)'
+        help_text='Schedule Name/ID: (F - Sched F / Accrued Expenses)',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
+        ]
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -4385,6 +4370,10 @@ individual."
         db_index=True,
         choices=REC_TYPE_CHOICES,
         help_text='Record type value: DEBT',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33, end_page=34),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -4482,6 +4471,8 @@ class S496Cd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=124, end_page=125),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=79),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=40),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4510,14 +4501,24 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=40),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
+        ]
     )
     FORM_TYPE_CHOICES = (
-        ('F496', 'F496 (Late independent expenditure report)'),
+        ('F496', CALACCESS_FORMS['F496'].description),
     )
     form_type = fields.CharField(
-        max_length=4, db_column='FORM_TYPE', blank=True,
+        max_length=4,
+        db_column='FORM_TYPE',
+        blank=True,
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=40),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -4588,9 +4589,10 @@ class S497Cd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=125, end_page=127),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=80, end_page=82)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=80, end_page=82),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41, end_page=42),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=54, end_page=55),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4619,6 +4621,10 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=54),
+        ]
     )
     FORM_TYPE_CHOICES = (
         ('F497P1', 'Form 497 (Late contribution report): \
@@ -4630,7 +4636,11 @@ Part 2, late contributions made')
         max_length=6,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=54),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -4639,28 +4649,29 @@ Part 2, late contributions made')
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('0', '0 (Unknown)'),
-        ('BNM', 'Ballot measure\'s name/title'),
-        ('CAO', 'Candidate/officerholder'),
-        ('CTL', 'Controlled committee'),
-        ('COM', 'Committee'),
-        ('IND', 'Person (spending > $5,000)'),
-        ('OFF', 'Officer'),
-        ('OTH', 'Other'),
-        ('PTY', 'Political party'),
-        ('RCP', 'Recipient Committee'),
-        ('SCC', 'Small contributor committee'),
+    ENTITY_CD_CHOICES = (
+        ('BNM', look_ups.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('CTL', look_ups.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', look_ups.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OFF', look_ups.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('OTH', look_ups.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', look_ups.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', look_ups.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('0', 'Unknown'),
     )
     entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CODE_CHOICES,
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=54),
+        ]
     )
     enty_naml = fields.CharField(
         max_length=200,
@@ -4775,18 +4786,15 @@ self-employed.'
         blank=True,
         help_text="Candidate/officeholder's suffix"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
         blank=True,
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=look_ups.OFFICE_CODE_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
-        ]
+        choices=OFFICE_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['office_codes']
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -4794,11 +4802,17 @@ self-employed.'
         blank=True,
         help_text="Office sought description"
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        verbose_name="Jurisdiction code"
+        verbose_name="Jurisdiction code",
+        choices=JURIS_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=42),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=55),
+        ]
     )
     juris_dscr = fields.CharField(
         max_length=40,
@@ -4813,15 +4827,12 @@ self-employed.'
         help_text="District number for the office being sought. Populated \
 for Senate, Assembly, or Board of Equalization races."
     )
-    OFF_S_H_CD_CHOICES = (
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        ("s", "SOUGHT"),
-        ("h", "HELD"),
+    OFF_S_H_CD_CHOICES = get_sorted_choices(look_ups.OFF_S_H_CODES) + (
+        ('s', look_ups.OFF_S_H_CODES['S']),
+        ('h', look_ups.OFF_S_H_CODES['H']),
         # The codes below appear in the database but are undocumented
         ('F', 'UNKNOWN'),
         ('T', 'UNKNOWN'),
-        ("", "NONE"),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -4829,6 +4840,10 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=42),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=55),
+        ]
     )
     bal_name = fields.CharField(
         max_length=200,
@@ -4878,17 +4893,16 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="This field is undocumented"
     )
-    SUPP_OPP_CODE = (
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('', 'NONE'),
-    )
+    SUP_OPP_CD_CHOICES = get_sorted_choices(look_ups.SUP_OPP_CODES)
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUP_OPP_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=82),
+        ]
     )
 
     def __str__(self):
@@ -4940,16 +4954,22 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=58),
+        ]
     )
     FORM_TYPE_CHOICES = (
-        ('F501', 'Form 501 (Candidate intention statement)'),
-        ('F502', 'Form 502 (Campaign bank account statement)')
+        ('F501', CALACCESS_FORMS['F501'].description),
+        ('F502', CALACCESS_FORMS['F502'].description),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=58),
+        ]
     )
     filer_id = fields.CharField(
         verbose_name='filer ID',
@@ -4966,12 +4986,16 @@ original filing and 1 to 999 amendments.",
         verbose_name="Committee ID",
         help_text='Committee identification number'
     )
+    ENTITY_CD_CHOICES = get_sorted_choices(look_ups.CAMPAIGN_ENTITY_CODES) + (
+        ('8', 'Unknown'),
+    )
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
-        choices=None,
+        choices=ENTITY_CD_CHOICES,
         blank=True,
         max_length=9,
-        help_text='Entity code'
+        help_text='Entity code',
+        documentcloud_pages=look_ups.DOCS['entity_codes'],
     )
     report_num = fields.CharField(
         db_column='REPORT_NUM',
@@ -4999,9 +5023,10 @@ original filing and 1 to 999 amendments.",
         db_column='STMT_TYPE',
         verbose_name="statement type",
         choices=STMT_TYPE_CHOICES,
+        help_text='Type of statement',
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=6)
-        ]
+        ],
     )
     from_date = fields.CharField(
         db_column='FROM_DATE',
@@ -5159,7 +5184,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Financial institution's e-mail address."
     )
-    OFFICE_CODE_CHOICES = (
+    OFFICE_CD_CHOICES = (
         (30001, "PRESIDENT"),
         (30002, "GOVERNOR"),
         (30003, "LIEUTENANT GOVERNOR"),
@@ -5309,7 +5334,7 @@ original filing and 1 to 999 amendments.",
         db_column='OFFICE_CD',
         verbose_name="office code",
         help_text="Identifies the office being sought",
-        choices=OFFICE_CODE_CHOICES,
+        choices=OFFICE_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=20, end_page=22),
         ]
@@ -5326,12 +5351,24 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Agency name"
     )
+    JURIS_CD_CHOICES = (
+        (0, "N/A"),
+        (40501, "LOCAL"),
+        (40502, "STATE"),
+        (40503, "COUNTY"),
+        (40504, "MULTI-COUNTY"),
+        (40505, "CITY"),
+        (40507, "SUPERIOR COURT JUDGE"),
+    )
     juris_cd = fields.IntegerField(
         db_column='JURIS_CD',
         blank=True,
         null=True,
-        choices=None,
-        help_text='Office jurisdiction code'
+        choices=JURIS_CD_CHOICES,
+        help_text='Office jurisdiction code',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19, end_page=20),
+        ]
     )
     juris_dscr = fields.CharField(
         db_column='JURIS_DSCR',
@@ -5359,17 +5396,15 @@ Populated for Senate, Assembly or Board of Equalization races.'
         help_text='Year of election'
     )
     ELEC_TYPE_CHOICES = (
+        (0, 'N/A'),
         (3001, "GENERAL"),
         (3002, "PRIMARY"),
         (3003, "RECALL"),
         (3004, "SPECIAL ELECTION"),
         (3005, "OFFICEHOLDER"),
         (3006, "SPECIAL RUNOFF"),
-        # The codes below appear in the database
-        # but are not documented in the lookupcodes table
+        # Observed in this field, but not documented
         (3007, "UNKNOWN"),
-        (0, 'N/A'),
-        (None, 'NONE'),
     )
     elec_type = fields.IntegerField(
         db_column='ELEC_TYPE',
@@ -5377,6 +5412,10 @@ Populated for Senate, Assembly or Board of Equalization races.'
         null=True,
         verbose_name="Election type",
         choices=ELEC_TYPE_CHOICES,
+        help_text="Election type",
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3, end_page=4),
+        ]
     )
     execute_dt = fields.DateTimeField(
         db_column='EXECUTE_DT',
@@ -5402,7 +5441,8 @@ Populated for Senate, Assembly or Board of Equalization races.'
         null=True,
         help_text='Account open date'
     )
-    PARTY_CODE_CHOICES = (
+    PARTY_CD_CHOICES = (
+        (0, 'N/A'),
         (16001, 'DEMOCRATIC'),
         (16002, 'REPUBLICAN'),
         (16003, 'GREEN PARTY'),
@@ -5418,26 +5458,110 @@ Populated for Senate, Assembly or Board of Equalization races.'
         (16013, 'AMERICANS ELECT'),
         (16014, 'UNKNOWN'),
         (16020, 'PEACE AND FREEDOM'),
-        (0, 'N/A'),
-        (None, 'NONE'),
     )
     party_cd = fields.IntegerField(
         db_column='PARTY_CD',
         blank=True,
         null=True,
-        choices=PARTY_CODE_CHOICES,
+        choices=PARTY_CD_CHOICES,
         help_text="Party code",
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=10, end_page=11),
         ]
     )
+    DISTRICT_CD_CHOICES = (
+        (0, 'N/A'),
+        (17001, '01'),
+        (17002, '13'),
+        (17003, '24'),
+        (17004, '35'),
+        (17005, '46'),
+        (17006, '57'),
+        (17007, '68'),
+        (17008, '79'),
+        (17009, '02'),
+        (17010, '05'),
+        (17011, '04'),
+        (17013, '06'),
+        (17014, '07'),
+        (17015, '08'),
+        (17016, '19'),
+        (17017, '10'),
+        (17018, '11'),
+        (17019, '12'),
+        (17020, '14'),
+        (17021, '15'),
+        (17022, '16'),
+        (17023, '17'),
+        (17024, '18'),
+        (17026, '20'),
+        (17027, '21'),
+        (17028, '22'),
+        (17029, '23'),
+        (17030, '25'),
+        (17031, '26'),
+        (17032, '27'),
+        (17033, '28'),
+        (17034, '29'),
+        (17035, '30'),
+        (17036, '31'),
+        (17037, '32'),
+        (17038, '33'),
+        (17039, '34'),
+        (17040, '36'),
+        (17041, '37'),
+        (17042, '38'),
+        (17043, '39'),
+        (17044, '40'),
+        (17045, '41'),
+        (17046, '42'),
+        (17047, '43'),
+        (17048, '44'),
+        (17049, '45'),
+        (17050, '47'),
+        (17051, '48'),
+        (17052, '49'),
+        (17053, '50'),
+        (17054, '51'),
+        (17055, '52'),
+        (17056, '53'),
+        (17057, '54'),
+        (17058, '55'),
+        (17059, '56'),
+        (17060, '03'),
+        (17061, '59'),
+        (17062, '60'),
+        (17063, '61'),
+        (17064, '62'),
+        (17065, '63'),
+        (17066, '64'),
+        (17067, '65'),
+        (17068, '66'),
+        (17069, '67'),
+        (17070, '69'),
+        (17071, '70'),
+        (17072, '71'),
+        (17073, '72'),
+        (17074, '73'),
+        (17075, '74'),
+        (17076, '75'),
+        (17077, '76'),
+        (17078, '77'),
+        (17079, '78'),
+        (17080, '80'),
+        (17081, '09'),
+        (17090, '58'),
+    )
     district_cd = fields.IntegerField(
         db_column='DISTRICT_CD',
         blank=True,
         null=True,
-        choices=None,
+        choices=DISTRICT_CD_CHOICES,
         help_text='District number for the office being sought. \
-Populated for Senate, Assembly, or Board of Equalization races.'
+Populated for Senate, Assembly, or Board of Equalization races.',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=11, end_page=13),
+        ]
     )
     accept_limit_yn = fields.IntegerField(
         db_column='ACCEPT_LIMIT_YN',
@@ -5482,7 +5606,9 @@ class S498Cd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=127, end_page=129),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=83, end_page=85)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=83, end_page=85),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43, end_page=44),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=56, end_page=57),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5511,6 +5637,10 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
+        ]
     )
     FORM_TYPE_CHOICES = (
         ('F498-A', 'Form 498 (Slate mailer late payment report): \
@@ -5523,7 +5653,11 @@ Part R: late payments received from')
         db_column='FORM_TYPE',
         blank=True,
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -5532,22 +5666,23 @@ Part R: late payments received from')
         blank=True,
         help_text='Permanent value unique to this item',
     )
-    ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('CAO', 'Candidate/officerholder'),
-        ('COM', 'Committee'),
-        ('IND', 'Person (spending > $5,000)'),
-        ('OTH', 'Other'),
-        ('RCP', 'Recipient Committee'),
+    ENTITY_CD_CHOICES = (
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', look_ups.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', look_ups.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', look_ups.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('RCP', look_ups.CAMPAIGN_ENTITY_CODES['RCP']),
     )
     entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CODE_CHOICES,
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=look_ups.DOCS['entity_codes'] + [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
+        ]
     )
     cmte_id = fields.CharField(
         max_length=9,
@@ -5633,21 +5768,15 @@ Part R: late payments received from')
         blank=True,
         help_text="Candidate/officerholder suffix"
     )
+    OFFICE_CD_CHOICES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=4,
         blank=True,
         verbose_name="office code",
-        choices=look_ups.OFFICE_CODE_CHOICES,
+        choices=OFFICE_CD_CHOICES,
         help_text="Identifies the office being sought",
-        documentcloud_pages=[
-            # .CAL Format 201
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=12, end_page=12),
-            # .CAL Format 1-05-02
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10, end_page=10),
-            # .CAL Errata 201
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2, end_page=2),
-        ]
+        documentcloud_pages=look_ups.DOCS['office_codes'],
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -5655,11 +5784,17 @@ Part R: late payments received from')
         blank=True,
         help_text="Description of office sought"
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        help_text="Office jurisdiction code"
+        choices=JURIS_CD_CHOICES,
+        help_text="Office jurisdiction code",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
+        ]
     )
     juris_dscr = fields.CharField(
         max_length=40,
@@ -5674,18 +5809,17 @@ Part R: late payments received from')
         help_text="District number for the office being sought. \
 Populated for Senate, Assembly, or Board of Equalization races."
     )
-    OFF_S_H_CD_CHOICES = (
-        ("S", "SOUGHT"),
-        ("H", "HELD"),
-        # The codes below appear in the database but are undocumented
-        ("", "NONE"),
-    )
+    OFF_S_H_CD_CHOICES = get_sorted_choices(look_ups.OFF_S_H_CODES)
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
         help_text='Office is sought or held code',
         choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=44),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
+        ]
     )
     bal_name = fields.CharField(
         max_length=200,
@@ -5705,17 +5839,17 @@ Populated for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="Jurisdiction of ballot measure"
     )
-    SUPP_OPP_CODE = (
-        ('S', 'SUPPORT'),
-        ('O', 'OPPOSITION'),
-        ('', 'NONE'),
-    )
+    SUP_OPP_CD_CHOICES = get_sorted_choices(look_ups.SUP_OPP_CODES)
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
-        choices=SUPP_OPP_CODE
+        choices=SUP_OPP_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
+        ]
     )
     amt_attrib = fields.DecimalField(
         max_digits=16,
@@ -5850,13 +5984,20 @@ class CvrF470Cd(CalAccessBaseModel):
         db_column="ELECT_DATE",
         help_text="Date of the general election. Required for filings in even years."
     )
+    ENTITY_CD_CHOICES = (
+        ('CAO', look_ups.CAMPAIGN_ENTITY_CODES['CAO']),
+    )
     entity_cd = fields.CharField(
         db_column="ENTITY_CD",
         blank=True,
-        choices=None,
+        choices=ENTITY_CD_CHOICES,
         max_length=3,
         help_text="The filer's entity code. The value of this column will always be "
-                  "Candidate/Office Holder (CAO) for this table."
+                  "Candidate/Office Holder (CAO) for this table.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29)
+        ]
     )
     filer_id = fields.CharField(
         db_column="FILER_ID",
@@ -5893,22 +6034,32 @@ class CvrF470Cd(CalAccessBaseModel):
         db_index=True,
         help_text="Unique filing identification number."
     )
+    FORM_TYPE_CHOICES = (
+        ('F470', CALACCESS_FORMS['F470'].description),
+    )
     form_type = fields.CharField(
         db_column="FORM_TYPE",
-        choices=None,
+        choices=FORM_TYPE_CHOICES,
         db_index=True,
         max_length=4,
         help_text="Type of Filing or Formset. The value of this column will always "
-                  "be equal to F470."
+                  "be equal to F470.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
     )
+    JURIS_CD_CHOICES = get_sorted_choices(look_ups.JURIS_CODES)
     juris_cd = fields.CharField(
         db_column="JURIS_CD",
-        choices=None,
+        choices=JURIS_CD_CHOICES,
         blank=True,
         max_length=3,
-        help_text="Office Jurisdiction Code. The legal values are Senate (SEN), Assembly (ASM), "
-                  "Board of Equalization (BOE), City (CIT), County (CTY), Local (LOC) and "
-                  "Other (OTH)."
+        help_text="Office Jurisdiction Code",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
     )
     juris_dscr = fields.CharField(
         db_column="JURIS_DSCR",
@@ -5917,12 +6068,17 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="Office jurisdiction description text reqired if the jurisdiction code "
                   "(Juris_cd) is equal to CIT, CTY, LOC, or OTH."
     )
+    OFF_S_H_CD_CHOICES = get_sorted_choices(look_ups.OFF_S_H_CODES)
     off_s_h_cd = fields.CharField(
         db_column="OFF_S_H_CD",
-        choices=None,
+        choices=OFF_S_H_CD_CHOICES,
         blank=True,
         max_length=1,
-        help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.'
+        help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=30),
+        ]
     )
     offic_dscr = fields.CharField(
         db_column="OFFIC_DSCR",
@@ -5930,20 +6086,32 @@ class CvrF470Cd(CalAccessBaseModel):
         max_length=40,
         help_text="Office sought description used if the office code is other (OTH)."
     )
+    OFFICE_CD_CODES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column="OFFICE_CD",
-        choices=look_ups.OFFICE_CODE_CHOICES,
+        choices=OFFICE_CD_CODES
         blank=True,
         max_length=3,
         help_text="Code that identifies the office being sought. See the CAL document for "
-                  "a list of valid codes."
+                  "a list of valid codes.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
+    )
+    REC_TYPE_CHOICES = (
+        ('CVR', 'Cover Page'),
     )
     rec_type = fields.CharField(
         db_column="REC_TYPE",
-        choices=None,
+        choices=REC_TYPE_CHOICES,
         blank=True,
         max_length=3,
-        help_text="Type of CAL record. This column will always contain CVR."
+        help_text="Type of CAL record. This column will always contain CVR.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
     )
     report_num = fields.CharField(
         db_column="REPORT_NUM",
