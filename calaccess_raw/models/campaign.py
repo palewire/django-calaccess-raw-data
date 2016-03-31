@@ -6089,7 +6089,7 @@ class CvrF470Cd(CalAccessBaseModel):
     OFFICE_CD_CODES = get_sorted_choices(look_ups.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column="OFFICE_CD",
-        choices=OFFICE_CD_CODES
+        choices=OFFICE_CD_CODES,
         blank=True,
         max_length=3,
         help_text="Code that identifies the office being sought. See the CAL document for "
