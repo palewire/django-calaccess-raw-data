@@ -62,3 +62,10 @@ def get_model_list():
             models.append(model)
 
     return models
+
+
+def get_sorted_choices(codes_dict):
+    """
+    Returns a tuple of tuples, sorted by the given codes_dict's key
+    """
+    return tuple(sorted(codes_dict.items(), key=lambda x: x[0]))
