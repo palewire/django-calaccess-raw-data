@@ -24,7 +24,7 @@ The categories for these tables are based on what's found in the `ReadMe <_http:
 
 **Sample:** `{{ object.get_tsv_name }} <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/{{ object.get_tsv_name }}>`_
 
-{% if object.get_documentcloud_page_urls|length > 0 %}
+{% if object.DOCUMENTCLOUD_PAGES|length > 0 %}
 Source Docs
 ^^^^^^^^^^^
 {% for doc, pages in object.docs.items %}
@@ -32,7 +32,7 @@ Source Docs
 {% for page in pages %}
 .. raw:: html
 
-    <a class="reference external image-reference" href="{{ page.0 }}"><img class='doc_page' src='{{ page.1 }}'></a>
+    <a class="reference external image-reference" href="{{ page.canonical_url }}"><img class='doc_page' src='{{ page.thumbnail_url }}' title='p. {{ page.num }}></a>
 {% endfor %}
 {% endfor %}
 {% endif %}
@@ -77,7 +77,7 @@ Look-up Codes
 {% for page in pages %}
 .. raw:: html
 
-    <a class="reference external image-reference" href="{{ page.0 }}"><img class='doc_page' src='{{ page.1 }}'></a>
+    <a class="reference external image-reference" href="{{ page.canonical_url }}"><img class='doc_page' src='{{ page.thumbnail_url }}' title='p. {{ page.num }}'></a>
 {% endfor %}
 
 {% endfor %}
