@@ -119,19 +119,20 @@ class CalAccessBaseModel(models.Model):
         else:
             return [self.__class__.UNIQUE_KEY]
 
-    def get_documentcloud_page_urls(self):
+    def get_documentcloud_pages(self):
         """
-        Return canonical and thumbnail urls for each page in the DOCUMENTCLOUD_PAGES
-        attribute (list of tuples).
+        Return a list of tuples for each page or each document in the DOCUMENTCLOUD_PAGES attr
+
+        Each tuple contains a DocumentCloud and DocPage object.
         """
-        page_url_list = []
-        thumb_url_list = []
+        page_list = []
         for dc in self.DOCUMENTCLOUD_PAGES:
             if not isinstance(dc, DocumentCloud):
                 raise TypeError("Values must be instances of DocumentCloud")
-            page_url_list.extend(dc.get_page_urls())
-            thumb_url_list.extend(dc.get_thumbnail_urls())
-        return zip(page_url_list, thumb_url_list)
+
+            page_list.extend([(dc, page) for page in dc.pages])
+
+        return page_list
 
     class Meta:
         abstract = True
@@ -140,55 +141,108 @@ class CalAccessBaseModel(models.Model):
 @deconstructible
 class DocumentCloud(object):
     """
-    A page or set of pages hosted on DocumentCloud.
+    A document hosted on DocumentCloud.
 
     Cited in our Python code and then republished in our HTML documentation.
     """
-    def __init__(self, id, start_page, end_page=None):
+    def __init__(self, id, start_page=None, end_page=None):
         self.id = id
         self.start_page = start_page
         self.end_page = end_page
 
-    def get_pages(self):
+    def _lazy_load(self):
         """
-        Return a list of all the pages in the object
+        Makes a GET /api/documents/[id].json method and assigns data in response to attrs
         """
-        if self.end_page:
-            return range(self.start_page, self.end_page+1)
+        r = requests.get(
+            'https://www.documentcloud.org/documents/{id}.json'.format(id=self.id)
+        )
+        self._metadata = json.loads(r.content.decode('utf-8'))
+        self._title = self._metadata['title']
+
+    @property
+    def title(self):
+        try:
+            self._title
+        except AttributeError:
+            self._lazy_load()
+
+        return self._title
+
+    @property
+    def canonical_url(self):
+        try:
+            self._metadata
+        except AttributeError:
+            self._lazy_load()
+
+        if self.start_page:
+            canonical_url = (
+                self._metadata['canonical_url'] +
+                '#document/p{}'.format(self.start_page)
+            )
         else:
-            return [self.start_page]
+            canonical_url = self._metadata['canonical_url']
 
-    def get_doc_data(self):
-        """
-        Return contents of response (as dict) from request to DocumentCloud
-        GET /api/documents/[id].json method.
-        """
-        r = requests.get('https://www.documentcloud.org/documents/{}.json'.format(self.id))
-        return json.loads(r.content.decode('utf-8'))
+        return canonical_url
 
-    def get_page_urls(self):
-        """
-        Return a list of canonical URLs for each page in the object.
-        """
-        url_pattern = 'https://www.documentcloud.org/documents/%(id)s/pages/%(page)s.html'
-        url_list = []
-        for page in self.get_pages():
-            url = url_pattern % dict(id=self.id, page=page)
-            url_list.append(url)
-        return url_list
+    @property
+    def thumbnail_url(self):
+        try:
+            self._metadata
+        except AttributeError:
+            self._lazy_load()
 
-    def get_thumbnail_urls(self):
-        """
-        Return a list of thumbnail URLs for each page in the object.
-        """
-        url_pattern = 'https://assets.documentcloud.org/documents/%(id)s/pages/\
-%(slug)s-p%(page)s-thumbnail.gif'
-        url_list = []
-        for page in self.get_pages():
-            split_id = self.id.split('-', 1)
-            url = url_pattern % dict(id=split_id[0], slug=split_id[1], page=page)
-            url_list.append(url)
-        return url_list
+        return self._metadata['resources']['page']['image'].format(
+                size='thumbnail',
+                page=self.start_page
+            )
+
+    @property
+    def num_pages(self):
+        if self.start_page and self.end_page:
+            num_pages = self.end_page - self.start_page + 1
+        elif self.end_page:
+            num_pages = self.end_page
+        elif self.start_page:
+            num_pages = 1
+        # ignored case: User wants to specify and start page and
+        # expects to include all subsequent pages in doc
+        else:
+            try:
+                num_pages = self._metadata['pages']
+            except AttributeError:
+                self._lazy_load()
+                num_pages = self._metadata['pages']
+
+        return num_pages
+
+    @property
+    def pages(self):
+
+        class DocPage(object):
+            def __init__(self, num, canonical_url, thumbnail_url):
+                self.num = num
+                self.canonical_url = canonical_url
+                self.thumbnail_url = thumbnail_url
+
+        canonical_url = 'https://www.documentcloud.org/documents/{id}/pages/{page}.html'
+
+        try:
+            image_url = self._metadata['resources']['page']['image']
+        except AttributeError:
+            self._lazy_load()
+            image_url = self._metadata['resources']['page']['image']
+
+        start = self.start_page or 1
+
+        return [
+            DocPage(
+                x,
+                canonical_url.format(id=self.id, page=x),
+                image_url.format(size='thumbnail', page=x)
+            ) for x in range(start, start+self.num_pages)
+        ]
 
 
 class CalAccessForm(object):
@@ -196,11 +250,15 @@ class CalAccessForm(object):
     A form used by the California Secretary of State to collection information
     which ends up in the CAL-ACCESS database
     """
-    def __init__(self, id, description, group=None, document_cloud_id=None):
+    def __init__(self, id, description, group=None, documentcloud=None):
         self.id = id
         self.description = description
         self.group = group
-        self.document_cloud_id = document_cloud_id
+        self.documentcloud = documentcloud
+
+        if self.documentcloud:
+            if not isinstance(documentcloud, DocumentCloud):
+                raise TypeError("documentcloud must be instance of DocumentCloud")
 
     def __str__(self):
         return str(self.id)
