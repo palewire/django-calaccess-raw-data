@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields, look_ups, get_sorted_choices
-from calaccess_raw.calaccess_forms import CALACCESS_FORMS
+from calaccess_raw.calaccess_forms import CALACCESS_FORMS as form_look_up
 from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -21,12 +21,6 @@ class CvrSoCd(CalAccessBaseModel):
         "FORM_TYPE",
     )
     DOCUMENTCLOUD_PAGES = [
-        # Form 400 statement of organization slate mailer organization form sample
-        DocumentCloud(id='1308004-cal-access-forms', start_page=3, end_page=7),
-        # Form 402 statement of termination form sample
-        DocumentCloud(id='1308004-cal-access-forms', start_page=21, end_page=22),
-        # Form 410 statement of organization for recipient committee form sample
-        DocumentCloud(id='1308004-cal-access-forms', start_page=25, end_page=31),
         # CAL-ACCESS record layout
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=39, end_page=41),
         # Mapping of .CAL format to CAL-ACCESS database table / fields
@@ -35,6 +29,11 @@ class CvrSoCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46, end_page=47),
         # .CAL Formate v2.01
         DocumentCloud(id='2712034-Cal-Format-201', start_page=59, end_page=61),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F400'],
+        form_look_up['F402'],
+        form_look_up['F410'],
     ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
@@ -227,11 +226,7 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F400', CALACCESS_FORMS['F400'].description),
-        ('F402', CALACCESS_FORMS['F402'].description),
-        ('F410', CALACCESS_FORMS['F410'].description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
@@ -479,8 +474,8 @@ original filing and 1 to 999 amendments.",
     )
     form_type = fields.CharField(
         choices=(
-            ('F400', CALACCESS_FORMS['F400'].description),
-            ('F410', CALACCESS_FORMS['F410'].description),
+            ('F400', form_look_up['F400'].description),
+            ('F410', form_look_up['F410'].description),
         ),
         db_column='FORM_TYPE',
         max_length=4,
@@ -1154,18 +1149,17 @@ individual the filer's last name."
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-
-        ('F511', CALACCESS_FORMS['F511'].description),
-        ('F900', CALACCESS_FORMS['F900'].description),
-        ('F425', CALACCESS_FORMS['F425'].description),
-        ('F450', CALACCESS_FORMS['F450'].description),
-        ('F401', CALACCESS_FORMS['F401'].description),
-        ('F498', CALACCESS_FORMS['F498'].description),
-        ('F465', CALACCESS_FORMS['F465'].description),
-        ('F496', CALACCESS_FORMS['F496'].description),
-        ('F461', CALACCESS_FORMS['F461'].description),
-        ('F460', CALACCESS_FORMS['F460'].description),
-        ('F497', CALACCESS_FORMS['F497'].description),
+        ('F511', form_look_up['F511'].description),
+        ('F900', form_look_up['F900'].description),
+        ('F425', form_look_up['F425'].description),
+        ('F450', form_look_up['F450'].description),
+        ('F401', form_look_up['F401'].description),
+        ('F498', form_look_up['F498'].description),
+        ('F465', form_look_up['F465'].description),
+        ('F496', form_look_up['F496'].description),
+        ('F461', form_look_up['F461'].description),
+        ('F460', form_look_up['F460'].description),
+        ('F497', form_look_up['F497'].description),
     )
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -1334,9 +1328,9 @@ values are 'Y' or 'N'."
 Report Number 000 represents an original filing. 001-999 are amendments."
     )
     REPORTNAME_CHOICES = (
-        ('450', CALACCESS_FORMS['F450'].description),
-        ('460', CALACCESS_FORMS['F460'].description),
-        ('461', CALACCESS_FORMS['F461'].description),
+        ('450', form_look_up['F450'].description),
+        ('460', form_look_up['F460'].description),
+        ('461', form_look_up['F461'].description),
     )
     reportname = fields.CharField(
         max_length=3,
@@ -1738,10 +1732,10 @@ for Senate, Assembly, or Board of Equalization races."
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('F425', CALACCESS_FORMS['F425'].description),
-        ('F450', CALACCESS_FORMS['F450'].description),
-        ('F460', CALACCESS_FORMS['F460'].description),
-        ('F465', CALACCESS_FORMS['F465'].description),
+        ('F425', form_look_up['F425'].description),
+        ('F450', form_look_up['F450'].description),
+        ('F460', form_look_up['F460'].description),
+        ('F465', form_look_up['F465'].description),
     )
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -1939,6 +1933,12 @@ class RcptCd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71, end_page=75),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29, end_page=30),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=37, end_page=41),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F401'],
+        form_look_up['F460'],
+        form_look_up['F900'],
+        form_look_up['E530'],
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2158,9 +2158,9 @@ and Form 401 Schedule A, A-1)"
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F900', CALACCESS_FORMS['F900'].description),
-        ('E530', CALACCESS_FORMS['E530'].description),
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
+        ('F900', form_look_up['F900'].description),
+        ('E530', form_look_up['E530'].description),
         ('A-1', 'Form 460: Schedule A-1, contributions transferred \
 to special election committees'),
         ('F496P3', 'Form 496 (Late independent expenditure): \
@@ -2347,7 +2347,7 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Date item received"
     )
     REC_TYPE_CHOICES = (
-        ('E530', CALACCESS_FORMS['E530'].description),
+        ('E530', form_look_up['E530'].description),
         ("RCPT", "Receipt"),
     )
     rec_type = fields.CharField(
@@ -2554,17 +2554,17 @@ original filing and 1 to 999 amendments.",
         ]
     )
     FORM_TYPE_CHOICES = (
-        ('F400', CALACCESS_FORMS['F400'].description),
-        ('F401', CALACCESS_FORMS['F401'].description),
-        ('F402', CALACCESS_FORMS['F402'].description),
-        ('F410', CALACCESS_FORMS['F410'].description),
-        ('F425', CALACCESS_FORMS['F425'].description),
-        ('F450', CALACCESS_FORMS['F450'].description),
-        ('F460', CALACCESS_FORMS['F460'].description),
-        ('F461', CALACCESS_FORMS['F461'].description),
-        ('F465', CALACCESS_FORMS['F465'].description),
-        ('F511', CALACCESS_FORMS['F511'].description),
-        ('F900', CALACCESS_FORMS['F900'].description),
+        ('F400', form_look_up['F400'].description),
+        ('F401', form_look_up['F401'].description),
+        ('F402', form_look_up['F402'].description),
+        ('F410', form_look_up['F410'].description),
+        ('F425', form_look_up['F425'].description),
+        ('F450', form_look_up['F450'].description),
+        ('F460', form_look_up['F460'].description),
+        ('F461', form_look_up['F461'].description),
+        ('F465', form_look_up['F465'].description),
+        ('F511', form_look_up['F511'].description),
+        ('F900', form_look_up['F900'].description),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
@@ -3755,7 +3755,7 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('F900', CALACCESS_FORMS['F900'].description),
+        ('F900', form_look_up['F900'].description),
         ('D', 'Form 460 (Recipient committee campaign statement): \
 Schedule D, summary of expenditure supporting/opposing other candidates, \
 measures and committees'),
@@ -4095,8 +4095,8 @@ original filing and 1 to 999 amendments.",
         ]
     )
     FORM_TYPE_CHOICES = (
-        ('F450', CALACCESS_FORMS['F450'].description),
-        ('F460', CALACCESS_FORMS['F460'].description),
+        ('F450', form_look_up['F450'].description),
+        ('F460', form_look_up['F460'].description),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
@@ -4507,7 +4507,7 @@ original filing and 1 to 999 amendments.",
         ]
     )
     FORM_TYPE_CHOICES = (
-        ('F496', CALACCESS_FORMS['F496'].description),
+        ('F496', form_look_up['F496'].description),
     )
     form_type = fields.CharField(
         max_length=4,
@@ -4959,8 +4959,8 @@ original filing and 1 to 999 amendments.",
         ]
     )
     FORM_TYPE_CHOICES = (
-        ('F501', CALACCESS_FORMS['F501'].description),
-        ('F502', CALACCESS_FORMS['F502'].description),
+        ('F501', form_look_up['F501'].description),
+        ('F502', form_look_up['F502'].description),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
@@ -6035,7 +6035,7 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="Unique filing identification number."
     )
     FORM_TYPE_CHOICES = (
-        ('F470', CALACCESS_FORMS['F470'].description),
+        ('F470', form_look_up['F470'].description),
     )
     form_type = fields.CharField(
         db_column="FORM_TYPE",
