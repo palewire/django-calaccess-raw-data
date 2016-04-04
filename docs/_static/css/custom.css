@@ -1,5 +1,16 @@
 @import url("theme.css");
 
+.doc_pages_container {
+    clear:both;
+    display:inline-block;
+}
+
+.doc_page_frame {
+    float: left;
+    text-align: center;
+    font-size: 0.8em;
+}
+
 .doc_page {
     border: 2px solid #aaa;
     -webkit-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.5);
@@ -14,4 +25,5 @@
     -webkit-box-shadow: 2px 2px 4px 4px rgba(51,153,255,0.5);
     -moz-box-shadow: 2px 2px 4px 4px rgba(51,153,255,0.5);
     box-shadow: 2px 2px 4px 4px rgba(51,153,255,0.5);
+    padding-bottom: 2px;
 }

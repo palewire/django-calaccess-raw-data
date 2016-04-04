@@ -11,7 +11,6 @@ The {{ model_count }} tab-delimited database exports published by California's S
 
 The categories for these tables are based on what's found in the `ReadMe <_http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#readme-zip>`_ file for the .ZIP database export file and the `mapping <http://django-calaccess-raw-data.californiacivicdata.org/en/latest/officialdocumentation.html#mapcalformat2fields>`_ of .CAL format to database fields. However, in cases where this official documentation was incomplete or inconsistent, we've either listed the table under whichever category is most obviously relevant or listed it under "Other".
 
-
 {% for group, model_list in group_list %}
 {{ group|capfirst }} tables
 ---------------------------
@@ -29,12 +28,22 @@ Source Docs
 ^^^^^^^^^^^
 {% for doc, pages in object.docs.items %}
 *{{ doc }}*
-{% for page in pages %}
+
+
 .. raw:: html
 
-    <a class="reference external image-reference" href="{{ page.canonical_url }}"><img class='doc_page' src='{{ page.thumbnail_url }}' title='p. {{ page.num }}></a>
+    <div class="doc_pages_container">{% for page in pages %}<div class="doc_page_frame"><a class="reference external image-reference" href="{{ page.canonical_url }}"><img class='doc_page' src='{{ page.thumbnail_url }}'></a><p>p. {{ page.num }}</p></div>{% endfor %}</div>
+
 {% endfor %}
-{% endfor %}
+{% endif %}
+{% if object.CALACCESS_FORMS|length > 0 %}
+Filing Forms
+^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="doc_pages_container">{% for form in object.CALACCESS_FORMS %}<div class="doc_page_frame"><a class="reference external image-reference" href="{{ form.documentcloud.canonical_url }}"><img class='doc_page' src='{{ form.documentcloud.thumbnail_url }}'></a><p>{{ form.id }}</p></div>{% endfor %}</div>
+
 {% endif %}
 
 Fields
@@ -74,11 +83,9 @@ Look-up Codes
 {% if field.documentcloud_pages|length > 0%}
 {% for doc, pages in field.docs.items %}
 *{{ doc }}*
-{% for page in pages %}
 .. raw:: html
 
-    <a class="reference external image-reference" href="{{ page.canonical_url }}"><img class='doc_page' src='{{ page.thumbnail_url }}' title='p. {{ page.num }}'></a>
-{% endfor %}
+    <div class="doc_pages_container">{% for page in pages %}<div class="doc_page_frame"><a class="reference external image-reference" href="{{ page.canonical_url }}"><img class='doc_page' src='{{ page.thumbnail_url }}'></a><p>p. {{ page.num }}</p></div>{% endfor %}</div>
 
 {% endfor %}
 {% endif %}
