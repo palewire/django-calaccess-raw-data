@@ -14,6 +14,7 @@ Documentation
    managementcommands
    models
    tracking
+   filingforms
    faq
    officialdocumentation
    howtocontribute
