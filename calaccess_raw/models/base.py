@@ -193,9 +193,11 @@ class DocumentCloud(object):
         except AttributeError:
             self._lazy_load()
 
+        page = self.start_page or 1
+
         return self._metadata['resources']['page']['image'].format(
                 size='thumbnail',
-                page=self.start_page
+                page=page
             )
 
     @property
