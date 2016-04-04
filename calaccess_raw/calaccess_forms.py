@@ -111,7 +111,7 @@ Campaign Statement',
             documentcloud=DocumentCloud('2781350-511-2015-01'),
         ),
     'E530': CalAccessForm(
-            'E350',
+            'E530',
             'Electronic Issue Advocacy Report',
             group='CAMPAIGN',
             documentcloud=DocumentCloud('2781349-E530-Instructions'),
