@@ -199,6 +199,24 @@ class DocumentCloud(object):
             )
 
     @property
+    def pdf_url(self):
+        try:
+            self._metadata
+        except AttributeError:
+            self._lazy_load()
+
+        return self._metadata['resources']['pdf']
+
+    @property
+    def text_url(self):
+        try:
+            self._metadata
+        except AttributeError:
+            self._lazy_load()
+
+        return self._metadata['resources']['text']
+
+    @property
     def num_pages(self):
         if self.start_page and self.end_page:
             num_pages = self.end_page - self.start_page + 1
