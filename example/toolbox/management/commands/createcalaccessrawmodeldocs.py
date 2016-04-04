@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 from django.conf import settings
 from calaccess_raw import get_model_list
