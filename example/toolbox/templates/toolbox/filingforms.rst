@@ -14,9 +14,19 @@ You can find more information about these filing forms and their instructions in
 ~~~~~~~~~~~~~
 
 {{ form.description|safe }}
+{% if form.get_models|length > 0 %}
+Tables
+^^^^^^
+Data collected via {{ form.id }} filings are written to the following tables:
+{% for model in form.get_models %}
+* `{{ model.klass_name }} </models.html#{{ model.klass_name|lower }}>`_
+{% endfor %}
+{% endif %}
+
 {% if not form.documentcloud %}
 *No PDF available.*
 {% else %}
+
 
 .. raw:: html
 

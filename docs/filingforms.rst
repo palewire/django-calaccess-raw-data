@@ -12,7 +12,18 @@ Campaign Forms
 
 E530
 ~~~~~~~~~~~~~
+
 Electronic Issue Advocacy Report
+
+Tables
+^^^^^^
+Data collected via E530 filings are written to the following tables:
+
+* `RcptCd </models.html#rcptcd>`_
+
+
+
+
 
 
 .. raw:: html
@@ -38,7 +49,18 @@ Electronic Issue Advocacy Report
 
 F400
 ~~~~~~~~~~~~~
+
 Statement of Organization (Slate Mailer Organization)
+
+Tables
+^^^^^^
+Data collected via F400 filings are written to the following tables:
+
+* `CvrSoCd </models.html#cvrsocd>`_
+
+
+
+
 
 
 .. raw:: html
@@ -64,7 +86,18 @@ Statement of Organization (Slate Mailer Organization)
 
 F401
 ~~~~~~~~~~~~~
+
 Slate Mailer Organization Campaign Statement
+
+Tables
+^^^^^^
+Data collected via F401 filings are written to the following tables:
+
+* `RcptCd </models.html#rcptcd>`_
+
+
+
+
 
 
 .. raw:: html
@@ -90,7 +123,18 @@ Slate Mailer Organization Campaign Statement
 
 F402
 ~~~~~~~~~~~~~
+
 Statement of Termination (Slate Mailer Organization)
+
+Tables
+^^^^^^
+Data collected via F402 filings are written to the following tables:
+
+* `CvrSoCd </models.html#cvrsocd>`_
+
+
+
+
 
 
 .. raw:: html
@@ -116,7 +160,18 @@ Statement of Termination (Slate Mailer Organization)
 
 F410
 ~~~~~~~~~~~~~
+
 Statement of Organization Recipient Committee
+
+Tables
+^^^^^^
+Data collected via F410 filings are written to the following tables:
+
+* `CvrSoCd </models.html#cvrsocd>`_
+
+
+
+
 
 
 .. raw:: html
@@ -142,7 +197,11 @@ Statement of Organization Recipient Committee
 
 F425
 ~~~~~~~~~~~~~
+
 Semi-Annual Statement of no Activity
+
+
+
 
 
 .. raw:: html
@@ -168,7 +227,11 @@ Semi-Annual Statement of no Activity
 
 F450
 ~~~~~~~~~~~~~
+
 Recipient Committee Campaign Disclosure Statement - Short Form
+
+
+
 
 
 .. raw:: html
@@ -194,7 +257,18 @@ Recipient Committee Campaign Disclosure Statement - Short Form
 
 F460
 ~~~~~~~~~~~~~
+
 Recipient Committee Campaign Statement
+
+Tables
+^^^^^^
+Data collected via F460 filings are written to the following tables:
+
+* `RcptCd </models.html#rcptcd>`_
+
+
+
+
 
 
 .. raw:: html
@@ -220,7 +294,11 @@ Recipient Committee Campaign Statement
 
 F461
 ~~~~~~~~~~~~~
+
 Independent Expenditure Committee & Major Donor Committee Campaign Statement
+
+
+
 
 
 .. raw:: html
@@ -246,7 +324,11 @@ Independent Expenditure Committee & Major Donor Committee Campaign Statement
 
 F465
 ~~~~~~~~~~~~~
+
 Supplemental Independent Expenditure Report
+
+
+
 
 
 .. raw:: html
@@ -272,7 +354,11 @@ Supplemental Independent Expenditure Report
 
 F470
 ~~~~~~~~~~~~~
+
 Officeholder and Candidate Campaign Statement, Short Form
+
+
+
 
 
 .. raw:: html
@@ -298,14 +384,21 @@ Officeholder and Candidate Campaign Statement, Short Form
 
 F470S
 ~~~~~~~~~~~~~
+
 Officeholder and Candidate Campaign Statement (Supplement)
+
+
 
 *No PDF available.*
 
 
 F495
 ~~~~~~~~~~~~~
+
 Supplemental Pre-Election Campaign Statement
+
+
+
 
 
 .. raw:: html
@@ -331,7 +424,11 @@ Supplemental Pre-Election Campaign Statement
 
 F496
 ~~~~~~~~~~~~~
+
 Late Independent Expenditure Report
+
+
+
 
 
 .. raw:: html
@@ -357,7 +454,11 @@ Late Independent Expenditure Report
 
 F497
 ~~~~~~~~~~~~~
+
 Late Contribution Report
+
+
+
 
 
 .. raw:: html
@@ -383,7 +484,11 @@ Late Contribution Report
 
 F498
 ~~~~~~~~~~~~~
+
 Slate Mailer Late Payment Report
+
+
+
 
 
 .. raw:: html
@@ -409,7 +514,11 @@ Slate Mailer Late Payment Report
 
 F501
 ~~~~~~~~~~~~~
+
 Candidate Intention Statement
+
+
+
 
 
 .. raw:: html
@@ -435,14 +544,21 @@ Candidate Intention Statement
 
 F502
 ~~~~~~~~~~~~~
+
 Campaign bank account statement
+
+
 
 *No PDF available.*
 
 
 F511
 ~~~~~~~~~~~~~
+
 Paid Spokesperson Report
+
+
+
 
 
 .. raw:: html
@@ -468,7 +584,17 @@ Paid Spokesperson Report
 
 F900
 ~~~~~~~~~~~~~
+
 Public employee's retirement board, candidate campaign statement
+
+Tables
+^^^^^^
+Data collected via F900 filings are written to the following tables:
+
+* `RcptCd </models.html#rcptcd>`_
+
+
+
 
 *No PDF available.*
 
@@ -480,7 +606,11 @@ Lobbyist Forms
 
 F601
 ~~~~~~~~~~~~~
+
 Lobbying Firm Registration Statement
+
+
+
 
 
 .. raw:: html
@@ -506,7 +636,11 @@ Lobbying Firm Registration Statement
 
 F602
 ~~~~~~~~~~~~~
+
 Lobbying Firm Activity Authorization
+
+
+
 
 
 .. raw:: html
@@ -532,7 +666,11 @@ Lobbying Firm Activity Authorization
 
 F603
 ~~~~~~~~~~~~~
+
 Lobbyist Employer or Lobbying Coalition Registration Statement
+
+
+
 
 
 .. raw:: html
@@ -558,7 +696,11 @@ Lobbyist Employer or Lobbying Coalition Registration Statement
 
 F604
 ~~~~~~~~~~~~~
+
 Lobbyist Certification Statement
+
+
+
 
 
 .. raw:: html
@@ -584,7 +726,11 @@ Lobbyist Certification Statement
 
 F605
 ~~~~~~~~~~~~~
+
 Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition
+
+
+
 
 
 .. raw:: html
@@ -610,7 +756,11 @@ Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition
 
 F606
 ~~~~~~~~~~~~~
+
 Notice of Termination
+
+
+
 
 
 .. raw:: html
@@ -636,7 +786,11 @@ Notice of Termination
 
 F607
 ~~~~~~~~~~~~~
+
 Notice of Withdrawal
+
+
+
 
 
 .. raw:: html
@@ -662,7 +816,11 @@ Notice of Withdrawal
 
 F615
 ~~~~~~~~~~~~~
+
 Lobbyist Report
+
+
+
 
 
 .. raw:: html
@@ -688,7 +846,11 @@ Lobbyist Report
 
 F625
 ~~~~~~~~~~~~~
+
 Report of Lobbying Firm
+
+
+
 
 
 .. raw:: html
@@ -714,7 +876,11 @@ Report of Lobbying Firm
 
 F630
 ~~~~~~~~~~~~~
+
 Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) 
+
+
+
 
 
 .. raw:: html
@@ -740,7 +906,11 @@ Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635)
 
 F635
 ~~~~~~~~~~~~~
+
 Report of Lobbyist Employer or Report of Lobbying Coalition
+
+
+
 
 
 .. raw:: html
@@ -766,7 +936,11 @@ Report of Lobbyist Employer or Report of Lobbying Coalition
 
 F635C
 ~~~~~~~~~~~~~
+
 Payments Received by Lobbying Coalitions
+
+
+
 
 
 .. raw:: html
@@ -792,7 +966,11 @@ Payments Received by Lobbying Coalitions
 
 F640
 ~~~~~~~~~~~~~
+
 Governmental Agencies Reporting (Attachment to Form 635 or Form 645)
+
+
+
 
 
 .. raw:: html
@@ -818,7 +996,11 @@ Governmental Agencies Reporting (Attachment to Form 635 or Form 645)
 
 F645
 ~~~~~~~~~~~~~
+
 Report of Person Spending $5,000 or More
+
+
+
 
 
 .. raw:: html
@@ -844,7 +1026,11 @@ Report of Person Spending $5,000 or More
 
 F690
 ~~~~~~~~~~~~~
+
 Amendment to Lobbying Disclosure Report
+
+
+
 
 
 .. raw:: html

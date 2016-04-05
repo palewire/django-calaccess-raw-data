@@ -6,7 +6,7 @@ import requests
 import json
 from django.db import models
 from django.utils.deconstruct import deconstructible
-from calaccess_raw import managers
+from calaccess_raw import managers, get_model_list
 
 
 class CalAccessBaseModel(models.Model):
@@ -279,6 +279,19 @@ class CalAccessForm(object):
         if self.documentcloud:
             if not isinstance(documentcloud, DocumentCloud):
                 raise TypeError("documentcloud must be instance of DocumentCloud")
+
+    def get_models(self):
+        models = []
+        for model in get_model_list():
+            try:
+                model.CALACCESS_FORMS
+            except AttributeError:
+                pass
+            else:
+                if self in model.CALACCESS_FORMS:
+                    models.append(model)
+
+        return models
 
     def __str__(self):
         return str(self.id)
