@@ -231,15 +231,7 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         max_length=4,
         db_column="FORM_TYPE",
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule',
-        documentcloud_pages=[
-            # Form 400 statement of organization slate mailer organization form sample
-            DocumentCloud(id='1308004-cal-access-forms', start_page=3, end_page=7),
-            # Form 402 statement of termination form sample
-            DocumentCloud(id='1308004-cal-access-forms', start_page=21, end_page=22),
-            # Form 410 statement of organization for recipient committee form sample
-            DocumentCloud(id='1308004-cal-access-forms', start_page=25, end_page=31),
-        ]
+        help_text='Name of the source filing form or schedule'
     )
     genpurp_cb = fields.CharField(
         max_length=1,

@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from calaccess_raw.models.base import DocumentCloud
-
 """
 Includes dicts of cannonical look-up / choice field values (e.g., 'codes' and 'types').
 
@@ -23,6 +21,7 @@ pages in our models, like so:
     documentcloud_pages=look_ups.DOCS['office_codes'],
 
 """
+from calaccess_raw.models.base import DocumentCloud
 
 DOCS = {
     'entity_codes': [
