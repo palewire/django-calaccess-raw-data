@@ -36,7 +36,7 @@ terminate the organization.'
             documentcloud=DocumentCloud('2781368-410-2016-01'),
             description='Form 410 must be filed within 10 days of receiving \
 $2,000 in contributions. If the committee has not yet reached the $2,000 \
-threshold, the  not yet qualified  box should be checked.'
+threshold, the not yet qualified box should be checked.'
         ),
     'F425': CalAccessForm(
             'F425',
@@ -323,7 +323,7 @@ payment received from the members of a coalition.'
             documentcloud=DocumentCloud('2781337-640-1993'),
             description='Form 640 is filed by a state or local governmental agency \
 which qualifies as a lobbyist employer, or $5,000 filer. The attachment replaces \
-Section D of Form 635 and Section B of Form 645 (both labeled  Other Payments to \
+Section D of Form 635 and Section B of Form 645 (both labeled Other Payments to \
 Influence Legislative or Administrative Action ). It is filed in conjunction with \
 either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).'
         ),
