@@ -231,7 +231,11 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         max_length=4,
         db_column="FORM_TYPE",
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
+        ]
     )
     genpurp_cb = fields.CharField(
         max_length=1,
