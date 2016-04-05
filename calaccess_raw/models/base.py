@@ -270,8 +270,9 @@ class CalAccessForm(object):
     A form used by the California Secretary of State to collection information
     which ends up in the CAL-ACCESS database
     """
-    def __init__(self, id, description, group=None, documentcloud=None):
+    def __init__(self, id, name, description=None, group=None, documentcloud=None):
         self.id = id
+        self.name = name
         self.description = description
         self.group = group
         self.documentcloud = documentcloud

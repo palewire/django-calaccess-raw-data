@@ -672,22 +672,22 @@ Look-up Codes
     
         <tr>
             <td>F425</td>
-            <td>Semi-Annual Statement of no Activity</td>
+            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
+            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
         </tr>
     
     </tbody>
@@ -1576,12 +1576,12 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Statement of Organization Recipient Committee</td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the  not yet qualified  box should be checked.</td>
         </tr>
     
     </tbody>
@@ -2416,57 +2416,57 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
         </tr>
     
         <tr>
             <td>F401</td>
-            <td>Slate Mailer Organization Campaign Statement</td>
+            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
+            <td>Form 402 is filed by slate mailer organizations to terminate the organization.</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Statement of Organization Recipient Committee</td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the  not yet qualified  box should be checked.</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Semi-Annual Statement of no Activity</td>
+            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
+            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
         </tr>
     
         <tr>
             <td>F511</td>
-            <td>Paid Spokesperson Report</td>
+            <td>Form 511 is filed by committees that make expenditures totaling $5,000 or more to an individual for his or her appearance in a printed, televised, or radio advertisement, or in a telephone message, to support or oppose the qualification, passage, or defeat of a state or local ballot measure.</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>None</td>
         </tr>
     
     </tbody>
@@ -3608,57 +3608,57 @@ Look-up Codes
     
         <tr>
             <td>F511</td>
-            <td>Paid Spokesperson Report</td>
+            <td>Form 511 is filed by committees that make expenditures totaling $5,000 or more to an individual for his or her appearance in a printed, televised, or radio advertisement, or in a telephone message, to support or oppose the qualification, passage, or defeat of a state or local ballot measure.</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>None</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Semi-Annual Statement of no Activity</td>
+            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
         </tr>
     
         <tr>
             <td>F401</td>
-            <td>Slate Mailer Organization Campaign Statement</td>
+            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
         </tr>
     
         <tr>
             <td>F498</td>
-            <td>Slate Mailer Late Payment Report</td>
+            <td>Form 498 is filed by a slate mailer organization upon receipt of a late payment.</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
+            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
         </tr>
     
         <tr>
             <td>F496</td>
-            <td>Late Independent Expenditure Report</td>
+            <td>Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
         <tr>
             <td>F497</td>
-            <td>Late Contribution Report</td>
+            <td>Form 497 is filed by state and local committees making or receiving contribution(s) whose combined total is $1,000 or more in the 90 days before an election, committees reporting contributions of $5,000 or more in connection with a state ballot measure, and state candidates as well as state ballot measure committees that receive $5,000 or more at any time other than a 90-day election cycle.</td>
         </tr>
     
     </tbody>
@@ -4059,17 +4059,17 @@ Look-up Codes
     
         <tr>
             <td>450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
         </tr>
     
         <tr>
             <td>460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
         <tr>
             <td>461</td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
         </tr>
     
     </tbody>
@@ -4697,7 +4697,7 @@ Look-up Codes
     
         <tr>
             <td>F470</td>
-            <td>Officeholder and Candidate Campaign Statement, Short Form</td>
+            <td>Form 470 is filed by officeholders and candidates who do not have a controlled committee, do not receive contributions totaling $2,000 or more during the calendar year, and do not spend $2,000 or more during the calendar year.</td>
         </tr>
     
     </tbody>
@@ -5093,6 +5093,7 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
+CvrSoCd contains data collected from the following filing forms:
 
 .. raw:: html
 
@@ -5730,10 +5731,16 @@ Look-up Codes
 *form_type*
 
 
-*CAL-ACCESS: Forms*
+*Cal-Format-201*
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p3-thumbnail.gif'></a><p>p. 3</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p4-thumbnail.gif'></a><p>p. 4</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/5.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p5-thumbnail.gif'></a><p>p. 5</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p6-thumbnail.gif'></a><p>p. 6</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/7.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p7-thumbnail.gif'></a><p>p. 7</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p21-thumbnail.gif'></a><p>p. 21</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p22-thumbnail.gif'></a><p>p. 22</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p25-thumbnail.gif'></a><p>p. 25</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p26-thumbnail.gif'></a><p>p. 26</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/27.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p27-thumbnail.gif'></a><p>p. 27</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p28-thumbnail.gif'></a><p>p. 28</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p29-thumbnail.gif'></a><p>p. 29</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p30-thumbnail.gif'></a><p>p. 30</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/1308004-cal-access-forms/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/1308004/pages/cal-access-forms-p31-thumbnail.gif'></a><p>p. 31</p></div></div>
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
+
+
+*Cal-Format-1-05-02*
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
 
 
 
@@ -5751,17 +5758,17 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
+            <td>Form 402 is filed by slate mailer organizations to terminate the organization.</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Statement of Organization Recipient Committee</td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the  not yet qualified  box should be checked.</td>
         </tr>
     
     </tbody>
@@ -8263,7 +8270,7 @@ Look-up Codes
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>None</td>
         </tr>
     
         <tr>
@@ -8975,12 +8982,12 @@ Look-up Codes
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
     </tbody>
@@ -9579,12 +9586,12 @@ Look-up Codes
     
         <tr>
             <td>F501</td>
-            <td>Candidate Intention Statement</td>
+            <td>Form 501 is filed each election by candidates for state or local office.</td>
         </tr>
     
         <tr>
             <td>F502</td>
-            <td>Campaign bank account statement</td>
+            <td>Form 502 must be filed within 10 days of opening a campaign bank account at a financial institution in California.</td>
         </tr>
     
     </tbody>
@@ -11997,6 +12004,7 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
+RcptCd contains data collected from the following filing forms:
 
 .. raw:: html
 
@@ -12735,32 +12743,32 @@ Look-up Codes
     
         <tr>
             <td>F401</td>
-            <td>Slate Mailer Organization Campaign Statement</td>
+            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>None</td>
         </tr>
     
         <tr>
             <td>E530</td>
-            <td>Electronic Issue Advocacy Report</td>
+            <td>On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>None</td>
         </tr>
     
         <tr>
             <td>E530</td>
-            <td>Electronic Issue Advocacy Report</td>
+            <td>On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.</td>
         </tr>
     
         <tr>
@@ -13152,7 +13160,7 @@ Look-up Codes
     
         <tr>
             <td>E530</td>
-            <td>Electronic Issue Advocacy Report</td>
+            <td>On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.</td>
         </tr>
     
         <tr>
@@ -14413,7 +14421,7 @@ Look-up Codes
     
         <tr>
             <td>F496</td>
-            <td>Late Independent Expenditure Report</td>
+            <td>Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.</td>
         </tr>
     
     </tbody>

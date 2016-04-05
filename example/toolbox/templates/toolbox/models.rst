@@ -39,6 +39,7 @@ Source Docs
 {% if object.CALACCESS_FORMS|length > 0 %}
 Filing Forms
 ^^^^^^^^^^^^
+{{ object.klass_name }} contains data collected from the following filing forms:
 
 .. raw:: html
 

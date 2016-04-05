@@ -1,9 +1,11 @@
 Filing Forms
 ============
 
-The data in CAL-ACCESS originates from forms filed by public office candidates, campaign committees, lobbyists and lobbyist employers. Those forms are describe below.
+The data in CAL-ACCESS originates from forms filed by public office candidates, campaign committees, lobbyists and lobbyist employers. These filing forms are outlined below.
 
-You can find more information about these filing forms and their instructions in the `Forms <http://www.fppc.ca.gov/forms.html>`_ section of the California Fair Political Practices Commission (FPPC) website and in the `Campaign Finance <http://www.sos.ca.gov/campaign-lobbying/campaign-disclosure-and-requirements>`_ and `Lobbying Activities <http://www.sos.ca.gov/campaign-lobbying/lobbying-disclosure-requirements>`_ sections of the California Secretary of State's website. 
+Much of the documents and descriptions included here were gathered from the `Forms <http://www.fppc.ca.gov/forms.html>`_ section of the California Fair Political Practices Commission (FPPC) website, where you can find even more detailed filing instructions and requirements.
+
+Similar documentation and background info can also be found in the `Campaign Finance <http://www.sos.ca.gov/campaign-lobbying/campaign-disclosure-and-requirements>`_ and `Lobbying Activities <http://www.sos.ca.gov/campaign-lobbying/lobbying-disclosure-requirements>`_ sections of the California Secretary of State's website.
 
 {% for group, form_list in group_list %}
 {{ group|title }} Forms
@@ -12,6 +14,8 @@ You can find more information about these filing forms and their instructions in
 {% for form in form_list %}
 {{ form.id }}
 ~~~~~~~~~~~~~
+
+{{ form.name|safe }}
 
 {{ form.description|safe }}
 {% if form.get_models|length > 0 %}
