@@ -19,8 +19,8 @@ Electronic Issue Advocacy Report
 
 On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.
 
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via E530 filings are written to the following tables:
 
 * `RcptCd </models.html#rcptcd>`_
@@ -28,6 +28,8 @@ Data collected via E530 filings are written to the following tables:
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -58,8 +60,8 @@ Statement of Organization (Slate Mailer Organization)
 
 Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.
 
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via F400 filings are written to the following tables:
 
 * `CvrSoCd </models.html#cvrsocd>`_
@@ -67,6 +69,8 @@ Data collected via F400 filings are written to the following tables:
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -97,8 +101,8 @@ Slate Mailer Organization Campaign Statement
 
 Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.
 
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via F401 filings are written to the following tables:
 
 * `RcptCd </models.html#rcptcd>`_
@@ -106,6 +110,8 @@ Data collected via F401 filings are written to the following tables:
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -136,8 +142,8 @@ Statement of Termination (Slate Mailer Organization)
 
 Form 402 is filed by slate mailer organizations to terminate the organization.
 
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via F402 filings are written to the following tables:
 
 * `CvrSoCd </models.html#cvrsocd>`_
@@ -145,6 +151,8 @@ Data collected via F402 filings are written to the following tables:
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -173,10 +181,10 @@ F410
 
 Statement of Organization Recipient Committee
 
-Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the  not yet qualified  box should be checked.
+Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.
 
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via F410 filings are written to the following tables:
 
 * `CvrSoCd </models.html#cvrsocd>`_
@@ -184,6 +192,8 @@ Data collected via F410 filings are written to the following tables:
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -216,6 +226,8 @@ Form 425 is filed by recipient committees that have not received any contributio
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -248,6 +260,8 @@ Form 450 is filed by recipient committees that meet certain specific criteria li
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -278,8 +292,8 @@ Recipient Committee Campaign Statement
 
 Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.
 
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via F460 filings are written to the following tables:
 
 * `RcptCd </models.html#rcptcd>`_
@@ -287,6 +301,8 @@ Data collected via F460 filings are written to the following tables:
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -319,6 +335,8 @@ Form 461 is filed by major donors, independent expenditure committees, and multi
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -351,6 +369,8 @@ Form 465 is filed by officeholders, candidates, recipient committees, major dono
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -383,6 +403,8 @@ Form 470 is filed by officeholders and candidates who do not have a controlled c
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -415,6 +437,8 @@ Form 495 is filed by recipient committees that make contributions totaling $10,0
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -447,6 +471,8 @@ Form 496 is filed by committees that make independent expenditures whose combine
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -479,6 +505,8 @@ Form 497 is filed by state and local committees making or receiving contribution
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -511,6 +539,8 @@ Form 498 is filed by a slate mailer organization upon receipt of a late payment.
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -543,6 +573,8 @@ Form 501 is filed each election by candidates for state or local office.
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -587,6 +619,8 @@ Form 511 is filed by committees that make expenditures totaling $5,000 or more t
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -617,8 +651,8 @@ Public employee's retirement board, candidate campaign statement
 
 None
 
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via F900 filings are written to the following tables:
 
 * `RcptCd </models.html#rcptcd>`_
@@ -643,6 +677,8 @@ Form 601 is filed on a biennial basis by a lobbying firm of individual contract 
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -675,6 +711,8 @@ Form 602 is an authorization form filed by each person who employs or contracts 
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -707,6 +745,8 @@ Form 603 is a registration statement filed by registered lobbyists employers or 
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -739,6 +779,8 @@ Form 604 is the certification statement filed by an individual who qualifies as 
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -771,6 +813,8 @@ Form 605 is the standard amendment form used to amend any previously-filed regis
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -803,6 +847,8 @@ Form 606 is filed by any lobbying firm, registered lobbyist employer, lobbying c
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -835,6 +881,8 @@ Form 607 is filed by a lobbying firm or lobbyist wishing to withdraw the filed r
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -867,6 +915,8 @@ Form 615 is the quarterly disclosure statement completed by the in-house lobbyis
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -899,6 +949,8 @@ Form 625 is the quarterly disclosure statement filed by a lobbying firm (includi
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -931,6 +983,8 @@ An attachment to the quarterly disclosure report filed by a lobbying firm or lob
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -963,6 +1017,8 @@ Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -995,6 +1051,8 @@ Form 635-C is filed by a lobbying coalition as an attachment to the Form 635 (Re
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -1023,10 +1081,12 @@ F640
 
 Governmental Agencies Reporting (Attachment to Form 635 or Form 645)
 
-Form 640 is filed by a state or local governmental agency which qualifies as a lobbyist employer, or $5,000 filer. The attachment replaces Section D of Form 635 and Section B of Form 645 (both labeled  Other Payments to Influence Legislative or Administrative Action ). It is filed in conjunction with either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).
+Form 640 is filed by a state or local governmental agency which qualifies as a lobbyist employer, or $5,000 filer. The attachment replaces Section D of Form 635 and Section B of Form 645 (both labeled Other Payments to Influence Legislative or Administrative Action ). It is filed in conjunction with either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -1059,6 +1119,8 @@ Form 645 is the quarterly disclosure document filed by a $5,000 filer (person wh
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -1091,6 +1153,8 @@ Form 690 is filed by a lobbying firm, lobbyist employer, lobbying coalition, $5,
 
 
 
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html

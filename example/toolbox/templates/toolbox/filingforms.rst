@@ -19,8 +19,8 @@ Similar documentation and background info can also be found in the `Campaign Fin
 
 {{ form.description|safe }}
 {% if form.get_models|length > 0 %}
-Tables
-^^^^^^
+Database Tables
+^^^^^^^^^^^^^^^
 Data collected via {{ form.id }} filings are written to the following tables:
 {% for model in form.get_models %}
 * `{{ model.klass_name }} </models.html#{{ model.klass_name|lower }}>`_
@@ -30,6 +30,8 @@ Data collected via {{ form.id }} filings are written to the following tables:
 {% if not form.documentcloud %}
 *No PDF available.*
 {% else %}
+Example Form
+^^^^^^^^^^^^
 
 
 .. raw:: html
