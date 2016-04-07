@@ -25,8 +25,6 @@ for the purposes of unit testing."
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
-        print self.tsv_dir
-
         with open(self.data_dir + "/sampled_version.txt", "r") as f:
             release_datetime = f.readline()
             size = f.readline()
