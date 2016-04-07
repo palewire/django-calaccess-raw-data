@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
+from calaccess_raw.calaccess_forms import CALACCESS_FORMS as form_look_up
 from django.db.models import ForeignKey
 from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel, DocumentCloud
@@ -184,6 +185,30 @@ class EfsFilingLogCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50)
     ]
+    CALACCESS_FORMS = [
+        form_look_up['F400'],
+        form_look_up['F401'],
+        form_look_up['F402'],
+        form_look_up['F410'],
+        form_look_up['F425'],
+        form_look_up['F450'],
+        form_look_up['F460'],
+        form_look_up['F461'],
+        form_look_up['F465'],
+        form_look_up['F496'],
+        form_look_up['F497'],
+        form_look_up['F498'],
+        form_look_up['F601'],
+        form_look_up['F602'],
+        form_look_up['F603'],
+        form_look_up['F604'],
+        form_look_up['F606'],
+        form_look_up['F607'],
+        form_look_up['F615'],
+        form_look_up['F625'],
+        form_look_up['F635'],
+        form_look_up['F645'],
+    ]
     filing_date = fields.DateTimeField(
         db_column='FILING_DATE',
         null=True,
@@ -206,30 +231,8 @@ class EfsFilingLogCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    FORM_TYPE_CHOICES = (
+    FORM_TYPE_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
         ('BADFORMAT 253', ''),
-        ('F400', ''),
-        ('F401', ''),
-        ('F402', ''),
-        ('F410', ''),
-        ('F425', ''),
-        ('F450', ''),
-        ('F460', ''),
-        ('F461', ''),
-        ('F465', ''),
-        ('F496', ''),
-        ('F497', ''),
-        ('F498', ''),
-        ('F601', ''),
-        ('F602', ''),
-        ('F603', ''),
-        ('F604', ''),
-        ('F606', ''),
-        ('F607', ''),
-        ('F615', ''),
-        ('F625', ''),
-        ('F635', ''),
-        ('F645', ''),
         ('form', ''),
     )
     form_type = fields.CharField(
@@ -720,9 +723,9 @@ level of activity",
         (16011, 'UNKNOWN'),
         (16012, 'NO PARTY PREFERENCE'),
         (16013, 'AMERICANS ELECT'),
+        (16020, 'PEACE AND FREEDOM'),
         # The codes below occur in the database but are
         # undocumented in the lookup table
-        (16020, 'PEACE AND FREEDOM'),
         (16014, 'UNKNOWN'),
         (0, 'UNKNOWN'),
         (None, 'NONE'),

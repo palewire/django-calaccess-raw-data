@@ -62,6 +62,47 @@ Source Docs
 
 
 
+Filing Forms
+^^^^^^^^^^^^
+Cvr2CampaignDisclosureCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f425">F425</a></td>
+            <td>Semi-Annual Statement of no Activity</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 Fields
 ^^^^^^
@@ -435,21 +476,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/23.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p23-thumbnail.gif'></a><p>p. 23</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/24.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p24-thumbnail.gif'></a><p>p. 24</p></div></div>
+
 
 
 
@@ -533,21 +578,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/24.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p24-thumbnail.gif'></a><p>p. 24</p></div></div>
+
 
 
 
@@ -646,15 +695,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p31-thumbnail.gif'></a><p>p. 31</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/23.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p23-thumbnail.gif'></a><p>p. 23</p></div></div>
+
 
 
 
@@ -698,21 +750,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/33.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p33-thumbnail.gif'></a><p>p. 33</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/24.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p24-thumbnail.gif'></a><p>p. 24</p></div></div>
+
 
 
 
@@ -776,21 +832,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/34.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p34-thumbnail.gif'></a><p>p. 34</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/24.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p24-thumbnail.gif'></a><p>p. 24</p></div></div>
+
 
 
 
@@ -839,21 +899,25 @@ Look-up Codes
 
 
 *Cal-Errata-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -1032,15 +1096,18 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/41.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p41-thumbnail.gif'></a><p>p. 41</p></div></div>
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
+
 
 
 
@@ -1069,15 +1136,18 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/41.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p41-thumbnail.gif'></a><p>p. 41</p></div></div>
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
+
 
 
 
@@ -1165,6 +1235,37 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/48.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p48-thumbnail.gif'></a><p>p. 48</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/49.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p49-thumbnail.gif'></a><p>p. 49</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+Cvr2SoCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f400">F400</a></td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f410">F410</a></td>
+            <td>Statement of Organization Recipient Committee</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -1495,27 +1596,32 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/38.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p38-thumbnail.gif'></a><p>p. 38</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p58-thumbnail.gif'></a><p>p. 58</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/45.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p45-thumbnail.gif'></a><p>p. 45</p></div></div>
+
 
 
 
@@ -1544,21 +1650,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/38.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p38-thumbnail.gif'></a><p>p. 38</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p58-thumbnail.gif'></a><p>p. 58</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/45.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p45-thumbnail.gif'></a><p>p. 45</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
+
 
 
 
@@ -1581,7 +1691,7 @@ Look-up Codes
     
         <tr>
             <td>F410</td>
-            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the  not yet qualified  box should be checked.</td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
         </tr>
     
     </tbody>
@@ -1592,21 +1702,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/38.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p38-thumbnail.gif'></a><p>p. 38</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/62.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p62-thumbnail.gif'></a><p>p. 62</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/48.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p48-thumbnail.gif'></a><p>p. 48</p></div></div>
+
 
 
 
@@ -1685,15 +1799,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/62.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p62-thumbnail.gif'></a><p>p. 62</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/48.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p48-thumbnail.gif'></a><p>p. 48</p></div></div>
+
 
 
 
@@ -1782,21 +1899,25 @@ Look-up Codes
 
 
 *Cal-Errata-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -1975,21 +2096,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/63.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p63-thumbnail.gif'></a><p>p. 63</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/49.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p49-thumbnail.gif'></a><p>p. 49</p></div></div>
+
 
 
 
@@ -2053,27 +2178,32 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/63.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p63-thumbnail.gif'></a><p>p. 63</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/49.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p49-thumbnail.gif'></a><p>p. 49</p></div></div>
+
 
 
 
@@ -2107,27 +2237,32 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/40.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p40-thumbnail.gif'></a><p>p. 40</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/49.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p49-thumbnail.gif'></a><p>p. 49</p></div></div>
+
 
 
 
@@ -2203,6 +2338,82 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p25-thumbnail.gif'></a><p>p. 25</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/50.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p50-thumbnail.gif'></a><p>p. 50</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+Cvr3VerificationInfoCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f400">F400</a></td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f402">F402</a></td>
+            <td>Statement of Termination (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f410">F410</a></td>
+            <td>Statement of Organization Recipient Committee</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f425">F425</a></td>
+            <td>Semi-Annual Statement of no Activity</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f461">F461</a></td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f511">F511</a></td>
+            <td>Paid Spokesperson Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f900">F900</a></td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -2353,15 +2564,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p28-thumbnail.gif'></a><p>p. 28</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p25-thumbnail.gif'></a><p>p. 25</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/50.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p50-thumbnail.gif'></a><p>p. 50</p></div></div>
+
 
 
 
@@ -2390,15 +2604,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/50.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p50-thumbnail.gif'></a><p>p. 50</p></div></div>
+
 
 
 
@@ -2431,7 +2648,7 @@ Look-up Codes
     
         <tr>
             <td>F410</td>
-            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the  not yet qualified  box should be checked.</td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
         </tr>
     
         <tr>
@@ -2477,15 +2694,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/34.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p34-thumbnail.gif'></a><p>p. 34</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p25-thumbnail.gif'></a><p>p. 25</p></div></div>
+
 
 
 
@@ -2624,6 +2844,82 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p18-thumbnail.gif'></a><p>p. 18</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p19-thumbnail.gif'></a><p>p. 19</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p20-thumbnail.gif'></a><p>p. 20</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p21-thumbnail.gif'></a><p>p. 21</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+CvrCampaignDisclosureCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f425">F425</a></td>
+            <td>Semi-Annual Statement of no Activity</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f461">F461</a></td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f496">F496</a></td>
+            <td>Late Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f498">F498</a></td>
+            <td>Slate Mailer Late Payment Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f497">F497</a></td>
+            <td>Late Contribution Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f511">F511</a></td>
+            <td>Paid Spokesperson Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f900">F900</a></td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -3431,21 +3727,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/24.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p24-thumbnail.gif'></a><p>p. 24</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p19-thumbnail.gif'></a><p>p. 19</p></div></div>
+
 
 
 
@@ -3489,21 +3789,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p6-thumbnail.gif'></a><p>p. 6</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p18-thumbnail.gif'></a><p>p. 18</p></div></div>
+
 
 
 
@@ -3582,15 +3886,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p18-thumbnail.gif'></a><p>p. 18</p></div></div>
+
 
 
 
@@ -3607,13 +3914,8 @@ Look-up Codes
     <tbody valign="top">
     
         <tr>
-            <td>F511</td>
-            <td>Form 511 is filed by committees that make expenditures totaling $5,000 or more to an individual for his or her appearance in a printed, televised, or radio advertisement, or in a telephone message, to support or oppose the qualification, passage, or defeat of a state or local ballot measure.</td>
-        </tr>
-    
-        <tr>
-            <td>F900</td>
-            <td>None</td>
+            <td>F401</td>
+            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
         </tr>
     
         <tr>
@@ -3627,13 +3929,13 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F401</td>
-            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
+            <td>F460</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
         <tr>
-            <td>F498</td>
-            <td>Form 498 is filed by a slate mailer organization upon receipt of a late payment.</td>
+            <td>F461</td>
+            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
         </tr>
     
         <tr>
@@ -3647,18 +3949,23 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F461</td>
-            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
-        </tr>
-    
-        <tr>
-            <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>F498</td>
+            <td>Form 498 is filed by a slate mailer organization upon receipt of a late payment.</td>
         </tr>
     
         <tr>
             <td>F497</td>
             <td>Form 497 is filed by state and local committees making or receiving contribution(s) whose combined total is $1,000 or more in the 90 days before an election, committees reporting contributions of $5,000 or more in connection with a state ballot measure, and state candidates as well as state ballot measure committees that receive $5,000 or more at any time other than a 90-day election cycle.</td>
+        </tr>
+    
+        <tr>
+            <td>F511</td>
+            <td>Form 511 is filed by committees that make expenditures totaling $5,000 or more to an individual for his or her appearance in a printed, televised, or radio advertisement, or in a telephone message, to support or oppose the qualification, passage, or defeat of a state or local ballot measure.</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>None</td>
         </tr>
     
     </tbody>
@@ -3669,21 +3976,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p13-thumbnail.gif'></a><p>p. 13</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p28-thumbnail.gif'></a><p>p. 28</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p21-thumbnail.gif'></a><p>p. 21</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -3747,15 +4058,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p28-thumbnail.gif'></a><p>p. 28</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p21-thumbnail.gif'></a><p>p. 21</p></div></div>
+
 
 
 
@@ -3809,15 +4123,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -3996,15 +4313,18 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p25-thumbnail.gif'></a><p>p. 25</p></div></div>
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p6-thumbnail.gif'></a><p>p. 6</p></div></div>
+
 
 
 
@@ -4033,15 +4353,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p19-thumbnail.gif'></a><p>p. 19</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p26-thumbnail.gif'></a><p>p. 26</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/15.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p15-thumbnail.gif'></a><p>p. 15</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p20-thumbnail.gif'></a><p>p. 20</p></div></div>
+
 
 
 
@@ -4080,21 +4403,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/7.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p7-thumbnail.gif'></a><p>p. 7</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/23.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p23-thumbnail.gif'></a><p>p. 23</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p18-thumbnail.gif'></a><p>p. 18</p></div></div>
+
 
 
 
@@ -4243,27 +4570,32 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p28-thumbnail.gif'></a><p>p. 28</p></div></div>
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/14.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p14-thumbnail.gif'></a><p>p. 14</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p28-thumbnail.gif'></a><p>p. 28</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p21-thumbnail.gif'></a><p>p. 21</p></div></div>
+
 
 
 
@@ -4349,6 +4681,32 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+CvrF470Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f470">F470</a></td>
+            <td>Officeholder and Candidate Campaign Statement, Short Form</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -4634,15 +4992,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -4671,15 +5032,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -4708,15 +5072,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -4780,15 +5147,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p30-thumbnail.gif'></a><p>p. 30</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -4822,15 +5192,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -5009,15 +5382,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -5097,7 +5473,34 @@ CvrSoCd contains data collected from the following filing forms:
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2781370-400-2016-01.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2781370/pages/400-2016-01-p1-thumbnail.gif'></a><p>F400</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2781369-402-2005-01.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2781369/pages/402-2005-01-p1-thumbnail.gif'></a><p>F402</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2781368-410-2016-01.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2781368/pages/410-2016-01-p1-thumbnail.gif'></a><p>F410</p></div></div>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f400">F400</a></td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f402">F402</a></td>
+            <td>Statement of Termination (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f410">F410</a></td>
+            <td>Statement of Organization Recipient Committee</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -5617,21 +6020,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p30-thumbnail.gif'></a><p>p. 30</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/60.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p60-thumbnail.gif'></a><p>p. 60</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/47.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p47-thumbnail.gif'></a><p>p. 47</p></div></div>
+
 
 
 
@@ -5670,15 +6077,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
+
 
 
 
@@ -5732,15 +6142,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
+
 
 
 
@@ -5768,7 +6181,7 @@ Look-up Codes
     
         <tr>
             <td>F410</td>
-            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the  not yet qualified  box should be checked.</td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
         </tr>
     
     </tbody>
@@ -5779,21 +6192,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p28-thumbnail.gif'></a><p>p. 28</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p58-thumbnail.gif'></a><p>p. 58</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/45.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p45-thumbnail.gif'></a><p>p. 45</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
+
 
 
 
@@ -5865,6 +6282,32 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/33.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p33-thumbnail.gif'></a><p>p. 33</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/34.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p34-thumbnail.gif'></a><p>p. 34</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+DebtCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -6195,15 +6638,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/45.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p45-thumbnail.gif'></a><p>p. 45</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/33.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p33-thumbnail.gif'></a><p>p. 33</p></div></div>
+
 
 
 
@@ -6262,15 +6708,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p13-thumbnail.gif'></a><p>p. 13</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/14.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p14-thumbnail.gif'></a><p>p. 14</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
+
 
 
 
@@ -6624,15 +7073,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/45.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p45-thumbnail.gif'></a><p>p. 45</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/33.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p33-thumbnail.gif'></a><p>p. 33</p></div></div>
+
 
 
 
@@ -6661,15 +7113,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/45.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p45-thumbnail.gif'></a><p>p. 45</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/33.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p33-thumbnail.gif'></a><p>p. 33</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/34.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p34-thumbnail.gif'></a><p>p. 34</p></div></div>
+
 
 
 
@@ -6740,6 +7195,52 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p31-thumbnail.gif'></a><p>p. 31</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+ExpnCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f461">F461</a></td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f900">F900</a></td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -7250,15 +7751,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/42.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p42-thumbnail.gif'></a><p>p. 42</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p31-thumbnail.gif'></a><p>p. 31</p></div></div>
+
 
 
 
@@ -7347,15 +7851,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p13-thumbnail.gif'></a><p>p. 13</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/14.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p14-thumbnail.gif'></a><p>p. 14</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
+
 
 
 
@@ -8244,15 +8751,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/42.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p42-thumbnail.gif'></a><p>p. 42</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p31-thumbnail.gif'></a><p>p. 31</p></div></div>
+
 
 
 
@@ -8267,6 +8777,26 @@ Look-up Codes
         </tr>
     </thead>
     <tbody valign="top">
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
+        </tr>
     
         <tr>
             <td>F900</td>
@@ -8311,15 +8841,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/44.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p44-thumbnail.gif'></a><p>p. 44</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
+
 
 
 
@@ -8383,15 +8916,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/44.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p44-thumbnail.gif'></a><p>p. 44</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
+
 
 
 
@@ -8455,21 +8991,25 @@ Look-up Codes
 
 
 *Cal-Errata-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -8648,15 +9188,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/42.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p42-thumbnail.gif'></a><p>p. 42</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p31-thumbnail.gif'></a><p>p. 31</p></div></div>
+
 
 
 
@@ -8685,15 +9228,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/44.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p44-thumbnail.gif'></a><p>p. 44</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
+
 
 
 
@@ -8816,6 +9362,37 @@ Source Docs
 
 
 
+Filing Forms
+^^^^^^^^^^^^
+F495P2Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 Fields
 ^^^^^^
@@ -8919,15 +9496,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p26-thumbnail.gif'></a><p>p. 26</p></div></div>
+
 
 
 
@@ -8956,15 +9536,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p26-thumbnail.gif'></a><p>p. 26</p></div></div>
+
 
 
 
@@ -9016,6 +9599,37 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p57-thumbnail.gif'></a><p>p. 57</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p58-thumbnail.gif'></a><p>p. 58</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+F501502Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f501">F501</a></td>
+            <td>Candidate Intention Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f502">F502</a></td>
+            <td>Campaign bank account statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -9535,9 +10149,11 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p58-thumbnail.gif'></a><p>p. 58</p></div></div>
+
 
 
 
@@ -9566,9 +10182,11 @@ Look-up Codes
 
 
 *CalAccessTablesWeb*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p58-thumbnail.gif'></a><p>p. 58</p></div></div>
+
 
 
 
@@ -9602,15 +10220,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div></div>
+
 
 
 
@@ -9734,9 +10355,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p6-thumbnail.gif'></a><p>p. 6</p></div></div>
+
 
 
 
@@ -9795,9 +10418,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p20-thumbnail.gif'></a><p>p. 20</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p21-thumbnail.gif'></a><p>p. 21</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
 
 
 
@@ -10541,9 +11166,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p20-thumbnail.gif'></a><p>p. 20</p></div></div>
+
 
 
 
@@ -10602,9 +11229,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p3-thumbnail.gif'></a><p>p. 3</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p4-thumbnail.gif'></a><p>p. 4</p></div></div>
+
 
 
 
@@ -10668,9 +11297,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
+
 
 
 
@@ -10774,9 +11405,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p12-thumbnail.gif'></a><p>p. 12</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p13-thumbnail.gif'></a><p>p. 13</p></div></div>
+
 
 
 
@@ -11247,6 +11880,32 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p35-thumbnail.gif'></a><p>p. 35</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/36.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p36-thumbnail.gif'></a><p>p. 36</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p37-thumbnail.gif'></a><p>p. 37</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/38.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p38-thumbnail.gif'></a><p>p. 38</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+LoanCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -11721,9 +12380,11 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
+
 
 
 
@@ -11777,15 +12438,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/47.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p47-thumbnail.gif'></a><p>p. 47</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
+
 
 
 
@@ -11844,15 +12508,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/47.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p47-thumbnail.gif'></a><p>p. 47</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
+
 
 
 
@@ -11916,15 +12583,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/47.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p47-thumbnail.gif'></a><p>p. 47</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
+
 
 
 
@@ -12008,7 +12678,39 @@ RcptCd contains data collected from the following filing forms:
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2781366-401-2005-01.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2781366/pages/401-2005-01-p1-thumbnail.gif'></a><p>F401</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2781363-460-2016-01.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2781363/pages/460-2016-01-p1-thumbnail.gif'></a><p>F460</p></div><div class="doc_page_frame"><a class="reference external image-reference" href=""><img class='doc_page' src=''></a><p>F900</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2781349-E530-Instructions.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2781349/pages/E530-Instructions-p1-thumbnail.gif'></a><p>E530</p></div></div>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f900">F900</a></td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#e530">E530</a></td>
+            <td>Electronic Issue Advocacy Report</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -12609,21 +13311,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/71.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p71-thumbnail.gif'></a><p>p. 71</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p37-thumbnail.gif'></a><p>p. 37</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p29-thumbnail.gif'></a><p>p. 29</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div></div>
+
 
 
 
@@ -12717,15 +13423,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p37-thumbnail.gif'></a><p>p. 37</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
+
 
 
 
@@ -12749,16 +13458,6 @@ Look-up Codes
         <tr>
             <td>F460</td>
             <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
-        </tr>
-    
-        <tr>
-            <td>F900</td>
-            <td>None</td>
-        </tr>
-    
-        <tr>
-            <td>E530</td>
-            <td>On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.</td>
         </tr>
     
         <tr>
@@ -12809,21 +13508,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/40.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p40-thumbnail.gif'></a><p>p. 40</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p30-thumbnail.gif'></a><p>p. 30</p></div></div>
+
 
 
 
@@ -12887,21 +13590,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/75.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p75-thumbnail.gif'></a><p>p. 75</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/40.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p40-thumbnail.gif'></a><p>p. 40</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p30-thumbnail.gif'></a><p>p. 30</p></div></div>
+
 
 
 
@@ -12935,21 +13642,25 @@ Look-up Codes
 
 
 *Cal-Errata-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -13128,21 +13839,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/71.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p71-thumbnail.gif'></a><p>p. 71</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p37-thumbnail.gif'></a><p>p. 37</p></div></div>
+
 
 
 
@@ -13176,21 +13891,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/40.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p40-thumbnail.gif'></a><p>p. 40</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/30.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p30-thumbnail.gif'></a><p>p. 30</p></div></div>
+
 
 
 
@@ -13229,21 +13948,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p72-thumbnail.gif'></a><p>p. 72</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/38.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p38-thumbnail.gif'></a><p>p. 38</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/29.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p29-thumbnail.gif'></a><p>p. 29</p></div></div>
+
 
 
 
@@ -13365,6 +14088,32 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+S401Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -13731,15 +14480,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/51.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p51-thumbnail.gif'></a><p>p. 51</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
+
 
 
 
@@ -13768,15 +14520,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/51.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p51-thumbnail.gif'></a><p>p. 51</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
+
 
 
 
@@ -13820,21 +14575,25 @@ Look-up Codes
 
 
 *Cal-Errata-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -14013,21 +14772,25 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/77.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p77-thumbnail.gif'></a><p>p. 77</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/52.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p52-thumbnail.gif'></a><p>p. 52</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
+
 
 
 
@@ -14091,15 +14854,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/52.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p52-thumbnail.gif'></a><p>p. 52</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
+
 
 
 
@@ -14133,15 +14899,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/52.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p52-thumbnail.gif'></a><p>p. 52</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/39.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p39-thumbnail.gif'></a><p>p. 39</p></div></div>
+
 
 
 
@@ -14217,6 +14986,32 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/40.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p40-thumbnail.gif'></a><p>p. 40</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+S496Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f496">F496</a></td>
+            <td>Late Independent Expenditure Report</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -14358,15 +15153,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p53-thumbnail.gif'></a><p>p. 53</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/40.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p40-thumbnail.gif'></a><p>p. 40</p></div></div>
+
 
 
 
@@ -14395,15 +15193,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p53-thumbnail.gif'></a><p>p. 53</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/40.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p40-thumbnail.gif'></a><p>p. 40</p></div></div>
+
 
 
 
@@ -14474,6 +15275,32 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/41.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p41-thumbnail.gif'></a><p>p. 41</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/42.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p42-thumbnail.gif'></a><p>p. 42</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+S497Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f497">F497</a></td>
+            <td>Late Contribution Report</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -14876,15 +15703,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/54.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p54-thumbnail.gif'></a><p>p. 54</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/41.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p41-thumbnail.gif'></a><p>p. 41</p></div></div>
+
 
 
 
@@ -14913,15 +15743,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/54.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p54-thumbnail.gif'></a><p>p. 54</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/41.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p41-thumbnail.gif'></a><p>p. 41</p></div></div>
+
 
 
 
@@ -14955,15 +15788,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/54.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p54-thumbnail.gif'></a><p>p. 54</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/41.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p41-thumbnail.gif'></a><p>p. 41</p></div></div>
+
 
 
 
@@ -15042,21 +15878,25 @@ Look-up Codes
 
 
 *Cal-Errata-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -15235,15 +16075,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/55.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p55-thumbnail.gif'></a><p>p. 55</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/42.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p42-thumbnail.gif'></a><p>p. 42</p></div></div>
+
 
 
 
@@ -15307,15 +16150,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/55.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p55-thumbnail.gif'></a><p>p. 55</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/42.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p42-thumbnail.gif'></a><p>p. 42</p></div></div>
+
 
 
 
@@ -15369,9 +16215,11 @@ Look-up Codes
 
 
 *MapCalFormat2Fields*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/82.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p82-thumbnail.gif'></a><p>p. 82</p></div></div>
+
 
 
 
@@ -15447,6 +16295,32 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/43.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p43-thumbnail.gif'></a><p>p. 43</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/44.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p44-thumbnail.gif'></a><p>p. 44</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+S498Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f498">F498</a></td>
+            <td>Slate Mailer Late Payment Report</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -15813,15 +16687,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/56.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p56-thumbnail.gif'></a><p>p. 56</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/43.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p43-thumbnail.gif'></a><p>p. 43</p></div></div>
+
 
 
 
@@ -15850,15 +16727,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/56.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p56-thumbnail.gif'></a><p>p. 56</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/43.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p43-thumbnail.gif'></a><p>p. 43</p></div></div>
+
 
 
 
@@ -15892,15 +16772,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/56.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p56-thumbnail.gif'></a><p>p. 56</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/8.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p8-thumbnail.gif'></a><p>p. 8</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/9.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p9-thumbnail.gif'></a><p>p. 9</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/43.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p43-thumbnail.gif'></a><p>p. 43</p></div></div>
+
 
 
 
@@ -15949,21 +16832,25 @@ Look-up Codes
 
 
 *Cal-Errata-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712032-Cal-Errata-201/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712032/pages/Cal-Errata-201-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p12-thumbnail.gif'></a><p>p. 12</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p10-thumbnail.gif'></a><p>p. 10</p></div></div>
+
 
 
 
@@ -16142,15 +17029,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/43.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p43-thumbnail.gif'></a><p>p. 43</p></div></div>
+
 
 
 
@@ -16214,15 +17104,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/44.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p44-thumbnail.gif'></a><p>p. 44</p></div></div>
+
 
 
 
@@ -16256,15 +17149,18 @@ Look-up Codes
 
 
 *Cal-Format-201*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
 
 
 *Cal-Format-1-05-02*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/43.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p43-thumbnail.gif'></a><p>p. 43</p></div></div>
+
 
 
 
@@ -16640,6 +17536,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -16662,6 +17559,7 @@ Look-up Codes
     </div>
 
 *form_type*
+
 
 .. raw:: html
 
@@ -16686,6 +17584,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -16708,6 +17607,7 @@ Look-up Codes
     </div>
 
 *office_cd*
+
 
 .. raw:: html
 
@@ -17471,6 +18371,182 @@ Source Docs
 
 
 
+Filing Forms
+^^^^^^^^^^^^
+FilerFilingsCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#e530">E530</a></td>
+            <td>Electronic Issue Advocacy Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f400">F400</a></td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f402">F402</a></td>
+            <td>Statement of Termination (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f410">F410</a></td>
+            <td>Statement of Organization Recipient Committee</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f425">F425</a></td>
+            <td>Semi-Annual Statement of no Activity</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f461">F461</a></td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f470">F470</a></td>
+            <td>Officeholder and Candidate Campaign Statement, Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f495">F495</a></td>
+            <td>Supplemental Pre-Election Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f496">F496</a></td>
+            <td>Late Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f497">F497</a></td>
+            <td>Late Contribution Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f498">F498</a></td>
+            <td>Slate Mailer Late Payment Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f501">F501</a></td>
+            <td>Candidate Intention Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f502">F502</a></td>
+            <td>Campaign bank account statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f601">F601</a></td>
+            <td>Lobbying Firm Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f602">F602</a></td>
+            <td>Lobbying Firm Activity Authorization</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f603">F603</a></td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f604">F604</a></td>
+            <td>Lobbyist Certification Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f605">F605</a></td>
+            <td>Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f606">F606</a></td>
+            <td>Notice of Termination</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f607">F607</a></td>
+            <td>Notice of Withdrawal</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f615">F615</a></td>
+            <td>Lobbyist Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f690">F690</a></td>
+            <td>Amendment to Lobbying Disclosure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f700">F700</a></td>
+            <td>Statement of Economic Interest</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f900">F900</a></td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 Fields
 ^^^^^^
@@ -17644,6 +18720,7 @@ Look-up Codes
 
 *form_id*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -17658,7 +18735,157 @@ Look-up Codes
     
         <tr>
             <td>E530</td>
-            <td></td>
+            <td>On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.</td>
+        </tr>
+    
+        <tr>
+            <td>F400</td>
+            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
+        </tr>
+    
+        <tr>
+            <td>F401</td>
+            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
+        </tr>
+    
+        <tr>
+            <td>F402</td>
+            <td>Form 402 is filed by slate mailer organizations to terminate the organization.</td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
+        </tr>
+    
+        <tr>
+            <td>F425</td>
+            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
+        </tr>
+    
+        <tr>
+            <td>F470</td>
+            <td>Form 470 is filed by officeholders and candidates who do not have a controlled committee, do not receive contributions totaling $2,000 or more during the calendar year, and do not spend $2,000 or more during the calendar year.</td>
+        </tr>
+    
+        <tr>
+            <td>F495</td>
+            <td>Form 495 is filed by recipient committees that make contributions totaling $10,000 or more in connection with an election in which the committee is not required to file regular preelection reports. Form 495 is filed as an attachment to a campaign disclosure statement (Form 450 or 460).</td>
+        </tr>
+    
+        <tr>
+            <td>F496</td>
+            <td>Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.</td>
+        </tr>
+    
+        <tr>
+            <td>F497</td>
+            <td>Form 497 is filed by state and local committees making or receiving contribution(s) whose combined total is $1,000 or more in the 90 days before an election, committees reporting contributions of $5,000 or more in connection with a state ballot measure, and state candidates as well as state ballot measure committees that receive $5,000 or more at any time other than a 90-day election cycle.</td>
+        </tr>
+    
+        <tr>
+            <td>F498</td>
+            <td>Form 498 is filed by a slate mailer organization upon receipt of a late payment.</td>
+        </tr>
+    
+        <tr>
+            <td>F501</td>
+            <td>Form 501 is filed each election by candidates for state or local office.</td>
+        </tr>
+    
+        <tr>
+            <td>F502</td>
+            <td>Form 502 must be filed within 10 days of opening a campaign bank account at a financial institution in California.</td>
+        </tr>
+    
+        <tr>
+            <td>F601</td>
+            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+        </tr>
+    
+        <tr>
+            <td>F602</td>
+            <td>Form 602 is an authorization form filed by each person who employs or contracts with a lobbying firm. This form serves as an attachment to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains a schedule which describes by category the nature and interest of the client of the firm. Like Form 601 this registration attachment is valid for the length of the State Legislative session for which it is filed. Form 602 must be filed by a firm or its client, prior to attempting to influence legislative or administrative action on behalf of that client.</td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+        </tr>
+    
+        <tr>
+            <td>F604</td>
+            <td>Form 604 is the certification statement filed by an individual who qualifies as a lobbyist (including an individual contract lobbyist). Form 604 is the initial certification statement and is also used as a renewal of a previous lobbyist certification. This form includes verification as to whether the lobbyist has attended a required course within the previous 12 months on ethical issues and laws relating to lobbying. When submitted as a paper filing, this form is an attachment to either the firm&#39;s Form 601 or the employer&#39;s Form 603. If the form is filed electronically, it is filed separately by the lobbyist.</td>
+        </tr>
+    
+        <tr>
+            <td>F605</td>
+            <td>Form 605 is the standard amendment form used to amend any previously-filed registration information. It is used to add or delete both lobbyists and clients to an existing registration. It is also used to change name, address, and responsible officer information, as well as any other pertinent information found on Forms 601, 602, 603 or 604.</td>
+        </tr>
+    
+        <tr>
+            <td>F606</td>
+            <td>Form 606 is filed by any lobbying firm, registered lobbyist employer, lobbying coalition or lobbyist who wishes to terminate a filed registration or certification statement. A client of a firm (non-registered employer) does not use this form to cease lobbying activity. Instead it is deleted by the associated firm, which files a Form 605. Form 606 is filed within 20 days of ceasing all lobbying activity. A final quarterly disclosure statement must be filed for the quarter in which the date of termination is effective.</td>
+        </tr>
+    
+        <tr>
+            <td>F607</td>
+            <td>Form 607 is filed by a lobbying firm or lobbyist wishing to withdraw the filed registration statement of a firm which has never met the statutory definition of a lobbying firm or lobbyist. Submittal of this form relieves the filer of any duty to file any previously-required quarterly disclosure statements.</td>
+        </tr>
+    
+        <tr>
+            <td>F615</td>
+            <td>Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.</td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td>Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.</td>
+        </tr>
+    
+        <tr>
+            <td>F690</td>
+            <td>Form 690 is filed by a lobbying firm, lobbyist employer, lobbying coalition, $5,000 filer or lobbyist seeking to amend any information previously submitted on a quarterly disclosure report. Any amendment to the registration statement should be made on Form 605 rather than Form 690. Amendments must be filed by the same method (paper or electronic) as the original form.</td>
+        </tr>
+    
+        <tr>
+            <td>F700</td>
+            <td>Every public official who makes or participates in making governmental decisions is required to file a Statement of Economic Interest, commonly referred to as the Form 700.</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>None</td>
         </tr>
     
         <tr>
@@ -17667,27 +18894,7 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F400</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F401</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F402</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>F405</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F410</td>
             <td></td>
         </tr>
     
@@ -17727,42 +18934,12 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F425</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>F430</td>
             <td></td>
         </tr>
     
         <tr>
             <td>F440</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F450</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F460</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F461</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F465</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F470</td>
             <td></td>
         </tr>
     
@@ -17782,32 +18959,7 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F495</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F496</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F497</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F498</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>F500</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F501</td>
             <td></td>
         </tr>
     
@@ -17817,82 +18969,12 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F502</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>F555</td>
             <td></td>
         </tr>
     
         <tr>
-            <td>F601</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F602</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F603</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F604</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F605</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F606</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F607</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F615</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F625</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F635</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F645</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>F666</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F690</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F700</td>
             <td></td>
         </tr>
     
@@ -17903,11 +18985,6 @@ Look-up Codes
     
         <tr>
             <td>F888</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F900</td>
             <td></td>
         </tr>
     
@@ -17924,9 +19001,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p6-thumbnail.gif'></a><p>p. 6</p></div></div>
+
 
 
 
@@ -17990,9 +19069,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p6-thumbnail.gif'></a><p>p. 6</p></div></div>
+
 
 
 
@@ -18036,9 +19117,11 @@ Look-up Codes
 
 
 *FAQ*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711615-FAQ/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
+
 
 
 
@@ -18299,9 +19382,11 @@ Look-up Codes
 
 
 *Filer-Types-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774536-Filer-Types-Cd/pages/1.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774536/pages/Filer-Types-Cd-p1-thumbnail.gif'></a><p>p. 1</p></div></div>
+
 
 
 
@@ -18410,9 +19495,11 @@ Look-up Codes
 
 
 *Filer-Status-Types-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774537-Filer-Status-Types-Cd/pages/1.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774537/pages/Filer-Status-Types-Cd-p1-thumbnail.gif'></a><p>p. 1</p></div></div>
+
 
 
 
@@ -18566,9 +19653,11 @@ Look-up Codes
 
 
 *FAQ*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711615-FAQ/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711615/pages/FAQ-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
+
 
 
 
@@ -18761,6 +19850,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -18943,6 +20033,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -19004,6 +20095,93 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/86.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p86-thumbnail.gif'></a><p>p. 86</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/87.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p87-thumbnail.gif'></a><p>p. 87</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p35-thumbnail.gif'></a><p>p. 35</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/36.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p36-thumbnail.gif'></a><p>p. 36</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p37-thumbnail.gif'></a><p>p. 37</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p72-thumbnail.gif'></a><p>p. 72</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/73.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p73-thumbnail.gif'></a><p>p. 73</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/27.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p27-thumbnail.gif'></a><p>p. 27</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p28-thumbnail.gif'></a><p>p. 28</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p59-thumbnail.gif'></a><p>p. 59</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/60.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p60-thumbnail.gif'></a><p>p. 60</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+SmryCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f461">F461</a></td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f640">F640</a></td>
+            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f900">F900</a></td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -19116,6 +20294,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -19138,6 +20317,30 @@ Look-up Codes
     </div>
 
 *form_type*
+
+
+*MapCalFormat2Fields*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/86.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p86-thumbnail.gif'></a><p>p. 86</p></div></div>
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/36.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p36-thumbnail.gif'></a><p>p. 36</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p37-thumbnail.gif'></a><p>p. 37</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/73.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p73-thumbnail.gif'></a><p>p. 73</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/27.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p27-thumbnail.gif'></a><p>p. 27</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p28-thumbnail.gif'></a><p>p. 28</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p59-thumbnail.gif'></a><p>p. 59</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/60.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p60-thumbnail.gif'></a><p>p. 60</p></div></div>
+
+
+
 
 .. raw:: html
 
@@ -19487,6 +20690,7 @@ Look-up Codes
 
 *pform_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -19568,6 +20772,147 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/89.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p89-thumbnail.gif'></a><p>p. 89</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/90.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p90-thumbnail.gif'></a><p>p. 90</p></div></div>
 
 
+
+
+Filing Forms
+^^^^^^^^^^^^
+TextMemoCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#e530">E530</a></td>
+            <td>Electronic Issue Advocacy Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f425">F425</a></td>
+            <td>Semi-Annual Statement of no Activity</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f410">F410</a></td>
+            <td>Statement of Organization Recipient Committee</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f461">F461</a></td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f496">F496</a></td>
+            <td>Late Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f497">F497</a></td>
+            <td>Late Contribution Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f601">F601</a></td>
+            <td>Lobbying Firm Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f602">F602</a></td>
+            <td>Lobbying Firm Activity Authorization</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f603">F603</a></td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f604">F604</a></td>
+            <td>Lobbyist Certification Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f605">F605</a></td>
+            <td>Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f606">F606</a></td>
+            <td>Notice of Termination</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f607">F607</a></td>
+            <td>Notice of Withdrawal</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f615">F615</a></td>
+            <td>Lobbyist Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f630">F630</a></td>
+            <td>Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) </td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635c">F635C</a></td>
+            <td>Payments Received by Lobbying Coalitions</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f640">F640</a></td>
+            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -19662,6 +21007,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -19704,6 +21050,7 @@ Look-up Codes
     </div>
 
 *form_type*
+
 
 .. raw:: html
 
@@ -20216,6 +21563,53 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/36.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p36-thumbnail.gif'></a><p>p. 36</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/71.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p71-thumbnail.gif'></a><p>p. 71</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+Cvr2LobbyDisclosureCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -20364,6 +21758,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -20407,6 +21802,23 @@ Look-up Codes
 
 *form_type*
 
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/71.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p71-thumbnail.gif'></a><p>p. 71</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -20421,12 +21833,12 @@ Look-up Codes
     
         <tr>
             <td>F625</td>
-            <td></td>
+            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td></td>
+            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
         </tr>
     
     </tbody>
@@ -20434,6 +21846,7 @@ Look-up Codes
     </div>
 
 *rec_type*
+
 
 .. raw:: html
 
@@ -20486,6 +21899,58 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/37.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p37-thumbnail.gif'></a><p>p. 37</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/87.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p87-thumbnail.gif'></a><p>p. 87</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/88.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p88-thumbnail.gif'></a><p>p. 88</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p72-thumbnail.gif'></a><p>p. 72</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/73.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p73-thumbnail.gif'></a><p>p. 73</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+Cvr2RegistrationCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f601">F601</a></td>
+            <td>Lobbying Firm Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f602">F602</a></td>
+            <td>Lobbying Firm Activity Authorization</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f603">F603</a></td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -20625,6 +22090,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -20648,6 +22114,23 @@ Look-up Codes
 
 *form_type*
 
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/87.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p87-thumbnail.gif'></a><p>p. 87</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p72-thumbnail.gif'></a><p>p. 72</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -20662,17 +22145,17 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Form 601 (Lobbying firm registration statement)</td>
+            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td>Form 602 (Lobbying firm activity authorization)</td>
+            <td>Form 602 is an authorization form filed by each person who employs or contracts with a lobbying firm. This form serves as an attachment to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains a schedule which describes by category the nature and interest of the client of the firm. Like Form 601 this registration attachment is valid for the length of the State Legislative session for which it is filed. Form 602 must be filed by a firm or its client, prior to attempting to influence legislative or administrative action on behalf of that client.</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Form 603 (Lobbyist employer or lobbying coalition registration statement)</td>
+            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
     </tbody>
@@ -20680,6 +22163,7 @@ Look-up Codes
     </div>
 
 *entity_cd*
+
 
 .. raw:: html
 
@@ -20762,6 +22246,63 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/17.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p17-thumbnail.gif'></a><p>p. 17</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p18-thumbnail.gif'></a><p>p. 18</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p19-thumbnail.gif'></a><p>p. 19</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p20-thumbnail.gif'></a><p>p. 20</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p21-thumbnail.gif'></a><p>p. 21</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p65-thumbnail.gif'></a><p>p. 65</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/66.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p66-thumbnail.gif'></a><p>p. 66</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/67.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p67-thumbnail.gif'></a><p>p. 67</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/68.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p68-thumbnail.gif'></a><p>p. 68</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/69.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p69-thumbnail.gif'></a><p>p. 69</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/70.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p70-thumbnail.gif'></a><p>p. 70</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p53-thumbnail.gif'></a><p>p. 53</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/54.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p54-thumbnail.gif'></a><p>p. 54</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/55.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p55-thumbnail.gif'></a><p>p. 55</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/56.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p56-thumbnail.gif'></a><p>p. 56</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+CvrLobbyDisclosureCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f615">F615</a></td>
+            <td>Lobbyist Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -21261,6 +22802,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -21319,6 +22861,23 @@ Look-up Codes
 
 *form_type*
 
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/66.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p66-thumbnail.gif'></a><p>p. 66</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p53-thumbnail.gif'></a><p>p. 53</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -21333,22 +22892,22 @@ Look-up Codes
     
         <tr>
             <td>F615</td>
-            <td></td>
+            <td>Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td></td>
+            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td></td>
+            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
         </tr>
     
         <tr>
             <td>F645</td>
-            <td></td>
+            <td>Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.</td>
         </tr>
     
     </tbody>
@@ -21356,6 +22915,7 @@ Look-up Codes
     </div>
 
 *rec_type*
+
 
 .. raw:: html
 
@@ -21408,6 +22968,73 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p22-thumbnail.gif'></a><p>p. 22</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/23.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p23-thumbnail.gif'></a><p>p. 23</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/24.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p24-thumbnail.gif'></a><p>p. 24</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/25.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p25-thumbnail.gif'></a><p>p. 25</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/26.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p26-thumbnail.gif'></a><p>p. 26</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/27.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p27-thumbnail.gif'></a><p>p. 27</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/82.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p82-thumbnail.gif'></a><p>p. 82</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/83.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p83-thumbnail.gif'></a><p>p. 83</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/84.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p84-thumbnail.gif'></a><p>p. 84</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/85.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p85-thumbnail.gif'></a><p>p. 85</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/86.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p86-thumbnail.gif'></a><p>p. 86</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/68.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p68-thumbnail.gif'></a><p>p. 68</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/69.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p69-thumbnail.gif'></a><p>p. 69</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/70.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p70-thumbnail.gif'></a><p>p. 70</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/71.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p71-thumbnail.gif'></a><p>p. 71</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+CvrRegistrationCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f601">F601</a></td>
+            <td>Lobbying Firm Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f602">F602</a></td>
+            <td>Lobbying Firm Activity Authorization</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f603">F603</a></td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f604">F604</a></td>
+            <td>Lobbyist Certification Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f606">F606</a></td>
+            <td>Notice of Termination</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f607">F607</a></td>
+            <td>Notice of Withdrawal</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -22078,6 +23705,7 @@ Look-up Codes
 
 *bus_class*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22151,6 +23779,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22199,6 +23828,23 @@ Look-up Codes
 
 *form_type*
 
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/82.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p82-thumbnail.gif'></a><p>p. 82</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/68.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p68-thumbnail.gif'></a><p>p. 68</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22213,32 +23859,32 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Form 601 (Lobbying firm registration statement)</td>
+            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td>Form 602 (Lobbying firm activity authorization)</td>
+            <td>Form 602 is an authorization form filed by each person who employs or contracts with a lobbying firm. This form serves as an attachment to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains a schedule which describes by category the nature and interest of the client of the firm. Like Form 601 this registration attachment is valid for the length of the State Legislative session for which it is filed. Form 602 must be filed by a firm or its client, prior to attempting to influence legislative or administrative action on behalf of that client.</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Form 603 (Lobbyist employer or lobbying coalition registration statement)</td>
+            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
         <tr>
             <td>F604</td>
-            <td>Form 604 (Lobbyist certification statement)</td>
+            <td>Form 604 is the certification statement filed by an individual who qualifies as a lobbyist (including an individual contract lobbyist). Form 604 is the initial certification statement and is also used as a renewal of a previous lobbyist certification. This form includes verification as to whether the lobbyist has attended a required course within the previous 12 months on ethical issues and laws relating to lobbying. When submitted as a paper filing, this form is an attachment to either the firm&#39;s Form 601 or the employer&#39;s Form 603. If the form is filed electronically, it is filed separately by the lobbyist.</td>
         </tr>
     
         <tr>
             <td>F606</td>
-            <td>Form 606 (Notice of termination)</td>
+            <td>Form 606 is filed by any lobbying firm, registered lobbyist employer, lobbying coalition or lobbyist who wishes to terminate a filed registration or certification statement. A client of a firm (non-registered employer) does not use this form to cease lobbying activity. Instead it is deleted by the associated firm, which files a Form 605. Form 606 is filed within 20 days of ceasing all lobbying activity. A final quarterly disclosure statement must be filed for the quarter in which the date of termination is effective.</td>
         </tr>
     
         <tr>
             <td>F607</td>
-            <td>Form 607 (Notice of withdrawal)</td>
+            <td>Form 607 is filed by a lobbying firm or lobbyist wishing to withdraw the filed registration statement of a firm which has never met the statutory definition of a lobbying firm or lobbyist. Submittal of this form relieves the filer of any duty to file any previously-required quarterly disclosure statements.</td>
         </tr>
     
     </tbody>
@@ -22246,6 +23892,7 @@ Look-up Codes
     </div>
 
 *ind_class*
+
 
 .. raw:: html
 
@@ -22315,6 +23962,7 @@ Look-up Codes
 
 *influen_yn*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22343,6 +23991,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22365,6 +24014,7 @@ Look-up Codes
     </div>
 
 *st_leg_yn*
+
 
 .. raw:: html
 
@@ -22422,6 +24072,63 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/50.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p50-thumbnail.gif'></a><p>p. 50</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/51.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p51-thumbnail.gif'></a><p>p. 51</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p72-thumbnail.gif'></a><p>p. 72</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p58-thumbnail.gif'></a><p>p. 58</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+F690P2Cd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f615">F615</a></td>
+            <td>Lobbyist Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -22552,6 +24259,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22575,6 +24283,23 @@ Look-up Codes
 
 *form_type*
 
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p72-thumbnail.gif'></a><p>p. 72</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p58-thumbnail.gif'></a><p>p. 58</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22589,22 +24314,22 @@ Look-up Codes
     
         <tr>
             <td>F615</td>
-            <td></td>
+            <td>Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td></td>
+            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td></td>
+            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
         </tr>
     
         <tr>
             <td>F645</td>
-            <td></td>
+            <td>Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.</td>
         </tr>
     
     </tbody>
@@ -22852,6 +24577,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22910,6 +24636,7 @@ Look-up Codes
 
 *form_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -22942,6 +24669,7 @@ Look-up Codes
     </div>
 
 *rec_type*
+
 
 .. raw:: html
 
@@ -23242,6 +24970,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -23280,6 +25009,7 @@ Look-up Codes
 
 *form_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -23317,6 +25047,7 @@ Look-up Codes
     </div>
 
 *rec_type*
+
 
 .. raw:: html
 
@@ -23616,6 +25347,7 @@ Look-up Codes
 
 *form_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -23643,6 +25375,7 @@ Look-up Codes
     </div>
 
 *rec_type*
+
 
 .. raw:: html
 
@@ -23952,6 +25685,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -23984,6 +25718,7 @@ Look-up Codes
     </div>
 
 *form_type*
+
 
 .. raw:: html
 
@@ -24023,6 +25758,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -24045,6 +25781,7 @@ Look-up Codes
     </div>
 
 *recsubtype*
+
 
 .. raw:: html
 
@@ -24102,6 +25839,53 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p64-thumbnail.gif'></a><p>p. 64</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p65-thumbnail.gif'></a><p>p. 65</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/66.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p66-thumbnail.gif'></a><p>p. 66</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/88.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p88-thumbnail.gif'></a><p>p. 88</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/89.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p89-thumbnail.gif'></a><p>p. 89</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+LobbyAmendmentsCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f601">F601</a></td>
+            <td>Lobbying Firm Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f603">F603</a></td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -24511,6 +26295,7 @@ Look-up Codes
 
 *rec_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -24534,6 +26319,23 @@ Look-up Codes
 
 *form_type*
 
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/88.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p88-thumbnail.gif'></a><p>p. 88</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -24548,12 +26350,12 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td></td>
+            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td></td>
+            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
     </tbody>
@@ -24828,6 +26630,7 @@ Look-up Codes
 ^^^^^^^^^^^^^
 
 *entity_type*
+
 
 .. raw:: html
 
@@ -28112,6 +29915,7 @@ Look-up Codes
 
 *form_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -28134,6 +29938,7 @@ Look-up Codes
     </div>
 
 *rec_type*
+
 
 .. raw:: html
 
@@ -28452,6 +30257,7 @@ Look-up Codes
 
 *entity_cd*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -28500,6 +30306,7 @@ Look-up Codes
 
 *form_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -28527,6 +30334,7 @@ Look-up Codes
     </div>
 
 *rec_type*
+
 
 .. raw:: html
 
@@ -28871,6 +30679,137 @@ Source Docs
 
 
 
+Filing Forms
+^^^^^^^^^^^^
+EfsFilingLogCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f400">F400</a></td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f401">F401</a></td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f402">F402</a></td>
+            <td>Statement of Termination (Slate Mailer Organization)</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f410">F410</a></td>
+            <td>Statement of Organization Recipient Committee</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f425">F425</a></td>
+            <td>Semi-Annual Statement of no Activity</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f450">F450</a></td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f460">F460</a></td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f461">F461</a></td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f465">F465</a></td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f496">F496</a></td>
+            <td>Late Independent Expenditure Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f497">F497</a></td>
+            <td>Late Contribution Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f498">F498</a></td>
+            <td>Slate Mailer Late Payment Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f601">F601</a></td>
+            <td>Lobbying Firm Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f602">F602</a></td>
+            <td>Lobbying Firm Activity Authorization</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f603">F603</a></td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f604">F604</a></td>
+            <td>Lobbyist Certification Statement</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f606">F606</a></td>
+            <td>Notice of Termination</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f607">F607</a></td>
+            <td>Notice of Withdrawal</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f615">F615</a></td>
+            <td>Lobbyist Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 Fields
 ^^^^^^
@@ -28954,6 +30893,7 @@ Look-up Codes
 
 *form_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -28967,117 +30907,117 @@ Look-up Codes
     <tbody valign="top">
     
         <tr>
-            <td>BADFORMAT 253</td>
-            <td></td>
-        </tr>
-    
-        <tr>
             <td>F400</td>
-            <td></td>
+            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
         </tr>
     
         <tr>
             <td>F401</td>
-            <td></td>
+            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td></td>
+            <td>Form 402 is filed by slate mailer organizations to terminate the organization.</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td></td>
+            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td></td>
+            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td></td>
+            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td></td>
+            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td></td>
+            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td></td>
+            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
         </tr>
     
         <tr>
             <td>F496</td>
-            <td></td>
+            <td>Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.</td>
         </tr>
     
         <tr>
             <td>F497</td>
-            <td></td>
+            <td>Form 497 is filed by state and local committees making or receiving contribution(s) whose combined total is $1,000 or more in the 90 days before an election, committees reporting contributions of $5,000 or more in connection with a state ballot measure, and state candidates as well as state ballot measure committees that receive $5,000 or more at any time other than a 90-day election cycle.</td>
         </tr>
     
         <tr>
             <td>F498</td>
-            <td></td>
+            <td>Form 498 is filed by a slate mailer organization upon receipt of a late payment.</td>
         </tr>
     
         <tr>
             <td>F601</td>
-            <td></td>
+            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td></td>
+            <td>Form 602 is an authorization form filed by each person who employs or contracts with a lobbying firm. This form serves as an attachment to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains a schedule which describes by category the nature and interest of the client of the firm. Like Form 601 this registration attachment is valid for the length of the State Legislative session for which it is filed. Form 602 must be filed by a firm or its client, prior to attempting to influence legislative or administrative action on behalf of that client.</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td></td>
+            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
         </tr>
     
         <tr>
             <td>F604</td>
-            <td></td>
+            <td>Form 604 is the certification statement filed by an individual who qualifies as a lobbyist (including an individual contract lobbyist). Form 604 is the initial certification statement and is also used as a renewal of a previous lobbyist certification. This form includes verification as to whether the lobbyist has attended a required course within the previous 12 months on ethical issues and laws relating to lobbying. When submitted as a paper filing, this form is an attachment to either the firm&#39;s Form 601 or the employer&#39;s Form 603. If the form is filed electronically, it is filed separately by the lobbyist.</td>
         </tr>
     
         <tr>
             <td>F606</td>
-            <td></td>
+            <td>Form 606 is filed by any lobbying firm, registered lobbyist employer, lobbying coalition or lobbyist who wishes to terminate a filed registration or certification statement. A client of a firm (non-registered employer) does not use this form to cease lobbying activity. Instead it is deleted by the associated firm, which files a Form 605. Form 606 is filed within 20 days of ceasing all lobbying activity. A final quarterly disclosure statement must be filed for the quarter in which the date of termination is effective.</td>
         </tr>
     
         <tr>
             <td>F607</td>
-            <td></td>
+            <td>Form 607 is filed by a lobbying firm or lobbyist wishing to withdraw the filed registration statement of a firm which has never met the statutory definition of a lobbying firm or lobbyist. Submittal of this form relieves the filer of any duty to file any previously-required quarterly disclosure statements.</td>
         </tr>
     
         <tr>
             <td>F615</td>
-            <td></td>
+            <td>Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td></td>
+            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td></td>
+            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
         </tr>
     
         <tr>
             <td>F645</td>
+            <td>Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.</td>
+        </tr>
+    
+        <tr>
+            <td>BADFORMAT 253</td>
             <td></td>
         </tr>
     
@@ -29535,6 +31475,7 @@ Look-up Codes
 
 *link_type*
 
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -29942,9 +31883,11 @@ Look-up Codes
 
 
 *Lookup-Codes-Cd*
+
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/10.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p10-thumbnail.gif'></a><p>p. 10</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
+
 
 
 
@@ -30468,6 +32411,7 @@ Look-up Codes
 ^^^^^^^^^^^^^
 
 *period_type*
+
 
 .. raw:: html
 

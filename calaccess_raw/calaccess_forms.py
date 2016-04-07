@@ -352,6 +352,15 @@ registration statement should be made on Form 605 rather than Form 690. \
 Amendments must be filed by the same method (paper or electronic) as the original \
 form.'
         ),
+    'F700': CalAccessForm(
+        'F700',
+        'Statement of Economic Interest',
+        group='PUBLIC OFFICIALS',
+        documentcloud=DocumentCloud('2792958-700-2015-12'),
+        description='Every public official who makes or participates in making \
+governmental decisions is required to file a Statement of Economic Interest, \
+commonly referred to as the Form 700.',
+    ),
     'F900': CalAccessForm(
             'F900',
             'Public employee\'s retirement board, candidate campaign statement',

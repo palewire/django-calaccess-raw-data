@@ -434,6 +434,10 @@ class Cvr2SoCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48, end_page=49),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=62, end_page=64),
     ]
+    CALACCESS_FORMS = [
+        form_look_up['F400'],
+        form_look_up['F410'],
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -468,11 +472,9 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=58),
         ]
     )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
-        choices=(
-            ('F400', form_look_up['F400'].description),
-            ('F410', form_look_up['F410'].description),
-        ),
+        choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
         max_length=4,
         help_text='Name of the source filing form or schedule',
@@ -756,6 +758,19 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id="2711616-MapCalFormat2Fields", start_page=6, end_page=14),
         DocumentCloud(id="2712033-Cal-Format-1-05-02", start_page=18, end_page=22),
         DocumentCloud(id="2712034-Cal-Format-201", start_page=22, end_page=30),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F401'],
+        form_look_up['F425'],
+        form_look_up['F450'],
+        form_look_up['F460'],
+        form_look_up['F461'],
+        form_look_up['F465'],
+        form_look_up['F496'],
+        form_look_up['F498'],
+        form_look_up['F497'],
+        form_look_up['F511'],
+        form_look_up['F900'],
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1144,19 +1159,7 @@ individual the filer's last name."
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F511', form_look_up['F511'].description),
-        ('F900', form_look_up['F900'].description),
-        ('F425', form_look_up['F425'].description),
-        ('F450', form_look_up['F450'].description),
-        ('F401', form_look_up['F401'].description),
-        ('F498', form_look_up['F498'].description),
-        ('F465', form_look_up['F465'].description),
-        ('F496', form_look_up['F496'].description),
-        ('F461', form_look_up['F461'].description),
-        ('F460', form_look_up['F460'].description),
-        ('F497', form_look_up['F497'].description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
@@ -1553,6 +1556,12 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23, end_page=24),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=31, end_page=34),
     ]
+    CALACCESS_FORMS = [
+        form_look_up['F425'],
+        form_look_up['F450'],
+        form_look_up['F460'],
+        form_look_up['F465'],
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
@@ -1727,12 +1736,7 @@ for Senate, Assembly, or Board of Equalization races."
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F425', form_look_up['F425'].description),
-        ('F450', form_look_up['F450'].description),
-        ('F460', form_look_up['F460'].description),
-        ('F465', form_look_up['F465'].description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
@@ -2155,8 +2159,6 @@ and Form 401 Schedule A, A-1)"
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
-        ('F900', form_look_up['F900'].description),
-        ('E530', form_look_up['E530'].description),
         ('A-1', 'Form 460: Schedule A-1, contributions transferred \
 to special election committees'),
         ('F496P3', 'Form 496 (Late independent expenditure): \
@@ -2515,6 +2517,19 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
     ]
+    CALACCESS_FORMS = [
+            form_look_up['F400'],
+            form_look_up['F401'],
+            form_look_up['F402'],
+            form_look_up['F410'],
+            form_look_up['F425'],
+            form_look_up['F450'],
+            form_look_up['F460'],
+            form_look_up['F461'],
+            form_look_up['F465'],
+            form_look_up['F511'],
+            form_look_up['F900'],
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -2549,19 +2564,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F400', form_look_up['F400'].description),
-        ('F401', form_look_up['F401'].description),
-        ('F402', form_look_up['F402'].description),
-        ('F410', form_look_up['F410'].description),
-        ('F425', form_look_up['F425'].description),
-        ('F450', form_look_up['F450'].description),
-        ('F460', form_look_up['F460'].description),
-        ('F461', form_look_up['F461'].description),
-        ('F465', form_look_up['F465'].description),
-        ('F511', form_look_up['F511'].description),
-        ('F900', form_look_up['F900'].description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -2682,6 +2685,9 @@ class LoanCd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60, end_page=63),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35, end_page=39),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=47, end_page=50),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F460'],
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -3118,7 +3124,9 @@ class S401Cd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=76, end_page=78),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=51, end_page=52),
-
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F401'],
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3425,6 +3433,13 @@ class ExpnCd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=45, end_page=48),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31, end_page=32),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=42, end_page=44),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F450'],
+        form_look_up['F460'],
+        form_look_up['F461'],
+        form_look_up['F465'],
+        form_look_up['F900'],
     ]
     agent_namf = fields.CharField(
         max_length=45,
@@ -3750,8 +3765,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F900', form_look_up['F900'].description),
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
         ('D', 'Form 460 (Recipient committee campaign statement): \
 Schedule D, summary of expenditure supporting/opposing other candidates, \
 measures and committees'),
@@ -4058,6 +4072,10 @@ class F495P2Cd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=26),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
     ]
+    CALACCESS_FORMS = [
+        form_look_up['F450'],
+        form_look_up['F460'],
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -4090,10 +4108,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F450', form_look_up['F450'].description),
-        ('F460', form_look_up['F460'].description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -4151,6 +4166,9 @@ class DebtCd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49, end_page=48),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33, end_page=34),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F460'],
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4470,6 +4488,9 @@ class S496Cd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=40),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
     ]
+    CALACCESS_FORMS = [
+        form_look_up['F496']
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -4502,9 +4523,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F496', form_look_up['F496'].description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -4589,6 +4608,9 @@ class S497Cd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=80, end_page=82),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41, end_page=42),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=54, end_page=55),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F497']
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4927,6 +4949,10 @@ class F501502Cd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=57, end_page=59),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F501'],
+        form_look_up['F502'],
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5606,6 +5632,9 @@ class S498Cd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43, end_page=44),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=56, end_page=57),
     ]
+    CALACCESS_FORMS = [
+        form_look_up['F498']
+    ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
@@ -5911,6 +5940,9 @@ class CvrF470Cd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
     ]
+    CALACCESS_FORMS = [
+        form_look_up['F470'],
+    ]
     amend_id = fields.IntegerField(
         db_column="AMEND_ID",
         db_index=True,
@@ -6030,9 +6062,7 @@ class CvrF470Cd(CalAccessBaseModel):
         db_index=True,
         help_text="Unique filing identification number."
     )
-    FORM_TYPE_CHOICES = (
-        ('F470', form_look_up['F470'].description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         db_column="FORM_TYPE",
         choices=FORM_TYPE_CHOICES,

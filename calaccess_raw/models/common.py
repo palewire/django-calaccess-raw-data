@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
+from calaccess_raw.calaccess_forms import CALACCESS_FORMS as form_look_up
 from .base import CalAccessBaseModel, DocumentCloud
 from django.template.defaultfilters import floatformat
 from django.utils.encoding import python_2_unicode_compatible
@@ -203,6 +204,39 @@ class FilerFilingsCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=64, end_page=66),
     ]
+    CALACCESS_FORMS = [
+        form_look_up['E530'],
+        form_look_up['F400'],
+        form_look_up['F401'],
+        form_look_up['F402'],
+        form_look_up['F410'],
+        form_look_up['F425'],
+        form_look_up['F450'],
+        form_look_up['F460'],
+        form_look_up['F461'],
+        form_look_up['F465'],
+        form_look_up['F470'],
+        form_look_up['F495'],
+        form_look_up['F496'],
+        form_look_up['F497'],
+        form_look_up['F498'],
+        form_look_up['F501'],
+        form_look_up['F502'],
+        form_look_up['F601'],
+        form_look_up['F602'],
+        form_look_up['F603'],
+        form_look_up['F604'],
+        form_look_up['F605'],
+        form_look_up['F606'],
+        form_look_up['F607'],
+        form_look_up['F615'],
+        form_look_up['F625'],
+        form_look_up['F635'],
+        form_look_up['F645'],
+        form_look_up['F690'],
+        form_look_up['F700'],
+        form_look_up['F900'],
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -222,14 +256,9 @@ class FilerFilingsCd(CalAccessBaseModel):
         blank=True,
         help_text="Identifies the period when the filing was recieved."
     )
-    FORM_ID_CHOICES = (
-        ('E530', ''),
+    FORM_ID_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
         ('F111', ''),
-        ('F400', ''),
-        ('F401', ''),
-        ('F402', ''),
         ('F405', ''),
-        ('F410', ''),
         ('F410 AT', ''),
         ('F410ATR', ''),
         ('F415', ''),
@@ -237,43 +266,17 @@ class FilerFilingsCd(CalAccessBaseModel):
         ('F419', ''),
         ('F420', ''),
         ('F421', ''),
-        ('F425', ''),
         ('F430', ''),
         ('F440', ''),
-        ('F450', ''),
-        ('F460', ''),
-        ('F461', ''),
-        ('F465', ''),
-        ('F470', ''),
         ('F470S', ''),
         ('F480', ''),
         ('F490', ''),
-        ('F495', ''),
-        ('F496', ''),
-        ('F497', ''),
-        ('F498', ''),
         ('F500', ''),
-        ('F501', ''),
         ('F501502', ''),
-        ('F502', ''),
         ('F555', ''),
-        ('F601', ''),
-        ('F602', ''),
-        ('F603', ''),
-        ('F604', ''),
-        ('F605', ''),
-        ('F606', ''),
-        ('F607', ''),
-        ('F615', ''),
-        ('F625', ''),
-        ('F635', ''),
-        ('F645', ''),
         ('F666', ''),
-        ('F690', ''),
-        ('F700', ''),
         ('F777', ''),
         ('F888', ''),
-        ('F900', ''),
         ('F999', ''),
     )
     form_id = fields.CharField(
@@ -295,7 +298,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         help_text="Date the filing entered into the system",
         null=True
     )
-    STATEMENT_TYPE_CHOICES = (
+    STMNT_TYPE_CHOICES = (
         (0, 'N/A'),
         (10001, 'ORIGINAL/INITIAL'),
         (10002, 'AMENDMENT'),
@@ -309,13 +312,13 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_column='STMNT_TYPE',
         verbose_name="statement type",
         db_index=True,
-        choices=STATEMENT_TYPE_CHOICES,
+        choices=STMNT_TYPE_CHOICES,
         help_text="Type of statement",
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=6),
         ]
     )
-    STATEMENT_STATUS_CHOICES = (
+    STMNT_STATUS_CHOICES = (
         (0, 'N/A'),
         (11001, 'COMPLETE'),
         (11002, 'INCOMPLETE'),
@@ -328,7 +331,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         help_text="The status of the statement. If the filing has been \
 reviewed or not reviewed.",
         verbose_name='statement status',
-        choices=STATEMENT_STATUS_CHOICES,
+        choices=STMNT_STATUS_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=6),
         ]
@@ -647,6 +650,22 @@ class SmryCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=131, end_page=132),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=86, end_page=87),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=27, end_page=28),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=59, end_page=60),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=35, end_page=37),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=72, end_page=74),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F401'],
+        form_look_up['F450'],
+        form_look_up['F460'],
+        form_look_up['F461'],
+        form_look_up['F465'],
+        form_look_up['F625'],
+        form_look_up['F635'],
+        form_look_up['F640'],
+        form_look_up['F645'],
+        form_look_up['F900'],
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -764,7 +783,14 @@ influence legislative or administrative action attachment)'),
         db_column='FORM_TYPE',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule'
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=86),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=27, end_page=28),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=59, end_page=60),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=36, end_page=37),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=73, end_page=74),
+        ]
     )
     amount_a = fields.DecimalField(
         decimal_places=2,
@@ -1281,6 +1307,32 @@ class TextMemoCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=14),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133, end_page=134),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=89, end_page=90)
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['E530'],
+        form_look_up['F401'],
+        form_look_up['F425'],
+        form_look_up['F410'],
+        form_look_up['F450'],
+        form_look_up['F460'],
+        form_look_up['F461'],
+        form_look_up['F465'],
+        form_look_up['F496'],
+        form_look_up['F497'],
+        form_look_up['F601'],
+        form_look_up['F602'],
+        form_look_up['F603'],
+        form_look_up['F604'],
+        form_look_up['F605'],
+        form_look_up['F606'],
+        form_look_up['F607'],
+        form_look_up['F615'],
+        form_look_up['F625'],
+        form_look_up['F630'],
+        form_look_up['F635'],
+        form_look_up['F635C'],
+        form_look_up['F640'],
+        form_look_up['F645'],
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
