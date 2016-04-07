@@ -94,4 +94,4 @@ class Command(CalAccessCommand):
             ) as zf:
             for name in os.listdir(self.sample_dir):
                 f = os.path.join(self.sample_dir, name)
-                zf.write(f, name)
+                zf.write(f, 'CalAccess/DATA/' + name)
