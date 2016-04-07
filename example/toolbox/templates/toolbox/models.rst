@@ -43,7 +43,24 @@ Filing Forms
 
 .. raw:: html
 
-    <div class="doc_pages_container">{% for form in object.CALACCESS_FORMS %}<div class="doc_page_frame"><a class="reference external image-reference" href="{{ form.documentcloud.canonical_url }}"><img class='doc_page' src='{{ form.documentcloud.thumbnail_url }}'></a><p>{{ form.id }}</p></div>{% endfor %}</div>
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    {% for form in object.CALACCESS_FORMS %}
+        <tr>
+            <td><a href="/filingforms.html#{{ form.id|lower }}">{{ form.id }}</a></td>
+            <td>{{ form.name }}</td>
+        </tr></a>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
 
 {% endif %}
 
@@ -84,12 +101,14 @@ Look-up Codes
 {% if field.documentcloud_pages|length > 0%}
 {% for doc, pages in field.docs.items %}
 *{{ doc }}*
+
 .. raw:: html
 
     <div class="doc_pages_container">{% for page in pages %}<div class="doc_page_frame"><a class="reference external image-reference" href="{{ page.canonical_url }}"><img class='doc_page' src='{{ page.thumbnail_url }}'></a><p>p. {{ page.num }}</p></div>{% endfor %}</div>
 
 {% endfor %}
 {% endif %}
+
 .. raw:: html
 
     <div class="wy-table-responsive">
