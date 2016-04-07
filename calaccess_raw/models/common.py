@@ -256,7 +256,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         blank=True,
         help_text="Identifies the period when the filing was recieved."
     )
-    FORM_ID_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
+    FORM_ID_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
         ('F111', ''),
         ('F405', ''),
         ('F410 AT', ''),

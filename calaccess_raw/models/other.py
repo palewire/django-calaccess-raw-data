@@ -231,7 +231,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    FORM_TYPE_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
+    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
         ('BADFORMAT 253', ''),
         ('form', ''),
     )
