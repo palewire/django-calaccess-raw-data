@@ -63,7 +63,7 @@ class Command(CalAccessCommand):
             for contrib in contributor_list:
                 d = dict(
                     repo=repo.name,
-                    name=contrib.url.split("/")[-1],
+                    name=contrib.login,
                     company=contrib.company,
                     location=contrib.location,
                     avatar_url=contrib.avatar_url,
