@@ -35,6 +35,7 @@ class Command(CalAccessCommand):
         """
         Make it happen.
         """
+        super(Command, self).handle(*args, **kwargs)
         self.set_options()
         self.header("Analyzing Code Rush contributors")
 
