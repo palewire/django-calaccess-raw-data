@@ -309,36 +309,29 @@ class FilingForm(object):
 
     @property
     def sections(self):
-        class FilingFormSection(object):
-            def __init__(self, id, title, documentcloud=None):
-                self.id = id
-                self.title = title
-                self.documentcloud = documentcloud
 
-                if documentcloud:
-                    if not isinstance(documentcloud, DocumentCloud):
-                        raise TypeError("documentcloud must be instance of DocumentCloud")
-
-            def __str__(self):
-                return str(self.id)
-
-        objs = []
-
-        for i in self.raw_sections:
-            if len(i) == 4:
-                doc = DocumentCloud(self.documentcloud.id, i[2], i[3])
-            elif len(i) == 3:
-                doc = DocumentCloud(self.documentcloud.id, i[2])
-            else:
-                doc = None
-
-            objs.append(FilingFormSection(i[0], i[1], doc))
-
-        return objs
+        return [FilingFormSection(self, *x) for x in self.raw_sections]
 
     def get_section(self, id):
         section_dict = {i.id: i for i in self.sections}
         return section_dict[id]
+
+    def __str__(self):
+        return str(self.id)
+
+
+class FilingFormSection(object):
+    def __init__(self, form, id, title, start_page=None, end_page=None):
+        self.id = id
+        self.title = title
+        self.form = form
+        self.start_page = start_page
+        self.end_page = end_page
+        self.documentcloud = DocumentCloud(
+            self.form.documentcloud.id,
+            self.start_page,
+            self.end_page
+        )
 
     def __str__(self):
         return str(self.id)
