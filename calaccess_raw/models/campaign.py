@@ -226,7 +226,7 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
@@ -472,7 +472,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=58),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
@@ -1159,7 +1159,7 @@ individual the filer's last name."
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
@@ -1736,7 +1736,7 @@ for Senate, Assembly, or Board of Equalization races."
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
@@ -1935,10 +1935,14 @@ class RcptCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=37, end_page=41),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F401'],
-        form_look_up['F460'],
-        form_look_up['F900'],
         form_look_up['E530'],
+        form_look_up['F900'],
+        form_look_up['F401'].get_part('F401A'),
+        form_look_up['F460'].get_part('A'),
+        form_look_up['F460'].get_part('A-1'),
+        form_look_up['F460'].get_part('C'),
+        form_look_up['F460'].get_part('I'),
+        form_look_up['F496'].get_part('F496P3'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2158,20 +2162,7 @@ and Form 401 Schedule A, A-1)"
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
-        ('A-1', 'Form 460: Schedule A-1, contributions transferred \
-to special election committees'),
-        ('F496P3', 'Form 496 (Late independent expenditure): \
-Part 3, contributions > $100 received'),
-        ('F401A', 'Form 401 (Slate mailer organization): Schedule A, \
-payments received'),
-        ('I', 'Form 460 (Recipient committee campaign statement): \
-Schedule I, miscellanous increases to cash'),
-        ('C', 'Form 460 (Recipient committee campaign statement): \
-Schedule C, non-monetary contributions received'),
-        ('A', 'Form 460 (Recipient committee campaign statement): \
-Schedule A, monetary contributions received')
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=9,
@@ -2564,7 +2555,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -3765,7 +3756,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS]) + (
         ('D', 'Form 460 (Recipient committee campaign statement): \
 Schedule D, summary of expenditure supporting/opposing other candidates, \
 measures and committees'),
@@ -4108,7 +4099,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -4523,7 +4514,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -6062,7 +6053,7 @@ class CvrF470Cd(CalAccessBaseModel):
         db_index=True,
         help_text="Unique filing identification number."
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         db_column="FORM_TYPE",
         choices=FORM_TYPE_CHOICES,

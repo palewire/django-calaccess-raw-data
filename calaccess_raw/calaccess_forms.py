@@ -20,6 +20,9 @@ producing one or more slate mailers.',
             documentcloud=DocumentCloud('2781366-401-2005-01'),
             description='Form 401 is filed by slate mailer organizations to \
 disclose payments made and received in connection with producing slate mailers.',
+            parts=[
+                ('F401A', 'Schedule A, payments received', 4, 6),
+            ]
         ),
     'F402': CalAccessForm(
             'F402',
@@ -63,7 +66,14 @@ certain specific criteria listed in the Form 450.'
             description='Form 460 is filed by recipient committees to report \
 expenditures and contributions. It can be used to file a pre-election statement, \
 semi-annual statement, quarterly statement, termination statement, special odd-\
-year report, or an amendment to a previously filed statement.'
+year report, or an amendment to a previously filed statement.',
+            parts=[
+                ('A', 'Schedule A, monetary contributions received', 8, 10),
+                ('A-1', 'Schedule A-1, contributions transferred to special \
+                    election committees'),
+                ('C', 'Schedule C, non-monetary contributions received', 15, 16),
+                ('I', 'Schedule I, miscellanous increases to cash', 31, 32),
+            ]
         ),
     'F461': CalAccessForm(
             'F461',
@@ -115,7 +125,10 @@ filed as an attachment to a campaign disclosure statement (Form 450 or 460).'
 expenditures whose combined total is $1,000 or more to support or oppose a single \
 candidate for elective office, or a single ballot measure. Form 496 should be \
 filed within 24-hours of making the expenditure during the 90 days immediately \
-preceding the election.'
+preceding the election.',
+            parts=[
+                ('F496P3', 'Part 3, contributions > $100 received', 3),
+            ]
         ),
     'F497': CalAccessForm(
             'F497',
@@ -285,8 +298,8 @@ If the firm employs one or more in-house lobbyists, then, for paper filers, a \
 separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic \
 or online filers file these as separate documents.'
         ),
-    'F630': CalAccessForm(
-            'F630',
+    'S630': CalAccessForm(
+            'S630',
             'Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) ',
             group='LOBBYIST',
             documentcloud=DocumentCloud('2782806-630-1990'),
@@ -307,8 +320,8 @@ as separate documents. This form is also used as a quarterly disclosure statemen
 for a client of a firm which has no in-house lobbyist (also referred to as a \
 non-registered employer).'
         ),
-    'F635C': CalAccessForm(
-            'F635C',
+    'S635C': CalAccessForm(
+            'S635C',
             'Payments Received by Lobbying Coalitions',
             group='LOBBYIST',
             documentcloud=DocumentCloud('2781338-635C-1990'),
@@ -316,8 +329,8 @@ non-registered employer).'
 attachment to the Form 635 (Report of a Lobbying Coalition) and discloses all \
 payment received from the members of a coalition.'
         ),
-    'F640': CalAccessForm(
-            'F640',
+    'S640': CalAccessForm(
+            'S640',
             'Governmental Agencies Reporting (Attachment to Form 635 or Form 645)',
             group='LOBBYIST',
             documentcloud=DocumentCloud('2781337-640-1993'),

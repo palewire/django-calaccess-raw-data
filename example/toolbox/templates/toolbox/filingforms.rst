@@ -15,15 +15,15 @@ Similar documentation and background info can also be found in the `Campaign Fin
 {{ form.id }}
 ~~~~~~~~~~~~~
 
-{{ form.name|safe }}
+{{ form.title|safe }}
 
 {{ form.description|safe }}
-{% if form.get_models|length > 0 %}
-Database Tables
+{% if form.parts|length > 0 %}
+Parts/Schedules
 ^^^^^^^^^^^^^^^
-Data collected via {{ form.id }} filings are written to the following tables:
-{% for model in form.get_models %}
-* `{{ model.klass_name }} </models.html#{{ model.klass_name|lower }}>`_
+{% for part in form.parts %}
+* {{ part.title }} {% if part.documentcloud.start_page %}(`p. {{ part.documentcloud.start_page }}{% if part.documentcloud.end_page %}-{{ part.documentcloud.end_page }}{% endif%} <{{ part.documentcloud.canonical_url }}>`_){% endif %}
+
 {% endfor %}
 {% endif %}
 
@@ -54,5 +54,15 @@ Example Form
     </noscript>
 
 {% endif %}
+
+{% if form.get_models|length > 0 %}
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via {{ form.id }} filings are written to the following tables:
+{% for model in form.get_models %}
+* `{{ model.klass_name }} </models.html#{{ model.klass_name|lower }}>`_
+{% endfor %}
+{% endif %}
+
 {% endfor %}
 {% endfor %}

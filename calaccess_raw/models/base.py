@@ -161,6 +161,15 @@ class DocumentCloud(object):
         self._title = self._metadata['title']
 
     @property
+    def metadata(self):
+        try:
+            self._metadata
+        except AttributeError:
+            self._lazy_load()
+
+        return self._metadata
+
+    @property
     def title(self):
         try:
             self._title
@@ -270,12 +279,16 @@ class CalAccessForm(object):
     A form used by the California Secretary of State to collection information
     which ends up in the CAL-ACCESS database
     """
-    def __init__(self, id, name, description=None, group=None, documentcloud=None):
+    def __init__(
+            self, id, title, description=None, group=None,
+            documentcloud=None, parts=None
+    ):
         self.id = id
-        self.name = name
+        self.title = title
         self.description = description
         self.group = group
         self.documentcloud = documentcloud
+        self.raw_parts = parts
 
         if self.documentcloud:
             if not isinstance(documentcloud, DocumentCloud):
@@ -293,6 +306,39 @@ class CalAccessForm(object):
                     models.append(model)
 
         return models
+
+    @property
+    def parts(self):
+        class CalAccessFormPart(object):
+            def __init__(self, id, title, documentcloud=None):
+                self.id = id
+                self.title = title
+                self.documentcloud = documentcloud
+
+                if documentcloud:
+                    if not isinstance(documentcloud, DocumentCloud):
+                        raise TypeError("documentcloud must be instance of DocumentCloud")
+
+            def __str__(self):
+                return str(self.id)
+
+        objs = []
+
+        for i in self.raw_parts:
+            if len(i) == 4:
+                doc = DocumentCloud(self.documentcloud.id, i[2], i[3])
+            elif len(i) == 3:
+                doc = DocumentCloud(self.documentcloud.id, i[2])
+            else:
+                doc = None
+
+            objs.append(CalAccessFormPart(i[0], i[1], doc))
+
+        return objs
+
+    def get_part(self, id):
+        part_dict = {i.id: i for i in self.parts}
+        return part_dict[id]
 
     def __str__(self):
         return str(self.id)

@@ -663,7 +663,7 @@ class SmryCd(CalAccessBaseModel):
         form_look_up['F465'],
         form_look_up['F625'],
         form_look_up['F635'],
-        form_look_up['F640'],
+        form_look_up['S640'],
         form_look_up['F645'],
         form_look_up['F900'],
     ]
@@ -696,7 +696,7 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
     )
-    FORM_TYPE_CHOICES = (
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS]) + (
         ('401A', 'Form 401 (Slate mailer organization campaign statement): \
 Schedule A, payments received'),
         ('401B', 'Form 401 (Slate mailer organization campaign statement): \
@@ -731,15 +731,6 @@ Schedule H2, '),
 Schedule H3, '),
         ('I', 'Form 460 (Recipient committee campaign statement): \
 Schedule I, '),
-        ('F401', 'Form 401 (Slate mailer organization campaign statement)'),
-
-        ('F450', 'Form 450 (Recipient committee campaign statement, \
-short form)'),
-        ('F460', 'Form 460 (Recipient committee campaign statement)'),
-        ('F461', 'Form 461 (Independent expenditure and major donor \
-committee campaign statement)'),
-        ('F465', 'Form 465 ()'),
-        ('F625', 'Form 625 (Report of lobbying firm)'),
         ('F625P2', 'Form 625 (Report of lobbying firm): \
 Part 2, payments received in connection with lobbying activity'),
         ('F625P3A', 'Form 625 (Report of lobbying firm): \
@@ -748,8 +739,6 @@ lobbying activities'),
         ('F625P3B', 'Form 625 (Report of lobbying firm): \
 Part 3B, payments to other lobbying firms made in connection with \
 lobbying activities'),
-        ('F635', 'Form 635 (Report of lobbyist employer and lobbying \
-coalition)'),
         ('F635P3A', 'Form 635 (Report of lobbyist employer and lobbying \
 coalition): Part 3A, payments in in-house employee lobbyists'),
         ('F635P3B', 'Form 635 (Report of lobbyist employer and lobbying \
@@ -762,8 +751,6 @@ administrative action'),
         ('F635P3E', 'Form 635 (Report of lobbyist employer and lobbying \
 coalition): Part 3E, payments in connection with administrative testimony \
 in ratemaking proceedings before the California Public Utilities Commission'),
-        ('F645', 'Form 645 (Report of person spending $5,000 or more to \
-influence legislative or administrative action)'),
         ('F645P2A', 'Form 645 (Report of person spending $5,000 or more to \
 influence legislative or administrative action): Part 2A, activity expenses'),
         ('F645P2B', 'Form 645 (Report of person spending $5,000 or more to \
@@ -773,10 +760,6 @@ other payments to influence legislative or administrative action'),
 influence legislative or administrative action): Part 2C, \
 payments in connection with administrative testimony in ratemaking \
 proceedings before the California Public Utilities Commission'),
-        ('F900', 'Form 900 (Form 900 (Public Employee\'s Retirement Board \
-         Candidate Campaign Statement)'),
-        ('S640', 'Form 640 (Governmental agencies reporting ther payments to \
-influence legislative or administrative action attachment)'),
     )
     form_type = fields.CharField(
         max_length=8,
@@ -1328,10 +1311,10 @@ class TextMemoCd(CalAccessBaseModel):
         form_look_up['F607'],
         form_look_up['F615'],
         form_look_up['F625'],
-        form_look_up['F630'],
+        form_look_up['S630'],
         form_look_up['F635'],
-        form_look_up['F635C'],
-        form_look_up['F640'],
+        form_look_up['S635C'],
+        form_look_up['S640'],
         form_look_up['F645'],
     ]
     filing_id = fields.IntegerField(

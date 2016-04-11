@@ -724,22 +724,22 @@ Look-up Codes
     
         <tr>
             <td>F425</td>
-            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
+            <td>Semi-Annual Statement of no Activity</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
+            <td>Supplemental Independent Expenditure Report</td>
         </tr>
     
     </tbody>
@@ -1686,12 +1686,12 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
+            <td>Statement of Organization Recipient Committee</td>
         </tr>
     
     </tbody>
@@ -2633,57 +2633,57 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F401</td>
-            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
+            <td>Slate Mailer Organization Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Form 402 is filed by slate mailer organizations to terminate the organization.</td>
+            <td>Statement of Termination (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
+            <td>Statement of Organization Recipient Committee</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
+            <td>Semi-Annual Statement of no Activity</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
+            <td>Supplemental Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F511</td>
-            <td>Form 511 is filed by committees that make expenditures totaling $5,000 or more to an individual for his or her appearance in a printed, televised, or radio advertisement, or in a telephone message, to support or oppose the qualification, passage, or defeat of a state or local ballot measure.</td>
+            <td>Paid Spokesperson Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>None</td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
     </tbody>
@@ -3915,57 +3915,57 @@ Look-up Codes
     
         <tr>
             <td>F401</td>
-            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
+            <td>Slate Mailer Organization Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
+            <td>Semi-Annual Statement of no Activity</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
+            <td>Supplemental Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F496</td>
-            <td>Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.</td>
+            <td>Late Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F498</td>
-            <td>Form 498 is filed by a slate mailer organization upon receipt of a late payment.</td>
+            <td>Slate Mailer Late Payment Report</td>
         </tr>
     
         <tr>
             <td>F497</td>
-            <td>Form 497 is filed by state and local committees making or receiving contribution(s) whose combined total is $1,000 or more in the 90 days before an election, committees reporting contributions of $5,000 or more in connection with a state ballot measure, and state candidates as well as state ballot measure committees that receive $5,000 or more at any time other than a 90-day election cycle.</td>
+            <td>Late Contribution Report</td>
         </tr>
     
         <tr>
             <td>F511</td>
-            <td>Form 511 is filed by committees that make expenditures totaling $5,000 or more to an individual for his or her appearance in a printed, televised, or radio advertisement, or in a telephone message, to support or oppose the qualification, passage, or defeat of a state or local ballot measure.</td>
+            <td>Paid Spokesperson Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>None</td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
     </tbody>
@@ -5061,7 +5061,7 @@ Look-up Codes
     
         <tr>
             <td>F470</td>
-            <td>Form 470 is filed by officeholders and candidates who do not have a controlled committee, do not receive contributions totaling $2,000 or more during the calendar year, and do not spend $2,000 or more during the calendar year.</td>
+            <td>Officeholder and Candidate Campaign Statement, Short Form</td>
         </tr>
     
     </tbody>
@@ -6171,17 +6171,17 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Form 402 is filed by slate mailer organizations to terminate the organization.</td>
+            <td>Statement of Termination (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
+            <td>Statement of Organization Recipient Committee</td>
         </tr>
     
     </tbody>
@@ -8780,27 +8780,27 @@ Look-up Codes
     
         <tr>
             <td>F450</td>
-            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
+            <td>Supplemental Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>None</td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
         <tr>
@@ -9565,12 +9565,12 @@ Look-up Codes
     
         <tr>
             <td>F450</td>
-            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>Recipient Committee Campaign Statement</td>
         </tr>
     
     </tbody>
@@ -12689,13 +12689,8 @@ RcptCd contains data collected from the following filing forms:
     <tbody valign="top">
     
         <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td><a href="/filingforms.html#e530">E530</a></td>
+            <td>Electronic Issue Advocacy Report</td>
         </tr></a>
     
         <tr>
@@ -12704,8 +12699,33 @@ RcptCd contains data collected from the following filing forms:
         </tr></a>
     
         <tr>
-            <td><a href="/filingforms.html#e530">E530</a></td>
-            <td>Electronic Issue Advocacy Report</td>
+            <td><a href="/filingforms.html#f401a">F401A</a></td>
+            <td>Schedule A, payments received</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#a">A</a></td>
+            <td>Schedule A, monetary contributions received</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#a-1">A-1</a></td>
+            <td>Schedule A-1, contributions transferred to special                     election committees</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#c">C</a></td>
+            <td>Schedule C, non-monetary contributions received</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#i">I</a></td>
+            <td>Schedule I, miscellanous increases to cash</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f496p3">F496P3</a></td>
+            <td>Part 3, contributions &gt; $100 received</td>
         </tr></a>
     
     </tbody>
@@ -13451,53 +13471,43 @@ Look-up Codes
     <tbody valign="top">
     
         <tr>
-            <td>F401</td>
-            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
-        </tr>
-    
-        <tr>
-            <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>E530</td>
+            <td>Electronic Issue Advocacy Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>None</td>
-        </tr>
-    
-        <tr>
-            <td>E530</td>
-            <td>On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.</td>
-        </tr>
-    
-        <tr>
-            <td>A-1</td>
-            <td>Form 460: Schedule A-1, contributions transferred to special election committees</td>
-        </tr>
-    
-        <tr>
-            <td>F496P3</td>
-            <td>Form 496 (Late independent expenditure): Part 3, contributions &gt; $100 received</td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
         <tr>
             <td>F401A</td>
-            <td>Form 401 (Slate mailer organization): Schedule A, payments received</td>
-        </tr>
-    
-        <tr>
-            <td>I</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule I, miscellanous increases to cash</td>
-        </tr>
-    
-        <tr>
-            <td>C</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule C, non-monetary contributions received</td>
+            <td>Schedule A, payments received</td>
         </tr>
     
         <tr>
             <td>A</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule A, monetary contributions received</td>
+            <td>Schedule A, monetary contributions received</td>
+        </tr>
+    
+        <tr>
+            <td>A-1</td>
+            <td>Schedule A-1, contributions transferred to special                     election committees</td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td>Schedule C, non-monetary contributions received</td>
+        </tr>
+    
+        <tr>
+            <td>I</td>
+            <td>Schedule I, miscellanous increases to cash</td>
+        </tr>
+    
+        <tr>
+            <td>F496P3</td>
+            <td>Part 3, contributions &gt; $100 received</td>
         </tr>
     
     </tbody>
@@ -15222,7 +15232,7 @@ Look-up Codes
     
         <tr>
             <td>F496</td>
-            <td>Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.</td>
+            <td>Late Independent Expenditure Report</td>
         </tr>
     
     </tbody>
@@ -20165,7 +20175,7 @@ SmryCd contains data collected from the following filing forms:
         </tr></a>
     
         <tr>
-            <td><a href="/filingforms.html#f640">F640</a></td>
+            <td><a href="/filingforms.html#s640">S640</a></td>
             <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
         </tr></a>
     
@@ -20355,6 +20365,56 @@ Look-up Codes
     <tbody valign="top">
     
         <tr>
+            <td>F401</td>
+            <td>Slate Mailer Organization Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Recipient Committee Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Supplemental Independent Expenditure Report</td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td>Report of Lobbying Firm</td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr>
+    
+        <tr>
+            <td>S640</td>
+            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+        </tr>
+    
+        <tr>
             <td>401A</td>
             <td>Form 401 (Slate mailer organization campaign statement): Schedule A, payments received</td>
         </tr>
@@ -20440,36 +20500,6 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F401</td>
-            <td>Form 401 (Slate mailer organization campaign statement)</td>
-        </tr>
-    
-        <tr>
-            <td>F450</td>
-            <td>Form 450 (Recipient committee campaign statement, short form)</td>
-        </tr>
-    
-        <tr>
-            <td>F460</td>
-            <td>Form 460 (Recipient committee campaign statement)</td>
-        </tr>
-    
-        <tr>
-            <td>F461</td>
-            <td>Form 461 (Independent expenditure and major donor committee campaign statement)</td>
-        </tr>
-    
-        <tr>
-            <td>F465</td>
-            <td>Form 465 ()</td>
-        </tr>
-    
-        <tr>
-            <td>F625</td>
-            <td>Form 625 (Report of lobbying firm)</td>
-        </tr>
-    
-        <tr>
             <td>F625P2</td>
             <td>Form 625 (Report of lobbying firm): Part 2, payments received in connection with lobbying activity</td>
         </tr>
@@ -20482,11 +20512,6 @@ Look-up Codes
         <tr>
             <td>F625P3B</td>
             <td>Form 625 (Report of lobbying firm): Part 3B, payments to other lobbying firms made in connection with lobbying activities</td>
-        </tr>
-    
-        <tr>
-            <td>F635</td>
-            <td>Form 635 (Report of lobbyist employer and lobbying coalition)</td>
         </tr>
     
         <tr>
@@ -20515,11 +20540,6 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F645</td>
-            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action)</td>
-        </tr>
-    
-        <tr>
             <td>F645P2A</td>
             <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2A, activity expenses</td>
         </tr>
@@ -20532,16 +20552,6 @@ Look-up Codes
         <tr>
             <td>F645P2C</td>
             <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2C, payments in connection with administrative testimony in ratemaking proceedings before the California Public Utilities Commission</td>
-        </tr>
-    
-        <tr>
-            <td>F900</td>
-            <td>Form 900 (Form 900 (Public Employee&#39;s Retirement Board          Candidate Campaign Statement)</td>
-        </tr>
-    
-        <tr>
-            <td>S640</td>
-            <td>Form 640 (Governmental agencies reporting ther payments to influence legislative or administrative action attachment)</td>
         </tr>
     
     </tbody>
@@ -20886,7 +20896,7 @@ TextMemoCd contains data collected from the following filing forms:
         </tr></a>
     
         <tr>
-            <td><a href="/filingforms.html#f630">F630</a></td>
+            <td><a href="/filingforms.html#s630">S630</a></td>
             <td>Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) </td>
         </tr></a>
     
@@ -20896,12 +20906,12 @@ TextMemoCd contains data collected from the following filing forms:
         </tr></a>
     
         <tr>
-            <td><a href="/filingforms.html#f635c">F635C</a></td>
+            <td><a href="/filingforms.html#s635c">S635C</a></td>
             <td>Payments Received by Lobbying Coalitions</td>
         </tr></a>
     
         <tr>
-            <td><a href="/filingforms.html#f640">F640</a></td>
+            <td><a href="/filingforms.html#s640">S640</a></td>
             <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
         </tr></a>
     
@@ -21833,12 +21843,12 @@ Look-up Codes
     
         <tr>
             <td>F625</td>
-            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
+            <td>Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
     </tbody>
@@ -22145,17 +22155,17 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbying Firm Registration Statement</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td>Form 602 is an authorization form filed by each person who employs or contracts with a lobbying firm. This form serves as an attachment to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains a schedule which describes by category the nature and interest of the client of the firm. Like Form 601 this registration attachment is valid for the length of the State Legislative session for which it is filed. Form 602 must be filed by a firm or its client, prior to attempting to influence legislative or administrative action on behalf of that client.</td>
+            <td>Lobbying Firm Activity Authorization</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
         </tr>
     
     </tbody>
@@ -22892,22 +22902,22 @@ Look-up Codes
     
         <tr>
             <td>F615</td>
-            <td>Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.</td>
+            <td>Lobbyist Report</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
+            <td>Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>F645</td>
-            <td>Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.</td>
+            <td>Report of Person Spending $5,000 or More</td>
         </tr>
     
     </tbody>
@@ -23859,32 +23869,32 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbying Firm Registration Statement</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td>Form 602 is an authorization form filed by each person who employs or contracts with a lobbying firm. This form serves as an attachment to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains a schedule which describes by category the nature and interest of the client of the firm. Like Form 601 this registration attachment is valid for the length of the State Legislative session for which it is filed. Form 602 must be filed by a firm or its client, prior to attempting to influence legislative or administrative action on behalf of that client.</td>
+            <td>Lobbying Firm Activity Authorization</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
         </tr>
     
         <tr>
             <td>F604</td>
-            <td>Form 604 is the certification statement filed by an individual who qualifies as a lobbyist (including an individual contract lobbyist). Form 604 is the initial certification statement and is also used as a renewal of a previous lobbyist certification. This form includes verification as to whether the lobbyist has attended a required course within the previous 12 months on ethical issues and laws relating to lobbying. When submitted as a paper filing, this form is an attachment to either the firm&#39;s Form 601 or the employer&#39;s Form 603. If the form is filed electronically, it is filed separately by the lobbyist.</td>
+            <td>Lobbyist Certification Statement</td>
         </tr>
     
         <tr>
             <td>F606</td>
-            <td>Form 606 is filed by any lobbying firm, registered lobbyist employer, lobbying coalition or lobbyist who wishes to terminate a filed registration or certification statement. A client of a firm (non-registered employer) does not use this form to cease lobbying activity. Instead it is deleted by the associated firm, which files a Form 605. Form 606 is filed within 20 days of ceasing all lobbying activity. A final quarterly disclosure statement must be filed for the quarter in which the date of termination is effective.</td>
+            <td>Notice of Termination</td>
         </tr>
     
         <tr>
             <td>F607</td>
-            <td>Form 607 is filed by a lobbying firm or lobbyist wishing to withdraw the filed registration statement of a firm which has never met the statutory definition of a lobbying firm or lobbyist. Submittal of this form relieves the filer of any duty to file any previously-required quarterly disclosure statements.</td>
+            <td>Notice of Withdrawal</td>
         </tr>
     
     </tbody>
@@ -24314,22 +24324,22 @@ Look-up Codes
     
         <tr>
             <td>F615</td>
-            <td>Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.</td>
+            <td>Lobbyist Report</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
+            <td>Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>F645</td>
-            <td>Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.</td>
+            <td>Report of Person Spending $5,000 or More</td>
         </tr>
     
     </tbody>
@@ -24366,6 +24376,58 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/52.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p52-thumbnail.gif'></a><p>p. 52</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p53-thumbnail.gif'></a><p>p. 53</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/79.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p79-thumbnail.gif'></a><p>p. 79</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/80.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p80-thumbnail.gif'></a><p>p. 80</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p65-thumbnail.gif'></a><p>p. 65</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+LattCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#s630">S630</a></td>
+            <td>Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) </td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#s635c">S635C</a></td>
+            <td>Payments Received by Lobbying Coalitions</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#s640">S640</a></td>
+            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -24637,6 +24699,29 @@ Look-up Codes
 *form_type*
 
 
+*MapCalFormat2Fields*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/52.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p52-thumbnail.gif'></a><p>p. 52</p></div></div>
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/79.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p79-thumbnail.gif'></a><p>p. 79</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p65-thumbnail.gif'></a><p>p. 65</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -24651,17 +24736,17 @@ Look-up Codes
     
         <tr>
             <td>S630</td>
-            <td></td>
+            <td>S630</td>
         </tr>
     
         <tr>
             <td>S635-C</td>
-            <td></td>
+            <td>S635C</td>
         </tr>
     
         <tr>
             <td>S640</td>
-            <td></td>
+            <td>S640</td>
         </tr>
     
     </tbody>
@@ -24723,6 +24808,63 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/54.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p54-thumbnail.gif'></a><p>p. 54</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/55.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p55-thumbnail.gif'></a><p>p. 55</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/78.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p78-thumbnail.gif'></a><p>p. 78</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/79.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p79-thumbnail.gif'></a><p>p. 79</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+LccmCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f615">F615</a></td>
+            <td>Lobbyist Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -25010,6 +25152,22 @@ Look-up Codes
 *form_type*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/78.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p78-thumbnail.gif'></a><p>p. 78</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/79.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p79-thumbnail.gif'></a><p>p. 79</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -25024,22 +25182,22 @@ Look-up Codes
     
         <tr>
             <td>F615P2</td>
-            <td></td>
+            <td>Form 615/Part 2 - Campaign Contrib</td>
         </tr>
     
         <tr>
             <td>F625P4B</td>
-            <td></td>
+            <td>Form 625/Part 4B - Campaign Contrib</td>
         </tr>
     
         <tr>
             <td>F635P4B</td>
-            <td></td>
+            <td>Form 635/Part 4B - Campaign Contrib</td>
         </tr>
     
         <tr>
             <td>F645P3B</td>
-            <td></td>
+            <td>Form 645/Part 3B - Campaign Contrib</td>
         </tr>
     
     </tbody>
@@ -25429,6 +25587,63 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p58-thumbnail.gif'></a><p>p. 58</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p74-thumbnail.gif'></a><p>p. 74</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/75.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p75-thumbnail.gif'></a><p>p. 75</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/61.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p61-thumbnail.gif'></a><p>p. 61</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+LexpCd contains data collected from the following filing forms:
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Form</th>
+            <th class="head">Title</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td><a href="/filingforms.html#f615">F615</a></td>
+            <td>Lobbyist Report</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f625">F625</a></td>
+            <td>Report of Lobbying Firm</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f635">F635</a></td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr></a>
+    
+        <tr>
+            <td><a href="/filingforms.html#f645">F645</a></td>
+            <td>Report of Person Spending $5,000 or More</td>
+        </tr></a>
+    
+    </tbody>
+    </table>
+    </div>
 
 
 
@@ -25720,6 +25935,22 @@ Look-up Codes
 *form_type*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/61.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p61-thumbnail.gif'></a><p>p. 61</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -25734,22 +25965,22 @@ Look-up Codes
     
         <tr>
             <td>F615P1</td>
-            <td></td>
+            <td>Form 615/Part 1 - Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F625P3A</td>
-            <td></td>
+            <td>Form 625/Part 3A - Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F635P3C</td>
-            <td></td>
+            <td>Form 635/Part 3C - Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F645P2A</td>
-            <td></td>
+            <td>Form 645/Part 2A - Activity Expenses</td>
         </tr>
     
     </tbody>
@@ -26350,12 +26581,12 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbying Firm Registration Statement</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
         </tr>
     
     </tbody>
@@ -26546,7 +26777,7 @@ Fields
             <td>entity_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td>This field is undocumented. The values might refer to either FILER_TYPE_CD.FILER_TYPE or GROUP_TYPE_CD.GRP_ID, but that&#39;s just a guess.</td>
         </tr>
     
     
@@ -26646,47 +26877,42 @@ Look-up Codes
     
         <tr>
             <td>0</td>
-            <td>Unknown</td>
+            <td>n/a</td>
         </tr>
     
         <tr>
             <td>1</td>
-            <td>Unknown</td>
+            <td>Client</td>
         </tr>
     
         <tr>
             <td>2</td>
-            <td>Unknown</td>
+            <td>Employer</td>
         </tr>
     
         <tr>
             <td>3</td>
-            <td>Unknown</td>
+            <td>Firm</td>
         </tr>
     
         <tr>
             <td>4</td>
-            <td>Unknown</td>
+            <td>Lobbyist</td>
         </tr>
     
         <tr>
             <td>10</td>
-            <td>Unknown</td>
+            <td>Major Donor</td>
         </tr>
     
         <tr>
             <td>16</td>
-            <td>Unknown</td>
+            <td>Recipient Committee</td>
         </tr>
     
         <tr>
             <td>20</td>
-            <td>Unknown</td>
-        </tr>
-    
-        <tr>
-            <td>None</td>
-            <td>Unknown</td>
+            <td>Treasurer/Responsible Officer</td>
         </tr>
     
     </tbody>
@@ -30908,112 +31134,112 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.</td>
+            <td>Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F401</td>
-            <td>Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.</td>
+            <td>Slate Mailer Organization Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Form 402 is filed by slate mailer organizations to terminate the organization.</td>
+            <td>Statement of Termination (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.</td>
+            <td>Statement of Organization Recipient Committee</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.</td>
+            <td>Semi-Annual Statement of no Activity</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.</td>
+            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.</td>
+            <td>Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.</td>
+            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.</td>
+            <td>Supplemental Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F496</td>
-            <td>Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.</td>
+            <td>Late Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F497</td>
-            <td>Form 497 is filed by state and local committees making or receiving contribution(s) whose combined total is $1,000 or more in the 90 days before an election, committees reporting contributions of $5,000 or more in connection with a state ballot measure, and state candidates as well as state ballot measure committees that receive $5,000 or more at any time other than a 90-day election cycle.</td>
+            <td>Late Contribution Report</td>
         </tr>
     
         <tr>
             <td>F498</td>
-            <td>Form 498 is filed by a slate mailer organization upon receipt of a late payment.</td>
+            <td>Slate Mailer Late Payment Report</td>
         </tr>
     
         <tr>
             <td>F601</td>
-            <td>Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbying Firm Registration Statement</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td>Form 602 is an authorization form filed by each person who employs or contracts with a lobbying firm. This form serves as an attachment to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains a schedule which describes by category the nature and interest of the client of the firm. Like Form 601 this registration attachment is valid for the length of the State Legislative session for which it is filed. Form 602 must be filed by a firm or its client, prior to attempting to influence legislative or administrative action on behalf of that client.</td>
+            <td>Lobbying Firm Activity Authorization</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Form 603 is a registration statement filed by registered lobbyists employers or lobbying coalitions upon qualifying as an employer or coalition. This form is also used to renew an existing registration on a biennial basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer or lobbying coalition. Renewal of an existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.</td>
+            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
         </tr>
     
         <tr>
             <td>F604</td>
-            <td>Form 604 is the certification statement filed by an individual who qualifies as a lobbyist (including an individual contract lobbyist). Form 604 is the initial certification statement and is also used as a renewal of a previous lobbyist certification. This form includes verification as to whether the lobbyist has attended a required course within the previous 12 months on ethical issues and laws relating to lobbying. When submitted as a paper filing, this form is an attachment to either the firm&#39;s Form 601 or the employer&#39;s Form 603. If the form is filed electronically, it is filed separately by the lobbyist.</td>
+            <td>Lobbyist Certification Statement</td>
         </tr>
     
         <tr>
             <td>F606</td>
-            <td>Form 606 is filed by any lobbying firm, registered lobbyist employer, lobbying coalition or lobbyist who wishes to terminate a filed registration or certification statement. A client of a firm (non-registered employer) does not use this form to cease lobbying activity. Instead it is deleted by the associated firm, which files a Form 605. Form 606 is filed within 20 days of ceasing all lobbying activity. A final quarterly disclosure statement must be filed for the quarter in which the date of termination is effective.</td>
+            <td>Notice of Termination</td>
         </tr>
     
         <tr>
             <td>F607</td>
-            <td>Form 607 is filed by a lobbying firm or lobbyist wishing to withdraw the filed registration statement of a firm which has never met the statutory definition of a lobbying firm or lobbyist. Submittal of this form relieves the filer of any duty to file any previously-required quarterly disclosure statements.</td>
+            <td>Notice of Withdrawal</td>
         </tr>
     
         <tr>
             <td>F615</td>
-            <td>Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.</td>
+            <td>Lobbyist Report</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td>Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.</td>
+            <td>Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td>Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).</td>
+            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>F645</td>
-            <td>Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.</td>
+            <td>Report of Person Spending $5,000 or More</td>
         </tr>
     
         <tr>
@@ -32445,7 +32671,9 @@ Look-up Codes
 GroupTypesCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This lookup table stores group type information.
+This lookup table stores group type information. Most (but not all) of the GRP_ID/
+GRP_NAME value pairs in this table match the FILER_TYPE/DESCRIPTION value pairs in
+the FILER_TYPE_CD table.
 
 **Sample:** `GROUP_TYPES_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/GROUP_TYPES_CD.TSV>`_
 
@@ -32497,7 +32725,7 @@ Fields
             <td>grp_name</td>
             <td>String (up to 28)</td>
             <td>No</td>
-            <td>Group name</td>
+            <td>Group name: Group name. Many of the values in this column are empty strings.</td>
         </tr>
     
     
@@ -32506,7 +32734,7 @@ Fields
             <td>grp_desc</td>
             <td>String (up to 32)</td>
             <td>No</td>
-            <td>Group description</td>
+            <td>Group description: Group Description. This column contains only empty strings.</td>
         </tr>
     
     

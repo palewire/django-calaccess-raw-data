@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 from calaccess_raw import fields
 from calaccess_raw.calaccess_forms import CALACCESS_FORMS as form_look_up
-from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel, DocumentCloud
 
 
@@ -297,7 +297,7 @@ Form 604. As filed by the lobbyist.',
         help_text='Name of the lobbyist employer or firm. Applies to \
 Forms 604, 606, 607.',
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -654,7 +654,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=10,
         db_column='FORM_TYPE',
@@ -888,7 +888,7 @@ to forms 625, 635, 645.",
         blank=True,
         help_text='Form, employer or coalition business ZIP Code',
     )
-    FORM_TYPE_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -1228,7 +1228,7 @@ entity is an individual. Only required by Form 635.',
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -1318,7 +1318,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         max_length=9,
         db_column='FORM_TYPE',
@@ -1619,7 +1619,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -1692,6 +1692,13 @@ class LattCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=81, end_page=82),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=52, end_page=53),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=79, end_page=80),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['S630'],
+        form_look_up['S635C'],
+        form_look_up['S640'],
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1743,9 +1750,9 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('S630', ''),
-        ('S635-C', ''),
-        ('S640', ''),
+        ('S630', form_look_up['S630']),
+        ('S635-C', form_look_up['S635C']),
+        ('S640', form_look_up['S640']),
     )
     form_type = fields.CharField(
         max_length=6,
@@ -1753,6 +1760,11 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=52),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=79),
+        ]
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -1874,7 +1886,16 @@ class LexpCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=86, end_page=87),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=58, end_page=59)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=58, end_page=59),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=74, end_page=75),
+
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F615'],
+        form_look_up['F625'],
+        form_look_up['F635'],
+        form_look_up['F645'],
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1954,10 +1975,10 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('F615P1', ''),
-        ('F625P3A', ''),
-        ('F635P3C', ''),
-        ('F645P2A', ''),
+        ('F615P1', 'Form 615/Part 1 - Activity Expenses'),
+        ('F625P3A', 'Form 625/Part 3A - Activity Expenses'),
+        ('F635P3C', 'Form 635/Part 3C - Activity Expenses'),
+        ('F645P2A', 'Form 645/Part 2A - Activity Expenses'),
     )
     form_type = fields.CharField(
         max_length=7,
@@ -1965,6 +1986,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=74),
+        ]
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -2091,7 +2116,15 @@ class LccmCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=83, end_page=84),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=54, end_page=55)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=54, end_page=55),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
+    ]
+    CALACCESS_FORMS = [
+        form_look_up['F615'],
+        form_look_up['F625'],
+        form_look_up['F635'],
+        form_look_up['F645'],
     ]
     # acct_name = fields.CharField(
     #   max_length=90,
@@ -2169,10 +2202,10 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('F615P2', ''),
-        ('F625P4B', ''),
-        ('F635P4B', ''),
-        ('F645P3B', ''),
+        ('F615P2', 'Form 615/Part 2 - Campaign Contrib'),
+        ('F625P4B', 'Form 625/Part 4B - Campaign Contrib'),
+        ('F635P4B', 'Form 635/Part 4B - Campaign Contrib'),
+        ('F645P3B', 'Form 645/Part 3B - Campaign Contrib'),
     )
     form_type = fields.CharField(
         max_length=7,
@@ -2180,6 +2213,10 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
+        ]
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -2566,21 +2603,21 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         verbose_name="Filer phone number"
     )
     ENTITY_TYPE_CHOICES = (
-        (0, 'Unknown'),
-        (1, 'Unknown'),
-        (2, 'Unknown'),
-        (3, 'Unknown'),
-        (4, 'Unknown'),
-        (10, 'Unknown'),
-        (16, 'Unknown'),
-        (20, 'Unknown'),
-        (None, 'Unknown'),
+        (0, 'n/a'),
+        (1, 'Client'),
+        (2, 'Employer'),
+        (3, 'Firm'),
+        (4, 'Lobbyist'),
+        (10, 'Major Donor'),
+        (16, 'Recipient Committee'),
+        (20, 'Treasurer/Responsible Officer'),
     )
     entity_type = fields.IntegerField(
         db_column="ENTITY_TYPE",
         null=True,
         choices=ENTITY_TYPE_CHOICES,
-        help_text="This field is undocumented"
+        help_text="This field is undocumented. The values might refer to either \
+FILER_TYPE_CD.FILER_TYPE or GROUP_TYPE_CD.GRP_ID, but that's just a guess."
     )
     entity_name = fields.CharField(
         max_length=500,
@@ -4026,6 +4063,9 @@ class LothCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=107),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=67, end_page=68),
     ]
+    CALACCESS_FORMS = [
+
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
@@ -4195,6 +4235,9 @@ class LpayCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    CALACCESS_FORMS = [
+
+    ]
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=69, end_page=70)

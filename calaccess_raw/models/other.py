@@ -231,7 +231,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS]) + (
         ('BADFORMAT 253', ''),
         ('form', ''),
     )
@@ -922,7 +922,9 @@ class FilingPeriodCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class GroupTypesCd(CalAccessBaseModel):
     """
-    This lookup table stores group type information.
+    This lookup table stores group type information. Most (but not all) of the GRP_ID/
+    GRP_NAME value pairs in this table match the FILER_TYPE/DESCRIPTION value pairs in
+    the FILER_TYPE_CD table.
     """
     UNIQUE_KEY = "GRP_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -938,13 +940,15 @@ class GroupTypesCd(CalAccessBaseModel):
         db_column='GRP_NAME',
         max_length=28,
         blank=True,
-        verbose_name="Group name"
+        verbose_name="Group name",
+        help_text="Group name. Many of the values in this column are empty strings."
     )
     grp_desc = fields.CharField(
         db_column='GRP_DESC',
         max_length=32,
         blank=True,
-        verbose_name="Group description"
+        verbose_name="Group description",
+        help_text="Group Description. This column contains only empty strings."
     )
 
     class Meta:

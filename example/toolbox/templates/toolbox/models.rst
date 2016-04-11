@@ -55,7 +55,7 @@ Filing Forms
     {% for form in object.CALACCESS_FORMS %}
         <tr>
             <td><a href="/filingforms.html#{{ form.id|lower }}">{{ form.id }}</a></td>
-            <td>{{ form.name }}</td>
+            <td>{{ form.title }}</td>
         </tr></a>
     {% endfor %}
     </tbody>
