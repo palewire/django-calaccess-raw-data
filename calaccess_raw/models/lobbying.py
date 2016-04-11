@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
 from calaccess_raw import fields
-from calaccess_raw.calaccess_forms import CALACCESS_FORMS as form_look_up
+from calaccess_raw.filing_forms import get_filing_form
 from .base import CalAccessBaseModel, DocumentCloud
 
 
@@ -26,12 +26,12 @@ class CvrRegistrationCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=82, end_page=86),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F601'],
-        form_look_up['F602'],
-        form_look_up['F603'],
-        form_look_up['F604'],
-        form_look_up['F606'],
-        form_look_up['F607'],
+        get_filing_form('F601'),
+        get_filing_form('F602'),
+        get_filing_form('F603'),
+        get_filing_form('F604'),
+        get_filing_form('F606'),
+        get_filing_form('F607'),
     ]
     # a_b_adr1 = fields.CharField(
     #   max_length=55,
@@ -623,9 +623,9 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=87, end_page=88),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F601'],
-        form_look_up['F602'],
-        form_look_up['F603'],
+        get_filing_form('F601'),
+        get_filing_form('F602'),
+        get_filing_form('F603'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -752,10 +752,10 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=65, end_page=70),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F615'],
-        form_look_up['F625'],
-        form_look_up['F635'],
-        form_look_up['F645'],
+        get_filing_form('F615'),
+        get_filing_form('F625'),
+        get_filing_form('F635'),
+        get_filing_form('F645'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1159,8 +1159,8 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F625'],
-        form_look_up['F635'],
+        get_filing_form('F625'),
+        get_filing_form('F635'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1292,8 +1292,8 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=88, end_page=89),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F601'],
-        form_look_up['F603'],
+        get_filing_form('F601'),
+        get_filing_form('F603'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1586,10 +1586,10 @@ class F690P2Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F615'],
-        form_look_up['F625'],
-        form_look_up['F635'],
-        form_look_up['F645'],
+        get_filing_form('F615'),
+        get_filing_form('F625'),
+        get_filing_form('F635'),
+        get_filing_form('F645'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1696,9 +1696,9 @@ class LattCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=79, end_page=80),
     ]
     CALACCESS_FORMS = [
-        form_look_up['S630'],
-        form_look_up['S635C'],
-        form_look_up['S640'],
+        get_filing_form('S630'),
+        get_filing_form('S635C'),
+        get_filing_form('S640'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1750,9 +1750,9 @@ original filing and 1 to 999 amendments.",
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
-        ('S630', form_look_up['S630']),
-        ('S635-C', form_look_up['S635C']),
-        ('S640', form_look_up['S640']),
+        ('S630', get_filing_form('S630')),
+        ('S635-C', get_filing_form('S635C')),
+        ('S640', get_filing_form('S640')),
     )
     form_type = fields.CharField(
         max_length=6,
@@ -1892,10 +1892,10 @@ class LexpCd(CalAccessBaseModel):
 
     ]
     CALACCESS_FORMS = [
-        form_look_up['F615'],
-        form_look_up['F625'],
-        form_look_up['F635'],
-        form_look_up['F645'],
+        get_filing_form('F615'),
+        get_filing_form('F625'),
+        get_filing_form('F635'),
+        get_filing_form('F645'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2121,10 +2121,10 @@ class LccmCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F615'],
-        form_look_up['F625'],
-        form_look_up['F635'],
-        form_look_up['F645'],
+        get_filing_form('F615'),
+        get_filing_form('F625'),
+        get_filing_form('F635'),
+        get_filing_form('F645'),
     ]
     # acct_name = fields.CharField(
     #   max_length=90,

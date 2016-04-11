@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields
-from calaccess_raw.calaccess_forms import CALACCESS_FORMS as form_look_up
+from calaccess_raw.filing_forms import get_filing_form
 from django.db.models import ForeignKey
 from django.utils.encoding import python_2_unicode_compatible
 from .base import CalAccessBaseModel, DocumentCloud
@@ -186,28 +186,28 @@ class EfsFilingLogCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50)
     ]
     CALACCESS_FORMS = [
-        form_look_up['F400'],
-        form_look_up['F401'],
-        form_look_up['F402'],
-        form_look_up['F410'],
-        form_look_up['F425'],
-        form_look_up['F450'],
-        form_look_up['F460'],
-        form_look_up['F461'],
-        form_look_up['F465'],
-        form_look_up['F496'],
-        form_look_up['F497'],
-        form_look_up['F498'],
-        form_look_up['F601'],
-        form_look_up['F602'],
-        form_look_up['F603'],
-        form_look_up['F604'],
-        form_look_up['F606'],
-        form_look_up['F607'],
-        form_look_up['F615'],
-        form_look_up['F625'],
-        form_look_up['F635'],
-        form_look_up['F645'],
+        get_filing_form('F400'),
+        get_filing_form('F401'),
+        get_filing_form('F402'),
+        get_filing_form('F410'),
+        get_filing_form('F425'),
+        get_filing_form('F450'),
+        get_filing_form('F460'),
+        get_filing_form('F461'),
+        get_filing_form('F465'),
+        get_filing_form('F496'),
+        get_filing_form('F497'),
+        get_filing_form('F498'),
+        get_filing_form('F601'),
+        get_filing_form('F602'),
+        get_filing_form('F603'),
+        get_filing_form('F604'),
+        get_filing_form('F606'),
+        get_filing_form('F607'),
+        get_filing_form('F615'),
+        get_filing_form('F625'),
+        get_filing_form('F635'),
+        get_filing_form('F645'),
     ]
     filing_date = fields.DateTimeField(
         db_column='FILING_DATE',

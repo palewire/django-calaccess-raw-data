@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields, look_ups, get_sorted_choices
-from calaccess_raw.calaccess_forms import CALACCESS_FORMS as form_look_up
+from calaccess_raw.filing_forms import get_filing_form
 from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -31,9 +31,9 @@ class CvrSoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=59, end_page=61),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F400'],
-        form_look_up['F402'],
-        form_look_up['F410'],
+        get_filing_form('F400'),
+        get_filing_form('F402'),
+        get_filing_form('F410'),
     ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
@@ -435,8 +435,8 @@ class Cvr2SoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=62, end_page=64),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F400'],
-        form_look_up['F410'],
+        get_filing_form('F400'),
+        get_filing_form('F410'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -760,17 +760,17 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id="2712034-Cal-Format-201", start_page=22, end_page=30),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F401'],
-        form_look_up['F425'],
-        form_look_up['F450'],
-        form_look_up['F460'],
-        form_look_up['F461'],
-        form_look_up['F465'],
-        form_look_up['F496'],
-        form_look_up['F498'],
-        form_look_up['F497'],
-        form_look_up['F511'],
-        form_look_up['F900'],
+        get_filing_form('F401'),
+        get_filing_form('F425'),
+        get_filing_form('F450'),
+        get_filing_form('F460'),
+        get_filing_form('F461'),
+        get_filing_form('F465'),
+        get_filing_form('F496'),
+        get_filing_form('F498'),
+        get_filing_form('F497'),
+        get_filing_form('F511'),
+        get_filing_form('F900'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1327,9 +1327,9 @@ values are 'Y' or 'N'."
 Report Number 000 represents an original filing. 001-999 are amendments."
     )
     REPORTNAME_CHOICES = (
-        ('450', form_look_up['F450'].description),
-        ('460', form_look_up['F460'].description),
-        ('461', form_look_up['F461'].description),
+        ('450', get_filing_form('F450').description),
+        ('460', get_filing_form('F460').description),
+        ('461', get_filing_form('F461').description),
     )
     reportname = fields.CharField(
         max_length=3,
@@ -1557,10 +1557,10 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=31, end_page=34),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F425'],
-        form_look_up['F450'],
-        form_look_up['F460'],
-        form_look_up['F465'],
+        get_filing_form('F425'),
+        get_filing_form('F450'),
+        get_filing_form('F460'),
+        get_filing_form('F465'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1935,14 +1935,14 @@ class RcptCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=37, end_page=41),
     ]
     CALACCESS_FORMS = [
-        form_look_up['E530'],
-        form_look_up['F900'],
-        form_look_up['F401'].get_part('F401A'),
-        form_look_up['F460'].get_part('A'),
-        form_look_up['F460'].get_part('A-1'),
-        form_look_up['F460'].get_part('C'),
-        form_look_up['F460'].get_part('I'),
-        form_look_up['F496'].get_part('F496P3'),
+        get_filing_form('E530'),
+        get_filing_form('F900'),
+        get_filing_form('F401').get_part('F401A'),
+        get_filing_form('F460').get_part('A'),
+        get_filing_form('F460').get_part('A-1'),
+        get_filing_form('F460').get_part('C'),
+        get_filing_form('F460').get_part('I'),
+        get_filing_form('F496').get_part('F496P3'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2336,7 +2336,7 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Date item received"
     )
     REC_TYPE_CHOICES = (
-        ('E530', form_look_up['E530'].description),
+        ('E530', get_filing_form('E530').description),
         ("RCPT", "Receipt"),
     )
     rec_type = fields.CharField(
@@ -2509,17 +2509,17 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
     ]
     CALACCESS_FORMS = [
-            form_look_up['F400'],
-            form_look_up['F401'],
-            form_look_up['F402'],
-            form_look_up['F410'],
-            form_look_up['F425'],
-            form_look_up['F450'],
-            form_look_up['F460'],
-            form_look_up['F461'],
-            form_look_up['F465'],
-            form_look_up['F511'],
-            form_look_up['F900'],
+            get_filing_form('F400'),
+            get_filing_form('F401'),
+            get_filing_form('F402'),
+            get_filing_form('F410'),
+            get_filing_form('F425'),
+            get_filing_form('F450'),
+            get_filing_form('F460'),
+            get_filing_form('F461'),
+            get_filing_form('F465'),
+            get_filing_form('F511'),
+            get_filing_form('F900'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2678,7 +2678,7 @@ class LoanCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=47, end_page=50),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F460'],
+        get_filing_form('F460'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -3117,7 +3117,7 @@ class S401Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=51, end_page=52),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F401'],
+        get_filing_form('F401'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3426,11 +3426,11 @@ class ExpnCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=42, end_page=44),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F450'],
-        form_look_up['F460'],
-        form_look_up['F461'],
-        form_look_up['F465'],
-        form_look_up['F900'],
+        get_filing_form('F450'),
+        get_filing_form('F460'),
+        get_filing_form('F461'),
+        get_filing_form('F465'),
+        get_filing_form('F900'),
     ]
     agent_namf = fields.CharField(
         max_length=45,
@@ -4064,8 +4064,8 @@ class F495P2Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F450'],
-        form_look_up['F460'],
+        get_filing_form('F450'),
+        get_filing_form('F460'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4159,7 +4159,7 @@ class DebtCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F460'],
+        get_filing_form('F460'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4480,7 +4480,7 @@ class S496Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F496']
+        get_filing_form('F496')
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4601,7 +4601,7 @@ class S497Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=54, end_page=55),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F497']
+        get_filing_form('F497')
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4942,8 +4942,8 @@ class F501502Cd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=57, end_page=59),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F501'],
-        form_look_up['F502'],
+        get_filing_form('F501'),
+        get_filing_form('F502'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4972,8 +4972,8 @@ original filing and 1 to 999 amendments.",
         ]
     )
     FORM_TYPE_CHOICES = (
-        ('F501', form_look_up['F501'].description),
-        ('F502', form_look_up['F502'].description),
+        ('F501', get_filing_form('F501').description),
+        ('F502', get_filing_form('F502').description),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
@@ -5624,7 +5624,7 @@ class S498Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=56, end_page=57),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F498']
+        get_filing_form('F498')
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5932,7 +5932,7 @@ class CvrF470Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
     ]
     CALACCESS_FORMS = [
-        form_look_up['F470'],
+        get_filing_form('F470'),
     ]
     amend_id = fields.IntegerField(
         db_column="AMEND_ID",
