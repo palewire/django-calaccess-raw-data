@@ -25,7 +25,7 @@ class CvrRegistrationCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=68, end_page=71),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=82, end_page=86),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F601'),
         get_filing_form('F602'),
         get_filing_form('F603'),
@@ -297,7 +297,7 @@ Form 604. As filed by the lobbyist.',
         help_text='Name of the lobbyist employer or firm. Applies to \
 Forms 604, 606, 607.',
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -622,7 +622,7 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=72, end_page=73),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=87, end_page=88),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F601'),
         get_filing_form('F602'),
         get_filing_form('F603'),
@@ -654,7 +654,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=10,
         db_column='FORM_TYPE',
@@ -751,7 +751,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53, end_page=56),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=65, end_page=70),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F615'),
         get_filing_form('F625'),
         get_filing_form('F635'),
@@ -888,7 +888,7 @@ to forms 625, 635, 645.",
         blank=True,
         help_text='Form, employer or coalition business ZIP Code',
     )
-    FORM_TYPE_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -1158,7 +1158,7 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F625'),
         get_filing_form('F635'),
     ]
@@ -1228,7 +1228,7 @@ entity is an individual. Only required by Form 635.',
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -1291,7 +1291,7 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=74),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=88, end_page=89),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F601'),
         get_filing_form('F603'),
     ]
@@ -1318,7 +1318,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=9,
         db_column='FORM_TYPE',
@@ -1585,7 +1585,7 @@ class F690P2Cd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=58),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F615'),
         get_filing_form('F625'),
         get_filing_form('F635'),
@@ -1619,7 +1619,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -1695,7 +1695,7 @@ class LattCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=79, end_page=80),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('S630'),
         get_filing_form('S635C'),
         get_filing_form('S640'),
@@ -1891,7 +1891,7 @@ class LexpCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=74, end_page=75),
 
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F615'),
         get_filing_form('F625'),
         get_filing_form('F635'),
@@ -2120,7 +2120,7 @@ class LccmCd(CalAccessBaseModel):
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F615'),
         get_filing_form('F625'),
         get_filing_form('F635'),
@@ -4063,7 +4063,7 @@ class LothCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=107),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=67, end_page=68),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
 
     ]
     amend_id = fields.IntegerField(
@@ -4235,7 +4235,7 @@ class LpayCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
 
     ]
     DOCUMENTCLOUD_PAGES = [

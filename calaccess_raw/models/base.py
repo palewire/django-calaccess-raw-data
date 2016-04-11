@@ -274,21 +274,21 @@ class DocumentCloud(object):
         ]
 
 
-class CalAccessForm(object):
+class FilingForm(object):
     """
     A form used by the California Secretary of State to collection information
     which ends up in the CAL-ACCESS database
     """
     def __init__(
             self, id, title, description=None, group=None,
-            documentcloud=None, parts=None
+            documentcloud=None, sections=None
     ):
         self.id = id
         self.title = title
         self.description = description
         self.group = group
         self.documentcloud = documentcloud
-        self.raw_parts = parts
+        self.raw_sections = sections
 
         if self.documentcloud:
             if not isinstance(documentcloud, DocumentCloud):
@@ -308,8 +308,8 @@ class CalAccessForm(object):
         return models
 
     @property
-    def parts(self):
-        class CalAccessFormPart(object):
+    def sections(self):
+        class FilingFormSection(object):
             def __init__(self, id, title, documentcloud=None):
                 self.id = id
                 self.title = title
@@ -324,7 +324,7 @@ class CalAccessForm(object):
 
         objs = []
 
-        for i in self.raw_parts:
+        for i in self.raw_sections:
             if len(i) == 4:
                 doc = DocumentCloud(self.documentcloud.id, i[2], i[3])
             elif len(i) == 3:
@@ -332,13 +332,13 @@ class CalAccessForm(object):
             else:
                 doc = None
 
-            objs.append(CalAccessFormPart(i[0], i[1], doc))
+            objs.append(FilingFormSection(i[0], i[1], doc))
 
         return objs
 
-    def get_part(self, id):
-        part_dict = {i.id: i for i in self.parts}
-        return part_dict[id]
+    def get_section(self, id):
+        section_dict = {i.id: i for i in self.sections}
+        return section_dict[id]
 
     def __str__(self):
         return str(self.id)

@@ -204,7 +204,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=64, end_page=66),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('E530'),
         get_filing_form('F400'),
         get_filing_form('F401'),
@@ -256,7 +256,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         blank=True,
         help_text="Identifies the period when the filing was recieved."
     )
-    FORM_ID_CHOICES = tuple([(f.id, f.description) for f in CALACCESS_FORMS]) + (
+    FORM_ID_CHOICES = tuple([(f.id, f.description) for f in FILING_FORMS]) + (
         ('F111', ''),
         ('F405', ''),
         ('F410 AT', ''),
@@ -655,7 +655,7 @@ class SmryCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=35, end_page=37),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=72, end_page=74),
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F401'),
         get_filing_form('F450'),
         get_filing_form('F460'),
@@ -696,7 +696,7 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS]) + (
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS]) + (
         ('401A', 'Form 401 (Slate mailer organization campaign statement): \
 Schedule A, payments received'),
         ('401B', 'Form 401 (Slate mailer organization campaign statement): \
@@ -1291,7 +1291,7 @@ class TextMemoCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=133, end_page=134),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=89, end_page=90)
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('E530'),
         get_filing_form('F401'),
         get_filing_form('F425'),

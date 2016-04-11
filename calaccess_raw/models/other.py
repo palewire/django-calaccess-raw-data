@@ -185,7 +185,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50)
     ]
-    CALACCESS_FORMS = [
+    FILING_FORMS = [
         get_filing_form('F400'),
         get_filing_form('F401'),
         get_filing_form('F402'),
@@ -231,7 +231,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in CALACCESS_FORMS]) + (
+    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS]) + (
         ('BADFORMAT 253', ''),
         ('form', ''),
     )

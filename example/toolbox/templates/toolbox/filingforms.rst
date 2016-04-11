@@ -19,10 +19,10 @@ Similar documentation and background info can also be found in the `Campaign Fin
 
 {{ form.description|safe }}
 {% if form.parts|length > 0 %}
-Parts/Schedules
-^^^^^^^^^^^^^^^
-{% for part in form.parts %}
-* {{ part.title }} {% if part.documentcloud.start_page %}(`p. {{ part.documentcloud.start_page }}{% if part.documentcloud.end_page %}-{{ part.documentcloud.end_page }}{% endif%} <{{ part.documentcloud.canonical_url }}>`_){% endif %}
+Sections
+^^^^^^^^
+{% for section in form.sections %}
+* {{ section.title }} {% if section.documentcloud.start_page %}(`p. {{ section.documentcloud.start_page }}{% if section.documentcloud.end_page %}-{{ section.documentcloud.end_page }}{% endif%} <{{ section.documentcloud.canonical_url }}>`_){% endif %}
 
 {% endfor %}
 {% endif %}
