@@ -21,13 +21,14 @@ class Command(CalAccessCommand):
         self.repo_list = [
             self.org.get_repo("django-calaccess-raw-data"),
         ]
-        self.start = datetime(2015, 9, 22, 0, 0, 0)
-        self.end = datetime(2015, 10, 1, 0, 0, 0)
+        self.start = datetime(2016, 3, 9, 0, 0, 0)
+        self.end = datetime(2016, 3, 15, 0, 0, 0)
 
     def handle(self, *args, **kwargs):
         """
         Make it happen.
         """
+        super(Command, self).handle(*args, **kwargs)
         self.set_options()
         self.header("Analyzing Code Rush commits")
 
