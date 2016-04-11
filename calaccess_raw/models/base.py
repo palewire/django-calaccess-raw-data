@@ -281,18 +281,16 @@ class FilingForm(object):
     """
     def __init__(
             self, id, title, description=None, group=None,
-            documentcloud=None, sections=None
+            documentcloud_id=None, sections=None
     ):
         self.id = id
         self.title = title
         self.description = description
         self.group = group
-        self.documentcloud = documentcloud
+        self.documentcloud_id = documentcloud_id
         self.raw_sections = sections
 
-        if self.documentcloud:
-            if not isinstance(documentcloud, DocumentCloud):
-                raise TypeError("documentcloud must be instance of DocumentCloud")
+        self.documentcloud = DocumentCloud(self.documentcloud_id)
 
     def get_models(self):
         models = []
@@ -328,7 +326,7 @@ class FilingFormSection(object):
         self.start_page = start_page
         self.end_page = end_page
         self.documentcloud = DocumentCloud(
-            self.form.documentcloud.id,
+            self.form.documentcloud_id,
             self.start_page,
             self.end_page
         )
