@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 import textwrap
 import requests
 import json
+import os
+from django.conf import settings
 from django.db import models
 from django.utils.deconstruct import deconstructible
 from calaccess_raw import managers, get_model_list
@@ -171,102 +173,98 @@ class DocumentCloud(object):
         self.id = id
         self.start_page = start_page
         self.end_page = end_page
+        self.metadata_cache_dir = os.path.join(
+            settings.BASE_DIR,
+            ".documentcloud_metadata"
+        )
+        self.metadata_filename = os.path.join(
+            self.metadata_cache_dir,
+            '{id}.json'.format(id=self.id)
+        )
 
-    def _lazy_load(self):
+    def _request_metadata(self):
         """
-        Makes a GET /api/documents/[id].json method and assigns data in response to attrs
+        Returns contents of GET request to /api/documents/[id].json method
         """
         r = requests.get(
             'https://www.documentcloud.org/documents/{id}.json'.format(id=self.id)
         )
-        self._metadata = json.loads(r.content.decode('utf-8'))
-        self._title = self._metadata['title']
+        print 'Calling DocumentCloud!'
+        return r.content.decode('utf-8')
+
+    def _cache_metadata(self):
+        """
+        Requests metadata and stores in .json file in .documentcloud_cache dir.
+
+        Creates .documentcloud_cache dir if it doesn't already exist.
+        """
+        os.path.exists(self.metadata_cache_dir) or os.makedirs(self.metadata_cache_dir)
+
+        with open(self.metadata_filename, 'w') as f:
+            f.write(self._request_metadata())
 
     @property
     def metadata(self):
-        try:
-            self._metadata
-        except AttributeError:
-            self._lazy_load()
+        if not os.path.exists(self.metadata_filename):
+            self._cache_metadata()
+
+        with open(self.metadata_filename) as f:
+            self._metadata = json.loads(f.read().decode('utf-8'))
 
         return self._metadata
 
     @property
     def title(self):
-        try:
-            self._title
-        except AttributeError:
-            self._lazy_load()
-
+        self._title = self.metadata['title']
         return self._title
 
     @property
     def canonical_url(self):
-        try:
-            self._metadata
-        except AttributeError:
-            self._lazy_load()
-
         if self.start_page:
             canonical_url = (
-                self._metadata['canonical_url'] +
+                self.metadata['canonical_url'] +
                 '#document/p{}'.format(self.start_page)
             )
         else:
-            canonical_url = self._metadata['canonical_url']
+            canonical_url = self.metadata['canonical_url']
 
         return canonical_url
 
     @property
     def thumbnail_url(self):
-        try:
-            self._metadata
-        except AttributeError:
-            self._lazy_load()
-
         page = self.start_page or 1
 
-        return self._metadata['resources']['page']['image'].format(
+        self._thumbnail_url = self.metadata['resources']['page']['image'].format(
                 size='thumbnail',
                 page=page
             )
 
+        return self._thumbnail_url
+
     @property
     def pdf_url(self):
-        try:
-            self._metadata
-        except AttributeError:
-            self._lazy_load()
-
-        return self._metadata['resources']['pdf']
+        self._pdf_url = self.metadata['resources']['pdf']
+        return self._pdf_url
 
     @property
     def text_url(self):
-        try:
-            self._metadata
-        except AttributeError:
-            self._lazy_load()
-
-        return self._metadata['resources']['text']
+        self._text_url = self.metadata['resources']['text']
+        return self._text_url
 
     @property
     def num_pages(self):
         if self.start_page and self.end_page:
-            num_pages = self.end_page - self.start_page + 1
+            self._num_pages = self.end_page - self.start_page + 1
         elif self.end_page:
-            num_pages = self.end_page
+            self._num_pages = self.end_page
         elif self.start_page:
-            num_pages = 1
+            self._num_pages = 1
         # ignored case: User wants to specify and start page and
         # expects to include all subsequent pages in doc
         else:
-            try:
-                num_pages = self._metadata['pages']
-            except AttributeError:
-                self._lazy_load()
-                num_pages = self._metadata['pages']
+            self._num_pages = self.metadata['pages']
 
-        return num_pages
+        return self._num_pages
 
     @property
     def pages(self):
@@ -279,11 +277,7 @@ class DocumentCloud(object):
 
         canonical_url = 'https://www.documentcloud.org/documents/{id}/pages/{page}.html'
 
-        try:
-            image_url = self._metadata['resources']['page']['image']
-        except AttributeError:
-            self._lazy_load()
-            image_url = self._metadata['resources']['page']['image']
+        image_url = self.metadata['resources']['page']['image']
 
         start = self.start_page or 1
 
@@ -313,7 +307,10 @@ class FilingForm(object):
         self.documentcloud_id = documentcloud_id
         self.raw_sections = sections
 
-        self.documentcloud = DocumentCloud(self.documentcloud_id)
+        if self.documentcloud_id:
+            self.documentcloud = DocumentCloud(self.documentcloud_id)
+        else:
+            self.documentcloud = None
 
     @property
     def type_and_num(self):
