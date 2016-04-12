@@ -74,7 +74,22 @@ Form 401 is filed by slate mailer organizations to disclose payments made and re
 Sections
 ^^^^^^^^
 
-* Schedule A, payments received (`p. 4-6 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p4>`_)
+* Cover Page (`p. 3-4 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p3>`_)
+
+
+* Schedule A, Payments Received (`p. 5-7 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p5>`_)
+
+
+* Schedule B, Payments Made (`p. 8-9 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p8>`_)
+
+
+* Schedule B-1, Payments Made by Agent or Independent Contractor (`p. 10 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p10>`_)
+
+
+* Schedule C, Persons Receiving $1,000 or More (`p. 11-12 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p11>`_)
+
+
+* Schedule D, Candidates and Measures Not Listed on Schedule A (`p. 13-14 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p13>`_)
 
 
 
@@ -113,8 +128,6 @@ Data collected via F401 filings are written to the following tables:
 * `CvrCampaignDisclosureCd </models.html#cvrcampaigndisclosurecd>`_
 
 * `Cvr3VerificationInfoCd </models.html#cvr3verificationinfocd>`_
-
-* `S401Cd </models.html#s401cd>`_
 
 * `FilerFilingsCd </models.html#filerfilingscd>`_
 
@@ -292,6 +305,13 @@ Recipient Committee Campaign Disclosure Statement - Short Form
 
 Form 450 is filed by recipient committees that meet certain specific criteria listed in the Form 450.
 
+Sections
+^^^^^^^^
+
+* Payments Made (`p. 6-7 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p6>`_)
+
+
+
 
 
 Example Form
@@ -329,8 +349,6 @@ Data collected via F450 filings are written to the following tables:
 * `Cvr2CampaignDisclosureCd </models.html#cvr2campaigndisclosurecd>`_
 
 * `Cvr3VerificationInfoCd </models.html#cvr3verificationinfocd>`_
-
-* `ExpnCd </models.html#expncd>`_
 
 * `F495P2Cd </models.html#f495p2cd>`_
 
@@ -380,6 +398,18 @@ Sections
 
 
 * Schedule C, Non-Monetary Contributions Received (`p. 16-17 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p16>`_)
+
+
+* Schedule D, Summary of Expenditures Supporting / Opposing Other Candidates, Measures and Committees (`p. 18-20 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p18>`_)
+
+
+* Schedule E, Payments Made (`p. 21-24 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p21>`_)
+
+
+* Schedule F, Accrued Expenses (Unpaid Bills) (`p. 25-27 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p25>`_)
+
+
+* Schedule G, Payments Made by an Agent or Independent Contractor (on Behalf of This Committee) (`p. 28-29 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p28>`_)
 
 
 * Schedule H, Loans Made to Others (`p. 29-30 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p29>`_)
@@ -436,11 +466,7 @@ Data collected via F460 filings are written to the following tables:
 
 * `Cvr3VerificationInfoCd </models.html#cvr3verificationinfocd>`_
 
-* `ExpnCd </models.html#expncd>`_
-
 * `F495P2Cd </models.html#f495p2cd>`_
-
-* `DebtCd </models.html#debtcd>`_
 
 * `FilerFilingsCd </models.html#filerfilingscd>`_
 
@@ -459,6 +485,19 @@ Form 461
 Independent Expenditure Committee & Major Donor Committee Campaign Statement
 
 Form 461 is filed by major donors, independent expenditure committees, and multipurpose organizations including nonprofits.
+
+Sections
+^^^^^^^^
+
+* Name and Address of Filer (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
+
+
+* Nature and Interests of Filer (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
+
+
+* Part 5, Contributions (Including Loans, Forgiveness of Loans, and Loan Guarantees) and Expenditures Made (`p. 5-6 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p5>`_)
+
+
 
 
 
@@ -496,8 +535,6 @@ Data collected via F461 filings are written to the following tables:
 
 * `Cvr3VerificationInfoCd </models.html#cvr3verificationinfocd>`_
 
-* `ExpnCd </models.html#expncd>`_
-
 * `FilerFilingsCd </models.html#filerfilingscd>`_
 
 * `SmryCd </models.html#smrycd>`_
@@ -515,6 +552,13 @@ Form 465
 Supplemental Independent Expenditure Report
 
 Form 465 is filed by officeholders, candidates, recipient committees, major donor committees, and independent expenditure committees that make independent expenditures totaling $1,000 or more in a calendar year to support or oppose: a single candidate, a single measure, or the qualification of one single measure. Form 465s are filed in the same period(s) the candidate or committee supported or opposed by the independent expenditure(s) is required to file.
+
+Sections
+^^^^^^^^
+
+* Part 3, Independent Expenditures Made (`p. 2 <https://www.documentcloud.org/documents/2781358-465-2009-06.html#document/p2>`_)
+
+
 
 
 
@@ -553,8 +597,6 @@ Data collected via F465 filings are written to the following tables:
 * `Cvr2CampaignDisclosureCd </models.html#cvr2campaigndisclosurecd>`_
 
 * `Cvr3VerificationInfoCd </models.html#cvr3verificationinfocd>`_
-
-* `ExpnCd </models.html#expncd>`_
 
 * `FilerFilingsCd </models.html#filerfilingscd>`_
 
@@ -723,6 +765,16 @@ Late Contribution Report
 
 Form 497 is filed by state and local committees making or receiving contribution(s) whose combined total is $1,000 or more in the 90 days before an election, committees reporting contributions of $5,000 or more in connection with a state ballot measure, and state candidates as well as state ballot measure committees that receive $5,000 or more at any time other than a 90-day election cycle.
 
+Sections
+^^^^^^^^
+
+* Part 1, Contribution(s) Received (`p. 2 <https://www.documentcloud.org/documents/2781353-497-2016-01.html#document/p2>`_)
+
+
+* Part 2, Contribution(s) Made (`p. 4 <https://www.documentcloud.org/documents/2781353-497-2016-01.html#document/p4>`_)
+
+
+
 
 
 Example Form
@@ -757,8 +809,6 @@ Data collected via F497 filings are written to the following tables:
 
 * `CvrCampaignDisclosureCd </models.html#cvrcampaigndisclosurecd>`_
 
-* `S497Cd </models.html#s497cd>`_
-
 * `FilerFilingsCd </models.html#filerfilingscd>`_
 
 * `TextMemoCd </models.html#textmemocd>`_
@@ -774,6 +824,16 @@ Form 498
 Slate Mailer Late Payment Report
 
 Form 498 is filed by a slate mailer organization upon receipt of a late payment.
+
+Sections
+^^^^^^^^
+
+* Part A: late payments attributed to 
+
+
+* Part R: late payments received from (`p. 2 <https://www.documentcloud.org/documents/2781352-498-2016-01.html#document/p2>`_)
+
+
 
 
 
@@ -808,8 +868,6 @@ Database Tables
 Data collected via F498 filings are written to the following tables:
 
 * `CvrCampaignDisclosureCd </models.html#cvrcampaigndisclosurecd>`_
-
-* `S498Cd </models.html#s498cd>`_
 
 * `FilerFilingsCd </models.html#filerfilingscd>`_
 
