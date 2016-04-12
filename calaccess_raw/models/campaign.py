@@ -1327,9 +1327,9 @@ values are 'Y' or 'N'."
 Report Number 000 represents an original filing. 001-999 are amendments."
     )
     REPORTNAME_CHOICES = (
-        ('450', get_filing_form('F450').description),
-        ('460', get_filing_form('F460').description),
-        ('461', get_filing_form('F461').description),
+        ('450', get_filing_form('F450').full_title),
+        ('460', get_filing_form('F460').full_title),
+        ('461', get_filing_form('F461').full_title),
     )
     reportname = fields.CharField(
         max_length=3,
@@ -2336,7 +2336,7 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Date item received"
     )
     REC_TYPE_CHOICES = (
-        ('E530', get_filing_form('E530').description),
+        ('E530', get_filing_form('E530').full_title),
         ("RCPT", "Receipt"),
     )
     rec_type = fields.CharField(
@@ -2678,7 +2678,13 @@ class LoanCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=47, end_page=50),
     ]
     FILING_FORMS = [
-        get_filing_form('F460'),
+        get_filing_form('F460').get_section('B1'),
+        get_filing_form('F460').get_section('B2'),
+        get_filing_form('F460').get_section('B3'),
+        get_filing_form('F460').get_section('H'),
+        get_filing_form('F460').get_section('H1'),
+        get_filing_form('F460').get_section('H2'),
+        get_filing_form('F460').get_section('H3'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2724,22 +2730,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('B1', 'Form 460 (Recipient committee campaign statement): \
-Schedule B1'),
-        ('B2', 'Form 460 (Recipient committee campaign statement): \
-Schedule B2'),
-        ('B3', 'Form 460 (Recipient committee campaign statement): \
-Schedule B3'),
-        ('H', 'Form 460 (Recipient committee campaign statement): \
-Schedule H'),
-        ('H1', 'Form 460 (Recipient committee campaign statement): \
-Schedule H1'),
-        ('H2', 'Form 460 (Recipient committee campaign statement): \
-Schedule H2'),
-        ('H3', 'Form 460 (Recipient committee campaign statement): \
-Schedule H3'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=2,
         db_column='FORM_TYPE',
@@ -3101,7 +3092,8 @@ identifier. "X" indicates this condition is true.'
 class S401Cd(CalAccessBaseModel):
     """
     This table contains Form 401 (Slate Mailer Organization) payment and other
-    disclosure schedule (F401B, F401B-1, F401C, F401D) information.
+    disclosure schedules (F401B, F401B-1, F401C, F401D) information. Does not
+    include Form 401, Schedule A (Payments Received).
     """
     UNIQUE_KEY = (
         'FILING_ID',
@@ -3117,7 +3109,10 @@ class S401Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=51, end_page=52),
     ]
     FILING_FORMS = [
-        get_filing_form('F401'),
+        get_filing_form('F401').get_section('F401B'),
+        get_filing_form('F401').get_section('F401B-1'),
+        get_filing_form('F401').get_section('F401C'),
+        get_filing_form('F401').get_section('F401D'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -3151,16 +3146,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=51),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F401B', 'Form 401 (Slate mailer organization campaign statement): \
-Schedule B, payments made'),
-        ('F401B-1', 'Form 401 (Slate mailer organization campaign statement): \
-Schedule B-1, payments made by agent or independent contractor'),
-        ('F401C', 'Form 401 (Slate mailer organization campaign statement): \
-Schedule C, persons receiving $1,000 or more'),
-        ('F401D', 'Form 401 (Slate mailer organization campaign statement): \
-Schedule D, candidates or measures supported or opposed with < $100 payment'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=7,
         db_column='FORM_TYPE',
@@ -3426,10 +3412,12 @@ class ExpnCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=42, end_page=44),
     ]
     FILING_FORMS = [
-        get_filing_form('F450'),
-        get_filing_form('F460'),
-        get_filing_form('F461'),
-        get_filing_form('F465'),
+        get_filing_form('F450').get_section('F450P5'),
+        get_filing_form('F460').get_section('D'),
+        get_filing_form('F460').get_section('E'),
+        get_filing_form('F460').get_section('G'),
+        get_filing_form('F461').get_section('F461P5'),
+        get_filing_form('F465').get_section('F465P3'),
         get_filing_form('F900'),
     ]
     agent_namf = fields.CharField(
@@ -3756,21 +3744,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS]) + (
-        ('D', 'Form 460 (Recipient committee campaign statement): \
-Schedule D, summary of expenditure supporting/opposing other candidates, \
-measures and committees'),
-        ('E', 'Form 460 (Recipient committee campaign statement): \
-Schedule E, payments made'),
-        ('G', 'Form 460 (Recipient committee campaign statement): \
-Schedule G, payments made by agent of independent contractor'),
-        ('F450P5', 'Form 450 (Recipient Committee Campaign Statement \
-Short Form): Part 5, payments made'),
-        ('F461P5', 'Form 461 (Independent expenditure and major donor \
-committee campaign statement): Part 5, contributions and expenditures made'),
-        ('F465P3', 'Form 465 (Supplemental independent expenditure \
-report): Part 3, independent expenditures made'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=6,
@@ -4159,7 +4133,7 @@ class DebtCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
     ]
     FILING_FORMS = [
-        get_filing_form('F460'),
+        get_filing_form('F460').get_section('F'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4286,10 +4260,7 @@ of a parent record.'
         verbose_name='filing ID',
         help_text="Unique filing identificiation number of the parent filing",
     )
-    FORM_TYPE_CHOICES = (
-        ('F', 'Form 460 (Recipient committee campaign statement): '
-              'Schedule F, accrued expenses (unpaid bills)'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=1,
         db_column='FORM_TYPE',
@@ -4601,7 +4572,8 @@ class S497Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=54, end_page=55),
     ]
     FILING_FORMS = [
-        get_filing_form('F497')
+        get_filing_form('F497').get_section('F497P1'),
+        get_filing_form('F497').get_section('F497P2'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4635,12 +4607,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=54),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F497P1', 'Form 497 (Late contribution report): \
-Part 1, late contributions received'),
-        ('F497P2', 'Form 497 (Late contribution report): \
-Part 2, late contributions made')
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=6,
         db_column='FORM_TYPE',
@@ -4971,10 +4938,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=58),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F501', get_filing_form('F501').description),
-        ('F502', get_filing_form('F502').description),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -5624,7 +5588,8 @@ class S498Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=56, end_page=57),
     ]
     FILING_FORMS = [
-        get_filing_form('F498')
+        get_filing_form('F498').get_section('F498-A'),
+        get_filing_form('F498').get_section('F498-R'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5658,12 +5623,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
         ]
     )
-    FORM_TYPE_CHOICES = (
-        ('F498-A', 'Form 498 (Slate mailer late payment report): \
-Part A: late payments attributed to'),
-        ('F498-R', 'Form 498 (Slate mailer late payment report): \
-Part R: late payments received from')
-    )
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=9,
         db_column='FORM_TYPE',

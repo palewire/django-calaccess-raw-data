@@ -20,7 +20,12 @@ producing one or more slate mailers.',
         description='Form 401 is filed by slate mailer organizations to \
 disclose payments made and received in connection with producing slate mailers.',
         sections=[
-            ('F401A', 'Schedule A, payments received', 4, 6),
+            ('CVR', 'Cover Page', 3, 4),
+            ('F401A', 'Schedule A, Payments Received', 5, 7),
+            ('F401B', 'Schedule B, Payments Made', 8, 9),
+            ('F401B-1', 'Schedule B-1, Payments Made by Agent or Independent Contractor', 10),
+            ('F401C', 'Schedule C, Persons Receiving $1,000 or More', 11, 12),
+            ('F401D', 'Schedule D, Candidates and Measures Not Listed on Schedule A', 13, 14),
         ]
     ),
     FilingForm(
@@ -55,7 +60,10 @@ month period covered by a semi-annual statement.'
         group='CAMPAIGN',
         documentcloud_id='2781364-450-2016-01',
         description='Form 450 is filed by recipient committees that meet \
-certain specific criteria listed in the Form 450.'
+certain specific criteria listed in the Form 450.',
+        sections=[
+            ('F450P5', 'Payments Made', 6, 7),
+        ]
     ),
     FilingForm(
         'F460',
@@ -67,10 +75,25 @@ expenditures and contributions. It can be used to file a pre-election statement,
 semi-annual statement, quarterly statement, termination statement, special odd-\
 year report, or an amendment to a previously filed statement.',
         sections=[
-            ('A', 'Schedule A, monetary contributions received', 8, 10),
-            ('A-1', 'Schedule A-1, contributions transferred to special \
-                election committees'),
-            ('C', 'Schedule C, non-monetary contributions received', 15, 16),
+            ('CVR', 'Cover Page', 3, 4),
+            ('CVR2', 'Cover Page - Part 2', 5),
+            ('SMRY', 'Summary Page', 7, 8),
+            ('A', 'Schedule A, Monetary Contributions Received', 9, 11),
+            ('A-1', 'Schedule A-1, Contributions Transferred to Special Election Committees'),
+            ('B1', 'Schedule B - Part 1, Loans Received', 12, 13),
+            ('B2', 'Schedule B - Part 2, Loan Guarantors', 14, 15),
+            ('B3', 'Schedule B - Part 3, Outstanding Bal'),
+            ('C', 'Schedule C, Non-Monetary Contributions Received', 16, 17),
+            ('D', 'Schedule D, Summary of Expenditures Supporting / Opposing \
+Other Candidates, Measures and Committees', 18, 20),
+            ('E', 'Schedule E, Payments Made', 21, 24),
+            ('F', 'Schedule F, Accrued Expenses (Unpaid Bills)', 25, 27),
+            ('G', 'Schedule G, Payments Made by an Agent or Independent \
+Contractor (on Behalf of This Committee)', 28, 29),
+            ('H', 'Schedule H, Loans Made to Others', 29, 30),
+            ('H1', 'Schedule H1, Loans Made'),
+            ('H2', 'Schedule H2, Repayments Rcvd'),
+            ('H3', 'Schedule H3, Outstanding Loan'),
             ('I', 'Schedule I, miscellanous increases to cash', 31, 32),
         ]
     ),
@@ -80,7 +103,13 @@ year report, or an amendment to a previously filed statement.',
         group='CAMPAIGN',
         documentcloud_id='2781361-461-2016-01',
         description='Form 461 is filed by major donors, independent \
-expenditure committees, and multipurpose organizations including nonprofits.'
+expenditure committees, and multipurpose organizations including nonprofits.',
+        sections=[
+            ('F461P1', 'Name and Address of Filer', 3),
+            ('F461P2', 'Nature and Interests of Filer', 3),
+            ('F461P5', 'Part 5, Contributions (Including Loans, Forgiveness of \
+Loans, and Loan Guarantees) and Expenditures Made', 5, 6),
+        ]
     ),
     FilingForm(
         'F465',
@@ -92,7 +121,10 @@ committees, major donor committees, and independent expenditure committees that 
 make independent expenditures totaling $1,000 or more in a calendar year to support \
 or oppose: a single candidate, a single measure, or the qualification of one single \
 measure. Form 465s are filed in the same period(s) the candidate or committee \
-supported or opposed by the independent expenditure(s) is required to file.'
+supported or opposed by the independent expenditure(s) is required to file.',
+        sections=[
+            ('F465P3', 'Part 3, Independent Expenditures Made', 2),
+        ],
     ),
     FilingForm(
         'F470',
@@ -138,7 +170,11 @@ or receiving contribution(s) whose combined total is $1,000 or more in the 90 \
 days before an election, committees reporting contributions of $5,000 or more in \
 connection with a state ballot measure, and state candidates as well as state \
 ballot measure committees that receive $5,000 or more at any time other than a \
-90-day election cycle.'
+90-day election cycle.',
+        sections=[
+            ('F497P1', 'Part 1, Contribution(s) Received', 2),
+            ('F497P2', 'Part 2, Contribution(s) Made', 4),
+        ]
     ),
     FilingForm(
         'F498',
@@ -146,7 +182,11 @@ ballot measure committees that receive $5,000 or more at any time other than a \
         group='CAMPAIGN',
         documentcloud_id='2781352-498-2016-01',
         description='Form 498 is filed by a slate mailer organization upon \
-receipt of a late payment.'
+receipt of a late payment.',
+        sections=[
+            ('F498-A', 'Part A: late payments attributed to'),
+            ('F498-R', 'Part R: late payments received from', 2),
+        ]
     ),
     FilingForm(
         'F501',
