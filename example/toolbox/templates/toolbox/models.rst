@@ -1,3 +1,4 @@
+{% load misc_tags %}
 Database tables
 ===============
 
@@ -36,32 +37,18 @@ Source Docs
 
 {% endfor %}
 {% endif %}
-{% if object.CALACCESS_FORMS|length > 0 %}
+{% if object.FILING_FORMS|length > 0 %}
 Filing Forms
 ^^^^^^^^^^^^
-{{ object.klass_name }} contains data collected from the following filing forms:
+{{ object.klass_name }} contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    {% for form in object.CALACCESS_FORMS %}
-        <tr>
-            <td><a href="/filingforms.html#{{ form.id|lower }}">{{ form.id }}</a></td>
-            <td>{{ form.title }}</td>
-        </tr></a>
-    {% endfor %}
-    </tbody>
-    </table>
-    </div>
-
+{% for form in object.FILING_FORMS %}
+{% if form|isinst:"calaccess_raw.models.base.FilingFormSection" %}
+* `{{ form.form.type_and_num|safe }} <filingforms.html#{{ form.form.type_and_num|slugify }}>`_ ({{form.form.title|safe}}): {{ form.title|safe }}
+{% else %}
+* `{{ form.type_and_num|safe }} <filingforms.html#{{ form.type_and_num|slugify }}>`_ ({{form.title|safe}})
+{% endif %}
+{% endfor %}
 {% endif %}
 
 Fields

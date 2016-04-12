@@ -1,3 +1,4 @@
+
 Database tables
 ===============
 
@@ -64,43 +65,24 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-Cvr2CampaignDisclosureCd contains data collected from the following filing forms:
+Cvr2CampaignDisclosureCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f425">F425</a></td>
-            <td>Semi-Annual Statement of no Activity</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+
+
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
 
 
 
@@ -724,22 +706,22 @@ Look-up Codes
     
         <tr>
             <td>F425</td>
-            <td>Semi-Annual Statement of no Activity</td>
+            <td>Form 425: Semi-Annual Statement of no Activity</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460: Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
+            <td>Form 465: Supplemental Independent Expenditure Report</td>
         </tr>
     
     </tbody>
@@ -1239,33 +1221,16 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-Cvr2SoCd contains data collected from the following filing forms:
+Cvr2SoCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f400">F400</a></td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f410">F410</a></td>
-            <td>Statement of Organization Recipient Committee</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+
+
+
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
 
 
 
@@ -1686,12 +1651,12 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400: Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Statement of Organization Recipient Committee</td>
+            <td>Form 410: Statement of Organization Recipient Committee</td>
         </tr>
     
     </tbody>
@@ -2342,78 +2307,52 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-Cvr3VerificationInfoCd contains data collected from the following filing forms:
+Cvr3VerificationInfoCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f400">F400</a></td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f402">F402</a></td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f410">F410</a></td>
-            <td>Statement of Organization Recipient Committee</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f425">F425</a></td>
-            <td>Semi-Annual Statement of no Activity</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f461">F461</a></td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f511">F511</a></td>
-            <td>Paid Spokesperson Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f900">F900</a></td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+
+
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+
+
+
+* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization))
+
+
+
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
+
+
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+
+
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
+
+
+* `Form 511 <filingforms.html#form-511>`_ (Paid Spokesperson Report)
+
+
+
+* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
+
 
 
 
@@ -2633,57 +2572,57 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400: Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F401</td>
-            <td>Slate Mailer Organization Campaign Statement</td>
+            <td>Form 401: Slate Mailer Organization Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
+            <td>Form 402: Statement of Termination (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Statement of Organization Recipient Committee</td>
+            <td>Form 410: Statement of Organization Recipient Committee</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Semi-Annual Statement of no Activity</td>
+            <td>Form 425: Semi-Annual Statement of no Activity</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460: Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+            <td>Form 461: Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
+            <td>Form 465: Supplemental Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F511</td>
-            <td>Paid Spokesperson Report</td>
+            <td>Form 511: Paid Spokesperson Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>Form 900: Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
     </tbody>
@@ -2848,78 +2787,52 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-CvrCampaignDisclosureCd contains data collected from the following filing forms:
+CvrCampaignDisclosureCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f425">F425</a></td>
-            <td>Semi-Annual Statement of no Activity</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f461">F461</a></td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f496">F496</a></td>
-            <td>Late Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f498">F498</a></td>
-            <td>Slate Mailer Late Payment Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f497">F497</a></td>
-            <td>Late Contribution Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f511">F511</a></td>
-            <td>Paid Spokesperson Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f900">F900</a></td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+
+
+
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+
+
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
+
+
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report)
+
+
+
+* `Form 498 <filingforms.html#form-498>`_ (Slate Mailer Late Payment Report)
+
+
+
+* `Form 497 <filingforms.html#form-497>`_ (Late Contribution Report)
+
+
+
+* `Form 511 <filingforms.html#form-511>`_ (Paid Spokesperson Report)
+
+
+
+* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
+
 
 
 
@@ -3915,57 +3828,57 @@ Look-up Codes
     
         <tr>
             <td>F401</td>
-            <td>Slate Mailer Organization Campaign Statement</td>
+            <td>Form 401: Slate Mailer Organization Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Semi-Annual Statement of no Activity</td>
+            <td>Form 425: Semi-Annual Statement of no Activity</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460: Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+            <td>Form 461: Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
+            <td>Form 465: Supplemental Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F496</td>
-            <td>Late Independent Expenditure Report</td>
+            <td>Form 496: Late Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F498</td>
-            <td>Slate Mailer Late Payment Report</td>
+            <td>Form 498: Slate Mailer Late Payment Report</td>
         </tr>
     
         <tr>
             <td>F497</td>
-            <td>Late Contribution Report</td>
+            <td>Form 497: Late Contribution Report</td>
         </tr>
     
         <tr>
             <td>F511</td>
-            <td>Paid Spokesperson Report</td>
+            <td>Form 511: Paid Spokesperson Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>Form 900: Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
     </tbody>
@@ -4685,28 +4598,12 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-CvrF470Cd contains data collected from the following filing forms:
+CvrF470Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f470">F470</a></td>
-            <td>Officeholder and Candidate Campaign Statement, Short Form</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 470 <filingforms.html#form-470>`_ (Officeholder and Candidate Campaign Statement, Short Form)
+
 
 
 
@@ -5061,7 +4958,7 @@ Look-up Codes
     
         <tr>
             <td>F470</td>
-            <td>Officeholder and Candidate Campaign Statement, Short Form</td>
+            <td>Form 470: Officeholder and Candidate Campaign Statement, Short Form</td>
         </tr>
     
     </tbody>
@@ -5469,38 +5366,20 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-CvrSoCd contains data collected from the following filing forms:
+CvrSoCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f400">F400</a></td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f402">F402</a></td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f410">F410</a></td>
-            <td>Statement of Organization Recipient Committee</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+
+
+
+* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization))
+
+
+
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
 
 
 
@@ -6171,17 +6050,17 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400: Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
+            <td>Form 402: Statement of Termination (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Statement of Organization Recipient Committee</td>
+            <td>Form 410: Statement of Organization Recipient Committee</td>
         </tr>
     
     </tbody>
@@ -6286,28 +6165,12 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-DebtCd contains data collected from the following filing forms:
+DebtCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
 
 
 
@@ -7199,48 +7062,28 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-ExpnCd contains data collected from the following filing forms:
+ExpnCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f461">F461</a></td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f900">F900</a></td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
+
+
+* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
+
 
 
 
@@ -8780,27 +8623,27 @@ Look-up Codes
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460: Recipient Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F461</td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+            <td>Form 461: Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
         </tr>
     
         <tr>
             <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
+            <td>Form 465: Supplemental Independent Expenditure Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>Form 900: Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
         <tr>
@@ -9364,33 +9207,16 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-F495P2Cd contains data collected from the following filing forms:
+F495P2Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
 
 
 
@@ -9565,12 +9391,12 @@ Look-up Codes
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
+            <td>Form 460: Recipient Committee Campaign Statement</td>
         </tr>
     
     </tbody>
@@ -9603,33 +9429,16 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-F501502Cd contains data collected from the following filing forms:
+F501502Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f501">F501</a></td>
-            <td>Candidate Intention Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f502">F502</a></td>
-            <td>Campaign bank account statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 501 <filingforms.html#form-501>`_ (Candidate Intention Statement)
+
+
+
+* `Form 502 <filingforms.html#form-502>`_ (Campaign bank account statement)
+
 
 
 
@@ -11884,28 +11693,12 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-LoanCd contains data collected from the following filing forms:
+LoanCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
 
 
 
@@ -12674,63 +12467,40 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-RcptCd contains data collected from the following filing forms:
+RcptCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#e530">E530</a></td>
-            <td>Electronic Issue Advocacy Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f900">F900</a></td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f401a">F401A</a></td>
-            <td>Schedule A, payments received</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#a">A</a></td>
-            <td>Schedule A, monetary contributions received</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#a-1">A-1</a></td>
-            <td>Schedule A-1, contributions transferred to special                     election committees</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#c">C</a></td>
-            <td>Schedule C, non-monetary contributions received</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#i">I</a></td>
-            <td>Schedule I, miscellanous increases to cash</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f496p3">F496P3</a></td>
-            <td>Part 3, contributions &gt; $100 received</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Electronic Form 530 <filingforms.html#electronic-form-530>`_ (Electronic Issue Advocacy Report)
+
+
+
+* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
+
+
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement): Schedule A, payments received
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule A, monetary contributions received
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule A-1, contributions transferred to special                 election committees
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule C, non-monetary contributions received
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule I, miscellanous increases to cash
+
+
+
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report): Part 3, contributions > $100 received
+
 
 
 
@@ -13472,42 +13242,42 @@ Look-up Codes
     
         <tr>
             <td>E530</td>
-            <td>Electronic Issue Advocacy Report</td>
+            <td>Electronic Form 530: Electronic Issue Advocacy Report</td>
         </tr>
     
         <tr>
             <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
+            <td>Form 900: Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
         <tr>
             <td>F401A</td>
-            <td>Schedule A, payments received</td>
+            <td>Form 401 (Slate Mailer Organization Campaign Statement): Schedule A, payments received</td>
         </tr>
     
         <tr>
             <td>A</td>
-            <td>Schedule A, monetary contributions received</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A, monetary contributions received</td>
         </tr>
     
         <tr>
             <td>A-1</td>
-            <td>Schedule A-1, contributions transferred to special                     election committees</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A-1, contributions transferred to special                 election committees</td>
         </tr>
     
         <tr>
             <td>C</td>
-            <td>Schedule C, non-monetary contributions received</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule C, non-monetary contributions received</td>
         </tr>
     
         <tr>
             <td>I</td>
-            <td>Schedule I, miscellanous increases to cash</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule I, miscellanous increases to cash</td>
         </tr>
     
         <tr>
             <td>F496P3</td>
-            <td>Part 3, contributions &gt; $100 received</td>
+            <td>Form 496 (Late Independent Expenditure Report): Part 3, contributions &gt; $100 received</td>
         </tr>
     
     </tbody>
@@ -14102,28 +13872,12 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-S401Cd contains data collected from the following filing forms:
+S401Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+
 
 
 
@@ -15000,28 +14754,12 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-S496Cd contains data collected from the following filing forms:
+S496Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f496">F496</a></td>
-            <td>Late Independent Expenditure Report</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report)
+
 
 
 
@@ -15232,7 +14970,7 @@ Look-up Codes
     
         <tr>
             <td>F496</td>
-            <td>Late Independent Expenditure Report</td>
+            <td>Form 496: Late Independent Expenditure Report</td>
         </tr>
     
     </tbody>
@@ -15289,28 +15027,12 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-S497Cd contains data collected from the following filing forms:
+S497Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f497">F497</a></td>
-            <td>Late Contribution Report</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 497 <filingforms.html#form-497>`_ (Late Contribution Report)
+
 
 
 
@@ -16309,28 +16031,12 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-S498Cd contains data collected from the following filing forms:
+S498Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f498">F498</a></td>
-            <td>Slate Mailer Late Payment Report</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 498 <filingforms.html#form-498>`_ (Slate Mailer Late Payment Report)
+
 
 
 
@@ -18383,178 +18089,132 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-FilerFilingsCd contains data collected from the following filing forms:
+FilerFilingsCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#e530">E530</a></td>
-            <td>Electronic Issue Advocacy Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f400">F400</a></td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f402">F402</a></td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f410">F410</a></td>
-            <td>Statement of Organization Recipient Committee</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f425">F425</a></td>
-            <td>Semi-Annual Statement of no Activity</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f461">F461</a></td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f470">F470</a></td>
-            <td>Officeholder and Candidate Campaign Statement, Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f495">F495</a></td>
-            <td>Supplemental Pre-Election Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f496">F496</a></td>
-            <td>Late Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f497">F497</a></td>
-            <td>Late Contribution Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f498">F498</a></td>
-            <td>Slate Mailer Late Payment Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f501">F501</a></td>
-            <td>Candidate Intention Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f502">F502</a></td>
-            <td>Campaign bank account statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f601">F601</a></td>
-            <td>Lobbying Firm Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f602">F602</a></td>
-            <td>Lobbying Firm Activity Authorization</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f603">F603</a></td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f604">F604</a></td>
-            <td>Lobbyist Certification Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f605">F605</a></td>
-            <td>Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f606">F606</a></td>
-            <td>Notice of Termination</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f607">F607</a></td>
-            <td>Notice of Withdrawal</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f615">F615</a></td>
-            <td>Lobbyist Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f690">F690</a></td>
-            <td>Amendment to Lobbying Disclosure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f700">F700</a></td>
-            <td>Statement of Economic Interest</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f900">F900</a></td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Electronic Form 530 <filingforms.html#electronic-form-530>`_ (Electronic Issue Advocacy Report)
+
+
+
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+
+
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+
+
+
+* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization))
+
+
+
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
+
+
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+
+
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
+
+
+* `Form 470 <filingforms.html#form-470>`_ (Officeholder and Candidate Campaign Statement, Short Form)
+
+
+
+* `Form 495 <filingforms.html#form-495>`_ (Supplemental Pre-Election Campaign Statement)
+
+
+
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report)
+
+
+
+* `Form 497 <filingforms.html#form-497>`_ (Late Contribution Report)
+
+
+
+* `Form 498 <filingforms.html#form-498>`_ (Slate Mailer Late Payment Report)
+
+
+
+* `Form 501 <filingforms.html#form-501>`_ (Candidate Intention Statement)
+
+
+
+* `Form 502 <filingforms.html#form-502>`_ (Campaign bank account statement)
+
+
+
+* `Form 601 <filingforms.html#form-601>`_ (Lobbying Firm Registration Statement)
+
+
+
+* `Form 602 <filingforms.html#form-602>`_ (Lobbying Firm Activity Authorization)
+
+
+
+* `Form 603 <filingforms.html#form-603>`_ (Lobbyist Employer or Lobbying Coalition Registration Statement)
+
+
+
+* `Form 604 <filingforms.html#form-604>`_ (Lobbyist Certification Statement)
+
+
+
+* `Form 605 <filingforms.html#form-605>`_ (Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition)
+
+
+
+* `Form 606 <filingforms.html#form-606>`_ (Notice of Termination)
+
+
+
+* `Form 607 <filingforms.html#form-607>`_ (Notice of Withdrawal)
+
+
+
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
+
+
+* `Form 690 <filingforms.html#form-690>`_ (Amendment to Lobbying Disclosure Report)
+
+
+
+* `Form 700 <filingforms.html#form-700>`_ (Statement of Economic Interest)
+
+
+
+* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
+
 
 
 
@@ -20125,73 +19785,48 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-SmryCd contains data collected from the following filing forms:
+SmryCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f461">F461</a></td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#s640">S640</a></td>
-            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f900">F900</a></td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+
+
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Schedule 640 <filingforms.html#schedule-640>`_ (Governmental Agencies Reporting (Attachment to Form 635 or Form 645))
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
+
+
+* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
+
 
 
 
@@ -20786,143 +20421,104 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-TextMemoCd contains data collected from the following filing forms:
+TextMemoCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#e530">E530</a></td>
-            <td>Electronic Issue Advocacy Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f425">F425</a></td>
-            <td>Semi-Annual Statement of no Activity</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f410">F410</a></td>
-            <td>Statement of Organization Recipient Committee</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f461">F461</a></td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f496">F496</a></td>
-            <td>Late Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f497">F497</a></td>
-            <td>Late Contribution Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f601">F601</a></td>
-            <td>Lobbying Firm Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f602">F602</a></td>
-            <td>Lobbying Firm Activity Authorization</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f603">F603</a></td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f604">F604</a></td>
-            <td>Lobbyist Certification Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f605">F605</a></td>
-            <td>Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f606">F606</a></td>
-            <td>Notice of Termination</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f607">F607</a></td>
-            <td>Notice of Withdrawal</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f615">F615</a></td>
-            <td>Lobbyist Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#s630">S630</a></td>
-            <td>Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) </td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#s635c">S635C</a></td>
-            <td>Payments Received by Lobbying Coalitions</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#s640">S640</a></td>
-            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Electronic Form 530 <filingforms.html#electronic-form-530>`_ (Electronic Issue Advocacy Report)
+
+
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+
+
+
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+
+
+
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
+
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
+
+
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report)
+
+
+
+* `Form 497 <filingforms.html#form-497>`_ (Late Contribution Report)
+
+
+
+* `Form 601 <filingforms.html#form-601>`_ (Lobbying Firm Registration Statement)
+
+
+
+* `Form 602 <filingforms.html#form-602>`_ (Lobbying Firm Activity Authorization)
+
+
+
+* `Form 603 <filingforms.html#form-603>`_ (Lobbyist Employer or Lobbying Coalition Registration Statement)
+
+
+
+* `Form 604 <filingforms.html#form-604>`_ (Lobbyist Certification Statement)
+
+
+
+* `Form 605 <filingforms.html#form-605>`_ (Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition)
+
+
+
+* `Form 606 <filingforms.html#form-606>`_ (Notice of Termination)
+
+
+
+* `Form 607 <filingforms.html#form-607>`_ (Notice of Withdrawal)
+
+
+
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Schedule 630 <filingforms.html#schedule-630>`_ (Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) )
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Schedule 635C <filingforms.html#schedule-635c>`_ (Payments Received by Lobbying Coalitions)
+
+
+
+* `Schedule 640 <filingforms.html#schedule-640>`_ (Governmental Agencies Reporting (Attachment to Form 635 or Form 645))
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
 
 
 
@@ -21593,33 +21189,16 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-Cvr2LobbyDisclosureCd contains data collected from the following filing forms:
+Cvr2LobbyDisclosureCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
 
 
 
@@ -21929,38 +21508,20 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-Cvr2RegistrationCd contains data collected from the following filing forms:
+Cvr2RegistrationCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f601">F601</a></td>
-            <td>Lobbying Firm Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f602">F602</a></td>
-            <td>Lobbying Firm Activity Authorization</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f603">F603</a></td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 601 <filingforms.html#form-601>`_ (Lobbying Firm Registration Statement)
+
+
+
+* `Form 602 <filingforms.html#form-602>`_ (Lobbying Firm Activity Authorization)
+
+
+
+* `Form 603 <filingforms.html#form-603>`_ (Lobbyist Employer or Lobbying Coalition Registration Statement)
+
 
 
 
@@ -22276,43 +21837,24 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-CvrLobbyDisclosureCd contains data collected from the following filing forms:
+CvrLobbyDisclosureCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f615">F615</a></td>
-            <td>Lobbyist Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
 
 
 
@@ -22998,53 +22540,32 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-CvrRegistrationCd contains data collected from the following filing forms:
+CvrRegistrationCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f601">F601</a></td>
-            <td>Lobbying Firm Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f602">F602</a></td>
-            <td>Lobbying Firm Activity Authorization</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f603">F603</a></td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f604">F604</a></td>
-            <td>Lobbyist Certification Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f606">F606</a></td>
-            <td>Notice of Termination</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f607">F607</a></td>
-            <td>Notice of Withdrawal</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 601 <filingforms.html#form-601>`_ (Lobbying Firm Registration Statement)
+
+
+
+* `Form 602 <filingforms.html#form-602>`_ (Lobbying Firm Activity Authorization)
+
+
+
+* `Form 603 <filingforms.html#form-603>`_ (Lobbyist Employer or Lobbying Coalition Registration Statement)
+
+
+
+* `Form 604 <filingforms.html#form-604>`_ (Lobbyist Certification Statement)
+
+
+
+* `Form 606 <filingforms.html#form-606>`_ (Notice of Termination)
+
+
+
+* `Form 607 <filingforms.html#form-607>`_ (Notice of Withdrawal)
+
 
 
 
@@ -24102,43 +23623,24 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-F690P2Cd contains data collected from the following filing forms:
+F690P2Cd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f615">F615</a></td>
-            <td>Lobbyist Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
 
 
 
@@ -24396,38 +23898,20 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-LattCd contains data collected from the following filing forms:
+LattCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#s630">S630</a></td>
-            <td>Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) </td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#s635c">S635C</a></td>
-            <td>Payments Received by Lobbying Coalitions</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#s640">S640</a></td>
-            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Schedule 630 <filingforms.html#schedule-630>`_ (Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) )
+
+
+
+* `Schedule 635C <filingforms.html#schedule-635c>`_ (Payments Received by Lobbying Coalitions)
+
+
+
+* `Schedule 640 <filingforms.html#schedule-640>`_ (Governmental Agencies Reporting (Attachment to Form 635 or Form 645))
+
 
 
 
@@ -24828,43 +24312,24 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-LccmCd contains data collected from the following filing forms:
+LccmCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f615">F615</a></td>
-            <td>Lobbyist Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
 
 
 
@@ -25607,43 +25072,24 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-LexpCd contains data collected from the following filing forms:
+LexpCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f615">F615</a></td>
-            <td>Lobbyist Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
 
 
 
@@ -26090,33 +25536,16 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-LobbyAmendmentsCd contains data collected from the following filing forms:
+LobbyAmendmentsCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f601">F601</a></td>
-            <td>Lobbying Firm Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f603">F603</a></td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 601 <filingforms.html#form-601>`_ (Lobbying Firm Registration Statement)
+
+
+
+* `Form 603 <filingforms.html#form-603>`_ (Lobbyist Employer or Lobbying Coalition Registration Statement)
+
 
 
 
@@ -30907,133 +30336,96 @@ Source Docs
 
 Filing Forms
 ^^^^^^^^^^^^
-EfsFilingLogCd contains data collected from the following filing forms:
+EfsFilingLogCd contains data collected from the following filing forms, form parts and schedules:
 
-.. raw:: html
 
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-    <thead valign="bottom">
-        <tr>
-            <th class="head">Form</th>
-            <th class="head">Title</th>
-        </tr>
-    </thead>
-    <tbody valign="top">
-    
-        <tr>
-            <td><a href="/filingforms.html#f400">F400</a></td>
-            <td>Statement of Organization (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f401">F401</a></td>
-            <td>Slate Mailer Organization Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f402">F402</a></td>
-            <td>Statement of Termination (Slate Mailer Organization)</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f410">F410</a></td>
-            <td>Statement of Organization Recipient Committee</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f425">F425</a></td>
-            <td>Semi-Annual Statement of no Activity</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f450">F450</a></td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f460">F460</a></td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f461">F461</a></td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f465">F465</a></td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f496">F496</a></td>
-            <td>Late Independent Expenditure Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f497">F497</a></td>
-            <td>Late Contribution Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f498">F498</a></td>
-            <td>Slate Mailer Late Payment Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f601">F601</a></td>
-            <td>Lobbying Firm Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f602">F602</a></td>
-            <td>Lobbying Firm Activity Authorization</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f603">F603</a></td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f604">F604</a></td>
-            <td>Lobbyist Certification Statement</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f606">F606</a></td>
-            <td>Notice of Termination</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f607">F607</a></td>
-            <td>Notice of Withdrawal</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f615">F615</a></td>
-            <td>Lobbyist Report</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f625">F625</a></td>
-            <td>Report of Lobbying Firm</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f635">F635</a></td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr></a>
-    
-        <tr>
-            <td><a href="/filingforms.html#f645">F645</a></td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr></a>
-    
-    </tbody>
-    </table>
-    </div>
+
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+
+
+
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+
+
+
+* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization))
+
+
+
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
+
+
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+
+
+
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+
+
+
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+
+
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+
+
+
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+
+
+
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report)
+
+
+
+* `Form 497 <filingforms.html#form-497>`_ (Late Contribution Report)
+
+
+
+* `Form 498 <filingforms.html#form-498>`_ (Slate Mailer Late Payment Report)
+
+
+
+* `Form 601 <filingforms.html#form-601>`_ (Lobbying Firm Registration Statement)
+
+
+
+* `Form 602 <filingforms.html#form-602>`_ (Lobbying Firm Activity Authorization)
+
+
+
+* `Form 603 <filingforms.html#form-603>`_ (Lobbyist Employer or Lobbying Coalition Registration Statement)
+
+
+
+* `Form 604 <filingforms.html#form-604>`_ (Lobbyist Certification Statement)
+
+
+
+* `Form 606 <filingforms.html#form-606>`_ (Notice of Termination)
+
+
+
+* `Form 607 <filingforms.html#form-607>`_ (Notice of Withdrawal)
+
+
+
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
 
 
 
