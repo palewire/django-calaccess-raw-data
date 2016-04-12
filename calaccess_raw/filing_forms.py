@@ -365,7 +365,7 @@ form.'
     FilingForm(
         'F700',
         'Statement of Economic Interest',
-        group='PUBLIC OFFICIALS',
+        group='FINANCIAL DISCLOSURE',
         documentcloud_id='2792958-700-2015-12',
         description='Every public official who makes or participates in making \
 governmental decisions is required to file a Statement of Economic Interest, \
