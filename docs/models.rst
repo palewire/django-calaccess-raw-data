@@ -1,4 +1,3 @@
-
 Database tables
 ===============
 
@@ -2819,11 +2818,11 @@ CvrCampaignDisclosureCd contains data collected from the following filing forms,
 
 
 
-* `Form 498 <filingforms.html#form-498>`_ (Slate Mailer Late Payment Report)
-
-
-
 * `Form 497 <filingforms.html#form-497>`_ (Late Contribution Report)
+
+
+
+* `Form 498 <filingforms.html#form-498>`_ (Slate Mailer Late Payment Report)
 
 
 
@@ -11699,6 +11698,21 @@ LoanCd contains data collected from the following filing forms, form parts and s
 
 * `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
 
+    * Schedule B - Part 1, Loans Received
+
+    * Schedule B - Part 2, Loan Guarantors
+
+    * Schedule B - Part 3, Outstanding Bal
+
+    * Schedule H, Loans Made to Others
+
+    * Schedule H1, Loans Made
+
+    * Schedule H2, Repayments Rcvd
+
+    * Schedule H3, Outstanding Loan
+
+
 
 
 
@@ -12260,37 +12274,37 @@ Look-up Codes
     
         <tr>
             <td>B1</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule B1</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule B - Part 1, Loans Received</td>
         </tr>
     
         <tr>
             <td>B2</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule B2</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule B - Part 2, Loan Guarantors</td>
         </tr>
     
         <tr>
             <td>B3</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule B3</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule B - Part 3, Outstanding Bal</td>
         </tr>
     
         <tr>
             <td>H</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H, Loans Made to Others</td>
         </tr>
     
         <tr>
             <td>H1</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H1</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H1, Loans Made</td>
         </tr>
     
         <tr>
             <td>H2</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H2</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H2, Repayments Rcvd</td>
         </tr>
     
         <tr>
             <td>H3</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H3</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H3, Outstanding Loan</td>
         </tr>
     
     </tbody>
@@ -12475,31 +12489,28 @@ RcptCd contains data collected from the following filing forms, form parts and s
 
 
 
-* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
-
-
-
 * `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement): Schedule A, payments received
 
 
 
-* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule A, monetary contributions received
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
 
+    * Schedule A, Monetary Contributions Received
 
+    * Schedule A-1, Contributions Transferred to Special Election Committees
 
-* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule A-1, contributions transferred to special                 election committees
+    * Schedule C, Non-Monetary Contributions Received
 
+    * Schedule I, miscellanous increases to cash
 
-
-* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule C, non-monetary contributions received
-
-
-
-* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Schedule I, miscellanous increases to cash
 
 
 
 * `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report): Part 3, contributions > $100 received
+
+
+
+* `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
 
 
 
@@ -13257,17 +13268,17 @@ Look-up Codes
     
         <tr>
             <td>A</td>
-            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A, monetary contributions received</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A, Monetary Contributions Received</td>
         </tr>
     
         <tr>
             <td>A-1</td>
-            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A-1, contributions transferred to special                 election committees</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A-1, Contributions Transferred to Special Election Committees</td>
         </tr>
     
         <tr>
             <td>C</td>
-            <td>Form 460 (Recipient Committee Campaign Statement): Schedule C, non-monetary contributions received</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule C, Non-Monetary Contributions Received</td>
         </tr>
     
         <tr>
@@ -19817,15 +19828,15 @@ SmryCd contains data collected from the following filing forms, form parts and s
 
 
 
-* `Schedule 640 <filingforms.html#schedule-640>`_ (Governmental Agencies Reporting (Attachment to Form 635 or Form 645))
-
-
-
 * `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
 
 
 
 * `Form 900 <filingforms.html#form-900>`_ (Public employee's retirement board, candidate campaign statement)
+
+
+
+* `Schedule 640 <filingforms.html#schedule-640>`_ (Governmental Agencies Reporting (Attachment to Form 635 or Form 645))
 
 
 
@@ -20433,11 +20444,11 @@ TextMemoCd contains data collected from the following filing forms, form parts a
 
 
 
-* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
-
-
-
 * `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
+
+
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
 
 
 
@@ -20501,11 +20512,15 @@ TextMemoCd contains data collected from the following filing forms, form parts a
 
 
 
-* `Schedule 630 <filingforms.html#schedule-630>`_ (Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) )
-
-
-
 * `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+
+
+
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
+
+
+* `Schedule 630 <filingforms.html#schedule-630>`_ (Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) )
 
 
 
@@ -20514,10 +20529,6 @@ TextMemoCd contains data collected from the following filing forms, form parts a
 
 
 * `Schedule 640 <filingforms.html#schedule-640>`_ (Governmental Agencies Reporting (Attachment to Form 635 or Form 645))
-
-
-
-* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
 
 
 

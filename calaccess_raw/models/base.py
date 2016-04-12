@@ -134,6 +134,28 @@ class CalAccessBaseModel(models.Model):
 
         return page_list
 
+    def get_filing_forms_w_sections(self):
+        """
+        Returns a list of tuples, each containing a FilingForm object and list of
+        FilingFormSection objects, if specific sections of the filing form are
+        relevant to the model.
+        """
+        forms_dict = {}
+
+        for i in self.FILING_FORMS:
+            if isinstance(i, FilingForm):
+                try:
+                    forms_dict[i]
+                except KeyError:
+                    forms_dict[i] = []
+            else:
+                try:
+                    forms_dict[i.form].append(i)
+                except KeyError:
+                    forms_dict[i.form] = [i]
+
+        return sorted(forms_dict.items(), key=lambda x: x[0].id)
+
     class Meta:
         abstract = True
 

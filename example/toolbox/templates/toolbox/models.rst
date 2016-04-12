@@ -1,4 +1,3 @@
-{% load misc_tags %}
 Database tables
 ===============
 
@@ -42,11 +41,16 @@ Filing Forms
 ^^^^^^^^^^^^
 {{ object.klass_name }} contains data collected from the following filing forms, form parts and schedules:
 
-{% for form in object.FILING_FORMS %}
-{% if form|isinst:"calaccess_raw.models.base.FilingFormSection" %}
-* `{{ form.form.type_and_num|safe }} <filingforms.html#{{ form.form.type_and_num|slugify }}>`_ ({{form.form.title|safe}}): {{ form.title|safe }}
+{% for form, sections in object.get_filing_forms_w_sections %}
+{% if sections|length > 1 %}
+* `{{ form.type_and_num|safe }} <filingforms.html#{{ form.type_and_num|slugify }}>`_ ({{ form.title|safe }})
+{% for section in sections %}
+    * {{ section.title|safe }}
+{% endfor %}
+{% elif sections|length == 1 %}
+* `{{ form.type_and_num|safe }} <filingforms.html#{{ form.type_and_num|slugify }}>`_ ({{ form.title|safe }}): {{ sections.0.title|safe }}
 {% else %}
-* `{{ form.type_and_num|safe }} <filingforms.html#{{ form.type_and_num|slugify }}>`_ ({{form.title|safe}})
+* `{{ form.type_and_num|safe }} <filingforms.html#{{ form.type_and_num|slugify }}>`_ ({{ form.title|safe }})
 {% endif %}
 {% endfor %}
 {% endif %}
