@@ -189,7 +189,6 @@ class DocumentCloud(object):
         r = requests.get(
             'https://www.documentcloud.org/documents/{id}.json'.format(id=self.id)
         )
-        print 'Calling DocumentCloud!'
         return r.content.decode('utf-8')
 
     def _cache_metadata(self):
