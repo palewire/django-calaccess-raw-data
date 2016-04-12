@@ -4,7 +4,7 @@ import os
 from django.conf import settings
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.calaccess_forms import CALACCESS_FORMS
+from calaccess_raw.filing_forms import all_filing_forms
 
 class Command(CalAccessCommand):
     help = 'Generate documentation for CAL-ACCESS forms'
@@ -19,11 +19,11 @@ class Command(CalAccessCommand):
 
         group_dict = {}
 
-        for k in sorted(CALACCESS_FORMS):
+        for form in all_filing_forms:
             try:
-                group_dict[CALACCESS_FORMS[k].group].append(CALACCESS_FORMS[k])
+                group_dict[form.group].append(form)
             except KeyError:
-                group_dict[CALACCESS_FORMS[k].group] = [CALACCESS_FORMS[k]]
+                group_dict[form.group] = [form]
 
         group_list = sorted(group_dict.items(), key=lambda x:x[0])
 
