@@ -12,55 +12,7 @@ Campaign Forms
 --------------------------
 
 
-E530
-~~~~~~~~~~~~~
-
-Electronic Issue Advocacy Report
-
-On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.
-
-
-
-Example Form
-^^^^^^^^^^^^
-
-
-.. raw:: html
-
-    <div style="margin-bottom:35px;" id="DV-viewer-2781349-E530-Instructions" class="DV-container"></div>
-    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
-    <script>
-      DV.load("//www.documentcloud.org/documents/2781349-E530-Instructions.js", {
-      container: "#DV-viewer-2781349-E530-Instructions",
-      width: 680,
-      height: 850,
-      sidebar: false,
-      zoom: 550
-      });
-    </script>
-      <noscript>
-      <a href=https://assets.documentcloud.org/documents/2781349/E530-Instructions.pdf>E530-Instructions (PDF)</a>
-      <br />
-      <a href=https://assets.documentcloud.org/documents/2781349/E530-Instructions.txt>E530-Instructions (Text)</a>
-    </noscript>
-
-
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via E530 filings are written to the following tables:
-
-* `RcptCd </models.html#rcptcd>`_
-
-* `FilerFilingsCd </models.html#filerfilingscd>`_
-
-* `TextMemoCd </models.html#textmemocd>`_
-
-
-
-
-F400
+Form 400
 ~~~~~~~~~~~~~
 
 Statement of Organization (Slate Mailer Organization)
@@ -112,15 +64,15 @@ Data collected via F400 filings are written to the following tables:
 
 
 
-F401
+Form 401
 ~~~~~~~~~~~~~
 
 Slate Mailer Organization Campaign Statement
 
 Form 401 is filed by slate mailer organizations to disclose payments made and received in connection with producing slate mailers.
 
-Parts/Schedules
-^^^^^^^^^^^^^^^
+Sections
+^^^^^^^^
 
 * Schedule A, payments received (`p. 4-6 <https://www.documentcloud.org/documents/2781366-401-2005-01.html#document/p4>`_)
 
@@ -175,7 +127,7 @@ Data collected via F401 filings are written to the following tables:
 
 
 
-F402
+Form 402
 ~~~~~~~~~~~~~
 
 Statement of Termination (Slate Mailer Organization)
@@ -225,7 +177,7 @@ Data collected via F402 filings are written to the following tables:
 
 
 
-F410
+Form 410
 ~~~~~~~~~~~~~
 
 Statement of Organization Recipient Committee
@@ -279,7 +231,7 @@ Data collected via F410 filings are written to the following tables:
 
 
 
-F425
+Form 425
 ~~~~~~~~~~~~~
 
 Semi-Annual Statement of no Activity
@@ -333,7 +285,7 @@ Data collected via F425 filings are written to the following tables:
 
 
 
-F450
+Form 450
 ~~~~~~~~~~~~~
 
 Recipient Committee Campaign Disclosure Statement - Short Form
@@ -393,20 +345,20 @@ Data collected via F450 filings are written to the following tables:
 
 
 
-F460
+Form 460
 ~~~~~~~~~~~~~
 
 Recipient Committee Campaign Statement
 
 Form 460 is filed by recipient committees to report expenditures and contributions. It can be used to file a pre-election statement, semi-annual statement, quarterly statement, termination statement, special odd-year report, or an amendment to a previously filed statement.
 
-Parts/Schedules
-^^^^^^^^^^^^^^^
+Sections
+^^^^^^^^
 
 * Schedule A, monetary contributions received (`p. 8-10 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p8>`_)
 
 
-* Schedule A-1, contributions transferred to special                     election committees 
+* Schedule A-1, contributions transferred to special                 election committees 
 
 
 * Schedule C, non-monetary contributions received (`p. 15-16 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p15>`_)
@@ -473,7 +425,7 @@ Data collected via F460 filings are written to the following tables:
 
 
 
-F461
+Form 461
 ~~~~~~~~~~~~~
 
 Independent Expenditure Committee & Major Donor Committee Campaign Statement
@@ -529,7 +481,7 @@ Data collected via F461 filings are written to the following tables:
 
 
 
-F465
+Form 465
 ~~~~~~~~~~~~~
 
 Supplemental Independent Expenditure Report
@@ -587,7 +539,7 @@ Data collected via F465 filings are written to the following tables:
 
 
 
-F470
+Form 470
 ~~~~~~~~~~~~~
 
 Officeholder and Candidate Campaign Statement, Short Form
@@ -633,7 +585,7 @@ Data collected via F470 filings are written to the following tables:
 
 
 
-F495
+Form 495
 ~~~~~~~~~~~~~
 
 Supplemental Pre-Election Campaign Statement
@@ -677,15 +629,15 @@ Data collected via F495 filings are written to the following tables:
 
 
 
-F496
+Form 496
 ~~~~~~~~~~~~~
 
 Late Independent Expenditure Report
 
 Form 496 is filed by committees that make independent expenditures whose combined total is $1,000 or more to support or oppose a single candidate for elective office, or a single ballot measure. Form 496 should be filed within 24-hours of making the expenditure during the 90 days immediately preceding the election.
 
-Parts/Schedules
-^^^^^^^^^^^^^^^
+Sections
+^^^^^^^^
 
 * Part 3, contributions &gt; $100 received (`p. 3 <https://www.documentcloud.org/documents/2781355-496-2016-01.html#document/p3>`_)
 
@@ -736,7 +688,7 @@ Data collected via F496 filings are written to the following tables:
 
 
 
-F497
+Form 497
 ~~~~~~~~~~~~~
 
 Late Contribution Report
@@ -788,7 +740,7 @@ Data collected via F497 filings are written to the following tables:
 
 
 
-F498
+Form 498
 ~~~~~~~~~~~~~
 
 Slate Mailer Late Payment Report
@@ -838,7 +790,7 @@ Data collected via F498 filings are written to the following tables:
 
 
 
-F501
+Form 501
 ~~~~~~~~~~~~~
 
 Candidate Intention Statement
@@ -884,7 +836,7 @@ Data collected via F501 filings are written to the following tables:
 
 
 
-F502
+Form 502
 ~~~~~~~~~~~~~
 
 Campaign bank account statement
@@ -908,7 +860,7 @@ Data collected via F502 filings are written to the following tables:
 
 
 
-F511
+Form 511
 ~~~~~~~~~~~~~
 
 Paid Spokesperson Report
@@ -954,7 +906,55 @@ Data collected via F511 filings are written to the following tables:
 
 
 
-F900
+Electronic Form 530
+~~~~~~~~~~~~~
+
+Electronic Issue Advocacy Report
+
+On-line Form E-530 reports must be filed by anyone spending or promising to pay $50,000 or more for a communication disseminated within 45 days of an election, if the communication clearly identifies a candidate for state elective office but does not expressly advocate the election or defeat of that candidate.
+
+
+
+Example Form
+^^^^^^^^^^^^
+
+
+.. raw:: html
+
+    <div style="margin-bottom:35px;" id="DV-viewer-2781349-E530-Instructions" class="DV-container"></div>
+    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
+    <script>
+      DV.load("//www.documentcloud.org/documents/2781349-E530-Instructions.js", {
+      container: "#DV-viewer-2781349-E530-Instructions",
+      width: 680,
+      height: 850,
+      sidebar: false,
+      zoom: 550
+      });
+    </script>
+      <noscript>
+      <a href=https://assets.documentcloud.org/documents/2781349/E530-Instructions.pdf>E530-Instructions (PDF)</a>
+      <br />
+      <a href=https://assets.documentcloud.org/documents/2781349/E530-Instructions.txt>E530-Instructions (Text)</a>
+    </noscript>
+
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via E530 filings are written to the following tables:
+
+* `RcptCd </models.html#rcptcd>`_
+
+* `FilerFilingsCd </models.html#filerfilingscd>`_
+
+* `TextMemoCd </models.html#textmemocd>`_
+
+
+
+
+Form 900
 ~~~~~~~~~~~~~
 
 Public employee's retirement board, candidate campaign statement
@@ -987,11 +987,60 @@ Data collected via F900 filings are written to the following tables:
 
 
 
+Financial Disclosure Forms
+--------------------------
+
+
+Form 700
+~~~~~~~~~~~~~
+
+Statement of Economic Interest
+
+Every public official who makes or participates in making governmental decisions is required to file a Statement of Economic Interest, commonly referred to as the Form 700.
+
+
+
+Example Form
+^^^^^^^^^^^^
+
+
+.. raw:: html
+
+    <div style="margin-bottom:35px;" id="DV-viewer-2792958-700-2015-12" class="DV-container"></div>
+    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
+    <script>
+      DV.load("//www.documentcloud.org/documents/2792958-700-2015-12.js", {
+      container: "#DV-viewer-2792958-700-2015-12",
+      width: 680,
+      height: 850,
+      sidebar: false,
+      zoom: 550
+      });
+    </script>
+      <noscript>
+      <a href=https://assets.documentcloud.org/documents/2792958/700-2015-12.pdf>700-2015-12 (PDF)</a>
+      <br />
+      <a href=https://assets.documentcloud.org/documents/2792958/700-2015-12.txt>700-2015-12 (Text)</a>
+    </noscript>
+
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via F700 filings are written to the following tables:
+
+* `FilerFilingsCd </models.html#filerfilingscd>`_
+
+
+
+
+
 Lobbyist Forms
 --------------------------
 
 
-F601
+Form 601
 ~~~~~~~~~~~~~
 
 Lobbying Firm Registration Statement
@@ -1045,7 +1094,7 @@ Data collected via F601 filings are written to the following tables:
 
 
 
-F602
+Form 602
 ~~~~~~~~~~~~~
 
 Lobbying Firm Activity Authorization
@@ -1097,7 +1146,7 @@ Data collected via F602 filings are written to the following tables:
 
 
 
-F603
+Form 603
 ~~~~~~~~~~~~~
 
 Lobbyist Employer or Lobbying Coalition Registration Statement
@@ -1151,7 +1200,7 @@ Data collected via F603 filings are written to the following tables:
 
 
 
-F604
+Form 604
 ~~~~~~~~~~~~~
 
 Lobbyist Certification Statement
@@ -1201,7 +1250,7 @@ Data collected via F604 filings are written to the following tables:
 
 
 
-F605
+Form 605
 ~~~~~~~~~~~~~
 
 Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition
@@ -1247,7 +1296,7 @@ Data collected via F605 filings are written to the following tables:
 
 
 
-F606
+Form 606
 ~~~~~~~~~~~~~
 
 Notice of Termination
@@ -1297,7 +1346,7 @@ Data collected via F606 filings are written to the following tables:
 
 
 
-F607
+Form 607
 ~~~~~~~~~~~~~
 
 Notice of Withdrawal
@@ -1347,7 +1396,7 @@ Data collected via F607 filings are written to the following tables:
 
 
 
-F615
+Form 615
 ~~~~~~~~~~~~~
 
 Lobbyist Report
@@ -1403,7 +1452,7 @@ Data collected via F615 filings are written to the following tables:
 
 
 
-F625
+Form 625
 ~~~~~~~~~~~~~
 
 Report of Lobbying Firm
@@ -1463,7 +1512,53 @@ Data collected via F625 filings are written to the following tables:
 
 
 
-F635
+Schedule 630
+~~~~~~~~~~~~~
+
+Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) 
+
+An attachment to the quarterly disclosure report filed by a lobbying firm or lobbyist employer which makes payments to a lobbying coalition. This attachment itemizes such payments.
+
+
+
+Example Form
+^^^^^^^^^^^^
+
+
+.. raw:: html
+
+    <div style="margin-bottom:35px;" id="DV-viewer-2782806-630-1990" class="DV-container"></div>
+    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
+    <script>
+      DV.load("//www.documentcloud.org/documents/2782806-630-1990.js", {
+      container: "#DV-viewer-2782806-630-1990",
+      width: 680,
+      height: 850,
+      sidebar: false,
+      zoom: 550
+      });
+    </script>
+      <noscript>
+      <a href=https://assets.documentcloud.org/documents/2782806/630-1990.pdf>630-1990 (PDF)</a>
+      <br />
+      <a href=https://assets.documentcloud.org/documents/2782806/630-1990.txt>630-1990 (Text)</a>
+    </noscript>
+
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via S630 filings are written to the following tables:
+
+* `LattCd </models.html#lattcd>`_
+
+* `TextMemoCd </models.html#textmemocd>`_
+
+
+
+
+Form 635
 ~~~~~~~~~~~~~
 
 Report of Lobbyist Employer or Report of Lobbying Coalition
@@ -1523,7 +1618,101 @@ Data collected via F635 filings are written to the following tables:
 
 
 
-F645
+Schedule 635C
+~~~~~~~~~~~~~
+
+Payments Received by Lobbying Coalitions
+
+Form 635-C is filed by a lobbying coalition as an attachment to the Form 635 (Report of a Lobbying Coalition) and discloses all payment received from the members of a coalition.
+
+
+
+Example Form
+^^^^^^^^^^^^
+
+
+.. raw:: html
+
+    <div style="margin-bottom:35px;" id="DV-viewer-2781338-635C-1990" class="DV-container"></div>
+    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
+    <script>
+      DV.load("//www.documentcloud.org/documents/2781338-635C-1990.js", {
+      container: "#DV-viewer-2781338-635C-1990",
+      width: 680,
+      height: 850,
+      sidebar: false,
+      zoom: 550
+      });
+    </script>
+      <noscript>
+      <a href=https://assets.documentcloud.org/documents/2781338/635C-1990.pdf>635C-1990 (PDF)</a>
+      <br />
+      <a href=https://assets.documentcloud.org/documents/2781338/635C-1990.txt>635C-1990 (Text)</a>
+    </noscript>
+
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via S635C filings are written to the following tables:
+
+* `LattCd </models.html#lattcd>`_
+
+* `TextMemoCd </models.html#textmemocd>`_
+
+
+
+
+Schedule 640
+~~~~~~~~~~~~~
+
+Governmental Agencies Reporting (Attachment to Form 635 or Form 645)
+
+Form 640 is filed by a state or local governmental agency which qualifies as a lobbyist employer, or $5,000 filer. The attachment replaces Section D of Form 635 and Section B of Form 645 (both labeled Other Payments to Influence Legislative or Administrative Action ). It is filed in conjunction with either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).
+
+
+
+Example Form
+^^^^^^^^^^^^
+
+
+.. raw:: html
+
+    <div style="margin-bottom:35px;" id="DV-viewer-2781337-640-1993" class="DV-container"></div>
+    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
+    <script>
+      DV.load("//www.documentcloud.org/documents/2781337-640-1993.js", {
+      container: "#DV-viewer-2781337-640-1993",
+      width: 680,
+      height: 850,
+      sidebar: false,
+      zoom: 550
+      });
+    </script>
+      <noscript>
+      <a href=https://assets.documentcloud.org/documents/2781337/640-1993.pdf>640-1993 (PDF)</a>
+      <br />
+      <a href=https://assets.documentcloud.org/documents/2781337/640-1993.txt>640-1993 (Text)</a>
+    </noscript>
+
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via S640 filings are written to the following tables:
+
+* `LattCd </models.html#lattcd>`_
+
+* `SmryCd </models.html#smrycd>`_
+
+* `TextMemoCd </models.html#textmemocd>`_
+
+
+
+
+Form 645
 ~~~~~~~~~~~~~
 
 Report of Person Spending $5,000 or More
@@ -1581,7 +1770,7 @@ Data collected via F645 filings are written to the following tables:
 
 
 
-F690
+Form 690
 ~~~~~~~~~~~~~
 
 Amendment to Lobbying Disclosure Report
@@ -1619,195 +1808,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F690 filings are written to the following tables:
-
-* `FilerFilingsCd </models.html#filerfilingscd>`_
-
-
-
-
-S630
-~~~~~~~~~~~~~
-
-Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) 
-
-An attachment to the quarterly disclosure report filed by a lobbying firm or lobbyist employer which makes payments to a lobbying coalition. This attachment itemizes such payments.
-
-
-
-Example Form
-^^^^^^^^^^^^
-
-
-.. raw:: html
-
-    <div style="margin-bottom:35px;" id="DV-viewer-2782806-630-1990" class="DV-container"></div>
-    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
-    <script>
-      DV.load("//www.documentcloud.org/documents/2782806-630-1990.js", {
-      container: "#DV-viewer-2782806-630-1990",
-      width: 680,
-      height: 850,
-      sidebar: false,
-      zoom: 550
-      });
-    </script>
-      <noscript>
-      <a href=https://assets.documentcloud.org/documents/2782806/630-1990.pdf>630-1990 (PDF)</a>
-      <br />
-      <a href=https://assets.documentcloud.org/documents/2782806/630-1990.txt>630-1990 (Text)</a>
-    </noscript>
-
-
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via S630 filings are written to the following tables:
-
-* `LattCd </models.html#lattcd>`_
-
-* `TextMemoCd </models.html#textmemocd>`_
-
-
-
-
-S635C
-~~~~~~~~~~~~~
-
-Payments Received by Lobbying Coalitions
-
-Form 635-C is filed by a lobbying coalition as an attachment to the Form 635 (Report of a Lobbying Coalition) and discloses all payment received from the members of a coalition.
-
-
-
-Example Form
-^^^^^^^^^^^^
-
-
-.. raw:: html
-
-    <div style="margin-bottom:35px;" id="DV-viewer-2781338-635C-1990" class="DV-container"></div>
-    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
-    <script>
-      DV.load("//www.documentcloud.org/documents/2781338-635C-1990.js", {
-      container: "#DV-viewer-2781338-635C-1990",
-      width: 680,
-      height: 850,
-      sidebar: false,
-      zoom: 550
-      });
-    </script>
-      <noscript>
-      <a href=https://assets.documentcloud.org/documents/2781338/635C-1990.pdf>635C-1990 (PDF)</a>
-      <br />
-      <a href=https://assets.documentcloud.org/documents/2781338/635C-1990.txt>635C-1990 (Text)</a>
-    </noscript>
-
-
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via S635C filings are written to the following tables:
-
-* `LattCd </models.html#lattcd>`_
-
-* `TextMemoCd </models.html#textmemocd>`_
-
-
-
-
-S640
-~~~~~~~~~~~~~
-
-Governmental Agencies Reporting (Attachment to Form 635 or Form 645)
-
-Form 640 is filed by a state or local governmental agency which qualifies as a lobbyist employer, or $5,000 filer. The attachment replaces Section D of Form 635 and Section B of Form 645 (both labeled Other Payments to Influence Legislative or Administrative Action ). It is filed in conjunction with either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).
-
-
-
-Example Form
-^^^^^^^^^^^^
-
-
-.. raw:: html
-
-    <div style="margin-bottom:35px;" id="DV-viewer-2781337-640-1993" class="DV-container"></div>
-    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
-    <script>
-      DV.load("//www.documentcloud.org/documents/2781337-640-1993.js", {
-      container: "#DV-viewer-2781337-640-1993",
-      width: 680,
-      height: 850,
-      sidebar: false,
-      zoom: 550
-      });
-    </script>
-      <noscript>
-      <a href=https://assets.documentcloud.org/documents/2781337/640-1993.pdf>640-1993 (PDF)</a>
-      <br />
-      <a href=https://assets.documentcloud.org/documents/2781337/640-1993.txt>640-1993 (Text)</a>
-    </noscript>
-
-
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via S640 filings are written to the following tables:
-
-* `LattCd </models.html#lattcd>`_
-
-* `SmryCd </models.html#smrycd>`_
-
-* `TextMemoCd </models.html#textmemocd>`_
-
-
-
-
-
-Public Officials Forms
---------------------------
-
-
-F700
-~~~~~~~~~~~~~
-
-Statement of Economic Interest
-
-Every public official who makes or participates in making governmental decisions is required to file a Statement of Economic Interest, commonly referred to as the Form 700.
-
-
-
-Example Form
-^^^^^^^^^^^^
-
-
-.. raw:: html
-
-    <div style="margin-bottom:35px;" id="DV-viewer-2792958-700-2015-12" class="DV-container"></div>
-    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
-    <script>
-      DV.load("//www.documentcloud.org/documents/2792958-700-2015-12.js", {
-      container: "#DV-viewer-2792958-700-2015-12",
-      width: 680,
-      height: 850,
-      sidebar: false,
-      zoom: 550
-      });
-    </script>
-      <noscript>
-      <a href=https://assets.documentcloud.org/documents/2792958/700-2015-12.pdf>700-2015-12 (PDF)</a>
-      <br />
-      <a href=https://assets.documentcloud.org/documents/2792958/700-2015-12.txt>700-2015-12 (Text)</a>
-    </noscript>
-
-
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via F700 filings are written to the following tables:
 
 * `FilerFilingsCd </models.html#filerfilingscd>`_
 

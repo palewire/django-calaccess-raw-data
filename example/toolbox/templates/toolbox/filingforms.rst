@@ -12,13 +12,13 @@ Similar documentation and background info can also be found in the `Campaign Fin
 --------------------------
 
 {% for form in form_list %}
-{{ form.id }}
+{{ form.type_and_num }}
 ~~~~~~~~~~~~~
 
 {{ form.title|safe }}
 
 {{ form.description|safe }}
-{% if form.parts|length > 0 %}
+{% if form.sections|length > 0 %}
 Sections
 ^^^^^^^^
 {% for section in form.sections %}
@@ -27,7 +27,7 @@ Sections
 {% endfor %}
 {% endif %}
 
-{% if not form.documentcloud %}
+{% if not form.documentcloud_id %}
 *No PDF available.*
 {% else %}
 Example Form
