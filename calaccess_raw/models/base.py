@@ -274,6 +274,7 @@ class DocumentCloud(object):
         ]
 
 
+@deconstructible
 class FilingForm(object):
     """
     A form used by the California Secretary of State to collection information
