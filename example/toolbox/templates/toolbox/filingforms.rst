@@ -60,7 +60,7 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via {{ form.id }} filings are written to the following tables:
 {% for model in form.get_models %}
-* `{{ model.klass_name }} </models.html#{{ model.klass_name|slugify }}>`_
+* `{{ model.klass_name }} <models.html#{{ model.klass_name|slugify }}>`_
 {% endfor %}
 {% endif %}
 
