@@ -12,7 +12,7 @@ Similar documentation and background info can also be found in the `Campaign Fin
 --------------------------
 
 {% for form in form_list %}
-{{ form.type_and_num }}
+{{ form.type_and_num|safe }}
 ~~~~~~~~~~~~~
 
 {{ form.title|safe }}
@@ -22,7 +22,7 @@ Similar documentation and background info can also be found in the `Campaign Fin
 Sections
 ^^^^^^^^
 {% for section in form.sections %}
-* {{ section.title }} {% if section.documentcloud.start_page %}(`p. {{ section.documentcloud.start_page }}{% if section.documentcloud.end_page %}-{{ section.documentcloud.end_page }}{% endif%} <{{ section.documentcloud.canonical_url }}>`_){% endif %}
+* {{ section.title|safe }} {% if section.documentcloud.start_page %}(`p. {{ section.documentcloud.start_page }}{% if section.documentcloud.end_page %}-{{ section.documentcloud.end_page }}{% endif%} <{{ section.documentcloud.canonical_url }}>`_){% endif %}
 
 {% endfor %}
 {% endif %}
@@ -60,7 +60,7 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via {{ form.id }} filings are written to the following tables:
 {% for model in form.get_models %}
-* `{{ model.klass_name }} </models.html#{{ model.klass_name|lower }}>`_
+* `{{ model.klass_name }} </models.html#{{ model.klass_name|slugify }}>`_
 {% endfor %}
 {% endif %}
 

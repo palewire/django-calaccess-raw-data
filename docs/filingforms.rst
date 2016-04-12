@@ -355,13 +355,43 @@ Form 460 is filed by recipient committees to report expenditures and contributio
 Sections
 ^^^^^^^^
 
-* Schedule A, monetary contributions received (`p. 8-10 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p8>`_)
+* Cover Page (`p. 3-4 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p3>`_)
 
 
-* Schedule A-1, contributions transferred to special                 election committees 
+* Cover Page - Part 2 (`p. 5 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p5>`_)
 
 
-* Schedule C, non-monetary contributions received (`p. 15-16 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p15>`_)
+* Summary Page (`p. 7-8 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p7>`_)
+
+
+* Schedule A, Monetary Contributions Received (`p. 9-11 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p9>`_)
+
+
+* Schedule A-1, Contributions Transferred to Special Election Committees 
+
+
+* Schedule B - Part 1, Loans Received (`p. 12-13 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p12>`_)
+
+
+* Schedule B - Part 2, Loan Guarantors (`p. 14-15 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p14>`_)
+
+
+* Schedule B - Part 3, Outstanding Bal 
+
+
+* Schedule C, Non-Monetary Contributions Received (`p. 16-17 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p16>`_)
+
+
+* Schedule H, Loans Made to Others (`p. 29-30 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p29>`_)
+
+
+* Schedule H1, Loans Made 
+
+
+* Schedule H2, Repayments Rcvd 
+
+
+* Schedule H3, Outstanding Loan 
 
 
 * Schedule I, miscellanous increases to cash (`p. 31-32 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p31>`_)
@@ -405,8 +435,6 @@ Data collected via F460 filings are written to the following tables:
 * `Cvr2CampaignDisclosureCd </models.html#cvr2campaigndisclosurecd>`_
 
 * `Cvr3VerificationInfoCd </models.html#cvr3verificationinfocd>`_
-
-* `LoanCd </models.html#loancd>`_
 
 * `ExpnCd </models.html#expncd>`_
 
@@ -639,7 +667,7 @@ Form 496 is filed by committees that make independent expenditures whose combine
 Sections
 ^^^^^^^^
 
-* Part 3, contributions &gt; $100 received (`p. 3 <https://www.documentcloud.org/documents/2781355-496-2016-01.html#document/p3>`_)
+* Part 3, contributions > $100 received (`p. 3 <https://www.documentcloud.org/documents/2781355-496-2016-01.html#document/p3>`_)
 
 
 
