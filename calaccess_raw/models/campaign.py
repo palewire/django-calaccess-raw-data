@@ -226,7 +226,7 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
@@ -472,7 +472,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=58),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
@@ -1159,7 +1159,7 @@ individual the filer's last name."
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
@@ -1736,7 +1736,7 @@ for Senate, Assembly, or Board of Equalization races."
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
@@ -2162,7 +2162,7 @@ and Form 401 Schedule A, A-1)"
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=9,
@@ -2555,7 +2555,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -3756,7 +3756,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS]) + (
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS]) + (
         ('D', 'Form 460 (Recipient committee campaign statement): \
 Schedule D, summary of expenditure supporting/opposing other candidates, \
 measures and committees'),
@@ -4099,7 +4099,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -4514,7 +4514,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -6053,7 +6053,7 @@ class CvrF470Cd(CalAccessBaseModel):
         db_index=True,
         help_text="Unique filing identification number."
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         db_column="FORM_TYPE",
         choices=FORM_TYPE_CHOICES,

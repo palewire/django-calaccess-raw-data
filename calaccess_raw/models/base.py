@@ -292,27 +292,45 @@ class FilingForm(object):
 
         self.documentcloud = DocumentCloud(self.documentcloud_id)
 
-    def get_models(self):
-        models = []
-        for model in get_model_list():
-            try:
-                model.CALACCESS_FORMS
-            except AttributeError:
-                pass
-            else:
-                if self in model.CALACCESS_FORMS:
-                    models.append(model)
+    @property
+    def type_and_num(self):
 
-        return models
+        if self.id[0] == 'E':
+            self._type_and_num = 'Electronic Form {}'.format(self.id[1:])
+        elif self.id[0] == 'S':
+            self._type_and_num = 'Schedule {}'.format(self.id[1:])
+        else:
+            self._type_and_num = 'Form {}'.format(self.id[1:])
+
+        return self._type_and_num
+
+    @property
+    def full_title(self):
+
+        self._full_title = '{0}: {1}'.format(self.type_and_num, self.title)
+
+        return self._full_title
 
     @property
     def sections(self):
-
         return [FilingFormSection(self, *x) for x in self.raw_sections]
 
     def get_section(self, id):
         section_dict = {i.id: i for i in self.sections}
         return section_dict[id]
+
+    def get_models(self):
+        models = []
+        for model in get_model_list():
+            try:
+                model.FILING_FORMS
+            except AttributeError:
+                pass
+            else:
+                if self in model.FILING_FORMS:
+                    models.append(model)
+
+        return models
 
     def __str__(self):
         return str(self.id)
@@ -325,11 +343,21 @@ class FilingFormSection(object):
         self.form = form
         self.start_page = start_page
         self.end_page = end_page
+
         self.documentcloud = DocumentCloud(
             self.form.documentcloud_id,
             self.start_page,
             self.end_page
         )
+
+    @property
+    def full_title(self):
+        self._full_title = '{0} ({1}): {2}'.format(
+            self.form.type_and_num,
+            self.form.title,
+            self.title,
+        )
+        return self._full_title
 
     def __str__(self):
         return str(self.id)
