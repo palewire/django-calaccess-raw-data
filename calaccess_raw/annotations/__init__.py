@@ -5,10 +5,10 @@ import json
 import os
 from django.conf import settings
 from calaccess_raw import get_model_list
-# from django.utils.deconstruct import deconstructible
+from django.utils.deconstruct import deconstructible
 
 
-# @deconstructible
+@deconstructible
 class DocumentCloud(object):
     """
     A document hosted on DocumentCloud.
@@ -135,7 +135,7 @@ class DocumentCloud(object):
         ]
 
 
-# @deconstructible
+@deconstructible
 class FilingForm(object):
     """
     A form used by the California Secretary of State to collection information
