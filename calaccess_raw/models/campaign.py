@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from calaccess_raw import fields, look_ups, get_sorted_choices
-from calaccess_raw.filing_forms import get_filing_form
+from calaccess_raw.annotations.filing_forms import get_filing_form
 from .base import CalAccessBaseModel, DocumentCloud
 from django.utils.encoding import python_2_unicode_compatible
 

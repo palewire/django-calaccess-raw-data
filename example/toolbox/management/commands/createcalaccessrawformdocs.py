@@ -4,7 +4,7 @@ import os
 from django.conf import settings
 from django.template.loader import render_to_string
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.filing_forms import all_filing_forms
+from calaccess_raw.annotations.filing_forms import all_filing_forms
 
 class Command(CalAccessCommand):
     help = 'Generate documentation for CAL-ACCESS forms'
