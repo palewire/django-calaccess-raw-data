@@ -208,7 +208,7 @@ class DocumentCloud(object):
             self._cache_metadata()
 
         with open(self.metadata_filename) as f:
-            self._metadata = json.loads(f.read().decode('utf-8'))
+            self._metadata = json.loads(f.read())
 
         return self._metadata
 
