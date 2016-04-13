@@ -423,4 +423,4 @@ def get_filing_form(id):
     """
     Takes an id for a filing form and returns a FilingForm object
     """
-    return next((x for x in all_filing_forms if x.id == id), None)
+    return next((x for x in all_filing_forms if x.id == id.upper()), None)
