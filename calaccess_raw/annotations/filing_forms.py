@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from calaccess_raw.models.base import FilingForm
+from calaccess_raw.annotations import FilingForm
 
 all_filing_forms = [
     FilingForm(
