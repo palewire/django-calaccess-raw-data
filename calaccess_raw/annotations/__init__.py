@@ -202,6 +202,9 @@ class FilingForm(object):
 
 
 class FilingFormSection(object):
+    """
+    A section of a FilingForm (e.g., a cover page, summary sheet, schedule or part).
+    """
     def __init__(self, form, id, title, start_page=None, end_page=None):
         self.id = id
         self.title = title
