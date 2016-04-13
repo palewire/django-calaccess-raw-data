@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from calaccess_raw.annotations import FilingForm
 
-all_filing_forms = [
+all_filing_forms = (
     FilingForm(
         'F400',
         'Statement of Organization (Slate Mailer Organization)',
@@ -416,7 +416,7 @@ commonly referred to as the Form 700.',
         'Public employee\'s retirement board, candidate campaign statement',
         group='CAMPAIGN',
     ),
-]
+)
 
 
 def get_filing_form(id):
