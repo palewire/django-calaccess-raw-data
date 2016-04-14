@@ -271,27 +271,3 @@ Describes changes to the .CAL file format, including changes to look-up code val
       <br />
       <a href="http://s3.documentcloud.org/documents/2712033/Cal-Format-1-05-02.txt">CAL-ACCESS: .CAL Format 1.05.02 (Text)</a>
     </noscript>
-
-Forms
------
-
-These docs are all found in the Forms directory inside either the CAL-ACCESS documentation and database export ZIP files.
-
-.. raw:: html
-
-    <div style="margin-bottom:35px;" id="DV-viewer-1308004-cal-access-forms" class="DV-container"></div>
-    <script>
-      DV.load("//www.documentcloud.org/documents/1308004-cal-access-forms.js", {
-      width: 660,
-        container: "#DV-viewer-1308004-cal-access-forms",
-      width: 680,
-      height: 850,
-      sidebar: false,
-      zoom: 550
-      });
-    </script>
-      <noscript>
-      <a href="http://s3.documentcloud.org/documents/1308004/cal-access-forms.pdf">CAL-ACCESS: Forms (PDF)</a>
-      <br />
-      <a href="http://s3.documentcloud.org/documents/1308004/cal-access-forms.txt">CAL-ACCESS: Forms (Text)</a>
-    </noscript>
