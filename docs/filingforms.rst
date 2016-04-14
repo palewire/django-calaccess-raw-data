@@ -19,6 +19,16 @@ Statement of Organization (Slate Mailer Organization)
 
 Form 400 must be filed within 10 days after the slate mailer organization receives, or is promised to receive, $500 or more for producing one or more slate mailers.
 
+Sections
+^^^^^^^^
+
+* Cover Page (`p. 2-3 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p2>`_)
+
+
+* Cover Page 2 (`p. 4-5 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p4>`_)
+
+
+
 
 
 Example Form
@@ -50,10 +60,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F400 filings are written to the following tables:
-
-* `CvrSoCd <models.html#cvrsocd>`_
-
-* `Cvr2SoCd <models.html#cvr2socd>`_
 
 * `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
@@ -125,8 +131,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F401 filings are written to the following tables:
 
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
 * `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
@@ -197,6 +201,16 @@ Statement of Organization Recipient Committee
 
 Form 410 must be filed within 10 days of receiving $2,000 in contributions. If the committee has not yet reached the $2,000 threshold, the not yet qualified box should be checked.
 
+Sections
+^^^^^^^^
+
+* Cover Page (`p. 2 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p2>`_)
+
+
+* Cover Page 2 (`p. 4 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p4>`_)
+
+
+
 
 
 Example Form
@@ -228,10 +242,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F410 filings are written to the following tables:
-
-* `CvrSoCd <models.html#cvrsocd>`_
-
-* `Cvr2SoCd <models.html#cvr2socd>`_
 
 * `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
@@ -308,6 +318,12 @@ Form 450 is filed by recipient committees that meet certain specific criteria li
 Sections
 ^^^^^^^^
 
+* Cover Page (`p. 3 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p3>`_)
+
+
+* Summary Page (`p. 5 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p5>`_)
+
+
 * Payments Made (`p. 6-7 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p6>`_)
 
 
@@ -343,8 +359,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F450 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
 
 * `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
 
@@ -460,8 +474,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F460 filings are written to the following tables:
 
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
 * `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
 
 * `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
@@ -489,10 +501,16 @@ Form 461 is filed by major donors, independent expenditure committees, and multi
 Sections
 ^^^^^^^^
 
-* Name and Address of Filer (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
+* Part 1, Name and Address of Filer (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
 
 
-* Nature and Interests of Filer (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
+* Part 2, Nature and Interests of Filer (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
+
+
+* Part 3, Summary (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
+
+
+* Part 4, Verification (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
 
 
 * Part 5, Contributions (Including Loans, Forgiveness of Loans, and Loan Guarantees) and Expenditures Made (`p. 5-6 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p5>`_)
@@ -531,8 +549,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F461 filings are written to the following tables:
 
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
 * `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
@@ -556,7 +572,22 @@ Form 465 is filed by officeholders, candidates, recipient committees, major dono
 Sections
 ^^^^^^^^
 
+* Part 1, Committee/Filer Information (`p. 2 <https://www.documentcloud.org/documents/2781358-465-2009-06.html#document/p2>`_)
+
+
+* Part 2, Name of Candidate or Measure Supported or Opposed (`p. 2 <https://www.documentcloud.org/documents/2781358-465-2009-06.html#document/p2>`_)
+
+
 * Part 3, Independent Expenditures Made (`p. 2 <https://www.documentcloud.org/documents/2781358-465-2009-06.html#document/p2>`_)
+
+
+* Part 4, Summary (`p. 4 <https://www.documentcloud.org/documents/2781358-465-2009-06.html#document/p4>`_)
+
+
+* Part 5, Filing Officers (`p. 4 <https://www.documentcloud.org/documents/2781358-465-2009-06.html#document/p4>`_)
+
+
+* Part 6, Verification (`p. 4 <https://www.documentcloud.org/documents/2781358-465-2009-06.html#document/p4>`_)
 
 
 
@@ -591,8 +622,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F465 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
 
 * `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
 
@@ -709,7 +738,13 @@ Form 496 is filed by committees that make independent expenditures whose combine
 Sections
 ^^^^^^^^
 
-* Part 3, contributions > $100 received (`p. 3 <https://www.documentcloud.org/documents/2781355-496-2016-01.html#document/p3>`_)
+* Part 1, List Only One Candidate or Ballot Measure (`p. 3 <https://www.documentcloud.org/documents/2781355-496-2016-01.html#document/p3>`_)
+
+
+* Part 2, Independent Expenditures Made (`p. 3 <https://www.documentcloud.org/documents/2781355-496-2016-01.html#document/p3>`_)
+
+
+* Part 3, Contributions > $100 Received (`p. 3 <https://www.documentcloud.org/documents/2781355-496-2016-01.html#document/p3>`_)
 
 
 
@@ -744,8 +779,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F496 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
 
 * `S496Cd <models.html#s496cd>`_
 

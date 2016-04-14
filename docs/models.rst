@@ -1224,11 +1224,11 @@ Cvr2SoCd contains data collected from the following filing forms, form parts and
 
 
 
-* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization)): Cover Page 2
 
 
 
-* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee): Cover Page 2
 
 
 
@@ -1650,12 +1650,12 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400: Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400 (Statement of Organization (Slate Mailer Organization)): Cover Page 2</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410: Statement of Organization Recipient Committee</td>
+            <td>Form 410 (Statement of Organization Recipient Committee): Cover Page 2</td>
         </tr>
     
     </tbody>
@@ -2739,10 +2739,9 @@ Look-up Codes
 CvrCampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cover page information from campaign disclosure forms:
-(F401, F450, F460, F461, F425, F465, F496, F497, F498).
-This data comes from the electronic filing.
-The data contained herein is "as filed" by the entity making the filing.
+Cover page information from campaign disclosure forms. This data comes from
+the electronic filing. The data contained herein is "as filed" by the entity
+making the filing.
 
 **Sample:** `CVR_CAMPAIGN_DISCLOSURE_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/CVR_CAMPAIGN_DISCLOSURE_CD.TSV>`_
 
@@ -2790,7 +2789,7 @@ CvrCampaignDisclosureCd contains data collected from the following filing forms,
 
 
 
-* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement): Cover Page
 
 
 
@@ -2798,23 +2797,33 @@ CvrCampaignDisclosureCd contains data collected from the following filing forms,
 
 
 
-* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form): Cover Page
 
 
 
-* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Cover Page
 
 
 
 * `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
 
+    * Part 1, Name and Address of Filer
+
+    * Part 2, Nature and Interests of Filer
+
+
 
 
 * `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
 
+    * Part 1, Committee/Filer Information
+
+    * Part 2, Name of Candidate or Measure Supported or Opposed
 
 
-* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report)
+
+
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report): Part 1, List Only One Candidate or Ballot Measure
 
 
 
@@ -3861,13 +3870,13 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>F498</td>
-            <td>Form 498: Slate Mailer Late Payment Report</td>
+            <td>F497</td>
+            <td>Form 497: Late Contribution Report</td>
         </tr>
     
         <tr>
-            <td>F497</td>
-            <td>Form 497: Late Contribution Report</td>
+            <td>F498</td>
+            <td>Form 498: Slate Mailer Late Payment Report</td>
         </tr>
     
         <tr>
@@ -5369,7 +5378,7 @@ CvrSoCd contains data collected from the following filing forms, form parts and 
 
 
 
-* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization)): Cover Page
 
 
 
@@ -5377,7 +5386,7 @@ CvrSoCd contains data collected from the following filing forms, form parts and 
 
 
 
-* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee): Cover Page
 
 
 
@@ -6049,17 +6058,17 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400: Statement of Organization (Slate Mailer Organization)</td>
+            <td>F400</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Form 402: Statement of Termination (Slate Mailer Organization)</td>
+            <td>F402</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410: Statement of Organization Recipient Committee</td>
+            <td>F410</td>
         </tr>
     
     </tbody>
@@ -12493,7 +12502,7 @@ RcptCd contains data collected from the following filing forms, form parts and s
 
 
 
-* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report): Part 3, contributions > $100 received
+* `Form 496 <filingforms.html#form-496>`_ (Late Independent Expenditure Report): Part 3, Contributions > $100 Received
 
 
 
@@ -13275,7 +13284,7 @@ Look-up Codes
     
         <tr>
             <td>F496P3</td>
-            <td>Form 496 (Late Independent Expenditure Report): Part 3, contributions &gt; $100 received</td>
+            <td>Form 496 (Late Independent Expenditure Report): Part 3, Contributions &gt; $100 Received</td>
         </tr>
     
     </tbody>

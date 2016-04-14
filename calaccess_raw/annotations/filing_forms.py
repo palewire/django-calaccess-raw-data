@@ -11,6 +11,10 @@ all_filing_forms = (
         description='Form 400 must be filed within 10 days after the slate \
 mailer organization receives, or is promised to receive, $500 or more for \
 producing one or more slate mailers.',
+        sections=[
+            ('CVR', 'Cover Page', 2, 3),
+            ('CVR2', 'Cover Page 2', 4, 5),
+        ]
     ),
     FilingForm(
         'F401',
@@ -43,7 +47,11 @@ terminate the organization.'
         documentcloud_id='2781368-410-2016-01',
         description='Form 410 must be filed within 10 days of receiving \
 $2,000 in contributions. If the committee has not yet reached the $2,000 \
-threshold, the not yet qualified box should be checked.'
+threshold, the not yet qualified box should be checked.',
+        sections=[
+            ('CVR', 'Cover Page', 2),
+            ('CVR2', 'Cover Page 2', 4),
+        ]
     ),
     FilingForm(
         'F425',
@@ -62,6 +70,8 @@ month period covered by a semi-annual statement.'
         description='Form 450 is filed by recipient committees that meet \
 certain specific criteria listed in the Form 450.',
         sections=[
+            ('CVR', 'Cover Page', 3),
+            ('SMRY', 'Summary Page', 5),
             ('F450P5', 'Payments Made', 6, 7),
         ]
     ),
@@ -105,8 +115,10 @@ Contractor (on Behalf of This Committee)', 28, 29),
         description='Form 461 is filed by major donors, independent \
 expenditure committees, and multipurpose organizations including nonprofits.',
         sections=[
-            ('F461P1', 'Name and Address of Filer', 3),
-            ('F461P2', 'Nature and Interests of Filer', 3),
+            ('F461P1', 'Part 1, Name and Address of Filer', 3),
+            ('F461P2', 'Part 2, Nature and Interests of Filer', 3),
+            ('F461P3', 'Part 3, Summary', 3),
+            ('F461P4', 'Part 4, Verification', 3),
             ('F461P5', 'Part 5, Contributions (Including Loans, Forgiveness of \
 Loans, and Loan Guarantees) and Expenditures Made', 5, 6),
         ]
@@ -123,7 +135,12 @@ or oppose: a single candidate, a single measure, or the qualification of one sin
 measure. Form 465s are filed in the same period(s) the candidate or committee \
 supported or opposed by the independent expenditure(s) is required to file.',
         sections=[
+            ('F465P1', 'Part 1, Committee/Filer Information', 2),
+            ('F465P2', 'Part 2, Name of Candidate or Measure Supported or Opposed', 2),
             ('F465P3', 'Part 3, Independent Expenditures Made', 2),
+            ('F465P4', 'Part 4, Summary', 4),
+            ('F465P5', 'Part 5, Filing Officers', 4),
+            ('F465P6', 'Part 6, Verification', 4),
         ],
     ),
     FilingForm(
@@ -157,7 +174,9 @@ candidate for elective office, or a single ballot measure. Form 496 should be \
 filed within 24-hours of making the expenditure during the 90 days immediately \
 preceding the election.',
         sections=[
-            ('F496P3', 'Part 3, contributions > $100 received', 3),
+            ('F496P1', 'Part 1, List Only One Candidate or Ballot Measure', 3),
+            ('F496P2', 'Part 2, Independent Expenditures Made', 3),
+            ('F496P3', 'Part 3, Contributions > $100 Received', 3),
         ]
     ),
     FilingForm(

@@ -36,9 +36,9 @@ class CvrSoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=59, end_page=61),
     ]
     FILING_FORMS = [
-        get_filing_form('F400'),
+        get_filing_form('F400').get_section('CVR'),
         get_filing_form('F402'),
-        get_filing_form('F410'),
+        get_filing_form('F410').get_section('CVR'),
     ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
@@ -231,7 +231,11 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = (
+        ('F400', get_filing_form('F400')),
+        ('F402', get_filing_form('F402')),
+        ('F410', get_filing_form('F410')),
+    )
     form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
@@ -440,8 +444,8 @@ class Cvr2SoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=62, end_page=64),
     ]
     FILING_FORMS = [
-        get_filing_form('F400'),
-        get_filing_form('F410'),
+        get_filing_form('F400').get_section('CVR2'),
+        get_filing_form('F410').get_section('CVR2'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -477,7 +481,7 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=58),
         ]
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.form.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
@@ -751,10 +755,9 @@ of Equalization districts."
 @python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information from campaign disclosure forms:
-    (F401, F450, F460, F461, F425, F465, F496, F497, F498).
-    This data comes from the electronic filing.
-    The data contained herein is "as filed" by the entity making the filing.
+    Cover page information from campaign disclosure forms. This data comes from
+    the electronic filing. The data contained herein is "as filed" by the entity
+    making the filing.
     """
     UNIQUE_KEY = ['filing_id', 'amend_id']
     DOCUMENTCLOUD_PAGES = [
@@ -765,15 +768,17 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id="2712034-Cal-Format-201", start_page=22, end_page=30),
     ]
     FILING_FORMS = [
-        get_filing_form('F401'),
+        get_filing_form('F401').get_section('CVR'),
         get_filing_form('F425'),
-        get_filing_form('F450'),
-        get_filing_form('F460'),
-        get_filing_form('F461'),
-        get_filing_form('F465'),
-        get_filing_form('F496'),
-        get_filing_form('F498'),
+        get_filing_form('F450').get_section('CVR'),
+        get_filing_form('F460').get_section('CVR'),
+        get_filing_form('F461').get_section('F461P1'),
+        get_filing_form('F461').get_section('F461P2'),
+        get_filing_form('F465').get_section('F465P1'),
+        get_filing_form('F465').get_section('F465P2'),
+        get_filing_form('F496').get_section('F496P1'),
         get_filing_form('F497'),
+        get_filing_form('F498'),
         get_filing_form('F511'),
         get_filing_form('F900'),
     ]
@@ -1164,7 +1169,19 @@ individual the filer's last name."
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.full_title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = (
+        ('F401', get_filing_form('F401').full_title),
+        ('F425', get_filing_form('F425').full_title),
+        ('F450', get_filing_form('F450').full_title),
+        ('F460', get_filing_form('F460').full_title),
+        ('F461', get_filing_form('F461').full_title),
+        ('F465', get_filing_form('F465').full_title),
+        ('F496', get_filing_form('F496').full_title),
+        ('F497', get_filing_form('F497').full_title),
+        ('F498', get_filing_form('F498').full_title),
+        ('F511', get_filing_form('F511').full_title),
+        ('F900', get_filing_form('F900').full_title),
+    )
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=4,
