@@ -117,13 +117,14 @@ class Command(CalAccessCommand):
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
-        download_metadata = self.get_download_metadata()
-
         if self.test_mode:
             with open(self.data_dir + "/sampled_version.txt", "r") as f:
                 current_release_datetime = f.readline()
+                expected_size = f.readline()
         else:
+            download_metadata = self.get_download_metadata()
             current_release_datetime = download_metadata['last-modified']
+            expected_size = download_metadata['content-length']
 
         last_started_update = self.get_last_log()
 
@@ -170,7 +171,7 @@ class Command(CalAccessCommand):
         else:
             prompt_context = dict(
                 current_release_datetime=current_release_datetime,
-                expected_size=size(download_metadata['content-length']),
+                expected_size=size(expected_size),
                 up_to_date=up_to_date,
                 can_resume=can_resume,
             )
@@ -212,7 +213,7 @@ class Command(CalAccessCommand):
             except RawDataVersion.DoesNotExist:
                 version = self.raw_data_versions.create(
                     release_datetime=current_release_datetime,
-                    size=download_metadata['content-length']
+                    size=expected_size
                 )
             # create a new log record
             self.log_record = self.command_logs.create(
