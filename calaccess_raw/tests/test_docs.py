@@ -25,8 +25,8 @@ class DocumentationTestCase(TestCase):
 
     def attr_test_output(self, obj_type, attr_name, results):
         # Load the data
-        table = agate.Table(results, ['group', 'model', attr_name])
-
+        table = agate.Table(results, ['group', obj_type, attr_name])
+        
         # Count the number with no __str__
         fails = table.where(lambda row: row[attr_name] is False)
         if fails.rows:
@@ -35,7 +35,7 @@ class DocumentationTestCase(TestCase):
                 obj_type,
                 attr_name
             ))
-            fails.select(["group", "model"]).print_table(max_column_width=50)
+            fails.select(["group", obj_type]).print_table(max_column_width=50)
 
     def test_model_str(self):
         """
@@ -47,7 +47,7 @@ class DocumentationTestCase(TestCase):
             m().__str__()
             # Make sure that it is customized and not the Django defalult
             is_custom = m().__str__() != '%s object' % m.__name__
-            results.append([m.__name__, is_custom])
+            results.append([m().klass_group, m.__name__, is_custom])
         self.attr_test_output("model", "__str__", results)
 
     def test_model_doc(self):
@@ -60,7 +60,7 @@ class DocumentationTestCase(TestCase):
                 exists = False
             else:
                 exists = True
-            results.append([m.__name__, exists])
+            results.append([m().klass_group, m.__name__, exists])
         self.attr_test_output("model", "__doc__", results)
 
     def test_model_unique_key(self):
@@ -70,7 +70,7 @@ class DocumentationTestCase(TestCase):
         results = []
         for m in get_model_list():
             exists = m().UNIQUE_KEY is not None
-            results.append([m.__name__, exists])
+            results.append([m().klass_group, m.__name__, exists])
         self.attr_test_output("model", "UNIQUE_KEY", results)
 
     def test_model_documentcloud_pages(self):
@@ -186,11 +186,13 @@ class DocumentationTestCase(TestCase):
             for f in m().get_field_list():
                 if f.name == 'id':
                     continue
-                if f.__dict__['_verbose_name']:
-                    exists = True
-                else:
+                if not f.__dict__['_verbose_name']:
                     exists = False
-                results.append(("%s.%s" % (m.__name__, f.name), exists))
+                elif len(f.__dict__['_verbose_name']) == 0:
+                    exists = False
+                else:
+                    exists = True
+                results.append([m().klass_group, "%s.%s" % (m.__name__, f.name), exists])
         self.attr_test_output("field", "verbose_name", results)
 
     def test_field_help_text(self):
@@ -202,11 +204,11 @@ class DocumentationTestCase(TestCase):
             for f in m().get_field_list():
                 if f.name == 'id':
                     continue
-                if f.help_text:
+                if len(f.help_text) > 0:
                     exists = True
                 else:
                     exists = False
-                results.append(("%s.%s" % (m.__name__, f.name), exists))
+                results.append([m().klass_group, "%s.%s" % (m.__name__, f.name), exists])
         self.attr_test_output("field", "help_text", results)
 
     def test_choices(self):
