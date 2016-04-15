@@ -40,6 +40,7 @@ class CalAccessBaseModel(models.Model):
     # which accepts a unique DocumentCloud id along with start and/or end
     # page numbers
     DOCUMENTCLOUD_PAGES = []
+    FILING_FORMS = []
 
     # Default manager
     objects = managers.CalAccessManager()
