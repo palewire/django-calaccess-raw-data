@@ -42,6 +42,7 @@ class CvrSoCd(CalAccessBaseModel):
     ]
     acct_opendt = fields.DateTimeField(
         db_column="ACCT_OPENDT",
+        verbose_name='account opened datetime',
         null=True,
         help_text='Date Account Opened'
     )
@@ -66,110 +67,127 @@ class CvrSoCd(CalAccessBaseModel):
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
+        verbose_name="amendment ID",
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
-        verbose_name="amendment ID"
     )
     bank_adr1 = fields.CharField(
         max_length=55,
         db_column="BANK_ADR1",
         blank=True,
+        verbose_name='bank address 1',
         help_text='Street 1 of Financial Institution',
     )
     bank_adr2 = fields.CharField(
         max_length=55,
         db_column="BANK_ADR2",
         blank=True,
+        verbose_name='bank address 2',
         help_text='Street 2 of Financial Institution',
     )
     bank_city = fields.CharField(
         max_length=30,
         db_column="BANK_CITY",
         blank=True,
+        verbose_name='bank city',
         help_text='City of Financial Institution',
     )
     bank_nam = fields.CharField(
         max_length=200,
         db_column="BANK_NAM",
         blank=True,
+        verbose_name='bank name',
         help_text='Name of Financial Institution',
     )
     bank_phon = fields.CharField(
         max_length=20,
         db_column="BANK_PHON",
         blank=True,
+        verbose_name='bank phone',
         help_text='Phone of Financial Institution',
     )
     bank_st = fields.CharField(
         max_length=2,
         db_column="BANK_ST",
         blank=True,
+        verbose_name='bank street',
         help_text='State of Financial Institution',
     )
     bank_zip4 = fields.CharField(
         max_length=10,
         db_column="BANK_ZIP4",
         blank=True,
+        verbose_name='bank zip4',
         help_text='ZIP+4 of Financial Institution',
     )
     brdbase_cb = fields.CharField(
         max_length=1,
         db_column="BRDBASE_CB",
         blank=True,
+        verbose_name='broad based committee check-box',
         help_text='Broad Based Committee Check-box',
     )
     city = fields.CharField(
         max_length=30,
         db_column="CITY",
         blank=True,
+        verbose_name='city',
         help_text='City of Org / Committee / Candidate or Office holder',
     )
     cmte_email = fields.CharField(
         max_length=60,
         db_column="CMTE_EMAIL",
         blank=True,
+        verbose_name='committee email',
         help_text='Optional Committee EMAIL address',
     )
     cmte_fax = fields.CharField(
         max_length=20,
         db_column="CMTE_FAX",
         blank=True,
+        verbose_name='committee fax',
         help_text='Optional Committee FAX number',
     )
     com82013id = fields.CharField(
         max_length=9,
         db_column="COM82013ID",
         blank=True,
+        verbose_name='committee 82013 id',
         help_text='ID of 82013 Committee (if Com82013Nm is a RCP cmtte)',
     )
     com82013nm = fields.CharField(
         max_length=200,
         db_column="COM82013NM",
         blank=True,
+        verbose_name='committee 82013 name',
         help_text='Name of 82013 Committee (F400; when Com82013YN=Y)',
     )
     com82013yn = fields.CharField(
         max_length=1,
         db_column="COM82013YN",
         blank=True,
+        verbose_name='committee 82013 yes/no',
         help_text='Is this SMO a 82013 "Committee"? (Yes/No) (F400)',
     )
     control_cb = fields.CharField(
         max_length=1,
         db_column="CONTROL_CB",
         blank=True,
+        verbose_name='controlled checkbox',
         help_text='Controlled Committee Check-box',
     )
     county_act = fields.CharField(
         max_length=20,
         db_column="COUNTY_ACT",
         blank=True,
+        verbose_name="county active",
         help_text='County where Active (F410)',
     )
     county_res = fields.CharField(
         max_length=20,
         db_column="COUNTY_RES",
         blank=True,
+        verbose_name='county residence',
         help_text='County of Domicile, Residence, or Location',
     )
     ENTITY_CD_CHOICES = (
@@ -186,12 +204,12 @@ original filing and 1 to 999 amendments.",
         blank=True,
         choices=ENTITY_CD_CHOICES,
         verbose_name="Entity code",
+        help_text="Entity Code of the Filer. Values: \
+SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410)",
         documentcloud_pages=choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
         ],
-        help_text="Entity Code of the Filer. Values: \
-SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410)"
     )
     filer_id = fields.CharField(
         verbose_name='filer ID',
@@ -205,30 +223,34 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         max_length=45,
         db_column="FILER_NAMF",
         blank=True,
-        verbose_name="Filer first name"
+        verbose_name="filer first name",
+        help_text="Filer first name",
     )
     filer_naml = fields.CharField(
         max_length=200,
         db_column="FILER_NAML",
         blank=True,
-        verbose_name="Filer last name"
+        verbose_name="filer last name",
+        help_text="Filer last name",
     )
     filer_nams = fields.CharField(
         max_length=10,
         db_column="FILER_NAMS",
         blank=True,
-        verbose_name="Filer name suffix"
+        verbose_name="filer name suffix",
+        help_text="Filer name suffix",
     )
     filer_namt = fields.CharField(
         max_length=10,
         db_column="FILER_NAMT",
         blank=True,
-        verbose_name="Filer name title"
+        verbose_name="filer name title",
+        help_text="Filer name title",
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
-        verbose_name='filing ID',
+        verbose_name='filing id',
         help_text="Unique filing identificiation number"
     )
     FORM_TYPE_CHOICES = (
@@ -239,6 +261,7 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
     form_type = fields.CharField(
         max_length=4,
         db_column="FORM_TYPE",
+        verbose_name='form type',
         choices=FORM_TYPE_CHOICES,
         help_text='Name of the source filing form or schedule',
         documentcloud_pages=[
@@ -250,54 +273,62 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         max_length=1,
         db_column="GENPURP_CB",
         blank=True,
+        verbose_name='general purpose checkbox',
         help_text='General Purpose Committee Check-box',
     )
     gpc_descr = fields.CharField(
         max_length=300,
         db_column="GPC_DESCR",
         blank=True,
+        verbose_name='general purpose committee description',
         help_text='Brief description of Activity of GPC',
     )
     mail_city = fields.CharField(
         max_length=30,
         db_column="MAIL_CITY",
         blank=True,
+        verbose_name='mail city',
         help_text='Mailing Address of Filing Committee - City',
     )
     mail_st = fields.CharField(
         max_length=2,
         db_column="MAIL_ST",
         blank=True,
+        verbose_name='mail street',
         help_text='Mailing Address of Filing Committee - State',
     )
     mail_zip4 = fields.CharField(
         max_length=10,
         db_column="MAIL_ZIP4",
         blank=True,
+        verbose_name='mail zip4',
         help_text='Mailing Address of Filing Committee - ZIP+4',
     )
     phone = fields.CharField(
         max_length=20,
         db_column="PHONE",
         blank=True,
+        verbose_name='phone',
         help_text='Phone Number of Org / Committee / Candidate or Office holder',
     )
     primfc_cb = fields.CharField(
         max_length=1,
         db_column="PRIMFC_CB",
         blank=True,
+        verbose_name='primarily formed committee check-box',
         help_text='Primarily Formed Committee Check-box',
     )
     qualfy_dt = fields.DateTimeField(
         db_column="QUALFY_DT",
         null=True,
-        verbose_name="Date qualified",
+        verbose_name="qualified datetime",
         help_text="Date qualified as an organization"
     )
     qual_cb = fields.CharField(
         max_length=1,
         db_column="QUAL_CB",
         blank=True,
+        verbose_name='qualified checkbox',
         help_text='Qualified Committee check-box (Req. if SMO)',
     )
     REC_TYPE_CHOICES = (
@@ -321,94 +352,110 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
         max_length=3,
         db_column="REPORT_NUM",
         blank=True,
+        verbose_name='report number',
         help_text='Report Number - Values: \
 000 - Original Report 001 thru 999 - Amended Rpt #1-#999',
     )
     rpt_date = fields.DateTimeField(
         db_column="RPT_DATE",
         null=True,
+        verbose_name='report date',
         help_text='Date this report is filed',
     )
     smcont_qualdt = fields.DateTimeField(
         db_column="SMCONT_QUALDT",
         null=True,
+        verbose_name='small contributor qualified datetime',
         help_text='Date Small Contributor Committee Qualified',
     )
     sponsor_cb = fields.CharField(
         max_length=1,
         db_column="SPONSOR_CB",
         blank=True,
+        verbose_name='sponsored checkbox',
         help_text='Sponsored Committee Check-box',
     )
     st = fields.CharField(
         max_length=2,
         db_column="ST",
         blank=True,
+        verbose_name='street',
         help_text='State of Org / Committee / Candidate or Office holder',
     )
     surplusdsp = fields.CharField(
         max_length=90,
         db_column="SURPLUSDSP",
         blank=True,
+        verbose_name='surplus disposition',
         help_text='Disposition of Surplus Funds',
     )
     term_date = fields.DateTimeField(
         db_column="TERM_DATE",
         null=True,
+        verbose_name='termination date',
         help_text='Termination Effective Date (Req. if F402)',
     )
     tres_city = fields.CharField(
         max_length=30,
         db_column="TRES_CITY",
         blank=True,
-        verbose_name="Treasurer's city"
+        verbose_name="treasurer city",
+        help_text="Treasurer's city",
     )
     tres_namf = fields.CharField(
         max_length=45,
         db_column="TRES_NAMF",
         blank=True,
-        verbose_name="Treasurer's first name"
+        verbose_name="treasurer first name",
+        help_text="Treasurer's first name",
     )
     tres_naml = fields.CharField(
         max_length=200,
         db_column="TRES_NAML",
         blank=True,
-        verbose_name="Treasurer's last name"
+        verbose_name="treasurer last name",
+        help_text="Treasurer's last name",
     )
     tres_nams = fields.CharField(
         max_length=10,
         db_column="TRES_NAMS",
         blank=True,
-        verbose_name="Treasurer's name suffix"
+        verbose_name="treasurer name suffix",
+        help_text="Treasurer's name suffix",
     )
     tres_namt = fields.CharField(
         max_length=10,
         db_column="TRES_NAMT",
         blank=True,
-        verbose_name="Treasurer's name title"
+        verbose_name="treasurer name title",
+        help_text="Treasurer's name title",
     )
     tres_phon = fields.CharField(
         max_length=20,
         db_column="TRES_PHON",
         blank=True,
-        verbose_name="Treasurer's phone number"
+        verbose_name="treasurer phone number",
+        help_text="Treasurer's phone number",
     )
     tres_st = fields.CharField(
         max_length=2,
         db_column="TRES_ST",
         blank=True,
-        verbose_name="Treasurer's street",
+        verbose_name="treasurer street",
+        help_text="Treasurer's street",
     )
     tres_zip4 = fields.CharField(
         max_length=10,
         db_column="TRES_ZIP4",
         blank=True,
-        help_text="Treasurer's ZIP Code"
+        verbose_name="treasurer zip code",
+        help_text="Treasurer's ZIP Code",
     )
     zip4 = fields.CharField(
         max_length=10,
         db_column="ZIP4",
         blank=True,
+        verbose_name='zip4',
         help_text='ZIP+4 for Org / Committee / Candidate or Office holder',
     )
 
@@ -456,24 +503,26 @@ class Cvr2SoCd(CalAccessBaseModel):
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
+        verbose_name="amendment ID",
         help_text="Amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
-        verbose_name="amendment ID"
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
-        help_text="Line item number of this record",
         db_index=True,
+        verbose_name='line item',
+        help_text="Line item number of this record",
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "Cover Page; Additional Names & Addresses"),
     )
     rec_type = fields.CharField(
-        verbose_name='record type',
+        choices=REC_TYPE_CHOICES,
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
-        choices=REC_TYPE_CHOICES,
+        verbose_name='record type',
+        help_text='Type of record. This column will always contain "CVR2".',
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
@@ -486,7 +535,9 @@ original filing and 1 to 999 amendments.",
         choices=FORM_TYPE_CHOICES,
         db_column='FORM_TYPE',
         max_length=4,
-        help_text='Name of the source filing form or schedule',
+        verbose_name='form type',
+        help_text="Form type of the filing the record is included in. This must \
+equal the form_type of the parent filing's cover (CVR) record.",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=45, end_page=46),
@@ -494,10 +545,10 @@ original filing and 1 to 999 amendments.",
         ]
     )
     tran_id = fields.CharField(
-        verbose_name='transaction ID',
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
+        verbose_name='transaction ID',
         help_text='Permanent value unique to this item',
     )
     ENTITY_CD_CHOICES = (
@@ -514,11 +565,12 @@ original filing and 1 to 999 amendments.",
         ('BMN', 'Unknown'),  # Misspelling of 'BNM'?
     )
     entity_cd = fields.CharField(
+        choices=ENTITY_CD_CHOICES,
+        blank=True,
         db_column='ENTITY_CD',
         max_length=3,
-        blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CD_CHOICES,
+        help_text='Entity code of the entity described by the record.',
         documentcloud_pages=choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48),
@@ -529,6 +581,7 @@ original filing and 1 to 999 amendments.",
         db_column='ENTY_NAML',
         max_length=200,
         blank=True,
+        verbose_name='entity last name',
         help_text="Entity's business name or last name if the entity is an \
 individual"
     )
@@ -536,12 +589,14 @@ individual"
         db_column='ENTY_NAMF',
         max_length=45,
         blank=True,
+        verbose_name='entity first name',
         help_text="Entity's first name if the entity is an individual"
     )
     enty_namt = fields.CharField(
         db_column='ENTY_NAMT',
         max_length=10,
         blank=True,
+        verbose_name='entity name title',
         help_text="Entity's name prefix or title if the entity is an \
 individual"
     )
@@ -549,6 +604,7 @@ individual"
         db_column='ENTY_NAMS',
         max_length=10,
         blank=True,
+        verbose_name='entity name suffix',
         help_text="Entity's name suffix if the entity is an individual"
     )
     ITEM_CD_CHOICES = (
@@ -571,49 +627,56 @@ individual"
         max_length=4,
         blank=True,
         choices=ITEM_CD_CHOICES,
+        verbose_name='item code',
+        help_text="Section of the Statement of Organization this itemization \
+relates to. See CAL document for the definition of legal values for this column.",
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=10),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=62),
         ],
-        help_text="Section of the Statement of Organization this itemization \
-relates to. See CAL document for the definition of legal values for this column."
     )
     mail_city = fields.CharField(
         db_column='MAIL_CITY',
         max_length=30,
         blank=True,
+        verbose_name='mail city',
         help_text="City portion of the entity's mailing address"
     )
     mail_st = fields.CharField(
         db_column='MAIL_ST',
         max_length=4,
         blank=True,
+        verbose_name='mail street',
         help_text="State portion of the entity's mailing address"
     )
     mail_zip4 = fields.CharField(
         db_column='MAIL_ZIP4',
         max_length=10,
         blank=True,
-        help_text="Zipcode portion of the entity's mailing address"
+        verbose_name='mail zip4',
+        help_text="Zipcode portion of the entity's mailing address",
     )
     day_phone = fields.CharField(
         db_column='DAY_PHONE',
         max_length=20,
         blank=True,
+        verbose_name='day phone',
         help_text="Entity's daytime phone number"
     )
     fax_phone = fields.CharField(
         db_column='FAX_PHONE',
         max_length=20,
         blank=True,
+        verbose_name='fax phone number',
         help_text="Entity's fax number"
     )
     email_adr = fields.CharField(
         db_column='EMAIL_ADR',
         max_length=60,
         blank=True,
+        verbose_name='email address',
         help_text="Email address. Not contained in current forms."
     )
     cmte_id = fields.IntegerField(
@@ -627,6 +690,7 @@ relates to. See CAL document for the definition of legal values for this column.
         db_column='IND_GROUP',
         max_length=90,
         blank=True,
+        verbose_name='industry group',
         help_text="Industry group/affiliation description"
     )
     OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
@@ -646,15 +710,17 @@ relates to. See CAL document for the definition of legal values for this column.
         db_column='OFFIC_DSCR',
         max_length=40,
         blank=True,
+        verbose_name='office description',
         help_text="Office sought description used if the office sought code \
 (OFFICE_CD) equals other (OTH)."
     )
     JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
     juris_cd = fields.CharField(
+        choices=JURIS_CD_CHOICES,
         db_column='JURIS_CD',
         max_length=4,
         blank=True,
-        choices=JURIS_CD_CHOICES,
+        verbose_name='jurisdiction code',
         help_text="Office jurisdiction code. See CAL document for a \
 list of legal values.",
         documentcloud_pages=[
@@ -667,6 +733,7 @@ list of legal values.",
         db_column='JURIS_DSCR',
         max_length=40,
         blank=True,
+        verbose_name='jurisdiction description',
         help_text="Office jurisdiction description provided if the \
         jurisdiction code (JURIS_CD) equals other (OTH)."
     )
@@ -674,6 +741,7 @@ list of legal values.",
         db_column='DIST_NO',
         max_length=4,
         blank=True,
+        verbose_name='district name',
         help_text="Office district number for Senate, Assembly, and Board \
 of Equalization districts."
     )
@@ -682,7 +750,9 @@ of Equalization districts."
         max_length=1,
         db_column='OFF_S_H_CD',
         blank=True,
-        help_text='Office is sought or held code',
+        verbose_name='office is sought or held code',
+        help_text='Office sought/held code. Legal values are "S" for \
+sought and "H" for held',
         choices=OFF_S_H_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
@@ -695,24 +765,28 @@ of Equalization districts."
         db_column='NON_PTY_CB',
         max_length=4,
         blank=True,
+        verbose_name='non-party checkbox',
         help_text="Non-partisan check-box. Legal values are 'X' and null."
     )
     party_name = fields.CharField(
         db_column='PARTY_NAME',
         max_length=200,
         blank=True,
+        verbose_name='party name',
         help_text="Name of party (if partisan)"
     )
     bal_num = fields.CharField(
         db_column='BAL_NUM',
         max_length=7,
         blank=True,
+        verbose_name='balance number',
         help_text="Ballot measure number or letter"
     )
     bal_juris = fields.CharField(
         db_column='BAL_JURIS',
         max_length=40,
         blank=True,
+        verbose_name='balance jurisdiction',
         help_text="Jurisdiction of ballot measure"
     )
     SUP_OPP_CD_CHOICES = get_sorted_choices(choices.SUP_OPP_CODES)
@@ -721,6 +795,7 @@ of Equalization districts."
         db_column='SUP_OPP_CD',
         blank=True,
         help_text="Support or opposition code",
+        verbose_name='support or opposition code',
         choices=SUP_OPP_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=46),
@@ -733,13 +808,15 @@ of Equalization districts."
         db_column='YEAR_ELECT',
         max_length=4,
         blank=True,
-        help_text="Year of election"
+        verbose_name="year of election",
+        help_text="Year of election",
     )
     pof_title = fields.CharField(
         db_column='POF_TITLE',
         max_length=45,
         blank=True,
-        help_text="Position/title of the principal officer"
+        verbose_name='principal officer title',
+        help_text="Position/title of the principal officer",
     )
 
     class Meta:
