@@ -4456,6 +4456,7 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     needs to describe the relationship between the multiple tables. Documentation
     should be cloned from D H's documentation on these tables. Cox 5/11/2000"
     """
+    UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96, end_page=97),
