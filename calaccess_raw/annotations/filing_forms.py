@@ -11,10 +11,6 @@ all_filing_forms = (
         description='Form 400 must be filed within 10 days after the slate \
 mailer organization receives, or is promised to receive, $500 or more for \
 producing one or more slate mailers.',
-        sections=[
-            ('CVR', 'Cover Page', 2, 3),
-            ('CVR2', 'Cover Page 2', 4, 5),
-        ]
     ),
     FilingForm(
         'F401',
@@ -23,14 +19,6 @@ producing one or more slate mailers.',
         documentcloud_id='2781366-401-2005-01',
         description='Form 401 is filed by slate mailer organizations to \
 disclose payments made and received in connection with producing slate mailers.',
-        sections=[
-            ('CVR', 'Cover Page', 3, 4),
-            ('F401A', 'Schedule A, Payments Received', 5, 7),
-            ('F401B', 'Schedule B, Payments Made', 8, 9),
-            ('F401B-1', 'Schedule B-1, Payments Made by Agent or Independent Contractor', 10),
-            ('F401C', 'Schedule C, Persons Receiving $1,000 or More', 11, 12),
-            ('F401D', 'Schedule D, Candidates and Measures Not Listed on Schedule A', 13, 14),
-        ]
     ),
     FilingForm(
         'F402',
@@ -38,7 +26,7 @@ disclose payments made and received in connection with producing slate mailers.'
         group='CAMPAIGN',
         documentcloud_id='2781369-402-2005-01',
         description='Form 402 is filed by slate mailer organizations to \
-terminate the organization.'
+terminate the organization.',
     ),
     FilingForm(
         'F410',
@@ -48,10 +36,6 @@ terminate the organization.'
         description='Form 410 must be filed within 10 days of receiving \
 $2,000 in contributions. If the committee has not yet reached the $2,000 \
 threshold, the not yet qualified box should be checked.',
-        sections=[
-            ('CVR', 'Cover Page', 2),
-            ('CVR2', 'Cover Page 2', 4),
-        ]
     ),
     FilingForm(
         'F425',
@@ -60,7 +44,7 @@ threshold, the not yet qualified box should be checked.',
         documentcloud_id='2781365-425-2001-01',
         description='Form 425 is filed by recipient committees that have not \
 received any contributions and have not made any expenditures during the six-\
-month period covered by a semi-annual statement.'
+month period covered by a semi-annual statement.',
     ),
     FilingForm(
         'F450',
@@ -69,11 +53,6 @@ month period covered by a semi-annual statement.'
         documentcloud_id='2781364-450-2016-01',
         description='Form 450 is filed by recipient committees that meet \
 certain specific criteria listed in the Form 450.',
-        sections=[
-            ('CVR', 'Cover Page', 3),
-            ('SMRY', 'Summary Page', 5),
-            ('F450P5', 'Payments Made', 6, 7),
-        ]
     ),
     FilingForm(
         'F460',
@@ -84,28 +63,6 @@ certain specific criteria listed in the Form 450.',
 expenditures and contributions. It can be used to file a pre-election statement, \
 semi-annual statement, quarterly statement, termination statement, special odd-\
 year report, or an amendment to a previously filed statement.',
-        sections=[
-            ('CVR', 'Cover Page', 3, 4),
-            ('CVR2', 'Cover Page - Part 2', 5),
-            ('SMRY', 'Summary Page', 7, 8),
-            ('A', 'Schedule A, Monetary Contributions Received', 9, 11),
-            ('A-1', 'Schedule A-1, Contributions Transferred to Special Election Committees'),
-            ('B1', 'Schedule B - Part 1, Loans Received', 12, 13),
-            ('B2', 'Schedule B - Part 2, Loan Guarantors', 14, 15),
-            ('B3', 'Schedule B - Part 3, Outstanding Bal'),
-            ('C', 'Schedule C, Non-Monetary Contributions Received', 16, 17),
-            ('D', 'Schedule D, Summary of Expenditures Supporting / Opposing \
-Other Candidates, Measures and Committees', 18, 20),
-            ('E', 'Schedule E, Payments Made', 21, 24),
-            ('F', 'Schedule F, Accrued Expenses (Unpaid Bills)', 25, 27),
-            ('G', 'Schedule G, Payments Made by an Agent or Independent \
-Contractor (on Behalf of This Committee)', 28, 29),
-            ('H', 'Schedule H, Loans Made to Others', 29, 30),
-            ('H1', 'Schedule H1, Loans Made'),
-            ('H2', 'Schedule H2, Repayments Rcvd'),
-            ('H3', 'Schedule H3, Outstanding Loan'),
-            ('I', 'Schedule I, miscellanous increases to cash', 31, 32),
-        ]
     ),
     FilingForm(
         'F461',
@@ -114,14 +71,6 @@ Contractor (on Behalf of This Committee)', 28, 29),
         documentcloud_id='2781361-461-2016-01',
         description='Form 461 is filed by major donors, independent \
 expenditure committees, and multipurpose organizations including nonprofits.',
-        sections=[
-            ('F461P1', 'Part 1, Name and Address of Filer', 3),
-            ('F461P2', 'Part 2, Nature and Interests of Filer', 3),
-            ('F461P3', 'Part 3, Summary', 3),
-            ('F461P4', 'Part 4, Verification', 3),
-            ('F461P5', 'Part 5, Contributions (Including Loans, Forgiveness of \
-Loans, and Loan Guarantees) and Expenditures Made', 5, 6),
-        ]
     ),
     FilingForm(
         'F465',
@@ -134,14 +83,6 @@ make independent expenditures totaling $1,000 or more in a calendar year to supp
 or oppose: a single candidate, a single measure, or the qualification of one single \
 measure. Form 465s are filed in the same period(s) the candidate or committee \
 supported or opposed by the independent expenditure(s) is required to file.',
-        sections=[
-            ('F465P1', 'Part 1, Committee/Filer Information', 2),
-            ('F465P2', 'Part 2, Name of Candidate or Measure Supported or Opposed', 2),
-            ('F465P3', 'Part 3, Independent Expenditures Made', 2),
-            ('F465P4', 'Part 4, Summary', 4),
-            ('F465P5', 'Part 5, Filing Officers', 4),
-            ('F465P6', 'Part 6, Verification', 4),
-        ],
     ),
     FilingForm(
         'F470',
@@ -173,11 +114,6 @@ expenditures whose combined total is $1,000 or more to support or oppose a singl
 candidate for elective office, or a single ballot measure. Form 496 should be \
 filed within 24-hours of making the expenditure during the 90 days immediately \
 preceding the election.',
-        sections=[
-            ('F496P1', 'Part 1, List Only One Candidate or Ballot Measure', 3),
-            ('F496P2', 'Part 2, Independent Expenditures Made', 3),
-            ('F496P3', 'Part 3, Contributions > $100 Received', 3),
-        ]
     ),
     FilingForm(
         'F497',
@@ -190,10 +126,6 @@ days before an election, committees reporting contributions of $5,000 or more in
 connection with a state ballot measure, and state candidates as well as state \
 ballot measure committees that receive $5,000 or more at any time other than a \
 90-day election cycle.',
-        sections=[
-            ('F497P1', 'Part 1, Contribution(s) Received', 2),
-            ('F497P2', 'Part 2, Contribution(s) Made', 4),
-        ]
     ),
     FilingForm(
         'F498',
@@ -202,10 +134,6 @@ ballot measure committees that receive $5,000 or more at any time other than a \
         documentcloud_id='2781352-498-2016-01',
         description='Form 498 is filed by a slate mailer organization upon \
 receipt of a late payment.',
-        sections=[
-            ('F498-A', 'Part A: late payments attributed to'),
-            ('F498-R', 'Part R: late payments received from', 2),
-        ]
     ),
     FilingForm(
         'F501',
@@ -443,3 +371,412 @@ def get_filing_form(id):
     Takes an id for a filing form and returns a FilingForm object
     """
     return next((x for x in all_filing_forms if x.id == id.upper()), None)
+
+
+# adding Filing Form Sections
+
+form = get_filing_form('F400')
+form.add_section(
+    id='P1',
+    title='Part 1, Slate Mailer Organization Information',
+    start_page=2,
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Treasurer And Other Principal Officers',
+    start_page=2,
+)
+form.add_section(
+    id='P3',
+    title='Part 3, Individuals Who Authorize Contents Of Slate Mailers',
+    start_page=3,
+)
+form.add_section(
+    id='P4',
+    title='Part 4, Is This Organization A "Committee" Pursuant To Government Code Section 82013?',
+    start_page=3,
+)
+form.add_section(
+    id='P5',
+    title='Part 5, Verification',
+    start_page=3,
+)
+
+form = get_filing_form('F401')
+form.add_section(
+    id='CVR',
+    title='Cover Page',
+    start_page=3,
+    end_page=4,
+)
+form.add_section(
+    id='A',
+    db_value='F401A',
+    title='Schedule A, Payments Received',
+    start_page=5,
+    end_page=7,
+)
+form.add_section(
+    id='B',
+    db_value='F401B',
+    title='Schedule B, Payments Made',
+    start_page=8,
+    end_page=9,
+)
+form.add_section(
+    id='B-1',
+    db_value='F401B-1',
+    title='Schedule B-1, Payments Made by Agent or Independent Contractor',
+    start_page=10,
+)
+form.add_section(
+    id='C',
+    db_value='F401C',
+    title='Schedule C, Persons Receiving $1,000 or More',
+    start_page=11,
+    end_page=12,
+)
+form.add_section(
+    id='D',
+    db_value='F401D',
+    title='Schedule D, Candidates and Measures Not Listed on Schedule A',
+    start_page=13,
+    end_page=14,
+)
+
+form = get_filing_form('F402')
+form.add_section(
+    id='CVR',
+    title='Cover Page',
+    start_page=2,
+)
+form.add_section(
+    id='VER',
+    title='Verification',
+    start_page=2,
+)
+
+form = get_filing_form('F410')
+form.add_section(
+    id='P1',
+    title='Part 1, Committee Information',
+    start_page=2,
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Treasurer and Other Principal Officers',
+    start_page=2,
+)
+form.add_section(
+    id='P3',
+    title='Part 3, Verification',
+    start_page=2,
+)
+form.add_section(
+    id='P4',
+    title='Part 4, Type of Committee',
+    start_page=2,
+    end_page=3,
+)
+
+form = get_filing_form('F425')
+form.add_section(
+    id='P1',
+    title='Part 1, Committee Information',
+    start_page=1,
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Period of No Activity',
+    start_page=1,
+)
+form.add_section(
+    id='P3',
+    title='Part 3, Verification',
+    start_page=1,
+)
+
+form = get_filing_form('F450')
+form.add_section(
+    id='CVR',
+    title='Type of Recipient Committee',
+    start_page=3
+)
+form.add_section(
+    id='P1',
+    title='Part 1, Payments Made',
+    start_page=3
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Type of Statement',
+    start_page=3
+)
+form.add_section(
+    id='P3',
+    title='Part 3, Committee Information',
+    start_page=3
+)
+form.add_section(
+    id='P4',
+    title='Part 4, Verification',
+    start_page=3
+)
+form.add_section(
+    id='SMRY',
+    title='Summary Page',
+    start_page=5
+)
+form.add_section(
+    id='P5',
+    title='Part 5, Payments Made',
+    start_page=6,
+    end_page=7
+)
+
+form = get_filing_form('F460')
+form.add_section(
+    id='CVR',
+    title='Cover Page',
+    start_page=3,
+    end_page=4,
+    db_value='CVR',
+)
+form.add_section(
+    id='CVR2',
+    title='Cover Page - Part 2',
+    start_page=2,
+    db_value='CVR2',
+)
+form.add_section(
+    id='SMRY',
+    title='Summary Page',
+    start_page=7,
+    end_page=8,
+    db_value='SMRY',
+)
+form.add_section(
+    id='A',
+    title='Schedule A, Monetary Contributions Received',
+    start_page=9,
+    end_page=11,
+    db_value='A',
+)
+# this section is not in the sample form downloaded from the FPPC site
+# but does appear in the filings
+form.add_section(
+    id='A-1',
+    title='Schedule A-1, Contributions Transferred to Special Election Commitee',
+    db_value='A-1',
+)
+form.add_section(
+    id='B1',
+    title='Schedule B - Part 1, Loans Received',
+    start_page=12,
+    end_page=13,
+    db_value='B1',
+)
+form.add_section(
+    id='B2',
+    title='Schedule B - Part 2, Loan Guarantors',
+    start_page=14,
+    end_page=15,
+    db_value='B2',
+)
+# this section appears in older versions of Form 460, but not in the current one
+form.add_section(
+    id='B3',
+    title='Schedule B - Part 3, Outstanding Bal',
+    db_value='B3',
+)
+form.add_section(
+    id='C',
+    title='Schedule C, Non-Monetary Contributions Received',
+    start_page=16,
+    end_page=17,
+    db_value='C',
+)
+form.add_section(
+    id='D',
+    title='Schedule D, Summary of Expenditures Supporting / Opposing Other \
+Candidates, Measures and Committees',
+    start_page=18,
+    end_page=20,
+    db_value='D',
+)
+form.add_section(
+    id='E',
+    title='Schedule E, Payments Made',
+    start_page=21,
+    end_page=24,
+    db_value='E',
+)
+form.add_section(
+    id='F',
+    title='Schedule F, Accrued Expenses (Unpaid Bills)',
+    start_page=25,
+    end_page=27,
+    db_value='F',
+)
+form.add_section(
+    id='G',
+    title='Schedule G, Payments Made by an Agent or Independent Contractor \
+(on Behalf of This Committee)',
+    start_page=28,
+    end_page=29,
+    db_value='G',
+)
+form.add_section(
+    id='H',
+    title='Schedule H, Loans Made to Others',
+    start_page=29,
+    end_page=30,
+    db_value='H',
+)
+# this section is not in the sample form downloaded from the FPPC site
+# but does appear in the filings
+form.add_section(
+    id='H1',
+    title='Schedule H - Part 1, Loans Made',
+    db_value='H1',
+)
+# this section is not in the sample form downloaded from the FPPC site
+# but does appear in the filings
+form.add_section(
+    id='H2',
+    title='Schedule H- Part 2, Repayments Rcvd',
+    db_value='H2',
+)
+# this section is not in the sample form downloaded from the FPPC site
+# but does appear in the filings
+form.add_section(
+    id='H3',
+    title='Schedule H - Part 3, Outstanding Loans',
+    db_value='H3',
+)
+form.add_section(
+    id='I',
+    title='Schedule I, miscellanous increases to cash',
+    start_page=31,
+    end_page=32,
+    db_value='I',
+)
+
+form = get_filing_form('F461')
+form.add_section(
+    id='P1',
+    title='Part 1, Name and Address of Filer',
+    start_page=3,
+    db_value='F461P1',
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Nature and Interests of Filer',
+    start_page=3,
+    db_value='F461P2',
+)
+form.add_section(
+    id='P3',
+    title='Part 3, Summary',
+    start_page=3,
+    db_value='F461P3',
+)
+form.add_section(
+    id='P4',
+    title='Part 4, Verification',
+    start_page=3,
+    db_value='F461P4',
+)
+form.add_section(
+    id='P5',
+    title='Part 5, Contributions (Including Loans, Forgiveness of Loans, and Loan\
+Guarantees) and Expenditures Made',
+    start_page=5,
+    end_page=6,
+    db_value='F461P5',
+)
+
+form = get_filing_form('F465')
+form.add_section(
+    id='P1',
+    title='Part 1, Committee/Filer Information',
+    start_page=2,
+    db_value='F465P1',
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Name of Candidate or Measure Supported or Opposed',
+    start_page=2,
+    db_value='F465P2',
+)
+form.add_section(
+    id='P3',
+    title='Part 3, Independent Expenditures Made',
+    start_page=2,
+    db_value='F465P3',
+)
+form.add_section(
+    id='P4',
+    title='Part 4, Summary',
+    start_page=4,
+    db_value='F465P4',
+)
+form.add_section(
+    id='P5',
+    title='Part 5, Filing Officers',
+    start_page=4,
+    db_value='F465P5',
+)
+form.add_section(
+    id='P6',
+    title='Part 6, Verification',
+    start_page=4,
+    db_value='F465P6',
+)
+
+form = get_filing_form('F496')
+form.add_section(
+    id='P1',
+    title='Part 1, List Only One Candidate or Ballot Measure',
+    start_page=3,
+    db_value='F496P1',
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Independent Expenditures Made',
+    start_page=3,
+    db_value='F496P2',
+)
+form.add_section(
+    id='P3',
+    title='Part 3, Contributions > $100 Received',
+    start_page=3,
+    db_value='F496P3',
+)
+
+form = get_filing_form('F497')
+form.add_section(
+    id='P1',
+    title='Part 1, Contribution(s) Received',
+    start_page=2,
+    db_value='F497P1',
+)
+form.add_section(
+    id='P2',
+    title='Part 2, Contribution(s) Made',
+    start_page=4,
+    db_value='F497P2',
+)
+
+form = get_filing_form('F498')
+form.add_section(
+    id='A',
+    title='Part A, Late Payments Attributed To',
+    db_value='F498-A',
+)
+form.add_section(
+    id='R',
+    title='Part R, Late Payments Received From',
+    start_page=2,
+    db_value='F498-R',
+)

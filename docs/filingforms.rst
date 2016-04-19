@@ -22,10 +22,19 @@ Form 400 must be filed within 10 days after the slate mailer organization receiv
 Sections
 ^^^^^^^^
 
-* Cover Page (`p. 2-3 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p2>`_)
+* Part 1, Slate Mailer Organization Information (`p. 2 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p2>`_)
 
 
-* Cover Page 2 (`p. 4-5 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p4>`_)
+* Part 2, Treasurer And Other Principal Officers (`p. 2 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p2>`_)
+
+
+* Part 3, Individuals Who Authorize Contents Of Slate Mailers (`p. 3 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p3>`_)
+
+
+* Part 4, Is This Organization A "Committee" Pursuant To Government Code Section 82013? (`p. 3 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p3>`_)
+
+
+* Part 5, Verification (`p. 3 <https://www.documentcloud.org/documents/2781370-400-2016-01.html#document/p3>`_)
 
 
 
@@ -60,8 +69,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F400 filings are written to the following tables:
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -131,8 +138,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F401 filings are written to the following tables:
 
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
 * `SmryCd <models.html#smrycd>`_
@@ -150,6 +155,16 @@ Form 402
 Statement of Termination (Slate Mailer Organization)
 
 Form 402 is filed by slate mailer organizations to terminate the organization.
+
+Sections
+^^^^^^^^
+
+* Cover Page (`p. 2 <https://www.documentcloud.org/documents/2781369-402-2005-01.html#document/p2>`_)
+
+
+* Verification (`p. 2 <https://www.documentcloud.org/documents/2781369-402-2005-01.html#document/p2>`_)
+
+
 
 
 
@@ -183,10 +198,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F402 filings are written to the following tables:
 
-* `CvrSoCd <models.html#cvrsocd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
 * `EfsFilingLogCd <models.html#efsfilinglogcd>`_
@@ -204,10 +215,16 @@ Form 410 must be filed within 10 days of receiving $2,000 in contributions. If t
 Sections
 ^^^^^^^^
 
-* Cover Page (`p. 2 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p2>`_)
+* Part 1, Committee Information (`p. 2 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p2>`_)
 
 
-* Cover Page 2 (`p. 4 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p4>`_)
+* Part 2, Treasurer and Other Principal Officers (`p. 2 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p2>`_)
+
+
+* Part 3, Verification (`p. 2 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p2>`_)
+
+
+* Part 4, Type of Committee (`p. 2-3 <https://www.documentcloud.org/documents/2781368-410-2016-01.html#document/p2>`_)
 
 
 
@@ -243,8 +260,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F410 filings are written to the following tables:
 
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
 * `TextMemoCd <models.html#textmemocd>`_
@@ -260,6 +275,19 @@ Form 425
 Semi-Annual Statement of no Activity
 
 Form 425 is filed by recipient committees that have not received any contributions and have not made any expenditures during the six-month period covered by a semi-annual statement.
+
+Sections
+^^^^^^^^
+
+* Part 1, Committee Information (`p. 1 <https://www.documentcloud.org/documents/2781365-425-2001-01.html#document/p1>`_)
+
+
+* Part 2, Period of No Activity (`p. 1 <https://www.documentcloud.org/documents/2781365-425-2001-01.html#document/p1>`_)
+
+
+* Part 3, Verification (`p. 1 <https://www.documentcloud.org/documents/2781365-425-2001-01.html#document/p1>`_)
+
+
 
 
 
@@ -293,12 +321,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F425 filings are written to the following tables:
 
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
 * `TextMemoCd <models.html#textmemocd>`_
@@ -318,13 +340,25 @@ Form 450 is filed by recipient committees that meet certain specific criteria li
 Sections
 ^^^^^^^^
 
-* Cover Page (`p. 3 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p3>`_)
+* Type of Recipient Committee (`p. 3 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p3>`_)
+
+
+* Part 1, Payments Made (`p. 3 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p3>`_)
+
+
+* Part 2, Type of Statement (`p. 3 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p3>`_)
+
+
+* Part 3, Committee Information (`p. 3 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p3>`_)
+
+
+* Part 4, Verification (`p. 3 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p3>`_)
 
 
 * Summary Page (`p. 5 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p5>`_)
 
 
-* Payments Made (`p. 6-7 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p6>`_)
+* Part 5, Payments Made (`p. 6-7 <https://www.documentcloud.org/documents/2781364-450-2016-01.html#document/p6>`_)
 
 
 
@@ -360,10 +394,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F450 filings are written to the following tables:
 
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
 * `F495P2Cd <models.html#f495p2cd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
@@ -390,7 +420,7 @@ Sections
 * Cover Page (`p. 3-4 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p3>`_)
 
 
-* Cover Page - Part 2 (`p. 5 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p5>`_)
+* Cover Page - Part 2 (`p. 2 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p2>`_)
 
 
 * Summary Page (`p. 7-8 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p7>`_)
@@ -399,7 +429,7 @@ Sections
 * Schedule A, Monetary Contributions Received (`p. 9-11 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p9>`_)
 
 
-* Schedule A-1, Contributions Transferred to Special Election Committees 
+* Schedule A-1, Contributions Transferred to Special Election Commitee 
 
 
 * Schedule B - Part 1, Loans Received (`p. 12-13 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p12>`_)
@@ -429,13 +459,13 @@ Sections
 * Schedule H, Loans Made to Others (`p. 29-30 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p29>`_)
 
 
-* Schedule H1, Loans Made 
+* Schedule H - Part 1, Loans Made 
 
 
-* Schedule H2, Repayments Rcvd 
+* Schedule H- Part 2, Repayments Rcvd 
 
 
-* Schedule H3, Outstanding Loan 
+* Schedule H - Part 3, Outstanding Loans 
 
 
 * Schedule I, miscellanous increases to cash (`p. 31-32 <https://www.documentcloud.org/documents/2781363-460-2016-01.html#document/p31>`_)
@@ -474,10 +504,6 @@ Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F460 filings are written to the following tables:
 
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
 * `F495P2Cd <models.html#f495p2cd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
@@ -513,7 +539,7 @@ Sections
 * Part 4, Verification (`p. 3 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p3>`_)
 
 
-* Part 5, Contributions (Including Loans, Forgiveness of Loans, and Loan Guarantees) and Expenditures Made (`p. 5-6 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p5>`_)
+* Part 5, Contributions (Including Loans, Forgiveness of Loans, and LoanGuarantees) and Expenditures Made (`p. 5-6 <https://www.documentcloud.org/documents/2781361-461-2016-01.html#document/p5>`_)
 
 
 
@@ -548,8 +574,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F461 filings are written to the following tables:
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -622,10 +646,6 @@ Example Form
 Database Tables
 ^^^^^^^^^^^^^^^
 Data collected via F465 filings are written to the following tables:
-
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -861,10 +881,10 @@ Form 498 is filed by a slate mailer organization upon receipt of a late payment.
 Sections
 ^^^^^^^^
 
-* Part A: late payments attributed to 
+* Part A, Late Payments Attributed To 
 
 
-* Part R: late payments received from (`p. 2 <https://www.documentcloud.org/documents/2781352-498-2016-01.html#document/p2>`_)
+* Part R, Late Payments Received From (`p. 2 <https://www.documentcloud.org/documents/2781352-498-2016-01.html#document/p2>`_)
 
 
 

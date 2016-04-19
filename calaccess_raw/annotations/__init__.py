@@ -141,16 +141,15 @@ class FilingForm(object):
     A form used by the California Secretary of State to collection information
     which ends up in the CAL-ACCESS database
     """
-    def __init__(
-            self, id, title, description=None, group=None,
-            documentcloud_id=None, sections=None
-    ):
+    def __init__(self, id, title, **kwargs):
         self.id = id
         self.title = title
-        self.description = description
-        self.group = group
-        self.documentcloud_id = documentcloud_id
-        self.raw_sections = sections
+        self.description = kwargs.get('description')
+        self.group = kwargs.get('group')
+        self.documentcloud_id = kwargs.get('documentcloud_id')
+        self.db_value = kwargs.get('db_value', self.id)
+
+        self.sections = []
 
         if self.documentcloud_id:
             self.documentcloud = DocumentCloud(self.documentcloud_id)
@@ -159,7 +158,6 @@ class FilingForm(object):
 
     @property
     def type_and_num(self):
-
         if self.id[0] == 'E':
             self._type_and_num = 'Electronic Form {}'.format(self.id[1:])
         elif self.id[0] == 'S':
@@ -171,14 +169,21 @@ class FilingForm(object):
 
     @property
     def full_title(self):
-
         self._full_title = '{0}: {1}'.format(self.type_and_num, self.title)
-
         return self._full_title
 
-    @property
-    def sections(self):
-        return [FilingFormSection(self, *x) for x in self.raw_sections]
+    def add_section(self, id, title, **kwargs):
+        new_section = FilingFormSection(
+            form=self,
+            id=id,
+            title=title,
+            db_value=kwargs.get('db_value', self.db_value),
+            start_page=kwargs.get('start_page'),
+            end_page=kwargs.get('end_page'),
+            documentcloud_id=kwargs.get('documentcloud_id'),
+        )
+        self.sections.append(new_section)
+        return new_section
 
     def get_section(self, id):
         section_dict = {i.id: i for i in self.sections}
@@ -205,12 +210,13 @@ class FilingFormSection(object):
     """
     A section of a FilingForm (e.g., a cover page, summary sheet, schedule or part).
     """
-    def __init__(self, form, id, title, start_page=None, end_page=None):
+    def __init__(self, form, id, title, **kwargs):
+        self.form = form
         self.id = id
         self.title = title
-        self.form = form
-        self.start_page = start_page
-        self.end_page = end_page
+        self.db_value = kwargs.get('db_value', form.db_value)
+        self.start_page = kwargs.get('start_page')
+        self.end_page = kwargs.get('end_page')
 
         self.documentcloud = DocumentCloud(
             self.form.documentcloud_id,

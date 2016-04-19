@@ -19,8 +19,8 @@ Campaign tables
 Cvr2CampaignDisclosureCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Record used to carry additional names for the campaign
-disclosure forms below.
+Record used to carry additional names (e.g., Assistant Treasurers for the
+campaign disclosure forms below.
 
 **Sample:** `CVR2_CAMPAIGN_DISCLOSURE_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/CVR2_CAMPAIGN_DISCLOSURE_CD.TSV>`_
 
@@ -68,19 +68,19 @@ Cvr2CampaignDisclosureCd contains data collected from the following filing forms
 
 
 
-* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity): Part 1, Committee Information
 
 
 
-* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form): Part 3, Committee Information
 
 
 
-* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Cover Page - Part 2
 
 
 
-* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report): Part 5, Filing Officers
 
 
 
@@ -705,22 +705,22 @@ Look-up Codes
     
         <tr>
             <td>F425</td>
-            <td>Form 425: Semi-Annual Statement of no Activity</td>
+            <td>Form 425 (Semi-Annual Statement of no Activity): Part 1, Committee Information</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450 (Recipient Committee Campaign Disclosure Statement - Short Form): Part 3, Committee Information</td>
         </tr>
     
         <tr>
-            <td>F460</td>
-            <td>Form 460: Recipient Committee Campaign Statement</td>
+            <td>CVR2</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Cover Page - Part 2</td>
         </tr>
     
         <tr>
-            <td>F465</td>
-            <td>Form 465: Supplemental Independent Expenditure Report</td>
+            <td>F465P5</td>
+            <td>Form 465 (Supplemental Independent Expenditure Report): Part 5, Filing Officers</td>
         </tr>
     
     </tbody>
@@ -1224,11 +1224,11 @@ Cvr2SoCd contains data collected from the following filing forms, form parts and
 
 
 
-* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization)): Cover Page 2
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization)): Part 3, Individuals Who Authorize Contents Of Slate Mailers
 
 
 
-* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee): Cover Page 2
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee): Part 4, Type of Committee
 
 
 
@@ -1275,7 +1275,7 @@ Fields
             <td>line_item</td>
             <td>Integer</td>
             <td>Yes</td>
-            <td>Line item number of this record</td>
+            <td>Line item: Line item number of this record</td>
         </tr>
     
     
@@ -1284,7 +1284,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td>Record type</td>
+            <td>Record type: Type of record. This column will always contain &quot;CVR2&quot;.</td>
         </tr>
     
     
@@ -1293,7 +1293,7 @@ Fields
             <td>form_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
+            <td>Form type: Form type of the filing the record is included in. This must equal the form_type of the parent filing&#39;s cover (CVR) record.</td>
         </tr>
     
     
@@ -1311,7 +1311,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Entity code</td>
+            <td>Entity code: Entity code of the entity described by the record.</td>
         </tr>
     
     
@@ -1320,7 +1320,7 @@ Fields
             <td>enty_naml</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Entity&#39;s business name or last name if the entity is an individual</td>
+            <td>Entity last name: Entity&#39;s business name or last name if the entity is an individual</td>
         </tr>
     
     
@@ -1329,7 +1329,7 @@ Fields
             <td>enty_namf</td>
             <td>String (up to 45)</td>
             <td>No</td>
-            <td>Entity&#39;s first name if the entity is an individual</td>
+            <td>Entity first name: Entity&#39;s first name if the entity is an individual</td>
         </tr>
     
     
@@ -1338,7 +1338,7 @@ Fields
             <td>enty_namt</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Entity&#39;s name prefix or title if the entity is an individual</td>
+            <td>Entity name title: Entity&#39;s name prefix or title if the entity is an individual</td>
         </tr>
     
     
@@ -1347,7 +1347,7 @@ Fields
             <td>enty_nams</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Entity&#39;s name suffix if the entity is an individual</td>
+            <td>Entity name suffix: Entity&#39;s name suffix if the entity is an individual</td>
         </tr>
     
     
@@ -1356,7 +1356,7 @@ Fields
             <td>item_cd</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>Section of the Statement of Organization this itemization relates to. See CAL document for the definition of legal values for this column.</td>
+            <td>Item code: Section of the Statement of Organization this itemization relates to. See CAL document for the definition of legal values for this column.</td>
         </tr>
     
     
@@ -1365,7 +1365,7 @@ Fields
             <td>mail_city</td>
             <td>String (up to 30)</td>
             <td>No</td>
-            <td>City portion of the entity&#39;s mailing address</td>
+            <td>Mail city: City portion of the entity&#39;s mailing address</td>
         </tr>
     
     
@@ -1374,7 +1374,7 @@ Fields
             <td>mail_st</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>State portion of the entity&#39;s mailing address</td>
+            <td>Mail street: State portion of the entity&#39;s mailing address</td>
         </tr>
     
     
@@ -1383,7 +1383,7 @@ Fields
             <td>mail_zip4</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Zipcode portion of the entity&#39;s mailing address</td>
+            <td>Mail zip4: Zipcode portion of the entity&#39;s mailing address</td>
         </tr>
     
     
@@ -1392,7 +1392,7 @@ Fields
             <td>day_phone</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>Entity&#39;s daytime phone number</td>
+            <td>Day phone: Entity&#39;s daytime phone number</td>
         </tr>
     
     
@@ -1401,7 +1401,7 @@ Fields
             <td>fax_phone</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>Entity&#39;s fax number</td>
+            <td>Fax phone number: Entity&#39;s fax number</td>
         </tr>
     
     
@@ -1410,7 +1410,7 @@ Fields
             <td>email_adr</td>
             <td>String (up to 60)</td>
             <td>No</td>
-            <td>Email address. Not contained in current forms.</td>
+            <td>Email address: Email address. Not contained in current forms.</td>
         </tr>
     
     
@@ -1428,7 +1428,7 @@ Fields
             <td>ind_group</td>
             <td>String (up to 90)</td>
             <td>No</td>
-            <td>Industry group/affiliation description</td>
+            <td>Industry group: Industry group/affiliation description</td>
         </tr>
     
     
@@ -1446,7 +1446,7 @@ Fields
             <td>offic_dscr</td>
             <td>String (up to 40)</td>
             <td>No</td>
-            <td>Office sought description used if the office sought code (OFFICE_CD) equals other (OTH).</td>
+            <td>Office description: Office sought description used if the office sought code (OFFICE_CD) equals other (OTH).</td>
         </tr>
     
     
@@ -1455,7 +1455,7 @@ Fields
             <td>juris_cd</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>Office jurisdiction code. See CAL document for a list of legal values.</td>
+            <td>Jurisdiction code: Office jurisdiction code. See CAL document for a list of legal values.</td>
         </tr>
     
     
@@ -1464,7 +1464,7 @@ Fields
             <td>juris_dscr</td>
             <td>String (up to 40)</td>
             <td>No</td>
-            <td>Office jurisdiction description provided if the         jurisdiction code (JURIS_CD) equals other (OTH).</td>
+            <td>Jurisdiction description: Office jurisdiction description provided if the         jurisdiction code (JURIS_CD) equals other (OTH).</td>
         </tr>
     
     
@@ -1473,7 +1473,7 @@ Fields
             <td>dist_no</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>Office district number for Senate, Assembly, and Board of Equalization districts.</td>
+            <td>District name: Office district number for Senate, Assembly, and Board of Equalization districts.</td>
         </tr>
     
     
@@ -1482,7 +1482,7 @@ Fields
             <td>off_s_h_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Office is sought or held code</td>
+            <td>Office is sought or held code: Office sought/held code. Legal values are &quot;S&quot; for sought and &quot;H&quot; for held</td>
         </tr>
     
     
@@ -1491,7 +1491,7 @@ Fields
             <td>non_pty_cb</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>Non-partisan check-box. Legal values are &#39;X&#39; and null.</td>
+            <td>Non-party checkbox: Non-partisan check-box. Legal values are &#39;X&#39; and null.</td>
         </tr>
     
     
@@ -1500,7 +1500,7 @@ Fields
             <td>party_name</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Name of party (if partisan)</td>
+            <td>Party name: Name of party (if partisan)</td>
         </tr>
     
     
@@ -1509,7 +1509,7 @@ Fields
             <td>bal_num</td>
             <td>String (up to 7)</td>
             <td>No</td>
-            <td>Ballot measure number or letter</td>
+            <td>Balance number: Ballot measure number or letter</td>
         </tr>
     
     
@@ -1518,7 +1518,7 @@ Fields
             <td>bal_juris</td>
             <td>String (up to 40)</td>
             <td>No</td>
-            <td>Jurisdiction of ballot measure</td>
+            <td>Balance jurisdiction: Jurisdiction of ballot measure</td>
         </tr>
     
     
@@ -1527,7 +1527,7 @@ Fields
             <td>sup_opp_cd</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Support or opposition code</td>
+            <td>Support or opposition code: Support or opposition code</td>
         </tr>
     
     
@@ -1536,7 +1536,7 @@ Fields
             <td>year_elect</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>Year of election</td>
+            <td>Year of election: Year of election</td>
         </tr>
     
     
@@ -1545,7 +1545,7 @@ Fields
             <td>pof_title</td>
             <td>String (up to 45)</td>
             <td>No</td>
-            <td>Position/title of the principal officer</td>
+            <td>Principal officer title: Position/title of the principal officer</td>
         </tr>
     
     
@@ -1650,12 +1650,12 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400 (Statement of Organization (Slate Mailer Organization)): Cover Page 2</td>
+            <td>Form 400 (Statement of Organization (Slate Mailer Organization)): Part 3, Individuals Who Authorize Contents Of Slate Mailers</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410 (Statement of Organization Recipient Committee): Cover Page 2</td>
+            <td>Form 410 (Statement of Organization Recipient Committee): Part 4, Type of Committee</td>
         </tr>
     
     </tbody>
@@ -2310,39 +2310,39 @@ Cvr3VerificationInfoCd contains data collected from the following filing forms, 
 
 
 
-* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization)): Part 5, Verification
 
 
 
-* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
+* `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement): Cover Page
 
 
 
-* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization))
+* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization)): Verification
 
 
 
-* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee): Part 3, Verification
 
 
 
-* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity): Part 3, Verification
 
 
 
-* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form): Part 4, Verification
 
 
 
-* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+* `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement): Cover Page
 
 
 
-* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement)
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement): Part 4, Verification
 
 
 
-* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report)
+* `Form 465 <filingforms.html#form-465>`_ (Supplemental Independent Expenditure Report): Part 6, Verification
 
 
 
@@ -2571,47 +2571,47 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>Form 400: Statement of Organization (Slate Mailer Organization)</td>
+            <td>Form 400 (Statement of Organization (Slate Mailer Organization)): Part 5, Verification</td>
         </tr>
     
         <tr>
             <td>F401</td>
-            <td>Form 401: Slate Mailer Organization Campaign Statement</td>
+            <td>Form 401 (Slate Mailer Organization Campaign Statement): Cover Page</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>Form 402: Statement of Termination (Slate Mailer Organization)</td>
+            <td>Form 402 (Statement of Termination (Slate Mailer Organization)): Verification</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>Form 410: Statement of Organization Recipient Committee</td>
+            <td>Form 410 (Statement of Organization Recipient Committee): Part 3, Verification</td>
         </tr>
     
         <tr>
             <td>F425</td>
-            <td>Form 425: Semi-Annual Statement of no Activity</td>
+            <td>Form 425 (Semi-Annual Statement of no Activity): Part 3, Verification</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
+            <td>Form 450 (Recipient Committee Campaign Disclosure Statement - Short Form): Part 4, Verification</td>
         </tr>
     
         <tr>
-            <td>F460</td>
-            <td>Form 460: Recipient Committee Campaign Statement</td>
+            <td>CVR</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Cover Page</td>
         </tr>
     
         <tr>
-            <td>F461</td>
-            <td>Form 461: Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+            <td>F461P4</td>
+            <td>Form 461 (Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement): Part 4, Verification</td>
         </tr>
     
         <tr>
-            <td>F465</td>
-            <td>Form 465: Supplemental Independent Expenditure Report</td>
+            <td>F465P6</td>
+            <td>Form 465 (Supplemental Independent Expenditure Report): Part 6, Verification</td>
         </tr>
     
         <tr>
@@ -2793,11 +2793,11 @@ CvrCampaignDisclosureCd contains data collected from the following filing forms,
 
 
 
-* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+* `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity): Part 1, Committee Information
 
 
 
-* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form): Cover Page
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form): Type of Recipient Committee
 
 
 
@@ -4562,7 +4562,8 @@ Look-up Codes
 CvrF470Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cover page layout for F470 Officeholder/Candidate Short Supplement
+Cover page layout for Officeholder and Candidate Short and Supplement Forms
+(Form 470)
 
 **Sample:** `CVR_F470_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/CVR_F470_CD.TSV>`_
 
@@ -5378,15 +5379,29 @@ CvrSoCd contains data collected from the following filing forms, form parts and 
 
 
 
-* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization)): Cover Page
+* `Form 400 <filingforms.html#form-400>`_ (Statement of Organization (Slate Mailer Organization))
+
+    * Part 1, Slate Mailer Organization Information
+
+    * Part 2, Treasurer And Other Principal Officers
+
+    * Part 4, Is This Organization A "Committee" Pursuant To Government Code Section 82013?
 
 
 
-* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization))
+
+* `Form 402 <filingforms.html#form-402>`_ (Statement of Termination (Slate Mailer Organization)): Cover Page
 
 
 
-* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee): Cover Page
+* `Form 410 <filingforms.html#form-410>`_ (Statement of Organization Recipient Committee)
+
+    * Part 1, Committee Information
+
+    * Part 2, Treasurer and Other Principal Officers
+
+    * Part 4, Type of Committee
+
 
 
 
@@ -5415,7 +5430,7 @@ Fields
             <td>acct_opendt</td>
             <td>Date (with time)</td>
             <td>No</td>
-            <td>Date Account Opened</td>
+            <td>Account opened datetime: Date Account Opened</td>
         </tr>
     
     
@@ -5442,7 +5457,7 @@ Fields
             <td>bank_adr1</td>
             <td>String (up to 55)</td>
             <td>No</td>
-            <td>Street 1 of Financial Institution</td>
+            <td>Bank address 1: Street 1 of Financial Institution</td>
         </tr>
     
     
@@ -5451,7 +5466,7 @@ Fields
             <td>bank_adr2</td>
             <td>String (up to 55)</td>
             <td>No</td>
-            <td>Street 2 of Financial Institution</td>
+            <td>Bank address 2: Street 2 of Financial Institution</td>
         </tr>
     
     
@@ -5460,7 +5475,7 @@ Fields
             <td>bank_city</td>
             <td>String (up to 30)</td>
             <td>No</td>
-            <td>City of Financial Institution</td>
+            <td>Bank city: City of Financial Institution</td>
         </tr>
     
     
@@ -5469,7 +5484,7 @@ Fields
             <td>bank_nam</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Name of Financial Institution</td>
+            <td>Bank name: Name of Financial Institution</td>
         </tr>
     
     
@@ -5478,7 +5493,7 @@ Fields
             <td>bank_phon</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>Phone of Financial Institution</td>
+            <td>Bank phone: Phone of Financial Institution</td>
         </tr>
     
     
@@ -5487,7 +5502,7 @@ Fields
             <td>bank_st</td>
             <td>String (up to 2)</td>
             <td>No</td>
-            <td>State of Financial Institution</td>
+            <td>Bank street: State of Financial Institution</td>
         </tr>
     
     
@@ -5496,7 +5511,7 @@ Fields
             <td>bank_zip4</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>ZIP+4 of Financial Institution</td>
+            <td>Bank zip4: ZIP+4 of Financial Institution</td>
         </tr>
     
     
@@ -5505,7 +5520,7 @@ Fields
             <td>brdbase_cb</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Broad Based Committee Check-box</td>
+            <td>Broad based committee check-box: Broad Based Committee Check-box</td>
         </tr>
     
     
@@ -5514,7 +5529,7 @@ Fields
             <td>city</td>
             <td>String (up to 30)</td>
             <td>No</td>
-            <td>City of Org / Committee / Candidate or Office holder</td>
+            <td>City: City of Org / Committee / Candidate or Office holder</td>
         </tr>
     
     
@@ -5523,7 +5538,7 @@ Fields
             <td>cmte_email</td>
             <td>String (up to 60)</td>
             <td>No</td>
-            <td>Optional Committee EMAIL address</td>
+            <td>Committee email: Optional Committee EMAIL address</td>
         </tr>
     
     
@@ -5532,7 +5547,7 @@ Fields
             <td>cmte_fax</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>Optional Committee FAX number</td>
+            <td>Committee fax: Optional Committee FAX number</td>
         </tr>
     
     
@@ -5541,7 +5556,7 @@ Fields
             <td>com82013id</td>
             <td>String (up to 9)</td>
             <td>No</td>
-            <td>ID of 82013 Committee (if Com82013Nm is a RCP cmtte)</td>
+            <td>Committee 82013 id: ID of 82013 Committee (if Com82013Nm is a RCP cmtte)</td>
         </tr>
     
     
@@ -5550,7 +5565,7 @@ Fields
             <td>com82013nm</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Name of 82013 Committee (F400; when Com82013YN=Y)</td>
+            <td>Committee 82013 name: Name of 82013 Committee (F400; when Com82013YN=Y)</td>
         </tr>
     
     
@@ -5559,7 +5574,7 @@ Fields
             <td>com82013yn</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Is this SMO a 82013 &quot;Committee&quot;? (Yes/No) (F400)</td>
+            <td>Committee 82013 yes/no: Is this SMO a 82013 &quot;Committee&quot;? (Yes/No) (F400)</td>
         </tr>
     
     
@@ -5568,7 +5583,7 @@ Fields
             <td>control_cb</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Controlled Committee Check-box</td>
+            <td>Controlled checkbox: Controlled Committee Check-box</td>
         </tr>
     
     
@@ -5577,7 +5592,7 @@ Fields
             <td>county_act</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>County where Active (F410)</td>
+            <td>County active: County where Active (F410)</td>
         </tr>
     
     
@@ -5586,7 +5601,7 @@ Fields
             <td>county_res</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>County of Domicile, Residence, or Location</td>
+            <td>County residence: County of Domicile, Residence, or Location</td>
         </tr>
     
     
@@ -5613,7 +5628,7 @@ Fields
             <td>filer_namf</td>
             <td>String (up to 45)</td>
             <td>No</td>
-            <td>Filer first name</td>
+            <td>Filer first name: Filer first name</td>
         </tr>
     
     
@@ -5622,7 +5637,7 @@ Fields
             <td>filer_naml</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Filer last name</td>
+            <td>Filer last name: Filer last name</td>
         </tr>
     
     
@@ -5631,7 +5646,7 @@ Fields
             <td>filer_nams</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Filer name suffix</td>
+            <td>Filer name suffix: Filer name suffix</td>
         </tr>
     
     
@@ -5640,7 +5655,7 @@ Fields
             <td>filer_namt</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Filer name title</td>
+            <td>Filer name title: Filer name title</td>
         </tr>
     
     
@@ -5649,7 +5664,7 @@ Fields
             <td>filing_id</td>
             <td>Integer</td>
             <td>Yes</td>
-            <td>Filing ID: Unique filing identificiation number</td>
+            <td>Filing id: Unique filing identificiation number</td>
         </tr>
     
     
@@ -5658,7 +5673,7 @@ Fields
             <td>form_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
+            <td>Form type: Name of the source filing form or schedule</td>
         </tr>
     
     
@@ -5667,7 +5682,7 @@ Fields
             <td>genpurp_cb</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>General Purpose Committee Check-box</td>
+            <td>General purpose checkbox: General Purpose Committee Check-box</td>
         </tr>
     
     
@@ -5676,7 +5691,7 @@ Fields
             <td>gpc_descr</td>
             <td>String (up to 300)</td>
             <td>No</td>
-            <td>Brief description of Activity of GPC</td>
+            <td>General purpose committee description: Brief description of Activity of GPC</td>
         </tr>
     
     
@@ -5685,7 +5700,7 @@ Fields
             <td>mail_city</td>
             <td>String (up to 30)</td>
             <td>No</td>
-            <td>Mailing Address of Filing Committee - City</td>
+            <td>Mail city: Mailing Address of Filing Committee - City</td>
         </tr>
     
     
@@ -5694,7 +5709,7 @@ Fields
             <td>mail_st</td>
             <td>String (up to 2)</td>
             <td>No</td>
-            <td>Mailing Address of Filing Committee - State</td>
+            <td>Mail street: Mailing Address of Filing Committee - State</td>
         </tr>
     
     
@@ -5703,7 +5718,7 @@ Fields
             <td>mail_zip4</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Mailing Address of Filing Committee - ZIP+4</td>
+            <td>Mail zip4: Mailing Address of Filing Committee - ZIP+4</td>
         </tr>
     
     
@@ -5712,7 +5727,7 @@ Fields
             <td>phone</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>Phone Number of Org / Committee / Candidate or Office holder</td>
+            <td>Phone: Phone Number of Org / Committee / Candidate or Office holder</td>
         </tr>
     
     
@@ -5721,7 +5736,7 @@ Fields
             <td>primfc_cb</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Primarily Formed Committee Check-box</td>
+            <td>Primarily formed committee check-box: Primarily Formed Committee Check-box</td>
         </tr>
     
     
@@ -5730,7 +5745,7 @@ Fields
             <td>qualfy_dt</td>
             <td>Date (with time)</td>
             <td>No</td>
-            <td>Date qualified: Date qualified as an organization</td>
+            <td>Qualified datetime: Date qualified as an organization</td>
         </tr>
     
     
@@ -5739,7 +5754,7 @@ Fields
             <td>qual_cb</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Qualified Committee check-box (Req. if SMO)</td>
+            <td>Qualified checkbox: Qualified Committee check-box (Req. if SMO)</td>
         </tr>
     
     
@@ -5757,7 +5772,7 @@ Fields
             <td>report_num</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Report Number - Values: 000 - Original Report 001 thru 999 - Amended Rpt #1-#999</td>
+            <td>Report number: Report Number - Values: 000 - Original Report 001 thru 999 - Amended Rpt #1-#999</td>
         </tr>
     
     
@@ -5766,7 +5781,7 @@ Fields
             <td>rpt_date</td>
             <td>Date (with time)</td>
             <td>No</td>
-            <td>Date this report is filed</td>
+            <td>Report date: Date this report is filed</td>
         </tr>
     
     
@@ -5775,7 +5790,7 @@ Fields
             <td>smcont_qualdt</td>
             <td>Date (with time)</td>
             <td>No</td>
-            <td>Date Small Contributor Committee Qualified</td>
+            <td>Small contributor qualified datetime: Date Small Contributor Committee Qualified</td>
         </tr>
     
     
@@ -5784,7 +5799,7 @@ Fields
             <td>sponsor_cb</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Sponsored Committee Check-box</td>
+            <td>Sponsored checkbox: Sponsored Committee Check-box</td>
         </tr>
     
     
@@ -5793,7 +5808,7 @@ Fields
             <td>st</td>
             <td>String (up to 2)</td>
             <td>No</td>
-            <td>State of Org / Committee / Candidate or Office holder</td>
+            <td>Street: State of Org / Committee / Candidate or Office holder</td>
         </tr>
     
     
@@ -5802,7 +5817,7 @@ Fields
             <td>surplusdsp</td>
             <td>String (up to 90)</td>
             <td>No</td>
-            <td>Disposition of Surplus Funds</td>
+            <td>Surplus disposition: Disposition of Surplus Funds</td>
         </tr>
     
     
@@ -5811,7 +5826,7 @@ Fields
             <td>term_date</td>
             <td>Date (with time)</td>
             <td>No</td>
-            <td>Termination Effective Date (Req. if F402)</td>
+            <td>Termination date: Termination Effective Date (Req. if F402)</td>
         </tr>
     
     
@@ -5820,7 +5835,7 @@ Fields
             <td>tres_city</td>
             <td>String (up to 30)</td>
             <td>No</td>
-            <td>Treasurer&#39;s city</td>
+            <td>Treasurer city: Treasurer&#39;s city</td>
         </tr>
     
     
@@ -5829,7 +5844,7 @@ Fields
             <td>tres_namf</td>
             <td>String (up to 45)</td>
             <td>No</td>
-            <td>Treasurer&#39;s first name</td>
+            <td>Treasurer first name: Treasurer&#39;s first name</td>
         </tr>
     
     
@@ -5838,7 +5853,7 @@ Fields
             <td>tres_naml</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Treasurer&#39;s last name</td>
+            <td>Treasurer last name: Treasurer&#39;s last name</td>
         </tr>
     
     
@@ -5847,7 +5862,7 @@ Fields
             <td>tres_nams</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Treasurer&#39;s name suffix</td>
+            <td>Treasurer name suffix: Treasurer&#39;s name suffix</td>
         </tr>
     
     
@@ -5856,7 +5871,7 @@ Fields
             <td>tres_namt</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Treasurer&#39;s name title</td>
+            <td>Treasurer name title: Treasurer&#39;s name title</td>
         </tr>
     
     
@@ -5865,7 +5880,7 @@ Fields
             <td>tres_phon</td>
             <td>String (up to 20)</td>
             <td>No</td>
-            <td>Treasurer&#39;s phone number</td>
+            <td>Treasurer phone number: Treasurer&#39;s phone number</td>
         </tr>
     
     
@@ -5874,7 +5889,7 @@ Fields
             <td>tres_st</td>
             <td>String (up to 2)</td>
             <td>No</td>
-            <td>Treasurer&#39;s street</td>
+            <td>Treasurer street: Treasurer&#39;s street</td>
         </tr>
     
     
@@ -5883,7 +5898,7 @@ Fields
             <td>tres_zip4</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Treasurer&#39;s ZIP Code</td>
+            <td>Treasurer zip code: Treasurer&#39;s ZIP Code</td>
         </tr>
     
     
@@ -5892,7 +5907,7 @@ Fields
             <td>zip4</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>ZIP+4 for Org / Committee / Candidate or Office holder</td>
+            <td>Zip4: ZIP+4 for Org / Committee / Candidate or Office holder</td>
         </tr>
     
     
@@ -6058,17 +6073,17 @@ Look-up Codes
     
         <tr>
             <td>F400</td>
-            <td>F400</td>
+            <td>Form 400: Statement of Organization (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F402</td>
-            <td>F402</td>
+            <td>Form 402: Statement of Termination (Slate Mailer Organization)</td>
         </tr>
     
         <tr>
             <td>F410</td>
-            <td>F410</td>
+            <td>Form 410: Statement of Organization Recipient Committee</td>
         </tr>
     
     </tbody>
@@ -6128,8 +6143,8 @@ Look-up Codes
 DebtCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Form 460 (Recipient Committee Campaign Statement)
-Schedule (F) Accrued Expenses (Unpaid Bills) records
+Form 460 (Recipient Committee Campaign Statement) Schedule (F) Accrued
+Expenses (Unpaid Bills) records
 
 **Sample:** `DEBT_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/DEBT_CD.TSV>`_
 
@@ -7074,7 +7089,7 @@ ExpnCd contains data collected from the following filing forms, form parts and s
 
 
 
-* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form): Payments Made
+* `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form): Part 5, Payments Made
 
 
 
@@ -7089,7 +7104,7 @@ ExpnCd contains data collected from the following filing forms, form parts and s
 
 
 
-* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement): Part 5, Contributions (Including Loans, Forgiveness of Loans, and Loan Guarantees) and Expenditures Made
+* `Form 461 <filingforms.html#form-461>`_ (Independent Expenditure Committee & Major Donor Committee Campaign Statement): Part 5, Contributions (Including Loans, Forgiveness of Loans, and LoanGuarantees) and Expenditures Made
 
 
 
@@ -8637,8 +8652,8 @@ Look-up Codes
     <tbody valign="top">
     
         <tr>
-            <td>F450P5</td>
-            <td>Form 450 (Recipient Committee Campaign Disclosure Statement - Short Form): Payments Made</td>
+            <td>F450</td>
+            <td>Form 450 (Recipient Committee Campaign Disclosure Statement - Short Form): Part 5, Payments Made</td>
         </tr>
     
         <tr>
@@ -8658,7 +8673,7 @@ Look-up Codes
     
         <tr>
             <td>F461P5</td>
-            <td>Form 461 (Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement): Part 5, Contributions (Including Loans, Forgiveness of Loans, and Loan Guarantees) and Expenditures Made</td>
+            <td>Form 461 (Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement): Part 5, Contributions (Including Loans, Forgiveness of Loans, and LoanGuarantees) and Expenditures Made</td>
         </tr>
     
         <tr>
@@ -9143,22 +9158,8 @@ Look-up Codes
 F495P2Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F495 Supplemental Preelection Campaign Statement
-
-It's attatchment to the forms below
-
-    F450 Recipient Committee Campaign Statement Short Form
-    F460 Recipient Committee Campaign Statement
-
-Form 495 is for use by a recipient committee that
-makes contributions totaling $10,000 or more in
-connection with an election for which the committee
-is not required to file regular preelection reports.
-Form 495 is filed as an attachment to a campaign
-disclosure statement (Form 450 or 460). On the
-Form 450 or 460, the committee will report all
-contributions received and expenditures made since
-its last report.
+Form 495 Supplemental Pre-Election Campaign Statement (attachment to
+Recipient Committee Campaign Statements (Forms 450 and 460).
 
 **Sample:** `F495P2_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/F495P2_CD.TSV>`_
 
@@ -9275,7 +9276,7 @@ Fields
             <td>form_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td>Name of the source filing form or schedule (must equal Form_Type in CVR record)</td>
+            <td>Name of the source filing form to which the Form 495 is attached (must equal Form_Type in CVR record)</td>
         </tr>
     
     
@@ -11702,11 +11703,11 @@ LoanCd contains data collected from the following filing forms, form parts and s
 
     * Schedule H, Loans Made to Others
 
-    * Schedule H1, Loans Made
+    * Schedule H - Part 1, Loans Made
 
-    * Schedule H2, Repayments Rcvd
+    * Schedule H- Part 2, Repayments Rcvd
 
-    * Schedule H3, Outstanding Loan
+    * Schedule H - Part 3, Outstanding Loans
 
 
 
@@ -12290,17 +12291,17 @@ Look-up Codes
     
         <tr>
             <td>H1</td>
-            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H1, Loans Made</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H - Part 1, Loans Made</td>
         </tr>
     
         <tr>
             <td>H2</td>
-            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H2, Repayments Rcvd</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H- Part 2, Repayments Rcvd</td>
         </tr>
     
         <tr>
             <td>H3</td>
-            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H3, Outstanding Loan</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H - Part 3, Outstanding Loans</td>
         </tr>
     
     </tbody>
@@ -12428,12 +12429,8 @@ Look-up Codes
 RcptCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Receipts schedules for the following forms.
-
-    Form 460 (Recipient Committee Campaign Statement)
-    Schedules A, C, I, and A-1.
-
-    Form 401 (Slate Mailer Organization Campaign Statement) Schedule A.
+Receipts schedules for Slate Mailer Organization and Recipient Committee
+Campaign Statements (Forms 401 and 460).
 
 **Sample:** `RCPT_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/RCPT_CD.TSV>`_
 
@@ -12493,7 +12490,7 @@ RcptCd contains data collected from the following filing forms, form parts and s
 
     * Schedule A, Monetary Contributions Received
 
-    * Schedule A-1, Contributions Transferred to Special Election Committees
+    * Schedule A-1, Contributions Transferred to Special Election Commitee
 
     * Schedule C, Non-Monetary Contributions Received
 
@@ -13269,7 +13266,7 @@ Look-up Codes
     
         <tr>
             <td>A-1</td>
-            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A-1, Contributions Transferred to Special Election Committees</td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A-1, Contributions Transferred to Special Election Commitee</td>
         </tr>
     
         <tr>
@@ -16059,9 +16056,9 @@ S498Cd contains data collected from the following filing forms, form parts and s
 
 * `Form 498 <filingforms.html#form-498>`_ (Slate Mailer Late Payment Report)
 
-    * Part A: late payments attributed to
+    * Part A, Late Payments Attributed To
 
-    * Part R: late payments received from
+    * Part R, Late Payments Received From
 
 
 
@@ -16499,12 +16496,12 @@ Look-up Codes
     
         <tr>
             <td>F498-A</td>
-            <td>Form 498 (Slate Mailer Late Payment Report): Part A: late payments attributed to</td>
+            <td>Form 498 (Slate Mailer Late Payment Report): Part A, Late Payments Attributed To</td>
         </tr>
     
         <tr>
             <td>F498-R</td>
-            <td>Form 498 (Slate Mailer Late Payment Report): Part R: late payments received from</td>
+            <td>Form 498 (Slate Mailer Late Payment Report): Part R, Late Payments Received From</td>
         </tr>
     
     </tbody>
