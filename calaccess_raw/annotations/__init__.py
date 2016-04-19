@@ -192,13 +192,8 @@ class FilingForm(object):
     def get_models(self):
         models = []
         for model in get_model_list():
-            try:
-                model.FILING_FORMS
-            except AttributeError:
-                pass
-            else:
-                if self in model.FILING_FORMS:
-                    models.append(model)
+            if self in [x[0] for x in model().get_filing_forms_w_sections()]:
+                models.append(model)
 
         return models
 

@@ -68,7 +68,13 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F400 filings are written to the following tables:
+Data collected via Form 400 filings are written to the following tables:
+
+* `CvrSoCd <models.html#cvrsocd>`_
+
+* `Cvr2SoCd <models.html#cvr2socd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -136,7 +142,15 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F401 filings are written to the following tables:
+Data collected via Form 401 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `RcptCd <models.html#rcptcd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `S401Cd <models.html#s401cd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -196,7 +210,11 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F402 filings are written to the following tables:
+Data collected via Form 402 filings are written to the following tables:
+
+* `CvrSoCd <models.html#cvrsocd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -258,7 +276,13 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F410 filings are written to the following tables:
+Data collected via Form 410 filings are written to the following tables:
+
+* `CvrSoCd <models.html#cvrsocd>`_
+
+* `Cvr2SoCd <models.html#cvr2socd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -319,7 +343,13 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F425 filings are written to the following tables:
+Data collected via Form 425 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -392,7 +422,15 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F450 filings are written to the following tables:
+Data collected via Form 450 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `ExpnCd <models.html#expncd>`_
 
 * `F495P2Cd <models.html#f495p2cd>`_
 
@@ -502,9 +540,23 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F460 filings are written to the following tables:
+Data collected via Form 460 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `RcptCd <models.html#rcptcd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `LoanCd <models.html#loancd>`_
+
+* `ExpnCd <models.html#expncd>`_
 
 * `F495P2Cd <models.html#f495p2cd>`_
+
+* `DebtCd <models.html#debtcd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -573,7 +625,13 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F461 filings are written to the following tables:
+Data collected via Form 461 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `ExpnCd <models.html#expncd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -645,7 +703,15 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F465 filings are written to the following tables:
+Data collected via Form 465 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `ExpnCd <models.html#expncd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -695,7 +761,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F470 filings are written to the following tables:
+Data collected via Form 470 filings are written to the following tables:
 
 * `CvrF470Cd <models.html#cvrf470cd>`_
 
@@ -741,7 +807,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F495 filings are written to the following tables:
+Data collected via Form 495 filings are written to the following tables:
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -798,7 +864,11 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F496 filings are written to the following tables:
+Data collected via Form 496 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `RcptCd <models.html#rcptcd>`_
 
 * `S496Cd <models.html#s496cd>`_
 
@@ -858,9 +928,11 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F497 filings are written to the following tables:
+Data collected via Form 497 filings are written to the following tables:
 
 * `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `S497Cd <models.html#s497cd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -918,9 +990,11 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F498 filings are written to the following tables:
+Data collected via Form 498 filings are written to the following tables:
 
 * `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `S498Cd <models.html#s498cd>`_
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -966,7 +1040,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F501 filings are written to the following tables:
+Data collected via Form 501 filings are written to the following tables:
 
 * `F501502Cd <models.html#f501502cd>`_
 
@@ -990,7 +1064,7 @@ Form 502 must be filed within 10 days of opening a campaign bank account at a fi
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F502 filings are written to the following tables:
+Data collected via Form 502 filings are written to the following tables:
 
 * `F501502Cd <models.html#f501502cd>`_
 
@@ -1036,7 +1110,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F511 filings are written to the following tables:
+Data collected via Form 511 filings are written to the following tables:
 
 * `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
 
@@ -1082,7 +1156,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via E530 filings are written to the following tables:
+Data collected via Electronic Form 530 filings are written to the following tables:
 
 * `RcptCd <models.html#rcptcd>`_
 
@@ -1108,7 +1182,7 @@ None
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F900 filings are written to the following tables:
+Data collected via Form 900 filings are written to the following tables:
 
 * `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
 
@@ -1167,7 +1241,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F700 filings are written to the following tables:
+Data collected via Form 700 filings are written to the following tables:
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -1216,7 +1290,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F601 filings are written to the following tables:
+Data collected via Form 601 filings are written to the following tables:
 
 * `CvrRegistrationCd <models.html#cvrregistrationcd>`_
 
@@ -1270,7 +1344,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F602 filings are written to the following tables:
+Data collected via Form 602 filings are written to the following tables:
 
 * `CvrRegistrationCd <models.html#cvrregistrationcd>`_
 
@@ -1322,7 +1396,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F603 filings are written to the following tables:
+Data collected via Form 603 filings are written to the following tables:
 
 * `CvrRegistrationCd <models.html#cvrregistrationcd>`_
 
@@ -1376,7 +1450,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F604 filings are written to the following tables:
+Data collected via Form 604 filings are written to the following tables:
 
 * `CvrRegistrationCd <models.html#cvrregistrationcd>`_
 
@@ -1426,7 +1500,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F605 filings are written to the following tables:
+Data collected via Form 605 filings are written to the following tables:
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
@@ -1472,7 +1546,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F606 filings are written to the following tables:
+Data collected via Form 606 filings are written to the following tables:
 
 * `CvrRegistrationCd <models.html#cvrregistrationcd>`_
 
@@ -1522,7 +1596,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F607 filings are written to the following tables:
+Data collected via Form 607 filings are written to the following tables:
 
 * `CvrRegistrationCd <models.html#cvrregistrationcd>`_
 
@@ -1572,7 +1646,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F615 filings are written to the following tables:
+Data collected via Form 615 filings are written to the following tables:
 
 * `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
 
@@ -1628,7 +1702,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F625 filings are written to the following tables:
+Data collected via Form 625 filings are written to the following tables:
 
 * `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
 
@@ -1688,7 +1762,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via S630 filings are written to the following tables:
+Data collected via Schedule 630 filings are written to the following tables:
 
 * `LattCd <models.html#lattcd>`_
 
@@ -1734,7 +1808,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F635 filings are written to the following tables:
+Data collected via Form 635 filings are written to the following tables:
 
 * `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
 
@@ -1794,7 +1868,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via S635C filings are written to the following tables:
+Data collected via Schedule 635C filings are written to the following tables:
 
 * `LattCd <models.html#lattcd>`_
 
@@ -1840,7 +1914,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via S640 filings are written to the following tables:
+Data collected via Schedule 640 filings are written to the following tables:
 
 * `LattCd <models.html#lattcd>`_
 
@@ -1888,7 +1962,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F645 filings are written to the following tables:
+Data collected via Form 645 filings are written to the following tables:
 
 * `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
 
@@ -1946,7 +2020,7 @@ Example Form
 
 Database Tables
 ^^^^^^^^^^^^^^^
-Data collected via F690 filings are written to the following tables:
+Data collected via Form 690 filings are written to the following tables:
 
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
