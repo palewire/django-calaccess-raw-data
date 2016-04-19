@@ -6,7 +6,6 @@ from calaccess_raw import fields
 from calaccess_raw.annotations.filing_forms import get_filing_form
 from calaccess_raw.annotations import (
     DocumentCloud,
-    FilingForm,
     choices,
     get_sorted_choices
 )
