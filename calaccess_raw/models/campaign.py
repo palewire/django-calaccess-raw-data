@@ -44,7 +44,7 @@ class CvrSoCd(CalAccessBaseModel):
         get_filing_form('F410').get_section('P2'),
         get_filing_form('F410').get_section('P4'),
     ]
-    acct_opendt = fields.DateTimeField(
+    acct_opendt = fields.DateField(
         db_column="ACCT_OPENDT",
         verbose_name='account opened datetime',
         null=True,
@@ -322,7 +322,7 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         verbose_name='primarily formed committee check-box',
         help_text='Primarily Formed Committee Check-box',
     )
-    qualfy_dt = fields.DateTimeField(
+    qualfy_dt = fields.DateField(
         db_column="QUALFY_DT",
         null=True,
         verbose_name="qualified datetime",
@@ -360,13 +360,13 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
         help_text='Report Number - Values: \
 000 - Original Report 001 thru 999 - Amended Rpt #1-#999',
     )
-    rpt_date = fields.DateTimeField(
+    rpt_date = fields.DateField(
         db_column="RPT_DATE",
         null=True,
         verbose_name='report date',
         help_text='Date this report is filed',
     )
-    smcont_qualdt = fields.DateTimeField(
+    smcont_qualdt = fields.DateField(
         db_column="SMCONT_QUALDT",
         null=True,
         verbose_name='small contributor qualified datetime',
@@ -393,7 +393,7 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
         verbose_name='surplus disposition',
         help_text='Disposition of Surplus Funds',
     )
-    term_date = fields.DateTimeField(
+    term_date = fields.DateField(
         db_column="TERM_DATE",
         null=True,
         verbose_name='termination date',
@@ -1116,7 +1116,7 @@ are 'Y' or 'N'."
         help_text="District number for the office being sought. Populated \
 for Senate, Assembly, or Board of Equalization races."
     )
-    elect_date = fields.DateTimeField(
+    elect_date = fields.DateField(
         null=True,
         db_column='ELECT_DATE',
         blank=True,
@@ -1273,7 +1273,7 @@ individual the filer's last name."
             DocumentCloud(id='2712034-Cal-Format-201', start_page=22),
         ]
     )
-    from_date = fields.DateTimeField(
+    from_date = fields.DateField(
         null=True,
         db_column='FROM_DATE',
         blank=True,
@@ -1460,14 +1460,14 @@ are 'X' or null. This field applies to the form 401."
         null=True,
         help_text="Date this report was filed, according to the filer"
     )
-    rptfromdt = fields.DateTimeField(
+    rptfromdt = fields.DateField(
         null=True,
         db_column='RPTFROMDT',
         blank=True,
         help_text="Attached campaign disclosure statement - Period from \
 date."
     )
-    rptthrudt = fields.DateTimeField(
+    rptthrudt = fields.DateField(
         null=True,
         db_column='RPTTHRUDT',
         blank=True,
@@ -1546,7 +1546,7 @@ are 'Y' or 'N'."
             DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
         ]
     )
-    thru_date = fields.DateTimeField(
+    thru_date = fields.DateField(
         null=True,
         db_column='THRU_DATE',
         blank=True,

@@ -124,7 +124,7 @@ class BallotMeasuresCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=7),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=19),
     ]
-    election_date = fields.DateTimeField(
+    election_date = fields.DateField(
         db_column='ELECTION_DATE',
         null=True,
         help_text="Ballot measure election date"
