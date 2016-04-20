@@ -714,12 +714,12 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>CVR2</td>
+            <td>F460</td>
             <td>Form 460 (Recipient Committee Campaign Statement): Cover Page - Part 2</td>
         </tr>
     
         <tr>
-            <td>F465P5</td>
+            <td>F465</td>
             <td>Form 465 (Supplemental Independent Expenditure Report): Part 5, Filing Officers</td>
         </tr>
     
@@ -2600,17 +2600,17 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>CVR</td>
+            <td>F460</td>
             <td>Form 460 (Recipient Committee Campaign Statement): Cover Page</td>
         </tr>
     
         <tr>
-            <td>F461P4</td>
+            <td>F461</td>
             <td>Form 461 (Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement): Part 4, Verification</td>
         </tr>
     
         <tr>
-            <td>F465P6</td>
+            <td>F465</td>
             <td>Form 465 (Supplemental Independent Expenditure Report): Part 6, Verification</td>
         </tr>
     
@@ -3163,7 +3163,7 @@ Fields
     
         <tr>
             <td>elect_date</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Date of the General Election</td>
         </tr>
@@ -3316,7 +3316,7 @@ Fields
     
         <tr>
             <td>from_date</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Reporting period from date</td>
         </tr>
@@ -3487,7 +3487,7 @@ Fields
     
         <tr>
             <td>rptfromdt</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Attached campaign disclosure statement - Period from date.</td>
         </tr>
@@ -3496,7 +3496,7 @@ Fields
     
         <tr>
             <td>rptthrudt</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Attached campaign disclosure statement - Period through date.</td>
         </tr>
@@ -3541,7 +3541,7 @@ Fields
     
         <tr>
             <td>thru_date</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Reporting period through date</td>
         </tr>
@@ -5428,7 +5428,7 @@ Fields
     
         <tr>
             <td>acct_opendt</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Account opened datetime: Date Account Opened</td>
         </tr>
@@ -5743,7 +5743,7 @@ Fields
     
         <tr>
             <td>qualfy_dt</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Qualified datetime: Date qualified as an organization</td>
         </tr>
@@ -5779,7 +5779,7 @@ Fields
     
         <tr>
             <td>rpt_date</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Report date: Date this report is filed</td>
         </tr>
@@ -5788,7 +5788,7 @@ Fields
     
         <tr>
             <td>smcont_qualdt</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Small contributor qualified datetime: Date Small Contributor Committee Qualified</td>
         </tr>
@@ -5824,7 +5824,7 @@ Fields
     
         <tr>
             <td>term_date</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Termination date: Termination Effective Date (Req. if F402)</td>
         </tr>
@@ -25631,27 +25631,27 @@ Fields
     
         <tr>
             <td>exec_date</td>
-            <td>String (up to 22)</td>
+            <td>Date (without time)</td>
             <td>No</td>
-            <td>Date this amendment executed on</td>
+            <td>Executed date: Date this amendment executed on</td>
         </tr>
     
     
     
         <tr>
             <td>from_date</td>
-            <td>String (up to 22)</td>
+            <td>Date (without time)</td>
             <td>No</td>
-            <td>Reporting period from date of original report</td>
+            <td>Reported from date: Reporting period from date of original report</td>
         </tr>
     
     
     
         <tr>
             <td>thru_date</td>
-            <td>String (up to 22)</td>
+            <td>Date (without time)</td>
             <td>No</td>
-            <td>Reporting date to/through date of original</td>
+            <td>Reported through date: Reporting date to/through date of original</td>
         </tr>
     
     
@@ -30281,7 +30281,7 @@ Fields
     
         <tr>
             <td>election_date</td>
-            <td>Date (with time)</td>
+            <td>Date (without time)</td>
             <td>No</td>
             <td>Ballot measure election date</td>
         </tr>

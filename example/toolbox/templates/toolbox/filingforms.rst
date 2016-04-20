@@ -7,6 +7,13 @@ Much of the documents and descriptions included here were gathered from the `For
 
 Similar documentation and background info can also be found in the `Campaign Finance <http://www.sos.ca.gov/campaign-lobbying/campaign-disclosure-and-requirements>`_ and `Lobbying Activities <http://www.sos.ca.gov/campaign-lobbying/lobbying-disclosure-requirements>`_ sections of the California Secretary of State's website.
 
+.. warning::
+
+    The sections and page numbers noted below match those of the current sample forms provided by the FPPC, but not necessarily any of the actual forms submitted by filers. This is a result of filings that include multiple pages for a given schedule as well as changes to the layout of forms over the years.
+
+    You can view a PDF of any form submitted by a filer by pointing your browser at http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=2028957&amendid=0. Note that in the query string parameters, *2028957* and *0* should be exchanged for the filling id and amendment id of the desired filling.
+
+
 {% for group, form_list in group_list %}
 {{ group|title }} Forms
 --------------------------
