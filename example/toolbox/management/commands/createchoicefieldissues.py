@@ -57,7 +57,6 @@ class Command(CalAccessCommand):
             'S497Cd.sup_off_cd',
         ]
 
-        results = []
         model_list = sorted(
             get_model_list(),
             key=lambda x: (x().klass_group, x().klass_name)
