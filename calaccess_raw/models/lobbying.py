@@ -1331,19 +1331,22 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=88),
         ]
     )
-    exec_date = fields.CharField(
+    exec_date = fields.DateField(
         max_length=22,
         db_column='EXEC_DATE',
+        verbose_name='executed date',
         help_text='Date this amendment executed on',
     )
-    from_date = fields.CharField(
+    from_date = fields.DateField(
         max_length=22,
         db_column='FROM_DATE',
+        verbose_name='reported from date',
         help_text='Reporting period from date of original report',
     )
-    thru_date = fields.CharField(
+    thru_date = fields.DateField(
         max_length=22,
         db_column='THRU_DATE',
+        verbose_name='reported through date',
         help_text='Reporting date to/through date of original',
     )
     add_l_cb = fields.CharField(
