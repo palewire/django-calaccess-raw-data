@@ -35,7 +35,10 @@ class DocumentationTestCase(TestCase):
                 obj_type,
                 attr_name
             ))
-            fails.select(["group", obj_type]).print_table(max_column_width=50)
+            fails.select(["group", obj_type]).print_table(
+                max_rows=None,
+                max_column_width=50,
+            )
 
     def test_model_str(self):
         """
@@ -291,6 +294,6 @@ class DocumentationTestCase(TestCase):
                             ))
 
         table = agate.Table(results, ['group', 'model', 'field', 'message'])
-        table.print_table(max_column_width=50)
+        table.print_table(max_rows=None, max_column_width=50)
 
         call_command("verifycalaccesschoicefields", verbosity=2)

@@ -74,6 +74,6 @@ that aren't defined in the choices attr"
                 results,
                 ['group', 'model', 'field', 'undefined_value', 'occurrences']
             )
-            table.print_table(max_column_width=50)
+            table.print_table(max_rows=None, max_column_width=50)
         else:
             self.success("No undefined choice field values")
