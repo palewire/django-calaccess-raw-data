@@ -1455,7 +1455,7 @@ values are 450, 460, and 461.",
         help_text="Committee Report Attached check-box. Legal values \
 are 'X' or null. This field applies to the form 401."
     )
-    rpt_date = fields.DateTimeField(
+    rpt_date = fields.DateField(
         db_column='RPT_DATE',
         null=True,
         help_text="Date this report was filed, according to the filer"
@@ -5078,7 +5078,7 @@ original filing and 1 to 999 amendments.",
         max_length=3,
         help_text='Report Number; 000 Original; 001-999 Amended'
     )
-    rpt_date = fields.DateTimeField(
+    rpt_date = fields.DateField(
         db_column='RPT_DATE',
         blank=True,
         null=True,
@@ -5491,7 +5491,7 @@ Populated for Senate, Assembly or Board of Equalization races.'
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3, end_page=4),
         ]
     )
-    execute_dt = fields.DateTimeField(
+    execute_dt = fields.DateField(
         db_column='EXECUTE_DT',
         blank=True,
         null=True,

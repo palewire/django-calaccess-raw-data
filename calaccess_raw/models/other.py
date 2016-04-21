@@ -210,7 +210,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
         get_filing_form('F635'),
         get_filing_form('F645'),
     ]
-    filing_date = fields.DateTimeField(
+    filing_date = fields.DateField(
         db_column='FILING_DATE',
         null=True,
         help_text="This field is undocumented"
@@ -345,7 +345,7 @@ class FilerAddressCd(CalAccessBaseModel):
         verbose_name='Address ID',
         help_text="Address identification number"
     )
-    effect_dt = fields.DateTimeField(
+    effect_dt = fields.DateField(
         db_column='EFFECT_DT',
         blank=True,
         null=True,
@@ -398,7 +398,7 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         help_text='Legislative session identification number',
         null=True,
     )
-    ethics_date = fields.DateTimeField(
+    ethics_date = fields.DateField(
         db_column='ETHICS_DATE',
         null=True,
         help_text="Date ethics training was accomplished"
@@ -448,7 +448,7 @@ class FilerInterestsCd(CalAccessBaseModel):
         null=True,
         verbose_name="interest code"
     )
-    effect_date = fields.DateTimeField(
+    effect_date = fields.DateField(
         db_column='EFFECT_DATE',
         null=True,
         verbose_name="Effective date"
