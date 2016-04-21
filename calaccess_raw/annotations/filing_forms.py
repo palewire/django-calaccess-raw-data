@@ -145,7 +145,7 @@ or local office.'
     ),
     FilingForm(
         'F502',
-        'Campaign bank account statement',
+        'Campaign Bank Account Statement',
         group='CAMPAIGN',
         description='Form 502 must be filed within 10 days of opening a \
 campaign bank account at a financial institution in California.'
