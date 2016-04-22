@@ -529,9 +529,10 @@ form.add_section(
 )
 form.add_section(
     id='P5',
+    db_value='F450P5',
     title='Part 5, Payments Made',
     start_page=6,
-    end_page=7
+    end_page=7,
 )
 
 form = get_filing_form('F460')
