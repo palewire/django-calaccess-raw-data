@@ -232,9 +232,9 @@ class EfsFilingLogCd(CalAccessBaseModel):
         db_index=True,
         help_text="Filer's unique identification number",
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS]) + (
-        ('BADFORMAT 253', ''),
-        ('form', ''),
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
+        ('BADFORMAT 253', 'Unknown'),
+        ('form', 'Unknown'),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
@@ -242,11 +242,12 @@ class EfsFilingLogCd(CalAccessBaseModel):
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        verbose_name="form type",
     )
     error_no = fields.CharField(
         db_column='ERROR_NO',
         max_length=250,
-        help_text="This field is undocumented"
+        help_text="This field is undocumented",
     )
 
     class Meta:
@@ -507,36 +508,40 @@ in the relationship',
         null=True,
     )
     LINK_TYPE_CHOICES = (
-        (-12019, '-12019'),
-        (-12018, '-12018'),
-        (-12016, '-12016'),
-        (-12015, '-12015'),
-        (-12014, '-12014'),
-        (-12013, '-12013'),
-        (-12011, '-12011'),
-        (-12008, '-12008'),
-        (-12005, '-12005'),
-        (-12004, '-12004'),
-        (-12002, '-12002'),
-        (-12001, '-12001'),
-        (0, '0'),
-        (12001, '12001'),
-        (12002, '12002'),
-        (12004, '12004'),
-        (12005, '12005'),
-        (12008, '12008'),
-        (12011, '12011'),
-        (12013, '12013'),
-        (12014, '12014'),
-        (12015, '12015'),
-        (12016, '12016'),
-        (12018, '12018'),
-        (12019, '12019'),
+        (-12019, 'CANDIDATE CONTROLLED CAUCUS COMMITTEE'),
+        (-12018, 'PROPONENT'),
+        (-12016, 'TREASURER/RESPONSIBLE OFFICER FOR'),
+        (-12015, 'ASSOCIATED'),
+        (-12014, 'SUPPORT'),
+        (-12013, 'OPPOSE'),
+        (-12011, 'CONTROLLING CANDIDATE'),
+        (-12008, 'FIRM OF A LOBBYIST'),
+        (-12005, 'FIRM OF A CLIENT (WHO IS ALSO A FIRM)'),
+        (-12004, 'FIRM OF A CLIENT (WHO IS AN EMPLOYER)'),
+        (-12002, 'EMPLOYER OF  AN IN-HOUSE LOBBYIST'),
+        (-12001, 'CLIENT OF A FIRM'),
+        (0, 'N/A'),
+        (12001, 'FIRM OF A CLIENT'),
+        (12002, 'IN-HOUSE LOBBYIST OF AN EMPLOYER'),
+        (12004, 'CLIENT (WHO IS AN EMPLOYER) OF A FIRM'),
+        (12005, 'CLIENT (WHO IS ALSO A FIRM) OF ANOTHER FIRM'),
+        (12008, 'LOBBYIST OF A FIRM'),
+        (12011, 'CANDIDATE CONTROLS THIS COMMITTEE'),
+        (12013, 'OPPOSE'),
+        (12014, 'SUPPORT'),
+        (12015, 'ASSOCIATED'),
+        (12016, 'TREASURER/RESPONSIBLE OFFICER'),
+        (12018, 'PROPONENT'),
+        (12019, 'CANDIDATE CONTROLLED CAUCUS COMMITTEE'),
     )
     link_type = fields.IntegerField(
         choices=LINK_TYPE_CHOICES,
         db_column='LINK_TYPE',
+        verbose_name='link type',
         help_text='Denotes the type of the link',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=6, end_page=7),
+        ]
     )
     link_desc = fields.CharField(
         verbose_name='link description',
@@ -562,7 +567,7 @@ in the relationship',
         db_column='TERMINATION_DT',
         null=True,
         blank=True,
-        help_text="Termination effective date"
+        help_text="Termination effective date",
     )
 
     class Meta:
@@ -589,6 +594,7 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     status_type = fields.CharField(
         max_length=11,
         db_column='STATUS_TYPE',
+        verbose_name='status type',
         help_text='This field is undocumented',
     )
     status_desc = fields.CharField(
@@ -737,6 +743,7 @@ level of activity",
         choices=PARTY_CODE_CHOICES,
         db_column='PARTY_CD',
         help_text="Filer's political party",
+        verbose_name='party code',
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=10, end_page=11),
         ]
@@ -745,11 +752,13 @@ level of activity",
         null=True,
         blank=True,
         help_text="Filer's county code",
+        verbose_name='county code',
         db_column='COUNTY_CD',
     )
     district_cd = fields.IntegerField(
         null=True,
         blank=True,
+        verbose_name='county code',
         help_text="Filer's district number for the office being sought. \
 Populated for Senate, Assembly or Board of Equalization races",
         db_column='DISTRICT_CD',
@@ -819,7 +828,8 @@ class FilerTypesCd(CalAccessBaseModel):
 class FilerXrefCd(CalAccessBaseModel):
     """
     This table maps legacy filer identification numbers to the system's filer
-    identification numbers.
+    identification numbers. Although 60 percent of the FILER_ID and XREF_ID values
+    are equal.
     """
     UNIQUE_KEY = ("FILER_ID", "XREF_ID")
     DOCUMENTCLOUD_PAGES = [
@@ -1165,6 +1175,30 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=121),
     ]
+    FILING_FORMS = [
+        get_filing_form('F400'),
+        get_filing_form('F401'),
+        get_filing_form('F402'),
+        get_filing_form('F410'),
+        get_filing_form('F425'),
+        get_filing_form('F450'),
+        get_filing_form('F460'),
+        get_filing_form('F461'),
+        get_filing_form('F465'),
+        get_filing_form('F496'),
+        get_filing_form('F497'),
+        get_filing_form('F498'),
+        get_filing_form('F601'),
+        get_filing_form('F602'),
+        get_filing_form('F603'),
+        get_filing_form('F604'),
+        get_filing_form('F606'),
+        get_filing_form('F607'),
+        get_filing_form('F615'),
+        get_filing_form('F625'),
+        get_filing_form('F635'),
+        get_filing_form('F645'),
+    ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
@@ -1195,11 +1229,14 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         null=True,
         blank=True,
     )
+    FORM_ID_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_id = fields.CharField(
         db_column='FORM_ID',
         max_length=4,
         blank=True,
-        help_text="Form identification code"
+        choices=FORM_ID_CHOICES,
+        verbose_name="form identification code",
+        help_text="Form identification code",
     )
     receive_comment = fields.CharField(
         db_column='RECEIVE_COMMENT',

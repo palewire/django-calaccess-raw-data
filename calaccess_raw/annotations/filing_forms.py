@@ -781,3 +781,174 @@ form.add_section(
     start_page=2,
     db_value='F498-R',
 )
+
+form = get_filing_form('F601')
+form.add_section(
+    id='P1',
+    db_value='F601P1',
+    title='Individual Lobbyists',
+    start_page=2,
+)
+form.add_section(
+    id='P2A',
+    db_value='F601P2A',
+    title='Part 2: Section A, Lobbyist Employers',
+    start_page=2,
+    end_page=4,
+)
+form.add_section(
+    id='P2B',
+    db_value='F601P2B',
+    title='Part 2: Section B: Subcontracted Clients',
+    start_page=4,
+)
+
+form = get_filing_form('F615')
+form.add_section(
+    id='P1',
+    db_value='F615P1',
+    title='Part 1, Activity Expenses Paid, Incurred, Arranged or Provided by the Lobbyist',
+    start_page=2,
+    end_page=4,
+)
+form.add_section(
+    id='P2',
+    db_value='F615P2',
+    title='Part 2, Campaign Contributions Made or Delivered',
+    start_page=5,
+)
+
+form = get_filing_form('F625')
+form.add_section(
+    id='P1',
+    db_value='F625P1',
+    title='Part 1, Partners, Owners, Officers, and Employees',
+    start_page=2,
+)
+form.add_section(
+    id='P2',
+    db_value='F625P2',
+    title='Part 2, Payments Received in Connection with Lobbying Activity',
+    start_page=4,
+)
+form.add_section(
+    id='P3A',
+    db_value='F625P3A',
+    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
+Section A: Activity Expenses',
+    start_page=4,
+)
+form.add_section(
+    id='P3B',
+    db_value='F625P3B',
+    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
+Section B: Payments Made',
+    start_page=8,
+)
+form.add_section(
+    id='P3C',
+    db_value='F625P3C',
+    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
+Section C: Summary of Payments',
+    start_page=2,
+)
+form.add_section(
+    id='P4B',
+    db_value='F625P4B',
+    title='Part 4: Campaign Contributions Made',
+    start_page=2,
+)
+
+form = get_filing_form('F635')
+form.add_section(
+    id='P1',
+    db_value='F635P1',
+    title='Part 1: Legislative or State Agency Administrative Actions Actively \
+Lobbied During the Period',
+    start_page=2,
+)
+form.add_section(
+    id='P2',
+    db_value='F635P2',
+    title='Part 2: Partners, Owners, and Employees whose "Lobbyist Reports" \
+(Form 615) are Atttached to this Report',
+    start_page=4,
+)
+form.add_section(
+    id='P3A',
+    db_value='F635P3A',
+    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
+Section A: Payments To In-house Employee Lobbyists',
+    start_page=4,
+)
+form.add_section(
+    id='P3B',
+    db_value='F635P3B',
+    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
+Section B: Payments To Lobbying Firms',
+    start_page=4,
+)
+form.add_section(
+    id='P3C',
+    db_value='F635P3C',
+    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
+Section C: Activity Expenses',
+    start_page=6,
+)
+form.add_section(
+    id='P3D',
+    db_value='F635P3D',
+    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
+Section D: Other Payments to Influence Legislative or Administrative Action',
+    start_page=6,
+)
+form.add_section(
+    id='P3E',
+    db_value='F635P3E',
+    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
+Section E: Payments in Connection with Administrative Testimony in Ratemaking \
+Proceedings Before The California Public Utilities Commission',
+    start_page=6,
+)
+form.add_section(
+    id='P4B',
+    db_value='F635P4B',
+    title='Part 4: Campaign Contributions Made',
+    start_page=8,
+)
+
+form = get_filing_form('F645')
+form.add_section(
+    id='P1',
+    db_value='F645P1',
+    title='Part 1: Legislative or State Agency Administrative Actions Actively \
+Lobbied during the Period',
+    start_page=2,
+)
+form.add_section(
+    id='P2A',
+    db_value='F645P2A',
+    title='Part 2 (Payments Made this Period), Section A: Activity Expenses',
+    start_page=4,
+)
+form.add_section(
+    id='P2B',
+    db_value='F645P2B',
+    title='Part 2 (Payments Made this Period), Section B: Other Payments to \
+Influence Legislative or Administrative Action',
+    start_page=4,
+)
+form.add_section(
+    id='P2C',
+    db_value='F645P2C',
+    title='Part 2 (Payments Made this Period), Section C: Payments in Connection \
+with Administrative Testimony in Ratemaking Proceedings Before the California \
+Public Utilities Commission',
+    start_page=4,
+)
+form.add_section(
+    id='P3B',
+    db_value='F645P3B',
+    title='Part 3: Campaign Contributions Made',
+    start_page=4,
+)
