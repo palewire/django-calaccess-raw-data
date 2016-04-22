@@ -182,20 +182,17 @@ class DocumentationTestCase(TestCase):
 
     def test_filing_forms(self):
         """
-        Verify that each model (with a few exceptions) has FILING_FORMS defined
+        Verify that each model with a form_type or form_id field has FILING_FORMS defined
         """
-        excluded = [
-            'LookupCodesCd',
-        ]
         results = []
         for m in get_model_list():
-            if m.__name__ in excluded:
-                continue
-            if m().FILING_FORMS:
-                exists = True
-            else:
-                exists = False
-            results.append([m().klass_group, m.__name__, exists])
+            field_names = m._meta.get_all_field_names()
+            if 'form_type' in field_names or 'form_id' in field_names:
+                if m().FILING_FORMS:
+                    exists = True
+                else:
+                    exists = False
+                results.append([m().klass_group, m.__name__, exists])
         self.attr_test_output("model", "FILING_FORMS", results)
 
     def test_field_verbose_name(self):
