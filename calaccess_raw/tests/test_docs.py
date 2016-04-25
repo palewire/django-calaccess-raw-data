@@ -91,10 +91,10 @@ class DocumentationTestCase(TestCase):
 
     def test_model_documentcloud_pages_for_both_links(self):
         """
-        Verify that each model has both DOCUMENTCLOUD_PAGES
+        Verify that each model (with a few exceptions) has both DOCUMENTCLOUD_PAGES
         """
         results = []
-        excluded_models = [
+        exceptions = [
             # campaign models
             'F501502Cd',
             # "common" models
@@ -150,7 +150,7 @@ class DocumentationTestCase(TestCase):
             'ReportsCd',
         ]
         model_list = [
-            x for x in get_model_list() if x.__name__ not in excluded_models
+            x for x in get_model_list() if x.__name__ not in exceptions
         ]
 
         for m in model_list:
@@ -182,10 +182,15 @@ class DocumentationTestCase(TestCase):
 
     def test_filing_forms(self):
         """
-        Verify that each model with a form_type or form_id field has FILING_FORMS defined
+        Verify that each model with a form_type or form_id field (with a few 
+        exceptions) has FILING_FORMS defined
         """
         results = []
-        for m in get_model_list():
+        exceptions = ['HeaderCd']
+        model_list = [
+            x for x in get_model_list() if x.__name__ not in exceptions
+        ]
+        for m in model_list:
             field_names = m._meta.get_all_field_names()
             if 'form_type' in field_names or 'form_id' in field_names:
                 if m().FILING_FORMS:
@@ -244,7 +249,7 @@ class DocumentationTestCase(TestCase):
             'reportname',
             'form_id',
         ]
-        excluded_fields = [
+        exceptions = [
             'LookupCodesCd.code_type',
             'S497Cd.sup_off_cd',
         ]
@@ -261,7 +266,7 @@ class DocumentationTestCase(TestCase):
                     any(x in f.name for x in choice_field_strs) and
                     f.name != 'memo_code' and
                     f.__class__ is not models.ForeignKey and
-                    '{}.{}'.format(m().klass_name, f.name) not in excluded_fields
+                    '{}.{}'.format(m().klass_name, f.name) not in exceptions
                 ):
                     if not f.choices:
                         results.append((
