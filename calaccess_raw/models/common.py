@@ -227,7 +227,6 @@ class FilerFilingsCd(CalAccessBaseModel):
     )
     FORM_ID_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
         ('F111', 'Unknown Form'),
-        ('F405', 'Unknown Form'),
         ('F410 AT', ''),
         ('F410ATR', ''),
         ('F415', ''),

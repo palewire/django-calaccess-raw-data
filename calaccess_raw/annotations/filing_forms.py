@@ -29,6 +29,15 @@ disclose payments made and received in connection with producing slate mailers.'
 terminate the organization.',
     ),
     FilingForm(
+        'F405',
+        'Amendment to Campaign Disclosure Statement',
+        group='CAMPAIGN',
+        documentcloud_id='2811582-405-1994',
+        description="Form 405 must be used to amend campaign disclosure statements,\
+except for Statement of Organization, Candidate Intention or Campaign Bank Account \
+(Forms 410, 501, 502).",
+    ),
+    FilingForm(
         'F410',
         'Statement of Organization Recipient Committee',
         group='CAMPAIGN',
