@@ -73,21 +73,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 400 filings are written to the following tables:
-
-* `CvrSoCd <models.html#cvrsocd>`_
-
-* `Cvr2SoCd <models.html#cvr2socd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 401
@@ -147,27 +132,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 401 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `RcptCd <models.html#rcptcd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `S401Cd <models.html#s401cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 402
@@ -213,19 +177,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 402 filings are written to the following tables:
-
-* `CvrSoCd <models.html#cvrsocd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -281,23 +232,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 410 filings are written to the following tables:
-
-* `CvrSoCd <models.html#cvrsocd>`_
-
-* `Cvr2SoCd <models.html#cvr2socd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 425
@@ -346,23 +280,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 425 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -425,29 +342,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 450 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `ExpnCd <models.html#expncd>`_
-
-* `F495P2Cd <models.html#f495p2cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -545,35 +439,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 460 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `RcptCd <models.html#rcptcd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `LoanCd <models.html#loancd>`_
-
-* `ExpnCd <models.html#expncd>`_
-
-* `F495P2Cd <models.html#f495p2cd>`_
-
-* `DebtCd <models.html#debtcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 461
@@ -628,25 +493,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 461 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `ExpnCd <models.html#expncd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -708,27 +554,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 465 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `ExpnCd <models.html#expncd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 470
@@ -766,15 +591,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 470 filings are written to the following tables:
-
-* `CvrF470Cd <models.html#cvrf470cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-
 
 
 Form 495
@@ -810,13 +626,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 495 filings are written to the following tables:
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 
@@ -869,23 +678,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 496 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `RcptCd <models.html#rcptcd>`_
-
-* `S496Cd <models.html#s496cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 497
@@ -931,21 +723,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 497 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `S497Cd <models.html#s497cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -995,19 +772,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 498 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `S498Cd <models.html#s498cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 501
@@ -1045,21 +809,12 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 501 filings are written to the following tables:
-
-* `F501502Cd <models.html#f501502cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-
 
 
 Form 502
 ~~~~~~~~~~~~~
 
-Campaign bank account statement
+Campaign Bank Account Statement
 
 Form 502 must be filed within 10 days of opening a campaign bank account at a financial institution in California.
 
@@ -1067,15 +822,6 @@ Form 502 must be filed within 10 days of opening a campaign bank account at a fi
 
 *No PDF available.*
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 502 filings are written to the following tables:
-
-* `F501502Cd <models.html#f501502cd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 
@@ -1115,15 +861,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 511 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-
 
 
 Electronic Form 530
@@ -1161,17 +898,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Electronic Form 530 filings are written to the following tables:
-
-* `RcptCd <models.html#rcptcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-
 
 
 Form 900
@@ -1185,23 +911,6 @@ None
 
 *No PDF available.*
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 900 filings are written to the following tables:
-
-* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
-
-* `RcptCd <models.html#rcptcd>`_
-
-* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
-
-* `ExpnCd <models.html#expncd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
 
 
 
@@ -1246,13 +955,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 700 filings are written to the following tables:
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-
 
 
 
@@ -1266,6 +968,19 @@ Form 601
 Lobbying Firm Registration Statement
 
 Form 601 is filed on a biennial basis by a lobbying firm of individual contract lobbyist wishing to register or renew an existing registration. The form must be filed within 10 days of qualifying as a lobbying firm. Renewal of existing registration is due between November 1 and December 31 of each even-numbered year. This registration is valid for the complete two-year cycle of such session.
+
+Sections
+^^^^^^^^
+
+* Individual Lobbyists (`p. 2 <https://www.documentcloud.org/documents/2781348-601-2014-10.html#document/p2>`_)
+
+
+* Part 2: Section A, Lobbyist Employers (`p. 2-4 <https://www.documentcloud.org/documents/2781348-601-2014-10.html#document/p2>`_)
+
+
+* Part 2: Section B: Subcontracted Clients (`p. 4 <https://www.documentcloud.org/documents/2781348-601-2014-10.html#document/p4>`_)
+
+
 
 
 
@@ -1293,23 +1008,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 601 filings are written to the following tables:
-
-* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
-
-* `Cvr2RegistrationCd <models.html#cvr2registrationcd>`_
-
-* `LobbyAmendmentsCd <models.html#lobbyamendmentscd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -1349,21 +1047,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 602 filings are written to the following tables:
-
-* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
-
-* `Cvr2RegistrationCd <models.html#cvr2registrationcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 603
@@ -1399,23 +1082,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 603 filings are written to the following tables:
-
-* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
-
-* `Cvr2RegistrationCd <models.html#cvr2registrationcd>`_
-
-* `LobbyAmendmentsCd <models.html#lobbyamendmentscd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -1455,19 +1121,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 604 filings are written to the following tables:
-
-* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 605
@@ -1503,15 +1156,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 605 filings are written to the following tables:
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
 
 
 
@@ -1551,19 +1195,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 606 filings are written to the following tables:
-
-* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 607
@@ -1601,19 +1232,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 607 filings are written to the following tables:
-
-* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 615
@@ -1622,6 +1240,16 @@ Form 615
 Lobbyist Report
 
 Form 615 is the quarterly disclosure statement completed by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying coalition. It is not filed on its own, but rather, for paper filers, it is an attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as separate documents.
+
+Sections
+^^^^^^^^
+
+* Part 1, Activity Expenses Paid, Incurred, Arranged or Provided by the Lobbyist (`p. 2-4 <https://www.documentcloud.org/documents/2781341-615-1990.html#document/p2>`_)
+
+
+* Part 2, Campaign Contributions Made or Delivered (`p. 5 <https://www.documentcloud.org/documents/2781341-615-1990.html#document/p5>`_)
+
+
 
 
 
@@ -1651,25 +1279,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 615 filings are written to the following tables:
-
-* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
-
-* `F690P2Cd <models.html#f690p2cd>`_
-
-* `LexpCd <models.html#lexpcd>`_
-
-* `LccmCd <models.html#lccmcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
-
-
 
 
 Form 625
@@ -1678,6 +1287,28 @@ Form 625
 Report of Lobbying Firm
 
 Form 625 is the quarterly disclosure statement filed by a lobbying firm (including individual contract lobbyists) each calendar quarter. If the firm employs one or more in-house lobbyists, then, for paper filers, a separate Form 615 (Lobbyist Report) must be attached for each lobbyist. Electronic or online filers file these as separate documents.
+
+Sections
+^^^^^^^^
+
+* Part 1, Partners, Owners, Officers, and Employees (`p. 2 <https://www.documentcloud.org/documents/2781340-625-1990.html#document/p2>`_)
+
+
+* Part 2, Payments Received in Connection with Lobbying Activity (`p. 4 <https://www.documentcloud.org/documents/2781340-625-1990.html#document/p4>`_)
+
+
+* Part 3 (Payments Made In Connection With Lobbying Activities), Section A: Activity Expenses (`p. 4 <https://www.documentcloud.org/documents/2781340-625-1990.html#document/p4>`_)
+
+
+* Part 3 (Payments Made In Connection With Lobbying Activities), Section B: Payments Made (`p. 8 <https://www.documentcloud.org/documents/2781340-625-1990.html#document/p8>`_)
+
+
+* Part 3 (Payments Made In Connection With Lobbying Activities), Section C: Summary of Payments (`p. 2 <https://www.documentcloud.org/documents/2781340-625-1990.html#document/p2>`_)
+
+
+* Part 4: Campaign Contributions Made (`p. 2 <https://www.documentcloud.org/documents/2781340-625-1990.html#document/p2>`_)
+
+
 
 
 
@@ -1705,29 +1336,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 625 filings are written to the following tables:
-
-* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
-
-* `Cvr2LobbyDisclosureCd <models.html#cvr2lobbydisclosurecd>`_
-
-* `F690P2Cd <models.html#f690p2cd>`_
-
-* `LexpCd <models.html#lexpcd>`_
-
-* `LccmCd <models.html#lccmcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -1767,15 +1375,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Schedule 630 filings are written to the following tables:
-
-* `LattCd <models.html#lattcd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-
 
 
 Form 635
@@ -1784,6 +1383,34 @@ Form 635
 Report of Lobbyist Employer or Report of Lobbying Coalition
 
 Form 635 is the quarterly disclosure statement filed by a lobbyist employer or a lobbying coalition. For employers and lobbying coalitions filing on paper, a separate Form 615 must be completed for each in house lobbyist and attached to Form 635. Electronic or online filers file these as separate documents. This form is also used as a quarterly disclosure statement for a client of a firm which has no in-house lobbyist (also referred to as a non-registered employer).
+
+Sections
+^^^^^^^^
+
+* Part 1: Legislative or State Agency Administrative Actions Actively Lobbied During the Period (`p. 2 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p2>`_)
+
+
+* Part 2: Partners, Owners, and Employees whose "Lobbyist Reports" (Form 615) are Atttached to this Report (`p. 4 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p4>`_)
+
+
+* Part 3 (Payments Made in Connection with Lobbying Activities), Section A: Payments To In-house Employee Lobbyists (`p. 4 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p4>`_)
+
+
+* Part 3 (Payments Made in Connection with Lobbying Activities), Section B: Payments To Lobbying Firms (`p. 4 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p4>`_)
+
+
+* Part 3 (Payments Made in Connection with Lobbying Activities), Section C: Activity Expenses (`p. 6 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p6>`_)
+
+
+* Part 3 (Payments Made in Connection with Lobbying Activities), Section D: Other Payments to Influence Legislative or Administrative Action (`p. 6 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p6>`_)
+
+
+* Part 3 (Payments Made in Connection with Lobbying Activities), Section E: Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before The California Public Utilities Commission (`p. 6 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p6>`_)
+
+
+* Part 4: Campaign Contributions Made (`p. 8 <https://www.documentcloud.org/documents/2781339-635-1993.html#document/p8>`_)
+
+
 
 
 
@@ -1811,29 +1438,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 635 filings are written to the following tables:
-
-* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
-
-* `Cvr2LobbyDisclosureCd <models.html#cvr2lobbydisclosurecd>`_
-
-* `F690P2Cd <models.html#f690p2cd>`_
-
-* `LexpCd <models.html#lexpcd>`_
-
-* `LccmCd <models.html#lccmcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -1873,15 +1477,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Schedule 635C filings are written to the following tables:
-
-* `LattCd <models.html#lattcd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-
 
 
 Schedule 640
@@ -1919,17 +1514,6 @@ Example Form
 
 
 
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Schedule 640 filings are written to the following tables:
-
-* `LattCd <models.html#lattcd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-
 
 
 Form 645
@@ -1938,6 +1522,25 @@ Form 645
 Report of Person Spending $5,000 or More
 
 Form 645 is the quarterly disclosure document filed by a $5,000 filer (person who does not employ a lobbyist or contract with a lobbying firm, but who makes payments to influence legislative or administrative action in aggregation of $5,000 or more in any calendar quarter). The filer does not submit a registration or termination statement, and is only required to file Form 645 in those calendar quarters which $5,000 or more is spent to influence legislative or administrative action. Form 645 must be filed electronically.
+
+Sections
+^^^^^^^^
+
+* Part 1: Legislative or State Agency Administrative Actions Actively Lobbied during the Period (`p. 2 <https://www.documentcloud.org/documents/2781336-645-1993.html#document/p2>`_)
+
+
+* Part 2 (Payments Made this Period), Section A: Activity Expenses (`p. 4 <https://www.documentcloud.org/documents/2781336-645-1993.html#document/p4>`_)
+
+
+* Part 2 (Payments Made this Period), Section B: Other Payments to Influence Legislative or Administrative Action (`p. 4 <https://www.documentcloud.org/documents/2781336-645-1993.html#document/p4>`_)
+
+
+* Part 2 (Payments Made this Period), Section C: Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before the California Public Utilities Commission (`p. 4 <https://www.documentcloud.org/documents/2781336-645-1993.html#document/p4>`_)
+
+
+* Part 3: Campaign Contributions Made (`p. 4 <https://www.documentcloud.org/documents/2781336-645-1993.html#document/p4>`_)
+
+
 
 
 
@@ -1965,27 +1568,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 645 filings are written to the following tables:
-
-* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
-
-* `F690P2Cd <models.html#f690p2cd>`_
-
-* `LexpCd <models.html#lexpcd>`_
-
-* `LccmCd <models.html#lccmcd>`_
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
-
-* `SmryCd <models.html#smrycd>`_
-
-* `TextMemoCd <models.html#textmemocd>`_
-
-* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
 
 
 
@@ -2023,13 +1605,6 @@ Example Form
     </noscript>
 
 
-
-
-Database Tables
-^^^^^^^^^^^^^^^
-Data collected via Form 690 filings are written to the following tables:
-
-* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 
