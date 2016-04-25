@@ -11,8 +11,6 @@ We make every effort to carefully parse and load the bulk CAL-ACCESS data from t
 
 Here's our one exception: We truncate the time part of any datetime field in the raw data, and load these into our models as DateFields. We consider this modification to be of little consequence since, for the most part, these raw datetime fields are effectively date fields anyway, with a time part of 12:00:00 AM for every value. Based on our own inspections of the raw data (details found `here <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues/1457>`_), very little information is being lost and whatever is lost has questionable utility.
 
-Why do we do this? Because datetime values are inherently inaccurate without also knowing the timezone in which they were recorded, and no timezone info is provided either in CAL-ACCESS' raw data dumps or its documentation. Since it's ambiguous data and since so little of it that could be useful, we prefer to spare our users from the hassle of dealing with it.
-
 This application is intended as a base layer below more sophisticated apps,
 like `django-calaccess-campaign-browser <http://django-calaccess-campaign-browser.californiacivicdata.org/>`_,
 that transform the source data and load it into simplified models to serve as a
