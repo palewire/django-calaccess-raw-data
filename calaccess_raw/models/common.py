@@ -226,26 +226,28 @@ class FilerFilingsCd(CalAccessBaseModel):
         help_text="Identifies the period when the filing was recieved."
     )
     FORM_ID_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
-        ('F111', 'Unknown Form'),
-        ('F410 AT', ''),
-        ('F410ATR', ''),
-        ('F415', ''),
-        ('F416', ''),
-        ('F419', ''),
-        ('F420', ''),
-        ('F421', ''),
-        ('F430', ''),
-        ('F440', ''),
+        # for unknown values see
+        # https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues/1459
+        ('F111', 'Unknown'),
+        ('F410 AT', 'Unknown'),
+        ('F410ATR', 'Unknown'),
+        ('F415', 'Unknown'),
+        ('F416', 'Unknown'),
+        ('F419', 'Unknown'),
+        ('F420', 'Unknown'),
+        ('F421', 'Unknown'),
+        ('F430', 'Unknown'),
+        ('F440', 'Unknown'),
         ('F470S', get_filing_form('F470').full_title),
-        ('F480', ''),
-        ('F490', ''),
-        ('F500', ''),
+        ('F480', 'Unknown'), 
+        ('F490', 'Unknown'),
+        ('F500', 'Unknown'),
         ('F501502', 'Forms 501 and/or 502 (Candidate Intention and/or Bank Account Statements)'),
-        ('F555', ''),
-        ('F666', ''),
-        ('F777', ''),
-        ('F888', ''),
-        ('F999', ''),
+        ('F555', 'Unknown'),
+        ('F666', 'Unknown'),
+        ('F777', 'Unknown'),
+        ('F888', 'Unknown'),
+        ('F999', 'Unknown'),
     )
     form_id = fields.CharField(
         max_length=7,
@@ -253,7 +255,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_index=True,
         verbose_name='form type',
         choices=FORM_ID_CHOICES,
-        help_text="Form identification code"
+        help_text="Form identification code",
     )
     filing_sequence = fields.IntegerField(
         db_column='FILING_SEQUENCE',
@@ -510,7 +512,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class HeaderCd(CalAccessBaseModel):
     """
-    Lookup table used to report form 460 information in the AMS.
+    Lookup table used to report Form 460 information in the AMS.
     """
     UNIQUE_KEY = ("LINE_NUMBER", "FORM_ID", "REC_TYPE")
     DOCUMENTCLOUD_PAGES = [
@@ -520,6 +522,21 @@ class HeaderCd(CalAccessBaseModel):
     line_number = fields.IntegerField(
         db_column='LINE_NUMBER',
         help_text="This field is undocumented"
+    )
+    FORM_ID_CHOICES = (
+        ('AF490', 'Form 490, Part A'),
+        ('AP1', 'Allocation Part 1'),
+        ('AP2', 'Allocation Part 2'),
+        ('BF490', 'Form 490, Part B'),
+        ('CF490', 'Form 490, Part C'),
+        ('DF490', 'Form 490, Part D'),
+        ('EF490', 'Form 490, Part E'),
+        ('F450', get_filing_form('F450').full_title),
+        ('F460', get_filing_form('F460').full_title),
+        ('F461', get_filing_form('F461').full_title),
+        ('FF490', 'Form 490, Part F'),
+        ('HF490', 'Form 490, Part H'),
+        ('IF490', 'Form 490, Part I'),
     )
     form_id = fields.CharField(
         db_column='FORM_ID',
@@ -624,15 +641,42 @@ class SmryCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=72, end_page=74),
     ]
     FILING_FORMS = [
-        get_filing_form('F401'),
+        get_filing_form('F401')
+        get_filing_form('F401').get_section('A'),
+        get_filing_form('F401').get_section('B'),
+        get_filing_form('F401').get_section('B-1'),
         get_filing_form('F450'),
-        get_filing_form('F460'),
+        get_filing_form('F460').get_section('A'),
+        get_filing_form('F460').get_section('B1'),
+        get_filing_form('F460').get_section('B2'),
+        get_filing_form('F460').get_section('B3'),
+        get_filing_form('F460').get_section('C'),
+        get_filing_form('F460').get_section('D'),
+        get_filing_form('F460').get_section('E'),
+        get_filing_form('F460').get_section('F'),
+        get_filing_form('F460').get_section('G'),
+        get_filing_form('F460').get_section('H'),
+        get_filing_form('F460').get_section('H1'),
+        get_filing_form('F460').get_section('H2'),
+        get_filing_form('F460').get_section('H3'),
+        get_filing_form('F460').get_section('I'),
         get_filing_form('F461'),
         get_filing_form('F465'),
         get_filing_form('F625'),
+        get_filing_form('F625').get_section('P2'),
+        get_filing_form('F625').get_section('P3A'),
+        get_filing_form('F625').get_section('P3B'),
         get_filing_form('F635'),
+        get_filing_form('F635').get_section('P3A'),
+        get_filing_form('F635').get_section('P3B'),
+        get_filing_form('F635').get_section('P3C'),
+        get_filing_form('F635').get_section('P3D'),
+        get_filing_form('F635').get_section('P3E'),
         get_filing_form('S640'),
         get_filing_form('F645'),
+        get_filing_form('F645').get_section('P2A'),
+        get_filing_form('F645').get_section('P2B'),
+        get_filing_form('F645').get_section('P2C'),
         get_filing_form('F900'),
     ]
     filing_id = fields.IntegerField(
@@ -664,71 +708,7 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS]) + (
-        ('401A', 'Form 401 (Slate mailer organization campaign statement): \
-Schedule A, payments received'),
-        ('401B', 'Form 401 (Slate mailer organization campaign statement): \
-Schedule B, payments made'),
-        ('401B-1', 'Form 401 (Slate mailer organization campaign statement): \
-Schedule B1, payments made by agent or independent contractor'),
-        ('A', 'Form 460 (Recipient committee campaign statement): \
-Schedule A, '),
-        ('B1', 'Form 460 (Recipient committee campaign statement): \
-Schedule B1, '),
-        ('B2', 'Form 460 (Recipient committee campaign statement): \
-Schedule B2, '),
-        ('B3', 'Form 460 (Recipient committee campaign statement): \
-Schedule B3, '),
-        ('C', 'Form 460 (Recipient committee campaign statement): \
-Schedule C, '),
-        ('D', 'Form 460 (Recipient committee campaign statement): \
-Schedule D, '),
-        ('E', 'Form 460 (Recipient committee campaign statement): \
-Schedule E, '),
-        ('F', 'Form 460 (Recipient committee campaign statement): \
-Schedule F, '),
-        ('G', 'Form 460 (Recipient committee campaign statement): \
-Schedule G, '),
-        ('H', 'Form 460 (Recipient committee campaign statement): \
-Schedule H, '),
-        ('H1', 'Form 460 (Recipient committee campaign statement): \
-Schedule H1, '),
-        ('H2', 'Form 460 (Recipient committee campaign statement): \
-Schedule H2, '),
-        ('H3', 'Form 460 (Recipient committee campaign statement): \
-Schedule H3, '),
-        ('I', 'Form 460 (Recipient committee campaign statement): \
-Schedule I, '),
-        ('F625P2', 'Form 625 (Report of lobbying firm): \
-Part 2, payments received in connection with lobbying activity'),
-        ('F625P3A', 'Form 625 (Report of lobbying firm): \
-Part 3A, payments for activity expenses made in connection with \
-lobbying activities'),
-        ('F625P3B', 'Form 625 (Report of lobbying firm): \
-Part 3B, payments to other lobbying firms made in connection with \
-lobbying activities'),
-        ('F635P3A', 'Form 635 (Report of lobbyist employer and lobbying \
-coalition): Part 3A, payments in in-house employee lobbyists'),
-        ('F635P3B', 'Form 635 (Report of lobbyist employer and lobbying \
-coalition): Part 3B, payments to lobbying firms'),
-        ('F635P3C', 'Form 635 (Report of lobbyist employer and lobbying \
-coalition): Part 3C, activity expenses'),
-        ('F635P3D', 'Form 635 (Report of lobbyist employer and lobbying \
-coalition): Part 3D, other payments to influence legislative or \
-administrative action'),
-        ('F635P3E', 'Form 635 (Report of lobbyist employer and lobbying \
-coalition): Part 3E, payments in connection with administrative testimony \
-in ratemaking proceedings before the California Public Utilities Commission'),
-        ('F645P2A', 'Form 645 (Report of person spending $5,000 or more to \
-influence legislative or administrative action): Part 2A, activity expenses'),
-        ('F645P2B', 'Form 645 (Report of person spending $5,000 or more to \
-influence legislative or administrative action): Part 2B, \
-other payments to influence legislative or administrative action'),
-        ('F645P2C', 'Form 645 (Report of person spending $5,000 or more to \
-influence legislative or administrative action): Part 2C, \
-payments in connection with administrative testimony in ratemaking \
-proceedings before the California Public Utilities Commission'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=8,
         db_column='FORM_TYPE',
@@ -821,6 +801,9 @@ class CvrE530Cd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=29, end_page=30),
     ]
+    FILING_ID = [
+        get_filing_form('E530'),
+    ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
@@ -838,11 +821,10 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = (
-        ('E530', 'Form 530 (Issue advocacy report)'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
+        verbose_name='form type',
         max_length=4,
         db_index=True,
         help_text='Name of the source filing form or schedule',
