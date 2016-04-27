@@ -361,6 +361,7 @@ non-registered employer).'
     FilingForm(
         'S635C',
         'Payments Received by Lobbying Coalitions',
+        db_value='S635-C',
         group='LOBBYIST',
         documentcloud_id='2781338-635C-1990',
         description='Form 635-C is filed by a lobbying coalition as an \

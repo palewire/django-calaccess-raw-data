@@ -298,7 +298,7 @@ Form 604. As filed by the lobbyist.',
         help_text='Name of the lobbyist employer or firm. Applies to \
 Forms 604, 606, 607.',
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -655,7 +655,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=10,
         db_column='FORM_TYPE',
@@ -889,7 +889,7 @@ to forms 625, 635, 645.",
         blank=True,
         help_text='Form, employer or coalition business ZIP Code',
     )
-    FORM_TYPE_CHOICES = FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -1229,7 +1229,7 @@ entity is an individual. Only required by Form 635.',
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=4,
         db_column='FORM_TYPE',
@@ -1319,7 +1319,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=9,
         db_column='FORM_TYPE',
@@ -1623,7 +1623,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
     )
-    FORM_TYPE_CHOICES = tuple([(f.id, f.title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         db_column='FORM_TYPE',
         max_length=4,
@@ -1753,11 +1753,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('S630', get_filing_form('S630')),
-        ('S635-C', get_filing_form('S635C')),
-        ('S640', get_filing_form('S640')),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=6,
         db_column='FORM_TYPE',
@@ -1893,13 +1889,12 @@ class LexpCd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=58, end_page=59),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=74, end_page=75),
-
     ]
     FILING_FORMS = [
-        get_filing_form('F615'),
-        get_filing_form('F625'),
-        get_filing_form('F635'),
-        get_filing_form('F645'),
+        get_filing_form('F615').get_section('P1'),
+        get_filing_form('F625').get_section('P3A'),
+        get_filing_form('F635').get_section('P3C'),
+        get_filing_form('F645').get_section('P2A'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1978,12 +1973,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F615P1', 'Form 615/Part 1 - Activity Expenses'),
-        ('F625P3A', 'Form 625/Part 3A - Activity Expenses'),
-        ('F635P3C', 'Form 635/Part 3C - Activity Expenses'),
-        ('F645P2A', 'Form 645/Part 2A - Activity Expenses'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=7,
         db_column='FORM_TYPE',
@@ -2125,10 +2115,10 @@ class LccmCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
     ]
     FILING_FORMS = [
-        get_filing_form('F615'),
-        get_filing_form('F625'),
-        get_filing_form('F635'),
-        get_filing_form('F645'),
+        get_filing_form('F615').get_section('P2'),
+        get_filing_form('F625').get_section('P4B'),
+        get_filing_form('F635').get_section('P4B'),
+        get_filing_form('F645').get_section('P3B'),
     ]
     # acct_name = fields.CharField(
     #   max_length=90,
@@ -2205,12 +2195,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F615P2', 'Form 615/Part 2 - Campaign Contrib'),
-        ('F625P4B', 'Form 625/Part 4B - Campaign Contrib'),
-        ('F635P4B', 'Form 635/Part 4B - Campaign Contrib'),
-        ('F645P3B', 'Form 645/Part 3B - Campaign Contrib'),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=7,
         db_column='FORM_TYPE',
@@ -2344,6 +2329,10 @@ class LempCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=85, end_page=86),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=56, end_page=57)
     ]
+    FILING_FORMS = [
+        get_filing_form('F601').get_section('P2A'),
+        get_filing_form('F601').get_section('P2B'),
+    ]
     agencylist = fields.CharField(
         max_length=200,
         db_column='AGENCYLIST',
@@ -2439,13 +2428,11 @@ Part 2B Client/Employer"
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F601P2A', ''),
-        ('F601P2B', ''),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=7,
         db_column='FORM_TYPE',
+        verbose_name='form type',
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
@@ -4068,7 +4055,7 @@ class LothCd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=67, end_page=68),
     ]
     FILING_FORMS = [
-
+        get_filing_form('F625').get_section('P3B'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4141,12 +4128,11 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text='Firm ZIP Code',
     )
-    FORM_TYPE_CHOICES = (
-        ('F625P3B', ''),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=7,
         db_column='FORM_TYPE',
+        verbose_name='form type',
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
@@ -4240,7 +4226,8 @@ class LpayCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     FILING_FORMS = [
-
+        get_filing_form('F625').get_section('P2'),
+        get_filing_form('F635').get_section('P3B'),
     ]
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
@@ -4375,13 +4362,11 @@ original filing and 1 to 999 amendments.",
         verbose_name='filing ID',
         help_text="Unique filing identificiation number"
     )
-    FORM_TYPE_CHOICES = (
-        ('F625P2', ''),
-        ('F635P3B', ''),
-    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
         max_length=7,
         db_column='FORM_TYPE',
+        verbose_name='form type',
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
