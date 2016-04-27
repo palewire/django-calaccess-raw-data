@@ -191,7 +191,7 @@ class DocumentationTestCase(TestCase):
             x for x in get_model_list() if x.__name__ not in exceptions
         ]
         for m in model_list:
-            field_names = m._meta.get_all_field_names()
+            field_names = m._meta.get_fields()
             if 'form_type' in field_names or 'form_id' in field_names:
                 if m().FILING_FORMS:
                     exists = True
