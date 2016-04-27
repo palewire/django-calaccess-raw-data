@@ -17,14 +17,10 @@ class CalAccessFieldMixin(fields.Field):
         """
         A humanized definition of what's the in field for documentation.
         """
-        s = ""
-        if self.__dict__['_verbose_name']:
-            s += capfirst(self.__dict__['_verbose_name'])
         if self.help_text:
-            if self.__dict__['_verbose_name']:
-                s += ": "
-            s += capfirst(self.help_text)
-        return s.strip()
+            return capfirst(self.help_text)
+        else:
+            return ''
 
     def is_unique_key(self):
         if self.__dict__['db_column'] in self.model().get_unique_key_list():
