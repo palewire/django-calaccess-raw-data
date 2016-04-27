@@ -73,6 +73,23 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 400 filings are written to the following tables:
+
+* `CvrSoCd <models.html#cvrsocd>`_
+
+* `Cvr2SoCd <models.html#cvr2socd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 401
@@ -132,6 +149,29 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 401 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `RcptCd <models.html#rcptcd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `S401Cd <models.html#s401cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 402
@@ -177,6 +217,67 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 402 filings are written to the following tables:
+
+* `CvrSoCd <models.html#cvrsocd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
+
+
+Form 405
+~~~~~~~~~~~~~
+
+Amendment to Campaign Disclosure Statement
+
+Form 405 must be used to amend campaign disclosure statements,except for Statement of Organization, Candidate Intention or Campaign Bank Account (Forms 410, 501, 502).
+
+
+
+Example Form
+^^^^^^^^^^^^
+
+
+.. raw:: html
+
+    <div style="margin-bottom:35px;" id="DV-viewer-2811582-405-1994" class="DV-container"></div>
+    <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
+    <script>
+      DV.load("//www.documentcloud.org/documents/2811582-405-1994.js", {
+      container: "#DV-viewer-2811582-405-1994",
+      width: 680,
+      height: 850,
+      sidebar: false,
+      zoom: 550
+      });
+    </script>
+      <noscript>
+      <a href=https://assets.documentcloud.org/documents/2811582/405-1994.pdf>405-1994 (PDF)</a>
+      <br />
+      <a href=https://assets.documentcloud.org/documents/2811582/405-1994.txt>405-1994 (Text)</a>
+    </noscript>
+
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 405 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
 
 
 
@@ -232,6 +333,25 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 410 filings are written to the following tables:
+
+* `CvrSoCd <models.html#cvrsocd>`_
+
+* `Cvr2SoCd <models.html#cvr2socd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 425
@@ -280,6 +400,25 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 425 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -342,6 +481,31 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 450 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `ExpnCd <models.html#expncd>`_
+
+* `F495P2Cd <models.html#f495p2cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -439,6 +603,37 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 460 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `RcptCd <models.html#rcptcd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `LoanCd <models.html#loancd>`_
+
+* `ExpnCd <models.html#expncd>`_
+
+* `F495P2Cd <models.html#f495p2cd>`_
+
+* `DebtCd <models.html#debtcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 461
@@ -493,6 +688,27 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 461 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `ExpnCd <models.html#expncd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -554,6 +770,29 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 465 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr2CampaignDisclosureCd <models.html#cvr2campaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `ExpnCd <models.html#expncd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 470
@@ -591,6 +830,15 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 470 filings are written to the following tables:
+
+* `CvrF470Cd <models.html#cvrf470cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
 
 
 Form 495
@@ -626,6 +874,13 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 495 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 
@@ -678,6 +933,25 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 496 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `RcptCd <models.html#rcptcd>`_
+
+* `S496Cd <models.html#s496cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 497
@@ -723,6 +997,23 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 497 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `S497Cd <models.html#s497cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -772,6 +1063,23 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 498 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `S498Cd <models.html#s498cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 501
@@ -809,6 +1117,15 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 501 filings are written to the following tables:
+
+* `F501502Cd <models.html#f501502cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
 
 
 Form 502
@@ -822,6 +1139,15 @@ Form 502 must be filed within 10 days of opening a campaign bank account at a fi
 
 *No PDF available.*
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 502 filings are written to the following tables:
+
+* `F501502Cd <models.html#f501502cd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 
@@ -861,6 +1187,17 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 511 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
 
 
 Electronic Form 530
@@ -898,6 +1235,17 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Electronic Form 530 filings are written to the following tables:
+
+* `RcptCd <models.html#rcptcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `CvrE530Cd <models.html#cvre530cd>`_
+
+
 
 
 Form 900
@@ -911,6 +1259,160 @@ None
 
 *No PDF available.*
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 900 filings are written to the following tables:
+
+* `CvrCampaignDisclosureCd <models.html#cvrcampaigndisclosurecd>`_
+
+* `RcptCd <models.html#rcptcd>`_
+
+* `Cvr3VerificationInfoCd <models.html#cvr3verificationinfocd>`_
+
+* `ExpnCd <models.html#expncd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+
+
+
+
+Deprecated Forms
+--------------------------
+
+
+Form 415
+~~~~~~~~~~~~~
+
+Title Unknown
+
+Form 415 was deprecated in or around 2001. The information previously reported on this form is now reported on Form 410 (Statement of Organization Recipient Committee). There are 51,047 filings with this form ID.
+
+
+
+*No PDF available.*
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 415 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
+
+
+Form 416
+~~~~~~~~~~~~~
+
+Title Unknown
+
+Form 416 was deprecated in or around 2001. The information previously reported on this form is now reported on Form 410 (Statement of Organization Recipient Committee). There are 521 filings with this form ID.
+
+
+
+*No PDF available.*
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 416 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
+
+
+Form 419
+~~~~~~~~~~~~~
+
+Ballot Measure Committee Campaign Statement-Long Form
+
+Form 419 was replaced by Form 460 (Recipient Committee Campaign Statement) in or around 2001. There are 2,293 filings with this form ID.
+
+
+
+*No PDF available.*
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 419 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
+
+
+Form 420
+~~~~~~~~~~~~~
+
+Recipient Committee Campaign Statement-Long Form
+
+Form 420 was replaced by Form 460 (Recipient Committee Campaign Statement) in or around 2001. There are 70,704 filings with this form ID.
+
+
+
+*No PDF available.*
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 420 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
+
+
+Form 430
+~~~~~~~~~~~~~
+
+Title Unknown
+
+Form 430 was deprecated in or around 1980. The information previously reported on this form is (probably) now reported on Form 460 (Recipient Committee Campaign Statement). There are 2,293 filings with this form ID.
+
+
+
+*No PDF available.*
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 430 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+
+
+
+Form 490
+~~~~~~~~~~~~~
+
+Officeholder/Candidate Campaign Statement-Long Form
+
+Form 490 was replaced by Form 460 (Recipient Committee Campaign Statement) in or around 2001. There are 58,266 filings with this form ID.
+
+
+
+*No PDF available.*
+
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 490 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 
@@ -953,6 +1455,13 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 700 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 
@@ -1010,6 +1519,27 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 601 filings are written to the following tables:
+
+* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
+
+* `Cvr2RegistrationCd <models.html#cvr2registrationcd>`_
+
+* `LobbyAmendmentsCd <models.html#lobbyamendmentscd>`_
+
+* `LempCd <models.html#lempcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 602
@@ -1045,6 +1575,23 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 602 filings are written to the following tables:
+
+* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
+
+* `Cvr2RegistrationCd <models.html#cvr2registrationcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -1084,6 +1631,25 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 603 filings are written to the following tables:
+
+* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
+
+* `Cvr2RegistrationCd <models.html#cvr2registrationcd>`_
+
+* `LobbyAmendmentsCd <models.html#lobbyamendmentscd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 604
@@ -1119,6 +1685,21 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 604 filings are written to the following tables:
+
+* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -1158,6 +1739,15 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 605 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+
 
 
 Form 606
@@ -1195,6 +1785,21 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 606 filings are written to the following tables:
+
+* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 607
@@ -1230,6 +1835,21 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 607 filings are written to the following tables:
+
+* `CvrRegistrationCd <models.html#cvrregistrationcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -1277,6 +1897,27 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 615 filings are written to the following tables:
+
+* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
+
+* `F690P2Cd <models.html#f690p2cd>`_
+
+* `LexpCd <models.html#lexpcd>`_
+
+* `LccmCd <models.html#lccmcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
 
 
 
@@ -1338,6 +1979,35 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 625 filings are written to the following tables:
+
+* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
+
+* `Cvr2LobbyDisclosureCd <models.html#cvr2lobbydisclosurecd>`_
+
+* `F690P2Cd <models.html#f690p2cd>`_
+
+* `LexpCd <models.html#lexpcd>`_
+
+* `LccmCd <models.html#lccmcd>`_
+
+* `LothCd <models.html#lothcd>`_
+
+* `LpayCd <models.html#lpaycd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Schedule 630
@@ -1373,6 +2043,17 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Schedule 630 filings are written to the following tables:
+
+* `LattCd <models.html#lattcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
 
 
 
@@ -1440,6 +2121,33 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 635 filings are written to the following tables:
+
+* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
+
+* `Cvr2LobbyDisclosureCd <models.html#cvr2lobbydisclosurecd>`_
+
+* `F690P2Cd <models.html#f690p2cd>`_
+
+* `LexpCd <models.html#lexpcd>`_
+
+* `LccmCd <models.html#lccmcd>`_
+
+* `LpayCd <models.html#lpaycd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Schedule 635C
@@ -1477,6 +2185,17 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Schedule 635C filings are written to the following tables:
+
+* `LattCd <models.html#lattcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+
 
 
 Schedule 640
@@ -1512,6 +2231,19 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Schedule 640 filings are written to the following tables:
+
+* `LattCd <models.html#lattcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
 
 
 
@@ -1570,6 +2302,29 @@ Example Form
 
 
 
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 645 filings are written to the following tables:
+
+* `CvrLobbyDisclosureCd <models.html#cvrlobbydisclosurecd>`_
+
+* `F690P2Cd <models.html#f690p2cd>`_
+
+* `LexpCd <models.html#lexpcd>`_
+
+* `LccmCd <models.html#lccmcd>`_
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
+
+* `SmryCd <models.html#smrycd>`_
+
+* `TextMemoCd <models.html#textmemocd>`_
+
+* `EfsFilingLogCd <models.html#efsfilinglogcd>`_
+
+* `ReceivedFilingsCd <models.html#receivedfilingscd>`_
+
+
 
 
 Form 690
@@ -1605,6 +2360,13 @@ Example Form
     </noscript>
 
 
+
+
+Database Tables
+^^^^^^^^^^^^^^^
+Data collected via Form 690 filings are written to the following tables:
+
+* `FilerFilingsCd <models.html#filerfilingscd>`_
 
 
 

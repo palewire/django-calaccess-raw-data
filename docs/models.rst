@@ -16959,6 +16959,16 @@ Source Docs
 
 
 
+Filing Forms
+^^^^^^^^^^^^
+CvrE530Cd contains data collected from the following filing forms, form parts and schedules:
+
+
+
+* `Electronic Form 530 <filingforms.html#electronic-form-530>`_ (Electronic Issue Advocacy Report)
+
+
+
 
 Fields
 ^^^^^^
@@ -17011,7 +17021,7 @@ Fields
             <td>form_type</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>Name of the source filing form or schedule</td>
+            <td>Form type: Name of the source filing form or schedule</td>
         </tr>
     
     
@@ -17315,7 +17325,7 @@ Look-up Codes
     
         <tr>
             <td>E530</td>
-            <td>Form 530 (Issue advocacy report)</td>
+            <td>Electronic Form 530: Electronic Issue Advocacy Report</td>
         </tr>
     
     </tbody>
@@ -18141,7 +18151,27 @@ FilerFilingsCd contains data collected from the following filing forms, form par
 
 
 
+* `Form 415 <filingforms.html#form-415>`_ (Title Unknown)
+
+
+
+* `Form 416 <filingforms.html#form-416>`_ (Title Unknown)
+
+
+
+* `Form 419 <filingforms.html#form-419>`_ (Ballot Measure Committee Campaign Statement-Long Form)
+
+
+
+* `Form 420 <filingforms.html#form-420>`_ (Recipient Committee Campaign Statement-Long Form)
+
+
+
 * `Form 425 <filingforms.html#form-425>`_ (Semi-Annual Statement of no Activity)
+
+
+
+* `Form 430 <filingforms.html#form-430>`_ (Title Unknown)
 
 
 
@@ -18162,6 +18192,10 @@ FilerFilingsCd contains data collected from the following filing forms, form par
 
 
 * `Form 470 <filingforms.html#form-470>`_ (Officeholder and Candidate Campaign Statement, Short Form)
+
+
+
+* `Form 490 <filingforms.html#form-490>`_ (Officeholder/Candidate Campaign Statement-Long Form)
 
 
 
@@ -18435,6 +18469,15 @@ Look-up Codes
 *form_id*
 
 
+*CalAccessTablesWeb*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711614-CalAccessTablesWeb/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711614/pages/CalAccessTablesWeb-p65-thumbnail.gif'></a><p>p. 65</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -18473,8 +18516,33 @@ Look-up Codes
         </tr>
     
         <tr>
+            <td>F415</td>
+            <td>Form 415: Title Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F416</td>
+            <td>Form 416: Title Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F419</td>
+            <td>Form 419: Ballot Measure Committee Campaign Statement-Long Form</td>
+        </tr>
+    
+        <tr>
+            <td>F420</td>
+            <td>Form 420: Recipient Committee Campaign Statement-Long Form</td>
+        </tr>
+    
+        <tr>
             <td>F425</td>
             <td>Form 425: Semi-Annual Statement of no Activity</td>
+        </tr>
+    
+        <tr>
+            <td>F430</td>
+            <td>Form 430: Title Unknown</td>
         </tr>
     
         <tr>
@@ -18500,6 +18568,11 @@ Look-up Codes
         <tr>
             <td>F470</td>
             <td>Form 470: Officeholder and Candidate Campaign Statement, Short Form</td>
+        </tr>
+    
+        <tr>
+            <td>F490</td>
+            <td>Form 490: Officeholder/Candidate Campaign Statement-Long Form</td>
         </tr>
     
         <tr>
@@ -18598,7 +18671,7 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>S635C</td>
+            <td>S635-C</td>
             <td>Schedule 635C: Payments Received by Lobbying Coalitions</td>
         </tr>
     
@@ -18629,52 +18702,27 @@ Look-up Codes
     
         <tr>
             <td>F111</td>
-            <td>Unknown Form</td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F410 AT</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F410ATR</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F415</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F416</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F419</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F420</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F421</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F430</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F440</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
@@ -18684,17 +18732,12 @@ Look-up Codes
     
         <tr>
             <td>F480</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>F490</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F500</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
@@ -18704,27 +18747,27 @@ Look-up Codes
     
         <tr>
             <td>F555</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F666</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F777</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F888</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
         <tr>
             <td>F999</td>
-            <td></td>
+            <td>Unknown</td>
         </tr>
     
     </tbody>
@@ -19612,7 +19655,7 @@ Look-up Codes
 HeaderCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lookup table used to report form 460 information in the AMS.
+Lookup table used to report Form 460 information in the AMS.
 
 **Sample:** `HEADER_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/HEADER_CD.TSV>`_
 
@@ -19855,6 +19898,13 @@ SmryCd contains data collected from the following filing forms, form parts and s
 
 * `Form 401 <filingforms.html#form-401>`_ (Slate Mailer Organization Campaign Statement)
 
+    * Schedule A, Payments Received
+
+    * Schedule B, Payments Made
+
+    * Schedule B-1, Payments Made by Agent or Independent Contractor
+
+
 
 
 * `Form 450 <filingforms.html#form-450>`_ (Recipient Committee Campaign Disclosure Statement - Short Form)
@@ -19862,6 +19912,35 @@ SmryCd contains data collected from the following filing forms, form parts and s
 
 
 * `Form 460 <filingforms.html#form-460>`_ (Recipient Committee Campaign Statement)
+
+    * Schedule A, Monetary Contributions Received
+
+    * Schedule B - Part 1, Loans Received
+
+    * Schedule B - Part 2, Loan Guarantors
+
+    * Schedule B - Part 3, Outstanding Bal
+
+    * Schedule C, Non-Monetary Contributions Received
+
+    * Schedule D, Summary of Expenditures Supporting / Opposing Other Candidates, Measures and Committees
+
+    * Schedule E, Payments Made
+
+    * Schedule F, Accrued Expenses (Unpaid Bills)
+
+    * Schedule G, Payments Made by an Agent or Independent Contractor (on Behalf of This Committee)
+
+    * Schedule H, Loans Made to Others
+
+    * Schedule H - Part 1, Loans Made
+
+    * Schedule H- Part 2, Repayments Rcvd
+
+    * Schedule H - Part 3, Outstanding Loans
+
+    * Schedule I, miscellanous increases to cash
+
 
 
 
@@ -19875,13 +19954,38 @@ SmryCd contains data collected from the following filing forms, form parts and s
 
 * `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
 
+    * Part 2, Payments Received in Connection with Lobbying Activity
+
+    * Part 3 (Payments Made In Connection With Lobbying Activities), Section A: Activity Expenses
+
+    * Part 3 (Payments Made In Connection With Lobbying Activities), Section B: Payments Made
+
+
 
 
 * `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
 
+    * Part 3 (Payments Made in Connection with Lobbying Activities), Section A: Payments To In-house Employee Lobbyists
+
+    * Part 3 (Payments Made in Connection with Lobbying Activities), Section B: Payments To Lobbying Firms
+
+    * Part 3 (Payments Made in Connection with Lobbying Activities), Section C: Activity Expenses
+
+    * Part 3 (Payments Made in Connection with Lobbying Activities), Section D: Other Payments to Influence Legislative or Administrative Action
+
+    * Part 3 (Payments Made in Connection with Lobbying Activities), Section E: Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before The California Public Utilities Commission
+
+
 
 
 * `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+
+    * Part 2 (Payments Made this Period), Section A: Activity Expenses
+
+    * Part 2 (Payments Made this Period), Section B: Other Payments to Influence Legislative or Administrative Action
+
+    * Part 2 (Payments Made this Period), Section C: Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before the California Public Utilities Commission
+
 
 
 
@@ -20065,192 +20169,187 @@ Look-up Codes
     
         <tr>
             <td>F401</td>
-            <td>Slate Mailer Organization Campaign Statement</td>
+            <td>Form 401: Slate Mailer Organization Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F401A</td>
+            <td>Form 401 (Slate Mailer Organization Campaign Statement): Schedule A, Payments Received</td>
+        </tr>
+    
+        <tr>
+            <td>F401B</td>
+            <td>Form 401 (Slate Mailer Organization Campaign Statement): Schedule B, Payments Made</td>
+        </tr>
+    
+        <tr>
+            <td>F401B-1</td>
+            <td>Form 401 (Slate Mailer Organization Campaign Statement): Schedule B-1, Payments Made by Agent or Independent Contractor</td>
         </tr>
     
         <tr>
             <td>F450</td>
-            <td>Recipient Committee Campaign Disclosure Statement - Short Form</td>
-        </tr>
-    
-        <tr>
-            <td>F460</td>
-            <td>Recipient Committee Campaign Statement</td>
-        </tr>
-    
-        <tr>
-            <td>F461</td>
-            <td>Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
-        </tr>
-    
-        <tr>
-            <td>F465</td>
-            <td>Supplemental Independent Expenditure Report</td>
-        </tr>
-    
-        <tr>
-            <td>F625</td>
-            <td>Report of Lobbying Firm</td>
-        </tr>
-    
-        <tr>
-            <td>F635</td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
-        </tr>
-    
-        <tr>
-            <td>S640</td>
-            <td>Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
-        </tr>
-    
-        <tr>
-            <td>F645</td>
-            <td>Report of Person Spending $5,000 or More</td>
-        </tr>
-    
-        <tr>
-            <td>F900</td>
-            <td>Public employee&#39;s retirement board, candidate campaign statement</td>
-        </tr>
-    
-        <tr>
-            <td>401A</td>
-            <td>Form 401 (Slate mailer organization campaign statement): Schedule A, payments received</td>
-        </tr>
-    
-        <tr>
-            <td>401B</td>
-            <td>Form 401 (Slate mailer organization campaign statement): Schedule B, payments made</td>
-        </tr>
-    
-        <tr>
-            <td>401B-1</td>
-            <td>Form 401 (Slate mailer organization campaign statement): Schedule B1, payments made by agent or independent contractor</td>
+            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
         </tr>
     
         <tr>
             <td>A</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule A, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule A, Monetary Contributions Received</td>
         </tr>
     
         <tr>
             <td>B1</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule B1, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule B - Part 1, Loans Received</td>
         </tr>
     
         <tr>
             <td>B2</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule B2, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule B - Part 2, Loan Guarantors</td>
         </tr>
     
         <tr>
             <td>B3</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule B3, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule B - Part 3, Outstanding Bal</td>
         </tr>
     
         <tr>
             <td>C</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule C, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule C, Non-Monetary Contributions Received</td>
         </tr>
     
         <tr>
             <td>D</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule D, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule D, Summary of Expenditures Supporting / Opposing Other Candidates, Measures and Committees</td>
         </tr>
     
         <tr>
             <td>E</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule E, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule E, Payments Made</td>
         </tr>
     
         <tr>
             <td>F</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule F, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule F, Accrued Expenses (Unpaid Bills)</td>
         </tr>
     
         <tr>
             <td>G</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule G, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule G, Payments Made by an Agent or Independent Contractor (on Behalf of This Committee)</td>
         </tr>
     
         <tr>
             <td>H</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H, Loans Made to Others</td>
         </tr>
     
         <tr>
             <td>H1</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H1, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H - Part 1, Loans Made</td>
         </tr>
     
         <tr>
             <td>H2</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H2, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H- Part 2, Repayments Rcvd</td>
         </tr>
     
         <tr>
             <td>H3</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule H3, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule H - Part 3, Outstanding Loans</td>
         </tr>
     
         <tr>
             <td>I</td>
-            <td>Form 460 (Recipient committee campaign statement): Schedule I, </td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule I, miscellanous increases to cash</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Form 461: Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465: Supplemental Independent Expenditure Report</td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td>Form 625: Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F625P2</td>
-            <td>Form 625 (Report of lobbying firm): Part 2, payments received in connection with lobbying activity</td>
+            <td>Form 625 (Report of Lobbying Firm): Part 2, Payments Received in Connection with Lobbying Activity</td>
         </tr>
     
         <tr>
             <td>F625P3A</td>
-            <td>Form 625 (Report of lobbying firm): Part 3A, payments for activity expenses made in connection with lobbying activities</td>
+            <td>Form 625 (Report of Lobbying Firm): Part 3 (Payments Made In Connection With Lobbying Activities), Section A: Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F625P3B</td>
-            <td>Form 625 (Report of lobbying firm): Part 3B, payments to other lobbying firms made in connection with lobbying activities</td>
+            <td>Form 625 (Report of Lobbying Firm): Part 3 (Payments Made In Connection With Lobbying Activities), Section B: Payments Made</td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td>Form 635: Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>F635P3A</td>
-            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3A, payments in in-house employee lobbyists</td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section A: Payments To In-house Employee Lobbyists</td>
         </tr>
     
         <tr>
             <td>F635P3B</td>
-            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3B, payments to lobbying firms</td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section B: Payments To Lobbying Firms</td>
         </tr>
     
         <tr>
             <td>F635P3C</td>
-            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3C, activity expenses</td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section C: Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F635P3D</td>
-            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3D, other payments to influence legislative or administrative action</td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section D: Other Payments to Influence Legislative or Administrative Action</td>
         </tr>
     
         <tr>
             <td>F635P3E</td>
-            <td>Form 635 (Report of lobbyist employer and lobbying coalition): Part 3E, payments in connection with administrative testimony in ratemaking proceedings before the California Public Utilities Commission</td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section E: Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before The California Public Utilities Commission</td>
+        </tr>
+    
+        <tr>
+            <td>S640</td>
+            <td>Schedule 640: Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td>Form 645: Report of Person Spending $5,000 or More</td>
         </tr>
     
         <tr>
             <td>F645P2A</td>
-            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2A, activity expenses</td>
+            <td>Form 645 (Report of Person Spending $5,000 or More): Part 2 (Payments Made this Period), Section A: Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F645P2B</td>
-            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2B, other payments to influence legislative or administrative action</td>
+            <td>Form 645 (Report of Person Spending $5,000 or More): Part 2 (Payments Made this Period), Section B: Other Payments to Influence Legislative or Administrative Action</td>
         </tr>
     
         <tr>
             <td>F645P2C</td>
-            <td>Form 645 (Report of person spending $5,000 or more to influence legislative or administrative action): Part 2C, payments in connection with administrative testimony in ratemaking proceedings before the California Public Utilities Commission</td>
+            <td>Form 645 (Report of Person Spending $5,000 or More): Part 2 (Payments Made this Period), Section C: Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before the California Public Utilities Commission</td>
+        </tr>
+    
+        <tr>
+            <td>F900</td>
+            <td>Form 900: Public employee&#39;s retirement board, candidate campaign statement</td>
         </tr>
     
     </tbody>
@@ -20479,6 +20578,22 @@ Source Docs
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/89.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p89-thumbnail.gif'></a><p>p. 89</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/90.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p90-thumbnail.gif'></a><p>p. 90</p></div></div>
+
+
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/15.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p15-thumbnail.gif'></a><p>p. 15</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/16.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p16-thumbnail.gif'></a><p>p. 16</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p13-thumbnail.gif'></a><p>p. 13</p></div></div>
 
 
 
@@ -20726,6 +20841,29 @@ Look-up Codes
 *form_type*
 
 
+*MapCalFormat2Fields*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/90.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p90-thumbnail.gif'></a><p>p. 90</p></div></div>
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/16.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p16-thumbnail.gif'></a><p>p. 16</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p13-thumbnail.gif'></a><p>p. 13</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -20737,6 +20875,131 @@ Look-up Codes
         </tr>
     </thead>
     <tbody valign="top">
+    
+        <tr>
+            <td>F401</td>
+            <td>Form 401: Slate Mailer Organization Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F405</td>
+            <td>Form 405: Amendment to Campaign Disclosure Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F410</td>
+            <td>Form 410: Statement of Organization Recipient Committee</td>
+        </tr>
+    
+        <tr>
+            <td>F425</td>
+            <td>Form 425: Semi-Annual Statement of no Activity</td>
+        </tr>
+    
+        <tr>
+            <td>F450</td>
+            <td>Form 450: Recipient Committee Campaign Disclosure Statement - Short Form</td>
+        </tr>
+    
+        <tr>
+            <td>F460</td>
+            <td>Form 460: Recipient Committee Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F461</td>
+            <td>Form 461: Independent Expenditure Committee &amp; Major Donor Committee Campaign Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F465</td>
+            <td>Form 465: Supplemental Independent Expenditure Report</td>
+        </tr>
+    
+        <tr>
+            <td>F496</td>
+            <td>Form 496: Late Independent Expenditure Report</td>
+        </tr>
+    
+        <tr>
+            <td>F497</td>
+            <td>Form 497: Late Contribution Report</td>
+        </tr>
+    
+        <tr>
+            <td>F498</td>
+            <td>Form 498: Slate Mailer Late Payment Report</td>
+        </tr>
+    
+        <tr>
+            <td>F601</td>
+            <td>Form 601: Lobbying Firm Registration Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F602</td>
+            <td>Form 602: Lobbying Firm Activity Authorization</td>
+        </tr>
+    
+        <tr>
+            <td>F603</td>
+            <td>Form 603: Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F604</td>
+            <td>Form 604: Lobbyist Certification Statement</td>
+        </tr>
+    
+        <tr>
+            <td>F605</td>
+            <td>Form 605: Amendment to Registration, Lobbying Firm, Lobbyist Employer, Lobbying Coalition</td>
+        </tr>
+    
+        <tr>
+            <td>F606</td>
+            <td>Form 606: Notice of Termination</td>
+        </tr>
+    
+        <tr>
+            <td>F607</td>
+            <td>Form 607: Notice of Withdrawal</td>
+        </tr>
+    
+        <tr>
+            <td>F615</td>
+            <td>Form 615: Lobbyist Report</td>
+        </tr>
+    
+        <tr>
+            <td>F625</td>
+            <td>Form 625: Report of Lobbying Firm</td>
+        </tr>
+    
+        <tr>
+            <td>F635</td>
+            <td>Form 635: Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+        </tr>
+    
+        <tr>
+            <td>F645</td>
+            <td>Form 645: Report of Person Spending $5,000 or More</td>
+        </tr>
+    
+        <tr>
+            <td>S630</td>
+            <td>Schedule 630: Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) </td>
+        </tr>
+    
+        <tr>
+            <td>S635-C</td>
+            <td>Schedule 635C: Payments Received by Lobbying Coalitions</td>
+        </tr>
+    
+        <tr>
+            <td>S640</td>
+            <td>Schedule 640: Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
+        </tr>
     
         <tr>
             <td>410</td>
@@ -20914,163 +21177,163 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>S635-C</td>
+            <td>S635C</td>
             <td>Schedule 635C: Payments Received by Lobbying Coalitions</td>
         </tr>
     
         <tr>
             <td>A</td>
-            <td></td>
+            <td>Schedule A of any form (e.g., Forms 401 or 460)</td>
         </tr>
     
         <tr>
             <td>A4</td>
-            <td></td>
+            <td>Schedule A of any form (e.g., Forms 401 or 460)</td>
         </tr>
     
         <tr>
             <td>A6</td>
-            <td></td>
+            <td>Schedule A of any form (e.g., Forms 401 or 460)</td>
         </tr>
     
         <tr>
             <td>B</td>
-            <td></td>
+            <td>Schedule B of any form (e.g., Forms 401 or 460)</td>
         </tr>
     
         <tr>
             <td>B1</td>
-            <td></td>
+            <td>Schedule B, Part 1 of Forms 401 or 460</td>
         </tr>
     
         <tr>
             <td>B2</td>
-            <td></td>
+            <td>Schedule B, Part 2 of Forms 401 or 460</td>
         </tr>
     
         <tr>
             <td>B3</td>
-            <td></td>
+            <td>Schedule B, Part 3 of Forms 401 or 460</td>
         </tr>
     
         <tr>
             <td>C</td>
-            <td></td>
+            <td>Schedule C of any form (e.g., Forms 401 or F460)</td>
         </tr>
     
         <tr>
             <td>COMMENTS</td>
-            <td></td>
+            <td>Possibly comments by FPPC for any form?</td>
         </tr>
     
         <tr>
             <td>CVR</td>
-            <td></td>
+            <td>Cover page for any form (e.g., Forms 460, 461 or 497)</td>
         </tr>
     
         <tr>
             <td>D</td>
-            <td></td>
+            <td>Schedule D of any form (e.g., Forms 401, 460 or 461)</td>
         </tr>
     
         <tr>
             <td>DEBTF</td>
-            <td></td>
+            <td>Form 460 (Recipient Committee Campaign Statement): Schedule F, Accrued Expenses (Unpaid Bills)</td>
         </tr>
     
         <tr>
             <td>E</td>
-            <td></td>
+            <td>Schedule E of any form (e.g., Forms 460, 461 or 465)</td>
         </tr>
     
         <tr>
             <td>EXPNT</td>
-            <td></td>
+            <td>Expenditures outlined on any form (e.g. Form 460)</td>
         </tr>
     
         <tr>
             <td>F</td>
-            <td></td>
+            <td>Schedule F of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>G</td>
-            <td></td>
+            <td>Schedule G of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>H</td>
-            <td></td>
+            <td>Schedule H of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>H1</td>
-            <td></td>
+            <td>Schedule H, Part 1 of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>H2</td>
-            <td></td>
+            <td>Schedule H2, Part 2 of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>H3</td>
-            <td></td>
+            <td>Schedule H3, Part 3 of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>I</td>
-            <td></td>
+            <td>Schedule I of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>PT5</td>
-            <td></td>
+            <td>Part 5 of any form (e.g., Form 461</td>
         </tr>
     
         <tr>
             <td>RCPTB1</td>
-            <td></td>
+            <td>Schedule B, Part 1 of any form (e.g., Form 460</td>
         </tr>
     
         <tr>
             <td>RCPTC</td>
-            <td></td>
+            <td>Schedule C of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>RCPTI</td>
-            <td></td>
+            <td>Schedule I of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>SCH A</td>
-            <td></td>
+            <td>Schedule A of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>SF</td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td>SMRY</td>
-            <td></td>
+            <td>Schedule F of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>SPLT</td>
-            <td></td>
+            <td>A memo that applies to multiple items?</td>
+        </tr>
+    
+        <tr>
+            <td>SMRY</td>
+            <td>Summary section of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>SUM</td>
-            <td></td>
+            <td>Summary section of any form (e.g., Form 460)</td>
         </tr>
     
         <tr>
             <td>SUMMARY</td>
-            <td></td>
+            <td>Summary section of any form (e.g., Form 460)</td>
         </tr>
     
     </tbody>
@@ -21365,12 +21628,12 @@ Look-up Codes
     
         <tr>
             <td>F625</td>
-            <td>Report of Lobbying Firm</td>
+            <td>Form 625: Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+            <td>Form 635: Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
     </tbody>
@@ -21659,17 +21922,17 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Lobbying Firm Registration Statement</td>
+            <td>Form 601: Lobbying Firm Registration Statement</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td>Lobbying Firm Activity Authorization</td>
+            <td>Form 602: Lobbying Firm Activity Authorization</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+            <td>Form 603: Lobbyist Employer or Lobbying Coalition Registration Statement</td>
         </tr>
     
     </tbody>
@@ -22387,22 +22650,22 @@ Look-up Codes
     
         <tr>
             <td>F615</td>
-            <td>Lobbyist Report</td>
+            <td>Form 615: Lobbyist Report</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td>Report of Lobbying Firm</td>
+            <td>Form 625: Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+            <td>Form 635: Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>F645</td>
-            <td>Report of Person Spending $5,000 or More</td>
+            <td>Form 645: Report of Person Spending $5,000 or More</td>
         </tr>
     
     </tbody>
@@ -23333,32 +23596,32 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Lobbying Firm Registration Statement</td>
+            <td>Form 601: Lobbying Firm Registration Statement</td>
         </tr>
     
         <tr>
             <td>F602</td>
-            <td>Lobbying Firm Activity Authorization</td>
+            <td>Form 602: Lobbying Firm Activity Authorization</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+            <td>Form 603: Lobbyist Employer or Lobbying Coalition Registration Statement</td>
         </tr>
     
         <tr>
             <td>F604</td>
-            <td>Lobbyist Certification Statement</td>
+            <td>Form 604: Lobbyist Certification Statement</td>
         </tr>
     
         <tr>
             <td>F606</td>
-            <td>Notice of Termination</td>
+            <td>Form 606: Notice of Termination</td>
         </tr>
     
         <tr>
             <td>F607</td>
-            <td>Notice of Withdrawal</td>
+            <td>Form 607: Notice of Withdrawal</td>
         </tr>
     
     </tbody>
@@ -23769,22 +24032,22 @@ Look-up Codes
     
         <tr>
             <td>F615</td>
-            <td>Lobbyist Report</td>
+            <td>Form 615: Lobbyist Report</td>
         </tr>
     
         <tr>
             <td>F625</td>
-            <td>Report of Lobbying Firm</td>
+            <td>Form 625: Report of Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>F635</td>
-            <td>Report of Lobbyist Employer or Report of Lobbying Coalition</td>
+            <td>Form 635: Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>F645</td>
-            <td>Report of Person Spending $5,000 or More</td>
+            <td>Form 645: Report of Person Spending $5,000 or More</td>
         </tr>
     
     </tbody>
@@ -24163,17 +24426,17 @@ Look-up Codes
     
         <tr>
             <td>S630</td>
-            <td>S630</td>
+            <td>Schedule 630: Payments Made to Lobbying Coalitions (Attachment to Form 625 or 635) </td>
         </tr>
     
         <tr>
             <td>S635-C</td>
-            <td>S635C</td>
+            <td>Schedule 635C: Payments Received by Lobbying Coalitions</td>
         </tr>
     
         <tr>
             <td>S640</td>
-            <td>S640</td>
+            <td>Schedule 640: Governmental Agencies Reporting (Attachment to Form 635 or Form 645)</td>
         </tr>
     
     </tbody>
@@ -24259,19 +24522,19 @@ LccmCd contains data collected from the following filing forms, form parts and s
 
 
 
-* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report): Part 2, Campaign Contributions Made or Delivered
 
 
 
-* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm): Part 4: Campaign Contributions Made
 
 
 
-* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 4: Campaign Contributions Made
 
 
 
-* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More): Part 3: Campaign Contributions Made
 
 
 
@@ -24590,22 +24853,22 @@ Look-up Codes
     
         <tr>
             <td>F615P2</td>
-            <td>Form 615/Part 2 - Campaign Contrib</td>
+            <td>Form 615 (Lobbyist Report): Part 2, Campaign Contributions Made or Delivered</td>
         </tr>
     
         <tr>
             <td>F625P4B</td>
-            <td>Form 625/Part 4B - Campaign Contrib</td>
+            <td>Form 625 (Report of Lobbying Firm): Part 4: Campaign Contributions Made</td>
         </tr>
     
         <tr>
             <td>F635P4B</td>
-            <td>Form 635/Part 4B - Campaign Contrib</td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 4: Campaign Contributions Made</td>
         </tr>
     
         <tr>
             <td>F645P3B</td>
-            <td>Form 645/Part 3B - Campaign Contrib</td>
+            <td>Form 645 (Report of Person Spending $5,000 or More): Part 3: Campaign Contributions Made</td>
         </tr>
     
     </tbody>
@@ -24664,6 +24927,21 @@ Source Docs
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/56.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p56-thumbnail.gif'></a><p>p. 56</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
+
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+LempCd contains data collected from the following filing forms, form parts and schedules:
+
+
+
+* `Form 601 <filingforms.html#form-601>`_ (Lobbying Firm Registration Statement)
+
+    * Part 2: Section A, Lobbyist Employers
+
+    * Part 2: Section B: Subcontracted Clients
 
 
 
@@ -24828,7 +25106,7 @@ Fields
             <td>form_type</td>
             <td>String (up to 7)</td>
             <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
+            <td>Form type: Name of the source filing form or schedule</td>
         </tr>
     
     
@@ -24928,12 +25206,12 @@ Look-up Codes
     
         <tr>
             <td>F601P2A</td>
-            <td></td>
+            <td>Form 601 (Lobbying Firm Registration Statement): Part 2: Section A, Lobbyist Employers</td>
         </tr>
     
         <tr>
             <td>F601P2B</td>
-            <td></td>
+            <td>Form 601 (Lobbying Firm Registration Statement): Part 2: Section B: Subcontracted Clients</td>
         </tr>
     
     </tbody>
@@ -25019,19 +25297,19 @@ LexpCd contains data collected from the following filing forms, form parts and s
 
 
 
-* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report)
+* `Form 615 <filingforms.html#form-615>`_ (Lobbyist Report): Part 1, Activity Expenses Paid, Incurred, Arranged or Provided by the Lobbyist
 
 
 
-* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm)
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm): Part 3 (Payments Made In Connection With Lobbying Activities), Section A: Activity Expenses
 
 
 
-* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition)
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section C: Activity Expenses
 
 
 
-* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More)
+* `Form 645 <filingforms.html#form-645>`_ (Report of Person Spending $5,000 or More): Part 2 (Payments Made this Period), Section A: Activity Expenses
 
 
 
@@ -25354,22 +25632,22 @@ Look-up Codes
     
         <tr>
             <td>F615P1</td>
-            <td>Form 615/Part 1 - Activity Expenses</td>
+            <td>Form 615 (Lobbyist Report): Part 1, Activity Expenses Paid, Incurred, Arranged or Provided by the Lobbyist</td>
         </tr>
     
         <tr>
             <td>F625P3A</td>
-            <td>Form 625/Part 3A - Activity Expenses</td>
+            <td>Form 625 (Report of Lobbying Firm): Part 3 (Payments Made In Connection With Lobbying Activities), Section A: Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F635P3C</td>
-            <td>Form 635/Part 3C - Activity Expenses</td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section C: Activity Expenses</td>
         </tr>
     
         <tr>
             <td>F645P2A</td>
-            <td>Form 645/Part 2A - Activity Expenses</td>
+            <td>Form 645 (Report of Person Spending $5,000 or More): Part 2 (Payments Made this Period), Section A: Activity Expenses</td>
         </tr>
     
     </tbody>
@@ -25953,12 +26231,12 @@ Look-up Codes
     
         <tr>
             <td>F601</td>
-            <td>Lobbying Firm Registration Statement</td>
+            <td>Form 601: Lobbying Firm Registration Statement</td>
         </tr>
     
         <tr>
             <td>F603</td>
-            <td>Lobbyist Employer or Lobbying Coalition Registration Statement</td>
+            <td>Form 603: Lobbyist Employer or Lobbying Coalition Registration Statement</td>
         </tr>
     
     </tbody>
@@ -29304,6 +29582,16 @@ Source Docs
 
 
 
+Filing Forms
+^^^^^^^^^^^^
+LothCd contains data collected from the following filing forms, form parts and schedules:
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm): Part 3 (Payments Made In Connection With Lobbying Activities), Section B: Payments Made
+
+
+
 
 Fields
 ^^^^^^
@@ -29410,7 +29698,7 @@ Fields
             <td>form_type</td>
             <td>String (up to 7)</td>
             <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
+            <td>Form type: Name of the source filing form or schedule</td>
         </tr>
     
     
@@ -29528,7 +29816,7 @@ Look-up Codes
     
         <tr>
             <td>F625P3B</td>
-            <td></td>
+            <td>Form 625 (Report of Lobbying Firm): Part 3 (Payments Made In Connection With Lobbying Activities), Section B: Payments Made</td>
         </tr>
     
     </tbody>
@@ -29589,6 +29877,20 @@ Source Docs
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/69.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p69-thumbnail.gif'></a><p>p. 69</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/70.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p70-thumbnail.gif'></a><p>p. 70</p></div></div>
 
+
+
+
+Filing Forms
+^^^^^^^^^^^^
+LpayCd contains data collected from the following filing forms, form parts and schedules:
+
+
+
+* `Form 625 <filingforms.html#form-625>`_ (Report of Lobbying Firm): Part 2, Payments Received in Connection with Lobbying Activity
+
+
+
+* `Form 635 <filingforms.html#form-635>`_ (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section B: Payments To Lobbying Firms
 
 
 
@@ -29770,7 +30072,7 @@ Fields
             <td>form_type</td>
             <td>String (up to 7)</td>
             <td>Yes</td>
-            <td>Name of the source filing form or schedule</td>
+            <td>Form type: Name of the source filing form or schedule</td>
         </tr>
     
     
@@ -29919,12 +30221,12 @@ Look-up Codes
     
         <tr>
             <td>F625P2</td>
-            <td></td>
+            <td>Form 625 (Report of Lobbying Firm): Part 2, Payments Received in Connection with Lobbying Activity</td>
         </tr>
     
         <tr>
             <td>F635P3B</td>
-            <td></td>
+            <td>Form 635 (Report of Lobbyist Employer or Report of Lobbying Coalition): Part 3 (Payments Made in Connection with Lobbying Activities), Section B: Payments To Lobbying Firms</td>
         </tr>
     
     </tbody>
