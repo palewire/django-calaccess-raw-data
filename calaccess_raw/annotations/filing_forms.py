@@ -47,6 +47,36 @@ $2,000 in contributions. If the committee has not yet reached the $2,000 \
 threshold, the not yet qualified box should be checked.',
     ),
     FilingForm(
+        'F415',
+        'Title Unknown',
+        group='Deprecated',
+        description='Form 415 was deprecated in or around 2001. The information \
+previously reported on this form is now reported on Form 410 (Statement of \
+Organization Recipient Committee). There are 51,047 filings with this form ID.',
+    ),
+    FilingForm(
+        'F416',
+        'Title Unknown',
+        group='Deprecated',
+        description='Form 416 was deprecated in or around 2001. The information \
+previously reported on this form is now reported on Form 410 (Statement of \
+Organization Recipient Committee). There are 521 filings with this form ID.',
+    ),
+    FilingForm(
+        'F419',
+        'Ballot Measure Committee Campaign Statement-Long Form',
+        group='Deprecated',
+        description='Form 419 was replaced by Form 460 (Recipient Committee \
+Campaign Statement) in or around 2001. There are 2,293 filings with this form ID.',
+    ),
+    FilingForm(
+        'F420',
+        'Recipient Committee Campaign Statement-Long Form',
+        group='Deprecated',
+        description='Form 420 was replaced by Form 460 (Recipient Committee \
+Campaign Statement) in or around 2001. There are 70,704 filings with this form ID.',
+    ),
+    FilingForm(
         'F425',
         'Semi-Annual Statement of no Activity',
         group='CAMPAIGN',
@@ -54,6 +84,14 @@ threshold, the not yet qualified box should be checked.',
         description='Form 425 is filed by recipient committees that have not \
 received any contributions and have not made any expenditures during the six-\
 month period covered by a semi-annual statement.',
+    ),
+    FilingForm(
+        'F430',
+        'Title Unknown',
+        group='Deprecated',
+        description='Form 430 was deprecated in or around 1980. The information \
+previously reported on this form is (probably) now reported on Form 460 (Recipient \
+Committee Campaign Statement). There are 2,293 filings with this form ID.',
     ),
     FilingForm(
         'F450',
@@ -103,6 +141,13 @@ not have a controlled committee, do not receive contributions totaling $2,000 or
 more during the calendar year, and do not spend $2,000 or more during the \
 calendar year.'
         ),
+    FilingForm(
+        'F490',
+        'Officeholder/Candidate Campaign Statement-Long Form',
+        group='Deprecated',
+        description='Form 490 was replaced by Form 460 (Recipient Committee \
+Campaign Statement) in or around 2001. There are 58,266 filings with this form ID.',
+    ),
     FilingForm(
         'F495',
         'Supplemental Pre-Election Campaign Statement',

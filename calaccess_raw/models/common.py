@@ -231,16 +231,10 @@ class FilerFilingsCd(CalAccessBaseModel):
         ('F111', 'Unknown'),
         ('F410 AT', 'Unknown'),
         ('F410ATR', 'Unknown'),
-        ('F415', 'Unknown'),
-        ('F416', 'Unknown'),
-        ('F419', 'Unknown'),
-        ('F420', 'Unknown'),
         ('F421', 'Unknown'),
-        ('F430', 'Unknown'),
         ('F440', 'Unknown'),
         ('F470S', get_filing_form('F470').full_title),
         ('F480', 'Unknown'),
-        ('F490', 'Unknown'),
         ('F500', 'Unknown'),
         ('F501502', 'Forms 501 and/or 502 (Candidate Intention and/or Bank Account Statements)'),
         ('F555', 'Unknown'),
@@ -641,7 +635,7 @@ class SmryCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=72, end_page=74),
     ]
     FILING_FORMS = [
-        get_filing_form('F401')
+        get_filing_form('F401'),
         get_filing_form('F401').get_section('A'),
         get_filing_form('F401').get_section('B'),
         get_filing_form('F401').get_section('B-1'),
@@ -801,7 +795,7 @@ class CvrE530Cd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=29, end_page=30),
     ]
-    FILING_ID = [
+    FILING_FORMS = [
         get_filing_form('E530'),
     ]
     amend_id = fields.IntegerField(
