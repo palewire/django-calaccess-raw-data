@@ -49,7 +49,8 @@ that aren't defined in the choices attr"
                     ).annotate(Count(f.name)):
                         if (
                             value not in [x[0] for x in f.choices] and
-                            value != ''
+                            value != '' and
+                            value is not None
                         ):
                             if self.verbosity > 2:
                                 self.failure(
