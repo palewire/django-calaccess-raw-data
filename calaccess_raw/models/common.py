@@ -239,7 +239,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         ('F430', 'Unknown'),
         ('F440', 'Unknown'),
         ('F470S', get_filing_form('F470').full_title),
-        ('F480', 'Unknown'), 
+        ('F480', 'Unknown'),
         ('F490', 'Unknown'),
         ('F500', 'Unknown'),
         ('F501502', 'Forms 501 and/or 502 (Candidate Intention and/or Bank Account Statements)'),

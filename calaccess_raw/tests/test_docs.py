@@ -182,7 +182,7 @@ class DocumentationTestCase(TestCase):
 
     def test_filing_forms(self):
         """
-        Verify that each model with a form_type or form_id field (with a few 
+        Verify that each model with a form_type or form_id field (with a few
         exceptions) has FILING_FORMS defined
         """
         results = []
