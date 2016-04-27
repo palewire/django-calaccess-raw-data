@@ -286,7 +286,6 @@ class FilerFilingsCd(CalAccessBaseModel):
         ]
     )
     STMNT_STATUS_CHOICES = (
-        (0, 'N/A'),
         (11001, 'COMPLETE'),
         (11002, 'INCOMPLETE'),
         (11003, 'NEEDS REVIEW'),
@@ -643,6 +642,7 @@ class SmryCd(CalAccessBaseModel):
         get_filing_form('F401').get_section('B'),
         get_filing_form('F401').get_section('B-1'),
         get_filing_form('F450'),
+        get_filing_form('F460'),
         get_filing_form('F460').get_section('A'),
         get_filing_form('F460').get_section('B1'),
         get_filing_form('F460').get_section('B2'),
@@ -705,7 +705,11 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
     )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
+        ('401A', get_filing_form('F401').get_section('A')),
+        ('401B', get_filing_form('F401').get_section('B')),
+        ('401B-1', get_filing_form('F401').get_section('B-1')),
+    )
     form_type = fields.CharField(
         max_length=8,
         db_column='FORM_TYPE',
