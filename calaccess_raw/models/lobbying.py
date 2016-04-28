@@ -354,9 +354,10 @@ if coded as other',
     )
     INFLUEN_YN_CHOICES = (
         ('Y', 'Yes'),
+        ('y', 'Yes'),
         ('N', 'No'),
-        ('X', 'Yes'),
         ('n', 'No'),
+        ('X', 'Yes'),
     )
     influen_yn = fields.CharField(
         null=True,
