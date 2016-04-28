@@ -63,7 +63,7 @@ class CharField(fields.CharField, CalAccessFieldMixin, DocumentCloudMixin):
     CASE
         WHEN "%(name)s" IS NULL
             THEN ''
-        ELSE TRIM("%(name)s")
+        ELSE regexp_replace(TRIM("%(name)s"), '\r|\n', '', 'g')
     END
     """
 
