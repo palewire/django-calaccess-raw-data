@@ -201,6 +201,7 @@ class FilingForm(object):
         return str(self.id)
 
 
+@deconstructible
 class FilingFormSection(object):
     """
     A section of a FilingForm (e.g., a cover page, summary sheet, schedule or part).
