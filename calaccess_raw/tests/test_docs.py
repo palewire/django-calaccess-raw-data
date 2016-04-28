@@ -200,24 +200,6 @@ class DocumentationTestCase(TestCase):
                 results.append([m().klass_group, m.__name__, exists])
         self.attr_test_output("model", "FILING_FORMS", results)
 
-    def test_field_verbose_name(self):
-        """
-        Verify that all fields have verbose_name documentation.
-        """
-        results = []
-        for m in get_model_list():
-            for f in m().get_field_list():
-                if f.name == 'id':
-                    continue
-                if not f.__dict__['_verbose_name']:
-                    exists = False
-                elif len(f.__dict__['_verbose_name']) == 0:
-                    exists = False
-                else:
-                    exists = True
-                results.append([m().klass_group, "%s.%s" % (m.__name__, f.name), exists])
-        self.attr_test_output("field", "verbose_name", results)
-
     def test_field_help_text(self):
         """
         Verify that all fields have help_text documentation.
