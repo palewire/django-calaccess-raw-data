@@ -1312,7 +1312,11 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
-        verbose_name='record type'
+        verbose_name='record type',
+        documentcloud_pages=[
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=16),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=13),
+        ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
         ('410', get_filing_form('F410').full_title),
