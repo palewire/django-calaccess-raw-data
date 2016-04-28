@@ -46,7 +46,7 @@ class FilernameCd(CalAccessBaseModel):
         help_text="Filer's unique identification number"
     )
     FILER_TYPE_CHOICES = (
-        (' NOT DEFINED', 'Undefined'),
+        ('NOT DEFINED', 'Undefined'),
         ('ALL FILERS', 'All filers'),
         ('CANDIDATE/OFFICEHOLDER', 'Candidate/officeholder'),
         ('CLIENT', 'Client'),
@@ -1291,11 +1291,21 @@ original filing and 1 to 999 amendments.",
         db_index=True,
     )
     REC_TYPE_CHOICES = (
-        ('i', 'i'),
-        ('MEMO', 'MEMO'),
+        # this is only valid value
         ('TEXT', 'TEXT'),
-        ('trun', 'trun'),
-        ('Unde', 'Unde'),
+        # More than 450 records with this value
+        # Which is roughly equvalent to the one valid value
+        ('MEMO', 'MEMO'),
+        # Each of these values only occurs once
+        # Records with this value have the same chars in the TEXT4000 field
+        ('trun', 'Unknown'),
+        ('Unde', 'Under'),
+        ('am', 'Unknown'),
+        ('sele', 'Unknown'),
+        ('Term', 'Unknown'),
+        # just noise
+        ('re', 'Unknown'),
+        ('i', 'Unknown'),
     )
     rec_type = fields.CharField(
         db_column='REC_TYPE',
