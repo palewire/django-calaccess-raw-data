@@ -1171,13 +1171,10 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('EMP', 'Employer'),
-        ('OFF', 'Officer (responsible)'),
-        ('OWN', 'Owner'),
-        ('PTM', 'PTM (Unknown)'),
+        ('EMP', choices.CAMPAIGN_ENTITY_CODES['EMP']),
+        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('OWN', choices.CAMPAIGN_ENTITY_CODES['OWN']),
+        ('PTN', choices.CAMPAIGN_ENTITY_CODES['PTN']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -1185,6 +1182,10 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
+        ]
     )
     entity_id = fields.CharField(
         max_length=9,
