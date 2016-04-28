@@ -223,6 +223,7 @@ class Command(CalAccessCommand):
             for f in self.model._meta.fields
         )
         date_set_list = []
+        char_set_list = []
 
         for h in csv_headers:
             # Pull the data type of the field
@@ -239,12 +240,17 @@ class Command(CalAccessCommand):
                 date_set_list.append(
                     "`%s` =  %s" % (h, self.datetime_sql % h)
                 )
+            elif 'char' in data_type:
+                header_sql_list.append('@`%s`' % h)
+                char_set_list.append(
+                    r"`{0}` = TRIM(TRAILING '\n' FROM @`{0}`)".format(h)
+                )
             else:
                 header_sql_list.append('`%s`' % h)
 
         bulk_sql_load = bulk_sql_load_part_1 + ','.join(header_sql_list) + ')'
-        if date_set_list:
-            bulk_sql_load += " set %s" % ",".join(date_set_list)
+        if date_set_list or char_set_list:
+            bulk_sql_load += " set %s" % ",".join(date_set_list + char_set_list)
 
         # Run the query
         cnt = self.cursor.execute(bulk_sql_load)
