@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 from .base import CalAccessBaseModel
 from calaccess_raw import fields
-from calaccess_raw.annotations import DocumentCloud
+from calaccess_raw.annotations import DocumentCloud, choices
 from calaccess_raw.annotations.filing_forms import get_filing_form
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -139,7 +139,6 @@ Applies to Form 602.',
     )
     BUS_CLASS_CHOICES = (
         ("ENT", "Entertainment/Recreation"),
-        ("Esp", "Unknown"),
         ("FIN", "Finance/Insurance"),
         ("LOG", "Lodging/Restaurants"),
         ("MAN", "Manufacturing/Industrial"),
@@ -158,6 +157,10 @@ Applies to Form 602.',
         help_text='Classifiction values of business related entities. \
 This field is exclusive of the business class field. One these \
 must be populated but not both.',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=70),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
+        ]
     )
     bus_descr = fields.CharField(
         max_length=100,
@@ -235,14 +238,11 @@ Form 604. As filed by the lobbyist.',
         help_text='Effective date of authoarization or termination',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('BUS', 'BUS (Unknown)'),
-        ('FRM', 'Lobbying firm'),
-        ('LBY', 'Lobbyist (an individual)'),
-        ('LCO', 'Lobbying coalition'),
-        ('LEM', 'Lobbying employer'),
+        ('BUS', 'Unknown'),
+        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -250,6 +250,10 @@ Form 604. As filed by the lobbyist.',
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=68),
+        ]
     )
     filer_id = fields.CharField(
         verbose_name='filer ID',
@@ -333,6 +337,10 @@ Forms 604, 606, 607.',
         db_column='IND_CLASS',
         blank=True,
         choices=IND_CLASS_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=85),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=70),
+        ],
         help_text='Classification values to category industry related \
 entities. This field is exclusive of the business class field. One these \
 must be populated but not both.',
@@ -347,6 +355,8 @@ if coded as other',
     INFLUEN_YN_CHOICES = (
         ('Y', 'Yes'),
         ('N', 'No'),
+        ('X', 'Yes'),
+        ('n', 'No'),
     )
     influen_yn = fields.CharField(
         null=True,
@@ -355,6 +365,10 @@ if coded as other',
         db_column='INFLUEN_YN',
         blank=True,
         help_text='Attempt to influence state legislation',
+        documentcloud_pages=[
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=86),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=71),
+        ]
     )
     l_firm_cb = fields.CharField(
         max_length=1,
@@ -570,7 +584,11 @@ the report and the firm or employer if they are submitting the report.',
     )
     ST_LEG_YN_CHOICES = (
         ('Y', 'Yes'),
+        ('y', 'Yes'),
         ('N', 'No'),
+        ('n', 'No'),
+        ('X', 'Yes'),
+        ('x', 'Yes'),
     )
     st_leg_yn = fields.CharField(
         max_length=1,
@@ -579,6 +597,10 @@ the report and the firm or employer if they are submitting the report.',
         blank=True,
         help_text='Will lobby state legislature checkbox. \
 Applies to Form 604.',
+        documentcloud_pages=[
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=86),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=71),
+        ]
     )
     stmt_firm = fields.CharField(
         max_length=90,
@@ -1171,10 +1193,10 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     ENTITY_CODE_CHOICES = (
-        ('EMP', choices.CAMPAIGN_ENTITY_CODES['EMP']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
-        ('OWN', choices.CAMPAIGN_ENTITY_CODES['OWN']),
-        ('PTN', choices.CAMPAIGN_ENTITY_CODES['PTN']),
+        ('EMP', choices.LOBBYING_ENTITY_CODES['EMP']),
+        ('OFF', choices.LOBBYING_ENTITY_CODES['OFF']),
+        ('OWN', choices.LOBBYING_ENTITY_CODES['OWN']),
+        ('PTN', choices.LOBBYING_ENTITY_CODES['PTN']),
     )
     entity_cd = fields.CharField(
         max_length=3,
