@@ -1209,6 +1209,20 @@ original filing and 1 to 999 amendments.",
         ('G', 'General'),
         ('S', 'Special'),
         ('R', 'Runoff'),
+        ('g', 'General'),
+        ('p', 'primary'),
+        # The values below are not parsing errors.
+        # They are as they appear on sample filing forms.
+        ('C', 'Unknown'),
+        ('D', 'Unknown'),
+        ('F', 'Unknown'),
+        ('M', 'Unknown'),
+        ('N', 'Unknown'),
+        ('X', 'Unknown'),
+        ('O', 'Unknown'),
+        ('0', 'Unknown'),
+        ('1', 'Unknown'),
+        ('2', 'Unknown'),
     )
     elec_code = fields.CharField(
         max_length=2,
