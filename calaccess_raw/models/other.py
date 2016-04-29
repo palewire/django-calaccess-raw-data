@@ -822,6 +822,7 @@ running",
         (40001, 'JOINTLY CONTROLLED'),
         (40002, 'CONTROLLED'),
         (40003, 'CAUCUS COMMITTEE'),
+        (40004, 'Unknown'),
     )
     category = fields.IntegerField(
         null=True,
@@ -862,6 +863,7 @@ information about the category. (e.g. state, local, etc.)",
         (40103, 'GENERAL PURPOSE'),
         (40104, 'GENERAL PURPOSE POLITICAL PARTY'),
         (40105, 'GENERAL PURPOSE MEASURE'),
+        (40112, 'Unknown'),
     )
     sub_category = fields.IntegerField(
         null=True,
@@ -908,6 +910,8 @@ formed, etc.",
         (3004, 'SPECIAL ELECTION'),
         (3005, 'OFFICEHOLDER'),
         (3006, 'SPECIAL RUNOFF'),
+        (3010, 'Unknown'),
+        (3007, 'Unknown'),
     )
     election_type = fields.IntegerField(
         null=True,
@@ -965,6 +969,7 @@ level of activity",
         ]
     )
     COUNTY_CD_CHOICES = (
+        (0, 'N/A'),
         (18001, '01'),
         (18002, '12'),
         (18003, '23'),
@@ -1117,11 +1122,29 @@ level of activity",
         (17080, '80'),
         (17081, '09'),
         (17090, '58'),
+        (17091, 'Unknown'),
+        (17083, 'Unknown'),
+        (17093, 'Unknown'),
+        (17094, 'Unknown'),
+        (17088, 'Unknown'),
+        (17096, 'Unknown'),
+        (17012, 'Unknown'),
+        (17095, 'Unknown'),
+        (17092, 'Unknown'),
+        (17086, 'Unknown'),
+        (17099, 'Unknown'),
+        (17082, 'Unknown'),
+        (17025, 'Unknown'),
+        (17085, 'Unknown'),
+        (17084, 'Unknown'),
+        (17087, 'Unknown'),
+        (17098, 'Unknown'),
+        (17089, 'Unknown'),
     )
     district_cd = fields.IntegerField(
         null=True,
         blank=True,
-        choices=DISTRICT_CD_CHOICES,   
+        choices=DISTRICT_CD_CHOICES,
         verbose_name='county code',
         help_text="Filer's district number for the office being sought. \
 Populated for Senate, Assembly or Board of Equalization races",
