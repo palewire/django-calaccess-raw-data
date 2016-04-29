@@ -501,6 +501,8 @@ Data collected via Form 450 filings are written to the following tables:
 
 * `SmryCd <models.html#smrycd>`_
 
+* `SpltCd <models.html#spltcd>`_
+
 * `TextMemoCd <models.html#textmemocd>`_
 
 * `EfsFilingLogCd <models.html#efsfilinglogcd>`_
@@ -626,6 +628,8 @@ Data collected via Form 460 filings are written to the following tables:
 * `FilerFilingsCd <models.html#filerfilingscd>`_
 
 * `SmryCd <models.html#smrycd>`_
+
+* `SpltCd <models.html#spltcd>`_
 
 * `TextMemoCd <models.html#textmemocd>`_
 
