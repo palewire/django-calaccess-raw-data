@@ -20778,6 +20778,66 @@ Look-up Codes
             <td>Runoff</td>
         </tr>
     
+        <tr>
+            <td>g</td>
+            <td>General</td>
+        </tr>
+    
+        <tr>
+            <td>p</td>
+            <td>primary</td>
+        </tr>
+    
+        <tr>
+            <td>C</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>D</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>M</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>N</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>X</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Unknown</td>
+        </tr>
+    
     </tbody>
     </table>
     </div>
@@ -21475,6 +21535,11 @@ Look-up Codes
         <tr>
             <td>F625P4B</td>
             <td>Form 625 (Report of Lobbying Firm): Part 4: Campaign Contributions Made</td>
+        </tr>
+    
+        <tr>
+            <td>S635</td>
+            <td>Form 635: Report of Lobbyist Employer or Report of Lobbying Coalition</td>
         </tr>
     
         <tr>
@@ -32198,6 +32263,1089 @@ Fields
 Look-up Codes
 ^^^^^^^^^^^^^
 
+*race*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/16.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p16-thumbnail.gif'></a><p>p. 16</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/17.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p17-thumbnail.gif'></a><p>p. 17</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p18-thumbnail.gif'></a><p>p. 18</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p20-thumbnail.gif'></a><p>p. 20</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p21-thumbnail.gif'></a><p>p. 21</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>30002</td>
+            <td>GOVERNOR</td>
+        </tr>
+    
+        <tr>
+            <td>30003</td>
+            <td>LIEUTENANT GOVERNOR</td>
+        </tr>
+    
+        <tr>
+            <td>30004</td>
+            <td>SECRETARY OF STATE</td>
+        </tr>
+    
+        <tr>
+            <td>30005</td>
+            <td>CONTROLLER</td>
+        </tr>
+    
+        <tr>
+            <td>30006</td>
+            <td>TREASURER</td>
+        </tr>
+    
+        <tr>
+            <td>30007</td>
+            <td>ATTORNEY GENERAL</td>
+        </tr>
+    
+        <tr>
+            <td>30008</td>
+            <td>SUPERINTENDENT OF PUBLIC INSTRUCTION</td>
+        </tr>
+    
+        <tr>
+            <td>30009</td>
+            <td>MEMBER BOARD OF EQUALIZATION</td>
+        </tr>
+    
+        <tr>
+            <td>30010</td>
+            <td>OXNARD HARBOR COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30011</td>
+            <td>CITY CONTROLLER</td>
+        </tr>
+    
+        <tr>
+            <td>30012</td>
+            <td>STATE SENATE</td>
+        </tr>
+    
+        <tr>
+            <td>30013</td>
+            <td>ASSEMBLY</td>
+        </tr>
+    
+        <tr>
+            <td>30014</td>
+            <td>INSURANCE COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30015</td>
+            <td>JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30016</td>
+            <td>BOARD MEMBER</td>
+        </tr>
+    
+        <tr>
+            <td>30017</td>
+            <td>TAX COLLECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30018</td>
+            <td>TRUSTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30019</td>
+            <td>SUPERVISOR</td>
+        </tr>
+    
+        <tr>
+            <td>30020</td>
+            <td>SHERIFF</td>
+        </tr>
+    
+        <tr>
+            <td>30021</td>
+            <td>CORONER</td>
+        </tr>
+    
+        <tr>
+            <td>30022</td>
+            <td>MARSHALL</td>
+        </tr>
+    
+        <tr>
+            <td>30023</td>
+            <td>CITY CLERK</td>
+        </tr>
+    
+        <tr>
+            <td>30024</td>
+            <td>SCHOOL BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30025</td>
+            <td>HARBOR COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30026</td>
+            <td>DISTRICT ATTORNEY</td>
+        </tr>
+    
+        <tr>
+            <td>30027</td>
+            <td>COUNTY CLERK</td>
+        </tr>
+    
+        <tr>
+            <td>30028</td>
+            <td>AUDITOR</td>
+        </tr>
+    
+        <tr>
+            <td>30029</td>
+            <td>MAYOR</td>
+        </tr>
+    
+        <tr>
+            <td>30030</td>
+            <td>CITY ATTORNEY</td>
+        </tr>
+    
+        <tr>
+            <td>30031</td>
+            <td>DEMOCRATIC COUNTY CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30032</td>
+            <td>TOWN COUNCIL</td>
+        </tr>
+    
+        <tr>
+            <td>30033</td>
+            <td>ASSESSOR</td>
+        </tr>
+    
+        <tr>
+            <td>30034</td>
+            <td>CITY TREASURER</td>
+        </tr>
+    
+        <tr>
+            <td>30035</td>
+            <td>CITY COUNCIL</td>
+        </tr>
+    
+        <tr>
+            <td>30036</td>
+            <td>COMMISSIONER</td>
+        </tr>
+    
+        <tr>
+            <td>30037</td>
+            <td>REPUBLICAN COUNTY CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30038</td>
+            <td>DIRECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30039</td>
+            <td>DIRECTOR OF ZONE 7</td>
+        </tr>
+    
+        <tr>
+            <td>30040</td>
+            <td>COMMUNITY COLLEGE BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30041</td>
+            <td>POLICE CHIEF</td>
+        </tr>
+    
+        <tr>
+            <td>30042</td>
+            <td>CHIEF OF POLICE</td>
+        </tr>
+    
+        <tr>
+            <td>30043</td>
+            <td>CENTRAL COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>30044</td>
+            <td>BOARD OF EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>30045</td>
+            <td>BOARD OF DIRECTORS</td>
+        </tr>
+    
+        <tr>
+            <td>30046</td>
+            <td>COLLEGE BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30047</td>
+            <td>BART BOARD DIRECTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30048</td>
+            <td>BOARD OF TRUSTEES</td>
+        </tr>
+    
+        <tr>
+            <td>30049</td>
+            <td>IRRIGATION</td>
+        </tr>
+    
+        <tr>
+            <td>30050</td>
+            <td>WATER BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30051</td>
+            <td>COMMUNITY PLANNING GROUP</td>
+        </tr>
+    
+        <tr>
+            <td>30052</td>
+            <td>BOARD OF SUPERVISORS</td>
+        </tr>
+    
+        <tr>
+            <td>30053</td>
+            <td>SUPERIOR COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30054</td>
+            <td>DISTRICT ATTORNEY/PUBLIC DEFENDER</td>
+        </tr>
+    
+        <tr>
+            <td>30055</td>
+            <td>MEASURE</td>
+        </tr>
+    
+        <tr>
+            <td>30056</td>
+            <td>CITY PROSECUTOR</td>
+        </tr>
+    
+        <tr>
+            <td>30057</td>
+            <td>SUPREME COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>30058</td>
+            <td>PUBLIC EMPLOYEES RETIREMENT BOARD</td>
+        </tr>
+    
+        <tr>
+            <td>30059</td>
+            <td>APPELLATE COURT JUDGE</td>
+        </tr>
+    
+        <tr>
+            <td>50001</td>
+            <td>Ag</td>
+        </tr>
+    
+        <tr>
+            <td>50002</td>
+            <td>Assembly</td>
+        </tr>
+    
+        <tr>
+            <td>50003</td>
+            <td>Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>50004</td>
+            <td>Assessor/Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50005</td>
+            <td>Assessor/County Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50006</td>
+            <td>Assessor/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50007</td>
+            <td>Associate Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50008</td>
+            <td>Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50009</td>
+            <td>Auditor/Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50010</td>
+            <td>Auditor/Controller/Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50011</td>
+            <td>Auditor/Controller/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50012</td>
+            <td>Auditor/Controller/Treasurer/Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50013</td>
+            <td>Auditor/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50014</td>
+            <td>Board Member</td>
+        </tr>
+    
+        <tr>
+            <td>50015</td>
+            <td>Board Of Director</td>
+        </tr>
+    
+        <tr>
+            <td>50016</td>
+            <td>Board Of Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>50017</td>
+            <td>Boe</td>
+        </tr>
+    
+        <tr>
+            <td>50018</td>
+            <td>Chief Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50019</td>
+            <td>City</td>
+        </tr>
+    
+        <tr>
+            <td>50020</td>
+            <td>City Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>50021</td>
+            <td>City Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50022</td>
+            <td>City Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50023</td>
+            <td>City Council</td>
+        </tr>
+    
+        <tr>
+            <td>50024</td>
+            <td>City Of Los Angeles</td>
+        </tr>
+    
+        <tr>
+            <td>50025</td>
+            <td>City Of South El Monte</td>
+        </tr>
+    
+        <tr>
+            <td>50026</td>
+            <td>City Prosecutor</td>
+        </tr>
+    
+        <tr>
+            <td>50027</td>
+            <td>City Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>50028</td>
+            <td>Clerk/Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50029</td>
+            <td>Clerk/Record/Public Admin</td>
+        </tr>
+    
+        <tr>
+            <td>50030</td>
+            <td>Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50031</td>
+            <td>Clerk/Recorder/Registar</td>
+        </tr>
+    
+        <tr>
+            <td>50032</td>
+            <td>Clerk/Recorder/Registrar</td>
+        </tr>
+    
+        <tr>
+            <td>50033</td>
+            <td>Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>50034</td>
+            <td>Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50035</td>
+            <td>Costa Mesa</td>
+        </tr>
+    
+        <tr>
+            <td>50036</td>
+            <td>Council Member</td>
+        </tr>
+    
+        <tr>
+            <td>50037</td>
+            <td>County Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50038</td>
+            <td>County Clerk/Auditor</td>
+        </tr>
+    
+        <tr>
+            <td>50039</td>
+            <td>County Clerk/Auditor/Controller</td>
+        </tr>
+    
+        <tr>
+            <td>50040</td>
+            <td>County Clerk/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50041</td>
+            <td>County Clerk/Recorder/Assessor</td>
+        </tr>
+    
+        <tr>
+            <td>50042</td>
+            <td>County Clerk/Recorder/Public Admin</td>
+        </tr>
+    
+        <tr>
+            <td>50043</td>
+            <td>Democratic County Central Committee</td>
+        </tr>
+    
+        <tr>
+            <td>50044</td>
+            <td>Director</td>
+        </tr>
+    
+        <tr>
+            <td>50045</td>
+            <td>District Attorney</td>
+        </tr>
+    
+        <tr>
+            <td>50046</td>
+            <td>District Attorney/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50047</td>
+            <td>Gccc</td>
+        </tr>
+    
+        <tr>
+            <td>50048</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>50049</td>
+            <td>Harbor Commissioner</td>
+        </tr>
+    
+        <tr>
+            <td>50050</td>
+            <td>Ic</td>
+        </tr>
+    
+        <tr>
+            <td>50051</td>
+            <td>Irrigation Dist</td>
+        </tr>
+    
+        <tr>
+            <td>50052</td>
+            <td>Judge</td>
+        </tr>
+    
+        <tr>
+            <td>50053</td>
+            <td>Justice</td>
+        </tr>
+    
+        <tr>
+            <td>50054</td>
+            <td>Legislature</td>
+        </tr>
+    
+        <tr>
+            <td>50055</td>
+            <td>Lieutenant Governor</td>
+        </tr>
+    
+        <tr>
+            <td>50056</td>
+            <td>Mayor</td>
+        </tr>
+    
+        <tr>
+            <td>50057</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>50058</td>
+            <td>Placentia</td>
+        </tr>
+    
+        <tr>
+            <td>50059</td>
+            <td>Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50060</td>
+            <td>Public Administrator/Guardian</td>
+        </tr>
+    
+        <tr>
+            <td>50061</td>
+            <td>Rent Stabilization Board</td>
+        </tr>
+    
+        <tr>
+            <td>50062</td>
+            <td>Republican Central Committee</td>
+        </tr>
+    
+        <tr>
+            <td>50063</td>
+            <td>San Francisco Dccc</td>
+        </tr>
+    
+        <tr>
+            <td>50064</td>
+            <td>Sanger</td>
+        </tr>
+    
+        <tr>
+            <td>50065</td>
+            <td>School Board</td>
+        </tr>
+    
+        <tr>
+            <td>50066</td>
+            <td>Secretary Of State</td>
+        </tr>
+    
+        <tr>
+            <td>50067</td>
+            <td>Senator</td>
+        </tr>
+    
+        <tr>
+            <td>50068</td>
+            <td>Sheriff</td>
+        </tr>
+    
+        <tr>
+            <td>50069</td>
+            <td>Sheriff/Coroner</td>
+        </tr>
+    
+        <tr>
+            <td>50070</td>
+            <td>Sheriff/Coroner/Marshall</td>
+        </tr>
+    
+        <tr>
+            <td>50071</td>
+            <td>Sheriff/Coroner/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50072</td>
+            <td>Solana Beach</td>
+        </tr>
+    
+        <tr>
+            <td>50073</td>
+            <td>Superintendent</td>
+        </tr>
+    
+        <tr>
+            <td>50074</td>
+            <td>Supervisor</td>
+        </tr>
+    
+        <tr>
+            <td>50075</td>
+            <td>Supt Of Schools</td>
+        </tr>
+    
+        <tr>
+            <td>50076</td>
+            <td>Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50077</td>
+            <td>Town Council</td>
+        </tr>
+    
+        <tr>
+            <td>50078</td>
+            <td>Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>50079</td>
+            <td>Treasurer/Tax Collector</td>
+        </tr>
+    
+        <tr>
+            <td>50080</td>
+            <td>Treasurer/Tax Collector/Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50081</td>
+            <td>Treasurer/Tax Collector/Public Administrator</td>
+        </tr>
+    
+        <tr>
+            <td>50082</td>
+            <td>Treasurer/Tax Collector/Public Administrator/County Clerk</td>
+        </tr>
+    
+        <tr>
+            <td>50083</td>
+            <td>Treasurer/Tax Collector/Recorder</td>
+        </tr>
+    
+        <tr>
+            <td>50084</td>
+            <td>Trustee</td>
+        </tr>
+    
+        <tr>
+            <td>50085</td>
+            <td>Weed Recreation Board Member</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*category*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p18-thumbnail.gif'></a><p>p. 18</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>40000</td>
+            <td>CATEGORY</td>
+        </tr>
+    
+        <tr>
+            <td>40001</td>
+            <td>JOINTLY CONTROLLED</td>
+        </tr>
+    
+        <tr>
+            <td>40002</td>
+            <td>CONTROLLED</td>
+        </tr>
+    
+        <tr>
+            <td>40003</td>
+            <td>CAUCUS COMMITTEE</td>
+        </tr>
+    
+        <tr>
+            <td>40004</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*category_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p20-thumbnail.gif'></a><p>p. 20</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>40501</td>
+            <td>LOCAL</td>
+        </tr>
+    
+        <tr>
+            <td>40502</td>
+            <td>STATE</td>
+        </tr>
+    
+        <tr>
+            <td>40503</td>
+            <td>COUNTY</td>
+        </tr>
+    
+        <tr>
+            <td>40504</td>
+            <td>MULTI-COUNTY</td>
+        </tr>
+    
+        <tr>
+            <td>40505</td>
+            <td>CITY</td>
+        </tr>
+    
+        <tr>
+            <td>40506</td>
+            <td>FEDERAL</td>
+        </tr>
+    
+        <tr>
+            <td>40507</td>
+            <td>SUPERIOR COURT JUDGE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sub_category*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p18-thumbnail.gif'></a><p>p. 18</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>40101</td>
+            <td>PRIMARILY FORMED MEASURE</td>
+        </tr>
+    
+        <tr>
+            <td>40102</td>
+            <td>PRIMARILY FORMED CANDIDATE</td>
+        </tr>
+    
+        <tr>
+            <td>40103</td>
+            <td>GENERAL PURPOSE</td>
+        </tr>
+    
+        <tr>
+            <td>40104</td>
+            <td>GENERAL PURPOSE POLITICAL PARTY</td>
+        </tr>
+    
+        <tr>
+            <td>40105</td>
+            <td>GENERAL PURPOSE MEASURE</td>
+        </tr>
+    
+        <tr>
+            <td>40112</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*sub_category_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p18-thumbnail.gif'></a><p>p. 18</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>40202</td>
+            <td>BROAD-BASED</td>
+        </tr>
+    
+        <tr>
+            <td>40203</td>
+            <td>SMALL CONTRIBUTOR</td>
+        </tr>
+    
+        <tr>
+            <td>40204</td>
+            <td>MPO - NON PROFIT</td>
+        </tr>
+    
+        <tr>
+            <td>40205</td>
+            <td>MPO - NON PROFIT CY</td>
+        </tr>
+    
+        <tr>
+            <td>40206</td>
+            <td>MPO - OTHER</td>
+        </tr>
+    
+        <tr>
+            <td>40207</td>
+            <td>MPO - OTHER CY</td>
+        </tr>
+    
+        <tr>
+            <td>40208</td>
+            <td>FEDERAL PAC</td>
+        </tr>
+    
+        <tr>
+            <td>40209</td>
+            <td>OUT OF STATE PAC</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*election_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p3-thumbnail.gif'></a><p>p. 3</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p4-thumbnail.gif'></a><p>p. 4</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>3001</td>
+            <td>GENERAL</td>
+        </tr>
+    
+        <tr>
+            <td>3002</td>
+            <td>PRIMARY</td>
+        </tr>
+    
+        <tr>
+            <td>3003</td>
+            <td>RECALL</td>
+        </tr>
+    
+        <tr>
+            <td>3004</td>
+            <td>SPECIAL ELECTION</td>
+        </tr>
+    
+        <tr>
+            <td>3005</td>
+            <td>OFFICEHOLDER</td>
+        </tr>
+    
+        <tr>
+            <td>3006</td>
+            <td>SPECIAL RUNOFF</td>
+        </tr>
+    
+        <tr>
+            <td>3010</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>3007</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
 *party_cd*
 
 
@@ -32305,6 +33453,852 @@ Look-up Codes
         <tr>
             <td>None</td>
             <td>NONE</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*county_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p13-thumbnail.gif'></a><p>p. 13</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/14.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p14-thumbnail.gif'></a><p>p. 14</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/15.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p15-thumbnail.gif'></a><p>p. 15</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>18001</td>
+            <td>01</td>
+        </tr>
+    
+        <tr>
+            <td>18002</td>
+            <td>12</td>
+        </tr>
+    
+        <tr>
+            <td>18003</td>
+            <td>23</td>
+        </tr>
+    
+        <tr>
+            <td>18004</td>
+            <td>34</td>
+        </tr>
+    
+        <tr>
+            <td>18005</td>
+            <td>45</td>
+        </tr>
+    
+        <tr>
+            <td>18006</td>
+            <td>55</td>
+        </tr>
+    
+        <tr>
+            <td>18007</td>
+            <td>56</td>
+        </tr>
+    
+        <tr>
+            <td>18008</td>
+            <td>57</td>
+        </tr>
+    
+        <tr>
+            <td>18009</td>
+            <td>58</td>
+        </tr>
+    
+        <tr>
+            <td>18010</td>
+            <td>02</td>
+        </tr>
+    
+        <tr>
+            <td>18011</td>
+            <td>03</td>
+        </tr>
+    
+        <tr>
+            <td>18012</td>
+            <td>04</td>
+        </tr>
+    
+        <tr>
+            <td>18013</td>
+            <td>05</td>
+        </tr>
+    
+        <tr>
+            <td>18014</td>
+            <td>06</td>
+        </tr>
+    
+        <tr>
+            <td>18015</td>
+            <td>07</td>
+        </tr>
+    
+        <tr>
+            <td>18016</td>
+            <td>08</td>
+        </tr>
+    
+        <tr>
+            <td>18017</td>
+            <td>09</td>
+        </tr>
+    
+        <tr>
+            <td>18018</td>
+            <td>10</td>
+        </tr>
+    
+        <tr>
+            <td>18019</td>
+            <td>11</td>
+        </tr>
+    
+        <tr>
+            <td>18020</td>
+            <td>13</td>
+        </tr>
+    
+        <tr>
+            <td>18021</td>
+            <td>14</td>
+        </tr>
+    
+        <tr>
+            <td>18022</td>
+            <td>15</td>
+        </tr>
+    
+        <tr>
+            <td>18023</td>
+            <td>16</td>
+        </tr>
+    
+        <tr>
+            <td>18024</td>
+            <td>17</td>
+        </tr>
+    
+        <tr>
+            <td>18025</td>
+            <td>18</td>
+        </tr>
+    
+        <tr>
+            <td>18026</td>
+            <td>19</td>
+        </tr>
+    
+        <tr>
+            <td>18027</td>
+            <td>20</td>
+        </tr>
+    
+        <tr>
+            <td>18028</td>
+            <td>21</td>
+        </tr>
+    
+        <tr>
+            <td>18029</td>
+            <td>22</td>
+        </tr>
+    
+        <tr>
+            <td>18030</td>
+            <td>24</td>
+        </tr>
+    
+        <tr>
+            <td>18031</td>
+            <td>25</td>
+        </tr>
+    
+        <tr>
+            <td>18032</td>
+            <td>26</td>
+        </tr>
+    
+        <tr>
+            <td>18033</td>
+            <td>27</td>
+        </tr>
+    
+        <tr>
+            <td>18034</td>
+            <td>28</td>
+        </tr>
+    
+        <tr>
+            <td>18035</td>
+            <td>29</td>
+        </tr>
+    
+        <tr>
+            <td>18036</td>
+            <td>30</td>
+        </tr>
+    
+        <tr>
+            <td>18037</td>
+            <td>31</td>
+        </tr>
+    
+        <tr>
+            <td>18038</td>
+            <td>32</td>
+        </tr>
+    
+        <tr>
+            <td>18039</td>
+            <td>33</td>
+        </tr>
+    
+        <tr>
+            <td>18040</td>
+            <td>35</td>
+        </tr>
+    
+        <tr>
+            <td>18041</td>
+            <td>36</td>
+        </tr>
+    
+        <tr>
+            <td>18042</td>
+            <td>37</td>
+        </tr>
+    
+        <tr>
+            <td>18043</td>
+            <td>38</td>
+        </tr>
+    
+        <tr>
+            <td>18044</td>
+            <td>39</td>
+        </tr>
+    
+        <tr>
+            <td>18045</td>
+            <td>40</td>
+        </tr>
+    
+        <tr>
+            <td>18046</td>
+            <td>41</td>
+        </tr>
+    
+        <tr>
+            <td>18047</td>
+            <td>42</td>
+        </tr>
+    
+        <tr>
+            <td>18048</td>
+            <td>43</td>
+        </tr>
+    
+        <tr>
+            <td>18049</td>
+            <td>44</td>
+        </tr>
+    
+        <tr>
+            <td>18050</td>
+            <td>46</td>
+        </tr>
+    
+        <tr>
+            <td>18051</td>
+            <td>47</td>
+        </tr>
+    
+        <tr>
+            <td>18052</td>
+            <td>48</td>
+        </tr>
+    
+        <tr>
+            <td>18053</td>
+            <td>49</td>
+        </tr>
+    
+        <tr>
+            <td>18054</td>
+            <td>50</td>
+        </tr>
+    
+        <tr>
+            <td>18055</td>
+            <td>51</td>
+        </tr>
+    
+        <tr>
+            <td>18056</td>
+            <td>52</td>
+        </tr>
+    
+        <tr>
+            <td>18057</td>
+            <td>53</td>
+        </tr>
+    
+        <tr>
+            <td>18058</td>
+            <td>54</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*district_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p12-thumbnail.gif'></a><p>p. 12</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p13-thumbnail.gif'></a><p>p. 13</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>17001</td>
+            <td>01</td>
+        </tr>
+    
+        <tr>
+            <td>17002</td>
+            <td>13</td>
+        </tr>
+    
+        <tr>
+            <td>17003</td>
+            <td>24</td>
+        </tr>
+    
+        <tr>
+            <td>17004</td>
+            <td>35</td>
+        </tr>
+    
+        <tr>
+            <td>17005</td>
+            <td>46</td>
+        </tr>
+    
+        <tr>
+            <td>17006</td>
+            <td>57</td>
+        </tr>
+    
+        <tr>
+            <td>17007</td>
+            <td>68</td>
+        </tr>
+    
+        <tr>
+            <td>17008</td>
+            <td>79</td>
+        </tr>
+    
+        <tr>
+            <td>17009</td>
+            <td>02</td>
+        </tr>
+    
+        <tr>
+            <td>17010</td>
+            <td>05</td>
+        </tr>
+    
+        <tr>
+            <td>17011</td>
+            <td>04</td>
+        </tr>
+    
+        <tr>
+            <td>17013</td>
+            <td>06</td>
+        </tr>
+    
+        <tr>
+            <td>17014</td>
+            <td>07</td>
+        </tr>
+    
+        <tr>
+            <td>17015</td>
+            <td>08</td>
+        </tr>
+    
+        <tr>
+            <td>17016</td>
+            <td>19</td>
+        </tr>
+    
+        <tr>
+            <td>17017</td>
+            <td>10</td>
+        </tr>
+    
+        <tr>
+            <td>17018</td>
+            <td>11</td>
+        </tr>
+    
+        <tr>
+            <td>17019</td>
+            <td>12</td>
+        </tr>
+    
+        <tr>
+            <td>17020</td>
+            <td>14</td>
+        </tr>
+    
+        <tr>
+            <td>17021</td>
+            <td>15</td>
+        </tr>
+    
+        <tr>
+            <td>17022</td>
+            <td>16</td>
+        </tr>
+    
+        <tr>
+            <td>17023</td>
+            <td>17</td>
+        </tr>
+    
+        <tr>
+            <td>17024</td>
+            <td>18</td>
+        </tr>
+    
+        <tr>
+            <td>17026</td>
+            <td>20</td>
+        </tr>
+    
+        <tr>
+            <td>17027</td>
+            <td>21</td>
+        </tr>
+    
+        <tr>
+            <td>17028</td>
+            <td>22</td>
+        </tr>
+    
+        <tr>
+            <td>17029</td>
+            <td>23</td>
+        </tr>
+    
+        <tr>
+            <td>17030</td>
+            <td>25</td>
+        </tr>
+    
+        <tr>
+            <td>17031</td>
+            <td>26</td>
+        </tr>
+    
+        <tr>
+            <td>17032</td>
+            <td>27</td>
+        </tr>
+    
+        <tr>
+            <td>17033</td>
+            <td>28</td>
+        </tr>
+    
+        <tr>
+            <td>17034</td>
+            <td>29</td>
+        </tr>
+    
+        <tr>
+            <td>17035</td>
+            <td>30</td>
+        </tr>
+    
+        <tr>
+            <td>17036</td>
+            <td>31</td>
+        </tr>
+    
+        <tr>
+            <td>17037</td>
+            <td>32</td>
+        </tr>
+    
+        <tr>
+            <td>17038</td>
+            <td>33</td>
+        </tr>
+    
+        <tr>
+            <td>17039</td>
+            <td>34</td>
+        </tr>
+    
+        <tr>
+            <td>17040</td>
+            <td>36</td>
+        </tr>
+    
+        <tr>
+            <td>17041</td>
+            <td>37</td>
+        </tr>
+    
+        <tr>
+            <td>17042</td>
+            <td>38</td>
+        </tr>
+    
+        <tr>
+            <td>17043</td>
+            <td>39</td>
+        </tr>
+    
+        <tr>
+            <td>17044</td>
+            <td>40</td>
+        </tr>
+    
+        <tr>
+            <td>17045</td>
+            <td>41</td>
+        </tr>
+    
+        <tr>
+            <td>17046</td>
+            <td>42</td>
+        </tr>
+    
+        <tr>
+            <td>17047</td>
+            <td>43</td>
+        </tr>
+    
+        <tr>
+            <td>17048</td>
+            <td>44</td>
+        </tr>
+    
+        <tr>
+            <td>17049</td>
+            <td>45</td>
+        </tr>
+    
+        <tr>
+            <td>17050</td>
+            <td>47</td>
+        </tr>
+    
+        <tr>
+            <td>17051</td>
+            <td>48</td>
+        </tr>
+    
+        <tr>
+            <td>17052</td>
+            <td>49</td>
+        </tr>
+    
+        <tr>
+            <td>17053</td>
+            <td>50</td>
+        </tr>
+    
+        <tr>
+            <td>17054</td>
+            <td>51</td>
+        </tr>
+    
+        <tr>
+            <td>17055</td>
+            <td>52</td>
+        </tr>
+    
+        <tr>
+            <td>17056</td>
+            <td>53</td>
+        </tr>
+    
+        <tr>
+            <td>17057</td>
+            <td>54</td>
+        </tr>
+    
+        <tr>
+            <td>17058</td>
+            <td>55</td>
+        </tr>
+    
+        <tr>
+            <td>17059</td>
+            <td>56</td>
+        </tr>
+    
+        <tr>
+            <td>17060</td>
+            <td>03</td>
+        </tr>
+    
+        <tr>
+            <td>17061</td>
+            <td>59</td>
+        </tr>
+    
+        <tr>
+            <td>17062</td>
+            <td>60</td>
+        </tr>
+    
+        <tr>
+            <td>17063</td>
+            <td>61</td>
+        </tr>
+    
+        <tr>
+            <td>17064</td>
+            <td>62</td>
+        </tr>
+    
+        <tr>
+            <td>17065</td>
+            <td>63</td>
+        </tr>
+    
+        <tr>
+            <td>17066</td>
+            <td>64</td>
+        </tr>
+    
+        <tr>
+            <td>17067</td>
+            <td>65</td>
+        </tr>
+    
+        <tr>
+            <td>17068</td>
+            <td>66</td>
+        </tr>
+    
+        <tr>
+            <td>17069</td>
+            <td>67</td>
+        </tr>
+    
+        <tr>
+            <td>17070</td>
+            <td>69</td>
+        </tr>
+    
+        <tr>
+            <td>17071</td>
+            <td>70</td>
+        </tr>
+    
+        <tr>
+            <td>17072</td>
+            <td>71</td>
+        </tr>
+    
+        <tr>
+            <td>17073</td>
+            <td>72</td>
+        </tr>
+    
+        <tr>
+            <td>17074</td>
+            <td>73</td>
+        </tr>
+    
+        <tr>
+            <td>17075</td>
+            <td>74</td>
+        </tr>
+    
+        <tr>
+            <td>17076</td>
+            <td>75</td>
+        </tr>
+    
+        <tr>
+            <td>17077</td>
+            <td>76</td>
+        </tr>
+    
+        <tr>
+            <td>17078</td>
+            <td>77</td>
+        </tr>
+    
+        <tr>
+            <td>17079</td>
+            <td>78</td>
+        </tr>
+    
+        <tr>
+            <td>17080</td>
+            <td>80</td>
+        </tr>
+    
+        <tr>
+            <td>17081</td>
+            <td>09</td>
+        </tr>
+    
+        <tr>
+            <td>17090</td>
+            <td>58</td>
+        </tr>
+    
+        <tr>
+            <td>17091</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17083</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17093</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17094</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17088</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17096</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17012</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17095</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17092</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17086</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17099</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17082</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17025</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17085</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17084</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17087</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17098</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17089</td>
+            <td>Unknown</td>
         </tr>
     
     </tbody>
