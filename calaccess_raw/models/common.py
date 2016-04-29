@@ -431,6 +431,8 @@ class HdrCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=79),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=1),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=51),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=4),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=5),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -445,8 +447,12 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="CAL Version number the filing was made using"
     )
+    EF_TYPE_CHOICES = (
+        ('CAL', '.CAL format'),
+    )
     ef_type = fields.CharField(
         max_length=3,
+        choices=EF_TYPE_CHOICES,
         db_column='EF_TYPE',
         blank=True,
         help_text='Electronic filing type. This will always have the \
@@ -469,11 +475,16 @@ original filing and 1 to 999 amendments.",
         ("HDR", "HDR"),
     )
     rec_type = fields.CharField(
-        verbose_name='record type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        verbose_name='record type',
+        help_text='record type',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=4),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=5),
+        ]
     )
     soft_name = fields.CharField(
         max_length=90,
@@ -487,12 +498,20 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Filing software version number"
     )
+    STATE_CD_CHOICES = (
+        ('CA', 'California'),
+    )
     state_cd = fields.CharField(
         max_length=2,
         db_column='STATE_CD',
+        choices=STATE_CD_CHOICES,
         blank=True,
         verbose_name='State code',
-        help_text="The state code value entered in the electronic filing"
+        help_text="The state code value entered in the electronic filing",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=4),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=5),
+        ]
     )
 
     class Meta:
@@ -538,7 +557,8 @@ class HeaderCd(CalAccessBaseModel):
         db_column='FORM_ID',
         max_length=5,
         help_text="Form identification code",
-        verbose_name="Form ID"
+        verbose_name="Form ID",
+        choices=FORM_ID_CHOICES,
     )
     REC_TYPE_CHOICES = (
         ("AP1", "AP1"),
@@ -704,6 +724,12 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=27),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=59),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
+        ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
         ('401A', get_filing_form('F401').get_section('A')),
@@ -1154,7 +1180,16 @@ class SpltCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=132),
         DocumentCloud(id="2711616-MapCalFormat2Fields", start_page=88),
-        DocumentCloud(id="2712034-Cal-Format-201", start_page=28),
+        DocumentCloud(id="2712034-Cal-Format-201", start_page=18),
+    ]
+    FILING_FORMS = [
+        get_filing_form('F460').get_section('A'),
+        get_filing_form('F460').get_section('B1'),
+        get_filing_form('F460').get_section('B2'),
+        get_filing_form('F460').get_section('C'),
+        get_filing_form('F460').get_section('D'),
+        get_filing_form('F450').get_section('P5'),
+        get_filing_form('F460').get_section('H'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1167,18 +1202,28 @@ original filing and 1 to 999 amendments.",
         max_digits=16,
         decimal_places=2,
         db_column='ELEC_AMOUNT',
-        help_text="This field is undocumented"
+        help_text="Per Election to Date Amount"
+    )
+    ELEC_CODE_CHOICES = (
+        ('P', 'Primary'),
+        ('G', 'General'),
+        ('S', 'Special'),
+        ('R', 'Runoff'),
     )
     elec_code = fields.CharField(
         max_length=2,
+        choices=ELEC_CODE_CHOICES,
         db_column='ELEC_CODE',
         blank=True,
-        help_text='This field is undocumented',
+        help_text='Per Election to Date Code',
+        documentcloud_pages=[
+            DocumentCloud(id="2712034-Cal-Format-201", start_page=18),
+        ]
     )
     elec_date = fields.DateField(
         db_column='ELEC_DATE',
         null=True,
-        help_text="This field is undocumented"
+        help_text="Date of Election"
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1191,28 +1236,23 @@ original filing and 1 to 999 amendments.",
         help_text="Line item number of this record",
         db_index=True,
     )
-    PFORM_TYPE_CHOICES = (
-        ('A', ''),
-        ('B1', ''),
-        ('B2', ''),
-        ('C', ''),
-        ('D', ''),
-        ('F450P5', ''),
-        ('H', ''),
-    )
+    PFORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     pform_type = fields.CharField(
         max_length=7,
         db_column='PFORM_TYPE',
         db_index=True,
         choices=PFORM_TYPE_CHOICES,
-        help_text='This field is undocumented',
+        help_text='Parent Schedule Type',
+        documentcloud_pages=[
+            DocumentCloud(id="2712034-Cal-Format-201", start_page=18),
+        ]
     )
     ptran_id = fields.CharField(
-        verbose_name='transaction ID',
+        verbose_name='parent transaction ID',
         max_length=32,
         db_column='PTRAN_ID',
         blank=True,
-        help_text='Permanent value unique to this item',
+        help_text='Parent transaction ID',
     )
 
     class Meta:
