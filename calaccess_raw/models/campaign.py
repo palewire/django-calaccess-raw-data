@@ -1805,21 +1805,26 @@ for Senate, Assembly, or Board of Equalization races."
         help_text="Entity ZIP code"
     )
     F460_PART_CHOICES = (
-        ('3', '3'),
-        ('4a', '4a'),
-        ('4b', '4b'),
-        ('4A', '4A'),
-        ('4B', '4B'),
-        ('5a', '5a'),
-        ('5b', '5b'),
-        ('5A', '5A'),
-        ('5B', '5B'),
-        ('6', '6'),
-        ('6a', '6a'),
-        ('6b', '6b'),
-        ('6A', '6A'),
-        ('6B', '6B'),
-        ('7', '7'),
+        ('3', 'Part 3: Committee Information'),
+        # Part 4 became Part 5 somewhere between 1999 and 2001
+        # Seems like the use of the old and new versions of the forms overlapped slightly
+        # https://gist.github.com/gordonje/fb858960bc249cf9a2a581212eccbb8b
+        ('4a', 'Part 4a: Officeholder or Candidate Controlled Committee'),
+        ('4A', 'Part 4a: Officeholder or Candidate Controlled Committee'),
+        ('4b', 'Part 4b: Related Committees Not Included in this Statement'),
+        ('4B', 'Part 4b: Related Committees Not Included in this Statement'),
+        ('5a', 'Part 5a: Officeholder or Candidate Controlled Committee'),
+        ('5A', 'Part 5a: Officeholder or Candidate Controlled Committee'),
+        ('5b', 'Part 5b: Related Committees Not Included in this Statement'),
+        ('5B', 'Part 5b: Related Committees Not Included in this Statement'),
+        # On the 1999 Form...
+        ('6', 'Part 6: Primarily Formed Committee'),
+        # On 2001 form...
+        ('6a', 'Part 6a: Name of Ballot Measure'),
+        ('6A', 'Part 6a: Name of Ballot Measure'),
+        ('6b', 'Part 6b: Name of Officeholder, Candidate, or Proponent'),
+        ('6B', 'Part 6b: Name of Officeholder, Candidate, or Proponent'),
+        ('7', 'Part 7: Primarily Formed Committee'),
     )
     f460_part = fields.CharField(
         max_length=2,
