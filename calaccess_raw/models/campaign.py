@@ -706,7 +706,7 @@ relates to. See CAL document for the definition of legal values for this column.
         ('REP', choices.OFFICE_CODES['ASM']),
         ('05', choices.OFFICE_CODES['ASM']),
         # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
-        # Looks like this was corrected on a later amendment. 
+        # Looks like this was corrected on a later amendment.
         # Don't think they actually mean to specify a jurisdiction
         ('H', 'N/A'),
         # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1613541&amendid=1
@@ -738,7 +738,7 @@ relates to. See CAL document for the definition of legal values for this column.
     )
     JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
         # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
-        # Looks like this was corrected on a later amendment. 
+        # Looks like this was corrected on a later amendment.
         # Don't think they actually mean to specify a jurisdiction
         ('FED', 'N/A'),
         # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1125823&amendid=0
@@ -2749,9 +2749,9 @@ original filing and 1 to 999 amendments.",
         ('PRO', choices.CAMPAIGN_ENTITY_CODES['PRO']),
         ('SPO', choices.CAMPAIGN_ENTITY_CODES['SPO']),
         # Lower case versions of valid codes
-        ('atr', choices.CAMPAIGN_ENTITY_CODES['tre'],
-        ('tre', choices.CAMPAIGN_ENTITY_CODES['atr'],
-        ('cao', choices.CAMPAIGN_ENTITY_CODES['cao'],
+        ('atr', choices.CAMPAIGN_ENTITY_CODES['TRE']),
+        ('tre', choices.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('cao', choices.CAMPAIGN_ENTITY_CODES['CAO']),
         # Other known codes observed in this field
         ('MDI', choices.CAMPAIGN_ENTITY_CODES['MDI']),
         ('POF', choices.CAMPAIGN_ENTITY_CODES['POF']),
@@ -5686,9 +5686,9 @@ Populated for Senate, Assembly or Board of Equalization races.'
         (17080, '80'),
         (17081, '09'),
         (17090, '58'),
-        (17012, 'Unknown')
-        (17082, 'Unknown')
-        (17025, 'Unknown')
+        (17012, 'Unknown'),
+        (17082, 'Unknown'),
+        (17025, 'Unknown'),
     )
     district_cd = fields.IntegerField(
         db_column='DISTRICT_CD',
