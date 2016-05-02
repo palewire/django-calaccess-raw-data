@@ -1855,7 +1855,20 @@ for Senate, Assembly, or Board of Equalization races."
             DocumentCloud(id='2712034-Cal-Format-201', start_page=31),
         ]
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('sen', choices.JURIS_CODES['SEN']),
+        # looks like the Arlie Ricasa Campaign was consistently making this mis-write
+        ('SD', choices.JURIS_CODES['ASM']),
+        # ditto for Kevin de Leon Believing in A Better California
+        ('se', choices.JURIS_CODES['SEN']),
+        # ditto for Friends of Bob Dutton
+        ('F', choices.JURIS_CODES['ASM']),
+        # ditto for Friends To Re-Elect Tonia For 7th District
+        ('LBC', choices.JURIS_CODES['CIT']),
+        # Several different filers have made this mis-write
+        # Usually they mean Statewide, but sometimes they mean State Assembly or City
+        ('CA', choices.JURIS_CODES['STW']),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
