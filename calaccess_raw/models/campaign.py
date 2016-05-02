@@ -1920,9 +1920,10 @@ for Senate, Assembly, or Board of Equalization races."
         ('S', choices.OFF_S_H_CODES['S']),
         ('H', choices.OFF_S_H_CODES['H']),
         ('s', choices.OFF_S_H_CODES['S']),
-        # The codes below appear in the database but are undocumented
-        ("F", "UNKNOWN"),
-        ("T", "UNKNOWN"),
+        # Bob Dutton meant 'Sought'
+        ("F", choices.OFF_S_H_CODES['S']),
+        # This one actually says 'Held'. Maybe a mis-read?
+        ("T", choices.OFF_S_H_CODES['H']),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
