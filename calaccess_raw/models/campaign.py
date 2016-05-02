@@ -697,7 +697,21 @@ relates to. See CAL document for the definition of legal values for this column.
         verbose_name='industry group',
         help_text="Industry group/affiliation description"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('Asm', choices.OFFICE_CODES['ASM']),
+        ('LEG', choices.OFFICE_CODES['ASM']),
+        ('OF', choices.OFFICE_CODES['ASM']),
+        ('REP', choices.OFFICE_CODES['ASM']),
+        ('05', choices.OFFICE_CODES['ASM']),
+        # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
+        # Maybe meant U.S. House of Representatives
+        ('H', 'Unknown'),
+        # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
+        # Seems like this committee is supporting a state measure, rather than any candidate
+        ('PRO', choices.OFFICE_CODES['GOV']),
+        # All over the board
+        ('PAC', 'Unknown'),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
