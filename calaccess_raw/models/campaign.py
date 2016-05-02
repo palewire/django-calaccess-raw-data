@@ -704,11 +704,13 @@ relates to. See CAL document for the definition of legal values for this column.
         ('REP', choices.OFFICE_CODES['ASM']),
         ('05', choices.OFFICE_CODES['ASM']),
         # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
-        # Maybe meant U.S. House of Representatives
-        ('H', 'Unknown'),
-        # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
+        # Looks like this was corrected on a later amendment. 
+        # Don't think they actually mean to specify a jurisdiction
+        ('H', 'N/A'),
+        # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1613541&amendid=1
         # Seems like this committee is supporting a state measure, rather than any candidate
-        ('PRO', choices.OFFICE_CODES['GOV']),
+        # Don't think they actually mean to specify an office. Was removed on later amendment
+        ('PRO', 'N/A'),
         # All over the board
         ('PAC', 'Unknown'),
     )
@@ -732,7 +734,14 @@ relates to. See CAL document for the definition of legal values for this column.
         help_text="Office sought description used if the office sought code \
 (OFFICE_CD) equals other (OTH)."
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
+        # Looks like this was corrected on a later amendment. 
+        # Don't think they actually mean to specify a jurisdiction
+        ('FED', 'N/A'),
+        # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1125823&amendid=0
+        ('JR', 'N/A'),
+    )
     juris_cd = fields.CharField(
         choices=JURIS_CD_CHOICES,
         db_column='JURIS_CD',
