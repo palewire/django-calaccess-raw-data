@@ -1942,7 +1942,18 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="Office sought description"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        # looks like the Richard Alarcon for Assembly made this mis-write
+        ('CIT', choices.OFFICE_CODES['ASM']),
+        # ditto for Isadore Hall for Assembly
+        ('CTL', choices.OFFICE_CODES['ASM']),
+        # ditto for Friends of Bob Dutton
+        ('F', choices.OFFICE_CODES['ASM']),
+        # ditto for Henry Perea
+        ('ST', choices.OFFICE_CODES['ASM']),
+        # This one is all over the board
+        ('PAC', 'Unknown'),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
