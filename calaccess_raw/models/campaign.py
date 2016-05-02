@@ -2746,6 +2746,10 @@ original filing and 1 to 999 amendments.",
         ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
         ('PRO', choices.CAMPAIGN_ENTITY_CODES['PRO']),
         ('SPO', choices.CAMPAIGN_ENTITY_CODES['SPO']),
+        # Lower case versions of valid codes
+        ('atr', choices.CAMPAIGN_ENTITY_CODES['tre'],
+        ('tre', choices.CAMPAIGN_ENTITY_CODES['atr'],
+        ('cao', choices.CAMPAIGN_ENTITY_CODES['cao'],
         # Other known codes observed in this field
         ('MDI', choices.CAMPAIGN_ENTITY_CODES['MDI']),
         ('POF', choices.CAMPAIGN_ENTITY_CODES['POF']),
