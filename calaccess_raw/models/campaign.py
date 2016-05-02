@@ -5898,7 +5898,10 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Candidate/officerholder suffix"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('gov', choices.OFFICE_CODES['GOV']),
+        ('oth', choices.OFFICE_CODES['OTH']),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=4,
