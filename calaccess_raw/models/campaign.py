@@ -54,6 +54,8 @@ class CvrSoCd(CalAccessBaseModel):
         ("CI", "City"),
         ("CO", "County"),
         ("ST", "State"),
+        ("St", "State"),
+        ("st", "State"),
     )
     actvty_lvl = fields.CharField(
         max_length=2,
