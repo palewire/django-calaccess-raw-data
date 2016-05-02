@@ -595,77 +595,77 @@ Look-up Codes
     
         <tr>
             <td>3</td>
-            <td>3</td>
+            <td>Part 3: Committee Information</td>
         </tr>
     
         <tr>
             <td>4a</td>
-            <td>4a</td>
-        </tr>
-    
-        <tr>
-            <td>4b</td>
-            <td>4b</td>
+            <td>Part 4a: Officeholder or Candidate Controlled Committee</td>
         </tr>
     
         <tr>
             <td>4A</td>
-            <td>4A</td>
+            <td>Part 4a: Officeholder or Candidate Controlled Committee</td>
+        </tr>
+    
+        <tr>
+            <td>4b</td>
+            <td>Part 4b: Related Committees Not Included in this Statement</td>
         </tr>
     
         <tr>
             <td>4B</td>
-            <td>4B</td>
+            <td>Part 4b: Related Committees Not Included in this Statement</td>
         </tr>
     
         <tr>
             <td>5a</td>
-            <td>5a</td>
-        </tr>
-    
-        <tr>
-            <td>5b</td>
-            <td>5b</td>
+            <td>Part 5a: Officeholder or Candidate Controlled Committee</td>
         </tr>
     
         <tr>
             <td>5A</td>
-            <td>5A</td>
+            <td>Part 5a: Officeholder or Candidate Controlled Committee</td>
+        </tr>
+    
+        <tr>
+            <td>5b</td>
+            <td>Part 5b: Related Committees Not Included in this Statement</td>
         </tr>
     
         <tr>
             <td>5B</td>
-            <td>5B</td>
+            <td>Part 5b: Related Committees Not Included in this Statement</td>
         </tr>
     
         <tr>
             <td>6</td>
-            <td>6</td>
+            <td>Part 6: Primarily Formed Committee</td>
         </tr>
     
         <tr>
             <td>6a</td>
-            <td>6a</td>
-        </tr>
-    
-        <tr>
-            <td>6b</td>
-            <td>6b</td>
+            <td>Part 6a: Name of Ballot Measure</td>
         </tr>
     
         <tr>
             <td>6A</td>
-            <td>6A</td>
+            <td>Part 6a: Name of Ballot Measure</td>
+        </tr>
+    
+        <tr>
+            <td>6b</td>
+            <td>Part 6b: Name of Officeholder, Candidate, or Proponent</td>
         </tr>
     
         <tr>
             <td>6B</td>
-            <td>6B</td>
+            <td>Part 6b: Name of Officeholder, Candidate, or Proponent</td>
         </tr>
     
         <tr>
             <td>7</td>
-            <td>7</td>
+            <td>Part 7: Primarily Formed Committee</td>
         </tr>
     
     </tbody>
@@ -805,6 +805,36 @@ Look-up Codes
             <td>Statewide</td>
         </tr>
     
+        <tr>
+            <td>sen</td>
+            <td>Senate District</td>
+        </tr>
+    
+        <tr>
+            <td>SD</td>
+            <td>Assembly District</td>
+        </tr>
+    
+        <tr>
+            <td>se</td>
+            <td>Senate District</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>Assembly District</td>
+        </tr>
+    
+        <tr>
+            <td>LBC</td>
+            <td>City</td>
+        </tr>
+    
+        <tr>
+            <td>CA</td>
+            <td>Statewide</td>
+        </tr>
+    
     </tbody>
     </table>
     </div>
@@ -864,12 +894,12 @@ Look-up Codes
     
         <tr>
             <td>F</td>
-            <td>UNKNOWN</td>
+            <td>SOUGHT</td>
         </tr>
     
         <tr>
             <td>T</td>
-            <td>UNKNOWN</td>
+            <td>HELD</td>
         </tr>
     
     </tbody>
@@ -1067,6 +1097,31 @@ Look-up Codes
         <tr>
             <td>TRS</td>
             <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>CTL</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>F</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
         </tr>
     
     </tbody>
@@ -2052,6 +2107,46 @@ Look-up Codes
             <td>Local Treasurer</td>
         </tr>
     
+        <tr>
+            <td>Asm</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>05</td>
+            <td>State Assembly Person</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>PRO</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
     </tbody>
     </table>
     </div>
@@ -2132,6 +2227,16 @@ Look-up Codes
         <tr>
             <td>STW</td>
             <td>Statewide</td>
+        </tr>
+    
+        <tr>
+            <td>FED</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>JR</td>
+            <td>N/A</td>
         </tr>
     
     </tbody>
@@ -2687,6 +2792,21 @@ Look-up Codes
         <tr>
             <td>SPO</td>
             <td>Sponsor</td>
+        </tr>
+    
+        <tr>
+            <td>atr</td>
+            <td>Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>tre</td>
+            <td>Assistant treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>cao</td>
+            <td>Candidate/officeholder</td>
         </tr>
     
         <tr>
@@ -5968,6 +6088,16 @@ Look-up Codes
     
         <tr>
             <td>ST</td>
+            <td>State</td>
+        </tr>
+    
+        <tr>
+            <td>St</td>
+            <td>State</td>
+        </tr>
+    
+        <tr>
+            <td>st</td>
             <td>State</td>
         </tr>
     
@@ -10244,6 +10374,11 @@ Look-up Codes
     <tbody valign="top">
     
         <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
             <td>30001</td>
             <td>PRESIDENT</td>
         </tr>
@@ -11633,6 +11768,21 @@ Look-up Codes
         <tr>
             <td>17090</td>
             <td>58</td>
+        </tr>
+    
+        <tr>
+            <td>17012</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17082</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>17025</td>
+            <td>Unknown</td>
         </tr>
     
     </tbody>
@@ -15587,6 +15737,11 @@ Look-up Codes
         </tr>
     
         <tr>
+            <td>com</td>
+            <td>Committee</td>
+        </tr>
+    
+        <tr>
             <td>IND</td>
             <td>Individual</td>
         </tr>
@@ -16759,6 +16914,16 @@ Look-up Codes
         <tr>
             <td>TRS</td>
             <td>Local Treasurer</td>
+        </tr>
+    
+        <tr>
+            <td>gov</td>
+            <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>oth</td>
+            <td>Other</td>
         </tr>
     
     </tbody>
