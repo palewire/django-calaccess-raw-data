@@ -5289,6 +5289,7 @@ original filing and 1 to 999 amendments.",
         help_text="Financial institution's e-mail address."
     )
     OFFICE_CD_CHOICES = (
+        (0, "N/A"),
         (30001, "PRESIDENT"),
         (30002, "GOVERNOR"),
         (30003, "LIEUTENANT GOVERNOR"),
