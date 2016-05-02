@@ -5656,6 +5656,9 @@ Populated for Senate, Assembly or Board of Equalization races.'
         (17080, '80'),
         (17081, '09'),
         (17090, '58'),
+        (17012, 'Unknown')
+        (17082, 'Unknown')
+        (17025, 'Unknown')
     )
     district_cd = fields.IntegerField(
         db_column='DISTRICT_CD',
