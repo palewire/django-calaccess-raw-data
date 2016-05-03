@@ -4358,14 +4358,11 @@ original filing and 1 to 999 amendments.",
         help_text='Employer ZIP Code',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
+        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
+        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
         ('128', '128 (Unknown)'),
-        ('FRM', 'Lobbying firm'),
-        ('LCO', 'Lobbying coalition'),
-        ('LEM', 'Lobbying employer'),
-        ('OTH', 'Other'),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -4373,6 +4370,11 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        help_text='Entity Code of the Employer Values'
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=76),
+        ]
     )
     fees_amt = fields.DecimalField(
         decimal_places=2,
