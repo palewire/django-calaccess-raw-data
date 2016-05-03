@@ -225,7 +225,7 @@ class DocumentationTestCase(TestCase):
         choice_field_strs = [
             '_cd',
             '_code',
-            'type',
+            '_type',
             'status',
             '_lvl',
             'reportname',
