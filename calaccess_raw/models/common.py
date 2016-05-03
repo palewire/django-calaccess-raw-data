@@ -857,17 +857,15 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
     )
-    ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-    )
+    ENTITY_CODE_CHOICES = get_sorted_choices(choices.CAMPAIGN_ENTITY_CODES)
     entity_cd = fields.CharField(
         db_column='ENTITY_CD',
         max_length=32,
         blank=True,
         verbose_name='entity code',
-        choices=ENTITY_CODE_CHOICES
+        choices=ENTITY_CODE_CHOICES,
+        help_text='entity code',
+        documentcloud_pages=choices.DOCS['entity_codes'],
     )
     filer_naml = fields.CharField(
         db_column='FILER_NAML',
