@@ -234,6 +234,8 @@ class DocumentationTestCase(TestCase):
         exceptions = [
             'LookupCodesCd.code_type',
             'S497Cd.sup_off_cd',
+            'FilerStatusTypesCd.status_type',
+            'FilerStatusTypesCd.status_desc',
         ]
 
         results = []
