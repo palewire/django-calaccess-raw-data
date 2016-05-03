@@ -2199,19 +2199,21 @@ original filing and 1 to 999 amendments.",
         help_text='Contributor prefix or title.',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('COM', 'Committee'),
-        ('CTL', 'Controlling committee'),
-        ('RCP', 'Recipient committee')
+        ('COM', choices.LOBBYING_ENTITY_CODES['COM']),
+        ('CTL', choices.LOBBYING_ENTITY_CODES['CTL']),
+        ('RCP', choices.LOBBYING_ENTITY_CODES['RCP']),
     )
     entity_cd = fields.CharField(
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
+        help_text='Entity Code for Recipient of the Campaign Contribution Value',
         choices=ENTITY_CODE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=78),
+        ],
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2257,6 +2259,10 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=78),
+        ],
     )
     # recip_adr1 = fields.CharField(
     #   max_length=55,
