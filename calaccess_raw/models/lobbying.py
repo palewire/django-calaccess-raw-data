@@ -2200,8 +2200,9 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CODE_CHOICES = (
         ('COM', choices.LOBBYING_ENTITY_CODES['COM']),
-        ('CTL', choices.LOBBYING_ENTITY_CODES['CTL']),
         ('RCP', choices.LOBBYING_ENTITY_CODES['RCP']),
+        # Not sure this is a valid value of lobbying records, but has over 1,000 occurrences
+        ('CTL', choices.CAMPAIGN_ENTITY_CODES['CTL']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -4386,7 +4387,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
-        help_text='Entity Code of the Employer Values'
+        help_text='Entity Code of the Employer Values',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=76),
