@@ -4077,6 +4077,8 @@ class LothCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=107),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=67, end_page=68),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=63),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=77, end_page=78),
     ]
     FILING_FORMS = [
         get_filing_form('F625').get_section('P3B'),
@@ -4160,6 +4162,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=63),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=77),
+        ]
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -4193,6 +4199,10 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=63),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=77),
+        ]
     )
     subj_namf = fields.CharField(
         max_length=45,
