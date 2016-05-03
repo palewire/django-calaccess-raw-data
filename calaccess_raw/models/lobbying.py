@@ -4249,13 +4249,15 @@ class LpayCd(CalAccessBaseModel):
         "REC_TYPE",
         "FORM_TYPE"
     )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=69, end_page=70),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=76, end_page=77),
+    ]
     FILING_FORMS = [
         get_filing_form('F625').get_section('P2'),
         get_filing_form('F635').get_section('P3B'),
-    ]
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=69, end_page=70)
     ]
     advan_amt = fields.DecimalField(
         decimal_places=2,
@@ -4394,6 +4396,10 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=76),
+        ]
     )
     lby_actvty = fields.CharField(
         max_length=200,
