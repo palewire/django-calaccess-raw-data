@@ -3,7 +3,11 @@
 from __future__ import unicode_literals
 from .base import CalAccessBaseModel
 from calaccess_raw import fields
-from calaccess_raw.annotations import DocumentCloud
+from calaccess_raw.annotations import (
+    DocumentCloud,
+    choices,
+    get_sorted_choices
+)
 from calaccess_raw.annotations.filing_forms import get_filing_form, all_filing_forms
 from django.template.defaultfilters import floatformat
 from django.utils.encoding import python_2_unicode_compatible
