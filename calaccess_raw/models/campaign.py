@@ -1528,7 +1528,7 @@ are 'Y' or 'N'."
         ('se', choices.STMT_TYPES['SE']),
         ('sy', choices.STMT_TYPES['SY']),
         ('ts', choices.STMT_TYPES['TS']),
-        ("*", "Unknown"),
+        ("**", "Amendment"),
         ("1", "Unknown"),
         ("2", "Unknown"),
         ("CA", "Unknown"),
