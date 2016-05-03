@@ -456,7 +456,11 @@ original filing and 1 to 999 amendments.",
         db_column='EF_TYPE',
         blank=True,
         help_text='Electronic filing type. This will always have the \
-        value of "CAL".'
+        value of "CAL".',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=4),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=5),
+        ]
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
