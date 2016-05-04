@@ -1440,6 +1440,19 @@ to other (OTH)"
     OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
         ('Gov', choices.OFFICE_CODES['GOV']),
         ('Sen', choices.OFFICE_CODES['SEN']),
+        ('LOC', choices.OFFICE_CODES['CCB']),
+        ('LEG', choices.OFFICE_CODES['SEN']),
+        ('REP', choices.OFFICE_CODES['ASM']),
+        # Rows with this value are all for Local Fire Board campaigns, with usually
+        # categorize as "Other"
+        ('Mem', choices.OFFICE_CODES['OTH']),
+        # Looks like a mis-write by Richard Alarcon for Assembly campaign
+        ('CIT', choices.OFFICE_CODES['ASM']),
+        # Rows with these value could be any number of offices
+        ('PAC', 'Unknown'),
+        ('F', 'Unknown'),
+        # No idea on this one
+        ('COM', 'Unknown'),
     )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
