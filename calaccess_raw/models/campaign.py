@@ -1305,7 +1305,41 @@ individual the filer's last name."
         help_text="Reporting period from date"
     )
     JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        # alt cases
         ('sen', choices.JURIS_CODES['SEN']),
+        ('Gov', choices.JURIS_CODES['STW']),
+        # statewide office codes
+        ('ATT', choices.JURIS_CODES['STW']),
+        ('CON', choices.JURIS_CODES['STW']),
+        ('GOV', choices.JURIS_CODES['STW']),
+        ('SOS', choices.JURIS_CODES['STW']),
+        ('SPM', choices.JURIS_CODES['STW']),
+        # assembly member districts
+        ('46', choices.JURIS_CODES['ASM']),
+        ('55', choices.JURIS_CODES['ASM']),
+        # county office codes
+        ('BSU', choices.JURIS_CODES['CTY']),
+        ('CSU', choices.JURIS_CODES['CTY']),
+        ('DAT', choices.JURIS_CODES['CTY']),
+        ('SHC', choices.JURIS_CODES['CTY']),
+        # city office codes
+        ('MAY', choices.JURIS_CODES['CIT']),
+        ('CCM', choices.JURIS_CODES['CIT']),
+        # other office codes
+        ('APP', choices.JURIS_CODES['OTH']),
+        ('BED', choices.JURIS_CODES['OTH']),
+        ('SCJ', choices.JURIS_CODES['OTH']),
+        # probably means 'San Diego', rows with this value are all for Arlie Ricasa's
+        # Board of Education campaign
+        ('SD', choices.JURIS_CODES['OTH']),
+        # probably means Orange County, rows with this value are all for Lou Correa's
+        # Board of Supervisor's campaign
+        ('OC', choices.JURIS_CODES['CTY']),
+        # One record for Joaquin Arambula's state assembly run
+        ('AD', choices.JURIS_CODES['ASM']),
+        # Often "State of California" but sometimes State Assembly, State Senate or other juris
+        ('CA', 'Unknown'),
+        ('F', 'Unknown'),
     )
     juris_cd = fields.CharField(
         max_length=3,
