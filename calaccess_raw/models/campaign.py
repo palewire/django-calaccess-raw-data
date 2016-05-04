@@ -1304,7 +1304,9 @@ individual the filer's last name."
         blank=True,
         help_text="Reporting period from date"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('sen', choices.JURIS_CODES['SEN']),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         choices=JURIS_CD_CHOICES,
@@ -1401,7 +1403,10 @@ same day."
         help_text="Office sought description if the field OFFICE_CD is set \
 to other (OTH)"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('Gov', choices.OFFICE_CODES['GOV']),
+        ('Sen', choices.OFFICE_CODES['SEN']),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
@@ -2470,7 +2475,13 @@ list of legal values. Used on Form 401 Schedule A",
         blank=True,
         help_text="Office Sought Description (used on F401A)"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('asm', choices.OFFICE_CODES['ASM']),
+        ('gov', choices.OFFICE_CODES['GOV']),
+        ('OTh', choices.OFFICE_CODES['OTH']),
+        ('oth', choices.OFFICE_CODES['OTH']),
+        ('csu', choices.OFFICE_CODES['CSU']),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
@@ -3444,7 +3455,18 @@ individual"
         blank=True,
         help_text="Candidate/officeholder suffix"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('asm', choices.OFFICE_CODES['ASM']),
+        ('ltg', choices.OFFICE_CODES['LTG']),
+        ('OTh', choices.OFFICE_CODES['OTH']),
+        ('att', choices.OFFICE_CODES['ATT']),
+        ('oth', choices.OFFICE_CODES['OTH']),
+        ('tre', choices.OFFICE_CODES['TRE']),
+        ('con', choices.OFFICE_CODES['CON']),
+        ('boe', choices.OFFICE_CODES['BOE']),
+        ('sos', choices.OFFICE_CODES['SOS']),
+        ('sup', choices.OFFICE_CODES['SUP']),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
@@ -3931,7 +3953,12 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('Cit', choices.JURIS_CODES['CIT']),
+        ('sen', choices.JURIS_CODES['SEN']),
+        ('Sen', choices.JURIS_CODES['SEN']),
+        ('stw', choices.JURIS_CODES['STW']),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
@@ -3993,7 +4020,16 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('Cou', choices.OFFICE_CODES['COU']),
+        ('sen', choices.OFFICE_CODES['SEN']),
+        ('AtT', choices.OFFICE_CODES['ATT']),
+        ('May', choices.OFFICE_CODES['MAY']),
+        ('Sen', choices.OFFICE_CODES['SEN']),
+        ('asm', choices.OFFICE_CODES['ASM']),
+        ('gov', choices.OFFICE_CODES['GOV']),
+        ('Gov', choices.OFFICE_CODES['GOV']),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
@@ -4919,7 +4955,16 @@ self-employed.'
         blank=True,
         help_text="Candidate/officeholder's suffix"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('asm', choices.OFFICE_CODES['ASM']),
+        ('sen', choices.OFFICE_CODES['SEN']),
+        ('Asm', choices.OFFICE_CODES['ASM']),
+        ('May', choices.OFFICE_CODES['MAY']),
+        ('ASm', choices.OFFICE_CODES['ASM']),
+        ('oth', choices.OFFICE_CODES['OTH']),
+        ('csu', choices.OFFICE_CODES['CSU']),
+        ('Oth', choices.OFFICE_CODES['OTH']),
+    )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
         max_length=3,
@@ -4935,7 +4980,11 @@ self-employed.'
         blank=True,
         help_text="Office sought description"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('asm', choices.JURIS_CODES['ASM']),
+        ('sen', choices.JURIS_CODES['SEN']),
+        ('cit', choices.JURIS_CODES['CIT']),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
