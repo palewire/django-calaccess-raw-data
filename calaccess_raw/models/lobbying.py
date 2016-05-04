@@ -700,7 +700,6 @@ original filing and 1 to 999 amendments.",
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
         ('AGY', 'State agency'),
         ('EMP', 'Employer'),
         ('FRM', 'Lobbying firm'),
@@ -811,8 +810,7 @@ to forms 625, 635, 645.",
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
-        ('CLI', 'CLI (Unknown)'),
+        ('CLI', 'Unknown'),
         ('FRM', 'Lobbying firm'),
         ('IND', 'Person (Spending > $5,000'),
         ('LBY', 'Lobbyist (an individual)'),
@@ -1755,7 +1753,6 @@ original filing and 1 to 999 amendments.",
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
         ('FRM', 'Lobbying firm'),
         ('IND', 'Person (Spending > $5,000'),
         ('LBY', 'Lobbyist (an individual)'),
@@ -1968,7 +1965,6 @@ original filing and 1 to 999 amendments.",
     ENTITY_CODE_CHOICES = (
         # Defined here:
         # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('', 'Unknown'),
         ('IND', 'Person (Spending > $5,000'),
         ('OTH', 'Other'),
     )
@@ -4379,7 +4375,7 @@ original filing and 1 to 999 amendments.",
         ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
         ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
         ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
-        ('128', '128 (Unknown)'),
+        ('128', 'Unknown'),
     )
     entity_cd = fields.CharField(
         max_length=3,
