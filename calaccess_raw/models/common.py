@@ -350,7 +350,7 @@ laundering or other special condition."
         help_text="Date filing received",
     )
     FILING_TYPE_CHOICES = (
-        (0, '0 (Unknown)'),
+        (0, 'N/A'),
         (22001, 'Electronic'),
         (22006, 'Cal Online'),
     )
