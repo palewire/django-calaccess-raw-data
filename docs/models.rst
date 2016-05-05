@@ -6616,7 +6616,7 @@ Fields
             <td>expn_code</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Expense Code</td>
         </tr>
     
     
@@ -16051,7 +16051,7 @@ Fields
             <td>juris_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Jurisdiction code describing the office being sought</td>
         </tr>
     
     

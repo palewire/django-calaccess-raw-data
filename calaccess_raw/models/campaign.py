@@ -4565,6 +4565,7 @@ of a parent record.'
         db_column='EXPN_CODE',
         blank=True,
         verbose_name='expense code',
+        help_text="Expense Code",
         choices=EXPN_CODE_CHOICES,
         documentcloud_pages=choices.DOCS['expense_codes']
     )
@@ -5154,7 +5155,8 @@ self-employed.'
         max_length=3,
         db_column='JURIS_CD',
         blank=True,
-        verbose_name="Jurisdiction code",
+        verbose_name="jurisdiction code",
+        help_text="Jurisdiction code describing the office being sought",
         choices=JURIS_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=42),
