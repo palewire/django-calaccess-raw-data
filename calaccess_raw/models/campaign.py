@@ -347,12 +347,12 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: CVR",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=28),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=45, end_page=46),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=58, end_page=59),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
         ],
-        help_text='Record Type Value: CVR'
     )
     report_num = fields.CharField(
         max_length=3,
@@ -1495,9 +1495,12 @@ values are 'Y' or 'N'."
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text='Record Type Value: CVR',
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=25),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6),
+            DocumentCloud(id="2712033-Cal-Format-1-05-02", start_page=18),
+            DocumentCloud(id="2712034-Cal-Format-201", start_page=22),
         ]
     )
     report_num = fields.CharField(
@@ -1809,6 +1812,8 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CD_CHOICES,
+        help_text="Entity code used to identify the type of entity being described \
+with in the record.",
         documentcloud_pages=choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23, end_page=24),
@@ -2050,9 +2055,12 @@ for Senate, Assembly, or Board of Equalization races."
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: CVR2",
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=41),
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=31),
         ]
     )
     SUP_OPP_CD_CHOICES = (
@@ -2572,6 +2580,7 @@ list of legal values. Used on Form 401 Schedule A",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: CVR",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=37),
@@ -2732,7 +2741,7 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=41, end_page=42),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=50),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=34),
         DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
     ]
     FILING_FORMS = [
@@ -2775,10 +2784,11 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: CVR3",
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=50),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=28),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=34),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
         ]
     )
@@ -2842,6 +2852,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CD_CHOICES,
+        help_text='Entity Code',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=9),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
@@ -3247,6 +3258,7 @@ CAL document for a description of the value of this field."
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text='Record Type Value: LOAN',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
@@ -3383,6 +3395,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text="Record Type Value: S401",
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
@@ -4212,6 +4225,7 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text='Record Type Value: EXPN',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=42),
@@ -4369,6 +4383,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text='Record Type Value: F495',
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=26),
@@ -4782,6 +4797,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: S496",
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=40),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
@@ -4903,6 +4919,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text="Record Type Value: S497",
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41),
@@ -5282,6 +5299,7 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type",
         documentcloud_pages=[
             DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=58),
         ]
@@ -5970,6 +5988,7 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: S498",
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=56),

@@ -488,7 +488,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
-        help_text='record type',
+        help_text='Record Type. Value: HDR',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=4),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=5),
@@ -578,6 +578,7 @@ class HeaderCd(CalAccessBaseModel):
         db_column='REC_TYPE',
         max_length=11,
         db_index=True,
+        help_text="Record Type",
         choices=REC_TYPE_CHOICES,
     )
     section_label = fields.CharField(
@@ -732,6 +733,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
+        help_text='Record Type Value: SMRY',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=27),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=59),
@@ -851,6 +853,7 @@ original filing and 1 to 999 amendments.",
     )
     rec_type = fields.CharField(
         verbose_name='record type',
+        help_text='Record Type',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
@@ -1373,6 +1376,7 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
         verbose_name='record type',
+        help_text="Record Type Value: TEXT",
         documentcloud_pages=[
             DocumentCloud(id='2712034-Cal-Format-201', start_page=16),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=13),

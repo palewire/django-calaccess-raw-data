@@ -507,6 +507,11 @@ occurs once in lobbying filings.',
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text='Record Type Value: CVR',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=68),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
+        ]
     )
     rencert_cb = fields.CharField(
         max_length=1,
@@ -677,6 +682,11 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_column='REC_TYPE',
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: CVR2",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=72),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=87),
+        ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -772,7 +782,7 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=32, end_page=35),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=17, end_page=21),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53, end_page=56),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=65, end_page=70),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=66, end_page=70),
     ]
     FILING_FORMS = [
         get_filing_form('F615'),
@@ -1082,9 +1092,14 @@ to Form 625.",
     rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
+        help_text="Record Type Value: CVR",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=66),
+        ]
     )
     report_num = fields.CharField(
         max_length=3,
@@ -1276,7 +1291,12 @@ entity is an individual. Only required by Form 635.',
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text='Record Type Value: CVR2',
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -1340,6 +1360,11 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text='Record Type Value: F605',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=74),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=88),
+        ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -1644,6 +1669,11 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: F690",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=58),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
+        ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -1817,7 +1847,12 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text="Record Type Value: LATT",
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=79),
+        ]
     )
     # recip_adr1 = fields.CharField(
     #   max_length=55,
@@ -2084,7 +2119,12 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text="Record Type Value: LEXP",
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=74),
+        ]
     )
     REC_SUBTYPE_CHOICES = (
         ('1', 'Main'),
@@ -2095,6 +2135,11 @@ original filing and 1 to 999 amendments.",
         db_column='RECSUBTYPE',
         choices=REC_SUBTYPE_CHOICES,
         verbose_name='record subtype',
+        help_text='Record Subtype',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=74),
+        ]
     )
     tran_id = fields.CharField(
         verbose_name='transaction ID',
@@ -2255,6 +2300,7 @@ original filing and 1 to 999 amendments.",
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text="Record Type Value: LCCM",
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
@@ -2354,7 +2400,9 @@ class LempCd(CalAccessBaseModel):
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=85, end_page=86),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=56, end_page=57)
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=56, end_page=57),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=75),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=90, end_page=91),
     ]
     FILING_FORMS = [
         get_filing_form('F601').get_section('P2A'),
@@ -2463,6 +2511,10 @@ Part 2B Client/Employer"
         help_text='Name of the source filing form or schedule',
         db_index=True,
         choices=FORM_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=75),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=90),
+        ]
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
@@ -2477,7 +2529,12 @@ Part 2B Client/Employer"
         db_column='REC_TYPE',
         max_length=4,
         db_index=True,
+        help_text='Record Type Value: LEMP',
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=75),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=90),
+        ]
     )
     # sub_adr1 = fields.CharField(
     #     max_length=55, db_column='SUB_ADR1', blank=True
@@ -4202,6 +4259,7 @@ original filing and 1 to 999 amendments.",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        help_text='Record Type Value: LOTH',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=63),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=77),
@@ -4451,9 +4509,14 @@ original filing and 1 to 999 amendments.",
     rec_type = fields.CharField(
         verbose_name='record type',
         db_column='REC_TYPE',
+        help_text="Record Type Value: LPAY",
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=76),
+        ]
     )
     reimb_amt = fields.DecimalField(
         decimal_places=2,
