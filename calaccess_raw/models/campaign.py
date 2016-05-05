@@ -2463,7 +2463,22 @@ and Form 401 Schedule A, A-1)"
         blank=True,
         help_text="Intermediary's zip code"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        # "other" office codes
+        ('BED', choices.JURIS_CODES['OTH']),
+        ('CLB', choices.JURIS_CODES['OTH']),
+        # misprint
+        ('COU', choices.JURIS_CODES['CTY']),
+        # Office Code for this one record is Superior Court Judge
+        ('CO', choices.JURIS_CODES['OTH']),
+        ('SAC', 'Unknown'),
+        ('PER', 'Unknown'),
+        ('SF', 'Unknown'),
+        ('OR', 'Unknown'),
+        ('AL', 'Unknown'),
+        ('4', 'Unknown'),
+        ('CA', 'Unknown'),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
@@ -3953,6 +3968,16 @@ original filing and 1 to 999 amendments.",
         ("WI", "Unknown"),
         ("x", "Unknown"),
         ("X", "Unknown"),
+        ('S-6', 'Unknown'),
+        ('S.M', 'Unknown'),
+        ('S-4', 'Unknown'),
+        ('SA:', 'Unknown'),
+        ('100', 'Unknown'),
+        ('RFN', 'Unknown'),
+        ('REN', 'Unknown'),
+        ('003', 'Unknown'),
+        ('S-1', 'Unknown'),
+        ('08', 'Unknown'),
     )
     expn_code = fields.CharField(
         max_length=3,
@@ -4001,10 +4026,48 @@ original filing and 1 to 999 amendments.",
         help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
     JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        # alt casing of valid values
         ('Cit', choices.JURIS_CODES['CIT']),
         ('sen', choices.JURIS_CODES['SEN']),
         ('Sen', choices.JURIS_CODES['SEN']),
         ('stw', choices.JURIS_CODES['STW']),
+        # statewide office codes
+        ('APP', choices.JURIS_CODES['STW']),
+        ('ASR', choices.JURIS_CODES['CTY']),
+        ('ATT', choices.JURIS_CODES['STW']),
+        ('GOV', choices.JURIS_CODES['STW']),
+        ('LTG', choices.JURIS_CODES['STW']),
+        ('SOS', choices.JURIS_CODES['STW']),
+        ('SUP', choices.JURIS_CODES['STW']),
+        ('TRE', choices.JURIS_CODES['STW']),
+        # county office codes
+        ('BSU', choices.JURIS_CODES['CTY']),
+        ('CSU', choices.JURIS_CODES['CTY']),
+        # "other" office codes
+        ('BED', choices.JURIS_CODES['OTH']),
+        ('CCB', choices.JURIS_CODES['OTH']),
+        ('CCM', choices.JURIS_CODES['OTH']),
+        ('PDR', choices.JURIS_CODES['OTH']),
+        # state senate districts
+        ('12', choices.JURIS_CODES['SEN']),
+        # Ballot Propositions
+        ('4', choices.JURIS_CODES['STW']),
+        ('8', choices.JURIS_CODES['STW']),
+        ('27', choices.JURIS_CODES['STW']),
+        ('93', choices.JURIS_CODES['STW']),
+        ('98', choices.JURIS_CODES['STW']),
+        # Community College Board, except that one time where it's City Council
+        ('CLB', 'Unknown'),
+        # Sometimes these are Assembly Members, sometimes State Senators,
+        # sometimes Public Employees Retirement System
+        ('PER', 'Unknown'),
+        # Misprint
+        ('Boa', choices.JURIS_CODES['BOE']),
+        # Usually Assembly Member except for those two times when it's governor and attorney general
+        ('Sta', 'Unknown'),
+        ('STA', 'Unknown'),
+        # All over the board
+        ('CA', 'Unknown'),
     )
     juris_cd = fields.CharField(
         max_length=3,
@@ -5031,6 +5094,38 @@ self-employed.'
         ('asm', choices.JURIS_CODES['ASM']),
         ('sen', choices.JURIS_CODES['SEN']),
         ('cit', choices.JURIS_CODES['CIT']),
+        ('GOV', choices.JURIS_CODES['STW']),
+        # city office codes
+        ('MAY', choices.JURIS_CODES['CIT']),
+        # county office codes
+        ('BSU', choices.JURIS_CODES['CTY']),
+        ('CSU', choices.JURIS_CODES['CTY']),
+        # statewide office codes
+        ('SUP', choices.JURIS_CODES['STW']),
+        # other office codes
+        ('BED', choices.JURIS_CODES['OTH']),
+        ('CCB', choices.JURIS_CODES['OTH']),
+        ('CCM', choices.JURIS_CODES['OTH']),
+        ('CLB', choices.JURIS_CODES['OTH']),
+        # These are all for City Council Member offices
+        ('IRV', choices.JURIS_CODES['CIT']),
+        ('Fon', choices.JURIS_CODES['CIT']),
+        # For Arnold's Gov campaign
+        ('JRS', choices.JURIS_CODES['STW']),
+        # County Supervisor office
+        ('CO', choices.JURIS_CODES['CTY']),
+        ('Riv', choices.JURIS_CODES['CTY']),
+        # misspelling
+        ('SNE', choices.JURIS_CODES['SEN']),
+        # This is for Prop 83
+        ('83', choices.JURIS_CODES['STW']),
+        # Sometimes Assembly Member, sometimes Public Employees Retirement System
+        ('PER', 'Unknown'),
+        # These look like contributions to federal campaigns (e.g., President, Congress)
+        ('FED', 'Unknown'),
+        # Sometimes for Assembly Members, sometimes Statewide offices, kinda all over
+        ('CA', 'Unknown'),
+        ('JR', 'Unknown'),
     )
     juris_cd = fields.CharField(
         max_length=3,
@@ -6020,7 +6115,10 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Description of office sought"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('GOV', choices.JURIS_CODES['STW']),
+        ('COU', choices.JURIS_CODES['CTY']),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         db_column='JURIS_CD',
