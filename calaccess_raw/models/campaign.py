@@ -2362,7 +2362,7 @@ and Form 401 Schedule A, A-1)"
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
-        help_text="Entity code",
+        help_text="Entity Code describing the contributor",
         choices=ENTITY_CD_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
@@ -2839,10 +2839,11 @@ original filing and 1 to 999 amendments.",
         ('MDI', choices.CAMPAIGN_ENTITY_CODES['MDI']),
         ('POF', choices.CAMPAIGN_ENTITY_CODES['POF']),
         ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        # Misspelling of 'CAO', 'Candidate/officeholder'
+        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
         # Other unknown values observed
         ('0', 'Unknown'),
         ('BBB', 'Unknown'),
-        ('COA', 'Unknown'),  # Misspelling of 'CAO', 'Candidate/officeholder'?
         ('CON', 'Unknown'),
         ('MAI', 'Unknown'),
     )
@@ -2852,7 +2853,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CD_CHOICES,
-        help_text='Entity Code',
+        help_text='Entity Code',  # describing verifier?
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=9),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=25),
@@ -2973,9 +2974,11 @@ original filing and 1 to 999 amendments.",
         db_column='ENTITY_CD',
         blank=True,
         verbose_name="entity code",
+        help_text="Entity code describing the lender",
         choices=ENTITY_CD_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=11),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
         ]
     )
     filing_id = fields.IntegerField(
@@ -3825,6 +3828,7 @@ original filing and 1 to 999 amendments.",
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
+        help_text='Entity Code describing payee',
         documentcloud_pages=choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=42),
@@ -4511,7 +4515,7 @@ of a parent record.'
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CD_CHOICES,
-        help_text='Entity code of the payee',
+        help_text='Entity code describing the payee',
         documentcloud_pages=choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
@@ -4963,6 +4967,7 @@ original filing and 1 to 999 amendments.",
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
+        help_text='Entity Code describing the Contributor/Recipient',
         choices=ENTITY_CD_CHOICES,
         documentcloud_pages=choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41),
@@ -4973,61 +4978,62 @@ original filing and 1 to 999 amendments.",
         max_length=200,
         db_column='ENTY_NAML',
         blank=True,
-        help_text="Entity's last name or business name"
+        help_text="Last name of Contributor/Recipient",
     )
     enty_namf = fields.CharField(
         max_length=45,
         db_column='ENTY_NAMF',
         blank=True,
-        help_text="Entity's first name"
+        help_text="First name of Contributor/Recipient",
     )
     enty_namt = fields.CharField(
         max_length=10,
         db_column='ENTY_NAMT',
         blank=True,
-        help_text="Entity's title or prefix"
+        help_text="Name title or prefix of Contributor/Recipient",
     )
     enty_nams = fields.CharField(
         max_length=10,
         db_column='ENTY_NAMS',
         blank=True,
-        help_text="Entity's suffix"
+        help_text="Name suffix of Contributor/Recipient",
     )
     enty_city = fields.CharField(
         max_length=30,
         db_column='ENTY_CITY',
         blank=True,
-        help_text="Filing committee's city address"
+        help_text="City address of Contributor/Recipient",
     )
     enty_st = fields.CharField(
         max_length=2,
         db_column='ENTY_ST',
         blank=True,
-        help_text="Filing committee's state address"
+        help_text="State address of Contributor/Recipient",
     )
     enty_zip4 = fields.CharField(
         max_length=10,
         db_column='ENTY_ZIP4',
         blank=True,
-        help_text="Filing committee's ZIP Code"
+        help_text="ZIP Code of Contributor/Recipient",
     )
     ctrib_emp = fields.CharField(
         max_length=200,
         db_column='CTRIB_EMP',
         blank=True,
-        help_text="Employer"
+        help_text="Employer of Contributor (populated for some Recipients as well)",
     )
     ctrib_occ = fields.CharField(
         max_length=60,
         db_column='CTRIB_OCC',
         blank=True,
-        help_text="Occupation"
+        help_text="Occupation of Contributor (populated for some Recipients as well)"
     )
     ctrib_self = fields.CharField(
         max_length=1,
         db_column='CTRIB_SELF',
         blank=True,
-        help_text='Self employed checkbox. "X" indicates the contributor is \
+        verbose_name="Contributor self-employed checkbox",
+        help_text='Contributor self-employed checkbox. "X" indicates the contributor is \
 self-employed.'
     )
     elec_date = fields.DateField(
@@ -5337,7 +5343,7 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CD_CHOICES,
         blank=True,
         max_length=9,
-        help_text='Entity code',
+        help_text='Entity code',  # Not clear which values are valid
         documentcloud_pages=choices.DOCS['entity_codes'],
     )
     report_num = fields.CharField(
@@ -6025,6 +6031,7 @@ original filing and 1 to 999 amendments.",
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
+        help_text="Entity code",
         choices=ENTITY_CD_CHOICES,
         documentcloud_pages=choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
