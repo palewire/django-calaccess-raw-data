@@ -172,7 +172,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity code used to identify the type of entity being described with in the record.</td>
         </tr>
     
     
@@ -379,7 +379,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: CVR2</td>
         </tr>
     
     
@@ -1143,6 +1143,20 @@ Look-up Codes
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/32.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p32-thumbnail.gif'></a><p>p. 32</p></div></div>
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/31.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p31-thumbnail.gif'></a><p>p. 31</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/23.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p23-thumbnail.gif'></a><p>p. 23</p></div></div>
 
 
 
@@ -2396,7 +2410,7 @@ Source Docs
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p28-thumbnail.gif'></a><p>p. 28</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/34.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p34-thumbnail.gif'></a><p>p. 34</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
 
 
 *Cal-Format-1-05-02*
@@ -2511,7 +2525,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: CVR3</td>
         </tr>
     
     
@@ -2538,7 +2552,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity Code</td>
         </tr>
     
     
@@ -2610,7 +2624,7 @@ Look-up Codes
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/28.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p28-thumbnail.gif'></a><p>p. 28</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/34.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p34-thumbnail.gif'></a><p>p. 34</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/64.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p64-thumbnail.gif'></a><p>p. 64</p></div></div>
 
 
 *Cal-Format-1-05-02*
@@ -2825,17 +2839,17 @@ Look-up Codes
         </tr>
     
         <tr>
+            <td>CAO</td>
+            <td>Candidate/officeholder</td>
+        </tr>
+    
+        <tr>
             <td>0</td>
             <td>Unknown</td>
         </tr>
     
         <tr>
             <td>BBB</td>
-            <td>Unknown</td>
-        </tr>
-    
-        <tr>
-            <td>COA</td>
             <td>Unknown</td>
         </tr>
     
@@ -3564,7 +3578,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td></td>
+            <td>Record Type Value: CVR</td>
         </tr>
     
     
@@ -4530,6 +4544,20 @@ Look-up Codes
 .. raw:: html
 
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/6.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p6-thumbnail.gif'></a><p>p. 6</p></div></div>
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p18-thumbnail.gif'></a><p>p. 18</p></div></div>
 
 
 
@@ -6399,14 +6427,14 @@ Look-up Codes
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p58-thumbnail.gif'></a><p>p. 58</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/59.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p59-thumbnail.gif'></a><p>p. 59</p></div></div>
 
 
 *Cal-Format-1-05-02*
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/45.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p45-thumbnail.gif'></a><p>p. 45</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/46.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p46-thumbnail.gif'></a><p>p. 46</p></div></div>
 
 
 
@@ -6579,7 +6607,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Entity code of the payee</td>
+            <td>Entity code describing the payee</td>
         </tr>
     
     
@@ -7598,7 +7626,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity Code describing payee</td>
         </tr>
     
     
@@ -7805,7 +7833,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: EXPN</td>
         </tr>
     
     
@@ -9802,7 +9830,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td></td>
+            <td>Record Type Value: F495</td>
         </tr>
     
     
@@ -10015,7 +10043,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td></td>
+            <td>Record Type</td>
         </tr>
     
     
@@ -12319,7 +12347,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity code describing the lender</td>
         </tr>
     
     
@@ -12634,7 +12662,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: LOAN</td>
         </tr>
     
     
@@ -12742,7 +12770,14 @@ Look-up Codes
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p11-thumbnail.gif'></a><p>p. 11</p></div></div>
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/47.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p47-thumbnail.gif'></a><p>p. 47</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/35.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p35-thumbnail.gif'></a><p>p. 35</p></div></div>
 
 
 
@@ -13321,7 +13356,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td>Entity code</td>
+            <td>Entity Code describing the contributor</td>
         </tr>
     
     
@@ -13537,7 +13572,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: CVR</td>
         </tr>
     
     
@@ -14581,7 +14616,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: S401</td>
         </tr>
     
     
@@ -15513,7 +15548,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: S496</td>
         </tr>
     
     
@@ -15791,7 +15826,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: S497</td>
         </tr>
     
     
@@ -15818,7 +15853,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity Code describing the Contributor/Recipient</td>
         </tr>
     
     
@@ -15827,7 +15862,7 @@ Fields
             <td>enty_naml</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Entity&#39;s last name or business name</td>
+            <td>Last name of Contributor/Recipient</td>
         </tr>
     
     
@@ -15836,7 +15871,7 @@ Fields
             <td>enty_namf</td>
             <td>String (up to 45)</td>
             <td>No</td>
-            <td>Entity&#39;s first name</td>
+            <td>First name of Contributor/Recipient</td>
         </tr>
     
     
@@ -15845,7 +15880,7 @@ Fields
             <td>enty_namt</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Entity&#39;s title or prefix</td>
+            <td>Name title or prefix of Contributor/Recipient</td>
         </tr>
     
     
@@ -15854,7 +15889,7 @@ Fields
             <td>enty_nams</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Entity&#39;s suffix</td>
+            <td>Name suffix of Contributor/Recipient</td>
         </tr>
     
     
@@ -15863,7 +15898,7 @@ Fields
             <td>enty_city</td>
             <td>String (up to 30)</td>
             <td>No</td>
-            <td>Filing committee&#39;s city address</td>
+            <td>City address of Contributor/Recipient</td>
         </tr>
     
     
@@ -15872,7 +15907,7 @@ Fields
             <td>enty_st</td>
             <td>String (up to 2)</td>
             <td>No</td>
-            <td>Filing committee&#39;s state address</td>
+            <td>State address of Contributor/Recipient</td>
         </tr>
     
     
@@ -15881,7 +15916,7 @@ Fields
             <td>enty_zip4</td>
             <td>String (up to 10)</td>
             <td>No</td>
-            <td>Filing committee&#39;s ZIP Code</td>
+            <td>ZIP Code of Contributor/Recipient</td>
         </tr>
     
     
@@ -15890,7 +15925,7 @@ Fields
             <td>ctrib_emp</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td>Employer</td>
+            <td>Employer of Contributor (populated for some Recipients as well)</td>
         </tr>
     
     
@@ -15899,7 +15934,7 @@ Fields
             <td>ctrib_occ</td>
             <td>String (up to 60)</td>
             <td>No</td>
-            <td>Occupation</td>
+            <td>Occupation of Contributor (populated for some Recipients as well)</td>
         </tr>
     
     
@@ -15908,7 +15943,7 @@ Fields
             <td>ctrib_self</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td>Self employed checkbox. &quot;X&quot; indicates the contributor is self-employed.</td>
+            <td>Contributor self-employed checkbox. &quot;X&quot; indicates the contributor is self-employed.</td>
         </tr>
     
     
@@ -16960,7 +16995,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: S498</td>
         </tr>
     
     
@@ -16987,7 +17022,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity code</td>
         </tr>
     
     
@@ -17877,7 +17912,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td></td>
+            <td>Record Type</td>
         </tr>
     
     
@@ -20569,7 +20604,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td>Record type</td>
+            <td>Record Type. Value: HDR</td>
         </tr>
     
     
@@ -20794,7 +20829,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 11)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type</td>
         </tr>
     
     
@@ -21211,7 +21246,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: SMRY</td>
         </tr>
     
     
@@ -22098,7 +22133,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: TEXT</td>
         </tr>
     
     
@@ -22914,7 +22949,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: CVR2</td>
         </tr>
     
     
@@ -23035,6 +23070,22 @@ Look-up Codes
     </div>
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/71.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p71-thumbnail.gif'></a><p>p. 71</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
+
+
 
 
 .. raw:: html
@@ -23176,7 +23227,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: CVR2</td>
         </tr>
     
     
@@ -23260,6 +23311,22 @@ Look-up Codes
 ^^^^^^^^^^^^^
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/87.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p87-thumbnail.gif'></a><p>p. 87</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p72-thumbnail.gif'></a><p>p. 72</p></div></div>
+
+
 
 
 .. raw:: html
@@ -23417,7 +23484,7 @@ Source Docs
 
 .. raw:: html
 
-    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p65-thumbnail.gif'></a><p>p. 65</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/66.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p66-thumbnail.gif'></a><p>p. 66</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/67.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p67-thumbnail.gif'></a><p>p. 67</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/68.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p68-thumbnail.gif'></a><p>p. 68</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/69.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p69-thumbnail.gif'></a><p>p. 69</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/70.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p70-thumbnail.gif'></a><p>p. 70</p></div></div>
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/66.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p66-thumbnail.gif'></a><p>p. 66</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/67.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p67-thumbnail.gif'></a><p>p. 67</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/68.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p68-thumbnail.gif'></a><p>p. 68</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/69.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p69-thumbnail.gif'></a><p>p. 69</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/70.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p70-thumbnail.gif'></a><p>p. 70</p></div></div>
 
 
 *Cal-Format-1-05-02*
@@ -23837,7 +23904,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: CVR</td>
         </tr>
     
     
@@ -24057,6 +24124,22 @@ Look-up Codes
     </div>
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/66.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p66-thumbnail.gif'></a><p>p. 66</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p53-thumbnail.gif'></a><p>p. 53</p></div></div>
+
+
 
 
 .. raw:: html
@@ -24678,7 +24761,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: CVR</td>
         </tr>
     
     
@@ -25182,6 +25265,22 @@ Look-up Codes
 *rec_type*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/82.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p82-thumbnail.gif'></a><p>p. 82</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/68.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p68-thumbnail.gif'></a><p>p. 68</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -25390,7 +25489,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: F690</td>
         </tr>
     
     
@@ -25465,6 +25564,22 @@ Look-up Codes
 ^^^^^^^^^^^^^
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p72-thumbnail.gif'></a><p>p. 72</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/58.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p58-thumbnail.gif'></a><p>p. 58</p></div></div>
+
+
 
 
 .. raw:: html
@@ -25733,7 +25848,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: LATT</td>
         </tr>
     
     
@@ -25928,6 +26043,22 @@ Look-up Codes
     </div>
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/79.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p79-thumbnail.gif'></a><p>p. 79</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p65-thumbnail.gif'></a><p>p. 65</p></div></div>
+
+
 
 
 .. raw:: html
@@ -26173,7 +26304,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: LCCM</td>
         </tr>
     
     
@@ -26440,6 +26571,22 @@ Source Docs
     <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/56.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p56-thumbnail.gif'></a><p>p. 56</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711616-MapCalFormat2Fields/pages/57.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711616/pages/MapCalFormat2Fields-p57-thumbnail.gif'></a><p>p. 57</p></div></div>
 
 
+*Cal-Format-201*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/90.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p90-thumbnail.gif'></a><p>p. 90</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/91.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p91-thumbnail.gif'></a><p>p. 91</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/75.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p75-thumbnail.gif'></a><p>p. 75</p></div></div>
+
+
 
 
 Filing Forms
@@ -26635,7 +26782,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: LEMP</td>
         </tr>
     
     
@@ -26703,6 +26850,22 @@ Look-up Codes
 *form_type*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/90.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p90-thumbnail.gif'></a><p>p. 90</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/75.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p75-thumbnail.gif'></a><p>p. 75</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -26730,6 +26893,22 @@ Look-up Codes
     </div>
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/90.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p90-thumbnail.gif'></a><p>p. 90</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/75.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p75-thumbnail.gif'></a><p>p. 75</p></div></div>
+
+
 
 
 .. raw:: html
@@ -27047,7 +27226,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: LEXP</td>
         </tr>
     
     
@@ -27056,7 +27235,7 @@ Fields
             <td>recsubtype</td>
             <td>String (up to 1)</td>
             <td>No</td>
-            <td></td>
+            <td>Record Subtype</td>
         </tr>
     
     
@@ -27163,6 +27342,22 @@ Look-up Codes
 *rec_type*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/61.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p61-thumbnail.gif'></a><p>p. 61</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -27185,6 +27380,22 @@ Look-up Codes
     </div>
 
 *recsubtype*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/61.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p61-thumbnail.gif'></a><p>p. 61</p></div></div>
+
+
 
 
 .. raw:: html
@@ -27318,7 +27529,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: F605</td>
         </tr>
     
     
@@ -27681,6 +27892,22 @@ Look-up Codes
 ^^^^^^^^^^^^^
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/88.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p88-thumbnail.gif'></a><p>p. 88</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/74.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p74-thumbnail.gif'></a><p>p. 74</p></div></div>
+
+
 
 
 .. raw:: html
@@ -31265,7 +31492,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: LOTH</td>
         </tr>
     
     
@@ -31696,7 +31923,7 @@ Fields
             <td>rec_type</td>
             <td>String (up to 4)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Record Type Value: LPAY</td>
         </tr>
     
     
@@ -31831,6 +32058,22 @@ Look-up Codes
     </div>
 
 *rec_type*
+
+
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/76.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p76-thumbnail.gif'></a><p>p. 76</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/62.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p62-thumbnail.gif'></a><p>p. 62</p></div></div>
+
+
 
 
 .. raw:: html
