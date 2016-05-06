@@ -153,7 +153,7 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
         max_length=4,
         db_column='ST',
         blank=True,
-        verbose_name="State"
+        help_text="State",
     )
     zip4 = fields.CharField(
         max_length=10,
@@ -791,7 +791,8 @@ original filing and 1 to 999 amendments.",
         db_column='ELEC_DT',
         null=True,
         blank=True,
-        verbose_name='election date'
+        verbose_name='election date',
+        help_text='Election date',
     )
 
     class Meta:
@@ -922,7 +923,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILER_ST',
         max_length=4,
         blank=True,
-        verbose_name='Filer state'
+        help_text='Filer state'
     )
     filer_zip4 = fields.CharField(
         db_column='FILER_ZIP4',

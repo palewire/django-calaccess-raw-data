@@ -353,11 +353,21 @@ class FilerAddressCd(CalAccessBaseModel):
         help_text="Address effective date",
         verbose_name='Effective date'
     )
+    ADD_TYPE_CHOICES = (
+        (51, 'PERMANENT'),
+        (7026, 'BUSINESS'),
+        (7027, 'HOME'),
+        (7050, 'NOT IN USE'),
+        (7051, 'PERMANENT'),
+        (7082, 'MAILING ADDRESS'),
+    )
     add_type = fields.IntegerField(
+        choices=ADD_TYPE_CHOICES,
         db_column='ADD_TYPE',
         blank=True,
         null=True,
-        verbose_name="Address type"
+        verbose_name="Address type",
+        help_text="Address type",
     )
     session_id = fields.IntegerField(
         verbose_name='session ID',
@@ -443,16 +453,43 @@ class FilerInterestsCd(CalAccessBaseModel):
         help_text='Legislative session identification number',
         null=True,
     )
+    INTEREST_CD_CHOICES = (
+        (40301, 'AGRICULTURE'),
+        (40302, 'EDUCATION'),
+        (40303, 'ENTERTAINMENT/RECREATION'),
+        (40304, 'FINANCE/INSURANCE'),
+        (40305, 'GOVERNMENT'),
+        (40306, 'HEALTH'),
+        (40307, 'LABOR UNIONS'),
+        (40308, 'LEGAL'),
+        (40309, 'LODGING/RESTAURANTS'),
+        (40310, 'MANUFACTURING/INDUSTRIAL'),
+        (40311, 'MERCHANDISE/RETAIL'),
+        (40312, 'MISCELLANEOUS'),
+        (40313, 'OIL AND GAS'),
+        (40314, 'POLITICAL ORGANIZATIONS'),
+        (40315, 'PROFESSIONAL/TRADE'),
+        (40316, 'PUBLIC EMPLOYEES'),
+        (40317, 'REAL ESTATE'),
+        (40318, 'TRANSPORTATION'),
+        (40319, 'UTILITIES'),
+    )
     interest_cd = fields.IntegerField(
         db_column='INTEREST_CD',
         blank=True,
         null=True,
-        verbose_name="interest code"
+        verbose_name="interest code",
+        help_text="Interest code linked to the filer",
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+        ],
+        choices=INTEREST_CD_CHOICES,
     )
     effect_date = fields.DateField(
         db_column='EFFECT_DATE',
         null=True,
-        verbose_name="Effective date"
+        verbose_name="Effective date",
+        help_text="Effective date",
     )
 
     class Meta:
@@ -1243,7 +1280,8 @@ class FilerXrefCd(CalAccessBaseModel):
     effect_dt = fields.DateField(
         db_column='EFFECT_DT',
         null=True,
-        verbose_name="Effective date"
+        verbose_name="Effective date",
+        help_text="Effective date",
     )
     migration_source = fields.CharField(
         max_length=50,
@@ -1292,7 +1330,11 @@ class FilingPeriodCd(CalAccessBaseModel):
     )
     period_type = fields.IntegerField(
         db_column='PERIOD_TYPE',
-        choices=PERIOD_TYPE_CHOICES
+        choices=PERIOD_TYPE_CHOICES,
+        help_text='Type of filing period',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3),
+        ]
     )
     per_grp_type = fields.IntegerField(
         db_column='PER_GRP_TYPE',
@@ -1377,23 +1419,45 @@ class ImageLinksCd(CalAccessBaseModel):
         verbose_name="Image link ID",
         help_text="Image link identification number"
     )
+    IMG_LINK_TYPE_CHOICES = (
+        (6501, 'FILING ID'),
+        (6502, 'FILER ID'),
+    )
     img_link_type = fields.IntegerField(
+        choices=IMG_LINK_TYPE_CHOICES,
         db_column='IMG_LINK_TYPE',
-        verbose_name="Image link type"
+        verbose_name="Image link type",
+        help_text='Type of image link',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=5),
+        ]
     )
     img_id = fields.IntegerField(
         db_column='IMG_ID',
         verbose_name="Image ID",
         help_text="Image identification number"
     )
+    IMG_TYPE_CHOICES = (
+        (6001, 'FAX'),
+        (6002, 'PERSONAL PHOTO'),
+        (6004, 'SCANNED CHECK'),
+        (6005, 'SCANNED LETTER'),
+        (6007, 'IMAGE TYPES'),
+    )
     img_type = fields.IntegerField(
+        choices=IMG_TYPE_CHOICES,
         db_column='IMG_TYPE',
-        verbose_name="Image type"
+        verbose_name="Image type",
+        help_text='Type of image',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=4),
+        ],
     )
     img_dt = fields.DateField(
         db_column='IMG_DT',
         null=True,
-        verbose_name="Image date"
+        verbose_name="Image date",
+        help_text="Image date",
     )
 
     class Meta:

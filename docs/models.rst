@@ -18002,7 +18002,7 @@ Fields
             <td>filer_st</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td></td>
+            <td>Filer state</td>
         </tr>
     
     
@@ -20109,7 +20109,7 @@ Fields
             <td>st</td>
             <td>String (up to 4)</td>
             <td>No</td>
-            <td></td>
+            <td>State</td>
         </tr>
     
     
@@ -21291,7 +21291,7 @@ Fields
             <td>elec_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>Election date</td>
         </tr>
     
     
@@ -32938,7 +32938,7 @@ Fields
             <td>add_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Address type</td>
         </tr>
     
     
@@ -32954,6 +32954,60 @@ Fields
     </tbody>
     </table>
     </div>
+
+Look-up Codes
+^^^^^^^^^^^^^
+
+*add_type*
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>51</td>
+            <td>PERMANENT</td>
+        </tr>
+    
+        <tr>
+            <td>7026</td>
+            <td>BUSINESS</td>
+        </tr>
+    
+        <tr>
+            <td>7027</td>
+            <td>HOME</td>
+        </tr>
+    
+        <tr>
+            <td>7050</td>
+            <td>NOT IN USE</td>
+        </tr>
+    
+        <tr>
+            <td>7051</td>
+            <td>PERMANENT</td>
+        </tr>
+    
+        <tr>
+            <td>7082</td>
+            <td>MAILING ADDRESS</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 
 FilerEthicsClassCd
@@ -33093,7 +33147,7 @@ Fields
             <td>interest_cd</td>
             <td>Integer</td>
             <td>Yes</td>
-            <td></td>
+            <td>Interest code linked to the filer</td>
         </tr>
     
     
@@ -33102,13 +33156,141 @@ Fields
             <td>effect_date</td>
             <td>Date (without time)</td>
             <td>Yes</td>
-            <td></td>
+            <td>Effective date</td>
         </tr>
     
     
     </tbody>
     </table>
     </div>
+
+Look-up Codes
+^^^^^^^^^^^^^
+
+*interest_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>40301</td>
+            <td>AGRICULTURE</td>
+        </tr>
+    
+        <tr>
+            <td>40302</td>
+            <td>EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>40303</td>
+            <td>ENTERTAINMENT/RECREATION</td>
+        </tr>
+    
+        <tr>
+            <td>40304</td>
+            <td>FINANCE/INSURANCE</td>
+        </tr>
+    
+        <tr>
+            <td>40305</td>
+            <td>GOVERNMENT</td>
+        </tr>
+    
+        <tr>
+            <td>40306</td>
+            <td>HEALTH</td>
+        </tr>
+    
+        <tr>
+            <td>40307</td>
+            <td>LABOR UNIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40308</td>
+            <td>LEGAL</td>
+        </tr>
+    
+        <tr>
+            <td>40309</td>
+            <td>LODGING/RESTAURANTS</td>
+        </tr>
+    
+        <tr>
+            <td>40310</td>
+            <td>MANUFACTURING/INDUSTRIAL</td>
+        </tr>
+    
+        <tr>
+            <td>40311</td>
+            <td>MERCHANDISE/RETAIL</td>
+        </tr>
+    
+        <tr>
+            <td>40312</td>
+            <td>MISCELLANEOUS</td>
+        </tr>
+    
+        <tr>
+            <td>40313</td>
+            <td>OIL AND GAS</td>
+        </tr>
+    
+        <tr>
+            <td>40314</td>
+            <td>POLITICAL ORGANIZATIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40315</td>
+            <td>PROFESSIONAL/TRADE</td>
+        </tr>
+    
+        <tr>
+            <td>40316</td>
+            <td>PUBLIC EMPLOYEES</td>
+        </tr>
+    
+        <tr>
+            <td>40317</td>
+            <td>REAL ESTATE</td>
+        </tr>
+    
+        <tr>
+            <td>40318</td>
+            <td>TRANSPORTATION</td>
+        </tr>
+    
+        <tr>
+            <td>40319</td>
+            <td>UTILITIES</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 
 FilerLinksCd
@@ -35930,7 +36112,7 @@ Fields
             <td>effect_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>Effective date</td>
         </tr>
     
     
@@ -36078,7 +36260,7 @@ Fields
             <td>period_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Type of filing period</td>
         </tr>
     
     
@@ -36117,6 +36299,15 @@ Look-up Codes
 ^^^^^^^^^^^^^
 
 *period_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p3-thumbnail.gif'></a><p>p. 3</p></div></div>
+
+
 
 
 .. raw:: html
@@ -36278,7 +36469,7 @@ Fields
             <td>img_link_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Type of image link</td>
         </tr>
     
     
@@ -36296,7 +36487,7 @@ Fields
             <td>img_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Type of image</td>
         </tr>
     
     
@@ -36305,13 +36496,109 @@ Fields
             <td>img_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>Image date</td>
         </tr>
     
     
     </tbody>
     </table>
     </div>
+
+Look-up Codes
+^^^^^^^^^^^^^
+
+*img_link_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/5.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p5-thumbnail.gif'></a><p>p. 5</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>6501</td>
+            <td>FILING ID</td>
+        </tr>
+    
+        <tr>
+            <td>6502</td>
+            <td>FILER ID</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+*img_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p4-thumbnail.gif'></a><p>p. 4</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>6001</td>
+            <td>FAX</td>
+        </tr>
+    
+        <tr>
+            <td>6002</td>
+            <td>PERSONAL PHOTO</td>
+        </tr>
+    
+        <tr>
+            <td>6004</td>
+            <td>SCANNED CHECK</td>
+        </tr>
+    
+        <tr>
+            <td>6005</td>
+            <td>SCANNED LETTER</td>
+        </tr>
+    
+        <tr>
+            <td>6007</td>
+            <td>IMAGE TYPES</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 
 LegislativeSessionsCd
