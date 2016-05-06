@@ -22859,7 +22859,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity code of the entity described by the record</td>
         </tr>
     
     
@@ -23254,7 +23254,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity code of the entity described by the record</td>
         </tr>
     
     
@@ -23403,6 +23403,22 @@ Look-up Codes
 *entity_cd*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/87.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p87-thumbnail.gif'></a><p>p. 87</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/72.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p72-thumbnail.gif'></a><p>p. 72</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -23417,7 +23433,7 @@ Look-up Codes
     
         <tr>
             <td>AGY</td>
-            <td>State agency</td>
+            <td>State Agency</td>
         </tr>
     
         <tr>
@@ -23427,7 +23443,7 @@ Look-up Codes
     
         <tr>
             <td>FRM</td>
-            <td>Lobbying firm</td>
+            <td>Lobbying Firm</td>
         </tr>
     
         <tr>
@@ -23437,12 +23453,12 @@ Look-up Codes
     
         <tr>
             <td>MBR</td>
-            <td>Member of association</td>
+            <td>Member of Associaton</td>
         </tr>
     
         <tr>
             <td>SCL</td>
-            <td>Subcontracted client</td>
+            <td>Subcontracted Client</td>
         </tr>
     
     </tbody>
@@ -23580,7 +23596,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity Code describing the filer</td>
         </tr>
     
     
@@ -24017,6 +24033,22 @@ Look-up Codes
 *entity_cd*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/67.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p67-thumbnail.gif'></a><p>p. 67</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/53.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p53-thumbnail.gif'></a><p>p. 53</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -24036,12 +24068,12 @@ Look-up Codes
     
         <tr>
             <td>FRM</td>
-            <td>Lobbying firm</td>
+            <td>Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>IND</td>
-            <td>Person (Spending &gt; $5,000</td>
+            <td>Person (spending &gt; $5000)</td>
         </tr>
     
         <tr>
@@ -24051,12 +24083,12 @@ Look-up Codes
     
         <tr>
             <td>LCO</td>
-            <td>Lobbying coalition</td>
+            <td>Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>LEM</td>
-            <td>Lobbying employer</td>
+            <td>Lobbying Employer</td>
         </tr>
     
         <tr>
@@ -24482,7 +24514,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity Code describing the filer</td>
         </tr>
     
     
@@ -25785,7 +25817,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity Code of the Payment Recipient/Payee</td>
         </tr>
     
     
@@ -25934,6 +25966,22 @@ Look-up Codes
 *entity_cd*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/80.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p80-thumbnail.gif'></a><p>p. 80</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/65.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p65-thumbnail.gif'></a><p>p. 65</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -25948,12 +25996,12 @@ Look-up Codes
     
         <tr>
             <td>FRM</td>
-            <td>Lobbying firm</td>
+            <td>Lobbying Firm</td>
         </tr>
     
         <tr>
             <td>IND</td>
-            <td>Person (Spending &gt; $5,000</td>
+            <td>Person (spending &gt; $5000)</td>
         </tr>
     
         <tr>
@@ -25963,12 +26011,12 @@ Look-up Codes
     
         <tr>
             <td>LCO</td>
-            <td>Lobbying coalition</td>
+            <td>Lobbying Coalition</td>
         </tr>
     
         <tr>
             <td>LEM</td>
-            <td>Lobbying employer</td>
+            <td>Lobbying Employer</td>
         </tr>
     
         <tr>
@@ -25978,7 +26026,7 @@ Look-up Codes
     
         <tr>
             <td>RCP</td>
-            <td>Recipient committee</td>
+            <td>Recipient Committee</td>
         </tr>
     
     </tbody>
@@ -27091,7 +27139,7 @@ Fields
             <td>entity_cd</td>
             <td>String (up to 3)</td>
             <td>No</td>
-            <td></td>
+            <td>Entity Code of the Payee</td>
         </tr>
     
     
@@ -27258,6 +27306,22 @@ Look-up Codes
 *entity_cd*
 
 
+*Cal-Format-201*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712034-Cal-Format-201/pages/75.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712034/pages/Cal-Format-201-p75-thumbnail.gif'></a><p>p. 75</p></div></div>
+
+
+*Cal-Format-1-05-02*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2712033-Cal-Format-1-05-02/pages/61.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2712033/pages/Cal-Format-1-05-02-p61-thumbnail.gif'></a><p>p. 61</p></div></div>
+
+
+
+
 .. raw:: html
 
     <div class="wy-table-responsive">
@@ -27272,7 +27336,7 @@ Look-up Codes
     
         <tr>
             <td>IND</td>
-            <td>Person (Spending &gt; $5,000</td>
+            <td>Person (spending &gt; $5000)</td>
         </tr>
     
         <tr>

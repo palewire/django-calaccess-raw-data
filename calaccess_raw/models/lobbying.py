@@ -249,6 +249,7 @@ Form 604. As filed by the lobbyist.',
         db_column='ENTITY_CD',
         blank=True,
         verbose_name='entity code',
+        help_text='Entity Code describing the filer',
         choices=ENTITY_CODE_CHOICES,
         documentcloud_pages=[
             DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
@@ -708,14 +709,12 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('AGY', 'State agency'),
-        ('EMP', 'Employer'),
-        ('FRM', 'Lobbying firm'),
-        ('LBY', 'Lobbyist (an individual)'),
-        ('MBR', 'Member of association'),
-        ('SCL', 'Subcontracted client'),
+        ('AGY', choices.LOBBYING_ENTITY_CODES['AGY']),
+        ('EMP', choices.LOBBYING_ENTITY_CODES['EMP']),
+        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('MBR', choices.LOBBYING_ENTITY_CODES['MBR']),
+        ('SCL', choices.LOBBYING_ENTITY_CODES['SCL']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -723,6 +722,11 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        help_text="Entity code of the entity described by the record",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=72),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=87),
+        ]
     )
     entity_id = fields.CharField(
         verbose_name='Entity ID',
@@ -818,15 +822,13 @@ to forms 625, 635, 645.",
         help_text='Cumulative period beginning date',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
         ('CLI', 'Unknown'),
-        ('FRM', 'Lobbying firm'),
-        ('IND', 'Person (Spending > $5,000'),
-        ('LBY', 'Lobbyist (an individual)'),
-        ('LCO', 'Lobbying coalition'),
-        ('LEM', 'Lobbying employer'),
-        ('OTH', 'Other'),
+        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('IND', choices.LOBBYING_ENTITY_CODES['IND']),
+        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
+        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -834,6 +836,11 @@ to forms 625, 635, 645.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        help_text="Entity Code describing the filer",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=67),
+        ]
     )
     filer_id = fields.CharField(
         verbose_name='filer ID',
@@ -1218,6 +1225,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        help_text='Entity code of the entity described by the record',
         documentcloud_pages=[
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
@@ -1781,15 +1789,13 @@ original filing and 1 to 999 amendments.",
         help_text='Cumulative period beginning to date',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('FRM', 'Lobbying firm'),
-        ('IND', 'Person (Spending > $5,000'),
-        ('LBY', 'Lobbyist (an individual)'),
-        ('LCO', 'Lobbying coalition'),
-        ('LEM', 'Lobbying employer'),
-        ('OTH', 'Other'),
-        ('RCP', 'Recipient committee'),
+        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('IND', choices.LOBBYING_ENTITY_CODES['IND']),
+        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
+        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
+        ('RCP', choices.LOBBYING_ENTITY_CODES['RCP']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -1797,6 +1803,11 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        help_text='Entity Code of the Payment Recipient/Payee',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=80),
+        ]
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1998,10 +2009,8 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the credit card company, if paid using a card',
     )
     ENTITY_CODE_CHOICES = (
-        # Defined here:
-        # http://www.documentcloud.org/documents/1308003-cal-access-cal-format.html#document/p9
-        ('IND', 'Person (Spending > $5,000'),
-        ('OTH', 'Other'),
+        ('IND', choices.LOBBYING_ENTITY_CODES['IND']),
+        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -2009,6 +2018,11 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         choices=ENTITY_CODE_CHOICES,
+        help_text="Entity Code of the Payee",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=75),
+        ]
     )
     expn_date = fields.DateField(
         null=True,
