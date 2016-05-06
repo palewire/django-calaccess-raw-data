@@ -2669,27 +2669,32 @@ class LobbyingChgLogCd(CalAccessBaseModel):
     )
     filer_full_name = fields.CharField(
         max_length=200,
-        db_column="FILER_FULL_NAME"
+        db_column="FILER_FULL_NAME",
+        help_text='Full name of filer',
     )
     filer_city = fields.CharField(
         max_length=200,
-        db_column="FILER_CITY"
+        db_column="FILER_CITY",
+        help_text='City address of filer',
     )
     filer_st = fields.CharField(
         max_length=200,
         db_column="FILER_ST",
-        verbose_name="Filer state"
+        verbose_name="Filer state",
+        help_text='State address of filer',
     )
     filer_zip = fields.IntegerField(
         db_column="FILER_ZIP",
         null=True,
-        verbose_name="Filer ZIP Code"
+        verbose_name="Filer ZIP Code",
+        help_text='ZIP Code of filer',
     )
     filer_phone = fields.CharField(
         db_column="FILER_PHONE",
         null=True,
         max_length=12,
-        verbose_name="Filer phone number"
+        verbose_name="Filer phone number",
+        help_text="Phone number of filer",
     )
     ENTITY_TYPE_CHOICES = (
         (0, 'n/a'),
@@ -2786,18 +2791,21 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     filing_period_start_dt = fields.DateField(
         null=True,
         db_column='FILING_PERIOD_START_DT',
-        verbose_name='Filing period start date'
+        verbose_name='Filing period start date',
+        help_text='Start date of filing period',
     )
     filing_period_end_dt = fields.DateField(
         db_column='FILING_PERIOD_END_DT',
         null=True,
-        verbose_name='Filing period end date'
+        verbose_name='Filing period end date',
+        help_text='End date of filing period',
     )
     contribution_dt = fields.CharField(
         db_column='CONTRIBUTION_DT',
         max_length=32,
         blank=True,
-        verbose_name='Contribution date'
+        verbose_name='Contribution date',
+        help_text='Date of contribution',
     )
     recipient_name = fields.CharField(
         db_column='RECIPIENT_NAME',
@@ -2849,18 +2857,21 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     filing_period_start_dt = fields.DateField(
         null=True,
         db_column='FILING_PERIOD_START_DT',
-        verbose_name='Filing period start date'
+        verbose_name='Filing period start date',
+        help_text='Start date of filing period',
     )
     filing_period_end_dt = fields.DateField(
         db_column='FILING_PERIOD_END_DT',
         null=True,
-        verbose_name='Filing period end date'
+        verbose_name='Filing period end date',
+        help_text='End date of filing period',
     )
     contribution_dt = fields.CharField(
         db_column='CONTRIBUTION_DT',
         max_length=32,
         blank=True,
-        verbose_name='Contribution date'
+        verbose_name='Contribution date',
+        help_text='Date of contribution',
     )
     recipient_name = fields.CharField(
         db_column='RECIPIENT_NAME',
@@ -2911,18 +2922,21 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     filing_period_start_dt = fields.DateField(
         null=True,
         db_column='FILING_PERIOD_START_DT',
-        verbose_name='Filing period start date'
+        verbose_name='Filing period start date',
+        help_text='Start date of filing period',
     )
     filing_period_end_dt = fields.DateField(
         db_column='FILING_PERIOD_END_DT',
         null=True,
-        verbose_name='Filing period end date'
+        verbose_name='Filing period end date',
+        help_text='End date of filing period',
     )
     contribution_dt = fields.CharField(
         db_column='CONTRIBUTION_DT',
         max_length=32,
         blank=True,
-        verbose_name='Contribution date'
+        verbose_name='Contribution date',
+        help_text='Date of contribution',
     )
     recipient_name = fields.CharField(
         db_column='RECIPIENT_NAME',
@@ -2994,33 +3008,64 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
         verbose_name="contributor ID",
         help_text="Contributor identification number"
     )
+    INTEREST_CD_CHOICES = (
+        (40301, 'AGRICULTURE'),
+        (40302, 'EDUCATION'),
+        (40303, 'ENTERTAINMENT/RECREATION'),
+        (40304, 'FINANCE/INSURANCE'),
+        (40305, 'GOVERNMENT'),
+        (40306, 'HEALTH'),
+        (40307, 'LABOR UNIONS'),
+        (40308, 'LEGAL'),
+        (40309, 'LODGING/RESTAURANTS'),
+        (40310, 'MANUFACTURING/INDUSTRIAL'),
+        (40311, 'MERCHANDISE/RETAIL'),
+        (40312, 'MISCELLANEOUS'),
+        (40313, 'OIL AND GAS'),
+        (40314, 'POLITICAL ORGANIZATIONS'),
+        (40315, 'PROFESSIONAL/TRADE'),
+        (40316, 'PUBLIC EMPLOYEES'),
+        (40317, 'REAL ESTATE'),
+        (40318, 'TRANSPORTATION'),
+        (40319, 'UTILITIES'),
+    )
     interest_cd = fields.IntegerField(
         db_column='INTEREST_CD',
+        choices=INTEREST_CD_CHOICES,
         blank=True,
         null=True,
-        verbose_name="interest code"
+        verbose_name="interest code",
+        help_text='Interest Code',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+        ],
     )
     interest_name = fields.CharField(
         db_column='INTEREST_NAME',
         max_length=24,
         blank=True,
-        help_text="Interest name"
+        verbose_name="Interest name",
+        help_text="Interest name",
     )
     session_yr_1 = fields.IntegerField(
         db_column='SESSION_YR_1',
+        verbose_name="Total amount of year 1 of the session",
         help_text="Total amount of year 1 of the session",
     )
     session_yr_2 = fields.IntegerField(
         db_column='SESSION_YR_2',
+        verbose_name="Total amount of year 2 of the session",
         help_text="Total amount of year 2 of the session",
     )
     yr_1_ytd_amt = fields.FloatField(
         db_column='YR_1_YTD_AMT',
         verbose_name="Year 1 year-to-date-amount",
+        help_text="Year 1 year-to-date-amount",
     )
     yr_2_ytd_amt = fields.FloatField(
         db_column='YR_2_YTD_AMT',
         verbose_name="Year 2 year-to-date-amount",
+        help_text="Year 2 year-to-date-amount",
     )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
@@ -3117,11 +3162,36 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         verbose_name="contributor ID",
         help_text="Contributor identification number"
     )
+    INTEREST_CD_CHOICES = (
+        (40301, 'AGRICULTURE'),
+        (40302, 'EDUCATION'),
+        (40303, 'ENTERTAINMENT/RECREATION'),
+        (40304, 'FINANCE/INSURANCE'),
+        (40305, 'GOVERNMENT'),
+        (40306, 'HEALTH'),
+        (40307, 'LABOR UNIONS'),
+        (40308, 'LEGAL'),
+        (40309, 'LODGING/RESTAURANTS'),
+        (40310, 'MANUFACTURING/INDUSTRIAL'),
+        (40311, 'MERCHANDISE/RETAIL'),
+        (40312, 'MISCELLANEOUS'),
+        (40313, 'OIL AND GAS'),
+        (40314, 'POLITICAL ORGANIZATIONS'),
+        (40315, 'PROFESSIONAL/TRADE'),
+        (40316, 'PUBLIC EMPLOYEES'),
+        (40317, 'REAL ESTATE'),
+        (40318, 'TRANSPORTATION'),
+        (40319, 'UTILITIES'),
+    )
     interest_cd = fields.IntegerField(
         db_column='INTEREST_CD',
         blank=True,
         null=True,
-        verbose_name="interest code"
+        verbose_name="interest code",
+        help_text='Interest Code',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+        ],
     )
     interest_name = fields.CharField(
         db_column='INTEREST_NAME',
@@ -3131,59 +3201,63 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     )
     session_yr_1 = fields.IntegerField(
         db_column='SESSION_YR_1',
+        verbose_name="Total amount of year 1 of the session",
         help_text="Total amount of year 1 of the session",
     )
     session_yr_2 = fields.IntegerField(
         db_column='SESSION_YR_2',
+        verbose_name="Total amount of year 2 of the session",
         help_text="Total amount of year 2 of the session",
     )
     yr_1_ytd_amt = fields.FloatField(
         db_column='YR_1_YTD_AMT',
         verbose_name="Year 1 year-to-date-amount",
+        help_text="Year 1 year-to-date-amount",
     )
     yr_2_ytd_amt = fields.FloatField(
         db_column='YR_2_YTD_AMT',
         verbose_name="Year 2 year-to-date-amount",
+        help_text="Year 2 year-to-date-amount",
     )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
         verbose_name="Quarter 1",
-        help_text="Quarter total amount",
+        help_text="Quarter 1 total amount",
     )
     qtr_2 = fields.FloatField(
         db_column='QTR_2',
         verbose_name="Quarter 2",
-        help_text="Quarter total amount",
+        help_text="Quarter 2 total amount",
     )
     qtr_3 = fields.FloatField(
         db_column='QTR_3',
         verbose_name="Quarter 3",
-        help_text="Quarter total amount",
+        help_text="Quarter 3 total amount",
     )
     qtr_4 = fields.FloatField(
         db_column='QTR_4',
         verbose_name="Quarter 4",
-        help_text="Quarter total amount",
+        help_text="Quarter 4 total amount",
     )
     qtr_5 = fields.FloatField(
         db_column='QTR_5',
         verbose_name="Quarter 5",
-        help_text="Quarter total amount",
+        help_text="Quarter 5 total amount",
     )
     qtr_6 = fields.FloatField(
         db_column='QTR_6',
         verbose_name="Quarter 6",
-        help_text="Quarter total amount",
+        help_text="Quarter 6 total amount",
     )
     qtr_7 = fields.FloatField(
         db_column='QTR_7',
         verbose_name="Quarter 7",
-        help_text="Quarter total amount",
+        help_text="Quarter 7 total amount",
     )
     qtr_8 = fields.FloatField(
         db_column='QTR_8',
         verbose_name="Quarter 8",
-        help_text="Quarter total amount",
+        help_text="Quarter 8 total amount",
     )
 
     class Meta:
@@ -3240,11 +3314,36 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         verbose_name="contributor ID",
         help_text="Contributor identification number"
     )
+    INTEREST_CD_CHOICES = (
+        (40301, 'AGRICULTURE'),
+        (40302, 'EDUCATION'),
+        (40303, 'ENTERTAINMENT/RECREATION'),
+        (40304, 'FINANCE/INSURANCE'),
+        (40305, 'GOVERNMENT'),
+        (40306, 'HEALTH'),
+        (40307, 'LABOR UNIONS'),
+        (40308, 'LEGAL'),
+        (40309, 'LODGING/RESTAURANTS'),
+        (40310, 'MANUFACTURING/INDUSTRIAL'),
+        (40311, 'MERCHANDISE/RETAIL'),
+        (40312, 'MISCELLANEOUS'),
+        (40313, 'OIL AND GAS'),
+        (40314, 'POLITICAL ORGANIZATIONS'),
+        (40315, 'PROFESSIONAL/TRADE'),
+        (40316, 'PUBLIC EMPLOYEES'),
+        (40317, 'REAL ESTATE'),
+        (40318, 'TRANSPORTATION'),
+        (40319, 'UTILITIES'),
+    )
     interest_cd = fields.IntegerField(
         db_column='INTEREST_CD',
         blank=True,
         null=True,
-        verbose_name="interest code"
+        verbose_name="interest code",
+        help_text='Interest Code',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+        ],
     )
     interest_name = fields.CharField(
         db_column='INTEREST_NAME',
@@ -3254,19 +3353,23 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     )
     session_yr_1 = fields.IntegerField(
         db_column='SESSION_YR_1',
+        verbose_name="Total amount of year 1 of the session",
         help_text="Total amount of year 1 of the session",
     )
     session_yr_2 = fields.IntegerField(
         db_column='SESSION_YR_2',
+        verbose_name="Total amount of year 2 of the session",
         help_text="Total amount of year 2 of the session",
     )
     yr_1_ytd_amt = fields.FloatField(
         db_column='YR_1_YTD_AMT',
         verbose_name="Year 1 year-to-date-amount",
+        help_text="Year 1 year-to-date-amount",
     )
     yr_2_ytd_amt = fields.FloatField(
         db_column='YR_2_YTD_AMT',
         verbose_name="Year 2 year-to-date-amount",
+        help_text="Year 2 year-to-date-amount",
     )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
@@ -3588,10 +3691,12 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
     yr_1_ytd_amt = fields.FloatField(
         db_column='YR_1_YTD_AMT',
         verbose_name="Year 1 year-to-date-amount",
+        help_text="Year 1 year-to-date-amount",
     )
     yr_2_ytd_amt = fields.FloatField(
         db_column='YR_2_YTD_AMT',
         verbose_name="Year 2 year-to-date-amount",
+        help_text="Year 2 year-to-date-amount",
     )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
@@ -3699,10 +3804,12 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     yr_1_ytd_amt = fields.FloatField(
         db_column='YR_1_YTD_AMT',
         verbose_name="Year 1 year-to-date-amount",
+        help_text="Year 1 year-to-date-amount",
     )
     yr_2_ytd_amt = fields.FloatField(
         db_column='YR_2_YTD_AMT',
         verbose_name="Year 2 year-to-date-amount",
+        help_text="Year 2 year-to-date-amount",
     )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
@@ -3810,10 +3917,12 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     yr_1_ytd_amt = fields.FloatField(
         db_column='YR_1_YTD_AMT',
         verbose_name="Year 1 year-to-date-amount",
+        help_text="Year 1 year-to-date-amount",
     )
     yr_2_ytd_amt = fields.FloatField(
         db_column='YR_2_YTD_AMT',
         verbose_name="Year 2 year-to-date-amount",
+        help_text="Year 2 year-to-date-amount",
     )
     qtr_1 = fields.FloatField(
         db_column='QTR_1',
@@ -4589,71 +4698,109 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
         blank=True,
         help_text="Employer Name"
     )
+    INTEREST_CD_CHOICES = (
+        (40301, 'AGRICULTURE'),
+        (40302, 'EDUCATION'),
+        (40303, 'ENTERTAINMENT/RECREATION'),
+        (40304, 'FINANCE/INSURANCE'),
+        (40305, 'GOVERNMENT'),
+        (40306, 'HEALTH'),
+        (40307, 'LABOR UNIONS'),
+        (40308, 'LEGAL'),
+        (40309, 'LODGING/RESTAURANTS'),
+        (40310, 'MANUFACTURING/INDUSTRIAL'),
+        (40311, 'MERCHANDISE/RETAIL'),
+        (40312, 'MISCELLANEOUS'),
+        (40313, 'OIL AND GAS'),
+        (40314, 'POLITICAL ORGANIZATIONS'),
+        (40315, 'PROFESSIONAL/TRADE'),
+        (40316, 'PUBLIC EMPLOYEES'),
+        (40317, 'REAL ESTATE'),
+        (40318, 'TRANSPORTATION'),
+        (40319, 'UTILITIES'),
+    )
     interest_cd = fields.IntegerField(
         db_column="INTEREST_CD",
-        help_text="Interest code."
+        verbose_name='interest code',
+        help_text='Interest Code',
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+        ],
     )
     interest_name = fields.CharField(
         db_column="INTEREST_NAME",
         max_length=300,
         blank=True,
-        help_text="Interest name."
+        verbose_name="Interest name.",
+        help_text="Interest name.",
     )
     qtr_1 = fields.IntegerField(
         db_column="QTR_1",
-        help_text="Quarter total amount."
+        verbose_name="quarter 1 amount",
+        help_text="Quarter 1 total amount.",
     )
     qtr_2 = fields.IntegerField(
         db_column="QTR_2",
-        help_text="Quarter total amount."
+        verbose_name="quarter 2 amount.",
+        help_text="Quarter 2 total amount.",
     )
     qtr_3 = fields.IntegerField(
         db_column="QTR_3",
-        help_text="Quarter total amount."
+        verbose_name="quarter 3 amount",
+        help_text="Quarter 3 total amount.",
     )
     qtr_4 = fields.IntegerField(
         db_column="QTR_4",
-        help_text="Quarter total amount."
+        verbose_name="quarter 4 amount",
+        help_text="Quarter 4 total amount.",
     )
     qtr_5 = fields.IntegerField(
         db_column="QTR_5",
-        help_text="Quarter total amount."
+        verbose_name="quarter 5 amount5",
+        help_text="Quarter 5 total amount.",
     )
     qtr_6 = fields.IntegerField(
         db_column="QTR_6",
-        help_text="Quarter total amount."
+        verbose_name="quarter 6 amount.",
+        help_text="Quarter 6 total amount.",
     )
     qtr_7 = fields.IntegerField(
         db_column="QTR_7",
-        help_text="Quarter total amount."
+        verbose_name="quarter 7 amount.",
+        help_text="Quarter 7 total amount.",
     )
     qtr_8 = fields.IntegerField(
         db_column="QTR_8",
-        help_text="Quarter total amount."
+        verbose_name="quarter 8 amount.",
+        help_text="Quarter 8 total amount.",
     )
     session_id = fields.IntegerField(
         db_column="SESSION_ID",
-        help_text="Session identification number."
+        verbose_name="session identification number.",
+        help_text="Session identification number.",
     )
     session_total_amt = fields.IntegerField(
         db_column="SESSION_TOTAL_AMT",
-        help_text="Total amount for the session."
+        verbose_name="session total amount",
+        help_text="Total amount for the session.",
     )
     session_yr_1 = fields.IntegerField(
         db_column="SESSION_YR_1",
-        help_text="Total amount for year 1 of the session."
+        verbose_name="session year 1",
+        help_text="Total amount for year 1 of the session.",
     )
     session_yr_2 = fields.IntegerField(
         db_column="SESSION_YR_2",
-        help_text="Total amount for year 2 of the session."
+        verbose_name="session year 2",
+        help_text="Total amount for year 2 of the session.",
     )
     yr_1_ytd_amt = fields.IntegerField(
         db_column="YR_1_YTD_AMT",
-        help_text="Year 1 year to date amount."
+        help_text="Year 1 year to date amount.",
     )
     yr_2_ytd_amt = fields.IntegerField(
         db_column="YR_2_YTD_AMT",
-        help_text="Year 2 year to date amount."
+        help_text="Year 2 year to date amount.",
     )
 
     class Meta:
@@ -4747,11 +4894,13 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
     )
     yr_1_ytd_amt = fields.IntegerField(
         db_column="YR_1_YTD_AMT",
-        help_text="YR_1_YTD_AMT"
+        verbose_name="Year 1 year to date amount.",
+        help_text="Year 1 year to date amount.",
     )
     yr_2_ytd_amt = fields.IntegerField(
         db_column="YR_2_YTD_AMT",
-        help_text="Year 2 year to date amount."
+        verbose_name="Year 2 year to date amount",
+        help_text="Year 2 year to date amount",
     )
 
     class Meta:

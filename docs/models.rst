@@ -28179,7 +28179,7 @@ Fields
             <td>filer_full_name</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td></td>
+            <td>Full name of filer</td>
         </tr>
     
     
@@ -28188,7 +28188,7 @@ Fields
             <td>filer_city</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td></td>
+            <td>City address of filer</td>
         </tr>
     
     
@@ -28197,7 +28197,7 @@ Fields
             <td>filer_st</td>
             <td>String (up to 200)</td>
             <td>No</td>
-            <td></td>
+            <td>State address of filer</td>
         </tr>
     
     
@@ -28206,7 +28206,7 @@ Fields
             <td>filer_zip</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>ZIP Code of filer</td>
         </tr>
     
     
@@ -28215,7 +28215,7 @@ Fields
             <td>filer_phone</td>
             <td>String (up to 12)</td>
             <td>No</td>
-            <td></td>
+            <td>Phone number of filer</td>
         </tr>
     
     
@@ -28424,7 +28424,7 @@ Fields
             <td>filing_period_start_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>Start date of filing period</td>
         </tr>
     
     
@@ -28433,7 +28433,7 @@ Fields
             <td>filing_period_end_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>End date of filing period</td>
         </tr>
     
     
@@ -28442,7 +28442,7 @@ Fields
             <td>contribution_dt</td>
             <td>String (up to 32)</td>
             <td>No</td>
-            <td></td>
+            <td>Date of contribution</td>
         </tr>
     
     
@@ -28534,7 +28534,7 @@ Fields
             <td>filing_period_start_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>Start date of filing period</td>
         </tr>
     
     
@@ -28543,7 +28543,7 @@ Fields
             <td>filing_period_end_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>End date of filing period</td>
         </tr>
     
     
@@ -28552,7 +28552,7 @@ Fields
             <td>contribution_dt</td>
             <td>String (up to 32)</td>
             <td>No</td>
-            <td></td>
+            <td>Date of contribution</td>
         </tr>
     
     
@@ -28643,7 +28643,7 @@ Fields
             <td>filing_period_start_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>Start date of filing period</td>
         </tr>
     
     
@@ -28652,7 +28652,7 @@ Fields
             <td>filing_period_end_dt</td>
             <td>Date (without time)</td>
             <td>No</td>
-            <td></td>
+            <td>End date of filing period</td>
         </tr>
     
     
@@ -28661,7 +28661,7 @@ Fields
             <td>contribution_dt</td>
             <td>String (up to 32)</td>
             <td>No</td>
-            <td></td>
+            <td>Date of contribution</td>
         </tr>
     
     
@@ -29003,7 +29003,7 @@ Fields
             <td>interest_cd</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Interest Code</td>
         </tr>
     
     
@@ -29039,7 +29039,7 @@ Fields
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -29048,7 +29048,7 @@ Fields
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -29127,6 +29127,134 @@ Fields
     </tbody>
     </table>
     </div>
+
+Look-up Codes
+^^^^^^^^^^^^^
+
+*interest_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>40301</td>
+            <td>AGRICULTURE</td>
+        </tr>
+    
+        <tr>
+            <td>40302</td>
+            <td>EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>40303</td>
+            <td>ENTERTAINMENT/RECREATION</td>
+        </tr>
+    
+        <tr>
+            <td>40304</td>
+            <td>FINANCE/INSURANCE</td>
+        </tr>
+    
+        <tr>
+            <td>40305</td>
+            <td>GOVERNMENT</td>
+        </tr>
+    
+        <tr>
+            <td>40306</td>
+            <td>HEALTH</td>
+        </tr>
+    
+        <tr>
+            <td>40307</td>
+            <td>LABOR UNIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40308</td>
+            <td>LEGAL</td>
+        </tr>
+    
+        <tr>
+            <td>40309</td>
+            <td>LODGING/RESTAURANTS</td>
+        </tr>
+    
+        <tr>
+            <td>40310</td>
+            <td>MANUFACTURING/INDUSTRIAL</td>
+        </tr>
+    
+        <tr>
+            <td>40311</td>
+            <td>MERCHANDISE/RETAIL</td>
+        </tr>
+    
+        <tr>
+            <td>40312</td>
+            <td>MISCELLANEOUS</td>
+        </tr>
+    
+        <tr>
+            <td>40313</td>
+            <td>OIL AND GAS</td>
+        </tr>
+    
+        <tr>
+            <td>40314</td>
+            <td>POLITICAL ORGANIZATIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40315</td>
+            <td>PROFESSIONAL/TRADE</td>
+        </tr>
+    
+        <tr>
+            <td>40316</td>
+            <td>PUBLIC EMPLOYEES</td>
+        </tr>
+    
+        <tr>
+            <td>40317</td>
+            <td>REAL ESTATE</td>
+        </tr>
+    
+        <tr>
+            <td>40318</td>
+            <td>TRANSPORTATION</td>
+        </tr>
+    
+        <tr>
+            <td>40319</td>
+            <td>UTILITIES</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 
 LobbyistEmployer2Cd
@@ -29232,7 +29360,7 @@ Fields
             <td>interest_cd</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Interest Code</td>
         </tr>
     
     
@@ -29268,7 +29396,7 @@ Fields
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -29277,7 +29405,7 @@ Fields
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -29286,7 +29414,7 @@ Fields
             <td>qtr_1</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 1 total amount</td>
         </tr>
     
     
@@ -29295,7 +29423,7 @@ Fields
             <td>qtr_2</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 2 total amount</td>
         </tr>
     
     
@@ -29304,7 +29432,7 @@ Fields
             <td>qtr_3</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 3 total amount</td>
         </tr>
     
     
@@ -29313,7 +29441,7 @@ Fields
             <td>qtr_4</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 4 total amount</td>
         </tr>
     
     
@@ -29322,7 +29450,7 @@ Fields
             <td>qtr_5</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 5 total amount</td>
         </tr>
     
     
@@ -29331,7 +29459,7 @@ Fields
             <td>qtr_6</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 6 total amount</td>
         </tr>
     
     
@@ -29340,7 +29468,7 @@ Fields
             <td>qtr_7</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 7 total amount</td>
         </tr>
     
     
@@ -29349,7 +29477,7 @@ Fields
             <td>qtr_8</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td>Quarter total amount</td>
+            <td>Quarter 8 total amount</td>
         </tr>
     
     
@@ -29461,7 +29589,7 @@ Fields
             <td>interest_cd</td>
             <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Interest Code</td>
         </tr>
     
     
@@ -29497,7 +29625,7 @@ Fields
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -29506,7 +29634,7 @@ Fields
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -29860,7 +29988,7 @@ Fields
             <td>interest_cd</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Interest code.</td>
+            <td>Interest Code</td>
         </tr>
     
     
@@ -29878,7 +30006,7 @@ Fields
             <td>qtr_1</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 1 total amount.</td>
         </tr>
     
     
@@ -29887,7 +30015,7 @@ Fields
             <td>qtr_2</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 2 total amount.</td>
         </tr>
     
     
@@ -29896,7 +30024,7 @@ Fields
             <td>qtr_3</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 3 total amount.</td>
         </tr>
     
     
@@ -29905,7 +30033,7 @@ Fields
             <td>qtr_4</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 4 total amount.</td>
         </tr>
     
     
@@ -29914,7 +30042,7 @@ Fields
             <td>qtr_5</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 5 total amount.</td>
         </tr>
     
     
@@ -29923,7 +30051,7 @@ Fields
             <td>qtr_6</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 6 total amount.</td>
         </tr>
     
     
@@ -29932,7 +30060,7 @@ Fields
             <td>qtr_7</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 7 total amount.</td>
         </tr>
     
     
@@ -29941,7 +30069,7 @@ Fields
             <td>qtr_8</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Quarter total amount.</td>
+            <td>Quarter 8 total amount.</td>
         </tr>
     
     
@@ -30125,7 +30253,7 @@ Fields
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -30134,7 +30262,7 @@ Fields
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -30336,7 +30464,7 @@ Fields
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -30345,7 +30473,7 @@ Fields
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -30547,7 +30675,7 @@ Fields
             <td>yr_1_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 1 year-to-date-amount</td>
         </tr>
     
     
@@ -30556,7 +30684,7 @@ Fields
             <td>yr_2_ytd_amt</td>
             <td>Floating point number</td>
             <td>No</td>
-            <td></td>
+            <td>Year 2 year-to-date-amount</td>
         </tr>
     
     
@@ -31126,7 +31254,7 @@ Fields
             <td>yr_1_ytd_amt</td>
             <td>Integer</td>
             <td>No</td>
-            <td>YR_1_YTD_AMT</td>
+            <td>Year 1 year to date amount.</td>
         </tr>
     
     
@@ -31135,7 +31263,7 @@ Fields
             <td>yr_2_ytd_amt</td>
             <td>Integer</td>
             <td>No</td>
-            <td>Year 2 year to date amount.</td>
+            <td>Year 2 year to date amount</td>
         </tr>
     
     
