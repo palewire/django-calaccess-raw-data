@@ -2546,11 +2546,16 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Office Sought Description (used on F401A)"
     )
     OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        # alt cases for valid codes
         ('asm', choices.OFFICE_CODES['ASM']),
         ('gov', choices.OFFICE_CODES['GOV']),
         ('OTh', choices.OFFICE_CODES['OTH']),
         ('oth', choices.OFFICE_CODES['OTH']),
         ('csu', choices.OFFICE_CODES['CSU']),
+        # invalid codes
+        ('H', 'Unknown'),
+        ('HOU', 'Unknown'),
+        ('ASS', 'Unknown'),
     )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
@@ -2840,7 +2845,7 @@ original filing and 1 to 999 amendments.",
         ('POF', choices.CAMPAIGN_ENTITY_CODES['POF']),
         ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
         # Misspelling of 'CAO', 'Candidate/officeholder'
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COA', choices.CAMPAIGN_ENTITY_CODES['CAO']),
         # Other unknown values observed
         ('0', 'Unknown'),
         ('BBB', 'Unknown'),
@@ -3534,6 +3539,7 @@ individual"
         help_text="Candidate/officeholder suffix"
     )
     OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        # alt cases for valid codes
         ('asm', choices.OFFICE_CODES['ASM']),
         ('ltg', choices.OFFICE_CODES['LTG']),
         ('OTh', choices.OFFICE_CODES['OTH']),
@@ -3544,6 +3550,8 @@ individual"
         ('boe', choices.OFFICE_CODES['BOE']),
         ('sos', choices.OFFICE_CODES['SOS']),
         ('sup', choices.OFFICE_CODES['SUP']),
+        # invalid codes
+        ('H', 'Unknown'),
     )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
@@ -3560,7 +3568,16 @@ individual"
         blank=True,
         help_text="Office sought description"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('SAC', 'Unknown'),
+        ('CT', 'Unknown'),
+        ('ca', 'Unknown'),
+        ('CAL', 'Unknown'),
+        ('OR', 'Unknown'),
+        ('AL', 'Unknown'),
+        ('CA', 'Unknown'),
+        ('10', 'Unknown'),
+    )
     juris_cd = fields.CharField(
         max_length=3,
         choices=JURIS_CD_CHOICES,
@@ -4060,6 +4077,9 @@ original filing and 1 to 999 amendments.",
         # county office codes
         ('BSU', choices.JURIS_CODES['CTY']),
         ('CSU', choices.JURIS_CODES['CTY']),
+        # city office codes
+        ('ES', choices.JURIS_CODES['CIT']),
+        ('SM', choices.JURIS_CODES['CIT']),
         # "other" office codes
         ('BED', choices.JURIS_CODES['OTH']),
         ('CCB', choices.JURIS_CODES['OTH']),
@@ -4085,6 +4105,45 @@ original filing and 1 to 999 amendments.",
         ('STA', 'Unknown'),
         # All over the board
         ('CA', 'Unknown'),
+        ('SAN', 'Unknown'),
+        ('ES ', 'Unknown'),
+        ('CON', 'Unknown'),
+        ('LA', 'Unknown'),
+        ('LBC', 'Unknown'),
+        ('OR', 'Unknown'),
+        ('SB', 'Unknown'),
+        ('WES', 'Unknown'),
+        ('BM', 'Unknown'),
+        ('(Lo', 'Unknown'),
+        ('(Ci', 'Unknown'),
+        ('vty', 'Unknown'),
+        ('OC', 'Unknown'),
+        ('SM ', 'Unknown'),
+        ('ASS', 'Unknown'),
+        ('JR', 'Unknown'),
+        ('O', 'Unknown'),
+        ('ADM', 'Unknown'),
+        ('SAC', 'Unknown'),
+        ('US', 'Unknown'),
+        ('J', 'Unknown'),
+        ('LOS', 'Unknown'),
+        ('IRV', 'Unknown'),
+        ('CO', 'Unknown'),
+        ('JRS', 'Unknown'),
+        ('NEV', 'Unknown'),
+        ('IB', 'Unknown'),
+        ('A', 'Unknown'),
+        ('Ass', 'Unknown'),
+        ('SD', 'Unknown'),
+        ('D', 'Unknown'),
+        ('SEC', 'Unknown'),
+        ('SC', 'Unknown'),
+        ('RB', 'Unknown'),
+        ('GEN', 'Unknown'),
+        ('CC', 'Unknown'),
+        ('FED', 'Unknown'),
+        ('FM', 'Unknown'),
+        ('R', 'Unknown'),
     )
     juris_cd = fields.CharField(
         max_length=3,
@@ -4148,6 +4207,7 @@ original filing and 1 to 999 amendments.",
         help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
     OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        # alt cases for valid codes
         ('Cou', choices.OFFICE_CODES['COU']),
         ('sen', choices.OFFICE_CODES['SEN']),
         ('AtT', choices.OFFICE_CODES['ATT']),
@@ -4156,6 +4216,51 @@ original filing and 1 to 999 amendments.",
         ('asm', choices.OFFICE_CODES['ASM']),
         ('gov', choices.OFFICE_CODES['GOV']),
         ('Gov', choices.OFFICE_CODES['GOV']),
+        # unknown codes
+        ('LA', 'Unknown'),
+        ('HOU', 'Unknown'),
+        ('LAD', 'Unknown'),
+        ('11A', 'Unknown'),
+        ('001', 'Unknown'),
+        ('BM', 'Unknown'),
+        ('AS1', 'Unknown'),
+        ('ASS', 'Unknown'),
+        ('73', 'Unknown'),
+        ('CIT', 'Unknown'),
+        ('HSE', 'Unknown'),
+        ('LT', 'Unknown'),
+        ('CTY', 'Unknown'),
+        ('STA', 'Unknown'),
+        ('GO', 'Unknown'),
+        ('CO', 'Unknown'),
+        ('A', 'Unknown'),
+        ('PAC', 'Unknown'),
+        ('REP', 'Unknown'),
+        ('OFF', 'Unknown'),
+        ('SE', 'Unknown'),
+        ('031', 'Unknown'),
+        ('COM', 'Unknown'),
+        ('ASB', 'Unknown'),
+        ('OT', 'Unknown'),
+        ('NAT', 'Unknown'),
+        ('CC', 'Unknown'),
+        ('SWE', 'Unknown'),
+        ('FED', 'Unknown'),
+        ('STE', 'Unknown'),
+        ('H', 'Unknown'),
+        ('DA', 'Unknown'),
+        ('S', 'Unknown'),
+        ('AS', 'Unknown'),
+        ('OF', 'Unknown'),
+        ('LEG', 'Unknown'),
+        ('STW', 'Unknown'),
+        ('ST', 'Unknown'),
+        ('PRE', 'Unknown'),
+        ('/S', 'Unknown'),
+        ('U S', 'Unknown'),
+        ('O', 'Unknown'),
+        ('8', 'Unknown'),
+        ('C:S', 'Unknown'),
     )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
@@ -4522,8 +4627,11 @@ of a parent record.'
         ]
     )
     EXPN_CODE_CHOICES = get_sorted_choices(choices.EXPENSE_CODES) + (
+        # alt cases of valid codes
         ('Fnd', choices.EXPENSE_CODES['FND']),
         ('ofc', choices.EXPENSE_CODES['OFC']),
+        # printed this way on the pdfs, but probably meant consultant code
+        ("'CN", choices.EXPENSE_CODES['CNS']),
         # Other codes observed in the table that are not documented by the state
         ("*", "Unknown"),
         ("AIR", "Unknown"),
@@ -4531,7 +4639,6 @@ of a parent record.'
         ("C", "Unknown"),
         ("CAM", "Unknown"),
         ("CC", "Unknown"),
-        ("'CN'", "Unknown"),
         ("COM", "Unknown"),
         ("CON", "Unknown"),
         ("CSN", "Unknown"),
@@ -5090,6 +5197,7 @@ self-employed.'
         help_text="Candidate/officeholder's suffix"
     )
     OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        # alt cases of valid codes
         ('asm', choices.OFFICE_CODES['ASM']),
         ('sen', choices.OFFICE_CODES['SEN']),
         ('Asm', choices.OFFICE_CODES['ASM']),
@@ -5098,6 +5206,22 @@ self-employed.'
         ('oth', choices.OFFICE_CODES['OTH']),
         ('csu', choices.OFFICE_CODES['CSU']),
         ('Oth', choices.OFFICE_CODES['OTH']),
+        # invalid codes
+        ('H', 'Unknown'),
+        ('S', 'Unknown'),
+        ('OF', 'Unknown'),
+        ('HOU', 'Unknown'),
+        ('LOC', 'Unknown'),
+        ('LEG', 'Unknown'),
+        ('STW', 'Unknown'),
+        ('P', 'Unknown'),
+        ('LTV', 'Unknown'),
+        ('LT', 'Unknown'),
+        ('CTY', 'Unknown'),
+        ('OFF', 'Unknown'),
+        ('REP', 'Unknown'),
+        ('COM', 'Unknown'),
+        ('N/A', 'Unknown'),
     )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',

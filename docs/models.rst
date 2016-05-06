@@ -2839,7 +2839,7 @@ Look-up Codes
         </tr>
     
         <tr>
-            <td>CAO</td>
+            <td>COA</td>
             <td>Candidate/officeholder</td>
         </tr>
     
@@ -7105,6 +7105,11 @@ Look-up Codes
         </tr>
     
         <tr>
+            <td>&#39;CN</td>
+            <td>campaign consultants</td>
+        </tr>
+    
+        <tr>
             <td>*</td>
             <td>Unknown</td>
         </tr>
@@ -7131,11 +7136,6 @@ Look-up Codes
     
         <tr>
             <td>CC</td>
-            <td>Unknown</td>
-        </tr>
-    
-        <tr>
-            <td>&#39;CN&#39;</td>
             <td>Unknown</td>
         </tr>
     
@@ -9205,6 +9205,16 @@ Look-up Codes
         </tr>
     
         <tr>
+            <td>ES</td>
+            <td>City</td>
+        </tr>
+    
+        <tr>
+            <td>SM</td>
+            <td>City</td>
+        </tr>
+    
+        <tr>
             <td>BED</td>
             <td>Other</td>
         </tr>
@@ -9281,6 +9291,201 @@ Look-up Codes
     
         <tr>
             <td>CA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SAN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ES </td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CON</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LBC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OR</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SB</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>WES</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>(Lo</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>(Ci</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>vty</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SM </td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>JR</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ADM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>US</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>J</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LOS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>IRV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>JRS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>NEV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>IB</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>A</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>Ass</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SD</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>D</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SEC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>RB</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>GEN</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FED</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>R</td>
             <td>Unknown</td>
         </tr>
     
@@ -9594,6 +9799,226 @@ Look-up Codes
         <tr>
             <td>Gov</td>
             <td>Governor</td>
+        </tr>
+    
+        <tr>
+            <td>LA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LAD</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>11A</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>001</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>BM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>AS1</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>73</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CIT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HSE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTY</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>STA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>GO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CO</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>A</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>031</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASB</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>NAT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>SWE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>FED</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>STE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>DA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>AS</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>STW</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ST</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>PRE</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>/S</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>U S</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>O</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>8</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>C:S</td>
+            <td>Unknown</td>
         </tr>
     
     </tbody>
@@ -14285,6 +14710,21 @@ Look-up Codes
             <td>County Supervisor</td>
         </tr>
     
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ASS</td>
+            <td>Unknown</td>
+        </tr>
+    
     </tbody>
     </table>
     </div>
@@ -15262,6 +15702,11 @@ Look-up Codes
             <td>Superintendent of Public Instruction</td>
         </tr>
     
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
     </tbody>
     </table>
     </div>
@@ -15342,6 +15787,46 @@ Look-up Codes
         <tr>
             <td>STW</td>
             <td>Statewide</td>
+        </tr>
+    
+        <tr>
+            <td>SAC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>ca</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CAL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OR</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>AL</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CA</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>10</td>
+            <td>Unknown</td>
         </tr>
     
     </tbody>
@@ -16581,6 +17066,81 @@ Look-up Codes
         <tr>
             <td>Oth</td>
             <td>Other</td>
+        </tr>
+    
+        <tr>
+            <td>H</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>S</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>HOU</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LOC</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LEG</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>STW</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>P</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LTV</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>LT</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>CTY</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>OFF</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>REP</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>COM</td>
+            <td>Unknown</td>
+        </tr>
+    
+        <tr>
+            <td>N/A</td>
+            <td>Unknown</td>
         </tr>
     
     </tbody>
@@ -33318,6 +33878,11 @@ Look-up Codes
         </tr>
     </thead>
     <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
     
         <tr>
             <td>40301</td>

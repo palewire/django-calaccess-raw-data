@@ -454,6 +454,7 @@ class FilerInterestsCd(CalAccessBaseModel):
         null=True,
     )
     INTEREST_CD_CHOICES = (
+        (0, 'N/A'),
         (40301, 'AGRICULTURE'),
         (40302, 'EDUCATION'),
         (40303, 'ENTERTAINMENT/RECREATION'),
