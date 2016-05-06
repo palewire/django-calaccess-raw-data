@@ -18634,7 +18634,7 @@ Fields
             <td>district_cd</td>
             <td>Integer</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td>District Code</td>
         </tr>
     
     
@@ -18922,7 +18922,449 @@ Look-up Codes
     </table>
     </div>
 
+*district_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/11.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p11-thumbnail.gif'></a><p>p. 11</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/12.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p12-thumbnail.gif'></a><p>p. 12</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/13.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p13-thumbnail.gif'></a><p>p. 13</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>17001</td>
+            <td>01</td>
+        </tr>
+    
+        <tr>
+            <td>17002</td>
+            <td>13</td>
+        </tr>
+    
+        <tr>
+            <td>17003</td>
+            <td>24</td>
+        </tr>
+    
+        <tr>
+            <td>17004</td>
+            <td>35</td>
+        </tr>
+    
+        <tr>
+            <td>17005</td>
+            <td>46</td>
+        </tr>
+    
+        <tr>
+            <td>17006</td>
+            <td>57</td>
+        </tr>
+    
+        <tr>
+            <td>17007</td>
+            <td>68</td>
+        </tr>
+    
+        <tr>
+            <td>17008</td>
+            <td>79</td>
+        </tr>
+    
+        <tr>
+            <td>17009</td>
+            <td>02</td>
+        </tr>
+    
+        <tr>
+            <td>17010</td>
+            <td>05</td>
+        </tr>
+    
+        <tr>
+            <td>17011</td>
+            <td>04</td>
+        </tr>
+    
+        <tr>
+            <td>17013</td>
+            <td>06</td>
+        </tr>
+    
+        <tr>
+            <td>17014</td>
+            <td>07</td>
+        </tr>
+    
+        <tr>
+            <td>17015</td>
+            <td>08</td>
+        </tr>
+    
+        <tr>
+            <td>17016</td>
+            <td>19</td>
+        </tr>
+    
+        <tr>
+            <td>17017</td>
+            <td>10</td>
+        </tr>
+    
+        <tr>
+            <td>17018</td>
+            <td>11</td>
+        </tr>
+    
+        <tr>
+            <td>17019</td>
+            <td>12</td>
+        </tr>
+    
+        <tr>
+            <td>17020</td>
+            <td>14</td>
+        </tr>
+    
+        <tr>
+            <td>17021</td>
+            <td>15</td>
+        </tr>
+    
+        <tr>
+            <td>17022</td>
+            <td>16</td>
+        </tr>
+    
+        <tr>
+            <td>17023</td>
+            <td>17</td>
+        </tr>
+    
+        <tr>
+            <td>17024</td>
+            <td>18</td>
+        </tr>
+    
+        <tr>
+            <td>17026</td>
+            <td>20</td>
+        </tr>
+    
+        <tr>
+            <td>17027</td>
+            <td>21</td>
+        </tr>
+    
+        <tr>
+            <td>17028</td>
+            <td>22</td>
+        </tr>
+    
+        <tr>
+            <td>17029</td>
+            <td>23</td>
+        </tr>
+    
+        <tr>
+            <td>17030</td>
+            <td>25</td>
+        </tr>
+    
+        <tr>
+            <td>17031</td>
+            <td>26</td>
+        </tr>
+    
+        <tr>
+            <td>17032</td>
+            <td>27</td>
+        </tr>
+    
+        <tr>
+            <td>17033</td>
+            <td>28</td>
+        </tr>
+    
+        <tr>
+            <td>17034</td>
+            <td>29</td>
+        </tr>
+    
+        <tr>
+            <td>17035</td>
+            <td>30</td>
+        </tr>
+    
+        <tr>
+            <td>17036</td>
+            <td>31</td>
+        </tr>
+    
+        <tr>
+            <td>17037</td>
+            <td>32</td>
+        </tr>
+    
+        <tr>
+            <td>17038</td>
+            <td>33</td>
+        </tr>
+    
+        <tr>
+            <td>17039</td>
+            <td>34</td>
+        </tr>
+    
+        <tr>
+            <td>17040</td>
+            <td>36</td>
+        </tr>
+    
+        <tr>
+            <td>17041</td>
+            <td>37</td>
+        </tr>
+    
+        <tr>
+            <td>17042</td>
+            <td>38</td>
+        </tr>
+    
+        <tr>
+            <td>17043</td>
+            <td>39</td>
+        </tr>
+    
+        <tr>
+            <td>17044</td>
+            <td>40</td>
+        </tr>
+    
+        <tr>
+            <td>17045</td>
+            <td>41</td>
+        </tr>
+    
+        <tr>
+            <td>17046</td>
+            <td>42</td>
+        </tr>
+    
+        <tr>
+            <td>17047</td>
+            <td>43</td>
+        </tr>
+    
+        <tr>
+            <td>17048</td>
+            <td>44</td>
+        </tr>
+    
+        <tr>
+            <td>17049</td>
+            <td>45</td>
+        </tr>
+    
+        <tr>
+            <td>17050</td>
+            <td>47</td>
+        </tr>
+    
+        <tr>
+            <td>17051</td>
+            <td>48</td>
+        </tr>
+    
+        <tr>
+            <td>17052</td>
+            <td>49</td>
+        </tr>
+    
+        <tr>
+            <td>17053</td>
+            <td>50</td>
+        </tr>
+    
+        <tr>
+            <td>17054</td>
+            <td>51</td>
+        </tr>
+    
+        <tr>
+            <td>17055</td>
+            <td>52</td>
+        </tr>
+    
+        <tr>
+            <td>17056</td>
+            <td>53</td>
+        </tr>
+    
+        <tr>
+            <td>17057</td>
+            <td>54</td>
+        </tr>
+    
+        <tr>
+            <td>17058</td>
+            <td>55</td>
+        </tr>
+    
+        <tr>
+            <td>17059</td>
+            <td>56</td>
+        </tr>
+    
+        <tr>
+            <td>17060</td>
+            <td>03</td>
+        </tr>
+    
+        <tr>
+            <td>17061</td>
+            <td>59</td>
+        </tr>
+    
+        <tr>
+            <td>17062</td>
+            <td>60</td>
+        </tr>
+    
+        <tr>
+            <td>17063</td>
+            <td>61</td>
+        </tr>
+    
+        <tr>
+            <td>17064</td>
+            <td>62</td>
+        </tr>
+    
+        <tr>
+            <td>17065</td>
+            <td>63</td>
+        </tr>
+    
+        <tr>
+            <td>17066</td>
+            <td>64</td>
+        </tr>
+    
+        <tr>
+            <td>17067</td>
+            <td>65</td>
+        </tr>
+    
+        <tr>
+            <td>17068</td>
+            <td>66</td>
+        </tr>
+    
+        <tr>
+            <td>17069</td>
+            <td>67</td>
+        </tr>
+    
+        <tr>
+            <td>17070</td>
+            <td>69</td>
+        </tr>
+    
+        <tr>
+            <td>17071</td>
+            <td>70</td>
+        </tr>
+    
+        <tr>
+            <td>17072</td>
+            <td>71</td>
+        </tr>
+    
+        <tr>
+            <td>17073</td>
+            <td>72</td>
+        </tr>
+    
+        <tr>
+            <td>17074</td>
+            <td>73</td>
+        </tr>
+    
+        <tr>
+            <td>17075</td>
+            <td>74</td>
+        </tr>
+    
+        <tr>
+            <td>17076</td>
+            <td>75</td>
+        </tr>
+    
+        <tr>
+            <td>17077</td>
+            <td>76</td>
+        </tr>
+    
+        <tr>
+            <td>17078</td>
+            <td>77</td>
+        </tr>
+    
+        <tr>
+            <td>17079</td>
+            <td>78</td>
+        </tr>
+    
+        <tr>
+            <td>17080</td>
+            <td>80</td>
+        </tr>
+    
+        <tr>
+            <td>17081</td>
+            <td>09</td>
+        </tr>
+    
+        <tr>
+            <td>17090</td>
+            <td>58</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
 *office_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/16.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p16-thumbnail.gif'></a><p>p. 16</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/17.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p17-thumbnail.gif'></a><p>p. 17</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/18.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p18-thumbnail.gif'></a><p>p. 18</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/20.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p20-thumbnail.gif'></a><p>p. 20</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/21.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p21-thumbnail.gif'></a><p>p. 21</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/22.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p22-thumbnail.gif'></a><p>p. 22</p></div></div>
+
+
 
 
 .. raw:: html
