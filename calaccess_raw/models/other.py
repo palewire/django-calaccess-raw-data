@@ -1337,9 +1337,12 @@ class FilingPeriodCd(CalAccessBaseModel):
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3),
         ]
     )
+    PER_GRP_TYPE_CHOICES = (
+        (1500, 'STANDARD PERIOD'),
+    )
     per_grp_type = fields.IntegerField(
         db_column='PER_GRP_TYPE',
-        help_text="Period group type"
+        help_text="Period group type",
     )
     period_desc = fields.CharField(
         max_length=255,
