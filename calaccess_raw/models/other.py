@@ -681,8 +681,7 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         'FilerTypesCd',
         related_name='filers',
         db_constraint=False,
-        help_text="Filer type identification number. Foreign key referencing \
-FilerTypesCd.FILER_TYPE",
+        help_text="Foreign key referencing FilerTypesCd.filer_type",
         db_column='FILER_TYPE',
     )
     active = fields.CharField(
@@ -1802,20 +1801,38 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71),
     ]
+    ELECTION_TYPE_CHOICES = (
+        (0, 'N/A'),
+        (3001, 'GENERAL'),
+        (3002, 'PRIMARY'),
+        (3003, 'RECALL'),
+        (3004, 'SPECIAL ELECTION'),
+        (3005, 'OFFICEHOLDER'),
+        (3006, 'SPECIAL RUNOFF'),
+    )
     election_type = fields.IntegerField(
         db_column="ELECTION_TYPE",
         db_index=True,
-        help_text="Election type"
+        help_text="Election type",
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3, end_page=4),
+        ],
     )
-    filer_type = fields.IntegerField(
+    filer_type = ForeignKey(
+        'FilerTypesCd',
+        related_name='filing_type_periods',
+        db_constraint=False,
         db_column="FILER_TYPE",
         db_index=True,
-        help_text="Filer type identification number."
+        help_text="Foreign key referencing FilerTypesCd.filer_type",
     )
-    period_id = fields.IntegerField(
+    period_id = ForeignKey(
+        'FilingPeriodCd',
+        related_name='filing_type_periods',
+        db_constraint=False,
         db_column="PERIOD_ID",
         db_index=True,
-        help_text="Period identification number."
+        help_text="Foreign key referencing FilingPeriodCd.period_id",
     )
 
     class Meta:
@@ -1825,4 +1842,4 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         verbose_name_plural = 'FILER_TYPE_PERIODS_CD'
 
     def __str__(self):
-        return str(self.filer_type)
+        return str(self.election_type)

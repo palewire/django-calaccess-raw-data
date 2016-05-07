@@ -37072,18 +37072,18 @@ Fields
     
         <tr>
             <td>filer_type</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Filer type identification number.</td>
+            <td>Foreign Key (type determined by related field)</td>
+            <td>No</td>
+            <td></td>
         </tr>
     
     
     
         <tr>
             <td>period_id</td>
-            <td>Integer</td>
-            <td>Yes</td>
-            <td>Period identification number.</td>
+            <td>Foreign Key (type determined by related field)</td>
+            <td>No</td>
+            <td></td>
         </tr>
     
     
