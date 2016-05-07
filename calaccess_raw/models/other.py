@@ -1222,11 +1222,21 @@ class FilerTypesCd(CalAccessBaseModel):
         db_column='DESCRIPTION',
         help_text="Description of the filer type"
     )
+    GRP_TYPE_CHOICES = (
+        (58, 'LOBBY PERIODS'),
+        (59, 'CAMPAIGN PERIODS'),
+        (60, 'DEFAULT PERIOD FOR ERRONEOUS DATA'),
+        (61, 'Unknown'),
+    )
     grp_type = fields.IntegerField(
         null=True,
         db_column='GRP_TYPE',
         blank=True,
-        help_text="Group type assocated with the filer type"
+        choices=GRP_TYPE_CHOICES,
+        help_text="Group type assocated with the filer type",
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=4),
+        ]
     )
     calc_use = fields.CharField(
         max_length=1,
@@ -1327,7 +1337,6 @@ class FilingPeriodCd(CalAccessBaseModel):
     )
     PERIOD_TYPE_CHOICES = (
         (1500, 'Standard period'),
-        (1501, 'Non-standard period'),
     )
     period_type = fields.IntegerField(
         db_column='PERIOD_TYPE',
@@ -1343,6 +1352,10 @@ class FilingPeriodCd(CalAccessBaseModel):
     per_grp_type = fields.IntegerField(
         db_column='PER_GRP_TYPE',
         help_text="Period group type",
+        choices=PER_GRP_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3),
+        ]
     )
     period_desc = fields.CharField(
         max_length=255,

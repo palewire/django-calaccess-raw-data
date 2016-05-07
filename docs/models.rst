@@ -37180,6 +37180,59 @@ Fields
     </table>
     </div>
 
+Look-up Codes
+^^^^^^^^^^^^^
+
+*grp_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p4-thumbnail.gif'></a><p>p. 4</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>58</td>
+            <td>LOBBY PERIODS</td>
+        </tr>
+    
+        <tr>
+            <td>59</td>
+            <td>CAMPAIGN PERIODS</td>
+        </tr>
+    
+        <tr>
+            <td>60</td>
+            <td>DEFAULT PERIOD FOR ERRONEOUS DATA</td>
+        </tr>
+    
+        <tr>
+            <td>61</td>
+            <td>Unknown</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 FilerXrefCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37462,9 +37515,37 @@ Look-up Codes
             <td>Standard period</td>
         </tr>
     
+    </tbody>
+    </table>
+    </div>
+
+*per_grp_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p3-thumbnail.gif'></a><p>p. 3</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
         <tr>
-            <td>1501</td>
-            <td>Non-standard period</td>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>1500</td>
+            <td>STANDARD PERIOD</td>
         </tr>
     
     </tbody>
