@@ -1211,7 +1211,7 @@ original filing and 1 to 999 amendments.",
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=16, end_page=18),
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=20, end_page=22),
-        ]   
+        ]
     )
     pmnt_dt = fields.DateField(
         db_column='PMNT_DT',
