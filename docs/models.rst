@@ -29125,9 +29125,9 @@ Fields
     
         <tr>
             <td>filer_type</td>
-            <td>Integer</td>
+            <td>Foreign Key (type determined by related field)</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td></td>
         </tr>
     
     
