@@ -368,6 +368,9 @@ class FilerAddressCd(CalAccessBaseModel):
         null=True,
         verbose_name="Address type",
         help_text="Address type",
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=5),
+        ]
     )
     session_id = fields.IntegerField(
         verbose_name='session ID',
