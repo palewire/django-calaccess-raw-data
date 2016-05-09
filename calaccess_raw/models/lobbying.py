@@ -3191,6 +3191,7 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         db_column='INTEREST_CD',
         blank=True,
         null=True,
+        choices=INTEREST_CD_CHOICES,
         verbose_name="interest code",
         help_text='Interest Code',
         documentcloud_pages=[
@@ -3343,6 +3344,7 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         db_column='INTEREST_CD',
         blank=True,
         null=True,
+        choices=INTEREST_CD_CHOICES,
         verbose_name="interest code",
         help_text='Interest Code',
         documentcloud_pages=[
@@ -4725,6 +4727,7 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     )
     interest_cd = fields.IntegerField(
         db_column="INTEREST_CD",
+        choices=INTEREST_CD_CHOICES,
         verbose_name='interest code',
         help_text='Interest Code',
         documentcloud_pages=[

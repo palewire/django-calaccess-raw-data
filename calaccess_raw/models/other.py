@@ -1813,6 +1813,7 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
     election_type = fields.IntegerField(
         db_column="ELECTION_TYPE",
         db_index=True,
+        choices=ELECTION_TYPE_CHOICES,
         help_text="Election type",
         documentcloud_pages=[
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3, end_page=4),

@@ -30487,6 +30487,134 @@ Fields
     </table>
     </div>
 
+Look-up Codes
+^^^^^^^^^^^^^
+
+*interest_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>40301</td>
+            <td>AGRICULTURE</td>
+        </tr>
+    
+        <tr>
+            <td>40302</td>
+            <td>EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>40303</td>
+            <td>ENTERTAINMENT/RECREATION</td>
+        </tr>
+    
+        <tr>
+            <td>40304</td>
+            <td>FINANCE/INSURANCE</td>
+        </tr>
+    
+        <tr>
+            <td>40305</td>
+            <td>GOVERNMENT</td>
+        </tr>
+    
+        <tr>
+            <td>40306</td>
+            <td>HEALTH</td>
+        </tr>
+    
+        <tr>
+            <td>40307</td>
+            <td>LABOR UNIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40308</td>
+            <td>LEGAL</td>
+        </tr>
+    
+        <tr>
+            <td>40309</td>
+            <td>LODGING/RESTAURANTS</td>
+        </tr>
+    
+        <tr>
+            <td>40310</td>
+            <td>MANUFACTURING/INDUSTRIAL</td>
+        </tr>
+    
+        <tr>
+            <td>40311</td>
+            <td>MERCHANDISE/RETAIL</td>
+        </tr>
+    
+        <tr>
+            <td>40312</td>
+            <td>MISCELLANEOUS</td>
+        </tr>
+    
+        <tr>
+            <td>40313</td>
+            <td>OIL AND GAS</td>
+        </tr>
+    
+        <tr>
+            <td>40314</td>
+            <td>POLITICAL ORGANIZATIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40315</td>
+            <td>PROFESSIONAL/TRADE</td>
+        </tr>
+    
+        <tr>
+            <td>40316</td>
+            <td>PUBLIC EMPLOYEES</td>
+        </tr>
+    
+        <tr>
+            <td>40317</td>
+            <td>REAL ESTATE</td>
+        </tr>
+    
+        <tr>
+            <td>40318</td>
+            <td>TRANSPORTATION</td>
+        </tr>
+    
+        <tr>
+            <td>40319</td>
+            <td>UTILITIES</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 LobbyistEmployer3Cd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -30715,6 +30843,134 @@ Fields
     </tbody>
     </table>
     </div>
+
+Look-up Codes
+^^^^^^^^^^^^^
+
+*interest_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>40301</td>
+            <td>AGRICULTURE</td>
+        </tr>
+    
+        <tr>
+            <td>40302</td>
+            <td>EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>40303</td>
+            <td>ENTERTAINMENT/RECREATION</td>
+        </tr>
+    
+        <tr>
+            <td>40304</td>
+            <td>FINANCE/INSURANCE</td>
+        </tr>
+    
+        <tr>
+            <td>40305</td>
+            <td>GOVERNMENT</td>
+        </tr>
+    
+        <tr>
+            <td>40306</td>
+            <td>HEALTH</td>
+        </tr>
+    
+        <tr>
+            <td>40307</td>
+            <td>LABOR UNIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40308</td>
+            <td>LEGAL</td>
+        </tr>
+    
+        <tr>
+            <td>40309</td>
+            <td>LODGING/RESTAURANTS</td>
+        </tr>
+    
+        <tr>
+            <td>40310</td>
+            <td>MANUFACTURING/INDUSTRIAL</td>
+        </tr>
+    
+        <tr>
+            <td>40311</td>
+            <td>MERCHANDISE/RETAIL</td>
+        </tr>
+    
+        <tr>
+            <td>40312</td>
+            <td>MISCELLANEOUS</td>
+        </tr>
+    
+        <tr>
+            <td>40313</td>
+            <td>OIL AND GAS</td>
+        </tr>
+    
+        <tr>
+            <td>40314</td>
+            <td>POLITICAL ORGANIZATIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40315</td>
+            <td>PROFESSIONAL/TRADE</td>
+        </tr>
+    
+        <tr>
+            <td>40316</td>
+            <td>PUBLIC EMPLOYEES</td>
+        </tr>
+    
+        <tr>
+            <td>40317</td>
+            <td>REAL ESTATE</td>
+        </tr>
+    
+        <tr>
+            <td>40318</td>
+            <td>TRANSPORTATION</td>
+        </tr>
+    
+        <tr>
+            <td>40319</td>
+            <td>UTILITIES</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 
 LobbyistEmployerFirms1Cd
@@ -31132,6 +31388,134 @@ Fields
     </tbody>
     </table>
     </div>
+
+Look-up Codes
+^^^^^^^^^^^^^
+
+*interest_cd*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/19.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p19-thumbnail.gif'></a><p>p. 19</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>40301</td>
+            <td>AGRICULTURE</td>
+        </tr>
+    
+        <tr>
+            <td>40302</td>
+            <td>EDUCATION</td>
+        </tr>
+    
+        <tr>
+            <td>40303</td>
+            <td>ENTERTAINMENT/RECREATION</td>
+        </tr>
+    
+        <tr>
+            <td>40304</td>
+            <td>FINANCE/INSURANCE</td>
+        </tr>
+    
+        <tr>
+            <td>40305</td>
+            <td>GOVERNMENT</td>
+        </tr>
+    
+        <tr>
+            <td>40306</td>
+            <td>HEALTH</td>
+        </tr>
+    
+        <tr>
+            <td>40307</td>
+            <td>LABOR UNIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40308</td>
+            <td>LEGAL</td>
+        </tr>
+    
+        <tr>
+            <td>40309</td>
+            <td>LODGING/RESTAURANTS</td>
+        </tr>
+    
+        <tr>
+            <td>40310</td>
+            <td>MANUFACTURING/INDUSTRIAL</td>
+        </tr>
+    
+        <tr>
+            <td>40311</td>
+            <td>MERCHANDISE/RETAIL</td>
+        </tr>
+    
+        <tr>
+            <td>40312</td>
+            <td>MISCELLANEOUS</td>
+        </tr>
+    
+        <tr>
+            <td>40313</td>
+            <td>OIL AND GAS</td>
+        </tr>
+    
+        <tr>
+            <td>40314</td>
+            <td>POLITICAL ORGANIZATIONS</td>
+        </tr>
+    
+        <tr>
+            <td>40315</td>
+            <td>PROFESSIONAL/TRADE</td>
+        </tr>
+    
+        <tr>
+            <td>40316</td>
+            <td>PUBLIC EMPLOYEES</td>
+        </tr>
+    
+        <tr>
+            <td>40317</td>
+            <td>REAL ESTATE</td>
+        </tr>
+    
+        <tr>
+            <td>40318</td>
+            <td>TRANSPORTATION</td>
+        </tr>
+    
+        <tr>
+            <td>40319</td>
+            <td>UTILITIES</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 
 LobbyistFirm1Cd
@@ -37090,6 +37474,74 @@ Fields
     </tbody>
     </table>
     </div>
+
+Look-up Codes
+^^^^^^^^^^^^^
+
+*election_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/3.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p3-thumbnail.gif'></a><p>p. 3</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/4.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p4-thumbnail.gif'></a><p>p. 4</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+        <tr>
+            <td>3001</td>
+            <td>GENERAL</td>
+        </tr>
+    
+        <tr>
+            <td>3002</td>
+            <td>PRIMARY</td>
+        </tr>
+    
+        <tr>
+            <td>3003</td>
+            <td>RECALL</td>
+        </tr>
+    
+        <tr>
+            <td>3004</td>
+            <td>SPECIAL ELECTION</td>
+        </tr>
+    
+        <tr>
+            <td>3005</td>
+            <td>OFFICEHOLDER</td>
+        </tr>
+    
+        <tr>
+            <td>3006</td>
+            <td>SPECIAL RUNOFF</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
 
 
 FilerTypesCd
