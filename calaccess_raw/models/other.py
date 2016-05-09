@@ -5,7 +5,6 @@ from .base import CalAccessBaseModel
 from calaccess_raw import fields
 from calaccess_raw.annotations import DocumentCloud
 from calaccess_raw.annotations.filing_forms import get_filing_form
-from django.db.models import ForeignKey
 from django.utils.encoding import python_2_unicode_compatible
 
 
@@ -680,7 +679,7 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
         db_column='FILER_ID',
     )
-    filer_type = ForeignKey(
+    filer_type = fields.ForeignKeyField(
         'FilerTypesCd',
         related_name='filers',
         db_constraint=False,
@@ -1835,7 +1834,7 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
             DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3, end_page=4),
         ],
     )
-    filer_type = ForeignKey(
+    filer_type = fields.ForeignKeyField(
         'FilerTypesCd',
         related_name='filing_type_periods',
         db_constraint=False,
@@ -1843,7 +1842,7 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         db_index=True,
         help_text="Foreign key referencing FilerTypesCd.filer_type",
     )
-    period_id = ForeignKey(
+    period_id = fields.ForeignKeyField(
         'FilingPeriodCd',
         related_name='filing_type_periods',
         db_constraint=False,

@@ -29125,9 +29125,9 @@ Fields
     
         <tr>
             <td>filer_type</td>
-            <td>Foreign Key (type determined by related field)</td>
+            <td>Integer</td>
             <td>No</td>
-            <td></td>
+            <td>Foreign key referencing FilerTypesCd.filer_type</td>
         </tr>
     
     
@@ -35226,9 +35226,9 @@ Fields
     
         <tr>
             <td>filer_type</td>
-            <td>Foreign Key (type determined by related field)</td>
-            <td>No</td>
-            <td></td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Foreign key referencing FilerTypesCd.filer_type</td>
         </tr>
     
     
@@ -37465,18 +37465,18 @@ Fields
     
         <tr>
             <td>filer_type</td>
-            <td>Foreign Key (type determined by related field)</td>
-            <td>No</td>
-            <td></td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Foreign key referencing FilerTypesCd.filer_type</td>
         </tr>
     
     
     
         <tr>
             <td>period_id</td>
-            <td>Foreign Key (type determined by related field)</td>
-            <td>No</td>
-            <td></td>
+            <td>Integer</td>
+            <td>Yes</td>
+            <td>Foreign key referencing FilingPeriodCd.period_id</td>
         </tr>
     
     

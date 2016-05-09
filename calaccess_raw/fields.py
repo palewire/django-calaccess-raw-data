@@ -7,6 +7,7 @@ django-postgres-copy.
 """
 from django.db.models import fields
 from django.template.defaultfilters import capfirst
+from django.db.models import ForeignKey
 
 
 class CalAccessFieldMixin(fields.Field):
@@ -149,3 +150,11 @@ class IntegerField(fields.IntegerField, CalAccessFieldMixin, DocumentCloudMixin)
             THEN "%(name)s"::int
         ELSE NULL
     END"""
+
+
+class ForeignKeyField(ForeignKey, IntegerField):
+    def __init__(self, *args, **kwargs):
+        super(ForeignKeyField, self).__init__(*args, **kwargs)
+
+    def description(self):
+        return self.target_field.description
