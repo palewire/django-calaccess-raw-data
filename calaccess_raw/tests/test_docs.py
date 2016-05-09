@@ -5,7 +5,7 @@ import agate
 import logging
 from django.test import TestCase
 from django.core.management import call_command
-from django.db import models
+from calaccess_raw.fields import ForeignKeyField
 from calaccess_raw import get_model_list
 logger = logging.getLogger(__name__)
 
@@ -250,7 +250,7 @@ class DocumentationTestCase(TestCase):
                 if (
                     any(x in f.name for x in choice_field_strs) and
                     f.name != 'memo_code' and
-                    f.__class__ is not models.ForeignKey and
+                    f.__class__ is not ForeignKeyField and
                     '{}.{}'.format(m().klass_name, f.name) not in exceptions
                 ):
                     if not f.choices:
