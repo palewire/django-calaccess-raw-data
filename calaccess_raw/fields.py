@@ -152,9 +152,18 @@ class IntegerField(fields.IntegerField, CalAccessFieldMixin, DocumentCloudMixin)
     END"""
 
 
-class ForeignKeyField(ForeignKey, IntegerField):
+class ForeignKeyField(ForeignKey, CalAccessFieldMixin, DocumentCloudMixin):
     def __init__(self, *args, **kwargs):
         super(ForeignKeyField, self).__init__(*args, **kwargs)
+        # self.related_field = self.foreign_related_fields[0]
+
+    @property
+    def copy_type(self):
+        return self.foreign_related_fields[0].copy_type
+
+    @property
+    def copy_template(self):
+        return self.foreign_related_fields[0].copy_template
 
     def description(self):
-        return self.target_field.description
+        return self.foreign_related_fields[0].description
