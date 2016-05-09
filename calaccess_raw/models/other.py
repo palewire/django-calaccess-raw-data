@@ -1769,9 +1769,22 @@ class ReportsCd(CalAccessBaseModel):
         null=True,
         help_text="Parameters indication flag"
     )
+    REPORT_TYPE_CHOICES = (
+        (401, 'PUBLIC REPORTS'),
+        (402, 'AUDITS'),
+        (403, 'FINANCIAL REPORTS'),
+        (404, 'AUDITS'),
+        (405, 'MAILING LABELS'),
+        (406, 'OTHER REPORTS'),
+        (0, 'N/A'),
+    )
     rpt_type = fields.IntegerField(
+        choices=REPORT_TYPE_CHOICES,
         db_column='RPT_TYPE',
-        help_text="Type of the report"
+        help_text="Type of the report",
+        documentcloud_pages=[
+            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=2),
+        ]
     )
     parm_definition = fields.IntegerField(
         db_column='PARM_DEFINITION',

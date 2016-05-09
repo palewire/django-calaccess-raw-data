@@ -39015,6 +39015,74 @@ Fields
     </table>
     </div>
 
+Look-up Codes
+^^^^^^^^^^^^^
+
+*rpt_type*
+
+
+*Lookup-Codes-Cd*
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2774529-Lookup-Codes-Cd/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2774529/pages/Lookup-Codes-Cd-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
+
+
+
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+    <thead valign="bottom">
+        <tr>
+            <th class="head">Code</th>
+            <th class="head">Definition</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    
+        <tr>
+            <td>401</td>
+            <td>PUBLIC REPORTS</td>
+        </tr>
+    
+        <tr>
+            <td>402</td>
+            <td>AUDITS</td>
+        </tr>
+    
+        <tr>
+            <td>403</td>
+            <td>FINANCIAL REPORTS</td>
+        </tr>
+    
+        <tr>
+            <td>404</td>
+            <td>AUDITS</td>
+        </tr>
+    
+        <tr>
+            <td>405</td>
+            <td>MAILING LABELS</td>
+        </tr>
+    
+        <tr>
+            <td>406</td>
+            <td>OTHER REPORTS</td>
+        </tr>
+    
+        <tr>
+            <td>0</td>
+            <td>N/A</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+
+
+
 
 
 
