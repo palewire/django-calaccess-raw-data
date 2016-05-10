@@ -176,14 +176,15 @@ class BallotMeasuresCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class EfsFilingLogCd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    Electronic Filing Subsystem Log. The EFS accepts and validates electronic filings.
     """
     UNIQUE_KEY = (
         "FILING_DATE",
         "VENDOR"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50)
+        DocumentCloud(id='2711624-Overview', start_page=1, end_page=2),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50),
     ]
     FILING_FORMS = [
         get_filing_form('F400'),
@@ -212,16 +213,17 @@ class EfsFilingLogCd(CalAccessBaseModel):
     filing_date = fields.DateField(
         db_column='FILING_DATE',
         null=True,
-        help_text="This field is undocumented"
+        help_text="Date of filing"
     )
     filingstatus = fields.IntegerField(
         db_column='FILINGSTATUS',
-        help_text="This field is undocumented",
+        help_text="Status of filing. This field is described in the docs as being\
+VARCHAR. However, its distinct values are 0, 1, 2 and 7.",
     )
     vendor = fields.CharField(
         db_column='VENDOR',
         max_length=250,
-        help_text="This field is undocumented"
+        help_text="Software vendor who submitted the electronic filing"
     )
     filer_id = fields.CharField(
         verbose_name='filer ID',
@@ -246,7 +248,8 @@ class EfsFilingLogCd(CalAccessBaseModel):
     error_no = fields.CharField(
         db_column='ERROR_NO',
         max_length=250,
-        help_text="This field is undocumented",
+        help_text='Most records have a value of "ACCEPTED". Other records include "ERROR"\
+or "BADFORMAT" and a three-digit number.',
     )
 
     class Meta:

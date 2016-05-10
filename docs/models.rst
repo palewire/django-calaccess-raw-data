@@ -33979,13 +33979,21 @@ Fields
 EfsFilingLogCd
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is an undocumented model.
+Electronic Filing Subsystem Log. The EFS accepts and validates electronic filings.
 
 **Sample:** `EFS_FILING_LOG_CD.TSV <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/blob/master/example/test-data/tsv/EFS_FILING_LOG_CD.TSV>`_
 
 
 Source Docs
 ^^^^^^^^^^^
+
+*Overview*
+
+
+.. raw:: html
+
+    <div class="doc_pages_container"><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711624-Overview/pages/1.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711624/pages/Overview-p1-thumbnail.gif'></a><p>p. 1</p></div><div class="doc_page_frame"><a class="reference external image-reference" href="https://www.documentcloud.org/documents/2711624-Overview/pages/2.html"><img class='doc_page' src='https://assets.documentcloud.org/documents/2711624/pages/Overview-p2-thumbnail.gif'></a><p>p. 2</p></div></div>
+
 
 *CalAccessTablesWeb*
 
@@ -34116,7 +34124,7 @@ Fields
             <td>filing_date</td>
             <td>Date (without time)</td>
             <td>Yes</td>
-            <td>This field is undocumented</td>
+            <td>Date of filing</td>
         </tr>
     
     
@@ -34125,7 +34133,7 @@ Fields
             <td>filingstatus</td>
             <td>Integer</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td>Status of filing. This field is described in the docs as beingVARCHAR. However, its distinct values are 0, 1, 2 and 7.</td>
         </tr>
     
     
@@ -34134,7 +34142,7 @@ Fields
             <td>vendor</td>
             <td>String (up to 250)</td>
             <td>Yes</td>
-            <td>This field is undocumented</td>
+            <td>Software vendor who submitted the electronic filing</td>
         </tr>
     
     
@@ -34161,7 +34169,7 @@ Fields
             <td>error_no</td>
             <td>String (up to 250)</td>
             <td>No</td>
-            <td>This field is undocumented</td>
+            <td>Most records have a value of &quot;ACCEPTED&quot;. Other records include &quot;ERROR&quot;or &quot;BADFORMAT&quot; and a three-digit number.</td>
         </tr>
     
     
