@@ -244,6 +244,9 @@ VARCHAR. However, its distinct values are 0, 1, 2 and 7.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         verbose_name="form type",
+        documentcloud_pages=[
+            DocumentCloud(id='2711624-Overview', start_page=4, end_page=8),
+        ]
     )
     error_no = fields.CharField(
         db_column='ERROR_NO',
