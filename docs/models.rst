@@ -29226,7 +29226,7 @@ Fields
             <td>entity_type</td>
             <td>Integer</td>
             <td>No</td>
-            <td>This field is undocumented. The values might refer to either FILER_TYPE_CD.FILER_TYPE or GROUP_TYPE_CD.GRP_ID, but that&#39;s just a guess.</td>
+            <td>This field is undocumented. The values might refer to either FILER_TYPES_CD.FILER_TYPE or GROUP_TYPES_CD.GRP_ID, but that&#39;s just a guess.</td>
         </tr>
     
     

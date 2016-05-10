@@ -2714,7 +2714,7 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         null=True,
         choices=ENTITY_TYPE_CHOICES,
         help_text="This field is undocumented. The values might refer to either \
-FILER_TYPE_CD.FILER_TYPE or GROUP_TYPE_CD.GRP_ID, but that's just a guess."
+FILER_TYPES_CD.FILER_TYPE or GROUP_TYPES_CD.GRP_ID, but that's just a guess."
     )
     entity_name = fields.CharField(
         max_length=500,
