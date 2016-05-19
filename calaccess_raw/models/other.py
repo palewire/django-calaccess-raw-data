@@ -1715,6 +1715,9 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         choices=FORM_ID_CHOICES,
         verbose_name="form identification code",
         help_text="Form identification code",
+        documentcloud_pages=[
+            DocumentCloud(id='2711624-Overview', start_page=4, end_page=8),
+        ]
     )
     receive_comment = fields.CharField(
         db_column='RECEIVE_COMMENT',

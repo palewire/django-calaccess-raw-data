@@ -535,7 +535,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class HeaderCd(CalAccessBaseModel):
     """
-    Lookup table used to report Form 460 information in the AMS.
+    Lookup table used to report Form 460 information in the Agency Management System.
     """
     UNIQUE_KEY = ("LINE_NUMBER", "FORM_ID", "REC_TYPE")
     DOCUMENTCLOUD_PAGES = [
@@ -827,7 +827,8 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class CvrE530Cd(CalAccessBaseModel):
     """
-    This table method is undocumented.
+    Probably Cover Pages for Electronic Form 530. This table is listed in the record
+    layouts, but neither table nor any of its columns are labeled.
     """
     UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     filing_id = fields.IntegerField(
