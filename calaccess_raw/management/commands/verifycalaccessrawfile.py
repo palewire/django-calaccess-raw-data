@@ -9,7 +9,7 @@ from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
-    help = "Logs given model's row count and compares against line count in cleaned CSV"
+    help = "Logs row count of given model and compares against line count in cleaned CSV"
 
     def add_arguments(self, parser):
         """
