@@ -54,6 +54,13 @@ class CalAccessBaseModel(models.Model):
         return textwrap.dedent(self.__doc__).strip()
 
     @property
+    def db_table(self):
+        """
+        Return the model's database table name as a string.
+        """
+        return self._meta.db_table
+
+    @property
     def klass(self):
         """
         Return the model class itself.
