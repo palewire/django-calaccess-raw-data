@@ -141,6 +141,33 @@ class CalAccessBaseModel(models.Model):
 
         return page_list
 
+    def get_documentcloud_dicts(self):
+        """
+        Return distinct DocumentCloud documents as a list of dicts.
+
+        Each dict has a pages key that is a list of start_page, end_page tuples.
+        """
+        from calaccess_raw.annotations import DocumentCloud
+
+        doc_dict = {}
+        for dc in self.DOCUMENTCLOUD_PAGES:
+            if not isinstance(dc, DocumentCloud):
+                raise TypeError("Values must be instances of DocumentCloud")
+
+            try:
+                doc_dict[dc.id]['pages'].append((dc.start_page, dc.end_page))
+            except KeyError:
+                doc_dict[dc.id] = {
+                    'title': dc.title,
+                    'url': dc.metadata['canonical_url'],
+                    'pages': [(dc.start_page, dc.end_page)],
+                }
+
+        output = [v for k, v in doc_dict.iteritems()]
+
+        return output
+
+
     def get_filing_forms_w_sections(self):
         """
         Returns a list of tuples, each containing a FilingForm object and list of
