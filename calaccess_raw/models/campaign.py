@@ -478,7 +478,7 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
 @python_2_unicode_compatible
 class Cvr2SoCd(CalAccessBaseModel):
     """
-    Additional names and committees information included on the second page
+    Additional names and committee information included on the second page
     of a statement of organization creation form filed
     by a slate-mailer organization or recipient committee.
     """
@@ -723,10 +723,7 @@ relates to. See CAL document for the definition of legal values for this column.
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['office_codes'] + [
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
-        ]
+        documentcloud_pages=choices.DOCS['office_codes']
     )
     offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR',
@@ -1722,7 +1719,7 @@ officer's street address."
 @python_2_unicode_compatible
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
-    Record used to carry additional names (e.g., Assistant Treasurers for the
+    Record used to carry additional names (e.g., Assistant Treasurers) for the
     campaign disclosure forms below.
     """
     UNIQUE_KEY = (
@@ -2131,8 +2128,8 @@ with in the record.",
 @python_2_unicode_compatible
 class RcptCd(CalAccessBaseModel):
     """
-    Receipts schedules for Slate Mailer Organization and Recipient Committee
-    Campaign Statements (Forms 401 and 460).
+    Contribution records from receipts schedules for Slate Mailer Organization
+    and Recipient Committee Campaign Statements.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2922,7 +2919,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     """
-    Loans received and made
+    Loans received and made by recepient committees
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -3354,7 +3351,7 @@ identifier. "X" indicates this condition is true.'
 @python_2_unicode_compatible
 class S401Cd(CalAccessBaseModel):
     """
-    This table contains Form 401 (Slate Mailer Organization) payment and other
+    Form 401 (Slate Mailer Organization) payment and other
     disclosure schedules (F401B, F401B-1, F401C, F401D) information. Does not
     include Form 401, Schedule A (Payments Received).
     """
@@ -3683,7 +3680,8 @@ for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class ExpnCd(CalAccessBaseModel):
     """
-    Campaign expenditures from a variety of forms
+    Campaign expenditures from a variety of forms, excluding Late Independent
+    Expenditures (from Form 496)
     """
     UNIQUE_KEY = (
         'FILING_ID',
@@ -3693,6 +3691,7 @@ class ExpnCd(CalAccessBaseModel):
         'FORM_TYPE'
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=53, end_page=56),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=45, end_page=48),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31, end_page=32),
@@ -4446,7 +4445,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class F495P2Cd(CalAccessBaseModel):
     """
-    Form 495 Supplemental Pre-Election Campaign Statement (attachment to
+    Form 495 Supplemental Pre-Election Campaign Statement, attached to
     Recipient Committee Campaign Statements (Forms 450 and 460).
     """
     UNIQUE_KEY = (
@@ -4542,8 +4541,8 @@ as on the filing's cover (CVR) record."
 @python_2_unicode_compatible
 class DebtCd(CalAccessBaseModel):
     """
-    Form 460 (Recipient Committee Campaign Statement) Schedule (F) Accrued
-    Expenses (Unpaid Bills) records
+    Records of unpaid bills accrued by Recipient Campaigns, as listed on
+    Form 460, Schedule F (Accrued Expenses).
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4864,7 +4863,8 @@ transaction identifier. /"X/" indicates this condition is true'
 @python_2_unicode_compatible
 class S496Cd(CalAccessBaseModel):
     """
-    Form 496 Late Independent Expenditures
+    Records of expenditures made by Independent Expenditure Committees in the 90
+    days preceding an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4874,6 +4874,7 @@ class S496Cd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=124, end_page=125),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=79),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=40),
@@ -4986,7 +4987,8 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class S497Cd(CalAccessBaseModel):
     """
-    Form 497: Late Contributions Received/Made
+    Campaign Committee contributions received or made in the 90 days before an
+    election, as reported on Form 497.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4996,6 +4998,7 @@ class S497Cd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=125, end_page=127),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=80, end_page=82),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41, end_page=42),
@@ -5395,7 +5398,8 @@ for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class F501502Cd(CalAccessBaseModel):
     """
-    Candidate intention statement (Forms 501 and 502)
+    Candidate Intention Statements (Forms 501 and 502), including a record
+    for the original filing and each amendment.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -6074,7 +6078,8 @@ Populated for Senate, Assembly, or Board of Equalization races.',
 @python_2_unicode_compatible
 class S498Cd(CalAccessBaseModel):
     """
-    Form 498: Slate Mailer Late Independent Expenditures Made
+    Payments received by Slate Mailer Organizations within 90 days of an election,
+    as reported on Form 498.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -6084,6 +6089,7 @@ class S498Cd(CalAccessBaseModel):
         "FORM_TYPE",
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=127, end_page=129),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=83, end_page=85),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43, end_page=44),
@@ -6387,7 +6393,7 @@ Populated for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class CvrF470Cd(CalAccessBaseModel):
     """
-    Cover page layout for Officeholder and Candidate Short and Supplement Forms
+    Cover page information for Officeholder and Candidate Short and Supplement Forms
     (Form 470)
     """
     UNIQUE_KEY = (
@@ -6397,6 +6403,7 @@ class CvrF470Cd(CalAccessBaseModel):
         "FORM_TYPE",
     )
     DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
         DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16),
         DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
