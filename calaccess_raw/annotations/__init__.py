@@ -134,6 +134,14 @@ class DocumentCloud(object):
             ) for x in range(start, start+self.num_pages)
         ]
 
+    @property
+    def formatted_page_nums(self):
+        if self.end_page:
+            formatted_str = '{0}-{1}'.format(self.start_page, self.end_page)
+        else:
+            formatted_str = str(self.start_page)
+        return formatted_str
+
 
 @deconstructible
 class FilingForm(object):
