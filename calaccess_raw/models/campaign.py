@@ -11,6 +11,10 @@ from calaccess_raw.annotations import (
 )
 from django.utils.encoding import python_2_unicode_compatible
 
+# =============================================================================
+# ------------------------------ Cover Pages ----------------------------------
+# =============================================================================
+
 
 @python_2_unicode_compatible
 class CvrSoCd(CalAccessBaseModel):
@@ -2126,607 +2130,6 @@ with in the record.",
 
 
 @python_2_unicode_compatible
-class RcptCd(CalAccessBaseModel):
-    """
-    Contribution records from receipts schedules for Slate Mailer Organization
-    and Recipient Committee Campaign Statements.
-    """
-    UNIQUE_KEY = (
-        "FILING_ID",
-        "AMEND_ID",
-        "LINE_ITEM",
-        "REC_TYPE",
-        "FORM_TYPE"
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=118, end_page=121),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71, end_page=75),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29, end_page=30),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=37, end_page=41),
-    ]
-    FILING_FORMS = [
-        get_filing_form('E530'),
-        get_filing_form('F900'),
-        get_filing_form('F401').get_section('A'),
-        get_filing_form('F460').get_section('A'),
-        get_filing_form('F460').get_section('A-1'),
-        get_filing_form('F460').get_section('C'),
-        get_filing_form('F460').get_section('I'),
-        get_filing_form('F496').get_section('P3'),
-    ]
-    amend_id = fields.IntegerField(
-        db_column='AMEND_ID',
-        db_index=True,
-        help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments.",
-        verbose_name="amendment ID"
-    )
-    amount = fields.DecimalField(
-        decimal_places=2,
-        max_digits=14,
-        db_column='AMOUNT',
-        help_text="Amount Received (Monetary, Inkkind, Promise)"
-    )
-    bakref_tid = fields.CharField(
-        max_length=20,
-        db_column='BAKREF_TID',
-        blank=True,
-        help_text="Back Reference to a transaction identifier of a parent \
-record"
-    )
-    bal_juris = fields.CharField(
-        max_length=40,
-        db_column='BAL_JURIS',
-        blank=True,
-        help_text="Jurisdiction of ballot measure. Used on the Form 401 \
-Schedule A"
-    )
-    bal_name = fields.CharField(
-        max_length=200,
-        db_column='BAL_NAME',
-        blank=True,
-        help_text="Ballot measure name. Used on the Form 401 Schedule A"
-    )
-    bal_num = fields.CharField(
-        max_length=7,
-        db_column='BAL_NUM',
-        blank=True,
-        help_text="Ballot measure number or letter. Used on the Form 401 \
-Schedule A"
-    )
-    cand_namf = fields.CharField(
-        max_length=45,
-        db_column='CAND_NAMF',
-        blank=True,
-        help_text="Candidate/officeholder's first name. Used on the Form \
-401 Schedule A"
-    )
-    cand_naml = fields.CharField(
-        max_length=200,
-        db_column='CAND_NAML',
-        blank=True,
-        help_text="Candidate/officeholder's last name. Used on the Form \
-401 Schedule A"
-    )
-    cand_nams = fields.CharField(
-        max_length=10,
-        db_column='CAND_NAMS',
-        blank=True,
-        help_text="Candidate/officeholder's name suffix. Used on the Form \
-401 Schedule A"
-    )
-    cand_namt = fields.CharField(
-        max_length=10,
-        db_column='CAND_NAMT',
-        blank=True,
-        help_text="Candidate/officeholder's name prefix or title. Used on \
-the Form 401 Schedule A"
-    )
-    cmte_id = fields.CharField(
-        max_length=9,
-        db_column='CMTE_ID',
-        blank=True,
-        help_text="Committee Identification number"
-    )
-    # ctrib_adr1 = fields.CharField(
-    #     max_length=55,
-    #     db_column='CTRIB_ADR1',
-    #     blank=True,
-    #     default="",
-    #     help_text="First line of the contributor's street address"
-    # )
-    # ctrib_adr2 = fields.CharField(
-    #     max_length=55,
-    #     db_column='CTRIB_ADR2',
-    #     blank=True,
-    #     help_text="Second line of the contributor's street address"
-    # )
-    ctrib_city = fields.CharField(
-        max_length=30,
-        db_column='CTRIB_CITY',
-        blank=True,
-        help_text="Contributor's City"
-    )
-    ctrib_dscr = fields.CharField(
-        max_length=90,
-        db_column='CTRIB_DSCR',
-        blank=True,
-        help_text="Description of goods/services received"
-    )
-    ctrib_emp = fields.CharField(
-        max_length=200,
-        db_column='CTRIB_EMP',
-        blank=True,
-        help_text="Employer"
-    )
-    ctrib_namf = fields.CharField(
-        max_length=45,
-        db_column='CTRIB_NAMF',
-        blank=True,
-        help_text="Contributor's First Name"
-    )
-    ctrib_naml = fields.CharField(
-        max_length=200,
-        db_column='CTRIB_NAML',
-        help_text="Contributor's last name or business name"
-    )
-    ctrib_nams = fields.CharField(
-        max_length=10,
-        db_column='CTRIB_NAMS',
-        blank=True,
-        help_text="Contributor's Suffix"
-    )
-    ctrib_namt = fields.CharField(
-        max_length=10,
-        db_column='CTRIB_NAMT',
-        blank=True,
-        help_text="Contributor's Prefix or Title"
-    )
-    ctrib_occ = fields.CharField(
-        max_length=60,
-        db_column='CTRIB_OCC',
-        blank=True,
-        help_text="Occupation"
-    )
-    ctrib_self = fields.CharField(
-        max_length=1,
-        db_column='CTRIB_SELF',
-        blank=True,
-        help_text="Self Employed Check-box"
-    )
-    ctrib_st = fields.CharField(
-        max_length=2,
-        db_column='CTRIB_ST',
-        blank=True,
-        help_text="Contributor's State"
-    )
-    ctrib_zip4 = fields.CharField(
-        max_length=10,
-        db_column='CTRIB_ZIP4',
-        blank=True,
-        help_text="Contributor's ZIP+4"
-    )
-    cum_oth = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='CUM_OTH',
-        blank=True,
-        help_text="Cumulative Other (Sched A, A-1)"
-    )
-    cum_ytd = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='CUM_YTD',
-        blank=True,
-        help_text="Cumulative year to date amount (Form 460 Schedule A \
-and Form 401 Schedule A, A-1)"
-    )
-    date_thru = fields.DateField(
-        null=True,
-        db_column='DATE_THRU',
-        blank=True,
-        help_text="End of date range for items received"
-    )
-    dist_no = fields.CharField(
-        max_length=3,
-        db_column='DIST_NO',
-        blank=True,
-        help_text="Office District Number (used on F401A)"
-    )
-    ENTITY_CD_CHOICES = (
-        # Codes explicitly allowed for this field, according to documentation
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
-        ('Com', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        # Other known codes observed in this field
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
-        # Other unknown values observed
-        ('0', "Unknown"),
-        ('PTH', 'Unknown'),
-        ('RFD', 'Unknown'),  # Request for Development?
-        ('MBR', 'Unknown'),  # Member?
-    )
-    entity_cd = fields.CharField(
-        max_length=3,
-        db_column='ENTITY_CD',
-        blank=True,
-        help_text="Entity Code describing the contributor",
-        choices=ENTITY_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
-        ] + choices.DOCS['entity_codes']
-    )
-    filing_id = fields.IntegerField(
-        db_column='FILING_ID',
-        db_index=True,
-        verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
-    )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
-    form_type = fields.CharField(
-        choices=FORM_TYPE_CHOICES,
-        max_length=9,
-        db_column='FORM_TYPE',
-        help_text='Name of the source filing form or schedule',
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
-        ]
-    )
-    int_rate = fields.CharField(
-        max_length=9,
-        db_column='INT_RATE',
-        blank=True,
-        help_text="This field is undocumented"
-    )
-    # intr_adr1 = fields.CharField(
-    #     max_length=55,
-    #     db_column='INTR_ADR1',
-    #     blank=True,
-    #     help_text="First line of the intermediary's street address."
-    # )
-    # intr_adr2 = fields.CharField(
-    #     max_length=55,
-    #     db_column='INTR_ADR2',
-    #     blank=True,
-    #     help_text="Second line of the Intermediary's street address."
-    # )
-    intr_city = fields.CharField(
-        max_length=30,
-        db_column='INTR_CITY',
-        blank=True,
-        help_text="Intermediary's City"
-    )
-    intr_cmteid = fields.CharField(
-        max_length=9,
-        db_column='INTR_CMTEID',
-        blank=True,
-        help_text="This field is undocumented"
-    )
-    intr_emp = fields.CharField(
-        max_length=200,
-        db_column='INTR_EMP',
-        blank=True,
-        help_text="Intermediary's Employer"
-    )
-    intr_namf = fields.CharField(
-        max_length=45,
-        db_column='INTR_NAMF',
-        blank=True,
-        help_text="Intermediary's First Name"
-    )
-    intr_naml = fields.CharField(
-        max_length=200,
-        db_column='INTR_NAML',
-        blank=True,
-        help_text="Intermediary's Last Name"
-    )
-    intr_nams = fields.CharField(
-        max_length=10,
-        db_column='INTR_NAMS',
-        blank=True,
-        help_text="Intermediary's Suffix"
-    )
-    intr_namt = fields.CharField(
-        max_length=10,
-        db_column='INTR_NAMT',
-        blank=True,
-        help_text="Intermediary's Prefix or Title"
-    )
-    intr_occ = fields.CharField(
-        max_length=60,
-        db_column='INTR_OCC',
-        blank=True,
-        help_text="Intermediary's Occupation"
-    )
-    intr_self = fields.CharField(
-        max_length=1,
-        db_column='INTR_SELF',
-        blank=True,
-        help_text="Intermediary's self employed check box"
-    )
-    intr_st = fields.CharField(
-        max_length=2,
-        db_column='INTR_ST',
-        blank=True,
-        help_text="Intermediary's state"
-    )
-    intr_zip4 = fields.CharField(
-        max_length=10,
-        db_column='INTR_ZIP4',
-        blank=True,
-        help_text="Intermediary's zip code"
-    )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
-        # "other" office codes
-        ('BED', choices.JURIS_CODES['OTH']),
-        ('CLB', choices.JURIS_CODES['OTH']),
-        # misprint
-        ('COU', choices.JURIS_CODES['CTY']),
-        # Office Code for this one record is Superior Court Judge
-        ('CO', choices.JURIS_CODES['OTH']),
-        ('SAC', 'Unknown'),
-        ('PER', 'Unknown'),
-        ('SF', 'Unknown'),
-        ('OR', 'Unknown'),
-        ('AL', 'Unknown'),
-        ('4', 'Unknown'),
-        ('CA', 'Unknown'),
-    )
-    juris_cd = fields.CharField(
-        max_length=3,
-        db_column='JURIS_CD',
-        blank=True,
-        choices=JURIS_CD_CHOICES,
-        help_text="Office jurisdiction code. See the CAL document for the \
-list of legal values. Used on Form 401 Schedule A",
-        documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=74),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
-        ]
-    )
-    juris_dscr = fields.CharField(
-        max_length=40,
-        db_column='JURIS_DSCR',
-        blank=True,
-        help_text="Office Jurisdiction Description (used on F401A)"
-    )
-    line_item = fields.IntegerField(
-        db_column='LINE_ITEM',
-        help_text="Line item number of this record",
-        db_index=True,
-    )
-    memo_code = fields.CharField(
-        max_length=1,
-        db_column='MEMO_CODE',
-        blank=True,
-        help_text="Memo amount flag (Date/Amount are informational only)"
-    )
-    memo_refno = fields.CharField(
-        max_length=20,
-        db_column='MEMO_REFNO',
-        blank=True,
-        help_text="Reference to text contained in a TEXT record"
-    )
-    OFF_S_H_CD_CHOICES = (
-        ('S', choices.OFF_S_H_CODES['S']),
-        ('H', choices.OFF_S_H_CODES['H']),
-    )
-    off_s_h_cd = fields.CharField(
-        max_length=1,
-        db_column='OFF_S_H_CD',
-        blank=True,
-        help_text='Office is sought or held code',
-        choices=OFF_S_H_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=75),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
-        ]
-    )
-    offic_dscr = fields.CharField(
-        max_length=40,
-        db_column='OFFIC_DSCR',
-        blank=True,
-        help_text="Office Sought Description (used on F401A)"
-    )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
-        # alt cases for valid codes
-        ('asm', choices.OFFICE_CODES['ASM']),
-        ('gov', choices.OFFICE_CODES['GOV']),
-        ('OTh', choices.OFFICE_CODES['OTH']),
-        ('oth', choices.OFFICE_CODES['OTH']),
-        ('csu', choices.OFFICE_CODES['CSU']),
-        # invalid codes
-        ('H', 'Unknown'),
-        ('HOU', 'Unknown'),
-        ('ASS', 'Unknown'),
-    )
-    office_cd = fields.CharField(
-        db_column='OFFICE_CD',
-        max_length=3,
-        blank=True,
-        verbose_name="office code",
-        help_text="Identifies the office being sought",
-        choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
-            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
-        ],
-    )
-    rcpt_date = fields.DateField(
-        db_column='RCPT_DATE',
-        null=True,
-        help_text="Date item received"
-    )
-    REC_TYPE_CHOICES = (
-        ('E530', get_filing_form('E530').full_title),
-        ("RCPT", "Receipt"),
-    )
-    rec_type = fields.CharField(
-        verbose_name='record type',
-        db_column='REC_TYPE',
-        max_length=4,
-        db_index=True,
-        choices=REC_TYPE_CHOICES,
-        help_text="Record Type Value: CVR",
-        documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=37),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    SUP_OPP_CD_CHOICES = (
-        # Codes explicitly allowed for this field, according to documentation
-        ('S', choices.SUP_OPP_CODES['S']),
-        ('O', choices.SUP_OPP_CODES['O']),
-        # Other unknown values observed
-        ('F', 'Unknown'),
-    )
-    sup_opp_cd = fields.CharField(
-        max_length=1,
-        db_column='SUP_OPP_CD',
-        blank=True,
-        help_text="Support or opposition code",
-        choices=SUP_OPP_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=74),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
-        ]
-    )
-    tran_id = fields.CharField(
-        verbose_name='transaction ID',
-        max_length=20,
-        db_column='TRAN_ID',
-        blank=True,
-        help_text='Permanent value unique to this item',
-    )
-    TRAN_TYPE_CHOICES = [
-        # Codes explicitly allowed for this field, according to documentation
-        ('F', 'Forgiven Loan'),
-        ('I', 'Intermediary'),
-        ('R', 'Returned (Negative Amount?)'),
-        ('T', 'Third Party Repayment'),
-        ('X', 'Transfer'),
-        # Other unknown values observed
-        ('0', 'Unknown'),
-        ('I', 'Unknown'),
-        ('M', 'Unknown'),
-        ('N', 'Unknown'),
-        ('R', 'Unknown'),
-        ('T', 'Unknown'),
-    ]
-    tran_type = fields.CharField(
-        max_length=1,
-        db_column='TRAN_TYPE',
-        blank=True,
-        choices=TRAN_TYPE_CHOICES,
-        help_text="Transaction Type",
-        documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=72),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=38),
-        ]
-    )
-#     tres_adr1 = fields.CharField(
-#         max_length=55,
-#         db_column='TRES_ADR1',
-#         blank=True,
-#         help_text="First line of the treasurer or responsible officer's \
-# street address"
-#     )
-#     tres_adr2 = fields.CharField(
-#         max_length=55,
-#         db_column='TRES_ADR2',
-#         blank=True,
-#         help_text="Second line of the treasurer or responsible officer's \
-# street address"
-#     )
-    tres_city = fields.CharField(
-        max_length=30,
-        db_column='TRES_CITY',
-        blank=True,
-        help_text="City portion of the treasurer or responsible officer's \
-street address"
-    )
-    tres_namf = fields.CharField(
-        max_length=45,
-        db_column='TRES_NAMF',
-        blank=True,
-        help_text="Treasurer or responsible officer's first name"
-    )
-    tres_naml = fields.CharField(
-        max_length=200,
-        db_column='TRES_NAML',
-        blank=True,
-        help_text="Treasurer or responsible officer's last name"
-    )
-    tres_nams = fields.CharField(
-        max_length=10,
-        db_column='TRES_NAMS',
-        blank=True,
-        help_text="Treasurer or responsible officer's suffix"
-    )
-    tres_namt = fields.CharField(
-        max_length=10,
-        db_column='TRES_NAMT',
-        blank=True,
-        help_text="Treasurer or responsible officer's prefix or title"
-    )
-    tres_st = fields.CharField(
-        max_length=2,
-        db_column='TRES_ST',
-        blank=True,
-        help_text="State portion of the treasurer or responsible officer's \
-address"
-    )
-    tres_zip4 = fields.CharField(
-        null=True,
-        max_length=10,
-        blank=True,
-        db_column='TRES_ZIP4',
-        help_text="Zip code portion of the treasurer or responsible officer's \
-address"
-    )
-    xref_match = fields.CharField(
-        max_length=1,
-        db_column='XREF_MATCH',
-        blank=True,
-        help_text="Related item on other schedule has same transaction \
-identifier. 'X' indicates this condition is true"
-    )
-    xref_schnm = fields.CharField(
-        max_length=2,
-        db_column='XREF_SCHNM',
-        blank=True,
-        help_text="Related record is included on Sched 'B2' or 'F'"
-    )
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'RCPT_CD'
-        verbose_name = 'RCPT_CD'
-        verbose_name_plural = 'RCPT_CD'
-
-    def __str__(self):
-        return str(self.filing_id)
-
-
-@python_2_unicode_compatible
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
     Cover page verification information from campaign disclosure forms
@@ -2917,9 +2320,255 @@ original filing and 1 to 999 amendments.",
 
 
 @python_2_unicode_compatible
-class LoanCd(CalAccessBaseModel):
+class CvrF470Cd(CalAccessBaseModel):
     """
-    Loans received and made by recepient committees
+    Cover page information for Officeholder and Candidate Short and Supplement Forms
+    (Form 470)
+    """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "REC_TYPE",
+        "FORM_TYPE",
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
+    ]
+    FILING_FORMS = [
+        get_filing_form('F470'),
+    ]
+    amend_id = fields.IntegerField(
+        db_column="AMEND_ID",
+        db_index=True,
+        help_text="Amendment Identification number. A number of 0 is an original filing and 1 "
+                  "to 999 amendments."
+    )
+    cand_adr1 = fields.CharField(
+        db_column="CAND_ADR1",
+        blank=True,
+        max_length=55,
+        help_text="First line of the filer's street address."
+    )
+    cand_adr2 = fields.CharField(
+        db_column="CAND_ADR2",
+        blank=True,
+        max_length=55,
+        help_text="Second line of the filer's street address. "
+    )
+    cand_city = fields.CharField(
+        db_column="CAND_CITY",
+        blank=True,
+        max_length=30,
+        help_text="Candidate/Officeholder's City."
+    )
+    cand_email = fields.CharField(
+        db_column="CAND_EMAIL",
+        blank=True,
+        max_length=60,
+        help_text="Candidate/Officeholder's EMail address. Not required by the form."
+    )
+    cand_fax = fields.CharField(
+        db_column="CAND_FAX",
+        blank=True,
+        max_length=20,
+        help_text="Candidate/Officeholder's FAX Phone Number. Not required by the form."
+    )
+    cand_phon = fields.CharField(
+        db_column="CAND_PHON",
+        blank=True,
+        max_length=20,
+        help_text="Candidate/Officeholder's phone number."
+    )
+    cand_st = fields.CharField(
+        db_column="CAND_ST",
+        blank=True,
+        max_length=2,
+        help_text="Filer's State"
+    )
+    cand_zip4 = fields.CharField(
+        db_column="CAND_ZIP4",
+        blank=True,
+        max_length=10,
+        help_text="Filer's zipcode"
+    )
+    date_1000 = fields.DateField(
+        db_column="DATE_1000",
+        help_text="Date contributions totaling $1,000 or more. (For the 470-S)"
+    )
+    dist_no = fields.CharField(
+        db_column="DIST_NO",
+        blank=True,
+        max_length=3,
+        help_text="District number for the office being sought. Populated for Senate, Assembly, "
+                  "or Board of Equalization races."
+    )
+    elect_date = fields.DateField(
+        db_column="ELECT_DATE",
+        help_text="Date of the general election. Required for filings in even years."
+    )
+    ENTITY_CD_CHOICES = (
+        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+    )
+    entity_cd = fields.CharField(
+        db_column="ENTITY_CD",
+        blank=True,
+        choices=ENTITY_CD_CHOICES,
+        max_length=3,
+        help_text="The filer's entity code. The value of this column will always be "
+                  "Candidate/Office Holder (CAO) for this table.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29)
+        ]
+    )
+    filer_id = fields.CharField(
+        db_column="FILER_ID",
+        blank=True,
+        max_length=9,
+        help_text="Filer's unique identification number."
+    )
+    filer_namf = fields.CharField(
+        db_column="FILER_NAMF",
+        blank=True,
+        max_length=45,
+        help_text="Filer's First Name(s) - required for individuals"
+    )
+    filer_naml = fields.CharField(
+        db_column="FILER_NAML",
+        blank=True,
+        max_length=200,
+        help_text="Filer's Last Name/Committee name"
+    )
+    filer_nams = fields.CharField(
+        db_column="FILER_NAMS",
+        blank=True,
+        max_length=10,
+        help_text="Filer's Name Suffix"
+    )
+    filer_namt = fields.CharField(
+        db_column="FILER_NAMT",
+        blank=True,
+        max_length=10,
+        help_text="The filer's prefix or title that preceeds their name if they are an individual."
+    )
+    filing_id = fields.IntegerField(
+        db_column="FILING_ID",
+        db_index=True,
+        help_text="Unique filing identification number."
+    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
+    form_type = fields.CharField(
+        db_column="FORM_TYPE",
+        choices=FORM_TYPE_CHOICES,
+        db_index=True,
+        max_length=4,
+        help_text="Type of Filing or Formset. The value of this column will always "
+                  "be equal to F470.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
+    )
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    juris_cd = fields.CharField(
+        db_column="JURIS_CD",
+        choices=JURIS_CD_CHOICES,
+        blank=True,
+        max_length=3,
+        help_text="Office Jurisdiction Code",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
+    )
+    juris_dscr = fields.CharField(
+        db_column="JURIS_DSCR",
+        blank=True,
+        max_length=40,
+        help_text="Office jurisdiction description text reqired if the jurisdiction code "
+                  "(Juris_cd) is equal to CIT, CTY, LOC, or OTH."
+    )
+    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
+    off_s_h_cd = fields.CharField(
+        db_column="OFF_S_H_CD",
+        choices=OFF_S_H_CD_CHOICES,
+        blank=True,
+        max_length=1,
+        help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=30),
+        ]
+    )
+    offic_dscr = fields.CharField(
+        db_column="OFFIC_DSCR",
+        blank=True,
+        max_length=40,
+        help_text="Office sought description used if the office code is other (OTH)."
+    )
+    OFFICE_CD_CODES = get_sorted_choices(choices.OFFICE_CODES)
+    office_cd = fields.CharField(
+        db_column="OFFICE_CD",
+        choices=OFFICE_CD_CODES,
+        blank=True,
+        max_length=3,
+        help_text="Code that identifies the office being sought. See the CAL document for "
+                  "a list of valid codes.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
+    )
+    REC_TYPE_CHOICES = (
+        ('CVR', 'Cover Page'),
+    )
+    rec_type = fields.CharField(
+        db_column="REC_TYPE",
+        choices=REC_TYPE_CHOICES,
+        blank=True,
+        max_length=3,
+        help_text="Type of CAL record. This column will always contain CVR.",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
+    )
+    report_num = fields.CharField(
+        db_column="REPORT_NUM",
+        blank=True,
+        max_length=3,
+        help_text="Report Number; 000 Original; 001-999 Amended as reported in the filing."
+    )
+    rpt_date = fields.DateField(
+        db_column="RPT_DATE",
+        db_index=True,
+        null=True,
+        help_text="Date this report is filed as reported by the filer."
+    )
+
+    def __str__(self):
+        return str(self.amend_id)
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'CVR_F470_CD'
+        verbose_name = 'CVR_F470_CD'
+        verbose_name_plural = 'CVR_F470_CD'
+
+# =============================================================================
+# ------------------------------- Line Items ----------------------------------
+# =============================================================================
+
+
+@python_2_unicode_compatible
+class DebtCd(CalAccessBaseModel):
+    """
+    Records of unpaid bills accrued by Recipient Campaigns, as listed on
+    Form 460, Schedule F (Accrued Expenses).
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2929,19 +2578,13 @@ class LoanCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=87, end_page=90),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60, end_page=63),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35, end_page=39),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=47, end_page=50),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=47, end_page=49),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49, end_page=48),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33, end_page=34),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
     ]
     FILING_FORMS = [
-        get_filing_form('F460').get_section('B1'),
-        get_filing_form('F460').get_section('B2'),
-        get_filing_form('F460').get_section('B3'),
-        get_filing_form('F460').get_section('H'),
-        get_filing_form('F460').get_section('H1'),
-        get_filing_form('F460').get_section('H2'),
-        get_filing_form('F460').get_section('H3'),
+        get_filing_form('F460').get_section('F'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2950,20 +2593,45 @@ class LoanCd(CalAccessBaseModel):
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
+    amt_incur = fields.DecimalField(
+        decimal_places=2,
+        max_digits=14,
+        db_column='AMT_INCUR',
+        help_text='Amount incurred this period',
+    )
+    amt_paid = fields.DecimalField(
+        decimal_places=2,
+        max_digits=14,
+        db_column='AMT_PAID',
+        help_text='Amount paid this period.'
+    )
     bakref_tid = fields.CharField(
         max_length=20,
         db_column='BAKREF_TID',
         blank=True,
-        help_text="Back Reference to transaction identifier of parent record"
+        help_text='Back reference to a transaction identifier \
+of a parent record.'
+    )
+    beg_bal = fields.DecimalField(
+        decimal_places=2,
+        max_digits=14,
+        db_column='BEG_BAL',
+        help_text='Outstanding balance at beginning of period',
     )
     cmte_id = fields.CharField(
         max_length=9,
         db_column='CMTE_ID',
         blank=True,
-        verbose_name="Committee ID",
-        help_text="Committee identification number"
+        help_text='Committee identification number',
+    )
+    end_bal = fields.DecimalField(
+        decimal_places=2,
+        max_digits=14,
+        db_column='END_BAL',
+        help_text='Outstanding balance at close of this period',
     )
     ENTITY_CD_CHOICES = (
+        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
         ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
         ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
         ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
@@ -2975,287 +2643,155 @@ original filing and 1 to 999 amendments.",
         max_length=3,
         db_column='ENTITY_CD',
         blank=True,
-        verbose_name="entity code",
-        help_text="Entity code describing the lender",
+        verbose_name='entity code',
         choices=ENTITY_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        help_text='Entity code describing the payee',
+        documentcloud_pages=choices.DOCS['entity_codes'] + [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
         ]
+    )
+    EXPN_CODE_CHOICES = get_sorted_choices(choices.EXPENSE_CODES) + (
+        # alt cases of valid codes
+        ('Fnd', choices.EXPENSE_CODES['FND']),
+        ('ofc', choices.EXPENSE_CODES['OFC']),
+        # printed this way on the pdfs, but probably meant consultant code
+        ("'CN", choices.EXPENSE_CODES['CNS']),
+        # Other codes observed in the table that are not documented by the state
+        ("*", "Unknown"),
+        ("AIR", "Unknown"),
+        ("BUS", "Unknown"),
+        ("C", "Unknown"),
+        ("CAM", "Unknown"),
+        ("CC", "Unknown"),
+        ("COM", "Unknown"),
+        ("CON", "Unknown"),
+        ("CSN", "Unknown"),
+        ("DEP", "Unknown"),
+        ("EVE", "Unknown"),
+        ("F", "Unknown"),
+        ("FED", "Unknown"),
+        ("fns", "Unknown"),
+        ("G", "Unknown"),
+        ("GGG", "Unknown"),
+        ("HOT", "Unknown"),
+        ("L", "Unknown"),
+        ("LDF", "Unknown"),
+        ("MEE", "Unknown"),
+        ("N", "Unknown"),
+        ("O", "Unknown"),
+        ("OTH", "Unknown"),  # Other?
+        ("P", "Unknown"),
+        ("PEN", "Unknown"),
+        ("S", "Unknown"),
+        ("SPE", "Unknown"),
+        ("STA", "Unknown"),
+        ("T", "Unknown"),
+        ("TAX", "Unknown"),
+        ("TRA", "Unknown"),
+        ("V", "Unknown"),
+        ("X", "Unknown"),
+    )
+    expn_code = fields.CharField(
+        max_length=3,
+        db_column='EXPN_CODE',
+        blank=True,
+        verbose_name='expense code',
+        help_text="Expense Code",
+        choices=EXPN_CODE_CHOICES,
+        documentcloud_pages=choices.DOCS['expense_codes']
+    )
+    expn_dscr = fields.CharField(
+        max_length=400,
+        db_column='EXPN_DSCR',
+        blank=True,
+        verbose_name="expense description",
+        help_text='Purpose of expense and/or description/explanation',
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identificiation number of the parent filing",
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
-        max_length=2,
+        max_length=1,
         db_column='FORM_TYPE',
         choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule',
+        help_text='Schedule Name/ID: (F - Sched F / Accrued Expenses)',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
         ]
-    )
-    # intr_adr1 = fields.CharField(
-    #     max_length=55, db_column='INTR_ADR1', blank=True
-    # )
-    # intr_adr2 = fields.CharField(
-    #     max_length=55, db_column='INTR_ADR2', blank=True
-    # )
-    intr_city = fields.CharField(
-        max_length=30,
-        db_column='INTR_CITY',
-        blank=True,
-        help_text="Intermediary's city"
-    )
-    intr_namf = fields.CharField(
-        max_length=45,
-        db_column='INTR_NAMF',
-        blank=True,
-        help_text="Intermediary's first name"
-    )
-    intr_naml = fields.CharField(
-        max_length=200,
-        db_column='INTR_NAML',
-        blank=True,
-        help_text="Intermediary's last name"
-    )
-    intr_nams = fields.CharField(
-        max_length=10,
-        db_column='INTR_NAMS',
-        blank=True,
-        help_text="Intermediary's suffix"
-    )
-    intr_namt = fields.CharField(
-        max_length=10,
-        db_column='INTR_NAMT',
-        blank=True,
-        help_text="Intermediary's title or prefix"
-    )
-    intr_st = fields.CharField(
-        max_length=2,
-        db_column='INTR_ST',
-        blank=True,
-        help_text="Intermediary's state"
-    )
-    intr_zip4 = fields.CharField(
-        max_length=10,
-        db_column='INTR_ZIP4',
-        blank=True,
-        help_text="Intermediary's ZIP Code"
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
-        help_text="Line item number of this record",
+        help_text="Record line item number",
         db_index=True,
-    )
-    lndr_namf = fields.CharField(
-        max_length=45,
-        db_column='LNDR_NAMF',
-        blank=True,
-        help_text="Lender's first name"
-    )
-    lndr_naml = fields.CharField(
-        max_length=200,
-        db_column='LNDR_NAML',
-        help_text="Lender's last name or business name"
-    )
-    lndr_nams = fields.CharField(
-        max_length=10,
-        db_column='LNDR_NAMS',
-        blank=True,
-        help_text="Lender's suffix"
-    )
-    lndr_namt = fields.CharField(
-        max_length=10,
-        db_column='LNDR_NAMT',
-        blank=True,
-        help_text="Lender's title or prefix"
-    )
-    # loan_adr1 = fields.CharField(
-    #     max_length=55, db_column='LOAN_ADR1', blank=True
-    # )
-    # loan_adr2 = fields.CharField(
-    #     max_length=55, db_column='LOAN_ADR2', blank=True
-    # )
-    loan_amt1 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT1',
-        blank=True,
-        help_text="Repaid or forgiven amount; Original loan amount. The \
-content of this column varies based on the \
-schedule/part that the record applies to. See the CAL \
-document for a description of the value of this field."
-    )
-    loan_amt2 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT2',
-        blank=True,
-        help_text="Outstanding Principal; unpaid balance. The content of \
-this column varies based on the schedule/part that the \
-record applies to. See the CAL document for a \
-description of the value of this field."
-    )
-    loan_amt3 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT3',
-        blank=True,
-        help_text="Interest Paid; Unpaid interest; Interest received. The \
-content of this column varies based on the \
-schedule/part that the record applies to. See the CAL \
-document for a description of the value of this field."
-    )
-    loan_amt4 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT4',
-        blank=True,
-        help_text="Cumulative Amount/Other. The content of this column \
-varies based on the schedule/part that the record \
-applies to. See the CAL document for a description of the \
-value of this field."
-    )
-    loan_amt5 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT5',
-        blank=True,
-        help_text="This field is undocumented"
-    )
-    loan_amt6 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT6',
-        blank=True,
-        help_text="This field is undocumented"
-    )
-    loan_amt7 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT7',
-        blank=True,
-        help_text="This field is undocumented"
-    )
-    loan_amt8 = fields.DecimalField(
-        decimal_places=2,
-        null=True,
-        max_digits=14,
-        db_column='LOAN_AMT8',
-        blank=True,
-        help_text="This field is undocumented"
-    )
-    loan_city = fields.CharField(
-        max_length=30,
-        db_column='LOAN_CITY',
-        blank=True,
-        help_text="Lender's city"
-    )
-    loan_date1 = fields.DateField(
-        db_column='LOAN_DATE1',
-        null=True,
-        help_text="Date the loan was made or recieved. The content of this \
-column varies based on the schedule/part that the \
-record applies to. See the CAL document for a description of the value."
-    )
-    loan_date2 = fields.DateField(
-        null=True,
-        db_column='LOAN_DATE2',
-        blank=True,
-        help_text="Date repaid/forgiven; date loan due. The content of this \
-column varies based on the schedule/part that the \
-record applies to. See the CAL document for a \
-description of the value of this field."
-    )
-    loan_emp = fields.CharField(
-        max_length=200,
-        db_column='LOAN_EMP',
-        blank=True,
-        help_text="Loan employer. Applies to the Form 460 Schedule B \
-Part 1."
-    )
-    loan_occ = fields.CharField(
-        max_length=60,
-        db_column='LOAN_OCC',
-        blank=True,
-        help_text="Loan occupation. Applies to the Form 460 Schedule B \
-Part 1."
-    )
-    loan_rate = fields.CharField(
-        max_length=30,
-        db_column='LOAN_RATE',
-        blank=True,
-        help_text="Interest Rate. The content of this column varies based \
-on the schedule/part that the record applies to. See the \
-CAL document for a description of the value of this field."
-    )
-    loan_self = fields.CharField(
-        max_length=1,
-        db_column='LOAN_SELF',
-        blank=True,
-        help_text="Self-employed checkbox"
-    )
-    loan_st = fields.CharField(
-        max_length=2,
-        db_column='LOAN_ST',
-        blank=True,
-        help_text="Lender's state"
-    )
-    LOAN_TYPE_CHOICES = (
-        ("H2T", "Third party payment"),
-        ("H2F", "Forgiven"),
-        ("H2R", "Repay"),
-        ("B2T", "Third party payment"),
-        ("B2F", "Forgiven"),
-        ("B2R", "Repay"),
-        ("B1G", "Guarantor"),
-        ("B1L", "Lender"),
-    )
-    loan_type = fields.CharField(
-        max_length=3,
-        db_column='LOAN_TYPE',
-        blank=True,
-        choices=LOAN_TYPE_CHOICES,
-        help_text="Type of loan",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
-            # this field may no longer be in use, CAL format v2 instructs to leave NULL
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
-        ]
-    )
-    loan_zip4 = fields.CharField(
-        max_length=10,
-        db_column='LOAN_ZIP4',
-        blank=True,
-        help_text="Lender's ZIP Code"
     )
     memo_code = fields.CharField(
         max_length=1,
         db_column='MEMO_CODE',
         blank=True,
-        help_text="Memo amount flag"
+        help_text='Memo amount flag',
     )
     memo_refno = fields.CharField(
         max_length=20,
         db_column='MEMO_REFNO',
         blank=True,
-        help_text="Reference to text contained in a TEXT record"
+        help_text='Reference to text contained in a TEXT record.'
+    )
+    # payee_adr1 = fields.CharField(
+    #     max_length=55, db_column='PAYEE_ADR1', blank=True
+    # )
+    # payee_adr2 = fields.CharField(
+    #     max_length=55, db_column='PAYEE_ADR2', blank=True
+    # )
+    payee_city = fields.CharField(
+        max_length=30,
+        db_column='PAYEE_CITY',
+        blank=True,
+        help_text='First line of the payee\'s street address',
+    )
+    payee_namf = fields.CharField(
+        max_length=45,
+        db_column='PAYEE_NAMF',
+        blank=True,
+        help_text='Payee\'s first name if the payee is an individual',
+    )
+    payee_naml = fields.CharField(
+        max_length=200,
+        db_column='PAYEE_NAML',
+        help_text="Payee's business name or last name if the payee is an \
+individual."
+    )
+    payee_nams = fields.CharField(
+        max_length=10,
+        db_column='PAYEE_NAMS',
+        blank=True,
+        help_text='Payee\'s name suffix if the payee is an individual',
+    )
+    payee_namt = fields.CharField(
+        max_length=100,
+        db_column='PAYEE_NAMT',
+        blank=True,
+        help_text='Payee\'s prefix or title if the payee is an individual',
+    )
+    payee_st = fields.CharField(
+        max_length=2,
+        db_column='PAYEE_ST',
+        blank=True,
+        help_text='Payee\'s state',
+    )
+    payee_zip4 = fields.CharField(
+        max_length=10,
+        db_column='PAYEE_ZIP4',
+        blank=True,
+        help_text='Payee\'s ZIP Code',
     )
     REC_TYPE_CHOICES = (
-        ("LOAN", "LOAN"),
+        ("DEBT", "DEBT"),
     )
     rec_type = fields.CharField(
         verbose_name='record type',
@@ -3263,10 +2799,10 @@ CAL document for a description of the value of this field."
         max_length=4,
         db_index=True,
         choices=REC_TYPE_CHOICES,
-        help_text='Record Type Value: LOAN',
+        help_text='Record type value: DEBT',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33, end_page=34),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
         ]
     )
     tran_id = fields.CharField(
@@ -3274,7 +2810,8 @@ CAL document for a description of the value of this field."
         max_length=20,
         db_column='TRAN_ID',
         blank=True,
-        help_text='Permanent value unique to this item',
+        help_text='Transaction identifier - permanent value unique to \
+this item',
     )
     # tres_adr1 = fields.CharField(
     #     max_length=55, db_column='TRES_ADR1', blank=True
@@ -3286,392 +2823,64 @@ CAL document for a description of the value of this field."
         max_length=30,
         db_column='TRES_CITY',
         blank=True,
-        help_text="Treasurer or responsible officer's city"
+        help_text='City portion of the treasurer or responsible \
+officer\'s street address',
     )
     tres_namf = fields.CharField(
         max_length=45,
         db_column='TRES_NAMF',
         blank=True,
-        help_text="Treasurer or responsible officer's first name"
+        help_text='Treasurer or responsible officer\'s first name'
     )
     tres_naml = fields.CharField(
         max_length=200,
         db_column='TRES_NAML',
         blank=True,
-        help_text="Treasurer or responsible officer's last name"
+        help_text='Treasurer or responsible officer\'s last name'
     )
     tres_nams = fields.CharField(
         max_length=10,
         db_column='TRES_NAMS',
         blank=True,
-        help_text="Treasurer or responsible officer's suffix"
+        help_text='Treasurer or responsible officer\'s suffix',
     )
     tres_namt = fields.CharField(
-        max_length=10,
+        max_length=100,
         db_column='TRES_NAMT',
         blank=True,
-        help_text="Treasurer or responsible officer's title or prefix"
+        help_text='Treasurer or responsible officer\'s prefix or title',
     )
     tres_st = fields.CharField(
         max_length=2,
         db_column='TRES_ST',
         blank=True,
-        help_text="Treasurer or responsible officer's street address"
+        help_text='State portion of the treasurer or responsible \
+officer\'s address',
     )
     tres_zip4 = fields.CharField(
         max_length=10,
         db_column='TRES_ZIP4',
         blank=True,
-        help_text="Treasurer or responsible officer's ZIP Code"
+        help_text='ZIP Code portion of the treasurer or responsible \
+officer\'s address',
     )
     xref_match = fields.CharField(
         max_length=1,
         db_column='XREF_MATCH',
         blank=True,
-        help_text='Related item on other schedule has same transaction \
-identifier. "X" indicates this condition is true.'
+        help_text='Related item on other schedule has same \
+transaction identifier. /"X/" indicates this condition is true'
     )
     xref_schnm = fields.CharField(
-        max_length=2,
-        db_column='XREF_SCHNM',
-        blank=True,
-        help_text="Related record is included on Form 460 Schedule 'A' or 'E'"
+        max_length=2, db_column='XREF_SCHNM', blank=True,
+        help_text='Related record is included on Schedule C.'
     )
 
     class Meta:
         app_label = 'calaccess_raw'
-        db_table = 'LOAN_CD'
-        verbose_name = 'LOAN_CD'
-        verbose_name_plural = 'LOAN_CD'
-
-    def __str__(self):
-        return str(self.filing_id)
-
-
-@python_2_unicode_compatible
-class S401Cd(CalAccessBaseModel):
-    """
-    Form 401 (Slate Mailer Organization) payment and other
-    disclosure schedules (F401B, F401B-1, F401C, F401D) information. Does not
-    include Form 401, Schedule A (Payments Received).
-    """
-    UNIQUE_KEY = (
-        'FILING_ID',
-        'AMEND_ID',
-        'LINE_ID',
-        'REC_TYPE',
-        'FORM_TYPE'
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=123, end_page=124),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=76, end_page=78),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=51, end_page=52),
-    ]
-    FILING_FORMS = [
-        get_filing_form('F401').get_section('B'),
-        get_filing_form('F401').get_section('B-1'),
-        get_filing_form('F401').get_section('C'),
-        get_filing_form('F401').get_section('D'),
-    ]
-    filing_id = fields.IntegerField(
-        db_column='FILING_ID',
-        db_index=True,
-        verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
-    )
-    amend_id = fields.IntegerField(
-        db_column='AMEND_ID',
-        db_index=True,
-        help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments.",
-        verbose_name="amendment ID"
-    )
-    line_item = fields.IntegerField(
-        db_column='LINE_ITEM',
-        help_text="Line item number of this record",
-        db_index=True,
-    )
-    REC_TYPE_CHOICES = (
-        ("S401", "S401"),
-    )
-    rec_type = fields.CharField(
-        verbose_name='record type',
-        db_column='REC_TYPE',
-        max_length=4,
-        db_index=True,
-        help_text="Record Type Value: S401",
-        choices=REC_TYPE_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=51),
-        ]
-    )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
-    form_type = fields.CharField(
-        max_length=7,
-        db_column='FORM_TYPE',
-        blank=True,
-        choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule',
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=51),
-        ]
-    )
-    tran_id = fields.CharField(
-        verbose_name='transaction ID',
-        max_length=20,
-        db_column='TRAN_ID',
-        blank=True,
-        help_text='Permanent value unique to this item',
-    )
-    agent_naml = fields.CharField(
-        max_length=200,
-        db_column='AGENT_NAML',
-        blank=True,
-        help_text="Agent or independent contractor's last name"
-    )
-    agent_namf = fields.CharField(
-        max_length=45,
-        db_column='AGENT_NAMF',
-        blank=True,
-        help_text="Agent or independent contractor's first name"
-    )
-    agent_namt = fields.CharField(
-        max_length=200,
-        db_column='AGENT_NAMT',
-        blank=True,
-        help_text="Agent or independent contractor's title or prefix"
-    )
-    agent_nams = fields.CharField(
-        max_length=10,
-        db_column='AGENT_NAMS',
-        blank=True,
-        help_text="Agent or independent contractor's suffix"
-    )
-    payee_naml = fields.CharField(
-        max_length=200,
-        db_column='PAYEE_NAML',
-        blank=True,
-        help_text="Payee's business name or last name if the payee is an \
-individual"
-    )
-    payee_namf = fields.CharField(
-        max_length=45,
-        db_column='PAYEE_NAMF',
-        blank=True,
-        help_text="Payee's first name if the payee is an individual"
-    )
-    payee_namt = fields.CharField(
-        max_length=10,
-        db_column='PAYEE_NAMT',
-        blank=True,
-        help_text="Payee's title or prefix if the payee is an individual"
-    )
-    payee_nams = fields.CharField(
-        max_length=10,
-        db_column='PAYEE_NAMS',
-        blank=True,
-        help_text="Payee's suffix if the payee is an individual"
-    )
-    payee_city = fields.CharField(
-        max_length=30,
-        db_column='PAYEE_CITY',
-        blank=True,
-        help_text="Payee's city address"
-    )
-    payee_st = fields.CharField(
-        max_length=2,
-        db_column='PAYEE_ST',
-        blank=True,
-        help_text="Payee state address"
-    )
-    payee_zip4 = fields.CharField(
-        max_length=10,
-        db_column='PAYEE_ZIP4',
-        blank=True,
-        help_text="Payee ZIP Code"
-    )
-    amount = fields.DecimalField(
-        max_digits=16,
-        decimal_places=2,
-        db_column='AMOUNT',
-        help_text="Amount (Sched F401B, 401B-1, 401C)"
-    )
-    aggregate = fields.DecimalField(
-        max_digits=16,
-        decimal_places=2,
-        db_column='AGGREGATE',
-        help_text="Aggregate year-to-date amount (Sched 401C)"
-    )
-    expn_dscr = fields.CharField(
-        max_length=90,
-        db_column='EXPN_DSCR',
-        blank=True,
-        help_text="Purpose of expense and/or description/explanation"
-    )
-    cand_naml = fields.CharField(
-        max_length=200,
-        db_column='CAND_NAML',
-        blank=True,
-        help_text="Candidate/officeholder last name"
-    )
-    cand_namf = fields.CharField(
-        max_length=45,
-        db_column='CAND_NAMF',
-        blank=True,
-        help_text="Candidate/officeholder first name"
-    )
-    cand_namt = fields.CharField(
-        max_length=10,
-        db_column='CAND_NAMT',
-        blank=True,
-        help_text="Candidate/officeholder title or prefix"
-    )
-    cand_nams = fields.CharField(
-        max_length=10,
-        db_column='CAND_NAMS',
-        blank=True,
-        help_text="Candidate/officeholder suffix"
-    )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
-        # alt cases for valid codes
-        ('asm', choices.OFFICE_CODES['ASM']),
-        ('ltg', choices.OFFICE_CODES['LTG']),
-        ('OTh', choices.OFFICE_CODES['OTH']),
-        ('att', choices.OFFICE_CODES['ATT']),
-        ('oth', choices.OFFICE_CODES['OTH']),
-        ('tre', choices.OFFICE_CODES['TRE']),
-        ('con', choices.OFFICE_CODES['CON']),
-        ('boe', choices.OFFICE_CODES['BOE']),
-        ('sos', choices.OFFICE_CODES['SOS']),
-        ('sup', choices.OFFICE_CODES['SUP']),
-        # invalid codes
-        ('H', 'Unknown'),
-    )
-    office_cd = fields.CharField(
-        db_column='OFFICE_CD',
-        max_length=3,
-        blank=True,
-        verbose_name="office code",
-        help_text="Identifies the office being sought",
-        choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['office_codes'],
-    )
-    offic_dscr = fields.CharField(
-        max_length=40,
-        db_column='OFFIC_DSCR',
-        blank=True,
-        help_text="Office sought description"
-    )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
-        ('SAC', 'Unknown'),
-        ('CT', 'Unknown'),
-        ('ca', 'Unknown'),
-        ('CAL', 'Unknown'),
-        ('OR', 'Unknown'),
-        ('AL', 'Unknown'),
-        ('CA', 'Unknown'),
-        ('10', 'Unknown'),
-    )
-    juris_cd = fields.CharField(
-        max_length=3,
-        choices=JURIS_CD_CHOICES,
-        db_column='JURIS_CD',
-        blank=True,
-        help_text="Office jurisdiction code",
-        documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=77),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
-        ]
-    )
-    juris_dscr = fields.CharField(
-        max_length=40,
-        db_column='JURIS_DSCR',
-        blank=True,
-        help_text="Office jurisdiction description"
-    )
-    dist_no = fields.CharField(
-        max_length=3,
-        db_column='DIST_NO',
-        blank=True,
-        help_text="District number for the office being sought. Populated \
-for Senate, Assembly, or Board of Equalization races."
-    )
-    OFF_S_H_CD_CHOICES = (
-        ('S', choices.OFF_S_H_CODES['S']),
-        ('H', choices.OFF_S_H_CODES['H']),
-    )
-    off_s_h_cd = fields.CharField(
-        max_length=1,
-        db_column='OFF_S_H_CD',
-        blank=True,
-        help_text='Office is sought or held code',
-        choices=OFF_S_H_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
-        ]
-    )
-    bal_name = fields.CharField(
-        max_length=200,
-        db_column='BAL_NAME',
-        blank=True,
-        help_text="Ballot measure name"
-    )
-    bal_num = fields.CharField(
-        max_length=7,
-        db_column='BAL_NUM',
-        blank=True,
-        help_text="Ballot measure number or letter"
-    )
-    bal_juris = fields.CharField(
-        max_length=40,
-        db_column='BAL_JURIS',
-        blank=True,
-        help_text="Ballot measure jurisdiction"
-    )
-    SUP_OPP_CD_CHOICES = (
-        ('S', choices.SUP_OPP_CODES['S']),
-        ('O', choices.SUP_OPP_CODES['O']),
-    )
-    sup_opp_cd = fields.CharField(
-        max_length=1,
-        db_column='SUP_OPP_CD',
-        blank=True,
-        help_text="Support or opposition code",
-        choices=SUP_OPP_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
-        ]
-    )
-    memo_code = fields.CharField(
-        max_length=1,
-        db_column='MEMO_CODE',
-        blank=True,
-        help_text="Memo amount flag"
-    )
-    memo_refno = fields.CharField(
-        max_length=20,
-        db_column='MEMO_REFNO',
-        blank=True,
-        help_text="Reference to text contained in the TEXT record"
-    )
-    bakref_tid = fields.CharField(
-        max_length=20,
-        db_column='BAKREF_TID',
-        blank=True,
-        help_text="Back reference to transaction identifier of parent record"
-    )
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'S401_CD'
-        verbose_name = 'S401_CD'
-        verbose_name_plural = 'S401_CD'
+        db_table = 'DEBT_CD'
+        verbose_name = 'DEBT_CD'
+        verbose_name_plural = 'DEBT_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -4443,6 +3652,1372 @@ original filing and 1 to 999 amendments.",
 
 
 @python_2_unicode_compatible
+class LoanCd(CalAccessBaseModel):
+    """
+    Loans received and made by recepient committees
+    """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=87, end_page=90),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=60, end_page=63),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35, end_page=39),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=47, end_page=50),
+    ]
+    FILING_FORMS = [
+        get_filing_form('F460').get_section('B1'),
+        get_filing_form('F460').get_section('B2'),
+        get_filing_form('F460').get_section('B3'),
+        get_filing_form('F460').get_section('H'),
+        get_filing_form('F460').get_section('H1'),
+        get_filing_form('F460').get_section('H2'),
+        get_filing_form('F460').get_section('H3'),
+    ]
+    amend_id = fields.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments.",
+        verbose_name="amendment ID"
+    )
+    bakref_tid = fields.CharField(
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True,
+        help_text="Back Reference to transaction identifier of parent record"
+    )
+    cmte_id = fields.CharField(
+        max_length=9,
+        db_column='CMTE_ID',
+        blank=True,
+        verbose_name="Committee ID",
+        help_text="Committee identification number"
+    )
+    ENTITY_CD_CHOICES = (
+        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
+    )
+    entity_cd = fields.CharField(
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name="entity code",
+        help_text="Entity code describing the lender",
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        ]
+    )
+    filing_id = fields.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
+    form_type = fields.CharField(
+        max_length=2,
+        db_column='FORM_TYPE',
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        ]
+    )
+    # intr_adr1 = fields.CharField(
+    #     max_length=55, db_column='INTR_ADR1', blank=True
+    # )
+    # intr_adr2 = fields.CharField(
+    #     max_length=55, db_column='INTR_ADR2', blank=True
+    # )
+    intr_city = fields.CharField(
+        max_length=30,
+        db_column='INTR_CITY',
+        blank=True,
+        help_text="Intermediary's city"
+    )
+    intr_namf = fields.CharField(
+        max_length=45,
+        db_column='INTR_NAMF',
+        blank=True,
+        help_text="Intermediary's first name"
+    )
+    intr_naml = fields.CharField(
+        max_length=200,
+        db_column='INTR_NAML',
+        blank=True,
+        help_text="Intermediary's last name"
+    )
+    intr_nams = fields.CharField(
+        max_length=10,
+        db_column='INTR_NAMS',
+        blank=True,
+        help_text="Intermediary's suffix"
+    )
+    intr_namt = fields.CharField(
+        max_length=10,
+        db_column='INTR_NAMT',
+        blank=True,
+        help_text="Intermediary's title or prefix"
+    )
+    intr_st = fields.CharField(
+        max_length=2,
+        db_column='INTR_ST',
+        blank=True,
+        help_text="Intermediary's state"
+    )
+    intr_zip4 = fields.CharField(
+        max_length=10,
+        db_column='INTR_ZIP4',
+        blank=True,
+        help_text="Intermediary's ZIP Code"
+    )
+    line_item = fields.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
+    lndr_namf = fields.CharField(
+        max_length=45,
+        db_column='LNDR_NAMF',
+        blank=True,
+        help_text="Lender's first name"
+    )
+    lndr_naml = fields.CharField(
+        max_length=200,
+        db_column='LNDR_NAML',
+        help_text="Lender's last name or business name"
+    )
+    lndr_nams = fields.CharField(
+        max_length=10,
+        db_column='LNDR_NAMS',
+        blank=True,
+        help_text="Lender's suffix"
+    )
+    lndr_namt = fields.CharField(
+        max_length=10,
+        db_column='LNDR_NAMT',
+        blank=True,
+        help_text="Lender's title or prefix"
+    )
+    # loan_adr1 = fields.CharField(
+    #     max_length=55, db_column='LOAN_ADR1', blank=True
+    # )
+    # loan_adr2 = fields.CharField(
+    #     max_length=55, db_column='LOAN_ADR2', blank=True
+    # )
+    loan_amt1 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT1',
+        blank=True,
+        help_text="Repaid or forgiven amount; Original loan amount. The \
+content of this column varies based on the \
+schedule/part that the record applies to. See the CAL \
+document for a description of the value of this field."
+    )
+    loan_amt2 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT2',
+        blank=True,
+        help_text="Outstanding Principal; unpaid balance. The content of \
+this column varies based on the schedule/part that the \
+record applies to. See the CAL document for a \
+description of the value of this field."
+    )
+    loan_amt3 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT3',
+        blank=True,
+        help_text="Interest Paid; Unpaid interest; Interest received. The \
+content of this column varies based on the \
+schedule/part that the record applies to. See the CAL \
+document for a description of the value of this field."
+    )
+    loan_amt4 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT4',
+        blank=True,
+        help_text="Cumulative Amount/Other. The content of this column \
+varies based on the schedule/part that the record \
+applies to. See the CAL document for a description of the \
+value of this field."
+    )
+    loan_amt5 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT5',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    loan_amt6 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT6',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    loan_amt7 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT7',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    loan_amt8 = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='LOAN_AMT8',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    loan_city = fields.CharField(
+        max_length=30,
+        db_column='LOAN_CITY',
+        blank=True,
+        help_text="Lender's city"
+    )
+    loan_date1 = fields.DateField(
+        db_column='LOAN_DATE1',
+        null=True,
+        help_text="Date the loan was made or recieved. The content of this \
+column varies based on the schedule/part that the \
+record applies to. See the CAL document for a description of the value."
+    )
+    loan_date2 = fields.DateField(
+        null=True,
+        db_column='LOAN_DATE2',
+        blank=True,
+        help_text="Date repaid/forgiven; date loan due. The content of this \
+column varies based on the schedule/part that the \
+record applies to. See the CAL document for a \
+description of the value of this field."
+    )
+    loan_emp = fields.CharField(
+        max_length=200,
+        db_column='LOAN_EMP',
+        blank=True,
+        help_text="Loan employer. Applies to the Form 460 Schedule B \
+Part 1."
+    )
+    loan_occ = fields.CharField(
+        max_length=60,
+        db_column='LOAN_OCC',
+        blank=True,
+        help_text="Loan occupation. Applies to the Form 460 Schedule B \
+Part 1."
+    )
+    loan_rate = fields.CharField(
+        max_length=30,
+        db_column='LOAN_RATE',
+        blank=True,
+        help_text="Interest Rate. The content of this column varies based \
+on the schedule/part that the record applies to. See the \
+CAL document for a description of the value of this field."
+    )
+    loan_self = fields.CharField(
+        max_length=1,
+        db_column='LOAN_SELF',
+        blank=True,
+        help_text="Self-employed checkbox"
+    )
+    loan_st = fields.CharField(
+        max_length=2,
+        db_column='LOAN_ST',
+        blank=True,
+        help_text="Lender's state"
+    )
+    LOAN_TYPE_CHOICES = (
+        ("H2T", "Third party payment"),
+        ("H2F", "Forgiven"),
+        ("H2R", "Repay"),
+        ("B2T", "Third party payment"),
+        ("B2F", "Forgiven"),
+        ("B2R", "Repay"),
+        ("B1G", "Guarantor"),
+        ("B1L", "Lender"),
+    )
+    loan_type = fields.CharField(
+        max_length=3,
+        db_column='LOAN_TYPE',
+        blank=True,
+        choices=LOAN_TYPE_CHOICES,
+        help_text="Type of loan",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            # this field may no longer be in use, CAL format v2 instructs to leave NULL
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        ]
+    )
+    loan_zip4 = fields.CharField(
+        max_length=10,
+        db_column='LOAN_ZIP4',
+        blank=True,
+        help_text="Lender's ZIP Code"
+    )
+    memo_code = fields.CharField(
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo amount flag"
+    )
+    memo_refno = fields.CharField(
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text="Reference to text contained in a TEXT record"
+    )
+    REC_TYPE_CHOICES = (
+        ("LOAN", "LOAN"),
+    )
+    rec_type = fields.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+        help_text='Record Type Value: LOAN',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=35),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=47),
+        ]
+    )
+    tran_id = fields.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
+    # tres_adr1 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR1', blank=True
+    # )
+    # tres_adr2 = fields.CharField(
+    #     max_length=55, db_column='TRES_ADR2', blank=True
+    # )
+    tres_city = fields.CharField(
+        max_length=30,
+        db_column='TRES_CITY',
+        blank=True,
+        help_text="Treasurer or responsible officer's city"
+    )
+    tres_namf = fields.CharField(
+        max_length=45,
+        db_column='TRES_NAMF',
+        blank=True,
+        help_text="Treasurer or responsible officer's first name"
+    )
+    tres_naml = fields.CharField(
+        max_length=200,
+        db_column='TRES_NAML',
+        blank=True,
+        help_text="Treasurer or responsible officer's last name"
+    )
+    tres_nams = fields.CharField(
+        max_length=10,
+        db_column='TRES_NAMS',
+        blank=True,
+        help_text="Treasurer or responsible officer's suffix"
+    )
+    tres_namt = fields.CharField(
+        max_length=10,
+        db_column='TRES_NAMT',
+        blank=True,
+        help_text="Treasurer or responsible officer's title or prefix"
+    )
+    tres_st = fields.CharField(
+        max_length=2,
+        db_column='TRES_ST',
+        blank=True,
+        help_text="Treasurer or responsible officer's street address"
+    )
+    tres_zip4 = fields.CharField(
+        max_length=10,
+        db_column='TRES_ZIP4',
+        blank=True,
+        help_text="Treasurer or responsible officer's ZIP Code"
+    )
+    xref_match = fields.CharField(
+        max_length=1,
+        db_column='XREF_MATCH',
+        blank=True,
+        help_text='Related item on other schedule has same transaction \
+identifier. "X" indicates this condition is true.'
+    )
+    xref_schnm = fields.CharField(
+        max_length=2,
+        db_column='XREF_SCHNM',
+        blank=True,
+        help_text="Related record is included on Form 460 Schedule 'A' or 'E'"
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'LOAN_CD'
+        verbose_name = 'LOAN_CD'
+        verbose_name_plural = 'LOAN_CD'
+
+    def __str__(self):
+        return str(self.filing_id)
+
+
+@python_2_unicode_compatible
+class RcptCd(CalAccessBaseModel):
+    """
+    Contribution records from receipts schedules for Slate Mailer Organization
+    and Recipient Committee Campaign Statements.
+    """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE"
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=13),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=118, end_page=121),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71, end_page=75),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29, end_page=30),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=37, end_page=41),
+    ]
+    FILING_FORMS = [
+        get_filing_form('E530'),
+        get_filing_form('F900'),
+        get_filing_form('F401').get_section('A'),
+        get_filing_form('F460').get_section('A'),
+        get_filing_form('F460').get_section('A-1'),
+        get_filing_form('F460').get_section('C'),
+        get_filing_form('F460').get_section('I'),
+        get_filing_form('F496').get_section('P3'),
+    ]
+    amend_id = fields.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments.",
+        verbose_name="amendment ID"
+    )
+    amount = fields.DecimalField(
+        decimal_places=2,
+        max_digits=14,
+        db_column='AMOUNT',
+        help_text="Amount Received (Monetary, Inkkind, Promise)"
+    )
+    bakref_tid = fields.CharField(
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True,
+        help_text="Back Reference to a transaction identifier of a parent \
+record"
+    )
+    bal_juris = fields.CharField(
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True,
+        help_text="Jurisdiction of ballot measure. Used on the Form 401 \
+Schedule A"
+    )
+    bal_name = fields.CharField(
+        max_length=200,
+        db_column='BAL_NAME',
+        blank=True,
+        help_text="Ballot measure name. Used on the Form 401 Schedule A"
+    )
+    bal_num = fields.CharField(
+        max_length=7,
+        db_column='BAL_NUM',
+        blank=True,
+        help_text="Ballot measure number or letter. Used on the Form 401 \
+Schedule A"
+    )
+    cand_namf = fields.CharField(
+        max_length=45,
+        db_column='CAND_NAMF',
+        blank=True,
+        help_text="Candidate/officeholder's first name. Used on the Form \
+401 Schedule A"
+    )
+    cand_naml = fields.CharField(
+        max_length=200,
+        db_column='CAND_NAML',
+        blank=True,
+        help_text="Candidate/officeholder's last name. Used on the Form \
+401 Schedule A"
+    )
+    cand_nams = fields.CharField(
+        max_length=10,
+        db_column='CAND_NAMS',
+        blank=True,
+        help_text="Candidate/officeholder's name suffix. Used on the Form \
+401 Schedule A"
+    )
+    cand_namt = fields.CharField(
+        max_length=10,
+        db_column='CAND_NAMT',
+        blank=True,
+        help_text="Candidate/officeholder's name prefix or title. Used on \
+the Form 401 Schedule A"
+    )
+    cmte_id = fields.CharField(
+        max_length=9,
+        db_column='CMTE_ID',
+        blank=True,
+        help_text="Committee Identification number"
+    )
+    # ctrib_adr1 = fields.CharField(
+    #     max_length=55,
+    #     db_column='CTRIB_ADR1',
+    #     blank=True,
+    #     default="",
+    #     help_text="First line of the contributor's street address"
+    # )
+    # ctrib_adr2 = fields.CharField(
+    #     max_length=55,
+    #     db_column='CTRIB_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the contributor's street address"
+    # )
+    ctrib_city = fields.CharField(
+        max_length=30,
+        db_column='CTRIB_CITY',
+        blank=True,
+        help_text="Contributor's City"
+    )
+    ctrib_dscr = fields.CharField(
+        max_length=90,
+        db_column='CTRIB_DSCR',
+        blank=True,
+        help_text="Description of goods/services received"
+    )
+    ctrib_emp = fields.CharField(
+        max_length=200,
+        db_column='CTRIB_EMP',
+        blank=True,
+        help_text="Employer"
+    )
+    ctrib_namf = fields.CharField(
+        max_length=45,
+        db_column='CTRIB_NAMF',
+        blank=True,
+        help_text="Contributor's First Name"
+    )
+    ctrib_naml = fields.CharField(
+        max_length=200,
+        db_column='CTRIB_NAML',
+        help_text="Contributor's last name or business name"
+    )
+    ctrib_nams = fields.CharField(
+        max_length=10,
+        db_column='CTRIB_NAMS',
+        blank=True,
+        help_text="Contributor's Suffix"
+    )
+    ctrib_namt = fields.CharField(
+        max_length=10,
+        db_column='CTRIB_NAMT',
+        blank=True,
+        help_text="Contributor's Prefix or Title"
+    )
+    ctrib_occ = fields.CharField(
+        max_length=60,
+        db_column='CTRIB_OCC',
+        blank=True,
+        help_text="Occupation"
+    )
+    ctrib_self = fields.CharField(
+        max_length=1,
+        db_column='CTRIB_SELF',
+        blank=True,
+        help_text="Self Employed Check-box"
+    )
+    ctrib_st = fields.CharField(
+        max_length=2,
+        db_column='CTRIB_ST',
+        blank=True,
+        help_text="Contributor's State"
+    )
+    ctrib_zip4 = fields.CharField(
+        max_length=10,
+        db_column='CTRIB_ZIP4',
+        blank=True,
+        help_text="Contributor's ZIP+4"
+    )
+    cum_oth = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='CUM_OTH',
+        blank=True,
+        help_text="Cumulative Other (Sched A, A-1)"
+    )
+    cum_ytd = fields.DecimalField(
+        decimal_places=2,
+        null=True,
+        max_digits=14,
+        db_column='CUM_YTD',
+        blank=True,
+        help_text="Cumulative year to date amount (Form 460 Schedule A \
+and Form 401 Schedule A, A-1)"
+    )
+    date_thru = fields.DateField(
+        null=True,
+        db_column='DATE_THRU',
+        blank=True,
+        help_text="End of date range for items received"
+    )
+    dist_no = fields.CharField(
+        max_length=3,
+        db_column='DIST_NO',
+        blank=True,
+        help_text="Office District Number (used on F401A)"
+    )
+    ENTITY_CD_CHOICES = (
+        # Codes explicitly allowed for this field, according to documentation
+        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('Com', choices.CAMPAIGN_ENTITY_CODES['COM']),
+        # Other known codes observed in this field
+        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        # Other unknown values observed
+        ('0', "Unknown"),
+        ('PTH', 'Unknown'),
+        ('RFD', 'Unknown'),  # Request for Development?
+        ('MBR', 'Unknown'),  # Member?
+    )
+    entity_cd = fields.CharField(
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        help_text="Entity Code describing the contributor",
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
+        ] + choices.DOCS['entity_codes']
+    )
+    filing_id = fields.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
+    form_type = fields.CharField(
+        choices=FORM_TYPE_CHOICES,
+        max_length=9,
+        db_column='FORM_TYPE',
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
+        ]
+    )
+    int_rate = fields.CharField(
+        max_length=9,
+        db_column='INT_RATE',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    # intr_adr1 = fields.CharField(
+    #     max_length=55,
+    #     db_column='INTR_ADR1',
+    #     blank=True,
+    #     help_text="First line of the intermediary's street address."
+    # )
+    # intr_adr2 = fields.CharField(
+    #     max_length=55,
+    #     db_column='INTR_ADR2',
+    #     blank=True,
+    #     help_text="Second line of the Intermediary's street address."
+    # )
+    intr_city = fields.CharField(
+        max_length=30,
+        db_column='INTR_CITY',
+        blank=True,
+        help_text="Intermediary's City"
+    )
+    intr_cmteid = fields.CharField(
+        max_length=9,
+        db_column='INTR_CMTEID',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    intr_emp = fields.CharField(
+        max_length=200,
+        db_column='INTR_EMP',
+        blank=True,
+        help_text="Intermediary's Employer"
+    )
+    intr_namf = fields.CharField(
+        max_length=45,
+        db_column='INTR_NAMF',
+        blank=True,
+        help_text="Intermediary's First Name"
+    )
+    intr_naml = fields.CharField(
+        max_length=200,
+        db_column='INTR_NAML',
+        blank=True,
+        help_text="Intermediary's Last Name"
+    )
+    intr_nams = fields.CharField(
+        max_length=10,
+        db_column='INTR_NAMS',
+        blank=True,
+        help_text="Intermediary's Suffix"
+    )
+    intr_namt = fields.CharField(
+        max_length=10,
+        db_column='INTR_NAMT',
+        blank=True,
+        help_text="Intermediary's Prefix or Title"
+    )
+    intr_occ = fields.CharField(
+        max_length=60,
+        db_column='INTR_OCC',
+        blank=True,
+        help_text="Intermediary's Occupation"
+    )
+    intr_self = fields.CharField(
+        max_length=1,
+        db_column='INTR_SELF',
+        blank=True,
+        help_text="Intermediary's self employed check box"
+    )
+    intr_st = fields.CharField(
+        max_length=2,
+        db_column='INTR_ST',
+        blank=True,
+        help_text="Intermediary's state"
+    )
+    intr_zip4 = fields.CharField(
+        max_length=10,
+        db_column='INTR_ZIP4',
+        blank=True,
+        help_text="Intermediary's zip code"
+    )
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        # "other" office codes
+        ('BED', choices.JURIS_CODES['OTH']),
+        ('CLB', choices.JURIS_CODES['OTH']),
+        # misprint
+        ('COU', choices.JURIS_CODES['CTY']),
+        # Office Code for this one record is Superior Court Judge
+        ('CO', choices.JURIS_CODES['OTH']),
+        ('SAC', 'Unknown'),
+        ('PER', 'Unknown'),
+        ('SF', 'Unknown'),
+        ('OR', 'Unknown'),
+        ('AL', 'Unknown'),
+        ('4', 'Unknown'),
+        ('CA', 'Unknown'),
+    )
+    juris_cd = fields.CharField(
+        max_length=3,
+        db_column='JURIS_CD',
+        blank=True,
+        choices=JURIS_CD_CHOICES,
+        help_text="Office jurisdiction code. See the CAL document for the \
+list of legal values. Used on Form 401 Schedule A",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=74),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
+        ]
+    )
+    juris_dscr = fields.CharField(
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True,
+        help_text="Office Jurisdiction Description (used on F401A)"
+    )
+    line_item = fields.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
+    memo_code = fields.CharField(
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo amount flag (Date/Amount are informational only)"
+    )
+    memo_refno = fields.CharField(
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text="Reference to text contained in a TEXT record"
+    )
+    OFF_S_H_CD_CHOICES = (
+        ('S', choices.OFF_S_H_CODES['S']),
+        ('H', choices.OFF_S_H_CODES['H']),
+    )
+    off_s_h_cd = fields.CharField(
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True,
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=75),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
+        ]
+    )
+    offic_dscr = fields.CharField(
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True,
+        help_text="Office Sought Description (used on F401A)"
+    )
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        # alt cases for valid codes
+        ('asm', choices.OFFICE_CODES['ASM']),
+        ('gov', choices.OFFICE_CODES['GOV']),
+        ('OTh', choices.OFFICE_CODES['OTH']),
+        ('oth', choices.OFFICE_CODES['OTH']),
+        ('csu', choices.OFFICE_CODES['CSU']),
+        # invalid codes
+        ('H', 'Unknown'),
+        ('HOU', 'Unknown'),
+        ('ASS', 'Unknown'),
+    )
+    office_cd = fields.CharField(
+        db_column='OFFICE_CD',
+        max_length=3,
+        blank=True,
+        verbose_name="office code",
+        help_text="Identifies the office being sought",
+        choices=OFFICE_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
+            DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
+        ],
+    )
+    rcpt_date = fields.DateField(
+        db_column='RCPT_DATE',
+        null=True,
+        help_text="Date item received"
+    )
+    REC_TYPE_CHOICES = (
+        ('E530', get_filing_form('E530').full_title),
+        ("RCPT", "Receipt"),
+    )
+    rec_type = fields.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: CVR",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=37),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+        ]
+    )
+    SUP_OPP_CD_CHOICES = (
+        # Codes explicitly allowed for this field, according to documentation
+        ('S', choices.SUP_OPP_CODES['S']),
+        ('O', choices.SUP_OPP_CODES['O']),
+        # Other unknown values observed
+        ('F', 'Unknown'),
+    )
+    sup_opp_cd = fields.CharField(
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True,
+        help_text="Support or opposition code",
+        choices=SUP_OPP_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=74),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=30),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=40),
+        ]
+    )
+    tran_id = fields.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
+    TRAN_TYPE_CHOICES = [
+        # Codes explicitly allowed for this field, according to documentation
+        ('F', 'Forgiven Loan'),
+        ('I', 'Intermediary'),
+        ('R', 'Returned (Negative Amount?)'),
+        ('T', 'Third Party Repayment'),
+        ('X', 'Transfer'),
+        # Other unknown values observed
+        ('0', 'Unknown'),
+        ('I', 'Unknown'),
+        ('M', 'Unknown'),
+        ('N', 'Unknown'),
+        ('R', 'Unknown'),
+        ('T', 'Unknown'),
+    ]
+    tran_type = fields.CharField(
+        max_length=1,
+        db_column='TRAN_TYPE',
+        blank=True,
+        choices=TRAN_TYPE_CHOICES,
+        help_text="Transaction Type",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=72),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=38),
+        ]
+    )
+#     tres_adr1 = fields.CharField(
+#         max_length=55,
+#         db_column='TRES_ADR1',
+#         blank=True,
+#         help_text="First line of the treasurer or responsible officer's \
+# street address"
+#     )
+#     tres_adr2 = fields.CharField(
+#         max_length=55,
+#         db_column='TRES_ADR2',
+#         blank=True,
+#         help_text="Second line of the treasurer or responsible officer's \
+# street address"
+#     )
+    tres_city = fields.CharField(
+        max_length=30,
+        db_column='TRES_CITY',
+        blank=True,
+        help_text="City portion of the treasurer or responsible officer's \
+street address"
+    )
+    tres_namf = fields.CharField(
+        max_length=45,
+        db_column='TRES_NAMF',
+        blank=True,
+        help_text="Treasurer or responsible officer's first name"
+    )
+    tres_naml = fields.CharField(
+        max_length=200,
+        db_column='TRES_NAML',
+        blank=True,
+        help_text="Treasurer or responsible officer's last name"
+    )
+    tres_nams = fields.CharField(
+        max_length=10,
+        db_column='TRES_NAMS',
+        blank=True,
+        help_text="Treasurer or responsible officer's suffix"
+    )
+    tres_namt = fields.CharField(
+        max_length=10,
+        db_column='TRES_NAMT',
+        blank=True,
+        help_text="Treasurer or responsible officer's prefix or title"
+    )
+    tres_st = fields.CharField(
+        max_length=2,
+        db_column='TRES_ST',
+        blank=True,
+        help_text="State portion of the treasurer or responsible officer's \
+address"
+    )
+    tres_zip4 = fields.CharField(
+        null=True,
+        max_length=10,
+        blank=True,
+        db_column='TRES_ZIP4',
+        help_text="Zip code portion of the treasurer or responsible officer's \
+address"
+    )
+    xref_match = fields.CharField(
+        max_length=1,
+        db_column='XREF_MATCH',
+        blank=True,
+        help_text="Related item on other schedule has same transaction \
+identifier. 'X' indicates this condition is true"
+    )
+    xref_schnm = fields.CharField(
+        max_length=2,
+        db_column='XREF_SCHNM',
+        blank=True,
+        help_text="Related record is included on Sched 'B2' or 'F'"
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'RCPT_CD'
+        verbose_name = 'RCPT_CD'
+        verbose_name_plural = 'RCPT_CD'
+
+    def __str__(self):
+        return str(self.filing_id)
+
+# =============================================================================
+# --------------------------- Forms and Schedules -----------------------------
+# =============================================================================
+
+
+@python_2_unicode_compatible
+class S401Cd(CalAccessBaseModel):
+    """
+    Form 401 (Slate Mailer Organization) payment and other
+    disclosure schedules (F401B, F401B-1, F401C, F401D) information. Does not
+    include Form 401, Schedule A (Payments Received).
+    """
+    UNIQUE_KEY = (
+        'FILING_ID',
+        'AMEND_ID',
+        'LINE_ID',
+        'REC_TYPE',
+        'FORM_TYPE'
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=123, end_page=124),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=76, end_page=78),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=51, end_page=52),
+    ]
+    FILING_FORMS = [
+        get_filing_form('F401').get_section('B'),
+        get_filing_form('F401').get_section('B-1'),
+        get_filing_form('F401').get_section('C'),
+        get_filing_form('F401').get_section('D'),
+    ]
+    filing_id = fields.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
+    amend_id = fields.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments.",
+        verbose_name="amendment ID"
+    )
+    line_item = fields.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
+    REC_TYPE_CHOICES = (
+        ("S401", "S401"),
+    )
+    rec_type = fields.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        help_text="Record Type Value: S401",
+        choices=REC_TYPE_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=51),
+        ]
+    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
+    form_type = fields.CharField(
+        max_length=7,
+        db_column='FORM_TYPE',
+        blank=True,
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=51),
+        ]
+    )
+    tran_id = fields.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
+    agent_naml = fields.CharField(
+        max_length=200,
+        db_column='AGENT_NAML',
+        blank=True,
+        help_text="Agent or independent contractor's last name"
+    )
+    agent_namf = fields.CharField(
+        max_length=45,
+        db_column='AGENT_NAMF',
+        blank=True,
+        help_text="Agent or independent contractor's first name"
+    )
+    agent_namt = fields.CharField(
+        max_length=200,
+        db_column='AGENT_NAMT',
+        blank=True,
+        help_text="Agent or independent contractor's title or prefix"
+    )
+    agent_nams = fields.CharField(
+        max_length=10,
+        db_column='AGENT_NAMS',
+        blank=True,
+        help_text="Agent or independent contractor's suffix"
+    )
+    payee_naml = fields.CharField(
+        max_length=200,
+        db_column='PAYEE_NAML',
+        blank=True,
+        help_text="Payee's business name or last name if the payee is an \
+individual"
+    )
+    payee_namf = fields.CharField(
+        max_length=45,
+        db_column='PAYEE_NAMF',
+        blank=True,
+        help_text="Payee's first name if the payee is an individual"
+    )
+    payee_namt = fields.CharField(
+        max_length=10,
+        db_column='PAYEE_NAMT',
+        blank=True,
+        help_text="Payee's title or prefix if the payee is an individual"
+    )
+    payee_nams = fields.CharField(
+        max_length=10,
+        db_column='PAYEE_NAMS',
+        blank=True,
+        help_text="Payee's suffix if the payee is an individual"
+    )
+    payee_city = fields.CharField(
+        max_length=30,
+        db_column='PAYEE_CITY',
+        blank=True,
+        help_text="Payee's city address"
+    )
+    payee_st = fields.CharField(
+        max_length=2,
+        db_column='PAYEE_ST',
+        blank=True,
+        help_text="Payee state address"
+    )
+    payee_zip4 = fields.CharField(
+        max_length=10,
+        db_column='PAYEE_ZIP4',
+        blank=True,
+        help_text="Payee ZIP Code"
+    )
+    amount = fields.DecimalField(
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMOUNT',
+        help_text="Amount (Sched F401B, 401B-1, 401C)"
+    )
+    aggregate = fields.DecimalField(
+        max_digits=16,
+        decimal_places=2,
+        db_column='AGGREGATE',
+        help_text="Aggregate year-to-date amount (Sched 401C)"
+    )
+    expn_dscr = fields.CharField(
+        max_length=90,
+        db_column='EXPN_DSCR',
+        blank=True,
+        help_text="Purpose of expense and/or description/explanation"
+    )
+    cand_naml = fields.CharField(
+        max_length=200,
+        db_column='CAND_NAML',
+        blank=True,
+        help_text="Candidate/officeholder last name"
+    )
+    cand_namf = fields.CharField(
+        max_length=45,
+        db_column='CAND_NAMF',
+        blank=True,
+        help_text="Candidate/officeholder first name"
+    )
+    cand_namt = fields.CharField(
+        max_length=10,
+        db_column='CAND_NAMT',
+        blank=True,
+        help_text="Candidate/officeholder title or prefix"
+    )
+    cand_nams = fields.CharField(
+        max_length=10,
+        db_column='CAND_NAMS',
+        blank=True,
+        help_text="Candidate/officeholder suffix"
+    )
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        # alt cases for valid codes
+        ('asm', choices.OFFICE_CODES['ASM']),
+        ('ltg', choices.OFFICE_CODES['LTG']),
+        ('OTh', choices.OFFICE_CODES['OTH']),
+        ('att', choices.OFFICE_CODES['ATT']),
+        ('oth', choices.OFFICE_CODES['OTH']),
+        ('tre', choices.OFFICE_CODES['TRE']),
+        ('con', choices.OFFICE_CODES['CON']),
+        ('boe', choices.OFFICE_CODES['BOE']),
+        ('sos', choices.OFFICE_CODES['SOS']),
+        ('sup', choices.OFFICE_CODES['SUP']),
+        # invalid codes
+        ('H', 'Unknown'),
+    )
+    office_cd = fields.CharField(
+        db_column='OFFICE_CD',
+        max_length=3,
+        blank=True,
+        verbose_name="office code",
+        help_text="Identifies the office being sought",
+        choices=OFFICE_CD_CHOICES,
+        documentcloud_pages=choices.DOCS['office_codes'],
+    )
+    offic_dscr = fields.CharField(
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True,
+        help_text="Office sought description"
+    )
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('SAC', 'Unknown'),
+        ('CT', 'Unknown'),
+        ('ca', 'Unknown'),
+        ('CAL', 'Unknown'),
+        ('OR', 'Unknown'),
+        ('AL', 'Unknown'),
+        ('CA', 'Unknown'),
+        ('10', 'Unknown'),
+    )
+    juris_cd = fields.CharField(
+        max_length=3,
+        choices=JURIS_CD_CHOICES,
+        db_column='JURIS_CD',
+        blank=True,
+        help_text="Office jurisdiction code",
+        documentcloud_pages=[
+            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=77),
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
+        ]
+    )
+    juris_dscr = fields.CharField(
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True,
+        help_text="Office jurisdiction description"
+    )
+    dist_no = fields.CharField(
+        max_length=3,
+        db_column='DIST_NO',
+        blank=True,
+        help_text="District number for the office being sought. Populated \
+for Senate, Assembly, or Board of Equalization races."
+    )
+    OFF_S_H_CD_CHOICES = (
+        ('S', choices.OFF_S_H_CODES['S']),
+        ('H', choices.OFF_S_H_CODES['H']),
+    )
+    off_s_h_cd = fields.CharField(
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True,
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
+        ]
+    )
+    bal_name = fields.CharField(
+        max_length=200,
+        db_column='BAL_NAME',
+        blank=True,
+        help_text="Ballot measure name"
+    )
+    bal_num = fields.CharField(
+        max_length=7,
+        db_column='BAL_NUM',
+        blank=True,
+        help_text="Ballot measure number or letter"
+    )
+    bal_juris = fields.CharField(
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True,
+        help_text="Ballot measure jurisdiction"
+    )
+    SUP_OPP_CD_CHOICES = (
+        ('S', choices.SUP_OPP_CODES['S']),
+        ('O', choices.SUP_OPP_CODES['O']),
+    )
+    sup_opp_cd = fields.CharField(
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True,
+        help_text="Support or opposition code",
+        choices=SUP_OPP_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=39),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=52),
+        ]
+    )
+    memo_code = fields.CharField(
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo amount flag"
+    )
+    memo_refno = fields.CharField(
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text="Reference to text contained in the TEXT record"
+    )
+    bakref_tid = fields.CharField(
+        max_length=20,
+        db_column='BAKREF_TID',
+        blank=True,
+        help_text="Back reference to transaction identifier of parent record"
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'S401_CD'
+        verbose_name = 'S401_CD'
+        verbose_name_plural = 'S401_CD'
+
+    def __str__(self):
+        return str(self.filing_id)
+
+
+@python_2_unicode_compatible
 class F495P2Cd(CalAccessBaseModel):
     """
     Form 495 Supplemental Pre-Election Campaign Statement, attached to
@@ -4533,328 +5108,6 @@ as on the filing's cover (CVR) record."
         db_table = 'F495P2_CD'
         verbose_name = 'F495P2_CD'
         verbose_name_plural = 'F495P2_CD'
-
-    def __str__(self):
-        return str(self.filing_id)
-
-
-@python_2_unicode_compatible
-class DebtCd(CalAccessBaseModel):
-    """
-    Records of unpaid bills accrued by Recipient Campaigns, as listed on
-    Form 460, Schedule F (Accrued Expenses).
-    """
-    UNIQUE_KEY = (
-        "FILING_ID",
-        "AMEND_ID",
-        "LINE_ITEM",
-        "REC_TYPE",
-        "FORM_TYPE"
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=47, end_page=49),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=49, end_page=48),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33, end_page=34),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
-    ]
-    FILING_FORMS = [
-        get_filing_form('F460').get_section('F'),
-    ]
-    amend_id = fields.IntegerField(
-        db_column='AMEND_ID',
-        db_index=True,
-        help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments.",
-        verbose_name="amendment ID"
-    )
-    amt_incur = fields.DecimalField(
-        decimal_places=2,
-        max_digits=14,
-        db_column='AMT_INCUR',
-        help_text='Amount incurred this period',
-    )
-    amt_paid = fields.DecimalField(
-        decimal_places=2,
-        max_digits=14,
-        db_column='AMT_PAID',
-        help_text='Amount paid this period.'
-    )
-    bakref_tid = fields.CharField(
-        max_length=20,
-        db_column='BAKREF_TID',
-        blank=True,
-        help_text='Back reference to a transaction identifier \
-of a parent record.'
-    )
-    beg_bal = fields.DecimalField(
-        decimal_places=2,
-        max_digits=14,
-        db_column='BEG_BAL',
-        help_text='Outstanding balance at beginning of period',
-    )
-    cmte_id = fields.CharField(
-        max_length=9,
-        db_column='CMTE_ID',
-        blank=True,
-        help_text='Committee identification number',
-    )
-    end_bal = fields.DecimalField(
-        decimal_places=2,
-        max_digits=14,
-        db_column='END_BAL',
-        help_text='Outstanding balance at close of this period',
-    )
-    ENTITY_CD_CHOICES = (
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
-    )
-    entity_cd = fields.CharField(
-        max_length=3,
-        db_column='ENTITY_CD',
-        blank=True,
-        verbose_name='entity code',
-        choices=ENTITY_CD_CHOICES,
-        help_text='Entity code describing the payee',
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
-        ]
-    )
-    EXPN_CODE_CHOICES = get_sorted_choices(choices.EXPENSE_CODES) + (
-        # alt cases of valid codes
-        ('Fnd', choices.EXPENSE_CODES['FND']),
-        ('ofc', choices.EXPENSE_CODES['OFC']),
-        # printed this way on the pdfs, but probably meant consultant code
-        ("'CN", choices.EXPENSE_CODES['CNS']),
-        # Other codes observed in the table that are not documented by the state
-        ("*", "Unknown"),
-        ("AIR", "Unknown"),
-        ("BUS", "Unknown"),
-        ("C", "Unknown"),
-        ("CAM", "Unknown"),
-        ("CC", "Unknown"),
-        ("COM", "Unknown"),
-        ("CON", "Unknown"),
-        ("CSN", "Unknown"),
-        ("DEP", "Unknown"),
-        ("EVE", "Unknown"),
-        ("F", "Unknown"),
-        ("FED", "Unknown"),
-        ("fns", "Unknown"),
-        ("G", "Unknown"),
-        ("GGG", "Unknown"),
-        ("HOT", "Unknown"),
-        ("L", "Unknown"),
-        ("LDF", "Unknown"),
-        ("MEE", "Unknown"),
-        ("N", "Unknown"),
-        ("O", "Unknown"),
-        ("OTH", "Unknown"),  # Other?
-        ("P", "Unknown"),
-        ("PEN", "Unknown"),
-        ("S", "Unknown"),
-        ("SPE", "Unknown"),
-        ("STA", "Unknown"),
-        ("T", "Unknown"),
-        ("TAX", "Unknown"),
-        ("TRA", "Unknown"),
-        ("V", "Unknown"),
-        ("X", "Unknown"),
-    )
-    expn_code = fields.CharField(
-        max_length=3,
-        db_column='EXPN_CODE',
-        blank=True,
-        verbose_name='expense code',
-        help_text="Expense Code",
-        choices=EXPN_CODE_CHOICES,
-        documentcloud_pages=choices.DOCS['expense_codes']
-    )
-    expn_dscr = fields.CharField(
-        max_length=400,
-        db_column='EXPN_DSCR',
-        blank=True,
-        verbose_name="expense description",
-        help_text='Purpose of expense and/or description/explanation',
-    )
-    filing_id = fields.IntegerField(
-        db_column='FILING_ID',
-        db_index=True,
-        verbose_name='filing ID',
-        help_text="Unique filing identificiation number of the parent filing",
-    )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
-    form_type = fields.CharField(
-        max_length=1,
-        db_column='FORM_TYPE',
-        choices=FORM_TYPE_CHOICES,
-        help_text='Schedule Name/ID: (F - Sched F / Accrued Expenses)',
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
-        ]
-    )
-    line_item = fields.IntegerField(
-        db_column='LINE_ITEM',
-        help_text="Record line item number",
-        db_index=True,
-    )
-    memo_code = fields.CharField(
-        max_length=1,
-        db_column='MEMO_CODE',
-        blank=True,
-        help_text='Memo amount flag',
-    )
-    memo_refno = fields.CharField(
-        max_length=20,
-        db_column='MEMO_REFNO',
-        blank=True,
-        help_text='Reference to text contained in a TEXT record.'
-    )
-    # payee_adr1 = fields.CharField(
-    #     max_length=55, db_column='PAYEE_ADR1', blank=True
-    # )
-    # payee_adr2 = fields.CharField(
-    #     max_length=55, db_column='PAYEE_ADR2', blank=True
-    # )
-    payee_city = fields.CharField(
-        max_length=30,
-        db_column='PAYEE_CITY',
-        blank=True,
-        help_text='First line of the payee\'s street address',
-    )
-    payee_namf = fields.CharField(
-        max_length=45,
-        db_column='PAYEE_NAMF',
-        blank=True,
-        help_text='Payee\'s first name if the payee is an individual',
-    )
-    payee_naml = fields.CharField(
-        max_length=200,
-        db_column='PAYEE_NAML',
-        help_text="Payee's business name or last name if the payee is an \
-individual."
-    )
-    payee_nams = fields.CharField(
-        max_length=10,
-        db_column='PAYEE_NAMS',
-        blank=True,
-        help_text='Payee\'s name suffix if the payee is an individual',
-    )
-    payee_namt = fields.CharField(
-        max_length=100,
-        db_column='PAYEE_NAMT',
-        blank=True,
-        help_text='Payee\'s prefix or title if the payee is an individual',
-    )
-    payee_st = fields.CharField(
-        max_length=2,
-        db_column='PAYEE_ST',
-        blank=True,
-        help_text='Payee\'s state',
-    )
-    payee_zip4 = fields.CharField(
-        max_length=10,
-        db_column='PAYEE_ZIP4',
-        blank=True,
-        help_text='Payee\'s ZIP Code',
-    )
-    REC_TYPE_CHOICES = (
-        ("DEBT", "DEBT"),
-    )
-    rec_type = fields.CharField(
-        verbose_name='record type',
-        db_column='REC_TYPE',
-        max_length=4,
-        db_index=True,
-        choices=REC_TYPE_CHOICES,
-        help_text='Record type value: DEBT',
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33, end_page=34),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
-        ]
-    )
-    tran_id = fields.CharField(
-        verbose_name='transaction ID',
-        max_length=20,
-        db_column='TRAN_ID',
-        blank=True,
-        help_text='Transaction identifier - permanent value unique to \
-this item',
-    )
-    # tres_adr1 = fields.CharField(
-    #     max_length=55, db_column='TRES_ADR1', blank=True
-    # )
-    # tres_adr2 = fields.CharField(
-    #     max_length=55, db_column='TRES_ADR2', blank=True
-    # )
-    tres_city = fields.CharField(
-        max_length=30,
-        db_column='TRES_CITY',
-        blank=True,
-        help_text='City portion of the treasurer or responsible \
-officer\'s street address',
-    )
-    tres_namf = fields.CharField(
-        max_length=45,
-        db_column='TRES_NAMF',
-        blank=True,
-        help_text='Treasurer or responsible officer\'s first name'
-    )
-    tres_naml = fields.CharField(
-        max_length=200,
-        db_column='TRES_NAML',
-        blank=True,
-        help_text='Treasurer or responsible officer\'s last name'
-    )
-    tres_nams = fields.CharField(
-        max_length=10,
-        db_column='TRES_NAMS',
-        blank=True,
-        help_text='Treasurer or responsible officer\'s suffix',
-    )
-    tres_namt = fields.CharField(
-        max_length=100,
-        db_column='TRES_NAMT',
-        blank=True,
-        help_text='Treasurer or responsible officer\'s prefix or title',
-    )
-    tres_st = fields.CharField(
-        max_length=2,
-        db_column='TRES_ST',
-        blank=True,
-        help_text='State portion of the treasurer or responsible \
-officer\'s address',
-    )
-    tres_zip4 = fields.CharField(
-        max_length=10,
-        db_column='TRES_ZIP4',
-        blank=True,
-        help_text='ZIP Code portion of the treasurer or responsible \
-officer\'s address',
-    )
-    xref_match = fields.CharField(
-        max_length=1,
-        db_column='XREF_MATCH',
-        blank=True,
-        help_text='Related item on other schedule has same \
-transaction identifier. /"X/" indicates this condition is true'
-    )
-    xref_schnm = fields.CharField(
-        max_length=2, db_column='XREF_SCHNM', blank=True,
-        help_text='Related record is included on Schedule C.'
-    )
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'DEBT_CD'
-        verbose_name = 'DEBT_CD'
-        verbose_name_plural = 'DEBT_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -5393,6 +5646,321 @@ for Senate, Assembly, or Board of Equalization races."
         db_table = 'S497_CD'
         verbose_name = 'S497_CD'
         verbose_name_plural = 'S497_CD'
+
+
+@python_2_unicode_compatible
+class S498Cd(CalAccessBaseModel):
+    """
+    Payments received by Slate Mailer Organizations within 90 days of an election,
+    as reported on Form 498.
+    """
+    UNIQUE_KEY = (
+        "FILING_ID",
+        "AMEND_ID",
+        "LINE_ITEM",
+        "REC_TYPE",
+        "FORM_TYPE",
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=127, end_page=129),
+        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=83, end_page=85),
+        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43, end_page=44),
+        DocumentCloud(id='2712034-Cal-Format-201', start_page=56, end_page=57),
+    ]
+    FILING_FORMS = [
+        get_filing_form('F498').get_section('A'),
+        get_filing_form('F498').get_section('R'),
+    ]
+    filing_id = fields.IntegerField(
+        db_column='FILING_ID',
+        db_index=True,
+        verbose_name='filing ID',
+        help_text="Unique filing identificiation number"
+    )
+    amend_id = fields.IntegerField(
+        db_column='AMEND_ID',
+        db_index=True,
+        help_text="Amendment identification number. A number of 0 is the \
+original filing and 1 to 999 amendments.",
+        verbose_name="amendment ID"
+    )
+    line_item = fields.IntegerField(
+        db_column='LINE_ITEM',
+        help_text="Line item number of this record",
+        db_index=True,
+    )
+    REC_TYPE_CHOICES = (
+        ("S498", "S498"),
+    )
+    rec_type = fields.CharField(
+        verbose_name='record type',
+        db_column='REC_TYPE',
+        max_length=4,
+        db_index=True,
+        choices=REC_TYPE_CHOICES,
+        help_text="Record Type Value: S498",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
+        ]
+    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
+    form_type = fields.CharField(
+        max_length=9,
+        db_column='FORM_TYPE',
+        blank=True,
+        choices=FORM_TYPE_CHOICES,
+        help_text='Name of the source filing form or schedule',
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
+        ]
+    )
+    tran_id = fields.CharField(
+        verbose_name='transaction ID',
+        max_length=20,
+        db_column='TRAN_ID',
+        blank=True,
+        help_text='Permanent value unique to this item',
+    )
+    ENTITY_CD_CHOICES = (
+        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
+    )
+    entity_cd = fields.CharField(
+        max_length=3,
+        db_column='ENTITY_CD',
+        blank=True,
+        verbose_name='entity code',
+        help_text="Entity code",
+        choices=ENTITY_CD_CHOICES,
+        documentcloud_pages=choices.DOCS['entity_codes'] + [
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
+        ]
+    )
+    cmte_id = fields.CharField(
+        max_length=9,
+        db_column='CMTE_ID',
+        blank=True,
+        verbose_name="Committee ID",
+        help_text="Committee identification number"
+    )
+    payor_naml = fields.CharField(
+        max_length=200,
+        db_column='PAYOR_NAML',
+        blank=True,
+        help_text="Payor's last name or business name"
+    )
+    payor_namf = fields.CharField(
+        max_length=45,
+        db_column='PAYOR_NAMF',
+        blank=True,
+        help_text="Payor's first name."
+    )
+    payor_namt = fields.CharField(
+        max_length=10,
+        db_column='PAYOR_NAMT',
+        blank=True,
+        help_text="Payor's Prefix or title."
+    )
+    payor_nams = fields.CharField(
+        max_length=10,
+        db_column='PAYOR_NAMS',
+        blank=True,
+        help_text="Payor's suffix."
+    )
+    payor_city = fields.CharField(
+        max_length=30,
+        db_column='PAYOR_CITY',
+        blank=True,
+        help_text="Payor's city."
+    )
+    payor_st = fields.CharField(
+        max_length=2,
+        db_column='PAYOR_ST',
+        blank=True,
+        help_text="Payor's State."
+    )
+    payor_zip4 = fields.CharField(
+        max_length=10,
+        db_column='PAYOR_ZIP4',
+        blank=True,
+        help_text="Payor's zip code"
+    )
+    date_rcvd = fields.DateField(
+        db_column='DATE_RCVD',
+        null=True,
+        help_text="Date received"
+    )
+    amt_rcvd = fields.DecimalField(
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMT_RCVD',
+        help_text="Amount received"
+    )
+    cand_naml = fields.CharField(
+        max_length=200,
+        db_column='CAND_NAML',
+        blank=True,
+        help_text="Candidate/officerholder last name"
+    )
+    cand_namf = fields.CharField(
+        max_length=45,
+        db_column='CAND_NAMF',
+        blank=True,
+        help_text="Candidate/officerholder first name"
+    )
+    cand_namt = fields.CharField(
+        max_length=10,
+        db_column='CAND_NAMT',
+        blank=True,
+        help_text="Candidate/officerholder title or prefix"
+    )
+    cand_nams = fields.CharField(
+        max_length=10,
+        db_column='CAND_NAMS',
+        blank=True,
+        help_text="Candidate/officerholder suffix"
+    )
+    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+        ('gov', choices.OFFICE_CODES['GOV']),
+        ('oth', choices.OFFICE_CODES['OTH']),
+    )
+    office_cd = fields.CharField(
+        db_column='OFFICE_CD',
+        max_length=4,
+        blank=True,
+        verbose_name="office code",
+        choices=OFFICE_CD_CHOICES,
+        help_text="Identifies the office being sought",
+        documentcloud_pages=choices.DOCS['office_codes'],
+    )
+    offic_dscr = fields.CharField(
+        max_length=40,
+        db_column='OFFIC_DSCR',
+        blank=True,
+        help_text="Description of office sought"
+    )
+    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+        ('GOV', choices.JURIS_CODES['STW']),
+        ('COU', choices.JURIS_CODES['CTY']),
+    )
+    juris_cd = fields.CharField(
+        max_length=3,
+        db_column='JURIS_CD',
+        blank=True,
+        choices=JURIS_CD_CHOICES,
+        help_text="Office jurisdiction code",
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
+        ]
+    )
+    juris_dscr = fields.CharField(
+        max_length=40,
+        db_column='JURIS_DSCR',
+        blank=True,
+        help_text="Office jurisdiction description"
+    )
+    dist_no = fields.CharField(
+        max_length=3,
+        db_column='DIST_NO',
+        blank=True,
+        help_text="District number for the office being sought. \
+Populated for Senate, Assembly, or Board of Equalization races."
+    )
+    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
+    off_s_h_cd = fields.CharField(
+        max_length=1,
+        db_column='OFF_S_H_CD',
+        blank=True,
+        help_text='Office is sought or held code',
+        choices=OFF_S_H_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=44),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
+        ]
+    )
+    bal_name = fields.CharField(
+        max_length=200,
+        db_column='BAL_NAME',
+        blank=True,
+        help_text="Ballot measure name"
+    )
+    bal_num = fields.CharField(
+        max_length=7,
+        db_column='BAL_NUM',
+        blank=True,
+        help_text="Ballot measure number or letter."
+    )
+    bal_juris = fields.CharField(
+        max_length=40,
+        db_column='BAL_JURIS',
+        blank=True,
+        help_text="Jurisdiction of ballot measure"
+    )
+    SUP_OPP_CD_CHOICES = get_sorted_choices(choices.SUP_OPP_CODES)
+    sup_opp_cd = fields.CharField(
+        max_length=1,
+        db_column='SUP_OPP_CD',
+        blank=True,
+        help_text="Support or opposition code",
+        choices=SUP_OPP_CD_CHOICES,
+        documentcloud_pages=[
+            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
+            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
+        ]
+    )
+    amt_attrib = fields.DecimalField(
+        max_digits=16,
+        decimal_places=2,
+        db_column='AMT_ATTRIB',
+        help_text="Amount attributed (only if Form_type = 'F498-A')"
+    )
+    memo_code = fields.CharField(
+        max_length=1,
+        db_column='MEMO_CODE',
+        blank=True,
+        help_text="Memo amount flat"
+    )
+    memo_refno = fields.CharField(
+        max_length=20,
+        db_column='MEMO_REFNO',
+        blank=True,
+        help_text='Reference text contained in TEXT record'
+    )
+    employer = fields.CharField(
+        max_length=200,
+        db_column='EMPLOYER',
+        blank=True,
+        help_text="This field is undocumented"
+    )
+    occupation = fields.CharField(
+        max_length=60,
+        db_column='OCCUPATION',
+        blank=True,
+        help_text='This field is undocumented'
+    )
+    selfemp_cb = fields.CharField(
+        max_length=1,
+        db_column='SELFEMP_CB',
+        blank=True,
+        help_text='Self-employed checkbox'
+    )
+
+    def __str__(self):
+        return str(self.filing_id)
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'S498_CD'
+        verbose_name = 'S498_CD'
+        verbose_name_plural = 'S498_CD'
 
 
 @python_2_unicode_compatible
@@ -6073,559 +6641,3 @@ Populated for Senate, Assembly, or Board of Equalization races.',
         db_table = 'F501_502_CD'
         verbose_name = 'F501_502_CD'
         verbose_name_plural = 'F501_502_CD'
-
-
-@python_2_unicode_compatible
-class S498Cd(CalAccessBaseModel):
-    """
-    Payments received by Slate Mailer Organizations within 90 days of an election,
-    as reported on Form 498.
-    """
-    UNIQUE_KEY = (
-        "FILING_ID",
-        "AMEND_ID",
-        "LINE_ITEM",
-        "REC_TYPE",
-        "FORM_TYPE",
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=127, end_page=129),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=83, end_page=85),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43, end_page=44),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=56, end_page=57),
-    ]
-    FILING_FORMS = [
-        get_filing_form('F498').get_section('A'),
-        get_filing_form('F498').get_section('R'),
-    ]
-    filing_id = fields.IntegerField(
-        db_column='FILING_ID',
-        db_index=True,
-        verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
-    )
-    amend_id = fields.IntegerField(
-        db_column='AMEND_ID',
-        db_index=True,
-        help_text="Amendment identification number. A number of 0 is the \
-original filing and 1 to 999 amendments.",
-        verbose_name="amendment ID"
-    )
-    line_item = fields.IntegerField(
-        db_column='LINE_ITEM',
-        help_text="Line item number of this record",
-        db_index=True,
-    )
-    REC_TYPE_CHOICES = (
-        ("S498", "S498"),
-    )
-    rec_type = fields.CharField(
-        verbose_name='record type',
-        db_column='REC_TYPE',
-        max_length=4,
-        db_index=True,
-        choices=REC_TYPE_CHOICES,
-        help_text="Record Type Value: S498",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
-        ]
-    )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
-    form_type = fields.CharField(
-        max_length=9,
-        db_column='FORM_TYPE',
-        blank=True,
-        choices=FORM_TYPE_CHOICES,
-        help_text='Name of the source filing form or schedule',
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
-        ]
-    )
-    tran_id = fields.CharField(
-        verbose_name='transaction ID',
-        max_length=20,
-        db_column='TRAN_ID',
-        blank=True,
-        help_text='Permanent value unique to this item',
-    )
-    ENTITY_CD_CHOICES = (
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-    )
-    entity_cd = fields.CharField(
-        max_length=3,
-        db_column='ENTITY_CD',
-        blank=True,
-        verbose_name='entity code',
-        help_text="Entity code",
-        choices=ENTITY_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
-        ]
-    )
-    cmte_id = fields.CharField(
-        max_length=9,
-        db_column='CMTE_ID',
-        blank=True,
-        verbose_name="Committee ID",
-        help_text="Committee identification number"
-    )
-    payor_naml = fields.CharField(
-        max_length=200,
-        db_column='PAYOR_NAML',
-        blank=True,
-        help_text="Payor's last name or business name"
-    )
-    payor_namf = fields.CharField(
-        max_length=45,
-        db_column='PAYOR_NAMF',
-        blank=True,
-        help_text="Payor's first name."
-    )
-    payor_namt = fields.CharField(
-        max_length=10,
-        db_column='PAYOR_NAMT',
-        blank=True,
-        help_text="Payor's Prefix or title."
-    )
-    payor_nams = fields.CharField(
-        max_length=10,
-        db_column='PAYOR_NAMS',
-        blank=True,
-        help_text="Payor's suffix."
-    )
-    payor_city = fields.CharField(
-        max_length=30,
-        db_column='PAYOR_CITY',
-        blank=True,
-        help_text="Payor's city."
-    )
-    payor_st = fields.CharField(
-        max_length=2,
-        db_column='PAYOR_ST',
-        blank=True,
-        help_text="Payor's State."
-    )
-    payor_zip4 = fields.CharField(
-        max_length=10,
-        db_column='PAYOR_ZIP4',
-        blank=True,
-        help_text="Payor's zip code"
-    )
-    date_rcvd = fields.DateField(
-        db_column='DATE_RCVD',
-        null=True,
-        help_text="Date received"
-    )
-    amt_rcvd = fields.DecimalField(
-        max_digits=16,
-        decimal_places=2,
-        db_column='AMT_RCVD',
-        help_text="Amount received"
-    )
-    cand_naml = fields.CharField(
-        max_length=200,
-        db_column='CAND_NAML',
-        blank=True,
-        help_text="Candidate/officerholder last name"
-    )
-    cand_namf = fields.CharField(
-        max_length=45,
-        db_column='CAND_NAMF',
-        blank=True,
-        help_text="Candidate/officerholder first name"
-    )
-    cand_namt = fields.CharField(
-        max_length=10,
-        db_column='CAND_NAMT',
-        blank=True,
-        help_text="Candidate/officerholder title or prefix"
-    )
-    cand_nams = fields.CharField(
-        max_length=10,
-        db_column='CAND_NAMS',
-        blank=True,
-        help_text="Candidate/officerholder suffix"
-    )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
-        ('gov', choices.OFFICE_CODES['GOV']),
-        ('oth', choices.OFFICE_CODES['OTH']),
-    )
-    office_cd = fields.CharField(
-        db_column='OFFICE_CD',
-        max_length=4,
-        blank=True,
-        verbose_name="office code",
-        choices=OFFICE_CD_CHOICES,
-        help_text="Identifies the office being sought",
-        documentcloud_pages=choices.DOCS['office_codes'],
-    )
-    offic_dscr = fields.CharField(
-        max_length=40,
-        db_column='OFFIC_DSCR',
-        blank=True,
-        help_text="Description of office sought"
-    )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
-        ('GOV', choices.JURIS_CODES['STW']),
-        ('COU', choices.JURIS_CODES['CTY']),
-    )
-    juris_cd = fields.CharField(
-        max_length=3,
-        db_column='JURIS_CD',
-        blank=True,
-        choices=JURIS_CD_CHOICES,
-        help_text="Office jurisdiction code",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
-        ]
-    )
-    juris_dscr = fields.CharField(
-        max_length=40,
-        db_column='JURIS_DSCR',
-        blank=True,
-        help_text="Office jurisdiction description"
-    )
-    dist_no = fields.CharField(
-        max_length=3,
-        db_column='DIST_NO',
-        blank=True,
-        help_text="District number for the office being sought. \
-Populated for Senate, Assembly, or Board of Equalization races."
-    )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
-    off_s_h_cd = fields.CharField(
-        max_length=1,
-        db_column='OFF_S_H_CD',
-        blank=True,
-        help_text='Office is sought or held code',
-        choices=OFF_S_H_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=44),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
-        ]
-    )
-    bal_name = fields.CharField(
-        max_length=200,
-        db_column='BAL_NAME',
-        blank=True,
-        help_text="Ballot measure name"
-    )
-    bal_num = fields.CharField(
-        max_length=7,
-        db_column='BAL_NUM',
-        blank=True,
-        help_text="Ballot measure number or letter."
-    )
-    bal_juris = fields.CharField(
-        max_length=40,
-        db_column='BAL_JURIS',
-        blank=True,
-        help_text="Jurisdiction of ballot measure"
-    )
-    SUP_OPP_CD_CHOICES = get_sorted_choices(choices.SUP_OPP_CODES)
-    sup_opp_cd = fields.CharField(
-        max_length=1,
-        db_column='SUP_OPP_CD',
-        blank=True,
-        help_text="Support or opposition code",
-        choices=SUP_OPP_CD_CHOICES,
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=57),
-        ]
-    )
-    amt_attrib = fields.DecimalField(
-        max_digits=16,
-        decimal_places=2,
-        db_column='AMT_ATTRIB',
-        help_text="Amount attributed (only if Form_type = 'F498-A')"
-    )
-    memo_code = fields.CharField(
-        max_length=1,
-        db_column='MEMO_CODE',
-        blank=True,
-        help_text="Memo amount flat"
-    )
-    memo_refno = fields.CharField(
-        max_length=20,
-        db_column='MEMO_REFNO',
-        blank=True,
-        help_text='Reference text contained in TEXT record'
-    )
-    employer = fields.CharField(
-        max_length=200,
-        db_column='EMPLOYER',
-        blank=True,
-        help_text="This field is undocumented"
-    )
-    occupation = fields.CharField(
-        max_length=60,
-        db_column='OCCUPATION',
-        blank=True,
-        help_text='This field is undocumented'
-    )
-    selfemp_cb = fields.CharField(
-        max_length=1,
-        db_column='SELFEMP_CB',
-        blank=True,
-        help_text='Self-employed checkbox'
-    )
-
-    def __str__(self):
-        return str(self.filing_id)
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'S498_CD'
-        verbose_name = 'S498_CD'
-        verbose_name_plural = 'S498_CD'
-
-
-@python_2_unicode_compatible
-class CvrF470Cd(CalAccessBaseModel):
-    """
-    Cover page information for Officeholder and Candidate Short and Supplement Forms
-    (Form 470)
-    """
-    UNIQUE_KEY = (
-        "FILING_ID",
-        "AMEND_ID",
-        "REC_TYPE",
-        "FORM_TYPE",
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
-    ]
-    FILING_FORMS = [
-        get_filing_form('F470'),
-    ]
-    amend_id = fields.IntegerField(
-        db_column="AMEND_ID",
-        db_index=True,
-        help_text="Amendment Identification number. A number of 0 is an original filing and 1 "
-                  "to 999 amendments."
-    )
-    cand_adr1 = fields.CharField(
-        db_column="CAND_ADR1",
-        blank=True,
-        max_length=55,
-        help_text="First line of the filer's street address."
-    )
-    cand_adr2 = fields.CharField(
-        db_column="CAND_ADR2",
-        blank=True,
-        max_length=55,
-        help_text="Second line of the filer's street address. "
-    )
-    cand_city = fields.CharField(
-        db_column="CAND_CITY",
-        blank=True,
-        max_length=30,
-        help_text="Candidate/Officeholder's City."
-    )
-    cand_email = fields.CharField(
-        db_column="CAND_EMAIL",
-        blank=True,
-        max_length=60,
-        help_text="Candidate/Officeholder's EMail address. Not required by the form."
-    )
-    cand_fax = fields.CharField(
-        db_column="CAND_FAX",
-        blank=True,
-        max_length=20,
-        help_text="Candidate/Officeholder's FAX Phone Number. Not required by the form."
-    )
-    cand_phon = fields.CharField(
-        db_column="CAND_PHON",
-        blank=True,
-        max_length=20,
-        help_text="Candidate/Officeholder's phone number."
-    )
-    cand_st = fields.CharField(
-        db_column="CAND_ST",
-        blank=True,
-        max_length=2,
-        help_text="Filer's State"
-    )
-    cand_zip4 = fields.CharField(
-        db_column="CAND_ZIP4",
-        blank=True,
-        max_length=10,
-        help_text="Filer's zipcode"
-    )
-    date_1000 = fields.DateField(
-        db_column="DATE_1000",
-        help_text="Date contributions totaling $1,000 or more. (For the 470-S)"
-    )
-    dist_no = fields.CharField(
-        db_column="DIST_NO",
-        blank=True,
-        max_length=3,
-        help_text="District number for the office being sought. Populated for Senate, Assembly, "
-                  "or Board of Equalization races."
-    )
-    elect_date = fields.DateField(
-        db_column="ELECT_DATE",
-        help_text="Date of the general election. Required for filings in even years."
-    )
-    ENTITY_CD_CHOICES = (
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-    )
-    entity_cd = fields.CharField(
-        db_column="ENTITY_CD",
-        blank=True,
-        choices=ENTITY_CD_CHOICES,
-        max_length=3,
-        help_text="The filer's entity code. The value of this column will always be "
-                  "Candidate/Office Holder (CAO) for this table.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29)
-        ]
-    )
-    filer_id = fields.CharField(
-        db_column="FILER_ID",
-        blank=True,
-        max_length=9,
-        help_text="Filer's unique identification number."
-    )
-    filer_namf = fields.CharField(
-        db_column="FILER_NAMF",
-        blank=True,
-        max_length=45,
-        help_text="Filer's First Name(s) - required for individuals"
-    )
-    filer_naml = fields.CharField(
-        db_column="FILER_NAML",
-        blank=True,
-        max_length=200,
-        help_text="Filer's Last Name/Committee name"
-    )
-    filer_nams = fields.CharField(
-        db_column="FILER_NAMS",
-        blank=True,
-        max_length=10,
-        help_text="Filer's Name Suffix"
-    )
-    filer_namt = fields.CharField(
-        db_column="FILER_NAMT",
-        blank=True,
-        max_length=10,
-        help_text="The filer's prefix or title that preceeds their name if they are an individual."
-    )
-    filing_id = fields.IntegerField(
-        db_column="FILING_ID",
-        db_index=True,
-        help_text="Unique filing identification number."
-    )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
-    form_type = fields.CharField(
-        db_column="FORM_TYPE",
-        choices=FORM_TYPE_CHOICES,
-        db_index=True,
-        max_length=4,
-        help_text="Type of Filing or Formset. The value of this column will always "
-                  "be equal to F470.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
-    juris_cd = fields.CharField(
-        db_column="JURIS_CD",
-        choices=JURIS_CD_CHOICES,
-        blank=True,
-        max_length=3,
-        help_text="Office Jurisdiction Code",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    juris_dscr = fields.CharField(
-        db_column="JURIS_DSCR",
-        blank=True,
-        max_length=40,
-        help_text="Office jurisdiction description text reqired if the jurisdiction code "
-                  "(Juris_cd) is equal to CIT, CTY, LOC, or OTH."
-    )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
-    off_s_h_cd = fields.CharField(
-        db_column="OFF_S_H_CD",
-        choices=OFF_S_H_CD_CHOICES,
-        blank=True,
-        max_length=1,
-        help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.',
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=30),
-        ]
-    )
-    offic_dscr = fields.CharField(
-        db_column="OFFIC_DSCR",
-        blank=True,
-        max_length=40,
-        help_text="Office sought description used if the office code is other (OTH)."
-    )
-    OFFICE_CD_CODES = get_sorted_choices(choices.OFFICE_CODES)
-    office_cd = fields.CharField(
-        db_column="OFFICE_CD",
-        choices=OFFICE_CD_CODES,
-        blank=True,
-        max_length=3,
-        help_text="Code that identifies the office being sought. See the CAL document for "
-                  "a list of valid codes.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    REC_TYPE_CHOICES = (
-        ('CVR', 'Cover Page'),
-    )
-    rec_type = fields.CharField(
-        db_column="REC_TYPE",
-        choices=REC_TYPE_CHOICES,
-        blank=True,
-        max_length=3,
-        help_text="Type of CAL record. This column will always contain CVR.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    report_num = fields.CharField(
-        db_column="REPORT_NUM",
-        blank=True,
-        max_length=3,
-        help_text="Report Number; 000 Original; 001-999 Amended as reported in the filing."
-    )
-    rpt_date = fields.DateField(
-        db_column="RPT_DATE",
-        db_index=True,
-        null=True,
-        help_text="Date this report is filed as reported by the filer."
-    )
-
-    def __str__(self):
-        return str(self.amend_id)
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'CVR_F470_CD'
-        verbose_name = 'CVR_F470_CD'
-        verbose_name_plural = 'CVR_F470_CD'
