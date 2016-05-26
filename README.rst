@@ -8,7 +8,7 @@ activity data from the California Secretary of State's
 |Build Status| |PyPI version| |Coverage Status| |Documentation Status|
 
 -  Documentation:
-   `django-calaccess-raw-data.californiacivicdata.org <http://django-calaccess-raw-data.californiacivicdata.org>`__
+   `django-calaccess.californiacivicdata.org <http://django-calaccess.californiacivicdata.org>`__
 -  Issues:
    `github.com/california-civic-data-coalition/django-calaccess-raw-data/issues <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues>`__
 -  Packaging:
