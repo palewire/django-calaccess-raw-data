@@ -6644,3 +6644,67 @@ Populated for Senate, Assembly, or Board of Equalization races.',
         db_table = 'F501_502_CD'
         verbose_name = 'F501_502_CD'
         verbose_name_plural = 'F501_502_CD'
+
+
+# =============================================================================
+# ---------------------------- Ballot Measures --------------------------------
+# =============================================================================
+
+@python_2_unicode_compatible
+class BallotMeasuresCd(CalAccessBaseModel):
+    """
+    Ballot measure dates and times
+    """
+    UNIQUE_KEY = "FILER_ID"
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=7),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=19),
+    ]
+    election_date = fields.DateField(
+        db_column='ELECTION_DATE',
+        null=True,
+        help_text="Ballot measure election date"
+    )
+    filer_id = fields.IntegerField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        null=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
+    measure_no = fields.CharField(
+        db_column='MEASURE_NO',
+        max_length=2,
+        help_text="Ballot measure number"
+    )
+    measure_name = fields.CharField(
+        db_column='MEASURE_NAME',
+        max_length=163,
+        help_text="Ballot measure full name"
+    )
+    measure_short_name = fields.CharField(
+        db_column='MEASURE_SHORT_NAME',
+        max_length=50,
+        blank=True,
+        help_text="Ballot measure short name"
+    )
+    jurisdiction = fields.CharField(
+        db_column='JURISDICTION',
+        max_length=9,
+        help_text="This field is undocumented"
+    )
+
+    class Meta:
+        app_label = 'calaccess_raw'
+        db_table = 'BALLOT_MEASURES_CD'
+        verbose_name = 'BALLOT_MEASURES_CD'
+        verbose_name_plural = 'BALLOT_MEASURES_CD'
+        ordering = (
+            "-election_date",
+            "measure_no",
+            "measure_short_name",
+            "measure_name"
+        )
+
+    def __str__(self):
+        return self.measure_name
