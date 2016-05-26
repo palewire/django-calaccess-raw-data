@@ -2323,7 +2323,10 @@ original filing and 1 to 999 amendments.",
 class CvrF470Cd(CalAccessBaseModel):
     """
     Cover page information for Officeholder and Candidate Short and Supplement Forms
-    (Form 470)
+    (Form 470).
+
+    An empty file of the same name is included in the Secretary of State's daily
+    CAL-ACCESS database exports.
     """
     UNIQUE_KEY = (
         "FILING_ID",
