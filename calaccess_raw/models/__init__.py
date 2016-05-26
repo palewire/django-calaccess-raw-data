@@ -18,6 +18,7 @@ from calaccess_raw.models.campaign import (
     S497Cd,
     S498Cd,
     F501502Cd,
+    BallotMeasuresCd,
 )
 from calaccess_raw.models.lobbying import (
     CvrRegistrationCd,
@@ -63,11 +64,8 @@ from calaccess_raw.models.common import (
     SmryCd,
     SpltCd,
     TextMemoCd,
-)
-from calaccess_raw.models.other import (
     AcronymsCd,
     AddressCd,
-    BallotMeasuresCd,
     EfsFilingLogCd,
     FilersCd,
     FilerAcronymsCd,
