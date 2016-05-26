@@ -2,7 +2,7 @@ These docs have moved...
 ========================
 
 .. meta::
-   :http-equiv=refresh: 5;URL='http://django-calaccess.readthedocs.io/en/latest/'
+   :http-equiv=refresh: 4;URL='http://django-calaccess.californiacivicdata.org/en/latest/howtocontribute.html'
 
 
-...to `django-calaccess.readthedocs.io <http://django-calaccess.readthedocs.io/en/latest/>`_. You will be re-directed in 5 seconds.
+...to `django-calaccess.californiacivicdata.org/en/latest/howtocontribute.html <http://django-calaccess.californiacivicdata.org/en/latest/howtocontribute.html>`_. You will be re-directed in a few seconds.
