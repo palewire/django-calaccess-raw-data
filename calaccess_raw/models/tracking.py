@@ -115,7 +115,7 @@ class RawDataFile(models.Model):
         blank=True,
         max_length=255,
         upload_to=archive_directory_path,
-        verbose_name='archive of download file',
+        verbose_name='archive of clean file',
         help_text='An archive of the raw data file after being cleaned.'
     )
 
