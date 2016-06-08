@@ -5,11 +5,12 @@ from setuptools import setup
 
 setup(
     name='django-calaccess-raw-data',
-    version='1.0.1',
+    version='1.0.2',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
         'calaccess_raw.management',
+        'calaccess_raw.migrations',
         'calaccess_raw.management.commands',
         'calaccess_raw.models',
         'calaccess_raw.annotations',
