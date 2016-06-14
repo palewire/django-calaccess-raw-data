@@ -1,7 +1,7 @@
 # How to contribute
 
 We welcome issues and pull requests for all parties. If you're looking for a place to plug in,
-work through our [getting started guide of new contributors](http://django-calaccess-raw-data.californiacivicdata.org/en/latest/howtocontribute.html)
+work through our [getting started guide of new contributors](http://django-calaccess.californiacivicdata.org/en/latest/howtocontribute.html)
 and then check out [our open issues list](https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues) to see if anything interests you. If this repository isn't your cup of tea, check out our other projects [on GitHub](https://github.com/california-civic-data-coalition/).
 
 ## How do the tests work?
@@ -18,8 +18,8 @@ We try not to be too uptight, but we generally expect the tests to be pass befor
 
 ## How can I contribute documentation?
 
-The [documentation](http://django-calaccess-raw-data.californiacivicdata.org/en/latest/) for this
-repository is published online by ReadTheDocs using the files found in the [./docs/](https://github.com/california-civic-data-coalition/django-calaccess-raw-data/tree/master/docs) directory.
+The [documentation](http://django-calaccess.californiacivicdata.org/) for this
+project is published online by ReadTheDocs using the files found in [a dedicated repository](https://github.com/california-civic-data-coalition/django-calaccess-technical-documentation).
 
 Those files are compiled using Python's [Sphinx](http://www.sphinx-doc.org/en/stable/) documentation framework, which is written in [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html) format.
 
