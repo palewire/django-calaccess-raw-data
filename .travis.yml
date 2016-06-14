@@ -13,9 +13,9 @@ env:
  - DJANGO_VERSION=1.9.7 DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.9.7 DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.9.7 DATABASE_SETTINGS='settings_test_multi_dbs.py'
- - DJANGO_VERSION=1.10.1a DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.10.1a DATABASE_SETTINGS='settings_test_postgresql.py'
- - DJANGO_VERSION=1.10.1a DATABASE_SETTINGS='settings_test_multi_dbs.py'
+ - DJANGO_VERSION=1.10a1 DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=1.10a1 DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=1.10a1 DATABASE_SETTINGS='settings_test_multi_dbs.py'
 
 install:
  - pip install -r requirements_dev.txt
