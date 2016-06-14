@@ -37,7 +37,7 @@ class Command(CalAccessCommand):
         """
         super(Command, self).handle(*args, **kwargs)
         self.set_options()
-        self.header("Analyzing Code Rush contributors")
+        self.header("Analyzing contributors")
 
         self.headers = [
             'repo',
@@ -64,10 +64,10 @@ class Command(CalAccessCommand):
                 d = dict(
                     repo=repo.name,
                     name=contrib.login,
-                    company=contrib.company,
-                    location=contrib.location,
-                    avatar_url=contrib.avatar_url,
-                    contributions=contrib.contributions
+                    #company='foo',#contrib.company,
+                    #location=contrib.location,
+                    #avatar_url=contrib.avatar_url,
+                    #contributions=contrib.contributions
                 )
                 self.outfile.writerow(d)
                 time.sleep(1)
