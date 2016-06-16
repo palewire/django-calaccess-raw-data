@@ -4,9 +4,8 @@ Sphinx
 sphinx_rtd_theme
 coverage
 hurry.filesize
-pep8
+flake8
 psycopg2
-pyflakes
 python-coveralls
 pytz
 requests

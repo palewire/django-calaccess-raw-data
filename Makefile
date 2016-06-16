@@ -28,8 +28,7 @@ sh:
 	python example/manage.py shell
 
 test:
-	pep8 calaccess_raw
-	pyflakes calaccess_raw
+	flake8 calaccess_raw
 	coverage run example/manage.py test calaccess_raw
 	coverage report -m
 

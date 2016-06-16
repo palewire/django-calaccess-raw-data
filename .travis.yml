@@ -28,8 +28,7 @@ before_script:
   - cp example/$DATABASE_SETTINGS.template example/settings_local.py
 
 script:
- - pep8 calaccess_raw
- - pyflakes calaccess_raw
+ - flake8 calaccess_raw
  - python example/manage.py migrate
  - coverage run example/manage.py test calaccess_raw
 
