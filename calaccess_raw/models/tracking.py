@@ -43,6 +43,13 @@ class RawDataVersion(models.Model):
         return str(self.release_datetime)
 
     def pretty_size(self):
+        """
+        Returns a prettified version of the file size, converted from
+        bytes into larger units like megabytes that people can better
+        understand.
+        """
+        if not self.size:
+            return None
         return sizeformat(self.size)
     pretty_size.short_description = 'size'
     pretty_size.admin_order_field = 'size'
