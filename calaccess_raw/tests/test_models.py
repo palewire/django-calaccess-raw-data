@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 import logging
 from django.test import TestCase
 from calaccess_raw import models
+from calaccess_raw.admin import BaseAdmin
+from django.contrib.admin import AdminSite
 logger = logging.getLogger(__name__)
 
 
@@ -40,3 +42,9 @@ class CommandTestCase(TestCase):
         models.RawDataVersion(size=1000).pretty_size()
         models.RawDataFile().__str__()
         models.RawDataCommand().__str__()
+
+    def test_admins(self):
+        """
+        Text the extra methods we've added to the admins.
+        """
+        BaseAdmin(models.RcptCd, AdminSite()).get_readonly_fields()
