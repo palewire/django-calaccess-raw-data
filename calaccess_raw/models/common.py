@@ -8,10 +8,11 @@ from calaccess_raw.annotations import (
     choices,
     get_sorted_choices
 )
-from calaccess_raw.annotations.filing_forms import get_filing_form, all_filing_forms
-from django.template.defaultfilters import floatformat
+from calaccess_raw.annotations.filing_forms import (
+    get_filing_form,
+    all_filing_forms
+)
 from django.utils.encoding import python_2_unicode_compatible
-from django.contrib.humanize.templatetags.humanize import intcomma
 
 
 @python_2_unicode_compatible
@@ -804,24 +805,6 @@ original filing and 1 to 999 amendments.",
 
     def __str__(self):
         return str(self.filing_id)
-
-    def pretty_amount_a(self):
-        if self.amount_a is None:
-            return None
-        return "$%s" % intcomma(floatformat(self.amount_a, 0))
-    pretty_amount_a.short_description = 'amount A'
-
-    def pretty_amount_b(self):
-        if self.amount_b is None:
-            return None
-        return "$%s" % intcomma(floatformat(self.amount_b, 0))
-    pretty_amount_b.short_description = 'amount B'
-
-    def pretty_amount_c(self):
-        if self.amount_c is None:
-            return None
-        return "$%s" % intcomma(floatformat(self.amount_c, 0))
-    pretty_amount_c.short_description = 'amount C'
 
 
 @python_2_unicode_compatible

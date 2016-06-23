@@ -49,9 +49,9 @@ class SmryCdAdmin(BaseAdmin):
         'amend_id',
         'form_type',
         'line_item',
-        'pretty_amount_a',
-        'pretty_amount_b',
-        'pretty_amount_c',
+        'amount_a',
+        'amount_b',
+        'amount_c',
     )
     list_filter = ('form_type',)
     search_fields = ('filing_id', 'form_type', 'line_item')
