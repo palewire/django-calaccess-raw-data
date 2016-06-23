@@ -2,6 +2,9 @@
 include =
     calaccess_raw/*.py
 
+omit =
+    calaccess_raw/tests/*.py
+
 [report]
 exclude_lines =
     pragma: no cover
