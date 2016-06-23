@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from .base import CalAccessBaseModel
 from calaccess_raw import fields
+from .base import CalAccessBaseModel
 from calaccess_raw.annotations.filing_forms import get_filing_form
+from django.utils.encoding import python_2_unicode_compatible
 from calaccess_raw.annotations import (
     DocumentCloud,
     choices,
     get_sorted_choices
 )
-from django.utils.encoding import python_2_unicode_compatible
 
 
 # =============================================================================
@@ -866,7 +866,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     the electronic filing. The data contained herein is "as filed" by the entity
     making the filing.
     """
-    UNIQUE_KEY = ('FILING_ID', 'AMEND_ID',)
+    UNIQUE_KEY = ('FILING_ID', 'AMEND_ID',).
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=7),
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=25, end_page=29),
