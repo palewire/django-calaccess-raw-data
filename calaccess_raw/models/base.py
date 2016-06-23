@@ -130,15 +130,9 @@ class CalAccessBaseModel(models.Model):
 
         Each tuple contains a DocumentCloud and DocPage object.
         """
-        from calaccess_raw.annotations import DocumentCloud
-
         page_list = []
         for dc in self.DOCUMENTCLOUD_PAGES:
-            if not isinstance(dc, DocumentCloud):
-                raise TypeError("Values must be instances of DocumentCloud")
-
             page_list.extend([(dc, page) for page in dc.pages])
-
         return page_list
 
     def get_filing_forms_w_sections(self):
