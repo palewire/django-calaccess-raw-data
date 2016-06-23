@@ -38,3 +38,7 @@ testdocs:
 testutils:
 	coverage run example/manage.py test calaccess_raw.tests.test_utilities.UtilityTestCase
 	coverage report -m
+
+testannotations:
+	coverage run example/manage.py test calaccess_raw.tests.test_annotations.AnnotationTestCase
+	coverage report -m
