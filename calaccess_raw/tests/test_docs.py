@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import re
 import agate
 import logging
 from django.test import TestCase
@@ -73,6 +74,12 @@ class DocumentationTestCase(TestCase):
         results = []
         for m in get_model_list():
             exists = m().UNIQUE_KEY is not None
+            lowercases = sum([
+                1 for k in m().get_unique_key_list()
+                if re.search("[a-z]{1,}", k)
+            ]) or 0
+            if lowercases:
+                exists = False
             results.append([m().klass_group, m.__name__, exists])
         self.attr_test_output("model", "UNIQUE_KEY", results)
 

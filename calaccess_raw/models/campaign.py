@@ -866,7 +866,7 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
     the electronic filing. The data contained herein is "as filed" by the entity
     making the filing.
     """
-    UNIQUE_KEY = ['filing_id', 'amend_id']
+    UNIQUE_KEY = ('FILING_ID', 'AMEND_ID',)
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=7),
         DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=25, end_page=29),
