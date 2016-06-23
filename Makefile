@@ -34,3 +34,7 @@ test:
 
 testdocs:
 	python example/manage.py test calaccess_raw.tests.test_docs.DocumentationTestCase
+
+testutils:
+	coverage run example/manage.py test calaccess_raw.tests.test_utilities.UtilityTestCase
+	coverage report -m

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import logging
+from copy import deepcopy
 from django.test import TestCase
 from calaccess_raw import models
 from calaccess_raw.admin import BaseAdmin
@@ -9,7 +10,7 @@ from django.contrib.admin import AdminSite
 logger = logging.getLogger(__name__)
 
 
-class CommandTestCase(TestCase):
+class ModelTestCase(TestCase):
     """
     Tests related to the database models.
     """
@@ -32,9 +33,10 @@ class CommandTestCase(TestCase):
         m.get_unique_key_list()
         m.get_documentcloud_pages()
         m.get_filing_forms_w_sections()
-
+        unique_key = deepcopy(models.RcptCd.UNIQUE_KEY)
         models.RcptCd.UNIQUE_KEY = None
         models.RcptCd().get_unique_key_list()
+        models.RcptCd.UNIQUE_KEY = unique_key
 
         # Our tracking models
         models.RawDataVersion().__str__()
