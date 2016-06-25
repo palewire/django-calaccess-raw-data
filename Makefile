@@ -46,3 +46,7 @@ testannotations:
 testfields:
 	coverage run example/manage.py test calaccess_raw.tests.test_fields.FieldTestCase
 	coverage report -m
+
+testcommands:
+	coverage run example/manage.py test calaccess_raw.tests.test_commands.CommandTestCase
+	coverage report -m

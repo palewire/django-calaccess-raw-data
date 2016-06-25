@@ -6,6 +6,7 @@ from django.test import TestCase
 from calaccess_raw import get_model_list
 from django.test.utils import override_settings
 from django.core.management import call_command
+from calaccess_raw.management.commands import CalAccessCommand
 logger = logging.getLogger(__name__)
 
 
@@ -23,6 +24,12 @@ class CommandTestCase(TestCase):
         super(CommandTestCase, cls).setUpClass()
         kwargs = dict(verbosity=3, test_data=True, noinput=True)
         call_command("updatecalaccessrawdata", **kwargs)
+
+    def test_download_metadata(self):
+        """
+        Test the bit that downloads metadata about the latest dump.
+        """
+        CalAccessCommand().get_download_metadata()
 
     @override_settings(BASE_DIR='example/')
     def test_csv_gettrs(self):
