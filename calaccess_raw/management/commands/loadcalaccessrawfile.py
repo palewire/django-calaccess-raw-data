@@ -120,6 +120,8 @@ class Command(CalAccessCommand):
         # add clean counts to raw_file_record
         raw_file.clean_columns_count = len(self.get_headers())
         raw_file.clean_records_count = self.get_row_count()
+        raw_file.load_columns_count = len(self.model._meta.fields)
+        raw_file.load_records_count = self.model.objects.count()
         raw_file.save()
 
         # save the log record
