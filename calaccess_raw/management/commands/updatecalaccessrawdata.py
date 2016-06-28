@@ -167,7 +167,7 @@ class Command(CalAccessCommand):
                             can_resume = True
 
         if self.noinput:
-            # if already up-to-date, skip 
+            # if already up-to-date, skip
             if up_to_date:
                 self.log('Your database is already up-to-date.')
                 exit(0)
