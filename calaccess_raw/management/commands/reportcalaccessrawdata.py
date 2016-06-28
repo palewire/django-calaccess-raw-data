@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from __future__ import division
 import os
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw import get_model_list
+from calaccess_raw import get_model_list, get_download_directory
 from django.conf import settings
 from django.core.management import call_command
 from django.db.models import Sum
@@ -128,8 +128,8 @@ class Command(CalAccessCommand):
         Write .csv file to the docs directory
         """
         file_name = os.path.join(
-            getattr(settings, 'REPO_DIR'),
-            'docs/calaccess_raw_files_report.csv'
+            get_download_directory(),
+            'calaccess_raw_files_report.csv'
         )
 
         with open(file_name, 'w') as f:
