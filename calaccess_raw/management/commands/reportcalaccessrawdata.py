@@ -154,6 +154,8 @@ class Command(CalAccessCommand):
 
                 del row['id']
                 del row['version']
+                del row['download_file_archive']
+                del row['clean_file_archive']
 
                 row.update({
                         'pct_cleaned': '{0:.2%}'.format(
