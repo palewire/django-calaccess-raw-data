@@ -5,7 +5,6 @@ from __future__ import division
 import os
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_model_list, get_download_directory
-from django.conf import settings
 from django.core.management import call_command
 from django.db.models import Sum
 from django.forms.models import model_to_dict
