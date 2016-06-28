@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+from sys import exit
 from hurry.filesize import size
 from clint.textui import progress
 from django.conf import settings
@@ -166,6 +167,10 @@ class Command(CalAccessCommand):
                             can_resume = True
 
         if self.noinput:
+            # if already up-to-date, skip 
+            if up_to_date:
+                self.log('Your database is already up-to-date.')
+                exit(0)
             # if not taking input and can resume, automatically go into resume mode
             self.resume_mode = can_resume
         else:
