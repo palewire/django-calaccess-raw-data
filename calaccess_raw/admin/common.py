@@ -76,7 +76,9 @@ class SpltCdAdmin(BaseAdmin):
 
 @admin.register(models.TextMemoCd)
 class TextMemoCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filing_id", "amend_id", "form_type")
+    list_filter = ("form_type",)
+    search_fields = ("filing_id", "rec_no", "text4000")
 
 
 @admin.register(models.CvrE530Cd)
