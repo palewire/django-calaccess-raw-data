@@ -8,7 +8,9 @@ from .base import BaseAdmin
 
 @admin.register(models.CvrSoCd)
 class CvrSoCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filing_id", "amend_id", "rec_type")
+    list_filter = ("rec_type",)
+    search_fields = ("filing_id",)
 
 
 @admin.register(models.Cvr2SoCd)

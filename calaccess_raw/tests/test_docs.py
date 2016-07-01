@@ -72,15 +72,33 @@ class DocumentationTestCase(TestCase):
         Verify that each model has a UNIQUE_KEY attribute set.
         """
         results = []
-        for m in get_model_list():
+        
+        # Loop through the models
+         for m in get_model_list():
+ 
+            # Verify the model has a UNIQUE_KEY attribute
             exists = m().UNIQUE_KEY is not None
+
+            # Verify that the field names are not lowercase
             lowercases = sum([
                 1 for k in m().get_unique_key_list()
                 if re.search("[a-z]{1,}", k)
             ]) or 0
             if lowercases:
                 exists = False
+
+            # Verify that the fields actually exist
+            missing = [
+                f for f in m().get_unique_key_list()
+                    if not hasattr(m, f.lower())
+            ]
+            if missing:
+                exists = False
+
+            # Pass out results
             results.append([m().klass_group, m.__name__, exists])
+
+        # Print results
         self.attr_test_output("model", "UNIQUE_KEY", results)
 
     def test_model_documentcloud_pages(self):

@@ -25,7 +25,6 @@ class CvrSoCd(CalAccessBaseModel):
     UNIQUE_KEY = (
         "FILING_ID",
         "AMEND_ID",
-        "LINE_ITEM",
         "REC_TYPE",
         "FORM_TYPE",
     )
