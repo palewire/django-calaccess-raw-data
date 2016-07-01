@@ -1825,10 +1825,10 @@ class FilerAcronymsCd(CalAccessBaseModel):
         db_table = 'FILER_ACRONYMS_CD'
         verbose_name = 'FILER_ACRONYMS_CD'
         verbose_name_plural = 'FILER_ACRONYMS_CD'
-        ordering = ("id",)
+        ordering = ("acronym",)
 
     def __str__(self):
-        return self.acronym
+        return str(self.acronym)
 
 
 @python_2_unicode_compatible
@@ -1931,6 +1931,7 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         db_table = 'FILER_ETHICS_CLASS_CD'
         verbose_name = 'FILER_ETHICS_CLASS_CD'
         verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
+        ordering = ("-ethics_date",)
 
     def __str__(self):
         return str(self.filer_id)

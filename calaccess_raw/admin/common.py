@@ -129,7 +129,8 @@ class FilersCdAdmin(BaseAdmin):
 
 @admin.register(models.FilerAcronymsCd)
 class FilerAcronymsCdAdmin(BaseAdmin):
-    pass
+    list_display = ("acronym", "filer_id")
+    search_fields = ("acronym",)
 
 
 @admin.register(models.FilerAddressCd)
@@ -144,7 +145,9 @@ class FilerAddressCdAdmin(BaseAdmin):
 
 @admin.register(models.FilerEthicsClassCd)
 class FilerEthicsClassCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filer_id", "session_id", "ethics_date",)
+    search_fields = ("filer_id",)
+    date_hierarchy = "ethics_date"
 
 
 @admin.register(models.FilerInterestsCd)
