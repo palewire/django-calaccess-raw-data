@@ -3,6 +3,7 @@
 import sys
 import codecs
 import locale
+import logging
 import requests
 from re import sub
 from datetime import datetime
@@ -16,6 +17,7 @@ from calaccess_raw.models.tracking import (
     RawDataFile,
     RawDataCommand
 )
+logger = logging.getLogger(__name__)
 
 
 class CalAccessCommand(BaseCommand):
@@ -120,6 +122,7 @@ class CalAccessCommand(BaseCommand):
         Writes out a string to stdout formatted to look like a header
         that stands out among the other lines.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize(string, fg="cyan", opts=("bold",))
         self.stdout.write(string)
@@ -128,6 +131,7 @@ class CalAccessCommand(BaseCommand):
         """
         Writes out a string to stdout formatted to look like a standard line.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize("%s" % string, fg="white")
         self.stdout.write(string)
@@ -136,6 +140,7 @@ class CalAccessCommand(BaseCommand):
         """
         Writes out a string to stdout formatted green to communicate success.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize(string, fg="green")
         self.stdout.write(string)
@@ -144,6 +149,7 @@ class CalAccessCommand(BaseCommand):
         """
         Writes out a string to stdout formatted red to communicate failure.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize(string, fg="red")
         self.stdout.write(string)
