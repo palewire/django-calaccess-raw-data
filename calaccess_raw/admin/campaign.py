@@ -16,7 +16,9 @@ class CvrSoCdAdmin(BaseAdmin):
 
 @admin.register(models.Cvr2SoCd)
 class Cvr2SoCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filing_id",  "item_cd", "entity_cd", "enty_naml", "form_type",)
+    list_filter = ("form_type", "entity_cd", "off_s_h_cd", "item_cd")
+    search_fields = ("filing_id", "enty_naml", "enty_namf", "cmte_id")
 
 
 @admin.register(models.Cvr2CampaignDisclosureCd)
