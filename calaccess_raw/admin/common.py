@@ -83,7 +83,10 @@ class TextMemoCdAdmin(BaseAdmin):
 
 @admin.register(models.CvrE530Cd)
 class CvrE530CdAdmin(BaseAdmin):
-    pass
+    list_display = ("filing_id", "filer_naml", "office_cd", "cand_naml", "pmnt_dt", "pmnt_amount")
+    list_filter = ("office_cd",)
+    search_fields = ("filer_namf", "filer_naml", "cand_naml", "cand_namf")
+    date_hierarchy = "pmnt_dt"
 
 
 @admin.register(models.AcronymsCd)

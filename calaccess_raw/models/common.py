@@ -1245,6 +1245,7 @@ original filing and 1 to 999 amendments.",
         db_table = 'CVR_E530_CD'
         verbose_name = 'CVR_E530_CD'
         verbose_name_plural = 'CVR_E530_CD'
+        ordering = ("-pmnt_dt",)
 
     def __str__(self):
         return str(self.filing_id)
