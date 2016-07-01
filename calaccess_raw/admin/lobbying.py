@@ -6,186 +6,151 @@ from calaccess_raw import models
 from .base import BaseAdmin
 
 
+@admin.register(models.CvrRegistrationCd)
 class CvrRegistrationCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.Cvr2RegistrationCd)
 class Cvr2RegistrationCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyAmendmentsCd)
 class LobbyAmendmentsCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyingChgLogCd)
 class LobbyingChgLogCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LempCd)
 class LempCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistEmployer1Cd)
 class LobbyistEmployer1CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistEmployer2Cd)
 class LobbyistEmployer2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistEmployer3Cd)
 class LobbyistEmployer3CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistEmployerFirms1Cd)
 class LobbyistEmployerFirms1CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistEmployerFirms2Cd)
 class LobbyistEmployerFirms2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistEmpLobbyist1Cd)
 class LobbyistEmpLobbyist1CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistEmpLobbyist2Cd)
 class LobbyistEmpLobbyist2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistFirm1Cd)
 class LobbyistFirm1CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistFirm2Cd)
 class LobbyistFirm2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistFirm3Cd)
 class LobbyistFirm3CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistFirmEmployer1Cd)
 class LobbyistFirmEmployer1CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistFirmEmployer2Cd)
 class LobbyistFirmEmployer2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistFirmLobbyist1Cd)
 class LobbyistFirmLobbyist1CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistFirmLobbyist2Cd)
 class LobbyistFirmLobbyist2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.F690P2Cd)
 class F690P2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.CvrLobbyDisclosureCd)
 class CvrLobbyDisclosureCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.Cvr2LobbyDisclosureCd)
 class Cvr2LobbyDisclosureCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LattCd)
 class LattCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LexpCd)
 class LexpCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LccmCd)
 class LccmCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistContributions1Cd)
 class LobbyistContributions1CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistContributions2Cd)
 class LobbyistContributions2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LobbyistContributions3Cd)
 class LobbyistContributions3CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LpayCd)
 class LpayCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LothCd)
 class LothCdAdmin(BaseAdmin):
     pass
-
-
-admin.site.register(models.CvrRegistrationCd, CvrRegistrationCdAdmin)
-admin.site.register(models.Cvr2RegistrationCd, Cvr2RegistrationCdAdmin)
-admin.site.register(models.CvrLobbyDisclosureCd, CvrLobbyDisclosureCdAdmin)
-admin.site.register(models.Cvr2LobbyDisclosureCd, Cvr2LobbyDisclosureCdAdmin)
-admin.site.register(models.LobbyAmendmentsCd, LobbyAmendmentsCdAdmin)
-admin.site.register(models.F690P2Cd, F690P2CdAdmin)
-admin.site.register(models.LattCd, LattCdAdmin)
-admin.site.register(models.LexpCd, LexpCdAdmin)
-admin.site.register(models.LccmCd, LccmCdAdmin)
-admin.site.register(models.LothCd, LothCdAdmin)
-admin.site.register(models.LempCd, LempCdAdmin)
-admin.site.register(models.LpayCd, LpayCdAdmin)
-admin.site.register(models.LobbyingChgLogCd, LobbyingChgLogCdAdmin)
-admin.site.register(
-    models.LobbyistContributions1Cd,
-    LobbyistContributions1CdAdmin
-)
-admin.site.register(
-    models.LobbyistContributions2Cd,
-    LobbyistContributions2CdAdmin
-)
-admin.site.register(
-    models.LobbyistContributions3Cd,
-    LobbyistContributions3CdAdmin
-)
-admin.site.register(models.LobbyistEmployer1Cd, LobbyistEmployer1CdAdmin)
-admin.site.register(models.LobbyistEmployer2Cd, LobbyistEmployer2CdAdmin)
-admin.site.register(models.LobbyistEmployer3Cd, LobbyistEmployer3CdAdmin)
-admin.site.register(
-    models.LobbyistEmployerFirms1Cd,
-    LobbyistEmployerFirms1CdAdmin
-)
-admin.site.register(
-    models.LobbyistEmployerFirms2Cd,
-    LobbyistEmployerFirms2CdAdmin
-)
-admin.site.register(
-    models.LobbyistEmpLobbyist1Cd,
-    LobbyistEmpLobbyist1CdAdmin
-)
-admin.site.register(
-    models.LobbyistEmpLobbyist2Cd,
-    LobbyistEmpLobbyist2CdAdmin
-)
-admin.site.register(models.LobbyistFirm1Cd, LobbyistFirm1CdAdmin)
-admin.site.register(models.LobbyistFirm2Cd, LobbyistFirm2CdAdmin)
-admin.site.register(models.LobbyistFirm3Cd, LobbyistFirm3CdAdmin)
-admin.site.register(
-    models.LobbyistFirmEmployer1Cd,
-    LobbyistFirmEmployer1CdAdmin
-)
-admin.site.register(
-    models.LobbyistFirmEmployer2Cd,
-    LobbyistFirmEmployer2CdAdmin
-)
-admin.site.register(
-    models.LobbyistFirmLobbyist1Cd,
-    LobbyistFirmLobbyist1CdAdmin
-)
-admin.site.register(
-    models.LobbyistFirmLobbyist2Cd,
-    LobbyistFirmLobbyist2CdAdmin
-)

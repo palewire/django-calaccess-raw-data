@@ -6,38 +6,47 @@ from calaccess_raw import models
 from .base import BaseAdmin
 
 
+@admin.register(models.CvrSoCd)
 class CvrSoCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.Cvr2SoCd)
 class Cvr2SoCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.Cvr2CampaignDisclosureCd)
 class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.CvrCampaignDisclosureCd)
 class CvrCampaignDisclosureCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.Cvr3VerificationInfoCd)
 class Cvr3VerificationInfoCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.DebtCd)
 class DebtCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.ExpnCd)
 class ExpnCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.LoanCd)
 class LoanCdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.RcptCd)
 class RcptCdAdmin(BaseAdmin):
     list_display = (
         "id",
@@ -52,55 +61,38 @@ class RcptCdAdmin(BaseAdmin):
     search_fields = ("ctrib_namf", "ctrib_naml",)
 
 
+@admin.register(models.S401Cd)
 class S401CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.F495P2Cd)
 class F495P2CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.S496Cd)
 class S496CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.S497Cd)
 class S497CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.S498Cd)
 class S498CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.F501502Cd)
 class F501502CdAdmin(BaseAdmin):
     pass
 
 
+@admin.register(models.BallotMeasuresCd)
 class BallotMeasuresCdAdmin(BaseAdmin):
     list_display = ("measure_name", "election_date", "jurisdiction")
     list_filter = ("jurisdiction",)
     search_fields = ("measure_name",)
-
-
-admin.site.register(models.CvrSoCd, CvrSoCdAdmin)
-admin.site.register(models.Cvr2SoCd, Cvr2SoCdAdmin)
-admin.site.register(models.Cvr3VerificationInfoCd, Cvr3VerificationInfoCdAdmin)
-admin.site.register(
-    models.CvrCampaignDisclosureCd,
-    CvrCampaignDisclosureCdAdmin
-)
-admin.site.register(
-    models.Cvr2CampaignDisclosureCd,
-    Cvr2CampaignDisclosureCdAdmin
-)
-admin.site.register(models.DebtCd, DebtCdAdmin)
-admin.site.register(models.ExpnCd, ExpnCdAdmin)
-admin.site.register(models.F495P2Cd, F495P2CdAdmin)
-admin.site.register(models.LoanCd, LoanCdAdmin)
-admin.site.register(models.RcptCd, RcptCdAdmin)
-admin.site.register(models.S496Cd, S496CdAdmin)
-admin.site.register(models.S497Cd, S497CdAdmin)
-admin.site.register(models.S498Cd, S498CdAdmin)
-admin.site.register(models.S401Cd, S401CdAdmin)
-admin.site.register(models.F501502Cd, F501502CdAdmin)
-admin.site.register(models.BallotMeasuresCd, BallotMeasuresCdAdmin)

@@ -222,7 +222,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     period_id = fields.IntegerField(
         null=True,
@@ -379,8 +379,7 @@ laundering or other special condition."
 @python_2_unicode_compatible
 class FilingsCd(CalAccessBaseModel):
     """
-    This table is the parent table from which all links and association to
-    a filing are derived.
+    The parent table from which all links and associations to a filing are derived.
     """
     UNIQUE_KEY = "FILING_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -391,7 +390,7 @@ class FilingsCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=75, end_page=75),
@@ -419,9 +418,10 @@ class FilingsCd(CalAccessBaseModel):
         db_table = 'FILINGS_CD'
         verbose_name = 'FILINGS_CD'
         verbose_name_plural = 'FILINGS_CD'
+        ordering = ("-filing_id",)
 
     def __str__(self):
-        return str("%s %s" % (self.filing_id, self.filing_type))
+        return str("{} ({})".format(self.filing_id, self.get_filing_type_display()))
 
 
 @python_2_unicode_compatible
@@ -471,7 +471,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     hdr_comment = fields.CharField(
         max_length=200,
@@ -710,7 +710,7 @@ class SmryCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -818,7 +818,7 @@ class CvrE530Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=29, end_page=30),
@@ -1279,7 +1279,7 @@ class SpltCd(CalAccessBaseModel):
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
-        help_text="Amendment identification number. A number of 0 is the \
+        help_text="amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
@@ -1287,7 +1287,8 @@ original filing and 1 to 999 amendments.",
         max_digits=16,
         decimal_places=2,
         db_column='ELEC_AMOUNT',
-        help_text="Per Election to Date Amount"
+        verbose_name="election amount",
+        help_text="per election to date amount"
     )
     ELEC_CODE_CHOICES = (
         ('P', 'Primary'),
@@ -1314,7 +1315,8 @@ original filing and 1 to 999 amendments.",
         choices=ELEC_CODE_CHOICES,
         db_column='ELEC_CODE',
         blank=True,
-        help_text='Per Election to Date Code',
+        verbose_name="election code",
+        help_text='per election to date code',
         documentcloud_pages=[
             DocumentCloud(id="2712034-Cal-Format-201", start_page=18),
         ]
@@ -1322,17 +1324,17 @@ original filing and 1 to 999 amendments.",
     elec_date = fields.DateField(
         db_column='ELEC_DATE',
         null=True,
-        help_text="Date of Election"
+        help_text="date of election"
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="unique filing identification number"
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
-        help_text="Line item number of this record",
+        help_text="line item number of this record",
         db_index=True,
     )
     PFORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
@@ -1351,7 +1353,7 @@ original filing and 1 to 999 amendments.",
         max_length=32,
         db_column='PTRAN_ID',
         blank=True,
-        help_text='Parent transaction ID',
+        help_text='parent transaction ID',
     )
 
     class Meta:
@@ -1415,7 +1417,7 @@ class TextMemoCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1758,9 +1760,10 @@ or "BADFORMAT" and a three-digit number.',
         db_table = 'EFS_FILING_LOG_CD'
         verbose_name = 'EFS_FILING_LOG_CD'
         verbose_name_plural = 'EFS_FILING_LOG_CD'
+        ordering = ("-filing_date",)
 
     def __str__(self):
-        return str(self.filer_id)
+        return "{} ({})".format(self.vendor, self.filing_date)
 
 
 @python_2_unicode_compatible
@@ -1787,6 +1790,7 @@ class FilersCd(CalAccessBaseModel):
         db_table = 'FILERS_CD'
         verbose_name = 'FILERS_CD'
         verbose_name_plural = 'FILERS_CD'
+        ordering = ("-filer_id",)
 
     def __str__(self):
         return str(self.filer_id)
@@ -3201,7 +3205,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number",
+        help_text="Unique filing identification number",
         null=True,
         blank=True,
     )
