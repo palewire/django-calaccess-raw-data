@@ -8,9 +8,10 @@ from .base import BaseAdmin
 
 @admin.register(models.CvrSoCd)
 class CvrSoCdAdmin(BaseAdmin):
-    list_display = ("filing_id", "amend_id", "rec_type")
-    list_filter = ("rec_type",)
-    search_fields = ("filing_id",)
+    list_display = ("filing_id", "amend_id", "rpt_date", "filer_naml", "form_type")
+    list_filter = ("form_type",)
+    search_fields = ("filing_id", "filer_naml", "filer_namf")
+    date_hierarchy = "rpt_date"
 
 
 @admin.register(models.Cvr2SoCd)
