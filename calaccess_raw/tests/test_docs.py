@@ -72,7 +72,6 @@ class DocumentationTestCase(TestCase):
         Verify that each model has a UNIQUE_KEY attribute set.
         """
         results = []
-        
         # Loop through the models
          for m in get_model_list():
  
