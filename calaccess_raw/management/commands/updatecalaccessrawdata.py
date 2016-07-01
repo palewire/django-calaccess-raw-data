@@ -2,14 +2,15 @@
 # -*- coding: utf-8 -*-
 import os
 from sys import exit
+import multiprocessing
 from hurry.filesize import size
-from clint.textui import progress
 from django.conf import settings
+from django.utils.timezone import now
+from multiprocessing.pool import ThreadPool
 from django.core.management import call_command
 from django.core.management.base import CommandError
 from django.template.loader import render_to_string
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from django.utils.timezone import now
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import (
     get_download_directory,
@@ -78,6 +79,13 @@ class Command(CalAccessCommand):
             help="Name of Django app with models into which data will "
                  "be imported (if other not calaccess_raw)"
         )
+        parser.add_argument(
+            "--nopooling",
+            action="store_true",
+            dest="nopooling",
+            default=False,
+            help="Run all tasks in order, one-by-one. No concurrent pooling."
+        )
 
     def handle(self, *args, **options):
         super(Command, self).handle(*args, **options)
@@ -90,6 +98,7 @@ class Command(CalAccessCommand):
         self.cleaning = options['clean']
         self.loading = options['load']
         self.noinput = options['noinput']
+        self.nopooling = options['nopooling']
 
         if self.test_mode:
             # and always keep files when running test data
@@ -275,6 +284,17 @@ class Command(CalAccessCommand):
         self.log_record.finish_datetime = now()
         self.log_record.save()
 
+    def _clean_command(self, name):
+        """
+        The call to the clean command, separated for concurrent pooling.
+        """
+        call_command(
+            "cleancalaccessrawfile",
+            name,
+            verbosity=self.verbosity,
+            keep_files=self.keep_files,
+        )
+
     def clean(self):
         """
         Clean up the raw data files from the state so they are
@@ -298,16 +318,24 @@ class Command(CalAccessCommand):
             # remove these from tsv_list
             tsv_list = [x for x in tsv_list if x not in prev_cleaned]
 
-        # Loop through all the files in the source directory
-        if self.verbosity:
-            tsv_list = progress.bar(tsv_list)
-        for name in tsv_list:
-            call_command(
-                "cleancalaccessrawfile",
-                name,
-                verbosity=self.verbosity,
-                keep_files=self.keep_files,
-            )
+        # Loop through all the files in the source directory conncurrently
+        if self.nopooling:
+            [self._clean_command(t) for t in tsv_list]
+        else:
+            pool = ThreadPool(processes=multiprocessing.cpu_count())
+            pool.map(self._clean_command, tsv_list)
+
+    def _load_command(self, model):
+        """
+        The call to the load command, separated for concurrent pooling.
+        """
+        call_command(
+            "loadcalaccessrawfile",
+            model.__name__,
+            verbosity=self.verbosity,
+            keep_files=self.keep_files,
+            app_name=self.app_name,
+        )
 
     def load(self):
         """
@@ -333,13 +361,9 @@ class Command(CalAccessCommand):
             # remove these from model_list
             model_list = [x for x in model_list if x._meta.db_table not in prev_loaded]
 
-        if self.verbosity:
-            model_list = progress.bar(model_list)
-        for model in model_list:
-            call_command(
-                "loadcalaccessrawfile",
-                model.__name__,
-                verbosity=self.verbosity,
-                keep_files=self.keep_files,
-                app_name=self.app_name,
-            )
+        # Loop and load the files concurrently
+        if self.nopooling:
+            [self._load_command(m) for m in model_list]
+        else:
+            pool = ThreadPool(processes=multiprocessing.cpu_count())
+            pool.map(self._load_command, model_list)

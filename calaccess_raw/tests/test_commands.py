@@ -22,7 +22,7 @@ class CommandTestCase(TestCase):
         Load data into the database before running other tests.
         """
         super(CommandTestCase, cls).setUpClass()
-        kwargs = dict(verbosity=3, test_data=True, noinput=True)
+        kwargs = dict(verbosity=3, test_data=True, noinput=True, nopooling=True)
         call_command("updatecalaccessrawdata", **kwargs)
 
     def test_download_metadata(self):

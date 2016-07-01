@@ -4,9 +4,9 @@ from __future__ import unicode_literals
 import os
 import csv
 from io import StringIO
+from django.utils import six
 from django.conf import settings
 from django.core.files import File
-from django.utils import six
 from django.utils.timezone import now
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
