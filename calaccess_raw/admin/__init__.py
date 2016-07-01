@@ -164,7 +164,7 @@ __all__ = [
     'LobbyistFirmEmployer2CdAdmin',
     'LobbyistFirmLobbyist1CdAdmin',
     'LobbyistFirmLobbyist2CdAdmin',
-    'LookupCodeCdAdmin',
+    'LookupCodesCdAdmin',
     'NamesCdAdmin',
     'ReceivedFilingsCdAdmin',
     'ReportsCdAdmin',
