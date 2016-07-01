@@ -89,8 +89,7 @@ class DocumentationTestCase(TestCase):
             # Verify that the fields actually exist
             missing = [
                 f for f in m().get_unique_key_list()
-                    if not hasattr(m(), f.lower())
-                    and not hasattr(m(), f.lower() + "_id")
+                if not hasattr(m(), f.lower()) and not hasattr(m(), f.lower() + "_id")
             ]
             if missing:
                 exists = False
