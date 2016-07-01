@@ -528,6 +528,7 @@ original filing and 1 to 999 amendments.",
         db_table = 'HDR_CD'
         verbose_name = 'HDR_CD'
         verbose_name_plural = 'HDR_CD'
+        ordering = ("-filing_id", "-amend_id")
 
     def __str__(self):
         return str(self.filing_id)
@@ -641,6 +642,7 @@ class HeaderCd(CalAccessBaseModel):
         db_table = 'HEADER_CD'
         verbose_name = 'HEADER_CD'
         verbose_name_plural = 'HEADER_CD'
+        ordering = ("form_id", "line_number")
 
     def __str__(self):
         return str(self.form_id)
@@ -2010,6 +2012,7 @@ class FilerInterestsCd(CalAccessBaseModel):
         db_table = 'FILER_INTERESTS_CD'
         verbose_name = 'FILER_INTERESTS_CD'
         verbose_name_plural = 'FILER_INTERESTS_CD'
+        ordering = ("-effect_date",)
 
     def __str__(self):
         return str(self.filer_id)
@@ -2927,6 +2930,7 @@ class GroupTypesCd(CalAccessBaseModel):
         db_table = 'GROUP_TYPES_CD'
         verbose_name = 'GROUP_TYPES_CD'
         verbose_name_plural = 'GROUP_TYPES_CD'
+        ordering = ("grp_id",)
 
     def __str__(self):
         return str(self.grp_id)
@@ -2993,6 +2997,7 @@ class ImageLinksCd(CalAccessBaseModel):
         db_table = 'IMAGE_LINKS_CD'
         verbose_name = 'IMAGE_LINKS_CD'
         verbose_name_plural = 'IMAGE_LINKS_CD'
+        ordering = ("-img_dt",)
 
     def __str__(self):
         return str(self.img_link_id)
@@ -3031,6 +3036,7 @@ class LegislativeSessionsCd(CalAccessBaseModel):
         db_table = 'LEGISLATIVE_SESSIONS_CD'
         verbose_name = 'LEGISLATIVE_SESSIONS_CD'
         verbose_name_plural = 'LEGISLATIVE_SESSIONS_CD'
+        ordering = ("-begin_date",)
 
     def __str__(self):
         return str(self.session_id)
@@ -3142,6 +3148,7 @@ class NamesCd(CalAccessBaseModel):
         db_table = 'NAMES_CD'
         verbose_name = 'NAMES_CD'
         verbose_name_plural = 'NAMES_CD'
+        ordering = ("naml", "namf")
 
     def __str__(self):
         return str(self.namid)
@@ -3234,6 +3241,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         db_table = 'RECEIVED_FILINGS_CD'
         verbose_name = 'RECEIVED_FILINGS_CD'
         verbose_name_plural = 'RECEIVED_FILINGS_CD'
+        ordering = ("-received_date",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -3308,6 +3316,7 @@ class ReportsCd(CalAccessBaseModel):
         db_table = 'REPORTS_CD'
         verbose_name = 'REPORTS_CD'
         verbose_name_plural = 'REPORTS_CD'
+        ordering = ("rpt_name",)
 
     def __str__(self):
         return str(self.rpt_id)

@@ -152,7 +152,15 @@ class FilerEthicsClassCdAdmin(BaseAdmin):
 
 @admin.register(models.FilerInterestsCd)
 class FilerInterestsCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id",
+        "session_id",
+        "interest_cd",
+        "effect_date"
+    )
+    list_filter = ("interest_cd",)
+    search_fields = ("filter_id",)
+    date_hierarchy = "effect_date"
 
 
 @admin.register(models.FilerLinksCd)
@@ -220,7 +228,10 @@ class FilerTypesCdAdmin(BaseAdmin):
 
 @admin.register(models.FilerXrefCd)
 class FilerXrefCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filer_id", "xref_id", "effect_dt", "migration_source")
+    list_filter = ("migration_source",)
+    search_fields = ("filer_id", "xref_id",)
+    date_hierarchy = "effect_dt"
 
 
 @admin.register(models.FilingPeriodCd)
@@ -235,27 +246,36 @@ class FilingPeriodCdAdmin(BaseAdmin):
 
 @admin.register(models.GroupTypesCd)
 class GroupTypesCdAdmin(BaseAdmin):
-    pass
+    list_display = ("grp_id", "grp_name", "grp_desc")
+    search_fields = ("grp_id", "grp_name", "grp_desc")
 
 
 @admin.register(models.HeaderCd)
 class HeaderCdAdmin(BaseAdmin):
-    pass
+    list_display = ("line_number", "form_id", "rec_type",)
+    list_filter = ("rec_type",)
 
 
 @admin.register(models.HdrCd)
 class HdrCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filing_id", "amend_id", "cal_ver", "soft_name", "soft_ver",)
+    list_filter = ("cal_ver", "soft_name",)
+    search_fields = ("filing_id",)
 
 
 @admin.register(models.ImageLinksCd)
 class ImageLinksCdAdmin(BaseAdmin):
-    pass
+    list_display = ("img_link_id", "img_link_type", "img_id", "img_type", "img_dt")
+    list_filter = ("img_link_type", "img_type")
+    search_fields = ("img_link_id", "img_id")
+    date_hierarchy = "img_dt"
 
 
 @admin.register(models.LegislativeSessionsCd)
 class LegislativeSessionsCdAdmin(BaseAdmin):
-    pass
+    list_display = ("session_id", "begin_date", "end_date")
+    search_fields = ("session_id",)
+    date_hierarchy = "begin_date"
 
 
 @admin.register(models.LookupCodesCd)
@@ -277,14 +297,20 @@ class LookupCodesCdAdmin(BaseAdmin):
 
 @admin.register(models.NamesCd)
 class NamesCdAdmin(BaseAdmin):
-    pass
+    list_display = ("namid", "namf", "naml",)
+    search_fields = ("namid", "namt", "namf", "naml", "nams", "moniker")
 
 
 @admin.register(models.ReceivedFilingsCd)
 class ReceivedFilingsCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filing_id", "filer_id", "form_id", "received_date",)
+    list_filter = ("form_id",)
+    search_fields = ("filing_id", "filer_id", "form_id",)
+    date_hierarchy = "received_date"
 
 
 @admin.register(models.ReportsCd)
 class ReportsCdAdmin(BaseAdmin):
-    pass
+    list_display = ("rpt_name", "rpt_id", "rpt_type")
+    list_filter = ("rpt_type",)
+    search_fields = ("rpt_id", "rpt_name")
