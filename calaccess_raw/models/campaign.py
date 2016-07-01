@@ -4700,7 +4700,7 @@ class S401Cd(CalAccessBaseModel):
     UNIQUE_KEY = (
         'FILING_ID',
         'AMEND_ID',
-        'LINE_ID',
+        'LINE_ITEM',
         'REC_TYPE',
         'FORM_TYPE'
     )
@@ -5029,7 +5029,7 @@ class F495P2Cd(CalAccessBaseModel):
         "FILING_ID",
         "AMEND_ID",
         "LINE_ITEM",
-        "REC_ITEM",
+        "REC_TYPE",
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [

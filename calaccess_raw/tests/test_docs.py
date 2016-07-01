@@ -73,8 +73,8 @@ class DocumentationTestCase(TestCase):
         """
         results = []
         # Loop through the models
-         for m in get_model_list():
- 
+        for m in get_model_list():
+
             # Verify the model has a UNIQUE_KEY attribute
             exists = m().UNIQUE_KEY is not None
 
@@ -89,7 +89,8 @@ class DocumentationTestCase(TestCase):
             # Verify that the fields actually exist
             missing = [
                 f for f in m().get_unique_key_list()
-                    if not hasattr(m, f.lower())
+                    if not hasattr(m(), f.lower())
+                    and not hasattr(m(), f.lower() + "_id")
             ]
             if missing:
                 exists = False

@@ -30,10 +30,8 @@ class FilernameCd(CalAccessBaseModel):
     (when they are only an individual's name) use both the first and last name
     fields in conjunction.
     """
-    UNIQUE_KEY = ("FILER_ID", "NAMID")
+    UNIQUE_KEY = ("FILER_ID",)
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=67, end_page=68),
         DocumentCloud(id='2711615-FAQ', start_page=2),
     ]
     xref_filer_id = fields.CharField(
@@ -41,14 +39,14 @@ class FilernameCd(CalAccessBaseModel):
         max_length=15,
         db_column='XREF_FILER_ID',
         db_index=True,
-        help_text="Alternative filer ID found on many forms"
+        help_text="alternative filer ID found on many forms"
     )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
         db_index=True,
         null=True,
-        help_text="Filer's unique identification number"
+        help_text="filer's unique identification number"
     )
     FILER_TYPE_CHOICES = (
         ('NOT DEFINED', 'Undefined'),
@@ -113,7 +111,7 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
     )
     effect_dt = fields.DateField(
         db_column='EFFECT_DT',
-        help_text="Effective date for status",
+        help_text="effective date for status",
         null=True,
     )
     naml = fields.CharField(
@@ -2721,7 +2719,7 @@ class FilerTypesCd(CalAccessBaseModel):
     """
     This lookup table describes filer types.
     """
-    UNIQUE_KEY = "FILTER_TYPE"
+    UNIQUE_KEY = "FILER_TYPE"
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71, end_page=72),
