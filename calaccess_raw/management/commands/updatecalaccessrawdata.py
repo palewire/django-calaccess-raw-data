@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+import logging
 from sys import exit
 from hurry.filesize import size
 from clint.textui import progress
@@ -17,6 +18,7 @@ from calaccess_raw import (
     get_model_list
 )
 from calaccess_raw.models.tracking import RawDataVersion
+logger = logging.getLogger(__name__)
 
 
 class Command(CalAccessCommand):
@@ -269,11 +271,12 @@ class Command(CalAccessCommand):
             if self.verbosity:
                 self.duration()
 
-        if self.verbosity:
-            self.success("Done!")
-
         self.log_record.finish_datetime = now()
         self.log_record.save()
+
+        if self.verbosity:
+            self.success("Done!")
+        logger.info("Done!")
 
     def clean(self):
         """
