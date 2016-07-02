@@ -20,12 +20,21 @@ class CvrRegistrationCdAdmin(BaseAdmin):
 
 @admin.register(models.Cvr2RegistrationCd)
 class Cvr2RegistrationCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "enty_naml",
+    )
 
 
 @admin.register(models.LobbyAmendmentsCd)
 class LobbyAmendmentsCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "exec_date",
+        "form_type",
+    )
+    date_hierarchy = "exec_date"
 
 
 @admin.register(models.LobbyingChgLogCd)
