@@ -102,7 +102,23 @@ class ExpnCdAdmin(BaseAdmin):
 
 @admin.register(models.LoanCd)
 class LoanCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "loan_date1",
+        "loan_type",
+        "lndr_naml",
+        "loan_amt1",
+        "loan_amt2",
+        "loan_amt3",
+        "loan_amt4"
+    )
+    list_filter = ("loan_type", "entity_cd", "form_type")
+    search_fields = (
+        "lndr_naml",
+        "lndr_namf",
+    )
+    date_hierarchy = "loan_date1"
 
 
 @admin.register(models.RcptCd)

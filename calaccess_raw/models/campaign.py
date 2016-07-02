@@ -4084,6 +4084,7 @@ identifier. "X" indicates this condition is true.'
         db_table = 'LOAN_CD'
         verbose_name = 'LOAN_CD'
         verbose_name_plural = 'LOAN_CD'
+        ordering = ("-loan_date1",)
 
     def __str__(self):
         return str(self.filing_id)
