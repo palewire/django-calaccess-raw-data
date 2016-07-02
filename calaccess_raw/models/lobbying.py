@@ -3753,6 +3753,7 @@ text description."
         db_table = 'F690P2_CD'
         verbose_name = 'F690P2_CD'
         verbose_name_plural = 'F690P2_CD'
+        ordering = ("-exec_date",)
 
     def __str__(self):
         return str(self.filing_id)

@@ -214,7 +214,12 @@ class LobbyistFirmLobbyist2CdAdmin(BaseAdmin):
 
 @admin.register(models.F690P2Cd)
 class F690P2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "exec_date",
+        "form_type",
+    )
+    date_hierarchy = "exec_date"
 
 
 @admin.register(models.CvrLobbyDisclosureCd)
