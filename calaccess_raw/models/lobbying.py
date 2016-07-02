@@ -1773,6 +1773,7 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_EMPLOYER2_CD'
         verbose_name = 'LOBBYIST_EMPLOYER2_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER2_CD'
+        ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.employer_id)
@@ -1932,6 +1933,7 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_EMPLOYER3_CD'
         verbose_name = 'LOBBYIST_EMPLOYER3_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER3_CD'
+        ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.employer_id)
@@ -2723,6 +2725,7 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
         verbose_name = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
+        ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.employer_id)
@@ -2780,6 +2783,7 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
         verbose_name = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
+        ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.employer_id)
@@ -2865,6 +2869,7 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
         verbose_name = 'LOBBYIST_FIRM_EMPLOYER1_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER1_CD'
+        ordering = ("-rpt_start",)
 
     def __str__(self):
         return str(self.firm_id)
@@ -2950,6 +2955,7 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
         verbose_name = 'LOBBYIST_FIRM_EMPLOYER2_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER2_CD'
+        ordering = ("-rpt_start",)
 
     def __str__(self):
         return str(self.filing_id)

@@ -89,12 +89,24 @@ class LobbyistEmployer3CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployerFirms1Cd)
 class LobbyistEmployerFirms1CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "firm_id",
+        "employer_id",
+        "session_id",
+        "firm_name",
+        "termination_dt",
+    )
 
 
 @admin.register(models.LobbyistEmployerFirms2Cd)
 class LobbyistEmployerFirms2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "firm_id",
+        "employer_id",
+        "session_id",
+        "firm_name",
+        "termination_dt",
+    )
 
 
 @admin.register(models.LobbyistEmpLobbyist1Cd)
@@ -124,12 +136,24 @@ class LobbyistFirm3CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirmEmployer1Cd)
 class LobbyistFirmEmployer1CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "firm_name",
+        "employer_name",
+        "rpt_start",
+        "per_total",
+    )
 
 
 @admin.register(models.LobbyistFirmEmployer2Cd)
 class LobbyistFirmEmployer2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "firm_name",
+        "employer_name",
+        "rpt_start",
+        "per_total",
+    )
 
 
 @admin.register(models.LobbyistFirmLobbyist1Cd)
