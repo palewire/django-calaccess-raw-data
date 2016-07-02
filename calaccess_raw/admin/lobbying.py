@@ -333,3 +333,20 @@ class LothCdAdmin(BaseAdmin):
         "amount"
     )
     date_hierarchy = "pmt_date"
+
+
+@admin.register(models.LobbyistFirmHistoryCd)
+class LobbyistFirmHistoryCdAdmin(BaseAdmin):
+    list_display = (
+        "contributor_id",
+        "firm_id",
+        "session_id",
+    )
+
+@admin.register(models.LobbyistEmployerHistoryCd)
+class LobbyistEmployerHistoryCdAdmin(BaseAdmin):
+    list_display = (
+        "employer_id",
+        "employer_name",
+    )
+

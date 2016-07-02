@@ -18,6 +18,7 @@ from calaccess_raw.admin.campaign import (
     F501502CdAdmin,
     S498CdAdmin,
     BallotMeasuresCdAdmin,
+    CvrF470CdAdmin,
 )
 from calaccess_raw.admin.lobbying import (
     CvrRegistrationCdAdmin,
@@ -50,6 +51,8 @@ from calaccess_raw.admin.lobbying import (
     LobbyistFirmEmployer2CdAdmin,
     LobbyistFirmLobbyist1CdAdmin,
     LobbyistFirmLobbyist2CdAdmin,
+    LobbyistFirmHistoryCdAdmin,
+    LobbyistEmployerHistoryCdAdmin
 )
 from calaccess_raw.admin.common import (
     FilernameCdAdmin,
@@ -82,6 +85,7 @@ from calaccess_raw.admin.common import (
     NamesCdAdmin,
     ReceivedFilingsCdAdmin,
     ReportsCdAdmin,
+    FilerTypePeriodsCd
 )
 
 from calaccess_raw.admin.tracking import (
@@ -108,6 +112,7 @@ __all__ = [
     'S497CdAdmin',
     'F501502CdAdmin',
     'S498CdAdmin',
+    'CvrF470CdAdmin',
     'CvrRegistrationCdAdmin',
     'Cvr2RegistrationCdAdmin',
     'CvrLobbyDisclosureCdAdmin',
@@ -141,6 +146,7 @@ __all__ = [
     'FilerTypesCdAdmin',
     'FilerXrefCdAdmin',
     'FilingPeriodCdAdmin',
+    'FilerTypePeriodsCd',
     'GroupTypesCdAdmin',
     'HeaderCdAdmin',
     'HdrCdAdmin',
@@ -164,6 +170,8 @@ __all__ = [
     'LobbyistFirmEmployer2CdAdmin',
     'LobbyistFirmLobbyist1CdAdmin',
     'LobbyistFirmLobbyist2CdAdmin',
+    'LobbyistFirmHistoryCdAdmin',
+    'LobbyistEmployerHistoryCdAdmin',
     'LookupCodesCdAdmin',
     'NamesCdAdmin',
     'ReceivedFilingsCdAdmin',

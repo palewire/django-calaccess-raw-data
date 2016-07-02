@@ -238,3 +238,12 @@ class ReceivedFilingsCdAdmin(BaseAdmin):
 @admin.register(models.ReportsCd)
 class ReportsCdAdmin(BaseAdmin):
     list_display = ("rpt_name", "rpt_id", "rpt_type")
+
+
+@admin.register(models.FilerTypePeriodsCd)
+class FilerTypePeriodsCd(BaseAdmin):
+    list_display = (
+        "election_type",
+        "filer_type",
+        "period_id",
+    )
