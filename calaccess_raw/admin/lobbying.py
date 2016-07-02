@@ -8,7 +8,14 @@ from .base import BaseAdmin
 
 @admin.register(models.CvrRegistrationCd)
 class CvrRegistrationCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "rpt_date",
+        "form_type",
+        "filer_naml",
+        "firm_name",
+    )
+    date_hierarchy = "rpt_date"
 
 
 @admin.register(models.Cvr2RegistrationCd)
