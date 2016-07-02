@@ -178,7 +178,15 @@ class S401CdAdmin(BaseAdmin):
 
 @admin.register(models.F495P2Cd)
 class F495P2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "elect_date",
+        "contribamt"
+    )
+    list_filter = ("rec_type", "form_type",)
+    search_fields = ("filing_id",)
+    date_hierarchy = "elect_date"
 
 
 @admin.register(models.S496Cd)

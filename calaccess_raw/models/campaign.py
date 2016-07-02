@@ -5116,6 +5116,7 @@ as on the filing's cover (CVR) record."
         db_table = 'F495P2_CD'
         verbose_name = 'F495P2_CD'
         verbose_name_plural = 'F495P2_CD'
+        ordering = ("-elect_date",)
 
     def __str__(self):
         return str(self.filing_id)
