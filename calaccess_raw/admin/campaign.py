@@ -150,7 +150,30 @@ class RcptCdAdmin(BaseAdmin):
 
 @admin.register(models.S401Cd)
 class S401CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "cand_naml",
+        "payee_naml",
+        "amount",
+    )
+    list_filter = (
+        "rec_type",
+        "form_type",
+        "office_cd",
+        "juris_cd",
+        "off_s_h_cd",
+        "sup_opp_cd",
+    )
+    search_fields = (
+        "filing_id",
+        "backref_tid",
+        "tran_id",
+        "cand_naml",
+        "cand_namf",
+        "payee_naml",
+        "payee_namf",
+    )
 
 
 @admin.register(models.F495P2Cd)
