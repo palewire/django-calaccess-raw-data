@@ -246,7 +246,14 @@ class Cvr2LobbyDisclosureCdAdmin(BaseAdmin):
 
 @admin.register(models.LattCd)
 class LattCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "pmt_date",
+        "recip_naml",
+        "amount"
+    )
+    date_hierarchy = "pmt_date"
 
 
 @admin.register(models.LexpCd)
