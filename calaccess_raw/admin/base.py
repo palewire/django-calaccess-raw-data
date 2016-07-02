@@ -13,6 +13,12 @@ class BaseAdmin(admin.ModelAdmin):
         """
         return [f.name for f in self.model._meta.fields]
 
+    def get_list_filter(self, request):
+        """
+        Filter all fields with `choices` configured
+        """
+        return [f.name for f in self.model._meta.fields if f.choices]
+
     def get_search_fields(self, request):
         """
         Search all fields on the model
