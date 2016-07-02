@@ -315,7 +315,12 @@ class LobbyistContributions3CdAdmin(BaseAdmin):
 
 @admin.register(models.LpayCd)
 class LpayCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "emplr_naml",
+        "per_total"
+    )
 
 
 @admin.register(models.LothCd)
