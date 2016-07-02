@@ -21,13 +21,23 @@ class Cvr2SoCdAdmin(BaseAdmin):
     search_fields = ("filing_id", "enty_naml", "enty_namf", "cmte_id")
 
 
-@admin.register(models.Cvr2CampaignDisclosureCd)
-class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
-    pass
-
-
 @admin.register(models.CvrCampaignDisclosureCd)
 class CvrCampaignDisclosureCdAdmin(BaseAdmin):
+    list_display = ("filing_id", "rpt_date", "filer_naml", "cmtte_type", "form_type")
+    list_filter = ("cmtte_type", "form_type", "entity_cd",)
+    search_fields = (
+        "filing_id",
+        "filter_id",
+        "cand_namf",
+        "cand_naml",
+        "filer_namf",
+        "filer_naml",
+    )
+    date_hierarchy = "rpt_date"
+
+
+@admin.register(models.Cvr2CampaignDisclosureCd)
+class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
     pass
 
 

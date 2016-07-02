@@ -1715,6 +1715,7 @@ officer's street address."
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
+        ordering = ("-rpt_date",)
 
     def __str__(self):
         return str(self.filing_id)
