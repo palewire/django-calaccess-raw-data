@@ -81,7 +81,23 @@ class DebtCdAdmin(BaseAdmin):
 
 @admin.register(models.ExpnCd)
 class ExpnCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "expn_date",
+        "cand_naml",
+        "payee_naml",
+        "form_type",
+        "amount",
+    )
+    list_filter = ("expn_code", "entity_cd", "form_type",)
+    search_fields = (
+        "filing_id",
+        "cand_naml",
+        "cand_namf",
+        "payee_naml",
+        "payee_namf",
+    )
+    date_hierarchy = "expn_date"
 
 
 @admin.register(models.LoanCd)

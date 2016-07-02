@@ -3651,6 +3651,7 @@ original filing and 1 to 999 amendments.",
         db_table = 'EXPN_CD'
         verbose_name = 'EXPN_CD'
         verbose_name_plural = 'EXPN_CD'
+        ordering = ("-expn_date",)
 
     def __str__(self):
         return str(self.filing_id)
