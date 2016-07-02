@@ -4686,6 +4686,7 @@ identifier. 'X' indicates this condition is true"
         db_table = 'RCPT_CD'
         verbose_name = 'RCPT_CD'
         verbose_name_plural = 'RCPT_CD'
+        ordering = ("-rcpt_date",)
 
     def __str__(self):
         return str(self.filing_id)

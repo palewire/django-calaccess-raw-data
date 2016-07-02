@@ -117,6 +117,7 @@ class LoanCdAdmin(BaseAdmin):
     search_fields = (
         "lndr_naml",
         "lndr_namf",
+        "filing_id",
     )
     date_hierarchy = "loan_date1"
 
@@ -124,16 +125,27 @@ class LoanCdAdmin(BaseAdmin):
 @admin.register(models.RcptCd)
 class RcptCdAdmin(BaseAdmin):
     list_display = (
-        "id",
         "filing_id",
-        "amend_id",
         "form_type",
         "rcpt_date",
-        "ctrib_namf",
         "ctrib_naml",
+        "ctrib_emp",
+        "ctrib_occ",
         "amount"
     )
-    search_fields = ("ctrib_namf", "ctrib_naml",)
+    list_filter = (
+        "form_type",
+        "entity_cd",
+    )
+    search_fields = (
+        "ctrib_namf",
+        "ctrib_naml",
+        "ctrib_emp",
+        "ctrib_occ",
+        "filing_id",
+        "backref_tid"
+    )
+    date_hierarchy = "rcpt_date"
 
 
 @admin.register(models.S401Cd)
