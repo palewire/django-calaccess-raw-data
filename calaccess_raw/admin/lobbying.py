@@ -258,7 +258,14 @@ class LattCdAdmin(BaseAdmin):
 
 @admin.register(models.LexpCd)
 class LexpCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "expn_date",
+        "form_type",
+        "payee_naml",
+        "amount"
+    )
+    date_hierarchy = "expn_date"
 
 
 @admin.register(models.LccmCd)
