@@ -325,4 +325,11 @@ class LpayCdAdmin(BaseAdmin):
 
 @admin.register(models.LothCd)
 class LothCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "pmt_date",
+        "form_type",
+        "firm_name",
+        "amount"
+    )
+    date_hierarchy = "pmt_date"

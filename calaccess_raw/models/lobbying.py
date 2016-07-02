@@ -5037,6 +5037,7 @@ original filing and 1 to 999 amendments.",
         db_table = 'LOTH_CD'
         verbose_name = 'LOTH_CD'
         verbose_name_plural = 'LOTH_CD'
+        ordering = ("-pmt_date",)
 
     def __str__(self):
         return str(self.filing_id)
