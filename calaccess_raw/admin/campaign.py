@@ -60,9 +60,23 @@ class Cvr3VerificationInfoCdAdmin(BaseAdmin):
     )
     date_hierarchy = "sig_date"
 
+
 @admin.register(models.DebtCd)
 class DebtCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "expn_code",
+        "payee_naml",
+        "amt_incur",
+        "amt_paid",
+    )
+    list_filter = ("entity_cd", "expn_code",)
+    search_fields = (
+        "filing_id",
+        "cmte_id",
+        "payee_naml",
+        "payee_namf",
+    )
 
 
 @admin.register(models.ExpnCd)
