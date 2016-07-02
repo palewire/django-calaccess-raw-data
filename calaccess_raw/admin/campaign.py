@@ -125,7 +125,12 @@ class S496CdAdmin(BaseAdmin):
 class S497CdAdmin(BaseAdmin):
     list_display = (
         "filing_id",
+        "ctrib_date",
+        "cand_naml",
+        "enty_naml",
+        "amount",
     )
+    date_hierarchy = "ctrib_date"
 
 
 @admin.register(models.S498Cd)

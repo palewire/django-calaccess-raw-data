@@ -5656,6 +5656,7 @@ for Senate, Assembly, or Board of Equalization races."
         db_table = 'S497_CD'
         verbose_name = 'S497_CD'
         verbose_name_plural = 'S497_CD'
+        ordering = ("-ctrib_date",)
 
 
 @python_2_unicode_compatible
