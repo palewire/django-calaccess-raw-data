@@ -111,27 +111,59 @@ class LobbyistEmployerFirms2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmpLobbyist1Cd)
 class LobbyistEmpLobbyist1CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "lobbyist_id",
+        "employer_id",
+        "session_id",
+        "lobbyist_first_name",
+        "lobbyist_last_name",
+        "employer_name",
+    )
 
 
 @admin.register(models.LobbyistEmpLobbyist2Cd)
 class LobbyistEmpLobbyist2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "lobbyist_id",
+        "employer_id",
+        "session_id",
+        "lobbyist_first_name",
+        "lobbyist_last_name",
+        "employer_name",
+    )
 
 
 @admin.register(models.LobbyistFirm1Cd)
 class LobbyistFirm1CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "firm_id",
+        "firm_name",
+        "session_id",
+        "contributor_id",
+        "current_qtr_amt",
+    )
 
 
 @admin.register(models.LobbyistFirm2Cd)
 class LobbyistFirm2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "firm_id",
+        "firm_name",
+        "session_id",
+        "contributor_id",
+        "current_qtr_amt",
+    )
 
 
 @admin.register(models.LobbyistFirm3Cd)
 class LobbyistFirm3CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "firm_id",
+        "firm_name",
+        "session_id",
+        "contributor_id",
+        "current_qtr_amt",
+    )
 
 
 @admin.register(models.LobbyistFirmEmployer1Cd)
