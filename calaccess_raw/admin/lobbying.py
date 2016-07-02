@@ -39,7 +39,12 @@ class LobbyAmendmentsCdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyingChgLogCd)
 class LobbyingChgLogCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id",
+        "log_dt",
+        "filer_full_name",
+    )
+    date_hierarchy = "log_dt"
 
 
 @admin.register(models.LempCd)

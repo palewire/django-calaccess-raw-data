@@ -1243,6 +1243,7 @@ FILER_TYPES_CD.FILER_TYPE or GROUP_TYPES_CD.GRP_ID, but that's just a guess."
         db_table = 'LOBBYING_CHG_LOG_CD'
         verbose_name = 'LOBBYING_CHG_LOG_CD'
         verbose_name_plural = 'LOBBYING_CHG_LOG_CD'
+        ordering = ("-log_dt",)
 
     def __str__(self):
         return str(self.filer_id)
