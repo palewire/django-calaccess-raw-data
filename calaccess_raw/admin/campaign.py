@@ -27,7 +27,7 @@ class CvrCampaignDisclosureCdAdmin(BaseAdmin):
     list_filter = ("cmtte_type", "form_type", "entity_cd",)
     search_fields = (
         "filing_id",
-        "filter_id",
+        "filer_id",
         "cand_namf",
         "cand_naml",
         "filer_namf",
@@ -42,7 +42,6 @@ class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
     list_filter = ("form_type", "entity_cd",)
     search_fields = (
         "filing_id",
-        "filter_id",
         "enty_namf",
         "enty_naml",
         "filer_namf",
@@ -52,8 +51,14 @@ class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
 
 @admin.register(models.Cvr3VerificationInfoCd)
 class Cvr3VerificationInfoCdAdmin(BaseAdmin):
-    pass
-
+    list_display = ("filing_id", "sig_date", "sig_naml", "form_type")
+    list_filter = ("form_type",)
+    search_fields = (
+        "filing_id",
+        "sig_naml",
+        "sign_namf",
+    )
+    date_hierarchy = "sig_date"
 
 @admin.register(models.DebtCd)
 class DebtCdAdmin(BaseAdmin):

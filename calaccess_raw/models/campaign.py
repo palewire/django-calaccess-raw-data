@@ -2151,17 +2151,17 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
     ]
     FILING_FORMS = [
-            get_filing_form('F400').get_section('P5'),
-            get_filing_form('F401').get_section('CVR'),
-            get_filing_form('F402').get_section('VER'),
-            get_filing_form('F410').get_section('P3'),
-            get_filing_form('F425').get_section('P3'),
-            get_filing_form('F450').get_section('P4'),
-            get_filing_form('F460').get_section('CVR'),
-            get_filing_form('F461').get_section('P4'),
-            get_filing_form('F465').get_section('P6'),
-            get_filing_form('F511'),
-            get_filing_form('F900'),
+        get_filing_form('F400').get_section('P5'),
+        get_filing_form('F401').get_section('CVR'),
+        get_filing_form('F402').get_section('VER'),
+        get_filing_form('F410').get_section('P3'),
+        get_filing_form('F425').get_section('P3'),
+        get_filing_form('F450').get_section('P4'),
+        get_filing_form('F460').get_section('CVR'),
+        get_filing_form('F461').get_section('P4'),
+        get_filing_form('F465').get_section('P6'),
+        get_filing_form('F511'),
+        get_filing_form('F900'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2315,6 +2315,7 @@ original filing and 1 to 999 amendments.",
         db_table = 'CVR3_VERIFICATION_INFO_CD'
         verbose_name = 'CVR3_VERIFICATION_INFO_CD'
         verbose_name_plural = 'CVR3_VERIFICATION_INFO_CD'
+        ordering = ("-sig_date",)
 
     def __str__(self):
         return str(self.filing_id)
