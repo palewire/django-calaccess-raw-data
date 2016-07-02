@@ -59,17 +59,32 @@ class LempCdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployer1Cd)
 class LobbyistEmployer1CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "employer_id",
+        "session_id",
+        "employer_name",
+        "session_total_amt",
+    )
 
 
 @admin.register(models.LobbyistEmployer2Cd)
 class LobbyistEmployer2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "employer_id",
+        "session_id",
+        "employer_name",
+        "session_total_amt",
+    )
 
 
 @admin.register(models.LobbyistEmployer3Cd)
 class LobbyistEmployer3CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "employer_id",
+        "session_id",
+        "employer_name",
+        "session_total_amt",
+    )
 
 
 @admin.register(models.LobbyistEmployerFirms1Cd)

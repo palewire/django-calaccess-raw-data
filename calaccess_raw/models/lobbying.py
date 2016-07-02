@@ -1613,6 +1613,7 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_EMPLOYER1_CD'
         verbose_name = 'LOBBYIST_EMPLOYER1_CD'
         verbose_name_plural = 'LOBBYIST_EMPLOYER1_CD'
+        ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.employer_id)
