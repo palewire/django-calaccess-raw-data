@@ -5972,6 +5972,7 @@ Populated for Senate, Assembly, or Board of Equalization races."
         db_table = 'S498_CD'
         verbose_name = 'S498_CD'
         verbose_name_plural = 'S498_CD'
+        ordering = ("-date_rcvd",)
 
 
 @python_2_unicode_compatible
@@ -6652,6 +6653,7 @@ Populated for Senate, Assembly, or Board of Equalization races.',
         db_table = 'F501_502_CD'
         verbose_name = 'F501_502_CD'
         verbose_name_plural = 'F501_502_CD'
+        ordering = ("-rpt_date",)
 
 
 # =============================================================================

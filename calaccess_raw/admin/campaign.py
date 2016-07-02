@@ -135,12 +135,26 @@ class S497CdAdmin(BaseAdmin):
 
 @admin.register(models.S498Cd)
 class S498CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "date_rcvd",
+        "payor_naml",
+        "cand_naml",
+        "amt_rcvd",
+    )
+    date_hierarchy = "date_rcvd"
 
 
 @admin.register(models.F501502Cd)
 class F501502CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "rpt_date",
+        "cand_naml",
+        "office_cd",
+        "elec_type",
+    )
+    date_hierarchy = "rpt_date"
 
 
 @admin.register(models.BallotMeasuresCd)
