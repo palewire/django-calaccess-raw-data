@@ -24,4 +24,3 @@ class BaseAdmin(admin.ModelAdmin):
         Search all fields on the model
         """
         return [f.name for f in self.model._meta.fields]
-

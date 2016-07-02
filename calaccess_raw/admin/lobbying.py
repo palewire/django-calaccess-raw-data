@@ -343,10 +343,10 @@ class LobbyistFirmHistoryCdAdmin(BaseAdmin):
         "session_id",
     )
 
+
 @admin.register(models.LobbyistEmployerHistoryCd)
 class LobbyistEmployerHistoryCdAdmin(BaseAdmin):
     list_display = (
         "employer_id",
         "employer_name",
     )
-
