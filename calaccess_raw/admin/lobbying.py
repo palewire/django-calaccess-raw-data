@@ -270,7 +270,13 @@ class LexpCdAdmin(BaseAdmin):
 
 @admin.register(models.LccmCd)
 class LccmCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "ctrib_date",
+        "ctrib_naml",
+        "recip_naml",
+    )
 
 
 @admin.register(models.LobbyistContributions1Cd)

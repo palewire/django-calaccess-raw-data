@@ -4415,6 +4415,7 @@ original filing and 1 to 999 amendments.",
         db_table = 'LCCM_CD'
         verbose_name = 'LCCM_CD'
         verbose_name_plural = 'LCCM_CD'
+        ordering = ("-ctrib_date",)
 
     def __str__(self):
         return str(self.filing_id)
