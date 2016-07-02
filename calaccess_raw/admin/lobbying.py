@@ -49,7 +49,12 @@ class LobbyingChgLogCdAdmin(BaseAdmin):
 
 @admin.register(models.LempCd)
 class LempCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "eff_date",
+        "cli_naml",
+        "form_type",
+    )
 
 
 @admin.register(models.LobbyistEmployer1Cd)

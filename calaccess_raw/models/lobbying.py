@@ -1452,6 +1452,7 @@ Part 2B Client/Employer"
         db_table = 'LEMP_CD'
         verbose_name = 'LEMP_CD'
         verbose_name_plural = 'LEMP_CD'
+        ordering = ("-eff_date",)
 
     def __str__(self):
         return str(self.filing_id)
