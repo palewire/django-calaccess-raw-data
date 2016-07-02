@@ -38,7 +38,16 @@ class CvrCampaignDisclosureCdAdmin(BaseAdmin):
 
 @admin.register(models.Cvr2CampaignDisclosureCd)
 class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
-    pass
+    list_display = ("filing_id", "enty_naml", "form_type")
+    list_filter = ("form_type", "entity_cd",)
+    search_fields = (
+        "filing_id",
+        "filter_id",
+        "enty_namf",
+        "enty_naml",
+        "filer_namf",
+        "filer_naml",
+    )
 
 
 @admin.register(models.Cvr3VerificationInfoCd)
