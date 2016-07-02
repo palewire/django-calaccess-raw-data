@@ -224,12 +224,24 @@ class F690P2CdAdmin(BaseAdmin):
 
 @admin.register(models.CvrLobbyDisclosureCd)
 class CvrLobbyDisclosureCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "rpt_date",
+        "filer_naml",
+        "firm_name",
+        "form_type",
+    )
+    date_hierarchy = "rpt_date"
 
 
 @admin.register(models.Cvr2LobbyDisclosureCd)
 class Cvr2LobbyDisclosureCdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "form_type",
+        "entity_cd",
+        "enty_naml",
+    )
 
 
 @admin.register(models.LattCd)

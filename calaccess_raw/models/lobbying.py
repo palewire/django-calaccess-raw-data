@@ -3495,6 +3495,7 @@ allows the firm to submit forms for its lobbyists.',
         db_table = 'CVR_LOBBY_DISCLOSURE_CD'
         verbose_name = 'CVR_LOBBY_DISCLOSURE_CD'
         verbose_name_plural = 'CVR_LOBBY_DISCLOSURE_CD'
+        ordering = ("-rpt_date",)
 
     def __str__(self):
         return str(self.filing_id)
