@@ -277,21 +277,40 @@ class LccmCdAdmin(BaseAdmin):
         "ctrib_naml",
         "recip_naml",
     )
+    date_hierarchy = "ctrib_date"
 
 
 @admin.register(models.LobbyistContributions1Cd)
 class LobbyistContributions1CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id",
+        "filing_period_start_dt",
+        "recipient_name",
+        "amount"
+    )
+    date_hierarchy = "filing_period_start_dt"
 
 
 @admin.register(models.LobbyistContributions2Cd)
 class LobbyistContributions2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id",
+        "filing_period_start_dt",
+        "recipient_name",
+        "amount"
+    )
+    date_hierarchy = "filing_period_start_dt"
 
 
 @admin.register(models.LobbyistContributions3Cd)
 class LobbyistContributions3CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filer_id",
+        "filing_period_start_dt",
+        "recipient_name",
+        "amount"
+    )
+    date_hierarchy = "filing_period_start_dt"
 
 
 @admin.register(models.LpayCd)

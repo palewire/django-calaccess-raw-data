@@ -4481,6 +4481,7 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_CONTRIBUTIONS1_CD'
         verbose_name = 'LOBBYIST_CONTRIBUTIONS1_CD'
         verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS1_CD'
+        ordering = ("-filing_period_start_dt",)
 
     def __str__(self):
         return str(self.filer_id)
@@ -4547,6 +4548,7 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_CONTRIBUTIONS2_CD'
         verbose_name = 'LOBBYIST_CONTRIBUTIONS2_CD'
         verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS2_CD'
+        ordering = ("-filing_period_start_dt",)
 
     def __str__(self):
         return str(self.filer_id)
@@ -4612,6 +4614,7 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_CONTRIBUTIONS3_CD'
         verbose_name = 'LOBBYIST_CONTRIBUTIONS3_CD'
         verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS3_CD'
+        ordering = ("-filing_period_start_dt",)
 
     def __str__(self):
         return str(self.filer_id)
