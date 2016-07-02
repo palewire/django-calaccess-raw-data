@@ -3017,6 +3017,7 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_FIRM_LOBBYIST1_CD'
         verbose_name = 'LOBBYIST_FIRM_LOBBYIST1_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST1_CD'
+        ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.lobbyist_id)
@@ -3076,6 +3077,7 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
         db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
         verbose_name = 'LOBBYIST_FIRM_LOBBYIST2_CD'
         verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST2_CD'
+        ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.lobbyist_id)

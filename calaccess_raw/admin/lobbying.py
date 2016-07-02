@@ -190,12 +190,26 @@ class LobbyistFirmEmployer2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirmLobbyist1Cd)
 class LobbyistFirmLobbyist1CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "lobbyist_id",
+        "firm_id",
+        "session_id",
+        "lobbyist_first_name",
+        "lobbyist_last_name",
+        "firm_name"
+    )
 
 
 @admin.register(models.LobbyistFirmLobbyist2Cd)
 class LobbyistFirmLobbyist2CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "lobbyist_id",
+        "firm_id",
+        "session_id",
+        "lobbyist_first_name",
+        "lobbyist_last_name",
+        "firm_name"
+    )
 
 
 @admin.register(models.F690P2Cd)
