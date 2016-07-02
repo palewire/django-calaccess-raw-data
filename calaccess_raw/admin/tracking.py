@@ -32,7 +32,6 @@ class RawDataFileAdmin(BaseAdmin):
     )
     list_display_links = ('id', 'file_name',)
     list_filter = ("version__release_datetime",)
-    search_fields = ("file_name",)
 
 
 @admin.register(models.RawDataCommand)
@@ -51,8 +50,4 @@ class RawDataCommandAdmin(BaseAdmin):
         "finish_datetime",
         "version__release_datetime",
         "command",
-    )
-    search_fields = (
-        "command",
-        "file_name",
     )

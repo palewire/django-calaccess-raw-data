@@ -10,7 +10,6 @@ from .base import BaseAdmin
 class CvrSoCdAdmin(BaseAdmin):
     list_display = ("filing_id", "amend_id", "rpt_date", "filer_naml", "form_type")
     list_filter = ("form_type",)
-    search_fields = ("filing_id", "filer_naml", "filer_namf")
     date_hierarchy = "rpt_date"
 
 
@@ -18,21 +17,12 @@ class CvrSoCdAdmin(BaseAdmin):
 class Cvr2SoCdAdmin(BaseAdmin):
     list_display = ("filing_id",  "item_cd", "entity_cd", "enty_naml", "form_type",)
     list_filter = ("form_type", "entity_cd", "off_s_h_cd", "item_cd")
-    search_fields = ("filing_id", "enty_naml", "enty_namf", "cmte_id")
 
 
 @admin.register(models.CvrCampaignDisclosureCd)
 class CvrCampaignDisclosureCdAdmin(BaseAdmin):
     list_display = ("filing_id", "rpt_date", "filer_naml", "cmtte_type", "form_type")
     list_filter = ("cmtte_type", "form_type", "entity_cd",)
-    search_fields = (
-        "filing_id",
-        "filer_id",
-        "cand_namf",
-        "cand_naml",
-        "filer_namf",
-        "filer_naml",
-    )
     date_hierarchy = "rpt_date"
 
 
@@ -40,24 +30,12 @@ class CvrCampaignDisclosureCdAdmin(BaseAdmin):
 class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
     list_display = ("filing_id", "enty_naml", "form_type")
     list_filter = ("form_type", "entity_cd",)
-    search_fields = (
-        "filing_id",
-        "enty_namf",
-        "enty_naml",
-        "filer_namf",
-        "filer_naml",
-    )
 
 
 @admin.register(models.Cvr3VerificationInfoCd)
 class Cvr3VerificationInfoCdAdmin(BaseAdmin):
     list_display = ("filing_id", "sig_date", "sig_naml", "form_type")
     list_filter = ("form_type",)
-    search_fields = (
-        "filing_id",
-        "sig_naml",
-        "sign_namf",
-    )
     date_hierarchy = "sig_date"
 
 
@@ -71,12 +49,6 @@ class DebtCdAdmin(BaseAdmin):
         "amt_paid",
     )
     list_filter = ("entity_cd", "expn_code",)
-    search_fields = (
-        "filing_id",
-        "cmte_id",
-        "payee_naml",
-        "payee_namf",
-    )
 
 
 @admin.register(models.ExpnCd)
@@ -90,13 +62,6 @@ class ExpnCdAdmin(BaseAdmin):
         "amount",
     )
     list_filter = ("expn_code", "entity_cd", "form_type",)
-    search_fields = (
-        "filing_id",
-        "cand_naml",
-        "cand_namf",
-        "payee_naml",
-        "payee_namf",
-    )
     date_hierarchy = "expn_date"
 
 
@@ -114,11 +79,6 @@ class LoanCdAdmin(BaseAdmin):
         "loan_amt4"
     )
     list_filter = ("loan_type", "entity_cd", "form_type")
-    search_fields = (
-        "lndr_naml",
-        "lndr_namf",
-        "filing_id",
-    )
     date_hierarchy = "loan_date1"
 
 
@@ -136,14 +96,6 @@ class RcptCdAdmin(BaseAdmin):
     list_filter = (
         "form_type",
         "entity_cd",
-    )
-    search_fields = (
-        "ctrib_namf",
-        "ctrib_naml",
-        "ctrib_emp",
-        "ctrib_occ",
-        "filing_id",
-        "backref_tid"
     )
     date_hierarchy = "rcpt_date"
 
@@ -165,15 +117,6 @@ class S401CdAdmin(BaseAdmin):
         "off_s_h_cd",
         "sup_opp_cd",
     )
-    search_fields = (
-        "filing_id",
-        "backref_tid",
-        "tran_id",
-        "cand_naml",
-        "cand_namf",
-        "payee_naml",
-        "payee_namf",
-    )
 
 
 @admin.register(models.F495P2Cd)
@@ -185,18 +128,29 @@ class F495P2CdAdmin(BaseAdmin):
         "contribamt"
     )
     list_filter = ("rec_type", "form_type",)
-    search_fields = ("filing_id",)
     date_hierarchy = "elect_date"
 
 
 @admin.register(models.S496Cd)
 class S496CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+        "exp_date",
+        "expn_dscr",
+        "amount"
+    )
+    list_filter = (
+        "rec_type",
+        "form_type",
+    )
+    date_hierarchy = "exp_date"
 
 
 @admin.register(models.S497Cd)
 class S497CdAdmin(BaseAdmin):
-    pass
+    list_display = (
+        "filing_id",
+    )
 
 
 @admin.register(models.S498Cd)
@@ -213,4 +167,3 @@ class F501502CdAdmin(BaseAdmin):
 class BallotMeasuresCdAdmin(BaseAdmin):
     list_display = ("measure_name", "election_date", "jurisdiction")
     list_filter = ("jurisdiction",)
-    search_fields = ("measure_name",)

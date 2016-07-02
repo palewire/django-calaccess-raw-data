@@ -19,18 +19,11 @@ class FilernameCdAdmin(BaseAdmin):
         "effect_dt",
     )
     list_filter = ("filer_type", "status")
-    search_fields = (
-        "xref_filer_id",
-        "filer_id",
-        "naml",
-        "namf",
-    )
     date_hierarchy = "effect_dt"
 
 
 @admin.register(models.FilerFilingsCd)
 class FilerFilingsCdAdmin(BaseAdmin):
-    search_fields = ("filing_id", "filer_id")
     list_display = (
         "id", "filer_id", "form_id",
         "filing_id", "filing_sequence"
@@ -41,7 +34,6 @@ class FilerFilingsCdAdmin(BaseAdmin):
 class FilingsCdAdmin(BaseAdmin):
     list_display = ("filing_id", "filing_type")
     list_filter = ("filing_type",)
-    search_fields = ("filing_id",)
 
 
 @admin.register(models.SmryCd)
@@ -56,7 +48,6 @@ class SmryCdAdmin(BaseAdmin):
         'amount_c',
     )
     list_filter = ('form_type',)
-    search_fields = ('filing_id', 'form_type', 'line_item')
 
 
 @admin.register(models.SpltCd)
@@ -70,7 +61,6 @@ class SpltCdAdmin(BaseAdmin):
         "elec_amount",
     )
     list_filter = ("pform_type",)
-    search_fields = ("filing_id",)
     date_hierarchy = "elec_date"
 
 
@@ -78,14 +68,12 @@ class SpltCdAdmin(BaseAdmin):
 class TextMemoCdAdmin(BaseAdmin):
     list_display = ("filing_id", "amend_id", "form_type")
     list_filter = ("form_type",)
-    search_fields = ("filing_id", "rec_no", "text4000")
 
 
 @admin.register(models.CvrE530Cd)
 class CvrE530CdAdmin(BaseAdmin):
     list_display = ("filing_id", "filer_naml", "office_cd", "cand_naml", "pmnt_dt", "pmnt_amount")
     list_filter = ("office_cd",)
-    search_fields = ("filer_namf", "filer_naml", "cand_naml", "cand_namf")
     date_hierarchy = "pmnt_dt"
 
 
@@ -93,14 +81,12 @@ class CvrE530CdAdmin(BaseAdmin):
 class AcronymsCdAdmin(BaseAdmin):
     list_display = ("acronym", "stands_for", "effect_dt", "a_desc")
     date_hierarchy = 'effect_dt'
-    search_fields = ("acronym", "a_desc")
 
 
 @admin.register(models.AddressCd)
 class AddressCdAdmin(BaseAdmin):
     list_display = ("adrid", "city", "st", "zip4",)
     list_filter = ("st",)
-    search_fields = ("adrid", "city", "st", "zip4")
 
 
 @admin.register(models.EfsFilingLogCd)
@@ -118,19 +104,16 @@ class EfsFilingLogCdAdmin(BaseAdmin):
         "form_type",
     )
     date_hierarchy = "filing_date"
-    search_fields = ("vendor",)
 
 
 @admin.register(models.FilersCd)
 class FilersCdAdmin(BaseAdmin):
     list_display = ("filer_id",)
-    search_fields = ("filer_id",)
 
 
 @admin.register(models.FilerAcronymsCd)
 class FilerAcronymsCdAdmin(BaseAdmin):
     list_display = ("acronym", "filer_id")
-    search_fields = ("acronym",)
 
 
 @admin.register(models.FilerAddressCd)
@@ -146,7 +129,6 @@ class FilerAddressCdAdmin(BaseAdmin):
 @admin.register(models.FilerEthicsClassCd)
 class FilerEthicsClassCdAdmin(BaseAdmin):
     list_display = ("filer_id", "session_id", "ethics_date",)
-    search_fields = ("filer_id",)
     date_hierarchy = "ethics_date"
 
 
@@ -159,7 +141,6 @@ class FilerInterestsCdAdmin(BaseAdmin):
         "effect_date"
     )
     list_filter = ("interest_cd",)
-    search_fields = ("filter_id",)
     date_hierarchy = "effect_date"
 
 
@@ -177,7 +158,6 @@ class FilerLinksCdAdmin(BaseAdmin):
         "active_flg",
         "link_type"
     )
-    search_fields = ("filer_id_a", "filer_id_b")
 
 
 @admin.register(models.FilerStatusTypesCd)
@@ -210,9 +190,6 @@ class FilerToFilerTypeCdAdmin(BaseAdmin):
         "session_id"
     )
     date_hierarchy = "effect_dt"
-    search_fields = (
-        "filer_id",
-    )
 
 
 @admin.register(models.FilerTypesCd)
@@ -230,24 +207,17 @@ class FilerTypesCdAdmin(BaseAdmin):
 class FilerXrefCdAdmin(BaseAdmin):
     list_display = ("filer_id", "xref_id", "effect_dt", "migration_source")
     list_filter = ("migration_source",)
-    search_fields = ("filer_id", "xref_id",)
     date_hierarchy = "effect_dt"
 
 
 @admin.register(models.FilingPeriodCd)
 class FilingPeriodCdAdmin(BaseAdmin):
-    list_display = (
-        "period_id", "start_date", "end_date", "period_desc",
-    )
-    search_fields = (
-        "period_id",
-    )
+    list_display = ("period_id", "start_date", "end_date", "period_desc")
 
 
 @admin.register(models.GroupTypesCd)
 class GroupTypesCdAdmin(BaseAdmin):
     list_display = ("grp_id", "grp_name", "grp_desc")
-    search_fields = ("grp_id", "grp_name", "grp_desc")
 
 
 @admin.register(models.HeaderCd)
@@ -260,21 +230,18 @@ class HeaderCdAdmin(BaseAdmin):
 class HdrCdAdmin(BaseAdmin):
     list_display = ("filing_id", "amend_id", "cal_ver", "soft_name", "soft_ver",)
     list_filter = ("cal_ver", "soft_name",)
-    search_fields = ("filing_id",)
 
 
 @admin.register(models.ImageLinksCd)
 class ImageLinksCdAdmin(BaseAdmin):
     list_display = ("img_link_id", "img_link_type", "img_id", "img_type", "img_dt")
     list_filter = ("img_link_type", "img_type")
-    search_fields = ("img_link_id", "img_id")
     date_hierarchy = "img_dt"
 
 
 @admin.register(models.LegislativeSessionsCd)
 class LegislativeSessionsCdAdmin(BaseAdmin):
     list_display = ("session_id", "begin_date", "end_date")
-    search_fields = ("session_id",)
     date_hierarchy = "begin_date"
 
 
@@ -288,24 +255,17 @@ class LookupCodesCdAdmin(BaseAdmin):
     list_filter = (
         "code_type",
     )
-    search_fields = (
-        "code_type",
-        "code_id",
-        "code_desc",
-    )
 
 
 @admin.register(models.NamesCd)
 class NamesCdAdmin(BaseAdmin):
     list_display = ("namid", "namf", "naml",)
-    search_fields = ("namid", "namt", "namf", "naml", "nams", "moniker")
 
 
 @admin.register(models.ReceivedFilingsCd)
 class ReceivedFilingsCdAdmin(BaseAdmin):
     list_display = ("filing_id", "filer_id", "form_id", "received_date",)
     list_filter = ("form_id",)
-    search_fields = ("filing_id", "filer_id", "form_id",)
     date_hierarchy = "received_date"
 
 
@@ -313,4 +273,3 @@ class ReceivedFilingsCdAdmin(BaseAdmin):
 class ReportsCdAdmin(BaseAdmin):
     list_display = ("rpt_name", "rpt_id", "rpt_type")
     list_filter = ("rpt_type",)
-    search_fields = ("rpt_id", "rpt_name")
