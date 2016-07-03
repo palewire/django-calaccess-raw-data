@@ -4,20 +4,22 @@ import os
 import logging
 from sys import exit
 from hurry.filesize import size
-from clint.textui import progress
 from django.conf import settings
+from clint.textui import progress
+from django.utils.timezone import now
 from django.core.management import call_command
+from calaccess_raw.management import handle_command
 from django.core.management.base import CommandError
 from django.template.loader import render_to_string
-from django.contrib.humanize.templatetags.humanize import naturaltime
-from django.utils.timezone import now
+from calaccess_raw.models.tracking import RawDataVersion
 from calaccess_raw.management.commands import CalAccessCommand
+from django.contrib.humanize.templatetags.humanize import naturaltime
+from calaccess_raw.management.commands.downloadcalaccessrawdata import TestCommand as TestDownloadCommand 
 from calaccess_raw import (
     get_download_directory,
     get_test_download_directory,
     get_model_list
 )
-from calaccess_raw.models.tracking import RawDataVersion
 logger = logging.getLogger(__name__)
 
 
@@ -245,10 +247,7 @@ class Command(CalAccessCommand):
 
         if self.downloading:
             if self.test_mode:
-                call_command(
-                    "downloadcalaccessrawdatatest",
-                    verbosity=self.verbosity,
-                )
+                handle_command(TestDownloadCommand, verbosity=self.verbosity)
             else:
                 call_command(
                     "downloadcalaccessrawdata",
