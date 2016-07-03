@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.db import models
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
 from calaccess_raw.annotations.filing_forms import get_filing_form
