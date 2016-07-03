@@ -4,12 +4,37 @@ from __future__ import unicode_literals
 import textwrap
 from django.db import models
 from calaccess_raw import managers
+from django.db.models.base import ModelBase
+
+
+class CalAccessMetaClass(ModelBase):
+    """
+    A custom metaclass for our base model.
+
+    Automatically configures Meta attributes common to all models.
+    """
+    def __new__(cls, name, bases, attrs):
+        klass = super(CalAccessMetaClass, cls).__new__(cls, name, bases, attrs)
+
+        # Cook up an automated verbose name for each model
+        klass_group = str(klass).split(".")[-2].upper()
+        klass_table = klass._meta.db_table
+        klass_name = "{0}: {1}".format(klass_group, klass_table)
+
+        # Insert the verbose name into each model's configuration
+        klass._meta.verbose_name = klass_name
+        klass._meta.verbose_name_plural = klass_name
+
+        # Finish up
+        return klass
 
 
 class CalAccessBaseModel(models.Model):
     """
     An abstract model with some tricks we'll reuse.
     """
+    __metaclass__ = CalAccessMetaClass
+
     # The UNIQUE_KEY is one or more fields that, taken together, are unique
     # within the database. https://en.wikipedia.org/wiki/Unique_key
 
@@ -161,3 +186,4 @@ class CalAccessBaseModel(models.Model):
 
     class Meta:
         abstract = True
+        app_label = 'calaccess_raw'

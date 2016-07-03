@@ -629,11 +629,8 @@ This field only applies to Form 601.',
         help_text="Industry, trade or professional checkbox",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR_REGISTRATION_CD'
-        verbose_name = 'CVR_REGISTRATION_CD'
-        verbose_name_plural = 'CVR_REGISTRATION_CD'
         ordering = ("-rpt_date",)
 
     def __str__(self):
@@ -769,11 +766,8 @@ the record',
         help_text='Entity suffix',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR2_REGISTRATION_CD'
-        verbose_name = 'CVR2_REGISTRATION_CD'
-        verbose_name_plural = 'CVR2_REGISTRATION_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -1070,11 +1064,8 @@ original filing and 1 to 999 amendments.",
         help_text='Lobbyist ceasing employment but staying active',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBY_AMENDMENTS_CD'
-        verbose_name = 'LOBBY_AMENDMENTS_CD'
-        verbose_name_plural = 'LOBBY_AMENDMENTS_CD'
         ordering = ("-exec_date",)
 
     def __str__(self):
@@ -1238,11 +1229,8 @@ FILER_TYPES_CD.FILER_TYPE or GROUP_TYPES_CD.GRP_ID, but that's just a guess."
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYING_CHG_LOG_CD'
-        verbose_name = 'LOBBYING_CHG_LOG_CD'
-        verbose_name_plural = 'LOBBYING_CHG_LOG_CD'
         ordering = ("-log_dt",)
 
     def __str__(self):
@@ -1447,11 +1435,8 @@ Part 2B Client/Employer"
         help_text='Identification number of subcontracting lobbying firm'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LEMP_CD'
-        verbose_name = 'LEMP_CD'
-        verbose_name_plural = 'LEMP_CD'
         ordering = ("-eff_date",)
 
     def __str__(self):
@@ -1608,11 +1593,8 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
         help_text="Quarter total amount",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMPLOYER1_CD'
-        verbose_name = 'LOBBYIST_EMPLOYER1_CD'
-        verbose_name_plural = 'LOBBYIST_EMPLOYER1_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -1768,11 +1750,8 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         help_text="Quarter 8 total amount",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMPLOYER2_CD'
-        verbose_name = 'LOBBYIST_EMPLOYER2_CD'
-        verbose_name_plural = 'LOBBYIST_EMPLOYER2_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -1928,11 +1907,8 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         help_text="Quarter total amount",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMPLOYER3_CD'
-        verbose_name = 'LOBBYIST_EMPLOYER3_CD'
-        verbose_name_plural = 'LOBBYIST_EMPLOYER3_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -2083,11 +2059,8 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
         help_text="Year 2 year to date amount.",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMPLOYER_HISTORY_CD'
-        verbose_name = 'LOBBYIST_EMPLOYER_HISTORY_CD'
-        verbose_name_plural = 'LOBBYIST_EMPLOYER_HISTORY_CD'
 
     def __str__(self):
         return str(self.contributor_id)
@@ -2143,11 +2116,8 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
         null=True,
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMP_LOBBYIST1_CD'
-        verbose_name = 'LOBBYIST_EMP_LOBBYIST1_CD'
-        verbose_name_plural = 'LOBBYIST_EMP_LOBBYIST1_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -2204,11 +2174,8 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
         null=True,
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMP_LOBBYIST2_CD'
-        verbose_name = 'LOBBYIST_EMP_LOBBYIST2_CD'
-        verbose_name_plural = 'LOBBYIST_EMP_LOBBYIST2_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -2323,11 +2290,8 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         help_text="Quarter total amount",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM1_CD'
-        verbose_name = 'LOBBYIST_FIRM1_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM1_CD'
 
     def __str__(self):
         return str(self.firm_id)
@@ -2441,11 +2405,8 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
         help_text="Quarter total amount",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM2_CD'
-        verbose_name = 'LOBBYIST_FIRM2_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM2_CD'
 
     def __str__(self):
         return str(self.firm_id)
@@ -2559,11 +2520,8 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
         help_text="Quarter total amount",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM3_CD'
-        verbose_name = 'LOBBYIST_FIRM3_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM3_CD'
 
     def __str__(self):
         return str(self.firm_id)
@@ -2665,11 +2623,8 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
         help_text="Year 2 year to date amount",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM_HISTORY_CD'
-        verbose_name = 'LOBBYIST_FIRM_HISTORY_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM_HISTORY_CD'
 
     def __str__(self):
         return str(self.contributor_id)
@@ -2722,11 +2677,8 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
         help_text="Termination effective date"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
-        verbose_name = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
-        verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -2780,11 +2732,8 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
         help_text="Termination effective date"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
-        verbose_name = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
-        verbose_name_plural = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -2866,11 +2815,8 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
-        verbose_name = 'LOBBYIST_FIRM_EMPLOYER1_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER1_CD'
         ordering = ("-rpt_start",)
 
     def __str__(self):
@@ -2952,11 +2898,8 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
-        verbose_name = 'LOBBYIST_FIRM_EMPLOYER2_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM_EMPLOYER2_CD'
         ordering = ("-rpt_start",)
 
     def __str__(self):
@@ -3012,11 +2955,8 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
         null=True,
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM_LOBBYIST1_CD'
-        verbose_name = 'LOBBYIST_FIRM_LOBBYIST1_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST1_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -3072,11 +3012,8 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
         null=True,
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
-        verbose_name = 'LOBBYIST_FIRM_LOBBYIST2_CD'
-        verbose_name_plural = 'LOBBYIST_FIRM_LOBBYIST2_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
@@ -3490,11 +3427,8 @@ allows the firm to submit forms for its lobbyists.',
         help_text='Reporting period through date',
     )
 
-    class Meta:
-        app_label = "calaccess_raw"
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR_LOBBY_DISCLOSURE_CD'
-        verbose_name = 'CVR_LOBBY_DISCLOSURE_CD'
-        verbose_name_plural = 'CVR_LOBBY_DISCLOSURE_CD'
         ordering = ("-rpt_date",)
 
     def __str__(self):
@@ -3632,11 +3566,8 @@ entity is an individual. Only required by Form 635.',
         help_text='Permanent value unique to this item',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
-        verbose_name = 'CVR2_LOBBY_DISCLOSURE_CD'
-        verbose_name_plural = 'CVR2_LOBBY_DISCLOSURE_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -3749,11 +3680,8 @@ text description."
         help_text="description of changes to the filing"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'F690P2_CD'
-        verbose_name = 'F690P2_CD'
-        verbose_name_plural = 'F690P2_CD'
         ordering = ("-exec_date",)
 
     def __str__(self):
@@ -3946,11 +3874,8 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LATT_CD'
-        verbose_name = 'LATT_CD'
-        verbose_name_plural = 'LATT_CD'
         ordering = ("-pmt_date",)
 
     def __str__(self):
@@ -4183,11 +4108,8 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LEXP_CD'
-        verbose_name = 'LEXP_CD'
-        verbose_name_plural = 'LEXP_CD'
         ordering = ("-expn_date",)
 
     def __str__(self):
@@ -4410,11 +4332,8 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LCCM_CD'
-        verbose_name = 'LCCM_CD'
-        verbose_name_plural = 'LCCM_CD'
         ordering = ("-ctrib_date",)
 
     def __str__(self):
@@ -4476,11 +4395,8 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
         help_text="Amount received"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_CONTRIBUTIONS1_CD'
-        verbose_name = 'LOBBYIST_CONTRIBUTIONS1_CD'
-        verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS1_CD'
         ordering = ("-filing_period_start_dt",)
 
     def __str__(self):
@@ -4543,11 +4459,8 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         help_text="Amount received"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_CONTRIBUTIONS2_CD'
-        verbose_name = 'LOBBYIST_CONTRIBUTIONS2_CD'
-        verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS2_CD'
         ordering = ("-filing_period_start_dt",)
 
     def __str__(self):
@@ -4609,11 +4522,8 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
         help_text="Amount received"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOBBYIST_CONTRIBUTIONS3_CD'
-        verbose_name = 'LOBBYIST_CONTRIBUTIONS3_CD'
-        verbose_name_plural = 'LOBBYIST_CONTRIBUTIONS3_CD'
         ordering = ("-filing_period_start_dt",)
 
     def __str__(self):
@@ -4847,11 +4757,8 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LPAY_CD'
-        verbose_name = 'LPAY_CD'
-        verbose_name_plural = 'LPAY_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -5032,11 +4939,8 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOTH_CD'
-        verbose_name = 'LOTH_CD'
-        verbose_name_plural = 'LOTH_CD'
         ordering = ("-pmt_date",)
 
     def __str__(self):

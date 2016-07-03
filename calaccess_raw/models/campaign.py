@@ -468,11 +468,8 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
         help_text='ZIP+4 for Org / Committee / Candidate or Office holder',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = "CVR_SO_CD"
-        verbose_name = 'CVR_SO_CD'
-        verbose_name_plural = 'CVR_SO_CD'
         ordering = ("-rpt_date",)
 
     def __str__(self):
@@ -849,11 +846,8 @@ sought and "H" for held',
         help_text="Position/title of the principal officer",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR2_SO_CD'
-        verbose_name = 'CVR2_SO_CD'
-        verbose_name_plural = 'CVR2_SO_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -1710,11 +1704,8 @@ officer's street address."
         help_text="Treasurer or responsible officer's ZIP Code"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         ordering = ("-rpt_date",)
 
     def __str__(self):
@@ -2120,11 +2111,8 @@ with in the record.",
         help_text="Treasurer or responsible officer's prefix or title"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name_plural = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -2310,11 +2298,8 @@ original filing and 1 to 999 amendments.",
         help_text='suffix of the signer',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR3_VERIFICATION_INFO_CD'
-        verbose_name = 'CVR3_VERIFICATION_INFO_CD'
-        verbose_name_plural = 'CVR3_VERIFICATION_INFO_CD'
         ordering = ("-sig_date",)
 
     def __str__(self):
@@ -2558,11 +2543,8 @@ class CvrF470Cd(CalAccessBaseModel):
     def __str__(self):
         return str(self.amend_id)
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR_F470_CD'
-        verbose_name = 'CVR_F470_CD'
-        verbose_name_plural = 'CVR_F470_CD'
 
 
 # =============================================================================
@@ -2881,11 +2863,8 @@ transaction identifier. /"X/" indicates this condition is true'
         help_text='Related record is included on Schedule C.'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'DEBT_CD'
-        verbose_name = 'DEBT_CD'
-        verbose_name_plural = 'DEBT_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -3646,11 +3625,8 @@ original filing and 1 to 999 amendments.",
         help_text="Related item is included on Sched 'C' or 'H2'"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'EXPN_CD'
-        verbose_name = 'EXPN_CD'
-        verbose_name_plural = 'EXPN_CD'
         ordering = ("-expn_date",)
 
     def __str__(self):
@@ -4079,11 +4055,8 @@ identifier. "X" indicates this condition is true.'
         help_text="Related record is included on Form 460 Schedule 'A' or 'E'"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOAN_CD'
-        verbose_name = 'LOAN_CD'
-        verbose_name_plural = 'LOAN_CD'
         ordering = ("-loan_date1",)
 
     def __str__(self):
@@ -4681,11 +4654,8 @@ identifier. 'X' indicates this condition is true"
         help_text="Related record is included on Sched 'B2' or 'F'"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'RCPT_CD'
-        verbose_name = 'RCPT_CD'
-        verbose_name_plural = 'RCPT_CD'
         ordering = ("-rcpt_date",)
 
     def __str__(self):
@@ -5015,11 +4985,8 @@ for Senate, Assembly, or Board of Equalization races."
         help_text="Back reference to transaction identifier of parent record"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S401_CD'
-        verbose_name = 'S401_CD'
-        verbose_name_plural = 'S401_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -5111,11 +5078,8 @@ as on the filing's cover (CVR) record."
 17 days before the election)"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'F495P2_CD'
-        verbose_name = 'F495P2_CD'
-        verbose_name_plural = 'F495P2_CD'
         ordering = ("-elect_date",)
 
     def __str__(self):
@@ -5232,11 +5196,8 @@ original filing and 1 to 999 amendments.",
         help_text="End of date range for items paid"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S496_CD'
-        verbose_name = 'S496_CD'
-        verbose_name_plural = 'S496_CD'
         ordering = ("-exp_date",)
 
     def __str__(self):
@@ -5651,11 +5612,8 @@ for Senate, Assembly, or Board of Equalization races."
             self.amend_id
         )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S497_CD'
-        verbose_name = 'S497_CD'
-        verbose_name_plural = 'S497_CD'
         ordering = ("-ctrib_date",)
 
 
@@ -5967,11 +5925,8 @@ Populated for Senate, Assembly, or Board of Equalization races."
     def __str__(self):
         return str(self.filing_id)
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S498_CD'
-        verbose_name = 'S498_CD'
-        verbose_name_plural = 'S498_CD'
         ordering = ("-date_rcvd",)
 
 
@@ -6648,11 +6603,8 @@ Populated for Senate, Assembly, or Board of Equalization races.',
     def __str__(self):
         return str(self.filing_id)
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'F501_502_CD'
-        verbose_name = 'F501_502_CD'
-        verbose_name_plural = 'F501_502_CD'
         ordering = ("-rpt_date",)
 
 
@@ -6704,11 +6656,8 @@ class BallotMeasuresCd(CalAccessBaseModel):
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'BALLOT_MEASURES_CD'
-        verbose_name = 'BALLOT_MEASURES_CD'
-        verbose_name_plural = 'BALLOT_MEASURES_CD'
         ordering = (
             "-election_date",
             "measure_no",

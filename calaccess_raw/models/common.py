@@ -180,11 +180,8 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
         help_text="Email address"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILERNAME_CD'
-        verbose_name = 'FILERNAME_CD'
-        verbose_name_plural = 'FILERNAME_CD'
         ordering = ("naml", "namf",)
 
     def __str__(self):
@@ -364,11 +361,8 @@ laundering or other special condition."
         ],
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_FILINGS_CD'
-        verbose_name = 'FILER_FILINGS_CD'
-        verbose_name_plural = 'FILER_FILINGS_CD'
 
     def __str__(self):
         return str("%s %s" % (self.filer_id, self.filing_id))
@@ -411,11 +405,8 @@ class FilingsCd(CalAccessBaseModel):
         ],
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILINGS_CD'
-        verbose_name = 'FILINGS_CD'
-        verbose_name_plural = 'FILINGS_CD'
         ordering = ("-filing_id",)
 
     def __str__(self):
@@ -521,11 +512,8 @@ original filing and 1 to 999 amendments.",
         ]
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'HDR_CD'
-        verbose_name = 'HDR_CD'
-        verbose_name_plural = 'HDR_CD'
         ordering = ("-filing_id", "-amend_id")
 
     def __str__(self):
@@ -635,11 +623,8 @@ class HeaderCd(CalAccessBaseModel):
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'HEADER_CD'
-        verbose_name = 'HEADER_CD'
-        verbose_name_plural = 'HEADER_CD'
         ordering = ("form_id", "line_number")
 
     def __str__(self):
@@ -796,11 +781,8 @@ original filing and 1 to 999 amendments.",
         help_text='Election date',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'SMRY_CD'
-        verbose_name = 'SMRY_CD'
-        verbose_name_plural = 'SMRY_CD'
         ordering = ("filing_id", "-amend_id", 'form_type', "line_item")
 
     def __str__(self):
@@ -1240,11 +1222,8 @@ original filing and 1 to 999 amendments.",
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR_E530_CD'
-        verbose_name = 'CVR_E530_CD'
-        verbose_name_plural = 'CVR_E530_CD'
         ordering = ("-pmnt_dt",)
 
     def __str__(self):
@@ -1357,11 +1336,8 @@ original filing and 1 to 999 amendments.",
         help_text='parent transaction ID',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'SPLT_CD'
-        verbose_name = 'SPLT_CD'
-        verbose_name_plural = 'SPLT_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -1559,11 +1535,8 @@ original filing and 1 to 999 amendments.",
         verbose_name='text'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'TEXT_MEMO_CD'
-        verbose_name = 'TEXT_MEMO_CD'
-        verbose_name_plural = 'TEXT_MEMO_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -1600,11 +1573,8 @@ class AcronymsCd(CalAccessBaseModel):
         help_text='Description of the acronym'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'ACRONYMS_CD'
-        verbose_name = 'ACRONYMS_CD'
-        verbose_name_plural = 'ACRONYMS_CD'
         ordering = ("acronym",)
 
     def __str__(self):
@@ -1664,11 +1634,8 @@ class AddressCd(CalAccessBaseModel):
         help_text='Address email'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'ADDRESS_CD'
-        verbose_name = 'ADDRESS_CD'
-        verbose_name_plural = 'ADDRESS_CD'
 
     def __str__(self):
         return str(self.adrid)
@@ -1756,11 +1723,8 @@ VARCHAR. However, its distinct values are 0, 1, 2 and 7.",
 or "BADFORMAT" and a three-digit number.',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'EFS_FILING_LOG_CD'
-        verbose_name = 'EFS_FILING_LOG_CD'
-        verbose_name_plural = 'EFS_FILING_LOG_CD'
         ordering = ("-filing_date",)
 
     def __str__(self):
@@ -1786,11 +1750,8 @@ class FilersCd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILERS_CD'
-        verbose_name = 'FILERS_CD'
-        verbose_name_plural = 'FILERS_CD'
         ordering = ("-filer_id",)
 
     def __str__(self):
@@ -1820,11 +1781,8 @@ class FilerAcronymsCd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_ACRONYMS_CD'
-        verbose_name = 'FILER_ACRONYMS_CD'
-        verbose_name_plural = 'FILER_ACRONYMS_CD'
         ordering = ("acronym",)
 
     def __str__(self):
@@ -1887,11 +1845,8 @@ class FilerAddressCd(CalAccessBaseModel):
         null=True,
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_ADDRESS_CD'
-        verbose_name = 'FILER_ADDRESS_CD'
-        verbose_name_plural = 'FILER_ADDRESS_CD'
 
     def __str__(self):
         return str(self.filer_id)
@@ -1926,11 +1881,8 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         help_text="Date ethics training was accomplished"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_ETHICS_CLASS_CD'
-        verbose_name = 'FILER_ETHICS_CLASS_CD'
-        verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
         ordering = ("-ethics_date",)
 
     def __str__(self):
@@ -2005,11 +1957,8 @@ class FilerInterestsCd(CalAccessBaseModel):
         help_text="Effective date",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_INTERESTS_CD'
-        verbose_name = 'FILER_INTERESTS_CD'
-        verbose_name_plural = 'FILER_INTERESTS_CD'
         ordering = ("-effect_date",)
 
     def __str__(self):
@@ -2121,11 +2070,8 @@ in the relationship',
         help_text="Termination effective date",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_LINKS_CD'
-        verbose_name = 'FILER_LINKS_CD'
-        verbose_name_plural = 'FILER_LINKS_CD'
 
     def __str__(self):
         return str('%s-%s' % (self.filer_id_a, self.filer_id_b))
@@ -2155,11 +2101,8 @@ class FilerStatusTypesCd(CalAccessBaseModel):
         help_text='This field is undocumented'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_STATUS_TYPES_CD'
-        verbose_name = 'FILER_STATUS_TYPES_CD'
-        verbose_name_plural = 'FILER_STATUS_TYPES_CD'
         ordering = ("status_type",)
 
     def __str__(self):
@@ -2704,11 +2647,8 @@ Populated for Senate, Assembly or Board of Equalization races",
         ]
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_TO_FILER_TYPE_CD'
-        verbose_name = 'FILER_TO_FILER_TYPE_CD'
-        verbose_name_plural = 'FILER_TO_FILER_TYPE_CD'
 
     def __str__(self):
         return str(self.filer_id)
@@ -2763,11 +2703,8 @@ class FilerTypesCd(CalAccessBaseModel):
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_TYPES_CD'
-        verbose_name = 'FILER_TYPES_CD'
-        verbose_name_plural = 'FILER_TYPES_CD'
         ordering = ("filer_type",)
 
     def __str__(self):
@@ -2812,11 +2749,8 @@ class FilerXrefCd(CalAccessBaseModel):
         help_text="Source of the XREF_ID. Migration or generated by the AMS."
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_XREF_CD'
-        verbose_name = 'FILER_XREF_CD'
-        verbose_name_plural = 'FILER_XREF_CD'
 
     def __str__(self):
         return str(self.filer_id)
@@ -2880,11 +2814,8 @@ class FilingPeriodCd(CalAccessBaseModel):
         help_text="Deadline date"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILING_PERIOD_CD'
-        verbose_name = 'FILING_PERIOD_CD'
-        verbose_name_plural = 'FILING_PERIOD_CD'
         ordering = ("-end_date",)
 
     def __str__(self):
@@ -2923,11 +2854,8 @@ class GroupTypesCd(CalAccessBaseModel):
         help_text="Group Description. This column contains only empty strings."
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'GROUP_TYPES_CD'
-        verbose_name = 'GROUP_TYPES_CD'
-        verbose_name_plural = 'GROUP_TYPES_CD'
         ordering = ("grp_id",)
 
     def __str__(self):
@@ -2990,11 +2918,8 @@ class ImageLinksCd(CalAccessBaseModel):
         help_text="Image date",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'IMAGE_LINKS_CD'
-        verbose_name = 'IMAGE_LINKS_CD'
-        verbose_name_plural = 'IMAGE_LINKS_CD'
         ordering = ("-img_dt",)
 
     def __str__(self):
@@ -3029,11 +2954,8 @@ class LegislativeSessionsCd(CalAccessBaseModel):
         help_text="Session end date"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LEGISLATIVE_SESSIONS_CD'
-        verbose_name = 'LEGISLATIVE_SESSIONS_CD'
-        verbose_name_plural = 'LEGISLATIVE_SESSIONS_CD'
         ordering = ("-begin_date",)
 
     def __str__(self):
@@ -3065,11 +2987,8 @@ class LookupCodesCd(CalAccessBaseModel):
         help_text="Code description",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOOKUP_CODES_CD'
-        verbose_name = 'LOOKUP_CODES_CD'
-        verbose_name_plural = 'LOOKUP_CODES_CD'
 
     def __str__(self):
         return str(self.code_id)
@@ -3141,11 +3060,8 @@ class NamesCd(CalAccessBaseModel):
         help_text="Last name",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'NAMES_CD'
-        verbose_name = 'NAMES_CD'
-        verbose_name_plural = 'NAMES_CD'
         ordering = ("naml", "namf")
 
     def __str__(self):
@@ -3234,11 +3150,8 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         help_text="A comment"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'RECEIVED_FILINGS_CD'
-        verbose_name = 'RECEIVED_FILINGS_CD'
-        verbose_name_plural = 'RECEIVED_FILINGS_CD'
         ordering = ("-received_date",)
 
     def __str__(self):
@@ -3309,11 +3222,8 @@ class ReportsCd(CalAccessBaseModel):
         help_text="Parameter definition"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'REPORTS_CD'
-        verbose_name = 'REPORTS_CD'
-        verbose_name_plural = 'REPORTS_CD'
         ordering = ("rpt_name",)
 
     def __str__(self):
@@ -3371,11 +3281,8 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         help_text="Foreign key referencing FilingPeriodCd.period_id",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_TYPE_PERIODS_CD'
-        verbose_name = 'FILER_TYPE_PERIODS_CD'
-        verbose_name_plural = 'FILER_TYPE_PERIODS_CD'
 
     def __str__(self):
         return str(self.election_type)
