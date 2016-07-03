@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Custom administration panels for common models.
+"""
 from __future__ import unicode_literals
 from django.contrib import admin
 from calaccess_raw import models
