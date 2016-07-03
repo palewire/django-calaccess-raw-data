@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Models for storing inactive and deprecated tables from the CAL-ACCESS database.
+"""
 from __future__ import unicode_literals
 from calaccess_raw import fields
 from .base import CalAccessBaseModel

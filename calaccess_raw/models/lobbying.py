@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Models for storing lobbying activity tables from the CAL-ACCESS database.
+"""
 from __future__ import unicode_literals
 from .base import CalAccessBaseModel
 from calaccess_raw import fields

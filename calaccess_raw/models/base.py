@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Base models for tables from the CAL-ACCESS database.
+"""
 from __future__ import unicode_literals
 import textwrap
 from django.db import models
