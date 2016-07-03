@@ -5,6 +5,7 @@ sphinx_rtd_theme
 coverage
 hurry.filesize
 flake8
+flake8_docstrings
 psycopg2
 python-coveralls
 pytz
