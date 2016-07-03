@@ -97,7 +97,7 @@ from calaccess_raw.models.tracking import (
     RawDataCommand,
     RawDataFile
 )
-__all__ = [
+__all__ = (
     'CalAccessBaseModel',
     'CvrSoCd',
     'Cvr2SoCd',
@@ -182,4 +182,4 @@ __all__ = [
     'RawDataVersion',
     'RawDataCommand',
     'RawDataFile'
-]
+)

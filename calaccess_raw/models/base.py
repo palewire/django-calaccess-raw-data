@@ -17,6 +17,9 @@ class CalAccessMetaClass(ModelBase):
     Automatically configures Meta attributes common to all models.
     """
     def __new__(cls, name, bases, attrs):
+        """
+        Override the default __new__ behavior.
+        """
         klass = super(CalAccessMetaClass, cls).__new__(cls, name, bases, attrs)
 
         # Cook up an automated verbose name for each model
@@ -78,7 +81,7 @@ class CalAccessBaseModel(models.Model):
 
     def doc(self):
         """
-        Return the model's docstring as a readable string ready to print
+        Return the model's docstring as a readable string ready to print.
         """
         if self.__doc__.startswith(self.klass_name):
             return ''
@@ -101,50 +104,50 @@ class CalAccessBaseModel(models.Model):
     @property
     def klass_name(self):
         """
-        Return the name of the model class
+        Return the name of the model class.
         """
         return self.__class__.__name__
 
     @property
     def klass_group(self):
         """
-        Return the name of the model's group, as determined by its submodule
+        Return the name of the model's group, as determined by its submodule.
         """
         return str(self.__class__).split(".")[-2]
 
     def get_field_list(self):
         """
-        Return all the fields on the model as a list
+        Return all the fields on the model as a list.
         """
         return self._meta.fields
 
     def get_csv_name(self):
         """
-        Return the name of the clean CSV file that contains the model's data
+        Return the name of the clean CSV file that contains the model's data.
         """
         return self.__class__.objects.get_csv_name()
 
     def get_csv_path(self):
         """
-        Return the path to the clean CSV file that contains the model's data
+        Return the path to the clean CSV file that contains the model's data.
         """
         return self.__class__.objects.get_csv_path()
 
     def get_tsv_name(self):
         """
-        Return the name of the raw TSV file that contains the model's data
+        Return the name of the raw TSV file that contains the model's data.
         """
         return self.__class__.objects.get_tsv_name()
 
     def get_tsv_path(self):
         """
-        Return the path to the raw TSV file that contains the model's data
+        Return the path to the raw TSV file that contains the model's data.
         """
         return self.__class__.objects.get_tsv_path()
 
     def get_unique_key_list(self):
         """
-        Return UNIQUE_KEY setting as a list regardless of its data type
+        Return UNIQUE_KEY setting as a list regardless of its data type.
         """
         if self.__class__.UNIQUE_KEY is None:
             return []
@@ -157,7 +160,7 @@ class CalAccessBaseModel(models.Model):
 
     def get_documentcloud_pages(self):
         """
-        Return a list of tuples for each page or each document in the DOCUMENTCLOUD_PAGES attr
+        Return a list of tuples for each page or each document in the DOCUMENTCLOUD_PAGES attr.
 
         Each tuple contains a DocumentCloud and DocPage object.
         """
@@ -168,14 +171,10 @@ class CalAccessBaseModel(models.Model):
 
     def get_filing_forms_w_sections(self):
         """
-        Returns a list of tuples, each containing a FilingForm object and list of
-        FilingFormSection objects, if specific sections of the filing form are
-        relevant to the model.
+        Returns a list of tuples, each containing a FilingForm object and list of FilingFormSection objects.
         """
         from calaccess_raw.annotations import FilingForm
-
         forms_dict = {}
-
         for i in self.FILING_FORMS:
             if isinstance(i, FilingForm):
                 try:
@@ -187,7 +186,6 @@ class CalAccessBaseModel(models.Model):
                     forms_dict[i.form].append(i)
                 except KeyError:
                     forms_dict[i.form] = [i]
-
         return sorted(forms_dict.items(), key=lambda x: x[0].id)
 
     class Meta:

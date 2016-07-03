@@ -15,15 +15,10 @@ from calaccess_raw.annotations import (
 )
 
 
-# =============================================================================
-# ------------------------------ Cover Pages ----------------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class CvrSoCd(CalAccessBaseModel):
     """
-    Cover page for a statement of organization creation or termination
-    form filed by a slate-mailer organization or recipient committee.
+    Cover page for a statement of organization creation or termination form.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -482,9 +477,7 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
 @python_2_unicode_compatible
 class Cvr2SoCd(CalAccessBaseModel):
     """
-    Additional names and committee information included on the second page
-    of a statement of organization creation form filed
-    by a slate-mailer organization or recipient committee.
+    Additional names and information from the second page of a statement of organization form.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -859,9 +852,7 @@ sought and "H" for held',
 @python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information from campaign disclosure forms. This data comes from
-    the electronic filing. The data contained herein is "as filed" by the entity
-    making the filing.
+    Cover page information from campaign disclosure forms.
     """
     UNIQUE_KEY = ('FILING_ID', 'AMEND_ID',)
     DOCUMENTCLOUD_PAGES = [
@@ -1718,8 +1709,7 @@ officer's street address."
 @python_2_unicode_compatible
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
-    Record used to carry additional names (e.g., Assistant Treasurers) for the
-    campaign disclosure forms below.
+    Additional names disclosed on campaign forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2124,7 +2114,7 @@ with in the record.",
 @python_2_unicode_compatible
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
-    Cover page verification information from campaign disclosure forms
+    Verification information from campaign disclosure cover pages.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2309,15 +2299,10 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-# =============================================================================
-# ------------------------------- Line Items ----------------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class DebtCd(CalAccessBaseModel):
     """
-    Records of unpaid bills accrued by Recipient Campaigns, as listed on
-    Form 460, Schedule F (Accrued Expenses).
+    Campaign debts and unpaid bills.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2635,8 +2620,7 @@ transaction identifier. /"X/" indicates this condition is true'
 @python_2_unicode_compatible
 class ExpnCd(CalAccessBaseModel):
     """
-    Campaign expenditures from a variety of forms, excluding Late Independent
-    Expenditures (from Form 496)
+    Itemized campaign expenditures.
     """
     UNIQUE_KEY = (
         'FILING_ID',
@@ -3398,7 +3382,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     """
-    Loans received and made by recepient committees
+    Loans received and made by campaigns.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -3828,8 +3812,7 @@ identifier. "X" indicates this condition is true.'
 @python_2_unicode_compatible
 class RcptCd(CalAccessBaseModel):
     """
-    Contribution records from receipts schedules for Slate Mailer Organization
-    and Recipient Committee Campaign Statements.
+    Itemized campaign contributions.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4424,16 +4407,10 @@ identifier. 'X' indicates this condition is true"
         return str(self.filing_id)
 
 
-# =============================================================================
-# --------------------------- Forms and Schedules -----------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class S401Cd(CalAccessBaseModel):
     """
-    Form 401 (Slate Mailer Organization) payment and other
-    disclosure schedules (F401B, F401B-1, F401C, F401D) information. Does not
-    include Form 401, Schedule A (Payments Received).
+    Slate Mailer Organizations payment and other disclosures.
     """
     UNIQUE_KEY = (
         'FILING_ID',
@@ -4757,8 +4734,7 @@ for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class F495P2Cd(CalAccessBaseModel):
     """
-    Form 495 Supplemental Pre-Election Campaign Statement, attached to
-    Recipient Committee Campaign Statements (Forms 450 and 460).
+    Supplemental pre-election campaign statements.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4851,8 +4827,7 @@ as on the filing's cover (CVR) record."
 @python_2_unicode_compatible
 class S496Cd(CalAccessBaseModel):
     """
-    Records of expenditures made by Independent Expenditure Committees in the 90
-    days preceding an election.
+    Independent expenditures made in the 90 days preceding an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4973,8 +4948,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class S497Cd(CalAccessBaseModel):
     """
-    Campaign Committee contributions received or made in the 90 days before an
-    election, as reported on Form 497.
+    Campaign contributions received or made in the 90 days before an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -5382,8 +5356,7 @@ for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class S498Cd(CalAccessBaseModel):
     """
-    Payments received by Slate Mailer Organizations within 90 days of an election,
-    as reported on Form 498.
+    Payments received by Slate Mailer Organizations within 90 days of an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -5695,8 +5668,7 @@ Populated for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class F501502Cd(CalAccessBaseModel):
     """
-    Candidate Intention Statements (Forms 501 and 502), including a record
-    for the original filing and each amendment.
+    Candidate intention statements.
     """
     UNIQUE_KEY = (
         "FILING_ID",
