@@ -18,7 +18,7 @@ from calaccess_raw.annotations import (
 @python_2_unicode_compatible
 class BallotMeasuresCd(CalAccessBaseModel):
     """
-    Ballot measure dates and times
+    Ballot measure dates and times.
     """
     UNIQUE_KEY = "FILER_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -75,8 +75,7 @@ class BallotMeasuresCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class CvrF470Cd(CalAccessBaseModel):
     """
-    Cover page information for Officeholder and Candidate Short and Supplement Forms
-    (Form 470).
+    Cover page information for Officeholder and Candidate Short and Supplement Forms.
 
     An empty file of the same name is included in the Secretary of State's daily
     CAL-ACCESS database exports.
@@ -316,9 +315,10 @@ class CvrF470Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerTypePeriodsCd(CalAccessBaseModel):
     """
-    This table and its fields are listed in the official CAL-ACCESS documentation,
-    but is not fully explained. The table's description contains this note: "J M needs
-    to document. This is in his list of tables designed for future enhancements."
+    Listed in the official CAL-ACCESS documentation, but not fully explained.
+
+    The table's description contains this note: "J M needs to document. This is
+    in his list of tables designed for future enhancements."
     """
     UNIQUE_KEY = (
         "ELECTION_TYPE",
@@ -437,8 +437,7 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table. Temporary table used to generate
-    disclosure table (Lobbyist Contributions 3)
+    Lobbyist contribution disclosure table.
     """
     UNIQUE_KEY = False
     filer_id = fields.IntegerField(
@@ -680,8 +679,7 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer1Cd(CalAccessBaseModel):
     """
-    This table is 99 percent identical to LOBBYIST_EMPLOYER2_CD and
-    LOBBYIST_EMPLOYER3_CD.
+    This table is 99 percent identical to LOBBYIST_EMPLOYER2_CD and LOBBYIST_EMPLOYER3_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
     with this cryptic note: "Matt needs to describe the relationship between the
@@ -838,8 +836,7 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
-    This table is 99 percent identical to LOBBYIST_EMPLOYER1_CD and
-    LOBBYIST_EMPLOYER3_CD.
+    This table is 99 percent identical to LOBBYIST_EMPLOYER1_CD and LOBBYIST_EMPLOYER3_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
     with this cryptic note: "Matt needs to describe the relationship between the
@@ -995,8 +992,7 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer3Cd(CalAccessBaseModel):
     """
-    This table is 99 percent identical to LOBBYIST_EMPLOYER1_CD and
-    LOBBYIST_EMPLOYER2_CD.
+    This table is 99 percent identical to LOBBYIST_EMPLOYER1_CD and LOBBYIST_EMPLOYER2_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
     with this cryptic note: "Matt needs to describe the relationship between the
@@ -1262,8 +1258,7 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     """
-    An empty file of the same name is included in the Secretary of State's daily
-    CAL-ACCESS database exports.
+    An empty file of the same name is included in the Secretary of State's daily CAL-ACCESS database exports.
 
     This table is documented in "Cal-Access Tables, Columns, Indexes", but with
     this cryptic note: "Matt needs to describe the relationship between the
@@ -1924,8 +1919,7 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmHistoryCd(CalAccessBaseModel):
     """
-    An empty file of the same name is included in the Secretary of State's daily
-    CAL-ACCESS database exports.
+    An empty file of the same name is included in the Secretary of State's daily CAL-ACCESS database exports.
 
     This table is documented in "Cal-Access Tables, Columns, Indexes", but with
     this cryptic note: "Matt needs to describe the relationship between the
