@@ -17,8 +17,30 @@ from calaccess_raw.admin.campaign import (
     S497CdAdmin,
     F501502CdAdmin,
     S498CdAdmin,
+)
+from calaccess_raw.admin.inactive import (
     BallotMeasuresCdAdmin,
     CvrF470CdAdmin,
+    FilerTypePeriodsCd,
+    LobbyistContributions1CdAdmin,
+    LobbyistContributions2CdAdmin,
+    LobbyistContributions3CdAdmin,
+    LobbyistEmpLobbyist1CdAdmin,
+    LobbyistEmpLobbyist2CdAdmin,
+    LobbyistEmployer1CdAdmin,
+    LobbyistEmployer2CdAdmin,
+    LobbyistEmployer3CdAdmin,
+    LobbyistEmployerFirms1CdAdmin,
+    LobbyistEmployerFirms2CdAdmin,
+    LobbyistEmployerHistoryCdAdmin,
+    LobbyistFirm1CdAdmin,
+    LobbyistFirm2CdAdmin,
+    LobbyistFirm3CdAdmin,
+    LobbyistFirmEmployer1CdAdmin,
+    LobbyistFirmEmployer2CdAdmin,
+    LobbyistFirmHistoryCdAdmin,
+    LobbyistFirmLobbyist1CdAdmin,
+    LobbyistFirmLobbyist2CdAdmin
 )
 from calaccess_raw.admin.lobbying import (
     CvrRegistrationCdAdmin,
@@ -33,26 +55,7 @@ from calaccess_raw.admin.lobbying import (
     LothCdAdmin,
     LempCdAdmin,
     LpayCdAdmin,
-    LobbyingChgLogCdAdmin,
-    LobbyistContributions1CdAdmin,
-    LobbyistContributions2CdAdmin,
-    LobbyistContributions3CdAdmin,
-    LobbyistEmployer1CdAdmin,
-    LobbyistEmployer2CdAdmin,
-    LobbyistEmployer3CdAdmin,
-    LobbyistEmployerFirms1CdAdmin,
-    LobbyistEmployerFirms2CdAdmin,
-    LobbyistEmpLobbyist1CdAdmin,
-    LobbyistEmpLobbyist2CdAdmin,
-    LobbyistFirm1CdAdmin,
-    LobbyistFirm2CdAdmin,
-    LobbyistFirm3CdAdmin,
-    LobbyistFirmEmployer1CdAdmin,
-    LobbyistFirmEmployer2CdAdmin,
-    LobbyistFirmLobbyist1CdAdmin,
-    LobbyistFirmLobbyist2CdAdmin,
-    LobbyistFirmHistoryCdAdmin,
-    LobbyistEmployerHistoryCdAdmin
+    LobbyingChgLogCdAdmin
 )
 from calaccess_raw.admin.common import (
     FilernameCdAdmin,
@@ -85,7 +88,6 @@ from calaccess_raw.admin.common import (
     NamesCdAdmin,
     ReceivedFilingsCdAdmin,
     ReportsCdAdmin,
-    FilerTypePeriodsCd
 )
 
 from calaccess_raw.admin.tracking import (

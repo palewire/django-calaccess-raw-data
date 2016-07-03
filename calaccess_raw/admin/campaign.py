@@ -158,13 +158,3 @@ class F501502CdAdmin(BaseAdmin):
         "elec_type",
     )
     date_hierarchy = "rpt_date"
-
-
-@admin.register(models.BallotMeasuresCd)
-class BallotMeasuresCdAdmin(BaseAdmin):
-    list_display = ("measure_name", "election_date", "jurisdiction")
-
-
-@admin.register(models.CvrF470Cd)
-class CvrF470CdAdmin(BaseAdmin):
-    list_display = ("filing_id", "filer_naml",)
