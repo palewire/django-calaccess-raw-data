@@ -25,5 +25,8 @@ flake8_docstrings
 coverage
 python-coveralls
 
+# Packaging
+wheel
+
 # DAT
 datpy
