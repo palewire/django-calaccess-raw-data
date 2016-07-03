@@ -11,15 +11,10 @@ from calaccess_raw.annotations.filing_forms import get_filing_form
 from django.utils.encoding import python_2_unicode_compatible
 
 
-# =============================================================================
-# ------------------------------ Registration ---------------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class CvrRegistrationCd(CalAccessBaseModel):
     """
-    Cover page information of lobbying registration (Forms 601, 602, 603, 604,
-    606, and 607).
+    Cover page information of lobbying registration forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -643,8 +638,7 @@ This field only applies to Form 601.',
 @python_2_unicode_compatible
 class Cvr2RegistrationCd(CalAccessBaseModel):
     """
-    Additional names found on lobbying registration (Forms 601, 602, 603, 604,
-    606, and 607).
+    Additional names found on lobbying registration.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -779,7 +773,7 @@ the record',
 @python_2_unicode_compatible
 class LobbyAmendmentsCd(CalAccessBaseModel):
     """
-    Lobbyist registration amendment information (Form 605 Part I).
+    Lobbyist registration amendments.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1078,7 +1072,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
     """
-    Holds lobbyist log data for web display.
+    Lobbyist filing log compiled for web display.
     """
     UNIQUE_KEY = (
         "FILER_ID",
@@ -1240,14 +1234,10 @@ FILER_TYPES_CD.FILER_TYPE or GROUP_TYPES_CD.GRP_ID, but that's just a guess."
         return str(self.filer_id)
 
 
-# =============================================================================
-# ------------------------------- Employment ----------------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class LempCd(CalAccessBaseModel):
     """
-    Lobbyist employers and subcontracted clients, as reported on Form 601.
+    Lobbyist employers and subcontracted clients.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1446,14 +1436,10 @@ Part 2B Client/Employer"
         return str(self.filing_id)
 
 
-# =============================================================================
-# --------------------------------- Activity ----------------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information for lobbying disclosure forms
+    Cover page information for lobbying disclosure forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1864,7 +1850,7 @@ allows the firm to submit forms for its lobbyists.',
 @python_2_unicode_compatible
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
-    Additional data from lobbyist disclosure forms (615, 625, 635, and 645)
+    Additional data from lobbyist disclosure form cover sheets.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2002,8 +1988,7 @@ entity is an individual. Only required by Form 635.',
 @python_2_unicode_compatible
 class F690P2Cd(CalAccessBaseModel):
     """
-    Amendment information to lobbying disclosure filings, as reported on
-    Form 690 filings.
+    Amendment information to lobbying disclosure filings.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2117,7 +2102,7 @@ text description."
 @python_2_unicode_compatible
 class LattCd(CalAccessBaseModel):
     """
-    Lobbyist disclosure attachment schedules for payments
+    Lobbyist disclosure attachment schedules for payments.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2311,8 +2296,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LexpCd(CalAccessBaseModel):
     """
-    Lobbying activity expenditures schedule information, reported in
-    Forms 615 Part 1, 625 Part 3A, 635 Part 3C, and 645 Part 2A.
+    Lobbying activity expenditures.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2545,8 +2529,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LccmCd(CalAccessBaseModel):
     """
-    Lobbying campaign contributions reported on Forms 615 Part 2,
-    625 Part 4B, 635 Part 4B and the 645 Part 3B.
+    Lobbyist campaign contributions.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2769,8 +2752,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LpayCd(CalAccessBaseModel):
     """
-    Payments made or received by lobbying firms, reported on Form 625 Part 2
-    and 635 Part 3B
+    Payments made or received by lobbying firms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -3003,7 +2985,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LothCd(CalAccessBaseModel):
     """
-    Payment to other lobbying firms listed of Form 625 Part 3B
+    Payments to other lobbying firms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
