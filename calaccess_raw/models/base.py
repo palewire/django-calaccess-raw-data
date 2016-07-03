@@ -25,6 +25,9 @@ class CalAccessMetaClass(ModelBase):
         klass._meta.verbose_name = klass_name
         klass._meta.verbose_name_plural = klass_name
 
+        # Set the app_label too
+        klass._meta.app_label = "calaccess_raw"
+
         # Finish up
         return klass
 
