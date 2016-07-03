@@ -21,7 +21,7 @@ class DocumentationTestCase(TestCase):
         Load data into the database before running other tests.
         """
         super(DocumentationTestCase, cls).setUpClass()
-        kwargs = dict(verbosity=3, test_data=True)
+        kwargs = dict(verbosity=0, test_data=True)
         call_command("updatecalaccessrawdata", **kwargs)
 
     def attr_test_output(self, obj_type, attr_name, results):
