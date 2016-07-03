@@ -11,25 +11,33 @@ from .base import BaseAdmin
 
 @admin.register(models.BallotMeasuresCd)
 class BallotMeasuresCdAdmin(BaseAdmin):
+    """
+    Custom admin for the BallotMeasuresCd model.
+    """
     list_display = ("measure_name", "election_date", "jurisdiction")
 
 
 @admin.register(models.CvrF470Cd)
 class CvrF470CdAdmin(BaseAdmin):
+    """
+    Custom admin for the CvrF470Cd model.
+    """
     list_display = ("filing_id", "filer_naml",)
 
 
 @admin.register(models.FilerTypePeriodsCd)
 class FilerTypePeriodsCd(BaseAdmin):
-    list_display = (
-        "election_type",
-        "filer_type",
-        "period_id",
-    )
+    """
+    Custom admin for the FilerTypePeriodsCd model.
+    """
+    list_display = ("election_type", "filer_type", "period_id")
 
 
 @admin.register(models.LobbyistContributions1Cd)
 class LobbyistContributions1CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistContributions1Cd model.
+    """
     list_display = (
         "filer_id",
         "filing_period_start_dt",
@@ -41,6 +49,9 @@ class LobbyistContributions1CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistContributions2Cd)
 class LobbyistContributions2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistContributions2Cd model.
+    """
     list_display = (
         "filer_id",
         "filing_period_start_dt",
@@ -52,6 +63,9 @@ class LobbyistContributions2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistContributions3Cd)
 class LobbyistContributions3CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistContributions3Cd model.
+    """
     list_display = (
         "filer_id",
         "filing_period_start_dt",
@@ -63,6 +77,9 @@ class LobbyistContributions3CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmpLobbyist1Cd)
 class LobbyistEmpLobbyist1CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmpLobbyist1Cd model.
+    """
     list_display = (
         "lobbyist_id",
         "employer_id",
@@ -75,6 +92,9 @@ class LobbyistEmpLobbyist1CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmpLobbyist2Cd)
 class LobbyistEmpLobbyist2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmpLobbyist2Cd model.
+    """
     list_display = (
         "lobbyist_id",
         "employer_id",
@@ -87,6 +107,9 @@ class LobbyistEmpLobbyist2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployer1Cd)
 class LobbyistEmployer1CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmployer1Cd model.
+    """
     list_display = (
         "employer_id",
         "session_id",
@@ -97,6 +120,9 @@ class LobbyistEmployer1CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployer2Cd)
 class LobbyistEmployer2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmployer2Cd model.
+    """
     list_display = (
         "employer_id",
         "session_id",
@@ -107,6 +133,9 @@ class LobbyistEmployer2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployer3Cd)
 class LobbyistEmployer3CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmployer3Cd model.
+    """
     list_display = (
         "employer_id",
         "session_id",
@@ -117,6 +146,9 @@ class LobbyistEmployer3CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployerFirms1Cd)
 class LobbyistEmployerFirms1CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmployerFirms1Cd model.
+    """
     list_display = (
         "firm_id",
         "employer_id",
@@ -128,6 +160,9 @@ class LobbyistEmployerFirms1CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployerFirms2Cd)
 class LobbyistEmployerFirms2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmployerFirms2Cd model.
+    """
     list_display = (
         "firm_id",
         "employer_id",
@@ -139,11 +174,17 @@ class LobbyistEmployerFirms2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistEmployerHistoryCd)
 class LobbyistEmployerHistoryCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistEmployerHistoryCd model.
+    """
     list_display = ("employer_id", "employer_name")
 
 
 @admin.register(models.LobbyistFirm1Cd)
 class LobbyistFirm1CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirm1Cd model.
+    """
     list_display = (
         "firm_id",
         "firm_name",
@@ -155,6 +196,9 @@ class LobbyistFirm1CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirm2Cd)
 class LobbyistFirm2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirm2Cd model.
+    """
     list_display = (
         "firm_id",
         "firm_name",
@@ -166,6 +210,9 @@ class LobbyistFirm2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirm3Cd)
 class LobbyistFirm3CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirm3Cd model.
+    """
     list_display = (
         "firm_id",
         "firm_name",
@@ -177,6 +224,9 @@ class LobbyistFirm3CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirmEmployer1Cd)
 class LobbyistFirmEmployer1CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirm2Cd model.
+    """
     list_display = (
         "filing_id",
         "firm_name",
@@ -188,6 +238,9 @@ class LobbyistFirmEmployer1CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirmEmployer2Cd)
 class LobbyistFirmEmployer2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirmEmployer2Cd model.
+    """
     list_display = (
         "filing_id",
         "firm_name",
@@ -199,11 +252,17 @@ class LobbyistFirmEmployer2CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirmHistoryCd)
 class LobbyistFirmHistoryCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirm2Cd model.
+    """
     list_display = ("contributor_id", "firm_id", "session_id")
 
 
 @admin.register(models.LobbyistFirmLobbyist1Cd)
 class LobbyistFirmLobbyist1CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirm2Cd model.
+    """
     list_display = (
         "lobbyist_id",
         "firm_id",
@@ -216,6 +275,9 @@ class LobbyistFirmLobbyist1CdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyistFirmLobbyist2Cd)
 class LobbyistFirmLobbyist2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyistFirm2Cd model.
+    """
     list_display = (
         "lobbyist_id",
         "firm_id",
@@ -224,4 +286,3 @@ class LobbyistFirmLobbyist2CdAdmin(BaseAdmin):
         "lobbyist_last_name",
         "firm_name"
     )
-

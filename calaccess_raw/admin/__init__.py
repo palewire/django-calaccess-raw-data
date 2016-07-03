@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Import all of the admins from submodules and thread them together.
+"""
 from calaccess_raw.admin.base import BaseAdmin
 from calaccess_raw.admin.campaign import (
     CvrSoCdAdmin,
@@ -96,7 +99,7 @@ from calaccess_raw.admin.tracking import (
     RawDataCommandAdmin
 )
 
-__all__ = [
+__all__ = (
     'BaseAdmin',
     'CvrSoCdAdmin',
     'Cvr2SoCdAdmin',
@@ -181,4 +184,4 @@ __all__ = [
     'RawDataVersionAdmin',
     'RawDataFileAdmin',
     'RawDataCommandAdmin',
-]
+)

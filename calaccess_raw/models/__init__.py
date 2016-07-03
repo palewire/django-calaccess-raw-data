@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Import all of the models from submodules and thread them together.
+"""
 from calaccess_raw.models.base import CalAccessBaseModel
 from calaccess_raw.models.campaign import (
     CvrSoCd,

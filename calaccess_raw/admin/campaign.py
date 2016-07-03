@@ -11,34 +11,52 @@ from .base import BaseAdmin
 
 @admin.register(models.CvrSoCd)
 class CvrSoCdAdmin(BaseAdmin):
+    """
+    Custom admin for the CvrSoCd model.
+    """
     list_display = ("filing_id", "amend_id", "rpt_date", "filer_naml", "form_type")
     date_hierarchy = "rpt_date"
 
 
 @admin.register(models.Cvr2SoCd)
 class Cvr2SoCdAdmin(BaseAdmin):
-    list_display = ("filing_id",  "item_cd", "entity_cd", "enty_naml", "form_type",)
+    """
+    Custom admin for the Cvr2SoCd model.
+    """
+    list_display = ("filing_id", "item_cd", "entity_cd", "enty_naml", "form_type")
 
 
 @admin.register(models.CvrCampaignDisclosureCd)
 class CvrCampaignDisclosureCdAdmin(BaseAdmin):
+    """
+    Custom admin for the CvrCampaignDisclosureCd model.
+    """
     list_display = ("filing_id", "rpt_date", "filer_naml", "cmtte_type", "form_type")
     date_hierarchy = "rpt_date"
 
 
 @admin.register(models.Cvr2CampaignDisclosureCd)
 class Cvr2CampaignDisclosureCdAdmin(BaseAdmin):
+    """
+    Custom admin for the Cvr2CampaignDisclosureCd model.
+    """
     list_display = ("filing_id", "enty_naml", "form_type")
 
 
 @admin.register(models.Cvr3VerificationInfoCd)
 class Cvr3VerificationInfoCdAdmin(BaseAdmin):
+    """
+    Custom admin for the Cvr3VerificationInfoCd model.
+    """
     list_display = ("filing_id", "sig_date", "sig_naml", "form_type")
     date_hierarchy = "sig_date"
 
 
 @admin.register(models.DebtCd)
 class DebtCdAdmin(BaseAdmin):
+    """
+    Custom admin for the DebtCd model.
+    """
     list_display = (
         "filing_id",
         "expn_code",
@@ -50,6 +68,9 @@ class DebtCdAdmin(BaseAdmin):
 
 @admin.register(models.ExpnCd)
 class ExpnCdAdmin(BaseAdmin):
+    """
+    Custom admin for the ExpnCd model.
+    """
     list_display = (
         "filing_id",
         "expn_date",
@@ -63,6 +84,9 @@ class ExpnCdAdmin(BaseAdmin):
 
 @admin.register(models.LoanCd)
 class LoanCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LoanCd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -79,6 +103,9 @@ class LoanCdAdmin(BaseAdmin):
 
 @admin.register(models.RcptCd)
 class RcptCdAdmin(BaseAdmin):
+    """
+    Custom admin for the RcptCd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -93,6 +120,9 @@ class RcptCdAdmin(BaseAdmin):
 
 @admin.register(models.S401Cd)
 class S401CdAdmin(BaseAdmin):
+    """
+    Custom admin for the S401Cd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -104,6 +134,9 @@ class S401CdAdmin(BaseAdmin):
 
 @admin.register(models.F495P2Cd)
 class F495P2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the F495P2Cd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -115,6 +148,9 @@ class F495P2CdAdmin(BaseAdmin):
 
 @admin.register(models.S496Cd)
 class S496CdAdmin(BaseAdmin):
+    """
+    Custom admin for the S496Cd model.
+    """
     list_display = (
         "filing_id",
         "exp_date",
@@ -126,6 +162,9 @@ class S496CdAdmin(BaseAdmin):
 
 @admin.register(models.S497Cd)
 class S497CdAdmin(BaseAdmin):
+    """
+    Custom admin for the S497Cd model.
+    """
     list_display = (
         "filing_id",
         "ctrib_date",
@@ -138,6 +177,9 @@ class S497CdAdmin(BaseAdmin):
 
 @admin.register(models.S498Cd)
 class S498CdAdmin(BaseAdmin):
+    """
+    Custom admin for the S498Cd model.
+    """
     list_display = (
         "filing_id",
         "date_rcvd",
@@ -150,6 +192,9 @@ class S498CdAdmin(BaseAdmin):
 
 @admin.register(models.F501502Cd)
 class F501502CdAdmin(BaseAdmin):
+    """
+    Custom admin for the F501502Cd model.
+    """
     list_display = (
         "filing_id",
         "rpt_date",

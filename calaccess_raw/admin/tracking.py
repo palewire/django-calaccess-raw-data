@@ -11,6 +11,9 @@ from .base import BaseAdmin
 
 @admin.register(models.RawDataVersion)
 class RawDataVersionAdmin(BaseAdmin):
+    """
+    Custom admin for the RawDataVersion model.
+    """
     list_display = (
         "id",
         "release_datetime",
@@ -22,6 +25,9 @@ class RawDataVersionAdmin(BaseAdmin):
 
 @admin.register(models.RawDataFile)
 class RawDataFileAdmin(BaseAdmin):
+    """
+    Custom admin for the RawDataFile model.
+    """
     list_display = (
         "id",
         "version",
@@ -39,6 +45,9 @@ class RawDataFileAdmin(BaseAdmin):
 
 @admin.register(models.RawDataCommand)
 class RawDataCommandAdmin(BaseAdmin):
+    """
+    Custom admin for the RawDataCommand model.
+    """
     list_display = (
         "id",
         "version",

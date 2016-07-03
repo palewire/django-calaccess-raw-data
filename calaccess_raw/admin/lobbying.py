@@ -11,6 +11,9 @@ from .base import BaseAdmin
 
 @admin.register(models.CvrRegistrationCd)
 class CvrRegistrationCdAdmin(BaseAdmin):
+    """
+    Custom admin for the CvrRegistrationCd model.
+    """
     list_display = (
         "filing_id",
         "rpt_date",
@@ -23,6 +26,9 @@ class CvrRegistrationCdAdmin(BaseAdmin):
 
 @admin.register(models.Cvr2RegistrationCd)
 class Cvr2RegistrationCdAdmin(BaseAdmin):
+    """
+    Custom admin for the Cvr2RegistrationCd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -32,6 +38,9 @@ class Cvr2RegistrationCdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyAmendmentsCd)
 class LobbyAmendmentsCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyAmendmentsCd model.
+    """
     list_display = (
         "filing_id",
         "exec_date",
@@ -42,6 +51,9 @@ class LobbyAmendmentsCdAdmin(BaseAdmin):
 
 @admin.register(models.LobbyingChgLogCd)
 class LobbyingChgLogCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LobbyingChgLogCd model.
+    """
     list_display = (
         "filer_id",
         "log_dt",
@@ -52,6 +64,9 @@ class LobbyingChgLogCdAdmin(BaseAdmin):
 
 @admin.register(models.LempCd)
 class LempCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LempCd model.
+    """
     list_display = (
         "filing_id",
         "eff_date",
@@ -62,6 +77,9 @@ class LempCdAdmin(BaseAdmin):
 
 @admin.register(models.F690P2Cd)
 class F690P2CdAdmin(BaseAdmin):
+    """
+    Custom admin for the F690P2Cd model.
+    """
     list_display = (
         "filing_id",
         "exec_date",
@@ -72,6 +90,9 @@ class F690P2CdAdmin(BaseAdmin):
 
 @admin.register(models.CvrLobbyDisclosureCd)
 class CvrLobbyDisclosureCdAdmin(BaseAdmin):
+    """
+    Custom admin for the CvrLobbyDisclosureCd model.
+    """
     list_display = (
         "filing_id",
         "rpt_date",
@@ -84,6 +105,9 @@ class CvrLobbyDisclosureCdAdmin(BaseAdmin):
 
 @admin.register(models.Cvr2LobbyDisclosureCd)
 class Cvr2LobbyDisclosureCdAdmin(BaseAdmin):
+    """
+    Custom admin for the Cvr2LobbyDisclosureCd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -94,6 +118,9 @@ class Cvr2LobbyDisclosureCdAdmin(BaseAdmin):
 
 @admin.register(models.LattCd)
 class LattCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LattCd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -106,6 +133,9 @@ class LattCdAdmin(BaseAdmin):
 
 @admin.register(models.LexpCd)
 class LexpCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LexpCd model.
+    """
     list_display = (
         "filing_id",
         "expn_date",
@@ -118,6 +148,9 @@ class LexpCdAdmin(BaseAdmin):
 
 @admin.register(models.LccmCd)
 class LccmCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LccmCd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -130,6 +163,9 @@ class LccmCdAdmin(BaseAdmin):
 
 @admin.register(models.LpayCd)
 class LpayCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LpayCd model.
+    """
     list_display = (
         "filing_id",
         "form_type",
@@ -140,6 +176,9 @@ class LpayCdAdmin(BaseAdmin):
 
 @admin.register(models.LothCd)
 class LothCdAdmin(BaseAdmin):
+    """
+    Custom admin for the LothCd model.
+    """
     list_display = (
         "filing_id",
         "pmt_date",
