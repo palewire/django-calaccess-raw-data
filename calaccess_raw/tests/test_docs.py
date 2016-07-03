@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tests how thoroughly the CAL-ACCESS database has been documented.
+"""
 from __future__ import unicode_literals
 import re
 import agate
@@ -13,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 class DocumentationTestCase(TestCase):
     """
-    Tests related to the documentation of models, fields and values
+    Tests the documentation of models, fields and values.
     """
     @classmethod
     def setUpClass(cls):
@@ -25,6 +28,9 @@ class DocumentationTestCase(TestCase):
         call_command("updatecalaccessrawdata", **kwargs)
 
     def attr_test_output(self, obj_type, attr_name, results):
+        """
+        Output test results to the console.
+        """
         # Load the data
         table = agate.Table(results, ['group', obj_type, attr_name])
 
@@ -102,7 +108,7 @@ class DocumentationTestCase(TestCase):
 
     def test_model_documentcloud_pages(self):
         """
-        Verify that each model has DOCUMENTCLOUD_PAGES defined
+        Verify that each model has DOCUMENTCLOUD_PAGES defined.
         """
         results = []
         for m in get_model_list():
@@ -115,7 +121,7 @@ class DocumentationTestCase(TestCase):
 
     def test_model_documentcloud_pages_for_both_links(self):
         """
-        Verify that each model (with a few exceptions) has both DOCUMENTCLOUD_PAGES
+        Verify that models linked to DocumentCloud reference.
         """
         results = []
         exceptions = [
@@ -206,8 +212,7 @@ class DocumentationTestCase(TestCase):
 
     def test_filing_forms(self):
         """
-        Verify that each model with a form_type or form_id field (with a few
-        exceptions) has FILING_FORMS defined
+        Verify that model's with a form field are linked to a FilingForm object.
         """
         results = []
         exceptions = ['HeaderCd']
@@ -242,8 +247,7 @@ class DocumentationTestCase(TestCase):
 
     def test_choices(self):
         """
-        Verify that valid choices are available for all expected fields
-        on all models.
+        Verify that valid choices are available for all expected fields on all models.
         """
         # substrings that appear in choice fields
         choice_field_strs = [

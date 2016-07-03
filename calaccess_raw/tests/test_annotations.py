@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tests annotations of the data.
+"""
 from __future__ import unicode_literals
 import os
 import logging
@@ -11,11 +14,14 @@ logger = logging.getLogger(__name__)
 
 class AnnotationTestCase(TestCase):
     """
-    Tests related to annotations of the data
+    Tests annotations of the data.
     """
     multi_db = True
 
     def test_filingform(self):
+        """
+        Test attributes of the FilingForm object.
+        """
         ff = get_filing_form('F400')
         ff.get_models()
         ff.__str__()
@@ -23,6 +29,9 @@ class AnnotationTestCase(TestCase):
         s.__str__()
 
     def test_documentcloud(self):
+        """
+        Test attributes of the DocumentCloud object.
+        """
         dc = annotations.DocumentCloud('2753585', 1, 1)
         if os.path.exists(dc.metadata_filename):
             os.remove(dc.metadata_filename)

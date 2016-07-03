@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tests the adminstration panel configuration.
+"""
 from __future__ import unicode_literals
 from django.test import TestCase
 from calaccess_raw import admin
@@ -7,7 +10,9 @@ from calaccess_raw import get_model_list
 
 
 class AdminTestCase(TestCase):
-
+    """
+    Tests the adminstration panel configuration.
+    """
     def test_models(self):
         """
         Make sure all the models have admins.

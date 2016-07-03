@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tests for custom database fields.
+"""
 from __future__ import unicode_literals
 import logging
 from calaccess_raw import fields
@@ -15,6 +18,9 @@ class FieldTestCase(TestCase):
     multi_db = True
 
     def test_fields(self):
+        """
+        Creates the fields and tests their attributes.
+        """
         f = fields.CharField(help_text="foo")
         self.assertEqual(f.definition(), "Foo")
         f2 = fields.CharField()
