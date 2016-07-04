@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Utilities for our custom managment commands
+Utilities for our custom managment commands.
 """
+from django.utils.encoding import force_text
 
 
 def handle_command(command_cls, *args, **options):

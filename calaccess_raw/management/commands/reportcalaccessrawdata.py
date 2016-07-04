@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Generate report outlining the number / proportion of files / records cleaned and loaded.
+"""
 from __future__ import unicode_literals
 from __future__ import division
 import os
@@ -15,6 +18,7 @@ from csv import DictWriter
 
 def calc_percent(whole, total):
     """
+    Calculate percentage of the total.
     """
     try:
         pct = whole / total
@@ -27,6 +31,9 @@ def calc_percent(whole, total):
 
 
 class Command(CalAccessCommand):
+    """
+    Generate report outlining the number / proportion of files / records cleaned and loaded.
+    """
     help = 'Generate report outlining the number / proportion of files / records cleaned and loaded'
 
     def add_arguments(self, parser):
@@ -36,6 +43,9 @@ class Command(CalAccessCommand):
         super(Command, self).add_arguments(parser)
 
     def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
         super(Command, self).handle(*args, **options)
 
         self.missing_raw_files = []
@@ -114,8 +124,7 @@ class Command(CalAccessCommand):
 
     def sum_count_column(self, column_name):
         """
-        Takes the name of a RawDataFile count column.
-        Returns a sum of its values
+        Takes the name of a RawDataFile count column. Returns a sum of its values.
         """
         result = self.raw_data_files.aggregate(
             the_sum=Sum(column_name)
@@ -124,7 +133,7 @@ class Command(CalAccessCommand):
 
     def write_csv_results(self):
         """
-        Write .csv file to the docs directory
+        Write .csv file to the docs directory.
         """
         file_name = os.path.join(
             get_download_directory(),
@@ -132,18 +141,17 @@ class Command(CalAccessCommand):
         )
 
         with open(file_name, 'w') as f:
-
             fieldnames = [
-                    'file_name',
-                    'download_columns_count',
-                    'clean_columns_count',
-                    'load_columns_count',
-                    'download_records_count',
-                    'clean_records_count',
-                    'load_records_count',
-                    'pct_cleaned',
-                    'pct_loaded'
-                ]
+                'file_name',
+                'download_columns_count',
+                'clean_columns_count',
+                'load_columns_count',
+                'download_records_count',
+                'clean_records_count',
+                'load_records_count',
+                'pct_cleaned',
+                'pct_loaded'
+            ]
             writer = DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
 
@@ -157,15 +165,15 @@ class Command(CalAccessCommand):
                 del row['clean_file_archive']
 
                 row.update({
-                        'pct_cleaned': '{0:.2%}'.format(
-                            calc_percent(i.clean_records_count, i.download_records_count)
-                        )
-                    })
+                    'pct_cleaned': '{0:.2%}'.format(
+                        calc_percent(i.clean_records_count, i.download_records_count)
+                    )
+                })
 
                 row.update({
-                        'pct_loaded': '{0:.2%}'.format(
-                            calc_percent(i.load_records_count, i.download_records_count)
-                        )
-                    })
+                    'pct_loaded': '{0:.2%}'.format(
+                        calc_percent(i.load_records_count, i.download_records_count)
+                    )
+                })
 
                 writer.writerow(row)

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Load clean CAL-ACCESS CSV file into a database model.
+"""
 from __future__ import unicode_literals
 import os
 import six
@@ -15,6 +18,9 @@ from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
+    """
+    Load clean CAL-ACCESS CSV file into a database model.
+    """
     help = 'Load clean CAL-ACCESS CSV file into a database model'
     # Trick for reformating date strings in source data so that they can
     # be gobbled up by MySQL. You'll see how below.
@@ -59,6 +65,9 @@ class Command(CalAccessCommand):
     # all BaseCommand subclasses require a handle() method that includes
     #   the actual logic of the command
     def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
         super(Command, self).handle(*args, **options)
 
         # set / compute any attributes that multiple class methods need
@@ -169,7 +178,7 @@ class Command(CalAccessCommand):
 
     def load_dat(self):
         """
-        Takes a model and a csv file and loads it into dat
+        Takes a model and a csv file and loads it into dat.
         """
         import datpy
         dat_source = settings.CALACCESS_DAT_SOURCE
@@ -192,7 +201,7 @@ class Command(CalAccessCommand):
 
     def load_mysql(self):
         """
-        Load the file into a MySQL database using LOAD DATA INFILE
+        Load the file into a MySQL database using LOAD DATA INFILE.
         """
         import warnings
         import MySQLdb
@@ -263,7 +272,7 @@ class Command(CalAccessCommand):
 
     def load_postgresql(self):
         """
-        Load the file into a PostgreSQL database using COPY
+        Load the file into a PostgreSQL database using COPY.
         """
         # Drop all the records from the target model's real table
         self.cursor.execute('TRUNCATE TABLE "%s" CASCADE' % (
@@ -305,8 +314,7 @@ class Command(CalAccessCommand):
 
     def finish_load_message(self, model_count, csv_count):
         """
-        The message displayed about whether or not a load finished
-        successfully.
+        The message displayed about whether or not a load finished successfully.
         """
         if model_count != csv_count:
             msg = '  Table record count doesn\'t match CSV. \

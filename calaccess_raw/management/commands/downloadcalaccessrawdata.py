@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Download, unzip and prep the latest CAL-ACCESS database ZIP.
+"""
 from __future__ import unicode_literals
 import os
 import shutil
@@ -21,6 +24,9 @@ from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
+    """
+    Download, unzip and prep the latest CAL-ACCESS database ZIP.
+    """
     help = "Download, unzip and prep the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
@@ -52,6 +58,9 @@ class Command(CalAccessCommand):
         )
 
     def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
         super(Command, self).handle(*args, **options)
 
         # get the dir where data goes from app settings
@@ -159,7 +168,7 @@ class Command(CalAccessCommand):
 
     def check_can_resume(self):
         """
-        Run a series of checks to see if the previous download can be resumed
+        Run a series of checks to see if the previous download can be resumed.
 
         If so, return True, else False.
         """
@@ -256,7 +265,7 @@ class Command(CalAccessCommand):
 
     def track_files(self):
         """
-        Create a RawDataFile for each download .TSV file
+        Create a RawDataFile for each download .TSV file.
         """
         for f in os.listdir(self.tsv_dir):
             if '.TSV' in f:
@@ -268,8 +277,7 @@ class Command(CalAccessCommand):
 
     def archive(self):
         """
-        Save a copy of the download zip file on RawDataVersion and a copy of
-        each .TSV file on the associated RawDataFile.
+        Save a copy of the download zip file and each file inside.
         """
         if self.verbosity:
             self.log(" Archiving original files")
@@ -298,8 +306,10 @@ class Command(CalAccessCommand):
 
 
 class TestCommand(Command):
-    help = "Simulates downloading and unzipping of CAL-ACCESS raw data \
-for the purposes of unit testing."
+    """
+    Simulates downloading and unzipping of CAL-ACCESS raw data for testing.
+    """
+    help = "Simulates downloading and unzipping of CAL-ACCESS raw data for testing"
 
     def add_arguments(self, parser):
         """
@@ -308,6 +318,9 @@ for the purposes of unit testing."
         super(TestCommand, self).add_arguments(parser)
 
     def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
         self.raw_data_files = RawDataFile.objects

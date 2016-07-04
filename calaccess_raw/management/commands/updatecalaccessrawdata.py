@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
+"""
 import os
 import logging
 from sys import exit
@@ -14,7 +17,7 @@ from django.template.loader import render_to_string
 from calaccess_raw.models.tracking import RawDataVersion
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from calaccess_raw.management.commands.downloadcalaccessrawdata import TestCommand as TestDownloadCommand 
+from calaccess_raw.management.commands.downloadcalaccessrawdata import TestCommand as TestDownloadCommand
 from calaccess_raw import (
     get_download_directory,
     get_test_download_directory,
@@ -24,6 +27,9 @@ logger = logging.getLogger(__name__)
 
 
 class Command(CalAccessCommand):
+    """
+    Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
+    """
     help = "Download, unzip, clean and load the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
@@ -84,6 +90,9 @@ class Command(CalAccessCommand):
         )
 
     def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
         super(Command, self).handle(*args, **options)
 
         # set / compute any attributes that multiple class methods need
@@ -279,8 +288,7 @@ class Command(CalAccessCommand):
 
     def clean(self):
         """
-        Clean up the raw data files from the state so they are
-        ready to get loaded into the database.
+        Clean up the raw data files from the state so they are ready to get loaded into the database.
         """
         if self.verbosity:
             self.header("Cleaning data files")
@@ -313,7 +321,7 @@ class Command(CalAccessCommand):
 
     def load(self):
         """
-        Loads the cleaned up csv files into the database
+        Loads the cleaned up csv files into the database.
         """
         if self.verbosity:
             self.header("Loading data files")
