@@ -185,7 +185,7 @@ class Command(CalAccessCommand):
         if log_rows:
             if self.verbosity > 1:
                 msg = '  %s errors'
-                self.failure(msg % (len(log_rows) - 1))
+                self.failure(msg % (len(log_rows)))
             self.log_errors(log_rows)
 
         raw_file = self.raw_data_files.get_or_create(
