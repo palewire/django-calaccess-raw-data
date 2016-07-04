@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Custom administration panels for tracking models.
+"""
 from __future__ import unicode_literals
 from django.contrib import admin
 from calaccess_raw import models
@@ -8,6 +11,9 @@ from .base import BaseAdmin
 
 @admin.register(models.RawDataVersion)
 class RawDataVersionAdmin(BaseAdmin):
+    """
+    Custom admin for the RawDataVersion model.
+    """
     list_display = (
         "id",
         "release_datetime",
@@ -19,6 +25,9 @@ class RawDataVersionAdmin(BaseAdmin):
 
 @admin.register(models.RawDataFile)
 class RawDataFileAdmin(BaseAdmin):
+    """
+    Custom admin for the RawDataFile model.
+    """
     list_display = (
         "id",
         "version",
@@ -32,11 +41,13 @@ class RawDataFileAdmin(BaseAdmin):
     )
     list_display_links = ('id', 'file_name',)
     list_filter = ("version__release_datetime",)
-    search_fields = ("file_name",)
 
 
 @admin.register(models.RawDataCommand)
 class RawDataCommandAdmin(BaseAdmin):
+    """
+    Custom admin for the RawDataCommand model.
+    """
     list_display = (
         "id",
         "version",
@@ -51,8 +62,4 @@ class RawDataCommandAdmin(BaseAdmin):
         "finish_datetime",
         "version__release_datetime",
         "command",
-    )
-    search_fields = (
-        "command",
-        "file_name",
     )

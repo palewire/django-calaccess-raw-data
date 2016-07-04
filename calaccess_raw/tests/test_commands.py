@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tests the management commands that interact with the database.
+"""
 from __future__ import unicode_literals
 import logging
 from django.test import TestCase
@@ -12,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 class CommandTestCase(TestCase):
     """
-    Tests related to the management commands that update the database.
+    Tests the management commands that interact with the database.
     """
     multi_db = True
 

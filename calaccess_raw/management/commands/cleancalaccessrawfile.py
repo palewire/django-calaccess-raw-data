@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
+"""
 from __future__ import unicode_literals
 import os
 import csv
@@ -15,6 +18,9 @@ from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
+    """
+    Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
+    """
     help = 'Clean a source CAL-ACCESS TSV file and reformat it as a CSV'
 
     def add_arguments(self, parser):
@@ -89,9 +95,8 @@ class Command(CalAccessCommand):
 
     def clean(self):
         """
-        Cleans the provided source TSV file and writes it out in CSV format
+        Cleans the provided source TSV file and writes it out in CSV format.
         """
-
         # Up the CSV data limit
         csv.field_size_limit(1000000000)
 
@@ -210,7 +215,7 @@ class Command(CalAccessCommand):
 
     def log_errors(self, rows):
         """
-        Log any errors to a csv file
+        Log any errors to a CSV file.
         """
         # Make sure the log directory exists
         os.path.exists(self.log_dir) or os.makedirs(self.log_dir)

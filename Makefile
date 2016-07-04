@@ -50,3 +50,7 @@ testfields:
 testcommands:
 	coverage run example/manage.py test calaccess_raw.tests.test_commands.CommandTestCase
 	coverage report -m
+
+testadmins:
+	coverage run example/manage.py test calaccess_raw.tests.test_admins.AdminTestCase
+	coverage report -m

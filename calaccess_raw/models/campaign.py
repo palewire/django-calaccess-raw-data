@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Models for storing campaign finance tables from the CAL-ACCESS database.
+"""
 from __future__ import unicode_literals
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
@@ -12,20 +15,14 @@ from calaccess_raw.annotations import (
 )
 
 
-# =============================================================================
-# ------------------------------ Cover Pages ----------------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class CvrSoCd(CalAccessBaseModel):
     """
-    Cover page for a statement of organization creation or termination
-    form filed by a slate-mailer organization or recipient committee.
+    Cover page for a statement of organization creation or termination form.
     """
     UNIQUE_KEY = (
         "FILING_ID",
         "AMEND_ID",
-        "LINE_ITEM",
         "REC_TYPE",
         "FORM_TYPE",
     )
@@ -469,11 +466,9 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
         help_text='ZIP+4 for Org / Committee / Candidate or Office holder',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = "CVR_SO_CD"
-        verbose_name = 'CVR_SO_CD'
-        verbose_name_plural = 'CVR_SO_CD'
+        ordering = ("-rpt_date",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -482,9 +477,7 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
 @python_2_unicode_compatible
 class Cvr2SoCd(CalAccessBaseModel):
     """
-    Additional names and committee information included on the second page
-    of a statement of organization creation form filed
-    by a slate-mailer organization or recipient committee.
+    Additional names and information from the second page of a statement of organization form.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -849,11 +842,8 @@ sought and "H" for held',
         help_text="Position/title of the principal officer",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR2_SO_CD'
-        verbose_name = 'CVR2_SO_CD'
-        verbose_name_plural = 'CVR2_SO_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -862,9 +852,7 @@ sought and "H" for held',
 @python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information from campaign disclosure forms. This data comes from
-    the electronic filing. The data contained herein is "as filed" by the entity
-    making the filing.
+    Cover page information from campaign disclosure forms.
     """
     UNIQUE_KEY = ('FILING_ID', 'AMEND_ID',)
     DOCUMENTCLOUD_PAGES = [
@@ -1710,11 +1698,9 @@ officer's street address."
         help_text="Treasurer or responsible officer's ZIP Code"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name = 'CVR_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name_plural = 'CVR_CAMPAIGN_DISCLOSURE_CD'
+        ordering = ("-rpt_date",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -1723,8 +1709,7 @@ officer's street address."
 @python_2_unicode_compatible
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
-    Record used to carry additional names (e.g., Assistant Treasurers) for the
-    campaign disclosure forms below.
+    Additional names disclosed on campaign forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2119,11 +2104,8 @@ with in the record.",
         help_text="Treasurer or responsible officer's prefix or title"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
-        verbose_name_plural = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -2132,7 +2114,7 @@ with in the record.",
 @python_2_unicode_compatible
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
-    Cover page verification information from campaign disclosure forms
+    Verification information from campaign disclosure cover pages.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2150,17 +2132,17 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
     ]
     FILING_FORMS = [
-            get_filing_form('F400').get_section('P5'),
-            get_filing_form('F401').get_section('CVR'),
-            get_filing_form('F402').get_section('VER'),
-            get_filing_form('F410').get_section('P3'),
-            get_filing_form('F425').get_section('P3'),
-            get_filing_form('F450').get_section('P4'),
-            get_filing_form('F460').get_section('CVR'),
-            get_filing_form('F461').get_section('P4'),
-            get_filing_form('F465').get_section('P6'),
-            get_filing_form('F511'),
-            get_filing_form('F900'),
+        get_filing_form('F400').get_section('P5'),
+        get_filing_form('F401').get_section('CVR'),
+        get_filing_form('F402').get_section('VER'),
+        get_filing_form('F410').get_section('P3'),
+        get_filing_form('F425').get_section('P3'),
+        get_filing_form('F450').get_section('P4'),
+        get_filing_form('F460').get_section('CVR'),
+        get_filing_form('F461').get_section('P4'),
+        get_filing_form('F465').get_section('P6'),
+        get_filing_form('F511'),
+        get_filing_form('F900'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2309,269 +2291,18 @@ original filing and 1 to 999 amendments.",
         help_text='suffix of the signer',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR3_VERIFICATION_INFO_CD'
-        verbose_name = 'CVR3_VERIFICATION_INFO_CD'
-        verbose_name_plural = 'CVR3_VERIFICATION_INFO_CD'
+        ordering = ("-sig_date",)
 
     def __str__(self):
         return str(self.filing_id)
 
 
 @python_2_unicode_compatible
-class CvrF470Cd(CalAccessBaseModel):
-    """
-    Cover page information for Officeholder and Candidate Short and Supplement Forms
-    (Form 470).
-
-    An empty file of the same name is included in the Secretary of State's daily
-    CAL-ACCESS database exports.
-    """
-    UNIQUE_KEY = (
-        "FILING_ID",
-        "AMEND_ID",
-        "REC_TYPE",
-        "FORM_TYPE",
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
-    ]
-    FILING_FORMS = [
-        get_filing_form('F470'),
-    ]
-    amend_id = fields.IntegerField(
-        db_column="AMEND_ID",
-        db_index=True,
-        help_text="Amendment Identification number. A number of 0 is an original filing and 1 "
-                  "to 999 amendments."
-    )
-    cand_adr1 = fields.CharField(
-        db_column="CAND_ADR1",
-        blank=True,
-        max_length=55,
-        help_text="First line of the filer's street address."
-    )
-    cand_adr2 = fields.CharField(
-        db_column="CAND_ADR2",
-        blank=True,
-        max_length=55,
-        help_text="Second line of the filer's street address. "
-    )
-    cand_city = fields.CharField(
-        db_column="CAND_CITY",
-        blank=True,
-        max_length=30,
-        help_text="Candidate/Officeholder's City."
-    )
-    cand_email = fields.CharField(
-        db_column="CAND_EMAIL",
-        blank=True,
-        max_length=60,
-        help_text="Candidate/Officeholder's EMail address. Not required by the form."
-    )
-    cand_fax = fields.CharField(
-        db_column="CAND_FAX",
-        blank=True,
-        max_length=20,
-        help_text="Candidate/Officeholder's FAX Phone Number. Not required by the form."
-    )
-    cand_phon = fields.CharField(
-        db_column="CAND_PHON",
-        blank=True,
-        max_length=20,
-        help_text="Candidate/Officeholder's phone number."
-    )
-    cand_st = fields.CharField(
-        db_column="CAND_ST",
-        blank=True,
-        max_length=2,
-        help_text="Filer's State"
-    )
-    cand_zip4 = fields.CharField(
-        db_column="CAND_ZIP4",
-        blank=True,
-        max_length=10,
-        help_text="Filer's zipcode"
-    )
-    date_1000 = fields.DateField(
-        db_column="DATE_1000",
-        help_text="Date contributions totaling $1,000 or more. (For the 470-S)"
-    )
-    dist_no = fields.CharField(
-        db_column="DIST_NO",
-        blank=True,
-        max_length=3,
-        help_text="District number for the office being sought. Populated for Senate, Assembly, "
-                  "or Board of Equalization races."
-    )
-    elect_date = fields.DateField(
-        db_column="ELECT_DATE",
-        help_text="Date of the general election. Required for filings in even years."
-    )
-    ENTITY_CD_CHOICES = (
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-    )
-    entity_cd = fields.CharField(
-        db_column="ENTITY_CD",
-        blank=True,
-        choices=ENTITY_CD_CHOICES,
-        max_length=3,
-        help_text="The filer's entity code. The value of this column will always be "
-                  "Candidate/Office Holder (CAO) for this table.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29)
-        ]
-    )
-    filer_id = fields.CharField(
-        db_column="FILER_ID",
-        blank=True,
-        max_length=9,
-        help_text="Filer's unique identification number."
-    )
-    filer_namf = fields.CharField(
-        db_column="FILER_NAMF",
-        blank=True,
-        max_length=45,
-        help_text="Filer's First Name(s) - required for individuals"
-    )
-    filer_naml = fields.CharField(
-        db_column="FILER_NAML",
-        blank=True,
-        max_length=200,
-        help_text="Filer's Last Name/Committee name"
-    )
-    filer_nams = fields.CharField(
-        db_column="FILER_NAMS",
-        blank=True,
-        max_length=10,
-        help_text="Filer's Name Suffix"
-    )
-    filer_namt = fields.CharField(
-        db_column="FILER_NAMT",
-        blank=True,
-        max_length=10,
-        help_text="The filer's prefix or title that preceeds their name if they are an individual."
-    )
-    filing_id = fields.IntegerField(
-        db_column="FILING_ID",
-        db_index=True,
-        help_text="Unique filing identification number."
-    )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
-    form_type = fields.CharField(
-        db_column="FORM_TYPE",
-        choices=FORM_TYPE_CHOICES,
-        db_index=True,
-        max_length=4,
-        help_text="Type of Filing or Formset. The value of this column will always "
-                  "be equal to F470.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
-    juris_cd = fields.CharField(
-        db_column="JURIS_CD",
-        choices=JURIS_CD_CHOICES,
-        blank=True,
-        max_length=3,
-        help_text="Office Jurisdiction Code",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    juris_dscr = fields.CharField(
-        db_column="JURIS_DSCR",
-        blank=True,
-        max_length=40,
-        help_text="Office jurisdiction description text reqired if the jurisdiction code "
-                  "(Juris_cd) is equal to CIT, CTY, LOC, or OTH."
-    )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
-    off_s_h_cd = fields.CharField(
-        db_column="OFF_S_H_CD",
-        choices=OFF_S_H_CD_CHOICES,
-        blank=True,
-        max_length=1,
-        help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.',
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=30),
-        ]
-    )
-    offic_dscr = fields.CharField(
-        db_column="OFFIC_DSCR",
-        blank=True,
-        max_length=40,
-        help_text="Office sought description used if the office code is other (OTH)."
-    )
-    OFFICE_CD_CODES = get_sorted_choices(choices.OFFICE_CODES)
-    office_cd = fields.CharField(
-        db_column="OFFICE_CD",
-        choices=OFFICE_CD_CODES,
-        blank=True,
-        max_length=3,
-        help_text="Code that identifies the office being sought. See the CAL document for "
-                  "a list of valid codes.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    REC_TYPE_CHOICES = (
-        ('CVR', 'Cover Page'),
-    )
-    rec_type = fields.CharField(
-        db_column="REC_TYPE",
-        choices=REC_TYPE_CHOICES,
-        blank=True,
-        max_length=3,
-        help_text="Type of CAL record. This column will always contain CVR.",
-        documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
-        ]
-    )
-    report_num = fields.CharField(
-        db_column="REPORT_NUM",
-        blank=True,
-        max_length=3,
-        help_text="Report Number; 000 Original; 001-999 Amended as reported in the filing."
-    )
-    rpt_date = fields.DateField(
-        db_column="RPT_DATE",
-        db_index=True,
-        null=True,
-        help_text="Date this report is filed as reported by the filer."
-    )
-
-    def __str__(self):
-        return str(self.amend_id)
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'CVR_F470_CD'
-        verbose_name = 'CVR_F470_CD'
-        verbose_name_plural = 'CVR_F470_CD'
-
-
-# =============================================================================
-# ------------------------------- Line Items ----------------------------------
-# =============================================================================
-
-@python_2_unicode_compatible
 class DebtCd(CalAccessBaseModel):
     """
-    Records of unpaid bills accrued by Recipient Campaigns, as listed on
-    Form 460, Schedule F (Accrued Expenses).
+    Campaign debts and unpaid bills.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2879,11 +2610,8 @@ transaction identifier. /"X/" indicates this condition is true'
         help_text='Related record is included on Schedule C.'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'DEBT_CD'
-        verbose_name = 'DEBT_CD'
-        verbose_name_plural = 'DEBT_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -2892,8 +2620,7 @@ transaction identifier. /"X/" indicates this condition is true'
 @python_2_unicode_compatible
 class ExpnCd(CalAccessBaseModel):
     """
-    Campaign expenditures from a variety of forms, excluding Late Independent
-    Expenditures (from Form 496)
+    Itemized campaign expenditures.
     """
     UNIQUE_KEY = (
         'FILING_ID',
@@ -3644,11 +3371,9 @@ original filing and 1 to 999 amendments.",
         help_text="Related item is included on Sched 'C' or 'H2'"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'EXPN_CD'
-        verbose_name = 'EXPN_CD'
-        verbose_name_plural = 'EXPN_CD'
+        ordering = ("-expn_date",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -3657,7 +3382,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     """
-    Loans received and made by recepient committees
+    Loans received and made by campaigns.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4076,11 +3801,9 @@ identifier. "X" indicates this condition is true.'
         help_text="Related record is included on Form 460 Schedule 'A' or 'E'"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOAN_CD'
-        verbose_name = 'LOAN_CD'
-        verbose_name_plural = 'LOAN_CD'
+        ordering = ("-loan_date1",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -4089,8 +3812,7 @@ identifier. "X" indicates this condition is true.'
 @python_2_unicode_compatible
 class RcptCd(CalAccessBaseModel):
     """
-    Contribution records from receipts schedules for Slate Mailer Organization
-    and Recipient Committee Campaign Statements.
+    Itemized campaign contributions.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4677,31 +4399,23 @@ identifier. 'X' indicates this condition is true"
         help_text="Related record is included on Sched 'B2' or 'F'"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'RCPT_CD'
-        verbose_name = 'RCPT_CD'
-        verbose_name_plural = 'RCPT_CD'
+        ordering = ("-rcpt_date",)
 
     def __str__(self):
         return str(self.filing_id)
 
 
-# =============================================================================
-# --------------------------- Forms and Schedules -----------------------------
-# =============================================================================
-
 @python_2_unicode_compatible
 class S401Cd(CalAccessBaseModel):
     """
-    Form 401 (Slate Mailer Organization) payment and other
-    disclosure schedules (F401B, F401B-1, F401C, F401D) information. Does not
-    include Form 401, Schedule A (Payments Received).
+    Slate Mailer Organizations payment and other disclosures.
     """
     UNIQUE_KEY = (
         'FILING_ID',
         'AMEND_ID',
-        'LINE_ID',
+        'LINE_ITEM',
         'REC_TYPE',
         'FORM_TYPE'
     )
@@ -5010,11 +4724,8 @@ for Senate, Assembly, or Board of Equalization races."
         help_text="Back reference to transaction identifier of parent record"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S401_CD'
-        verbose_name = 'S401_CD'
-        verbose_name_plural = 'S401_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -5023,14 +4734,13 @@ for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class F495P2Cd(CalAccessBaseModel):
     """
-    Form 495 Supplemental Pre-Election Campaign Statement, attached to
-    Recipient Committee Campaign Statements (Forms 450 and 460).
+    Supplemental pre-election campaign statements.
     """
     UNIQUE_KEY = (
         "FILING_ID",
         "AMEND_ID",
         "LINE_ITEM",
-        "REC_ITEM",
+        "REC_TYPE",
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
@@ -5106,11 +4816,9 @@ as on the filing's cover (CVR) record."
 17 days before the election)"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'F495P2_CD'
-        verbose_name = 'F495P2_CD'
-        verbose_name_plural = 'F495P2_CD'
+        ordering = ("-elect_date",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -5119,8 +4827,7 @@ as on the filing's cover (CVR) record."
 @python_2_unicode_compatible
 class S496Cd(CalAccessBaseModel):
     """
-    Records of expenditures made by Independent Expenditure Committees in the 90
-    days preceding an election.
+    Independent expenditures made in the 90 days preceding an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -5226,11 +4933,9 @@ original filing and 1 to 999 amendments.",
         help_text="End of date range for items paid"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S496_CD'
-        verbose_name = 'S496_CD'
-        verbose_name_plural = 'S496_CD'
+        ordering = ("-exp_date",)
 
     def __str__(self):
         return "{} Filing {}, Amendment {}".format(
@@ -5243,8 +4948,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class S497Cd(CalAccessBaseModel):
     """
-    Campaign Committee contributions received or made in the 90 days before an
-    election, as reported on Form 497.
+    Campaign contributions received or made in the 90 days before an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -5644,18 +5348,15 @@ for Senate, Assembly, or Board of Equalization races."
             self.amend_id
         )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S497_CD'
-        verbose_name = 'S497_CD'
-        verbose_name_plural = 'S497_CD'
+        ordering = ("-ctrib_date",)
 
 
 @python_2_unicode_compatible
 class S498Cd(CalAccessBaseModel):
     """
-    Payments received by Slate Mailer Organizations within 90 days of an election,
-    as reported on Form 498.
+    Payments received by Slate Mailer Organizations within 90 days of an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -5959,18 +5660,15 @@ Populated for Senate, Assembly, or Board of Equalization races."
     def __str__(self):
         return str(self.filing_id)
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'S498_CD'
-        verbose_name = 'S498_CD'
-        verbose_name_plural = 'S498_CD'
+        ordering = ("-date_rcvd",)
 
 
 @python_2_unicode_compatible
 class F501502Cd(CalAccessBaseModel):
     """
-    Candidate Intention Statements (Forms 501 and 502), including a record
-    for the original filing and each amendment.
+    Candidate intention statements.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -6639,72 +6337,6 @@ Populated for Senate, Assembly, or Board of Equalization races.',
     def __str__(self):
         return str(self.filing_id)
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'F501_502_CD'
-        verbose_name = 'F501_502_CD'
-        verbose_name_plural = 'F501_502_CD'
-
-
-# =============================================================================
-# ---------------------------- Ballot Measures --------------------------------
-# =============================================================================
-
-@python_2_unicode_compatible
-class BallotMeasuresCd(CalAccessBaseModel):
-    """
-    Ballot measure dates and times
-    """
-    UNIQUE_KEY = "FILER_ID"
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=7),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=19),
-    ]
-    election_date = fields.DateField(
-        db_column='ELECTION_DATE',
-        null=True,
-        help_text="Ballot measure election date"
-    )
-    filer_id = fields.IntegerField(
-        verbose_name='filer ID',
-        db_column='FILER_ID',
-        null=True,
-        db_index=True,
-        help_text="Filer's unique identification number",
-    )
-    measure_no = fields.CharField(
-        db_column='MEASURE_NO',
-        max_length=2,
-        help_text="Ballot measure number"
-    )
-    measure_name = fields.CharField(
-        db_column='MEASURE_NAME',
-        max_length=163,
-        help_text="Ballot measure full name"
-    )
-    measure_short_name = fields.CharField(
-        db_column='MEASURE_SHORT_NAME',
-        max_length=50,
-        blank=True,
-        help_text="Ballot measure short name"
-    )
-    jurisdiction = fields.CharField(
-        db_column='JURISDICTION',
-        max_length=9,
-        help_text="This field is undocumented"
-    )
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'BALLOT_MEASURES_CD'
-        verbose_name = 'BALLOT_MEASURES_CD'
-        verbose_name_plural = 'BALLOT_MEASURES_CD'
-        ordering = (
-            "-election_date",
-            "measure_no",
-            "measure_short_name",
-            "measure_name"
-        )
-
-    def __str__(self):
-        return self.measure_name
+        ordering = ("-rpt_date",)

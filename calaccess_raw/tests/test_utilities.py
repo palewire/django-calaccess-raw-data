@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tests for the utilities storied in app's __init__.py file.
+"""
 from __future__ import unicode_literals
 import logging
 import calaccess_raw
@@ -20,6 +23,9 @@ class UtilityTestCase(TestCase):
     @override_settings(CALACCESS_TEST_DOWNLOAD_DIR=None)
     @override_settings(BASE_DIR=None)
     def test_dir_errors(self):
+        """
+        Test error expected when download directory is missing.
+        """
         with self.assertRaises(ValueError):
             calaccess_raw.get_download_directory()
 
@@ -27,6 +33,9 @@ class UtilityTestCase(TestCase):
     @override_settings(CALACCESS_TEST_DOWNLOAD_DIR=None)
     @override_settings(BASE_DIR=None)
     def test_testdir_errors(self):
+        """
+        Test error expected when test download directory is missing.
+        """
         with self.assertRaises(ValueError):
             calaccess_raw.get_test_download_directory()
 
@@ -34,7 +43,7 @@ class UtilityTestCase(TestCase):
     @override_settings(CALACCESS_TEST_DOWNLOAD_DIR="/foo/bar/tests/")
     def test_dir_configured(self):
         """
-        Tests for directory functions __init__.py file
+        Tests for directory functions __init__.py file.
         """
         calaccess_raw.get_download_directory()
         calaccess_raw.get_test_download_directory()
@@ -44,14 +53,14 @@ class UtilityTestCase(TestCase):
     @override_settings(BASE_DIR="/foo/bar/")
     def test_dir_basedir(self):
         """
-        Tests for directory functions __init__.py file
+        Tests for directory functions __init__.py file with different settings.
         """
         calaccess_raw.get_download_directory()
         calaccess_raw.get_test_download_directory()
 
     def test_model_methods(self):
         """
-        Test the methods that hook up with our models
+        Test the methods that hook up with our models.
         """
         version = models.RawDataVersion(release_datetime=datetime.now())
         calaccess_raw.archive_directory_path(version, 'foobar.csv')

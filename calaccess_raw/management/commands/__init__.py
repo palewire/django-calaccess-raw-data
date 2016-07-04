@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Base management command that provides common functionality for the other commands in this app.
+"""
 import sys
 import codecs
 import locale
+import logging
 import requests
 from re import sub
 from datetime import datetime
@@ -16,12 +20,12 @@ from calaccess_raw.models.tracking import (
     RawDataFile,
     RawDataCommand
 )
+logger = logging.getLogger(__name__)
 
 
 class CalAccessCommand(BaseCommand):
     """
-    A base management command that provides common functionality
-    for the other commands in this application.
+    Base management command that provides common functionality for the other commands in this app.
     """
     url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
@@ -47,9 +51,7 @@ class CalAccessCommand(BaseCommand):
 
     def get_download_metadata(self):
         """
-        Returns basic metadata about the current CAL-ACCESS snapshot,
-        like its size and the last time it was updated while stopping
-        short of actually downloading it.
+        Returns basic metadata about the current CAL-ACCESS snapshot.
         """
         request = requests.head(self.url)
         last_modified = request.headers['last-modified']
@@ -61,8 +63,9 @@ class CalAccessCommand(BaseCommand):
 
     def get_last_log(self, file_name=None, finished=False):
         """
-        Execute query for the given command most recently started CalAccessCommandLog,
-        unless finished=True, in which case query for the most recently finished.
+        Retrives the given command most recently from database log.
+
+        Unless finished=True, in which case query for the most recently finished.
 
         Commands that require a file / model as a positional argument should
         pass the file_name keyword argument.
@@ -91,8 +94,9 @@ class CalAccessCommand(BaseCommand):
 
     def get_caller_log(self):
         """
-        If the command was called by another command, return the caller's
-        RawDataCommandLog object. Else, return None.
+        If the command was called by another command, returns RawDataCommandLog object.
+
+        Otherwise, return None.
         """
         caller = None
 
@@ -117,9 +121,9 @@ class CalAccessCommand(BaseCommand):
 
     def header(self, string):
         """
-        Writes out a string to stdout formatted to look like a header
-        that stands out among the other lines.
+        Writes out a string to stdout formatted to look like a header.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize(string, fg="cyan", opts=("bold",))
         self.stdout.write(string)
@@ -128,6 +132,7 @@ class CalAccessCommand(BaseCommand):
         """
         Writes out a string to stdout formatted to look like a standard line.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize("%s" % string, fg="white")
         self.stdout.write(string)
@@ -136,6 +141,7 @@ class CalAccessCommand(BaseCommand):
         """
         Writes out a string to stdout formatted green to communicate success.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize(string, fg="green")
         self.stdout.write(string)
@@ -144,14 +150,14 @@ class CalAccessCommand(BaseCommand):
         """
         Writes out a string to stdout formatted red to communicate failure.
         """
+        logger.debug(string)
         if not self.no_color:
             string = colorize(string, fg="red")
         self.stdout.write(string)
 
     def duration(self):
         """
-        Calculates how long the command has been running and writes a
-        readable duration to stdout.
+        Calculates how long the command has been running and writes it to stdout.
         """
         duration = datetime.now() - self.start_datetime
         self.stdout.write('Duration: {}'.format(str(duration)))

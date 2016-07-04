@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Download, unzip and prep the latest CAL-ACCESS database ZIP.
+"""
 from __future__ import unicode_literals
 import os
 import shutil
 import zipfile
 import requests
+import calaccess_raw
 from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
@@ -16,10 +20,13 @@ from django.template.loader import render_to_string
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from calaccess_raw.models.tracking import RawDataVersion
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
+    """
+    Download, unzip and prep the latest CAL-ACCESS database ZIP.
+    """
     help = "Download, unzip and prep the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
@@ -51,6 +58,9 @@ class Command(CalAccessCommand):
         )
 
     def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
         super(Command, self).handle(*args, **options)
 
         # get the dir where data goes from app settings
@@ -158,7 +168,7 @@ class Command(CalAccessCommand):
 
     def check_can_resume(self):
         """
-        Run a series of checks to see if the previous download can be resumed
+        Run a series of checks to see if the previous download can be resumed.
 
         If so, return True, else False.
         """
@@ -255,7 +265,7 @@ class Command(CalAccessCommand):
 
     def track_files(self):
         """
-        Create a RawDataFile for each download .TSV file
+        Create a RawDataFile for each download .TSV file.
         """
         for f in os.listdir(self.tsv_dir):
             if '.TSV' in f:
@@ -267,8 +277,7 @@ class Command(CalAccessCommand):
 
     def archive(self):
         """
-        Save a copy of the download zip file on RawDataVersion and a copy of
-        each .TSV file on the associated RawDataFile.
+        Save a copy of the download zip file and each file inside.
         """
         if self.verbosity:
             self.log(" Archiving original files")
@@ -294,3 +303,48 @@ class Command(CalAccessCommand):
                     raw_data_file.file_name + '.TSV',
                     File(f)
                 )
+
+
+class TestCommand(Command):
+    """
+    Simulates downloading and unzipping of CAL-ACCESS raw data for testing.
+    """
+    help = "Simulates downloading and unzipping of CAL-ACCESS raw data for testing"
+
+    def add_arguments(self, parser):
+        """
+        Adds custom arguments specific to this command.
+        """
+        super(TestCommand, self).add_arguments(parser)
+
+    def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
+        self.verbosity = options.get("verbosity")
+        self.no_color = options.get("no_color")
+        self.raw_data_files = RawDataFile.objects
+        self.data_dir = calaccess_raw.get_test_download_directory()
+        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
+        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
+
+        with open(self.data_dir + "/sampled_version.txt", "r") as f:
+            release_datetime = f.readline()
+            size = f.readline()
+
+        try:
+            self.version = RawDataVersion.objects.get(
+                release_datetime=release_datetime
+            )
+        except RawDataVersion.DoesNotExist:
+            self.version = RawDataVersion.objects.create(
+                release_datetime=release_datetime,
+                size=size
+            )
+
+        self.unzip()
+        self.prep()
+        self.track_files()
+
+        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
+            self.archive()

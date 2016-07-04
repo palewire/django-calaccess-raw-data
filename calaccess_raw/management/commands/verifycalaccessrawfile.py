@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Logs row count of given model and compares against line count in cleaned CSV.
+"""
 from __future__ import unicode_literals
 from django.apps import apps
 from django.db import router
@@ -9,6 +12,9 @@ from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
+    """
+    Logs row count of given model and compares against line count in cleaned CSV.
+    """
     help = "Logs row count of given model and compares against line count in cleaned CSV"
 
     def add_arguments(self, parser):
@@ -27,6 +33,9 @@ class Command(CalAccessCommand):
         )
 
     def handle(self, *args, **options):
+        """
+        Make it happen.
+        """
         super(Command, self).handle(*args, **options)
 
         if self.verbosity > 1:

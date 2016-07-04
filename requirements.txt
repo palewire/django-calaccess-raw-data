@@ -1,0 +1,31 @@
+# The app
+Django
+django-postgres-copy
+hurry.filesize
+pytz
+requests
+clint
+csvkit
+
+# Databases
+mysqlclient
+psycopg2
+
+# Docs
+Sphinx
+sphinx_rtd_theme
+sphinx-autobuild
+
+# Testing
+agate
+subsample
+flake8
+flake8_docstrings
+coverage
+python-coveralls
+
+# Packaging
+wheel
+
+# DAT
+datpy

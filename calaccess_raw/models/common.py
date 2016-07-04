@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Models for storing common tables from the CAL-ACCESS database.
+"""
 from __future__ import unicode_literals
 from .base import CalAccessBaseModel
 from calaccess_raw import fields
@@ -18,11 +21,9 @@ from django.utils.encoding import python_2_unicode_compatible
 @python_2_unicode_compatible
 class FilernameCd(CalAccessBaseModel):
     """
-    A combination of CAL-ACCESS tables to provide the analyst with
-    filer information.
+    A combination of CAL-ACCESS tables to provide the analyst with filer information.
 
-    Full name of all PACs, firms, and employers are in the last
-    name field.
+    Full name of all PACs, firms, and employers are in the last name field.
 
     Major donors can be split between first and last name fields, but usually
     are contained in the last name field only. Individual names of lobbyists,
@@ -30,10 +31,8 @@ class FilernameCd(CalAccessBaseModel):
     (when they are only an individual's name) use both the first and last name
     fields in conjunction.
     """
-    UNIQUE_KEY = ("FILER_ID", "NAMID")
+    UNIQUE_KEY = ("FILER_ID",)
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=67, end_page=68),
         DocumentCloud(id='2711615-FAQ', start_page=2),
     ]
     xref_filer_id = fields.CharField(
@@ -41,14 +40,14 @@ class FilernameCd(CalAccessBaseModel):
         max_length=15,
         db_column='XREF_FILER_ID',
         db_index=True,
-        help_text="Alternative filer ID found on many forms"
+        help_text="alternative filer ID found on many forms"
     )
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
         db_column='FILER_ID',
         db_index=True,
         null=True,
-        help_text="Filer's unique identification number"
+        help_text="filer's unique identification number"
     )
     FILER_TYPE_CHOICES = (
         ('NOT DEFINED', 'Undefined'),
@@ -113,7 +112,7 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
     )
     effect_dt = fields.DateField(
         db_column='EFFECT_DT',
-        help_text="Effective date for status",
+        help_text="effective date for status",
         null=True,
     )
     naml = fields.CharField(
@@ -182,11 +181,8 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
         help_text="Email address"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILERNAME_CD'
-        verbose_name = 'FILERNAME_CD'
-        verbose_name_plural = 'FILERNAME_CD'
         ordering = ("naml", "namf",)
 
     def __str__(self):
@@ -196,9 +192,9 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
 @python_2_unicode_compatible
 class FilerFilingsCd(CalAccessBaseModel):
     """
-    Key table that links filers to their paper, key data entry, legacy,
-    and electronic filings. This table is used as an index to locate
-    filing information.
+    Links filers to their filings.
+
+    Used as the index to locate filing information.
     """
     UNIQUE_KEY = (
         "FILER_ID",
@@ -222,7 +218,7 @@ class FilerFilingsCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     period_id = fields.IntegerField(
         null=True,
@@ -366,11 +362,8 @@ laundering or other special condition."
         ],
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_FILINGS_CD'
-        verbose_name = 'FILER_FILINGS_CD'
-        verbose_name_plural = 'FILER_FILINGS_CD'
 
     def __str__(self):
         return str("%s %s" % (self.filer_id, self.filing_id))
@@ -379,8 +372,7 @@ laundering or other special condition."
 @python_2_unicode_compatible
 class FilingsCd(CalAccessBaseModel):
     """
-    This table is the parent table from which all links and association to
-    a filing are derived.
+    The parent table from which all links and associations to a filing are derived.
     """
     UNIQUE_KEY = "FILING_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -391,7 +383,7 @@ class FilingsCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=75, end_page=75),
@@ -414,21 +406,20 @@ class FilingsCd(CalAccessBaseModel):
         ],
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILINGS_CD'
-        verbose_name = 'FILINGS_CD'
-        verbose_name_plural = 'FILINGS_CD'
+        ordering = ("-filing_id",)
 
     def __str__(self):
-        return str("%s %s" % (self.filing_id, self.filing_type))
+        return str("{} ({})".format(self.filing_id, self.get_filing_type_display()))
 
 
 @python_2_unicode_compatible
 class HdrCd(CalAccessBaseModel):
     """
-    Electronic filing record header data. Contains information
-    identifying vendor and Cal Format version.
+    Electronic filing record header data.
+
+    Contains information identifying vendor and Cal Format version.
     """
     UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     DOCUMENTCLOUD_PAGES = [
@@ -471,7 +462,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     hdr_comment = fields.CharField(
         max_length=200,
@@ -523,11 +514,9 @@ original filing and 1 to 999 amendments.",
         ]
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'HDR_CD'
-        verbose_name = 'HDR_CD'
-        verbose_name_plural = 'HDR_CD'
+        ordering = ("-filing_id", "-amend_id")
 
     def __str__(self):
         return str(self.filing_id)
@@ -636,11 +625,9 @@ class HeaderCd(CalAccessBaseModel):
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'HEADER_CD'
-        verbose_name = 'HEADER_CD'
-        verbose_name_plural = 'HEADER_CD'
+        ordering = ("form_id", "line_number")
 
     def __str__(self):
         return str(self.form_id)
@@ -710,7 +697,7 @@ class SmryCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -796,11 +783,8 @@ original filing and 1 to 999 amendments.",
         help_text='Election date',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'SMRY_CD'
-        verbose_name = 'SMRY_CD'
-        verbose_name_plural = 'SMRY_CD'
         ordering = ("filing_id", "-amend_id", 'form_type', "line_item")
 
     def __str__(self):
@@ -810,15 +794,14 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class CvrE530Cd(CalAccessBaseModel):
     """
-    Probably Cover Pages for Electronic Form 530. This table is listed in the record
-    layouts, but neither table nor any of its columns are labeled.
+    Cover Pages for Electronic Form 530.
     """
     UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=29, end_page=30),
@@ -1240,11 +1223,9 @@ original filing and 1 to 999 amendments.",
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'CVR_E530_CD'
-        verbose_name = 'CVR_E530_CD'
-        verbose_name_plural = 'CVR_E530_CD'
+        ordering = ("-pmnt_dt",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -1253,8 +1234,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class SpltCd(CalAccessBaseModel):
     """
-    Split Transaction Record - Used as a child record for schedules:
-    A, B1, B2, C, D, H and/or F450P5 when disclosing Per Election to Date information.
+    Split transaction records used as a child record for a number of forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1279,7 +1259,7 @@ class SpltCd(CalAccessBaseModel):
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
         db_index=True,
-        help_text="Amendment identification number. A number of 0 is the \
+        help_text="amendment identification number. A number of 0 is the \
 original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
@@ -1287,7 +1267,8 @@ original filing and 1 to 999 amendments.",
         max_digits=16,
         decimal_places=2,
         db_column='ELEC_AMOUNT',
-        help_text="Per Election to Date Amount"
+        verbose_name="election amount",
+        help_text="per election to date amount"
     )
     ELEC_CODE_CHOICES = (
         ('P', 'Primary'),
@@ -1314,7 +1295,8 @@ original filing and 1 to 999 amendments.",
         choices=ELEC_CODE_CHOICES,
         db_column='ELEC_CODE',
         blank=True,
-        help_text='Per Election to Date Code',
+        verbose_name="election code",
+        help_text='per election to date code',
         documentcloud_pages=[
             DocumentCloud(id="2712034-Cal-Format-201", start_page=18),
         ]
@@ -1322,17 +1304,17 @@ original filing and 1 to 999 amendments.",
     elec_date = fields.DateField(
         db_column='ELEC_DATE',
         null=True,
-        help_text="Date of Election"
+        help_text="date of election"
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="unique filing identification number"
     )
     line_item = fields.IntegerField(
         db_column='LINE_ITEM',
-        help_text="Line item number of this record",
+        help_text="line item number of this record",
         db_index=True,
     )
     PFORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
@@ -1351,14 +1333,11 @@ original filing and 1 to 999 amendments.",
         max_length=32,
         db_column='PTRAN_ID',
         blank=True,
-        help_text='Parent transaction ID',
+        help_text='parent transaction ID',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'SPLT_CD'
-        verbose_name = 'SPLT_CD'
-        verbose_name_plural = 'SPLT_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -1367,7 +1346,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class TextMemoCd(CalAccessBaseModel):
     """
-    Text memos attached to electronic filings
+    Text memos attached to electronic filings.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1415,7 +1394,7 @@ class TextMemoCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1556,11 +1535,8 @@ original filing and 1 to 999 amendments.",
         verbose_name='text'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'TEXT_MEMO_CD'
-        verbose_name = 'TEXT_MEMO_CD'
-        verbose_name_plural = 'TEXT_MEMO_CD'
 
     def __str__(self):
         return str(self.filing_id)
@@ -1597,11 +1573,8 @@ class AcronymsCd(CalAccessBaseModel):
         help_text='Description of the acronym'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'ACRONYMS_CD'
-        verbose_name = 'ACRONYMS_CD'
-        verbose_name_plural = 'ACRONYMS_CD'
         ordering = ("acronym",)
 
     def __str__(self):
@@ -1611,9 +1584,7 @@ class AcronymsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class AddressCd(CalAccessBaseModel):
     """
-    This table holds all addresses for the system. This table can be used
-    for address-based searches and formes the bases for address information
-    desplayed by the AMS.
+    Holds all addresses for the system.
     """
     UNIQUE_KEY = "ADRID"
     DOCUMENTCLOUD_PAGES = [
@@ -1661,11 +1632,8 @@ class AddressCd(CalAccessBaseModel):
         help_text='Address email'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'ADDRESS_CD'
-        verbose_name = 'ADDRESS_CD'
-        verbose_name_plural = 'ADDRESS_CD'
 
     def __str__(self):
         return str(self.adrid)
@@ -1674,7 +1642,9 @@ class AddressCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class EfsFilingLogCd(CalAccessBaseModel):
     """
-    Electronic Filing Subsystem Log. The EFS accepts and validates electronic filings.
+    Electronic Filing Subsystem Log.
+
+    The EFS accepts and validates electronic filings.
     """
     UNIQUE_KEY = (
         "FILING_DATE",
@@ -1753,21 +1723,18 @@ VARCHAR. However, its distinct values are 0, 1, 2 and 7.",
 or "BADFORMAT" and a three-digit number.',
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'EFS_FILING_LOG_CD'
-        verbose_name = 'EFS_FILING_LOG_CD'
-        verbose_name_plural = 'EFS_FILING_LOG_CD'
+        ordering = ("-filing_date",)
 
     def __str__(self):
-        return str(self.filer_id)
+        return "{} ({})".format(self.vendor, self.filing_date)
 
 
 @python_2_unicode_compatible
 class FilersCd(CalAccessBaseModel):
     """
-    This table is the parent table from which all links and associations
-    to a filer are derived.
+    The parent table from which all links and associations to a filer are derived.
     """
     UNIQUE_KEY = "FILER_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -1782,11 +1749,9 @@ class FilersCd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILERS_CD'
-        verbose_name = 'FILERS_CD'
-        verbose_name_plural = 'FILERS_CD'
+        ordering = ("-filer_id",)
 
     def __str__(self):
         return str(self.filer_id)
@@ -1795,7 +1760,7 @@ class FilersCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerAcronymsCd(CalAccessBaseModel):
     """
-    Links acronyms to filers
+    Links acronyms to filers.
     """
     UNIQUE_KEY = ("ACRONYM", "FILER_ID")
     DOCUMENTCLOUD_PAGES = [
@@ -1815,22 +1780,20 @@ class FilerAcronymsCd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_ACRONYMS_CD'
-        verbose_name = 'FILER_ACRONYMS_CD'
-        verbose_name_plural = 'FILER_ACRONYMS_CD'
-        ordering = ("id",)
+        ordering = ("acronym",)
 
     def __str__(self):
-        return self.acronym
+        return str(self.acronym)
 
 
 @python_2_unicode_compatible
 class FilerAddressCd(CalAccessBaseModel):
     """
-    Links filers and addresses. This table maintains a history of when
-    addresses change.
+    Links filers and addresses.
+
+    Maintains a history of when addresses change.
     """
     UNIQUE_KEY = ("FILER_ID", "ADRID")
     DOCUMENTCLOUD_PAGES = [
@@ -1882,11 +1845,8 @@ class FilerAddressCd(CalAccessBaseModel):
         null=True,
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_ADDRESS_CD'
-        verbose_name = 'FILER_ADDRESS_CD'
-        verbose_name_plural = 'FILER_ADDRESS_CD'
 
     def __str__(self):
         return str(self.filer_id)
@@ -1895,7 +1855,7 @@ class FilerAddressCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerEthicsClassCd(CalAccessBaseModel):
     """
-    This table stores lobbyist ethics training dates.
+    Stores lobbyist ethics training dates.
     """
     UNIQUE_KEY = "FILER_ID", "SESSION_ID", "ETHICS_DATE"
     DOCUMENTCLOUD_PAGES = [
@@ -1921,11 +1881,9 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         help_text="Date ethics training was accomplished"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_ETHICS_CLASS_CD'
-        verbose_name = 'FILER_ETHICS_CLASS_CD'
-        verbose_name_plural = 'FILER_ETHICS_CLASS_CD'
+        ordering = ("-ethics_date",)
 
     def __str__(self):
         return str(self.filer_id)
@@ -1999,11 +1957,9 @@ class FilerInterestsCd(CalAccessBaseModel):
         help_text="Effective date",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_INTERESTS_CD'
-        verbose_name = 'FILER_INTERESTS_CD'
-        verbose_name_plural = 'FILER_INTERESTS_CD'
+        ordering = ("-effect_date",)
 
     def __str__(self):
         return str(self.filer_id)
@@ -2114,11 +2070,8 @@ in the relationship',
         help_text="Termination effective date",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_LINKS_CD'
-        verbose_name = 'FILER_LINKS_CD'
-        verbose_name_plural = 'FILER_LINKS_CD'
 
     def __str__(self):
         return str('%s-%s' % (self.filer_id_a, self.filer_id_b))
@@ -2127,8 +2080,7 @@ in the relationship',
 @python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
-    This is an undocumented model that contains a small number
-    of codes and definitions that map to values in FILERNAME_CD.STATUS.
+    An undocumented model that contains a small number of codes that map to FILERNAME_CD.STATUS.
     """
     UNIQUE_KEY = "STATUS_TYPE"
     DOCUMENTCLOUD_PAGES = [
@@ -2148,11 +2100,8 @@ class FilerStatusTypesCd(CalAccessBaseModel):
         help_text='This field is undocumented'
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_STATUS_TYPES_CD'
-        verbose_name = 'FILER_STATUS_TYPES_CD'
-        verbose_name_plural = 'FILER_STATUS_TYPES_CD'
         ordering = ("status_type",)
 
     def __str__(self):
@@ -2162,9 +2111,9 @@ class FilerStatusTypesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerToFilerTypeCd(CalAccessBaseModel):
     """
-    This table links a filer to a set of characteristics that describe the
-    filer. This table maintains a history of changes and allows the filer
-    to change characteristics over time.
+    Links a filer to a set of characteristics that describe the filer.
+
+    Maintains a history of changes and allows the filer to change characteristics over time.
     """
     UNIQUE_KEY = (
         "FILER_ID",
@@ -2697,11 +2646,8 @@ Populated for Senate, Assembly or Board of Equalization races",
         ]
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_TO_FILER_TYPE_CD'
-        verbose_name = 'FILER_TO_FILER_TYPE_CD'
-        verbose_name_plural = 'FILER_TO_FILER_TYPE_CD'
 
     def __str__(self):
         return str(self.filer_id)
@@ -2712,7 +2658,7 @@ class FilerTypesCd(CalAccessBaseModel):
     """
     This lookup table describes filer types.
     """
-    UNIQUE_KEY = "FILTER_TYPE"
+    UNIQUE_KEY = "FILER_TYPE"
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=9),
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71, end_page=72),
@@ -2756,11 +2702,8 @@ class FilerTypesCd(CalAccessBaseModel):
         help_text="This field is undocumented"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_TYPES_CD'
-        verbose_name = 'FILER_TYPES_CD'
-        verbose_name_plural = 'FILER_TYPES_CD'
         ordering = ("filer_type",)
 
     def __str__(self):
@@ -2770,9 +2713,7 @@ class FilerTypesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerXrefCd(CalAccessBaseModel):
     """
-    This table maps legacy filer identification numbers to the system's filer
-    identification numbers. Although 60 percent of the FILER_ID and XREF_ID values
-    are equal.
+    This table maps legacy filer identification numbers to the system's filer identification numbers.
     """
     UNIQUE_KEY = ("FILER_ID", "XREF_ID")
     DOCUMENTCLOUD_PAGES = [
@@ -2805,11 +2746,8 @@ class FilerXrefCd(CalAccessBaseModel):
         help_text="Source of the XREF_ID. Migration or generated by the AMS."
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILER_XREF_CD'
-        verbose_name = 'FILER_XREF_CD'
-        verbose_name_plural = 'FILER_XREF_CD'
 
     def __str__(self):
         return str(self.filer_id)
@@ -2818,8 +2756,7 @@ class FilerXrefCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilingPeriodCd(CalAccessBaseModel):
     """
-    An undocumented table that contains metadata for a variety
-    of filing periods.
+    An undocumented table that contains metadata for a variety of filing periods.
     """
     UNIQUE_KEY = "PERIOD_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -2873,11 +2810,8 @@ class FilingPeriodCd(CalAccessBaseModel):
         help_text="Deadline date"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'FILING_PERIOD_CD'
-        verbose_name = 'FILING_PERIOD_CD'
-        verbose_name_plural = 'FILING_PERIOD_CD'
         ordering = ("-end_date",)
 
     def __str__(self):
@@ -2887,9 +2821,10 @@ class FilingPeriodCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class GroupTypesCd(CalAccessBaseModel):
     """
-    This lookup table stores group type information. Most (but not all) of the GRP_ID/
-    GRP_NAME value pairs in this table match the FILER_TYPE/DESCRIPTION value pairs in
-    the FILER_TYPE_CD table.
+    This lookup table stores group type information.
+
+    Most (but not all) of the GRP_ID/GRP_NAME value pairs in this table match
+    the FILER_TYPE/DESCRIPTION value pairs in the FILER_TYPE_CD table.
     """
     UNIQUE_KEY = "GRP_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -2916,11 +2851,9 @@ class GroupTypesCd(CalAccessBaseModel):
         help_text="Group Description. This column contains only empty strings."
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'GROUP_TYPES_CD'
-        verbose_name = 'GROUP_TYPES_CD'
-        verbose_name_plural = 'GROUP_TYPES_CD'
+        ordering = ("grp_id",)
 
     def __str__(self):
         return str(self.grp_id)
@@ -2982,11 +2915,9 @@ class ImageLinksCd(CalAccessBaseModel):
         help_text="Image date",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'IMAGE_LINKS_CD'
-        verbose_name = 'IMAGE_LINKS_CD'
-        verbose_name_plural = 'IMAGE_LINKS_CD'
+        ordering = ("-img_dt",)
 
     def __str__(self):
         return str(self.img_link_id)
@@ -3020,11 +2951,9 @@ class LegislativeSessionsCd(CalAccessBaseModel):
         help_text="Session end date"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LEGISLATIVE_SESSIONS_CD'
-        verbose_name = 'LEGISLATIVE_SESSIONS_CD'
-        verbose_name_plural = 'LEGISLATIVE_SESSIONS_CD'
+        ordering = ("-begin_date",)
 
     def __str__(self):
         return str(self.session_id)
@@ -3055,11 +2984,8 @@ class LookupCodesCd(CalAccessBaseModel):
         help_text="Code description",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'LOOKUP_CODES_CD'
-        verbose_name = 'LOOKUP_CODES_CD'
-        verbose_name_plural = 'LOOKUP_CODES_CD'
 
     def __str__(self):
         return str(self.code_id)
@@ -3068,8 +2994,9 @@ class LookupCodesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class NamesCd(CalAccessBaseModel):
     """
-    The name of all entities in the system. Used for searches when
-    the name has an identification number.
+    The name of all entities in the system.
+
+    Used for searches when the name has an identification number.
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
@@ -3131,11 +3058,9 @@ class NamesCd(CalAccessBaseModel):
         help_text="Last name",
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'NAMES_CD'
-        verbose_name = 'NAMES_CD'
-        verbose_name_plural = 'NAMES_CD'
+        ordering = ("naml", "namf")
 
     def __str__(self):
         return str(self.namid)
@@ -3201,7 +3126,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number",
+        help_text="Unique filing identification number",
         null=True,
         blank=True,
     )
@@ -3223,11 +3148,9 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         help_text="A comment"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'RECEIVED_FILINGS_CD'
-        verbose_name = 'RECEIVED_FILINGS_CD'
-        verbose_name_plural = 'RECEIVED_FILINGS_CD'
+        ordering = ("-received_date",)
 
     def __str__(self):
         return str(self.filing_id)
@@ -3297,72 +3220,9 @@ class ReportsCd(CalAccessBaseModel):
         help_text="Parameter definition"
     )
 
-    class Meta:
-        app_label = 'calaccess_raw'
+    class Meta(CalAccessBaseModel.Meta):
         db_table = 'REPORTS_CD'
-        verbose_name = 'REPORTS_CD'
-        verbose_name_plural = 'REPORTS_CD'
+        ordering = ("rpt_name",)
 
     def __str__(self):
         return str(self.rpt_id)
-
-
-@python_2_unicode_compatible
-class FilerTypePeriodsCd(CalAccessBaseModel):
-    """
-    This table and its fields are listed in the official CAL-ACCESS documentation,
-    but is not fully explained. The table's description contains this note: "J M needs
-    to document. This is in his list of tables designed for future enhancements."
-    """
-    UNIQUE_KEY = (
-        "ELECTION_TYPE",
-        "FILER_TYPE",
-        "PERIOD_ID",
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71),
-    ]
-    ELECTION_TYPE_CHOICES = (
-        (0, 'N/A'),
-        (3001, 'GENERAL'),
-        (3002, 'PRIMARY'),
-        (3003, 'RECALL'),
-        (3004, 'SPECIAL ELECTION'),
-        (3005, 'OFFICEHOLDER'),
-        (3006, 'SPECIAL RUNOFF'),
-    )
-    election_type = fields.IntegerField(
-        db_column="ELECTION_TYPE",
-        db_index=True,
-        choices=ELECTION_TYPE_CHOICES,
-        help_text="Election type",
-        documentcloud_pages=[
-            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3, end_page=4),
-        ],
-    )
-    filer_type = fields.ForeignKeyField(
-        'FilerTypesCd',
-        related_name='filing_type_periods',
-        db_constraint=False,
-        db_column="FILER_TYPE",
-        db_index=True,
-        help_text="Foreign key referencing FilerTypesCd.filer_type",
-    )
-    period_id = fields.ForeignKeyField(
-        'FilingPeriodCd',
-        related_name='filing_type_periods',
-        db_constraint=False,
-        db_column="PERIOD_ID",
-        db_index=True,
-        help_text="Foreign key referencing FilingPeriodCd.period_id",
-    )
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        db_table = 'FILER_TYPE_PERIODS_CD'
-        verbose_name = 'FILER_TYPE_PERIODS_CD'
-        verbose_name_plural = 'FILER_TYPE_PERIODS_CD'
-
-    def __str__(self):
-        return str(self.election_type)

@@ -1,16 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Models for tracking CAL-ACCESS updates over time.
+"""
 from __future__ import unicode_literals
 from django.db import models
 from hurry.filesize import size as sizeformat
-from django.utils.encoding import python_2_unicode_compatible
 from calaccess_raw import archive_directory_path
+from django.utils.encoding import python_2_unicode_compatible
 
 
 @python_2_unicode_compatible
 class RawDataVersion(models.Model):
     """
-    A version of CAL-ACCESS raw source data, typically released every day
+    A version of CAL-ACCESS raw source data, typically released every day.
     """
     release_datetime = models.DateTimeField(
         unique=True,
@@ -44,9 +47,7 @@ class RawDataVersion(models.Model):
 
     def pretty_size(self):
         """
-        Returns a prettified version of the file size, converted from
-        bytes into larger units like megabytes that people can better
-        understand.
+        Returns a prettified version of the file size.
         """
         if not self.size:
             return None
@@ -58,7 +59,7 @@ class RawDataVersion(models.Model):
 @python_2_unicode_compatible
 class RawDataFile(models.Model):
     """
-    A data file included in a version of the CAL-ACCESS raw source data
+    A data file included in a version of the CAL-ACCESS raw source data.
     """
     version = models.ForeignKey(
         'RawDataVersion',
@@ -139,7 +140,7 @@ class RawDataFile(models.Model):
 @python_2_unicode_compatible
 class RawDataCommand(models.Model):
     """
-    A call of a command from this application with start and finish times
+    A call of a command from this application with start and finish times.
     """
     version = models.ForeignKey(
         'RawDataVersion',

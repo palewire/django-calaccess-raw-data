@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Import all of the admins from submodules and thread them together.
+"""
 from calaccess_raw.admin.base import BaseAdmin
 from calaccess_raw.admin.campaign import (
     CvrSoCdAdmin,
@@ -17,7 +20,30 @@ from calaccess_raw.admin.campaign import (
     S497CdAdmin,
     F501502CdAdmin,
     S498CdAdmin,
+)
+from calaccess_raw.admin.inactive import (
     BallotMeasuresCdAdmin,
+    CvrF470CdAdmin,
+    FilerTypePeriodsCd,
+    LobbyistContributions1CdAdmin,
+    LobbyistContributions2CdAdmin,
+    LobbyistContributions3CdAdmin,
+    LobbyistEmpLobbyist1CdAdmin,
+    LobbyistEmpLobbyist2CdAdmin,
+    LobbyistEmployer1CdAdmin,
+    LobbyistEmployer2CdAdmin,
+    LobbyistEmployer3CdAdmin,
+    LobbyistEmployerFirms1CdAdmin,
+    LobbyistEmployerFirms2CdAdmin,
+    LobbyistEmployerHistoryCdAdmin,
+    LobbyistFirm1CdAdmin,
+    LobbyistFirm2CdAdmin,
+    LobbyistFirm3CdAdmin,
+    LobbyistFirmEmployer1CdAdmin,
+    LobbyistFirmEmployer2CdAdmin,
+    LobbyistFirmHistoryCdAdmin,
+    LobbyistFirmLobbyist1CdAdmin,
+    LobbyistFirmLobbyist2CdAdmin
 )
 from calaccess_raw.admin.lobbying import (
     CvrRegistrationCdAdmin,
@@ -32,24 +58,7 @@ from calaccess_raw.admin.lobbying import (
     LothCdAdmin,
     LempCdAdmin,
     LpayCdAdmin,
-    LobbyingChgLogCdAdmin,
-    LobbyistContributions1CdAdmin,
-    LobbyistContributions2CdAdmin,
-    LobbyistContributions3CdAdmin,
-    LobbyistEmployer1CdAdmin,
-    LobbyistEmployer2CdAdmin,
-    LobbyistEmployer3CdAdmin,
-    LobbyistEmployerFirms1CdAdmin,
-    LobbyistEmployerFirms2CdAdmin,
-    LobbyistEmpLobbyist1CdAdmin,
-    LobbyistEmpLobbyist2CdAdmin,
-    LobbyistFirm1CdAdmin,
-    LobbyistFirm2CdAdmin,
-    LobbyistFirm3CdAdmin,
-    LobbyistFirmEmployer1CdAdmin,
-    LobbyistFirmEmployer2CdAdmin,
-    LobbyistFirmLobbyist1CdAdmin,
-    LobbyistFirmLobbyist2CdAdmin,
+    LobbyingChgLogCdAdmin
 )
 from calaccess_raw.admin.common import (
     FilernameCdAdmin,
@@ -78,7 +87,7 @@ from calaccess_raw.admin.common import (
     HdrCdAdmin,
     ImageLinksCdAdmin,
     LegislativeSessionsCdAdmin,
-    LookupCodeAdmin,
+    LookupCodesCdAdmin,
     NamesCdAdmin,
     ReceivedFilingsCdAdmin,
     ReportsCdAdmin,
@@ -90,7 +99,7 @@ from calaccess_raw.admin.tracking import (
     RawDataCommandAdmin
 )
 
-__all__ = [
+__all__ = (
     'BaseAdmin',
     'CvrSoCdAdmin',
     'Cvr2SoCdAdmin',
@@ -108,6 +117,7 @@ __all__ = [
     'S497CdAdmin',
     'F501502CdAdmin',
     'S498CdAdmin',
+    'CvrF470CdAdmin',
     'CvrRegistrationCdAdmin',
     'Cvr2RegistrationCdAdmin',
     'CvrLobbyDisclosureCdAdmin',
@@ -141,6 +151,7 @@ __all__ = [
     'FilerTypesCdAdmin',
     'FilerXrefCdAdmin',
     'FilingPeriodCdAdmin',
+    'FilerTypePeriodsCd',
     'GroupTypesCdAdmin',
     'HeaderCdAdmin',
     'HdrCdAdmin',
@@ -164,11 +175,13 @@ __all__ = [
     'LobbyistFirmEmployer2CdAdmin',
     'LobbyistFirmLobbyist1CdAdmin',
     'LobbyistFirmLobbyist2CdAdmin',
-    'LookupCodeAdmin',
+    'LobbyistFirmHistoryCdAdmin',
+    'LobbyistEmployerHistoryCdAdmin',
+    'LookupCodesCdAdmin',
     'NamesCdAdmin',
     'ReceivedFilingsCdAdmin',
     'ReportsCdAdmin',
     'RawDataVersionAdmin',
     'RawDataFileAdmin',
     'RawDataCommandAdmin',
-]
+)

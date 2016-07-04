@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+All the CAL-ACCESS forms cataloged by our research.
+"""
 from calaccess_raw.annotations import FilingForm
 
 all_filing_forms = (
@@ -139,8 +142,7 @@ supported or opposed by the independent expenditure(s) is required to file.',
         description='Form 470 is filed by officeholders and candidates who do \
 not have a controlled committee, do not receive contributions totaling $2,000 or \
 more during the calendar year, and do not spend $2,000 or more during the \
-calendar year.'
-        ),
+calendar year.'),
     FilingForm(
         'F490',
         'Officeholder/Candidate Campaign Statement-Long Form',
@@ -235,8 +237,7 @@ firm of individual contract lobbyist wishing to register or renew an existing \
 registration. The form must be filed within 10 days of qualifying as a lobbying \
 firm. Renewal of existing registration is due between November 1 and December 31 \
 of each even-numbered year. This registration is valid for the complete two-year \
-cycle of such session.'
-        ),
+cycle of such session.'),
     FilingForm(
         'F602',
         'Lobbying Firm Activity Authorization',
@@ -423,7 +424,7 @@ commonly referred to as the Form 700.',
 
 def get_filing_form(id):
     """
-    Takes an id for a filing form and returns a FilingForm object
+    Takes an id for a filing form and returns a FilingForm object.
     """
     return next((x for x in all_filing_forms if x.id == id.upper()), None)
 

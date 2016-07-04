@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Import all of the models from submodules and thread them together.
+"""
 from calaccess_raw.models.base import CalAccessBaseModel
 from calaccess_raw.models.campaign import (
     CvrSoCd,
@@ -7,7 +10,6 @@ from calaccess_raw.models.campaign import (
     CvrCampaignDisclosureCd,
     Cvr2CampaignDisclosureCd,
     Cvr3VerificationInfoCd,
-    CvrF470Cd,
     DebtCd,
     ExpnCd,
     LoanCd,
@@ -18,7 +20,30 @@ from calaccess_raw.models.campaign import (
     S497Cd,
     S498Cd,
     F501502Cd,
+)
+from calaccess_raw.models.inactive import (
     BallotMeasuresCd,
+    CvrF470Cd,
+    FilerTypePeriodsCd,
+    LobbyistContributions1Cd,
+    LobbyistContributions2Cd,
+    LobbyistContributions3Cd,
+    LobbyistEmpLobbyist1Cd,
+    LobbyistEmpLobbyist2Cd,
+    LobbyistEmployer1Cd,
+    LobbyistEmployer2Cd,
+    LobbyistEmployer3Cd,
+    LobbyistEmployerFirms1Cd,
+    LobbyistEmployerFirms2Cd,
+    LobbyistEmployerHistoryCd,
+    LobbyistFirm1Cd,
+    LobbyistFirm2Cd,
+    LobbyistFirm3Cd,
+    LobbyistFirmEmployer1Cd,
+    LobbyistFirmEmployer2Cd,
+    LobbyistFirmHistoryCd,
+    LobbyistFirmLobbyist1Cd,
+    LobbyistFirmLobbyist2Cd,
 )
 from calaccess_raw.models.lobbying import (
     CvrRegistrationCd,
@@ -26,31 +51,12 @@ from calaccess_raw.models.lobbying import (
     LobbyAmendmentsCd,
     LobbyingChgLogCd,
     LempCd,
-    LobbyistEmployer1Cd,
-    LobbyistEmployer2Cd,
-    LobbyistEmployer3Cd,
-    LobbyistEmployerHistoryCd,
-    LobbyistEmpLobbyist1Cd,
-    LobbyistEmpLobbyist2Cd,
-    LobbyistFirm1Cd,
-    LobbyistFirm2Cd,
-    LobbyistFirm3Cd,
-    LobbyistFirmHistoryCd,
-    LobbyistEmployerFirms1Cd,
-    LobbyistEmployerFirms2Cd,
-    LobbyistFirmEmployer1Cd,
-    LobbyistFirmEmployer2Cd,
-    LobbyistFirmLobbyist1Cd,
-    LobbyistFirmLobbyist2Cd,
     CvrLobbyDisclosureCd,
     Cvr2LobbyDisclosureCd,
     F690P2Cd,
     LattCd,
     LexpCd,
     LccmCd,
-    LobbyistContributions1Cd,
-    LobbyistContributions2Cd,
-    LobbyistContributions3Cd,
     LpayCd,
     LothCd,
 )
@@ -76,7 +82,6 @@ from calaccess_raw.models.common import (
     FilerStatusTypesCd,
     FilerToFilerTypeCd,
     FilerTypesCd,
-    FilerTypePeriodsCd,
     FilerXrefCd,
     FilingPeriodCd,
     GroupTypesCd,
@@ -92,7 +97,7 @@ from calaccess_raw.models.tracking import (
     RawDataCommand,
     RawDataFile
 )
-__all__ = [
+__all__ = (
     'CalAccessBaseModel',
     'CvrSoCd',
     'Cvr2SoCd',
@@ -177,4 +182,4 @@ __all__ = [
     'RawDataVersion',
     'RawDataCommand',
     'RawDataFile'
-]
+)

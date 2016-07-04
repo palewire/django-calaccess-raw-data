@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Custom field overrides that allow for cleaning and transforming the data
-when it is bulk loaded into the database with PostgreSQL's COPY command via
-django-postgres-copy.
+Custom field overrides.
+
+Allow for cleaning and transforming the data when it is bulk loaded into the
+database with PostgreSQL's COPY command via django-postgres-copy.
 """
 from django.db.models import fields
 from django.template.defaultfilters import capfirst
@@ -24,6 +25,11 @@ class CalAccessFieldMixin(fields.Field):
             return ''
 
     def is_unique_key(self):
+        """
+        Tests if the column is part of its model's unique key.
+
+        Returns True or False
+        """
         if self.__dict__['db_column'] in self.model().get_unique_key_list():
             return True
         return False
@@ -31,22 +37,20 @@ class CalAccessFieldMixin(fields.Field):
 
 class DocumentCloudMixin(fields.Field):
     """
-    Adds a documentcloud_pages keyword argument to the Field
-    so it can include links to JPG pages that document the contents
-    of the field.
+    Adds a documentcloud_pages keyword argument to the Field.
+
+    Allows it to link to documents that explain the contents of the data.
     """
     def __init__(self, documentcloud_pages=[], *args, **kwargs):
         """
-        Overrides the standard __init__ to add our documentcloud_page_urls
-        option.
+        Overrides the standard __init__ to add our documentcloud_page_urls option.
         """
         self.documentcloud_pages = documentcloud_pages
         super(DocumentCloudMixin, self).__init__(*args, **kwargs)
 
     def deconstruct(self):
         """
-        Overrides the standard deconstruct method to add our
-        documentcloud_page_urls option.
+        Overrides the standard deconstruct method to add our documentcloud_page_urls option.
         """
         name, path, args, kwargs = super(
             DocumentCloudMixin,
@@ -59,6 +63,9 @@ class DocumentCloudMixin(fields.Field):
 
 
 class CharField(fields.CharField, CalAccessFieldMixin, DocumentCloudMixin):
+    """
+    A custom character field.
+    """
     copy_type = "text"
     copy_template = """
     CASE
@@ -69,12 +76,18 @@ class CharField(fields.CharField, CalAccessFieldMixin, DocumentCloudMixin):
     """
 
     def description(self):
+        """
+        Returns a custom description for documentation that includes the max length.
+        """
         return super(CharField, self).description % dict(
             max_length=self.max_length
         )
 
 
 class DateField(fields.DateField, CalAccessFieldMixin):
+    """
+    A custom date field.
+    """
     copy_type = "text"
     copy_template = """
     CASE
@@ -86,6 +99,9 @@ class DateField(fields.DateField, CalAccessFieldMixin):
 
 
 class DateTimeField(fields.DateTimeField, CalAccessFieldMixin):
+    """
+    A custom datetime field.
+    """
     copy_type = "text"
     copy_template = """
     CASE
@@ -97,6 +113,9 @@ class DateTimeField(fields.DateTimeField, CalAccessFieldMixin):
 
 
 class DecimalField(fields.DecimalField, CalAccessFieldMixin):
+    """
+    A custom decimal field.
+    """
     copy_type = "text"
     copy_template = """
     CASE
@@ -111,6 +130,9 @@ class DecimalField(fields.DecimalField, CalAccessFieldMixin):
 
 
 class FloatField(fields.FloatField, CalAccessFieldMixin):
+    """
+    A custom float field.
+    """
     copy_type = "text"
     copy_template = """
     CASE
@@ -125,6 +147,9 @@ class FloatField(fields.FloatField, CalAccessFieldMixin):
 
 
 class IntegerField(fields.IntegerField, CalAccessFieldMixin, DocumentCloudMixin):
+    """
+    A custom integer field.
+    """
     copy_type = "text"
     copy_template = """
     CASE
@@ -153,17 +178,25 @@ class IntegerField(fields.IntegerField, CalAccessFieldMixin, DocumentCloudMixin)
 
 
 class ForeignKeyField(ForeignKey, CalAccessFieldMixin, DocumentCloudMixin):
-    def __init__(self, *args, **kwargs):
-        super(ForeignKeyField, self).__init__(*args, **kwargs)
-        # self.related_field = self.foreign_related_fields[0]
-
+    """
+    A custom foreign key field.
+    """
     @property
     def copy_type(self):
+        """
+        Returns the copy_type of the related foreign key field.
+        """
         return self.foreign_related_fields[0].copy_type
 
     @property
     def copy_template(self):
+        """
+        Returns the copy_template of the related foreign key field.
+        """
         return self.foreign_related_fields[0].copy_template
 
     def description(self):
+        """
+        Returns a description for documentation from the related foreign key field.
+        """
         return self.foreign_related_fields[0].description
