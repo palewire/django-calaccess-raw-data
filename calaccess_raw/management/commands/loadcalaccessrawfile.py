@@ -301,7 +301,12 @@ class Command(CalAccessCommand):
         Returns the number of rows in the file, not counting headers.
         """
         with open(self.csv) as infile:
-            return sum(1 for line in infile) - 1
+            row_count = sum(1 for line in infile) - 1
+
+        if row_count < 0:
+            row_count = 0
+
+        return row_count
 
     def finish_load_message(self, model_count, csv_count):
         """
