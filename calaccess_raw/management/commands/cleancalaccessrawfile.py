@@ -194,10 +194,16 @@ class Command(CalAccessCommand):
             file_name=self.log_record.file_name
         )[0]
 
-        # add counts to raw_file_record
+        # Add counts to raw_file_record
         raw_file.download_columns_count = headers_count
         raw_file.download_records_count = line_number - 1
         raw_file.clean_records_count = line_number - 1 - len(log_rows)
+
+        # Add file size to the raw_file_record
+        raw_file.download_file_size = os.path.getsize(tsv_path)
+        raw_file.clean_file_size = os.path.getsize(csv_path)
+
+        # Save it
         raw_file.save()
 
         # Shut it down

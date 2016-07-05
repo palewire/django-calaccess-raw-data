@@ -119,12 +119,24 @@ class RawDataFile(models.Model):
         help_text='An archive of the original raw data file downloaded '
                      'from CAL-ACCESS.'
     )
+    download_file_size = models.IntegerField(
+        null=False,
+        default=0,
+        verbose_name='size of raw data file in bytes',
+        help_text='Size of the .TSV file'
+    )
     clean_file_archive = models.FileField(
         blank=True,
         max_length=255,
         upload_to=archive_directory_path,
         verbose_name='archive of clean file',
         help_text='An archive of the raw data file after being cleaned.'
+    )
+    clean_file_size = models.IntegerField(
+        null=False,
+        default=0,
+        verbose_name='size of clean data file in bytes',
+        help_text='Size of the .CSV file'
     )
 
     class Meta:
