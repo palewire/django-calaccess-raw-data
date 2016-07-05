@@ -203,9 +203,6 @@ class Command(CalAccessCommand):
         raw_file.download_file_size = os.path.getsize(tsv_path) or 0
         raw_file.clean_file_size = os.path.getsize(csv_path) or 0
 
-        print raw_file.download_file_size
-        print raw_file.clean_file_size
-
         # Save it
         raw_file.save()
 
