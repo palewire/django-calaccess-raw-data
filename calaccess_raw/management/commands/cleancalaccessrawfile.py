@@ -133,6 +133,7 @@ class Command(CalAccessCommand):
         # Loop through the rest of the data
         line_number = 1
         for tsv_line in tsv_file:
+            line_number += 1
 
             # Goofing around with the encoding while we're in there.
             tsv_line = tsv_line.decode("ascii", "replace")
@@ -161,6 +162,7 @@ class Command(CalAccessCommand):
                     StringIO(tsv_line),
                     delimiter=str('\t')
                 ))
+
                 if not len(csv_field_list) == headers_count:
                     if self.verbosity > 2:
                         msg = '  Bad parse of line %s (%s headers, %s values)'
@@ -179,7 +181,6 @@ class Command(CalAccessCommand):
 
             # Write out the row
             csv_writer.writerow(csv_field_list)
-            line_number += 1
 
         # Log errors if there are any
         if log_rows:
@@ -193,9 +194,10 @@ class Command(CalAccessCommand):
             file_name=self.log_record.file_name
         )[0]
 
-        # add download counts to raw_file_record
+        # add counts to raw_file_record
         raw_file.download_columns_count = headers_count
-        raw_file.download_records_count = line_number
+        raw_file.download_records_count = line_number - 1
+        raw_file.clean_records_count = line_number - 1 - len(log_rows)
         raw_file.save()
 
         # Shut it down
