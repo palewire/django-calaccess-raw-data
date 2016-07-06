@@ -153,7 +153,7 @@ class Command(CalAccessCommand):
 
             # Split on tabs so we can later spit it back out as CSV
             # and remove extra newlines while we are there.
-            csv_field_list = tsv_line.replace("\r\n", "").split("\t")
+            csv_field_list = tsv_line.replace("\r\n", "").replace("\r", "").split("\t")
 
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems
