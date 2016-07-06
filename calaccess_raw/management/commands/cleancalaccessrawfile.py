@@ -112,7 +112,7 @@ class Command(CalAccessCommand):
         )
 
         # Reader
-        tsv_file = open(tsv_path, 'rb')
+        tsv_file = open(tsv_path, 'rbU')
 
         # Writer
         csv_file = open(csv_path, 'w')
@@ -139,6 +139,15 @@ class Command(CalAccessCommand):
         for tsv_line in tsv_file:
             line_number += 1
 
+            # Log empty lines, then skip
+            if tsv_line == '\n':
+                if self.verbosity > 2:
+                    msg = '  Line %s is empty'
+                    self.failure(msg % (
+                        line_number,
+                    ))
+                continue
+
             # Goofing around with the encoding while we're in there.
             tsv_line = tsv_line.decode("ascii", "replace")
             if six.PY2:
@@ -156,8 +165,7 @@ class Command(CalAccessCommand):
                 tsv_line = tsv_line.replace('\x1a', '')
 
             # Split on tabs so we can later spit it back out as CSV
-            # and remove extra newlines while we are there.
-            csv_field_list = tsv_line.replace("\r\n", "").replace("\r", "").split("\t")
+            csv_field_list = tsv_line.split("\t")
 
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems
@@ -189,7 +197,7 @@ class Command(CalAccessCommand):
         # Log errors if there are any
         if log_rows:
             if self.verbosity > 1:
-                msg = '  %s errors'
+                msg = '  %s errors logged (not including empty lines)'
                 self.failure(msg % (len(log_rows)))
             self.log_errors(log_rows)
 
