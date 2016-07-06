@@ -38,6 +38,8 @@ class RawDataFileAdmin(BaseAdmin):
         "download_columns_count",
         "clean_columns_count",
         "load_columns_count",
+        "pretty_download_file_size",
+        "pretty_clean_file_size"
     )
     list_display_links = ('id', 'file_name',)
     list_filter = ("version__release_datetime",)

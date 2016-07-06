@@ -22,7 +22,7 @@ class RawDataVersion(models.Model):
         help_text='Date and time the version of the CAL-ACCESS database was released '
                   '(value of last-modified field in HTTP response header)'
     )
-    size = models.IntegerField(
+    size = models.BigIntegerField(
         null=False,
         verbose_name='size of raw data version in bytes',
         help_text='Size of the .ZIP file for this version of the CAL-ACCESS raw source data '
@@ -119,12 +119,24 @@ class RawDataFile(models.Model):
         help_text='An archive of the original raw data file downloaded '
                      'from CAL-ACCESS.'
     )
+    download_file_size = models.BigIntegerField(
+        null=False,
+        default=0,
+        verbose_name='size of raw data file in bytes',
+        help_text='Size of the .TSV file'
+    )
     clean_file_archive = models.FileField(
         blank=True,
         max_length=255,
         upload_to=archive_directory_path,
         verbose_name='archive of clean file',
         help_text='An archive of the raw data file after being cleaned.'
+    )
+    clean_file_size = models.BigIntegerField(
+        null=False,
+        default=0,
+        verbose_name='size of clean data file in bytes',
+        help_text='Size of the .CSV file'
     )
 
     class Meta:
@@ -135,6 +147,26 @@ class RawDataFile(models.Model):
 
     def __str__(self):
         return self.file_name
+
+    def pretty_download_file_size(self):
+        """
+        Returns a prettified version of the download_file_size size.
+        """
+        if not self.download_file_size:
+            return None
+        return sizeformat(self.download_file_size)
+    pretty_download_file_size.short_description = 'download file size'
+    pretty_download_file_size.admin_order_field = 'download file size'
+
+    def pretty_clean_file_size(self):
+        """
+        Returns a prettified version of the clean_file_size size.
+        """
+        if not self.clean_file_size:
+            return None
+        return sizeformat(self.clean_file_size)
+    pretty_clean_file_size.short_description = 'clean file size'
+    pretty_clean_file_size.admin_order_field = 'clean file size'
 
 
 @python_2_unicode_compatible
