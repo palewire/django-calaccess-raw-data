@@ -52,6 +52,10 @@ class Command(CalAccessCommand):
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         self.log_dir = os.path.join(self.data_dir, "log/")
+        self.error_log_path = os.path.join(
+            self.log_dir,
+            self.file_name.lower().replace("tsv", "errors.csv")
+        )
 
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
@@ -212,15 +216,28 @@ class Command(CalAccessCommand):
         csv_file.close()
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-            # Remove previous .CSV file
+            if self.verbosity > 2:
+                self.log(" Archiving cleaned file")
+            # Remove previous .CSV and error log files
             raw_file.clean_file_archive.delete()
+            raw_file.error_log_archive.delete()
+
             # Open up the .CSV file so we can wrap it in the Django File obj
-            f = open(csv_path)
-            # Save the .CSV on the raw data file
-            raw_file.clean_file_archive.save(
-                self.file_name.lower().replace("tsv", "csv"),
-                File(f)
-            )
+            with open(csv_path) as csv_file:
+                # Save the .CSV on the raw data file
+                raw_file.clean_file_archive.save(
+                    self.file_name.lower().replace("tsv", "csv"),
+                    File(csv_file),
+                )
+            # if there are any errors, archive the log too
+            if log_rows:
+                if self.verbosity > 2:
+                    self.log(" Archiving error log")
+                with open(self.error_log_path) as error_file:
+                    raw_file.error_log_archive.save(
+                        os.path.basename(self.error_log_path),
+                        File(error_file),
+                    )
 
     def log_errors(self, rows):
         """
@@ -230,11 +247,7 @@ class Command(CalAccessCommand):
         os.path.exists(self.log_dir) or os.makedirs(self.log_dir)
 
         # Log writer
-        log_path = os.path.join(
-            self.log_dir,
-            self.file_name.lower().replace("tsv", "errors.csv")
-        )
-        log_file = open(log_path, 'w')
+        log_file = open(self.error_log_path, 'w')
         log_writer = CSVKitWriter(log_file, quoting=csv.QUOTE_ALL)
 
         # Add the headers
