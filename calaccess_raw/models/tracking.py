@@ -138,6 +138,15 @@ class RawDataFile(models.Model):
         verbose_name='size of clean data file in bytes',
         help_text='Size of the .CSV file'
     )
+    error_log_archive = models.FileField(
+        blank=True,
+        max_length=255,
+        upload_to=archive_directory_path,
+        verbose_name='archive of error log',
+        help_text='An archive of the error log containing .TSV file lines '
+                  'that could not be cleaned and are excluded from the '
+                  '.CSV file.'
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
