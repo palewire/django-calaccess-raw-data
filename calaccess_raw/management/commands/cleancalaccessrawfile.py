@@ -197,6 +197,7 @@ class Command(CalAccessCommand):
         # Add counts to raw_file_record
         raw_file.download_columns_count = headers_count
         raw_file.download_records_count = line_number - 1
+        raw_file.clean_columns_count = headers_count
         raw_file.clean_records_count = line_number - 1 - len(log_rows)
 
         # Add file size to the raw_file_record

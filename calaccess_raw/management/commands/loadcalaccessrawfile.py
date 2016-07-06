@@ -126,8 +126,7 @@ class Command(CalAccessCommand):
             file_name=self.log_record.file_name
         )[0]
 
-        # add clean counts to raw_file_record
-        raw_file.clean_columns_count = len(self.get_headers())
+        # add load counts to raw_file_record
         raw_file.load_columns_count = len(self.model._meta.fields)
         raw_file.load_records_count = self.model.objects.count()
         raw_file.save()
