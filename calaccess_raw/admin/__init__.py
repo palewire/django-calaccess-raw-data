@@ -43,7 +43,8 @@ from calaccess_raw.admin.inactive import (
     LobbyistFirmEmployer2CdAdmin,
     LobbyistFirmHistoryCdAdmin,
     LobbyistFirmLobbyist1CdAdmin,
-    LobbyistFirmLobbyist2CdAdmin
+    LobbyistFirmLobbyist2CdAdmin,
+    EfsFilingLogCdAdmin,
 )
 from calaccess_raw.admin.lobbying import (
     CvrRegistrationCdAdmin,
@@ -70,7 +71,6 @@ from calaccess_raw.admin.common import (
     TextMemoCdAdmin,
     AcronymsCdAdmin,
     AddressCdAdmin,
-    EfsFilingLogCdAdmin,
     FilersCdAdmin,
     FilerAcronymsCdAdmin,
     FilerAddressCdAdmin,

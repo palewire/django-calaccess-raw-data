@@ -286,3 +286,18 @@ class LobbyistFirmLobbyist2CdAdmin(BaseAdmin):
         "lobbyist_last_name",
         "firm_name"
     )
+
+
+@admin.register(models.EfsFilingLogCd)
+class EfsFilingLogCdAdmin(BaseAdmin):
+    """
+    Custom admin for the EfsFilingLogCd model.
+    """
+    list_display = (
+        "id",
+        "vendor",
+        "filing_date",
+        "filingstatus",
+        "form_type",
+    )
+    date_hierarchy = "filing_date"
