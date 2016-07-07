@@ -138,6 +138,13 @@ class RawDataFile(models.Model):
         verbose_name='size of clean data file in bytes',
         help_text='Size of the .CSV file'
     )
+    error_count = models.IntegerField(
+        null=False,
+        default=0,
+        verbose_name='error count',
+        help_text='Count of records in the original download that could not '
+                  'be parsed and are excluded from the cleaned file.'
+    )
     error_log_archive = models.FileField(
         blank=True,
         max_length=255,
