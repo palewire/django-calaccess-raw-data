@@ -160,10 +160,9 @@ class Command(CalAccessCommand):
 
                 row = model_to_dict(i)
 
-                del row['id']
-                del row['version']
-                del row['download_file_archive']
-                del row['clean_file_archive']
+                for k in row.keys():
+                    if k not in fieldnames:
+                        del row[k]
 
                 row.update({
                     'pct_cleaned': '{0:.2%}'.format(
