@@ -6,7 +6,7 @@ Models for tracking CAL-ACCESS updates over time.
 from __future__ import unicode_literals
 from django.db import models
 from hurry.filesize import size as sizeformat
-from calaccess_raw import archive_directory_path
+from calaccess_raw import archive_directory_path, get_model_list
 from django.utils.encoding import python_2_unicode_compatible
 
 
@@ -183,6 +183,12 @@ class RawDataFile(models.Model):
         return sizeformat(self.clean_file_size)
     pretty_clean_file_size.short_description = 'clean file size'
     pretty_clean_file_size.admin_order_field = 'clean file size'
+
+    @property
+    def model(self):
+        return [
+            m for m in get_model_list() if m().db_table == self.file_name
+        ][0]
 
 
 @python_2_unicode_compatible
