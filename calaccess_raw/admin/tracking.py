@@ -35,6 +35,7 @@ class RawDataFileAdmin(BaseAdmin):
         "download_records_count",
         "clean_records_count",
         "load_records_count",
+        "error_count",
         "download_columns_count",
         "clean_columns_count",
         "load_columns_count",
