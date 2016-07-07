@@ -374,8 +374,7 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
     """
-    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS2_CD and
-    LOBBYIST_CONTRIBUTIONS3_CD.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS2_CD and LOBBYIST_CONTRIBUTIONS3_CD.
 
     According to "Cal-Access Tables, Columns, Indexes", this is a temporary
     table used to generate the actual Lobbyist contribution disclosure table,
@@ -445,8 +444,7 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
-    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and
-    LOBBYIST_CONTRIBUTIONS3_CD.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS3_CD.
 
     According to "Cal-Access Tables, Columns, Indexes", this is a temporary
     table used to generate the actual Lobbyist contribution disclosure table,
@@ -516,8 +514,7 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions3Cd(CalAccessBaseModel):
     """
-    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and
-    LOBBYIST_CONTRIBUTIONS2_CD.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS2_CD.
 
     According to "Cal-Access Tables, Columns, Indexes", this is the actual
     Lobbyist contribution disclosure table generated from the other two
