@@ -150,9 +150,9 @@ class RawDataFile(models.Model):
         max_length=255,
         upload_to=archive_directory_path,
         verbose_name='archive of error log',
-        help_text='An archive of the error log containing .TSV file lines '
-                  'that could not be cleaned and are excluded from the '
-                  '.CSV file.'
+        help_text='An archive of the error log containing lines from the '
+                  'original download file that could not be parsed and are '
+                  'excluded from the cleaned file.'
     )
 
     class Meta:
