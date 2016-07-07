@@ -374,7 +374,15 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS2_CD and 
+    LOBBYIST_CONTRIBUTIONS3_CD.
+
+    According to "Cal-Access Tables, Columns, Indexes", this is a temporary
+    table used to generate the actual Lobbyist contribution disclosure table,
+    which is LOBBYIST_CONTRIBUTIONS3_CD.
+
+    Also, the most recent values observed in FILING_PERIOD_START_DT are for the
+    April 2001, so probably this table is no longer in use.
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
@@ -437,7 +445,15 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and
+    LOBBYIST_CONTRIBUTIONS3_CD.
+
+    According to "Cal-Access Tables, Columns, Indexes", this is a temporary
+    table used to generate the actual Lobbyist contribution disclosure table,
+    which is LOBBYIST_CONTRIBUTIONS3_CD.
+
+    Also, the most recent values observed in FILING_PERIOD_START_DT are for the
+    April 2001, so probably this table is no longer in use.
     """
     UNIQUE_KEY = False
     filer_id = fields.IntegerField(
@@ -500,7 +516,15 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions3Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and 
+    LOBBYIST_CONTRIBUTIONS2_CD.
+
+    According to "Cal-Access Tables, Columns, Indexes", this is the actual 
+    Lobbyist contribution disclosure table generated from the other two 
+    temporary tables: LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS2_CD.
+
+    Also, the most recent values observed in FILING_PERIOD_START_DT are for the
+    April 2001, so probably this table is no longer in use.
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
