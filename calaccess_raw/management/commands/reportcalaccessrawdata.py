@@ -149,6 +149,7 @@ class Command(CalAccessCommand):
                 'download_records_count',
                 'clean_records_count',
                 'load_records_count',
+                'error_count',
                 'pct_cleaned',
                 'pct_loaded'
             ]
