@@ -164,6 +164,9 @@ class Command(CalAccessCommand):
             if sub_char:
                 tsv_line = tsv_line.replace('\x1a', '')
 
+            # Remove any extra newline chars
+            tsv_line = tsv_line.replace("\r\n", "").replace("\r", "").replace("\n", "")
+
             # Split on tabs so we can later spit it back out as CSV
             csv_field_list = tsv_line.split("\t")
 
