@@ -186,6 +186,9 @@ class RawDataFile(models.Model):
 
     @property
     def model(self):
+        """
+        Returns the RawDataFile's corresponding CalAccess database model object.
+        """
         return [
             m for m in get_model_list() if m().db_table == self.file_name
         ][0]
