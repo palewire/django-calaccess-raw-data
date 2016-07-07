@@ -214,6 +214,7 @@ class Command(CalAccessCommand):
         raw_file.download_records_count = line_number - 1
         raw_file.clean_columns_count = headers_count
         raw_file.clean_records_count = line_number - 1 - len(log_rows)
+        raw_file.error_count = len(log_rows)
 
         # Add file size to the raw_file_record
         raw_file.download_file_size = os.path.getsize(tsv_path) or 0
