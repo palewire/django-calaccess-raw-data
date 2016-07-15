@@ -294,6 +294,8 @@ class Command(CalAccessCommand):
 
         # make the RawDataFile records
         for raw_data_file in self.raw_data_files.filter(version=self.version):
+            if self.verbosity > 2:
+                self.log(" Archiving {0}.TSV".format(raw_data_file.file_name))
             # Remove previous .TSV file
             raw_data_file.download_file_archive.delete()
             # Open up the .TSV file so we can wrap it in the Django File obj
@@ -303,8 +305,6 @@ class Command(CalAccessCommand):
                     raw_data_file.file_name + '.TSV',
                     File(f)
                 )
-                if self.verbosity > 2:
-                    self.log(" Archiving {0}.TSV".format(raw_data_file.file_name))
 
 
 class TestCommand(Command):
