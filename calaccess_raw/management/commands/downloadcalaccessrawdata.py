@@ -304,7 +304,7 @@ class Command(CalAccessCommand):
                     File(f)
                 )
                 if self.verbosity > 2:
-                    self.log(" Archiving {0}.TSV".format(raw_data_file.file_name)
+                    self.log(" Archiving {0}.TSV".format(raw_data_file.file_name))
 
 
 class TestCommand(Command):
