@@ -229,7 +229,7 @@ class Command(CalAccessCommand):
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             if self.verbosity > 2:
-                self.log(" Archiving cleaned file")
+                self.log(" Archiving {0}.csv".format(raw_file.file_name))
             # Remove previous .CSV and error log files
             raw_file.clean_file_archive.delete()
             raw_file.error_log_archive.delete()
@@ -244,7 +244,7 @@ class Command(CalAccessCommand):
             # if there are any errors, archive the log too
             if log_rows:
                 if self.verbosity > 2:
-                    self.log(" Archiving error log")
+                    self.log(" Archiving {0}.errors.csv".format(raw_file.file_name))
                 with open(self.error_log_path) as error_file:
                     raw_file.error_log_archive.save(
                         os.path.basename(self.error_log_path),
