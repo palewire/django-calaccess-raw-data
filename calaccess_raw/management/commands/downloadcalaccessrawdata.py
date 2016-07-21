@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Download, unzip and prep the latest CAL-ACCESS database ZIP.
+Download the latest CAL-ACCESS database ZIP.
 """
 from __future__ import unicode_literals
 import os
-import shutil
-import zipfile
 import requests
 from datetime import datetime
 from hurry.filesize import size
@@ -14,19 +12,19 @@ from clint.textui import progress
 from django.conf import settings
 from django.core.files import File
 from django.utils.timezone import utc, now
-from calaccess_raw import get_download_directory, get_test_download_directory
+from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 class Command(CalAccessCommand):
     """
-    Download, unzip and prep the latest CAL-ACCESS database ZIP.
+    Download the latest CAL-ACCESS database ZIP.
     """
-    help = "Download, unzip and prep the latest CAL-ACCESS database ZIP"
+    help = "Download the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
         """
@@ -151,16 +149,9 @@ class Command(CalAccessCommand):
             )
 
         self.download()
-        self.unzip()
-        self.prep()
-        self.track_files()
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
-
-        if not options['keep_files']:
-            os.remove(self.zip_path)
-            shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
         self.log_record.finish_datetime = now()
         self.log_record.save()
@@ -218,69 +209,11 @@ class Command(CalAccessCommand):
                 fp.write(chunk)
                 fp.flush()
 
-    def unzip(self):
-        """
-        Unzip the snapshot file.
-        """
-        if self.verbosity:
-            self.log(" Unzipping archive")
-
-        with zipfile.ZipFile(self.zip_path) as zf:
-            for member in zf.infolist():
-                words = member.filename.split('/')
-                path = self.data_dir
-                for word in words[:-1]:
-                    drive, word = os.path.splitdrive(word)
-                    head, word = os.path.split(word)
-                    if word in (os.curdir, os.pardir, ''):
-                        continue
-                    path = os.path.join(path, word)
-                zf.extract(member, path)
-
-    def prep(self):
-        """
-        Rearrange the unzipped files and get rid of the stuff we don't want.
-        """
-        if self.verbosity:
-            self.log(" Prepping unzipped data")
-
-        # Move the deep down directory we want out
-        shutil.move(
-            os.path.join(
-                self.data_dir,
-                'CalAccess/DATA/CalAccess/DATA/'
-            ),
-            self.data_dir
-        )
-        # Clear out target if it exists
-        if os.path.exists(self.tsv_dir):
-            shutil.rmtree(self.tsv_dir)
-
-        # Rename it to the target
-        shutil.move(
-            os.path.join(self.data_dir, "DATA/"),
-            self.tsv_dir,
-        )
-
-    def track_files(self):
-        """
-        Create a RawDataFile for each download .TSV file.
-        """
-        for f in os.listdir(self.tsv_dir):
-            if '.TSV' in f:
-                file_name = f.upper().replace('.TSV', '')
-                self.raw_data_files.get_or_create(
-                    version=self.version,
-                    file_name=file_name,
-                )
-
     def archive(self):
         """
         Save a copy of the download zip file and each file inside.
         """
         if self.verbosity:
-            self.log(" Archiving original files")
-        if self.verbosity > 2:
             self.log(" Archiving {0}".format(os.path.basename(self.zip_path)))
         # Remove previous zip file
         self.version.zip_file_archive.delete()
@@ -292,62 +225,3 @@ class Command(CalAccessCommand):
             File(zipped_file)
         )
         zipped_file.close()
-
-        # make the RawDataFile records
-        for raw_data_file in self.raw_data_files.filter(version=self.version):
-            if self.verbosity > 2:
-                self.log(" Archiving {0}.TSV".format(raw_data_file.file_name))
-            # Remove previous .TSV file
-            raw_data_file.download_file_archive.delete()
-            # Open up the .TSV file so we can wrap it in the Django File obj
-            with open(self.tsv_dir + raw_data_file.file_name + '.TSV') as f:
-                # Save the .TSV on the raw data file
-                raw_data_file.download_file_archive.save(
-                    raw_data_file.file_name + '.TSV',
-                    File(f)
-                )
-
-
-class TestCommand(Command):
-    """
-    Simulates downloading and unzipping of CAL-ACCESS raw data for testing.
-    """
-    help = "Simulates downloading and unzipping of CAL-ACCESS raw data for testing"
-
-    def add_arguments(self, parser):
-        """
-        Adds custom arguments specific to this command.
-        """
-        super(TestCommand, self).add_arguments(parser)
-
-    def handle(self, *args, **options):
-        """
-        Make it happen.
-        """
-        self.verbosity = options.get("verbosity")
-        self.no_color = options.get("no_color")
-        self.raw_data_files = RawDataFile.objects
-        self.data_dir = get_test_download_directory()
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
-
-        with open(self.data_dir + "/sampled_version.txt", "r") as f:
-            release_datetime = f.readline()
-            size = f.readline()
-
-        try:
-            self.version = RawDataVersion.objects.get(
-                release_datetime=release_datetime
-            )
-        except RawDataVersion.DoesNotExist:
-            self.version = RawDataVersion.objects.create(
-                release_datetime=release_datetime,
-                size=size
-            )
-
-        self.unzip()
-        self.prep()
-        self.track_files()
-
-        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-            self.archive()

@@ -17,7 +17,7 @@ from django.template.loader import render_to_string
 from calaccess_raw.models.tracking import RawDataVersion
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from calaccess_raw.management.commands.downloadcalaccessrawdata import TestCommand as TestDownloadCommand
+from calaccess_raw.management.commands.extractcalaccessrawfiles import TestCommand as TestExtractCommand
 from calaccess_raw import (
     get_download_directory,
     get_test_download_directory,
@@ -43,6 +43,13 @@ class Command(CalAccessCommand):
             dest="download",
             default=True,
             help="Skip downloading of the ZIP archive"
+        )
+        parser.add_argument(
+            "--skip-extract",
+            action="store_false",
+            dest="extract",
+            default=True,
+            help="Skip extracting the raw data files"
         )
         parser.add_argument(
             "--skip-clean",
@@ -257,7 +264,8 @@ class Command(CalAccessCommand):
 
         if self.downloading:
             if self.test_mode:
-                handle_command(TestDownloadCommand, verbosity=self.verbosity)
+                pass
+                handle_command(TestExtractCommand, verbosity=self.verbosity)
             else:
                 call_command(
                     "downloadcalaccessrawdata",
@@ -270,6 +278,12 @@ class Command(CalAccessCommand):
                 self.duration()
 
         # execute the other steps that haven't been skipped
+        if options['extract']:
+            if self.test_mode:
+                handle_command(TestExtractCommand, verbosity=self.verbosity)
+            else:
+                call_command('extractcalaccessrawfiles')
+
         if options['clean']:
             self.clean()
             if self.verbosity:
