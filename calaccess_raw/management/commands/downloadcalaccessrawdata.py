@@ -8,14 +8,13 @@ import os
 import shutil
 import zipfile
 import requests
-import calaccess_raw
 from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
 from django.conf import settings
 from django.core.files import File
 from django.utils.timezone import utc, now
-from calaccess_raw import get_download_directory
+from calaccess_raw import get_download_directory, get_test_download_directory
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
@@ -328,7 +327,7 @@ class TestCommand(Command):
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
         self.raw_data_files = RawDataFile.objects
-        self.data_dir = calaccess_raw.get_test_download_directory()
+        self.data_dir = get_test_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
