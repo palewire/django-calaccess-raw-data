@@ -149,8 +149,9 @@ class Command(CalAccessCommand):
 
         last_started_update = self.get_last_log()
 
-        if last_started_update.version.release_datetime < current_release_datetime:
-            logger.info("New CAL-ACCESS database export available.")
+        if not self.test_mode:
+            if last_started_update.version.release_datetime < current_release_datetime:
+                logger.info("New CAL-ACCESS database export available.")
 
         if self.test_mode:
             last_download = None
