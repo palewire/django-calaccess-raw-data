@@ -51,7 +51,7 @@ class CalAccessCommand(BaseCommand):
 
     def get_download_metadata(self):
         """
-        Returns basic metadata about the current CAL-ACCESS snapshot.
+        Returns a dict with metadata about the current CAL-ACCESS snapshot.
         """
         request = requests.head(self.url)
         last_modified = request.headers['last-modified']
@@ -63,14 +63,16 @@ class CalAccessCommand(BaseCommand):
 
     def get_last_log(self, file_name=None, finished=False):
         """
-        Retrives the given command most recently from database log.
+        Get the most recent instance when the command was executed.
 
-        Unless finished=True, in which case query for the most recently finished.
+        Keyword arguments:
+            file_name (string): Should be used for commands that act on specific 
+                files / models (e.g., cleancalaccessrawfile). Defaults to None.
+            finished (boolean): Return the most recently finished command instance.
+                Defaults to False.
 
-        Commands that require a file / model as a positional argument should
-        pass the file_name keyword argument.
-
-        Returns a CalAccessCommandLog object or None, if no results.
+        Returns:
+            RawDataCommand object or None, if no results.
         """
         if file_name:
             q = self.command_logs.filter(file_name=file_name)
@@ -94,9 +96,11 @@ class CalAccessCommand(BaseCommand):
 
     def get_caller_log(self):
         """
-        If the command was called by another command, returns RawDataCommandLog object.
-
-        Otherwise, return None.
+        Get the instance of the calling command (e.g., updatecalaccessrawdata calls 
+        downloadcalaccessrawdata)
+        
+        Returns:
+            RawDataCommand object or None, if no results.
         """
         caller = None
 
