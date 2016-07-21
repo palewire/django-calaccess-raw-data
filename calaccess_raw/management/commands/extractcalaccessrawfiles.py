@@ -71,6 +71,8 @@ class Command(CalAccessCommand):
             called_by=self.get_caller_log()
         )
 
+        self.header("Extracting raw data files")
+
         self.unzip()
         self.prep()
         self.track_files()
