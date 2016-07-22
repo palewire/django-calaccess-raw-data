@@ -6,7 +6,7 @@ Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 import os
 import logging
 from sys import exit
-import zipfile
+from zipfile import ZipFile
 from hurry.filesize import size
 from django.conf import settings
 from clint.textui import progress
@@ -338,6 +338,24 @@ class Command(CalAccessCommand):
                 verbosity=self.verbosity,
                 keep_files=self.keep_files,
             )
+            if name == 'CVR_REGISTRATION_CD.TSV':
+                break
+
+        # if archive setting is enabled, zip up all of the csv and error logs
+        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
+            if self.verbosity:
+                self.header("Zipping cleaned files")
+            clean_zip_path = os.path.join(self.data_dir, 'cleaned.zip')
+            with ZipFile(clean_zip_path, 'w', allowZip64=True) as zf:
+                # loop over and save files in csv dir
+                for f in os.listdir(self.csv_dir):
+                    csv_path = os.path.join(self.csv_dir, f)
+                    zf.write(csv_path, f)
+                # same for errors dir
+                errors_dir = os.path.join(self.data_dir, 'log')
+                for f in os.listdir(errors_dir):
+                    error_path = os.path.join(errors_dir, f)
+                    zf.write(error_path, f)
 
     def load(self):
         """
