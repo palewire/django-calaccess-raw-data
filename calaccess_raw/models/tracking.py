@@ -36,6 +36,13 @@ class RawDataVersion(models.Model):
         help_text='An archive of the original zipped file downloaded from '
                      'CAL-ACCESS.'
     )
+    clean_zip_archive = models.FileField(
+        blank=True,
+        max_length=255,
+        upload_to=archive_directory_path,
+        verbose_name='cleaned files zip archive',
+        help_text='An archive zip of cleaned (and error log) files'
+    )
 
     class Meta:
         app_label = 'calaccess_raw'
