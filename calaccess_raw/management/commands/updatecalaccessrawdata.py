@@ -6,6 +6,7 @@ Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 import os
 import logging
 from sys import exit
+import zipfile
 from hurry.filesize import size
 from django.conf import settings
 from clint.textui import progress
@@ -149,7 +150,7 @@ class Command(CalAccessCommand):
 
         last_started_update = self.get_last_log()
 
-        if not self.test_mode and if last_started_update:
+        if not self.test_mode and last_started_update:
             if last_started_update.version.release_datetime < current_release_datetime:
                 logger.info("New CAL-ACCESS database export available.")
 
