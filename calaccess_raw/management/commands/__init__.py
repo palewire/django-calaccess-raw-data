@@ -66,7 +66,7 @@ class CalAccessCommand(BaseCommand):
         Get the most recent instance when the command was executed.
 
         Keyword arguments:
-            file_name (string): Should be used for commands that act on specific 
+            file_name (string): Should be used for commands that act on specific
                 files / models (e.g., cleancalaccessrawfile). Defaults to None.
             finished (boolean): Return the most recently finished command instance.
                 Defaults to False.
@@ -96,9 +96,10 @@ class CalAccessCommand(BaseCommand):
 
     def get_caller_log(self):
         """
-        Get the instance of the calling command (e.g., updatecalaccessrawdata calls 
-        downloadcalaccessrawdata)
-        
+        Get instance of the calling command.
+
+        For example, updatecalaccessrawdata calls downloadcalaccessrawdata.
+
         Returns:
             RawDataCommand object or None, if no results.
         """
