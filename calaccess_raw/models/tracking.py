@@ -48,6 +48,7 @@ class RawDataVersion(models.Model):
         app_label = 'calaccess_raw'
         verbose_name = 'CAL-ACCESS raw data version'
         ordering = ('-release_datetime',)
+        get_latest_by = "release_datetime"
 
     def __str__(self):
         return str(self.release_datetime)
