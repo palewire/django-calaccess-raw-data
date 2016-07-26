@@ -8,6 +8,7 @@ import logging
 from sys import exit
 from zipfile import ZipFile
 from hurry.filesize import size
+from django.core.files import File
 from django.conf import settings
 from clint.textui import progress
 from django.utils.timezone import now
@@ -303,6 +304,8 @@ class Command(CalAccessCommand):
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             if self.verbosity:
                 self.header("Zipping cleaned files")
+            # Remove previous zip file
+            self.log_record.version.clean_zip_archive.delete()
             clean_zip_path = os.path.join(self.data_dir, 'cleaned.zip')
             with ZipFile(clean_zip_path, 'w', allowZip64=True) as zf:
                 # loop over and save files in csv dir
@@ -314,6 +317,13 @@ class Command(CalAccessCommand):
                 for f in os.listdir(errors_dir):
                     error_path = os.path.join(errors_dir, f)
                     zf.write(error_path, f)
+            # Save the zip on the raw data version
+            zipped_file = open(clean_zip_path)
+            self.log_record.version.clean_zip_archive.save(
+                os.path.basename(clean_zip_path),
+                File(zipped_file),
+            )
+            zipped_file.close()
 
     def load(self):
         """
