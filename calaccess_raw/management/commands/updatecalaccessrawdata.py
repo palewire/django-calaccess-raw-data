@@ -297,8 +297,6 @@ class Command(CalAccessCommand):
                 verbosity=self.verbosity,
                 keep_files=self.keep_files,
             )
-            if name == 'CVR_REGISTRATION_CD.TSV':
-                break
 
         # if archive setting is enabled, zip up all of the csv and error logs
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
