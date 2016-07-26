@@ -28,11 +28,11 @@ class RawDataVersion(models.Model):
         help_text='Size of the .ZIP file for this version of the CAL-ACCESS raw source data '
                   '(value of content-length field in HTTP response header)'
     )
-    zip_file_archive = models.FileField(
+    download_zip_archive = models.FileField(
         blank=True,
         max_length=255,
         upload_to=archive_directory_path,
-        verbose_name='archive of zip file',
+        verbose_name='download files zip file',
         help_text='An archive of the original zipped file downloaded from '
                      'CAL-ACCESS.'
     )

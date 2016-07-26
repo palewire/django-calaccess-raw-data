@@ -216,11 +216,11 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.log(" Archiving {0}".format(os.path.basename(self.zip_path)))
         # Remove previous zip file
-        self.version.zip_file_archive.delete()
+        self.version.download_zip_archive.delete()
         # Open up the zipped file so we can wrap it in the Django File obj
         zipped_file = open(self.zip_path)
         # Save the zip on the raw data version
-        self.version.zip_file_archive.save(
+        self.version.download_zip_archive.save(
             self.url.split('/')[-1],
             File(zipped_file)
         )
