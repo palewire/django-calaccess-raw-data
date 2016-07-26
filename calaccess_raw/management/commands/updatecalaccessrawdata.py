@@ -39,34 +39,6 @@ class Command(CalAccessCommand):
         """
         super(Command, self).add_arguments(parser)
         parser.add_argument(
-            "--skip-download",
-            action="store_false",
-            dest="download",
-            default=True,
-            help="Skip downloading of the ZIP archive"
-        )
-        parser.add_argument(
-            "--skip-extract",
-            action="store_false",
-            dest="extract",
-            default=True,
-            help="Skip extracting the raw data files"
-        )
-        parser.add_argument(
-            "--skip-clean",
-            action="store_false",
-            dest="clean",
-            default=True,
-            help="Skip cleaning up the raw data files"
-        )
-        parser.add_argument(
-            "--skip-load",
-            action="store_false",
-            dest="load",
-            default=True,
-            help="Skip loading up the raw data files"
-        )
-        parser.add_argument(
             "--keep-files",
             action="store_true",
             dest="keep_files",
@@ -107,9 +79,6 @@ class Command(CalAccessCommand):
         self.app_name = options["app_name"]
         self.keep_files = options["keep_files"]
         self.test_mode = options['test_data']
-        self.downloading = options['download']
-        self.cleaning = options['clean']
-        self.loading = options['load']
         self.noinput = options['noinput']
 
         if self.test_mode:
@@ -180,11 +149,8 @@ class Command(CalAccessCommand):
                     can_resume = True
             # if the last started update didn't finish
             elif not last_started_update.finish_datetime:
-                # can resume update of old version as long as skipping download
-                if not self.downloading:
-                    can_resume = True
-                # or if there is a last download
-                elif last_download:
+                # can resume update of old version if there is a last download
+                if last_download:
                     # and last download's version matches the outstanding update version
                     if last_download.version == last_started_update.version:
                         # and last download completed
@@ -256,8 +222,8 @@ class Command(CalAccessCommand):
         # if the user could have resumed but didn't
         force_restart_download = can_resume and not self.resume_mode
 
-        # if not skipping download, and there's a previous download
-        if self.downloading and last_download:
+        # if there's a previous download
+        if last_download:
             # if not forcing a restart
             if not force_restart_download:
                 # check if version we are updating is last one being downloaded
@@ -265,39 +231,31 @@ class Command(CalAccessCommand):
                     # if it finished
                     if last_download.finish_datetime:
                         self.log('Already downloaded.')
-                        self.downloading = False
+                    elif self.test_mode:
+                        pass
+                    else:
+                        call_command(
+                            "downloadcalaccessrawdata",
+                            keep_files=self.keep_files,
+                            verbosity=self.verbosity,
+                            noinput=True,
+                            restart=force_restart_download,
+                        )
+                        if self.verbosity:
+                            self.duration()
 
-        if self.downloading:
-            if self.test_mode:
-                pass
-                handle_command(TestExtractCommand, verbosity=self.verbosity)
-            else:
-                call_command(
-                    "downloadcalaccessrawdata",
-                    keep_files=self.keep_files,
-                    verbosity=self.verbosity,
-                    noinput=True,
-                    restart=force_restart_download,
-                )
-            if self.verbosity:
-                self.duration()
+        if self.test_mode:
+            handle_command(TestExtractCommand, verbosity=self.verbosity)
+        else:
+            call_command('extractcalaccessrawfiles')
 
-        # execute the other steps that haven't been skipped
-        if options['extract']:
-            if self.test_mode:
-                handle_command(TestExtractCommand, verbosity=self.verbosity)
-            else:
-                call_command('extractcalaccessrawfiles')
+        self.clean()
+        if self.verbosity:
+            self.duration()
 
-        if options['clean']:
-            self.clean()
-            if self.verbosity:
-                self.duration()
-
-        if options['load']:
-            self.load()
-            if self.verbosity:
-                self.duration()
+        self.load()
+        if self.verbosity:
+            self.duration()
 
         self.log_record.finish_datetime = now()
         self.log_record.save()
