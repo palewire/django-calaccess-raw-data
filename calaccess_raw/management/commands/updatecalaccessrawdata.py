@@ -364,7 +364,7 @@ class Command(CalAccessCommand):
                 self.header("Zipping cleaned files")
             # Remove previous zip file
             self.log_record.version.clean_zip_archive.delete()
-            clean_zip_path = os.path.join(self.data_dir, 'cleaned.zip')
+            clean_zip_path = os.path.join(self.data_dir, 'calaccess_cleaned.zip')
             with ZipFile(clean_zip_path, 'w', allowZip64=True) as zf:
                 # loop over and save files in csv dir
                 for f in os.listdir(self.csv_dir):
