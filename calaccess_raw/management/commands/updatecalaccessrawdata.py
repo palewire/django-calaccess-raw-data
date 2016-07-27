@@ -93,10 +93,9 @@ class Command(CalAccessCommand):
         else:
             self.data_dir = get_download_directory()
 
+        # make the data dir if necessary
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
-        self.zip_path = os.path.join(self.data_dir, 'calaccess.zip')
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-
         # Immediately check that the tsv directory exists when using test data,
         #   so we can stop immediately.
         if self.test_mode:
@@ -106,92 +105,39 @@ class Command(CalAccessCommand):
             elif self.verbosity:
                 self.log("Using test data")
 
+        # set up the dir for clean files
         self.csv_dir = os.path.join(self.data_dir, "csv/")
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
-        if self.test_mode:
-            with open(self.data_dir + "/sampled_version.txt", "r") as f:
-                current_release_datetime = f.readline()
-                expected_size = f.readline()
-        else:
-            download_metadata = self.get_download_metadata()
-            current_release_datetime = download_metadata['last-modified']
-            expected_size = download_metadata['content-length']
+        # get the context
+        self.context = self.get_context()
 
-        last_started_update = self.get_last_log()
-
-        if not self.test_mode and last_started_update:
-            if last_started_update.version.release_datetime < current_release_datetime:
-                logger.info("New CAL-ACCESS database export available.")
-
-        if self.test_mode:
-            last_download = None
-        else:
-            try:
-                last_download = self.command_logs.filter(
-                    command='downloadcalaccessrawdata'
-                ).order_by('-start_datetime')[0]
-            except IndexError:
-                last_download = None
-
-        up_to_date = False
-        can_resume = False
-
-        # if there's a previously started update
-        if last_started_update:
-            # if current release datetime matches version of last started update
-            if current_release_datetime == last_started_update.version.release_datetime:
-                # if the last update finished
-                if last_started_update.finish_datetime:
-                    up_to_date = True
-                else:
-                    # if the last update didn't finish
-                    # (but is still for the current version)
-                    can_resume = True
-            # if the last started update didn't finish
-            elif not last_started_update.finish_datetime:
-                # can resume update of old version if there is a last download
-                if last_download:
-                    # and last download's version matches the outstanding update version
-                    if last_download.version == last_started_update.version:
-                        # and last download completed
-                        if last_download.finish_datetime:
-                            can_resume = True
-
+        # if not accepting input
         if self.noinput:
-            # if already up-to-date, skip
-            if up_to_date:
+            # and already up-to-date
+            if self.context['up_to_date']:
+                # skip
                 self.log('Your database is already up-to-date.')
                 logger.debug("Your database is already up-to-date.")
                 exit(0)
             # if not taking input and can resume, automatically go into resume mode
-            self.resume_mode = can_resume
+            self.resume_mode = self.context['can_resume']
         else:
-            prompt_context = dict(
-                current_release_datetime=current_release_datetime,
-                expected_size=size(expected_size),
-                up_to_date=up_to_date,
-                can_resume=can_resume,
-            )
-
-            last_finished_update = self.get_last_log(finished=True)
-
-            if last_finished_update:
-                loaded_v = last_finished_update.version
-                prompt_context['since_loaded_version'] = naturaltime(loaded_v.release_datetime)
-            else:
-                prompt_context['since_loaded_version'] = None
-
+            # prompt user
             prompt = render_to_string(
                 'calaccess_raw/updatecalaccessrawdata.txt',
-                prompt_context,
+                self.context,
             )
-
-            if can_resume:
+            # if the user can resume
+            if self.context['can_resume']:
+                # and initially confirms
                 if self.confirm_proceed(prompt):
+                    # go into resume mode
                     self.resume_mode = True
+                # if does not initially confirm
                 else:
                     self.resume_mode = False
+                    # prompt restart
                     if not self.confirm_proceed('Do you want re-start your update?\n'):
                         raise CommandError("Update cancelled")
             else:
@@ -200,18 +146,17 @@ class Command(CalAccessCommand):
                     raise CommandError("Update cancelled")
 
         if self.resume_mode:
-            self.log_record = last_started_update
+            self.log_record = self.context['last_started_update']
         else:
             # get or create a version
-            # .get_or_create() throws IntegrityError
             try:
                 version = self.raw_data_versions.get(
-                    release_datetime=current_release_datetime
+                    release_datetime=self.context['latest_release_datetime']
                 )
             except RawDataVersion.DoesNotExist:
                 version = self.raw_data_versions.create(
-                    release_datetime=current_release_datetime,
-                    size=expected_size
+                    release_datetime=self.context['latest_release_datetime'],
+                    size=self.context['raw_expected_size']
                 )
             # create a new log record
             self.log_record = self.command_logs.create(
@@ -220,35 +165,66 @@ class Command(CalAccessCommand):
                 called_by=self.get_caller_log()
             )
 
-        # if the user could have resumed but didn't
-        force_restart_download = can_resume and not self.resume_mode
+        # set to force restart download if the user could have resumed but didn't
+        force_restart_download = self.context['can_resume'] and not self.resume_mode
 
-        # if there's a previous download
-        if last_download:
-            # if not forcing a restart
-            if not force_restart_download:
-                # check if version we are updating is last one being downloaded
-                if self.log_record.version == last_download.version:
-                    # if it finished
-                    if last_download.finish_datetime:
-                        self.log('Already downloaded.')
-                    elif self.test_mode:
-                        pass
-                    else:
-                        call_command(
-                            "downloadcalaccessrawdata",
-                            keep_files=self.keep_files,
-                            verbosity=self.verbosity,
-                            noinput=True,
-                            restart=force_restart_download,
-                        )
-                        if self.verbosity:
-                            self.duration()
+        # handle download
+        if self.test_mode:
+            pass
+        # if not forcing restart and there is a last download
+        elif not force_restart_download and self.context['last_download']:
+            # if the version for the last download matches version of this update
+            # and it finished
+            if (
+                self.log_record.version == self.context['last_download'].version and
+                self.context['last_download'].finish_datetime
+            ):
+                self.log('Already downloaded.')
+            else:
+                call_command(
+                    "downloadcalaccessrawdata",
+                    keep_files=self.keep_files,
+                    verbosity=self.verbosity,
+                    noinput=True,
+                    restart=force_restart_download,
+                )
+                if self.verbosity:
+                    self.duration()
+        else:
+            call_command(
+                "downloadcalaccessrawdata",
+                keep_files=self.keep_files,
+                verbosity=self.verbosity,
+                noinput=True,
+                restart=force_restart_download,
+            )
+            if self.verbosity:
+                self.duration()
 
+        # handle extract
         if self.test_mode:
             handle_command(TestExtractCommand, verbosity=self.verbosity)
         else:
-            call_command('extractcalaccessrawfiles')
+            if self.context['last_extract']:
+                if (
+                    self.context['last_extract'].version == self.log_record.version and
+                    self.context['last_extract'].finish_datetime
+                ):
+                    pass
+                else:
+                    call_command(
+                        'extractcalaccessrawfiles',
+                        keep_files=self.keep_files
+                    )
+                    if self.verbosity:
+                        self.duration()
+            else:
+                call_command(
+                    'extractcalaccessrawfiles',
+                    keep_files=self.keep_files
+                )
+                if self.verbosity:
+                    self.duration()
 
         self.clean()
         if self.verbosity:
@@ -264,6 +240,90 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.success("Done!")
         logger.info("Done!")
+
+    def get_context(self):
+        """
+        Returns a dict with key/values describing the current context of the database.
+        """
+        context = {}
+
+        if self.test_mode:
+            with open(self.data_dir + "/sampled_version.txt", "r") as f:
+                context['latest_release_datetime'] = f.readline()
+                context['raw_expected_size'] = f.readline()
+        else:
+            download_metadata = self.get_download_metadata()
+            context['latest_release_datetime'] = download_metadata['last-modified']
+            context['raw_expected_size'] = download_metadata['content-length']
+            context['pretty_expected_size'] = size(context['raw_expected_size'])
+
+        context['last_started_update'] = self.get_last_log()
+        context['last_finished_update'] = self.get_last_log(finished=True)
+
+        previous_downloads = self.command_logs.filter(
+            command='downloadcalaccessrawdata'
+        ).order_by('-start_datetime')
+
+        if previous_downloads:
+            context['last_download'] = previous_downloads[0]
+        else:
+            context['last_download'] = None
+
+        previous_extracts = self.command_logs.filter(
+            command='extractcalaccessrawfiles'
+        ).order_by('-start_datetime')
+
+        if previous_extracts:
+            context['last_extract'] = previous_extracts[0]
+        else:
+            context['last_extract'] = None
+
+        context['current_db_version'] = None
+        context['up_to_date'] = False
+        context['new_version_available'] = False
+        context['can_resume'] = False
+
+        # if there is a previous update
+        if context['last_started_update'] and not self.test_mode:
+            context['current_db_version'] = context['last_started_update'].version
+            # if the current db version release date is less than latest
+            if context['current_db_version'].release_datetime < context['latest_release_datetime']:
+                context['new_version_available'] = True
+            # else if the current db version release datetime is the same as the latest
+            elif context['current_db_version'].release_datetime == context['latest_release_datetime']:
+                # and the last started updated finished
+                if context['last_started_update'].finish_datetime:
+                    context['up_to_date'] = True
+                else:
+                    # if the last update didn't finish
+                    # (but is still for the current version)
+                    context['can_resume'] = True
+            # else if the last update did not finish
+            elif not context['last_started_update'].finish_datetime:
+                # but if there's a last download
+                if context['last_download']:
+                    # and it was for the same version
+                    if context['current_db_version'] == context['last_download'].version:
+                        # and the download finished
+                        if context['last_download'].finish_datetime:
+                            # can resume if the zip file is still there
+                            if os.path.exists(self.zip_path):
+                                context['can_resume'] = True
+                            # or if there's a last extract
+                            elif context['last_extract']:
+                                # and it finished
+                                if context['last_extract'].finish_datetime:
+                                    context['can_resume'] = True
+        # if there's a previously finished update
+        if context['last_finished_update']:
+            # calculate the time since it was loaded
+            context['since_loaded_version'] = naturaltime(
+                context['last_finished_update'].finish_datetime
+            )
+        else:
+            context['since_loaded_version'] = None
+
+        return context
 
     def clean(self):
         """
@@ -315,13 +375,14 @@ class Command(CalAccessCommand):
                 for f in os.listdir(errors_dir):
                     error_path = os.path.join(errors_dir, f)
                     zf.write(error_path, f)
-            # Save the zip on the raw data version
-            zipped_file = open(clean_zip_path)
-            self.log_record.version.clean_zip_archive.save(
-                os.path.basename(clean_zip_path),
-                File(zipped_file),
-            )
-            zipped_file.close()
+            if not self.test_mode:
+                # Save the zip on the raw data version
+                zipped_file = open(clean_zip_path)
+                self.log_record.version.clean_zip_archive.save(
+                    os.path.basename(clean_zip_path),
+                    File(zipped_file),
+                )
+                zipped_file.close()
 
     def load(self):
         """
