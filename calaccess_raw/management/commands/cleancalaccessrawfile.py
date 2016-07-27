@@ -116,7 +116,7 @@ class Command(CalAccessCommand):
 
         # Writer
         csv_file = open(csv_path, 'w')
-        csv_writer = CSVKitWriter(csv_file, quoting=csv.QUOTE_ALL)
+        csv_writer = CSVKitWriter(csv_file)
 
         # Pull and clean the headers
         try:
