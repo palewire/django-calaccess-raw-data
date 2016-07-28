@@ -6,7 +6,7 @@ Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 import os
 import logging
 from sys import exit
-from zipfile import ZipFile
+from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 from hurry.filesize import size
 from django.core.files import File
 from django.conf import settings
@@ -314,24 +314,35 @@ class Command(CalAccessCommand):
             # Remove previous zip file
             self.log_record.version.clean_zip_archive.delete()
             clean_zip_path = os.path.join(self.data_dir, 'calaccess_cleaned.zip')
-            with ZipFile(clean_zip_path, 'w', allowZip64=True) as zf:
-                # loop over and save files in csv dir
-                for f in os.listdir(self.csv_dir):
-                    csv_path = os.path.join(self.csv_dir, f)
-                    zf.write(csv_path, f)
-                # same for errors dir
-                errors_dir = os.path.join(self.data_dir, 'log')
-                for f in os.listdir(errors_dir):
-                    error_path = os.path.join(errors_dir, f)
-                    zf.write(error_path, f)
+
+            # enable zipfile compression
+            compression = ZIP_DEFLATED
+
+            try:
+                zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
+            except RuntimeError:
+                logger.error('Zip file cannot be compressed (check zlib module).')
+                compression = ZIP_STORED
+                zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
+
+            # loop over and save files in csv dir
+            for f in os.listdir(self.csv_dir):
+                csv_path = os.path.join(self.csv_dir, f)
+                zf.write(csv_path, f)
+
+            # same for errors dir
+            errors_dir = os.path.join(self.data_dir, 'log')
+            for f in os.listdir(errors_dir):
+                error_path = os.path.join(errors_dir, f)
+                zf.write(error_path, f)
+
             if not self.test_mode:
                 # Save the zip on the raw data version
-                zipped_file = open(clean_zip_path)
                 self.log_record.version.clean_zip_archive.save(
-                    os.path.basename(clean_zip_path),
-                    File(zipped_file),
+                    os.path.basename(clean_zip_path), File(zf)
                 )
-                zipped_file.close()
+            # close the zip file
+            zf.close()
 
     def load(self):
         """
