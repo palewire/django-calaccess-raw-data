@@ -183,7 +183,15 @@ class Command(CalAccessCommand):
                 else:
                     self.resume_mode = False
                     # prompt restart
-                    if not self.confirm_proceed('Do you want re-start your update?\n'):
+                    if last_update.version.release_datetime == latest_release_datetime:
+                        confirm_restart = self.confirm_proceed(
+                            'Do you want re-start your update?\n'
+                        )
+                    else:
+                        confirm_restart = self.confirm_proceed(
+                            'Do you want to update to the latest version?\n'
+                        )
+                    if not confirm_restart:
                         raise CommandError("Update cancelled")
             else:
                 self.resume_mode = False
