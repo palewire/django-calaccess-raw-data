@@ -53,6 +53,42 @@ class RawDataVersion(models.Model):
     def __str__(self):
         return str(self.release_datetime)
 
+    def is_last_downloaded(self):
+        """
+        Return true if this version is the last to be downloaded and the download finished.
+        """
+        is_last_downloaded = False
+
+        try:
+            last_download = RawDataCommand.objects.filter(
+                command='downloadcalaccessrawdata'
+            ).latest('start_datetime')
+        except RawDataCommand.DoesNotExist:
+            pass
+        else:
+            if last_download.version == self and last_download.finish_datetime:
+                is_last_downloaded = True
+
+        return is_last_downloaded
+
+    def is_last_extracted(self):
+        """
+        Return true if this version is the last to be downloaded and the download finished.
+        """
+        is_last_extracted = False
+
+        try:
+            last_extract = RawDataCommand.objects.filter(
+                command='extractcalaccessrawfiles'
+            ).latest('start_datetime')
+        except RawDataCommand.DoesNotExist:
+            pass
+        else:
+            if last_extract.version == self and last_extract.finish_datetime:
+                is_last_extracted = True
+
+        return is_last_extracted
+
     def pretty_size(self):
         """
         Returns a prettified version of the file size.
