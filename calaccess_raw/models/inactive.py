@@ -60,6 +60,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'BALLOT_MEASURES_CD'
         ordering = (
             "-election_date",
@@ -309,6 +312,9 @@ class CvrF470Cd(CalAccessBaseModel):
         return str(self.amend_id)
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR_F470_CD'
 
 
@@ -365,6 +371,9 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_TYPE_PERIODS_CD'
 
     def __str__(self):
@@ -434,6 +443,9 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_CONTRIBUTIONS1_CD'
         ordering = ("-filing_period_start_dt",)
 
@@ -504,6 +516,9 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_CONTRIBUTIONS2_CD'
         ordering = ("-filing_period_start_dt",)
 
@@ -574,6 +589,9 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_CONTRIBUTIONS3_CD'
         ordering = ("-filing_period_start_dt",)
 
@@ -632,6 +650,9 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMP_LOBBYIST1_CD'
         ordering = ("-session_id",)
 
@@ -690,6 +711,9 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMP_LOBBYIST2_CD'
         ordering = ("-session_id",)
 
@@ -847,6 +871,9 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER1_CD'
         ordering = ("-session_id",)
 
@@ -1003,6 +1030,9 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER2_CD'
         ordering = ("-session_id",)
 
@@ -1159,6 +1189,9 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER3_CD'
         ordering = ("-session_id",)
 
@@ -1214,6 +1247,9 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
         ordering = ("-session_id",)
 
@@ -1269,6 +1305,9 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
         ordering = ("-session_id",)
 
@@ -1420,6 +1459,9 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER_HISTORY_CD'
 
     def __str__(self):
@@ -1535,6 +1577,9 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM1_CD'
 
     def __str__(self):
@@ -1650,6 +1695,9 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM2_CD'
 
     def __str__(self):
@@ -1765,6 +1813,9 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM3_CD'
 
     def __str__(self):
@@ -1847,6 +1898,9 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
         ordering = ("-rpt_start",)
 
@@ -1930,6 +1984,9 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
         ordering = ("-rpt_start",)
 
@@ -2033,6 +2090,9 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_HISTORY_CD'
 
     def __str__(self):
@@ -2089,6 +2149,9 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_LOBBYIST1_CD'
         ordering = ("-session_id",)
 
@@ -2146,6 +2209,9 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
         ordering = ("-session_id",)
 
@@ -2238,6 +2304,9 @@ or "BADFORMAT" and a three-digit number.',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'EFS_FILING_LOG_CD'
         ordering = ("-filing_date",)
 
