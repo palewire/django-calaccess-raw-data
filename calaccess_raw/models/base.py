@@ -189,5 +189,8 @@ class CalAccessBaseModel(models.Model):
         return sorted(forms_dict.items(), key=lambda x: x[0].id)
 
     class Meta:
+        """
+        Meta model options.
+        """
         abstract = True
         app_label = 'calaccess_raw'

@@ -75,6 +75,9 @@ class RawDataVersion(models.Model):
     )
 
     class Meta:
+        """
+        Meta model options.
+        """
         app_label = 'calaccess_raw'
         verbose_name = 'CAL-ACCESS raw data version'
         ordering = ('-release_datetime',)
@@ -291,6 +294,9 @@ class RawDataFile(models.Model):
     )
 
     class Meta:
+        """
+        Meta model options.
+        """
         app_label = 'calaccess_raw'
         unique_together = (('version', 'file_name'),)
         verbose_name = 'CAL-ACCESS raw data file'
@@ -376,6 +382,9 @@ class RawDataCommand(models.Model):
     )
 
     class Meta:
+        """
+        Meta model options.
+        """
         app_label = 'calaccess_raw'
         verbose_name = 'CAL-ACCESS raw data command'
         ordering = ('-id',)

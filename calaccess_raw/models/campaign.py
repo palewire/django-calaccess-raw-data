@@ -467,6 +467,9 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = "CVR_SO_CD"
         ordering = ("-rpt_date",)
 
@@ -843,6 +846,9 @@ sought and "H" for held',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR2_SO_CD'
 
     def __str__(self):
@@ -1699,6 +1705,9 @@ officer's street address."
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR_CAMPAIGN_DISCLOSURE_CD'
         ordering = ("-rpt_date",)
 
@@ -2105,6 +2114,9 @@ with in the record.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR2_CAMPAIGN_DISCLOSURE_CD'
 
     def __str__(self):
@@ -2292,6 +2304,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR3_VERIFICATION_INFO_CD'
         ordering = ("-sig_date",)
 
@@ -2611,6 +2626,9 @@ transaction identifier. /"X/" indicates this condition is true'
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'DEBT_CD'
 
     def __str__(self):
@@ -3372,6 +3390,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'EXPN_CD'
         ordering = ("-expn_date",)
 
@@ -3802,6 +3823,9 @@ identifier. "X" indicates this condition is true.'
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOAN_CD'
         ordering = ("-loan_date1",)
 
@@ -4400,6 +4424,9 @@ identifier. 'X' indicates this condition is true"
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'RCPT_CD'
         ordering = ("-rcpt_date",)
 
@@ -4725,6 +4752,9 @@ for Senate, Assembly, or Board of Equalization races."
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'S401_CD'
 
     def __str__(self):
@@ -4817,6 +4847,9 @@ as on the filing's cover (CVR) record."
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'F495P2_CD'
         ordering = ("-elect_date",)
 
@@ -4934,6 +4967,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'S496_CD'
         ordering = ("-exp_date",)
 
@@ -5349,6 +5385,9 @@ for Senate, Assembly, or Board of Equalization races."
         )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'S497_CD'
         ordering = ("-ctrib_date",)
 
@@ -5661,6 +5700,9 @@ Populated for Senate, Assembly, or Board of Equalization races."
         return str(self.filing_id)
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'S498_CD'
         ordering = ("-date_rcvd",)
 
@@ -6338,5 +6380,8 @@ Populated for Senate, Assembly, or Board of Equalization races.',
         return str(self.filing_id)
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'F501_502_CD'
         ordering = ("-rpt_date",)

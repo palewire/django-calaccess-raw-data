@@ -628,6 +628,9 @@ This field only applies to Form 601.',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR_REGISTRATION_CD'
         ordering = ("-rpt_date",)
 
@@ -764,6 +767,9 @@ the record',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR2_REGISTRATION_CD'
 
     def __str__(self):
@@ -1062,6 +1068,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBY_AMENDMENTS_CD'
         ordering = ("-exec_date",)
 
@@ -1227,6 +1236,9 @@ FILER_TYPES_CD.FILER_TYPE or GROUP_TYPES_CD.GRP_ID, but that's just a guess."
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYING_CHG_LOG_CD'
         ordering = ("-log_dt",)
 
@@ -1429,6 +1441,9 @@ Part 2B Client/Employer"
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LEMP_CD'
         ordering = ("-eff_date",)
 
@@ -1840,6 +1855,9 @@ allows the firm to submit forms for its lobbyists.',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR_LOBBY_DISCLOSURE_CD'
         ordering = ("-rpt_date",)
 
@@ -1979,6 +1997,9 @@ entity is an individual. Only required by Form 635.',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR2_LOBBY_DISCLOSURE_CD'
 
     def __str__(self):
@@ -2092,6 +2113,9 @@ text description."
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'F690P2_CD'
         ordering = ("-exec_date",)
 
@@ -2286,6 +2310,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LATT_CD'
         ordering = ("-pmt_date",)
 
@@ -2519,6 +2546,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LEXP_CD'
         ordering = ("-expn_date",)
 
@@ -2742,6 +2772,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LCCM_CD'
         ordering = ("-ctrib_date",)
 
@@ -2976,6 +3009,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LPAY_CD'
 
     def __str__(self):
@@ -3158,6 +3194,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOTH_CD'
         ordering = ("-pmt_date",)
 
