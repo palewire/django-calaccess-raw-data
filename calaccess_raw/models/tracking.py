@@ -28,6 +28,36 @@ class RawDataVersion(models.Model):
         help_text='Size of the .ZIP file for this version of the CAL-ACCESS raw source data '
                   '(value of content-length field in HTTP response header)'
     )
+    update_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time update started',
+        help_text='Date and time when the update to the CAL-ACCESS version started',
+    )
+    update_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time update finished',
+        help_text='Date and time when the update to the CAL-ACCESS version finished',
+    )
+    download_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time download started',
+        help_text='Date and time when the download of the CAL-ACCESS database export started',
+    )
+    download_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time download finished',
+        help_text='Date and time when the download of the CAL-ACCESS database export finished',
+    )
+    extract_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time extraction started',
+        help_text='Date and time when extraction of the CAL-ACCESS data files started',
+    )
+    extract_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time extraction finished',
+        help_text='Date and time when extraction of the CAL-ACCESS data files finished',
+    )
     download_zip_archive = models.FileField(
         blank=True,
         max_length=255,
@@ -48,46 +78,87 @@ class RawDataVersion(models.Model):
         app_label = 'calaccess_raw'
         verbose_name = 'CAL-ACCESS raw data version'
         ordering = ('-release_datetime',)
-        get_latest_by = "release_datetime"
 
     def __str__(self):
         return str(self.release_datetime)
 
-    def is_last_downloaded(self):
+    @property
+    def update_completed(self):
         """
-        Return true if this version is the last to be downloaded and the download finished.
-        """
-        is_last_downloaded = False
+        Check if the database update to the version completed.
 
-        try:
-            last_download = RawDataCommand.objects.filter(
-                command='downloadcalaccessrawdata'
-            ).latest('start_datetime')
-        except RawDataCommand.DoesNotExist:
-            pass
+        Return True or False.
+        """
+        if self.update_finish_datetime:
+            is_completed = True
         else:
-            if last_download.version == self and last_download.finish_datetime:
-                is_last_downloaded = True
+            is_completed = False
 
-        return is_last_downloaded
+        return is_completed
 
-    def is_last_extracted(self):
+    @property
+    def update_stalled(self):
         """
-        Return true if this version is the last to be downloaded and the download finished.
-        """
-        is_last_extracted = False
+        Check if the database update to the version started but did not complete.
 
-        try:
-            last_extract = RawDataCommand.objects.filter(
-                command='extractcalaccessrawfiles'
-            ).latest('start_datetime')
-        except RawDataCommand.DoesNotExist:
-            pass
+        Return True or False.
+        """
+        if self.update_start_datetime and not self.update_finish_datetime:
+            is_stalled = True
         else:
-            if last_extract.version == self and last_extract.finish_datetime:
-                is_last_extracted = True
+            is_stalled = False
 
-        return is_last_extracted
+        return is_stalled
+
+    @property
+    def download_completed(self):
+        """
+        Check if the download of the version's zip file completed.
+
+        Return True or False.
+        """
+        if self.download_finish_datetime:
+            is_completed = True
+        else:
+            is_completed = False
+
+        return is_completed
+
+    @property
+    def download_stalled(self):
+        """
+        Check if the download of the version's zip file started but did not complete.
+        """
+        if self.download_start_datetime and not self.download_finish_datetime:
+            is_stalled = True
+        else:
+            is_stalled = False
+
+        return is_stalled
+
+    @property
+    def extract_completed(self):
+        """
+        Return True if the extraction of the version's raw data files completed.
+        """
+        if self.extract_finish_datetime:
+            is_completed = True
+        else:
+            is_completed = False
+
+        return is_completed
+
+    @property
+    def extract_stalled(self):
+        """
+        Check if the download of the version's zip file started but did not complete.
+        """
+        if self.extract_start_datetime and not self.extract_finish_datetime:
+            is_stalled = True
+        else:
+            is_stalled = False
+
+        return is_stalled
 
     def pretty_size(self):
         """
@@ -197,6 +268,26 @@ class RawDataFile(models.Model):
         help_text='An archive of the error log containing lines from the '
                   'original download file that could not be parsed and are '
                   'excluded from the cleaned file.'
+    )
+    clean_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time cleaning started',
+        help_text='Date and time when the cleaning of the file started',
+    )
+    clean_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time cleaning finished',
+        help_text='Date and time when the cleaning of the file finished',
+    )
+    load_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time loading started',
+        help_text='Date and time when the loading of the file started',
+    )
+    load_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time extraction finished',
+        help_text='Date and time when the loading of the file finished',
     )
 
     class Meta:
