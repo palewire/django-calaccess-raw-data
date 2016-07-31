@@ -5,6 +5,7 @@ Download the latest CAL-ACCESS database ZIP.
 """
 from __future__ import unicode_literals
 import os
+import logging
 import requests
 from datetime import datetime
 from hurry.filesize import size
@@ -16,8 +17,8 @@ from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from django.contrib.humanize.templatetags.humanize import naturaltime
 from calaccess_raw.models.tracking import RawDataVersion
+logger = logging.getLogger(__name__)
 
 
 class Command(CalAccessCommand):
@@ -31,13 +32,6 @@ class Command(CalAccessCommand):
         Adds custom arguments specific to this command.
         """
         super(Command, self).add_arguments(parser)
-        parser.add_argument(
-            "--keep-files",
-            action="store_true",
-            dest="keep_files",
-            default=False,
-            help="Keep downloaded zip and unzipped files"
-        )
         parser.add_argument(
             "--noinput",
             action="store_true",
@@ -72,50 +66,55 @@ class Command(CalAccessCommand):
 
         download_metadata = self.get_download_metadata()
 
-        self.current_release_datetime = download_metadata['last-modified']
-        self.current_release_size = download_metadata['content-length']
+        # get or create the RawDataVersion
+        self.version, created = RawDataVersion.objects.get_or_create(
+            release_datetime=download_metadata['last-modified'],
+            size=download_metadata['content-length'],
+        )
+        # log if a new version was found
+        if created:
+            logger.info('New CAL-ACCESS version available.')
 
-        self.last_started_download = self.get_last_log()
-        self.last_finished_download = self.get_last_log(finished=True)
-
-        if self.last_finished_download:
-            last_release_datetime = self.last_finished_download.version.release_datetime
-            since_prev_version = naturaltime(last_release_datetime)
-        else:
-            last_release_datetime = None
-            since_prev_version = None
-
-        if last_release_datetime == self.current_release_datetime:
-            already_downloaded = True
-        else:
-            already_downloaded = False
-
-        # can resume only if possible and not forcing re-start
-        self.resume_download = self.check_can_resume() and not options['restart']
-
-        if self.resume_download:
+        # if download is stalled, zip file is there, and user did not invoke restart
+        if (
+            self.version.download_stalled and
+            os.path.exists(self.zip_path) and
+            not options['restart']
+        ):
+            # enable resuming
+            self.resume = True
             # set current size to partially downloaded zip
             self.local_file_size = os.path.getsize(self.zip_path)
-            # set the datetime of last download to last modified date
-            # of zip file
+            # set the datetime of last download to last modified date of zip file
             timestamp = os.path.getmtime(self.zip_path)
             self.local_file_datetime = datetime.fromtimestamp(timestamp, utc)
         else:
+            self.resume = False
             self.local_file_size = 0
             self.local_file_datetime = None
 
-        if not options['noinput'] and not options['restart']:
+        if not options['noinput']:
+            # get downloaded versions
+            downloaded_versions = RawDataVersion.objects.filter(
+                download_finish_datetime__isnull=False
+            )
+            # if there are any
+            if downloaded_versions:
+                # get the last version downloaded datetime
+                last_download_datetime = downloaded_versions.latest(
+                    'download_finish_datetime'
+                ).download_finish_datetime
+            else:
+                last_download_datetime = None
 
             # setting up the prompt
             prompt_context = dict(
-                current_release_datetime=self.current_release_datetime,
-                resuming=self.resume_download,
-                already_downloaded=already_downloaded,
-                expected_size=size(self.current_release_size),
+                latest_version=self.version,
+                resume=self.resume,
                 local_file_size=size(self.local_file_size),
+                local_file_datetime=self.local_file_datetime,
                 download_dir=self.data_dir,
-                since_prev_version=since_prev_version,
-                since_local_file_modified=naturaltime(self.local_file_datetime)
+                last_download_datetime=last_download_datetime,
             )
 
             prompt = render_to_string(
@@ -123,77 +122,58 @@ class Command(CalAccessCommand):
                 prompt_context,
             )
 
+            # if the user doesn't confirm initially
             if not self.confirm_proceed(prompt):
-                raise CommandError("Download cancelled")
+                # but the user can resume
+                if self.resume:
+                    # prompt to restart
+                    confirm_restart = self.confirm_proceed(
+                        'Do you want re-start your update?\n'
+                    )
+                    # if user confirms restart, do not resume
+                    if confirm_restart:
+                        self.resume = False
+                    else:
+                        # if the user doesn't confirm restart, cancel
+                        raise CommandError("Download cancelled")
+                # if the user doesn't confirm initial and can't resume
+                elif not self.resume:
+                    # cancel
+                    raise CommandError("Download cancelled")
 
-        if self.resume_download:
-            self.log_record = self.last_started_download
-            self.version = self.log_record.version
-        else:
-            # get or create a version record
-            # .get_or_create() throws IntegrityError
-            try:
-                self.version = self.raw_data_versions.get(
-                    release_datetime=self.current_release_datetime
-                )
-            except RawDataVersion.DoesNotExist:
-                self.version = self.raw_data_versions.create(
-                    release_datetime=self.current_release_datetime,
-                    size=download_metadata['content-length']
-                )
-            # create a log record
-            self.log_record = self.command_logs.create(
-                version=self.version,
-                command=self,
-                called_by=self.get_caller_log()
-            )
+        # if not resuming, store the download start time
+        if not self.resume:
+            self.version.download_start_datetime = now()
+        # either way, reset the finish time
+        self.version.download_finish_datetime = None
+        # save here in case the command doesn't finish
+        self.version.save()
 
         self.download()
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
 
-        self.log_record.finish_datetime = now()
-        self.log_record.save()
-
-    def check_can_resume(self):
-        """
-        Run a series of checks to see if the previous download can be resumed.
-
-        If so, return True, else False.
-        """
-        result = False
-        # if there's a zip file
-        if os.path.exists(self.zip_path):
-            # and there's a previous download
-            if self.last_started_download:
-                # that did not finish
-                if not self.last_started_download.finish_datetime:
-
-                    prev_release = self.last_started_download.version.release_datetime
-
-                    # and the current release datetime is the same as
-                    #  the one on the last incomplete download
-                    if self.current_release_datetime == prev_release:
-                        result = True
-        return result
+        # store extraction finish time
+        self.version.download_finish_datetime = now()
+        # and save the RawDataVersion
+        self.version.save()
 
     def download(self):
         """
         Download the ZIP file in pieces.
         """
         if self.verbosity:
-            if self.resume_download:
+            if self.resume:
                 self.header("Resuming download of ZIP file")
             else:
                 self.header("Downloading ZIP file")
 
-        expected_size = self.current_release_size
-
         # Prep
+        expected_size = self.version.size
         headers = dict()
         if os.path.exists(self.zip_path):
-            if self.resume_download:
+            if self.resume:
                 headers['Range'] = 'bytes=%d-' % self.local_file_size
                 expected_size = expected_size - self.local_file_size
             else:

@@ -14,7 +14,7 @@ from django.db import connections, router
 from django.core.management.base import CommandError
 from django.utils.timezone import now
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion
+from calaccess_raw.models.tracking import RawDataFile
 
 
 class Command(CalAccessCommand):
@@ -81,63 +81,54 @@ class Command(CalAccessCommand):
         # load into database suggested for model by router
         self.database = router.db_for_write(model=self.model)
 
-        if self.verbosity > 2:
-            self.log(" Loading %s" % options['model_name'])
-
-        # set up version and log records
-        caller = self.get_caller_log()
-
-        if caller:
-            # if called by another command, use it's version
-            self.version = caller.version
-            self.log_record = self.command_logs.create(
-                version=self.version,
-                command=self,
-                called_by=caller,
-                file_name=self.model._meta.db_table
+        # get most recently cleaned RawDataFile
+        try:
+            raw_file = RawDataFile.objects.filter(
+                file_name=self.model._meta.db_table,
+                clean_start_datetime__isnull=False
+            ).latest('clean_start_datetime')
+        except RawDataFile.DoesNotExist:
+            raise CommandError(
+                'No record of cleaning {0}.TSV (run `python manage.py '
+                'cleancalaccessrawfile {0}`).'.format(self.model._meta.db_table)
             )
-        else:
-            # try getting the most recent version
-            try:
-                self.version = self.raw_data_versions.latest('release_datetime')
-            except RawDataVersion.DoesNotExist:
-                # if there's no version, assume this is a test and do not log
-                # TODO: Figure out a more direct way to handle this
-                self.version = None
-            else:
-                self.log_record = self.command_logs.create(
-                    # if called by another command, use it's version
-                    version=self.version,
-                    command=self,
-                    file_name=self.model._meta.db_table
-                )
+        # raise exception if clean step did not finish
+        if not raw_file.clean_finish_datetime:
+            raise CommandError(
+                'Previous cleaning of {0}.TSV did not finish (run `python manage.py '
+                'cleancalaccessrawfile {0}`).'.format(self.model._meta.db_table)
+            )
 
+        # get the row count
         row_count = self.get_row_count()
 
-        if row_count > 0:
-            self.load()
-        else:
+        if row_count == 0:
             if self.verbosity > 2:
-                self.failure("File is empty.")
+                self.failure("%s is empty." % self.csv)
+        else:
+            # store the start time for the load
+            raw_file.load_start_datetime = now()
+            # reset the finish time for the load
+            raw_file.load_finish_datetime = None
+            # save here in case command doesn't finish
+            raw_file.save()
 
-        # handle tracking data
-        raw_file = self.raw_data_files.get_or_create(
-            version=self.version,
-            file_name=self.log_record.file_name
-        )[0]
+            if self.verbosity > 2:
+                self.log(" Loading %s" % options['model_name'])
+            self.load()
 
-        # add load counts to raw_file_record
-        raw_file.load_columns_count = len(self.model._meta.fields)
-        raw_file.load_records_count = self.model.objects.count()
-        raw_file.save()
+            # add load counts to raw_file_record
+            raw_file.load_columns_count = len(self.model._meta.fields)
+            raw_file.load_records_count = self.model.objects.count()
 
-        # save the log record
-        self.log_record.finish_datetime = now()
-        self.log_record.save()
+            # if not keeping files, remove the csv file
+            if not self.keep_files:
+                os.remove(self.csv)
 
-        # if not keeping files, remove the csv file
-        if not self.keep_files:
-            os.remove(self.csv)
+            # store the finish time for the load
+            raw_file.load_finish_datetime = now()
+            # and save the RawDataFile
+            raw_file.save()
 
     def load(self):
         """

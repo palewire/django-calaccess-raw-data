@@ -8,7 +8,7 @@ import shutil
 import zipfile
 from django.conf import settings
 from django.core.files import File
-from django.core.management import call_command
+from django.core.management.base import CommandError
 from django.utils.timezone import now
 from calaccess_raw import get_download_directory, get_test_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
@@ -48,28 +48,30 @@ class Command(CalAccessCommand):
         # raw tsv files go in same data_dir in tsv/
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
-        # get the most recent download
-        last_download = self.command_logs.filter(
-            command='downloadcalaccessrawdata'
-        ).latest('start_datetime')
+        # get most recently downloaded RawDataVersion
+        try:
+            self.version = RawDataVersion.objects.filter(
+                download_start_datetime__isnull=False
+            ).latest('download_start_datetime')
+        except RawDataVersion.DoesNotExist:
+            raise CommandError(
+                'No record of download CAL-ACCESS zip file '
+                '(run `python manage.py downloadcalaccessrawdata`).'
+            )
 
-        # if it finished, use that version
-        if last_download.finish_datetime:
-            self.version = last_download.version
-        else:
-            self.failure('Previous download did not complete.')
-            call_command("downloadcalaccessrawdata", noinput=True)
-            last_download = self.command_logs.filter(
-                command='downloadcalaccessrawdata'
-            ).latest('finish_datetime')
-            self.version = last_download.version
+        # raise exception if extract step did not finish
+        if not self.version.download_completed:
+            raise CommandError(
+                'Previous download did not finish '
+                '(run `python manage.py extractcalaccessrawfiles`).'
+            )
 
-        # always create a new RawDataCommand (i.e., no resume mode)
-        self.log_record = self.command_logs.create(
-            version=self.version,
-            command=self,
-            called_by=self.get_caller_log()
-        )
+        # store extraction start time
+        self.version.extract_start_datetime = now()
+        # and reset the finish time
+        self.version.extract_finish_datetime = None
+        # save here in case the command doesn't finish
+        self.version.save()
 
         self.header("Extracting raw data files")
 
@@ -84,8 +86,10 @@ class Command(CalAccessCommand):
             os.remove(self.zip_path)
             shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
 
-        self.log_record.finish_datetime = now()
-        self.log_record.save()
+        # store extraction finish time
+        self.version.extract_finish_datetime = now()
+        # and save the RawDataVersion
+        self.version.save()
 
     def unzip(self):
         """
@@ -138,10 +142,17 @@ class Command(CalAccessCommand):
         for f in os.listdir(self.tsv_dir):
             if '.TSV' in f:
                 file_name = f.upper().replace('.TSV', '')
-                self.raw_data_files.get_or_create(
+                raw_file, created = self.raw_data_files.get_or_create(
                     version=self.version,
                     file_name=file_name,
                 )
+                # if raw file was already there, clear out timestamp fields
+                if not created:
+                    raw_file.clean_start_datetime = None
+                    raw_file.clean_finish_datetime = None
+                    raw_file.load_start_datetime = None
+                    raw_file.load_finish_datetime = None
+                    raw_file.save()
 
     def archive(self):
         """
@@ -193,15 +204,14 @@ class TestCommand(Command):
             release_datetime = f.readline()
             size = f.readline()
 
-        try:
-            self.version = RawDataVersion.objects.get(
-                release_datetime=release_datetime
-            )
-        except RawDataVersion.DoesNotExist:
-            self.version = RawDataVersion.objects.create(
-                release_datetime=release_datetime,
-                size=size
-            )
+        # get or create the RawDataVersion
+        self.version, created = RawDataVersion.objects.get_or_create(
+            release_datetime=release_datetime,
+            size=size
+        )
+
+        # store extraction start time
+        self.version.extract_start_datetime = now()
 
         self.unzip()
         self.prep()
@@ -209,3 +219,8 @@ class TestCommand(Command):
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
+
+        # store extraction finish time
+        self.version.extract_finish_datetime = now()
+        # and save the RawDataVersion
+        self.version.save()

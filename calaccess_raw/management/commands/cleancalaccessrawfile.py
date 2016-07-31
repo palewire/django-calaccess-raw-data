@@ -9,12 +9,13 @@ import csv
 from io import StringIO
 from django.conf import settings
 from django.core.files import File
+from django.core.management.base import CommandError
 from django.utils import six
 from django.utils.timezone import now
 from csvkit import CSVKitReader, CSVKitWriter
 from calaccess_raw import get_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
@@ -57,35 +58,37 @@ class Command(CalAccessCommand):
             self.file_name.lower().replace("tsv", "errors.csv")
         )
 
+        # get most recently extracted RawDataVersion
+        try:
+            version = RawDataVersion.objects.filter(
+                extract_start_datetime__isnull=False
+            ).latest('extract_start_datetime')
+        except RawDataVersion.DoesNotExist:
+            raise CommandError(
+                'No record of extracting files from download zip '
+                '(run `python manage.py extractcalaccessrawfiles`).'
+            )
+
+        # raise exception if extract step did not finish
+        if not version.extract_completed:
+            raise CommandError(
+                'Previous extraction files from download zip did not finish '
+                '(run `python manage.py extractcalaccessrawfiles`).'
+            )
+
+        # get the raw file record
+        self.raw_file = RawDataFile.objects.get(
+            file_name=self.file_name.replace('.TSV', ''), version=version
+        )
+        # store the start time for the clean
+        self.raw_file.clean_start_datetime = now()
+        # reset the finish time for the clean
+        self.raw_file.clean_finish_datetime = None
+        # save here in case command doesn't finish
+        self.raw_file.save()
+
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
-
-        caller = self.get_caller_log()
-
-        if caller:
-            # if called by another command, use its version record
-            self.version = caller.version
-            self.log_record = self.command_logs.create(
-                version=self.version,
-                command=self,
-                called_by=caller,
-                file_name=self.file_name.upper().replace('.TSV', '')
-            )
-        else:
-            # try getting the most recent version
-            try:
-                self.version = self.raw_data_versions.latest('release_datetime')
-            except RawDataVersion.DoesNotExist:
-                # if there's no version, assume this is a test and do not log
-                # TODO: Figure out a more direct way to handle this
-                self.version = None
-            else:
-                self.log_record = self.command_logs.create(
-                    # if called by another command, use it's version
-                    version=self.version,
-                    command=self,
-                    file_name=self.file_name.upper().replace('.TSV', '')
-                )
 
         self.clean()
 
@@ -93,9 +96,10 @@ class Command(CalAccessCommand):
         if not options['keep_files']:
             os.remove(os.path.join(self.tsv_dir, options['file_name']))
 
-        # save the log record
-        self.log_record.finish_datetime = now()
-        self.log_record.save()
+        # store the finish time for the clean
+        self.raw_file.clean_finish_datetime = now()
+        # and save the RawDataFile
+        self.raw_file.save()
 
     def clean(self):
         """
@@ -204,24 +208,16 @@ class Command(CalAccessCommand):
                 self.failure(msg % (len(log_rows)))
             self.log_errors(log_rows)
 
-        raw_file = self.raw_data_files.get_or_create(
-            version=self.version,
-            file_name=self.log_record.file_name
-        )[0]
-
         # Add counts to raw_file_record
-        raw_file.download_columns_count = headers_count
-        raw_file.download_records_count = line_number - 1
-        raw_file.clean_columns_count = headers_count
-        raw_file.clean_records_count = line_number - 1 - len(log_rows)
-        raw_file.error_count = len(log_rows)
+        self.raw_file.download_columns_count = headers_count
+        self.raw_file.download_records_count = line_number - 1
+        self.raw_file.clean_columns_count = headers_count
+        self.raw_file.clean_records_count = line_number - 1 - len(log_rows)
+        self.raw_file.error_count = len(log_rows)
 
         # Add file size to the raw_file_record
-        raw_file.download_file_size = os.path.getsize(tsv_path) or 0
-        raw_file.clean_file_size = os.path.getsize(csv_path) or 0
-
-        # Save it
-        raw_file.save()
+        self.raw_file.download_file_size = os.path.getsize(tsv_path) or 0
+        self.raw_file.clean_file_size = os.path.getsize(csv_path) or 0
 
         # Shut it down
         tsv_file.close()
@@ -231,13 +227,13 @@ class Command(CalAccessCommand):
             if self.verbosity > 2:
                 self.log(" Archiving {0}".format(os.path.basename(csv_path)))
             # Remove previous .CSV and error log files
-            raw_file.clean_file_archive.delete()
-            raw_file.error_log_archive.delete()
+            self.raw_file.clean_file_archive.delete()
+            self.raw_file.error_log_archive.delete()
 
             # Open up the .CSV file so we can wrap it in the Django File obj
             with open(csv_path) as csv_file:
                 # Save the .CSV on the raw data file
-                raw_file.clean_file_archive.save(
+                self.raw_file.clean_file_archive.save(
                     self.file_name.lower().replace("tsv", "csv"),
                     File(csv_file),
                 )
@@ -248,7 +244,7 @@ class Command(CalAccessCommand):
                         os.path.basename(self.error_log_path)
                     ))
                 with open(self.error_log_path) as error_file:
-                    raw_file.error_log_archive.save(
+                    self.raw_file.error_log_archive.save(
                         os.path.basename(self.error_log_path),
                         File(error_file),
                     )
