@@ -44,25 +44,3 @@ class RawDataFileAdmin(BaseAdmin):
     )
     list_display_links = ('id', 'file_name',)
     list_filter = ("version__release_datetime",)
-
-
-@admin.register(models.RawDataCommand)
-class RawDataCommandAdmin(BaseAdmin):
-    """
-    Custom admin for the RawDataCommand model.
-    """
-    list_display = (
-        "id",
-        "version",
-        "command",
-        "file_name",
-        "start_datetime",
-        "finish_datetime",
-    )
-    list_display_links = ("id", "command",)
-    list_filter = (
-        "start_datetime",
-        "finish_datetime",
-        "version__release_datetime",
-        "command",
-    )

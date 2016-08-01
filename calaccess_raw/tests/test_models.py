@@ -46,7 +46,6 @@ class ModelTestCase(TestCase):
         models.RawDataVersion().pretty_size()
         models.RawDataVersion(size=1000).pretty_size()
         models.RawDataFile().__str__()
-        models.RawDataCommand().__str__()
 
     def test_admins(self):
         """

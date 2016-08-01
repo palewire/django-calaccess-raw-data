@@ -96,7 +96,7 @@ class Command(CalAccessCommand):
         Unzip the snapshot file.
         """
         if self.verbosity:
-            self.log(" Unzipping archive")
+            self.log(" Unzipping %s" % os.path.basename(self.zip_path))
 
         with zipfile.ZipFile(self.zip_path) as zf:
             for member in zf.infolist():
@@ -142,7 +142,7 @@ class Command(CalAccessCommand):
         for f in os.listdir(self.tsv_dir):
             if '.TSV' in f:
                 file_name = f.upper().replace('.TSV', '')
-                raw_file, created = self.raw_data_files.get_or_create(
+                raw_file, created = RawDataFile.objects.get_or_create(
                     version=self.version,
                     file_name=file_name,
                 )
@@ -212,6 +212,8 @@ class TestCommand(Command):
 
         # store extraction start time
         self.version.extract_start_datetime = now()
+        # and save the RawDataVersion
+        self.version.save()
 
         self.unzip()
         self.prep()

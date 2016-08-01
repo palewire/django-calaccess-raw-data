@@ -6,14 +6,15 @@ Generate report outlining the number / proportion of files / records cleaned and
 from __future__ import unicode_literals
 from __future__ import division
 import os
-from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw import get_model_list, get_download_directory
+from csv import DictWriter
+from clint.textui import progress
 from django.core.management import call_command
+from django.core.management.base import CommandError
 from django.db.models import Sum
 from django.forms.models import model_to_dict
-from django.contrib.humanize.templatetags.humanize import naturaltime
-from clint.textui import progress
-from csv import DictWriter
+from calaccess_raw import get_model_list, get_download_directory
+from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw.models.tracking import RawDataVersion
 
 
 def calc_percent(whole, total):
@@ -52,28 +53,17 @@ class Command(CalAccessCommand):
         self.empty_raw_files = []
         self.unknown_raw_files = []
 
+        # get the latest version
         try:
-            last_complete_download = self.command_logs.filter(
-                command='downloadcalaccessrawdata',
-                finish_datetime__isnull=False
-            ).order_by('-finish_datetime')[0]
-        except IndexError:
-            self.failure("No complete downloads yet.")
-            self.log("Try: python manage.py updatecalaccessrawdata")
-            return
-        else:
-            self.raw_data_files = self.raw_data_files.filter(
-                version=last_complete_download.version
+            self.version = RawDataVersion.objects.latest('release_datetime')
+        except RawDataVersion.DoesNotExist:
+            raise CommandError('No CAL-ACCESS versions tracked.')
+        # quit if version update not complete
+        if not self.version.update_completed:
+            raise CommandError(
+                'Update to {:%c} version is not complete. (run `python manage.py '
+                'updatecalaccessrawdata`).'.format(self.version.release_datetime)
             )
-
-            downloaded_release_datetime = last_complete_download.version.release_datetime
-            current_release_datetime = self.get_download_metadata()['last-modified']
-
-            if current_release_datetime != downloaded_release_datetime:
-                since_new_release = naturaltime(current_release_datetime)
-                self.failure("A new version of CAL-ACCESS was "
-                             "released {}.".format(since_new_release))
-                self.log("Try: python manage.py updatecalaccessrawdata")
 
         self.log("Analyzing loaded models")
 
@@ -90,13 +80,13 @@ class Command(CalAccessCommand):
                 verbosity=self.verbosity
             )
 
-        self.num_download_files = self.raw_data_files.count()
+        self.num_download_files = self.version.files.count()
 
-        self.num_clean_files = self.raw_data_files.filter(
+        self.num_clean_files = self.version.files.filter(
             clean_records_count__gt=0
         ).count()
 
-        self.num_loaded_files = self.raw_data_files.filter(
+        self.num_loaded_files = self.version.files.filter(
             load_records_count__gt=0
         ).count()
 
@@ -126,7 +116,7 @@ class Command(CalAccessCommand):
         """
         Takes the name of a RawDataFile count column. Returns a sum of its values.
         """
-        result = self.raw_data_files.aggregate(
+        result = self.version.files.aggregate(
             the_sum=Sum(column_name)
         )
         return result['the_sum']
@@ -156,7 +146,7 @@ class Command(CalAccessCommand):
             writer = DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
 
-            for i in self.raw_data_files:
+            for i in self.version.files.all():
 
                 row = model_to_dict(i)
 
