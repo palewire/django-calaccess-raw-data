@@ -46,7 +46,7 @@ def archive_directory_path(instance, filename):
         release_datetime = instance.version.release_datetime
     else:
         raise TypeError("Must be called on RawDataVersion or RawDataFile instance.")
-    template = '{dt.year}-{dt.month}-{dt.day}_{dt.hour}-{dt.minute}-{dt.second}/{f}'
+    template = '{dt:%Y-%m-%d_%H-%M-%S}/{f}'
     return template.format(dt=release_datetime, f=filename)
 
 

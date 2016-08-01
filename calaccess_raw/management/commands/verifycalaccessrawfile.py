@@ -7,8 +7,9 @@ from __future__ import unicode_literals
 from django.apps import apps
 from django.db import router
 from django.contrib.humanize.templatetags.humanize import intcomma
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
@@ -48,20 +49,33 @@ class Command(CalAccessCommand):
         # Get the model total
         model_count = model.objects.count()
 
+        # get the latest version
         try:
-            version = self.raw_data_versions.latest('release_datetime')
+            version = RawDataVersion.objects.latest('release_datetime')
         except RawDataVersion.DoesNotExist:
-            version = None
-        else:
-            raw_file = self.raw_data_files.get_or_create(
+            raise CommandError('No CAL-ACCESS versions tracked.')
+        # quit if version update not complete
+        if not version.update_completed:
+            raise CommandError(
+                'Update to {:%c} version is not complete. (run `python manage.py '
+                'updatecalaccessrawdata`).'.format(version.release_datetime)
+            )
+        # get the raw_file
+        try:
+            raw_file = version.files.get(
                 version=version,
                 file_name=model._meta.db_table
-            )[0]
+            )
+        except RawDataFile.DoesNotExist:
+            raise CommandError('{0} not included in {1:%c} version'.format(
+                model._meta.db_table,
+                version.release_datetime,
+            ))
 
-            # add load counts to raw_file_record
-            raw_file.load_columns_count = len(model._meta.fields)
-            raw_file.load_records_count = model_count
-            raw_file.save()
+        # add load counts to raw_file_record
+        raw_file.load_columns_count = len(model._meta.fields)
+        raw_file.load_records_count = model_count
+        raw_file.save()
 
         # Get the CSV total
         try:

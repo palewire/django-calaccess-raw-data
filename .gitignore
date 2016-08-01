@@ -17,6 +17,7 @@ docs/_build
 .tox
 example/data
 example/test-data/csv
+example/test-data/calaccess_cleaned.zip
 example/settings_local.py
 example/.static/
 example/routers.py

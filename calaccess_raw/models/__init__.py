@@ -44,6 +44,7 @@ from calaccess_raw.models.inactive import (
     LobbyistFirmHistoryCd,
     LobbyistFirmLobbyist1Cd,
     LobbyistFirmLobbyist2Cd,
+    EfsFilingLogCd,
 )
 from calaccess_raw.models.lobbying import (
     CvrRegistrationCd,
@@ -72,7 +73,6 @@ from calaccess_raw.models.common import (
     TextMemoCd,
     AcronymsCd,
     AddressCd,
-    EfsFilingLogCd,
     FilersCd,
     FilerAcronymsCd,
     FilerAddressCd,
@@ -94,8 +94,7 @@ from calaccess_raw.models.common import (
 )
 from calaccess_raw.models.tracking import (
     RawDataVersion,
-    RawDataCommand,
-    RawDataFile
+    RawDataFile,
 )
 __all__ = (
     'CalAccessBaseModel',
@@ -180,6 +179,5 @@ __all__ = (
     'ReceivedFilingsCd',
     'ReportsCd',
     'RawDataVersion',
-    'RawDataCommand',
-    'RawDataFile'
+    'RawDataFile',
 )

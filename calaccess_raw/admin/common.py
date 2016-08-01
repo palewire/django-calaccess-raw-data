@@ -112,21 +112,6 @@ class AddressCdAdmin(BaseAdmin):
     list_display = ("adrid", "city", "st", "zip4",)
 
 
-@admin.register(models.EfsFilingLogCd)
-class EfsFilingLogCdAdmin(BaseAdmin):
-    """
-    Custom admin for the EfsFilingLogCd model.
-    """
-    list_display = (
-        "id",
-        "vendor",
-        "filing_date",
-        "filingstatus",
-        "form_type",
-    )
-    date_hierarchy = "filing_date"
-
-
 @admin.register(models.FilersCd)
 class FilersCdAdmin(BaseAdmin):
     """

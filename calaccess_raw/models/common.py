@@ -182,6 +182,9 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILERNAME_CD'
         ordering = ("naml", "namf",)
 
@@ -363,6 +366,9 @@ laundering or other special condition."
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_FILINGS_CD'
 
     def __str__(self):
@@ -407,6 +413,9 @@ class FilingsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILINGS_CD'
         ordering = ("-filing_id",)
 
@@ -515,6 +524,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'HDR_CD'
         ordering = ("-filing_id", "-amend_id")
 
@@ -626,6 +638,9 @@ class HeaderCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'HEADER_CD'
         ordering = ("form_id", "line_number")
 
@@ -784,6 +799,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'SMRY_CD'
         ordering = ("filing_id", "-amend_id", 'form_type', "line_item")
 
@@ -1224,6 +1242,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR_E530_CD'
         ordering = ("-pmnt_dt",)
 
@@ -1337,6 +1358,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'SPLT_CD'
 
     def __str__(self):
@@ -1536,6 +1560,9 @@ original filing and 1 to 999 amendments.",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'TEXT_MEMO_CD'
 
     def __str__(self):
@@ -1574,6 +1601,9 @@ class AcronymsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'ACRONYMS_CD'
         ordering = ("acronym",)
 
@@ -1633,102 +1663,13 @@ class AddressCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'ADDRESS_CD'
 
     def __str__(self):
         return str(self.adrid)
-
-
-@python_2_unicode_compatible
-class EfsFilingLogCd(CalAccessBaseModel):
-    """
-    Electronic Filing Subsystem Log.
-
-    The EFS accepts and validates electronic filings.
-    """
-    UNIQUE_KEY = (
-        "FILING_DATE",
-        "VENDOR"
-    )
-    DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711624-Overview', start_page=1, end_page=2),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50),
-    ]
-    FILING_FORMS = [
-        get_filing_form('F400'),
-        get_filing_form('F401'),
-        get_filing_form('F402'),
-        get_filing_form('F410'),
-        get_filing_form('F425'),
-        get_filing_form('F450'),
-        get_filing_form('F460'),
-        get_filing_form('F461'),
-        get_filing_form('F465'),
-        get_filing_form('F496'),
-        get_filing_form('F497'),
-        get_filing_form('F498'),
-        get_filing_form('F601'),
-        get_filing_form('F602'),
-        get_filing_form('F603'),
-        get_filing_form('F604'),
-        get_filing_form('F606'),
-        get_filing_form('F607'),
-        get_filing_form('F615'),
-        get_filing_form('F625'),
-        get_filing_form('F635'),
-        get_filing_form('F645'),
-    ]
-    filing_date = fields.DateField(
-        db_column='FILING_DATE',
-        null=True,
-        help_text="Date of filing"
-    )
-    filingstatus = fields.IntegerField(
-        db_column='FILINGSTATUS',
-        help_text="Status of filing. This field is described in the docs as being\
-VARCHAR. However, its distinct values are 0, 1, 2 and 7.",
-    )
-    vendor = fields.CharField(
-        db_column='VENDOR',
-        max_length=250,
-        help_text="Software vendor who submitted the electronic filing"
-    )
-    filer_id = fields.CharField(
-        verbose_name='filer ID',
-        db_column='FILER_ID',
-        max_length=250,
-        blank=True,
-        db_index=True,
-        help_text="Filer's unique identification number",
-    )
-    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
-        ('BADFORMAT 253', 'Unknown'),
-        ('form', 'Unknown'),
-    )
-    form_type = fields.CharField(
-        db_column='FORM_TYPE',
-        max_length=250,
-        help_text='Name of the source filing form or schedule',
-        db_index=True,
-        choices=FORM_TYPE_CHOICES,
-        verbose_name="form type",
-        documentcloud_pages=[
-            DocumentCloud(id='2711624-Overview', start_page=4, end_page=8),
-        ]
-    )
-    error_no = fields.CharField(
-        db_column='ERROR_NO',
-        max_length=250,
-        help_text='Most records have a value of "ACCEPTED". Other records include "ERROR"\
-or "BADFORMAT" and a three-digit number.',
-    )
-
-    class Meta(CalAccessBaseModel.Meta):
-        db_table = 'EFS_FILING_LOG_CD'
-        ordering = ("-filing_date",)
-
-    def __str__(self):
-        return "{} ({})".format(self.vendor, self.filing_date)
 
 
 @python_2_unicode_compatible
@@ -1750,6 +1691,9 @@ class FilersCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILERS_CD'
         ordering = ("-filer_id",)
 
@@ -1781,6 +1725,9 @@ class FilerAcronymsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_ACRONYMS_CD'
         ordering = ("acronym",)
 
@@ -1846,6 +1793,9 @@ class FilerAddressCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_ADDRESS_CD'
 
     def __str__(self):
@@ -1882,6 +1832,9 @@ class FilerEthicsClassCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_ETHICS_CLASS_CD'
         ordering = ("-ethics_date",)
 
@@ -1958,6 +1911,9 @@ class FilerInterestsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_INTERESTS_CD'
         ordering = ("-effect_date",)
 
@@ -2071,6 +2027,9 @@ in the relationship',
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_LINKS_CD'
 
     def __str__(self):
@@ -2101,6 +2060,9 @@ class FilerStatusTypesCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_STATUS_TYPES_CD'
         ordering = ("status_type",)
 
@@ -2647,6 +2609,9 @@ Populated for Senate, Assembly or Board of Equalization races",
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_TO_FILER_TYPE_CD'
 
     def __str__(self):
@@ -2703,6 +2668,9 @@ class FilerTypesCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_TYPES_CD'
         ordering = ("filer_type",)
 
@@ -2747,6 +2715,9 @@ class FilerXrefCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_XREF_CD'
 
     def __str__(self):
@@ -2811,6 +2782,9 @@ class FilingPeriodCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILING_PERIOD_CD'
         ordering = ("-end_date",)
 
@@ -2852,6 +2826,9 @@ class GroupTypesCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'GROUP_TYPES_CD'
         ordering = ("grp_id",)
 
@@ -2916,6 +2893,9 @@ class ImageLinksCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'IMAGE_LINKS_CD'
         ordering = ("-img_dt",)
 
@@ -2952,6 +2932,9 @@ class LegislativeSessionsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LEGISLATIVE_SESSIONS_CD'
         ordering = ("-begin_date",)
 
@@ -2985,6 +2968,9 @@ class LookupCodesCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOOKUP_CODES_CD'
 
     def __str__(self):
@@ -3059,6 +3045,9 @@ class NamesCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'NAMES_CD'
         ordering = ("naml", "namf")
 
@@ -3149,6 +3138,9 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'RECEIVED_FILINGS_CD'
         ordering = ("-received_date",)
 
@@ -3221,6 +3213,9 @@ class ReportsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'REPORTS_CD'
         ordering = ("rpt_name",)
 

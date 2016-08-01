@@ -60,6 +60,9 @@ class BallotMeasuresCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'BALLOT_MEASURES_CD'
         ordering = (
             "-election_date",
@@ -309,6 +312,9 @@ class CvrF470Cd(CalAccessBaseModel):
         return str(self.amend_id)
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'CVR_F470_CD'
 
 
@@ -365,6 +371,9 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'FILER_TYPE_PERIODS_CD'
 
     def __str__(self):
@@ -374,7 +383,14 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS2_CD and LOBBYIST_CONTRIBUTIONS3_CD.
+
+    According to "Cal-Access Tables, Columns, Indexes", this is a temporary
+    table used to generate the actual Lobbyist contribution disclosure table,
+    which is LOBBYIST_CONTRIBUTIONS3_CD.
+
+    Also, the most recent values observed in FILING_PERIOD_START_DT are for the
+    April 2001, so probably this table is no longer in use.
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
@@ -427,6 +443,9 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_CONTRIBUTIONS1_CD'
         ordering = ("-filing_period_start_dt",)
 
@@ -437,7 +456,14 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS3_CD.
+
+    According to "Cal-Access Tables, Columns, Indexes", this is a temporary
+    table used to generate the actual Lobbyist contribution disclosure table,
+    which is LOBBYIST_CONTRIBUTIONS3_CD.
+
+    Also, the most recent values observed in FILING_PERIOD_START_DT are for the
+    April 2001, so probably this table is no longer in use.
     """
     UNIQUE_KEY = False
     filer_id = fields.IntegerField(
@@ -490,6 +516,9 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_CONTRIBUTIONS2_CD'
         ordering = ("-filing_period_start_dt",)
 
@@ -500,7 +529,14 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions3Cd(CalAccessBaseModel):
     """
-    Lobbyist contribution disclosure table.
+    This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS2_CD.
+
+    According to "Cal-Access Tables, Columns, Indexes", this is the actual
+    Lobbyist contribution disclosure table generated from the other two
+    temporary tables: LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS2_CD.
+
+    Also, the most recent values observed in FILING_PERIOD_START_DT are for the
+    April 2001, so probably this table is no longer in use.
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
@@ -553,6 +589,9 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_CONTRIBUTIONS3_CD'
         ordering = ("-filing_period_start_dt",)
 
@@ -611,6 +650,9 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMP_LOBBYIST1_CD'
         ordering = ("-session_id",)
 
@@ -669,6 +711,9 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMP_LOBBYIST2_CD'
         ordering = ("-session_id",)
 
@@ -826,6 +871,9 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER1_CD'
         ordering = ("-session_id",)
 
@@ -982,6 +1030,9 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER2_CD'
         ordering = ("-session_id",)
 
@@ -1138,6 +1189,9 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER3_CD'
         ordering = ("-session_id",)
 
@@ -1193,6 +1247,9 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER_FIRMS1_CD'
         ordering = ("-session_id",)
 
@@ -1248,6 +1305,9 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER_FIRMS2_CD'
         ordering = ("-session_id",)
 
@@ -1399,6 +1459,9 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_EMPLOYER_HISTORY_CD'
 
     def __str__(self):
@@ -1514,6 +1577,9 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM1_CD'
 
     def __str__(self):
@@ -1629,6 +1695,9 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM2_CD'
 
     def __str__(self):
@@ -1744,6 +1813,9 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM3_CD'
 
     def __str__(self):
@@ -1826,6 +1898,9 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_EMPLOYER1_CD'
         ordering = ("-rpt_start",)
 
@@ -1909,6 +1984,9 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_EMPLOYER2_CD'
         ordering = ("-rpt_start",)
 
@@ -2012,6 +2090,9 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_HISTORY_CD'
 
     def __str__(self):
@@ -2068,6 +2149,9 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_LOBBYIST1_CD'
         ordering = ("-session_id",)
 
@@ -2125,8 +2209,106 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     )
 
     class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
         db_table = 'LOBBYIST_FIRM_LOBBYIST2_CD'
         ordering = ("-session_id",)
 
     def __str__(self):
         return str(self.lobbyist_id)
+
+
+@python_2_unicode_compatible
+class EfsFilingLogCd(CalAccessBaseModel):
+    """
+    Electronic Filing Subsystem Log.
+
+    The EFS accepts and validates electronic filings.
+    """
+    UNIQUE_KEY = (
+        "FILING_DATE",
+        "VENDOR"
+    )
+    DOCUMENTCLOUD_PAGES = [
+        DocumentCloud(id='2711624-Overview', start_page=1, end_page=2),
+        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50),
+    ]
+    FILING_FORMS = [
+        get_filing_form('F400'),
+        get_filing_form('F401'),
+        get_filing_form('F402'),
+        get_filing_form('F410'),
+        get_filing_form('F425'),
+        get_filing_form('F450'),
+        get_filing_form('F460'),
+        get_filing_form('F461'),
+        get_filing_form('F465'),
+        get_filing_form('F496'),
+        get_filing_form('F497'),
+        get_filing_form('F498'),
+        get_filing_form('F601'),
+        get_filing_form('F602'),
+        get_filing_form('F603'),
+        get_filing_form('F604'),
+        get_filing_form('F606'),
+        get_filing_form('F607'),
+        get_filing_form('F615'),
+        get_filing_form('F625'),
+        get_filing_form('F635'),
+        get_filing_form('F645'),
+    ]
+    filing_date = fields.DateField(
+        db_column='FILING_DATE',
+        null=True,
+        help_text="Date of filing"
+    )
+    filingstatus = fields.IntegerField(
+        db_column='FILINGSTATUS',
+        help_text="Status of filing. This field is described in the docs as being\
+VARCHAR. However, its distinct values are 0, 1, 2 and 7.",
+    )
+    vendor = fields.CharField(
+        db_column='VENDOR',
+        max_length=250,
+        help_text="Software vendor who submitted the electronic filing"
+    )
+    filer_id = fields.CharField(
+        verbose_name='filer ID',
+        db_column='FILER_ID',
+        max_length=250,
+        blank=True,
+        db_index=True,
+        help_text="Filer's unique identification number",
+    )
+    FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS]) + (
+        ('BADFORMAT 253', 'Unknown'),
+        ('form', 'Unknown'),
+    )
+    form_type = fields.CharField(
+        db_column='FORM_TYPE',
+        max_length=250,
+        help_text='Name of the source filing form or schedule',
+        db_index=True,
+        choices=FORM_TYPE_CHOICES,
+        verbose_name="form type",
+        documentcloud_pages=[
+            DocumentCloud(id='2711624-Overview', start_page=4, end_page=8),
+        ]
+    )
+    error_no = fields.CharField(
+        db_column='ERROR_NO',
+        max_length=250,
+        help_text='Most records have a value of "ACCEPTED". Other records include "ERROR"\
+or "BADFORMAT" and a three-digit number.',
+    )
+
+    class Meta(CalAccessBaseModel.Meta):
+        """
+        Meta model options.
+        """
+        db_table = 'EFS_FILING_LOG_CD'
+        ordering = ("-filing_date",)
+
+    def __str__(self):
+        return "{} ({})".format(self.vendor, self.filing_date)

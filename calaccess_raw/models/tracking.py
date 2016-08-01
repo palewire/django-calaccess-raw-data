@@ -6,7 +6,7 @@ Models for tracking CAL-ACCESS updates over time.
 from __future__ import unicode_literals
 from django.db import models
 from hurry.filesize import size as sizeformat
-from calaccess_raw import archive_directory_path
+from calaccess_raw import archive_directory_path, get_model_list
 from django.utils.encoding import python_2_unicode_compatible
 
 
@@ -28,22 +28,140 @@ class RawDataVersion(models.Model):
         help_text='Size of the .ZIP file for this version of the CAL-ACCESS raw source data '
                   '(value of content-length field in HTTP response header)'
     )
-    zip_file_archive = models.FileField(
+    update_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time update started',
+        help_text='Date and time when the update to the CAL-ACCESS version started',
+    )
+    update_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time update finished',
+        help_text='Date and time when the update to the CAL-ACCESS version finished',
+    )
+    download_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time download started',
+        help_text='Date and time when the download of the CAL-ACCESS database export started',
+    )
+    download_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time download finished',
+        help_text='Date and time when the download of the CAL-ACCESS database export finished',
+    )
+    extract_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time extraction started',
+        help_text='Date and time when extraction of the CAL-ACCESS data files started',
+    )
+    extract_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time extraction finished',
+        help_text='Date and time when extraction of the CAL-ACCESS data files finished',
+    )
+    download_zip_archive = models.FileField(
         blank=True,
         max_length=255,
         upload_to=archive_directory_path,
-        verbose_name='archive of zip file',
+        verbose_name='download files zip file',
         help_text='An archive of the original zipped file downloaded from '
                      'CAL-ACCESS.'
     )
+    clean_zip_archive = models.FileField(
+        blank=True,
+        max_length=255,
+        upload_to=archive_directory_path,
+        verbose_name='cleaned files zip archive',
+        help_text='An archive zip of cleaned (and error log) files'
+    )
 
     class Meta:
+        """
+        Meta model options.
+        """
         app_label = 'calaccess_raw'
         verbose_name = 'CAL-ACCESS raw data version'
         ordering = ('-release_datetime',)
 
     def __str__(self):
         return str(self.release_datetime)
+
+    @property
+    def update_completed(self):
+        """
+        Check if the database update to the version completed.
+
+        Return True or False.
+        """
+        if self.update_finish_datetime:
+            is_completed = True
+        else:
+            is_completed = False
+
+        return is_completed
+
+    @property
+    def update_stalled(self):
+        """
+        Check if the database update to the version started but did not complete.
+
+        Return True or False.
+        """
+        if self.update_start_datetime and not self.update_finish_datetime:
+            is_stalled = True
+        else:
+            is_stalled = False
+
+        return is_stalled
+
+    @property
+    def download_completed(self):
+        """
+        Check if the download of the version's zip file completed.
+
+        Return True or False.
+        """
+        if self.download_finish_datetime:
+            is_completed = True
+        else:
+            is_completed = False
+
+        return is_completed
+
+    @property
+    def download_stalled(self):
+        """
+        Check if the download of the version's zip file started but did not complete.
+        """
+        if self.download_start_datetime and not self.download_finish_datetime:
+            is_stalled = True
+        else:
+            is_stalled = False
+
+        return is_stalled
+
+    @property
+    def extract_completed(self):
+        """
+        Return True if the extraction of the version's raw data files completed.
+        """
+        if self.extract_finish_datetime:
+            is_completed = True
+        else:
+            is_completed = False
+
+        return is_completed
+
+    @property
+    def extract_stalled(self):
+        """
+        Check if the download of the version's zip file started but did not complete.
+        """
+        if self.extract_start_datetime and not self.extract_finish_datetime:
+            is_stalled = True
+        else:
+            is_stalled = False
+
+        return is_stalled
 
     def pretty_size(self):
         """
@@ -138,8 +256,47 @@ class RawDataFile(models.Model):
         verbose_name='size of clean data file in bytes',
         help_text='Size of the .CSV file'
     )
+    error_count = models.IntegerField(
+        null=False,
+        default=0,
+        verbose_name='error count',
+        help_text='Count of records in the original download that could not '
+                  'be parsed and are excluded from the cleaned file.'
+    )
+    error_log_archive = models.FileField(
+        blank=True,
+        max_length=255,
+        upload_to=archive_directory_path,
+        verbose_name='archive of error log',
+        help_text='An archive of the error log containing lines from the '
+                  'original download file that could not be parsed and are '
+                  'excluded from the cleaned file.'
+    )
+    clean_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time cleaning started',
+        help_text='Date and time when the cleaning of the file started',
+    )
+    clean_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time cleaning finished',
+        help_text='Date and time when the cleaning of the file finished',
+    )
+    load_start_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time loading started',
+        help_text='Date and time when the loading of the file started',
+    )
+    load_finish_datetime = models.DateTimeField(
+        null=True,
+        verbose_name='date and time extraction finished',
+        help_text='Date and time when the loading of the file finished',
+    )
 
     class Meta:
+        """
+        Meta model options.
+        """
         app_label = 'calaccess_raw'
         unique_together = (('version', 'file_name'),)
         verbose_name = 'CAL-ACCESS raw data file'
@@ -168,57 +325,11 @@ class RawDataFile(models.Model):
     pretty_clean_file_size.short_description = 'clean file size'
     pretty_clean_file_size.admin_order_field = 'clean file size'
 
-
-@python_2_unicode_compatible
-class RawDataCommand(models.Model):
-    """
-    A call of a command from this application with start and finish times.
-    """
-    version = models.ForeignKey(
-        'RawDataVersion',
-        on_delete=models.CASCADE,
-        related_name='command_logs',
-        verbose_name='raw data version',
-        help_text='Foreign key referencing the version of the raw '
-                  'source data on which the command was performed'
-    )
-    command = models.CharField(
-        max_length=50,
-        verbose_name='command name',
-        help_text='Name of the command performed on the given version of the raw source data'
-    )
-    called_by = models.ForeignKey(
-        'self',
-        related_name="called",
-        null=True,
-        on_delete=models.SET_NULL,
-        verbose_name='called by',
-        help_text='Foreign key refencing log of the CalAccessCommand that '
-                  'called this command. Null represents call from command line'
-    )
-    file_name = models.CharField(
-        max_length=100,
-        verbose_name='raw data file name',
-        help_text='Name of the raw source data file without extension',
-    )
-    start_datetime = models.DateTimeField(
-        auto_now_add=True,
-        null=False,
-        verbose_name='date and time command started',
-        help_text='Date and time when the given command started on the '
-                  'given version of the raw source data'
-    )
-    finish_datetime = models.DateTimeField(
-        null=True,
-        verbose_name='date and time command finished',
-        help_text='Date and time when the given command finished on '
-                  'the given version of the raw source data'
-    )
-
-    class Meta:
-        app_label = 'calaccess_raw'
-        verbose_name = 'CAL-ACCESS raw data command'
-        ordering = ('-id',)
-
-    def __str__(self):
-        return self.command
+    @property
+    def model(self):
+        """
+        Returns the RawDataFile's corresponding CalAccess database model object.
+        """
+        return [
+            m for m in get_model_list() if m().db_table == self.file_name
+        ][0]

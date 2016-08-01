@@ -15,11 +15,6 @@ from django.utils import timezone
 from django.utils.six.moves import input
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
-from calaccess_raw.models.tracking import (
-    RawDataVersion,
-    RawDataFile,
-    RawDataCommand
-)
 logger = logging.getLogger(__name__)
 
 
@@ -44,14 +39,9 @@ class CalAccessCommand(BaseCommand):
         # Start the clock
         self.start_datetime = datetime.now()
 
-        # Set the logger models for later use
-        self.raw_data_versions = RawDataVersion.objects
-        self.raw_data_files = RawDataFile.objects
-        self.command_logs = RawDataCommand.objects
-
     def get_download_metadata(self):
         """
-        Returns basic metadata about the current CAL-ACCESS snapshot.
+        Returns a dict with metadata about the current CAL-ACCESS snapshot.
         """
         request = requests.head(self.url)
         last_modified = request.headers['last-modified']
@@ -60,60 +50,6 @@ class CalAccessCommand(BaseCommand):
             'content-length': int(request.headers['content-length']),
             'last-modified': timezone.utc.localize(dt)
         }
-
-    def get_last_log(self, file_name=None, finished=False):
-        """
-        Retrives the given command most recently from database log.
-
-        Unless finished=True, in which case query for the most recently finished.
-
-        Commands that require a file / model as a positional argument should
-        pass the file_name keyword argument.
-
-        Returns a CalAccessCommandLog object or None, if no results.
-        """
-        if file_name:
-            q = self.command_logs.filter(file_name=file_name)
-        else:
-            q = self.command_logs
-
-        if finished:
-            order_by_field = '-finish_datetime'
-            q = q.filter(finish_datetime__isnull=False)
-        else:
-            order_by_field = '-start_datetime'
-
-        try:
-            last_log = q.filter(
-                command=self
-            ).order_by(order_by_field)[0]
-        except IndexError:
-            last_log = None
-
-        return last_log
-
-    def get_caller_log(self):
-        """
-        If the command was called by another command, returns RawDataCommandLog object.
-
-        Otherwise, return None.
-        """
-        caller = None
-
-        if not self._called_from_command_line:
-            # TODO: see if there's another way to identify caller
-            # in (edge) case when update is not called from command line
-
-            # for now, assume the caller is the arg passed to manage.py
-            # try getting the most recent log of this command for the version
-            try:
-                caller = self.command_logs.filter(
-                    command=sys.argv[1]
-                ).order_by('-start_datetime')[0]
-            except IndexError:
-                pass
-
-        return caller
 
     #
     # Logging methods
