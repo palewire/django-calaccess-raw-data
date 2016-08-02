@@ -9,79 +9,6 @@ from django.db import migrations, models
 import django.db.models.deletion
 
 
-def migrate_command_datetimes(apps, schema_editor):
-    """
-    Migrate start_datetime and finish_datetime values from RawDataCommand
-    """
-    RawDataVersion = apps.get_model("calaccess_raw", "RawDataVersion")
-    
-    # for each version
-    for v in RawDataVersion.objects.all():
-        # get all downloads for the version
-        downloads = v.command_logs.filter(
-            command='downloadcalaccessrawdata',
-        )
-        # if there are downloads, get the last one started
-        if downloads:
-            d = downloads.latest('start_datetime')
-            # set the version's download start and finish datetimes
-            v.download_start_datetime = d.start_datetime
-            v.download_finish_datetime = d.finish_datetime
-        
-        # get all extractions for the version
-        extracts = v.command_logs.filter(
-            command='extractcalaccessrawfiles',
-        )
-        # if there are extraction, get the last one started
-        if extracts:
-            e = extracts.latest('start_datetime')
-            # set the version's extract start and finish datetimes
-            v.extract_start_datetime = e.start_datetime
-            v.extract_finish_datetime = e.finish_datetime
-
-        # get all updates for the version
-        updates = v.command_logs.filter(
-            command__contains='update',
-        )
-        # if there are updates, get the last one started
-        if updates:
-            u = updates.latest('start_datetime')
-            # set the version's update start and finish datetimes
-            v.update_start_datetime = u.start_datetime
-            v.update_finish_datetime = u.finish_datetime
-
-        # save changes to the RawDataVersion
-        v.save()
-
-        # for each of the version's files
-        for f in v.files.all():
-            # get all the files clean jobs
-            cleans = v.command_logs.filter(
-                command='cleancalaccessrawfile',
-                file_name=f.file_name,
-            )
-            # if there are clean jobs, get the last one started
-            if cleans:
-                c = cleans.latest('start_datetime')
-                # set the file version's clean start and finish times
-                f.clean_start_datetime = c.start_datetime
-                f.clean_finish_datetime = c.finish_datetime
-
-            # get all the files load jobs
-            loads = v.command_logs.filter(
-                command='loadcalaccessrawfile',
-                file_name=f.file_name,
-            )
-            # if there are load jobs, get the last one started
-            if loads:
-                l = loads.latest('start_datetime')
-                # set the file version's load start and finish times
-                f.load_start_datetime = l.start_datetime
-                f.load_finish_datetime = l.finish_datetime
-
-            # save changes to the RawDataFile
-            f.save()
-
 class Migration(migrations.Migration):
 
     replaces = [('calaccess_raw', '0001_initial'), ('calaccess_raw', '0002_auto_20160703_0600'), ('calaccess_raw', '0003_auto_20160705_1923'), ('calaccess_raw', '0004_auto_20160705_1924'), ('calaccess_raw', '0005_auto_20160705_2145'), ('calaccess_raw', '0006_rawdatafile_error_log_archive'), ('calaccess_raw', '0007_rawdatafile_error_count'), ('calaccess_raw', '0008_auto_20160707_0518'), ('calaccess_raw', '0009_rawdataversion_clean_zip_archive'), ('calaccess_raw', '0010_auto_20160726_1425'), ('calaccess_raw', '0011_auto_20160728_1944'), ('calaccess_raw', '0012_auto_20160728_1945'), ('calaccess_raw', '0013_auto_20160729_0506'), ('calaccess_raw', '0014_auto_20160801_2039')]
@@ -2104,21 +2031,6 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='RawDataCommand',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('command', models.CharField(help_text='Name of the command performed on the given version of the raw source data', max_length=50, verbose_name='command name')),
-                ('file_name', models.CharField(help_text='Name of the raw source data file without extension', max_length=100, verbose_name='raw data file name')),
-                ('start_datetime', models.DateTimeField(auto_now_add=True, help_text='Date and time when the given command started on the given version of the raw source data', verbose_name='date and time command started')),
-                ('finish_datetime', models.DateTimeField(help_text='Date and time when the given command finished on the given version of the raw source data', null=True, verbose_name='date and time command finished')),
-                ('called_by', models.ForeignKey(help_text='Foreign key refencing log of the CalAccessCommand that called this command. Null represents call from command line', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='called', to='calaccess_raw.RawDataCommand', verbose_name='called by')),
-            ],
-            options={
-                'ordering': ('-id',),
-                'verbose_name': 'CAL-ACCESS raw data command',
-            },
-        ),
-        migrations.CreateModel(
             name='RawDataFile',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -2495,11 +2407,6 @@ class Migration(migrations.Migration):
             model_name='rawdatafile',
             name='version',
             field=models.ForeignKey(help_text='Foreign key referencing the version of the raw source data in which the file was included', on_delete=django.db.models.deletion.CASCADE, related_name='files', to='calaccess_raw.RawDataVersion', verbose_name='raw data version'),
-        ),
-        migrations.AddField(
-            model_name='rawdatacommand',
-            name='version',
-            field=models.ForeignKey(help_text='Foreign key referencing the version of the raw source data on which the command was performed', on_delete=django.db.models.deletion.CASCADE, related_name='command_logs', to='calaccess_raw.RawDataVersion', verbose_name='raw data version'),
         ),
         migrations.AddField(
             model_name='filertypeperiodscd',
@@ -3008,22 +2915,8 @@ class Migration(migrations.Migration):
             name='update_start_datetime',
             field=models.DateTimeField(help_text='Date and time when the update to the CAL-ACCESS version started', null=True, verbose_name='date and time update started'),
         ),
-        migrations.RunPython(
-            migrations.RunPython(migrate_command_datetimes),
-        ),
         migrations.AlterModelOptions(
             name='rawdataversion',
             options={'ordering': ('-release_datetime',), 'verbose_name': 'CAL-ACCESS raw data version'},
-        ),
-        migrations.RemoveField(
-            model_name='rawdatacommand',
-            name='called_by',
-        ),
-        migrations.RemoveField(
-            model_name='rawdatacommand',
-            name='version',
-        ),
-        migrations.DeleteModel(
-            name='RawDataCommand',
         ),
     ]
