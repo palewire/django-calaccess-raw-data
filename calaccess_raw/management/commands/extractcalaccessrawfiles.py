@@ -163,16 +163,16 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Archiving {0}".format(os.path.basename(self.zip_path)))
 
-        for raw_data_file in self.raw_data_files.filter(version=self.version):
+        for raw_file in self.version.files.all():
             if self.verbosity > 2:
-                self.log(" Archiving {0}.TSV".format(raw_data_file.file_name))
+                self.log(" Archiving {0}.TSV".format(raw_file.file_name))
             # Remove previous .TSV file
-            raw_data_file.download_file_archive.delete()
+            raw_file.download_file_archive.delete()
             # Open up the .TSV file so we can wrap it in the Django File obj
-            with open(self.tsv_dir + raw_data_file.file_name + '.TSV') as f:
+            with open(self.tsv_dir + raw_file.file_name + '.TSV') as f:
                 # Save the .TSV on the raw data file
-                raw_data_file.download_file_archive.save(
-                    raw_data_file.file_name + '.TSV',
+                raw_file.download_file_archive.save(
+                    raw_file.file_name + '.TSV',
                     File(f)
                 )
 
@@ -195,7 +195,6 @@ class TestCommand(Command):
         """
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
-        self.raw_data_files = RawDataFile.objects
         self.data_dir = get_test_download_directory()
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
