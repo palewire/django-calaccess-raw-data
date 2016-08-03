@@ -174,6 +174,16 @@ class RawDataVersion(models.Model):
     pretty_size.short_description = 'size'
     pretty_size.admin_order_field = 'size'
 
+    def pretty_clean_size(self):
+        """
+        Returns a prettified version of the file size.
+        """
+        if not self.clean_zip_archive:
+            return None
+        return sizeformat(self.clean_zip_archive.size)
+    pretty_clean_size.short_description = 'clean zip size'
+    pretty_clean_size.admin_order_field = 'clean zip size'
+
 
 @python_2_unicode_compatible
 class RawDataFile(models.Model):
