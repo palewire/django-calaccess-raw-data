@@ -1572,7 +1572,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class AcronymsCd(CalAccessBaseModel):
     """
-    Contains acronyms and their meaning.
+    Contains acronyms and their meanings.
     """
     UNIQUE_KEY = "ACRONYM"
     DOCUMENTCLOUD_PAGES = [
