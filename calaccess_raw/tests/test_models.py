@@ -43,8 +43,8 @@ class ModelTestCase(TestCase):
 
         # Our tracking models
         models.RawDataVersion().__str__()
-        models.RawDataVersion().pretty_size()
-        models.RawDataVersion(size=1000).pretty_size()
+        models.RawDataVersion().pretty_download_size()
+        models.RawDataVersion().pretty_clean_size()
         models.RawDataFile().__str__()
 
     def test_admins(self):
