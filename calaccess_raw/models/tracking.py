@@ -164,15 +164,15 @@ class RawDataVersion(models.Model):
 
         return is_stalled
 
-    def pretty_size(self):
+    def pretty_download_size(self):
         """
         Returns a prettified version of the file size.
         """
-        if not self.size:
+        if not self.download_zip_archive:
             return None
-        return sizeformat(self.size)
-    pretty_size.short_description = 'size'
-    pretty_size.admin_order_field = 'size'
+        return sizeformat(self.download_zip_archive.size)
+    pretty_download_size.short_description = 'download zip size'
+    pretty_download_size.admin_order_field = 'download zip size'
 
     def pretty_clean_size(self):
         """
