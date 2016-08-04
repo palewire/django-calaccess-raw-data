@@ -11,6 +11,7 @@ from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
 from django.conf import settings
+from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.core.files import File
 from django.utils.timezone import utc, now
 from calaccess_raw import get_download_directory
@@ -104,6 +105,7 @@ class Command(CalAccessCommand):
                 last_download_datetime = downloaded_versions.latest(
                     'download_finish_datetime'
                 ).download_finish_datetime
+                since_last_download = naturaltime(last_download_datetime)
             else:
                 last_download_datetime = None
 
@@ -114,7 +116,7 @@ class Command(CalAccessCommand):
                 local_file_size=size(self.local_file_size),
                 local_file_datetime=self.local_file_datetime,
                 download_dir=self.data_dir,
-                last_download_datetime=last_download_datetime,
+                since_previous_download=since_last_download,
             )
 
             prompt = render_to_string(

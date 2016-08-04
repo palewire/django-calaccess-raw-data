@@ -9,6 +9,7 @@ from sys import exit
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 from django.core.files import File
 from django.conf import settings
+from django.contrib.humanize.templatetags.humanize import naturaltime
 from clint.textui import progress
 from django.utils.timezone import now
 from django.core.management import call_command
@@ -130,6 +131,7 @@ class Command(CalAccessCommand):
             logger.info('New CAL-ACCESS version available.')
 
         previous_version = None
+        since_previous_release = None
         can_resume_previous = False
         # if update to latest version has not yet started, check to see if previous
         #   version can resume
@@ -143,6 +145,10 @@ class Command(CalAccessCommand):
                 # get the last one started
                 previous_version = prev_downloaded_versions.latest(
                     'download_start_datetime'
+                )
+                # for prompt, get time since previous release
+                since_previous_release = naturaltime(
+                    previous_version.release_datetime
                 )
                 # if the previous version finished downloading and didn't finish updating
                 if (
@@ -172,6 +178,7 @@ class Command(CalAccessCommand):
                 latest_version=latest_version,
                 previous_version=previous_version,
                 can_resume_previous=can_resume_previous,
+                since_previous_release=since_previous_release,
             )
             # render prompt string
             prompt = render_to_string(
