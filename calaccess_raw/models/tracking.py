@@ -73,6 +73,18 @@ class RawDataVersion(models.Model):
         verbose_name='cleaned files zip archive',
         help_text='An archive zip of cleaned (and error log) files'
     )
+    download_zip_size = models.BigIntegerField(
+        null=True,
+        verbose_name='downloaded zip size',
+        help_text='The actual size of the downloaded CAL-ACCESS zip after the '
+                  'downloaded completed.'
+    )
+    clean_zip_size = models.BigIntegerField(
+        null=True,
+        verbose_name='clean zip size',
+        help_text='The size of the zip containing all cleaned raw data files '
+                  'and error logs.'
+    )
 
     class Meta:
         """
@@ -178,9 +190,9 @@ class RawDataVersion(models.Model):
         """
         Returns a prettified version of the file size.
         """
-        if not self.download_zip_archive:
+        if not self.download_zip_size:
             return None
-        return sizeformat(self.download_zip_archive.size)
+        return sizeformat(self.download_zip_size)
     pretty_download_size.short_description = 'download zip size'
     pretty_download_size.admin_order_field = 'download zip size'
 
@@ -190,7 +202,7 @@ class RawDataVersion(models.Model):
         """
         if not self.clean_zip_archive:
             return None
-        return sizeformat(self.clean_zip_archive.size)
+        return sizeformat(self.clean_zip_size)
     pretty_clean_size.short_description = 'clean zip size'
     pretty_clean_size.admin_order_field = 'clean zip size'
 

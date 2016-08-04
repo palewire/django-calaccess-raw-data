@@ -44,8 +44,13 @@ class ModelTestCase(TestCase):
 
         # Tracking model methods
         models.RawDataVersion().__str__()
+        models.RawDataVersion().pretty_expected_size()
         models.RawDataVersion().pretty_download_size()
         models.RawDataVersion().pretty_clean_size()
+        models.RawDataVersion(expected_size=100).pretty_expected_size()
+        models.RawDataVersion(download_zip_size=100).pretty_download_size()
+        models.RawDataVersion(clean_zip_size=100).pretty_clean_size()
+
         models.RawDataFile().__str__()
         models.RawDataFile().pretty_download_file_size()
         models.RawDataFile().pretty_clean_file_size()

@@ -356,6 +356,8 @@ class Command(CalAccessCommand):
                 zf.close()
 
                 if not self.test_mode:
+                    # save the clean zip size
+                    self.version.clean_zip_size = os.path.getsize(clean_zip_path)
                     with open(clean_zip_path) as zf:
                         # Save the zip on the raw data version
                         self.version.clean_zip_archive.save(
