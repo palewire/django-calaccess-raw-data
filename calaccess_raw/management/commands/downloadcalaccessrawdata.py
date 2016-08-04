@@ -153,6 +153,15 @@ class Command(CalAccessCommand):
 
         self.download()
 
+        # log warning if downloaded zip size is not same as expected size
+        if self.expected_size != self.os.path.getsize(self.zip_path):
+            logger.warning(
+                'Expected {0} byte zip, but download {1} byte zip.'.format(
+                    self.expected_size,
+                    self.os.path.getsize(self.zip_path)
+                )
+            )
+
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
 
