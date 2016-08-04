@@ -125,16 +125,15 @@ class Command(CalAccessCommand):
                 release_datetime=download_metadata['last-modified'],
                 expected_size=download_metadata['content-length']
             )
+        # log if latest version is new
+        if created:
+            logger.info('New CAL-ACCESS version available.')
 
+        previous_version = None
         can_resume_previous = False
-        # if already started updating to latest version, ignore previous version
-        if latest_version.update_start_datetime:
-            previous_version = None
-        else:
-            # log if latest version is new
-            if created:
-                logger.info('New CAL-ACCESS version available.')
-
+        # if update to latest version has not yet started, check to see if previous
+        #   version can resume
+        if not latest_version.update_start_datetime:
             # get previous versions
             prev_downloaded_versions = RawDataVersion.objects.filter(
                 download_start_datetime__isnull=False
