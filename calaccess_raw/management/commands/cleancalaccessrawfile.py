@@ -215,13 +215,16 @@ class Command(CalAccessCommand):
         self.raw_file.clean_records_count = line_number - 1 - len(log_rows)
         self.raw_file.error_count = len(log_rows)
 
+        # Shut it down
+        tsv_file.close()
+        csv_file.close()
+
         # Add file size to the raw_file_record
         self.raw_file.download_file_size = os.path.getsize(tsv_path) or 0
         self.raw_file.clean_file_size = os.path.getsize(csv_path) or 0
 
-        # Shut it down
-        tsv_file.close()
-        csv_file.close()
+        print csv_path
+        print os.path.getsize(csv_path)
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             if self.verbosity > 2:
