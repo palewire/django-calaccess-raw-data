@@ -223,9 +223,6 @@ class Command(CalAccessCommand):
         self.raw_file.download_file_size = os.path.getsize(tsv_path) or 0
         self.raw_file.clean_file_size = os.path.getsize(csv_path) or 0
 
-        print csv_path
-        print os.path.getsize(csv_path)
-
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             if self.verbosity > 2:
                 self.log(" Archiving {0}".format(os.path.basename(csv_path)))
