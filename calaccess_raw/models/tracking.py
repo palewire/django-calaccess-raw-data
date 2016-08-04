@@ -342,9 +342,7 @@ class RawDataFile(models.Model):
         """
         Returns a prettified version of the download_file_size size.
         """
-        if not self.download_file_archive:
-            return None
-        return sizeformat(self.download_file_archive.size)
+        return sizeformat(self.download_file_size)
     pretty_download_file_size.short_description = 'download file size'
     pretty_download_file_size.admin_order_field = 'download file size'
 
@@ -352,9 +350,7 @@ class RawDataFile(models.Model):
         """
         Returns a prettified version of the clean_file_size size.
         """
-        if not self.clean_file_archive:
-            return None
-        return sizeformat(self.clean_file_archive.size)
+        return sizeformat(self.clean_file_size)
     pretty_clean_file_size.short_description = 'clean file size'
     pretty_clean_file_size.admin_order_field = 'clean file size'
 

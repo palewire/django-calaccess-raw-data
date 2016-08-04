@@ -54,6 +54,8 @@ class ModelTestCase(TestCase):
         models.RawDataFile().__str__()
         models.RawDataFile().pretty_download_file_size()
         models.RawDataFile().pretty_clean_file_size()
+        models.RawDataFile(download_file_size=100).pretty_download_file_size()
+        models.RawDataFile(clean_file_size=100).pretty_clean_file_size()
 
         # Tracking model properties
         completed_version = models.RawDataVersion(
