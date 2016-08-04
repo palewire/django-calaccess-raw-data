@@ -4,6 +4,7 @@
 Tests for the models.py files.
 """
 from __future__ import unicode_literals
+from datetime import datetime
 import logging
 from copy import deepcopy
 from django.test import TestCase
@@ -41,11 +42,41 @@ class ModelTestCase(TestCase):
         models.RcptCd().get_unique_key_list()
         models.RcptCd.UNIQUE_KEY = unique_key
 
-        # Our tracking models
+        # Tracking model methods
         models.RawDataVersion().__str__()
         models.RawDataVersion().pretty_download_size()
         models.RawDataVersion().pretty_clean_size()
         models.RawDataFile().__str__()
+        models.RawDataFile().pretty_download_file_size()
+        models.RawDataFile().pretty_clean_file_size()
+
+        # Tracking model properties
+        completed_version = models.RawDataVersion(
+            download_start_datetime=datetime.now(),
+            download_finish_datetime=datetime.now(),
+            extract_start_datetime=datetime.now(),
+            extract_finish_datetime=datetime.now(),
+            update_start_datetime=datetime.now(),
+            update_finish_datetime=datetime.now(),
+        )
+        stalled_version = models.RawDataVersion(
+            download_start_datetime=datetime.now(),
+            extract_start_datetime=datetime.now(),
+            update_start_datetime=datetime.now(),
+        )
+        self.assertTrue(completed_version.download_completed)
+        self.assertTrue(completed_version.extract_completed)
+        self.assertTrue(completed_version.update_completed)
+        self.assertFalse(stalled_version.download_completed)
+        self.assertFalse(stalled_version.extract_completed)
+        self.assertFalse(stalled_version.update_completed)
+
+        self.assertTrue(stalled_version.download_stalled)
+        self.assertTrue(stalled_version.extract_stalled)
+        self.assertTrue(stalled_version.update_stalled)
+        self.assertFalse(completed_version.download_stalled)
+        self.assertFalse(completed_version.extract_stalled)
+        self.assertFalse(completed_version.update_stalled)
 
     def test_admins(self):
         """
