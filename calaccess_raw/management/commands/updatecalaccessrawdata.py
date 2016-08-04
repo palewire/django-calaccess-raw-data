@@ -115,7 +115,7 @@ class Command(CalAccessCommand):
                 # get or create the RawDataVersion
                 latest_version, created = RawDataVersion.objects.get_or_create(
                     release_datetime=f.readline(),
-                    size=f.readline()
+                    expected_size=f.readline()
                 )
         # else request it
         else:
@@ -123,7 +123,7 @@ class Command(CalAccessCommand):
             # get or create the RawDataVersion
             latest_version, created = RawDataVersion.objects.get_or_create(
                 release_datetime=download_metadata['last-modified'],
-                size=download_metadata['content-length']
+                expected_size=download_metadata['content-length']
             )
 
         can_resume_previous = False

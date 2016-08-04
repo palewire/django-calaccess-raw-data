@@ -69,7 +69,7 @@ class Command(CalAccessCommand):
         # get or create the RawDataVersion
         self.version, created = RawDataVersion.objects.get_or_create(
             release_datetime=download_metadata['last-modified'],
-            size=download_metadata['content-length'],
+            expected_size=download_metadata['content-length'],
         )
         # log if a new version was found
         if created:
@@ -170,7 +170,7 @@ class Command(CalAccessCommand):
                 self.header("Downloading ZIP file")
 
         # Prep
-        expected_size = self.version.size
+        expected_size = self.version.expected_size
         headers = dict()
         if os.path.exists(self.zip_path):
             if self.resume:

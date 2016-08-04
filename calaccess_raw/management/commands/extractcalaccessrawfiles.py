@@ -201,12 +201,12 @@ class TestCommand(Command):
 
         with open(self.data_dir + "/sampled_version.txt", "r") as f:
             release_datetime = f.readline()
-            size = f.readline()
+            expected_size = f.readline()
 
         # get or create the RawDataVersion
         self.version, created = RawDataVersion.objects.get_or_create(
             release_datetime=release_datetime,
-            size=size
+            expected_size=expected_size,
         )
 
         # store extraction start time

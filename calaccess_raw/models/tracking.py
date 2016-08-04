@@ -22,11 +22,11 @@ class RawDataVersion(models.Model):
         help_text='Date and time the version of the CAL-ACCESS database was released '
                   '(value of last-modified field in HTTP response header)'
     )
-    size = models.BigIntegerField(
+    expected_size = models.BigIntegerField(
         null=False,
-        verbose_name='size of raw data version in bytes',
-        help_text='Size of the .ZIP file for this version of the CAL-ACCESS raw source data '
-                  '(value of content-length field in HTTP response header)'
+        verbose_name='expected downloaded zip size',
+        help_text='The expected size of the downloaded CAL-ACCESS zip, as '
+                  'specified in the content-length field in HTTP response header.'
     )
     update_start_datetime = models.DateTimeField(
         null=True,
@@ -163,6 +163,16 @@ class RawDataVersion(models.Model):
             is_stalled = False
 
         return is_stalled
+
+    def pretty_expected_size(self):
+        """
+        Returns a prettified version of the file size.
+        """
+        if not self.expected_size:
+            return None
+        return sizeformat(self.expected_size)
+    pretty_expected_size.short_description = 'expected download zip size'
+    pretty_expected_size.admin_order_field = 'expected download zip size'
 
     def pretty_download_size(self):
         """
@@ -320,9 +330,9 @@ class RawDataFile(models.Model):
         """
         Returns a prettified version of the download_file_size size.
         """
-        if not self.download_file_size:
+        if not self.download_file_archive:
             return None
-        return sizeformat(self.download_file_size)
+        return sizeformat(self.download_file_archive.size)
     pretty_download_file_size.short_description = 'download file size'
     pretty_download_file_size.admin_order_field = 'download file size'
 
@@ -330,9 +340,9 @@ class RawDataFile(models.Model):
         """
         Returns a prettified version of the clean_file_size size.
         """
-        if not self.clean_file_size:
+        if not self.clean_file_archive:
             return None
-        return sizeformat(self.clean_file_size)
+        return sizeformat(self.clean_file_archive.size)
     pretty_clean_file_size.short_description = 'clean file size'
     pretty_clean_file_size.admin_order_field = 'clean file size'
 

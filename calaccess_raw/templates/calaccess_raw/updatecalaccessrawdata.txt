@@ -2,7 +2,7 @@
 {% timezone "America/Los_Angeles" %}
 The latest CAL-ACCESS snapshot was released by the California Secretary of State on {{ latest_version.release_datetime|date:'N j, Y' }}, at {{ latest_version.release_datetime|date:'P' }} Pacific Time.{% endtimezone %}
 
-It is {{ latest_version.pretty_download_size }} in size.
+It is {{ latest_version.pretty_expected_size }} in size.
 
 {% if latest_version.update_completed %}Your database is already updated to the current version of CAL-ACCESS.{% elif latest_version.update_stalled %}Your last update to this snapshot did not complete.{% elif previous_version %}{% if previous_version.update_completed %}The last data snapshot you loaded was posted {{ previous_version.release_datetime|timesince }} ago.{% elif previous_version.update_stalled %}Your last update to the {{ previous_version.release_datetime|date:'N j, Y' }}snapshot did not complete. {% if not can_resume_previous %}You cannot resume this previous update (sorry).{% endif %}{% endif %}{% else %}We couldn't find any sign of a previous update.{% endif %}
 

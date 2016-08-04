@@ -2,7 +2,7 @@
 {% timezone "America/Los_Angeles" %}
 The currently available CAL-ACCESS snapshot was released by the California Secretary of State on {{ latest_version.release_datetime|date:'N j, Y' }}, at {{ latest_version.release_datetime|date:'P' }} Pacific Time.{% endtimezone %}
 
-It is {{ latest_version.pretty_download_size }} in size. {% if resume %}You downloaded up to {{ local_file_size }} as of {{ local_file_datetime|timesince }}{% elif latest_version.download_completed %}You have already downloaded this entire file{% elif last_download_datetime %}The last file you finished downloading was posted {{ last_download_datetime|timesince }}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
+It is {{ latest_version.pretty_expected_size }} in size. {% if resume %}You downloaded up to {{ local_file_size }} as of {{ local_file_datetime|timesince }}{% elif latest_version.download_completed %}You have already downloaded this entire file{% elif last_download_datetime %}The last file you finished downloading was posted {{ last_download_datetime|timesince }}{% else %}We couldn't find any sign you've downloaded it before{% endif %}.
 
 Do you want to {% if resume %}resume downloading{% else %}download it{% endif %} to {{ download_dir }}{% if latest_version.download_completed %} (again){% endif %}?
 
