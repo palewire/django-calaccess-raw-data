@@ -329,7 +329,7 @@ class Command(CalAccessCommand):
                     self.header("Zipping cleaned files")
                 # Remove previous zip file
                 self.version.clean_zip_archive.delete()
-                clean_zip_path = os.path.join(self.data_dir, 'calaccess_cleaned.zip')
+                clean_zip_path = os.path.join(self.data_dir, 'clean.zip')
 
                 # enable zipfile compression
                 compression = ZIP_DEFLATED
