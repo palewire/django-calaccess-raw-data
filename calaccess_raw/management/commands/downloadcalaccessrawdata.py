@@ -62,8 +62,6 @@ class Command(CalAccessCommand):
 
         # downloaded zip file will go in data_dir
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
-        # raw tsv files go in same data_dir in tsv/
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
 
         download_metadata = self.get_download_metadata()
 
