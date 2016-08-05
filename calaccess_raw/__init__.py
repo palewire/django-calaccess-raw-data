@@ -42,12 +42,18 @@ def archive_directory_path(instance, filename):
 
     if isinstance(instance, RawDataVersion):
         release_datetime = instance.release_datetime
+        f_name, f_ext = filename.split('.')
+        path = '{fn}_{dt:%Y-%m-%d_%H-%M-%S}.{fx}'.format(
+            fn=f_name,
+            dt=release_datetime,
+            fx=f_ext,
+        )
     elif isinstance(instance, RawDataFile):
         release_datetime = instance.version.release_datetime
+        path = '{dt:%Y-%m-%d_%H-%M-%S}/{f}'.format(dt=release_datetime, f=filename)
     else:
         raise TypeError("Must be called on RawDataVersion or RawDataFile instance.")
-    template = '{dt:%Y-%m-%d_%H-%M-%S}/{f}'
-    return template.format(dt=release_datetime, f=filename)
+    return path
 
 
 def get_model_list():
