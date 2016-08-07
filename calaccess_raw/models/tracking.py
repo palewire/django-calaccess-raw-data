@@ -200,7 +200,7 @@ class RawDataVersion(models.Model):
         """
         Returns a prettified version of the file size.
         """
-        if not self.clean_zip_archive:
+        if not self.clean_zip_size:
             return None
         return sizeformat(self.clean_zip_size)
     pretty_clean_size.short_description = 'clean zip size'
