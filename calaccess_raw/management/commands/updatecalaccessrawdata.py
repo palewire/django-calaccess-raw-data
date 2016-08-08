@@ -50,7 +50,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="noinput",
             default=False,
-            help="Download the ZIP archive without asking permission"
+            help="Update or resume previous update without asking permission"
         )
         parser.add_argument(
             "--test",
