@@ -143,6 +143,8 @@ class RawDataVersion(models.Model):
     def download_stalled(self):
         """
         Check if the download of the version's zip file started but did not complete.
+
+        Return True or False.
         """
         if self.download_start_datetime and not self.download_finish_datetime:
             is_stalled = True
@@ -154,7 +156,9 @@ class RawDataVersion(models.Model):
     @property
     def extract_completed(self):
         """
-        Return True if the extraction of the version's raw data files completed.
+        Check if the extract of files from the downloaded zip completed.
+
+        Return True or False.
         """
         if self.extract_finish_datetime:
             is_completed = True
@@ -166,7 +170,9 @@ class RawDataVersion(models.Model):
     @property
     def extract_stalled(self):
         """
-        Check if the download of the version's zip file started but did not complete.
+        Check if the extract of files from the downloaded zip started but did not complete.
+
+        Return True or False.
         """
         if self.extract_start_datetime and not self.extract_finish_datetime:
             is_stalled = True
@@ -177,7 +183,7 @@ class RawDataVersion(models.Model):
 
     def pretty_expected_size(self):
         """
-        Returns a prettified version of the file size.
+        Returns a prettified version (e.g., "725M") of the expected size of the downloaded zip.
         """
         if not self.expected_size:
             return None
@@ -187,7 +193,7 @@ class RawDataVersion(models.Model):
 
     def pretty_download_size(self):
         """
-        Returns a prettified version of the file size.
+        Returns a prettified version (e.g., "725M") of the actual size of the downloaded zip.
         """
         if not self.download_zip_size:
             return None
@@ -197,7 +203,7 @@ class RawDataVersion(models.Model):
 
     def pretty_clean_size(self):
         """
-        Returns a prettified version of the file size.
+        Returns a prettified version (e.g., "725M") of the zip of clean data files and error logs.
         """
         if not self.clean_zip_size:
             return None
