@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Extract the CAL-ACCESS raw data files from the database export ZIP.
+Extract the CAL-ACCESS raw data files from downloaded ZIP.
 """
 import os
 import shutil
@@ -17,9 +17,9 @@ from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 class Command(CalAccessCommand):
     """
-    Extract the CAL-ACCESS raw data files from the database export ZIP.
+    Extract the CAL-ACCESS raw data files from downloaded ZIP.
     """
-    help = "Extract the CAL-ACCESS raw data files from the database export ZIP"
+    help = "Extract the CAL-ACCESS raw data files from downloaded ZIP"
 
     def add_arguments(self, parser):
         """
