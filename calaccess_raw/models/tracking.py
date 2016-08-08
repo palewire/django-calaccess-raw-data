@@ -63,8 +63,7 @@ class RawDataVersion(models.Model):
         max_length=255,
         upload_to=archive_directory_path,
         verbose_name='download files zip file',
-        help_text='An archive of the original zipped file downloaded from '
-                     'CAL-ACCESS.'
+        help_text='An archive of the original zipped file downloaded from CAL-ACCESS.'
     )
     clean_zip_archive = models.FileField(
         blank=True,
