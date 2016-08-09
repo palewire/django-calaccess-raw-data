@@ -3,7 +3,6 @@ BASE_DIR = os.path.dirname(__file__)
 REPO_DIR = os.path.join(BASE_DIR, os.pardir)
 SECRET_KEY = 'w11nbg_3n4+e@qk^b55qgo5qygesn^3=&s1kwtlbpkai$(1jv3'
 DEBUG = False
-TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
@@ -33,6 +32,22 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'urls'
 WSGI_APPLICATION = 'wsgi.application'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 DATABASES = {
     'default': {
