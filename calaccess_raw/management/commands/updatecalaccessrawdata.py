@@ -316,7 +316,7 @@ class Command(CalAccessCommand):
                 "cleancalaccessrawfile",
                 name,
                 verbosity=self.verbosity,
-                keep_files=self.keep_files,
+                keep_file=self.keep_files,
             )
 
         # if archive setting is enabled, zip up all of the csv and error logs
@@ -394,6 +394,6 @@ class Command(CalAccessCommand):
                 "loadcalaccessrawfile",
                 model.__name__,
                 verbosity=self.verbosity,
-                keep_files=self.keep_files,
+                keep_file=self.keep_files,
                 app_name=self.app_name,
             )
