@@ -191,7 +191,16 @@ class Command(CalAccessCommand):
         # Stream the download
         chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
-        n_iters = float(expected_size) / long(chunk_size + 1)
+
+        # in Python 2, need to convert this to long int
+        try:
+            divisor = long(chunk_size + 1)
+        except NameError:
+            # no long() in Python 3, all ints are long ints
+            divisor = chunk_size + 1
+
+        n_iters = float(expected_size) / divisor
+
         with open(self.zip_path, 'ab') as fp:
             for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
                                       expected_size=n_iters):
