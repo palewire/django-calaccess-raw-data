@@ -31,7 +31,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Keep downloaded zip and unzipped files"
+            help="Keep downloaded zipped files"
         )
 
     def handle(self, *args, **options):
