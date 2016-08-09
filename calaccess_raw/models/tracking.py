@@ -345,7 +345,7 @@ class RawDataFile(models.Model):
 
     def pretty_download_file_size(self):
         """
-        Returns a prettified version of the download_file_size size.
+        Returns a prettified version (e.g., "725M") of the downloaded file's size.
         """
         return sizeformat(self.download_file_size)
     pretty_download_file_size.short_description = 'download file size'
@@ -353,7 +353,7 @@ class RawDataFile(models.Model):
 
     def pretty_clean_file_size(self):
         """
-        Returns a prettified version of the clean_file_size size.
+        Returns a prettified version (e.g., "725M") of the cleaned file's size.
         """
         return sizeformat(self.clean_file_size)
     pretty_clean_file_size.short_description = 'clean file size'
