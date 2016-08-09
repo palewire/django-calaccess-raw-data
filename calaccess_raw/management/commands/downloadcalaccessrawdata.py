@@ -191,7 +191,7 @@ class Command(CalAccessCommand):
         # Stream the download
         chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
-        n_iters = float(expected_size) / chunk_size + 1
+        n_iters = float(expected_size) / long(chunk_size + 1)
         with open(self.zip_path, 'ab') as fp:
             for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
                                       expected_size=n_iters):
