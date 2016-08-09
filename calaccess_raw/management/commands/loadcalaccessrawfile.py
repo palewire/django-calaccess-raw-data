@@ -47,11 +47,11 @@ class Command(CalAccessCommand):
             help="Path to comma-delimited file to be loaded. Defaults to one associated with model."
         )
         parser.add_argument(
-            "--keep-files",
+            "--keep-file",
             action="store_true",
-            dest="keep_files",
+            dest="keep_file",
             default=False,
-            help="Keep CSV file after loading"
+            help="Keep clean CSV file after loading"
         )
         parser.add_argument(
             "-a",
@@ -71,7 +71,7 @@ class Command(CalAccessCommand):
         super(Command, self).handle(*args, **options)
 
         # set / compute any attributes that multiple class methods need
-        self.keep_files = options["keep_files"]
+        self.keep_file = options["keep_file"]
         # get model based on strings of app_name and model_name
         self.model = apps.get_model(options["app_name"], options['model_name'])
 
@@ -122,7 +122,7 @@ class Command(CalAccessCommand):
             raw_file.load_records_count = self.model.objects.count()
 
             # if not keeping files, remove the csv file
-            if not self.keep_files:
+            if not self.keep_file:
                 os.remove(self.csv)
 
             # store the finish time for the load

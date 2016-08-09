@@ -34,9 +34,9 @@ class Command(CalAccessCommand):
             help="Name of the TSV file to be cleaned and discarded for a CSV"
         )
         parser.add_argument(
-            "--keep-files",
+            "--keep-file",
             action="store_true",
-            dest="keep_files",
+            dest="keep_file",
             default=False,
             help="Keep original TSV file"
         )
@@ -93,7 +93,7 @@ class Command(CalAccessCommand):
         self.clean()
 
         # unless keeping files, remove tsv files
-        if not options['keep_files']:
+        if not options['keep_file']:
             os.remove(os.path.join(self.tsv_dir, options['file_name']))
 
         # store the finish time for the clean
