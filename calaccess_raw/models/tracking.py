@@ -213,6 +213,22 @@ class RawDataVersion(models.Model):
     pretty_clean_size.short_description = 'clean zip size'
     pretty_clean_size.admin_order_field = 'clean zip size'
 
+    @property
+    def file_count(self):
+        """
+        Returns the totals number of files tracked by this version.
+        """
+        return self.files.count()
+
+    @property
+    def record_count(self):
+        """
+        Returns the total number of downloaded records in files tracked by this version.
+        """
+        return self.files.aggregate(
+            total=models.Sum('download_records_count')
+        )['total']
+
 
 @python_2_unicode_compatible
 class RawDataFile(models.Model):
