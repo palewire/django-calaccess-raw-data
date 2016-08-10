@@ -18,6 +18,8 @@ class RawDataVersionAdmin(BaseAdmin):
         "id",
         "release_datetime",
         "pretty_download_size",
+        "file_count",
+        "record_count",
         "pretty_clean_size",
     )
     list_display_links = ('release_datetime',)
@@ -36,12 +38,7 @@ class RawDataFileAdmin(BaseAdmin):
         "download_records_count",
         "clean_records_count",
         "load_records_count",
-        "error_count",
-        "download_columns_count",
-        "clean_columns_count",
-        "load_columns_count",
-        "pretty_download_file_size",
-        "pretty_clean_file_size"
+        "error_count"
     )
     list_display_links = ('id', 'file_name',)
     list_filter = ("version__release_datetime",)
