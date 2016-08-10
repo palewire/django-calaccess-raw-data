@@ -62,7 +62,13 @@ class RawDataVersionManager(models.Manager):
     Custom methods for working with the RawDataVersion model.
     """
     def get_queryset(self):
+        """
+        Returns the custom QuerySet we want for this manager.
+        """
         return RawDataVersionQuerySet(self.model, using=self._db)
 
     def complete(self):
+        """
+        Filters down QuerySet to return only version that have a complete update.
+        """
         return self.get_queryset().complete()
