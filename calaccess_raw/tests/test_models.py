@@ -56,6 +56,7 @@ class ModelTestCase(TestCase):
         models.RawDataFile().pretty_clean_file_size()
         models.RawDataFile(download_file_size=100).pretty_download_file_size()
         models.RawDataFile(clean_file_size=100).pretty_clean_file_size()
+        self.assertEqual(models.RawDataFile().model, None)
 
         # Tracking model properties
         completed_version = models.RawDataVersion(
@@ -84,6 +85,9 @@ class ModelTestCase(TestCase):
         self.assertFalse(completed_version.download_stalled)
         self.assertFalse(completed_version.extract_stalled)
         self.assertFalse(completed_version.update_stalled)
+
+        # Managers
+        models.RawDataVersion.objects.complete()
 
     def test_admins(self):
         """
