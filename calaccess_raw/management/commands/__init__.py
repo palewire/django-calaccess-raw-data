@@ -46,8 +46,16 @@ class CalAccessCommand(BaseCommand):
         request = requests.head(self.url)
         last_modified = request.headers['last-modified']
         dt = datetime(*parsedate(last_modified)[:6])
+        # content length is a string, need to convert
+        try:
+            # long int type is big enough for double the current size of the zip
+            length = long(request.headers['content-length'])
+        except NameError:
+            # in py3, no long(), instead int will suffice
+            length = int(request.headers['content-length'])
         return {
-            'content-length': int(request.headers['content-length']),
+            # should prob not call int here, can this remain a string until writing to db?
+            'content-length': length,
             'last-modified': timezone.utc.localize(dt)
         }
 
