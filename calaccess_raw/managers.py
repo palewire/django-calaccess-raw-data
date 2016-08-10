@@ -11,7 +11,7 @@ from calaccess_raw import get_download_directory
 
 class CalAccessManager(models.Manager):
     """
-    Utilities for accessing the raw data associated with a model.
+    Utilities for accessing the raw data associated with a CAL-ACCESS model.
     """
     def get_csv_name(self):
         """
@@ -44,3 +44,25 @@ class CalAccessManager(models.Manager):
             'tsv',
             self.get_tsv_name()
         )
+
+
+class RawDataVersionQuerySet(models.QuerySet):
+    """
+    Custom methods for working with a RawDataVersion QuerySet.
+    """
+    def complete(self):
+        """
+        Filters down QuerySet to return only version that have a complete update.
+        """
+        return self.exclude(update_finish_datetime__isnull=True)
+
+
+class RawDataVersionManager(models.Manager):
+    """
+    Custom methods for working with the RawDataVersion model.
+    """
+    def get_queryset(self):
+        return RawDataVersionQuerySet(self.model, using=self._db)
+
+    def complete(self):
+        return self.get_queryset().complete()
