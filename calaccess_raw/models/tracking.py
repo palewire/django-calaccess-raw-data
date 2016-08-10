@@ -4,7 +4,6 @@
 Models for tracking CAL-ACCESS updates over time.
 """
 from __future__ import unicode_literals
-from .. import managers
 from django.db import models
 from hurry.filesize import size as sizeformat
 from calaccess_raw import archive_directory_path, get_model_list
@@ -85,7 +84,6 @@ class RawDataVersion(models.Model):
         help_text='The size of the zip containing all cleaned raw data files '
                   'and error logs.'
     )
-    objects = managers.RawDataVersionManager()
 
     class Meta:
         """
@@ -382,9 +380,6 @@ class RawDataFile(models.Model):
         """
         Returns the RawDataFile's corresponding CalAccess database model object.
         """
-        try:
-            return [
-                m for m in get_model_list() if m().db_table == self.file_name
-            ][0]
-        except IndexError:
-            return None
+        return [
+            m for m in get_model_list() if m().db_table == self.file_name
+        ][0]
