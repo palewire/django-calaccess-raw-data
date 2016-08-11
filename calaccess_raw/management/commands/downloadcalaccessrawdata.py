@@ -158,7 +158,7 @@ class Command(CalAccessCommand):
             logger.warning(
                 'Expected {0} byte zip, but download {1} byte zip.'.format(
                     self.version.expected_size,
-                    self.os.path.getsize(self.zip_path)
+                    os.path.getsize(self.zip_path)
                 )
             )
 
