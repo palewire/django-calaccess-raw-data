@@ -269,6 +269,9 @@ class Command(CalAccessCommand):
             if self.verbosity:
                 self.duration()
 
+        # refresh the version (to get timestamp field values)
+        self.version.refresh_from_db()
+
         self.clean()
         if self.verbosity:
             self.duration()
@@ -277,8 +280,6 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.duration()
 
-        # refresh the version (to get timestamp field values)
-        self.version.refresh_from_db()
         # store update finish time
         self.version.update_finish_datetime = now()
         # and save the RawDataVersion
