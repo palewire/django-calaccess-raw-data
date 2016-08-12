@@ -294,7 +294,9 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.header("Cleaning data files")
 
-        tsv_list = os.listdir(self.tsv_dir)
+        tsv_list = [
+            f for f in os.listdir(self.tsv_dir) if '.TSV' in f.upper()
+        ]
 
         if self.resume:
             # get finished clean command logs of last update
