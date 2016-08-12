@@ -165,7 +165,7 @@ class Command(CalAccessCommand):
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
 
-        # store extraction finish time
+        # store download finish time
         self.version.download_finish_datetime = now()
         # and save the RawDataVersion
         self.version.save()
