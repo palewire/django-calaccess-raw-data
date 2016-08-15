@@ -214,19 +214,51 @@ class RawDataVersion(models.Model):
     pretty_clean_size.admin_order_field = 'clean zip size'
 
     @property
-    def file_count(self):
+    def download_file_count(self):
         """
-        Returns the totals number of files tracked by this version.
+        Returns the total number of files included in the downloaded version.
         """
         return self.files.count()
 
     @property
-    def record_count(self):
+    def download_record_count(self):
         """
-        Returns the total number of downloaded records in files tracked by this version.
+        Returns the total number of records in the files included in the downloaded version.
         """
         return self.files.aggregate(
             total=models.Sum('download_records_count')
+        )['total']
+
+    @property
+    def clean_file_count(self):
+        """
+        Returns the totals number of files cleaned in this version.
+        """
+        return self.files.exclude(clean_file_archive='').count()
+
+    @property
+    def clean_record_count(self):
+        """
+        Returns the total number of records in the cleaned files of this version.
+        """
+        return self.files.aggregate(
+            total=models.Sum('clean_records_count')
+        )['total']
+
+    @property
+    def error_file_count(self):
+        """
+        Returns the totals number of cleaned files with errors in this version.
+        """
+        return self.files.exclude(error_log_archive='').count()
+
+    @property
+    def error_count(self):
+        """
+        Returns the total number of cleaning errors in this version.
+        """
+        return self.files.aggregate(
+            total=models.Sum('error_count')
         )['total']
 
 

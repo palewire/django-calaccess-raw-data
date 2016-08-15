@@ -59,6 +59,13 @@ class ModelTestCase(TestCase):
         self.assertEqual(models.RawDataFile().model, None)
 
         # Tracking model properties
+        models.RawDataVersion().download_file_count
+        models.RawDataVersion().download_record_count
+        models.RawDataVersion().clean_file_count
+        models.RawDataVersion().clean_record_count
+        models.RawDataVersion().error_file_count
+        models.RawDataVersion().error_count
+
         completed_version = models.RawDataVersion(
             download_start_datetime=datetime.now(),
             download_finish_datetime=datetime.now(),
