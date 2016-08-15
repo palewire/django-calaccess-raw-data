@@ -56,7 +56,8 @@ class CalAccessCommand(BaseCommand):
         return {
             # should prob not call int here, can this remain a string until writing to db?
             'content-length': length,
-            'last-modified': timezone.utc.localize(dt)
+            'last-modified': timezone.utc.localize(dt),
+            'etag': request.headers['etag'],
         }
 
     #
