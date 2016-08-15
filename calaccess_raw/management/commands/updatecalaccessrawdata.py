@@ -121,6 +121,9 @@ class Command(CalAccessCommand):
         # else request it
         else:
             download_metadata = self.get_download_metadata()
+            logger.debug('ETag: %s' % download_metadata['etag'])
+            logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
+            logger.debug('Content-Length: %s' % download_metadata['content-length'])
             # get or create the RawDataVersion
             latest_version, created = RawDataVersion.objects.get_or_create(
                 release_datetime=download_metadata['last-modified'],

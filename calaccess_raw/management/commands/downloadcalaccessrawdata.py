@@ -64,6 +64,9 @@ class Command(CalAccessCommand):
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
         download_metadata = self.get_download_metadata()
+        logger.debug('ETag: %s' % download_metadata['etag'])
+        logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
+        logger.debug('Content-Length: %s' % download_metadata['content-length'])
 
         # get or create the RawDataVersion
         self.version, created = RawDataVersion.objects.get_or_create(
@@ -72,7 +75,7 @@ class Command(CalAccessCommand):
         )
         # log if a new version was found
         if created:
-            logger.info('New CAL-ACCESS version available.')
+            logger.info('New CAL-ACCESS version available. ETag')
 
         # if download is stalled, zip file is there, and user did not invoke restart
         if (
@@ -148,6 +151,8 @@ class Command(CalAccessCommand):
         self.version.download_finish_datetime = None
         # save here in case the command doesn't finish
         self.version.save()
+
+        logger.debug('Download zip size: %s bytes' % os.path.getsize(self.zip_path))
 
         # check if local zip file is already completely downloaded before trying
         if self.local_file_size < self.version.expected_size:
