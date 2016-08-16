@@ -152,7 +152,6 @@ class Command(CalAccessCommand):
         # save here in case the command doesn't finish
         self.version.save()
 
-
         # check if local zip file is already completely downloaded before trying
         if self.local_file_size < self.version.expected_size:
             self.download()
