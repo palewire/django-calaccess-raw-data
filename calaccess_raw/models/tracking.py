@@ -130,7 +130,7 @@ class RawDataVersion(models.Model):
     @property
     def download_completed(self):
         """
-        Check if the download of the version's zip file completed.
+        Check if the download of the version's zip completed.
 
         Return True or False.
         """
@@ -144,7 +144,7 @@ class RawDataVersion(models.Model):
     @property
     def download_stalled(self):
         """
-        Check if the download of the version's zip file started but did not complete.
+        Check if the download of the version's zip started but did not complete.
 
         Return True or False.
         """
@@ -216,14 +216,14 @@ class RawDataVersion(models.Model):
     @property
     def download_file_count(self):
         """
-        Returns the total number of files included in the downloaded version.
+        Returns the count of files included in the version's downloaded zip.
         """
         return self.files.count()
 
     @property
     def download_record_count(self):
         """
-        Returns the total number of records in the files included in the downloaded version.
+        Returns the count of records in the version's downloaded files.
         """
         return self.files.aggregate(
             total=models.Sum('download_records_count')
@@ -232,14 +232,14 @@ class RawDataVersion(models.Model):
     @property
     def clean_file_count(self):
         """
-        Returns the totals number of files cleaned in this version.
+        Returns the count of files cleaned in the version.
         """
         return self.files.exclude(clean_file_archive='').count()
 
     @property
     def clean_record_count(self):
         """
-        Returns the total number of records in the cleaned files of this version.
+        Returns the count of records in the version's cleaned files.
         """
         return self.files.aggregate(
             total=models.Sum('clean_records_count')
@@ -248,14 +248,14 @@ class RawDataVersion(models.Model):
     @property
     def error_file_count(self):
         """
-        Returns the totals number of cleaned files with errors in this version.
+        Returns the count of cleaned files with errors in the version.
         """
         return self.files.exclude(error_log_archive='').count()
 
     @property
     def error_count(self):
         """
-        Returns the total number of cleaning errors in this version.
+        Returns the count of cleaning errors in the version.
         """
         return self.files.aggregate(
             total=models.Sum('error_count')
