@@ -75,7 +75,7 @@ class Command(CalAccessCommand):
         )
         # log if a new version was found
         if created:
-            logger.info('New CAL-ACCESS version available. ETag')
+            logger.info('New CAL-ACCESS version available.')
 
         # if download is stalled, zip file is there, and user did not invoke restart
         if (
