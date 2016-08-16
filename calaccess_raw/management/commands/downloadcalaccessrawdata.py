@@ -152,12 +152,12 @@ class Command(CalAccessCommand):
         # save here in case the command doesn't finish
         self.version.save()
 
-        logger.debug('Download zip size: %s bytes' % os.path.getsize(self.zip_path))
 
         # check if local zip file is already completely downloaded before trying
         if self.local_file_size < self.version.expected_size:
             self.download()
 
+        logger.debug('Download zip size: %s bytes' % os.path.getsize(self.zip_path))
         # log warning if downloaded zip size is not same as expected size
         if self.version.expected_size != os.path.getsize(self.zip_path):
             logger.warning(
