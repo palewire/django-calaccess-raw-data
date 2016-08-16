@@ -159,7 +159,7 @@ class Command(CalAccessCommand):
         logger.debug('Download zip size: %s bytes' % os.path.getsize(self.zip_path))
         # log warning if downloaded zip size is not same as expected size
         if self.version.expected_size != os.path.getsize(self.zip_path):
-            logger.warning(
+            raise CommandError(
                 'Expected {0} byte zip, but download {1} byte zip.'.format(
                     self.version.expected_size,
                     os.path.getsize(self.zip_path)
