@@ -6,6 +6,7 @@ Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 import os
 import logging
 from sys import exit
+from time import sleep
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 from django.core.files import File
 from django.conf import settings
@@ -249,12 +250,28 @@ class Command(CalAccessCommand):
         ):
             self.log('Already downloaded.')
         else:
-            call_command(
-                "downloadcalaccessrawdata",
-                verbosity=self.verbosity,
-                noinput=True,
-                restart=force_restart,
-            )
+            try:
+                call_command(
+                    "downloadcalaccessrawdata",
+                    verbosity=self.verbosity,
+                    noinput=True,
+                    restart=force_restart,
+                )
+            except CommandError as e:
+                # if the expected and actual zip size are not the same
+                if 'expected' in e.message.lower():
+                    logger.debug('Waiting five minutes before re-trying')
+                    # wait five minutes
+                    sleep(300)
+                    # then try again
+                    call_command(
+                        "downloadcalaccessrawdata",
+                        verbosity=self.verbosity,
+                        noinput=True,
+                        # force a restart on second try
+                        restart=True,
+                    )
+
             if self.verbosity:
                 self.duration()
 
