@@ -63,15 +63,19 @@ class Command(CalAccessCommand):
         # downloaded zip file will go in data_dir
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
-        download_metadata = self.get_download_metadata()
-        logger.debug('ETag (from HEAD): %s' % download_metadata['etag'])
-        logger.debug('Last-Modified (from HEAD): %s' % download_metadata['last-modified'])
-        logger.debug('Content-Length (from HEAD): %s' % download_metadata['content-length'])
+        self.download_metadata = self.get_download_metadata()
+        logger.debug('ETag (from HEAD): %s' % self.download_metadata['etag'])
+        logger.debug(
+            'Last-Modified (from HEAD): %s' % self.download_metadata['last-modified']
+        )
+        logger.debug(
+            'Content-Length (from HEAD): %s' % self.download_metadata['content-length']
+        )
 
         # get or create the RawDataVersion
         self.version, created = RawDataVersion.objects.get_or_create(
-            release_datetime=download_metadata['last-modified'],
-            expected_size=download_metadata['content-length'],
+            release_datetime=self.download_metadata['last-modified'],
+            expected_size=self.download_metadata['content-length'],
         )
         # log if a new version was found
         if created:
@@ -201,6 +205,9 @@ class Command(CalAccessCommand):
         logger.debug('ETag (from GET): %s' % req.headers['etag'])
         logger.debug('Last-Modified (from GET): %s' % req.headers['last-modified'])
         logger.debug('Content-Length (from GET): %s' % req.headers['content-length'])
+
+        if self.download_metadata['etag'] != req.headers['etag']:
+            raise CommandError("ETags in HEAD and GET requests don't match.")
 
         # in Python 2, need to convert this to long int
         try:
