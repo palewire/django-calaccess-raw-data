@@ -64,9 +64,9 @@ class Command(CalAccessCommand):
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
         download_metadata = self.get_download_metadata()
-        logger.debug('ETag: %s' % download_metadata['etag'])
-        logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
-        logger.debug('Content-Length: %s' % download_metadata['content-length'])
+        logger.debug('ETag (from HEAD): %s' % download_metadata['etag'])
+        logger.debug('Last-Modified (from HEAD): %s' % download_metadata['last-modified'])
+        logger.debug('Content-Length (from HEAD): %s' % download_metadata['content-length'])
 
         # get or create the RawDataVersion
         self.version, created = RawDataVersion.objects.get_or_create(
@@ -197,6 +197,10 @@ class Command(CalAccessCommand):
         # Stream the download
         chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
+
+        logger.debug('ETag (from GET): %s' % req.headers['etag'])
+        logger.debug('Last-Modified (from GET): %s' % req.headers['last-modified'])
+        logger.debug('Content-Length (from GET): %s' % req.headers['content-length'])
 
         # in Python 2, need to convert this to long int
         try:
