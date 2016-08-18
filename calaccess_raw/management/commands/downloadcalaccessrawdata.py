@@ -78,6 +78,19 @@ class Command(CalAccessCommand):
             release_datetime=self.download_metadata['last-modified'],
             expected_size=self.download_metadata['content-length'],
         )
+
+        # if not called from command-line, assume called by update command
+        if not self._called_from_command_line:
+            # get the version that the update command is working on
+            last_update_started = RawDataVersion.objects.filter(
+                download_start_datetime__isnull=False
+            ).latest('update_start_datetime')
+            # confirm that update and download commands are working with same version
+            if self.version != last_update_started:
+                raise CommandError(
+                    'Version available to download does not match version of update.'
+                )
+
         # log if a new version was found
         if created:
             logger.info('New CAL-ACCESS version available.')
