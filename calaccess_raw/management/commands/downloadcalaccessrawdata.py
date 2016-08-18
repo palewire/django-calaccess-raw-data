@@ -201,11 +201,12 @@ class Command(CalAccessCommand):
                 self.header(
                     "Resuming download of {:%m-%d-%Y %H:%M:%S} ZIP".format(
                         self.version.release_datetime
-                    ) 
+                    )
                 )
             else:
-                self.header("Downloading {:%m-%d-%Y %H:%M:%S} ZIP".format(
-                      self.version.release_datetime  
+                self.header(
+                    "Downloading {:%m-%d-%Y %H:%M:%S} ZIP".format(
+                        self.version.release_datetime
                     )
                 )
 

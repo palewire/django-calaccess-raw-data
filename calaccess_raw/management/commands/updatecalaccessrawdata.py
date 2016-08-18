@@ -230,6 +230,22 @@ class Command(CalAccessCommand):
         else:
             self.version = latest_version
 
+        print self.version.release_datetime
+
+        if self.verbosity:
+            if self.resume:
+                self.header(
+                    "Resuming update to {:%m-%d-%Y %H:%M:%S} snapshot".format(
+                        self.version.release_datetime
+                    )
+                )
+            else:
+                self.header(
+                    "Update to {:%m-%d-%Y %H:%M:%S} snapshot".format(
+                        self.version.release_datetime
+                    )
+                )
+
         # if not resuming, store the update start time
         if not self.resume:
             self.version.update_start_datetime = now()
