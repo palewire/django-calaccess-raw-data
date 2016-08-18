@@ -259,7 +259,11 @@ class Command(CalAccessCommand):
                 )
             except CommandError as e:
                 # if the expected and actual zip size are not the same
-                if 'expected' in e.message.lower() or 'etag' in e.message.lower():
+                if (
+                    'expected' in e.message.lower() or
+                    'etag' in e.message.lower() or
+                    'version' in e.message.lower()
+                ):
                     logger.debug('Waiting five minutes before re-trying')
                     # wait five minutes
                     sleep(300)
