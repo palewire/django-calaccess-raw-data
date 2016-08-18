@@ -64,6 +64,7 @@ class Command(CalAccessCommand):
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
         self.download_metadata = self.get_download_metadata()
+        logger.debug('Server (from HEAD): %s' % self.download_metadata['server'])
         logger.debug('ETag (from HEAD): %s' % self.download_metadata['etag'])
         logger.debug(
             'Last-Modified (from HEAD): %s' % self.download_metadata['last-modified']
@@ -202,6 +203,7 @@ class Command(CalAccessCommand):
         chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
 
+        logger.debug('Server (from GET): %s' % req.headers['server'])
         logger.debug('ETag (from GET): %s' % req.headers['etag'])
         logger.debug('Last-Modified (from GET): %s' % req.headers['last-modified'])
         logger.debug('Content-Length (from GET): %s' % req.headers['content-length'])

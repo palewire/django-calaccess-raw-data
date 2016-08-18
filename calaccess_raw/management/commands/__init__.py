@@ -58,6 +58,7 @@ class CalAccessCommand(BaseCommand):
             'content-length': length,
             'last-modified': timezone.utc.localize(dt),
             'etag': request.headers['etag'],
+            'server': request.headers['server'],
         }
 
     #
