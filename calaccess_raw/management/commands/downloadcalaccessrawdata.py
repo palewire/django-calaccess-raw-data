@@ -198,9 +198,16 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             if self.resume:
-                self.header("Resuming download of ZIP file")
+                self.header(
+                    "Resuming download of {:%m-%d-%Y %H:%M:%S} ZIP".format(
+                        self.version.release_datetime
+                    ) 
+                )
             else:
-                self.header("Downloading ZIP file")
+                self.header("Downloading {:%m-%d-%Y %H:%M:%S} ZIP".format(
+                      self.version.release_datetime  
+                    )
+                )
 
         # Prep
         expected_size = self.version.expected_size
