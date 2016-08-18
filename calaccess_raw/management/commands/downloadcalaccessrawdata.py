@@ -64,13 +64,13 @@ class Command(CalAccessCommand):
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
         self.download_metadata = self.get_download_metadata()
-        logger.debug('Server (from HEAD): %s' % self.download_metadata['server'])
-        logger.debug('ETag (from HEAD): %s' % self.download_metadata['etag'])
+        logger.debug('Server: %s <-- (from HEAD)' % self.download_metadata['server'])
+        logger.debug('ETag: %s <-- (from HEAD)' % self.download_metadata['etag'])
         logger.debug(
-            'Last-Modified (from HEAD): %s' % self.download_metadata['last-modified']
+            'Last-Modified: %s <-- (from HEAD)' % self.download_metadata['last-modified']
         )
         logger.debug(
-            'Content-Length (from HEAD): %s' % self.download_metadata['content-length']
+            'Content-Length %s <-- (from HEAD):' % self.download_metadata['content-length']
         )
 
         # get or create the RawDataVersion
@@ -203,10 +203,10 @@ class Command(CalAccessCommand):
         chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
 
-        logger.debug('Server (from GET): %s' % req.headers['server'])
-        logger.debug('ETag (from GET): %s' % req.headers['etag'])
-        logger.debug('Last-Modified (from GET): %s' % req.headers['last-modified'])
-        logger.debug('Content-Length (from GET): %s' % req.headers['content-length'])
+        logger.debug('Server: %s <--  (from GET)' % req.headers['server'])
+        logger.debug('ETag: %s <-- (from GET)' % req.headers['etag'])
+        logger.debug('Last-Modified: %s <--  (from GET)' % req.headers['last-modified'])
+        logger.debug('Content-Length: %s <-- (from GET)' % req.headers['content-length'])
 
         if self.download_metadata['etag'] != req.headers['etag']:
             raise CommandError("ETags in HEAD and GET requests don't match.")
