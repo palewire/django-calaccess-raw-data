@@ -83,7 +83,7 @@ class Command(CalAccessCommand):
         if not self._called_from_command_line:
             # get the version that the update command is working on
             last_update_started = RawDataVersion.objects.filter(
-                download_start_datetime__isnull=False
+                update_start_datetime__isnull=False
             ).latest('update_start_datetime')
             # confirm that update and download commands are working with same version
             if self.version != last_update_started:
