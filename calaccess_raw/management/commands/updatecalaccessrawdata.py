@@ -240,7 +240,7 @@ class Command(CalAccessCommand):
                 )
             else:
                 self.header(
-                    "Update to {:%m-%d-%Y %H:%M:%S} snapshot".format(
+                    "Updating to {:%m-%d-%Y %H:%M:%S} snapshot".format(
                         self.version.release_datetime
                     )
                 )
