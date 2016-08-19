@@ -122,6 +122,7 @@ class Command(CalAccessCommand):
         # else request it
         else:
             download_metadata = self.get_download_metadata()
+            logger.debug('Server: %s' % download_metadata['server'])
             logger.debug('ETag: %s' % download_metadata['etag'])
             logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
             logger.debug('Content-Length: %s' % download_metadata['content-length'])
