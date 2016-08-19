@@ -70,7 +70,7 @@ class Command(CalAccessCommand):
             'Last-Modified: %s <-- (from HEAD)' % self.download_metadata['last-modified']
         )
         logger.debug(
-            'Content-Length %s <-- (from HEAD):' % self.download_metadata['content-length']
+            'Content-Length %s <-- (from HEAD)' % self.download_metadata['content-length']
         )
 
         # get or create the RawDataVersion
