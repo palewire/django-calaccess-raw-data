@@ -34,7 +34,7 @@ Set either CALACCESS_TEST_DOWNLOAD_DIR or BASE_DIR in settings.py")
 
 def archive_directory_path(instance, filename):
     """
-    Returns a path to an archived RawDataFile.
+    Returns a path to an archived raw data file or ZIP.
 
     (e.g., MEDIA_ROOT/YYYY-MM-DD_HH-MM-SS/filename.ext)
     """
