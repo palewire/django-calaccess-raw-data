@@ -663,7 +663,7 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
-    This table is identical to LOBBYIST_EMP_LOBBYIST2_CD.
+    This table is identical to LOBBYIST_EMP_LOBBYIST1_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
     this cryptic note: "Matt needs to describe the relationship between the
