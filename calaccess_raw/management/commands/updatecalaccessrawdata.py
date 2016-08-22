@@ -113,7 +113,7 @@ class Command(CalAccessCommand):
 
         # in test mode, get download metadata from local file
         if self.test_mode:
-            with open(self.data_dir + "/sampled_version.txt", "rb") as f:
+            with open(self.data_dir + "/sampled_version.txt", "r") as f:
                 # get or create the RawDataVersion
                 latest_version, created = RawDataVersion.objects.get_or_create(
                     release_datetime=f.readline(),
@@ -400,7 +400,7 @@ class Command(CalAccessCommand):
                 if not self.test_mode:
                     # save the clean zip size
                     self.version.clean_zip_size = os.path.getsize(clean_zip_path)
-                    with open(clean_zip_path) as zf:
+                    with open(clean_zip_path, 'rb') as zf:
                         # Save the zip on the raw data version
                         self.version.clean_zip_archive.save(
                             os.path.basename(clean_zip_path), File(zf)

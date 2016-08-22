@@ -199,7 +199,7 @@ class TestCommand(Command):
         self.tsv_dir = os.path.join(self.data_dir, "tsv/")
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
-        with open(self.data_dir + "/sampled_version.txt", "rb") as f:
+        with open(self.data_dir + "/sampled_version.txt", "r") as f:
             release_datetime = f.readline()
             expected_size = f.readline()
 
