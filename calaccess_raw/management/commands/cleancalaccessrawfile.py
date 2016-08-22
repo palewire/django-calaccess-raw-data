@@ -143,7 +143,10 @@ class Command(CalAccessCommand):
         for tsv_line in tsv_file:
             line_number += 1
             # Log empty lines, then skip
-            if tsv_line == '\n':
+            if (
+                tsv_line.decode('utf8') == '\n' or 
+                tsv_line.decode('utf8') == '\r\n'
+            ):
                 if self.verbosity > 2:
                     msg = '  Line %s is empty'
                     self.failure(msg % (
