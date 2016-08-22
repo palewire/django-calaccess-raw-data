@@ -113,7 +113,7 @@ class Command(CalAccessCommand):
 
         # in test mode, get download metadata from local file
         if self.test_mode:
-            with open(self.data_dir + "/sampled_version.txt", "r") as f:
+            with open(self.data_dir + "/sampled_version.txt", "rb") as f:
                 # get or create the RawDataVersion
                 latest_version, created = RawDataVersion.objects.get_or_create(
                     release_datetime=f.readline(),

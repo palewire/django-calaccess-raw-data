@@ -142,7 +142,6 @@ class Command(CalAccessCommand):
         line_number = 1
         for tsv_line in tsv_file:
             line_number += 1
-
             # Log empty lines, then skip
             if tsv_line == '\n':
                 if self.verbosity > 2:
@@ -231,7 +230,7 @@ class Command(CalAccessCommand):
             self.raw_file.error_log_archive.delete()
 
             # Open up the .CSV file so we can wrap it in the Django File obj
-            with open(csv_path) as csv_file:
+            with open(csv_path, 'rb') as csv_file:
                 # Save the .CSV on the raw data file
                 self.raw_file.clean_file_archive.save(
                     self.file_name.lower().replace("tsv", "csv"),
@@ -243,7 +242,7 @@ class Command(CalAccessCommand):
                     self.log(" Archiving {0}".format(
                         os.path.basename(self.error_log_path)
                     ))
-                with open(self.error_log_path) as error_file:
+                with open(self.error_log_path, 'rb') as error_file:
                     self.raw_file.error_log_archive.save(
                         os.path.basename(self.error_log_path),
                         File(error_file),

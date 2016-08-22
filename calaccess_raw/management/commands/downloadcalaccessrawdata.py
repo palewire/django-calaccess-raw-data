@@ -258,7 +258,7 @@ class Command(CalAccessCommand):
         # Store the actual download zip file size
         self.version.download_zip_size = os.path.getsize(self.zip_path)
         # Open up the zipped file so we can wrap it in the Django File obj
-        zipped_file = open(self.zip_path)
+        zipped_file = open(self.zip_path, 'rb')
         # Save the zip on the raw data version
         self.version.download_zip_archive.save(
             self.url.split('/')[-1],
