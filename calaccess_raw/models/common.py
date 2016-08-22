@@ -2039,7 +2039,7 @@ in the relationship',
 @python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
-    An undocumented model that contains a small number of codes that map to FILERNAME_CD.STATUS.
+    An undocumented table that contains a small number of codes that map to FILERNAME_CD.STATUS.
     """
     UNIQUE_KEY = "STATUS_TYPE"
     DOCUMENTCLOUD_PAGES = [
@@ -3151,7 +3151,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class ReportsCd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table is undocumented.
     """
     UNIQUE_KEY = "RPT_ID"
     DOCUMENTCLOUD_PAGES = [
