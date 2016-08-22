@@ -144,7 +144,7 @@ class Command(CalAccessCommand):
             line_number += 1
             # Log empty lines, then skip
             if (
-                tsv_line.decode('utf8') == '\n' or 
+                tsv_line.decode('utf8') == '\n' or
                 tsv_line.decode('utf8') == '\r\n'
             ):
                 if self.verbosity > 2:
