@@ -245,11 +245,17 @@ class Command(CalAccessCommand):
                     )
                 )
 
-        # if not resuming, store the update start time
+        # if not resuming, reset the update start datetime
         if not self.resume:
             self.version.update_start_datetime = now()
-        # either way, reset the finish time
-        self.version.update_finish_datetime = None
+        # if restarting, also erase all the other datetimes
+        if self.force_restart:
+            self.version.update_finish_datetime = None
+            self.version.download_start_datetime = None
+            self.version.download_finish_datetime = None
+            self.version.extract_start_datetime = None
+            self.version.extract_finish_datetime = None
+
         # save here in case the command doesn't finish
         self.version.save()
 
@@ -286,13 +292,13 @@ class Command(CalAccessCommand):
                     raise CommandError(
                         'Incomplete file extraction and %s not found.' % self.zip_path
                     )
-                # now extract
-                call_command(
-                    'extractcalaccessrawfiles',
-                    keep_files=self.keep_files
-                )
-                if self.verbosity:
-                    self.duration()
+            # now extract
+            call_command(
+                'extractcalaccessrawfiles',
+                keep_files=self.keep_files
+            )
+            if self.verbosity:
+                self.duration()
 
         # refresh the version (to get timestamp field values)
         self.version.refresh_from_db()
