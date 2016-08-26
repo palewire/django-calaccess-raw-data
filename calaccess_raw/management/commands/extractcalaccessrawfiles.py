@@ -63,7 +63,7 @@ class Command(CalAccessCommand):
         if not self.version.download_completed:
             raise CommandError(
                 'Previous download did not finish '
-                '(run `python manage.py extractcalaccessrawfiles`).'
+                '(run `python manage.py downloadcalaccessrawdata`).'
             )
 
         # store extraction start time
