@@ -3873,7 +3873,7 @@ original filing and 1 to 999 amendments.",
         decimal_places=2,
         max_digits=14,
         db_column='AMOUNT',
-        help_text="Amount Received (Monetary, Inkkind, Promise)"
+        help_text="Amount Received (Monetary, In-kind, Promise)"
     )
     bakref_tid = fields.CharField(
         max_length=20,
