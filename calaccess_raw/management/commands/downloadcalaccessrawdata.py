@@ -88,7 +88,11 @@ class Command(CalAccessCommand):
             # confirm that update and download commands are working with same version
             if self.version != last_update_started:
                 raise CommandError(
-                    'Version available to download does not match version of update.'
+                    'Version available to download ({0}) does not match version '
+                    'of update ({1}).'.format(
+                        self.version,
+                        last_update_started.release_datetime,
+                    )
                 )
 
         # log if a new version was found
