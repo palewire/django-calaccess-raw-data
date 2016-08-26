@@ -288,6 +288,8 @@ class Command(CalAccessCommand):
                         '%s not found. Re-downloading before extracting.' % self.zip_path
                     )
                     self.download()
+                    if self.verbosity:
+                        self.duration()
                 else:
                     raise CommandError(
                         'Incomplete file extraction and %s not found.' % self.zip_path
