@@ -220,13 +220,13 @@ class Command(CalAccessCommand):
                     raise CommandError("Update cancelled")
 
         # set to force restart if the user could have resumed but didn't
-        force_restart = (
+        self.force_restart = (
             (latest_version.update_stalled or can_resume_previous) and
             not self.resume
         )
 
         # set the version to be updated
-        if not force_restart and can_resume_previous:
+        if not self.force_restart and can_resume_previous:
             self.version = previous_version
         else:
             self.version = latest_version
@@ -256,57 +256,43 @@ class Command(CalAccessCommand):
         # handle download
         if self.test_mode:
             pass
-        # if the last download of the version completed and not forcing restart
-        #   and the zip file is still there
-        elif (
-            self.version.download_completed and
-            not force_restart and
-            os.path.exists(self.zip_path)
-        ):
-            self.log('Already downloaded.')
-        else:
-            try:
-                call_command(
-                    "downloadcalaccessrawdata",
-                    verbosity=self.verbosity,
-                    noinput=True,
-                    restart=force_restart,
-                )
-            except CommandError as e:
-                # if the expected and actual zip size are not the same
-                if (
-                    'expected' in e.message.lower() or
-                    'etag' in e.message.lower() or
-                    'version' in e.message.lower()
-                ):
-                    logger.debug('Waiting five minutes before re-trying')
-                    # wait five minutes
-                    sleep(300)
-                    # then try again
-                    call_command(
-                        "downloadcalaccessrawdata",
-                        verbosity=self.verbosity,
-                        noinput=True,
-                        # force a restart on second try
-                        restart=True,
-                    )
-
-            if self.verbosity:
-                self.duration()
+        # can only download the latest version:
+        elif self.version == latest_version:
+            # if download completed and not forcing restart
+            if self.version.download_completed and not self.force_restart:
+                self.log('Already downloaded.')
+            # otherwise try downloading
+            else:
+                self.download()
+                if self.verbosity:
+                    self.duration()
 
         # handle file extraction
         if self.test_mode:
             handle_command(TestExtractCommand, verbosity=self.verbosity)
-        # if the last extact of the version completed and not forcing restart
-        elif self.version.extract_completed and not force_restart:
+        # if the last extract of the version completed and not forcing restart
+        elif self.version.extract_completed and not self.force_restart:
             self.log('Already extracted.')
         else:
-            call_command(
-                'extractcalaccessrawfiles',
-                keep_files=self.keep_files
-            )
-            if self.verbosity:
-                self.duration()
+            # if the zip isn't there
+            if not os.path.exists(self.zip_path):
+                # if updating to the lastest
+                if self.version == latest_version:
+                    self.log(
+                        '%s not found. Re-downloading before extracting.' % self.zip_path
+                    )
+                    self.download()
+                else:
+                    raise CommandError(
+                        'Incomplete file extraction and %s not found.' % self.zip_path
+                    )
+                # now extract
+                call_command(
+                    'extractcalaccessrawfiles',
+                    keep_files=self.keep_files
+                )
+                if self.verbosity:
+                    self.duration()
 
         # refresh the version (to get timestamp field values)
         self.version.refresh_from_db()
@@ -326,6 +312,36 @@ class Command(CalAccessCommand):
 
         if self.verbosity:
             self.success("Done!")
+
+    def download(self):
+        """
+        Try downloading the zip. Wait and re-try if certain CommandErrors are raised.
+        """
+        try:
+            call_command(
+                "downloadcalaccessrawdata",
+                verbosity=self.verbosity,
+                noinput=True,
+                restart=self.force_restart,
+            )
+        except CommandError as e:
+            # if the expected and actual zip size are not the same
+            if (
+                'expected' in e.message.lower() or
+                'etag' in e.message.lower() or
+                'version' in e.message.lower()
+            ):
+                logger.debug('Waiting five minutes before re-trying')
+                # wait five minutes
+                sleep(300)
+                # then try again
+                call_command(
+                    "downloadcalaccessrawdata",
+                    verbosity=self.verbosity,
+                    noinput=True,
+                    # force a restart on second try
+                    restart=True,
+                )
 
     def clean(self):
         """
