@@ -18,7 +18,7 @@ from calaccess_raw.annotations import (
 @python_2_unicode_compatible
 class BallotMeasuresCd(CalAccessBaseModel):
     """
-    Ballot measure dates and times.
+    Ballot-measure dates and times.
     """
     UNIQUE_KEY = "FILER_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -78,10 +78,7 @@ class BallotMeasuresCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class CvrF470Cd(CalAccessBaseModel):
     """
-    Cover page information for Officeholder and Candidate Short and Supplement Forms.
-
-    An empty file of the same name is included in the Secretary of State's daily
-    CAL-ACCESS database exports.
+    The cover page for officeholder and candidate short and supplemental forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -321,9 +318,9 @@ class CvrF470Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerTypePeriodsCd(CalAccessBaseModel):
     """
-    Listed in the official CAL-ACCESS documentation, but not fully explained.
+    Undocumented.
 
-    The table's description contains this note: "J M needs to document. This is
+    The table's official description contains this note: "J M needs to document. This is
     in his list of tables designed for future enhancements."
     """
     UNIQUE_KEY = (
@@ -383,6 +380,8 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of campaign contributions made by lobbyists.
+
     This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS2_CD and LOBBYIST_CONTRIBUTIONS3_CD.
 
     According to "Cal-Access Tables, Columns, Indexes", this is a temporary
@@ -456,6 +455,8 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of campaign contributions made by lobbyists.
+
     This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS3_CD.
 
     According to "Cal-Access Tables, Columns, Indexes", this is a temporary
@@ -529,6 +530,8 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistContributions3Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of campaign contributions made by lobbyists.
+
     This table is 95 percent identical to LOBBYIST_CONTRIBUTIONS1_CD and LOBBYIST_CONTRIBUTIONS2_CD.
 
     According to "Cal-Access Tables, Columns, Indexes", this is the actual
@@ -602,6 +605,8 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_EMP_LOBBYIST2_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -663,6 +668,8 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_EMP_LOBBYIST1_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -724,6 +731,8 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer1Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is 99 percent identical to LOBBYIST_EMPLOYER2_CD and LOBBYIST_EMPLOYER3_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
@@ -884,6 +893,8 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is 99 percent identical to LOBBYIST_EMPLOYER1_CD and LOBBYIST_EMPLOYER3_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
@@ -1043,6 +1054,8 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployer3Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is 99 percent identical to LOBBYIST_EMPLOYER1_CD and LOBBYIST_EMPLOYER2_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
@@ -1202,6 +1215,8 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_EMPLOYER_FIRMS2_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -1260,6 +1275,8 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_EMPLOYER_FIRMS1_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -1318,6 +1335,8 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     """
+    Undocumented.
+
     An empty file of the same name is included in the Secretary of State's daily CAL-ACCESS database exports.
 
     This table is documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -1471,6 +1490,8 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirm1Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_FIRM2_CD and LOBBYIST_FIRM3_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
@@ -1589,6 +1610,8 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirm2Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_FIRM1_CD and LOBBYIST_FIRM3_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
@@ -1707,6 +1730,8 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirm3Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_FIRM1_CD and LOBBYIST_FIRM2_CD.
 
     All three tables are documented in "Cal-Access Tables, Columns, Indexes", but
@@ -1825,6 +1850,8 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_FIRM_EMPLOYER2_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -1911,6 +1938,8 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_FIRM_EMPLOYER1_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -1997,6 +2026,8 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmHistoryCd(CalAccessBaseModel):
     """
+    Undocumented.
+
     An empty file of the same name is included in the Secretary of State's daily CAL-ACCESS database exports.
 
     This table is documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -2102,6 +2133,8 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_FIRM_LOBBYIST2_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -2162,6 +2195,8 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     """
+    Deprecated table for the disclosure of lobbyist relationships.
+
     This table is identical to LOBBYIST_FIRM_LOBBYIST1_CD.
 
     Both tables are documented in "Cal-Access Tables, Columns, Indexes", but with
@@ -2222,9 +2257,7 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class EfsFilingLogCd(CalAccessBaseModel):
     """
-    Electronic Filing Subsystem Log.
-
-    The EFS accepts and validates electronic filings.
+    Logs from the Electronic Filing Subsystem, which accepts and validates electronic filings.
     """
     UNIQUE_KEY = (
         "FILING_DATE",
