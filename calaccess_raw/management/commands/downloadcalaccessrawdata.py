@@ -63,13 +63,38 @@ class Command(CalAccessCommand):
         # downloaded zip file will go in data_dir
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
-        download_metadata = self.get_download_metadata()
+        self.download_metadata = self.get_download_metadata()
+        logger.debug('Server: %s <-- (from HEAD)' % self.download_metadata['server'])
+        logger.debug('ETag: %s <-- (from HEAD)' % self.download_metadata['etag'])
+        logger.debug(
+            'Last-Modified: %s <-- (from HEAD)' % self.download_metadata['last-modified']
+        )
+        logger.debug(
+            'Content-Length %s <-- (from HEAD)' % self.download_metadata['content-length']
+        )
 
         # get or create the RawDataVersion
         self.version, created = RawDataVersion.objects.get_or_create(
-            release_datetime=download_metadata['last-modified'],
-            expected_size=download_metadata['content-length'],
+            release_datetime=self.download_metadata['last-modified'],
+            expected_size=self.download_metadata['content-length'],
         )
+
+        # if not called from command-line, assume called by update command
+        if not self._called_from_command_line:
+            # get the version that the update command is working on
+            last_update_started = RawDataVersion.objects.filter(
+                update_start_datetime__isnull=False
+            ).latest('update_start_datetime')
+            # confirm that update and download commands are working with same version
+            if self.version != last_update_started:
+                raise CommandError(
+                    'Version available to download ({0}) does not match version '
+                    'of update ({1}).'.format(
+                        self.version,
+                        last_update_started.release_datetime,
+                    )
+                )
+
         # log if a new version was found
         if created:
             logger.info('New CAL-ACCESS version available.')
@@ -149,21 +174,24 @@ class Command(CalAccessCommand):
         # save here in case the command doesn't finish
         self.version.save()
 
-        self.download()
+        # check if local zip file is already completely downloaded before trying
+        if self.local_file_size < self.version.expected_size:
+            self.download()
 
+        logger.debug('Download zip size: %s bytes' % os.path.getsize(self.zip_path))
         # log warning if downloaded zip size is not same as expected size
         if self.version.expected_size != os.path.getsize(self.zip_path):
-            logger.warning(
+            raise CommandError(
                 'Expected {0} byte zip, but download {1} byte zip.'.format(
-                    self.expected_size,
-                    self.os.path.getsize(self.zip_path)
+                    self.version.expected_size,
+                    os.path.getsize(self.zip_path)
                 )
             )
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
 
-        # store extraction finish time
+        # store download finish time
         self.version.download_finish_datetime = now()
         # and save the RawDataVersion
         self.version.save()
@@ -174,9 +202,17 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             if self.resume:
-                self.header("Resuming download of ZIP file")
+                self.header(
+                    "Resuming download of {:%m-%d-%Y %H:%M:%S} ZIP".format(
+                        self.version.release_datetime
+                    )
+                )
             else:
-                self.header("Downloading ZIP file")
+                self.header(
+                    "Downloading {:%m-%d-%Y %H:%M:%S} ZIP".format(
+                        self.version.release_datetime
+                    )
+                )
 
         # Prep
         expected_size = self.version.expected_size
@@ -191,6 +227,14 @@ class Command(CalAccessCommand):
         # Stream the download
         chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
+
+        logger.debug('Server: %s <--  (from GET)' % req.headers['server'])
+        logger.debug('ETag: %s <-- (from GET)' % req.headers['etag'])
+        logger.debug('Last-Modified: %s <--  (from GET)' % req.headers['last-modified'])
+        logger.debug('Content-Length: %s <-- (from GET)' % req.headers['content-length'])
+
+        if self.download_metadata['etag'] != req.headers['etag']:
+            raise CommandError("ETags in HEAD and GET requests don't match.")
 
         # in Python 2, need to convert this to long int
         try:
@@ -218,7 +262,7 @@ class Command(CalAccessCommand):
         # Store the actual download zip file size
         self.version.download_zip_size = os.path.getsize(self.zip_path)
         # Open up the zipped file so we can wrap it in the Django File obj
-        zipped_file = open(self.zip_path)
+        zipped_file = open(self.zip_path, 'rb')
         # Save the zip on the raw data version
         self.version.download_zip_archive.save(
             self.url.split('/')[-1],

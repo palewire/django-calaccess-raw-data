@@ -6,6 +6,7 @@ Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 import os
 import logging
 from sys import exit
+from time import sleep
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 from django.core.files import File
 from django.conf import settings
@@ -121,6 +122,10 @@ class Command(CalAccessCommand):
         # else request it
         else:
             download_metadata = self.get_download_metadata()
+            logger.debug('Server: %s' % download_metadata['server'])
+            logger.debug('ETag: %s' % download_metadata['etag'])
+            logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
+            logger.debug('Content-Length: %s' % download_metadata['content-length'])
             # get or create the RawDataVersion
             latest_version, created = RawDataVersion.objects.get_or_create(
                 release_datetime=download_metadata['last-modified'],
@@ -215,59 +220,90 @@ class Command(CalAccessCommand):
                     raise CommandError("Update cancelled")
 
         # set to force restart if the user could have resumed but didn't
-        force_restart = (
+        self.force_restart = (
             (latest_version.update_stalled or can_resume_previous) and
             not self.resume
         )
 
         # set the version to be updated
-        if not force_restart and can_resume_previous:
+        if not self.force_restart and can_resume_previous:
             self.version = previous_version
         else:
             self.version = latest_version
 
-        # if not resuming, store the update start time
+        if self.verbosity and not self.test_mode:
+            if self.resume:
+                self.header(
+                    "Resuming update to {:%m-%d-%Y %H:%M:%S} snapshot".format(
+                        self.version.release_datetime
+                    )
+                )
+            else:
+                self.header(
+                    "Updating to {:%m-%d-%Y %H:%M:%S} snapshot".format(
+                        self.version.release_datetime
+                    )
+                )
+
+        # if not resuming, reset the update start datetime
         if not self.resume:
             self.version.update_start_datetime = now()
-        # either way, reset the finish time
-        self.version.update_finish_datetime = None
+        # if restarting, also erase all the other datetimes
+        if self.force_restart:
+            self.version.update_finish_datetime = None
+            self.version.download_start_datetime = None
+            self.version.download_finish_datetime = None
+            self.version.extract_start_datetime = None
+            self.version.extract_finish_datetime = None
+
         # save here in case the command doesn't finish
         self.version.save()
 
         # handle download
         if self.test_mode:
             pass
-        # if the last download of the version completed and not forcing restart
-        #   and the zip file is still there
-        elif (
-            self.version.download_completed and
-            not force_restart and
-            os.path.exists(self.zip_path)
-        ):
-            self.log('Already downloaded.')
-        else:
-            call_command(
-                "downloadcalaccessrawdata",
-                verbosity=self.verbosity,
-                noinput=True,
-                restart=force_restart,
-            )
-            if self.verbosity:
-                self.duration()
+        # can only download the latest version:
+        elif self.version == latest_version:
+            # if download completed and not forcing restart
+            if self.version.download_completed and not self.force_restart:
+                self.log('Already downloaded.')
+            # otherwise try downloading
+            else:
+                self.download()
+                if self.verbosity:
+                    self.duration()
 
         # handle file extraction
         if self.test_mode:
             handle_command(TestExtractCommand, verbosity=self.verbosity)
-        # if the last extact of the version completed and not forcing restart
-        elif self.version.extract_completed and not force_restart:
+        # if the last extract of the version completed and not forcing restart
+        elif self.version.extract_completed and not self.force_restart:
             self.log('Already extracted.')
         else:
+            # if the zip isn't there
+            if not os.path.exists(self.zip_path):
+                # if updating to the lastest
+                if self.version == latest_version:
+                    self.log(
+                        '%s not found. Re-downloading before extracting.' % self.zip_path
+                    )
+                    self.download()
+                    if self.verbosity:
+                        self.duration()
+                else:
+                    raise CommandError(
+                        'Incomplete file extraction and %s not found.' % self.zip_path
+                    )
+            # now extract
             call_command(
                 'extractcalaccessrawfiles',
                 keep_files=self.keep_files
             )
             if self.verbosity:
                 self.duration()
+
+        # refresh the version (to get timestamp field values)
+        self.version.refresh_from_db()
 
         self.clean()
         if self.verbosity:
@@ -277,8 +313,6 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.duration()
 
-        # refresh the version (to get timestamp field values)
-        self.version.refresh_from_db()
         # store update finish time
         self.version.update_finish_datetime = now()
         # and save the RawDataVersion
@@ -287,6 +321,36 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.success("Done!")
 
+    def download(self):
+        """
+        Try downloading the zip. Wait and re-try if certain CommandErrors are raised.
+        """
+        try:
+            call_command(
+                "downloadcalaccessrawdata",
+                verbosity=self.verbosity,
+                noinput=True,
+                restart=self.force_restart,
+            )
+        except CommandError as e:
+            # if the expected and actual zip size are not the same
+            if (
+                'expected' in e.message.lower() or
+                'etag' in e.message.lower() or
+                'version' in e.message.lower()
+            ):
+                logger.debug('Waiting five minutes before re-trying')
+                # wait five minutes
+                sleep(300)
+                # then try again
+                call_command(
+                    "downloadcalaccessrawdata",
+                    verbosity=self.verbosity,
+                    noinput=True,
+                    # force a restart on second try
+                    restart=True,
+                )
+
     def clean(self):
         """
         Clean up the raw data files from the state so they are ready to get loaded into the database.
@@ -294,7 +358,9 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.header("Cleaning data files")
 
-        tsv_list = os.listdir(self.tsv_dir)
+        tsv_list = [
+            f for f in os.listdir(self.tsv_dir) if '.TSV' in f.upper()
+        ]
 
         if self.resume:
             # get finished clean command logs of last update
@@ -358,7 +424,7 @@ class Command(CalAccessCommand):
                 if not self.test_mode:
                     # save the clean zip size
                     self.version.clean_zip_size = os.path.getsize(clean_zip_path)
-                    with open(clean_zip_path) as zf:
+                    with open(clean_zip_path, 'rb') as zf:
                         # Save the zip on the raw data version
                         self.version.clean_zip_archive.save(
                             os.path.basename(clean_zip_path), File(zf)

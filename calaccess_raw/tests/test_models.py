@@ -58,6 +58,13 @@ class ModelTestCase(TestCase):
         models.RawDataFile(clean_file_size=100).pretty_clean_file_size()
 
         # Tracking model properties
+        models.RawDataVersion().download_file_count
+        models.RawDataVersion().download_record_count
+        models.RawDataVersion().clean_file_count
+        models.RawDataVersion().clean_record_count
+        models.RawDataVersion().error_file_count
+        models.RawDataVersion().error_count
+
         completed_version = models.RawDataVersion(
             download_start_datetime=datetime.now(),
             download_finish_datetime=datetime.now(),

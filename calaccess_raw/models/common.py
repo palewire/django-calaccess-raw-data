@@ -2039,7 +2039,7 @@ in the relationship',
 @python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
-    An undocumented model that contains a small number of codes that map to FILERNAME_CD.STATUS.
+    An undocumented table that contains a small number of codes that map to FILERNAME_CD.STATUS.
     """
     UNIQUE_KEY = "STATUS_TYPE"
     DOCUMENTCLOUD_PAGES = [
@@ -3098,7 +3098,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     )
     filing_file_name = fields.CharField(
         db_column='FILING_FILE_NAME',
-        max_length=14,
+        max_length=60,
         help_text="The field is undocumented"
     )
     received_date = fields.DateField(
@@ -3108,7 +3108,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     )
     filing_directory = fields.CharField(
         db_column='FILING_DIRECTORY',
-        max_length=45,
+        max_length=60,
         help_text="This field is undocumented",
     )
     filing_id = fields.IntegerField(
@@ -3122,7 +3122,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     FORM_ID_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_id = fields.CharField(
         db_column='FORM_ID',
-        max_length=4,
+        max_length=7,
         blank=True,
         choices=FORM_ID_CHOICES,
         verbose_name="form identification code",
@@ -3133,7 +3133,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
     )
     receive_comment = fields.CharField(
         db_column='RECEIVE_COMMENT',
-        max_length=51,
+        max_length=120,
         help_text="A comment"
     )
 
@@ -3151,7 +3151,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class ReportsCd(CalAccessBaseModel):
     """
-    This is an undocumented model.
+    This table is undocumented.
     """
     UNIQUE_KEY = "RPT_ID"
     DOCUMENTCLOUD_PAGES = [

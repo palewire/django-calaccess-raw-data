@@ -63,7 +63,7 @@ class Command(CalAccessCommand):
         if not self.version.download_completed:
             raise CommandError(
                 'Previous download did not finish '
-                '(run `python manage.py extractcalaccessrawfiles`).'
+                '(run `python manage.py downloadcalaccessrawdata`).'
             )
 
         # store extraction start time
@@ -169,7 +169,7 @@ class Command(CalAccessCommand):
             # Remove previous .TSV file
             raw_file.download_file_archive.delete()
             # Open up the .TSV file so we can wrap it in the Django File obj
-            with open(self.tsv_dir + raw_file.file_name + '.TSV') as f:
+            with open(self.tsv_dir + raw_file.file_name + '.TSV', 'rb') as f:
                 # Save the .TSV on the raw data file
                 raw_file.download_file_archive.save(
                     raw_file.file_name + '.TSV',

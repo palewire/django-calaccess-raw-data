@@ -25,3 +25,4 @@ example/routers.py
 *dbwebexport_sample/
 jupyter_notebooks
 example/.documentcloud_metadata/2753585.json
+django.log
