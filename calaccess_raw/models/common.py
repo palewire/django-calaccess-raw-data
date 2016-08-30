@@ -426,9 +426,7 @@ class FilingsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class HdrCd(CalAccessBaseModel):
     """
-    Electronic filing record header data.
-
-    Contains information identifying vendor and Cal Format version.
+    Electronic-filing headers with vendor and CalFormat version.
     """
     UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     DOCUMENTCLOUD_PAGES = [
@@ -812,7 +810,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class CvrE530Cd(CalAccessBaseModel):
     """
-    Cover Pages for Electronic Form 530.
+    The cover page of Electronic Form 530.
     """
     UNIQUE_KEY = ("FILING_ID", "AMEND_ID")
     filing_id = fields.IntegerField(
@@ -1572,7 +1570,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class AcronymsCd(CalAccessBaseModel):
     """
-    Contains acronyms and their meanings.
+    Acronyms and their definitions.
     """
     UNIQUE_KEY = "ACRONYM"
     DOCUMENTCLOUD_PAGES = [
@@ -1614,7 +1612,7 @@ class AcronymsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class AddressCd(CalAccessBaseModel):
     """
-    Holds all addresses for the system.
+    Addresses drawn from across the system.
     """
     UNIQUE_KEY = "ADRID"
     DOCUMENTCLOUD_PAGES = [
@@ -1675,7 +1673,7 @@ class AddressCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilersCd(CalAccessBaseModel):
     """
-    The parent table from which all links and associations to a filer are derived.
+    All links and associations to a filer.
     """
     UNIQUE_KEY = "FILER_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -1805,7 +1803,7 @@ class FilerAddressCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerEthicsClassCd(CalAccessBaseModel):
     """
-    Stores lobbyist ethics training dates.
+    Ethics training events for lobbyists.
     """
     UNIQUE_KEY = "FILER_ID", "SESSION_ID", "ETHICS_DATE"
     DOCUMENTCLOUD_PAGES = [
@@ -1845,7 +1843,7 @@ class FilerEthicsClassCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerInterestsCd(CalAccessBaseModel):
     """
-    Links a filer to their interest codes.
+    Links a filer to interest codes.
     """
     UNIQUE_KEY = (
         "FILER_ID",
@@ -1924,7 +1922,7 @@ class FilerInterestsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerLinksCd(CalAccessBaseModel):
     """
-    Links filers to each other and records their relationship type.
+    Links filers to each other.
     """
     UNIQUE_KEY = (
         "FILER_ID_A",
@@ -2039,7 +2037,9 @@ in the relationship',
 @python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
-    An undocumented table that contains a small number of codes that map to FILERNAME_CD.STATUS.
+    An undocumented table.
+
+    Contains a small number of codes that map to FILERNAME_CD.STATUS.
     """
     UNIQUE_KEY = "STATUS_TYPE"
     DOCUMENTCLOUD_PAGES = [
@@ -2621,7 +2621,7 @@ Populated for Senate, Assembly or Board of Equalization races",
 @python_2_unicode_compatible
 class FilerTypesCd(CalAccessBaseModel):
     """
-    This lookup table describes filer types.
+    Lookup table describing filer types.
     """
     UNIQUE_KEY = "FILER_TYPE"
     DOCUMENTCLOUD_PAGES = [
@@ -2681,7 +2681,7 @@ class FilerTypesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilerXrefCd(CalAccessBaseModel):
     """
-    This table maps legacy filer identification numbers to the system's filer identification numbers.
+    Maps legacy filer identification numbers to current filer identification numbers.
     """
     UNIQUE_KEY = ("FILER_ID", "XREF_ID")
     DOCUMENTCLOUD_PAGES = [
@@ -2727,7 +2727,7 @@ class FilerXrefCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class FilingPeriodCd(CalAccessBaseModel):
     """
-    An undocumented table that contains metadata for a variety of filing periods.
+    Metadata for filing periods.
     """
     UNIQUE_KEY = "PERIOD_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -2795,7 +2795,7 @@ class FilingPeriodCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class GroupTypesCd(CalAccessBaseModel):
     """
-    This lookup table stores group type information.
+    Lookup table for group types.
 
     Most (but not all) of the GRP_ID/GRP_NAME value pairs in this table match
     the FILER_TYPE/DESCRIPTION value pairs in the FILER_TYPE_CD table.
@@ -2839,7 +2839,7 @@ class GroupTypesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class ImageLinksCd(CalAccessBaseModel):
     """
-    This table links images to filers and accounts.
+    Links images to filers and accounts.
     """
     UNIQUE_KEY = ("IMG_LINK_ID", "IMG_ID")
     DOCUMENTCLOUD_PAGES = [
@@ -2906,7 +2906,7 @@ class ImageLinksCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LegislativeSessionsCd(CalAccessBaseModel):
     """
-    Legislative session, begin and end dates look up table.
+    Start and end dates for legislative sessions.
     """
     UNIQUE_KEY = "SESSION_ID"
     DOCUMENTCLOUD_PAGES = [
@@ -2945,7 +2945,7 @@ class LegislativeSessionsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class LookupCodesCd(CalAccessBaseModel):
     """
-    The description of some lookup codes in the system.
+    Definitions for some lookup codes.
     """
     UNIQUE_KEY = ("CODE_ID", "CODE_TYPE")
     DOCUMENTCLOUD_PAGES = [
@@ -2972,7 +2972,7 @@ class LookupCodesCd(CalAccessBaseModel):
         Meta model options.
         """
         db_table = 'LOOKUP_CODES_CD'
-
+ 
     def __str__(self):
         return str(self.code_id)
 
@@ -2980,7 +2980,7 @@ class LookupCodesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class NamesCd(CalAccessBaseModel):
     """
-    The name of all entities in the system.
+    A collection of names from across the database.
 
     Used for searches when the name has an identification number.
     """
@@ -3058,7 +3058,7 @@ class NamesCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class ReceivedFilingsCd(CalAccessBaseModel):
     """
-    This table is undocumented.
+    Undocumented.
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
@@ -3151,7 +3151,7 @@ class ReceivedFilingsCd(CalAccessBaseModel):
 @python_2_unicode_compatible
 class ReportsCd(CalAccessBaseModel):
     """
-    This table is undocumented.
+    Undocumented.
     """
     UNIQUE_KEY = "RPT_ID"
     DOCUMENTCLOUD_PAGES = [
