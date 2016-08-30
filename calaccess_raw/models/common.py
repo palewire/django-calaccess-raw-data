@@ -378,7 +378,7 @@ laundering or other special condition."
 @python_2_unicode_compatible
 class FilingsCd(CalAccessBaseModel):
     """
-    The parent table from which all links and associations to a filing are derived.
+    All links and associations to a filing.
     """
     UNIQUE_KEY = "FILING_ID"
     DOCUMENTCLOUD_PAGES = [
