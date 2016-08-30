@@ -197,9 +197,7 @@ politicans and officers tend to use both the first and last name."
 @python_2_unicode_compatible
 class FilerFilingsCd(CalAccessBaseModel):
     """
-    Links filers to their filings.
-
-    Used as the index to locate filing information.
+    An index that links filers to their filings.
     """
     UNIQUE_KEY = (
         "FILER_ID",
