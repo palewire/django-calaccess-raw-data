@@ -14,7 +14,7 @@ from django.utils.encoding import python_2_unicode_compatible
 @python_2_unicode_compatible
 class CvrRegistrationCd(CalAccessBaseModel):
     """
-    Cover page information of lobbying registration forms.
+    The cover page of lobbying-registration forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -641,7 +641,7 @@ This field only applies to Form 601.',
 @python_2_unicode_compatible
 class Cvr2RegistrationCd(CalAccessBaseModel):
     """
-    Additional names found on lobbying registration.
+    Additional names provided on lobbying-registration forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -779,7 +779,7 @@ the record',
 @python_2_unicode_compatible
 class LobbyAmendmentsCd(CalAccessBaseModel):
     """
-    Lobbyist registration amendments.
+    Amendments to lobbyist-registration forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1081,7 +1081,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
     """
-    Lobbyist filing log compiled for web display.
+    Log of lobbyist filings compiled for display on the state website.
     """
     UNIQUE_KEY = (
         "FILER_ID",
@@ -1454,7 +1454,7 @@ Part 2B Client/Employer"
 @python_2_unicode_compatible
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information for lobbying disclosure forms.
+    The cover page of lobbying-disclosure forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -1868,7 +1868,7 @@ allows the firm to submit forms for its lobbyists.',
 @python_2_unicode_compatible
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
-    Additional data from lobbyist disclosure form cover sheets.
+    Extra information from the cover sheets of lobbyist-disclosure form.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2009,7 +2009,7 @@ entity is an individual. Only required by Form 635.',
 @python_2_unicode_compatible
 class F690P2Cd(CalAccessBaseModel):
     """
-    Amendment information to lobbying disclosure filings.
+    Amendments to lobbying-disclosure filings.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2126,7 +2126,7 @@ text description."
 @python_2_unicode_compatible
 class LattCd(CalAccessBaseModel):
     """
-    Lobbyist disclosure attachment schedules for payments.
+    Attachments for lobbying payments.
     """
     UNIQUE_KEY = (
         "FILING_ID",
