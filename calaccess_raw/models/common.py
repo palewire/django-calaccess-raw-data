@@ -2972,7 +2972,7 @@ class LookupCodesCd(CalAccessBaseModel):
         Meta model options.
         """
         db_table = 'LOOKUP_CODES_CD'
- 
+
     def __str__(self):
         return str(self.code_id)
 
