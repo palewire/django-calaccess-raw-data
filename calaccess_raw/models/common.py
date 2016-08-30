@@ -21,15 +21,7 @@ from django.utils.encoding import python_2_unicode_compatible
 @python_2_unicode_compatible
 class FilernameCd(CalAccessBaseModel):
     """
-    A combination of CAL-ACCESS tables to provide the analyst with filer information.
-
-    Full name of all PACs, firms, and employers are in the last name field.
-
-    Major donors can be split between first and last name fields, but usually
-    are contained in the last name field only. Individual names of lobbyists,
-    candidates/officeholders, treasurers/responsible officers, and major donors
-    (when they are only an individual's name) use both the first and last name
-    fields in conjunction.
+    A combination of CAL-ACCESS tables created by the state to consolidate filer information.
     """
     UNIQUE_KEY = ("FILER_ID",)
     DOCUMENTCLOUD_PAGES = [
@@ -116,19 +108,29 @@ in the STATUS_TYPE and STATUS_DESC columns on FILER_STATUS_TYPES_CD',
         null=True,
     )
     naml = fields.CharField(
-        max_length=200, db_column='NAML',
-        help_text="Last name, sometimes full name"
+        max_length=200,
+        db_column='NAML',
+        help_text="Last name, sometimes full name in the case of PACs, firms and employers. \
+Major donors can be split between first and last name fields, but usually \
+are contained in the last name field only. Individual names of lobbyists, \
+politicans and officers tend to use both the first and last name."
     )
     namf = fields.CharField(
-        max_length=55, db_column='NAMF', blank=True,
+        max_length=55,
+        db_column='NAMF',
+        blank=True,
         help_text="First name"
     )
     namt = fields.CharField(
-        max_length=70, db_column='NAMT', blank=True,
+        max_length=70,
+        db_column='NAMT',
+        blank=True,
         help_text="Name prefix or title"
     )
     nams = fields.CharField(
-        max_length=32, db_column='NAMS', blank=True,
+        max_length=32,
+        db_column='NAMS',
+        blank=True,
         help_text="Name suffix"
     )
     adr1 = fields.CharField(
