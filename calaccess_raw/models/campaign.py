@@ -18,7 +18,7 @@ from calaccess_raw.annotations import (
 @python_2_unicode_compatible
 class CvrSoCd(CalAccessBaseModel):
     """
-    Cover page for a statement of organization creation or termination form.
+    The cover page for statement-of-organization forms that create or terminate an entity.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -480,7 +480,7 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
 @python_2_unicode_compatible
 class Cvr2SoCd(CalAccessBaseModel):
     """
-    Additional names and information from the second page of a statement of organization form.
+    Extra information from a statement-of-organization form.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -858,7 +858,7 @@ sought and "H" for held',
 @python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
-    Cover page information from campaign disclosure forms.
+    The cover page of campaign-disclosure forms.
     """
     UNIQUE_KEY = ('FILING_ID', 'AMEND_ID',)
     DOCUMENTCLOUD_PAGES = [
@@ -1718,7 +1718,7 @@ officer's street address."
 @python_2_unicode_compatible
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
-    Additional names disclosed on campaign forms.
+    Extra information from campaign-disclosure forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2126,7 +2126,7 @@ with in the record.",
 @python_2_unicode_compatible
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
-    Verification information from campaign disclosure cover pages.
+    Verification information from campaign-disclosure forms.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -2317,7 +2317,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class DebtCd(CalAccessBaseModel):
     """
-    Campaign debts and unpaid bills.
+    Itemized campaign debts.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -3403,7 +3403,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     """
-    Loans received and made by campaigns.
+    Itemized campaign loans.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4437,7 +4437,7 @@ identifier. 'X' indicates this condition is true"
 @python_2_unicode_compatible
 class S401Cd(CalAccessBaseModel):
     """
-    Slate Mailer Organizations payment and other disclosures.
+    Payments and other disclosures made by slate-mailer organizations.
     """
     UNIQUE_KEY = (
         'FILING_ID',
@@ -4860,7 +4860,7 @@ as on the filing's cover (CVR) record."
 @python_2_unicode_compatible
 class S496Cd(CalAccessBaseModel):
     """
-    Independent expenditures made in the 90 days preceding an election.
+    Itemized independent expenditures made in the 90 days before an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -4984,7 +4984,7 @@ original filing and 1 to 999 amendments.",
 @python_2_unicode_compatible
 class S497Cd(CalAccessBaseModel):
     """
-    Campaign contributions received or made in the 90 days before an election.
+    Campaign contributions made or received in the 90 days before an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
@@ -5395,7 +5395,7 @@ for Senate, Assembly, or Board of Equalization races."
 @python_2_unicode_compatible
 class S498Cd(CalAccessBaseModel):
     """
-    Payments received by Slate Mailer Organizations within 90 days of an election.
+    Payments received by slate-mailer organizations in the 90 days before an election.
     """
     UNIQUE_KEY = (
         "FILING_ID",
