@@ -17,7 +17,7 @@ producing one or more slate mailers.',
     ),
     FilingForm(
         'F401',
-        'Slate Mailer Organization Campaign Statement',
+        'Campaign Disclosure Statement (Slate Mailer Organization)',
         group='CAMPAIGN',
         documentcloud_id='2781366-401-2005-01',
         description='Form 401 is filed by slate mailer organizations to \
@@ -36,13 +36,12 @@ terminate the organization.',
         'Amendment to Campaign Disclosure Statement',
         group='CAMPAIGN',
         documentcloud_id='2811582-405-1994',
-        description="Form 405 must be used to amend campaign disclosure statements, \
-except for Statement of Organization, Candidate Intention or Campaign Bank Account \
-(Forms 410, 501, 502).",
+        description="Form 405 is used to amend many campaign disclosure statements, with the exception of \
+Statement of Organization (410), Candidate Intention (501) or Campaign Bank Account (502) forms.",
     ),
     FilingForm(
         'F410',
-        'Statement of Organization Recipient Committee',
+        'Statement of Organization (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781368-410-2016-01',
         description='Form 410 must be filed within 10 days of receiving \
@@ -67,21 +66,21 @@ Organization Recipient Committee). There are 521 filings with this form ID.',
     ),
     FilingForm(
         'F419',
-        'Ballot Measure Committee Campaign Statement-Long Form',
+        'Campaign Disclosure Statement, Long Form (Ballot Measure Committee)',
         group='Deprecated',
         description='Form 419 was replaced by Form 460 (Recipient Committee \
 Campaign Statement) in or around 2001. There are 2,293 filings with this form ID.',
     ),
     FilingForm(
         'F420',
-        'Recipient Committee Campaign Statement-Long Form',
+        'Campaign Disclosure Statement, Long Form (Recipient Committee)',
         group='Deprecated',
         description='Form 420 was replaced by Form 460 (Recipient Committee \
 Campaign Statement) in or around 2001. There are 70,704 filings with this form ID.',
     ),
     FilingForm(
         'F425',
-        'Semi-Annual Statement of no Activity',
+        'Semi-Annual Statement of No Activity (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781365-425-2001-01',
         description='Form 425 is filed by recipient committees that have not \
@@ -98,7 +97,7 @@ Committee Campaign Statement). There are 2,293 filings with this form ID.',
     ),
     FilingForm(
         'F450',
-        'Recipient Committee Campaign Disclosure Statement - Short Form',
+        'Campaign Disclosure Statement, Short Form (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781364-450-2016-01',
         description='Form 450 is filed by recipient committees that meet \
@@ -106,7 +105,7 @@ certain specific criteria listed in the Form 450.',
     ),
     FilingForm(
         'F460',
-        'Recipient Committee Campaign Statement',
+        'Campaign Disclosure Statement (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781363-460-2016-01',
         description='Form 460 is filed by recipient committees to report \
@@ -116,7 +115,7 @@ year report, or an amendment to a previously filed statement.',
     ),
     FilingForm(
         'F461',
-        'Independent Expenditure Committee & Major Donor Committee Campaign Statement',
+        'Campaign Disclosure Statement (Independent Expenditure Committee & Major Donor Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781361-461-2016-01',
         description='Form 461 is filed by major donors, independent \
@@ -136,7 +135,7 @@ supported or opposed by the independent expenditure(s) is required to file.',
     ),
     FilingForm(
         'F470',
-        'Officeholder and Candidate Campaign Statement, Short Form',
+        'Campaign Disclosure Statement, Short Form (Officeholders and Candidates)',
         group='CAMPAIGN',
         documentcloud_id='2781357-470-2016-01',
         description='Form 470 is filed by officeholders and candidates who do \
