@@ -129,9 +129,9 @@ expenditure committees, and multipurpose organizations including nonprofits.',
         description='Form 465 is filed by officeholders, candidates, recipient \
 committees, major donor committees, and independent expenditure committees that \
 make independent expenditures totaling $1,000 or more in a calendar year to support \
-or oppose: a single candidate, a single measure, or the qualification of one single \
-measure. Form 465s are filed in the same period(s) the candidate or committee \
-supported or opposed by the independent expenditure(s) is required to file.',
+or oppose a single candidate, a single measure, or the qualification of one single \
+measure. filed in the same period(s) the candidate or committee \
+supported or opposed by the independent expenditures is required to file.',
     ),
     FilingForm(
         'F470',
@@ -144,14 +144,14 @@ more during the calendar year, and do not spend $2,000 or more during the \
 calendar year.'),
     FilingForm(
         'F490',
-        'Officeholder/Candidate Campaign Statement-Long Form',
+        'Campaign Disclosure Statement, Long Form (Officeholders and Candidates)',
         group='Deprecated',
         description='Form 490 was replaced by Form 460 (Recipient Committee \
 Campaign Statement) in or around 2001. There are 58,266 filings with this form ID.',
     ),
     FilingForm(
         'F495',
-        'Supplemental Pre-Election Campaign Statement',
+        'Supplemental Pre-Election Campaign Statement (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781356-495-2005-01',
         description='Form 495 is filed by recipient committees that make \
@@ -184,7 +184,7 @@ ballot measure committees that receive $5,000 or more at any time other than a \
     ),
     FilingForm(
         'F498',
-        'Slate Mailer Late Payment Report',
+        'Late Payment Report (Slate Mailer Organization)',
         group='CAMPAIGN',
         documentcloud_id='2781352-498-2016-01',
         description='Form 498 is filed by a slate mailer organization upon \
