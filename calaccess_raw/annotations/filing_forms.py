@@ -413,7 +413,7 @@ governmental decisions is required to file.',
     ),
     FilingForm(
         'F900',
-        'Public employee\'s retirement board, candidate campaign statement',
+        'Campaign Disclosure Statement (Public employee retirement board candidate)',
         group='CAMPAIGN',
     ),
 )
