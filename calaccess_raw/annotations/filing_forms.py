@@ -46,7 +46,7 @@ Statement of Organization (410), Candidate Intention (501) or Campaign Bank Acco
         documentcloud_id='2781368-410-2016-01',
         description='Form 410 must be filed within 10 days of receiving \
 $2,000 in contributions. If the committee has not yet reached the $2,000 \
-threshold, the not yet qualified box should be checked.',
+threshold, the not-yet-qualified box should be checked.',
     ),
     FilingForm(
         'F415',
@@ -111,7 +111,7 @@ certain specific criteria listed in the Form 450.',
         description='Form 460 is filed by recipient committees to report \
 expenditures and contributions. It can be used to file a pre-election statement, \
 semi-annual statement, quarterly statement, termination statement, special odd-\
-year report, or an amendment to a previously filed statement.',
+year report or an amendment to a previously filed statement.',
     ),
     FilingForm(
         'F461',
@@ -119,7 +119,7 @@ year report, or an amendment to a previously filed statement.',
         group='CAMPAIGN',
         documentcloud_id='2781361-461-2016-01',
         description='Form 461 is filed by major donors, independent \
-expenditure committees, and multipurpose organizations including nonprofits.',
+expenditure committees and multipurpose organizations including nonprofits.',
     ),
     FilingForm(
         'F465',
@@ -127,10 +127,10 @@ expenditure committees, and multipurpose organizations including nonprofits.',
         group='CAMPAIGN',
         documentcloud_id='2781358-465-2009-06',
         description='Form 465 is filed by officeholders, candidates, recipient \
-committees, major donor committees, and independent expenditure committees that \
+committees, major donor committees and independent expenditure committees that \
 make independent expenditures totaling $1,000 or more in a calendar year to support \
-or oppose a single candidate, a single measure, or the qualification of one single \
-measure. filed in the same period(s) the candidate or committee \
+or oppose a single candidate, a single measure, or the qualification of a single \
+measure. Filed in the same periods the candidate or committee \
 supported or opposed by the independent expenditures is required to file.',
     ),
     FilingForm(
@@ -139,15 +139,14 @@ supported or opposed by the independent expenditures is required to file.',
         group='CAMPAIGN',
         documentcloud_id='2781357-470-2016-01',
         description='Form 470 is filed by officeholders and candidates who do \
-not have a controlled committee, do not receive contributions totaling $2,000 or \
-more during the calendar year, and do not spend $2,000 or more during the \
-calendar year.'),
+not have a controlled committee, do not spend or receive contributions totaling $2,000 or \
+more during the calendar year.'),
     FilingForm(
         'F490',
         'Campaign Disclosure Statement, Long Form (Officeholders and Candidates)',
         group='Deprecated',
-        description='Form 490 was replaced by Form 460 (Recipient Committee \
-Campaign Statement) in or around 2001. There are 58,266 filings with this form ID.',
+        description='Form 490 was replaced by Form 460 in or around 2001. There \
+are 58,266 filings with this form ID.',
     ),
     FilingForm(
         'F495',
@@ -157,7 +156,7 @@ Campaign Statement) in or around 2001. There are 58,266 filings with this form I
         description='Form 495 is filed by recipient committees that make \
 contributions totaling $10,000 or more in connection with an election in which \
 the committee is not required to file regular preelection reports. Form 495 is \
-filed as an attachment to a campaign disclosure statement (Form 450 or 460).'
+filed as an attachment to Form 450 or Form 460.'
     ),
     FilingForm(
         'F496',
@@ -166,7 +165,7 @@ filed as an attachment to a campaign disclosure statement (Form 450 or 460).'
         documentcloud_id='2781355-496-2016-01',
         description='Form 496 is filed by committees that make independent \
 expenditures whose combined total is $1,000 or more to support or oppose a single \
-candidate for elective office, or a single ballot measure. Form 496 should be \
+candidate for office or a single ballot measure. Form 496 should be \
 filed within 24-hours of making the expenditure during the 90 days immediately \
 preceding the election.',
     ),
@@ -176,9 +175,9 @@ preceding the election.',
         group='CAMPAIGN',
         documentcloud_id='2781353-497-2016-01',
         description='Form 497 is filed by state and local committees making \
-or receiving contribution(s) whose combined total is $1,000 or more in the 90 \
+or receiving contributions totaling $1,000 or more in the 90 \
 days before an election, committees reporting contributions of $5,000 or more in \
-connection with a state ballot measure, and state candidates as well as state \
+connection with a state ballot measure and state candidates as well as state \
 ballot measure committees that receive $5,000 or more at any time other than a \
 90-day election cycle.',
     ),
@@ -187,7 +186,7 @@ ballot measure committees that receive $5,000 or more at any time other than a \
         'Late Payment Report (Slate Mailer Organization)',
         group='CAMPAIGN',
         documentcloud_id='2781352-498-2016-01',
-        description='Form 498 is filed by a slate mailer organization upon \
+        description='Form 498 is filed by a slate mailer organization on \
 receipt of a late payment.',
     ),
     FilingForm(
@@ -212,7 +211,7 @@ campaign bank account at a financial institution in California.'
         documentcloud_id='2781350-511-2015-01',
         description='Form 511 is filed by committees that make expenditures \
 totaling $5,000 or more to an individual for his or her appearance in a printed, \
-televised, or radio advertisement, or in a telephone message, to support or \
+televised, or radio advertisement, or in a telephone message to support or \
 oppose the qualification, passage, or defeat of a state or local ballot measure.'
     ),
     FilingForm(
@@ -232,7 +231,7 @@ of that candidate.'
         group='LOBBYIST',
         documentcloud_id='2781348-601-2014-10',
         description='Form 601 is filed on a biennial basis by a lobbying \
-firm of individual contract lobbyist wishing to register or renew an existing \
+firm or individual contract lobbyist wishing to register or renew an existing \
 registration. The form must be filed within 10 days of qualifying as a lobbying \
 firm. Renewal of existing registration is due between November 1 and December 31 \
 of each even-numbered year. This registration is valid for the complete two-year \
@@ -247,7 +246,7 @@ who employs or contracts with a lobbying firm. This form serves as an attachment
 to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains \
 a schedule which describes by category the nature and interest of the client of \
 the firm. Like Form 601 this registration attachment is valid for the length of \
-the State Legislative session for which it is filed. Form 602 must be filed by \
+the state legislative session for which it is filed. Form 602 must be filed by \
 a firm or its client, prior to attempting to influence legislative or \
 administrative action on behalf of that client.'
     ),
@@ -259,7 +258,7 @@ administrative action on behalf of that client.'
         description='Form 603 is a registration statement filed by registered \
 lobbyists employers or lobbying coalitions upon qualifying as an employer or \
 coalition. This form is also used to renew an existing registration on a biennial \
-basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer \
+basis. Form 603 must be filed within 10 days of qualifying as a lobbyist employer \
 or lobbying coalition. Renewal of an existing registration is due between November \
 1 and December 31 of each even-numbered year. This registration is valid for the \
 complete two-year cycle of such session.'
@@ -284,10 +283,10 @@ on ethical issues and laws relating to lobbying. When submitted as a paper filin
         group='LOBBYIST',
         documentcloud_id='2781344-605-2014-10',
         description='Form 605 is the standard amendment form used to amend \
-any previously-filed registration information. It is used to add or delete both \
+any previously filed registration information. It is used to add or delete both \
 lobbyists and clients to an existing registration. It is also used to change name\
 , address, and responsible officer information, as well as any other pertinent \
-information found on Forms 601, 602, 603 or 604.'
+information found on forms 601, 602, 603 or 604.'
     ),
     FilingForm(
         'F606',
@@ -320,9 +319,9 @@ disclosure statements.'
         documentcloud_id='2781341-615-1990',
         description='Form 615 is the quarterly disclosure statement completed \
 by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying \
-coalition. It is not filed on its own, but rather, for paper filers, it is an \
-attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of \
-Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as \
+coalition. It is not filed on its own. For paper filers, it is an \
+attachment to either Form 625 (Report of Lobbying Firm) or Form 635. (Report of \
+Lobbyist Employer/Lobbying Coalition). Electronic or online filers file these as \
 separate documents.'
     ),
     FilingForm(
@@ -352,7 +351,7 @@ coalition. This attachment itemizes such payments.'
         documentcloud_id='2781339-635-1993',
         description='Form 635 is the quarterly disclosure statement filed by \
 a lobbyist employer or a lobbying coalition. For employers and lobbying \
-coalitions filing on paper, a separate Form 615 must be completed for each in \
+coalitions filing on paper, a separate Form 615 must be completed for each in-\
 house lobbyist and attached to Form 635. Electronic or online filers file these \
 as separate documents. This form is also used as a quarterly disclosure statement \
 for a client of a firm which has no in-house lobbyist (also referred to as a \
@@ -364,7 +363,7 @@ non-registered employer).'
         db_value='S635-C',
         group='LOBBYIST',
         documentcloud_id='2781338-635C-1990',
-        description='Form 635-C is filed by a lobbying coalition as an \
+        description='Form 635C is filed by a lobbying coalition as an \
 attachment to the Form 635 (Report of a Lobbying Coalition) and discloses all \
 payment received from the members of a coalition.'
     ),
@@ -374,10 +373,10 @@ payment received from the members of a coalition.'
         group='LOBBYIST',
         documentcloud_id='2781337-640-1993',
         description='Form 640 is filed by a state or local governmental agency \
-which qualifies as a lobbyist employer, or $5,000 filer. The attachment replaces \
-Section D of Form 635 and Section B of Form 645 (both labeled Other Payments to \
-Influence Legislative or Administrative Action ). It is filed in conjunction with \
-either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).'
+which qualifies as a lobbyist employer or $5,000 filer. The attachment replaces \
+Section D of Form 635 and Section B of Form 645 (Other Payments to \
+Influence Legislative or Administrative Action). It is filed in conjunction with \
+either Form 635 if a lobbyist employer or Form 645 if a $5,000 filer.'
     ),
     FilingForm(
         'F645',
@@ -385,7 +384,7 @@ either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).'
         group='LOBBYIST',
         documentcloud_id='2781336-645-1993',
         description='Form 645 is the quarterly disclosure document filed by a \
-$5,000 filer (person who does not employ a lobbyist or contract with a lobbying \
+$5,000 filer (i.e. a person who does not employ a lobbyist or contract with a lobbying \
 firm, but who makes payments to influence legislative or administrative action \
 in aggregation of $5,000 or more in any calendar quarter). The filer does not \
 submit a registration or termination statement, and is only required to file Form \
@@ -410,8 +409,7 @@ form.'
         group='FINANCIAL DISCLOSURE',
         documentcloud_id='2792958-700-2015-12',
         description='Every public official who makes or participates in making \
-governmental decisions is required to file a Statement of Economic Interest, \
-commonly referred to as the Form 700.',
+governmental decisions is required to file.',
     ),
     FilingForm(
         'F900',
