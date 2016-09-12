@@ -552,7 +552,7 @@ form.add_section(
 form = get_filing_form('F450')
 form.add_section(
     id='CVR',
-    title='Type of Recipient Committee',
+    title='Cover Page, Type of Recipient Committee',
     start_page=3
 )
 form.add_section(
@@ -591,14 +591,14 @@ form.add_section(
 form = get_filing_form('F460')
 form.add_section(
     id='CVR',
-    title='Cover Page',
+    title='Cover Page, Part 1',
     start_page=3,
     end_page=4,
     db_value='CVR',
 )
 form.add_section(
     id='CVR2',
-    title='Cover Page - Part 2',
+    title='Cover Page, Part 2',
     start_page=2,
     db_value='CVR2',
 )
@@ -625,14 +625,14 @@ form.add_section(
 )
 form.add_section(
     id='B1',
-    title='Schedule B - Part 1, Loans Received',
+    title='Schedule B, Part 1, Loans Received',
     start_page=12,
     end_page=13,
     db_value='B1',
 )
 form.add_section(
     id='B2',
-    title='Schedule B - Part 2, Loan Guarantors',
+    title='Schedule B, Part 2, Loan Guarantors',
     start_page=14,
     end_page=15,
     db_value='B2',
@@ -640,7 +640,7 @@ form.add_section(
 # this section appears in older versions of Form 460, but not in the current one
 form.add_section(
     id='B3',
-    title='Schedule B - Part 3, Outstanding Bal',
+    title='Schedule B, Part 3, Outstanding Balance',
     db_value='B3',
 )
 form.add_section(
@@ -691,26 +691,26 @@ form.add_section(
 # but does appear in the filings
 form.add_section(
     id='H1',
-    title='Schedule H - Part 1, Loans Made',
+    title='Schedule H, Part 1, Loans Made',
     db_value='H1',
 )
 # this section is not in the sample form downloaded from the FPPC site
 # but does appear in the filings
 form.add_section(
     id='H2',
-    title='Schedule H- Part 2, Repayments Rcvd',
+    title='Schedule H, Part 2, Repayments Rcvd',
     db_value='H2',
 )
 # this section is not in the sample form downloaded from the FPPC site
 # but does appear in the filings
 form.add_section(
     id='H3',
-    title='Schedule H - Part 3, Outstanding Loans',
+    title='Schedule H, Part 3, Outstanding Loans',
     db_value='H3',
 )
 form.add_section(
     id='I',
-    title='Schedule I, miscellanous increases to cash',
+    title='Schedule I, Miscellanous increases to cash',
     start_page=31,
     end_page=32,
     db_value='I',
@@ -811,13 +811,13 @@ form.add_section(
 form = get_filing_form('F497')
 form.add_section(
     id='P1',
-    title='Part 1, Contribution(s) Received',
+    title='Part 1, Contributions Received',
     start_page=2,
     db_value='F497P1',
 )
 form.add_section(
     id='P2',
-    title='Part 2, Contribution(s) Made',
+    title='Part 2, Contributions Made',
     start_page=4,
     db_value='F497P2',
 )
@@ -839,20 +839,20 @@ form = get_filing_form('F601')
 form.add_section(
     id='P1',
     db_value='F601P1',
-    title='Individual Lobbyists',
+    title='Part 1, Individual Lobbyists',
     start_page=2,
 )
 form.add_section(
     id='P2A',
     db_value='F601P2A',
-    title='Part 2: Section A, Lobbyist Employers',
+    title='Part 2, Section A, Lobbyist Employers',
     start_page=2,
     end_page=4,
 )
 form.add_section(
     id='P2B',
     db_value='F601P2B',
-    title='Part 2: Section B: Subcontracted Clients',
+    title='Part 2, Section B, Subcontracted Clients',
     start_page=4,
 )
 
@@ -887,28 +887,28 @@ form.add_section(
 form.add_section(
     id='P3A',
     db_value='F625P3A',
-    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
-Section A: Activity Expenses',
+    title='Part 3, Payments Made In Connection With Lobbying Activities, \
+Section A, Activity Expenses',
     start_page=4,
 )
 form.add_section(
     id='P3B',
     db_value='F625P3B',
-    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
-Section B: Payments Made',
+    title='Part 3, Payments Made In Connection With Lobbying Activities, \
+Section B, Payments Made',
     start_page=8,
 )
 form.add_section(
     id='P3C',
     db_value='F625P3C',
-    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
-Section C: Summary of Payments',
+    title='Part 3, Payments Made In Connection With Lobbying Activities, \
+Section C, Summary of Payments',
     start_page=2,
 )
 form.add_section(
     id='P4B',
     db_value='F625P4B',
-    title='Part 4: Campaign Contributions Made',
+    title='Part 4, Campaign Contributions Made',
     start_page=2,
 )
 
@@ -916,57 +916,57 @@ form = get_filing_form('F635')
 form.add_section(
     id='P1',
     db_value='F635P1',
-    title='Part 1: Legislative or State Agency Administrative Actions Actively \
+    title='Part 1, Legislative or State Agency Administrative Actions Actively \
 Lobbied During the Period',
     start_page=2,
 )
 form.add_section(
     id='P2',
     db_value='F635P2',
-    title='Part 2: Partners, Owners, and Employees whose "Lobbyist Reports" \
-(Form 615) are Atttached to this Report',
+    title='Part 2, Partners, Owners, and Employees whose "Lobbyist Reports" \
+(Form 615) are Attached to this Report',
     start_page=4,
 )
 form.add_section(
     id='P3A',
     db_value='F635P3A',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section A: Payments To In-house Employee Lobbyists',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section A, Payments To In-house Employee Lobbyists',
     start_page=4,
 )
 form.add_section(
     id='P3B',
     db_value='F635P3B',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section B: Payments To Lobbying Firms',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section B, Payments To Lobbying Firms',
     start_page=4,
 )
 form.add_section(
     id='P3C',
     db_value='F635P3C',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section C: Activity Expenses',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section C, Activity Expenses',
     start_page=6,
 )
 form.add_section(
     id='P3D',
     db_value='F635P3D',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section D: Other Payments to Influence Legislative or Administrative Action',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section D, Other Payments to Influence Legislative or Administrative Action',
     start_page=6,
 )
 form.add_section(
     id='P3E',
     db_value='F635P3E',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section E: Payments in Connection with Administrative Testimony in Ratemaking \
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section E, Payments in Connection with Administrative Testimony in Ratemaking \
 Proceedings Before The California Public Utilities Commission',
     start_page=6,
 )
 form.add_section(
     id='P4B',
     db_value='F635P4B',
-    title='Part 4: Campaign Contributions Made',
+    title='Part 4, Campaign Contributions Made',
     start_page=8,
 )
 
@@ -974,27 +974,27 @@ form = get_filing_form('F645')
 form.add_section(
     id='P1',
     db_value='F645P1',
-    title='Part 1: Legislative or State Agency Administrative Actions Actively \
+    title='Part 1, Legislative or State Agency Administrative Actions Actively \
 Lobbied during the Period',
     start_page=2,
 )
 form.add_section(
     id='P2A',
     db_value='F645P2A',
-    title='Part 2 (Payments Made this Period), Section A: Activity Expenses',
+    title='Part 2, Payments Made this Period, Section A, Activity Expenses',
     start_page=4,
 )
 form.add_section(
     id='P2B',
     db_value='F645P2B',
-    title='Part 2 (Payments Made this Period), Section B: Other Payments to \
+    title='Part 2, Payments Made this Period, Section B, Other Payments to \
 Influence Legislative or Administrative Action',
     start_page=4,
 )
 form.add_section(
     id='P2C',
     db_value='F645P2C',
-    title='Part 2 (Payments Made this Period), Section C: Payments in Connection \
+    title='Part 2, Payments Made this Period, Section C, Payments in Connection \
 with Administrative Testimony in Ratemaking Proceedings Before the California \
 Public Utilities Commission',
     start_page=4,
@@ -1002,6 +1002,6 @@ Public Utilities Commission',
 form.add_section(
     id='P3B',
     db_value='F645P3B',
-    title='Part 3: Campaign Contributions Made',
+    title='Part 3, Campaign Contributions Made',
     start_page=4,
 )
