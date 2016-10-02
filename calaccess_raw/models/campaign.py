@@ -4782,6 +4782,7 @@ class F495P2Cd(CalAccessBaseModel):
     FILING_FORMS = [
         get_filing_form('F450'),
         get_filing_form('F460'),
+        get_filing_form('F495'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
