@@ -26,6 +26,7 @@ python-coveralls
 
 # Packaging
 wheel
+twine
 
 # DAT
 datpy

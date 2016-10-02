@@ -17,7 +17,7 @@ producing one or more slate mailers.',
     ),
     FilingForm(
         'F401',
-        'Slate Mailer Organization Campaign Statement',
+        'Campaign Disclosure Statement (Slate Mailer Organization)',
         group='CAMPAIGN',
         documentcloud_id='2781366-401-2005-01',
         description='Form 401 is filed by slate mailer organizations to \
@@ -36,18 +36,17 @@ terminate the organization.',
         'Amendment to Campaign Disclosure Statement',
         group='CAMPAIGN',
         documentcloud_id='2811582-405-1994',
-        description="Form 405 must be used to amend campaign disclosure statements,\
-except for Statement of Organization, Candidate Intention or Campaign Bank Account \
-(Forms 410, 501, 502).",
+        description="Form 405 is used to amend many campaign disclosure statements, with the exception of \
+Statement of Organization (410), Candidate Intention (501) or Campaign Bank Account (502) forms.",
     ),
     FilingForm(
         'F410',
-        'Statement of Organization Recipient Committee',
+        'Statement of Organization (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781368-410-2016-01',
         description='Form 410 must be filed within 10 days of receiving \
 $2,000 in contributions. If the committee has not yet reached the $2,000 \
-threshold, the not yet qualified box should be checked.',
+threshold, the not-yet-qualified box should be checked.',
     ),
     FilingForm(
         'F415',
@@ -67,21 +66,21 @@ Organization Recipient Committee). There are 521 filings with this form ID.',
     ),
     FilingForm(
         'F419',
-        'Ballot Measure Committee Campaign Statement-Long Form',
+        'Campaign Disclosure Statement, Long Form (Ballot Measure Committee)',
         group='Deprecated',
         description='Form 419 was replaced by Form 460 (Recipient Committee \
 Campaign Statement) in or around 2001. There are 2,293 filings with this form ID.',
     ),
     FilingForm(
         'F420',
-        'Recipient Committee Campaign Statement-Long Form',
+        'Campaign Disclosure Statement, Long Form (Recipient Committee)',
         group='Deprecated',
         description='Form 420 was replaced by Form 460 (Recipient Committee \
 Campaign Statement) in or around 2001. There are 70,704 filings with this form ID.',
     ),
     FilingForm(
         'F425',
-        'Semi-Annual Statement of no Activity',
+        'Semi-Annual Statement of No Activity (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781365-425-2001-01',
         description='Form 425 is filed by recipient committees that have not \
@@ -98,7 +97,7 @@ Committee Campaign Statement). There are 2,293 filings with this form ID.',
     ),
     FilingForm(
         'F450',
-        'Recipient Committee Campaign Disclosure Statement - Short Form',
+        'Campaign Disclosure Statement, Short Form (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781364-450-2016-01',
         description='Form 450 is filed by recipient committees that meet \
@@ -106,21 +105,21 @@ certain specific criteria listed in the Form 450.',
     ),
     FilingForm(
         'F460',
-        'Recipient Committee Campaign Statement',
+        'Campaign Disclosure Statement (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781363-460-2016-01',
         description='Form 460 is filed by recipient committees to report \
 expenditures and contributions. It can be used to file a pre-election statement, \
 semi-annual statement, quarterly statement, termination statement, special odd-\
-year report, or an amendment to a previously filed statement.',
+year report or an amendment to a previously filed statement.',
     ),
     FilingForm(
         'F461',
-        'Independent Expenditure Committee & Major Donor Committee Campaign Statement',
+        'Campaign Disclosure Statement (Independent Expenditure Committee & Major Donor Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781361-461-2016-01',
         description='Form 461 is filed by major donors, independent \
-expenditure committees, and multipurpose organizations including nonprofits.',
+expenditure committees and multipurpose organizations including nonprofits.',
     ),
     FilingForm(
         'F465',
@@ -128,37 +127,36 @@ expenditure committees, and multipurpose organizations including nonprofits.',
         group='CAMPAIGN',
         documentcloud_id='2781358-465-2009-06',
         description='Form 465 is filed by officeholders, candidates, recipient \
-committees, major donor committees, and independent expenditure committees that \
+committees, major donor committees and independent expenditure committees that \
 make independent expenditures totaling $1,000 or more in a calendar year to support \
-or oppose: a single candidate, a single measure, or the qualification of one single \
-measure. Form 465s are filed in the same period(s) the candidate or committee \
-supported or opposed by the independent expenditure(s) is required to file.',
+or oppose a single candidate, a single measure, or the qualification of a single \
+measure. Filed in the same periods the candidate or committee \
+supported or opposed by the independent expenditures is required to file.',
     ),
     FilingForm(
         'F470',
-        'Officeholder and Candidate Campaign Statement, Short Form',
+        'Campaign Disclosure Statement, Short Form (Officeholders and Candidates)',
         group='CAMPAIGN',
         documentcloud_id='2781357-470-2016-01',
         description='Form 470 is filed by officeholders and candidates who do \
-not have a controlled committee, do not receive contributions totaling $2,000 or \
-more during the calendar year, and do not spend $2,000 or more during the \
-calendar year.'),
+not have a controlled committee, do not spend or receive contributions totaling $2,000 or \
+more during the calendar year.'),
     FilingForm(
         'F490',
-        'Officeholder/Candidate Campaign Statement-Long Form',
+        'Campaign Disclosure Statement, Long Form (Officeholders and Candidates)',
         group='Deprecated',
-        description='Form 490 was replaced by Form 460 (Recipient Committee \
-Campaign Statement) in or around 2001. There are 58,266 filings with this form ID.',
+        description='Form 490 was replaced by Form 460 in or around 2001. There \
+are 58,266 filings with this form ID.',
     ),
     FilingForm(
         'F495',
-        'Supplemental Pre-Election Campaign Statement',
+        'Supplemental Pre-Election Campaign Statement (Recipient Committee)',
         group='CAMPAIGN',
         documentcloud_id='2781356-495-2005-01',
         description='Form 495 is filed by recipient committees that make \
 contributions totaling $10,000 or more in connection with an election in which \
 the committee is not required to file regular preelection reports. Form 495 is \
-filed as an attachment to a campaign disclosure statement (Form 450 or 460).'
+filed as an attachment to Form 450 or Form 460.'
     ),
     FilingForm(
         'F496',
@@ -167,7 +165,7 @@ filed as an attachment to a campaign disclosure statement (Form 450 or 460).'
         documentcloud_id='2781355-496-2016-01',
         description='Form 496 is filed by committees that make independent \
 expenditures whose combined total is $1,000 or more to support or oppose a single \
-candidate for elective office, or a single ballot measure. Form 496 should be \
+candidate for office or a single ballot measure. Form 496 should be \
 filed within 24-hours of making the expenditure during the 90 days immediately \
 preceding the election.',
     ),
@@ -177,18 +175,18 @@ preceding the election.',
         group='CAMPAIGN',
         documentcloud_id='2781353-497-2016-01',
         description='Form 497 is filed by state and local committees making \
-or receiving contribution(s) whose combined total is $1,000 or more in the 90 \
+or receiving contributions totaling $1,000 or more in the 90 \
 days before an election, committees reporting contributions of $5,000 or more in \
-connection with a state ballot measure, and state candidates as well as state \
+connection with a state ballot measure and state candidates as well as state \
 ballot measure committees that receive $5,000 or more at any time other than a \
 90-day election cycle.',
     ),
     FilingForm(
         'F498',
-        'Slate Mailer Late Payment Report',
+        'Late Payment Report (Slate Mailer Organization)',
         group='CAMPAIGN',
         documentcloud_id='2781352-498-2016-01',
-        description='Form 498 is filed by a slate mailer organization upon \
+        description='Form 498 is filed by a slate mailer organization on \
 receipt of a late payment.',
     ),
     FilingForm(
@@ -213,7 +211,7 @@ campaign bank account at a financial institution in California.'
         documentcloud_id='2781350-511-2015-01',
         description='Form 511 is filed by committees that make expenditures \
 totaling $5,000 or more to an individual for his or her appearance in a printed, \
-televised, or radio advertisement, or in a telephone message, to support or \
+televised, or radio advertisement, or in a telephone message to support or \
 oppose the qualification, passage, or defeat of a state or local ballot measure.'
     ),
     FilingForm(
@@ -233,7 +231,7 @@ of that candidate.'
         group='LOBBYIST',
         documentcloud_id='2781348-601-2014-10',
         description='Form 601 is filed on a biennial basis by a lobbying \
-firm of individual contract lobbyist wishing to register or renew an existing \
+firm or individual contract lobbyist wishing to register or renew an existing \
 registration. The form must be filed within 10 days of qualifying as a lobbying \
 firm. Renewal of existing registration is due between November 1 and December 31 \
 of each even-numbered year. This registration is valid for the complete two-year \
@@ -248,7 +246,7 @@ who employs or contracts with a lobbying firm. This form serves as an attachment
 to Form 601, and is filed by the applicable lobbying firm. Form 602 also contains \
 a schedule which describes by category the nature and interest of the client of \
 the firm. Like Form 601 this registration attachment is valid for the length of \
-the State Legislative session for which it is filed. Form 602 must be filed by \
+the state legislative session for which it is filed. Form 602 must be filed by \
 a firm or its client, prior to attempting to influence legislative or \
 administrative action on behalf of that client.'
     ),
@@ -260,7 +258,7 @@ administrative action on behalf of that client.'
         description='Form 603 is a registration statement filed by registered \
 lobbyists employers or lobbying coalitions upon qualifying as an employer or \
 coalition. This form is also used to renew an existing registration on a biennial \
-basis. Form 603 must be filed within 10days of qualifying as a lobbyist employer \
+basis. Form 603 must be filed within 10 days of qualifying as a lobbyist employer \
 or lobbying coalition. Renewal of an existing registration is due between November \
 1 and December 31 of each even-numbered year. This registration is valid for the \
 complete two-year cycle of such session.'
@@ -285,10 +283,10 @@ on ethical issues and laws relating to lobbying. When submitted as a paper filin
         group='LOBBYIST',
         documentcloud_id='2781344-605-2014-10',
         description='Form 605 is the standard amendment form used to amend \
-any previously-filed registration information. It is used to add or delete both \
+any previously filed registration information. It is used to add or delete both \
 lobbyists and clients to an existing registration. It is also used to change name\
 , address, and responsible officer information, as well as any other pertinent \
-information found on Forms 601, 602, 603 or 604.'
+information found on forms 601, 602, 603 or 604.'
     ),
     FilingForm(
         'F606',
@@ -321,9 +319,9 @@ disclosure statements.'
         documentcloud_id='2781341-615-1990',
         description='Form 615 is the quarterly disclosure statement completed \
 by the in-house lobbyist of a lobbying firm, lobbyist employer, or lobbying \
-coalition. It is not filed on its own, but rather, for paper filers, it is an \
-attachment to either Form 625 (Report of Lobbying Firm) or Form 635 (Report of \
-Lobbyist Employer/Lobbying Coalition) Electronic or online filers file these as \
+coalition. It is not filed on its own. For paper filers, it is an \
+attachment to either Form 625 (Report of Lobbying Firm) or Form 635. (Report of \
+Lobbyist Employer/Lobbying Coalition). Electronic or online filers file these as \
 separate documents.'
     ),
     FilingForm(
@@ -353,7 +351,7 @@ coalition. This attachment itemizes such payments.'
         documentcloud_id='2781339-635-1993',
         description='Form 635 is the quarterly disclosure statement filed by \
 a lobbyist employer or a lobbying coalition. For employers and lobbying \
-coalitions filing on paper, a separate Form 615 must be completed for each in \
+coalitions filing on paper, a separate Form 615 must be completed for each in-\
 house lobbyist and attached to Form 635. Electronic or online filers file these \
 as separate documents. This form is also used as a quarterly disclosure statement \
 for a client of a firm which has no in-house lobbyist (also referred to as a \
@@ -365,7 +363,7 @@ non-registered employer).'
         db_value='S635-C',
         group='LOBBYIST',
         documentcloud_id='2781338-635C-1990',
-        description='Form 635-C is filed by a lobbying coalition as an \
+        description='Form 635C is filed by a lobbying coalition as an \
 attachment to the Form 635 (Report of a Lobbying Coalition) and discloses all \
 payment received from the members of a coalition.'
     ),
@@ -375,10 +373,10 @@ payment received from the members of a coalition.'
         group='LOBBYIST',
         documentcloud_id='2781337-640-1993',
         description='Form 640 is filed by a state or local governmental agency \
-which qualifies as a lobbyist employer, or $5,000 filer. The attachment replaces \
-Section D of Form 635 and Section B of Form 645 (both labeled Other Payments to \
-Influence Legislative or Administrative Action ). It is filed in conjunction with \
-either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).'
+which qualifies as a lobbyist employer or $5,000 filer. The attachment replaces \
+Section D of Form 635 and Section B of Form 645 (Other Payments to \
+Influence Legislative or Administrative Action). It is filed in conjunction with \
+either Form 635 if a lobbyist employer or Form 645 if a $5,000 filer.'
     ),
     FilingForm(
         'F645',
@@ -386,7 +384,7 @@ either Form 635 (if a lobbyist employer) or Form 645 (if a $5,000 filer).'
         group='LOBBYIST',
         documentcloud_id='2781336-645-1993',
         description='Form 645 is the quarterly disclosure document filed by a \
-$5,000 filer (person who does not employ a lobbyist or contract with a lobbying \
+$5,000 filer (i.e. a person who does not employ a lobbyist or contract with a lobbying \
 firm, but who makes payments to influence legislative or administrative action \
 in aggregation of $5,000 or more in any calendar quarter). The filer does not \
 submit a registration or termination statement, and is only required to file Form \
@@ -411,12 +409,11 @@ form.'
         group='FINANCIAL DISCLOSURE',
         documentcloud_id='2792958-700-2015-12',
         description='Every public official who makes or participates in making \
-governmental decisions is required to file a Statement of Economic Interest, \
-commonly referred to as the Form 700.',
+governmental decisions is required to file.',
     ),
     FilingForm(
         'F900',
-        'Public employee\'s retirement board, candidate campaign statement',
+        'Campaign Disclosure Statement (Public employee retirement board candidate)',
         group='CAMPAIGN',
     ),
 )
@@ -555,7 +552,7 @@ form.add_section(
 form = get_filing_form('F450')
 form.add_section(
     id='CVR',
-    title='Type of Recipient Committee',
+    title='Cover Page, Type of Recipient Committee',
     start_page=3
 )
 form.add_section(
@@ -594,14 +591,14 @@ form.add_section(
 form = get_filing_form('F460')
 form.add_section(
     id='CVR',
-    title='Cover Page',
+    title='Cover Page, Part 1',
     start_page=3,
     end_page=4,
     db_value='CVR',
 )
 form.add_section(
     id='CVR2',
-    title='Cover Page - Part 2',
+    title='Cover Page, Part 2',
     start_page=2,
     db_value='CVR2',
 )
@@ -628,14 +625,14 @@ form.add_section(
 )
 form.add_section(
     id='B1',
-    title='Schedule B - Part 1, Loans Received',
+    title='Schedule B, Part 1, Loans Received',
     start_page=12,
     end_page=13,
     db_value='B1',
 )
 form.add_section(
     id='B2',
-    title='Schedule B - Part 2, Loan Guarantors',
+    title='Schedule B, Part 2, Loan Guarantors',
     start_page=14,
     end_page=15,
     db_value='B2',
@@ -643,7 +640,7 @@ form.add_section(
 # this section appears in older versions of Form 460, but not in the current one
 form.add_section(
     id='B3',
-    title='Schedule B - Part 3, Outstanding Bal',
+    title='Schedule B, Part 3, Outstanding Balance',
     db_value='B3',
 )
 form.add_section(
@@ -694,26 +691,26 @@ form.add_section(
 # but does appear in the filings
 form.add_section(
     id='H1',
-    title='Schedule H - Part 1, Loans Made',
+    title='Schedule H, Part 1, Loans Made',
     db_value='H1',
 )
 # this section is not in the sample form downloaded from the FPPC site
 # but does appear in the filings
 form.add_section(
     id='H2',
-    title='Schedule H- Part 2, Repayments Rcvd',
+    title='Schedule H, Part 2, Repayments Rcvd',
     db_value='H2',
 )
 # this section is not in the sample form downloaded from the FPPC site
 # but does appear in the filings
 form.add_section(
     id='H3',
-    title='Schedule H - Part 3, Outstanding Loans',
+    title='Schedule H, Part 3, Outstanding Loans',
     db_value='H3',
 )
 form.add_section(
     id='I',
-    title='Schedule I, miscellanous increases to cash',
+    title='Schedule I, Miscellanous increases to cash',
     start_page=31,
     end_page=32,
     db_value='I',
@@ -814,13 +811,13 @@ form.add_section(
 form = get_filing_form('F497')
 form.add_section(
     id='P1',
-    title='Part 1, Contribution(s) Received',
+    title='Part 1, Contributions Received',
     start_page=2,
     db_value='F497P1',
 )
 form.add_section(
     id='P2',
-    title='Part 2, Contribution(s) Made',
+    title='Part 2, Contributions Made',
     start_page=4,
     db_value='F497P2',
 )
@@ -842,20 +839,20 @@ form = get_filing_form('F601')
 form.add_section(
     id='P1',
     db_value='F601P1',
-    title='Individual Lobbyists',
+    title='Part 1, Individual Lobbyists',
     start_page=2,
 )
 form.add_section(
     id='P2A',
     db_value='F601P2A',
-    title='Part 2: Section A, Lobbyist Employers',
+    title='Part 2, Section A, Lobbyist Employers',
     start_page=2,
     end_page=4,
 )
 form.add_section(
     id='P2B',
     db_value='F601P2B',
-    title='Part 2: Section B: Subcontracted Clients',
+    title='Part 2, Section B, Subcontracted Clients',
     start_page=4,
 )
 
@@ -890,28 +887,28 @@ form.add_section(
 form.add_section(
     id='P3A',
     db_value='F625P3A',
-    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
-Section A: Activity Expenses',
+    title='Part 3, Payments Made In Connection With Lobbying Activities, \
+Section A, Activity Expenses',
     start_page=4,
 )
 form.add_section(
     id='P3B',
     db_value='F625P3B',
-    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
-Section B: Payments Made',
+    title='Part 3, Payments Made In Connection With Lobbying Activities, \
+Section B, Payments Made',
     start_page=8,
 )
 form.add_section(
     id='P3C',
     db_value='F625P3C',
-    title='Part 3 (Payments Made In Connection With Lobbying Activities), \
-Section C: Summary of Payments',
+    title='Part 3, Payments Made In Connection With Lobbying Activities, \
+Section C, Summary of Payments',
     start_page=2,
 )
 form.add_section(
     id='P4B',
     db_value='F625P4B',
-    title='Part 4: Campaign Contributions Made',
+    title='Part 4, Campaign Contributions Made',
     start_page=2,
 )
 
@@ -919,57 +916,57 @@ form = get_filing_form('F635')
 form.add_section(
     id='P1',
     db_value='F635P1',
-    title='Part 1: Legislative or State Agency Administrative Actions Actively \
+    title='Part 1, Legislative or State Agency Administrative Actions Actively \
 Lobbied During the Period',
     start_page=2,
 )
 form.add_section(
     id='P2',
     db_value='F635P2',
-    title='Part 2: Partners, Owners, and Employees whose "Lobbyist Reports" \
-(Form 615) are Atttached to this Report',
+    title='Part 2, Partners, Owners, and Employees whose "Lobbyist Reports" \
+(Form 615) are Attached to this Report',
     start_page=4,
 )
 form.add_section(
     id='P3A',
     db_value='F635P3A',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section A: Payments To In-house Employee Lobbyists',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section A, Payments To In-house Employee Lobbyists',
     start_page=4,
 )
 form.add_section(
     id='P3B',
     db_value='F635P3B',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section B: Payments To Lobbying Firms',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section B, Payments To Lobbying Firms',
     start_page=4,
 )
 form.add_section(
     id='P3C',
     db_value='F635P3C',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section C: Activity Expenses',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section C, Activity Expenses',
     start_page=6,
 )
 form.add_section(
     id='P3D',
     db_value='F635P3D',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section D: Other Payments to Influence Legislative or Administrative Action',
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section D, Other Payments to Influence Legislative or Administrative Action',
     start_page=6,
 )
 form.add_section(
     id='P3E',
     db_value='F635P3E',
-    title='Part 3 (Payments Made in Connection with Lobbying Activities), \
-Section E: Payments in Connection with Administrative Testimony in Ratemaking \
+    title='Part 3, Payments Made in Connection with Lobbying Activities, \
+Section E, Payments in Connection with Administrative Testimony in Ratemaking \
 Proceedings Before The California Public Utilities Commission',
     start_page=6,
 )
 form.add_section(
     id='P4B',
     db_value='F635P4B',
-    title='Part 4: Campaign Contributions Made',
+    title='Part 4, Campaign Contributions Made',
     start_page=8,
 )
 
@@ -977,27 +974,27 @@ form = get_filing_form('F645')
 form.add_section(
     id='P1',
     db_value='F645P1',
-    title='Part 1: Legislative or State Agency Administrative Actions Actively \
+    title='Part 1, Legislative or State Agency Administrative Actions Actively \
 Lobbied during the Period',
     start_page=2,
 )
 form.add_section(
     id='P2A',
     db_value='F645P2A',
-    title='Part 2 (Payments Made this Period), Section A: Activity Expenses',
+    title='Part 2, Payments Made this Period, Section A, Activity Expenses',
     start_page=4,
 )
 form.add_section(
     id='P2B',
     db_value='F645P2B',
-    title='Part 2 (Payments Made this Period), Section B: Other Payments to \
+    title='Part 2, Payments Made this Period, Section B, Other Payments to \
 Influence Legislative or Administrative Action',
     start_page=4,
 )
 form.add_section(
     id='P2C',
     db_value='F645P2C',
-    title='Part 2 (Payments Made this Period), Section C: Payments in Connection \
+    title='Part 2, Payments Made this Period, Section C, Payments in Connection \
 with Administrative Testimony in Ratemaking Proceedings Before the California \
 Public Utilities Commission',
     start_page=4,
@@ -1005,6 +1002,6 @@ Public Utilities Commission',
 form.add_section(
     id='P3B',
     db_value='F645P3B',
-    title='Part 3: Campaign Contributions Made',
+    title='Part 3, Campaign Contributions Made',
     start_page=4,
 )

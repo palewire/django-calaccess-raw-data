@@ -187,9 +187,7 @@ class FilingForm(object):
         self.group = kwargs.get('group')
         self.documentcloud_id = kwargs.get('documentcloud_id')
         self.db_value = kwargs.get('db_value', self.id)
-
         self.sections = []
-
         if self.documentcloud_id:
             self.documentcloud = DocumentCloud(self.documentcloud_id)
         else:
