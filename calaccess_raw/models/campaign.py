@@ -4095,7 +4095,9 @@ and Form 401 Schedule A, A-1)"
         max_length=9,
         db_column='INT_RATE',
         blank=True,
-        help_text="This field is undocumented"
+        help_text="This field is undocumented. The observed values look like "
+                  "filer_ids taken from section 5, cover page 2 of Form 460 "
+                  "(Related Committees Not Included in this Statement)."
     )
     # intr_adr1 = fields.CharField(
     #     max_length=55,
