@@ -4084,6 +4084,7 @@ and Form 401 Schedule A, A-1)"
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
         max_length=9,
+        db_index=True,
         db_column='FORM_TYPE',
         help_text='Name of the source filing form or schedule',
         documentcloud_pages=[
