@@ -147,6 +147,9 @@ class Command(CalAccessCommand):
                     "{} not configured in DATABASES settings.".format(self.database)
                 )
 
+        # temporarily drop model and field constraints and indexes
+        self.model.objects.drop_constraints_and_indexes()
+
         # set up database connection
         self.connection = connections[self.database]
         self.cursor = self.connection.cursor()
@@ -164,6 +167,9 @@ class Command(CalAccessCommand):
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
             )
+
+        # re-add model and field constraints and indexes
+        self.model.objects.add_constraints_and_indexes()
 
     def load_dat(self):
         """

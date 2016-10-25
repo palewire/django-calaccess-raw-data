@@ -5,7 +5,7 @@ Custom managers for working with CAL-ACCESS data.
 """
 from __future__ import unicode_literals
 import os
-from django.db import models
+from django.db import models, connection
 from calaccess_raw import get_download_directory
 
 
@@ -44,6 +44,87 @@ class CalAccessManager(models.Manager):
             'tsv',
             self.get_tsv_name()
         )
+
+    def add_constraints_and_indexes(self):
+        """
+        Re-create constraints and indexes on the model and its fields.
+        """
+        with connection.schema_editor() as schema_editor:
+            schema_editor.alter_unique_together(
+                self.model,
+                (),
+                self.model._meta.unique_together,
+            )
+
+            schema_editor.alter_index_together(
+                self.model,
+                (),
+                self.model._meta.index_together,
+            )
+
+            for field in self.model.objects.constrained_fields:
+                field_copy = field.__copy__()
+                field_copy.db_constraint = False
+                schema_editor.alter_field(
+                    self.model, field_copy, field
+                )
+
+            for field in self.model.objects.indexed_fields:
+                field_copy = field.__copy__()
+                field_copy.db_index = False
+                schema_editor.alter_field(
+                    self.model, field_copy, field
+                )
+
+    def drop_constraints_and_indexes(self):
+        """
+        Temporarily drop constraints and indexes on the model and its fields.
+        """
+        with connection.schema_editor() as schema_editor:
+            schema_editor.alter_unique_together(
+                self.model,
+                self.model._meta.unique_together,
+                (),
+            )
+
+            schema_editor.alter_index_together(
+                self.model,
+                self.model._meta.index_together,
+                (),
+            )
+
+            for field in self.model.objects.constrained_fields:
+                field_copy = field.__copy__()
+                field_copy.db_constraint = False
+                schema_editor.alter_field(
+                    self.model, field, field_copy
+                )
+
+            for field in self.model.objects.indexed_fields:
+                field_copy = field.__copy__()
+                field_copy.db_index = False
+                schema_editor.alter_field(
+                    self.model, field, field_copy
+                )
+
+    @property
+    def constrained_fields(self):
+        """
+        Returns list of model's fields with db_constraint set to True.
+        """
+        return [
+            f for f in self.model._meta.fields
+            if hasattr(f, 'db_constraint') and f.db_constraint
+        ]
+
+    @property
+    def indexed_fields(self):
+        """
+        Returns list of model's fields with db_index set to True.
+        """
+        return [
+            f for f in self.model._meta.fields if f.db_index
+        ]
 
 
 class RawDataVersionQuerySet(models.QuerySet):
