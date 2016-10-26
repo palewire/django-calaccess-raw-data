@@ -258,7 +258,7 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing id',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = (
         ('F400', get_filing_form('F400').full_title),
@@ -504,7 +504,7 @@ class Cvr2SoCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1268,7 +1268,7 @@ individual the filer's last name."
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = (
         ('F401', get_filing_form('F401').full_title),
@@ -1919,7 +1919,7 @@ with in the record.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.form.id, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -2160,7 +2160,7 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2461,7 +2461,7 @@ of a parent record.'
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number of the parent filing",
+        help_text="Unique filing identification number of the parent filing",
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -2996,7 +2996,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -3471,7 +3471,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -4078,7 +4078,7 @@ and Form 401 Schedule A, A-1)"
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -4465,7 +4465,7 @@ class S401Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4791,7 +4791,7 @@ class F495P2Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4887,7 +4887,7 @@ class S496Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -5012,7 +5012,7 @@ class S497Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -5423,7 +5423,7 @@ class S498Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -5732,7 +5732,7 @@ class F501502Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',

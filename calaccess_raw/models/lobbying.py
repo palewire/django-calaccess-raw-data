@@ -295,7 +295,7 @@ Form 604. As filed by the lobbyist.',
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number",
+        help_text="Unique filing identification number",
         null=True,
         blank=True,
     )
@@ -666,7 +666,7 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -802,7 +802,7 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1362,7 +1362,7 @@ Part 2B Client/Employer"
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -1558,7 +1558,7 @@ to forms 625, 635, 645.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     # firm_adr1 = fields.CharField(
     #   max_length=55,
@@ -1954,7 +1954,7 @@ entity is an individual. Only required by Form 635.',
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -2035,7 +2035,7 @@ class F690P2Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2195,7 +2195,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -2422,7 +2422,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -2657,7 +2657,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -2933,7 +2933,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
     form_type = fields.CharField(
@@ -3066,7 +3066,7 @@ original filing and 1 to 999 amendments.",
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     # firm_adr1 = fields.CharField(
     #   max_length=55,

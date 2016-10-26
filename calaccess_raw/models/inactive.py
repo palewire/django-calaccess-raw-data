@@ -1876,7 +1876,7 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     filing_sequence = fields.IntegerField(
         db_column='FILING_SEQUENCE',
@@ -1964,7 +1964,7 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
         db_column='FILING_ID',
         db_index=True,
         verbose_name='filing ID',
-        help_text="Unique filing identificiation number"
+        help_text="Unique filing identification number"
     )
     filing_sequence = fields.IntegerField(
         db_column='FILING_SEQUENCE',
