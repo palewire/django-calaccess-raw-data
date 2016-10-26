@@ -1769,7 +1769,7 @@ original filing and 1 to 999 amendments.",
         max_length=9,
         db_column='CMTE_ID',
         blank=True,
-        help_text="Commitee identification number, when the entity \
+        help_text="Committee identification number, when the entity \
 is a committee"
     )
     control_yn = fields.IntegerField(
