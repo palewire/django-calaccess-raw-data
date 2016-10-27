@@ -2988,7 +2988,7 @@ original filing and 1 to 999 amendments.",
     expn_dscr = fields.CharField(
         max_length=400,
         db_column='EXPN_DSCR',
-        verbose_name="espense description",
+        verbose_name="expense description",
         blank=True,
         help_text="Purpose of expense and/or description/explanation"
     )
