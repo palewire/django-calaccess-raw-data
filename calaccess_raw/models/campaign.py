@@ -2701,24 +2701,28 @@ original filing and 1 to 999 amendments.",
         help_text="Amount of Payment"
     )
     bakref_tid = fields.CharField(
+        verbose_name='back reference transaction id',
         max_length=20,
         db_column='BAKREF_TID',
         blank=True,
         help_text="Back Reference to a Tran_ID of a 'parent' record"
     )
     bal_juris = fields.CharField(
+        verbose_name='ballot measure jurisdiction',
         max_length=40,
         db_column='BAL_JURIS',
         blank=True,
-        help_text="Jurisdiction"
+        help_text="Ballot measure's jurisdiction"
     )
     bal_name = fields.CharField(
+        verbose_name='ballot measure name',
         max_length=200,
         db_column='BAL_NAME',
         blank=True,
         help_text="Ballot Measure Name"
     )
     bal_num = fields.CharField(
+        verbose_name='ballot measure number',
         max_length=7,
         db_column='BAL_NUM',
         blank=True,
