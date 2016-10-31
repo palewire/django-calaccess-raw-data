@@ -3132,7 +3132,10 @@ original filing and 1 to 999 amendments.",
         max_length=1,
         db_column='MEMO_CODE',
         blank=True,
-        help_text="Memo Amount? (Date/Amount are informational only)"
+        help_text="Memo Amount? (Date/Amount are informational only). For Form"
+                  " 460 filings, this indicates the record is a sub-item and "
+                  "its amount is included in another item reported on the "
+                  "filing."
     )
     memo_refno = fields.CharField(
         max_length=20,
