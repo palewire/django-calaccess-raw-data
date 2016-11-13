@@ -54,3 +54,7 @@ testcommands:
 testadmins:
 	coverage run example/manage.py test calaccess_raw.tests.test_admins.AdminTestCase
 	coverage report -m
+
+testmodels:
+	coverage run example/manage.py test calaccess_raw.tests.test_models.ModelTestCase
+	coverage report -m

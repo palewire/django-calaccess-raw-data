@@ -56,6 +56,7 @@ class ModelTestCase(TestCase):
         models.RawDataFile().pretty_clean_file_size()
         models.RawDataFile(download_file_size=100).pretty_download_file_size()
         models.RawDataFile(clean_file_size=100).pretty_clean_file_size()
+        models.RawDataFile().model
 
         # Tracking model properties
         models.RawDataVersion().download_file_count
