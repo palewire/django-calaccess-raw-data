@@ -29,7 +29,7 @@ Secretary of State\'s CAL-ACCESS database',
         'requests',
         'clint',
         'hurry.filesize',
-        'django-postgres-copy',
+        'django-postgres-copy>=0.1.0',
         'pytz',
     ),
     classifiers=(

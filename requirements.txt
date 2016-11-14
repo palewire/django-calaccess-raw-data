@@ -1,7 +1,6 @@
 # The app
-Django
-# django-postgres-copy
-git+git://github.com/california-civic-data-coalition/django-postgres-copy.git@HEAD#postgres_copy
+Django>=1.8
+django-postgres-copy>=0.1.0
 hurry.filesize
 pytz
 requests
