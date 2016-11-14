@@ -24,6 +24,9 @@ class AdminTestCase(TestCase):
         self.assertEqual(missing, set([]))
 
     def test_methods(self):
+        """
+        Make sure our custom methods work.
+        """
         a = admin.CvrSoCdAdmin(models.CvrSoCd(), None)
         a.get_readonly_fields()
         a.get_list_filter({})
