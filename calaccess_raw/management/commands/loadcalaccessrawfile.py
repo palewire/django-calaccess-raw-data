@@ -274,10 +274,17 @@ class Command(CalAccessCommand):
             self.model._meta.db_table
         ))
 
+        # Create a mapping between our django models and the CSV headers
+        model_mapping = dict(
+            (f.name, f.db_column) for f in self.model._meta.fields
+            if f.db_column
+        )
+
+        # Load the data
         c = CopyMapping(
             self.model,
             self.csv,
-            dict((f.name, f.db_column) for f in self.model._meta.fields),
+            model_mapping,
             using=self.database,
         )
         c.save(silent=True)

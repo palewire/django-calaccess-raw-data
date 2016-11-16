@@ -1,6 +1,6 @@
 # The app
-Django
-django-postgres-copy
+Django>=1.8
+django-postgres-copy>=0.1.0
 hurry.filesize
 pytz
 requests

@@ -4,6 +4,7 @@ include =
 
 omit =
     calaccess_raw/tests/*.py
+    calaccess_raw/migrations/*.py
 
 [report]
 exclude_lines =
