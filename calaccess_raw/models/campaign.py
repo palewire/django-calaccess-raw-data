@@ -3658,7 +3658,7 @@ value of this field."
     loan_date1 = fields.DateField(
         db_column='LOAN_DATE1',
         null=True,
-        help_text="Date the loan was made or recieved. The content of this \
+        help_text="Date the loan was made or received. The content of this \
 column varies based on the schedule/part that the \
 record applies to. See the CAL document for a description of the value."
     )
