@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='django-calaccess-raw-data',
-    version='1.4.5',
+    version='1.4.6',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
@@ -17,23 +17,23 @@ setup(
     ),
     include_package_data=True,
     license='MIT',
-    description='A Django app to download, extract and load campaign \
-finance and lobbying activity data from the California \
-Secretary of State\'s CAL-ACCESS database',
+    description="A Django app to download, extract and load campaign "
+                "finance and lobbying activity data from the California "
+                "Secretary of State\'s CAL-ACCESS database",
     url='http://django-calaccess-raw-data.californiacivicdata.org/',
     author='California Civic Data Coalition',
     author_email='cacivicdata@gmail.com',
     install_requires=(
         'django>=1.8',
+        'django-postgres-copy>=0.1.0',
         'csvkit',
         'requests',
         'clint',
         'hurry.filesize',
-        'django-postgres-copy>=0.1.0',
         'pytz',
     ),
     classifiers=(
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
@@ -42,6 +42,7 @@ Secretary of State\'s CAL-ACCESS database',
         'Framework :: Django',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.10',
         'License :: OSI Approved :: MIT License',
     ),
 )
