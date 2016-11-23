@@ -17,7 +17,7 @@ sphinx_rtd_theme
 sphinx-autobuild
 
 # Testing
-agate>=1.5.0
+agate==1.4.0
 subsample
 pydocstyle==1.0.0
 flake8
