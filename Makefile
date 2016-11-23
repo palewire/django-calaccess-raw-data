@@ -1,4 +1,4 @@
-.PHONY: bootstrap docs load rs sh test
+.PHONY: bootstrap docs load rs sh ship test
 
 bootstrap:
 	mysqladmin -h localhost -u root -p create calaccess_raw
@@ -26,6 +26,10 @@ rs:
 
 sh:
 	python example/manage.py shell
+
+ship:
+	python setup.py sdist bdist_wheel
+	twine upload dist/* --skip-existing
 
 test:
 	flake8 calaccess_raw
