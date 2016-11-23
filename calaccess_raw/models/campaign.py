@@ -2979,7 +2979,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         choices=EXPN_CODE_CHOICES,
         verbose_name="expense code",
-        help_text="CTB & IND need explanation & listing on Sched D TRC & TRS require explanation",
+        help_text="The type of expenditure",
         documentcloud_pages=choices.DOCS['expense_codes']
     )
     expn_date = fields.DateField(
