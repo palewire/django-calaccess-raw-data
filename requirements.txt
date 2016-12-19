@@ -25,6 +25,10 @@ flake8_docstrings
 coverage
 python-coveralls
 
+# Extra management commands
+latimes-calculate
+PyGithub
+
 # Packaging
 wheel
 twine

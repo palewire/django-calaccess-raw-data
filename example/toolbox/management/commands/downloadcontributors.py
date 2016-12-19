@@ -27,7 +27,11 @@ class Command(CalAccessCommand):
         )
         os.path.exists(self.data_dir) or os.mkdir(self.data_dir)
         # Get our GitHub repos
-        self.gh = Github(os.getenv('GITHUB_TOKEN'))
+        # self.gh = Github(os.getenv('GITHUB_TOKEN'))
+        self.gh = Github(
+            client_id=settings.SOCIAL_AUTH_GITHUB_ORG_KEY,
+            client_secret=settings.SOCIAL_AUTH_GITHUB_ORG_SECRET
+        )
         self.org = self.gh.get_organization("california-civic-data-coalition")
         self.repo_list = self.org.get_repos()
 
@@ -58,16 +62,18 @@ class Command(CalAccessCommand):
         self.outfile.writeheader()
 
         for repo in self.repo_list:
-            self.log(" - Sifting through %s" % repo.name)
+            repo_name = repo.name
+            self.log(" - Sifting through %s" % repo_name)
             contributor_list = repo.get_contributors()
             for contrib in contributor_list:
                 d = dict(
-                    repo=repo.name,
+                    repo=repo_name,
                     name=contrib.login,
-                    #company='foo',#contrib.company,
-                    #location=contrib.location,
-                    #avatar_url=contrib.avatar_url,
-                    #contributions=contrib.contributions
+                    company=contrib.company,
+                    location=contrib.location,
+                    avatar_url=contrib.avatar_url,
+                    contributions=contrib.contributions
                 )
+                pprint(d)
                 self.outfile.writerow(d)
-                time.sleep(1)
+                time.sleep(2)
