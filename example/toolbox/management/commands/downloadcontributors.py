@@ -45,9 +45,12 @@ class Command(CalAccessCommand):
 
         self.headers = [
             'repo',
+            'login',
             'name',
+            'email',
             'company',
             'location',
+            'bio',
             'avatar_url',
             'contributions'
         ]
@@ -68,9 +71,12 @@ class Command(CalAccessCommand):
             for contrib in contributor_list:
                 d = dict(
                     repo=repo_name,
-                    name=contrib.login,
+                    login=contrib.login,
+                    name=contrib.name,
+                    email=contrib.email,
                     company=contrib.company,
                     location=contrib.location,
+                    bio=contrib.bio,
                     avatar_url=contrib.avatar_url,
                     contributions=contrib.contributions
                 )
