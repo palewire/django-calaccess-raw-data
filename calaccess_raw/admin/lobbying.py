@@ -56,6 +56,7 @@ class LobbyingChgLogCdAdmin(BaseAdmin):
     """
     list_display = (
         "filer_id",
+        "entity_type",
         "log_dt",
         "filer_full_name",
     )

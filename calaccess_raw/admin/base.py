@@ -27,6 +27,6 @@ class BaseAdmin(admin.ModelAdmin):
 
     def get_search_fields(self, request):
         """
-        Search all fields on the model.
+        Search all fields that aren't a ForeignKey field.
         """
-        return [f.name for f in self.model._meta.fields]
+        return [f.name for f in self.model._meta.fields if not f.is_relation]
