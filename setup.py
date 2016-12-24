@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='django-calaccess-raw-data',
-    version='1.4.6',
+    version='1.4.7',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
@@ -20,7 +20,7 @@ setup(
     description="A Django app to download, extract and load campaign "
                 "finance and lobbying activity data from the California "
                 "Secretary of State\'s CAL-ACCESS database",
-    url='http://django-calaccess-raw-data.californiacivicdata.org/',
+    url='http://django-calaccess.californiacivicdata.org/',
     author='California Civic Data Coalition',
     author_email='cacivicdata@gmail.com',
     install_requires=(
