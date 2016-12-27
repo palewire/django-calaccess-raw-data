@@ -5,7 +5,7 @@ hurry.filesize
 pytz
 requests
 clint
-csvkit
+csvkit==1.0
 
 # Databases
 mysqlclient

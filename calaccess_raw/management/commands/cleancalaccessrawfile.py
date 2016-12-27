@@ -12,7 +12,7 @@ from django.core.files import File
 from django.core.management.base import CommandError
 from django.utils import six
 from django.utils.timezone import now
-from csvkit import CSVKitReader, CSVKitWriter
+from csvkit import reader, writer
 from calaccess_raw import get_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
@@ -120,7 +120,7 @@ class Command(CalAccessCommand):
 
         # Writer
         csv_file = open(csv_path, 'w')
-        csv_writer = CSVKitWriter(csv_file)
+        csv_writer = writer(csv_file)
 
         # Pull and clean the headers
         try:
@@ -128,7 +128,7 @@ class Command(CalAccessCommand):
         except StopIteration:
             return
         headers = headers.decode("ascii", "replace")
-        headers_csv = CSVKitReader(StringIO(headers), delimiter=str('\t'))
+        headers_csv = reader(StringIO(headers), delimiter=str('\t'))
         try:
             headers_list = next(headers_csv)
         except StopIteration:
@@ -179,7 +179,7 @@ class Command(CalAccessCommand):
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems
             if not len(csv_field_list) == headers_count:
-                csv_field_list = next(CSVKitReader(
+                csv_field_list = next(reader(
                     StringIO(tsv_line),
                     delimiter=str('\t')
                 ))
@@ -260,7 +260,7 @@ class Command(CalAccessCommand):
 
         # Log writer
         log_file = open(self.error_log_path, 'w')
-        log_writer = CSVKitWriter(log_file, quoting=csv.QUOTE_ALL)
+        log_writer = writer(log_file, quoting=csv.QUOTE_ALL)
 
         # Add the headers
         log_writer.writerow([

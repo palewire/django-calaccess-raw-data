@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 import os
 import six
 from django.apps import apps
-from csvkit import CSVKitReader
+from csvkit import reader
 from django.conf import settings
 from postgres_copy import CopyMapping
 from django.db import connections, router
@@ -300,7 +300,7 @@ class Command(CalAccessCommand):
         Returns the column headers from the csv as a list.
         """
         with open(self.csv, 'r') as infile:
-            csv_reader = CSVKitReader(infile)
+            csv_reader = reader(infile)
             try:
                 headers = next(csv_reader)
             except StopIteration:
