@@ -4336,16 +4336,13 @@ list of legal values. Used on Form 401 Schedule A",
         # Codes explicitly allowed for this field, according to documentation
         ('F', 'Forgiven Loan'),
         ('I', 'Intermediary'),
-        ('R', 'Returned (Negative Amount?)'),
+        ('R', 'Returned'),
         ('T', 'Third Party Repayment'),
         ('X', 'Transfer'),
         # Other unknown values observed
         ('0', 'Unknown'),
-        ('I', 'Unknown'),
         ('M', 'Unknown'),
         ('N', 'Unknown'),
-        ('R', 'Unknown'),
-        ('T', 'Unknown'),
     ]
     tran_type = fields.CharField(
         max_length=1,
