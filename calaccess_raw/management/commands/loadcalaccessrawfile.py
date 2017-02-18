@@ -270,7 +270,7 @@ class Command(CalAccessCommand):
         Load the file into a PostgreSQL database using COPY.
         """
         # Drop all the records from the target model's real table
-        self.cursor.execute('TRUNCATE TABLE "%s" CASCADE' % (
+        self.cursor.execute('TRUNCATE TABLE "%s" RESTART IDENTITY CASCADE' % (
             self.model._meta.db_table
         ))
 
