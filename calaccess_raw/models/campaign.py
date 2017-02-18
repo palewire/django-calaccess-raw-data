@@ -4336,23 +4336,20 @@ list of legal values. Used on Form 401 Schedule A",
         # Codes explicitly allowed for this field, according to documentation
         ('F', 'Forgiven Loan'),
         ('I', 'Intermediary'),
-        ('R', 'Returned (Negative Amount?)'),
+        ('R', 'Returned'),
         ('T', 'Third Party Repayment'),
         ('X', 'Transfer'),
         # Other unknown values observed
         ('0', 'Unknown'),
-        ('I', 'Unknown'),
         ('M', 'Unknown'),
         ('N', 'Unknown'),
-        ('R', 'Unknown'),
-        ('T', 'Unknown'),
     ]
     tran_type = fields.CharField(
+        verbose_name="transaction type",
         max_length=1,
         db_column='TRAN_TYPE',
         blank=True,
         choices=TRAN_TYPE_CHOICES,
-        help_text="Transaction Type",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=72),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
