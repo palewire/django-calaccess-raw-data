@@ -38,7 +38,7 @@ class CommandTestCase(TestCase):
             CalAccessCommand().get_download_metadata()
         except HTTPError as e:
             warnings.warn(
-                "Could not verify download metadata: %s".format(e.message)
+                "Could not verify download metadata: %s".format(e)
             )
 
     @override_settings(BASE_DIR='example/')
