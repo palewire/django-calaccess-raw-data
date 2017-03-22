@@ -44,7 +44,9 @@ class CalAccessCommand(BaseCommand):
         Returns a dict with metadata about the current CAL-ACCESS snapshot.
         """
         response = requests.head(self.url)
-        logger.debug('{0.status_code} Error: {0.reason}'.format(response))
+        logger.debug(
+            '{0.status_code} Error from HEAD request: {0.reason}'.format(response)
+        )
         if not response.ok:
             response.raise_for_status()
         last_modified = response.headers['last-modified']

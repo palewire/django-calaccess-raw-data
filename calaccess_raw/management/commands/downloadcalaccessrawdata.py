@@ -227,6 +227,11 @@ class Command(CalAccessCommand):
         # Stream the download
         chunk_size = 1024
         req = requests.get(self.url, stream=True, headers=headers)
+        logger.debug(
+            '{0.status_code} Error from GET request: {0.reason}'.format(req)
+        )
+        if not req.ok:
+            req.raise_for_status()
 
         logger.debug('Server: %s <--  (from GET)' % req.headers['server'])
         logger.debug('ETag: %s <-- (from GET)' % req.headers['etag'])
