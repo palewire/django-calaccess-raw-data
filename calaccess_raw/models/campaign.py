@@ -4350,6 +4350,7 @@ list of legal values. Used on Form 401 Schedule A",
         db_column='TRAN_TYPE',
         blank=True,
         choices=TRAN_TYPE_CHOICES,
+        help_text="Transaction Type",
         documentcloud_pages=[
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=72),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
