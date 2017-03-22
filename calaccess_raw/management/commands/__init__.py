@@ -44,6 +44,9 @@ class CalAccessCommand(BaseCommand):
         Returns a dict with metadata about the current CAL-ACCESS snapshot.
         """
         request = requests.head(self.url)
+        logger.debug('{0.status_code} Error: {0.reason}'.format(request))
+        if not request.ok:
+            request.raise_for_status()
         last_modified = request.headers['last-modified']
         dt = datetime(*parsedate(last_modified)[:6])
         # content length is a string, need to convert
