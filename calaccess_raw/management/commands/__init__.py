@@ -43,25 +43,25 @@ class CalAccessCommand(BaseCommand):
         """
         Returns a dict with metadata about the current CAL-ACCESS snapshot.
         """
-        request = requests.head(self.url)
-        logger.debug('{0.status_code} Error: {0.reason}'.format(request))
-        if not request.ok:
-            request.raise_for_status()
-        last_modified = request.headers['last-modified']
+        response = requests.head(self.url)
+        logger.debug('{0.status_code} Error: {0.reason}'.format(response))
+        if not response.ok:
+            response.raise_for_status()
+        last_modified = response.headers['last-modified']
         dt = datetime(*parsedate(last_modified)[:6])
         # content length is a string, need to convert
         try:
             # long int type is big enough for double the current size of the zip
-            length = long(request.headers['content-length'])
+            length = long(response.headers['content-length'])
         except NameError:
             # in py3, no long(), instead int will suffice
-            length = int(request.headers['content-length'])
+            length = int(response.headers['content-length'])
         return {
             # should prob not call int here, can this remain a string until writing to db?
             'content-length': length,
             'last-modified': timezone.utc.localize(dt),
-            'etag': request.headers['etag'],
-            'server': request.headers['server'],
+            'etag': response.headers['etag'],
+            'server': response.headers['server'],
         }
 
     #
