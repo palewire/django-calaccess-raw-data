@@ -309,6 +309,16 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.duration()
 
+        # if archive setting is enabled, zip up all of the csv and error logs
+        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
+            # skip if resuming and the clean zip file is already saved
+            if self.resume and bool(self.version.clean_zip_archive):
+                self.log('File already zipped.')
+            else:
+                self.archive()
+                if self.verbosity:
+                    self.duration()
+
         self.load()
         if self.verbosity:
             self.duration()
@@ -385,50 +395,58 @@ class Command(CalAccessCommand):
                 keep_file=self.keep_files,
             )
 
-        # if archive setting is enabled, zip up all of the csv and error logs
-        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-            # skip if resuming and the clean zip file is already saved
-            if self.resume and bool(self.version.clean_zip_archive):
-                pass
-            else:
-                if self.verbosity:
-                    self.header("Zipping cleaned files")
-                # Remove previous zip file
-                self.version.clean_zip_archive.delete()
-                clean_zip_path = os.path.join(self.data_dir, 'clean.zip')
+    def archive(self):
+        """
+        Zip up and archive the .csv and error log files.
+        """
+        if self.verbosity:
+            self.header("Zipping cleaned files")
+        # Remove previous zip file
+        self.version.clean_zip_archive.delete()
+        clean_zip_path = os.path.join(self.data_dir, 'clean.zip')
 
-                # enable zipfile compression
-                compression = ZIP_DEFLATED
+        # enable zipfile compression
+        compression = ZIP_DEFLATED
 
-                try:
-                    zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
-                except RuntimeError:
-                    logger.error('Zip file cannot be compressed (check zlib module).')
-                    compression = ZIP_STORED
-                    zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
+        try:
+            zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
+        except RuntimeError:
+            logger.error('Zip file cannot be compressed (check zlib module).')
+            compression = ZIP_STORED
+            zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
 
-                # loop over and save files in csv dir
-                for f in os.listdir(self.csv_dir):
-                    csv_path = os.path.join(self.csv_dir, f)
-                    zf.write(csv_path, f)
+        # loop over and save files in csv dir
+        for f in os.listdir(self.csv_dir):
+            if self.verbosity > 2:
+                self.log(" Adding %s to zip" % f)
+            csv_path = os.path.join(self.csv_dir, f)
+            zf.write(csv_path, f)
 
-                # same for errors dir
-                errors_dir = os.path.join(self.data_dir, 'log')
-                for f in os.listdir(errors_dir):
-                    error_path = os.path.join(errors_dir, f)
-                    zf.write(error_path, f)
+        # same for errors dir
+        errors_dir = os.path.join(self.data_dir, 'log')
+        for f in os.listdir(errors_dir):
+            if self.verbosity > 2:
+                self.log(" Adding %s to zip" % f)
+            error_path = os.path.join(errors_dir, f)
+            zf.write(error_path, f)
 
-                # close the zip file
-                zf.close()
+        # close the zip file
+        zf.close()
+        if self.verbosity > 2:
+            self.log(" All files zipped")
 
-                if not self.test_mode:
-                    # save the clean zip size
-                    self.version.clean_zip_size = os.path.getsize(clean_zip_path)
-                    with open(clean_zip_path, 'rb') as zf:
-                        # Save the zip on the raw data version
-                        self.version.clean_zip_archive.save(
-                            os.path.basename(clean_zip_path), File(zf)
-                        )
+        if not self.test_mode:
+            # save the clean zip size
+            self.version.clean_zip_size = os.path.getsize(clean_zip_path)
+            with open(clean_zip_path, 'rb') as zf:
+                # Save the zip on the raw data version
+                if self.verbosity > 2:
+                    self.log(" Archiving zip")
+                self.version.clean_zip_archive.save(
+                    os.path.basename(clean_zip_path), File(zf)
+                )
+            if self.verbosity > 2:
+                self.log(" Zip archived.")
 
     def load(self):
         """
