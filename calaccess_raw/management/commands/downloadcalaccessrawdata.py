@@ -226,19 +226,19 @@ class Command(CalAccessCommand):
 
         # Stream the download
         chunk_size = 1024
-        req = requests.get(self.url, stream=True, headers=headers)
+        resp = requests.get(self.url, stream=True, headers=headers)
         logger.debug(
-            '{0.status_code} Error from GET request: {0.reason}'.format(req)
+            'Response status {0.status_code} ({0.reason}) from GET request.'.format(resp)
         )
-        if not req.ok:
-            req.raise_for_status()
+        if not resp.ok:
+            resp.raise_for_status()
 
-        logger.debug('Server: %s <--  (from GET)' % req.headers['server'])
-        logger.debug('ETag: %s <-- (from GET)' % req.headers['etag'])
-        logger.debug('Last-Modified: %s <--  (from GET)' % req.headers['last-modified'])
-        logger.debug('Content-Length: %s <-- (from GET)' % req.headers['content-length'])
+        logger.debug('Server: %s <--  (from GET)' % resp.headers['server'])
+        logger.debug('ETag: %s <-- (from GET)' % resp.headers['etag'])
+        logger.debug('Last-Modified: %s <--  (from GET)' % resp.headers['last-modified'])
+        logger.debug('Content-Length: %s <-- (from GET)' % resp.headers['content-length'])
 
-        if self.download_metadata['etag'] != req.headers['etag']:
+        if self.download_metadata['etag'] != resp.headers['etag']:
             raise CommandError("ETags in HEAD and GET requests don't match.")
 
         # in Python 2, need to convert this to long int
@@ -251,8 +251,10 @@ class Command(CalAccessCommand):
         n_iters = float(expected_size) / divisor
 
         with open(self.zip_path, 'ab') as fp:
-            for chunk in progress.bar(req.iter_content(chunk_size=chunk_size),
-                                      expected_size=n_iters):
+            for chunk in progress.bar(
+                resp.iter_content(chunk_size=chunk_size),
+                expected_size=n_iters,
+            ):
                 fp.write(chunk)
                 fp.flush()
 

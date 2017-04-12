@@ -45,7 +45,7 @@ class CalAccessCommand(BaseCommand):
         """
         response = requests.head(self.url)
         logger.debug(
-            '{0.status_code} Error from HEAD request: {0.reason}'.format(response)
+            'Response status {0.status_code} ({0.reason}) from HEAD request.'.format(response)
         )
         if not response.ok:
             response.raise_for_status()
