@@ -1,0 +1,105 @@
+RecType  ,FormName,Description
+HDR,CAL,"""CAL"" Header record"
+CVR,F401,Cover Page; Slate Mailer Organization
+CVR3,F401,Cover Page; Part IV; Verification Information
+SMRY,F401,Summary Page & Misc. Schedule Line-item [sub]totals
+RCPT,F401A,Payments Received
+S401,F401B,Payments Made
+S401,F401B-1,Payments Made by Agent/Contractor on Behalf of SMO
+S401,F401C,"""F400"" Persons in SMO Receiving $1000 or more"
+S401,F401D,Candidates/Measurers not on Schedule F401A
+CVR,F425,Cover Page; Semi Annual Statement of No Activity
+CVR2,F425,Cover Page; Part 1; Assistant Treasurer
+CVR3,F425,Cover Page; Part 3; Verification Information
+CVR,F450,Cover Page; Recipient Committee
+CVR2,F450,Cover Page; Part 3; Assistant Treasurer
+CVR3,F450,Cover Page; Verification Information
+F495,F450,Supplemental Pre-Election Statement (a.k.a. Form 495)
+SMRY,F450,Summary Page & Misc. Schedule Line-item [sub]totals
+EXPN,F450P5,Expenditures & Contributions Made
+SPLT,Child,"Split Transaction Record - Used as a child record for schedules: A, B1, B2, C, D, H and/or F450P5 when disclosing Per Election to Date information."
+CVR,F460,Cover Page; Recipient Committee Campaign Statement
+CVR2,F460,"Cover Page; Additional Committees, Asst. Treasurer, etc."
+CVR3,F460,Cover Page; Part 4; Verification Information
+F495,F460,Supplemental Pre-Election Statement (a.k.a. Form 495)
+SMRY,F460,Summary Page & Misc. Schedule Line-item [sub]totals
+RCPT,A,Schedule A Monetary Contributions Received
+LOAN,B1,Schedule B Part 1 - Loans Received
+LOAN,B2,Schedule B Part 2 - Loan Guarantors
+RCPT,C,Schedule C - Nonmonetary Contributions Received
+EXPN,D,Schedule D - Summary of Expenditures - Support/Oppose...
+EXPN,E,Schedule E - Payments Made
+DEBT,F,Schedule F - Accrued Expenses (Unpaid Bills)
+EXPN,G,"Schedule G - Payments Made ""on behalf"" of this Committee"
+LOAN,H,Schedule H - Loans Made to Others
+RCPT,I,Schedule I - Miscellaneous Increases to Cash
+CVR,F461,Cover Page; Ind Expenditure & Major Donor Committee
+CVR3,F461,Cover Page; Part 4; Verification Information
+F405,F461,Amendment Information sheet (a.k.a. Form 405)
+SMRY,F461,Summary Page & Misc. Schedule Line-item [sub]totals
+EXPN,F461P5,Expenditures & Contributions Made
+CVR,F465,Cover Page; Supplemental Independent Expenditure Rpt
+CVR2,F465,Cover Page; Part V Filing Officer Titles & Addresses
+CVR3,F465,Cover Page; Part VII; Verification Information
+SMRY,F465,Summary Page & Misc. Schedule Line-item [sub]totals
+EXPN,F465P3,Independent Expenditures Made
+CVR,F496,Cover Page; Late Independent Expenditure Report
+CVR2,F496,Independent Expenditures Made
+CVR3,F496P3,Contributions of $100 or More Received
+CVR,F497,Cover Page; Late Contribution Report
+S497,F497P1,Late Contributions Received
+S497,F497P2,Late Contributions Made
+CVR,F498,Cover Page; Slate Mailer Late Payments Report
+S498,F498-R,Late Payments Received From:
+S498,F498-A,Late Payments Attributed To:
+CVR,F400,Cover Page; Stmt of Organization / Slate Mailer Org
+CVR2,F400,Cover Page; Additional Names & Addresses
+CVR3,F400,Cover Page; Part V; Verification Information
+CVR,F402,Cover Page; Stmt of Termination / Slate Mailer Org
+CVR3,F402,Cover Page; Verification Information
+CVR,F410,Cover Page; Stmt of Organization / Recipient Committee
+CVR2,F410,Cover Page; Additional Names & Addresses
+CVR3,F410,Cover Page; Part 3; Verification Information
+CVR,F615,Cover Page; Lobbyist Report
+F690,F615,Amendment Information sheet (a.k.a. Form 690)
+LEXP,F615P1,Part I - Activity Expenses
+LCCM,F615P2,Part II - Campaign Contributions Made [or Delivered]
+CVR,F625,Cover Page; Recipient Committee
+CVR2,F625,"Cover Page; Part II; Partners, Owners, Officers, ..."
+F690,F625,Amendment Information sheet (a.k.a. Form 690)
+SMRY,F625...,Summary Page & Misc. Schedule Line-item [sub]totals
+LPAY,F625P2,Payments Received in Connection with Lobbying Activity
+LEXP,F625P3A,Part III/Sec A - Activity Expenses
+LOTH,F625P3B,Part III/Sec B - Payments to OTHER Lobbying Firms
+LCCM,F625P4B,Part IV/Sec B - Campaign Contributions Made
+LATT,S630,Attachment Form 630 - Payments Made to Lobbying Coalitions
+CVR,F635,Cover Page; Candidate Committee
+CVR2,F635,"Cover Page; Part II; Partners, Owners, Officers, ..."
+F690,F635,Amendment Information sheet (a.k.a. Form 690)
+SMRY,F635...,Summary Page & Misc. Schedule Line-item [sub]totals
+LPAY,F635P3B,Part III/Sec B - Payments to Lobbying Firms
+LEXP,F635P3C,Part III/Sec C - Activity Expenses
+LCCM,F635P4B,Part IV/SecB - Campaign Contributions Made
+LATT,S630,Attach Form 630 - Payments Made to Lobbying Coalitions
+LATT,S635-C,Attach Form 635-C - Payments Rcvd by Lobbying Coalitions
+LATT,S640,Attach Form 640 - Other Payments to Influence ...
+CVR,F645,Cover Page; Recipient Committee
+F690,F645,Amendment Information sheet (a.k.a. Form 690)
+SMRY,F645...,Summary Page & Misc. Schedule Line-item [sub]totals
+LEXP,F645P2A,Part II/Sec A - Activity Expenses
+LCCM,F645P3B,Part III/SecB - Campaign Contributions Made
+LATT,S630,Attach Form 630 - Payments Made to Lobbying Coalitions
+LATT,S640,Attach Form 640 - Other Payments to Influence ...
+CVR,F601,Cover Page Lobbying Firm Registration Statement
+CVR2,F601,Cover Page; Part I Individual Lobbyists
+F605,F601,Amendment information sheet (a.k.a. Form 605)
+LEMP,F601P2A,Part II/Sec A Lobbyist Employers
+LEMP,F601P2B,Part II/Sec B Subcontracted Clients
+CVR,F602,Cover Page; Lobbying Firm Activity Authorization
+CVR2,F602,"Cover Page; side 1: Names of Subcontracted Clients side 2: Names ""50 or less"" Assoc members"
+CVR,F603,Cover Page; Lobbyist Employer/Coalition Regis Stmt
+CVR2,F603,"Cover Page; Names of Employees, Firms & Agencies"
+F605,F603,Amendment Information sheet (a.k.a. Form 605)
+CVR,F604,Cover Page; Lobbyist Certification Statement
+CVR,F606,Cover Page; Notice of Termination
+CVR,F607,Cover Page; Notice of Withdrawal
