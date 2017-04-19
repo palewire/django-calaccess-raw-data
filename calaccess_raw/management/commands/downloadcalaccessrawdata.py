@@ -189,7 +189,7 @@ class Command(CalAccessCommand):
         # log warning if downloaded zip size is not same as expected size
         if self.version.expected_size != os.path.getsize(self.zip_path):
             raise CommandError(
-                'Expected {0} byte zip, but download {1} byte zip.'.format(
+                'Expected {0} byte zip, but downloaded {1} byte zip.'.format(
                     self.version.expected_size,
                     os.path.getsize(self.zip_path)
                 )
@@ -253,8 +253,8 @@ class Command(CalAccessCommand):
             self.last_modified_from_head - last_modified_from_request
         )
         # Quit if diff greater than five minutes
-        if last_modified_diff.total_seconds() > 3600:
-            raise Exception(
+        if last_modified_diff.total_seconds() > 300:
+            raise CommandError(
                 "Last-modified of HEAD and GET are more than five minutes apart."
             )
 

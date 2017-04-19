@@ -348,7 +348,7 @@ class Command(CalAccessCommand):
             # if the expected and actual zip size are not the same
             if (
                 'expected' in e.message.lower() or
-                'etag' in e.message.lower() or
+                'modified' in e.message.lower() or
                 'version' in e.message.lower()
             ):
                 logger.debug('Waiting five minutes before re-trying')
