@@ -13,7 +13,7 @@ from clint.textui import progress
 from django.conf import settings
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.core.files import File
-from django.utils.timezone import utc, now
+from django.utils import timezone
 from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
@@ -73,9 +73,13 @@ class Command(CalAccessCommand):
             'Content-Length %s <-- (from HEAD)' % self.download_metadata['content-length']
         )
 
+        self.last_modified_from_head = self.parse_imf_datetime_str(
+            self.download_metadata['last-modified']
+        )
+
         # get or create the RawDataVersion
         self.version, created = RawDataVersion.objects.get_or_create(
-            release_datetime=self.download_metadata['last-modified'],
+            release_datetime=self.last_modified_from_head,
             expected_size=self.download_metadata['content-length'],
         )
 
@@ -111,7 +115,10 @@ class Command(CalAccessCommand):
             self.local_file_size = os.path.getsize(self.zip_path)
             # set the datetime of last download to last modified date of zip file
             timestamp = os.path.getmtime(self.zip_path)
-            self.local_file_datetime = datetime.fromtimestamp(timestamp, utc)
+            self.local_file_datetime = datetime.fromtimestamp(
+                timestamp,
+                timezone.utc
+            )
         else:
             self.resume = False
             self.local_file_size = 0
@@ -168,7 +175,7 @@ class Command(CalAccessCommand):
 
         # if not resuming, store the download start time
         if not self.resume:
-            self.version.download_start_datetime = now()
+            self.version.download_start_datetime = timezone.now()
         # either way, reset the finish time
         self.version.download_finish_datetime = None
         # save here in case the command doesn't finish
@@ -192,7 +199,7 @@ class Command(CalAccessCommand):
             self.archive()
 
         # store download finish time
-        self.version.download_finish_datetime = now()
+        self.version.download_finish_datetime = timezone.now()
         # and save the RawDataVersion
         self.version.save()
 
@@ -238,8 +245,18 @@ class Command(CalAccessCommand):
         logger.debug('Last-Modified: %s <--  (from GET)' % resp.headers['last-modified'])
         logger.debug('Content-Length: %s <-- (from GET)' % resp.headers['content-length'])
 
-        if self.download_metadata['etag'] != resp.headers['etag']:
-            raise CommandError("ETags in HEAD and GET requests don't match.")
+        # Calculate absolute value of diff between last-modifed in HEAD and GET
+        last_modified_from_request = self.parse_imf_datetime_str(
+            resp.headers['last-modified']
+        )
+        last_modified_diff = abs(
+            self.last_modified_from_head - last_modified_from_request
+        )
+        # Quit if diff greater than five minutes
+        if last_modified_diff.total_seconds() > 3600:
+            raise Exception(
+                "Last-modified of HEAD and GET are more than five minutes apart."
+            )
 
         # in Python 2, need to convert this to long int
         try:

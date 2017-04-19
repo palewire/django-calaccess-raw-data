@@ -128,7 +128,9 @@ class Command(CalAccessCommand):
             logger.debug('Content-Length: %s' % download_metadata['content-length'])
             # get or create the RawDataVersion
             latest_version, created = RawDataVersion.objects.get_or_create(
-                release_datetime=download_metadata['last-modified'],
+                release_datetime=self.parse_imf_datetime_str(
+                    download_metadata['last-modified']
+                ),
                 expected_size=download_metadata['content-length']
             )
         # log if latest version is new

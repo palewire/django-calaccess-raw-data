@@ -9,8 +9,8 @@ import locale
 import logging
 import requests
 from re import sub
+from email.utils import parsedate_tz, mktime_tz
 from datetime import datetime
-from email.utils import parsedate
 from django.utils import timezone
 from django.utils.six.moves import input
 from django.utils.termcolors import colorize
@@ -39,6 +39,20 @@ class CalAccessCommand(BaseCommand):
         # Start the clock
         self.start_datetime = datetime.now()
 
+    def parse_imf_datetime_str(self, datetime_str):
+        """
+        Parse a string containing a datetime value in Internet Message Format.
+
+        See Section 7.1.1.1 of RFC 7231:
+        https://tools.ietf.org/html/rfc7231.html#section-7.1.1.1
+
+        Return a utc datetime object.
+        """
+        datetime_tuple = parsedate_tz(datetime_str)
+        timestamp = mktime_tz(datetime_tuple)
+        datetime_obj = datetime.fromtimestamp(timestamp, timezone.utc)
+        return datetime_obj
+
     def get_download_metadata(self):
         """
         Returns a dict with metadata about the current CAL-ACCESS snapshot.
@@ -49,8 +63,6 @@ class CalAccessCommand(BaseCommand):
         )
         if not response.ok:
             response.raise_for_status()
-        last_modified = response.headers['last-modified']
-        dt = datetime(*parsedate(last_modified)[:6])
         # content length is a string, need to convert
         try:
             # long int type is big enough for double the current size of the zip
@@ -61,7 +73,7 @@ class CalAccessCommand(BaseCommand):
         return {
             # should prob not call int here, can this remain a string until writing to db?
             'content-length': length,
-            'last-modified': timezone.utc.localize(dt),
+            'last-modified': response.headers['last-modified'],
             'etag': response.headers['etag'],
             'server': response.headers['server'],
         }
