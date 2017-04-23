@@ -1,6 +1,7 @@
 import os
 import shutil
 import zipfile
+from datetime import datetime
 from itertools import chain
 from optparse import make_option
 from clint.textui import progress
@@ -8,6 +9,7 @@ from subsample.file_input import FileInput
 from subsample.algorithms import two_pass_sample
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw import get_download_directory, get_test_download_directory
+from calaccess_raw.models import RawDataVersion
 
 
 class Command(CalAccessCommand):
@@ -75,14 +77,13 @@ class Command(CalAccessCommand):
         self.save_zip()
 
         # Stash the release_datetime and size of the last completed download
-        version = self.command_logs.filter(
-            command='downloadcalaccessrawdata',
-            finish_datetime__isnull=False
-        ).order_by('-start_datetime')[0].version
+        version = RawDataVersion.objects.latest('download_finish_datetime')
 
         with open(self.test_data_dir + '/sampled_version.txt', 'w') as f:
-            f.write(str(version.release_datetime) + '\n')
-            f.write(str(version.size))
+            f.write(str(version.expected_size) + '\n')
+            f.write(
+                version.release_datetime.strftime('%a, %d %b %Y %H:%M:%S GMT')
+            )
     
     def save_zip(self):
         """
