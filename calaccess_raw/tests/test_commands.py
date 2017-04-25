@@ -14,7 +14,6 @@ from django.test import TestCase
 from django.test.utils import override_settings
 from calaccess_raw import get_model_list
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models import RawDataVersion
 logger = logging.getLogger(__name__)
 
 
@@ -112,7 +111,7 @@ class SimilarReleaseDatetimesTestCase(TestCase):
     Confirm that the lastest RawDataVersion is returned.
     """
     fixtures = ['raw_data_versions.json']
-    
+
     def test(self):
         """Confirm that an existing RawDataVersion is returned."""
         version, created = CalAccessCommand().get_or_create_version(
