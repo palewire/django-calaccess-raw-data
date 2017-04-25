@@ -114,12 +114,19 @@ class Command(CalAccessCommand):
         # in test mode, get download metadata from local file
         if self.test_mode:
             with open(self.data_dir + "/sampled_version.txt", "r") as f:
+                # read expected_size from sampled_version.txt
+                try:
+                    # long int type is big enough for double the current size of the zip
+                    expected_size = long(f.readline())
+                except NameError:
+                    # in py3, no long(), instead int will suffice
+                    expected_size = int(f.readline())
+                # and release_datetime
+                release_datetime = self.parse_imf_datetime_str(f.readline())
                 # get or create the RawDataVersion
                 latest_version, created = self.get_or_create_version(
-                    f.readline(),
-                    self.parse_imf_datetime_str(
-                        f.readline()
-                    ),
+                    expected_size,
+                    release_datetime,
                 )
         # else request it
         else:
