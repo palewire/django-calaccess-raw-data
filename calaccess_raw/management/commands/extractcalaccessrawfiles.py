@@ -200,13 +200,22 @@ class TestCommand(Command):
         self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
 
         with open(self.data_dir + "/sampled_version.txt", "r") as f:
+            length = f.readline()
             release_datetime = f.readline()
-            expected_size = f.readline()
+
+        try:
+            # long int type is big enough for double the current size of the zip
+            expected_size = long(length)
+        except NameError:
+            # in py3, no long(), instead int will suffice
+            expected_size = int(length)
 
         # get or create the RawDataVersion
-        self.version, created = RawDataVersion.objects.get_or_create(
-            release_datetime=release_datetime,
-            expected_size=expected_size,
+        self.version, created = self.get_or_create_version(
+            expected_size,
+            self.parse_imf_datetime_str(
+                release_datetime,
+            )
         )
 
         # store extraction start time

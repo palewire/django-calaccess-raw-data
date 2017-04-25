@@ -15,6 +15,7 @@ from django.utils import timezone
 from django.utils.six.moves import input
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
+from calaccess_raw.models import RawDataVersion
 logger = logging.getLogger(__name__)
 
 
@@ -77,6 +78,43 @@ class CalAccessCommand(BaseCommand):
             'etag': response.headers['etag'],
             'server': response.headers['server'],
         }
+
+    def get_or_create_version(self, expected_size, release_datetime):
+        """
+        Get or create a RawDataVersion.
+
+        Create a new one only if:
+        * expected_size is different from the latest version; or
+        * release_datetime is five minutes later than latest_version's.
+
+        Return a tuple of (object, created), where created is a boolean
+        specifying whether an object was created.
+        """
+        obj = None
+        try:
+            latest = RawDataVersion.objects.latest('release_datetime')
+        except RawDataVersion.DoesNotExist:
+            obj = RawDataVersion.objects.create(
+                release_datetime=release_datetime,
+                expected_size=expected_size,
+            )
+            created = True
+        else:
+            diff = release_datetime - latest.release_datetime
+            if (
+                latest.expected_size == expected_size and
+                diff.total_seconds() < 300
+            ):
+                obj = latest
+                created = False
+            else:
+                obj = RawDataVersion.objects.create(
+                    release_datetime=release_datetime,
+                    expected_size=expected_size,
+                )
+                created = True
+
+        return (obj, created)
 
     #
     # Logging methods

@@ -1,0 +1,20 @@
+[  
+   {  
+      "model":"calaccess_raw.rawdataversion",
+      "pk":1,
+      "fields":{  
+         "release_datetime":"2017-04-19T11:20:29Z",
+         "expected_size":805713742,
+         "update_start_datetime":null,
+         "update_finish_datetime":null,
+         "download_start_datetime":null,
+         "download_finish_datetime":null,
+         "extract_start_datetime":null,
+         "extract_finish_datetime":null,
+         "download_zip_archive":"",
+         "clean_zip_archive":"",
+         "download_zip_size":null,
+         "clean_zip_size":null
+      }
+   }
+]

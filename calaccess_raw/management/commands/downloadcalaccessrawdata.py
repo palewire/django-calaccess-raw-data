@@ -78,9 +78,9 @@ class Command(CalAccessCommand):
         )
 
         # get or create the RawDataVersion
-        self.version, created = RawDataVersion.objects.get_or_create(
-            release_datetime=self.last_modified_from_head,
-            expected_size=self.download_metadata['content-length'],
+        self.version, created = self.get_or_create_version(
+            self.download_metadata['content-length'],
+            self.last_modified_from_head,
         )
 
         # if not called from command-line, assume called by update command

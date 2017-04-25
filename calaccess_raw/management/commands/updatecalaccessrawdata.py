@@ -115,9 +115,11 @@ class Command(CalAccessCommand):
         if self.test_mode:
             with open(self.data_dir + "/sampled_version.txt", "r") as f:
                 # get or create the RawDataVersion
-                latest_version, created = RawDataVersion.objects.get_or_create(
-                    release_datetime=f.readline(),
-                    expected_size=f.readline()
+                latest_version, created = self.get_or_create_version(
+                    f.readline(),
+                    self.parse_imf_datetime_str(
+                        f.readline()
+                    ),
                 )
         # else request it
         else:
@@ -127,11 +129,11 @@ class Command(CalAccessCommand):
             logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
             logger.debug('Content-Length: %s' % download_metadata['content-length'])
             # get or create the RawDataVersion
-            latest_version, created = RawDataVersion.objects.get_or_create(
-                release_datetime=self.parse_imf_datetime_str(
+            latest_version, created = self.get_or_create_version(
+                download_metadata['content-length'],
+                self.parse_imf_datetime_str(
                     download_metadata['last-modified']
                 ),
-                expected_size=download_metadata['content-length']
             )
         # log if latest version is new
         if created:
@@ -222,9 +224,13 @@ class Command(CalAccessCommand):
                     raise CommandError("Update cancelled")
 
         # set to force restart if the user could have resumed but didn't
+        # or no new version is available
         self.force_restart = (
-            (latest_version.update_stalled or can_resume_previous) and
-            not self.resume
+            (
+                latest_version.update_stalled or
+                can_resume_previous or
+                not created
+            ) and not self.resume
         )
 
         # set the version to be updated
