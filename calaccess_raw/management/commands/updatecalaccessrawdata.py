@@ -7,18 +7,18 @@ import os
 import logging
 from sys import exit
 from time import sleep
-from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
-from django.core.files import File
 from django.conf import settings
-from django.contrib.humanize.templatetags.humanize import naturaltime
 from clint.textui import progress
+from django.core.files import File
 from django.utils.timezone import now
 from django.core.management import call_command
 from calaccess_raw.management import handle_command
-from django.core.management.base import CommandError
 from django.template.loader import render_to_string
+from django.core.management.base import CommandError
+from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 from calaccess_raw.models.tracking import RawDataVersion
 from calaccess_raw.management.commands import CalAccessCommand
+from django.contrib.humanize.templatetags.humanize import naturaltime
 from calaccess_raw.management.commands.extractcalaccessrawfiles import TestCommand as TestExtractCommand
 from calaccess_raw import (
     get_download_directory,
