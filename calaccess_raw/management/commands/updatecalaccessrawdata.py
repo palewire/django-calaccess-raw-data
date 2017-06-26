@@ -67,7 +67,7 @@ class Command(CalAccessCommand):
             dest="app_name",
             default="calaccess_raw",
             help="Name of Django app with models into which data will "
-                 "be imported (if other not calaccess_raw)"
+                 "be imported (if not calaccess_raw)"
         )
 
     def handle(self, *args, **options):
