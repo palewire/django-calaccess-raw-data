@@ -19,7 +19,7 @@ sphinx-autobuild
 # Testing
 agate==1.4.0
 subsample
-pydocstyle==1.0.0
+pydocstyle
 flake8
 flake8_docstrings
 coverage
