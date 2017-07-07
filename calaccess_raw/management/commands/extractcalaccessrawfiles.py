@@ -209,7 +209,6 @@ class TestCommand(Command):
         self.version.save()
 
         self.unzip()
-        self.prep()
         self.track_files()
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
