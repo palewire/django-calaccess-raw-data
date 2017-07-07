@@ -6,6 +6,7 @@ Extract the CAL-ACCESS raw data files from downloaded ZIP.
 import os
 import shutil
 import zipfile
+from glob import iglob
 from django.conf import settings
 from django.core.files import File
 from django.core.management.base import CommandError
@@ -76,7 +77,6 @@ class Command(CalAccessCommand):
         self.header("Extracting raw data files")
 
         self.unzip()
-        self.prep()
         self.track_files()
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
@@ -110,49 +110,34 @@ class Command(CalAccessCommand):
                     path = os.path.join(path, word)
                 zf.extract(member, path)
 
-    def prep(self):
-        """
-        Rearrange the unzipped files and get rid of the stuff we don't want.
-        """
-        if self.verbosity:
-            self.log(" Prepping unzipped data")
-
-        # Move the deep down directory we want out
-        shutil.move(
-            os.path.join(
-                self.data_dir,
-                'CalAccess/DATA/CalAccess/DATA/'
-            ),
-            self.data_dir
-        )
-        # Clear out target if it exists
-        if os.path.exists(self.tsv_dir):
-            shutil.rmtree(self.tsv_dir)
-
-        # Rename it to the target
-        shutil.move(
-            os.path.join(self.data_dir, "DATA/"),
-            self.tsv_dir,
-        )
-
     def track_files(self):
         """
         Create a RawDataFile for each download .TSV file.
         """
-        for f in os.listdir(self.tsv_dir):
-            if '.TSV' in f:
-                file_name = f.upper().replace('.TSV', '')
-                raw_file, created = RawDataFile.objects.get_or_create(
-                    version=self.version,
-                    file_name=file_name,
-                )
-                # if raw file was already there, clear out timestamp fields
-                if not created:
-                    raw_file.clean_start_datetime = None
-                    raw_file.clean_finish_datetime = None
-                    raw_file.load_start_datetime = None
-                    raw_file.load_finish_datetime = None
-                    raw_file.save()
+        # Clear out target if it exists
+        if os.path.exists(self.tsv_dir):
+            shutil.rmtree(self.tsv_dir)
+
+        os.mkdir(self.tsv_dir)
+        pattern = os.path.join(self.data_dir, '*/DATA/*/DATA/*.TSV')
+
+        for f in iglob(pattern):
+            # copy the file into the TSV dir
+            shutil.move(f, self.tsv_dir)
+
+            # get or create a raw data file object
+            file_name = os.path.basename(f).upper().replace('.TSV', '')
+            raw_file, created = RawDataFile.objects.get_or_create(
+                version=self.version,
+                file_name=file_name,
+            )
+            # if raw file was already there, clear out timestamp fields
+            if not created:
+                raw_file.clean_start_datetime = None
+                raw_file.clean_finish_datetime = None
+                raw_file.load_start_datetime = None
+                raw_file.load_finish_datetime = None
+                raw_file.save()
 
     def archive(self):
         """
