@@ -8,6 +8,7 @@ cache:
 python:
  - "2.7"
  - "3.5"
+ - "3.6"
 
 env:
  - DJANGO_VERSION=1.8.* DATABASE_SETTINGS='settings_test_mysql.py'
