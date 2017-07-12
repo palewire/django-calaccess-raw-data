@@ -15,8 +15,11 @@ data
 docs/_build
 .coverage
 .tox
-example/data
-example/test-data/csv
+example/data/
+example/test-data/download/
+example/test-data/csv/
+example/test-data/tsv/
+example/test-data/log/
 example/test-data/clean.zip
 example/settings_local.py
 example/.static/
