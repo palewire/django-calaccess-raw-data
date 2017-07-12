@@ -3,11 +3,12 @@
 """
 Base management command that provides common functionality for the other commands in this app.
 """
-import sys
 import codecs
 import locale
 import logging
+import os
 import requests
+import sys
 from re import sub
 from email.utils import parsedate_tz, mktime_tz
 from datetime import datetime
@@ -15,6 +16,7 @@ from django.utils import timezone
 from django.utils.six.moves import input
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
+from calaccess_raw import get_data_directory
 from calaccess_raw.models import RawDataVersion
 logger = logging.getLogger(__name__)
 
@@ -36,6 +38,22 @@ class CalAccessCommand(BaseCommand):
         # Set global options
         self.verbosity = options.get("verbosity")
         self.no_color = options.get("no_color")
+
+        # set up data directories
+        self.data_dir = get_data_directory()
+        self.tsv_dir = os.path.join(self.data_dir, 'tsv')
+        self.csv_dir = os.path.join(self.data_dir, 'csv')
+
+        os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
+        os.path.exists(self.tsv_dir) or os.makedirs(self.tsv_dir)
+        os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
+
+        # set path where zip will be downloaded
+        self.download_dir = os.path.join(self.data_dir, 'download')
+        self.zip_path = os.path.join(
+            self.download_dir,
+            self.url.split('/')[-1]
+        )
 
         # Start the clock
         self.start_datetime = datetime.now()

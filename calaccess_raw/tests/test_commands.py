@@ -4,19 +4,27 @@
 Tests the management commands that interact with the database.
 """
 from __future__ import unicode_literals
+import io
 import logging
+import os
 import warnings
 from requests import HTTPError
+import requests_mock
 from datetime import datetime
-from django.utils import timezone
+from django.conf import settings
 from django.core.management import call_command
 from django.test import TestCase
 from django.test.utils import override_settings
+from django.utils import timezone
 from calaccess_raw import get_model_list
 from calaccess_raw.management.commands import CalAccessCommand
 logger = logging.getLogger(__name__)
 
 
+@override_settings(BASE_DIR='example/')
+@override_settings(
+    CALACCESS_DATA_DIR=os.path.join(settings.BASE_DIR, 'test-data')
+)
 class CommandTestCase(TestCase):
     """
     Tests the management commands that interact with the database.
@@ -24,12 +32,39 @@ class CommandTestCase(TestCase):
     multi_db = True
 
     @classmethod
-    def setUpClass(cls):
+    @requests_mock.Mocker()
+    def setUpClass(cls, m):
         """
         Load data into the database before running other tests.
         """
         super(CommandTestCase, cls).setUpClass()
-        kwargs = dict(verbosity=3, test_data=True, noinput=True)
+        test_zip_path = os.path.join(
+            settings.BASE_DIR,
+            settings.CALACCESS_DATA_DIR,
+            'dbwebexport.zip',
+        )
+        headers = {
+            'Content-Length': str(os.stat(test_zip_path).st_size),
+            'Accept-Ranges': 'bytes',
+            'Last-Modified': 'Mon, 11 Jul 2017 11:20:31 GMT',
+            'Connection': 'keep-alive',
+            'Date': 'Mon, 10 Jul 2017 21:25:40 GMT',
+            'Content-Type': 'application/zip',
+            'ETag': '2320c8-30619331-c54f7dc0',
+            'Server': 'Apache/2.2.3 (Red Hat)',
+        }
+        m.register_uri(
+            'HEAD',
+            'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
+            headers=headers,
+        )
+        m.register_uri(
+            'GET',
+            'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
+            headers=headers,
+            content=io.open(test_zip_path, mode='rb').read(),
+        )
+        kwargs = dict(verbosity=3, noinput=True)
         call_command("updatecalaccessrawdata", **kwargs)
 
     def test_download_metadata(self):
@@ -43,7 +78,6 @@ class CommandTestCase(TestCase):
                 "Could not verify download metadata: %s".format(e)
             )
 
-    @override_settings(BASE_DIR='example/')
     def test_csv_gettrs(self):
         """
         Verify that get_csv_name methods work for all models.
@@ -64,6 +98,12 @@ class CommandTestCase(TestCase):
         Test that totalcalaccessrawdata management command is working.
         """
         call_command("totalcalaccessrawdata")
+
+    def test_verifycalaccesschoicefield(self):
+        """
+        Find db values in choice fields not defined in the fields choices attr.
+        """
+        call_command("verifycalaccesschoicefields", verbosity=2)
 
 
 class DifferentFileSizesTestCase(TestCase):

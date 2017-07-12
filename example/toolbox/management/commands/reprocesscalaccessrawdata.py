@@ -15,10 +15,7 @@ from django.core.management import call_command
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion
-from calaccess_raw import (
-    get_download_directory,
-    get_model_list,
-)
+from calaccess_raw import get_data_directory, get_model_list
 logger = logging.getLogger(__name__)
 
 

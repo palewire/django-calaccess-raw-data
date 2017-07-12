@@ -12,7 +12,7 @@ from django.core.management import call_command
 from django.core.management.base import CommandError
 from django.db.models import Sum
 from django.forms.models import model_to_dict
-from calaccess_raw import get_model_list, get_download_directory
+from calaccess_raw import get_model_list, get_data_directory
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion
 
@@ -126,7 +126,7 @@ class Command(CalAccessCommand):
         Write .csv file to the docs directory.
         """
         file_name = os.path.join(
-            get_download_directory(),
+            get_data_directory(),
             'calaccess_raw_files_report.csv'
         )
 

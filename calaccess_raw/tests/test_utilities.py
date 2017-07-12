@@ -19,44 +19,29 @@ class UtilityTestCase(TestCase):
     """
     multi_db = True
 
-    @override_settings(CALACCESS_DOWNLOAD_DIR=None)
-    @override_settings(CALACCESS_TEST_DOWNLOAD_DIR=None)
+    @override_settings(CALACCESS_DATA_DIR=None)
     @override_settings(BASE_DIR=None)
     def test_dir_errors(self):
         """
         Test error expected when download directory is missing.
         """
         with self.assertRaises(ValueError):
-            calaccess_raw.get_download_directory()
+            calaccess_raw.get_data_directory()
 
-    @override_settings(CALACCESS_DOWNLOAD_DIR=None)
-    @override_settings(CALACCESS_TEST_DOWNLOAD_DIR=None)
-    @override_settings(BASE_DIR=None)
-    def test_testdir_errors(self):
-        """
-        Test error expected when test download directory is missing.
-        """
-        with self.assertRaises(ValueError):
-            calaccess_raw.get_test_download_directory()
-
-    @override_settings(CALACCESS_DOWNLOAD_DIR="/foo/bar/")
-    @override_settings(CALACCESS_TEST_DOWNLOAD_DIR="/foo/bar/tests/")
+    @override_settings(CALACCESS_DATA_DIR="/foo/bar/")
     def test_dir_configured(self):
         """
         Tests for directory functions __init__.py file.
         """
-        calaccess_raw.get_download_directory()
-        calaccess_raw.get_test_download_directory()
+        calaccess_raw.get_data_directory()
 
-    @override_settings(CALACCESS_DOWNLOAD_DIR=None)
-    @override_settings(CALACCESS_TEST_DOWNLOAD_DIR=None)
+    @override_settings(CALACCESS_DATA_DIR=None)
     @override_settings(BASE_DIR="/foo/bar/")
     def test_dir_basedir(self):
         """
         Tests for directory functions __init__.py file with different settings.
         """
-        calaccess_raw.get_download_directory()
-        calaccess_raw.get_test_download_directory()
+        calaccess_raw.get_data_directory()
 
     def test_model_methods(self):
         """

@@ -7,8 +7,7 @@ from calaccess_raw import get_model_list
 
 
 class Command(CalAccessCommand):
-    help = "Discovers choice field values in the database \
-that aren't defined in the choices attr"
+    help = "Find db values in choice fields not defined in the fields choices attr."
 
     def add_arguments(self, parser):
         """

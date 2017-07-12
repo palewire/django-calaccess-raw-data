@@ -8,7 +8,6 @@ import re
 import agate
 import logging
 from django.test import TestCase
-from django.core.management import call_command
 from calaccess_raw.fields import ForeignKeyField
 from calaccess_raw import get_model_list
 logger = logging.getLogger(__name__)
@@ -24,8 +23,6 @@ class DocumentationTestCase(TestCase):
         Load data into the database before running other tests.
         """
         super(DocumentationTestCase, cls).setUpClass()
-        kwargs = dict(verbosity=0, test_data=True)
-        call_command("updatecalaccessrawdata", **kwargs)
 
     def attr_test_output(self, obj_type, attr_name, results):
         """
@@ -310,5 +307,3 @@ class DocumentationTestCase(TestCase):
 
         table = agate.Table(results, ['group', 'model', 'field', 'message'])
         table.print_table(max_rows=None, max_column_width=50)
-
-        call_command("verifycalaccesschoicefields", verbosity=2)

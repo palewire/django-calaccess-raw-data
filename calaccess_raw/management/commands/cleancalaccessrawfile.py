@@ -13,7 +13,6 @@ from django.core.management.base import CommandError
 from django.utils import six
 from django.utils.timezone import now
 from csvkit import reader, writer
-from calaccess_raw import get_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
@@ -49,9 +48,7 @@ class Command(CalAccessCommand):
 
         # Set options
         self.file_name = options['file_name']
-        self.data_dir = get_download_directory()
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-        self.csv_dir = os.path.join(self.data_dir, "csv/")
+
         self.log_dir = os.path.join(self.data_dir, "log/")
         self.error_log_path = os.path.join(
             self.log_dir,

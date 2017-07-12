@@ -6,7 +6,7 @@ Custom managers for working with CAL-ACCESS data.
 from __future__ import unicode_literals
 import os
 from django.db import models, connection
-from calaccess_raw import get_download_directory
+from calaccess_raw import get_data_directory
 
 
 class CalAccessManager(models.Manager):
@@ -24,7 +24,7 @@ class CalAccessManager(models.Manager):
         Returns the path to the model's CSV data file.
         """
         return os.path.join(
-            get_download_directory(),
+            get_data_directory(),
             'csv',
             self.get_csv_name()
         )
@@ -40,7 +40,7 @@ class CalAccessManager(models.Manager):
         Returns the path to the model's raw TSV data file.
         """
         return os.path.join(
-            get_download_directory(),
+            get_data_directory(),
             'tsv',
             self.get_tsv_name()
         )

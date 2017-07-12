@@ -8,28 +8,16 @@ from django.conf import settings
 default_app_config = 'calaccess_raw.apps.CalAccessRawConfig'
 
 
-def get_download_directory():
+def get_data_directory():
     """
     Returns download directory for data storage downloaded data.
     """
-    if getattr(settings, 'CALACCESS_DOWNLOAD_DIR', None):
-        return getattr(settings, 'CALACCESS_DOWNLOAD_DIR')
+    if getattr(settings, 'CALACCESS_DATA_DIR', None):
+        return getattr(settings, 'CALACCESS_DATA_DIR')
     elif getattr(settings, 'BASE_DIR', None):
         return os.path.join(getattr(settings, 'BASE_DIR'), 'data')
     raise ValueError("CAL-ACCESS download directory not configured. Set either \
-CALACCESS_DOWNLOAD_DIR or BASE_DIR in settings.py")
-
-
-def get_test_download_directory():
-    """
-    Returns download directory where we will store test data.
-    """
-    if getattr(settings, 'CALACCESS_TEST_DOWNLOAD_DIR', None):
-        return getattr(settings, 'CALACCESS_TEST_DOWNLOAD_DIR')
-    elif getattr(settings, 'BASE_DIR', None):
-        return os.path.join(getattr(settings, 'BASE_DIR'), 'test-data')
-    raise ValueError("CAL-ACCESS test download directory not configured. \
-Set either CALACCESS_TEST_DOWNLOAD_DIR or BASE_DIR in settings.py")
+CALACCESS_DATA_DIR or BASE_DIR in settings.py")
 
 
 def archive_directory_path(instance, filename):

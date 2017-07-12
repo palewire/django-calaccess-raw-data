@@ -7,6 +7,7 @@ from __future__ import unicode_literals
 import os
 import logging
 import requests
+import shutil
 from datetime import datetime
 from hurry.filesize import size
 from clint.textui import progress
@@ -14,7 +15,6 @@ from django.conf import settings
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.core.files import File
 from django.utils import timezone
-from calaccess_raw import get_download_directory
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
@@ -55,14 +55,6 @@ class Command(CalAccessCommand):
         """
         super(Command, self).handle(*args, **options)
 
-        # get the dir where data goes from app settings
-        self.data_dir = get_download_directory()
-        # if data_dir doesn't exist, create it
-        os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
-
-        # downloaded zip file will go in data_dir
-        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
-
         self.download_metadata = self.get_download_metadata()
         logger.debug('Server: %s <-- (from HEAD)' % self.download_metadata['server'])
         logger.debug('ETag: %s <-- (from HEAD)' % self.download_metadata['etag'])
@@ -86,18 +78,22 @@ class Command(CalAccessCommand):
         # if not called from command-line, assume called by update command
         if not self._called_from_command_line:
             # get the version that the update command is working on
-            last_update_started = RawDataVersion.objects.filter(
-                update_start_datetime__isnull=False
-            ).latest('update_start_datetime')
-            # confirm that update and download commands are working with same version
-            if self.version != last_update_started:
-                raise CommandError(
-                    'Version available to download ({0}) does not match version '
-                    'of update ({1}).'.format(
-                        self.version,
-                        last_update_started.release_datetime,
+            try:
+                last_update_started = RawDataVersion.objects.filter(
+                    update_start_datetime__isnull=False
+                ).latest('update_start_datetime')
+            except RawDataVersion.DoesNotExist:
+                pass
+            else:
+                # confirm that update and download commands are working with same version
+                if self.version != last_update_started:
+                    raise CommandError(
+                        'Version available to download ({0}) does not match version '
+                        'of update ({1}).'.format(
+                            self.version,
+                            last_update_started.release_datetime,
+                        )
                     )
-                )
 
         # log if a new version was found
         if created:
@@ -224,12 +220,15 @@ class Command(CalAccessCommand):
         # Prep
         expected_size = self.version.expected_size
         headers = dict()
-        if os.path.exists(self.zip_path):
-            if self.resume:
-                headers['Range'] = 'bytes=%d-' % self.local_file_size
-                expected_size = expected_size - self.local_file_size
-            else:
-                os.remove(self.zip_path)
+
+        if self.resume:
+            headers['Range'] = 'bytes=%d-' % self.local_file_size
+            expected_size = expected_size - self.local_file_size
+        else:
+            # flush previous download
+            if os.path.exists(self.download_dir):
+                shutil.rmtree(self.download_dir)
+            os.mkdir(self.download_dir)
 
         # Stream the download
         chunk_size = 1024

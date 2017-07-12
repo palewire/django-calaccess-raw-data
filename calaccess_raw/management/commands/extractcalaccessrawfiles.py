@@ -4,14 +4,13 @@
 Extract the CAL-ACCESS raw data files from downloaded ZIP.
 """
 import os
+import re
 import shutil
 import zipfile
-from glob import iglob
 from django.conf import settings
 from django.core.files import File
 from django.core.management.base import CommandError
 from django.utils.timezone import now
-from calaccess_raw import get_download_directory, get_test_download_directory
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
@@ -41,14 +40,6 @@ class Command(CalAccessCommand):
         """
         super(Command, self).handle(*args, **options)
 
-        # get the dir where data goes from app settings
-        self.data_dir = get_download_directory()
-
-        # get path to download zip file
-        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
-        # raw tsv files go in same data_dir in tsv/
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-
         # get most recently downloaded RawDataVersion
         try:
             self.version = RawDataVersion.objects.filter(
@@ -76,68 +67,68 @@ class Command(CalAccessCommand):
 
         self.header("Extracting raw data files")
 
-        self.unzip()
-        self.track_files()
+        # flush tsv dir
+        if os.path.exists(self.tsv_dir):
+            shutil.rmtree(self.tsv_dir)
+        os.mkdir(self.tsv_dir)
+
+        self.extract_tsv_files()
 
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
 
         if not options['keep_files']:
-            os.remove(self.zip_path)
-            shutil.rmtree(os.path.join(self.data_dir, 'CalAccess'))
+            shutil.rmtree(self.download_dir)
 
         # store extraction finish time
         self.version.extract_finish_datetime = now()
         # and save the RawDataVersion
         self.version.save()
 
-    def unzip(self):
+    def extract_tsv_files(self):
         """
-        Unzip the snapshot file.
+        Extract all files with .TSV extension from downloaded zip.
         """
         if self.verbosity:
-            self.log(" Unzipping %s" % os.path.basename(self.zip_path))
+            self.log(" Extracting .TSV files")
+
+        pattern = r'^.+\.TSV$'
 
         with zipfile.ZipFile(self.zip_path) as zf:
-            for member in zf.infolist():
-                words = member.filename.split('/')
-                path = self.data_dir
-                for word in words[:-1]:
-                    drive, word = os.path.splitdrive(word)
-                    head, word = os.path.split(word)
-                    if word in (os.curdir, os.pardir, ''):
-                        continue
-                    path = os.path.join(path, word)
-                zf.extract(member, path)
+            tsv_files = [
+                f for f in zf.namelist() if re.match(pattern, f)
+            ]
 
-    def track_files(self):
+            for f in tsv_files:
+                # extract
+                extracted_path = zf.extract(f, self.download_dir)
+                # move
+                file_name = os.path.basename(extracted_path).upper()
+                shutil.move(
+                    extracted_path,
+                    os.path.join(self.tsv_dir, file_name),
+                )
+                # track
+                self.track_file(file_name)
+        return
+
+    def track_file(self, file_name):
         """
-        Create a RawDataFile for each download .TSV file.
+        Create a RawDataFile object for for each download .TSV file.
         """
-        # Clear out target if it exists
-        if os.path.exists(self.tsv_dir):
-            shutil.rmtree(self.tsv_dir)
+        raw_file, created = RawDataFile.objects.get_or_create(
+            version=self.version,
+            file_name=file_name.replace('.TSV', ''),
+        )
+        # if raw file was already there, clear out timestamp fields
+        if not created:
+            raw_file.clean_start_datetime = None
+            raw_file.clean_finish_datetime = None
+            raw_file.load_start_datetime = None
+            raw_file.load_finish_datetime = None
+            raw_file.save()
 
-        os.mkdir(self.tsv_dir)
-        pattern = os.path.join(self.data_dir, '*/DATA/*/DATA/*.TSV')
-
-        for f in iglob(pattern):
-            # copy the file into the TSV dir
-            shutil.move(f, self.tsv_dir)
-
-            # get or create a raw data file object
-            file_name = os.path.basename(f).upper().replace('.TSV', '')
-            raw_file, created = RawDataFile.objects.get_or_create(
-                version=self.version,
-                file_name=file_name,
-            )
-            # if raw file was already there, clear out timestamp fields
-            if not created:
-                raw_file.clean_start_datetime = None
-                raw_file.clean_finish_datetime = None
-                raw_file.load_start_datetime = None
-                raw_file.load_finish_datetime = None
-                raw_file.save()
+        return
 
     def archive(self):
         """
@@ -154,67 +145,11 @@ class Command(CalAccessCommand):
             # Remove previous .TSV file
             raw_file.download_file_archive.delete()
             # Open up the .TSV file so we can wrap it in the Django File obj
-            with open(self.tsv_dir + raw_file.file_name + '.TSV', 'rb') as f:
+            file_path = os.path.join(self.tsv_dir, raw_file.file_name + '.TSV')
+            with open(file_path, 'rb') as f:
                 # Save the .TSV on the raw data file
                 raw_file.download_file_archive.save(
                     raw_file.file_name + '.TSV',
                     File(f)
                 )
-
-
-class TestCommand(Command):
-    """
-    Simulates the unzipping and preping of CAL-ACCESS raw data for testing.
-    """
-    help = "Simulates the unzipping and preping of CAL-ACCESS raw data for testing"
-
-    def add_arguments(self, parser):
-        """
-        Adds custom arguments specific to this command.
-        """
-        super(TestCommand, self).add_arguments(parser)
-
-    def handle(self, *args, **options):
-        """
-        Make it happen.
-        """
-        self.verbosity = options.get("verbosity")
-        self.no_color = options.get("no_color")
-        self.data_dir = get_test_download_directory()
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
-
-        with open(self.data_dir + "/sampled_version.txt", "r") as f:
-            length = f.readline()
-            release_datetime = f.readline()
-
-        try:
-            # long int type is big enough for double the current size of the zip
-            expected_size = long(length)
-        except NameError:
-            # in py3, no long(), instead int will suffice
-            expected_size = int(length)
-
-        # get or create the RawDataVersion
-        self.version, created = self.get_or_create_version(
-            expected_size,
-            self.parse_imf_datetime_str(
-                release_datetime,
-            )
-        )
-
-        # store extraction start time
-        self.version.extract_start_datetime = now()
-        # and save the RawDataVersion
-        self.version.save()
-
-        self.unzip()
-        self.track_files()
-
-        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-            self.archive()
-
-        # store extraction finish time
-        self.version.extract_finish_datetime = now()
-        # and save the RawDataVersion
-        self.version.save()
+        return

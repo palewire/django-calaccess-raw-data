@@ -12,19 +12,13 @@ from clint.textui import progress
 from django.core.files import File
 from django.utils.timezone import now
 from django.core.management import call_command
-from calaccess_raw.management import handle_command
 from django.template.loader import render_to_string
 from django.core.management.base import CommandError
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 from calaccess_raw.models.tracking import RawDataVersion
 from calaccess_raw.management.commands import CalAccessCommand
 from django.contrib.humanize.templatetags.humanize import naturaltime
-from calaccess_raw.management.commands.extractcalaccessrawfiles import TestCommand as TestExtractCommand
-from calaccess_raw import (
-    get_download_directory,
-    get_test_download_directory,
-    get_model_list
-)
+from calaccess_raw import get_model_list
 logger = logging.getLogger(__name__)
 
 
@@ -54,14 +48,6 @@ class Command(CalAccessCommand):
             help="Update or resume previous update without asking permission"
         )
         parser.add_argument(
-            "--test",
-            "--use-test-data",
-            action="store_true",
-            dest="test_data",
-            default=False,
-            help="Use sampled test data (skips download, clean a load)"
-        )
-        parser.add_argument(
             "-a",
             "--app-name",
             dest="app_name",
@@ -79,69 +65,20 @@ class Command(CalAccessCommand):
         # set / compute any attributes that multiple class methods need
         self.app_name = options["app_name"]
         self.keep_files = options["keep_files"]
-        self.test_mode = options['test_data']
         self.noinput = options['noinput']
 
-        if self.test_mode:
-            # and always keep files when running test data
-            self.keep_files = True
-            self.data_dir = get_test_download_directory()
-            # need to set this app-wide because cleancalaccessrawfile
-            #   also calls get_download_directory
-            settings.CALACCESS_DOWNLOAD_DIR = self.data_dir
-            self.noinput = True
-        else:
-            self.data_dir = get_download_directory()
-
-        # set the download zip file path
-        self.zip_path = os.path.join(self.data_dir, self.url.split('/')[-1])
-        # make the data dir if necessary
-        os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
-        # Immediately check that the tsv directory exists when using test data,
-        #   so we can stop immediately.
-        if self.test_mode:
-            if not os.path.exists(self.tsv_dir):
-                raise CommandError("Data tsv directory does not exist "
-                                   "at %s" % self.tsv_dir)
-            elif self.verbosity:
-                self.log("Using test data")
-
-        # set up the dir for clean files
-        self.csv_dir = os.path.join(self.data_dir, "csv/")
-        os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
-
-        # in test mode, get download metadata from local file
-        if self.test_mode:
-            with open(self.data_dir + "/sampled_version.txt", "r") as f:
-                # read expected_size from sampled_version.txt
-                try:
-                    # long int type is big enough for double the current size of the zip
-                    expected_size = long(f.readline())
-                except NameError:
-                    # in py3, no long(), instead int will suffice
-                    expected_size = int(f.readline())
-                # and release_datetime
-                release_datetime = self.parse_imf_datetime_str(f.readline())
-                # get or create the RawDataVersion
-                latest_version, created = self.get_or_create_version(
-                    expected_size,
-                    release_datetime,
-                )
-        # else request it
-        else:
-            download_metadata = self.get_download_metadata()
-            logger.debug('Server: %s' % download_metadata['server'])
-            logger.debug('ETag: %s' % download_metadata['etag'])
-            logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
-            logger.debug('Content-Length: %s' % download_metadata['content-length'])
-            # get or create the RawDataVersion
-            latest_version, created = self.get_or_create_version(
-                download_metadata['content-length'],
-                self.parse_imf_datetime_str(
-                    download_metadata['last-modified']
-                ),
-            )
+        download_metadata = self.get_download_metadata()
+        logger.debug('Server: %s' % download_metadata['server'])
+        logger.debug('ETag: %s' % download_metadata['etag'])
+        logger.debug('Last-Modified: %s' % download_metadata['last-modified'])
+        logger.debug('Content-Length: %s' % download_metadata['content-length'])
+        # get or create the RawDataVersion
+        latest_version, created = self.get_or_create_version(
+            download_metadata['content-length'],
+            self.parse_imf_datetime_str(
+                download_metadata['last-modified']
+            ),
+        )
         # log if latest version is new
         if created:
             logger.info('New CAL-ACCESS version available.')
@@ -246,7 +183,7 @@ class Command(CalAccessCommand):
         else:
             self.version = latest_version
 
-        if self.verbosity and not self.test_mode:
+        if self.verbosity:
             if self.resume:
                 self.header(
                     "Resuming update to {:%m-%d-%Y %H:%M:%S} snapshot".format(
@@ -275,10 +212,8 @@ class Command(CalAccessCommand):
         self.version.save()
 
         # handle download
-        if self.test_mode:
-            pass
         # can only download the latest version:
-        elif self.version == latest_version:
+        if self.version == latest_version:
             # if download completed and not forcing restart
             if self.version.download_completed and not self.force_restart:
                 self.log('Already downloaded.')
@@ -289,10 +224,8 @@ class Command(CalAccessCommand):
                     self.duration()
 
         # handle file extraction
-        if self.test_mode:
-            handle_command(TestExtractCommand, verbosity=self.verbosity)
         # if the last extract of the version completed and not forcing restart
-        elif self.version.extract_completed and not self.force_restart:
+        if self.version.extract_completed and not self.force_restart:
             self.log('Already extracted.')
         else:
             # if the zip isn't there
@@ -450,18 +383,17 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" All files zipped")
 
-        if not self.test_mode:
-            # save the clean zip size
-            self.version.clean_zip_size = os.path.getsize(clean_zip_path)
-            with open(clean_zip_path, 'rb') as zf:
-                # Save the zip on the raw data version
-                if self.verbosity > 2:
-                    self.log(" Archiving zip")
-                self.version.clean_zip_archive.save(
-                    os.path.basename(clean_zip_path), File(zf)
-                )
+        # save the clean zip size
+        self.version.clean_zip_size = os.path.getsize(clean_zip_path)
+        with open(clean_zip_path, 'rb') as zf:
+            # Save the zip on the raw data version
             if self.verbosity > 2:
-                self.log(" Zip archived.")
+                self.log(" Archiving zip")
+            self.version.clean_zip_archive.save(
+                os.path.basename(clean_zip_path), File(zf)
+            )
+        if self.verbosity > 2:
+            self.log(" Zip archived.")
 
     def load(self):
         """

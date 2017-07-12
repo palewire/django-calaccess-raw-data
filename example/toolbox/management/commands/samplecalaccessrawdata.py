@@ -1,15 +1,15 @@
 import os
 import shutil
-import zipfile
 from datetime import datetime
 from itertools import chain
 from optparse import make_option
 from clint.textui import progress
 from subsample.file_input import FileInput
 from subsample.algorithms import two_pass_sample
+from django.conf import settings
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw import get_download_directory, get_test_download_directory
 from calaccess_raw.models import RawDataVersion
+from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 
 
 class Command(CalAccessCommand):
@@ -32,13 +32,10 @@ class Command(CalAccessCommand):
         super(Command, self).handle(*args, **options)
 
         # Set options
-        self.data_dir = get_download_directory()
-        self.test_data_dir = get_test_download_directory()
-        self.tsv_dir = os.path.join(self.data_dir, "tsv/")
+        self.test_data_dir = os.path.join(settings.BASE_DIR, 'test-data')
         self.sample_dir = os.path.join(self.test_data_dir, "tsv/")
         self.sample_rows = int(options['samplerows'])
         self.tsv_list = os.listdir(self.tsv_dir)
-        self.verbosity = int(options['verbosity'])
 
         self.header("Sampling %i rows from %s source files" % (
             self.sample_rows,
@@ -75,24 +72,27 @@ class Command(CalAccessCommand):
 
         self.header("Compressing zip file...")
         self.save_zip()
-
-        # Stash the release_datetime and size of the last completed download
-        version = RawDataVersion.objects.latest('download_finish_datetime')
-
-        with open(self.test_data_dir + '/sampled_version.txt', 'w') as f:
-            f.write(str(version.expected_size) + '\n')
-            f.write(
-                version.release_datetime.strftime('%a, %d %b %Y %H:%M:%S GMT')
-            )
     
     def save_zip(self):
         """
         Save a zip file containing all the sampled .TSV files
         """
-        with zipfile.ZipFile(
-                self.test_data_dir + "/dbwebexport.zip", 
-                'w'
-            ) as zf:
-            for name in os.listdir(self.sample_dir):
-                f = os.path.join(self.sample_dir, name)
-                zf.write(f, 'CalAccess/DATA/' + name)
+        # enable zipfile compression
+        compression = ZIP_DEFLATED
+        zip_path = os.path.join(self.test_data_dir, 'dbwebexport.zip')
+
+        try:
+            zf = ZipFile(zip_path, 'w', compression, allowZip64=True)
+        except RuntimeError:
+            logger.error('Zip file cannot be compressed (check zlib module).')
+            compression = ZIP_STORED
+            zf = ZipFile(zip_path, 'w', compression, allowZip64=True)
+
+        # loop over and save files in csv dir
+        for name in os.listdir(self.sample_dir):
+            if self.verbosity > 2:
+                self.log(" Adding %s to zip" % name)
+            f = os.path.join(self.sample_dir, name)
+            zf.write(f, 'CalAccess/DATA/' + name)
+
+        zf.close()
