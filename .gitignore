@@ -21,10 +21,11 @@ example/test-data/csv/
 example/test-data/tsv/
 example/test-data/log/
 example/test-data/clean.zip
-example/settings_local.py
+example/test-data/.media/
+example/.media/*
 example/.static/
 example/routers.py
-*/.media/*
+example/settings_local.py
 *dbwebexport_sample/
 jupyter_notebooks
 example/.documentcloud_metadata/2753585.json

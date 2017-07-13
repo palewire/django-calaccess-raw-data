@@ -21,10 +21,13 @@ from calaccess_raw.management.commands import CalAccessCommand
 logger = logging.getLogger(__name__)
 
 
-@override_settings(BASE_DIR='example/')
 @override_settings(
     CALACCESS_DATA_DIR=os.path.join(settings.BASE_DIR, 'test-data')
 )
+@override_settings(
+    MEDIA_ROOT=os.path.join(settings.BASE_DIR, 'test-data', '.media')
+)
+@override_settings(CALACCESS_STORE_ARCHIVE=True)
 class CommandTestCase(TestCase):
     """
     Tests the management commands that interact with the database.
