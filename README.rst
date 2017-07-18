@@ -18,7 +18,7 @@ activity data from the California Secretary of State's
 -  Coverage:
    `coveralls.io/r/california-civic-data-coalition/django-calaccess-raw-data <https://coveralls.io/r/california-civic-data-coalition/django-calaccess-raw-data>`__
 
-.. |Build Status| image:: image:: https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data.svg?branch=master
+.. |Build Status| image:: https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data.svg?branch=master
     :target: https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data
 .. |PyPI version| image:: https://badge.fury.io/py/django-calaccess-raw-data.svg
     :target: https://badge.fury.io/py/django-calaccess-raw-data
