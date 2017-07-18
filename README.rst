@@ -24,5 +24,5 @@ activity data from the California Secretary of State's
     :target: https://badge.fury.io/py/django-calaccess-raw-data
 .. |Coverage Status| image:: https://coveralls.io/repos/github/california-civic-data-coalition/django-calaccess-raw-data/badge.svg?branch=master
     :target: https://coveralls.io/github/california-civic-data-coalition/django-calaccess-raw-data?branch=master
-.. |Documentation Status| image:: https://readthedocs.org/projects/django-calaccess-raw-data/badge/?version=latest
+.. |Documentation Status| image:: https://readthedocs.org/projects/django-calaccess-raw-data/badge/
    :target: http://django-calaccess.californiacivicdata.org
