@@ -18,11 +18,11 @@ activity data from the California Secretary of State's
 -  Coverage:
    `coveralls.io/r/california-civic-data-coalition/django-calaccess-raw-data <https://coveralls.io/r/california-civic-data-coalition/django-calaccess-raw-data>`__
 
-.. |Build Status| image:: https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data.png?branch=master
-   :target: https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data
-.. |PyPI version| image:: https://badge.fury.io/py/django-calaccess-raw-data.png
-   :target: http://badge.fury.io/py/django-calaccess-raw-data
-.. |Coverage Status| image:: https://coveralls.io/repos/california-civic-data-coalition/django-calaccess-raw-data/badge.png?branch=master
-   :target: https://coveralls.io/r/california-civic-data-coalition/django-calaccess-raw-data?branch=master
+.. |Build Status| image:: image:: https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data.svg?branch=master
+    :target: https://travis-ci.org/california-civic-data-coalition/django-calaccess-raw-data
+.. |PyPI version| image:: https://badge.fury.io/py/django-calaccess-raw-data.svg
+    :target: https://badge.fury.io/py/django-calaccess-raw-data
+.. |Coverage Status| image:: https://coveralls.io/repos/github/california-civic-data-coalition/django-calaccess-raw-data/badge.svg?branch=master
+    :target: https://coveralls.io/github/california-civic-data-coalition/django-calaccess-raw-data?branch=master
 .. |Documentation Status| image:: https://readthedocs.org/projects/django-calaccess-raw-data/badge/?version=latest
    :target: http://django-calaccess.californiacivicdata.org
