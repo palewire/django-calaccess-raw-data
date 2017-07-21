@@ -24,7 +24,7 @@ setup(
     author='California Civic Data Coalition',
     author_email='cacivicdata@gmail.com',
     install_requires=(
-        'django>=1.8',
+        'django>=1.10',
         'django-postgres-copy>=0.1.0',
         'csvkit>=1.0',
         'requests',
@@ -41,8 +41,6 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Framework :: Django',
-        'Framework :: Django :: 1.8',
-        'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
         'License :: OSI Approved :: MIT License',

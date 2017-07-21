@@ -11,9 +11,6 @@ python:
  - "3.6"
 
 env:
- - DJANGO_VERSION=1.8.* DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.8.* DATABASE_SETTINGS='settings_test_postgresql.py'
- - DJANGO_VERSION=1.8.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
  - DJANGO_VERSION=1.10.* DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.10.* DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.10.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
