@@ -1,4 +1,4 @@
 include LICENSE
 include README.md
-include CONTRIBUTING.md
+include .github/CONTRIBUTING.md
 recursive-include calaccess_raw/templates *
