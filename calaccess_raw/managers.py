@@ -5,11 +5,12 @@ Custom managers for working with CAL-ACCESS data.
 """
 from __future__ import unicode_literals
 import os
+from postgres_copy import CopyManager
 from django.db import models, connection
 from calaccess_raw import get_data_directory
 
 
-class CalAccessManager(models.Manager):
+class CalAccessManager(CopyManager):
     """
     Utilities for accessing the raw data associated with a model.
     """

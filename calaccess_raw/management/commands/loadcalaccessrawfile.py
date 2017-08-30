@@ -9,7 +9,6 @@ import six
 from django.apps import apps
 from csvkit import reader
 from django.conf import settings
-from postgres_copy import CopyMapping
 from django.db import connections, router
 from django.core.management.base import CommandError
 from django.utils.timezone import now
@@ -279,13 +278,11 @@ class Command(CalAccessCommand):
         )
 
         # Load the data
-        c = CopyMapping(
-            self.model,
+        self.model.objects.from_csv(
             self.csv,
             model_mapping,
             using=self.database,
         )
-        c.save(silent=True)
 
         # Print out the results
         if self.verbosity > 2:
