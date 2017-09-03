@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='django-calaccess-raw-data',
-    version='1.6.0',
+    version='1.6.1',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
