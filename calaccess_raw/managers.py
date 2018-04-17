@@ -5,8 +5,8 @@ Custom managers for working with CAL-ACCESS data.
 """
 from __future__ import unicode_literals
 import os
+from django.db import models
 from postgres_copy import CopyManager
-from django.db import models, connection
 from calaccess_raw import get_data_directory
 
 
