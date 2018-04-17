@@ -161,9 +161,7 @@ class Command(CalAccessCommand):
             self.load_postgresql()
         else:
             self.failure("Sorry your database engine is unsupported")
-            raise CommandError(
-                "Only MySQL and PostgresSQL backends supported."
-            )
+            raise CommandError("Only MySQL and PostgresSQL backends supported.")
 
     def load_dat(self):
         """
