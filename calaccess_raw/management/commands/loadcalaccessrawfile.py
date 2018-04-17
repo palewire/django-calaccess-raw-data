@@ -314,8 +314,7 @@ class Command(CalAccessCommand):
         The message displayed about whether or not a load finished successfully.
         """
         if model_count != csv_count:
-            msg = '  Table record count doesn\'t match CSV. \
-Table: %s\tCSV: %s'
+            msg = '  Table record count doesn\'t match CSV. Table: %s\tCSV: %s'
             self.failure(msg % (
                 model_count,
                 csv_count,
