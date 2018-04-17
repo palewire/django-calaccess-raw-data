@@ -4,6 +4,7 @@
 Models for storing lobbying activity tables from the CAL-ACCESS database.
 """
 from __future__ import unicode_literals
+from django.db import models
 from .base import CalAccessBaseModel
 from calaccess_raw import fields
 from calaccess_raw.annotations import DocumentCloud, choices
@@ -1119,6 +1120,7 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         db_constraint=False,
         help_text="Foreign key referencing FilerTypesCd.filer_type",
         db_column='FILER_TYPE',
+        on_delete=models.CASCADE
     )
     correction_flag = fields.CharField(
         max_length=200,

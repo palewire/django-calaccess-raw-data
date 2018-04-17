@@ -4,6 +4,7 @@
 Models for storing inactive and deprecated tables from the CAL-ACCESS database.
 """
 from __future__ import unicode_literals
+from django.db import models
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
 from calaccess_raw.annotations.filing_forms import get_filing_form
@@ -357,6 +358,7 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         db_column="FILER_TYPE",
         db_index=True,
         help_text="Foreign key referencing FilerTypesCd.filer_type",
+        on_delete=models.CASCADE
     )
     period_id = fields.ForeignKeyField(
         'FilingPeriodCd',
@@ -365,6 +367,7 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         db_column="PERIOD_ID",
         db_index=True,
         help_text="Foreign key referencing FilingPeriodCd.period_id",
+        on_delete=models.CASCADE
     )
 
     class Meta(CalAccessBaseModel.Meta):

@@ -4,6 +4,7 @@
 Models for storing common tables from the CAL-ACCESS database.
 """
 from __future__ import unicode_literals
+from django.db import models
 from .base import CalAccessBaseModel
 from calaccess_raw import fields
 from calaccess_raw.annotations import (
@@ -2100,6 +2101,7 @@ class FilerToFilerTypeCd(CalAccessBaseModel):
         db_constraint=False,
         help_text="Foreign key referencing FilerTypesCd.filer_type",
         db_column='FILER_TYPE',
+        on_delete=models.CASCADE
     )
     active = fields.CharField(
         max_length=1,
