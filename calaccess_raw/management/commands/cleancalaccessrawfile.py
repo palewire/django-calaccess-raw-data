@@ -113,7 +113,7 @@ class Command(CalAccessCommand):
         )
 
         # Reader
-        tsv_file = open(tsv_path, 'rbU')
+        tsv_file = open(tsv_path, 'rb')
 
         # Writer
         csv_file = open(csv_path, 'w')
