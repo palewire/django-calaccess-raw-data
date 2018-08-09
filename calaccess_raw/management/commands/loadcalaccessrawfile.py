@@ -71,6 +71,7 @@ class Command(CalAccessCommand):
 
         # set / compute any attributes that multiple class methods need
         self.keep_file = options["keep_file"]
+
         # get model based on strings of app_name and model_name
         self.model = apps.get_model(options["app_name"], options['model_name'])
 
@@ -133,10 +134,6 @@ class Command(CalAccessCommand):
         """
         Loads the source CSV for the provided model based on settings and database connections.
         """
-        # check if can load into dat
-        if getattr(settings, 'CALACCESS_DAT_SOURCE', None) and six.PY2:
-            self.load_dat()
-
         # if not using default db, make sure the database is set up in django's settings
         if self.database:
             try:
@@ -166,29 +163,6 @@ class Command(CalAccessCommand):
             self.failure("Sorry your database engine is unsupported")
             raise CommandError(
                 "Only MySQL and PostgresSQL backends supported."
-            )
-
-    def load_dat(self):
-        """
-        Takes a model and a csv file and loads it into dat.
-        """
-        import datpy
-        dat_source = settings.CALACCESS_DAT_SOURCE
-        self.dat = datpy.Dat(dat_source['source'])
-        dataset = self.dat.dataset(self.model._meta.db_table)
-        try:
-            dataset.import_file(self.csv, format='csv')
-            if self.verbosity > 2:
-                dat_status = self.dat.status()
-                model_count = dat_status['rows']
-                csv_count = self.get_row_count(self.csv)
-                self.finish_load_message(model_count, csv_count)
-        except datpy.DatException:
-            raise CommandError(
-                'Failed to load dat for %s, %s' % (
-                    self.model._meta.db_table,
-                    self.csv
-                )
             )
 
     def load_mysql(self):
@@ -306,7 +280,7 @@ class Command(CalAccessCommand):
         """
         Returns the number of rows in the file, not counting headers.
         """
-        with open(self.csv) as infile:
+        with open(self.csv, 'r') as infile:
             row_count = sum(1 for line in infile) - 1
 
         if row_count < 0:
@@ -319,8 +293,7 @@ class Command(CalAccessCommand):
         The message displayed about whether or not a load finished successfully.
         """
         if model_count != csv_count:
-            msg = '  Table record count doesn\'t match CSV. \
-Table: %s\tCSV: %s'
+            msg = "  Table record count doesn\'t match CSV. Table: %s\tCSV: %s"
             self.failure(msg % (
                 model_count,
                 csv_count,
