@@ -4,15 +4,21 @@
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 """
 from __future__ import unicode_literals
+from django.utils import six
+
+# Files
 import os
 import csv
 from io import StringIO
-from django.conf import settings
-from django.core.files import File
-from django.core.management.base import CommandError
-from django.utils import six
-from django.utils.timezone import now
 from csvkit import reader, writer
+from django.core.files import File
+
+# Django
+from django.conf import settings
+from django.utils.timezone import now
+
+# Commands
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
@@ -49,11 +55,10 @@ class Command(CalAccessCommand):
         # Set options
         self.file_name = options['file_name']
 
+        # Set log variables
         self.log_dir = os.path.join(self.data_dir, "log/")
-        self.error_log_path = os.path.join(
-            self.log_dir,
-            self.file_name.lower().replace("tsv", "errors.csv")
-        )
+        self.log_name = self.file_name.lower().replace("tsv", "errors.csv")
+        self.error_log_path = os.path.join(self.log_dir, self.log_name)
 
         # get most recently extracted RawDataVersion
         try:
@@ -75,7 +80,8 @@ class Command(CalAccessCommand):
 
         # get the raw file record
         self.raw_file = RawDataFile.objects.get(
-            file_name=self.file_name.replace('.TSV', ''), version=version
+            file_name=self.file_name.replace('.TSV', ''),
+            version=version
         )
         # store the start time for the clean
         self.raw_file.clean_start_datetime = now()
@@ -84,9 +90,9 @@ class Command(CalAccessCommand):
         # save here in case command doesn't finish
         self.raw_file.save()
 
+        # Clean it
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
-
         self.clean()
 
         # unless keeping files, remove tsv files
