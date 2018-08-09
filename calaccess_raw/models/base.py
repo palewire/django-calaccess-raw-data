@@ -4,7 +4,11 @@
 Base models for tables from the CAL-ACCESS database.
 """
 from __future__ import unicode_literals
+
+# Text
 import textwrap
+
+# Models
 from django.db import models
 from calaccess_raw import managers
 from django.db.models.base import ModelBase

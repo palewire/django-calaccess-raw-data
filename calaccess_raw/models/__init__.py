@@ -19,7 +19,7 @@ from calaccess_raw.models.campaign import (
     S496Cd,
     S497Cd,
     S498Cd,
-    F501502Cd,
+    F501502Cd
 )
 from calaccess_raw.models.inactive import (
     BallotMeasuresCd,
@@ -44,7 +44,7 @@ from calaccess_raw.models.inactive import (
     LobbyistFirmHistoryCd,
     LobbyistFirmLobbyist1Cd,
     LobbyistFirmLobbyist2Cd,
-    EfsFilingLogCd,
+    EfsFilingLogCd
 )
 from calaccess_raw.models.lobbying import (
     CvrRegistrationCd,
@@ -59,7 +59,7 @@ from calaccess_raw.models.lobbying import (
     LexpCd,
     LccmCd,
     LpayCd,
-    LothCd,
+    LothCd
 )
 from calaccess_raw.models.common import (
     CvrE530Cd,
@@ -90,11 +90,11 @@ from calaccess_raw.models.common import (
     LookupCodesCd,
     NamesCd,
     ReceivedFilingsCd,
-    ReportsCd,
+    ReportsCd
 )
 from calaccess_raw.models.tracking import (
     RawDataVersion,
-    RawDataFile,
+    RawDataFile
 )
 __all__ = (
     'CalAccessBaseModel',
@@ -179,5 +179,5 @@ __all__ = (
     'ReceivedFilingsCd',
     'ReportsCd',
     'RawDataVersion',
-    'RawDataFile',
+    'RawDataFile'
 )

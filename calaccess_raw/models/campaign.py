@@ -4,15 +4,15 @@
 Models for storing campaign finance tables from the CAL-ACCESS database.
 """
 from __future__ import unicode_literals
+
+# Models
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
-from calaccess_raw.annotations.filing_forms import get_filing_form
 from django.utils.encoding import python_2_unicode_compatible
-from calaccess_raw.annotations import (
-    DocumentCloud,
-    choices,
-    get_sorted_choices
-)
+
+# Annotations
+from calaccess_raw.annotations.filing_forms import get_filing_form
+from calaccess_raw.annotations import DocumentCloud, choices, get_sorted_choices
 
 
 @python_2_unicode_compatible

@@ -4,10 +4,15 @@
 Models for tracking CAL-ACCESS updates over time.
 """
 from __future__ import unicode_literals
+
+# Files
+from hurry.filesize import size as sizeformat
+from calaccess_raw import archive_directory_path
+
+# Models
 from .. import managers
 from django.db import models
-from hurry.filesize import size as sizeformat
-from calaccess_raw import archive_directory_path, get_model_list
+from calaccess_raw import get_model_list
 from django.utils.encoding import python_2_unicode_compatible
 
 
