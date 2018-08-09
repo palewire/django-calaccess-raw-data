@@ -1,3 +1,4 @@
+*.csv#
 *.egg/
 *.egg-info*
 .eggs/
