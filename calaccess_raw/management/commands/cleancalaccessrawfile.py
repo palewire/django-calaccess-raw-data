@@ -107,10 +107,8 @@ class Command(CalAccessCommand):
 
         # Input and output paths
         tsv_path = os.path.join(self.tsv_dir, self.file_name)
-        csv_path = os.path.join(
-            self.csv_dir,
-            self.file_name.lower().replace("tsv", "csv")
-        )
+        csv_name = self.file_name.lower().replace("tsv", "csv")
+        csv_path = os.path.join(self.csv_dir, csv_name)
 
         # Reader
         tsv_file = open(tsv_path, 'rbU')
