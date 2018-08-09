@@ -59,7 +59,6 @@ DATABASES = {
         'PORT': '5432'
     },
 }
-CALACCESS_DAT_SOURCE = ''
 CALACCESS_STORE_ARCHIVE = False
 
 LANGUAGE_CODE = 'en-us'
