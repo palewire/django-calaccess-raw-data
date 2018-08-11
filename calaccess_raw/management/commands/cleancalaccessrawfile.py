@@ -117,7 +117,7 @@ class Command(CalAccessCommand):
         csv_path = os.path.join(self.csv_dir, csv_name)
 
         # Reader
-        tsv_file = open(tsv_path, 'rbU')
+        tsv_file = open(tsv_path, 'rb')
 
         # Writer
         csv_file = open(csv_path, 'w')

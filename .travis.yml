@@ -11,12 +11,21 @@ python:
  - "3.6"
 
 env:
- - DJANGO_VERSION=1.10.* DATABASE_SETTINGS='settings_test_mysql.py'
- - DJANGO_VERSION=1.10.* DATABASE_SETTINGS='settings_test_postgresql.py'
- - DJANGO_VERSION=1.10.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
  - DJANGO_VERSION=1.11.* DATABASE_SETTINGS='settings_test_mysql.py'
  - DJANGO_VERSION=1.11.* DATABASE_SETTINGS='settings_test_postgresql.py'
  - DJANGO_VERSION=1.11.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
+ - DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_mysql.py'
+ - DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_postgresql.py'
+ - DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
+
+matrix:
+  exclude:
+  - python: "2.7"
+    env: DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_mysql.py'
+  - python: "2.7"
+    env: DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_postgresql.py'
+  - python: "2.7"
+    env: DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
 
 install:
  - pip install -r requirements.txt

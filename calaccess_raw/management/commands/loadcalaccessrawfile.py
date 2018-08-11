@@ -168,7 +168,8 @@ class Command(CalAccessCommand):
         if engine == 'django.db.backends.mysql':
             self.load_mysql()
         elif engine in (
-            'django.db.backends.postgresql_psycopg2'
+            'django.db.backends.postgresql_psycopg2',
+            'django.db.backends.postgresql',
             'django.contrib.gis.db.backends.postgis'
         ):
             self.load_postgresql()
