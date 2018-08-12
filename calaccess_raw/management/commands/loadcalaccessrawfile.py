@@ -237,9 +237,6 @@ class Command(CalAccessCommand):
         """
         Load the file into a PostgreSQL database using COPY.
         """
-        # Temporarily drop model and field constraints and indexes
-        self.model.objects.drop_constraints_and_indexes()
-
         # Drop all the records from the target model's real table
         sql = 'TRUNCATE TABLE "{}" RESTART IDENTITY CASCADE'.format(self.model._meta.db_table)
         self.cursor.execute(sql)
@@ -252,6 +249,3 @@ class Command(CalAccessCommand):
 
         # Load the data
         self.model.objects.from_csv(self.csv, model_mapping, using=self.database)
-
-        # Re-add model and field constraints and indexes
-        self.model.objects.add_constraints_and_indexes()

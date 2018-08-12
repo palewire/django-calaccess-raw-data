@@ -25,7 +25,7 @@ setup(
     author_email='cacivicdata@gmail.com',
     install_requires=(
         'django>=1.11',
-        'django-postgres-copy>=2.3.2',
+        'django-postgres-copy>=2.3.3',
         'csvkit>=1.0',
         'requests',
         'clint',
