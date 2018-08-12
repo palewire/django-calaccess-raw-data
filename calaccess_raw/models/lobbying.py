@@ -12,8 +12,8 @@ from .base import CalAccessBaseModel
 from django.utils.encoding import python_2_unicode_compatible
 
 # Annotations
-from calaccess_raw.annotations import DocumentCloud, choices
-from calaccess_raw.annotations.filing_forms import get_filing_form
+from calaccess_raw import annotations
+from calaccess_raw.annotations import DocumentCloud
 
 
 @python_2_unicode_compatible
@@ -35,12 +35,12 @@ class CvrRegistrationCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=82, end_page=86),
     ]
     FILING_FORMS = [
-        get_filing_form('F601'),
-        get_filing_form('F602'),
-        get_filing_form('F603'),
-        get_filing_form('F604'),
-        get_filing_form('F606'),
-        get_filing_form('F607'),
+        annotations.get_form('F601'),
+        annotations.get_form('F602'),
+        annotations.get_form('F603'),
+        annotations.get_form('F604'),
+        annotations.get_form('F606'),
+        annotations.get_form('F607'),
     ]
     # a_b_adr1 = fields.CharField(
     #   max_length=55,
@@ -247,10 +247,10 @@ Form 604. As filed by the lobbyist.',
     )
     ENTITY_CODE_CHOICES = (
         ('BUS', 'Unknown'),
-        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
-        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
-        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
-        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
+        ('FRM', annotations.choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('LBY', annotations.choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('LCO', annotations.choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', annotations.choices.LOBBYING_ENTITY_CODES['LEM']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -663,9 +663,9 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=87, end_page=88),
     ]
     FILING_FORMS = [
-        get_filing_form('F601'),
-        get_filing_form('F602'),
-        get_filing_form('F603'),
+        annotations.get_form('F601'),
+        annotations.get_form('F602'),
+        annotations.get_form('F603'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -719,12 +719,12 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
     ENTITY_CODE_CHOICES = (
-        ('AGY', choices.LOBBYING_ENTITY_CODES['AGY']),
-        ('EMP', choices.LOBBYING_ENTITY_CODES['EMP']),
-        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
-        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
-        ('MBR', choices.LOBBYING_ENTITY_CODES['MBR']),
-        ('SCL', choices.LOBBYING_ENTITY_CODES['SCL']),
+        ('AGY', annotations.choices.LOBBYING_ENTITY_CODES['AGY']),
+        ('EMP', annotations.choices.LOBBYING_ENTITY_CODES['EMP']),
+        ('FRM', annotations.choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('LBY', annotations.choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('MBR', annotations.choices.LOBBYING_ENTITY_CODES['MBR']),
+        ('SCL', annotations.choices.LOBBYING_ENTITY_CODES['SCL']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -800,8 +800,8 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=88, end_page=89),
     ]
     FILING_FORMS = [
-        get_filing_form('F601'),
-        get_filing_form('F603'),
+        annotations.get_form('F601'),
+        annotations.get_form('F603'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -1272,8 +1272,8 @@ class LempCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=90, end_page=91),
     ]
     FILING_FORMS = [
-        get_filing_form('F601').get_section('P2A'),
-        get_filing_form('F601').get_section('P2B'),
+        annotations.get_form('F601').get_section('P2A'),
+        annotations.get_form('F601').get_section('P2B'),
     ]
     agencylist = fields.CharField(
         max_length=200,
@@ -1476,10 +1476,10 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=66, end_page=70),
     ]
     FILING_FORMS = [
-        get_filing_form('F615'),
-        get_filing_form('F625'),
-        get_filing_form('F635'),
-        get_filing_form('F645'),
+        annotations.get_form('F615'),
+        annotations.get_form('F625'),
+        annotations.get_form('F635'),
+        annotations.get_form('F645'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1510,12 +1510,12 @@ to forms 625, 635, 645.",
     )
     ENTITY_CODE_CHOICES = (
         ('CLI', 'Unknown'),
-        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
-        ('IND', choices.LOBBYING_ENTITY_CODES['IND']),
-        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
-        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
-        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
-        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
+        ('FRM', annotations.choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('IND', annotations.choices.LOBBYING_ENTITY_CODES['IND']),
+        ('LBY', annotations.choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('LCO', annotations.choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', annotations.choices.LOBBYING_ENTITY_CODES['LEM']),
+        ('OTH', annotations.choices.LOBBYING_ENTITY_CODES['OTH']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -1891,8 +1891,8 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
     ]
     FILING_FORMS = [
-        get_filing_form('F625'),
-        get_filing_form('F635'),
+        annotations.get_form('F625'),
+        annotations.get_form('F635'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1902,10 +1902,10 @@ original filing and 1 to 999 amendments.",
         verbose_name="amendment ID"
     )
     ENTITY_CODE_CHOICES = (
-        ('EMP', choices.LOBBYING_ENTITY_CODES['EMP']),
-        ('OFF', choices.LOBBYING_ENTITY_CODES['OFF']),
-        ('OWN', choices.LOBBYING_ENTITY_CODES['OWN']),
-        ('PTN', choices.LOBBYING_ENTITY_CODES['PTN']),
+        ('EMP', annotations.choices.LOBBYING_ENTITY_CODES['EMP']),
+        ('OFF', annotations.choices.LOBBYING_ENTITY_CODES['OFF']),
+        ('OWN', annotations.choices.LOBBYING_ENTITY_CODES['OWN']),
+        ('PTN', annotations.choices.LOBBYING_ENTITY_CODES['PTN']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -2032,10 +2032,10 @@ class F690P2Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
     ]
     FILING_FORMS = [
-        get_filing_form('F615'),
-        get_filing_form('F625'),
-        get_filing_form('F635'),
-        get_filing_form('F645'),
+        annotations.get_form('F615'),
+        annotations.get_form('F625'),
+        annotations.get_form('F635'),
+        annotations.get_form('F645'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2148,9 +2148,9 @@ class LattCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=79, end_page=80),
     ]
     FILING_FORMS = [
-        get_filing_form('S630'),
-        get_filing_form('S635C'),
-        get_filing_form('S640'),
+        annotations.get_form('S630'),
+        annotations.get_form('S635C'),
+        annotations.get_form('S640'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2177,13 +2177,13 @@ original filing and 1 to 999 amendments.",
         help_text='Cumulative period beginning to date',
     )
     ENTITY_CODE_CHOICES = (
-        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
-        ('IND', choices.LOBBYING_ENTITY_CODES['IND']),
-        ('LBY', choices.LOBBYING_ENTITY_CODES['LBY']),
-        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
-        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
-        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
-        ('RCP', choices.LOBBYING_ENTITY_CODES['RCP']),
+        ('FRM', annotations.choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('IND', annotations.choices.LOBBYING_ENTITY_CODES['IND']),
+        ('LBY', annotations.choices.LOBBYING_ENTITY_CODES['LBY']),
+        ('LCO', annotations.choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', annotations.choices.LOBBYING_ENTITY_CODES['LEM']),
+        ('OTH', annotations.choices.LOBBYING_ENTITY_CODES['OTH']),
+        ('RCP', annotations.choices.LOBBYING_ENTITY_CODES['RCP']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -2346,10 +2346,10 @@ class LexpCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=74, end_page=75),
     ]
     FILING_FORMS = [
-        get_filing_form('F615').get_section('P1'),
-        get_filing_form('F625').get_section('P3A'),
-        get_filing_form('F635').get_section('P3C'),
-        get_filing_form('F645').get_section('P2A'),
+        annotations.get_form('F615').get_section('P1'),
+        annotations.get_form('F625').get_section('P3A'),
+        annotations.get_form('F635').get_section('P3C'),
+        annotations.get_form('F645').get_section('P2A'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2397,8 +2397,8 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the credit card company, if paid using a card',
     )
     ENTITY_CODE_CHOICES = (
-        ('IND', choices.LOBBYING_ENTITY_CODES['IND']),
-        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
+        ('IND', annotations.choices.LOBBYING_ENTITY_CODES['IND']),
+        ('OTH', annotations.choices.LOBBYING_ENTITY_CODES['OTH']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -2582,10 +2582,10 @@ class LccmCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
     ]
     FILING_FORMS = [
-        get_filing_form('F615').get_section('P2'),
-        get_filing_form('F625').get_section('P4B'),
-        get_filing_form('F635').get_section('P4B'),
-        get_filing_form('F645').get_section('P3B'),
+        annotations.get_form('F615').get_section('P2'),
+        annotations.get_form('F625').get_section('P4B'),
+        annotations.get_form('F635').get_section('P4B'),
+        annotations.get_form('F645').get_section('P3B'),
     ]
     # acct_name = fields.CharField(
     #   max_length=90,
@@ -2642,10 +2642,10 @@ original filing and 1 to 999 amendments.",
         help_text='Contributor prefix or title.',
     )
     ENTITY_CODE_CHOICES = (
-        ('COM', choices.LOBBYING_ENTITY_CODES['COM']),
-        ('RCP', choices.LOBBYING_ENTITY_CODES['RCP']),
+        ('COM', annotations.choices.LOBBYING_ENTITY_CODES['COM']),
+        ('RCP', annotations.choices.LOBBYING_ENTITY_CODES['RCP']),
         # Not sure this is a valid value of lobbying records, but has over 1,000 occurrences
-        ('CTL', choices.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('CTL', annotations.choices.CAMPAIGN_ENTITY_CODES['CTL']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -2807,8 +2807,8 @@ class LpayCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=76, end_page=77),
     ]
     FILING_FORMS = [
-        get_filing_form('F625').get_section('P2'),
-        get_filing_form('F635').get_section('P3B'),
+        annotations.get_form('F625').get_section('P2'),
+        annotations.get_form('F635').get_section('P3B'),
     ]
     advan_amt = fields.DecimalField(
         decimal_places=2,
@@ -2909,10 +2909,10 @@ original filing and 1 to 999 amendments.",
         help_text='Employer ZIP Code',
     )
     ENTITY_CODE_CHOICES = (
-        ('FRM', choices.LOBBYING_ENTITY_CODES['FRM']),
-        ('LCO', choices.LOBBYING_ENTITY_CODES['LCO']),
-        ('LEM', choices.LOBBYING_ENTITY_CODES['LEM']),
-        ('OTH', choices.LOBBYING_ENTITY_CODES['OTH']),
+        ('FRM', annotations.choices.LOBBYING_ENTITY_CODES['FRM']),
+        ('LCO', annotations.choices.LOBBYING_ENTITY_CODES['LCO']),
+        ('LEM', annotations.choices.LOBBYING_ENTITY_CODES['LEM']),
+        ('OTH', annotations.choices.LOBBYING_ENTITY_CODES['OTH']),
         ('128', 'Unknown'),
     )
     entity_cd = fields.CharField(
@@ -3043,7 +3043,7 @@ class LothCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=77, end_page=78),
     ]
     FILING_FORMS = [
-        get_filing_form('F625').get_section('P3B'),
+        annotations.get_form('F625').get_section('P3B'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',

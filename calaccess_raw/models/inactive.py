@@ -12,8 +12,8 @@ from .base import CalAccessBaseModel
 from django.utils.encoding import python_2_unicode_compatible
 
 # Annotations
-from calaccess_raw.annotations.filing_forms import get_filing_form
-from calaccess_raw.annotations import DocumentCloud, choices, get_sorted_choices
+from calaccess_raw import annotations
+from calaccess_raw.annotations import DocumentCloud
 
 
 @python_2_unicode_compatible
@@ -95,7 +95,7 @@ class CvrF470Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
     ]
     FILING_FORMS = [
-        get_filing_form('F470'),
+        annotations.get_form('F470'),
     ]
     amend_id = fields.IntegerField(
         db_column="AMEND_ID",
@@ -167,7 +167,7 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="Date of the general election. Required for filings in even years."
     )
     ENTITY_CD_CHOICES = (
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
     )
     entity_cd = fields.CharField(
         db_column="ENTITY_CD",
@@ -229,7 +229,7 @@ class CvrF470Cd(CalAccessBaseModel):
             DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
         ]
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES)
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES)
     juris_cd = fields.CharField(
         db_column="JURIS_CD",
         choices=JURIS_CD_CHOICES,
@@ -248,7 +248,7 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="Office jurisdiction description text reqired if the jurisdiction code "
                   "(Juris_cd) is equal to CIT, CTY, LOC, or OTH."
     )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
+    OFF_S_H_CD_CHOICES = annotations.sort_choices(annotations.choices.OFF_S_H_CODES)
     off_s_h_cd = fields.CharField(
         db_column="OFF_S_H_CD",
         choices=OFF_S_H_CD_CHOICES,
@@ -266,7 +266,7 @@ class CvrF470Cd(CalAccessBaseModel):
         max_length=40,
         help_text="Office sought description used if the office code is other (OTH)."
     )
-    OFFICE_CD_CODES = get_sorted_choices(choices.OFFICE_CODES)
+    OFFICE_CD_CODES = annotations.sort_choices(annotations.choices.OFFICE_CODES)
     office_cd = fields.CharField(
         db_column="OFFICE_CD",
         choices=OFFICE_CD_CODES,
@@ -2271,28 +2271,28 @@ class EfsFilingLogCd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50),
     ]
     FILING_FORMS = [
-        get_filing_form('F400'),
-        get_filing_form('F401'),
-        get_filing_form('F402'),
-        get_filing_form('F410'),
-        get_filing_form('F425'),
-        get_filing_form('F450'),
-        get_filing_form('F460'),
-        get_filing_form('F461'),
-        get_filing_form('F465'),
-        get_filing_form('F496'),
-        get_filing_form('F497'),
-        get_filing_form('F498'),
-        get_filing_form('F601'),
-        get_filing_form('F602'),
-        get_filing_form('F603'),
-        get_filing_form('F604'),
-        get_filing_form('F606'),
-        get_filing_form('F607'),
-        get_filing_form('F615'),
-        get_filing_form('F625'),
-        get_filing_form('F635'),
-        get_filing_form('F645'),
+        annotations.get_form('F400'),
+        annotations.get_form('F401'),
+        annotations.get_form('F402'),
+        annotations.get_form('F410'),
+        annotations.get_form('F425'),
+        annotations.get_form('F450'),
+        annotations.get_form('F460'),
+        annotations.get_form('F461'),
+        annotations.get_form('F465'),
+        annotations.get_form('F496'),
+        annotations.get_form('F497'),
+        annotations.get_form('F498'),
+        annotations.get_form('F601'),
+        annotations.get_form('F602'),
+        annotations.get_form('F603'),
+        annotations.get_form('F604'),
+        annotations.get_form('F606'),
+        annotations.get_form('F607'),
+        annotations.get_form('F615'),
+        annotations.get_form('F625'),
+        annotations.get_form('F635'),
+        annotations.get_form('F645'),
     ]
     filing_date = fields.DateField(
         db_column='FILING_DATE',

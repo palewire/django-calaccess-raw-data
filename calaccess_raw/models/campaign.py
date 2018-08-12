@@ -11,8 +11,8 @@ from .base import CalAccessBaseModel
 from django.utils.encoding import python_2_unicode_compatible
 
 # Annotations
-from calaccess_raw.annotations.filing_forms import get_filing_form
-from calaccess_raw.annotations import DocumentCloud, choices, get_sorted_choices
+from calaccess_raw import annotations
+from calaccess_raw.annotations import DocumentCloud
 
 
 @python_2_unicode_compatible
@@ -37,13 +37,13 @@ class CvrSoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=59, end_page=61),
     ]
     FILING_FORMS = [
-        get_filing_form('F400').get_section('P1'),
-        get_filing_form('F400').get_section('P2'),
-        get_filing_form('F400').get_section('P4'),
-        get_filing_form('F402').get_section('CVR'),
-        get_filing_form('F410').get_section('P1'),
-        get_filing_form('F410').get_section('P2'),
-        get_filing_form('F410').get_section('P4'),
+        annotations.get_form('F400').get_section('P1'),
+        annotations.get_form('F400').get_section('P2'),
+        annotations.get_form('F400').get_section('P4'),
+        annotations.get_form('F402').get_section('CVR'),
+        annotations.get_form('F410').get_section('P1'),
+        annotations.get_form('F410').get_section('P2'),
+        annotations.get_form('F410').get_section('P4'),
     ]
     acct_opendt = fields.DateField(
         db_column="ACCT_OPENDT",
@@ -198,12 +198,12 @@ original filing and 1 to 999 amendments.",
         help_text='County of Domicile, Residence, or Location',
     )
     ENTITY_CD_CHOICES = (
-        ('BMC', choices.CAMPAIGN_ENTITY_CODES['BMC']),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('CTL', choices.CAMPAIGN_ENTITY_CODES['CTL']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SMO', choices.CAMPAIGN_ENTITY_CODES['SMO']),
+        ('BMC', annotations.choices.CAMPAIGN_ENTITY_CODES['BMC']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', annotations.choices.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SMO', annotations.choices.CAMPAIGN_ENTITY_CODES['SMO']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -213,7 +213,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="Entity code",
         help_text="Entity Code of the Filer. Values: \
 SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410)",
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=46),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=59),
         ],
@@ -261,9 +261,9 @@ SMO - Slate Mailer Organization (F400,402) [COM|RCP] - Recipient Committee (F410
         help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = (
-        ('F400', get_filing_form('F400').full_title),
-        ('F402', get_filing_form('F402').full_title),
-        ('F410', get_filing_form('F410').full_title),
+        ('F400', annotations.get_form('F400').full_title),
+        ('F402', annotations.get_form('F402').full_title),
+        ('F410', annotations.get_form('F410').full_title),
     )
     form_type = fields.CharField(
         max_length=4,
@@ -497,8 +497,8 @@ class Cvr2SoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=62, end_page=64),
     ]
     FILING_FORMS = [
-        get_filing_form('F400').get_section('P3'),
-        get_filing_form('F410').get_section('P4'),
+        annotations.get_form('F400').get_section('P3'),
+        annotations.get_form('F410').get_section('P4'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -558,16 +558,16 @@ equal the form_type of the parent filing's cover (CVR) record.",
         help_text='Permanent value unique to this item',
     )
     ENTITY_CD_CHOICES = (
-        ('ATH', choices.CAMPAIGN_ENTITY_CODES['ATH']),
-        ('ATR', choices.CAMPAIGN_ENTITY_CODES['ATR']),
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('CTL', choices.CAMPAIGN_ENTITY_CODES['CTL']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
-        ('POF', choices.CAMPAIGN_ENTITY_CODES['POF']),
-        ('PRO', choices.CAMPAIGN_ENTITY_CODES['PRO']),
-        ('SPO', choices.CAMPAIGN_ENTITY_CODES['SPO']),
+        ('ATH', annotations.choices.CAMPAIGN_ENTITY_CODES['ATH']),
+        ('ATR', annotations.choices.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('BNM', annotations.choices.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', annotations.choices.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('OFF', annotations.choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('POF', annotations.choices.CAMPAIGN_ENTITY_CODES['POF']),
+        ('PRO', annotations.choices.CAMPAIGN_ENTITY_CODES['PRO']),
+        ('SPO', annotations.choices.CAMPAIGN_ENTITY_CODES['SPO']),
         ('BMN', 'Unknown'),  # Misspelling of 'BNM'?
     )
     entity_cd = fields.CharField(
@@ -577,7 +577,7 @@ equal the form_type of the parent filing's cover (CVR) record.",
         max_length=3,
         verbose_name='entity code',
         help_text='Entity code of the entity described by the record.',
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=38),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=48),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=62),
@@ -615,13 +615,13 @@ individual"
     )
     ITEM_CD_CHOICES = (
         ('ATR', 'Assistant Treasurer (F410)'),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
         ('CTL', 'Controlled Committee (F410)'),
         ('P5B', 'Unknown'),
         ('PFC', 'Primarily Formed Committee Item (F410)'),
         ('Pfc', 'Primarily Formed Committee Item (F410)'),
         ('POF', 'Principal Officer (F400, F410'),
-        ('PRO', choices.CAMPAIGN_ENTITY_CODES['PRO']),
+        ('PRO', annotations.choices.CAMPAIGN_ENTITY_CODES['PRO']),
         ('SMA', 'Slate Mailer Authorizer (F400)'),
         ('SPO', 'Sponsored Committee Itemization (F410)'),
         ('n/a', 'Not Applicable'),
@@ -699,12 +699,12 @@ relates to. See CAL document for the definition of legal values for this column.
         verbose_name='industry group',
         help_text="Industry group/affiliation description"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
-        ('Asm', choices.OFFICE_CODES['ASM']),
-        ('LEG', choices.OFFICE_CODES['ASM']),
-        ('OF', choices.OFFICE_CODES['ASM']),
-        ('REP', choices.OFFICE_CODES['ASM']),
-        ('05', choices.OFFICE_CODES['ASM']),
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
+        ('Asm', annotations.choices.OFFICE_CODES['ASM']),
+        ('LEG', annotations.choices.OFFICE_CODES['ASM']),
+        ('OF', annotations.choices.OFFICE_CODES['ASM']),
+        ('REP', annotations.choices.OFFICE_CODES['ASM']),
+        ('05', annotations.choices.OFFICE_CODES['ASM']),
         # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
         # Looks like this was corrected on a later amendment.
         # Don't think they actually mean to specify a jurisdiction
@@ -723,7 +723,7 @@ relates to. See CAL document for the definition of legal values for this column.
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['office_codes']
+        documentcloud_pages=annotations.choices.DOCS['office_codes']
     )
     offic_dscr = fields.CharField(
         db_column='OFFIC_DSCR',
@@ -733,7 +733,7 @@ relates to. See CAL document for the definition of legal values for this column.
         help_text="Office sought description used if the office sought code \
 (OFFICE_CD) equals other (OTH)."
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
         # Only one record: http://cal-access.ss.ca.gov/PDFGen/pdfgen.prg?filingid=1388367&amendid=0
         # Looks like this was corrected on a later amendment.
         # Don't think they actually mean to specify a jurisdiction
@@ -771,7 +771,7 @@ list of legal values.",
         help_text="Office district number for Senate, Assembly, and Board \
 of Equalization districts."
     )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
+    OFF_S_H_CD_CHOICES = annotations.sort_choices(annotations.choices.OFF_S_H_CODES)
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
@@ -815,7 +815,7 @@ sought and "H" for held',
         verbose_name='balance jurisdiction',
         help_text="Jurisdiction of ballot measure"
     )
-    SUP_OPP_CD_CHOICES = get_sorted_choices(choices.SUP_OPP_CODES)
+    SUP_OPP_CD_CHOICES = annotations.sort_choices(annotations.choices.SUP_OPP_CODES)
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
@@ -869,19 +869,19 @@ class CvrCampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id="2712034-Cal-Format-201", start_page=22, end_page=30),
     ]
     FILING_FORMS = [
-        get_filing_form('F401').get_section('CVR'),
-        get_filing_form('F425').get_section('P1'),
-        get_filing_form('F450').get_section('CVR'),
-        get_filing_form('F460').get_section('CVR'),
-        get_filing_form('F461').get_section('P1'),
-        get_filing_form('F461').get_section('P2'),
-        get_filing_form('F465').get_section('P1'),
-        get_filing_form('F465').get_section('P2'),
-        get_filing_form('F496').get_section('P1'),
-        get_filing_form('F497'),
-        get_filing_form('F498'),
-        get_filing_form('F511'),
-        get_filing_form('F900'),
+        annotations.get_form('F401').get_section('CVR'),
+        annotations.get_form('F425').get_section('P1'),
+        annotations.get_form('F450').get_section('CVR'),
+        annotations.get_form('F460').get_section('CVR'),
+        annotations.get_form('F461').get_section('P1'),
+        annotations.get_form('F461').get_section('P2'),
+        annotations.get_form('F465').get_section('P1'),
+        annotations.get_form('F465').get_section('P2'),
+        annotations.get_form('F496').get_section('P1'),
+        annotations.get_form('F497'),
+        annotations.get_form('F498'),
+        annotations.get_form('F511'),
+        annotations.get_form('F900'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1156,17 +1156,17 @@ values are 'X' or null. Applies to the Form 461."
         help_text="Employer. This field is most likely unused."
     )
     ENTITY_CD_CHOICES = (
-        ('BMC', choices.CAMPAIGN_ENTITY_CODES['BMC']),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('CTL', choices.CAMPAIGN_ENTITY_CODES['CTL']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('MDI', choices.CAMPAIGN_ENTITY_CODES['MDI']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
-        ('SMO', choices.CAMPAIGN_ENTITY_CODES['SMO']),
+        ('BMC', annotations.choices.CAMPAIGN_ENTITY_CODES['BMC']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', annotations.choices.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('IND', annotations.choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('MDI', annotations.choices.CAMPAIGN_ENTITY_CODES['MDI']),
+        ('OTH', annotations.choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', annotations.choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', annotations.choices.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('SMO', annotations.choices.CAMPAIGN_ENTITY_CODES['SMO']),
     )
     entity_cd = fields.CharField(
         max_length=4,
@@ -1175,7 +1175,7 @@ values are 'X' or null. Applies to the Form 461."
         verbose_name='entity code',
         help_text="The entity type of the filer. These codes vary by form type.",
         choices=ENTITY_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=6),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=18),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=22),
@@ -1271,17 +1271,17 @@ individual the filer's last name."
         help_text="Unique filing identification number"
     )
     FORM_TYPE_CHOICES = (
-        ('F401', get_filing_form('F401').full_title),
-        ('F425', get_filing_form('F425').full_title),
-        ('F450', get_filing_form('F450').full_title),
-        ('F460', get_filing_form('F460').full_title),
-        ('F461', get_filing_form('F461').full_title),
-        ('F465', get_filing_form('F465').full_title),
-        ('F496', get_filing_form('F496').full_title),
-        ('F497', get_filing_form('F497').full_title),
-        ('F498', get_filing_form('F498').full_title),
-        ('F511', get_filing_form('F511').full_title),
-        ('F900', get_filing_form('F900').full_title),
+        ('F401', annotations.get_form('F401').full_title),
+        ('F425', annotations.get_form('F425').full_title),
+        ('F450', annotations.get_form('F450').full_title),
+        ('F460', annotations.get_form('F460').full_title),
+        ('F461', annotations.get_form('F461').full_title),
+        ('F465', annotations.get_form('F465').full_title),
+        ('F496', annotations.get_form('F496').full_title),
+        ('F497', annotations.get_form('F497').full_title),
+        ('F498', annotations.get_form('F498').full_title),
+        ('F511', annotations.get_form('F511').full_title),
+        ('F900', annotations.get_form('F900').full_title),
     )
     form_type = fields.CharField(
         choices=FORM_TYPE_CHOICES,
@@ -1299,39 +1299,39 @@ individual the filer's last name."
         blank=True,
         help_text="Reporting period from date"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
         # alt cases
-        ('sen', choices.JURIS_CODES['SEN']),
-        ('Gov', choices.JURIS_CODES['STW']),
+        ('sen', annotations.choices.JURIS_CODES['SEN']),
+        ('Gov', annotations.choices.JURIS_CODES['STW']),
         # statewide office codes
-        ('ATT', choices.JURIS_CODES['STW']),
-        ('CON', choices.JURIS_CODES['STW']),
-        ('GOV', choices.JURIS_CODES['STW']),
-        ('SOS', choices.JURIS_CODES['STW']),
-        ('SPM', choices.JURIS_CODES['STW']),
+        ('ATT', annotations.choices.JURIS_CODES['STW']),
+        ('CON', annotations.choices.JURIS_CODES['STW']),
+        ('GOV', annotations.choices.JURIS_CODES['STW']),
+        ('SOS', annotations.choices.JURIS_CODES['STW']),
+        ('SPM', annotations.choices.JURIS_CODES['STW']),
         # assembly member districts
-        ('46', choices.JURIS_CODES['ASM']),
-        ('55', choices.JURIS_CODES['ASM']),
+        ('46', annotations.choices.JURIS_CODES['ASM']),
+        ('55', annotations.choices.JURIS_CODES['ASM']),
         # county office codes
-        ('BSU', choices.JURIS_CODES['CTY']),
-        ('CSU', choices.JURIS_CODES['CTY']),
-        ('DAT', choices.JURIS_CODES['CTY']),
-        ('SHC', choices.JURIS_CODES['CTY']),
+        ('BSU', annotations.choices.JURIS_CODES['CTY']),
+        ('CSU', annotations.choices.JURIS_CODES['CTY']),
+        ('DAT', annotations.choices.JURIS_CODES['CTY']),
+        ('SHC', annotations.choices.JURIS_CODES['CTY']),
         # city office codes
-        ('MAY', choices.JURIS_CODES['CIT']),
-        ('CCM', choices.JURIS_CODES['CIT']),
+        ('MAY', annotations.choices.JURIS_CODES['CIT']),
+        ('CCM', annotations.choices.JURIS_CODES['CIT']),
         # other office codes
-        ('APP', choices.JURIS_CODES['OTH']),
-        ('BED', choices.JURIS_CODES['OTH']),
-        ('SCJ', choices.JURIS_CODES['OTH']),
+        ('APP', annotations.choices.JURIS_CODES['OTH']),
+        ('BED', annotations.choices.JURIS_CODES['OTH']),
+        ('SCJ', annotations.choices.JURIS_CODES['OTH']),
         # probably means 'San Diego', rows with this value are all for Arlie Ricasa's
         # Board of Education campaign
-        ('SD', choices.JURIS_CODES['OTH']),
+        ('SD', annotations.choices.JURIS_CODES['OTH']),
         # probably means Orange County, rows with this value are all for Lou Correa's
         # Board of Supervisor's campaign
-        ('OC', choices.JURIS_CODES['CTY']),
+        ('OC', annotations.choices.JURIS_CODES['CTY']),
         # One record for Joaquin Arambula's state assembly run
-        ('AD', choices.JURIS_CODES['ASM']),
+        ('AD', annotations.choices.JURIS_CODES['ASM']),
         # Often "State of California" but sometimes State Assembly, State Senate or other juris
         ('CA', 'Unknown'),
         ('F', 'Unknown'),
@@ -1406,10 +1406,10 @@ same day."
         help_text="Occupation. This field is most likely unused."
     )
     OFF_S_H_CD_CHOICES = (
-        ('S', choices.OFF_S_H_CODES['S']),
-        ('H', choices.OFF_S_H_CODES['H']),
-        ('s', choices.OFF_S_H_CODES['S']),
-        ('h', choices.OFF_S_H_CODES['H']),
+        ('S', annotations.choices.OFF_S_H_CODES['S']),
+        ('H', annotations.choices.OFF_S_H_CODES['H']),
+        ('s', annotations.choices.OFF_S_H_CODES['S']),
+        ('h', annotations.choices.OFF_S_H_CODES['H']),
         # The codes below appear in the database but are undocumented
         ('F', 'UNKNOWN'),
         ('O', 'UNKNOWN'),
@@ -1432,17 +1432,17 @@ same day."
         help_text="Office sought description if the field OFFICE_CD is set \
 to other (OTH)"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
-        ('Gov', choices.OFFICE_CODES['GOV']),
-        ('Sen', choices.OFFICE_CODES['SEN']),
-        ('LOC', choices.OFFICE_CODES['CCB']),
-        ('LEG', choices.OFFICE_CODES['SEN']),
-        ('REP', choices.OFFICE_CODES['ASM']),
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
+        ('Gov', annotations.choices.OFFICE_CODES['GOV']),
+        ('Sen', annotations.choices.OFFICE_CODES['SEN']),
+        ('LOC', annotations.choices.OFFICE_CODES['CCB']),
+        ('LEG', annotations.choices.OFFICE_CODES['SEN']),
+        ('REP', annotations.choices.OFFICE_CODES['ASM']),
         # Rows with this value are all for Local Fire Board campaigns, with usually
         # categorize as "Other"
-        ('Mem', choices.OFFICE_CODES['OTH']),
+        ('Mem', annotations.choices.OFFICE_CODES['OTH']),
         # Looks like a mis-write by Richard Alarcon for Assembly campaign
-        ('CIT', choices.OFFICE_CODES['ASM']),
+        ('CIT', annotations.choices.OFFICE_CODES['ASM']),
         # Rows with these value could be any number of offices
         ('PAC', 'Unknown'),
         ('F', 'Unknown'),
@@ -1505,9 +1505,9 @@ values are 'Y' or 'N'."
 Report Number 000 represents an original filing. 001-999 are amendments."
     )
     REPORTNAME_CHOICES = (
-        ('450', get_filing_form('F450').full_title),
-        ('460', get_filing_form('F460').full_title),
-        ('461', get_filing_form('F461').full_title),
+        ('450', annotations.get_form('F450').full_title),
+        ('460', annotations.get_form('F460').full_title),
+        ('461', annotations.get_form('F461').full_title),
     )
     reportname = fields.CharField(
         max_length=3,
@@ -1564,20 +1564,20 @@ through date."
 are 'Y' or 'N'."
     )
     STMT_TYPE_CHOICES = (
-        ('PE', choices.STMT_TYPES['PE']),
-        ('QT', choices.STMT_TYPES['QT']),
-        ('SA', choices.STMT_TYPES['SA']),
-        ('SE', choices.STMT_TYPES['SE']),
-        ('SY', choices.STMT_TYPES['SY']),
-        ('S1', choices.STMT_TYPES['S1']),
-        ('S2', choices.STMT_TYPES['S2']),
-        ('TS', choices.STMT_TYPES['TS']),
-        ('pe', choices.STMT_TYPES['PE']),
-        ('qt', choices.STMT_TYPES['QT']),
-        ('sa', choices.STMT_TYPES['SA']),
-        ('se', choices.STMT_TYPES['SE']),
-        ('sy', choices.STMT_TYPES['SY']),
-        ('ts', choices.STMT_TYPES['TS']),
+        ('PE', annotations.choices.STMT_TYPES['PE']),
+        ('QT', annotations.choices.STMT_TYPES['QT']),
+        ('SA', annotations.choices.STMT_TYPES['SA']),
+        ('SE', annotations.choices.STMT_TYPES['SE']),
+        ('SY', annotations.choices.STMT_TYPES['SY']),
+        ('S1', annotations.choices.STMT_TYPES['S1']),
+        ('S2', annotations.choices.STMT_TYPES['S2']),
+        ('TS', annotations.choices.STMT_TYPES['TS']),
+        ('pe', annotations.choices.STMT_TYPES['PE']),
+        ('qt', annotations.choices.STMT_TYPES['QT']),
+        ('sa', annotations.choices.STMT_TYPES['SA']),
+        ('se', annotations.choices.STMT_TYPES['SE']),
+        ('sy', annotations.choices.STMT_TYPES['SY']),
+        ('ts', annotations.choices.STMT_TYPES['TS']),
         ("**", "Amendment"),
         ("1", "Unknown"),
         ("2", "Unknown"),
@@ -1603,10 +1603,10 @@ are 'Y' or 'N'."
         ]
     )
     SUP_OPP_CD_CHOICES = (
-        ('S', choices.SUP_OPP_CODES['S']),
-        ('O', choices.SUP_OPP_CODES['O']),
-        ('s', choices.SUP_OPP_CODES['S']),
-        ('o', choices.SUP_OPP_CODES['O']),
+        ('S', annotations.choices.SUP_OPP_CODES['S']),
+        ('O', annotations.choices.SUP_OPP_CODES['O']),
+        ('s', annotations.choices.SUP_OPP_CODES['S']),
+        ('o', annotations.choices.SUP_OPP_CODES['O']),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
@@ -1735,10 +1735,10 @@ class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=31, end_page=34),
     ]
     FILING_FORMS = [
-        get_filing_form('F425').get_section('P1'),
-        get_filing_form('F450').get_section('P3'),
-        get_filing_form('F460').get_section('CVR2'),
-        get_filing_form('F465').get_section('P5'),
+        annotations.get_form('F425').get_section('P1'),
+        annotations.get_form('F450').get_section('P3'),
+        annotations.get_form('F460').get_section('CVR2'),
+        annotations.get_form('F465').get_section('P5'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -1787,15 +1787,15 @@ are "Y" or "N".'
 for Senate, Assembly, or Board of Equalization races."
     )
     ENTITY_CD_CHOICES = (
-        ('ATR', choices.CAMPAIGN_ENTITY_CODES['ATR']),
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('CTL', choices.CAMPAIGN_ENTITY_CODES['CTL']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
-        ('POF', choices.CAMPAIGN_ENTITY_CODES['POF']),
-        ('PRO', choices.CAMPAIGN_ENTITY_CODES['PRO']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('ATR', annotations.choices.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('BNM', annotations.choices.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('CTL', annotations.choices.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('OFF', annotations.choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('POF', annotations.choices.CAMPAIGN_ENTITY_CODES['POF']),
+        ('PRO', annotations.choices.CAMPAIGN_ENTITY_CODES['PRO']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
         # Values observed in this field but not found in docs
         ('FIL', 'Unknown'),
         ('PEX', 'Unknown'),
@@ -1809,7 +1809,7 @@ for Senate, Assembly, or Board of Equalization races."
         choices=ENTITY_CD_CHOICES,
         help_text="Entity code used to identify the type of entity being described \
 with in the record.",
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=32),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=23, end_page=24),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=32),
@@ -1932,19 +1932,19 @@ with in the record.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=31),
         ]
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
-        ('sen', choices.JURIS_CODES['SEN']),
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
+        ('sen', annotations.choices.JURIS_CODES['SEN']),
         # looks like the Arlie Ricasa Campaign was consistently making this mis-write
-        ('SD', choices.JURIS_CODES['ASM']),
+        ('SD', annotations.choices.JURIS_CODES['ASM']),
         # ditto for Kevin de Leon Believing in A Better California
-        ('se', choices.JURIS_CODES['SEN']),
+        ('se', annotations.choices.JURIS_CODES['SEN']),
         # ditto for Friends of Bob Dutton
-        ('F', choices.JURIS_CODES['ASM']),
+        ('F', annotations.choices.JURIS_CODES['ASM']),
         # ditto for Friends To Re-Elect Tonia For 7th District
-        ('LBC', choices.JURIS_CODES['CIT']),
+        ('LBC', annotations.choices.JURIS_CODES['CIT']),
         # Several different filers have made this mis-write
         # Usually they mean Statewide, but sometimes they mean State Assembly or City
-        ('CA', choices.JURIS_CODES['STW']),
+        ('CA', annotations.choices.JURIS_CODES['STW']),
     )
     juris_cd = fields.CharField(
         max_length=3,
@@ -1994,13 +1994,13 @@ with in the record.",
         help_text="Filer's mailing ZIP Code"
     )
     OFF_S_H_CD_CHOICES = (
-        ('S', choices.OFF_S_H_CODES['S']),
-        ('H', choices.OFF_S_H_CODES['H']),
-        ('s', choices.OFF_S_H_CODES['S']),
+        ('S', annotations.choices.OFF_S_H_CODES['S']),
+        ('H', annotations.choices.OFF_S_H_CODES['H']),
+        ('s', annotations.choices.OFF_S_H_CODES['S']),
         # Bob Dutton meant 'Sought'
-        ("F", choices.OFF_S_H_CODES['S']),
+        ("F", annotations.choices.OFF_S_H_CODES['S']),
         # This one actually says 'Held'. Maybe a mis-read?
-        ("T", choices.OFF_S_H_CODES['H']),
+        ("T", annotations.choices.OFF_S_H_CODES['H']),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -2020,15 +2020,15 @@ with in the record.",
         blank=True,
         help_text="Office sought description"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
         # looks like the Richard Alarcon for Assembly made this mis-write
-        ('CIT', choices.OFFICE_CODES['ASM']),
+        ('CIT', annotations.choices.OFFICE_CODES['ASM']),
         # ditto for Isadore Hall for Assembly
-        ('CTL', choices.OFFICE_CODES['ASM']),
+        ('CTL', annotations.choices.OFFICE_CODES['ASM']),
         # ditto for Friends of Bob Dutton
-        ('F', choices.OFFICE_CODES['ASM']),
+        ('F', annotations.choices.OFFICE_CODES['ASM']),
         # ditto for Henry Perea
-        ('ST', choices.OFFICE_CODES['ASM']),
+        ('ST', annotations.choices.OFFICE_CODES['ASM']),
         # This one is all over the board
         ('PAC', 'Unknown'),
     )
@@ -2039,7 +2039,7 @@ with in the record.",
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['office_codes'],
+        documentcloud_pages=annotations.choices.DOCS['office_codes'],
     )
     REC_TYPE_CHOICES = (
         ("CVR2", "Cover, Page 2"),
@@ -2059,10 +2059,10 @@ with in the record.",
         ]
     )
     SUP_OPP_CD_CHOICES = (
-        ('S', choices.SUP_OPP_CODES['S']),
-        ('O', choices.SUP_OPP_CODES['O']),
-        ('s', choices.SUP_OPP_CODES['S']),
-        ('o', choices.SUP_OPP_CODES['O']),
+        ('S', annotations.choices.SUP_OPP_CODES['S']),
+        ('O', annotations.choices.SUP_OPP_CODES['O']),
+        ('s', annotations.choices.SUP_OPP_CODES['S']),
+        ('o', annotations.choices.SUP_OPP_CODES['O']),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
@@ -2144,17 +2144,17 @@ class Cvr3VerificationInfoCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=64),
     ]
     FILING_FORMS = [
-        get_filing_form('F400').get_section('P5'),
-        get_filing_form('F401').get_section('CVR'),
-        get_filing_form('F402').get_section('VER'),
-        get_filing_form('F410').get_section('P3'),
-        get_filing_form('F425').get_section('P3'),
-        get_filing_form('F450').get_section('P4'),
-        get_filing_form('F460').get_section('CVR'),
-        get_filing_form('F461').get_section('P4'),
-        get_filing_form('F465').get_section('P6'),
-        get_filing_form('F511'),
-        get_filing_form('F900'),
+        annotations.get_form('F400').get_section('P5'),
+        annotations.get_form('F401').get_section('CVR'),
+        annotations.get_form('F402').get_section('VER'),
+        annotations.get_form('F410').get_section('P3'),
+        annotations.get_form('F425').get_section('P3'),
+        annotations.get_form('F450').get_section('P4'),
+        annotations.get_form('F460').get_section('CVR'),
+        annotations.get_form('F461').get_section('P4'),
+        annotations.get_form('F465').get_section('P6'),
+        annotations.get_form('F511'),
+        annotations.get_form('F900'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -2192,17 +2192,17 @@ original filing and 1 to 999 amendments.",
         ]
     )
     FORM_TYPE_CHOICES = (
-        ('F400', get_filing_form('F400').get_section('P5').full_title),
-        ('F401', get_filing_form('F401').get_section('CVR').full_title),
-        ('F402', get_filing_form('F402').get_section('VER').full_title),
-        ('F410', get_filing_form('F410').get_section('P3').full_title),
-        ('F425', get_filing_form('F425').get_section('P3').full_title),
-        ('F450', get_filing_form('F450').get_section('P4').full_title),
-        ('F460', get_filing_form('F460').get_section('CVR').full_title),
-        ('F461', get_filing_form('F461').get_section('P4').full_title),
-        ('F465', get_filing_form('F465').get_section('P6').full_title),
-        ('F511', get_filing_form('F511').full_title),
-        ('F900', get_filing_form('F900').full_title),
+        ('F400', annotations.get_form('F400').get_section('P5').full_title),
+        ('F401', annotations.get_form('F401').get_section('CVR').full_title),
+        ('F402', annotations.get_form('F402').get_section('VER').full_title),
+        ('F410', annotations.get_form('F410').get_section('P3').full_title),
+        ('F425', annotations.get_form('F425').get_section('P3').full_title),
+        ('F450', annotations.get_form('F450').get_section('P4').full_title),
+        ('F460', annotations.get_form('F460').get_section('CVR').full_title),
+        ('F461', annotations.get_form('F461').get_section('P4').full_title),
+        ('F465', annotations.get_form('F465').get_section('P6').full_title),
+        ('F511', annotations.get_form('F511').full_title),
+        ('F900', annotations.get_form('F900').full_title),
     )
     form_type = fields.CharField(
         db_column='FORM_TYPE',
@@ -2224,22 +2224,22 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CD_CHOICES = (
         # Codes explicitly allowed for this field, according to documentation
-        ('ATR', choices.CAMPAIGN_ENTITY_CODES['ATR']),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('TRE', choices.CAMPAIGN_ENTITY_CODES['TRE']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
-        ('PRO', choices.CAMPAIGN_ENTITY_CODES['PRO']),
-        ('SPO', choices.CAMPAIGN_ENTITY_CODES['SPO']),
+        ('ATR', annotations.choices.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('TRE', annotations.choices.CAMPAIGN_ENTITY_CODES['TRE']),
+        ('OFF', annotations.choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('PRO', annotations.choices.CAMPAIGN_ENTITY_CODES['PRO']),
+        ('SPO', annotations.choices.CAMPAIGN_ENTITY_CODES['SPO']),
         # Lower case versions of valid codes
-        ('atr', choices.CAMPAIGN_ENTITY_CODES['TRE']),
-        ('tre', choices.CAMPAIGN_ENTITY_CODES['ATR']),
-        ('cao', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('atr', annotations.choices.CAMPAIGN_ENTITY_CODES['TRE']),
+        ('tre', annotations.choices.CAMPAIGN_ENTITY_CODES['ATR']),
+        ('cao', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
         # Other known codes observed in this field
-        ('MDI', choices.CAMPAIGN_ENTITY_CODES['MDI']),
-        ('POF', choices.CAMPAIGN_ENTITY_CODES['POF']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('MDI', annotations.choices.CAMPAIGN_ENTITY_CODES['MDI']),
+        ('POF', annotations.choices.CAMPAIGN_ENTITY_CODES['POF']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
         # Misspelling of 'CAO', 'Candidate/officeholder'
-        ('COA', choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COA', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
         # Other unknown values observed
         ('0', 'Unknown'),
         ('BBB', 'Unknown'),
@@ -2333,7 +2333,7 @@ class DebtCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=45, end_page=46),
     ]
     FILING_FORMS = [
-        get_filing_form('F460').get_section('F'),
+        annotations.get_form('F460').get_section('F'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -2380,13 +2380,13 @@ of a parent record.'
         help_text='Outstanding balance at close of this period',
     )
     ENTITY_CD_CHOICES = (
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('BNM', annotations.choices.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', annotations.choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', annotations.choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', annotations.choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', annotations.choices.CAMPAIGN_ENTITY_CODES['SCC']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -2395,17 +2395,17 @@ of a parent record.'
         verbose_name='entity code',
         choices=ENTITY_CD_CHOICES,
         help_text='Entity code describing the payee',
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=33),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=45),
         ]
     )
-    EXPN_CODE_CHOICES = get_sorted_choices(choices.EXPENSE_CODES) + (
+    EXPN_CODE_CHOICES = annotations.sort_choices(annotations.choices.EXPENSE_CODES) + (
         # alt cases of valid codes
-        ('Fnd', choices.EXPENSE_CODES['FND']),
-        ('ofc', choices.EXPENSE_CODES['OFC']),
+        ('Fnd', annotations.choices.EXPENSE_CODES['FND']),
+        ('ofc', annotations.choices.EXPENSE_CODES['OFC']),
         # printed this way on the pdfs, but probably meant consultant code
-        ("'CN", choices.EXPENSE_CODES['CNS']),
+        ("'CN", annotations.choices.EXPENSE_CODES['CNS']),
         # Other codes observed in the table that are not documented by the state
         ("*", "Unknown"),
         ("AIR", "Unknown"),
@@ -2448,7 +2448,7 @@ of a parent record.'
         verbose_name='expense code',
         help_text="Expense Code",
         choices=EXPN_CODE_CHOICES,
-        documentcloud_pages=choices.DOCS['expense_codes']
+        documentcloud_pages=annotations.choices.DOCS['expense_codes']
     )
     expn_dscr = fields.CharField(
         max_length=400,
@@ -2655,13 +2655,13 @@ class ExpnCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=42, end_page=44),
     ]
     FILING_FORMS = [
-        get_filing_form('F450').get_section('P5'),
-        get_filing_form('F460').get_section('D'),
-        get_filing_form('F460').get_section('E'),
-        get_filing_form('F460').get_section('G'),
-        get_filing_form('F461').get_section('P5'),
-        get_filing_form('F465').get_section('P3'),
-        get_filing_form('F900'),
+        annotations.get_form('F450').get_section('P5'),
+        annotations.get_form('F460').get_section('D'),
+        annotations.get_form('F460').get_section('E'),
+        annotations.get_form('F460').get_section('G'),
+        annotations.get_form('F461').get_section('P5'),
+        annotations.get_form('F465').get_section('P3'),
+        annotations.get_form('F900'),
     ]
     agent_namf = fields.CharField(
         max_length=45,
@@ -2783,17 +2783,17 @@ original filing and 1 to 999 amendments.",
     )
     ENTITY_CD_CHOICES = (
         # Codes explicitly allowed for this field, according to documentation
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', annotations.choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('OTH', annotations.choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', annotations.choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('SCC', annotations.choices.CAMPAIGN_ENTITY_CODES['SCC']),
         # Other known codes observed in this field
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('MBR', choices.LOBBYING_ENTITY_CODES['MBR']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('BNM', annotations.choices.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('MBR', annotations.choices.LOBBYING_ENTITY_CODES['MBR']),
+        ('OFF', annotations.choices.CAMPAIGN_ENTITY_CODES['OFF']),
         # Unknown codes observed in this field
         ('0', 'Unknown'),
         ('PTH', 'Unknown'),
@@ -2806,7 +2806,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         verbose_name='entity code',
         help_text='Entity Code describing payee',
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=31),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=42),
         ]
@@ -2817,13 +2817,13 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Check Number (Optional)"
     )
-    EXPN_CODE_CHOICES = get_sorted_choices(choices.EXPENSE_CODES) + (
-        ('ctb', choices.EXPENSE_CODES['CTB']),
-        ('ikd', choices.EXPENSE_CODES['IKD']),
-        ('Mon', choices.EXPENSE_CODES['MON']),
-        ('ofc', choices.EXPENSE_CODES['OFC']),
-        ('OFc', choices.EXPENSE_CODES['OFC']),
-        ('Ofc', choices.EXPENSE_CODES['OFC']),
+    EXPN_CODE_CHOICES = annotations.sort_choices(annotations.choices.EXPENSE_CODES) + (
+        ('ctb', annotations.choices.EXPENSE_CODES['CTB']),
+        ('ikd', annotations.choices.EXPENSE_CODES['IKD']),
+        ('Mon', annotations.choices.EXPENSE_CODES['MON']),
+        ('ofc', annotations.choices.EXPENSE_CODES['OFC']),
+        ('OFc', annotations.choices.EXPENSE_CODES['OFC']),
+        ('Ofc', annotations.choices.EXPENSE_CODES['OFC']),
         # Codes observed in this field, but not found in docs
         ("", "Unknown"),
         ("*", "Unknown"),
@@ -2980,7 +2980,7 @@ original filing and 1 to 999 amendments.",
         choices=EXPN_CODE_CHOICES,
         verbose_name="expense code",
         help_text="The type of expenditure",
-        documentcloud_pages=choices.DOCS['expense_codes']
+        documentcloud_pages=annotations.choices.DOCS['expense_codes']
     )
     expn_date = fields.DateField(
         null=True,
@@ -3019,47 +3019,47 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Back Reference from Sched G to Sched 'E' or 'F'?"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
         # alt casing of valid values
-        ('Cit', choices.JURIS_CODES['CIT']),
-        ('sen', choices.JURIS_CODES['SEN']),
-        ('Sen', choices.JURIS_CODES['SEN']),
-        ('stw', choices.JURIS_CODES['STW']),
+        ('Cit', annotations.choices.JURIS_CODES['CIT']),
+        ('sen', annotations.choices.JURIS_CODES['SEN']),
+        ('Sen', annotations.choices.JURIS_CODES['SEN']),
+        ('stw', annotations.choices.JURIS_CODES['STW']),
         # statewide office codes
-        ('APP', choices.JURIS_CODES['STW']),
-        ('ASR', choices.JURIS_CODES['CTY']),
-        ('ATT', choices.JURIS_CODES['STW']),
-        ('GOV', choices.JURIS_CODES['STW']),
-        ('LTG', choices.JURIS_CODES['STW']),
-        ('SOS', choices.JURIS_CODES['STW']),
-        ('SUP', choices.JURIS_CODES['STW']),
-        ('TRE', choices.JURIS_CODES['STW']),
+        ('APP', annotations.choices.JURIS_CODES['STW']),
+        ('ASR', annotations.choices.JURIS_CODES['CTY']),
+        ('ATT', annotations.choices.JURIS_CODES['STW']),
+        ('GOV', annotations.choices.JURIS_CODES['STW']),
+        ('LTG', annotations.choices.JURIS_CODES['STW']),
+        ('SOS', annotations.choices.JURIS_CODES['STW']),
+        ('SUP', annotations.choices.JURIS_CODES['STW']),
+        ('TRE', annotations.choices.JURIS_CODES['STW']),
         # county office codes
-        ('BSU', choices.JURIS_CODES['CTY']),
-        ('CSU', choices.JURIS_CODES['CTY']),
+        ('BSU', annotations.choices.JURIS_CODES['CTY']),
+        ('CSU', annotations.choices.JURIS_CODES['CTY']),
         # city office codes
-        ('ES', choices.JURIS_CODES['CIT']),
-        ('SM', choices.JURIS_CODES['CIT']),
+        ('ES', annotations.choices.JURIS_CODES['CIT']),
+        ('SM', annotations.choices.JURIS_CODES['CIT']),
         # "other" office codes
-        ('BED', choices.JURIS_CODES['OTH']),
-        ('CCB', choices.JURIS_CODES['OTH']),
-        ('CCM', choices.JURIS_CODES['OTH']),
-        ('PDR', choices.JURIS_CODES['OTH']),
+        ('BED', annotations.choices.JURIS_CODES['OTH']),
+        ('CCB', annotations.choices.JURIS_CODES['OTH']),
+        ('CCM', annotations.choices.JURIS_CODES['OTH']),
+        ('PDR', annotations.choices.JURIS_CODES['OTH']),
         # state senate districts
-        ('12', choices.JURIS_CODES['SEN']),
+        ('12', annotations.choices.JURIS_CODES['SEN']),
         # Ballot Propositions
-        ('4', choices.JURIS_CODES['STW']),
-        ('8', choices.JURIS_CODES['STW']),
-        ('27', choices.JURIS_CODES['STW']),
-        ('93', choices.JURIS_CODES['STW']),
-        ('98', choices.JURIS_CODES['STW']),
+        ('4', annotations.choices.JURIS_CODES['STW']),
+        ('8', annotations.choices.JURIS_CODES['STW']),
+        ('27', annotations.choices.JURIS_CODES['STW']),
+        ('93', annotations.choices.JURIS_CODES['STW']),
+        ('98', annotations.choices.JURIS_CODES['STW']),
         # Community College Board, except that one time where it's City Council
         ('CLB', 'Unknown'),
         # Sometimes these are Assembly Members, sometimes State Senators,
         # sometimes Public Employees Retirement System
         ('PER', 'Unknown'),
         # Misprint
-        ('Boa', choices.JURIS_CODES['BOE']),
+        ('Boa', annotations.choices.JURIS_CODES['BOE']),
         # Usually Assembly Member except for those two times when it's governor and attorney general
         ('Sta', 'Unknown'),
         ('STA', 'Unknown'),
@@ -3143,9 +3143,9 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Reference to text contained in a TEXT record."
     )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES) + (
-        ('s', choices.OFF_S_H_CODES['S']),
-        ('h', choices.OFF_S_H_CODES['H']),
+    OFF_S_H_CD_CHOICES = annotations.sort_choices(annotations.choices.OFF_S_H_CODES) + (
+        ('s', annotations.choices.OFF_S_H_CODES['S']),
+        ('h', annotations.choices.OFF_S_H_CODES['H']),
         # The codes below appear in the database but are undocumented
         ('A', 'UNKNOWN'),
         ('a', 'UNKNOWN'),
@@ -3169,16 +3169,16 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Office Sought Description (Req. if Office_Cd=OTH)"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
         # alt cases for valid codes
-        ('Cou', choices.OFFICE_CODES['COU']),
-        ('sen', choices.OFFICE_CODES['SEN']),
-        ('AtT', choices.OFFICE_CODES['ATT']),
-        ('May', choices.OFFICE_CODES['MAY']),
-        ('Sen', choices.OFFICE_CODES['SEN']),
-        ('asm', choices.OFFICE_CODES['ASM']),
-        ('gov', choices.OFFICE_CODES['GOV']),
-        ('Gov', choices.OFFICE_CODES['GOV']),
+        ('Cou', annotations.choices.OFFICE_CODES['COU']),
+        ('sen', annotations.choices.OFFICE_CODES['SEN']),
+        ('AtT', annotations.choices.OFFICE_CODES['ATT']),
+        ('May', annotations.choices.OFFICE_CODES['MAY']),
+        ('Sen', annotations.choices.OFFICE_CODES['SEN']),
+        ('asm', annotations.choices.OFFICE_CODES['ASM']),
+        ('gov', annotations.choices.OFFICE_CODES['GOV']),
+        ('Gov', annotations.choices.OFFICE_CODES['GOV']),
         # unknown codes
         ('LA', 'Unknown'),
         ('HOU', 'Unknown'),
@@ -3232,7 +3232,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['office_codes']
+        documentcloud_pages=annotations.choices.DOCS['office_codes']
     )
     # payee_adr1 = fields.CharField(
     #     max_length=55,
@@ -3303,9 +3303,9 @@ original filing and 1 to 999 amendments.",
             DocumentCloud(id='2712034-Cal-Format-201', start_page=42),
         ]
     )
-    SUP_OPP_CD_CHOICES = get_sorted_choices(choices.SUP_OPP_CODES) + (
-        ('s', choices.SUP_OPP_CODES['S']),
-        ('o', choices.SUP_OPP_CODES['O']),
+    SUP_OPP_CD_CHOICES = annotations.sort_choices(annotations.choices.SUP_OPP_CODES) + (
+        ('s', annotations.choices.SUP_OPP_CODES['S']),
+        ('o', annotations.choices.SUP_OPP_CODES['O']),
         ('H', 'UNKNOWN'),
         ('N', 'UNKNOWN'),
         ('X', 'UNKNOWN'),
@@ -3426,13 +3426,13 @@ class LoanCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=47, end_page=50),
     ]
     FILING_FORMS = [
-        get_filing_form('F460').get_section('B1'),
-        get_filing_form('F460').get_section('B2'),
-        get_filing_form('F460').get_section('B3'),
-        get_filing_form('F460').get_section('H'),
-        get_filing_form('F460').get_section('H1'),
-        get_filing_form('F460').get_section('H2'),
-        get_filing_form('F460').get_section('H3'),
+        annotations.get_form('F460').get_section('B1'),
+        annotations.get_form('F460').get_section('B2'),
+        annotations.get_form('F460').get_section('B3'),
+        annotations.get_form('F460').get_section('H'),
+        annotations.get_form('F460').get_section('H1'),
+        annotations.get_form('F460').get_section('H2'),
+        annotations.get_form('F460').get_section('H3'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -3455,12 +3455,12 @@ original filing and 1 to 999 amendments.",
         help_text="Committee identification number"
     )
     ENTITY_CD_CHOICES = (
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', annotations.choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', annotations.choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', annotations.choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', annotations.choices.CAMPAIGN_ENTITY_CODES['SCC']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -3860,14 +3860,14 @@ class RcptCd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=37, end_page=41),
     ]
     FILING_FORMS = [
-        get_filing_form('E530'),
-        get_filing_form('F900'),
-        get_filing_form('F401').get_section('A'),
-        get_filing_form('F460').get_section('A'),
-        get_filing_form('F460').get_section('A-1'),
-        get_filing_form('F460').get_section('C'),
-        get_filing_form('F460').get_section('I'),
-        get_filing_form('F496').get_section('P3'),
+        annotations.get_form('E530'),
+        annotations.get_form('F900'),
+        annotations.get_form('F401').get_section('A'),
+        annotations.get_form('F460').get_section('A'),
+        annotations.get_form('F460').get_section('A-1'),
+        annotations.get_form('F460').get_section('C'),
+        annotations.get_form('F460').get_section('I'),
+        annotations.get_form('F496').get_section('P3'),
     ]
     amend_id = fields.IntegerField(
         db_column='AMEND_ID',
@@ -4052,17 +4052,17 @@ and Form 401 Schedule A, A-1)"
     )
     ENTITY_CD_CHOICES = (
         # Codes explicitly allowed for this field, according to documentation
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
-        ('Com', choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', annotations.choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('PTY', annotations.choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('OTH', annotations.choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', annotations.choices.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('Com', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
         # Other known codes observed in this field
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('BNM', annotations.choices.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('OFF', annotations.choices.CAMPAIGN_ENTITY_CODES['OFF']),
         # Other unknown values observed
         ('0', "Unknown"),
         ('PTH', 'Unknown'),
@@ -4079,7 +4079,7 @@ and Form 401 Schedule A, A-1)"
             DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=71),
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=37),
-        ] + choices.DOCS['entity_codes']
+        ] + annotations.choices.DOCS['entity_codes']
     )
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4185,14 +4185,14 @@ and Form 401 Schedule A, A-1)"
         blank=True,
         help_text="Intermediary's zip code"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
         # "other" office codes
-        ('BED', choices.JURIS_CODES['OTH']),
-        ('CLB', choices.JURIS_CODES['OTH']),
+        ('BED', annotations.choices.JURIS_CODES['OTH']),
+        ('CLB', annotations.choices.JURIS_CODES['OTH']),
         # misprint
-        ('COU', choices.JURIS_CODES['CTY']),
+        ('COU', annotations.choices.JURIS_CODES['CTY']),
         # Office Code for this one record is Superior Court Judge
-        ('CO', choices.JURIS_CODES['OTH']),
+        ('CO', annotations.choices.JURIS_CODES['OTH']),
         ('SAC', 'Unknown'),
         ('PER', 'Unknown'),
         ('SF', 'Unknown'),
@@ -4238,8 +4238,8 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Reference to text contained in a TEXT record"
     )
     OFF_S_H_CD_CHOICES = (
-        ('S', choices.OFF_S_H_CODES['S']),
-        ('H', choices.OFF_S_H_CODES['H']),
+        ('S', annotations.choices.OFF_S_H_CODES['S']),
+        ('H', annotations.choices.OFF_S_H_CODES['H']),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -4259,13 +4259,13 @@ list of legal values. Used on Form 401 Schedule A",
         blank=True,
         help_text="Office Sought Description (used on F401A)"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
         # alt cases for valid codes
-        ('asm', choices.OFFICE_CODES['ASM']),
-        ('gov', choices.OFFICE_CODES['GOV']),
-        ('OTh', choices.OFFICE_CODES['OTH']),
-        ('oth', choices.OFFICE_CODES['OTH']),
-        ('csu', choices.OFFICE_CODES['CSU']),
+        ('asm', annotations.choices.OFFICE_CODES['ASM']),
+        ('gov', annotations.choices.OFFICE_CODES['GOV']),
+        ('OTh', annotations.choices.OFFICE_CODES['OTH']),
+        ('oth', annotations.choices.OFFICE_CODES['OTH']),
+        ('csu', annotations.choices.OFFICE_CODES['CSU']),
         # invalid codes
         ('H', 'Unknown'),
         ('HOU', 'Unknown'),
@@ -4290,7 +4290,7 @@ list of legal values. Used on Form 401 Schedule A",
         help_text="Date item received"
     )
     REC_TYPE_CHOICES = (
-        ('E530', get_filing_form('E530').full_title),
+        ('E530', annotations.get_form('E530').full_title),
         ("RCPT", "Receipt"),
     )
     rec_type = fields.CharField(
@@ -4308,8 +4308,8 @@ list of legal values. Used on Form 401 Schedule A",
     )
     SUP_OPP_CD_CHOICES = (
         # Codes explicitly allowed for this field, according to documentation
-        ('S', choices.SUP_OPP_CODES['S']),
-        ('O', choices.SUP_OPP_CODES['O']),
+        ('S', annotations.choices.SUP_OPP_CODES['S']),
+        ('O', annotations.choices.SUP_OPP_CODES['O']),
         # Other unknown values observed
         ('F', 'Unknown'),
     )
@@ -4461,10 +4461,10 @@ class S401Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=51, end_page=52),
     ]
     FILING_FORMS = [
-        get_filing_form('F401').get_section('B'),
-        get_filing_form('F401').get_section('B-1'),
-        get_filing_form('F401').get_section('C'),
-        get_filing_form('F401').get_section('D'),
+        annotations.get_form('F401').get_section('B'),
+        annotations.get_form('F401').get_section('B-1'),
+        annotations.get_form('F401').get_section('C'),
+        annotations.get_form('F401').get_section('D'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4627,18 +4627,18 @@ individual"
         blank=True,
         help_text="Candidate/officeholder suffix"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
         # alt cases for valid codes
-        ('asm', choices.OFFICE_CODES['ASM']),
-        ('ltg', choices.OFFICE_CODES['LTG']),
-        ('OTh', choices.OFFICE_CODES['OTH']),
-        ('att', choices.OFFICE_CODES['ATT']),
-        ('oth', choices.OFFICE_CODES['OTH']),
-        ('tre', choices.OFFICE_CODES['TRE']),
-        ('con', choices.OFFICE_CODES['CON']),
-        ('boe', choices.OFFICE_CODES['BOE']),
-        ('sos', choices.OFFICE_CODES['SOS']),
-        ('sup', choices.OFFICE_CODES['SUP']),
+        ('asm', annotations.choices.OFFICE_CODES['ASM']),
+        ('ltg', annotations.choices.OFFICE_CODES['LTG']),
+        ('OTh', annotations.choices.OFFICE_CODES['OTH']),
+        ('att', annotations.choices.OFFICE_CODES['ATT']),
+        ('oth', annotations.choices.OFFICE_CODES['OTH']),
+        ('tre', annotations.choices.OFFICE_CODES['TRE']),
+        ('con', annotations.choices.OFFICE_CODES['CON']),
+        ('boe', annotations.choices.OFFICE_CODES['BOE']),
+        ('sos', annotations.choices.OFFICE_CODES['SOS']),
+        ('sup', annotations.choices.OFFICE_CODES['SUP']),
         # invalid codes
         ('H', 'Unknown'),
     )
@@ -4649,7 +4649,7 @@ individual"
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['office_codes'],
+        documentcloud_pages=annotations.choices.DOCS['office_codes'],
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -4657,7 +4657,7 @@ individual"
         blank=True,
         help_text="Office sought description"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
         ('SAC', 'Unknown'),
         ('CT', 'Unknown'),
         ('ca', 'Unknown'),
@@ -4693,8 +4693,8 @@ individual"
 for Senate, Assembly, or Board of Equalization races."
     )
     OFF_S_H_CD_CHOICES = (
-        ('S', choices.OFF_S_H_CODES['S']),
-        ('H', choices.OFF_S_H_CODES['H']),
+        ('S', annotations.choices.OFF_S_H_CODES['S']),
+        ('H', annotations.choices.OFF_S_H_CODES['H']),
     )
     off_s_h_cd = fields.CharField(
         max_length=1,
@@ -4726,8 +4726,8 @@ for Senate, Assembly, or Board of Equalization races."
         help_text="Ballot measure jurisdiction"
     )
     SUP_OPP_CD_CHOICES = (
-        ('S', choices.SUP_OPP_CODES['S']),
-        ('O', choices.SUP_OPP_CODES['O']),
+        ('S', annotations.choices.SUP_OPP_CODES['S']),
+        ('O', annotations.choices.SUP_OPP_CODES['O']),
     )
     sup_opp_cd = fields.CharField(
         max_length=1,
@@ -4788,9 +4788,9 @@ class F495P2Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=35),
     ]
     FILING_FORMS = [
-        get_filing_form('F450'),
-        get_filing_form('F460'),
-        get_filing_form('F495'),
+        annotations.get_form('F450'),
+        annotations.get_form('F460'),
+        annotations.get_form('F495'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -4886,7 +4886,7 @@ class S496Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=53),
     ]
     FILING_FORMS = [
-        get_filing_form('F496')
+        annotations.get_form('F496')
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5010,8 +5010,8 @@ class S497Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=54, end_page=55),
     ]
     FILING_FORMS = [
-        get_filing_form('F497').get_section('P1'),
-        get_filing_form('F497').get_section('P2'),
+        annotations.get_form('F497').get_section('P1'),
+        annotations.get_form('F497').get_section('P2'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5065,17 +5065,17 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
     ENTITY_CD_CHOICES = (
-        ('BNM', choices.CAMPAIGN_ENTITY_CODES['BNM']),
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('CTL', choices.CAMPAIGN_ENTITY_CODES['CTL']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('com', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('OFF', choices.CAMPAIGN_ENTITY_CODES['OFF']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('PTY', choices.CAMPAIGN_ENTITY_CODES['PTY']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
-        ('SCC', choices.CAMPAIGN_ENTITY_CODES['SCC']),
+        ('BNM', annotations.choices.CAMPAIGN_ENTITY_CODES['BNM']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('CTL', annotations.choices.CAMPAIGN_ENTITY_CODES['CTL']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('com', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', annotations.choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OFF', annotations.choices.CAMPAIGN_ENTITY_CODES['OFF']),
+        ('OTH', annotations.choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('PTY', annotations.choices.CAMPAIGN_ENTITY_CODES['PTY']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('SCC', annotations.choices.CAMPAIGN_ENTITY_CODES['SCC']),
         ('0', 'Unknown'),
     )
     entity_cd = fields.CharField(
@@ -5085,7 +5085,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='entity code',
         help_text='Entity Code describing the Contributor/Recipient',
         choices=ENTITY_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=41),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=54),
         ]
@@ -5204,16 +5204,16 @@ self-employed.'
         blank=True,
         help_text="Candidate/officeholder's suffix"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
         # alt cases of valid codes
-        ('asm', choices.OFFICE_CODES['ASM']),
-        ('sen', choices.OFFICE_CODES['SEN']),
-        ('Asm', choices.OFFICE_CODES['ASM']),
-        ('May', choices.OFFICE_CODES['MAY']),
-        ('ASm', choices.OFFICE_CODES['ASM']),
-        ('oth', choices.OFFICE_CODES['OTH']),
-        ('csu', choices.OFFICE_CODES['CSU']),
-        ('Oth', choices.OFFICE_CODES['OTH']),
+        ('asm', annotations.choices.OFFICE_CODES['ASM']),
+        ('sen', annotations.choices.OFFICE_CODES['SEN']),
+        ('Asm', annotations.choices.OFFICE_CODES['ASM']),
+        ('May', annotations.choices.OFFICE_CODES['MAY']),
+        ('ASm', annotations.choices.OFFICE_CODES['ASM']),
+        ('oth', annotations.choices.OFFICE_CODES['OTH']),
+        ('csu', annotations.choices.OFFICE_CODES['CSU']),
+        ('Oth', annotations.choices.OFFICE_CODES['OTH']),
         # invalid codes
         ('H', 'Unknown'),
         ('S', 'Unknown'),
@@ -5238,7 +5238,7 @@ self-employed.'
         verbose_name="office code",
         help_text="Identifies the office being sought",
         choices=OFFICE_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['office_codes']
+        documentcloud_pages=annotations.choices.DOCS['office_codes']
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -5246,35 +5246,35 @@ self-employed.'
         blank=True,
         help_text="Office sought description"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
-        ('asm', choices.JURIS_CODES['ASM']),
-        ('sen', choices.JURIS_CODES['SEN']),
-        ('cit', choices.JURIS_CODES['CIT']),
-        ('GOV', choices.JURIS_CODES['STW']),
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
+        ('asm', annotations.choices.JURIS_CODES['ASM']),
+        ('sen', annotations.choices.JURIS_CODES['SEN']),
+        ('cit', annotations.choices.JURIS_CODES['CIT']),
+        ('GOV', annotations.choices.JURIS_CODES['STW']),
         # city office codes
-        ('MAY', choices.JURIS_CODES['CIT']),
+        ('MAY', annotations.choices.JURIS_CODES['CIT']),
         # county office codes
-        ('BSU', choices.JURIS_CODES['CTY']),
-        ('CSU', choices.JURIS_CODES['CTY']),
+        ('BSU', annotations.choices.JURIS_CODES['CTY']),
+        ('CSU', annotations.choices.JURIS_CODES['CTY']),
         # statewide office codes
-        ('SUP', choices.JURIS_CODES['STW']),
+        ('SUP', annotations.choices.JURIS_CODES['STW']),
         # other office codes
-        ('BED', choices.JURIS_CODES['OTH']),
-        ('CCB', choices.JURIS_CODES['OTH']),
-        ('CCM', choices.JURIS_CODES['OTH']),
-        ('CLB', choices.JURIS_CODES['OTH']),
+        ('BED', annotations.choices.JURIS_CODES['OTH']),
+        ('CCB', annotations.choices.JURIS_CODES['OTH']),
+        ('CCM', annotations.choices.JURIS_CODES['OTH']),
+        ('CLB', annotations.choices.JURIS_CODES['OTH']),
         # These are all for City Council Member offices
-        ('IRV', choices.JURIS_CODES['CIT']),
-        ('Fon', choices.JURIS_CODES['CIT']),
+        ('IRV', annotations.choices.JURIS_CODES['CIT']),
+        ('Fon', annotations.choices.JURIS_CODES['CIT']),
         # For Arnold's Gov campaign
-        ('JRS', choices.JURIS_CODES['STW']),
+        ('JRS', annotations.choices.JURIS_CODES['STW']),
         # County Supervisor office
-        ('CO', choices.JURIS_CODES['CTY']),
-        ('Riv', choices.JURIS_CODES['CTY']),
+        ('CO', annotations.choices.JURIS_CODES['CTY']),
+        ('Riv', annotations.choices.JURIS_CODES['CTY']),
         # misspelling
-        ('SNE', choices.JURIS_CODES['SEN']),
+        ('SNE', annotations.choices.JURIS_CODES['SEN']),
         # This is for Prop 83
-        ('83', choices.JURIS_CODES['STW']),
+        ('83', annotations.choices.JURIS_CODES['STW']),
         # Sometimes Assembly Member, sometimes Public Employees Retirement System
         ('PER', 'Unknown'),
         # These look like contributions to federal campaigns (e.g., President, Congress)
@@ -5308,9 +5308,9 @@ self-employed.'
         help_text="District number for the office being sought. Populated \
 for Senate, Assembly, or Board of Equalization races."
     )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES) + (
-        ('s', choices.OFF_S_H_CODES['S']),
-        ('h', choices.OFF_S_H_CODES['H']),
+    OFF_S_H_CD_CHOICES = annotations.sort_choices(annotations.choices.OFF_S_H_CODES) + (
+        ('s', annotations.choices.OFF_S_H_CODES['S']),
+        ('h', annotations.choices.OFF_S_H_CODES['H']),
         # The codes below appear in the database but are undocumented
         ('F', 'UNKNOWN'),
         ('T', 'UNKNOWN'),
@@ -5374,7 +5374,7 @@ for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="This field is undocumented"
     )
-    SUP_OPP_CD_CHOICES = get_sorted_choices(choices.SUP_OPP_CODES)
+    SUP_OPP_CD_CHOICES = annotations.sort_choices(annotations.choices.SUP_OPP_CODES)
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
@@ -5388,7 +5388,7 @@ for Senate, Assembly, or Board of Equalization races."
 
     def __str__(self):
         return "{} Filing {}, Amendment {}".format(
-            self.get_form_type_display(),
+            self.annotations.get_form_type_display(),
             self.filing_id,
             self.amend_id
         )
@@ -5421,8 +5421,8 @@ class S498Cd(CalAccessBaseModel):
         DocumentCloud(id='2712034-Cal-Format-201', start_page=56, end_page=57),
     ]
     FILING_FORMS = [
-        get_filing_form('F498').get_section('A'),
-        get_filing_form('F498').get_section('R'),
+        annotations.get_form('F498').get_section('A'),
+        annotations.get_form('F498').get_section('R'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5477,11 +5477,11 @@ original filing and 1 to 999 amendments.",
         help_text='Permanent value unique to this item',
     )
     ENTITY_CD_CHOICES = (
-        ('CAO', choices.CAMPAIGN_ENTITY_CODES['CAO']),
-        ('COM', choices.CAMPAIGN_ENTITY_CODES['COM']),
-        ('IND', choices.CAMPAIGN_ENTITY_CODES['IND']),
-        ('OTH', choices.CAMPAIGN_ENTITY_CODES['OTH']),
-        ('RCP', choices.CAMPAIGN_ENTITY_CODES['RCP']),
+        ('CAO', annotations.choices.CAMPAIGN_ENTITY_CODES['CAO']),
+        ('COM', annotations.choices.CAMPAIGN_ENTITY_CODES['COM']),
+        ('IND', annotations.choices.CAMPAIGN_ENTITY_CODES['IND']),
+        ('OTH', annotations.choices.CAMPAIGN_ENTITY_CODES['OTH']),
+        ('RCP', annotations.choices.CAMPAIGN_ENTITY_CODES['RCP']),
     )
     entity_cd = fields.CharField(
         max_length=3,
@@ -5490,7 +5490,7 @@ original filing and 1 to 999 amendments.",
         verbose_name='entity code',
         help_text="Entity code",
         choices=ENTITY_CD_CHOICES,
-        documentcloud_pages=choices.DOCS['entity_codes'] + [
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'] + [
             DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=43),
             DocumentCloud(id='2712034-Cal-Format-201', start_page=56),
         ]
@@ -5579,9 +5579,9 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Candidate/officerholder suffix"
     )
-    OFFICE_CD_CHOICES = get_sorted_choices(choices.OFFICE_CODES) + (
-        ('gov', choices.OFFICE_CODES['GOV']),
-        ('oth', choices.OFFICE_CODES['OTH']),
+    OFFICE_CD_CHOICES = annotations.sort_choices(annotations.choices.OFFICE_CODES) + (
+        ('gov', annotations.choices.OFFICE_CODES['GOV']),
+        ('oth', annotations.choices.OFFICE_CODES['OTH']),
     )
     office_cd = fields.CharField(
         db_column='OFFICE_CD',
@@ -5590,7 +5590,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="office code",
         choices=OFFICE_CD_CHOICES,
         help_text="Identifies the office being sought",
-        documentcloud_pages=choices.DOCS['office_codes'],
+        documentcloud_pages=annotations.choices.DOCS['office_codes'],
     )
     offic_dscr = fields.CharField(
         max_length=40,
@@ -5598,9 +5598,9 @@ original filing and 1 to 999 amendments.",
         blank=True,
         help_text="Description of office sought"
     )
-    JURIS_CD_CHOICES = get_sorted_choices(choices.JURIS_CODES) + (
-        ('GOV', choices.JURIS_CODES['STW']),
-        ('COU', choices.JURIS_CODES['CTY']),
+    JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES) + (
+        ('GOV', annotations.choices.JURIS_CODES['STW']),
+        ('COU', annotations.choices.JURIS_CODES['CTY']),
     )
     juris_cd = fields.CharField(
         max_length=3,
@@ -5626,7 +5626,7 @@ original filing and 1 to 999 amendments.",
         help_text="District number for the office being sought. \
 Populated for Senate, Assembly, or Board of Equalization races."
     )
-    OFF_S_H_CD_CHOICES = get_sorted_choices(choices.OFF_S_H_CODES)
+    OFF_S_H_CD_CHOICES = annotations.sort_choices(annotations.choices.OFF_S_H_CODES)
     off_s_h_cd = fields.CharField(
         max_length=1,
         db_column='OFF_S_H_CD',
@@ -5656,7 +5656,7 @@ Populated for Senate, Assembly, or Board of Equalization races."
         blank=True,
         help_text="Jurisdiction of ballot measure"
     )
-    SUP_OPP_CD_CHOICES = get_sorted_choices(choices.SUP_OPP_CODES)
+    SUP_OPP_CD_CHOICES = annotations.sort_choices(annotations.choices.SUP_OPP_CODES)
     sup_opp_cd = fields.CharField(
         max_length=1,
         db_column='SUP_OPP_CD',
@@ -5730,8 +5730,8 @@ class F501502Cd(CalAccessBaseModel):
         DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=57, end_page=59),
     ]
     FILING_FORMS = [
-        get_filing_form('F501'),
-        get_filing_form('F502'),
+        annotations.get_form('F501'),
+        annotations.get_form('F502'),
     ]
     filing_id = fields.IntegerField(
         db_column='FILING_ID',
@@ -5785,7 +5785,7 @@ original filing and 1 to 999 amendments.",
         verbose_name="Committee ID",
         help_text='Committee identification number'
     )
-    ENTITY_CD_CHOICES = get_sorted_choices(choices.CAMPAIGN_ENTITY_CODES) + (
+    ENTITY_CD_CHOICES = annotations.sort_choices(annotations.choices.CAMPAIGN_ENTITY_CODES) + (
         ('8', 'Unknown'),
     )
     entity_cd = fields.CharField(
@@ -5794,7 +5794,7 @@ original filing and 1 to 999 amendments.",
         blank=True,
         max_length=9,
         help_text='Entity code',  # Not clear which values are valid
-        documentcloud_pages=choices.DOCS['entity_codes'],
+        documentcloud_pages=annotations.choices.DOCS['entity_codes'],
     )
     report_num = fields.CharField(
         db_column='REPORT_NUM',

@@ -1,0 +1,88 @@
+form_id,id,title,db_value,start_page,end_page
+F400,P1,"Part 1, Slate Mailer Organization Information",,2,
+F400,P2,"Part 2, Treasurer And Other Principal Officers",,2,
+F400,P3,"Part 3, Individuals Who Authorize Contents Of Slate Mailers",,3,
+F400,P4,"Part 4, Is This Organization A ""Committee"" Pursuant To Government Code Section 82013?",,3,
+F400,P5,"Part 5, Verification",,3,
+F401,CVR,Cover Page,,3,4
+F401,A,"Schedule A, Payments Received",F401A,5,7
+F401,B,"Schedule B, Payments Made",F401B,8,9
+F401,B-1,"Schedule B-1, Payments Made by Agent or Independent Contractor",F401B-1,10,
+F401,C,"Schedule C, Persons Receiving $1,000 or More",F401C,11,12
+F401,D,"Schedule D, Candidates and Measures Not Listed on Schedule A",F401D,13,14
+F402,CVR,Cover Page,,2,
+F402,VER,Verification,,2,
+F410,P1,"Part 1, Committee Information",,2,
+F410,P2,"Part 2, Treasurer and Other Principal Officers",,2,
+F410,P3,"Part 3, Verification",,2,
+F410,P4,"Part 4, Type of Committee",,2,3
+F425,P1,"Part 1, Committee Information",,1,
+F425,P2,"Part 2, Period of No Activity",,1,
+F425,P3,"Part 3, Verification",,1,
+F450,CVR,"Cover Page, Type of Recipient Committee",,3,
+F450,P1,"Part 1, Payments Made",,3,
+F450,P2,"Part 2, Type of Statement",,3,
+F450,P3,"Part 3, Committee Information",,3,
+F450,P4,"Part 4, Verification",,3,
+F450,SMRY,Summary Page,,5,
+F450,P5,"Part 5, Payments Made",F450P5,6,7
+F460,CVR,"Cover Page, Part 1",CVR,3,4
+F460,CVR2,"Cover Page, Part 2",CVR2,2,
+F460,SMRY,Summary Page,SMRY,7,8
+F460,A,"Schedule A, Monetary Contributions Received",A,9,11
+F460,A-1,"Schedule A-1, Contributions Transferred to Special Election Commitee",A-1,,
+F460,B1,"Schedule B, Part 1, Loans Received",B1,12,13
+F460,B2,"Schedule B, Part 2, Loan Guarantors",B2,14,15
+F460,B3,"Schedule B, Part 3, Outstanding Balance",B3,,
+F460,C,"Schedule C, Non-Monetary Contributions Received",C,16,17
+F460,D,"Schedule D, Summary of Expenditures Supporting / Opposing Other Candidates, Measures and Committees",D,18,20
+F460,E,"Schedule E, Payments Made",E,21,24
+F460,F,"Schedule F, Accrued Expenses (Unpaid Bills)",F,25,27
+F460,G,"Schedule G, Payments Made by an Agent or Independent Contractor (on Behalf of This Committee)",G,28,29
+F460,H,"Schedule H, Loans Made to Others",H,29,30
+F460,H1,"Schedule H, Part 1, Loans Made",H1,,
+F460,H2,"Schedule H, Part 2, Repayments Rcvd",H2,,
+F460,H3,"Schedule H, Part 3, Outstanding Loans",H3,,
+F460,I,"Schedule I, Miscellanous increases to cash",I,31,32
+F461,P1,"Part 1, Name and Address of Filer",F461P1,3,
+F461,P2,"Part 2, Nature and Interests of Filer",F461P2,3,
+F461,P3,"Part 3, Summary",F461P3,3,
+F461,P4,"Part 4, Verification",F461P4,3,
+F461,P5,"Part 5, Contributions (Including Loans, Forgiveness of Loans, and LoanGuarantees) and Expenditures Made",F461P5,5,6
+F465,P1,"Part 1, Committee/Filer Information",F465P1,2,
+F465,P2,"Part 2, Name of Candidate or Measure Supported or Opposed",F465P2,2,
+F465,P3,"Part 3, Independent Expenditures Made",F465P3,2,
+F465,P4,"Part 4, Summary",F465P4,4,
+F465,P5,"Part 5, Filing Officers",F465P5,4,
+F465,P6,"Part 6, Verification",F465P6,4,
+F496,P1,"Part 1, List Only One Candidate or Ballot Measure",F496P1,3,
+F496,P2,"Part 2, Independent Expenditures Made",F496P2,3,
+F496,P3,"Part 3, Contributions > $100 Received",F496P3,3,
+F497,P1,"Part 1, Contributions Received",F497P1,2,
+F497,P2,"Part 2, Contributions Made",F497P2,4,
+F498,A,"Part A, Late Payments Attributed To",F498-A,,
+F498,R,"Part R, Late Payments Received From",F498-R,2,
+F601,P1,"Part 1, Individual Lobbyists",F601P1,2,
+F601,P2A,"Part 2, Section A, Lobbyist Employers",F601P2A,2,4
+F601,P2B,"Part 2, Section B, Subcontracted Clients",F601P2B,4,
+F615,P1,"Part 1, Activity Expenses Paid, Incurred, Arranged or Provided by the Lobbyist",F615P1,2,4
+F615,P2,"Part 2, Campaign Contributions Made or Delivered",F615P2,5,
+F625,P1,"Part 1, Partners, Owners, Officers, and Employees",F625P1,2,
+F625,P2,"Part 2, Payments Received in Connection with Lobbying Activity",F625P2,4,
+F625,P3A,"Part 3, Payments Made In Connection With Lobbying Activities, Section A, Activity Expenses",F625P3A,4,
+F625,P3B,"Part 3, Payments Made In Connection With Lobbying Activities, Section B, Payments Made",F625P3B,8,
+F625,P3C,"Part 3, Payments Made In Connection With Lobbying Activities, Section C, Summary of Payments",F625P3C,2,
+F625,P4B,"Part 4, Campaign Contributions Made",F625P4B,2,
+F635,P1,"Part 1, Legislative or State Agency Administrative Actions Actively Lobbied During the Period",F635P1,2,
+F635,P2,"Part 2, Partners, Owners, and Employees whose ""Lobbyist Reports"" (Form 615) are Attached to this Report",F635P2,4,
+F635,P3A,"Part 3, Payments Made in Connection with Lobbying Activities, Section A, Payments To In-house Employee Lobbyists",F635P3A,4,
+F635,P3B,"Part 3, Payments Made in Connection with Lobbying Activities, Section B, Payments To Lobbying Firms",F635P3B,4,
+F635,P3C,"Part 3, Payments Made in Connection with Lobbying Activities, Section C, Activity Expenses",F635P3C,6,
+F635,P3D,"Part 3, Payments Made in Connection with Lobbying Activities, Section D, Other Payments to Influence Legislative or Administrative Action",F635P3D,6,
+F635,P3E,"Part 3, Payments Made in Connection with Lobbying Activities, Section E, Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before The California Public Utilities Commission",F635P3E,6,
+F635,P4B,"Part 4, Campaign Contributions Made",F635P4B,8,
+F645,P1,"Part 1, Legislative or State Agency Administrative Actions Actively Lobbied during the Period",F645P1,2,
+F645,P2A,"Part 2, Payments Made this Period, Section A, Activity Expenses",F645P2A,4,
+F645,P2B,"Part 2, Payments Made this Period, Section B, Other Payments to Influence Legislative or Administrative Action",F645P2B,4,
+F645,P2C,"Part 2, Payments Made this Period, Section C, Payments in Connection with Administrative Testimony in Ratemaking Proceedings Before the California Public Utilities Commission",F645P2C,4,
+F645,P3B,"Part 3, Campaign Contributions Made",F645P3B,4,

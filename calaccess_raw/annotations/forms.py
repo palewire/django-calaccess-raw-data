@@ -3,9 +3,9 @@
 """
 Utilities for representing CAL-ACCESS forms.
 """
+from .documents import DocumentCloud
 from calaccess_raw import get_model_list
 from django.utils.deconstruct import deconstructible
-from calaccess_raw.annotations.documents import DocumentCloud
 
 
 @deconstructible
