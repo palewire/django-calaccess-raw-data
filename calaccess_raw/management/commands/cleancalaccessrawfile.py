@@ -9,8 +9,8 @@ from django.utils import six
 # Files
 import os
 import csv
+import csvkit
 from io import StringIO
-from csvkit import reader, writer
 from django.core.files import File
 
 # Django
@@ -51,7 +51,30 @@ class Command(CalAccessCommand):
         Make it happen.
         """
         super(Command, self).handle(*args, **options)
+        self.set_options(options)
+        self.raw_file = self.get_file_obj()
 
+        # Clean it
+        if self.verbosity > 2:
+            self.log(" Cleaning %s" % self.file_name)
+        self.clean()
+
+        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
+            self.archive()
+
+        # unless keeping files, remove tsv files
+        if not options['keep_file']:
+            os.remove(os.path.join(self.tsv_dir, options['file_name']))
+
+        # store the finish time for the clean
+        self.raw_file.clean_finish_datetime = now()
+        # and save the RawDataFile
+        self.raw_file.save()
+
+    def set_options(self, options):
+        """
+        Set options for use in other methods.
+        """
         # Set options
         self.file_name = options['file_name']
 
@@ -60,6 +83,30 @@ class Command(CalAccessCommand):
         self.log_name = self.file_name.lower().replace("tsv", "errors.csv")
         self.error_log_path = os.path.join(self.log_dir, self.log_name)
 
+        # Make sure the log directory exists
+        os.path.exists(self.log_dir) or os.makedirs(self.log_dir)
+
+        # Input and output paths
+        self.tsv_path = os.path.join(self.tsv_dir, self.file_name)
+        self.csv_name = self.file_name.lower().replace("tsv", "csv")
+        self.csv_path = os.path.join(self.csv_dir, self.csv_name)
+
+        # Pull and clean the headers
+        self.headers = self.get_headers()
+        self.headers_count = len(list(self.headers))
+
+    def get_headers(self):
+        """
+        Returns the headers from the TSV file.
+        """
+        with open(self.tsv_path, "rb") as tsv_file:
+            tsv_reader = csvkit.reader(tsv_file, delimiter="t")
+            yield next(tsv_reader)
+
+    def get_file_obj(self):
+        """
+        Get the file object from our tracking database table.
+        """
         # get most recently extracted RawDataVersion
         try:
             version = RawDataVersion.objects.filter(
@@ -79,30 +126,22 @@ class Command(CalAccessCommand):
             )
 
         # get the raw file record
-        self.raw_file = RawDataFile.objects.get(
+        raw_file = RawDataFile.objects.get(
             file_name=self.file_name.replace('.TSV', ''),
             version=version
         )
+
         # store the start time for the clean
-        self.raw_file.clean_start_datetime = now()
+        raw_file.clean_start_datetime = now()
+
         # reset the finish time for the clean
-        self.raw_file.clean_finish_datetime = None
+        raw_file.clean_finish_datetime = None
+
         # save here in case command doesn't finish
-        self.raw_file.save()
+        raw_file.save()
 
-        # Clean it
-        if self.verbosity > 2:
-            self.log(" Cleaning %s" % self.file_name)
-        self.clean()
-
-        # unless keeping files, remove tsv files
-        if not options['keep_file']:
-            os.remove(os.path.join(self.tsv_dir, options['file_name']))
-
-        # store the finish time for the clean
-        self.raw_file.clean_finish_datetime = now()
-        # and save the RawDataFile
-        self.raw_file.save()
+        # Pass it back
+        return raw_file
 
     def clean(self):
         """
@@ -111,33 +150,15 @@ class Command(CalAccessCommand):
         # Up the CSV data limit
         csv.field_size_limit(1000000000)
 
-        # Input and output paths
-        tsv_path = os.path.join(self.tsv_dir, self.file_name)
-        csv_name = self.file_name.lower().replace("tsv", "csv")
-        csv_path = os.path.join(self.csv_dir, csv_name)
-
         # Reader
-        tsv_file = open(tsv_path, 'rb')
+        tsv_file = open(self.tsv_path, 'rb')
 
         # Writer
-        csv_file = open(csv_path, 'w')
-        csv_writer = writer(csv_file)
+        csv_file = open(self.csv_path, 'w')
+        csv_writer = csvkit.writer(csv_file)
+        csv_writer.writerow(self.headers)
 
-        # Pull and clean the headers
-        try:
-            headers = tsv_file.readline()
-        except StopIteration:
-            return
-        headers = headers.decode("ascii", "replace")
-        headers_csv = reader(StringIO(headers), delimiter=str('\t'))
-        try:
-            headers_list = next(headers_csv)
-        except StopIteration:
-            return
-        headers_count = len(headers_list)
-        csv_writer.writerow(headers_list)
-
-        log_rows = []
+        self.log_rows = []
 
         # Loop through the rest of the data
         line_number = 1
@@ -179,23 +200,18 @@ class Command(CalAccessCommand):
 
             # Check if our values line up with our headers
             # and if not, see if CSVkit can sort out the problems
-            if not len(csv_field_list) == headers_count:
-                csv_field_list = next(reader(
-                    StringIO(tsv_line),
-                    delimiter=str('\t')
-                ))
+            if not len(csv_field_list) == self.headers_count:
+                line_io = StringIO(tsv_line)
+                line_reader = csvkit.reader(line_io, delimiter='\t')
+                csv_field_list = next(line_reader)
 
-                if not len(csv_field_list) == headers_count:
+                if not len(csv_field_list) == self.headers_count:
                     if self.verbosity > 2:
-                        msg = '  Bad parse of line %s (%s headers, %s values)'
-                        self.failure(msg % (
-                            line_number,
-                            len(headers_list),
-                            len(csv_field_list)
-                        ))
-                    log_rows.append([
+                        msg = '  Bad parse of line {} ({} headers, {} values)'
+                        self.failure(msg.format(line_number, self.headers_count, len(csv_field_list)))
+                    self.log_rows.append([
                         line_number,
-                        len(headers_list),
+                        self.headers_count,
                         len(csv_field_list),
                         ','.join(csv_field_list)
                     ])
@@ -205,74 +221,53 @@ class Command(CalAccessCommand):
             csv_writer.writerow(csv_field_list)
 
         # Log errors if there are any
-        if log_rows:
+        if self.log_rows:
+            # Log to the terminal
             if self.verbosity > 1:
                 msg = '  %s errors logged (not including empty lines)'
-                self.failure(msg % (len(log_rows)))
-            self.log_errors(log_rows)
+                self.failure(msg % (len(self.log_rows)))
+            # Log to the file
+            with open(self.error_log_path, 'w') as log_file:
+                log_writer = csvkit.writer(log_file, quoting=csv.QUOTE_ALL)
+                log_writer.writerow(['line', 'headers', 'fields', 'value'])
+                log_writer.writerows(rows)
 
         # Add counts to raw_file_record
-        self.raw_file.download_columns_count = headers_count
+        self.raw_file.download_columns_count = self.headers_count
         self.raw_file.download_records_count = line_number - 1
-        self.raw_file.clean_columns_count = headers_count
-        self.raw_file.clean_records_count = line_number - 1 - len(log_rows)
-        self.raw_file.error_count = len(log_rows)
+        self.raw_file.clean_columns_count = self.headers_count
+        self.raw_file.clean_records_count = line_number - 1 - len(self.log_rows)
+        self.raw_file.error_count = len(self.log_rows)
 
         # Shut it down
         tsv_file.close()
         csv_file.close()
 
         # Add file size to the raw_file_record
-        self.raw_file.download_file_size = os.path.getsize(tsv_path) or 0
-        self.raw_file.clean_file_size = os.path.getsize(csv_path) or 0
+        self.raw_file.download_file_size = os.path.getsize(self.tsv_path) or 0
+        self.raw_file.clean_file_size = os.path.getsize(self.csv_path) or 0
 
-        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
+    def archive(self):
+        """
+        Archive the file.
+        """
+        if self.verbosity > 2:
+            self.log(" Archiving {0}".format(os.path.basename(self.csv_path)))
+        # Remove previous .CSV and error log files
+        self.raw_file.clean_file_archive.delete()
+        self.raw_file.error_log_archive.delete()
+
+        # Open up the .CSV file so we can wrap it in the Django File obj
+        with open(self.csv_path, 'rb') as csv_file:
+            # Save the .CSV on the raw data file
+            self.raw_file.clean_file_archive.save(
+                self.file_name.lower().replace("tsv", "csv"),
+                File(csv_file),
+            )
+        # if there are any errors, archive the log too
+        if self.log_rows:
+            error_log_name = os.path.basename(self.error_log_path)
             if self.verbosity > 2:
-                self.log(" Archiving {0}".format(os.path.basename(csv_path)))
-            # Remove previous .CSV and error log files
-            self.raw_file.clean_file_archive.delete()
-            self.raw_file.error_log_archive.delete()
-
-            # Open up the .CSV file so we can wrap it in the Django File obj
-            with open(csv_path, 'rb') as csv_file:
-                # Save the .CSV on the raw data file
-                self.raw_file.clean_file_archive.save(
-                    self.file_name.lower().replace("tsv", "csv"),
-                    File(csv_file),
-                )
-            # if there are any errors, archive the log too
-            if log_rows:
-                if self.verbosity > 2:
-                    self.log(" Archiving {0}".format(
-                        os.path.basename(self.error_log_path)
-                    ))
-                with open(self.error_log_path, 'rb') as error_file:
-                    self.raw_file.error_log_archive.save(
-                        os.path.basename(self.error_log_path),
-                        File(error_file),
-                    )
-
-    def log_errors(self, rows):
-        """
-        Log any errors to a CSV file.
-        """
-        # Make sure the log directory exists
-        os.path.exists(self.log_dir) or os.makedirs(self.log_dir)
-
-        # Log writer
-        log_file = open(self.error_log_path, 'w')
-        log_writer = writer(log_file, quoting=csv.QUOTE_ALL)
-
-        # Add the headers
-        log_writer.writerow([
-            'Line number',
-            'Headers len',
-            'Fields len',
-            'Line value'
-        ])
-
-        # Log out the rows
-        log_writer.writerows(rows)
-
-        # Shut it down
-        log_file.close()
+                self.log(" Archiving {}".format(error_log_name))
+            with open(self.error_log_path, 'rb') as error_file:
+                self.raw_file.error_log_archive.save(error_log_name, File(error_file))
