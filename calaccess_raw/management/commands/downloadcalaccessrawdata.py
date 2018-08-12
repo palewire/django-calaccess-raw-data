@@ -4,21 +4,33 @@
 Download the latest CAL-ACCESS database ZIP.
 """
 from __future__ import unicode_literals
+
+# Files
 import os
-import logging
-import requests
 import shutil
-from datetime import datetime
+import requests
 from hurry.filesize import size
-from clint.textui import progress
-from django.conf import settings
-from django.contrib.humanize.templatetags.humanize import naturaltime
-from django.core.files import File
-from django.utils import timezone
+
+# Strings
 from django.template.loader import render_to_string
+from django.contrib.humanize.templatetags.humanize import naturaltime
+
+# Time
+from datetime import datetime
+from django.utils import timezone
+
+# Django stuff
+from django.conf import settings
+from django.core.files import File
+from calaccess_raw.models.tracking import RawDataVersion
+
+# Commands
+from clint.textui import progress
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion
+
+# Logging
+import logging
 logger = logging.getLogger(__name__)
 
 
