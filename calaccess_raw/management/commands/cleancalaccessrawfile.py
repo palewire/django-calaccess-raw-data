@@ -228,7 +228,7 @@ class Command(CalAccessCommand):
             with open(self.error_log_path, 'w') as log_file:
                 log_writer = csvkit.writer(log_file, quoting=csv.QUOTE_ALL)
                 log_writer.writerow(['line', 'headers', 'fields', 'value'])
-                log_writer.writerows(rows)
+                log_writer.writerows(self.log_rows)
 
         # Add counts to raw_file_record
         self.raw_file.download_columns_count = self.headers_count
