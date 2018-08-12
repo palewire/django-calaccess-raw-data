@@ -93,15 +93,15 @@ class Command(CalAccessCommand):
 
         # Pull and clean the headers
         self.headers = self.get_headers()
-        self.headers_count = len(list(self.headers))
+        self.headers_count = len(self.headers)
 
     def get_headers(self):
         """
         Returns the headers from the TSV file.
         """
         with open(self.tsv_path, "rb") as tsv_file:
-            tsv_reader = csvkit.reader(tsv_file, delimiter="t")
-            yield next(tsv_reader)
+            tsv_reader = csvkit.reader(tsv_file, delimiter=str("\t"))
+            return next(tsv_reader)
 
     def get_file_obj(self):
         """
@@ -170,10 +170,8 @@ class Command(CalAccessCommand):
                 tsv_line.decode("ascii", "replace") == '\r\n'
             ):
                 if self.verbosity > 2:
-                    msg = '  Line %s is empty'
-                    self.failure(msg % (
-                        line_number,
-                    ))
+                    msg = '  Line {} is empty'.format(line_number)
+                    self.failure(msg)
                 continue
 
             # Goofing around with the encoding while we're in there.
@@ -202,7 +200,7 @@ class Command(CalAccessCommand):
             # and if not, see if CSVkit can sort out the problems
             if not len(csv_field_list) == self.headers_count:
                 line_io = StringIO(tsv_line)
-                line_reader = csvkit.reader(line_io, delimiter='\t')
+                line_reader = csvkit.reader(line_io, delimiter=str('\t'))
                 csv_field_list = next(line_reader)
 
                 if not len(csv_field_list) == self.headers_count:
