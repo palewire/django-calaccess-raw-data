@@ -102,22 +102,23 @@ class Command(CalAccessCommand):
                 'cleancalaccessrawfile {0}`).'.format(self.model._meta.db_table)
             )
 
-        # Get the headers and the row count from the source CSV
+        # Get the row count from the source CSV
         with open(self.csv, 'r') as infile:
             self.csv_row_count = sum(1 for line in infile) - 1
 
+        # Quit if the CSV is empty.
+        if self.csv_row_count == 0:
+            if self.verbosity > 2:
+                self.failure("{} is empty.".format(self.csv))
+            return
+
+        # Get the headers from the source CSV
         with open(self.csv, 'r') as infile:
             try:
                 csv_reader = reader(infile)
                 self.csv_headers = next(csv_reader)
             except StopIteration:
                 self.csv_headers = []
-
-        # Quick of the CSV is empty.
-        if self.csv_row_count == 0:
-            if self.verbosity > 2:
-                self.failure("{} is empty.".format(self.csv))
-            return
 
         # store the start time for the load
         raw_file.load_start_datetime = now()
