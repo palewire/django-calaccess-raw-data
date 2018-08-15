@@ -89,25 +89,6 @@ class CommandTestCase(TestCase):
             self.assertEqual(m.objects.get_csv_name(), m().get_csv_name())
             self.assertEqual(m.objects.get_csv_path(), m().get_csv_path())
 
-    def test_verifycalacessrawfile(self):
-        """
-        Test that verifycalaccessrawfile management command is working.
-        """
-        call_command("verifycalaccessrawfile", 'RcptCd')
-        call_command("verifycalaccessrawfile", 'AcronymsCd')
-
-    def test_totalcalacessrawdata(self):
-        """
-        Test that totalcalaccessrawdata management command is working.
-        """
-        call_command("totalcalaccessrawdata")
-
-    def test_verifycalaccesschoicefield(self):
-        """
-        Find db values in choice fields not defined in the fields choices attr.
-        """
-        call_command("verifycalaccesschoicefields", verbosity=2)
-
 
 class DifferentFileSizesTestCase(TestCase):
     """

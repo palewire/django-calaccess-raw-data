@@ -114,15 +114,12 @@ class CalAccessCommand(BaseCommand):
         except RawDataVersion.DoesNotExist:
             obj = RawDataVersion.objects.create(
                 release_datetime=release_datetime,
-                expected_size=expected_size,
+                expected_size=expected_size
             )
             created = True
         else:
             diff = release_datetime - latest.release_datetime
-            if (
-                latest.expected_size == expected_size and
-                diff.total_seconds() < 300
-            ):
+            if latest.expected_size == expected_size and diff.total_seconds() < 300:
                 obj = latest
                 created = False
             else:
@@ -131,8 +128,7 @@ class CalAccessCommand(BaseCommand):
                     expected_size=expected_size,
                 )
                 created = True
-
-        return (obj, created)
+        return obj, created
 
     #
     # Logging methods
