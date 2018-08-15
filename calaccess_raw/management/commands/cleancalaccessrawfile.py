@@ -4,7 +4,6 @@
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 """
 from __future__ import unicode_literals
-from django.utils import six
 
 # Files
 import os
@@ -14,6 +13,7 @@ from io import StringIO
 from django.core.files import File
 
 # Django
+from django.utils import six
 from django.conf import settings
 from django.utils.timezone import now
 

@@ -3,14 +3,21 @@
 """
 Extract the CAL-ACCESS raw data files from downloaded ZIP.
 """
+from __future__ import unicode_literals
+
+# Files
 import os
-import re
 import shutil
 import zipfile
-from django.conf import settings
 from django.core.files import File
-from django.core.management.base import CommandError
+
+# Misc.
+import re
+from django.conf import settings
 from django.utils.timezone import now
+
+# Commands
+from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
@@ -127,7 +134,6 @@ class Command(CalAccessCommand):
             raw_file.load_start_datetime = None
             raw_file.load_finish_datetime = None
             raw_file.save()
-
         return
 
     def archive(self):

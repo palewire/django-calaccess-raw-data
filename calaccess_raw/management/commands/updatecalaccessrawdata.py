@@ -3,22 +3,35 @@
 """
 Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 """
-import os
-import logging
-from sys import exit
-from time import sleep
+from __future__ import unicode_literals
 from django.conf import settings
-from clint.textui import progress
+
+# Files
+import os
 from django.core.files import File
-from django.utils.timezone import now
-from django.core.management import call_command
-from django.template.loader import render_to_string
-from django.core.management.base import CommandError
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
-from calaccess_raw.models.tracking import RawDataVersion
-from calaccess_raw.management.commands import CalAccessCommand
+
+# Time
+from time import sleep
+from django.utils.timezone import now
+
+# Templating
+from django.template.loader import render_to_string
 from django.contrib.humanize.templatetags.humanize import naturaltime
+
+# Commands
+from sys import exit
+from clint.textui import progress
+from django.core.management import call_command
+from django.core.management.base import CommandError
+from calaccess_raw.management.commands import CalAccessCommand
+
+# Models
 from calaccess_raw import get_model_list
+from calaccess_raw.models.tracking import RawDataVersion
+
+# Logging
+import logging
 logger = logging.getLogger(__name__)
 
 

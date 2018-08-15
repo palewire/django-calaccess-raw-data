@@ -4,12 +4,18 @@
 Logs row count of given model and compares against line count in cleaned CSV.
 """
 from __future__ import unicode_literals
+
+# Django
 from django.apps import apps
-from django.db import router
 from django.contrib.humanize.templatetags.humanize import intcomma
+
+# Database
+from django.db import router
+from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
+
+# Commands
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
