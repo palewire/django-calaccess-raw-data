@@ -262,6 +262,7 @@ class Command(CalAccessCommand):
         """
         if self.verbosity > 2:
             self.log(" Archiving {0}".format(os.path.basename(self.csv_path)))
+
         # Remove previous .CSV and error log files
         self.raw_file.clean_file_archive.delete()
         self.raw_file.error_log_archive.delete()
