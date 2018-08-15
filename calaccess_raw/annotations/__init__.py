@@ -65,5 +65,5 @@ __all__ = (
     'FORMS',
     'get_form',
     'choices',
-    "sort_choices",
+    "sort_choices"
 )

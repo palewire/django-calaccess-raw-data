@@ -4,11 +4,16 @@
 Tests annotations of the data.
 """
 from __future__ import unicode_literals
-import os
-import logging
+
+# Testing framework
 from django.test import TestCase
+
+# Stuff to test
+import os
 from calaccess_raw import annotations
-from calaccess_raw.annotations.filing_forms import get_filing_form
+
+# Logging
+import logging
 logger = logging.getLogger(__name__)
 
 
@@ -22,7 +27,7 @@ class AnnotationTestCase(TestCase):
         """
         Test attributes of the FilingForm object.
         """
-        ff = get_filing_form('F400')
+        ff = annotations.get_form('F400')
         ff.get_models()
         ff.__str__()
         s = ff.get_section("P1")
