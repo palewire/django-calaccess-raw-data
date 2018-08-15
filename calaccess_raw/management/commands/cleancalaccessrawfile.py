@@ -51,24 +51,30 @@ class Command(CalAccessCommand):
         Make it happen.
         """
         super(Command, self).handle(*args, **options)
+
+        # Set all the config options
         self.set_options(options)
+
+        # Get the tracking object from the database
         self.raw_file = self.get_file_obj()
 
-        # Clean it
+        # Walk through the raw TSV file and create a clean CSV file
         if self.verbosity > 2:
             self.log(" Cleaning %s" % self.file_name)
         self.clean()
 
+        # If requested, archive the files
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             self.archive()
 
-        # unless keeping files, remove tsv files
+        # Unless keeping files, remove the raw TSV file
         if not options['keep_file']:
-            os.remove(os.path.join(self.tsv_dir, options['file_name']))
+            os.remove(self.tsv_path)
 
-        # store the finish time for the clean
+        # Store the finish time in the database
         self.raw_file.clean_finish_datetime = now()
-        # and save the RawDataFile
+
+        # Save the tracking record in the database one last time
         self.raw_file.save()
 
     def set_options(self, options):
@@ -156,11 +162,16 @@ class Command(CalAccessCommand):
         # Writer
         csv_file = open(self.csv_path, 'w')
         csv_writer = csvkit.writer(csv_file)
-        csv_writer.writerow(self.headers)
 
+        # Write the headers
+        csv_writer.writerow(self.headers)
+        # Pop them out of the source file
+        next(tsv_file)
+
+        # Get ready to log errors
         self.log_rows = []
 
-        # Loop through the rest of the data
+        # Loop through the rest of the rows
         line_number = 1
         for tsv_line in tsv_file:
             line_number += 1

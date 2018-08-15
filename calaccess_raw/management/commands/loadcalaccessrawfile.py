@@ -104,13 +104,14 @@ class Command(CalAccessCommand):
 
         # Get the headers and the row count from the source CSV
         with open(self.csv, 'r') as infile:
-            csv_reader = reader(infile)
+            self.csv_row_count = sum(1 for line in infile) - 1
+
+        with open(self.csv, 'r') as infile:
             try:
+                csv_reader = reader(infile)
                 self.csv_headers = next(csv_reader)
-                self.csv_row_count = sum(1 for line in infile) - 1
             except StopIteration:
                 self.csv_headers = []
-                self.csv_row_count = 0
 
         # Quick of the CSV is empty.
         if self.csv_row_count == 0:
