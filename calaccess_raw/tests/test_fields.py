@@ -4,10 +4,16 @@
 Tests for custom database fields.
 """
 from __future__ import unicode_literals
-import logging
+
+# Testing
+from django.test import TestCase
+
+# Stuff to test
 from calaccess_raw import fields
 from calaccess_raw import models
-from django.test import TestCase
+
+# Logging
+import logging
 logger = logging.getLogger(__name__)
 
 
