@@ -72,8 +72,7 @@ class CharField(fields.CharField, CalAccessFieldMixin, DocumentCloudMixin):
         WHEN "%(name)s" IS NULL
             THEN ''
         ELSE regexp_replace(TRIM("%(name)s"), '\r|\n', '', 'g')
-    END
-    """
+    END"""
 
     def description(self):
         """
@@ -94,8 +93,7 @@ class DateField(fields.DateField, CalAccessFieldMixin):
         WHEN "%(name)s" IS NOT NULL AND TRIM("%(name)s") != ''
             THEN to_date(substring("%(name)s" from 1 for 10), 'MM/DD/YYYY')
         ELSE null
-    END
-    """
+    END"""
 
 
 class DateTimeField(fields.DateTimeField, CalAccessFieldMixin):
@@ -108,8 +106,7 @@ class DateTimeField(fields.DateTimeField, CalAccessFieldMixin):
         WHEN "%(name)s" IS NOT NULL AND TRIM("%(name)s") != ''
             THEN to_timestamp("%(name)s", 'MM/DD/YYYY HH12:MI:SS AM')
         ELSE null
-    END
-    """
+    END"""
 
 
 class DecimalField(fields.DecimalField, CalAccessFieldMixin):
@@ -125,8 +122,7 @@ class DecimalField(fields.DecimalField, CalAccessFieldMixin):
             THEN 0.0
         WHEN "%(name)s" IS NOT NULL
             THEN "%(name)s"::numeric
-    END
-    """
+    END"""
 
 
 class FloatField(fields.FloatField, CalAccessFieldMixin):
@@ -142,8 +138,7 @@ class FloatField(fields.FloatField, CalAccessFieldMixin):
             THEN 0.0
         WHEN TRIM("%(name)s") IS NOT NULL
             THEN "%(name)s"::double precision
-    END
-    """
+    END"""
 
 
 class IntegerField(fields.IntegerField, CalAccessFieldMixin, DocumentCloudMixin):
