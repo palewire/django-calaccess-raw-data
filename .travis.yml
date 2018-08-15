@@ -9,6 +9,7 @@ python:
  - "2.7"
  - "3.5"
  - "3.6"
+ - "3.7-dev"
 
 env:
  - DJANGO_VERSION=1.11.* DATABASE_SETTINGS='settings_test_mysql.py'
