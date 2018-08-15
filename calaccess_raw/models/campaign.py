@@ -5388,7 +5388,7 @@ for Senate, Assembly, or Board of Equalization races."
 
     def __str__(self):
         return "{} Filing {}, Amendment {}".format(
-            self.annotations.get_form_type_display(),
+            self.get_form_type_display(),
             self.filing_id,
             self.amend_id
         )
