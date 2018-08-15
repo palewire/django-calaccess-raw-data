@@ -70,16 +70,10 @@ class Command(CalAccessCommand):
         self.download_metadata = self.get_download_metadata()
         logger.debug('Server: %s <-- (from HEAD)' % self.download_metadata['server'])
         logger.debug('ETag: %s <-- (from HEAD)' % self.download_metadata['etag'])
-        logger.debug(
-            'Last-Modified: %s <-- (from HEAD)' % self.download_metadata['last-modified']
-        )
-        logger.debug(
-            'Content-Length %s <-- (from HEAD)' % self.download_metadata['content-length']
-        )
+        logger.debug('Last-Modified: %s <-- (from HEAD)' % self.download_metadata['last-modified'])
+        logger.debug('Content-Length %s <-- (from HEAD)' % self.download_metadata['content-length'])
 
-        self.last_modified_from_head = self.parse_imf_datetime_str(
-            self.download_metadata['last-modified']
-        )
+        self.last_modified_from_head = self.parse_imf_datetime_str(self.download_metadata['last-modified'])
 
         # get or create the RawDataVersion
         self.version, created = self.get_or_create_version(
