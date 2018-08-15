@@ -19,7 +19,7 @@ from calaccess_raw.admin.campaign import (
     S496CdAdmin,
     S497CdAdmin,
     F501502CdAdmin,
-    S498CdAdmin,
+    S498CdAdmin
 )
 from calaccess_raw.admin.inactive import (
     BallotMeasuresCdAdmin,
@@ -44,7 +44,7 @@ from calaccess_raw.admin.inactive import (
     LobbyistFirmHistoryCdAdmin,
     LobbyistFirmLobbyist1CdAdmin,
     LobbyistFirmLobbyist2CdAdmin,
-    EfsFilingLogCdAdmin,
+    EfsFilingLogCdAdmin
 )
 from calaccess_raw.admin.lobbying import (
     CvrRegistrationCdAdmin,
@@ -90,12 +90,12 @@ from calaccess_raw.admin.common import (
     LookupCodesCdAdmin,
     NamesCdAdmin,
     ReceivedFilingsCdAdmin,
-    ReportsCdAdmin,
+    ReportsCdAdmin
 )
 
 from calaccess_raw.admin.tracking import (
     RawDataVersionAdmin,
-    RawDataFileAdmin,
+    RawDataFileAdmin
 )
 
 __all__ = (

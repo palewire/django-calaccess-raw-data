@@ -21,7 +21,8 @@ pages in our models, like so:
     documentcloud_pages=look_ups.DOCS['office_codes'],
 
 """
-from calaccess_raw.annotations.documents import DocumentCloud
+from __future__ import unicode_literals
+from .documents import DocumentCloud
 
 DOCS = {
     'entity_codes': [
