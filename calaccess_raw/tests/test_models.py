@@ -4,13 +4,21 @@
 Tests for the models.py files.
 """
 from __future__ import unicode_literals
-from datetime import datetime
-import logging
-from copy import deepcopy
+
+# Testing
 from django.test import TestCase
+
+# Stuff to test
 from calaccess_raw import models
 from calaccess_raw.admin import BaseAdmin
 from django.contrib.admin import AdminSite
+
+# Python misc.
+from copy import deepcopy
+from datetime import datetime
+
+# Logging
+import logging
 logger = logging.getLogger(__name__)
 
 

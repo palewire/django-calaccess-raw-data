@@ -4,12 +4,20 @@
 Tests for the utilities storied in app's __init__.py file.
 """
 from __future__ import unicode_literals
-import logging
-import calaccess_raw
-from datetime import datetime
-from calaccess_raw import models
+
+# Testing
 from django.test import TestCase
 from django.test.utils import override_settings
+
+# Stuff to test
+import calaccess_raw
+from calaccess_raw import models
+
+# Python misc.
+from datetime import datetimes
+
+# Logging
+import logging
 logger = logging.getLogger(__name__)
 
 

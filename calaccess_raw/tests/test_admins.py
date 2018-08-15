@@ -4,10 +4,18 @@
 Tests the adminstration panel configuration.
 """
 from __future__ import unicode_literals
+
+# Testing
 from django.test import TestCase
+
+# Stuff to test
 from calaccess_raw import admin
 from calaccess_raw import models
 from calaccess_raw import get_model_list
+
+# Logging
+import logging
+logger = logging.getLogger(__name__)
 
 
 class AdminTestCase(TestCase):

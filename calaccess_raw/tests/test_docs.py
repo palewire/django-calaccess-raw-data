@@ -4,12 +4,20 @@
 Tests how thoroughly the CAL-ACCESS database has been documented.
 """
 from __future__ import unicode_literals
+
+# Testing
+from django.test import TestCase
+
+# Stuff to test
+from calaccess_raw import get_model_list
+from calaccess_raw.fields import ForeignKeyField
+
+# Text
 import re
 import agate
+
+# Logging
 import logging
-from django.test import TestCase
-from calaccess_raw.fields import ForeignKeyField
-from calaccess_raw import get_model_list
 logger = logging.getLogger(__name__)
 
 
