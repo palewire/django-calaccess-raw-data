@@ -273,10 +273,7 @@ class Command(CalAccessCommand):
         n_iters = float(expected_size) / divisor
 
         with open(self.zip_path, 'ab') as fp:
-            for chunk in progress.bar(
-                resp.iter_content(chunk_size=chunk_size),
-                expected_size=n_iters,
-            ):
+            for chunk in progress.bar(resp.iter_content(chunk_size=chunk_size), expected_size=n_iters):
                 fp.write(chunk)
                 fp.flush()
 
