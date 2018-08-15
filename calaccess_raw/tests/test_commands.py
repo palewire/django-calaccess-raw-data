@@ -4,20 +4,30 @@
 Tests the management commands that interact with the database.
 """
 from __future__ import unicode_literals
+
+# Files
 import io
-import logging
 import os
+
+# Testing
 import warnings
-from requests import HTTPError
 import requests_mock
-from datetime import datetime
-from django.conf import settings
-from django.core.management import call_command
+from requests import HTTPError
 from django.test import TestCase
 from django.test.utils import override_settings
+
+# Times
+from datetime import datetime
 from django.utils import timezone
+
+# Django etc.
+from django.conf import settings
 from calaccess_raw import get_model_list
+from django.core.management import call_command
 from calaccess_raw.management.commands import CalAccessCommand
+
+# Logging
+import logging
 logger = logging.getLogger(__name__)
 
 
@@ -77,9 +87,7 @@ class CommandTestCase(TestCase):
         try:
             CalAccessCommand().get_download_metadata()
         except HTTPError as e:
-            warnings.warn(
-                "Could not verify download metadata: %s".format(e)
-            )
+            warnings.warn("Could not verify download metadata: %s".format(e))
 
     def test_csv_gettrs(self):
         """
