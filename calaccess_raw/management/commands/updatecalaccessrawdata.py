@@ -21,7 +21,6 @@ from django.contrib.humanize.templatetags.humanize import naturaltime
 
 # Commands
 from sys import exit
-from clint.textui import progress
 from django.core.management import call_command
 from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
@@ -344,8 +343,6 @@ class Command(CalAccessCommand):
             tsv_list = [x for x in tsv_list if x not in prev_cleaned]
 
         # Loop through all the files in the source directory
-        if self.verbosity:
-            tsv_list = progress.bar(tsv_list)
         for name in tsv_list:
             call_command(
                 "cleancalaccessrawfile",
@@ -429,8 +426,6 @@ class Command(CalAccessCommand):
             # remove these from model_list
             model_list = [x for x in model_list if x._meta.db_table not in prev_loaded]
 
-        if self.verbosity:
-            model_list = progress.bar(model_list)
         for model in model_list:
             call_command(
                 "loadcalaccessrawfile",
