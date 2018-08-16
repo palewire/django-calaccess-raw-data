@@ -54,23 +54,19 @@ class Command(CalAccessCommand):
         # Set all the config options
         self.set_options(options)
 
-        # If there are no rows, kill the file and finish
-        if not self.row_count:
-            self.log(" No data in %s" % self.file_name)
-            os.remove(self.tsv_path)
-            return
-
         # Get the tracking object from the database
         self.raw_file = self.get_file_obj()
 
-        # Walk through the raw TSV file and create a clean CSV file
-        if self.verbosity > 1:
-            self.log(" Cleaning %s" % self.file_name)
-        self.clean()
+        # If the file has data ...
+        if self.row_count:
+            # Walk through the raw TSV file and create a clean CSV file
+            if self.verbosity > 1:
+                self.log(" Cleaning %s" % self.file_name)
+            self.clean()
 
-        # If requested, archive the files
-        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-            self.archive()
+            # If requested, archive the files
+            if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
+                self.archive()
 
         # Unless keeping files, remove the raw TSV file
         if not options['keep_file']:
@@ -125,17 +121,17 @@ class Command(CalAccessCommand):
         """
         Get the file object from our tracking database table.
         """
-        # get most recently extracted RawDataVersion
+        # Get most recently extracted RawDataVersion
         try:
             version = RawDataVersion.objects.latest_extract()
         except RawDataVersion.DoesNotExist:
             raise CommandError('No record of extracting zip (run `python manage.py extractcalaccessrawfiles`)')
 
-        # raise exception if extract step did not finish
+        # Raise exception if extract step did not finish
         if not version.extract_completed:
             raise CommandError('Previous extraction did not finish (run `python manage.py extractcalaccessrawfiles`)')
 
-        # get the raw file record
+        # Get the raw file record
         raw_file = RawDataFile.objects.get(
             file_name=self.file_name.replace('.TSV', ''),
             version=version
@@ -151,7 +147,7 @@ class Command(CalAccessCommand):
         raw_file.download_columns_count = self.headers_count
         raw_file.download_records_count = self.row_count - 1
 
-        # save here in case command doesn't finish
+        # Save here in case command doesn't finish
         raw_file.save()
 
         # Pass it back
