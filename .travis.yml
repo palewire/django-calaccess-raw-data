@@ -27,6 +27,12 @@ matrix:
     env: DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_postgresql.py'
   - python: "2.7"
     env: DJANGO_VERSION=2.0.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
+  - python: "3.7-dev"
+    env: DJANGO_VERSION=1.11.* DATABASE_SETTINGS='settings_test_mysql.py'
+  - python: "3.7-dev"
+    env: DJANGO_VERSION=1.11.* DATABASE_SETTINGS='settings_test_postgresql.py'
+  - python: "3.7-dev"
+    env: DJANGO_VERSION=1.11.* DATABASE_SETTINGS='settings_test_multi_dbs.py'
 
 install:
  - pip install -r requirements.txt
