@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='django-calaccess-raw-data',
-    version='1.7.0',
+    version='2.0.0',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
@@ -24,8 +24,8 @@ setup(
     author='California Civic Data Coalition',
     author_email='cacivicdata@gmail.com',
     install_requires=(
-        'django>=1.11',
-        'django-postgres-copy>=2.3.3',
+        'django>=1.9',
+        'django-postgres-copy>=2.3.5',
         'csvkit>=1.0',
         'requests',
         'clint',

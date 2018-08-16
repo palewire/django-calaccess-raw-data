@@ -2,3 +2,4 @@ include LICENSE
 include README.md
 include .github/CONTRIBUTING.md
 recursive-include calaccess_raw/templates *
+include calaccess_raw/annotations/*.csv
