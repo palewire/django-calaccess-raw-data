@@ -25,7 +25,7 @@ setup(
         'calaccess_raw.migrations',
         'calaccess_raw.management.commands',
         'calaccess_raw.models',
-        'calaccess_raw.annotations',
+        'calaccess_raw.annotations'
     ),
     include_package_data=True,
     zip_safe=False,
