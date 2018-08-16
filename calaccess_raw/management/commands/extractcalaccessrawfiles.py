@@ -102,9 +102,7 @@ class Command(CalAccessCommand):
         pattern = r'^.+\.TSV$'
 
         with zipfile.ZipFile(self.zip_path) as zf:
-            tsv_files = [
-                f for f in zf.namelist() if re.match(pattern, f)
-            ]
+            tsv_files = [f for f in zf.namelist() if re.match(pattern, f)]
 
             for f in tsv_files:
                 # extract

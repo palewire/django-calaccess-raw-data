@@ -28,6 +28,7 @@ latimes-calculate = "*"
 PyGithub = "*"
 twine = "*"
 datpy = "*"
+"psycopg2-binary" = "*"
 
 [dev-packages]
 

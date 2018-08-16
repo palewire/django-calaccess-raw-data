@@ -9,7 +9,6 @@ from __future__ import unicode_literals
 import os
 import csv
 import csvkit
-from io import StringIO
 from django.core.files import File
 
 # Django
@@ -55,11 +54,17 @@ class Command(CalAccessCommand):
         # Set all the config options
         self.set_options(options)
 
+        # If there are no rows, kill the file and finish
+        if not self.row_count:
+            self.log(" No data in %s" % self.file_name)
+            os.remove(self.tsv_path)
+            return
+
         # Get the tracking object from the database
         self.raw_file = self.get_file_obj()
 
         # Walk through the raw TSV file and create a clean CSV file
-        if self.verbosity > 2:
+        if self.verbosity > 1:
             self.log(" Cleaning %s" % self.file_name)
         self.clean()
 
@@ -88,6 +93,7 @@ class Command(CalAccessCommand):
         self.log_dir = os.path.join(self.data_dir, "log/")
         self.log_name = self.file_name.lower().replace("tsv", "errors.csv")
         self.error_log_path = os.path.join(self.log_dir, self.log_name)
+        self.log_rows = []
 
         # Make sure the log directory exists
         os.path.exists(self.log_dir) or os.makedirs(self.log_dir)
@@ -101,13 +107,19 @@ class Command(CalAccessCommand):
         self.headers = self.get_headers()
         self.headers_count = len(self.headers)
 
+        # Get the row count
+        self.row_count = sum(1 for line in open(self.tsv_path, "r"))
+
     def get_headers(self):
         """
         Returns the headers from the TSV file.
         """
-        with open(self.tsv_path, "rb") as tsv_file:
+        with open(self.tsv_path, "r") as tsv_file:
             tsv_reader = csvkit.reader(tsv_file, delimiter=str("\t"))
-            return next(tsv_reader)
+            try:
+                return next(tsv_reader)
+            except StopIteration:
+                return []
 
     def get_file_obj(self):
         """
@@ -143,125 +155,103 @@ class Command(CalAccessCommand):
         # reset the finish time for the clean
         raw_file.clean_finish_datetime = None
 
+        # Set the count fields
+        raw_file.download_columns_count = self.headers_count
+        raw_file.download_records_count = self.row_count - 1
+
         # save here in case command doesn't finish
         raw_file.save()
 
         # Pass it back
         return raw_file
 
+    def _convert_tsv(self):
+        """
+        Given it a raw list of rows from a TSV, yields cleaned rows for a CSV.
+        """
+        with open(self.tsv_path, 'rb') as tsv_file:
+            # Pop the headers out of the TSV file
+            next(tsv_file)
+
+            # Loop through all the rows
+            for tsv_line in tsv_file:
+                # Decode the line for testing
+                tsv_line = tsv_line.decode("ascii", "replace")
+
+                # If the line is empty skip it
+                if not tsv_line.strip():
+                    continue
+
+                # Fix any encoding bugs if we're in Python 2.
+                if six.PY2:
+                    tsv_line = tsv_line.replace('\ufffd', '?')
+
+                # Nuke any null bytes
+                if tsv_line.count('\x00'):
+                    tsv_line = tsv_line.replace('\x00', ' ')
+
+                # Nuke the ASCII "substitute character." chr(26) in Python
+                if tsv_line.count('\x1a'):
+                    tsv_line = tsv_line.replace('\x1a', '')
+
+                # Remove any extra newline chars
+                tsv_line = tsv_line.replace("\r\n", "").replace("\r", "").replace("\n", "")
+
+                # Split on tabs so we can later spit it back out as a CSV row
+                csv_line = tsv_line.split("\t")
+                csv_field_count = len(csv_line)
+
+                # If it matches the header count, yield it
+                if csv_field_count == self.headers_count:
+                    yield csv_line
+                else:
+                    # Otherwise log it
+                    self.log_rows.append([self.headers_count, csv_field_count, ','.join(csv_line)])
+
     def clean(self):
         """
         Cleans the provided source TSV file and writes it out in CSV format.
         """
-        # Up the CSV data limit
-        csv.field_size_limit(1000000000)
-
-        # Reader
-        tsv_file = open(self.tsv_path, 'rb')
-
-        # Writer
-        csv_file = open(self.csv_path, 'w')
-        csv_writer = csvkit.writer(csv_file)
-
-        # Write the headers
-        csv_writer.writerow(self.headers)
-        # Pop them out of the source file
-        next(tsv_file)
-
-        # Get ready to log errors
-        self.log_rows = []
-
-        # Loop through the rest of the rows
-        line_number = 1
-        for tsv_line in tsv_file:
-            line_number += 1
-            # Log empty lines, then skip
-            if (
-                tsv_line.decode("ascii", "replace") == '\n' or
-                tsv_line.decode("ascii", "replace") == '\r\n'
-            ):
-                if self.verbosity > 2:
-                    msg = '  Line {} is empty'.format(line_number)
-                    self.failure(msg)
-                continue
-
-            # Goofing around with the encoding while we're in there.
-            tsv_line = tsv_line.decode("ascii", "replace")
-            if six.PY2:
-                tsv_line = tsv_line.replace('\ufffd', '?')
-
-            # Nuke any null bytes
-            null_bytes = tsv_line.count('\x00')
-            if null_bytes:
-                tsv_line = tsv_line.replace('\x00', ' ')
-
-            # Nuke ASCII 26 char, the "substitute character"
-            # or chr(26) in python
-            sub_char = tsv_line.count('\x1a')
-            if sub_char:
-                tsv_line = tsv_line.replace('\x1a', '')
-
-            # Remove any extra newline chars
-            tsv_line = tsv_line.replace("\r\n", "").replace("\r", "").replace("\n", "")
-
-            # Split on tabs so we can later spit it back out as CSV
-            csv_field_list = tsv_line.split("\t")
-
-            # Check if our values line up with our headers
-            # and if not, see if CSVkit can sort out the problems
-            if not len(csv_field_list) == self.headers_count:
-                line_io = StringIO(tsv_line)
-                line_reader = csvkit.reader(line_io, delimiter=str('\t'))
-                csv_field_list = next(line_reader)
-
-                if not len(csv_field_list) == self.headers_count:
-                    if self.verbosity > 2:
-                        msg = '  Bad parse of line {} ({} headers, {} values)'
-                        self.failure(msg.format(line_number, self.headers_count, len(csv_field_list)))
-                    self.log_rows.append([
-                        line_number,
-                        self.headers_count,
-                        len(csv_field_list),
-                        ','.join(csv_field_list)
-                    ])
-                    continue
-
-            # Write out the row
-            csv_writer.writerow(csv_field_list)
+        # Create the output object
+        with open(self.csv_path, 'w') as csv_file:
+            # Create the CSV writer
+            csv_writer = csvkit.writer(csv_file)
+            # Write the headers
+            csv_writer.writerow(self.headers)
+            # Write out the rows
+            [csv_writer.writerow(row) for row in self._convert_tsv()]
 
         # Log errors if there are any
         if self.log_rows:
             # Log to the terminal
-            if self.verbosity > 1:
-                msg = '  %s errors logged (not including empty lines)'
-                self.failure(msg % (len(self.log_rows)))
+            if self.verbosity > 2:
+                msg = '  {} errors logged (not including empty lines)'
+                self.failure(msg.format(len(self.log_rows)))
+
             # Log to the file
             with open(self.error_log_path, 'w') as log_file:
                 log_writer = csvkit.writer(log_file, quoting=csv.QUOTE_ALL)
-                log_writer.writerow(['line', 'headers', 'fields', 'value'])
+                log_writer.writerow(['headers', 'fields', 'value'])
                 log_writer.writerows(self.log_rows)
 
         # Add counts to raw_file_record
-        self.raw_file.download_columns_count = self.headers_count
-        self.raw_file.download_records_count = line_number - 1
         self.raw_file.clean_columns_count = self.headers_count
-        self.raw_file.clean_records_count = line_number - 1 - len(self.log_rows)
         self.raw_file.error_count = len(self.log_rows)
-
-        # Shut it down
-        tsv_file.close()
-        csv_file.close()
+        self.raw_file.clean_records_count = self.raw_file.download_records_count - self.raw_file.error_count
 
         # Add file size to the raw_file_record
         self.raw_file.download_file_size = os.path.getsize(self.tsv_path) or 0
         self.raw_file.clean_file_size = os.path.getsize(self.csv_path) or 0
+
+        # Save it in case it crashes in the next step
+        self.raw_file.save()
 
     def archive(self):
         """
         Archive the file.
         """
         if self.verbosity > 2:
-            self.log(" Archiving {0}".format(os.path.basename(self.csv_path)))
+            self.log(" Archiving {}".format(os.path.basename(self.csv_path)))
 
         # Remove previous .CSV and error log files
         self.raw_file.clean_file_archive.delete()

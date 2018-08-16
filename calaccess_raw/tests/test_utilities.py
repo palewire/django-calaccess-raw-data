@@ -14,7 +14,7 @@ import calaccess_raw
 from calaccess_raw import models
 
 # Python misc.
-from datetime import datetimes
+from datetime import datetime
 
 # Logging
 import logging
