@@ -8,7 +8,6 @@ clint
 csvkit>=1.0
 
 # Databases
-mysqlclient
 psycopg2
 
 # Docs
@@ -33,6 +32,3 @@ PyGithub
 # Packaging
 wheel
 twine
-
-# DAT
-datpy

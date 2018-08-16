@@ -8,15 +8,11 @@ DATABASES = {
         'PORT': '5432'
     },
     'alt': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'calaccess_raw',
-        'USER': 'root',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'calaccess_raw_alt',
+        'USER': 'postgres',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3306',
-        'OPTIONS': {
-            'local_infile': 1,
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
+        'PORT': '5432'
     }
 }

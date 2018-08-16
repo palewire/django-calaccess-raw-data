@@ -28,10 +28,6 @@ class Command(CalAccessCommand):
     Load clean CAL-ACCESS CSV file into a database model.
     """
     help = 'Load clean CAL-ACCESS CSV file into a database model'
-    # Trick for reformating date strings in source data so that they can
-    # be gobbled up by MySQL. You'll see how below.
-    date_sql = "DATE_FORMAT(str_to_date(@`{}`, '%%c/%%e/%%Y'), '%%Y-%%m-%%d')"
-    datetime_sql = "DATE_FORMAT(str_to_date(@`{}`, '%%c/%%e/%%Y %%h:%%i:%%s %%p'), '%%Y-%%m-%%d  %%H:%%i:%%s')"
 
     def add_arguments(self, parser):
         """
@@ -167,9 +163,7 @@ class Command(CalAccessCommand):
         self.cursor = self.connection.cursor()
 
         # check the kind of database before calling db-specific load method
-        if engine == 'django.db.backends.mysql':
-            self.load_mysql()
-        elif engine in (
+        if engine in (
             'django.db.backends.postgresql_psycopg2',
             'django.db.backends.postgresql',
             'django.contrib.gis.db.backends.postgis'
@@ -177,63 +171,7 @@ class Command(CalAccessCommand):
             self.load_postgresql()
         else:
             self.failure("Sorry your database engine is unsupported")
-            raise CommandError("Only MySQL and PostgresSQL backends supported.")
-
-    def load_mysql(self):
-        """
-        Load the file into a MySQL database using LOAD DATA INFILE.
-        """
-        import warnings
-        import MySQLdb
-        warnings.filterwarnings("ignore", category=MySQLdb.Warning)
-
-        # Flush the target model
-        self.cursor.execute('TRUNCATE TABLE {}'.format(self.model._meta.db_table))
-
-        # Build the MySQL LOAD DATA INFILE command
-        bulk_sql_load_part_1 = """
-            LOAD DATA LOCAL INFILE '{}'
-            INTO TABLE {}
-            FIELDS TERMINATED BY ','
-            OPTIONALLY ENCLOSED BY '"'
-            LINES TERMINATED BY '\\n'
-            IGNORE 1 LINES
-            (
-        """.format(self.csv, self.model._meta.db_table)
-
-        header_sql_list = []
-        field_types = dict(
-            (f.db_column, f.db_type(self.connection)) for f in self.model._meta.fields
-        )
-        date_set_list = []
-        char_set_list = []
-
-        for h in self.csv_headers:
-            # Pull the data type of the field
-            data_type = field_types[h]
-            # If it is a date field, we need to reformat the data
-            # so that MySQL will properly parse it on the way in.
-            if data_type == 'date':
-                header_sql_list.append('@`{}`'.format(h))
-                date_set = "`{}` =  {}".format(h, self.date_sql.format(h))
-                date_set_list.append(date_set)
-            elif data_type == 'datetime':
-                header_sql_list.append('@`{}`'.format(h))
-                date_set = "`{}` =  {}".format(h, self.datetime_sql.format(h))
-                date_set_list.append(date_set)
-            elif 'char' in data_type:
-                header_sql_list.append('@`{}`'.format(h))
-                date_set = r"`` = TRIM(TRAILING '\n' FROM @`{0}`)".format(h)
-                char_set_list.append(date_set)
-            else:
-                header_sql_list.append('`{}`'.format(h))
-
-        bulk_sql_load = bulk_sql_load_part_1 + ','.join(header_sql_list) + ')'
-        if date_set_list or char_set_list:
-            bulk_sql_load += " set {}".format(",".join(date_set_list + char_set_list))
-
-        # Run the query
-        self.cursor.execute(bulk_sql_load)
+            raise CommandError("Only PostgresSQL backends supported.")
 
     def load_postgresql(self):
         """

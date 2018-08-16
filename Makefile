@@ -1,7 +1,6 @@
 .PHONY: bootstrap docs load rs sh ship test
 
 bootstrap:
-	mysqladmin -h localhost -u root -p create calaccess_raw
 	python example/manage.py makemigrations calaccess_raw
 	python example/manage.py migrate
 	python example/manage.py update
