@@ -57,6 +57,12 @@ class RawDataVersionQuerySet(models.QuerySet):
         """
         return self.filter(download_start_datetime__isnull=False).latest('download_start_datetime')
 
+    def latest_extract(self):
+        """
+        Returns the most recently extracted download.
+        """
+        return self.filter(extract_start_datetime__isnull=False).latest('extract_start_datetime')
+
     def complete(self):
         """
         Filters down QuerySet to return only version that have a complete update.
@@ -79,6 +85,12 @@ class RawDataVersionManager(models.Manager):
         Returns the most recently completed download.
         """
         return self.get_queryset().latest_download()
+
+    def latest_extract(self):
+        """
+        Returns the most recently extracted download.
+        """
+        return self.get_queryset().latest_extract()
 
     def complete(self):
         """

@@ -47,24 +47,21 @@ class Command(CalAccessCommand):
         """
         super(Command, self).handle(*args, **options)
 
-        # get most recently downloaded RawDataVersion
+        # Get the most recently downloaded RawDataVersion
         try:
             self.version = RawDataVersion.objects.latest_download()
         except RawDataVersion.DoesNotExist:
             raise CommandError('No record of a downloaded zip (run `python manage.py downloadcalaccessrawdata`).')
 
-        # raise exception if extract step did not finish
+        # Raise exception if extract step did not finish
         if not self.version.download_completed:
-            raise CommandError(
-                'Previous download did not finish '
-                '(run `python manage.py downloadcalaccessrawdata`).'
-            )
+            raise CommandError('Previous download did not finish (run `python manage.py downloadcalaccessrawdata`).')
 
-        # store extraction start time
+        # Store extraction start time
         self.version.extract_start_datetime = now()
-        # and reset the finish time
+        # Reset the finish time
         self.version.extract_finish_datetime = None
-        # save here in case the command doesn't finish
+        # Save in case the command doesn't finish
         self.version.save()
 
         self.header("Extracting raw data files")

@@ -127,21 +127,13 @@ class Command(CalAccessCommand):
         """
         # get most recently extracted RawDataVersion
         try:
-            version = RawDataVersion.objects.filter(
-                extract_start_datetime__isnull=False
-            ).latest('extract_start_datetime')
+            version = RawDataVersion.objects.latest_extract()
         except RawDataVersion.DoesNotExist:
-            raise CommandError(
-                'No record of extracting files from download zip '
-                '(run `python manage.py extractcalaccessrawfiles`).'
-            )
+            raise CommandError('No record of extracting zip (run `python manage.py extractcalaccessrawfiles`).')
 
         # raise exception if extract step did not finish
         if not version.extract_completed:
-            raise CommandError(
-                'Previous extraction files from download zip did not finish '
-                '(run `python manage.py extractcalaccessrawfiles`).'
-            )
+            raise CommandError('Previous extraction did not finish (run `python manage.py extractcalaccessrawfiles`).')
 
         # get the raw file record
         raw_file = RawDataFile.objects.get(
