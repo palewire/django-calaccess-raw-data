@@ -13,7 +13,7 @@ import os
 import warnings
 import requests_mock
 from requests import HTTPError
-from django.test import TestCase
+from django.test import TransactionTestCase
 from django.test.utils import override_settings
 
 # Times
@@ -32,13 +32,11 @@ logger = logging.getLogger(__name__)
 
 
 @override_settings(
-    CALACCESS_DATA_DIR=os.path.join(settings.BASE_DIR, 'test-data')
+    CALACCESS_DATA_DIR=os.path.join(settings.BASE_DIR, 'test-data'),
+    MEDIA_ROOT=os.path.join(settings.BASE_DIR, 'test-data', '.media'),
+    CALACCESS_STORE_ARCHIVE=True
 )
-@override_settings(
-    MEDIA_ROOT=os.path.join(settings.BASE_DIR, 'test-data', '.media')
-)
-@override_settings(CALACCESS_STORE_ARCHIVE=True)
-class CommandTestCase(TestCase):
+class CommandTestCase(TransactionTestCase):
     """
     Tests the management commands that interact with the database.
     """
@@ -98,7 +96,7 @@ class CommandTestCase(TestCase):
             self.assertEqual(m.objects.get_csv_path(), m().get_csv_path())
 
 
-class DifferentFileSizesTestCase(TestCase):
+class DifferentFileSizesTestCase(TransactionTestCase):
     """
     Test case when file size on CAL-ACCESS server and latest RawDataVersion differ.
 
@@ -107,7 +105,7 @@ class DifferentFileSizesTestCase(TestCase):
     """
     fixtures = ['raw_data_versions.json']
 
-    def test(self):
+    def test_command(self):
         """Confirm that an existing RawDataVersion is returned."""
         version, created = CalAccessCommand().get_or_create_version(
             805713743,
@@ -117,7 +115,7 @@ class DifferentFileSizesTestCase(TestCase):
         self.assertTrue(created)
 
 
-class DifferentReleaseDatetimesTestCase(TestCase):
+class DifferentReleaseDatetimesTestCase(TransactionTestCase):
     """
     Test case when release datetimes on CAL-ACCESS server and latest RawDataVersion differ.
 
@@ -126,7 +124,7 @@ class DifferentReleaseDatetimesTestCase(TestCase):
     """
     fixtures = ['raw_data_versions.json']
 
-    def test(self):
+    def test_command(self):
         """Confirm that a new RawDataVersion is created."""
         version, created = CalAccessCommand().get_or_create_version(
             805713742,
@@ -136,7 +134,7 @@ class DifferentReleaseDatetimesTestCase(TestCase):
         self.assertTrue(created)
 
 
-class SimilarReleaseDatetimesTestCase(TestCase):
+class SimilarReleaseDatetimesTestCase(TransactionTestCase):
     """
     Test case when release datetimes on CAL-ACCESS server and latest RawDataVersion are similar.
 
@@ -144,7 +142,7 @@ class SimilarReleaseDatetimesTestCase(TestCase):
     """
     fixtures = ['raw_data_versions.json']
 
-    def test(self):
+    def test_command(self):
         """Confirm that an existing RawDataVersion is returned."""
         version, created = CalAccessCommand().get_or_create_version(
             805713742,
