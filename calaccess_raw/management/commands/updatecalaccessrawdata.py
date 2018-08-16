@@ -300,7 +300,7 @@ class Command(CalAccessCommand):
                 "downloadcalaccessrawdata",
                 verbosity=self.verbosity,
                 noinput=True,
-                restart=self.force_restart,
+                restart=self.force_restart
             )
         except CommandError as e:
             # if the expected and actual zip size are not the same
@@ -334,9 +334,7 @@ class Command(CalAccessCommand):
             # get finished clean command logs of last update
             prev_cleaned = [
                 x.file_name + '.TSV'
-                for x in self.version.files.filter(
-                    clean_finish_datetime__isnull=False
-                )
+                for x in self.version.files.filter(clean_finish_datetime__isnull=False)
             ]
             self.log("{} files already cleaned.".format(len(prev_cleaned)))
             # remove these from tsv_list
@@ -410,17 +408,13 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.header("Loading data files")
 
-        model_list = [
-            x for x in get_model_list() if os.path.exists(x.objects.get_csv_path())
-        ]
+        model_list = [x for x in get_model_list() if os.path.exists(x.objects.get_csv_path())]
 
         if self.resume:
             # get finished load command logs of last update
             prev_loaded = [
                 x.file_name
-                for x in self.version.files.filter(
-                    load_finish_datetime__isnull=False
-                )
+                for x in self.version.files.filter(load_finish_datetime__isnull=False)
             ]
             self.log("{} models already loaded.".format(len(prev_loaded)))
             # remove these from model_list

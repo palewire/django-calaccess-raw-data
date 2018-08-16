@@ -248,10 +248,7 @@ class Command(CalAccessCommand):
         # Open up the .CSV file so we can wrap it in the Django File obj
         with open(self.csv_path, 'rb') as csv_file:
             # Save the .CSV on the raw data file
-            self.raw_file.clean_file_archive.save(
-                self.file_name.lower().replace("tsv", "csv"),
-                File(csv_file),
-            )
+            self.raw_file.clean_file_archive.save(self.csv_name, File(csv_file))
         # if there are any errors, archive the log too
         if self.log_rows:
             error_log_name = os.path.basename(self.error_log_path)

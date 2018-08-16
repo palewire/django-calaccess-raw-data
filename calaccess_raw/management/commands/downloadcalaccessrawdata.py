@@ -282,7 +282,7 @@ class Command(CalAccessCommand):
         Save a copy of the download zip file and each file inside.
         """
         if self.verbosity:
-            self.log(" Archiving {0}".format(os.path.basename(self.zip_path)))
+            self.log(" Archiving {}".format(os.path.basename(self.zip_path)))
         # Remove previous zip file
         self.version.download_zip_archive.delete()
         # Store the actual download zip file size

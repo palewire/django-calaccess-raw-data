@@ -81,6 +81,7 @@ class Command(CalAccessCommand):
 
         # store extraction finish time
         self.version.extract_finish_datetime = now()
+
         # and save the RawDataVersion
         self.version.save()
 
@@ -90,12 +91,9 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             self.log(" Extracting .TSV files")
-
         pattern = r'^.+\.TSV$'
-
         with zipfile.ZipFile(self.zip_path) as zf:
             tsv_files = [f for f in zf.namelist() if re.match(pattern, f)]
-
             for f in tsv_files:
                 # extract
                 extracted_path = zf.extract(f, self.download_dir)
@@ -107,7 +105,6 @@ class Command(CalAccessCommand):
                 )
                 # track
                 self.track_file(file_name)
-        return
 
     def track_file(self, file_name):
         """
@@ -115,7 +112,7 @@ class Command(CalAccessCommand):
         """
         raw_file, created = RawDataFile.objects.get_or_create(
             version=self.version,
-            file_name=file_name.replace('.TSV', ''),
+            file_name=file_name.replace('.TSV', '')
         )
         # if raw file was already there, clear out timestamp fields
         if not created:
@@ -124,7 +121,6 @@ class Command(CalAccessCommand):
             raw_file.load_start_datetime = None
             raw_file.load_finish_datetime = None
             raw_file.save()
-        return
 
     def archive(self):
         """
@@ -133,7 +129,7 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.log(" Archiving original files")
         if self.verbosity > 2:
-            self.log(" Archiving {0}".format(os.path.basename(self.zip_path)))
+            self.log(" Archiving {}".format(os.path.basename(self.zip_path)))
 
         for raw_file in self.version.files.all():
             if self.verbosity > 2:
