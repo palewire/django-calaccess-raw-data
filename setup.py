@@ -1,11 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import os
 from setuptools import setup
 
+def read(fname):
+    with open(os.path.join(os.path.dirname(__file__), fname)) as f:
+        return f.read()
 
 setup(
     name='django-calaccess-raw-data',
     version='2.0.0',
+    author='California Civic Data Coalition',
+    author_email='cacivicdata@gmail.com',
+    url='http://django-calaccess.californiacivicdata.org/',
+    description=("A Django app to download, extract and load campaign "
+                "finance and lobbying activity data from the California "
+                "Secretary of State's CAL-ACCESS database"),
+    long_description=read('README.rst'),
+    license='MIT',
     packages=(
         'calaccess_raw',
         'calaccess_raw.admin',
@@ -16,13 +28,7 @@ setup(
         'calaccess_raw.annotations',
     ),
     include_package_data=True,
-    license='MIT',
-    description="A Django app to download, extract and load campaign "
-                "finance and lobbying activity data from the California "
-                "Secretary of State\'s CAL-ACCESS database",
-    url='http://django-calaccess.californiacivicdata.org/',
-    author='California Civic Data Coalition',
-    author_email='cacivicdata@gmail.com',
+    zip_safe=False,
     install_requires=(
         'django>=1.9',
         'django-postgres-copy>=2.3.5',
@@ -30,10 +36,12 @@ setup(
         'requests',
         'clint',
         'hurry.filesize',
-        'pytz',
+        'pytz'
     ),
     classifiers=(
         'Development Status :: 5 - Production/Stable',
+        'Operating System :: OS Independent',
+        'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
@@ -45,6 +53,14 @@ setup(
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: MIT License'
     ),
+    project_urls={
+        'Project': 'https://www.californiacivicdata.org/',
+        'Documentation': 'http://django-calaccess.californiacivicdata.org',
+        'Funding': 'https://www.californiacivicdata.org/about/',
+        'Source': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data',
+        'Coverage': 'https://coveralls.io/github/california-civic-data-coalition/django-calaccess-raw-data?branch=master',
+        'Tracker': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues'
+    },
 )
