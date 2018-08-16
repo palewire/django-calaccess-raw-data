@@ -4,14 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Django = "==1.11.*"
-django-postgres-copy = ">=2.3.2"
+Django = "==2.1.*"
+django-postgres-copy = ">=2.3.5"
 "hurry.filesize" = "*"
+"psycopg2-binary" = "*"
 pytz = "*"
 requests = "*"
 clint = "*"
 csvkit = ">=1.0"
-"psycopg2" = "*"
+
+[dev-packages]
 Sphinx = "*"
 sphinx_rtd_theme = "*"
 sphinx-autobuild = "*"
@@ -23,13 +25,8 @@ pydocstyle = "*"
 coverage = "*"
 python-coveralls = "*"
 requests-mock = "*"
-latimes-calculate = "*"
 PyGithub = "*"
 twine = "*"
-datpy = "*"
-"psycopg2-binary" = "*"
-
-[dev-packages]
 
 [requires]
 python_version = "3.6"
