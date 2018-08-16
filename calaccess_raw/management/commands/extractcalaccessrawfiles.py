@@ -49,14 +49,9 @@ class Command(CalAccessCommand):
 
         # get most recently downloaded RawDataVersion
         try:
-            self.version = RawDataVersion.objects.filter(
-                download_start_datetime__isnull=False
-            ).latest('download_start_datetime')
+            self.version = RawDataVersion.objects.latest_download()
         except RawDataVersion.DoesNotExist:
-            raise CommandError(
-                'No record of download CAL-ACCESS zip file '
-                '(run `python manage.py downloadcalaccessrawdata`).'
-            )
+            raise CommandError('No record of a downloaded zip (run `python manage.py downloadcalaccessrawdata`).')
 
         # raise exception if extract step did not finish
         if not self.version.download_completed:

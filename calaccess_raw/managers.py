@@ -51,6 +51,12 @@ class RawDataVersionQuerySet(models.QuerySet):
     """
     Custom methods for working with a RawDataVersion QuerySet.
     """
+    def latest_download(self):
+        """
+        Returns the most recently completed download.
+        """
+        return self.filter(download_start_datetime__isnull=False).latest('download_start_datetime')
+
     def complete(self):
         """
         Filters down QuerySet to return only version that have a complete update.
@@ -67,6 +73,12 @@ class RawDataVersionManager(models.Manager):
         Returns the custom QuerySet we want for this manager.
         """
         return RawDataVersionQuerySet(self.model, using=self._db)
+
+    def latest_download(self):
+        """
+        Returns the most recently completed download.
+        """
+        return self.get_queryset().latest_download()
 
     def complete(self):
         """
