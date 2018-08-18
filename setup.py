@@ -31,7 +31,7 @@ setup(
     zip_safe=False,
     install_requires=(
         'django>=1.9',
-        'django-postgres-copy>=2.3.5',
+        'django-postgres-copy>=2.3.7',
         'csvkit>=1.0',
         'requests',
         'clint',
