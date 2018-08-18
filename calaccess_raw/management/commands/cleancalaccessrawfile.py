@@ -104,7 +104,8 @@ class Command(CalAccessCommand):
         self.headers_count = len(self.headers)
 
         # Get the row count
-        self.row_count = sum(1 for line in open(self.tsv_path, "r"))
+        with open(self.tsv_path, "r") as tsv_file:
+            self.row_count = sum(1 for line in tsv_file)
 
     def get_headers(self):
         """
