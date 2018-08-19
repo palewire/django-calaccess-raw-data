@@ -110,11 +110,8 @@ class Command(CalAccessCommand):
 
         # Get the headers from the source CSV
         with open(self.csv, 'r') as infile:
-            try:
-                csv_reader = reader(infile)
-                self.csv_headers = next(csv_reader)
-            except StopIteration:
-                self.csv_headers = []
+            csv_reader = reader(infile)
+            self.csv_headers = next(csv_reader)
 
         # store the start time for the load
         raw_file.load_start_datetime = now()
