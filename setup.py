@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='django-calaccess-raw-data',
-    version='2.0.1',
+    version='2.0.2',
     author='California Civic Data Coalition',
     author_email='cacivicdata@gmail.com',
     url='http://django-calaccess.californiacivicdata.org/',
