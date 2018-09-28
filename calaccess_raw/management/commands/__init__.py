@@ -25,7 +25,7 @@ class CalAccessCommand(BaseCommand):
     """
     Base management command that provides common functionality for the other commands in this app.
     """
-    url = 'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
+    url = 'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
 
     def handle(self, *args, **options):
         """
