@@ -66,12 +66,12 @@ class CommandTestCase(TransactionTestCase):
         }
         m.register_uri(
             'HEAD',
-            'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
+            'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
             headers=headers,
         )
         m.register_uri(
             'GET',
-            'http://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
+            'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
             headers=headers,
             content=io.open(test_zip_path, mode='rb').read(),
         )
