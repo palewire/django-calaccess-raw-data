@@ -2277,7 +2277,7 @@ original filing and 1 to 999 amendments.",
     sig_naml = fields.CharField(
         verbose_name='last name',
         db_column='SIG_NAML',
-        max_length=56,
+        max_length=500,
         blank=True,
         help_text='last name of the signer',
     )
