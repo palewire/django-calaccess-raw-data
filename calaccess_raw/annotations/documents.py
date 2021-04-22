@@ -88,8 +88,8 @@ class DocumentCloud(object):
         """
         if self.start_page:
             canonical_url = (
-                self.metadata['canonical_url'] +
-                '#document/p{}'.format(self.start_page)
+                self.metadata['canonical_url']
+                + '#document/p{}'.format(self.start_page)
             )
         else:
             canonical_url = self.metadata['canonical_url']

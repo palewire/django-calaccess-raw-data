@@ -107,9 +107,9 @@ class Command(CalAccessCommand):
 
         # if download is stalled, zip file is there, and user did not invoke restart
         if (
-            self.version.download_stalled and
-            os.path.exists(self.zip_path) and
-            not options['restart']
+            self.version.download_stalled
+            and os.path.exists(self.zip_path)
+            and not options['restart']
         ):
             # enable resuming
             self.resume = True

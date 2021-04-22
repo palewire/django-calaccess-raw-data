@@ -117,14 +117,14 @@ class Command(CalAccessCommand):
                 )
                 # if the previous version finished downloading and didn't finish updating
                 if (
-                    previous_version.download_completed and
-                    not previous_version.update_completed
+                    previous_version.download_completed
+                    and not previous_version.update_completed
                 ):
                     # can resume if zip file has not been deleted
                     #   or if the raw files have been extracted
                     if (
-                        os.path.exists(self.zip_path) or
-                        previous_version.extract_completed
+                        os.path.exists(self.zip_path)
+                        or previous_version.extract_completed
                     ):
                         can_resume_previous = True
 
@@ -183,9 +183,9 @@ class Command(CalAccessCommand):
         # or no new version is available
         self.force_restart = (
             (
-                latest_version.update_stalled or
-                can_resume_previous or
-                not created
+                latest_version.update_stalled
+                or can_resume_previous
+                or not created
             ) and not self.resume
         )
 
@@ -305,9 +305,9 @@ class Command(CalAccessCommand):
         except CommandError as e:
             # if the expected and actual zip size are not the same
             if (
-                'expected' in e.message.lower() or
-                'modified' in e.message.lower() or
-                'version' in e.message.lower()
+                'expected' in e.message.lower()
+                or 'modified' in e.message.lower()
+                or 'version' in e.message.lower()
             ):
                 logger.debug('Waiting five minutes before re-trying')
                 # wait five minutes

@@ -281,10 +281,10 @@ class DocumentationTestCase(TestCase):
         for m in model_list:
             for f in m._meta.fields:
                 if (
-                    any(x in f.name for x in choice_field_strs) and
-                    f.name != 'memo_code' and
-                    f.__class__ is not ForeignKeyField and
-                    '{}.{}'.format(m().klass_name, f.name) not in exceptions
+                    any(x in f.name for x in choice_field_strs)
+                    and f.name != 'memo_code'
+                    and f.__class__ is not ForeignKeyField
+                    and '{}.{}'.format(m().klass_name, f.name) not in exceptions
                 ):
                     if not f.choices:
                         results.append((

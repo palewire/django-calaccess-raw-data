@@ -85,7 +85,7 @@ class CommandTestCase(TransactionTestCase):
         try:
             CalAccessCommand().get_download_metadata()
         except HTTPError as e:
-            warnings.warn("Could not verify download metadata: %s".format(e))
+            warnings.warn(f"Could not verify download metadata: {e}")
 
     def test_csv_gettrs(self):
         """
