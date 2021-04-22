@@ -7,6 +7,9 @@ jobs:
   tests:
     name: "Tests"
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        settings: ['postgresql', 'multi_dbs']
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
@@ -33,7 +36,7 @@ jobs:
 
       - name: Test
         run: |
-          cp example/settings_test_postgresql.py.template example/settings_local.py
+          cp example/settings_test_${{ matrix.settings }}.py.template example/settings_local.py
           pipenv run flake8 calaccess_raw
           pipenv run coverage run example/manage.py test calaccess_raw
           pipenv run coverage report -m
