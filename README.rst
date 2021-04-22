@@ -3,7 +3,7 @@ A Django app to download, extract and load campaign finance and lobbying activit
 |Build Status| |PyPI version| |Documentation Status|
 
 -  Documentation:
-   `django-calaccess.californiacivicdata.org <http://django-calaccess.californiacivicdata.org>`__
+   `django-calaccess.californiacivicdata.org <https://django-calaccess.californiacivicdata.org/en/latest/>`__
 -  Issues:
    `github.com/california-civic-data-coalition/django-calaccess-raw-data/issues <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues>`__
 -  Packaging:

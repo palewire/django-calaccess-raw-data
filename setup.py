@@ -53,7 +53,7 @@ setup(
     ),
     project_urls={
         'Project': 'https://www.californiacivicdata.org/',
-        'Documentation': 'http://django-calaccess.californiacivicdata.org',
+        'Documentation': 'https://django-calaccess.californiacivicdata.org/',
         'Funding': 'https://www.californiacivicdata.org/about/',
         'Source': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data',
         'Testing': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/workflows/tests.yaml',
