@@ -68,7 +68,7 @@ class DocumentCloud(object):
         """
         if not os.path.exists(self.metadata_filename):
             self._cache_metadata()
-        with open(self.metadata_filename) as f:
+        with open(self.metadata_filename, 'r') as f:
             self._metadata = json.loads(f.read())
         return self._metadata
 

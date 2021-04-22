@@ -10,7 +10,6 @@ import csvkit
 from django.core.files import File
 
 # Django
-from django.utils import six
 from django.conf import settings
 from django.utils.timezone import now
 
@@ -168,10 +167,6 @@ class Command(CalAccessCommand):
                 # If the line is empty skip it
                 if not tsv_line.strip():
                     continue
-
-                # Fix any encoding bugs if we're in Python 2.
-                if six.PY2:
-                    tsv_line = tsv_line.replace('\ufffd', '?')
 
                 # Nuke any null bytes
                 if tsv_line.count('\x00'):

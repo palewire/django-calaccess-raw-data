@@ -13,7 +13,6 @@ from re import sub
 from email.utils import parsedate_tz, mktime_tz
 from datetime import datetime
 from django.utils import timezone
-from django.utils.six.moves import input
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
 from calaccess_raw import get_data_directory

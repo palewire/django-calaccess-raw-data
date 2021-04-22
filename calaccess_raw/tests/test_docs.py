@@ -301,7 +301,7 @@ class DocumentationTestCase(TestCase):
                         ))
 
                     # Pull out all the choices in that field
-                    for slug, name in f.choices:
+                    for slug, name in f.flatchoices:
                         # Make sure that each has a definition
                         if not name or name == '':
                             results.append((
