@@ -86,6 +86,7 @@ class DocumentCloud(object):
         """
         Returns the slug of the document.
         """
+        print(self.metadata)
         self._slug = self.metadata['slug']
         return self._slug
 

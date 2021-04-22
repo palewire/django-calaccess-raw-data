@@ -19,8 +19,8 @@ class BallotMeasuresCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = "FILER_ID"
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=7),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=19),
+        DocumentCloud(id='2711614', start_page=7),
+        DocumentCloud(id='2711614', start_page=19),
     ]
     election_date = fields.DateField(
         db_column='ELECTION_DATE',
@@ -83,11 +83,11 @@ class CvrF470Cd(CalAccessBaseModel):
         "FORM_TYPE",
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=30, end_page=32),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=15, end_page=16),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=29, end_page=30),
+        DocumentCloud(id='2711614', start_page=8),
+        DocumentCloud(id='2711614', start_page=30, end_page=32),
+        DocumentCloud(id='2711616', start_page=15, end_page=16),
+        DocumentCloud(id='2712033', start_page=22),
+        DocumentCloud(id='2712034', start_page=29, end_page=30),
     ]
     FILING_FORMS = [
         annotations.get_form('F470'),
@@ -172,8 +172,8 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="The filer's entity code. The value of this column will always be "
                   "Candidate/Office Holder (CAO) for this table.",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29)
+            DocumentCloud(id='2712033', start_page=22),
+            DocumentCloud(id='2712034', start_page=29)
         ]
     )
     filer_id = fields.CharField(
@@ -220,8 +220,8 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="Type of Filing or Formset. The value of this column will always "
                   "be equal to F470.",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+            DocumentCloud(id='2712033', start_page=22),
+            DocumentCloud(id='2712034', start_page=29),
         ]
     )
     JURIS_CD_CHOICES = annotations.sort_choices(annotations.choices.JURIS_CODES)
@@ -232,8 +232,8 @@ class CvrF470Cd(CalAccessBaseModel):
         max_length=3,
         help_text="Office Jurisdiction Code",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+            DocumentCloud(id='2712033', start_page=22),
+            DocumentCloud(id='2712034', start_page=29),
         ]
     )
     juris_dscr = fields.CharField(
@@ -251,8 +251,8 @@ class CvrF470Cd(CalAccessBaseModel):
         max_length=1,
         help_text='Office Sought/Held code. Legal values are "S" for sought and "H" for held.',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=30),
+            DocumentCloud(id='2712033', start_page=22),
+            DocumentCloud(id='2712034', start_page=30),
         ]
     )
     offic_dscr = fields.CharField(
@@ -270,8 +270,8 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="Code that identifies the office being sought. See the CAL document for "
                   "a list of valid codes.",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+            DocumentCloud(id='2712033', start_page=22),
+            DocumentCloud(id='2712034', start_page=29),
         ]
     )
     REC_TYPE_CHOICES = (
@@ -284,8 +284,8 @@ class CvrF470Cd(CalAccessBaseModel):
         max_length=3,
         help_text="Type of CAL record. This column will always contain CVR.",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=22),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=29),
+            DocumentCloud(id='2712033', start_page=22),
+            DocumentCloud(id='2712034', start_page=29),
         ]
     )
     report_num = fields.CharField(
@@ -324,8 +324,8 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         "PERIOD_ID",
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=71),
+        DocumentCloud(id='2711614', start_page=8),
+        DocumentCloud(id='2711614', start_page=71),
     ]
     ELECTION_TYPE_CHOICES = (
         (0, 'N/A'),
@@ -342,7 +342,7 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         choices=ELECTION_TYPE_CHOICES,
         help_text="Election type",
         documentcloud_pages=[
-            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=3, end_page=4),
+            DocumentCloud(id='2774529', start_page=3, end_page=4),
         ],
     )
     filer_type = fields.ForeignKeyField(
@@ -389,8 +389,8 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=10),
-        DocumentCloud(id="2711614-CalAccessTablesWeb", start_page=92, end_page=93),
+        DocumentCloud(id="2711614", start_page=10),
+        DocumentCloud(id="2711614", start_page=92, end_page=93),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -470,8 +470,8 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         help_text="Filer's unique identification number",
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10, end_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=93, end_page=94),
+        DocumentCloud(id='2711614', start_page=10, end_page=11),
+        DocumentCloud(id='2711614', start_page=93, end_page=94),
     ]
     filing_period_start_dt = fields.DateField(
         null=True,
@@ -537,8 +537,8 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=94),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=94),
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -612,8 +612,8 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=94, end_page=95),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=94, end_page=95),
     ]
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
@@ -674,8 +674,8 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=95),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=95),
     ]
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
@@ -736,8 +736,8 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=97, end_page=98),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=97, end_page=98),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -799,7 +799,7 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
         verbose_name="interest code",
         help_text='Interest Code',
         documentcloud_pages=[
-            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+            DocumentCloud(id='2774529', start_page=19),
         ],
     )
     interest_name = fields.CharField(
@@ -897,8 +897,8 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=98, end_page=99),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=98, end_page=99),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -960,7 +960,7 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         verbose_name="interest code",
         help_text='Interest Code',
         documentcloud_pages=[
-            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+            DocumentCloud(id='2774529', start_page=19),
         ],
     )
     interest_name = fields.CharField(
@@ -1057,8 +1057,8 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=99),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=99),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -1120,7 +1120,7 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         verbose_name="interest code",
         help_text='Interest Code',
         documentcloud_pages=[
-            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+            DocumentCloud(id='2774529', start_page=19),
         ],
     )
     interest_name = fields.CharField(
@@ -1217,8 +1217,8 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=95, end_page=96),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=95, end_page=96),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -1276,8 +1276,8 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=96),
     ]
     employer_id = fields.IntegerField(
         db_column='EMPLOYER_ID',
@@ -1336,8 +1336,8 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=96, end_page=97),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=96, end_page=97),
     ]
     contributor_id = fields.IntegerField(
         db_column="CONTRIBUTOR_ID",
@@ -1384,7 +1384,7 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
         verbose_name='interest code',
         help_text='Interest Code',
         documentcloud_pages=[
-            DocumentCloud(id='2774529-Lookup-Codes-Cd', start_page=19),
+            DocumentCloud(id='2774529', start_page=19),
         ],
     )
     interest_name = fields.CharField(
@@ -1494,8 +1494,8 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         help_text="Identification number of the firm, employer or coalition"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=103, end_page=104),
+        DocumentCloud(id='2711614', start_page=12),
+        DocumentCloud(id='2711614', start_page=103, end_page=104),
     ]
     session_id = fields.IntegerField(
         verbose_name='session ID',
@@ -1608,8 +1608,8 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=104),
+        DocumentCloud(id='2711614', start_page=12),
+        DocumentCloud(id='2711614', start_page=104),
     ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
@@ -1727,8 +1727,8 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=105),
+        DocumentCloud(id='2711614', start_page=12),
+        DocumentCloud(id='2711614', start_page=105),
     ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
@@ -1846,8 +1846,8 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=100),
+        DocumentCloud(id='2711614', start_page=11),
+        DocumentCloud(id='2711614', start_page=100),
     ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
@@ -1933,8 +1933,8 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=11, end_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=100, end_page=101),
+        DocumentCloud(id='2711614', start_page=11, end_page=12),
+        DocumentCloud(id='2711614', start_page=100, end_page=101),
     ]
     firm_id = fields.IntegerField(
         db_column='FIRM_ID',
@@ -2021,8 +2021,8 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
     UNIQUE_KEY = (
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=101, end_page=102),
+        DocumentCloud(id='2711614', start_page=12),
+        DocumentCloud(id='2711614', start_page=101, end_page=102),
     ]
     contributor_id = fields.IntegerField(
         db_column="CONTRIBUTOR_ID",
@@ -2125,8 +2125,8 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=102),
+        DocumentCloud(id='2711614', start_page=12),
+        DocumentCloud(id='2711614', start_page=102),
     ]
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
@@ -2186,8 +2186,8 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     """
     UNIQUE_KEY = False
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=12),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=102, end_page=103),
+        DocumentCloud(id='2711614', start_page=12),
+        DocumentCloud(id='2711614', start_page=102, end_page=103),
     ]
     lobbyist_id = fields.IntegerField(
         db_column='LOBBYIST_ID',
@@ -2242,7 +2242,7 @@ class EfsFilingLogCd(CalAccessBaseModel):
     )
     DOCUMENTCLOUD_PAGES = [
         DocumentCloud(id='2711624-Overview', start_page=1, end_page=2),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=49, end_page=50),
+        DocumentCloud(id='2711614', start_page=49, end_page=50),
     ]
     FILING_FORMS = [
         annotations.get_form('F400'),

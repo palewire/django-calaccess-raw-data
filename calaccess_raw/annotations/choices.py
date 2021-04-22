@@ -25,17 +25,17 @@ from .documents import DocumentCloud
 
 DOCS = {
     'entity_codes': [
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=8, end_page=9),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=9, end_page=11),
+        DocumentCloud(id='2712033', start_page=8, end_page=9),
+        DocumentCloud(id='2712034', start_page=9, end_page=11),
     ],
     'expense_codes': [
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=11),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=13, end_page=14),
+        DocumentCloud(id='2712033', start_page=11),
+        DocumentCloud(id='2712034', start_page=13, end_page=14),
     ],
     'office_codes': [
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=10),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=12),
-        DocumentCloud(id='2712032-Cal-Errata-201', start_page=2),
+        DocumentCloud(id='2712033', start_page=10),
+        DocumentCloud(id='2712034', start_page=12),
+        DocumentCloud(id='2712032', start_page=2),
     ],
 }
 

@@ -24,11 +24,11 @@ class CvrRegistrationCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=35, end_page=39),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=22, end_page=27),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=68, end_page=71),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=82, end_page=86),
+        DocumentCloud(id='2711614', start_page=8),
+        DocumentCloud(id='2711614', start_page=35, end_page=39),
+        DocumentCloud(id='2711616', start_page=22, end_page=27),
+        DocumentCloud(id='2712033', start_page=68, end_page=71),
+        DocumentCloud(id='2712034', start_page=82, end_page=86),
     ]
     FILING_FORMS = [
         annotations.get_form('F601'),
@@ -162,8 +162,8 @@ Applies to Form 602.',
 This field is exclusive of the business class field. One these \
 must be populated but not both.',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=70),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
+            DocumentCloud(id='2712033', start_page=70),
+            DocumentCloud(id='2712034', start_page=82),
         ]
     )
     bus_descr = fields.CharField(
@@ -256,8 +256,8 @@ Form 604. As filed by the lobbyist.',
         help_text='Entity Code describing the filer',
         choices=ENTITY_CODE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=68),
+            DocumentCloud(id='2712034', start_page=82),
+            DocumentCloud(id='2712033', start_page=68),
         ]
     )
     filer_id = fields.CharField(
@@ -315,8 +315,8 @@ Forms 604, 606, 607.',
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=68),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
+            DocumentCloud(id='2712033', start_page=68),
+            DocumentCloud(id='2712034', start_page=82),
         ]
     )
     ind_cb = fields.CharField(
@@ -343,8 +343,8 @@ Forms 604, 606, 607.',
         blank=True,
         choices=IND_CLASS_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=85),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=70),
+            DocumentCloud(id='2712034', start_page=85),
+            DocumentCloud(id='2712033', start_page=70),
         ],
         help_text='Classification values to category industry related \
 entities. This field is exclusive of the business class field. One these \
@@ -372,8 +372,8 @@ if coded as other',
         blank=True,
         help_text='Attempt to influence state legislation',
         documentcloud_pages=[
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=86),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=71),
+            DocumentCloud(id='2712034', start_page=86),
+            DocumentCloud(id='2712033', start_page=71),
         ]
     )
     l_firm_cb = fields.CharField(
@@ -514,8 +514,8 @@ occurs once in lobbying filings.',
         choices=REC_TYPE_CHOICES,
         help_text='Record Type Value: CVR',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=68),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=82),
+            DocumentCloud(id='2712033', start_page=68),
+            DocumentCloud(id='2712034', start_page=82),
         ]
     )
     rencert_cb = fields.CharField(
@@ -609,8 +609,8 @@ the report and the firm or employer if they are submitting the report.',
         help_text='Will lobby state legislature checkbox. \
 Applies to Form 604.',
         documentcloud_pages=[
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=86),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=71),
+            DocumentCloud(id='2712034', start_page=86),
+            DocumentCloud(id='2712033', start_page=71),
         ]
     )
     stmt_firm = fields.CharField(
@@ -651,11 +651,11 @@ class Cvr2RegistrationCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=44, end_page=45),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=37, end_page=37),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=72, end_page=73),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=87, end_page=88),
+        DocumentCloud(id='2711614', start_page=8),
+        DocumentCloud(id='2711614', start_page=44, end_page=45),
+        DocumentCloud(id='2711616', start_page=37, end_page=37),
+        DocumentCloud(id='2712033', start_page=72, end_page=73),
+        DocumentCloud(id='2712034', start_page=87, end_page=88),
     ]
     FILING_FORMS = [
         annotations.get_form('F601'),
@@ -690,8 +690,8 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         help_text="Record Type Value: CVR2",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=72),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=87),
+            DocumentCloud(id='2712033', start_page=72),
+            DocumentCloud(id='2712034', start_page=87),
         ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
@@ -702,8 +702,8 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=72),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=87),
+            DocumentCloud(id='2712033', start_page=72),
+            DocumentCloud(id='2712034', start_page=87),
         ]
     )
     tran_id = fields.CharField(
@@ -729,8 +729,8 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
         help_text="Entity code of the entity described by the record",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=72),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=87),
+            DocumentCloud(id='2712033', start_page=72),
+            DocumentCloud(id='2712034', start_page=87),
         ]
     )
     entity_id = fields.CharField(
@@ -787,11 +787,11 @@ class LobbyAmendmentsCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=90, end_page=91),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=64, end_page=66),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=74),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=88, end_page=89),
+        DocumentCloud(id='2711614', start_page=10),
+        DocumentCloud(id='2711614', start_page=90, end_page=91),
+        DocumentCloud(id='2711616', start_page=64, end_page=66),
+        DocumentCloud(id='2712033', start_page=74),
+        DocumentCloud(id='2712034', start_page=88, end_page=89),
     ]
     FILING_FORMS = [
         annotations.get_form('F601'),
@@ -821,8 +821,8 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         help_text='Record Type Value: F605',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=74),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=88),
+            DocumentCloud(id='2712033', start_page=74),
+            DocumentCloud(id='2712034', start_page=88),
         ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
@@ -833,8 +833,8 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=74),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=88),
+            DocumentCloud(id='2712033', start_page=74),
+            DocumentCloud(id='2712034', start_page=88),
         ]
     )
     exec_date = fields.DateField(
@@ -1086,8 +1086,8 @@ class LobbyingChgLogCd(CalAccessBaseModel):
         "CHANGE_NO"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=91, end_page=92)
+        DocumentCloud(id='2711614', start_page=10),
+        DocumentCloud(id='2711614', start_page=91, end_page=92)
     ]
     filer_id = fields.IntegerField(
         verbose_name='filer ID',
@@ -1257,11 +1257,11 @@ class LempCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=85, end_page=86),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=56, end_page=57),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=75),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=90, end_page=91),
+        DocumentCloud(id='2711614', start_page=10),
+        DocumentCloud(id='2711614', start_page=85, end_page=86),
+        DocumentCloud(id='2711616', start_page=56, end_page=57),
+        DocumentCloud(id='2712033', start_page=75),
+        DocumentCloud(id='2712034', start_page=90, end_page=91),
     ]
     FILING_FORMS = [
         annotations.get_form('F601').get_section('P2A'),
@@ -1371,8 +1371,8 @@ Part 2B Client/Employer"
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=75),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=90),
+            DocumentCloud(id='2712033', start_page=75),
+            DocumentCloud(id='2712034', start_page=90),
         ]
     )
     line_item = fields.IntegerField(
@@ -1391,8 +1391,8 @@ Part 2B Client/Employer"
         help_text='Record Type Value: LEMP',
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=75),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=90),
+            DocumentCloud(id='2712033', start_page=75),
+            DocumentCloud(id='2712034', start_page=90),
         ]
     )
     # sub_adr1 = fields.CharField(
@@ -1460,11 +1460,11 @@ class CvrLobbyDisclosureCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=32, end_page=35),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=17, end_page=21),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53, end_page=56),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=66, end_page=70),
+        DocumentCloud(id='2711614', start_page=8),
+        DocumentCloud(id='2711614', start_page=32, end_page=35),
+        DocumentCloud(id='2711616', start_page=17, end_page=21),
+        DocumentCloud(id='2712033', start_page=53, end_page=56),
+        DocumentCloud(id='2712034', start_page=66, end_page=70),
     ]
     FILING_FORMS = [
         annotations.get_form('F615'),
@@ -1516,8 +1516,8 @@ to forms 625, 635, 645.",
         choices=ENTITY_CODE_CHOICES,
         help_text="Entity Code describing the filer",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=67),
+            DocumentCloud(id='2712033', start_page=53),
+            DocumentCloud(id='2712034', start_page=67),
         ]
     )
     filer_id = fields.CharField(
@@ -1613,8 +1613,8 @@ to forms 625, 635, 645.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=66),
+            DocumentCloud(id='2712033', start_page=53),
+            DocumentCloud(id='2712034', start_page=66),
         ]
     )
     from_date = fields.DateField(
@@ -1782,8 +1782,8 @@ to Form 625.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=53),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=66),
+            DocumentCloud(id='2712033', start_page=53),
+            DocumentCloud(id='2712034', start_page=66),
         ]
     )
     report_num = fields.CharField(
@@ -1874,11 +1874,11 @@ class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=43, end_page=44),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=36),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
+        DocumentCloud(id='2711614', start_page=8),
+        DocumentCloud(id='2711614', start_page=43, end_page=44),
+        DocumentCloud(id='2711616', start_page=36),
+        DocumentCloud(id='2712033', start_page=57),
+        DocumentCloud(id='2712034', start_page=71),
     ]
     FILING_FORMS = [
         annotations.get_form('F625'),
@@ -1905,8 +1905,8 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
         help_text='Entity code of the entity described by the record',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
+            DocumentCloud(id='2712033', start_page=57),
+            DocumentCloud(id='2712034', start_page=71),
         ]
     )
     entity_id = fields.CharField(
@@ -1960,8 +1960,8 @@ entity is an individual. Only required by Form 635.',
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
+            DocumentCloud(id='2712033', start_page=57),
+            DocumentCloud(id='2712034', start_page=71),
         ]
     )
     line_item = fields.IntegerField(
@@ -1980,8 +1980,8 @@ entity is an individual. Only required by Form 635.',
         help_text='Record Type Value: CVR2',
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=57),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=71),
+            DocumentCloud(id='2712033', start_page=57),
+            DocumentCloud(id='2712034', start_page=71),
         ]
     )
     tran_id = fields.CharField(
@@ -2014,11 +2014,11 @@ class F690P2Cd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=8),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=59, end_page=60),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=50, end_page=51),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=58),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
+        DocumentCloud(id='2711614', start_page=8),
+        DocumentCloud(id='2711614', start_page=59, end_page=60),
+        DocumentCloud(id='2711616', start_page=50, end_page=51),
+        DocumentCloud(id='2712033', start_page=58),
+        DocumentCloud(id='2712034', start_page=72),
     ]
     FILING_FORMS = [
         annotations.get_form('F615'),
@@ -2055,8 +2055,8 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         help_text="Record Type Value: F690",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=58),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
+            DocumentCloud(id='2712033', start_page=58),
+            DocumentCloud(id='2712034', start_page=72),
         ]
     )
     FORM_TYPE_CHOICES = tuple([(f.db_value, f.full_title) for f in FILING_FORMS])
@@ -2067,8 +2067,8 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=58),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=72),
+            DocumentCloud(id='2712033', start_page=58),
+            DocumentCloud(id='2712034', start_page=72),
         ]
     )
     exec_date = fields.DateField(
@@ -2130,10 +2130,10 @@ class LattCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=81, end_page=82),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=52, end_page=53),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=79, end_page=80),
+        DocumentCloud(id='2711614', start_page=81, end_page=82),
+        DocumentCloud(id='2711616', start_page=52, end_page=53),
+        DocumentCloud(id='2712033', start_page=65),
+        DocumentCloud(id='2712034', start_page=79, end_page=80),
     ]
     FILING_FORMS = [
         annotations.get_form('S630'),
@@ -2181,8 +2181,8 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
         help_text='Entity Code of the Payment Recipient/Payee',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=80),
+            DocumentCloud(id='2712033', start_page=65),
+            DocumentCloud(id='2712034', start_page=80),
         ]
     )
     filing_id = fields.IntegerField(
@@ -2199,9 +2199,9 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=52),
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=79),
+            DocumentCloud(id='2711616', start_page=52),
+            DocumentCloud(id='2712033', start_page=65),
+            DocumentCloud(id='2712034', start_page=79),
         ]
     )
     line_item = fields.IntegerField(
@@ -2237,8 +2237,8 @@ original filing and 1 to 999 amendments.",
         help_text="Record Type Value: LATT",
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=65),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=79),
+            DocumentCloud(id='2712033', start_page=65),
+            DocumentCloud(id='2712034', start_page=79),
         ]
     )
     # recip_adr1 = fields.CharField(
@@ -2326,11 +2326,11 @@ class LexpCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=86, end_page=87),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=58, end_page=59),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=74, end_page=75),
+        DocumentCloud(id='2711614', start_page=10),
+        DocumentCloud(id='2711614', start_page=86, end_page=87),
+        DocumentCloud(id='2711616', start_page=58, end_page=59),
+        DocumentCloud(id='2712033', start_page=61),
+        DocumentCloud(id='2712034', start_page=74, end_page=75),
     ]
     FILING_FORMS = [
         annotations.get_form('F615').get_section('P1'),
@@ -2395,8 +2395,8 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
         help_text="Entity Code of the Payee",
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=75),
+            DocumentCloud(id='2712033', start_page=61),
+            DocumentCloud(id='2712034', start_page=75),
         ]
     )
     expn_date = fields.DateField(
@@ -2425,8 +2425,8 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=74),
+            DocumentCloud(id='2712033', start_page=61),
+            DocumentCloud(id='2712034', start_page=74),
         ]
     )
     line_item = fields.IntegerField(
@@ -2511,8 +2511,8 @@ original filing and 1 to 999 amendments.",
         help_text="Record Type Value: LEXP",
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=74),
+            DocumentCloud(id='2712033', start_page=61),
+            DocumentCloud(id='2712034', start_page=74),
         ]
     )
     REC_SUBTYPE_CHOICES = (
@@ -2526,8 +2526,8 @@ original filing and 1 to 999 amendments.",
         verbose_name='record subtype',
         help_text='Record Subtype',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=61),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=74),
+            DocumentCloud(id='2712033', start_page=61),
+            DocumentCloud(id='2712034', start_page=74),
         ]
     )
     tran_id = fields.CharField(
@@ -2561,11 +2561,11 @@ class LccmCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=10),
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=83, end_page=84),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=54, end_page=55),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
+        DocumentCloud(id='2711614', start_page=10),
+        DocumentCloud(id='2711614', start_page=83, end_page=84),
+        DocumentCloud(id='2711616', start_page=54, end_page=55),
+        DocumentCloud(id='2712033', start_page=64),
+        DocumentCloud(id='2712034', start_page=78, end_page=79),
     ]
     FILING_FORMS = [
         annotations.get_form('F615').get_section('P2'),
@@ -2641,8 +2641,8 @@ original filing and 1 to 999 amendments.",
         help_text='Entity Code for Recipient of the Campaign Contribution Value',
         choices=ENTITY_CODE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=78),
+            DocumentCloud(id='2712033', start_page=64),
+            DocumentCloud(id='2712034', start_page=78),
         ],
     )
     filing_id = fields.IntegerField(
@@ -2659,8 +2659,8 @@ original filing and 1 to 999 amendments.",
         help_text='Name of the source filing form or schedule',
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=78, end_page=79),
+            DocumentCloud(id='2712033', start_page=64),
+            DocumentCloud(id='2712034', start_page=78, end_page=79),
         ]
     )
     line_item = fields.IntegerField(
@@ -2691,8 +2691,8 @@ original filing and 1 to 999 amendments.",
         help_text="Record Type Value: LCCM",
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=64),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=78),
+            DocumentCloud(id='2712033', start_page=64),
+            DocumentCloud(id='2712034', start_page=78),
         ],
     )
     # recip_adr1 = fields.CharField(
@@ -2786,10 +2786,10 @@ class LpayCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=107, end_page=109),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=69, end_page=70),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=76, end_page=77),
+        DocumentCloud(id='2711614', start_page=107, end_page=109),
+        DocumentCloud(id='2711616', start_page=69, end_page=70),
+        DocumentCloud(id='2712033', start_page=62),
+        DocumentCloud(id='2712034', start_page=76, end_page=77),
     ]
     FILING_FORMS = [
         annotations.get_form('F625').get_section('P2'),
@@ -2908,8 +2908,8 @@ original filing and 1 to 999 amendments.",
         choices=ENTITY_CODE_CHOICES,
         help_text='Entity Code of the Employer Values',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=76),
+            DocumentCloud(id='2712033', start_page=62),
+            DocumentCloud(id='2712034', start_page=76),
         ]
     )
     fees_amt = fields.DecimalField(
@@ -2935,8 +2935,8 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=76),
+            DocumentCloud(id='2712033', start_page=62),
+            DocumentCloud(id='2712034', start_page=76),
         ]
     )
     lby_actvty = fields.CharField(
@@ -2979,8 +2979,8 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=REC_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=62),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=76),
+            DocumentCloud(id='2712033', start_page=62),
+            DocumentCloud(id='2712034', start_page=76),
         ]
     )
     reimb_amt = fields.DecimalField(
@@ -3021,10 +3021,10 @@ class LothCd(CalAccessBaseModel):
         "FORM_TYPE"
     )
     DOCUMENTCLOUD_PAGES = [
-        DocumentCloud(id='2711614-CalAccessTablesWeb', start_page=106, end_page=107),
-        DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=67, end_page=68),
-        DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=63),
-        DocumentCloud(id='2712034-Cal-Format-201', start_page=77, end_page=78),
+        DocumentCloud(id='2711614', start_page=106, end_page=107),
+        DocumentCloud(id='2711616', start_page=67, end_page=68),
+        DocumentCloud(id='2712033', start_page=63),
+        DocumentCloud(id='2712034', start_page=77, end_page=78),
     ]
     FILING_FORMS = [
         annotations.get_form('F625').get_section('P3B'),
@@ -3109,8 +3109,8 @@ original filing and 1 to 999 amendments.",
         db_index=True,
         choices=FORM_TYPE_CHOICES,
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=63),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=77),
+            DocumentCloud(id='2712033', start_page=63),
+            DocumentCloud(id='2712034', start_page=77),
         ]
     )
     line_item = fields.IntegerField(
@@ -3147,8 +3147,8 @@ original filing and 1 to 999 amendments.",
         choices=REC_TYPE_CHOICES,
         help_text='Record Type Value: LOTH',
         documentcloud_pages=[
-            DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=63),
-            DocumentCloud(id='2712034-Cal-Format-201', start_page=77),
+            DocumentCloud(id='2712033', start_page=63),
+            DocumentCloud(id='2712034', start_page=77),
         ]
     )
     subj_namf = fields.CharField(
