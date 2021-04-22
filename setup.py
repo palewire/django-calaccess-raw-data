@@ -9,9 +9,9 @@ def read(fname):
 
 setup(
     name='django-calaccess-raw-data',
-    version='2.0.6',
+    version='3.0.0',
     author='California Civic Data Coalition',
-    author_email='cacivicdata@gmail.com',
+    author_email='b@palewi.re',
     url='http://django-calaccess.californiacivicdata.org/',
     description=("A Django app to download, extract and load campaign "
                 "finance and lobbying activity data from the California "
@@ -43,16 +43,12 @@ setup(
         'Operating System :: OS Independent',
         'Intended Audience :: Developers',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Framework :: Django',
-        'Framework :: Django :: 1.11',
-        'Framework :: Django :: 2.0',
-        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 3.2',
         'License :: OSI Approved :: MIT License'
     ),
     project_urls={
