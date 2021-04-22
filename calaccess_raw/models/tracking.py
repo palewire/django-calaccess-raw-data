@@ -3,8 +3,6 @@
 """
 Models for tracking CAL-ACCESS updates over time.
 """
-from __future__ import unicode_literals
-
 # Files
 from hurry.filesize import size as sizeformat
 from calaccess_raw import archive_directory_path
@@ -13,10 +11,8 @@ from calaccess_raw import archive_directory_path
 from .. import managers
 from django.db import models
 from calaccess_raw import get_model_list
-from django.utils.encoding import python_2_unicode_compatible
 
 
-@python_2_unicode_compatible
 class RawDataVersion(models.Model):
     """
     A version of CAL-ACCESS raw source data, typically released every day.
@@ -267,7 +263,6 @@ class RawDataVersion(models.Model):
         )['total']
 
 
-@python_2_unicode_compatible
 class RawDataFile(models.Model):
     """
     A data file included in a version of the CAL-ACCESS raw source data.

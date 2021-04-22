@@ -3,20 +3,16 @@
 """
 Models for storing inactive and deprecated tables from the CAL-ACCESS database.
 """
-from __future__ import unicode_literals
-
 # Models
 from django.db import models
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
-from django.utils.encoding import python_2_unicode_compatible
 
 # Annotations
 from calaccess_raw import annotations
 from calaccess_raw.annotations import DocumentCloud
 
 
-@python_2_unicode_compatible
 class BallotMeasuresCd(CalAccessBaseModel):
     """
     Ballot-measure dates and times.
@@ -76,7 +72,6 @@ class BallotMeasuresCd(CalAccessBaseModel):
         return self.measure_name
 
 
-@python_2_unicode_compatible
 class CvrF470Cd(CalAccessBaseModel):
     """
     The cover page for officeholder and candidate short and supplemental forms.
@@ -316,7 +311,6 @@ class CvrF470Cd(CalAccessBaseModel):
         db_table = 'CVR_F470_CD'
 
 
-@python_2_unicode_compatible
 class FilerTypePeriodsCd(CalAccessBaseModel):
     """
     Undocumented.
@@ -380,7 +374,6 @@ class FilerTypePeriodsCd(CalAccessBaseModel):
         return str(self.election_type)
 
 
-@python_2_unicode_compatible
 class LobbyistContributions1Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of campaign contributions made by lobbyists.
@@ -455,7 +448,6 @@ class LobbyistContributions1Cd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistContributions2Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of campaign contributions made by lobbyists.
@@ -530,7 +522,6 @@ class LobbyistContributions2Cd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistContributions3Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of campaign contributions made by lobbyists.
@@ -605,7 +596,6 @@ class LobbyistContributions3Cd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -668,7 +658,6 @@ class LobbyistEmpLobbyist1Cd(CalAccessBaseModel):
         return str(self.lobbyist_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -731,7 +720,6 @@ class LobbyistEmpLobbyist2Cd(CalAccessBaseModel):
         return str(self.lobbyist_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmployer1Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -893,7 +881,6 @@ class LobbyistEmployer1Cd(CalAccessBaseModel):
         return str(self.employer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmployer2Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1054,7 +1041,6 @@ class LobbyistEmployer2Cd(CalAccessBaseModel):
         return str(self.employer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmployer3Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1215,7 +1201,6 @@ class LobbyistEmployer3Cd(CalAccessBaseModel):
         return str(self.employer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1275,7 +1260,6 @@ class LobbyistEmployerFirms1Cd(CalAccessBaseModel):
         return str(self.employer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1335,7 +1319,6 @@ class LobbyistEmployerFirms2Cd(CalAccessBaseModel):
         return str(self.employer_id)
 
 
-@python_2_unicode_compatible
 class LobbyistEmployerHistoryCd(CalAccessBaseModel):
     """
     Undocumented.
@@ -1490,7 +1473,6 @@ class LobbyistEmployerHistoryCd(CalAccessBaseModel):
         return str(self.contributor_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirm1Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1610,7 +1592,6 @@ class LobbyistFirm1Cd(CalAccessBaseModel):
         return str(self.firm_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirm2Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1730,7 +1711,6 @@ class LobbyistFirm2Cd(CalAccessBaseModel):
         return str(self.firm_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirm3Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1850,7 +1830,6 @@ class LobbyistFirm3Cd(CalAccessBaseModel):
         return str(self.firm_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -1938,7 +1917,6 @@ class LobbyistFirmEmployer1Cd(CalAccessBaseModel):
         return str(self.firm_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -2026,7 +2004,6 @@ class LobbyistFirmEmployer2Cd(CalAccessBaseModel):
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirmHistoryCd(CalAccessBaseModel):
     """
     Undocumented.
@@ -2133,7 +2110,6 @@ class LobbyistFirmHistoryCd(CalAccessBaseModel):
         return str(self.contributor_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -2195,7 +2171,6 @@ class LobbyistFirmLobbyist1Cd(CalAccessBaseModel):
         return str(self.lobbyist_id)
 
 
-@python_2_unicode_compatible
 class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
     """
     Deprecated table for the disclosure of lobbyist relationships.
@@ -2257,7 +2232,6 @@ class LobbyistFirmLobbyist2Cd(CalAccessBaseModel):
         return str(self.lobbyist_id)
 
 
-@python_2_unicode_compatible
 class EfsFilingLogCd(CalAccessBaseModel):
     """
     Logs from the Electronic Filing Subsystem, which accepts and validates electronic filings.

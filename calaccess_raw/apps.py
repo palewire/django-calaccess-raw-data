@@ -3,7 +3,6 @@
 """
 Configuration of the Django app.
 """
-from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
@@ -13,3 +12,4 @@ class CalAccessRawConfig(AppConfig):
     """
     name = 'calaccess_raw'
     verbose_name = "CAL-ACCESS raw data"
+    default_auto_field = 'django.db.models.BigAutoField'

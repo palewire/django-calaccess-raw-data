@@ -3,20 +3,16 @@
 """
 Models for storing lobbying activity tables from the CAL-ACCESS database.
 """
-from __future__ import unicode_literals
-
 # Models
 from django.db import models
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
-from django.utils.encoding import python_2_unicode_compatible
 
 # Annotations
 from calaccess_raw import annotations
 from calaccess_raw.annotations import DocumentCloud
 
 
-@python_2_unicode_compatible
 class CvrRegistrationCd(CalAccessBaseModel):
     """
     The cover page of lobbying-registration forms.
@@ -643,7 +639,6 @@ This field only applies to Form 601.',
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class Cvr2RegistrationCd(CalAccessBaseModel):
     """
     Additional names provided on lobbying-registration forms.
@@ -781,7 +776,6 @@ the record',
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LobbyAmendmentsCd(CalAccessBaseModel):
     """
     Amendments to lobbyist-registration forms.
@@ -1083,7 +1077,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LobbyingChgLogCd(CalAccessBaseModel):
     """
     Log of lobbyist filings compiled for display on the state website.
@@ -1252,7 +1245,6 @@ FILER_TYPES_CD.FILER_TYPE or GROUP_TYPES_CD.GRP_ID, but that's just a guess."
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class LempCd(CalAccessBaseModel):
     """
     Lobbyist employers and subcontracted clients.
@@ -1457,7 +1449,6 @@ Part 2B Client/Employer"
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class CvrLobbyDisclosureCd(CalAccessBaseModel):
     """
     The cover page of lobbying-disclosure forms.
@@ -1871,7 +1862,6 @@ allows the firm to submit forms for its lobbyists.',
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class Cvr2LobbyDisclosureCd(CalAccessBaseModel):
     """
     Extra information from the cover sheets of lobbyist-disclosure form.
@@ -2012,7 +2002,6 @@ entity is an individual. Only required by Form 635.',
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class F690P2Cd(CalAccessBaseModel):
     """
     Amendments to lobbying-disclosure filings.
@@ -2129,7 +2118,6 @@ text description."
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LattCd(CalAccessBaseModel):
     """
     Attachments for lobbying payments.
@@ -2326,7 +2314,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LexpCd(CalAccessBaseModel):
     """
     Lobbying activity expenditures.
@@ -2562,7 +2549,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LccmCd(CalAccessBaseModel):
     """
     Lobbyist campaign contributions.
@@ -2788,7 +2774,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LpayCd(CalAccessBaseModel):
     """
     Payments made or received by lobbying firms.
@@ -3024,7 +3009,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LothCd(CalAccessBaseModel):
     """
     Payments to other lobbying firms.

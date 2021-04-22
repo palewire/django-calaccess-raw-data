@@ -3,20 +3,16 @@
 """
 Models for storing common tables from the CAL-ACCESS database.
 """
-from __future__ import unicode_literals
-
 # Models
 from django.db import models
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
-from django.utils.encoding import python_2_unicode_compatible
 
 # Annotations
 from calaccess_raw import annotations
 from calaccess_raw.annotations import DocumentCloud
 
 
-@python_2_unicode_compatible
 class FilernameCd(CalAccessBaseModel):
     """
     A combination of CAL-ACCESS tables created by the state to consolidate filer information.
@@ -192,7 +188,6 @@ politicans and officers tend to use both the first and last name."
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class FilerFilingsCd(CalAccessBaseModel):
     """
     An index that links filers to their filings.
@@ -373,7 +368,6 @@ laundering or other special condition."
         return str("%s %s" % (self.filer_id, self.filing_id))
 
 
-@python_2_unicode_compatible
 class FilingsCd(CalAccessBaseModel):
     """
     All links and associations to a filing.
@@ -421,7 +415,6 @@ class FilingsCd(CalAccessBaseModel):
         return str("{} ({})".format(self.filing_id, self.get_filing_type_display()))
 
 
-@python_2_unicode_compatible
 class HdrCd(CalAccessBaseModel):
     """
     Electronic-filing headers with vendor and CalFormat version.
@@ -530,7 +523,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class HeaderCd(CalAccessBaseModel):
     """
     Lookup table used to report Form 460 information in the Agency Management System.
@@ -644,7 +636,6 @@ class HeaderCd(CalAccessBaseModel):
         return str(self.form_id)
 
 
-@python_2_unicode_compatible
 class SmryCd(CalAccessBaseModel):
     """
     Summary totals from filings.
@@ -805,7 +796,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class CvrE530Cd(CalAccessBaseModel):
     """
     The cover page of Electronic Form 530.
@@ -1248,7 +1238,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class SpltCd(CalAccessBaseModel):
     """
     Split transaction records used as a child record for a number of forms.
@@ -1363,7 +1352,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class TextMemoCd(CalAccessBaseModel):
     """
     Text memos attached to electronic filings.
@@ -1565,7 +1553,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class AcronymsCd(CalAccessBaseModel):
     """
     Acronyms and their definitions.
@@ -1607,7 +1594,6 @@ class AcronymsCd(CalAccessBaseModel):
         return self.acronym
 
 
-@python_2_unicode_compatible
 class AddressCd(CalAccessBaseModel):
     """
     Addresses drawn from across the system.
@@ -1668,7 +1654,6 @@ class AddressCd(CalAccessBaseModel):
         return str(self.adrid)
 
 
-@python_2_unicode_compatible
 class FilersCd(CalAccessBaseModel):
     """
     All links and associations to a filer.
@@ -1697,7 +1682,6 @@ class FilersCd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class FilerAcronymsCd(CalAccessBaseModel):
     """
     Links acronyms to filers.
@@ -1731,7 +1715,6 @@ class FilerAcronymsCd(CalAccessBaseModel):
         return str(self.acronym)
 
 
-@python_2_unicode_compatible
 class FilerAddressCd(CalAccessBaseModel):
     """
     Links filers and addresses.
@@ -1798,7 +1781,6 @@ class FilerAddressCd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class FilerEthicsClassCd(CalAccessBaseModel):
     """
     Ethics training events for lobbyists.
@@ -1838,7 +1820,6 @@ class FilerEthicsClassCd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class FilerInterestsCd(CalAccessBaseModel):
     """
     Links a filer to interest codes.
@@ -1917,7 +1898,6 @@ class FilerInterestsCd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class FilerLinksCd(CalAccessBaseModel):
     """
     Links filers to each other.
@@ -2032,7 +2012,6 @@ in the relationship',
         return str('%s-%s' % (self.filer_id_a, self.filer_id_b))
 
 
-@python_2_unicode_compatible
 class FilerStatusTypesCd(CalAccessBaseModel):
     """
     An undocumented table.
@@ -2068,7 +2047,6 @@ class FilerStatusTypesCd(CalAccessBaseModel):
         return self.status_type
 
 
-@python_2_unicode_compatible
 class FilerToFilerTypeCd(CalAccessBaseModel):
     """
     Links a filer to a set of characteristics that describe the filer.
@@ -2617,7 +2595,6 @@ Populated for Senate, Assembly or Board of Equalization races",
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class FilerTypesCd(CalAccessBaseModel):
     """
     Lookup table describing filer types.
@@ -2677,7 +2654,6 @@ class FilerTypesCd(CalAccessBaseModel):
         return str(self.filer_type)
 
 
-@python_2_unicode_compatible
 class FilerXrefCd(CalAccessBaseModel):
     """
     Maps legacy filer identification numbers to current filer identification numbers.
@@ -2723,7 +2699,6 @@ class FilerXrefCd(CalAccessBaseModel):
         return str(self.filer_id)
 
 
-@python_2_unicode_compatible
 class FilingPeriodCd(CalAccessBaseModel):
     """
     Metadata for filing periods.
@@ -2791,7 +2766,6 @@ class FilingPeriodCd(CalAccessBaseModel):
         return str(self.period_id)
 
 
-@python_2_unicode_compatible
 class GroupTypesCd(CalAccessBaseModel):
     """
     Lookup table for group types.
@@ -2835,7 +2809,6 @@ class GroupTypesCd(CalAccessBaseModel):
         return str(self.grp_id)
 
 
-@python_2_unicode_compatible
 class ImageLinksCd(CalAccessBaseModel):
     """
     Links images to filers and accounts.
@@ -2902,7 +2875,6 @@ class ImageLinksCd(CalAccessBaseModel):
         return str(self.img_link_id)
 
 
-@python_2_unicode_compatible
 class LegislativeSessionsCd(CalAccessBaseModel):
     """
     Start and end dates for legislative sessions.
@@ -2941,7 +2913,6 @@ class LegislativeSessionsCd(CalAccessBaseModel):
         return str(self.session_id)
 
 
-@python_2_unicode_compatible
 class LookupCodesCd(CalAccessBaseModel):
     """
     Definitions for some lookup codes.
@@ -2976,7 +2947,6 @@ class LookupCodesCd(CalAccessBaseModel):
         return str(self.code_id)
 
 
-@python_2_unicode_compatible
 class NamesCd(CalAccessBaseModel):
     """
     A collection of names from across the database.
@@ -3054,7 +3024,6 @@ class NamesCd(CalAccessBaseModel):
         return str(self.namid)
 
 
-@python_2_unicode_compatible
 class ReceivedFilingsCd(CalAccessBaseModel):
     """
     Undocumented.
@@ -3147,7 +3116,6 @@ class ReceivedFilingsCd(CalAccessBaseModel):
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class ReportsCd(CalAccessBaseModel):
     """
     Undocumented.

@@ -3,19 +3,15 @@
 """
 Models for storing campaign finance tables from the CAL-ACCESS database.
 """
-from __future__ import unicode_literals
-
 # Models
 from calaccess_raw import fields
 from .base import CalAccessBaseModel
-from django.utils.encoding import python_2_unicode_compatible
 
 # Annotations
 from calaccess_raw import annotations
 from calaccess_raw.annotations import DocumentCloud
 
 
-@python_2_unicode_compatible
 class CvrSoCd(CalAccessBaseModel):
     """
     The cover page for statement-of-organization forms that create or terminate an entity.
@@ -477,7 +473,6 @@ Termination / Slate Mailer Org or Stmt of Organization / Recipient Committee"),
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class Cvr2SoCd(CalAccessBaseModel):
     """
     Extra information from a statement-of-organization form.
@@ -855,7 +850,6 @@ sought and "H" for held',
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class CvrCampaignDisclosureCd(CalAccessBaseModel):
     """
     The cover page of campaign-disclosure forms.
@@ -1715,7 +1709,6 @@ officer's street address."
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class Cvr2CampaignDisclosureCd(CalAccessBaseModel):
     """
     Extra information from campaign-disclosure forms.
@@ -2123,7 +2116,6 @@ with in the record.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class Cvr3VerificationInfoCd(CalAccessBaseModel):
     """
     Verification information from campaign-disclosure forms.
@@ -2314,7 +2306,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class DebtCd(CalAccessBaseModel):
     """
     Itemized campaign debts.
@@ -2442,7 +2433,7 @@ of a parent record.'
         ("X", "Unknown"),
     )
     expn_code = fields.CharField(
-        max_length=3,
+        max_length=4,
         db_column='EXPN_CODE',
         blank=True,
         verbose_name='expense code',
@@ -2635,7 +2626,6 @@ transaction identifier. /"X/" indicates this condition is true'
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class ExpnCd(CalAccessBaseModel):
     """
     Itemized campaign expenditures.
@@ -2974,7 +2964,7 @@ original filing and 1 to 999 amendments.",
         ('08', 'Unknown'),
     )
     expn_code = fields.CharField(
-        max_length=3,
+        max_length=4,
         db_column='EXPN_CODE',
         blank=True,
         choices=EXPN_CODE_CHOICES,
@@ -3407,7 +3397,6 @@ original filing and 1 to 999 amendments.",
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class LoanCd(CalAccessBaseModel):
     """
     Itemized campaign loans.
@@ -3840,7 +3829,6 @@ identifier. "X" indicates this condition is true.'
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class RcptCd(CalAccessBaseModel):
     """
     Itemized campaign contributions.
@@ -4442,7 +4430,6 @@ identifier. 'X' indicates this condition is true"
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class S401Cd(CalAccessBaseModel):
     """
     Payments and other disclosures made by slate-mailer organizations.
@@ -4769,7 +4756,6 @@ for Senate, Assembly, or Board of Equalization races."
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class F495P2Cd(CalAccessBaseModel):
     """
     Supplemental pre-election campaign statements.
@@ -4866,7 +4852,6 @@ as on the filing's cover (CVR) record."
         return str(self.filing_id)
 
 
-@python_2_unicode_compatible
 class S496Cd(CalAccessBaseModel):
     """
     Itemized independent expenditures made in the 90 days before an election.
@@ -4990,7 +4975,6 @@ original filing and 1 to 999 amendments.",
         )
 
 
-@python_2_unicode_compatible
 class S497Cd(CalAccessBaseModel):
     """
     Campaign contributions made or received in the 90 days before an election.
@@ -5401,7 +5385,6 @@ for Senate, Assembly, or Board of Equalization races."
         ordering = ("-ctrib_date",)
 
 
-@python_2_unicode_compatible
 class S498Cd(CalAccessBaseModel):
     """
     Payments received by slate-mailer organizations in the 90 days before an election.
@@ -5716,7 +5699,6 @@ Populated for Senate, Assembly, or Board of Equalization races."
         ordering = ("-date_rcvd",)
 
 
-@python_2_unicode_compatible
 class F501502Cd(CalAccessBaseModel):
     """
     Candidate intention statements.

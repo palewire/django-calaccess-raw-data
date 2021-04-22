@@ -3,8 +3,6 @@
 """
 Base models for tables from the CAL-ACCESS database.
 """
-from __future__ import unicode_literals
-
 # Text
 import textwrap
 
