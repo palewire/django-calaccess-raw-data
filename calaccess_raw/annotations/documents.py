@@ -48,7 +48,8 @@ class DocumentCloud(object):
         """
         Returns contents of GET request to /api/documents/[id].json method.
         """
-        r = requests.get('https://www.documentcloud.org/documents/{}.json'.format(self.id))
+        url = f'https://api.www.documentcloud.org/api/documents/{self.id}'
+        r = requests.get(url)
         return r.content.decode('utf-8')
 
     def _cache_metadata(self):
@@ -81,6 +82,14 @@ class DocumentCloud(object):
         return self._title
 
     @property
+    def slug(self):
+        """
+        Returns the slug of the document.
+        """
+        self._slug = self.metadata['slug']
+        return self._slug
+
+    @property
     def canonical_url(self):
         """
         Returns the URL where the document can be found on DocumentCloud.
@@ -100,10 +109,7 @@ class DocumentCloud(object):
         Returns a URL to the thumbnail image of the document's first page.
         """
         page = self.start_page or 1
-        self._thumbnail_url = self.metadata['resources']['page']['image'].format(
-            size='thumbnail',
-            page=page
-        )
+        self._thumbnail_url = f'https://assets.documentcloud.org/documents/{self.id}/pages/{self.slug}-p{page}-thumbnail.gif'
         return self._thumbnail_url
 
     @property
@@ -111,7 +117,7 @@ class DocumentCloud(object):
         """
         Returns a URL to the full PDF of the document.
         """
-        self._pdf_url = self.metadata['resources']['pdf']
+        self._pdf_url = f"https://assets.documentcloud.org/documents/{self.id}/{self.slug}.pdf"
         return self._pdf_url
 
     @property
@@ -119,7 +125,7 @@ class DocumentCloud(object):
         """
         Returns a URL to the full text of the document.
         """
-        self._text_url = self.metadata['resources']['text']
+        self._text_url = f"https://assets.documentcloud.org/documents/{self.id}/{self.slug}.txt"
         return self._text_url
 
     @property
@@ -136,7 +142,7 @@ class DocumentCloud(object):
         # ignored case: User wants to specify and start page and
         # expects to include all subsequent pages in doc
         else:
-            self._num_pages = self.metadata['pages']
+            self._num_pages = self.metadata['page_count']
         return self._num_pages
 
     @property
@@ -145,13 +151,12 @@ class DocumentCloud(object):
         Returns a list of the pages in this form as DocPage objects.
         """
         canonical_url = 'https://www.documentcloud.org/documents/{id}/pages/{page}.html'
-        image_url = self.metadata['resources']['page']['image']
         start = self.start_page or 1
         return [
             DocumentCloudPage(
                 x,
                 canonical_url.format(id=self.id, page=x),
-                image_url.format(size='thumbnail', page=x)
+                f'https://assets.documentcloud.org/documents/{self.id}/pages/{self.slug}-p{x}-thumbnail.gif'
             ) for x in range(start, start + self.num_pages)
         ]
 
