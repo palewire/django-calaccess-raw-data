@@ -3,8 +3,6 @@
 """
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 """
-from __future__ import unicode_literals
-
 # Files
 import os
 import csv

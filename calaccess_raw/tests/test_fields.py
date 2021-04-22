@@ -3,8 +3,6 @@
 """
 Tests for custom database fields.
 """
-from __future__ import unicode_literals
-
 # Testing
 from django.test import TestCase
 

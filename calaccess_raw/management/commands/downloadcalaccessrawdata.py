@@ -3,8 +3,6 @@
 """
 Download the latest CAL-ACCESS database ZIP.
 """
-from __future__ import unicode_literals
-
 # Files
 import os
 import shutil

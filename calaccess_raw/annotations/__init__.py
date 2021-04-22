@@ -3,8 +3,6 @@
 """
 Utilities for representing and interacting with CAL-ACCESS reference documents and forms.
 """
-from __future__ import unicode_literals
-
 # Helpers
 import os
 import csvkit

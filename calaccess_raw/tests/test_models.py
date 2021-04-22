@@ -3,8 +3,6 @@
 """
 Tests for the models.py files.
 """
-from __future__ import unicode_literals
-
 # Testing
 from django.test import TestCase
 

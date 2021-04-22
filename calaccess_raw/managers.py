@@ -3,7 +3,6 @@
 """
 Custom managers for working with CAL-ACCESS data.
 """
-from __future__ import unicode_literals
 import os
 import calaccess_raw
 from django.db import models

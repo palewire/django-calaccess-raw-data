@@ -3,7 +3,6 @@
 """
 Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 """
-from __future__ import unicode_literals
 from django.conf import settings
 
 # Files

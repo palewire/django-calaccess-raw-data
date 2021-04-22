@@ -3,8 +3,6 @@
 """
 Tests how thoroughly the CAL-ACCESS database has been documented.
 """
-from __future__ import unicode_literals
-
 # Testing
 from django.test import TestCase
 

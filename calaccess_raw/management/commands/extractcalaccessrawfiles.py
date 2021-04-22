@@ -3,8 +3,6 @@
 """
 Extract the CAL-ACCESS raw data files from downloaded ZIP.
 """
-from __future__ import unicode_literals
-
 # Files
 import os
 import shutil

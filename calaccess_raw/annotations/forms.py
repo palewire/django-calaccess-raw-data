@@ -3,7 +3,6 @@
 """
 Utilities for representing CAL-ACCESS forms.
 """
-from __future__ import unicode_literals
 from .documents import DocumentCloud
 from calaccess_raw import get_model_list
 from django.utils.deconstruct import deconstructible

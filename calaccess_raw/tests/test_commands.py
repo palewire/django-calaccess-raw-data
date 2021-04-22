@@ -3,8 +3,6 @@
 """
 Tests the management commands that interact with the database.
 """
-from __future__ import unicode_literals
-
 # Files
 import io
 import os

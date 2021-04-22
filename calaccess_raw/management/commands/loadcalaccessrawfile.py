@@ -3,8 +3,6 @@
 """
 Load clean CAL-ACCESS CSV file into a database model.
 """
-from __future__ import unicode_literals
-
 # Files
 import os
 from csvkit import reader

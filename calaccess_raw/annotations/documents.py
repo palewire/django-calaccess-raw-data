@@ -3,7 +3,6 @@
 """
 Utilities for representing DocumentCloud documents.
 """
-from __future__ import unicode_literals
 import os
 import json
 import requests

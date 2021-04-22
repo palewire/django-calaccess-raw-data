@@ -3,8 +3,6 @@
 """
 Tests the adminstration panel configuration.
 """
-from __future__ import unicode_literals
-
 # Testing
 from django.test import TestCase
 

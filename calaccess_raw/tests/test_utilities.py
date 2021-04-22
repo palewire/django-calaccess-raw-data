@@ -3,8 +3,6 @@
 """
 Tests for the utilities storied in app's __init__.py file.
 """
-from __future__ import unicode_literals
-
 # Testing
 from django.test import TestCase
 from django.test.utils import override_settings

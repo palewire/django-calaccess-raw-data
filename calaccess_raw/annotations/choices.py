@@ -21,7 +21,6 @@ pages in our models, like so:
     documentcloud_pages=look_ups.DOCS['office_codes'],
 
 """
-from __future__ import unicode_literals
 from .documents import DocumentCloud
 
 DOCS = {

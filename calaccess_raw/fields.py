@@ -5,7 +5,6 @@ Custom field overrides.
 
 Allow for cleaning and transforming the data when it is loaded into the database with PostgreSQL's COPY command.
 """
-from __future__ import unicode_literals
 from django.db.models import fields
 from django.db.models import ForeignKey
 from django.template.defaultfilters import capfirst
