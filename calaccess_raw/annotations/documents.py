@@ -109,7 +109,8 @@ class DocumentCloud(object):
         Returns a URL to the thumbnail image of the document's first page.
         """
         page = self.start_page or 1
-        self._thumbnail_url = f'https://assets.documentcloud.org/documents/{self.id}/pages/{self.slug}-p{page}-thumbnail.gif'
+        url = f'https://assets.documentcloud.org/documents/{self.id}/pages/{self.slug}-p{page}-thumbnail.gif'
+        self._thumbnail_url = url
         return self._thumbnail_url
 
     @property
