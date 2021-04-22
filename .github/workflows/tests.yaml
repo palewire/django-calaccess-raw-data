@@ -21,6 +21,8 @@ jobs:
         with:
           postgresql version: '11'
           postgresql: calaccess_raw
+          postgresql user: postgres
+          postgresql password:
 
       - name: Install
         run: |
