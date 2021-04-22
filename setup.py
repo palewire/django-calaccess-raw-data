@@ -56,7 +56,7 @@ setup(
         'Documentation': 'http://django-calaccess.californiacivicdata.org',
         'Funding': 'https://www.californiacivicdata.org/about/',
         'Source': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data',
-        'Coverage': 'https://coveralls.io/github/california-civic-data-coalition/django-calaccess-raw-data?branch=master',
+        'Testing': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/workflows/tests.yaml',
         'Tracker': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues'
     },
 )
