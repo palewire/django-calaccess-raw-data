@@ -11,7 +11,6 @@ django-postgres-copy = ">=2.5.*"
 pytz = "*"
 requests = "*"
 clint = "*"
-csvkit = ">=1.0"
 
 [dev-packages]
 Sphinx = "*"

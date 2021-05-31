@@ -5,7 +5,7 @@ Load clean CAL-ACCESS CSV file into a database model.
 """
 # Files
 import os
-from csvkit import reader
+from csv import reader
 
 # Django config
 from django.apps import apps

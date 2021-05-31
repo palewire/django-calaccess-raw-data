@@ -5,7 +5,7 @@ Utilities for representing and interacting with CAL-ACCESS reference documents a
 """
 # Helpers
 import os
-import csvkit
+import csv
 
 # Annotations data
 from . import choices
@@ -22,13 +22,13 @@ def load_forms():
     # Read in forms
     form_path = os.path.join(this_dir, 'forms.csv')
     with open(form_path, 'r') as form_obj:
-        form_reader = csvkit.DictReader(form_obj)
+        form_reader = csv.DictReader(form_obj)
         form_list = [FilingForm(**row) for row in form_reader]
 
     # Read in sections
     section_path = os.path.join(this_dir, 'sections.csv')
     with open(section_path, 'r') as section_obj:
-        section_reader = csvkit.DictReader(section_obj)
+        section_reader = csv.DictReader(section_obj)
         for section in section_reader:
             form = next((x for x in form_list if x.id == section['form_id']))
             form.add_section(**section)
