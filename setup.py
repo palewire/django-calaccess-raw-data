@@ -32,7 +32,6 @@ setup(
     install_requires=(
         'django>=3.2.*',
         'django-postgres-copy>=2.5.*',
-        'csvkit>=1.0',
         'requests',
         'clint',
         'hurry.filesize',
