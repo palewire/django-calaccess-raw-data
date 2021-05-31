@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='django-calaccess-raw-data',
-    version='3.0.1',
+    version='3.1.0',
     author='California Civic Data Coalition',
     author_email='b@palewi.re',
     url='http://django-calaccess.californiacivicdata.org/',
@@ -43,9 +43,7 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Framework :: Django',
         'Framework :: Django :: 3.2',
         'License :: OSI Approved :: MIT License'
