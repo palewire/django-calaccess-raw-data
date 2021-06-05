@@ -22,8 +22,6 @@ class RawDataVersionAdmin(BaseAdmin):
         "clean_file_count",
         "clean_record_count",
         "pretty_clean_size",
-        "download_file_count",
-        "clean_record_count"
     )
     list_display_links = ('release_datetime',)
     list_filter = ("release_datetime",)
