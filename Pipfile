@@ -25,6 +25,7 @@ coverage = "*"
 requests-mock = "*"
 PyGithub = "*"
 twine = "*"
+csvkit = "*"
 
 [requires]
 python_version = "3.9"

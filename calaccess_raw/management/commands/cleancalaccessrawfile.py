@@ -6,6 +6,7 @@ Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 # Files
 import os
 import csv
+import csvkit
 from django.core.files import File
 
 # Django
@@ -108,7 +109,7 @@ class Command(CalAccessCommand):
         Returns the headers from the TSV file.
         """
         with open(self.tsv_path, "r") as tsv_file:
-            tsv_reader = csv.reader(tsv_file, delimiter=str("\t"))
+            tsv_reader = csvkit.reader(tsv_file, delimiter=str("\t"))
             try:
                 return next(tsv_reader)
             except StopIteration:
@@ -196,7 +197,7 @@ class Command(CalAccessCommand):
         # Create the output object
         with open(self.csv_path, 'w') as csv_file:
             # Create the CSV writer
-            csv_writer = csv.writer(csv_file)
+            csv_writer = csvkit.writer(csv_file)
             # Write the headers
             csv_writer.writerow(self.headers)
             # Write out the rows
@@ -211,7 +212,7 @@ class Command(CalAccessCommand):
 
             # Log to the file
             with open(self.error_log_path, 'w') as log_file:
-                log_writer = csv.writer(log_file, quoting=csv.QUOTE_ALL)
+                log_writer = csvkit.writer(log_file, quoting=csv.QUOTE_ALL)
                 log_writer.writerow(['headers', 'fields', 'value'])
                 log_writer.writerows(self.log_rows)
 
