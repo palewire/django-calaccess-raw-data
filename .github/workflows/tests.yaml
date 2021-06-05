@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         settings: ['postgresql', 'multi_dbs']
-        python: [3.8, 3.9]
+        python: [3.6, 3.7, 3.8, 3.9]
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
