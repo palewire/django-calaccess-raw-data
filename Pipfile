@@ -11,12 +11,12 @@ django-postgres-copy = ">=2.5.*"
 pytz = "*"
 requests = "*"
 clint = "*"
+csvkit = "*"
 
 [dev-packages]
 Sphinx = "*"
 sphinx_rtd_theme = "*"
 sphinx-autobuild = "*"
-agate = "==1.4.0"
 subsample = "*"
 pydocstyle = "*"
 "flake8" = "*"
@@ -25,7 +25,6 @@ coverage = "*"
 requests-mock = "*"
 PyGithub = "*"
 twine = "*"
-csvkit = "*"
 
 [requires]
 python_version = "3.9"
