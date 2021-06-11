@@ -111,7 +111,6 @@ class RawDataVersion(models.Model):
             is_completed = True
         else:
             is_completed = False
-
         return is_completed
 
     @property
@@ -125,7 +124,6 @@ class RawDataVersion(models.Model):
             is_stalled = True
         else:
             is_stalled = False
-
         return is_stalled
 
     @property
@@ -139,7 +137,6 @@ class RawDataVersion(models.Model):
             is_completed = True
         else:
             is_completed = False
-
         return is_completed
 
     @property
@@ -153,7 +150,6 @@ class RawDataVersion(models.Model):
             is_stalled = True
         else:
             is_stalled = False
-
         return is_stalled
 
     @property
@@ -167,7 +163,6 @@ class RawDataVersion(models.Model):
             is_completed = True
         else:
             is_completed = False
-
         return is_completed
 
     @property
@@ -181,7 +176,6 @@ class RawDataVersion(models.Model):
             is_stalled = True
         else:
             is_stalled = False
-
         return is_stalled
 
     def pretty_expected_size(self):

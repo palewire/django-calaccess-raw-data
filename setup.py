@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='django-calaccess-raw-data',
-    version='3.1.1',
+    version='3.1.2',
     author='California Civic Data Coalition',
     author_email='b@palewi.re',
     url='http://django-calaccess.californiacivicdata.org/',
@@ -31,7 +31,7 @@ setup(
     zip_safe=False,
     install_requires=(
         'django>=3.2.*',
-        'django-postgres-copy>=2.5.*',
+        'django-postgres-copy>=2.6.*',
         'requests',
         'clint',
         'hurry.filesize',
