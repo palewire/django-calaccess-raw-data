@@ -23,7 +23,8 @@ from django.utils import timezone
 from django.conf import settings
 from calaccess_raw import get_model_list
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.management.commands.downloadcalaccessrawdata import Command
+from calaccess_raw.management.commands.extractcalaccessrawfiles import Command as ExtractCommand
+from calaccess_raw.management.commands.downloadcalaccessrawdata import Command as DownloadCommand
 
 # Logging
 import logging
@@ -75,11 +76,17 @@ class CommandTestCase(TransactionTestCase):
                 content=io.open(test_zip_path, mode='rb').read(),
             )
             kwargs = dict(verbosity=3, noinput=True)
-            cmd = Command()
+            cmd = DownloadCommand()
             cmd.handle(**kwargs)
 
-        # Now archive it
-        cmd.archive(suffix=f"-{get_random_string()}")
+        # Now archive the download
+        suffix = f"-{get_random_string()}"
+        cmd.archive(suffix=suffix)
+
+        # Extract the data
+        cmd = ExtractCommand()
+        cmd.handle(verbosity=3, keep_files=False)
+        cmd.archive(suffix=suffix)
 
     def test_download_metadata(self):
         """

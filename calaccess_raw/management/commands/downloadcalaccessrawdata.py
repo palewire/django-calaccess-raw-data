@@ -281,8 +281,6 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             self.log(" Archiving {}".format(os.path.basename(self.zip_path)))
-        # Remove previous zip file
-        self.version.download_zip_archive = None
         # Store the actual download zip file size
         self.version.download_zip_size = os.path.getsize(self.zip_path)
         # Open up the zipped file so we can wrap it in the Django File obj

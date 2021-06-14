@@ -311,10 +311,9 @@ class RawDataFile(models.Model):
         verbose_name='load columns count',
         help_text='Count of columns on the loaded calaccess_raw data model'
     )
-    download_file_archive = models.FileField(
+    download_file_archive = InternetArchiveFileField(
         blank=True,
         max_length=255,
-        upload_to=archive_directory_path,
         verbose_name='archive of download file',
         help_text='An archive of the original raw data file downloaded '
                      'from CAL-ACCESS.'

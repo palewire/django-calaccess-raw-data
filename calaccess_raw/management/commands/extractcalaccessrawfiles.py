@@ -11,6 +11,7 @@ from django.core.files import File
 
 # Misc.
 import re
+import time
 from django.conf import settings
 from django.utils.timezone import now
 
@@ -120,7 +121,7 @@ class Command(CalAccessCommand):
             raw_file.load_finish_datetime = None
             raw_file.save()
 
-    def archive(self):
+    def archive(self, suffix=None):
         """
         Save a copy of the download zip file and each file inside.
         """
@@ -129,17 +130,21 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" Archiving {}".format(os.path.basename(self.zip_path)))
 
+        identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=self.version.release_datetime)
+        if suffix:
+            identifier += suffix
+
         for raw_file in self.version.files.all():
             if self.verbosity > 2:
                 self.log(" Archiving {0}.TSV".format(raw_file.file_name))
-            # Remove previous .TSV file
-            raw_file.download_file_archive.delete()
             # Open up the .TSV file so we can wrap it in the Django File obj
             file_path = os.path.join(self.tsv_dir, raw_file.file_name + '.TSV')
             with open(file_path, 'rb') as f:
                 # Save the .TSV on the raw data file
                 raw_file.download_file_archive.save(
-                    raw_file.file_name + '.TSV',
+                    identifier,
                     File(f)
                 )
-        return
+            time.sleep(0.25)
+
+        return identifier
