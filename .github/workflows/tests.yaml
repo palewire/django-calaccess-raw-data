@@ -46,7 +46,7 @@ jobs:
 
       - id: sync-pipfile
         name: Sync pipfile
-        run: pipenv sync --dev --python ${{ matrix.python }}
+        run: pipenv sync --dev --python=${{ matrix.python }}
         shell: bash
 
       - name: Test
@@ -55,3 +55,6 @@ jobs:
           pipenv run flake8 calaccess_raw
           pipenv run coverage run example/manage.py test calaccess_raw
           pipenv run coverage report -m
+        env:
+          IA_STORAGE_ACCESS_KEY: ${{ secrets.IA_STORAGE_ACCESS_KEY }}
+          IA_STORAGE_SECRET_KEY: ${{ secrets.IA_STORAGE_SECRET_KEY }}

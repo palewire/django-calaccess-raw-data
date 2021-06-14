@@ -275,7 +275,7 @@ class Command(CalAccessCommand):
                 fp.write(chunk)
                 fp.flush()
 
-    def archive(self):
+    def archive(self, suffix=None):
         """
         Save a copy of the download zip file and each file inside.
         """
@@ -288,6 +288,8 @@ class Command(CalAccessCommand):
         # Open up the zipped file so we can wrap it in the Django File obj
         release_datetime = self.version.release_datetime
         identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=release_datetime)
+        if suffix:
+            identifier += suffix
         with open(self.zip_path, 'rb') as f:
             # Save the zip on the raw data version
             self.version.download_zip_archive.save(
@@ -297,3 +299,4 @@ class Command(CalAccessCommand):
                     title=f"CAL-ACCESS raw data ({self.version.release_datetime})"
                 )
             )
+        return identifier

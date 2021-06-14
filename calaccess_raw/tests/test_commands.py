@@ -13,6 +13,7 @@ import requests_mock
 from requests import HTTPError
 from django.test import TransactionTestCase
 from django.test.utils import override_settings
+from django.utils.crypto import get_random_string
 
 # Times
 from datetime import datetime
@@ -21,7 +22,6 @@ from django.utils import timezone
 # Django etc.
 from django.conf import settings
 from calaccess_raw import get_model_list
-# from django.core.management import call_command
 from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.management.commands.downloadcalaccessrawdata import Command
 
@@ -79,7 +79,7 @@ class CommandTestCase(TransactionTestCase):
             cmd.handle(**kwargs)
 
         # Now archive it
-        cmd.archive()
+        cmd.archive(suffix=f"-{get_random_string()}")
 
     def test_download_metadata(self):
         """

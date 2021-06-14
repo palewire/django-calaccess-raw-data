@@ -124,6 +124,11 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
+        'ia_storage': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
     }
 }
 
