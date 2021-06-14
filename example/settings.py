@@ -61,6 +61,15 @@ DATABASES = {
 }
 CALACCESS_STORE_ARCHIVE = False
 
+IA_STORAGE_ACCESS_KEY = os.getenv('IA_STORAGE_ACCESS_KEY')
+IA_STORAGE_SECRET_KEY = os.getenv('IA_STORAGE_SECRET_KEY')
+IA_STORAGE_COLLECTION = 'test_collection'
+IA_STORAGE_CONTRIBUTOR = 'palewire'
+IA_STORAGE_CREATOR = "palewire"
+IA_STORAGE_PUBLISHER = 'california-civic-data-coalition/django-calaccess-raw-data'
+IA_STORAGE_MEDIATYPE = "data"
+IA_STORAGE_SUBJECT = ['test']
+
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = False

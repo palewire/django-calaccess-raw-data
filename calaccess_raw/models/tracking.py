@@ -11,6 +11,7 @@ from calaccess_raw import archive_directory_path
 from .. import managers
 from django.db import models
 from calaccess_raw import get_model_list
+from ia_storage.fields import InternetArchiveFileField
 
 
 class RawDataVersion(models.Model):
@@ -60,10 +61,9 @@ class RawDataVersion(models.Model):
         verbose_name='date and time extraction finished',
         help_text='Date and time when extraction of the CAL-ACCESS data files finished',
     )
-    download_zip_archive = models.FileField(
+    download_zip_archive = InternetArchiveFileField(
         blank=True,
         max_length=255,
-        upload_to=archive_directory_path,
         verbose_name='download files zip file',
         help_text='An archive of the original zipped file downloaded from CAL-ACCESS.'
     )

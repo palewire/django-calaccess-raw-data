@@ -37,6 +37,7 @@ setup(
         'hurry.filesize',
         'pytz',
         'csvkit',
+        'django-internetarchive-storage',
     ),
     classifiers=(
         'Development Status :: 5 - Production/Stable',
@@ -44,6 +45,7 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Framework :: Django',
         'Framework :: Django :: 3.2',

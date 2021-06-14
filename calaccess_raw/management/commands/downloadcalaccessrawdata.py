@@ -282,14 +282,18 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.log(" Archiving {}".format(os.path.basename(self.zip_path)))
         # Remove previous zip file
-        self.version.download_zip_archive.delete()
+        self.version.download_zip_archive = None
         # Store the actual download zip file size
         self.version.download_zip_size = os.path.getsize(self.zip_path)
         # Open up the zipped file so we can wrap it in the Django File obj
-        zipped_file = open(self.zip_path, 'rb')
-        # Save the zip on the raw data version
-        self.version.download_zip_archive.save(
-            self.url.split('/')[-1],
-            File(zipped_file)
-        )
-        zipped_file.close()
+        release_datetime = self.version.release_datetime
+        identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=release_datetime)
+        with open(self.zip_path, 'rb') as f:
+            # Save the zip on the raw data version
+            self.version.download_zip_archive.save(
+                identifier,
+                File(f),
+                metadata=dict(
+                    title=f"CAL-ACCESS raw data ({self.version.release_datetime})"
+                )
+            )

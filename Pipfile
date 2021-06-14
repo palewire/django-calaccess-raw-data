@@ -12,6 +12,7 @@ pytz = "*"
 requests = "*"
 clint = "*"
 csvkit = "*"
+django-internetarchive-storage = "*"
 
 [dev-packages]
 Sphinx = "*"

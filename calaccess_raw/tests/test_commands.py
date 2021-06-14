@@ -21,8 +21,9 @@ from django.utils import timezone
 # Django etc.
 from django.conf import settings
 from calaccess_raw import get_model_list
-from django.core.management import call_command
+# from django.core.management import call_command
 from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw.management.commands.downloadcalaccessrawdata import Command
 
 # Logging
 import logging
@@ -32,7 +33,7 @@ logger = logging.getLogger(__name__)
 @override_settings(
     CALACCESS_DATA_DIR=os.path.join(settings.BASE_DIR, 'test-data'),
     MEDIA_ROOT=os.path.join(settings.BASE_DIR, 'test-data', '.media'),
-    CALACCESS_STORE_ARCHIVE=True
+    CALACCESS_STORE_ARCHIVE=False
 )
 class CommandTestCase(TransactionTestCase):
     """
@@ -41,40 +42,44 @@ class CommandTestCase(TransactionTestCase):
     multi_db = True
 
     @classmethod
-    @requests_mock.Mocker()
-    def setUpClass(cls, m):
+    def setUpClass(cls):
         """
         Load data into the database before running other tests.
         """
         super(CommandTestCase, cls).setUpClass()
-        test_zip_path = os.path.join(
-            settings.BASE_DIR,
-            settings.CALACCESS_DATA_DIR,
-            'dbwebexport.zip',
-        )
-        headers = {
-            'Content-Length': str(os.stat(test_zip_path).st_size),
-            'Accept-Ranges': 'bytes',
-            'Last-Modified': 'Mon, 11 Jul 2017 11:20:31 GMT',
-            'Connection': 'keep-alive',
-            'Date': 'Mon, 10 Jul 2017 21:25:40 GMT',
-            'Content-Type': 'application/zip',
-            'ETag': '2320c8-30619331-c54f7dc0',
-            'Server': 'Apache/2.2.3 (Red Hat)',
-        }
-        m.register_uri(
-            'HEAD',
-            'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
-            headers=headers,
-        )
-        m.register_uri(
-            'GET',
-            'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
-            headers=headers,
-            content=io.open(test_zip_path, mode='rb').read(),
-        )
-        kwargs = dict(verbosity=3, noinput=True)
-        call_command("updatecalaccessrawdata", **kwargs)
+        with requests_mock.Mocker() as m:
+            test_zip_path = os.path.join(
+                settings.BASE_DIR,
+                settings.CALACCESS_DATA_DIR,
+                'dbwebexport.zip',
+            )
+            headers = {
+                'Content-Length': str(os.stat(test_zip_path).st_size),
+                'Accept-Ranges': 'bytes',
+                'Last-Modified': 'Mon, 11 Jul 2017 11:20:31 GMT',
+                'Connection': 'keep-alive',
+                'Date': 'Mon, 10 Jul 2017 21:25:40 GMT',
+                'Content-Type': 'application/zip',
+                'ETag': '2320c8-30619331-c54f7dc0',
+                'Server': 'Apache/2.2.3 (Red Hat)',
+            }
+            m.register_uri(
+                'HEAD',
+                'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
+                headers=headers,
+            )
+            m.register_uri(
+                'GET',
+                'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip',
+                headers=headers,
+                content=io.open(test_zip_path, mode='rb').read(),
+            )
+            kwargs = dict(verbosity=3, noinput=True)
+            cmd = Command()
+            cmd.handle(**kwargs)
+
+        # Now archive it
+        cmd.archive()
 
     def test_download_metadata(self):
         """
