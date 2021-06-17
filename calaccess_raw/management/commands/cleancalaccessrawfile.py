@@ -3,6 +3,8 @@
 """
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 """
+import time
+
 # Files
 import os
 import csv
@@ -228,25 +230,34 @@ class Command(CalAccessCommand):
         # Save it in case it crashes in the next step
         self.raw_file.save()
 
-    def archive(self):
+    def archive(self, suffix=None):
         """
         Archive the file.
         """
         if self.verbosity > 2:
             self.log(" Archiving {}".format(os.path.basename(self.csv_path)))
 
-        # Remove previous .CSV and error log files
-        self.raw_file.clean_file_archive.delete()
-        self.raw_file.error_log_archive.delete()
+        identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=self.raw_file.version.release_datetime)
+        if suffix:
+            identifier += suffix
 
         # Open up the .CSV file so we can wrap it in the Django File obj
         with open(self.csv_path, 'rb') as csv_file:
             # Save the .CSV on the raw data file
-            self.raw_file.clean_file_archive.save(self.csv_name, File(csv_file))
+            self.raw_file.clean_file_archive.save(
+                identifier,
+                File(csv_file)
+            )
+            time.sleep(.25)
+
         # if there are any errors, archive the log too
         if self.log_rows:
             error_log_name = os.path.basename(self.error_log_path)
             if self.verbosity > 2:
                 self.log(" Archiving {}".format(error_log_name))
             with open(self.error_log_path, 'rb') as error_file:
-                self.raw_file.error_log_archive.save(error_log_name, File(error_file))
+                self.raw_file.error_log_archive.save(
+                    identifier,
+                    File(error_file)
+                )
+                time.sleep(0.5)

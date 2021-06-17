@@ -348,14 +348,13 @@ class Command(CalAccessCommand):
                 keep_file=self.keep_files,
             )
 
-    def archive(self):
+    def archive(self, suffix=None):
         """
         Zip up and archive the .csv and error log files.
         """
         if self.verbosity:
             self.header("Zipping cleaned files")
-        # Remove previous zip file
-        self.version.clean_zip_archive.delete()
+
         clean_zip_path = os.path.join(self.data_dir, 'raw.zip')
 
         # enable zipfile compression
@@ -389,14 +388,20 @@ class Command(CalAccessCommand):
             self.log(" All files zipped")
 
         # save the clean zip size
+        identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=self.version.release_datetime)
+        if suffix:
+            identifier += suffix
+
         self.version.clean_zip_size = os.path.getsize(clean_zip_path)
         with open(clean_zip_path, 'rb') as zf:
             # Save the zip on the raw data version
             if self.verbosity > 2:
                 self.log(" Archiving zip")
             self.version.clean_zip_archive.save(
-                os.path.basename(clean_zip_path), File(zf)
+                identifier,
+                File(zf)
             )
+            sleep(0.25)
         if self.verbosity > 2:
             self.log(" Zip archived.")
 

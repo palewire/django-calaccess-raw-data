@@ -23,6 +23,9 @@ from django.utils import timezone
 from django.conf import settings
 from calaccess_raw import get_model_list
 from calaccess_raw.management.commands import CalAccessCommand
+from calaccess_raw.management.commands.loadcalaccessrawfile import Command as LoadCommand
+from calaccess_raw.management.commands.cleancalaccessrawfile import Command as CleanCommand
+from calaccess_raw.management.commands.updatecalaccessrawdata import Command as UpdateCommand
 from calaccess_raw.management.commands.extractcalaccessrawfiles import Command as ExtractCommand
 from calaccess_raw.management.commands.downloadcalaccessrawdata import Command as DownloadCommand
 
@@ -76,17 +79,43 @@ class CommandTestCase(TransactionTestCase):
                 content=io.open(test_zip_path, mode='rb').read(),
             )
             kwargs = dict(verbosity=3, noinput=True)
-            cmd = DownloadCommand()
-            cmd.handle(**kwargs)
+            dcmd = DownloadCommand()
+            dcmd.handle(**kwargs)
 
         # Now archive the download
-        suffix = f"-{get_random_string()}"
-        cmd.archive(suffix=suffix)
+        suffix = f"-test-{get_random_string()}"
+        print(f"Suffix: {suffix}")
+        dcmd.archive(suffix=suffix)
 
         # Extract the data
-        cmd = ExtractCommand()
-        cmd.handle(verbosity=3, keep_files=False)
-        cmd.archive(suffix=suffix)
+        ecmd = ExtractCommand()
+        ecmd.handle(verbosity=3, keep_files=True)
+        ecmd.archive(suffix=suffix)
+
+        # Clean the data
+        tsv_list = [f for f in os.listdir(ecmd.tsv_dir) if '.TSV' in f.upper()]
+        for i, name in enumerate(tsv_list):
+            ccmd = CleanCommand()
+            ccmd.handle(file_name=name, verbosity=3, keep_file=True)
+            # Archive every 10th one. Don't need to do them all.
+            if i % 10 == 0:
+                ccmd.archive(suffix=suffix)
+
+        model_list = [x for x in get_model_list() if os.path.exists(x.objects.get_csv_path())]
+        for model in model_list:
+            lcmd = LoadCommand()
+            lcmd.handle(
+                model_name=model.__name__,
+                csv=model.objects.get_csv_path(),
+                verbosity=3,
+                keep_file=True,
+                app_name='calaccess_raw'
+            )
+
+        ucmd = UpdateCommand()
+        ucmd.set_global_options(dict(verbosity=3, no_color=False))
+        ucmd.version = ecmd.version
+        ucmd.archive(suffix=suffix)
 
     def test_download_metadata(self):
         """

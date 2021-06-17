@@ -5,7 +5,6 @@ Models for tracking CAL-ACCESS updates over time.
 """
 # Files
 from hurry.filesize import size as sizeformat
-from calaccess_raw import archive_directory_path
 
 # Models
 from .. import managers
@@ -67,10 +66,9 @@ class RawDataVersion(models.Model):
         verbose_name='download files zip file',
         help_text='An archive of the original zipped file downloaded from CAL-ACCESS.'
     )
-    clean_zip_archive = models.FileField(
+    clean_zip_archive = InternetArchiveFileField(
         blank=True,
         max_length=255,
-        upload_to=archive_directory_path,
         verbose_name='cleaned files zip archive',
         help_text='An archive zip of cleaned (and error log) files'
     )
@@ -324,10 +322,9 @@ class RawDataFile(models.Model):
         verbose_name='size of raw data file in bytes',
         help_text='Size of the .TSV file'
     )
-    clean_file_archive = models.FileField(
+    clean_file_archive = InternetArchiveFileField(
         blank=True,
         max_length=255,
-        upload_to=archive_directory_path,
         verbose_name='archive of clean file',
         help_text='An archive of the raw data file after being cleaned.'
     )
@@ -344,10 +341,9 @@ class RawDataFile(models.Model):
         help_text='Count of records in the original download that could not '
                   'be parsed and are excluded from the cleaned file.'
     )
-    error_log_archive = models.FileField(
+    error_log_archive = InternetArchiveFileField(
         blank=True,
         max_length=255,
-        upload_to=archive_directory_path,
         verbose_name='archive of error log',
         help_text='An archive of the error log containing lines from the '
                   'original download file that could not be parsed and are '

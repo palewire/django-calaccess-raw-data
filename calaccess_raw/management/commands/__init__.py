@@ -28,11 +28,17 @@ class CalAccessCommand(BaseCommand):
 
     def handle(self, *args, **options):
         """
-        Sets options common to all commands.
+        The generic handler function.
 
         Any command subclassing this object should implement its own
         handle method, as is standard in Django, and run this method
         via a super call to inherit its functionality.
+        """
+        self.set_global_options(options)
+
+    def set_global_options(self, options):
+        """
+        Set options to all commands.
         """
         # Set global options
         self.verbosity = options.get("verbosity")
