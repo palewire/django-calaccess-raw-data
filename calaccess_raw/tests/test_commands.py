@@ -44,6 +44,7 @@ class CommandTestCase(TransactionTestCase):
     Tests the management commands that interact with the database.
     """
     multi_db = True
+    test_archiving = False
 
     @classmethod
     def setUpClass(cls):
@@ -85,12 +86,14 @@ class CommandTestCase(TransactionTestCase):
         # Now archive the download
         suffix = f"-test-{get_random_string()}"
         print(f"Suffix: {suffix}")
-        dcmd.archive(suffix=suffix)
+        if cls.test_archiving:
+            dcmd.archive(suffix=suffix)
 
         # Extract the data
         ecmd = ExtractCommand()
         ecmd.handle(verbosity=3, keep_files=True)
-        ecmd.archive(suffix=suffix)
+        if cls.test_archiving:
+            ecmd.archive(suffix=suffix)
 
         # Clean the data
         tsv_list = [f for f in os.listdir(ecmd.tsv_dir) if '.TSV' in f.upper()]
@@ -98,7 +101,7 @@ class CommandTestCase(TransactionTestCase):
             ccmd = CleanCommand()
             ccmd.handle(file_name=name, verbosity=3, keep_file=True)
             # Archive every 10th one. Don't need to do them all.
-            if i % 10 == 0:
+            if i % 10 == 0 and cls.test_archiving:
                 ccmd.archive(suffix=suffix)
 
         model_list = [x for x in get_model_list() if os.path.exists(x.objects.get_csv_path())]
@@ -115,7 +118,8 @@ class CommandTestCase(TransactionTestCase):
         ucmd = UpdateCommand()
         ucmd.set_global_options(dict(verbosity=3, no_color=False))
         ucmd.version = ecmd.version
-        ucmd.archive(suffix=suffix)
+        if cls.test_archiving:
+            ucmd.archive(suffix=suffix)
 
     def test_download_metadata(self):
         """
