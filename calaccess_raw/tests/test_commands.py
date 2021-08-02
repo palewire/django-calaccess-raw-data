@@ -13,7 +13,7 @@ import requests_mock
 from requests import HTTPError
 from django.test import TransactionTestCase
 from django.test.utils import override_settings
-from django.utils.crypto import get_random_string
+# from django.utils.crypto import get_random_string
 
 # Times
 from datetime import datetime
@@ -84,7 +84,7 @@ class CommandTestCase(TransactionTestCase):
             dcmd.handle(**kwargs)
 
         # Now archive the download
-        suffix = f"-test-{get_random_string()}"
+        suffix = "-test"  # f"-test-{get_random_string()}"
         print(f"Suffix: {suffix}")
         if cls.test_archiving:
             dcmd.archive(suffix=suffix)

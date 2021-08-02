@@ -244,10 +244,17 @@ class Command(CalAccessCommand):
         # Open up the .CSV file so we can wrap it in the Django File obj
         with open(self.csv_path, 'rb') as csv_file:
             # Save the .CSV on the raw data file
-            self.raw_file.clean_file_archive.save(
-                identifier,
-                File(csv_file)
-            )
+            try:
+                self.raw_file.clean_file_archive.save(
+                    identifier,
+                    File(csv_file)
+                )
+            except FileExistsError:
+                self.raw_file.clean_file_archive.delete()
+                self.raw_file.clean_file_archive.save(
+                    identifier,
+                    File(csv_file)
+                )
             time.sleep(.25)
 
         # if there are any errors, archive the log too
@@ -255,9 +262,17 @@ class Command(CalAccessCommand):
             error_log_name = os.path.basename(self.error_log_path)
             if self.verbosity > 2:
                 self.log(" Archiving {}".format(error_log_name))
+            # Save it
             with open(self.error_log_path, 'rb') as error_file:
-                self.raw_file.error_log_archive.save(
-                    identifier,
-                    File(error_file)
-                )
+                try:
+                    self.raw_file.error_log_archive.save(
+                        identifier,
+                        File(error_file)
+                    )
+                except FileExistsError:
+                    self.raw_file.error_log_archive.delete()
+                    self.raw_file.error_log_archive.save(
+                        identifier,
+                        File(error_file)
+                    )
                 time.sleep(0.5)

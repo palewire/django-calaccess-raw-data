@@ -140,11 +140,13 @@ class Command(CalAccessCommand):
             # Open up the .TSV file so we can wrap it in the Django File obj
             file_path = os.path.join(self.tsv_dir, raw_file.file_name + '.TSV')
             with open(file_path, 'rb') as f:
+                args = [identifier, File(f)]
                 # Save the .TSV on the raw data file
-                raw_file.download_file_archive.save(
-                    identifier,
-                    File(f)
-                )
+                try:
+                    raw_file.download_file_archive.save(*args)
+                except FileExistsError:
+                    raw_file.download_file_archive.delete()
+                    raw_file.download_file_archive.save(*args)
             time.sleep(0.25)
 
         return identifier

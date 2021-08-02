@@ -14,6 +14,7 @@ from django.template.loader import render_to_string
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 # Time
+import time
 from datetime import datetime
 from django.utils import timezone
 
@@ -290,11 +291,22 @@ class Command(CalAccessCommand):
             identifier += suffix
         with open(self.zip_path, 'rb') as f:
             # Save the zip on the raw data version
-            self.version.download_zip_archive.save(
-                identifier,
-                File(f),
-                metadata=dict(
-                    title=f"CAL-ACCESS raw data ({self.version.release_datetime})"
+            try:
+                self.version.download_zip_archive.save(
+                    identifier,
+                    File(f),
+                    metadata=dict(
+                        title=f"CAL-ACCESS raw data ({self.version.release_datetime})"
+                    )
                 )
-            )
+            except FileExistsError:
+                self.version.download_zip_archive.delete()
+                time.sleep(60)
+                self.version.download_zip_archive.save(
+                    identifier,
+                    File(f),
+                    metadata=dict(
+                        title=f"CAL-ACCESS raw data ({self.version.release_datetime})"
+                    )
+                )
         return identifier
