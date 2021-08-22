@@ -51,10 +51,8 @@ class ModelTestCase(TestCase):
         # Tracking model methods
         models.RawDataVersion().__str__()
         models.RawDataVersion().pretty_expected_size()
-        models.RawDataVersion().pretty_download_size()
         models.RawDataVersion().pretty_clean_size()
         models.RawDataVersion(expected_size=100).pretty_expected_size()
-        models.RawDataVersion(download_zip_size=100).pretty_download_size()
         models.RawDataVersion(clean_zip_size=100).pretty_clean_size()
 
         models.RawDataFile().__str__()
@@ -66,11 +64,8 @@ class ModelTestCase(TestCase):
 
         # Tracking model properties
         models.RawDataVersion().download_file_count
-        models.RawDataVersion().download_record_count
         models.RawDataVersion().clean_file_count
         models.RawDataVersion().clean_record_count
-        models.RawDataVersion().error_file_count
-        models.RawDataVersion().error_count
 
         completed_version = models.RawDataVersion(
             download_start_datetime=datetime.now(),

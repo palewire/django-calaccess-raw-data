@@ -18,7 +18,6 @@ class RawDataVersionAdmin(BaseAdmin):
         "release_datetime",
         "pretty_download_size",
         "download_file_count",
-        "download_record_count",
         "clean_file_count",
         "clean_record_count",
         "pretty_clean_size",

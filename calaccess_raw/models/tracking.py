@@ -214,15 +214,6 @@ class RawDataVersion(models.Model):
         return self.files.count()
 
     @property
-    def download_record_count(self):
-        """
-        Returns the count of records in the version's downloaded files.
-        """
-        return self.files.aggregate(
-            total=models.Sum('download_records_count')
-        )['total']
-
-    @property
     def clean_file_count(self):
         """
         Returns the count of files cleaned in the version.
@@ -236,22 +227,6 @@ class RawDataVersion(models.Model):
         """
         return self.files.aggregate(
             total=models.Sum('clean_records_count')
-        )['total']
-
-    @property
-    def error_file_count(self):
-        """
-        Returns the count of cleaned files with errors in the version.
-        """
-        return self.files.exclude(error_log_archive='').count()
-
-    @property
-    def error_count(self):
-        """
-        Returns the count of cleaning errors in the version.
-        """
-        return self.files.aggregate(
-            total=models.Sum('error_count')
         )['total']
 
 
