@@ -36,7 +36,7 @@ setup(
         'clint',
         'hurry.filesize',
         'pytz',
-        'csvkit',
+        'pandas',
         'django-internetarchive-storage',
     ),
     classifiers=(
