@@ -272,12 +272,6 @@ class RawDataFile(models.Model):
         verbose_name='raw data file name',
         help_text='Name of the raw source data file without extension',
     )
-    download_records_count = models.IntegerField(
-        null=False,
-        default=0,
-        verbose_name='download records count',
-        help_text='Count of records in the original file downloaded from CAL-ACCESS'
-    )
     clean_records_count = models.IntegerField(
         null=False,
         default=0,
@@ -290,12 +284,6 @@ class RawDataFile(models.Model):
         verbose_name='load records count',
         help_text="Count of records in the loaded from cleaned file into "
                   "calaccess_raw's data model"
-    )
-    download_columns_count = models.IntegerField(
-        null=False,
-        default=0,
-        verbose_name='download columns count',
-        help_text='Count of columns in the original file downloaded from CAL-ACCESS'
     )
     clean_columns_count = models.IntegerField(
         null=False,
@@ -333,21 +321,6 @@ class RawDataFile(models.Model):
         default=0,
         verbose_name='size of clean data file in bytes',
         help_text='Size of the .CSV file'
-    )
-    error_count = models.IntegerField(
-        null=False,
-        default=0,
-        verbose_name='error count',
-        help_text='Count of records in the original download that could not '
-                  'be parsed and are excluded from the cleaned file.'
-    )
-    error_log_archive = InternetArchiveFileField(
-        blank=True,
-        max_length=255,
-        verbose_name='archive of error log',
-        help_text='An archive of the error log containing lines from the '
-                  'original download file that could not be parsed and are '
-                  'excluded from the cleaned file.'
     )
     clean_start_datetime = models.DateTimeField(
         null=True,

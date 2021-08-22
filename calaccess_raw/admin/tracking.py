@@ -36,10 +36,8 @@ class RawDataFileAdmin(BaseAdmin):
         "id",
         "version",
         "file_name",
-        "download_records_count",
         "clean_records_count",
         "load_records_count",
-        "error_count"
     )
     list_display_links = ('id', 'file_name',)
     list_filter = ("version__release_datetime",)
