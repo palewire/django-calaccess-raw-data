@@ -237,7 +237,7 @@ class Command(CalAccessCommand):
 
         # Stream the download
         chunk_size = 1024
-        resp = requests.get(self.url, stream=True, headers=headers)
+        resp = requests.get(self.url, stream=True, headers=headers, verify=False)
         logger.debug(
             'Response status {0.status_code} ({0.reason}) from GET request.'.format(resp)
         )
