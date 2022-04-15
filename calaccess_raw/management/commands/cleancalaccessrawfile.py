@@ -128,7 +128,7 @@ class Command(CalAccessCommand):
             self.tsv_path,
             delimiter='\t',
             dtype=str,
-            on_bad_lines="warn"  # Skip bad rows
+            on_bad_lines="skip"  # Skip bad rows
         )
 
         # Wrote out CSV
