@@ -81,7 +81,7 @@ class CalAccessCommand(BaseCommand):
         """
         Returns a dict with metadata about the current CAL-ACCESS snapshot.
         """
-        response = requests.head(self.url)
+        response = requests.head(self.url, verify=False)
         logger.debug(
             'Response status {0.status_code} ({0.reason}) from HEAD request.'.format(response)
         )
