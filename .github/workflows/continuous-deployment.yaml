@@ -26,7 +26,7 @@ jobs:
 
       - id: lint
         name: Lint
-        run: pipenv run flake8 ./
+        run: pipenv run flake8 ./calaccess_raw
 
   test-python:
     name: "Test Python code"
