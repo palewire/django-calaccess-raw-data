@@ -91,14 +91,14 @@ jobs:
 
       - id: build
         name: Build release
-        run: pipenv run twine check dist/*
+        run: |
+          pipenv run python setup.py sdist
+          pipenv run python setup.py bdist_wheel
         shell: bash
 
       - id: check
         name: Check release
-        run: |
-          pipenv run python setup.py sdist
-          pipenv run python setup.py bdist_wheel
+        run: pipenv run twine check dist/*
         shell: bash
 
       - id: save
