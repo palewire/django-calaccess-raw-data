@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='django-calaccess-raw-data',
-    version='4.0.2',
+    version='4.0.3',
     author='California Civic Data Coalition',
     author_email='b@palewi.re',
     url='http://django-calaccess.californiacivicdata.org/',
@@ -38,6 +38,7 @@ setup(
         'pytz',
         'pandas',
         'django-internetarchive-storage',
+        'csvkit',
     ),
     classifiers=(
         'Development Status :: 5 - Production/Stable',
