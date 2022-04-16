@@ -25,6 +25,7 @@ pydocstyle = "*"
 coverage = "*"
 requests-mock = "*"
 twine = "*"
+setuptools-scm = "*"
 
 [requires]
 python_version = "3.9"
