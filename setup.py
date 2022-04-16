@@ -90,9 +90,9 @@ setup(
         'Project': 'https://www.californiacivicdata.org/',
         'Documentation': 'https://django-calaccess.californiacivicdata.org/',
         'Funding': 'https://www.californiacivicdata.org/about/',
-        'Source': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data',
-        'Testing': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/workflows/tests.yaml',
-        'Tracker': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues'
+        'Source': 'https://github.com/palewire/django-calaccess-raw-data',
+        'Testing': 'https://github.com/palewire/django-calaccess-raw-data/actions/workflows/tests.yaml',
+        'Tracker': 'https://github.com/palewire/django-calaccess-raw-data/issues'
     },
     setup_requires=["pytest-runner", "setuptools_scm"],
     use_scm_version={"version_scheme": version_scheme, "local_scheme": local_version},
