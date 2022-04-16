@@ -1,7 +1,5 @@
 A Django app to download, extract and load campaign finance and lobbying activity data from the California Secretary of State's `CAL-ACCESS <http://www.sos.ca.gov/prd/cal-access/>`__ database
 
-|Build Status| |PyPI version| 
-
 -  Documentation:
    `django-calaccess.californiacivicdata.org <https://django-calaccess.californiacivicdata.org/en/latest/>`__
 -  Issues:
@@ -10,8 +8,3 @@ A Django app to download, extract and load campaign finance and lobbying activit
    `pypi.python.org/pypi/django-calaccess-raw-data <https://pypi.python.org/pypi/django-calaccess-raw-data>`__
 -  Testing:
    `github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/ <https://github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/workflows/tests.yaml>`__
-
-.. |Build Status| image:: https://github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/workflows/tests.yaml/badge.svg
-    :target: https://github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/workflows/tests.yaml
-.. |PyPI version| image:: https://badge.fury.io/py/django-calaccess-raw-data.svg
-    :target: https://badge.fury.io/py/django-calaccess-raw-data
