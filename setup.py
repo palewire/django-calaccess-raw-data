@@ -3,8 +3,12 @@
 import os
 from setuptools import setup
 
-def read(fname):
-    with open(os.path.join(os.path.dirname(__file__), fname)) as f:
+
+def read(file_name):
+    """Read the provided file."""
+    this_dir = os.path.dirname(__file__)
+    file_path = os.path.join(this_dir, file_name)
+    with open(file_path) as f:
         return f.read()
 
 
@@ -44,7 +48,8 @@ setup(
     description=("A Django app to download, extract and load campaign "
                 "finance and lobbying activity data from the California "
                 "Secretary of State's CAL-ACCESS database"),
-    long_description=read('README.rst'),
+    long_description=read("README.md"),
+    long_description_content_type="text/markdown",
     license='MIT',
     packages=(
         'calaccess_raw',
@@ -76,6 +81,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Framework :: Django',
         'Framework :: Django :: 3.2',
         'License :: OSI Approved :: MIT License'
@@ -84,9 +90,9 @@ setup(
         'Project': 'https://www.californiacivicdata.org/',
         'Documentation': 'https://django-calaccess.californiacivicdata.org/',
         'Funding': 'https://www.californiacivicdata.org/about/',
-        'Source': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data',
-        'Testing': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/actions/workflows/tests.yaml',
-        'Tracker': 'https://github.com/california-civic-data-coalition/django-calaccess-raw-data/issues'
+        'Source': 'https://github.com/palewire/django-calaccess-raw-data',
+        'Testing': 'https://github.com/palewire/django-calaccess-raw-data/actions/workflows/tests.yaml',
+        'Tracker': 'https://github.com/palewire/django-calaccess-raw-data/issues'
     },
     setup_requires=["pytest-runner", "setuptools_scm"],
     use_scm_version={"version_scheme": version_scheme, "local_scheme": local_version},
