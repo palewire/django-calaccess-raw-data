@@ -35,8 +35,8 @@ jobs:
 
       - name: Update downloads website
         run: |
-          pipenv run python -W ignore manage.py migrate;
-          pipenv run python -W ignore manage.py updatecalaccessrawdata --noinput --verbosity=3;
+          pipenv run python -W ignore example/manage.py migrate;
+          pipenv run python -W ignore example/manage.py updatecalaccessrawdata --noinput --verbosity=3;
         shell: bash
         env:
           PGPASSWORD: postgres
