@@ -40,3 +40,9 @@ jobs:
         shell: bash
         env:
           PGPASSWORD: postgres
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: django-calaccess-raw-data
+          path: example/data
+          if-no-files-found: error
