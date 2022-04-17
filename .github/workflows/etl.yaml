@@ -1,0 +1,42 @@
+name: Extract, transform and load
+on:
+  workflow_dispatch:
+
+jobs:
+  etl:
+    name: "ETL"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Install GIS packages
+        run: sudo apt-get install binutils libproj-dev gdal-bin
+
+      - name: Set up PostGIS
+        uses: huaxk/postgis-action@v1
+        with:
+          postgresql version: '11'
+          postgresql db: calaccess_raw
+          postgresql user: postgres
+          postgresql password: postgres
+
+      - name: Install pipenv
+        run: pipx install pipenv
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+          cache: 'pipenv'
+
+      - id: pipenv-install
+        name: Install Python dependencies
+        run: pipenv install --dev --python `which python`
+
+      - name: Update downloads website
+        run: |
+          pipenv run python -W ignore manage.py migrate;
+          pipenv run python -W ignore manage.py updatecalaccessrawdata --noinput --verbosity=3;
+        shell: bash
+        env:
+          PGPASSWORD: postgres
