@@ -41,8 +41,16 @@ jobs:
         env:
           PGPASSWORD: postgres
 
-      - uses: actions/upload-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
         with:
           name: django-calaccess-raw-data
-          path: example/data
+          path: example/data/
           if-no-files-found: error
+
+      - name: Upload file to biglocalnews.org
+        uses: biglocalnews/upload-files@v1
+        with:
+          api-key: ${{ secrets.BLN_API_TOKEN }}
+          project-id: ${{ secrets.BLN_PROJECT_ID }}
+          path: example/data/
