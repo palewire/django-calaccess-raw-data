@@ -6,6 +6,20 @@ jobs:
   etl:
     name: "ETL"
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:11
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: calaccess_raw
+        ports:
+        # will assign a random free host port
+        - 5432/tcp
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
@@ -18,13 +32,6 @@ jobs:
 
       - name: Checkout the repo
         uses: actions/checkout@v2
-
-      - uses: harmon758/postgresql-action@v1
-        with:
-          postgresql version: '11'
-          postgresql db: calaccess_raw
-          postgresql user: postgres
-          postgresql password: postgres
 
       - name: Install pipenv
         run: pipx install pipenv
