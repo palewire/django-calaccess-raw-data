@@ -7,14 +7,17 @@ jobs:
     name: "ETL"
     runs-on: ubuntu-latest
     steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
+
       - name: Checkout the repo
         uses: actions/checkout@v2
 
-      - name: Install GIS packages
-        run: sudo apt-get install binutils libproj-dev gdal-bin
-
-      - name: Set up PostGIS
-        uses: huaxk/postgis-action@v1
+      - uses: harmon758/postgresql-action@v1
         with:
           postgresql version: '11'
           postgresql db: calaccess_raw
@@ -48,7 +51,7 @@ jobs:
           path: example/data/
           if-no-files-found: error
 
-      - name: Upload file to biglocalnews.org
+      - name: Upload files to biglocalnews.org
         uses: biglocalnews/upload-files@v1
         with:
           api-key: ${{ secrets.BLN_API_TOKEN }}
