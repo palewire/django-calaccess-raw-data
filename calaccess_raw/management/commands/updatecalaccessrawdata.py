@@ -271,12 +271,9 @@ class Command(CalAccessCommand):
         # if archive setting is enabled, zip up all of the csv and error logs
         if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
             # skip if resuming and the clean zip file is already saved
-            if self.resume and bool(self.version.clean_zip_archive):
-                self.log('File already zipped.')
-            else:
-                self.archive()
-                if self.verbosity:
-                    self.duration()
+            self.archive()
+            if self.verbosity:
+                self.duration()
 
         self.load()
         if self.verbosity:
