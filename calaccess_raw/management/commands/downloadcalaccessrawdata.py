@@ -14,13 +14,10 @@ from django.template.loader import render_to_string
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 # Time
-import time
 from datetime import datetime
 from django.utils import timezone
 
 # Django stuff
-from django.conf import settings
-from django.core.files import File
 from calaccess_raw.models.tracking import RawDataVersion
 
 # Commands
