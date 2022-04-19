@@ -196,9 +196,6 @@ class Command(CalAccessCommand):
                 )
             )
 
-        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-            self.archive()
-
         # store download finish time
         self.version.download_finish_datetime = timezone.now()
         # and save the RawDataVersion
@@ -275,38 +272,3 @@ class Command(CalAccessCommand):
             for chunk in progress.bar(resp.iter_content(chunk_size=chunk_size), expected_size=n_iters):
                 fp.write(chunk)
                 fp.flush()
-
-    def archive(self, suffix=None):
-        """
-        Save a copy of the download zip file and each file inside.
-        """
-        if self.verbosity:
-            self.log(" Archiving {}".format(os.path.basename(self.zip_path)))
-        # Store the actual download zip file size
-        self.version.download_zip_size = os.path.getsize(self.zip_path)
-        # Open up the zipped file so we can wrap it in the Django File obj
-        release_datetime = self.version.release_datetime
-        identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=release_datetime)
-        if suffix:
-            identifier += suffix
-        with open(self.zip_path, 'rb') as f:
-            # Save the zip on the raw data version
-            try:
-                self.version.download_zip_archive.save(
-                    identifier,
-                    File(f),
-                    metadata=dict(
-                        title=f"CAL-ACCESS raw data ({self.version.release_datetime})"
-                    )
-                )
-            except FileExistsError:
-                self.version.download_zip_archive.delete()
-                time.sleep(60)
-                self.version.download_zip_archive.save(
-                    identifier,
-                    File(f),
-                    metadata=dict(
-                        title=f"CAL-ACCESS raw data ({self.version.release_datetime})"
-                    )
-                )
-        return identifier
