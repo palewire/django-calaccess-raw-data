@@ -387,31 +387,6 @@ class Command(CalAccessCommand):
         if self.verbosity > 2:
             self.log(" All files zipped")
 
-        # save the clean zip size
-        identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=self.version.release_datetime)
-        if suffix:
-            identifier += suffix
-
-        self.version.clean_zip_size = os.path.getsize(clean_zip_path)
-        with open(clean_zip_path, 'rb') as zf:
-            # Save the zip on the raw data version
-            if self.verbosity > 2:
-                self.log(" Archiving zip")
-            try:
-                self.version.clean_zip_archive.save(
-                    identifier,
-                    File(zf)
-                )
-            except FileExistsError:
-                self.version.clean_zip_archive.delete()
-                self.version.clean_zip_archive.save(
-                    identifier,
-                    File(zf)
-                )
-            sleep(0.25)
-        if self.verbosity > 2:
-            self.log(" Zip archived.")
-
     def load(self):
         """
         Loads the cleaned up csv files into the database.
