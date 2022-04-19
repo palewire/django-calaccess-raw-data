@@ -63,10 +63,6 @@ class Command(CalAccessCommand):
                 self.log(" Cleaning %s" % self.file_name)
             self.clean()
 
-            # If requested, archive the files
-            if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-                self.archive()
-
         # Unless keeping files, remove the raw TSV file
         if not options['keep_file']:
             os.remove(self.tsv_path)
@@ -229,50 +225,3 @@ class Command(CalAccessCommand):
 
         # Save it in case it crashes in the next step
         self.raw_file.save()
-
-    def archive(self, suffix=None):
-        """
-        Archive the file.
-        """
-        if self.verbosity > 2:
-            self.log(" Archiving {}".format(os.path.basename(self.csv_path)))
-
-        identifier = "ccdc-raw-data-{dt:%Y-%m-%d_%H-%M-%S}".format(dt=self.raw_file.version.release_datetime)
-        if suffix:
-            identifier += suffix
-
-        # Open up the .CSV file so we can wrap it in the Django File obj
-        with open(self.csv_path, 'rb') as csv_file:
-            # Save the .CSV on the raw data file
-            try:
-                self.raw_file.clean_file_archive.save(
-                    identifier,
-                    File(csv_file)
-                )
-            except FileExistsError:
-                self.raw_file.clean_file_archive.delete()
-                self.raw_file.clean_file_archive.save(
-                    identifier,
-                    File(csv_file)
-                )
-            time.sleep(.25)
-
-        # if there are any errors, archive the log too
-        if self.log_rows:
-            error_log_name = os.path.basename(self.error_log_path)
-            if self.verbosity > 2:
-                self.log(" Archiving {}".format(error_log_name))
-            # Save it
-            with open(self.error_log_path, 'rb') as error_file:
-                try:
-                    self.raw_file.error_log_archive.save(
-                        identifier,
-                        File(error_file)
-                    )
-                except FileExistsError:
-                    self.raw_file.error_log_archive.delete()
-                    self.raw_file.error_log_archive.save(
-                        identifier,
-                        File(error_file)
-                    )
-                time.sleep(0.5)
