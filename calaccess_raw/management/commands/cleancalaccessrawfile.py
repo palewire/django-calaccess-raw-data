@@ -3,16 +3,12 @@
 """
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 """
-import time
-
 # Files
 import os
 import csv
 import csvkit
-from django.core.files import File
 
 # Django
-from django.conf import settings
 from django.utils.timezone import now
 
 # Commands
