@@ -7,7 +7,6 @@ from django.conf import settings
 
 # Files
 import os
-from django.core.files import File
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 
 # Time
