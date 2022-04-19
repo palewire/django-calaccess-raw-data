@@ -7,12 +7,9 @@ Extract the CAL-ACCESS raw data files from downloaded ZIP.
 import os
 import shutil
 import zipfile
-from django.core.files import File
 
 # Misc.
 import re
-import time
-from django.conf import settings
 from django.utils.timezone import now
 
 # Commands
