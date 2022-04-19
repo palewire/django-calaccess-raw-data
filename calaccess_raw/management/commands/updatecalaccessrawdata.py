@@ -3,11 +3,8 @@
 """
 Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 """
-from django.conf import settings
-
 # Files
 import os
-from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
 
 # Time
 from time import sleep
