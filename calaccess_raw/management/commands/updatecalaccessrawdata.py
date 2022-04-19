@@ -267,13 +267,6 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.duration()
 
-        # if archive setting is enabled, zip up all of the csv and error logs
-        if getattr(settings, 'CALACCESS_STORE_ARCHIVE', False):
-            # skip if resuming and the clean zip file is already saved
-            self.archive()
-            if self.verbosity:
-                self.duration()
-
         self.load()
         if self.verbosity:
             self.duration()
@@ -343,45 +336,6 @@ class Command(CalAccessCommand):
                 verbosity=self.verbosity,
                 keep_file=self.keep_files,
             )
-
-    def archive(self, suffix=None):
-        """
-        Zip up and archive the .csv and error log files.
-        """
-        if self.verbosity:
-            self.header("Zipping cleaned files")
-
-        clean_zip_path = os.path.join(self.data_dir, 'raw.zip')
-
-        # enable zipfile compression
-        compression = ZIP_DEFLATED
-
-        try:
-            zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
-        except RuntimeError:
-            logger.error('Zip file cannot be compressed (check zlib module).')
-            compression = ZIP_STORED
-            zf = ZipFile(clean_zip_path, 'w', compression, allowZip64=True)
-
-        # loop over and save files in csv dir
-        for f in os.listdir(self.csv_dir):
-            if self.verbosity > 2:
-                self.log(" Adding %s to zip" % f)
-            csv_path = os.path.join(self.csv_dir, f)
-            zf.write(csv_path, f)
-
-        # same for errors dir
-        errors_dir = os.path.join(self.data_dir, 'log')
-        for f in os.listdir(errors_dir):
-            if self.verbosity > 2:
-                self.log(" Adding %s to zip" % f)
-            error_path = os.path.join(errors_dir, f)
-            zf.write(error_path, f)
-
-        # close the zip file
-        zf.close()
-        if self.verbosity > 2:
-            self.log(" All files zipped")
 
     def load(self):
         """
