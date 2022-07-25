@@ -2963,7 +2963,7 @@ class NamesCd(CalAccessBaseModel):
         help_text="Identification number unique to the name",
     )
     naml = fields.CharField(
-        max_length=200,
+        max_length=1000,
         db_column='NAML',
         help_text="Last name",
     )
@@ -3003,12 +3003,12 @@ class NamesCd(CalAccessBaseModel):
         help_text="Middle name",
     )
     fullname = fields.CharField(
-        max_length=200,
+        max_length=1000,
         db_column='FULLNAME',
         help_text="Full name",
     )
     naml_search = fields.CharField(
-        max_length=200,
+        max_length=1000,
         db_column='NAML_SEARCH',
         help_text="Last name",
     )
