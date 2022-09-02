@@ -218,7 +218,9 @@ class Command(CalAccessCommand):
 
         # Prep
         expected_size = self.version.expected_size
-        headers = dict()
+        headers = {
+            'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+        }
 
         if self.resume:
             headers['Range'] = 'bytes=%d-' % self.local_file_size

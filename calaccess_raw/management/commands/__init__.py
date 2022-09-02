@@ -81,7 +81,10 @@ class CalAccessCommand(BaseCommand):
         """
         Returns a dict with metadata about the current CAL-ACCESS snapshot.
         """
-        response = requests.head(self.url, verify=False)
+        headers = {
+            'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+        }
+        response = requests.head(self.url, headers=headers, verify=False)
         logger.debug(
             'Response status {0.status_code} ({0.reason}) from HEAD request.'.format(response)
         )
