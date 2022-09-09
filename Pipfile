@@ -23,6 +23,7 @@ coverage = "*"
 requests-mock = "*"
 twine = "*"
 setuptools-scm = "*"
+django-internetarchive-storage = "*"
 
 [requires]
 python_version = "3.9"

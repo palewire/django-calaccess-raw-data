@@ -64,6 +64,7 @@ setup(
         'django-postgres-copy>=2.6.*',
         'requests',
         'csvkit',
+        'django-internetarchive-storage',
     ),
     classifiers=(
         'Development Status :: 5 - Production/Stable',
