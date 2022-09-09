@@ -92,10 +92,7 @@ from calaccess_raw.models.common import (
     ReceivedFilingsCd,
     ReportsCd
 )
-from calaccess_raw.models.tracking import (
-    RawDataVersion,
-    RawDataFile
-)
+
 __all__ = (
     'CalAccessBaseModel',
     'CvrSoCd',
@@ -178,6 +175,4 @@ __all__ = (
     'NamesCd',
     'ReceivedFilingsCd',
     'ReportsCd',
-    'RawDataVersion',
-    'RawDataFile'
 )

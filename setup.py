@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import os
 from setuptools import setup
 
@@ -41,7 +39,7 @@ def local_version(version):
 
 setup(
     name='django-calaccess-raw-data',
-    author='California Civic Data Coalition',
+    author='Ben Welsh',
     author_email='b@palewi.re',
     url='http://django-calaccess.californiacivicdata.org/',
     description=("A Django app to download, extract and load campaign "
@@ -69,7 +67,6 @@ setup(
         'hurry.filesize',
         'pytz',
         'pandas',
-        'django-internetarchive-storage',
         'csvkit',
     ),
     classifiers=(

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Custom managers for working with CAL-ACCESS data.
 """
@@ -44,55 +42,3 @@ class CalAccessManager(CopyManager):
             'tsv',
             self.get_tsv_name()
         )
-
-
-class RawDataVersionQuerySet(models.QuerySet):
-    """
-    Custom methods for working with a RawDataVersion QuerySet.
-    """
-    def latest_download(self):
-        """
-        Returns the most recently completed download.
-        """
-        return self.filter(download_start_datetime__isnull=False).latest('download_start_datetime')
-
-    def latest_extract(self):
-        """
-        Returns the most recently extracted download.
-        """
-        return self.filter(extract_start_datetime__isnull=False).latest('extract_start_datetime')
-
-    def complete(self):
-        """
-        Filters down QuerySet to return only version that have a complete update.
-        """
-        return self.exclude(update_finish_datetime__isnull=True)
-
-
-class RawDataVersionManager(models.Manager):
-    """
-    Custom methods for working with the RawDataVersion model.
-    """
-    def get_queryset(self):
-        """
-        Returns the custom QuerySet we want for this manager.
-        """
-        return RawDataVersionQuerySet(self.model, using=self._db)
-
-    def latest_download(self):
-        """
-        Returns the most recently completed download.
-        """
-        return self.get_queryset().latest_download()
-
-    def latest_extract(self):
-        """
-        Returns the most recently extracted download.
-        """
-        return self.get_queryset().latest_extract()
-
-    def complete(self):
-        """
-        Filters down QuerySet to return only version that have a complete update.
-        """
-        return self.get_queryset().complete()

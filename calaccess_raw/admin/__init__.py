@@ -93,11 +93,6 @@ from calaccess_raw.admin.common import (
     ReportsCdAdmin
 )
 
-from calaccess_raw.admin.tracking import (
-    RawDataVersionAdmin,
-    RawDataFileAdmin
-)
-
 __all__ = (
     'BaseAdmin',
     'CvrSoCdAdmin',
@@ -180,6 +175,4 @@ __all__ = (
     'NamesCdAdmin',
     'ReceivedFilingsCdAdmin',
     'ReportsCdAdmin',
-    'RawDataVersionAdmin',
-    'RawDataFileAdmin',
 )

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for the utilities storied in app's __init__.py file.
 """
@@ -53,13 +51,4 @@ class UtilityTestCase(TestCase):
         """
         Test the methods that hook up with our models.
         """
-        version = models.RawDataVersion(release_datetime=datetime.now())
-        calaccess_raw.archive_directory_path(version, 'foobar.csv')
-        datafile = models.RawDataFile(version=version)
-        calaccess_raw.archive_directory_path(datafile, 'foobar.csv')
-        with self.assertRaises(TypeError):
-            calaccess_raw.archive_directory_path(
-                models.RcptCd(),
-                'foobar.csv'
-            )
         calaccess_raw.get_model_list()
