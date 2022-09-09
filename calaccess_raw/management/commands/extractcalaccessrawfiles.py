@@ -1,17 +1,11 @@
 """
 Extract the CAL-ACCESS raw data files from downloaded ZIP.
 """
-# Files
+import re
 import os
 import shutil
 import zipfile
 
-# Misc.
-import re
-from django.conf import settings
-
-# Commands
-from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 
 

@@ -73,6 +73,12 @@ class Command(CalAccessCommand):
         with open(self.csv, 'r') as infile:
             self.csv_row_count = max(sum(1 for line in infile) - 1, 0)
 
+        # Quit if the CSV is empty.
+        if not self.csv_row_count:
+            if self.verbosity > 2:
+                self.failure("{} is empty.".format(self.csv))
+            return
+
         # Get the headers from the source CSV
         with open(self.csv, 'r') as infile:
             csv_reader = reader(infile)

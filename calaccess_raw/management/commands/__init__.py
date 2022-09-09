@@ -1,22 +1,13 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Base management command that provides common functionality for the other commands in this app.
 """
-import codecs
-import locale
 import logging
 import os
-import requests
-import sys
 from re import sub
-from email.utils import parsedate_tz, mktime_tz
 from datetime import datetime
-from django.utils import timezone
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
 from calaccess_raw import get_data_directory
-from calaccess_raw.models import RawDataVersion
 logger = logging.getLogger(__name__)
 
 

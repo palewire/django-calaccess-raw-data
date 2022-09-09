@@ -7,10 +7,6 @@ from django.test.utils import override_settings
 
 # Stuff to test
 import calaccess_raw
-from calaccess_raw import models
-
-# Python misc.
-from datetime import datetime
 
 # Logging
 import logging

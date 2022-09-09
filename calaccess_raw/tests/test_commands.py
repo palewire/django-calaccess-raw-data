@@ -1,25 +1,18 @@
+"""Test commands."""
 # Files
 import io
 import os
 
 # Testing
-import warnings
 import requests_mock
-from requests import HTTPError
 from django.test import TransactionTestCase
 from django.test.utils import override_settings
-
-# Times
-from datetime import datetime
-from django.utils import timezone
 
 # Django etc.
 from django.conf import settings
 from calaccess_raw import get_model_list
-from calaccess_raw.management.commands import CalAccessCommand
 from calaccess_raw.management.commands.loadcalaccessrawfile import Command as LoadCommand
 from calaccess_raw.management.commands.cleancalaccessrawfile import Command as CleanCommand
-from calaccess_raw.management.commands.updatecalaccessrawdata import Command as UpdateCommand
 from calaccess_raw.management.commands.extractcalaccessrawfiles import Command as ExtractCommand
 from calaccess_raw.management.commands.downloadcalaccessrawdata import Command as DownloadCommand
 

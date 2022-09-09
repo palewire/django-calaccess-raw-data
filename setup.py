@@ -63,10 +63,6 @@ setup(
         'django>=3.2.*',
         'django-postgres-copy>=2.6.*',
         'requests',
-        'clint',
-        'hurry.filesize',
-        'pytz',
-        'pandas',
         'csvkit',
     ),
     classifiers=(

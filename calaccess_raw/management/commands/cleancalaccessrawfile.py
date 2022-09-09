@@ -1,22 +1,10 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 """
-import time
-
-# Files
 import os
 import csv
+
 import csvkit
-from django.core.files import File
-
-# Django
-from django.conf import settings
-from django.utils.timezone import now
-
-# Commands
-from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 
 
@@ -49,9 +37,15 @@ class Command(CalAccessCommand):
         """
         super(Command, self).handle(*args, **options)
 
-        if self.verbosity > 1:
-            self.log(" Cleaning %s" % self.file_name)
-        self.clean()
+        # Set all the config options
+        self.set_options(options)
+
+        # If the file has data ...
+        if self.row_count:
+            # Walk through the raw TSV file and create a clean CSV file
+            if self.verbosity > 1:
+                self.log(" Cleaning %s" % self.file_name)
+            self.clean()
 
         # Unless keeping files, remove the raw TSV file
         if not options['keep_file']:

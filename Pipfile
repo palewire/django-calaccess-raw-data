@@ -6,11 +6,9 @@ name = "pypi"
 [packages]
 Django = "==3.2.*"
 django-postgres-copy = ">=2.6.*"
-"hurry.filesize" = "*"
 "psycopg2-binary" = "*"
 pytz = "*"
 requests = "*"
-clint = "*"
 csvkit = "*"
 
 [dev-packages]

@@ -11,7 +11,6 @@ from django.contrib.admin import AdminSite
 
 # Python misc.
 from copy import deepcopy
-from datetime import datetime
 
 # Logging
 import logging

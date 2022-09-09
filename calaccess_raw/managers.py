@@ -3,7 +3,6 @@ Custom managers for working with CAL-ACCESS data.
 """
 import os
 import calaccess_raw
-from django.db import models
 from postgres_copy import CopyManager
 
 

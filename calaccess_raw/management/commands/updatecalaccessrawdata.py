@@ -1,15 +1,11 @@
 """
 Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
 """
-from django.conf import settings
-
 # Files
 import os
 
 # Commands
-from sys import exit
 from django.core.management import call_command
-from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
 
 # Models
