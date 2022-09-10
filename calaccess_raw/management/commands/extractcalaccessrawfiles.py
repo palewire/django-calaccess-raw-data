@@ -43,7 +43,6 @@ class Command(CalAccessCommand):
         # Do it
         self.extract_tsv_files()
 
-        # Nuke it, unless we want to keep it
         if not options['keep_files']:
             shutil.rmtree(self.download_dir)
 

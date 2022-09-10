@@ -5,6 +5,25 @@ import os
 import shutil
 
 import requests
+<<<<<<< HEAD
+=======
+from hurry.filesize import size
+
+# Strings
+from django.template.loader import render_to_string
+from django.contrib.humanize.templatetags.humanize import naturaltime
+
+# Time
+from datetime import datetime
+from django.utils import timezone
+
+# Django stuff
+from calaccess_raw.models.tracking import RawDataVersion
+
+# Commands
+from clint.textui import progress
+from django.core.management.base import CommandError
+>>>>>>> 1e2809770c82a7f46501cd8a16bd47d5e78850f5
 from calaccess_raw.management.commands import CalAccessCommand
 
 
@@ -26,11 +45,6 @@ class Command(CalAccessCommand):
         """
         super(Command, self).handle(*args, **options)
 
-        # Prep
-        headers = {
-            'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
-        }
-
         # flush previous download
         if os.path.exists(self.download_dir):
             shutil.rmtree(self.download_dir)
@@ -38,6 +52,9 @@ class Command(CalAccessCommand):
 
         # Stream the download
         self.header("Downloading ZIP file")
+        headers = {
+            'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+        }
         with requests.get(self.url, stream=True, headers=headers, verify=False) as r:
             r.raise_for_status()
             chunk_size = 1024
