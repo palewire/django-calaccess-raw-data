@@ -105,5 +105,4 @@ class Command(CalAccessCommand):
                 model.__name__,
                 verbosity=self.verbosity,
                 keep_file=self.keep_files,
-                app_name=self.app_name,
             )
