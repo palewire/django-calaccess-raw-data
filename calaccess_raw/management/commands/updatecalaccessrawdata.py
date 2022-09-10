@@ -50,7 +50,6 @@ class Command(CalAccessCommand):
         call_command(
             "downloadcalaccessrawdata",
             verbosity=self.verbosity,
-            noinput=True,
         )
         if self.verbosity:
             self.duration()
