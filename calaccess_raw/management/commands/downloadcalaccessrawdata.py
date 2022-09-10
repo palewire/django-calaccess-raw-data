@@ -5,25 +5,6 @@ import os
 import shutil
 
 import requests
-<<<<<<< HEAD
-=======
-from hurry.filesize import size
-
-# Strings
-from django.template.loader import render_to_string
-from django.contrib.humanize.templatetags.humanize import naturaltime
-
-# Time
-from datetime import datetime
-from django.utils import timezone
-
-# Django stuff
-from calaccess_raw.models.tracking import RawDataVersion
-
-# Commands
-from clint.textui import progress
-from django.core.management.base import CommandError
->>>>>>> 1e2809770c82a7f46501cd8a16bd47d5e78850f5
 from calaccess_raw.management.commands import CalAccessCommand
 
 

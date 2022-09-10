@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0024_auto_20210822_2158'),
+        ('calaccess_raw', '0025_auto_20220725_1711'),
     ]
 
     operations = [
