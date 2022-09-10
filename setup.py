@@ -76,7 +76,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Framework :: Django',
-        'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4',
         'License :: OSI Approved :: MIT License'
     ),
     project_urls={
@@ -87,6 +87,6 @@ setup(
         'Testing': 'https://github.com/palewire/django-calaccess-raw-data/actions/workflows/tests.yaml',
         'Tracker': 'https://github.com/palewire/django-calaccess-raw-data/issues'
     },
-    setup_requires=["pytest-runner", "setuptools_scm"],
+    setup_requires=["setuptools_scm"],
     use_scm_version={"version_scheme": version_scheme, "local_scheme": local_version},
 )
