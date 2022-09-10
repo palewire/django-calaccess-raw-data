@@ -51,7 +51,6 @@ class Command(CalAccessCommand):
             "downloadcalaccessrawdata",
             verbosity=self.verbosity,
             noinput=True,
-            restart=self.force_restart,
         )
         if self.verbosity:
             self.duration()
