@@ -13,6 +13,7 @@ from calaccess_raw import get_model_list
 
 # Logging
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -20,6 +21,7 @@ class Command(CalAccessCommand):
     """
     Download, unzip, clean and load the latest CAL-ACCESS database ZIP.
     """
+
     help = "Download, unzip, clean and load the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
@@ -32,7 +34,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Keep zip, unzipped, TSV and CSV files"
+            help="Keep zip, unzipped, TSV and CSV files",
         )
 
     def handle(self, *args, **options):
@@ -49,16 +51,13 @@ class Command(CalAccessCommand):
             "downloadcalaccessrawdata",
             verbosity=self.verbosity,
             noinput=True,
-            restart=self.force_restart
+            restart=self.force_restart,
         )
         if self.verbosity:
             self.duration()
 
         # Extract
-        call_command(
-            'extractcalaccessrawfiles',
-            keep_files=self.keep_files
-        )
+        call_command("extractcalaccessrawfiles", keep_files=self.keep_files)
         if self.verbosity:
             self.duration()
 
@@ -80,7 +79,7 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.header("Cleaning data files")
 
-        tsv_list = [f for f in os.listdir(self.tsv_dir) if '.TSV' in f.upper()]
+        tsv_list = [f for f in os.listdir(self.tsv_dir) if ".TSV" in f.upper()]
 
         # Loop through all the files in the source directory
         for name in tsv_list:
@@ -98,7 +97,9 @@ class Command(CalAccessCommand):
         if self.verbosity:
             self.header("Loading data files")
 
-        model_list = [x for x in get_model_list() if os.path.exists(x.objects.get_csv_path())]
+        model_list = [
+            x for x in get_model_list() if os.path.exists(x.objects.get_csv_path())
+        ]
 
         for model in model_list:
             call_command(

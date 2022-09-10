@@ -10,6 +10,7 @@ import calaccess_raw
 
 # Logging
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -17,6 +18,7 @@ class UtilityTestCase(TestCase):
     """
     Tests related to our hodgepodge of utilities.
     """
+
     multi_db = True
 
     @override_settings(CALACCESS_DATA_DIR=None)

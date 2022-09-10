@@ -13,6 +13,7 @@ class Command(CalAccessCommand):
     """
     Extract the CAL-ACCESS raw data files from downloaded ZIP.
     """
+
     help = "Extract the CAL-ACCESS raw data files from downloaded ZIP"
 
     def add_arguments(self, parser):
@@ -25,7 +26,7 @@ class Command(CalAccessCommand):
             action="store_true",
             dest="keep_files",
             default=False,
-            help="Keep downloaded zipped files"
+            help="Keep downloaded zipped files",
         )
 
     def handle(self, *args, **options):
@@ -43,7 +44,7 @@ class Command(CalAccessCommand):
         # Do it
         self.extract_tsv_files()
 
-        if not options['keep_files']:
+        if not options["keep_files"]:
             shutil.rmtree(self.download_dir)
 
     def extract_tsv_files(self):
@@ -52,7 +53,7 @@ class Command(CalAccessCommand):
         """
         if self.verbosity:
             self.log(" Extracting .TSV files")
-        pattern = r'^.+\.TSV$'
+        pattern = r"^.+\.TSV$"
         with zipfile.ZipFile(self.zip_path) as zf:
             tsv_files = [f for f in zf.namelist() if re.match(pattern, f)]
             for f in tsv_files:

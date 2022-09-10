@@ -6,17 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0019_alter_rawdataversion_download_zip_archive'),
+        ("calaccess_raw", "0019_alter_rawdataversion_download_zip_archive"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='rawdatafile',
-            name='download_file_archive',
+            model_name="rawdatafile",
+            name="download_file_archive",
         ),
         migrations.AddField(
-            model_name='rawdatafile',
-            name='InternetArchiveFileField',
-            field=models.FileField(blank=True, help_text='An archive of the original raw data file downloaded from CAL-ACCESS.', max_length=255, upload_to='', verbose_name='archive of download file'),
+            model_name="rawdatafile",
+            name="InternetArchiveFileField",
+            field=models.FileField(
+                blank=True,
+                help_text="An archive of the original raw data file downloaded from CAL-ACCESS.",
+                max_length=255,
+                upload_to="",
+                verbose_name="archive of download file",
+            ),
         ),
     ]

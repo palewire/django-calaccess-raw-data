@@ -8,13 +8,20 @@ import ia_storage.storage
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0022_auto_20210614_1627'),
+        ("calaccess_raw", "0022_auto_20210614_1627"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='rawdataversion',
-            name='clean_zip_archive',
-            field=ia_storage.fields.InternetArchiveFileField(blank=True, help_text='An archive zip of cleaned (and error log) files', max_length=255, storage=ia_storage.storage.InternetArchiveStorage, upload_to='', verbose_name='cleaned files zip archive'),
+            model_name="rawdataversion",
+            name="clean_zip_archive",
+            field=ia_storage.fields.InternetArchiveFileField(
+                blank=True,
+                help_text="An archive zip of cleaned (and error log) files",
+                max_length=255,
+                storage=ia_storage.storage.InternetArchiveStorage,
+                upload_to="",
+                verbose_name="cleaned files zip archive",
+            ),
         ),
     ]

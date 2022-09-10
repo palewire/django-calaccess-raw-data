@@ -18,6 +18,7 @@ class CalAccessMetaClass(ModelBase):
 
     Automatically configures Meta attributes common to all models.
     """
+
     def __new__(cls, name, bases, attrs):
         """
         Override the default __new__ behavior.
@@ -44,6 +45,7 @@ class CalAccessBaseModel(models.Model):
     """
     An abstract model with some tricks we'll reuse.
     """
+
     __metaclass__ = CalAccessMetaClass
 
     # The UNIQUE_KEY is one or more fields that, taken together, are unique
@@ -86,7 +88,7 @@ class CalAccessBaseModel(models.Model):
         Return the model's docstring as a readable string ready to print.
         """
         if self.__doc__.startswith(self.klass_name):
-            return ''
+            return ""
         return textwrap.dedent(self.__doc__).strip()
 
     @property
@@ -176,6 +178,7 @@ class CalAccessBaseModel(models.Model):
         Returns a list of tuples, each containing a FilingForm object and list of FilingFormSection objects.
         """
         from calaccess_raw.annotations import FilingForm
+
         forms_dict = {}
         for i in self.FILING_FORMS:
             if isinstance(i, FilingForm):
@@ -194,5 +197,6 @@ class CalAccessBaseModel(models.Model):
         """
         Meta model options.
         """
+
         abstract = True
-        app_label = 'calaccess_raw'
+        app_label = "calaccess_raw"

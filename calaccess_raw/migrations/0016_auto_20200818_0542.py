@@ -9,13 +9,19 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0015_auto_20170729_0218'),
+        ("calaccess_raw", "0015_auto_20170729_0218"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='cvr3verificationinfocd',
-            name='sig_naml',
-            field=calaccess_raw.fields.CharField(blank=True, db_column='SIG_NAML', help_text='last name of the signer', max_length=500, verbose_name='last name'),
+            model_name="cvr3verificationinfocd",
+            name="sig_naml",
+            field=calaccess_raw.fields.CharField(
+                blank=True,
+                db_column="SIG_NAML",
+                help_text="last name of the signer",
+                max_length=500,
+                verbose_name="last name",
+            ),
         ),
     ]

@@ -14,6 +14,7 @@ from copy import deepcopy
 
 # Logging
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -21,6 +22,7 @@ class ModelTestCase(TestCase):
     """
     Tests related to the database models.
     """
+
     multi_db = True
 
     def test_model_methods(self):

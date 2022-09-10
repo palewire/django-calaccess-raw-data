@@ -7,23 +7,29 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0024_auto_20210822_2158'),
+        ("calaccess_raw", "0024_auto_20210822_2158"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='namescd',
-            name='fullname',
-            field=calaccess_raw.fields.CharField(db_column='FULLNAME', help_text='Full name', max_length=1000),
+            model_name="namescd",
+            name="fullname",
+            field=calaccess_raw.fields.CharField(
+                db_column="FULLNAME", help_text="Full name", max_length=1000
+            ),
         ),
         migrations.AlterField(
-            model_name='namescd',
-            name='naml',
-            field=calaccess_raw.fields.CharField(db_column='NAML', help_text='Last name', max_length=1000),
+            model_name="namescd",
+            name="naml",
+            field=calaccess_raw.fields.CharField(
+                db_column="NAML", help_text="Last name", max_length=1000
+            ),
         ),
         migrations.AlterField(
-            model_name='namescd',
-            name='naml_search',
-            field=calaccess_raw.fields.CharField(db_column='NAML_SEARCH', help_text='Last name', max_length=1000),
+            model_name="namescd",
+            name="naml_search",
+            field=calaccess_raw.fields.CharField(
+                db_column="NAML_SEARCH", help_text="Last name", max_length=1000
+            ),
         ),
     ]

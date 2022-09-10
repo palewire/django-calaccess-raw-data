@@ -12,7 +12,8 @@ class Command(CalAccessCommand):
     """
     Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
     """
-    help = 'Clean a source CAL-ACCESS TSV file and reformat it as a CSV'
+
+    help = "Clean a source CAL-ACCESS TSV file and reformat it as a CSV"
 
     def add_arguments(self, parser):
         """
@@ -20,15 +21,15 @@ class Command(CalAccessCommand):
         """
         super(Command, self).add_arguments(parser)
         parser.add_argument(
-            'file_name',
-            help="Name of the TSV file to be cleaned and discarded for a CSV"
+            "file_name",
+            help="Name of the TSV file to be cleaned and discarded for a CSV",
         )
         parser.add_argument(
             "--keep-file",
             action="store_true",
             dest="keep_file",
             default=False,
-            help="Keep original TSV file"
+            help="Keep original TSV file",
         )
 
     def handle(self, *args, **options):
@@ -48,7 +49,7 @@ class Command(CalAccessCommand):
             self.clean()
 
         # Unless keeping files, remove the raw TSV file
-        if not options['keep_file']:
+        if not options["keep_file"]:
             os.remove(self.tsv_path)
 
     def set_options(self, options):
@@ -56,7 +57,7 @@ class Command(CalAccessCommand):
         Set options for use in other methods.
         """
         # Set options
-        self.file_name = options['file_name']
+        self.file_name = options["file_name"]
 
         # Set log variables
         self.log_dir = os.path.join(self.data_dir, "log/")
@@ -95,7 +96,7 @@ class Command(CalAccessCommand):
         """
         Given it a raw list of rows from a TSV, yields cleaned rows for a CSV.
         """
-        with open(self.tsv_path, 'rb') as tsv_file:
+        with open(self.tsv_path, "rb") as tsv_file:
             # Pop the headers out of the TSV file
             next(tsv_file)
 
@@ -109,15 +110,17 @@ class Command(CalAccessCommand):
                     continue
 
                 # Nuke any null bytes
-                if tsv_line.count('\x00'):
-                    tsv_line = tsv_line.replace('\x00', ' ')
+                if tsv_line.count("\x00"):
+                    tsv_line = tsv_line.replace("\x00", " ")
 
                 # Nuke the ASCII "substitute character." chr(26) in Python
-                if tsv_line.count('\x1a'):
-                    tsv_line = tsv_line.replace('\x1a', '')
+                if tsv_line.count("\x1a"):
+                    tsv_line = tsv_line.replace("\x1a", "")
 
                 # Remove any extra newline chars
-                tsv_line = tsv_line.replace("\r\n", "").replace("\r", "").replace("\n", "")
+                tsv_line = (
+                    tsv_line.replace("\r\n", "").replace("\r", "").replace("\n", "")
+                )
 
                 # Split on tabs so we can later spit it back out as a CSV row
                 csv_line = tsv_line.split("\t")
@@ -128,14 +131,16 @@ class Command(CalAccessCommand):
                     yield csv_line
                 else:
                     # Otherwise log it
-                    self.log_rows.append([self.headers_count, csv_field_count, ','.join(csv_line)])
+                    self.log_rows.append(
+                        [self.headers_count, csv_field_count, ",".join(csv_line)]
+                    )
 
     def clean(self):
         """
         Cleans the provided source TSV file and writes it out in CSV format.
         """
         # Create the output object
-        with open(self.csv_path, 'w') as csv_file:
+        with open(self.csv_path, "w") as csv_file:
             # Create the CSV writer
             csv_writer = csvkit.writer(csv_file)
             # Write the headers
@@ -147,11 +152,11 @@ class Command(CalAccessCommand):
         if self.log_rows:
             # Log to the terminal
             if self.verbosity > 2:
-                msg = '  {} errors logged (not including empty lines)'
+                msg = "  {} errors logged (not including empty lines)"
                 self.failure(msg.format(len(self.log_rows)))
 
             # Log to the file
-            with open(self.error_log_path, 'w') as log_file:
+            with open(self.error_log_path, "w") as log_file:
                 log_writer = csvkit.writer(log_file, quoting=csv.QUOTE_ALL)
-                log_writer.writerow(['headers', 'fields', 'value'])
+                log_writer.writerow(["headers", "fields", "value"])
                 log_writer.writerows(self.log_rows)

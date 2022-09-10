@@ -8,9 +8,9 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0002_auto_20160802_2101'),
+        ("calaccess_raw", "0002_auto_20160802_2101"),
     ]
 
     operations = [
-        migrations.RenameField('RawDataVersion', 'size', 'expected_size'),
+        migrations.RenameField("RawDataVersion", "size", "expected_size"),
     ]

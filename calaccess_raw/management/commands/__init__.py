@@ -8,6 +8,7 @@ from datetime import datetime
 from django.utils.termcolors import colorize
 from django.core.management.base import BaseCommand
 from calaccess_raw import get_data_directory
+
 logger = logging.getLogger(__name__)
 
 
@@ -15,7 +16,8 @@ class CalAccessCommand(BaseCommand):
     """
     Base management command that provides common functionality for the other commands in this app.
     """
-    url = 'https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip'
+
+    url = "https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip"
 
     def handle(self, *args, **options):
         """
@@ -37,19 +39,16 @@ class CalAccessCommand(BaseCommand):
 
         # set up data directories
         self.data_dir = get_data_directory()
-        self.tsv_dir = os.path.join(self.data_dir, 'tsv')
-        self.csv_dir = os.path.join(self.data_dir, 'csv')
+        self.tsv_dir = os.path.join(self.data_dir, "tsv")
+        self.csv_dir = os.path.join(self.data_dir, "csv")
 
         os.path.exists(self.data_dir) or os.makedirs(self.data_dir)
         os.path.exists(self.tsv_dir) or os.makedirs(self.tsv_dir)
         os.path.exists(self.csv_dir) or os.makedirs(self.csv_dir)
 
         # set path where zip will be downloaded
-        self.download_dir = os.path.join(self.data_dir, 'download')
-        self.zip_path = os.path.join(
-            self.download_dir,
-            self.url.split('/')[-1]
-        )
+        self.download_dir = os.path.join(self.data_dir, "download")
+        self.zip_path = os.path.join(self.download_dir, self.url.split("/")[-1])
 
         # Start the clock
         self.start_datetime = datetime.now()
@@ -99,8 +98,8 @@ class CalAccessCommand(BaseCommand):
         Calculates how long the command has been running and writes it to stdout.
         """
         duration = datetime.now() - self.start_datetime
-        self.stdout.write('Duration: {}'.format(str(duration)))
-        logger.debug('Duration: {}'.format(str(duration)))
+        self.stdout.write("Duration: {}".format(str(duration)))
+        logger.debug("Duration: {}".format(str(duration)))
 
     def __str__(self):
-        return sub(r'(.+\.)*', '', self.__class__.__module__)
+        return sub(r"(.+\.)*", "", self.__class__.__module__)

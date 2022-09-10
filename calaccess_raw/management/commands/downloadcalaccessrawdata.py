@@ -12,6 +12,7 @@ class Command(CalAccessCommand):
     """
     Download the latest CAL-ACCESS database ZIP.
     """
+
     help = "Download the latest CAL-ACCESS database ZIP"
 
     def add_arguments(self, parser):
@@ -34,11 +35,11 @@ class Command(CalAccessCommand):
         # Stream the download
         self.header("Downloading ZIP file")
         headers = {
-            'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
         }
         with requests.get(self.url, stream=True, headers=headers, verify=False) as r:
             r.raise_for_status()
             chunk_size = 1024
-            with open(self.zip_path, 'ab') as fp:
+            with open(self.zip_path, "ab") as fp:
                 for chunk in r.iter_content(chunk_size=chunk_size):
                     fp.write(chunk)

@@ -12,6 +12,7 @@ class CalAccessFieldMixin(fields.Field):
     """
     A set of common helpers for all of our custom fields.
     """
+
     def definition(self):
         """
         A humanized definition of what's the in field for documentation.
@@ -19,7 +20,7 @@ class CalAccessFieldMixin(fields.Field):
         if self.help_text:
             return capfirst(self.help_text)
         else:
-            return ''
+            return ""
 
     def is_unique_key(self):
         """
@@ -27,7 +28,7 @@ class CalAccessFieldMixin(fields.Field):
 
         Returns True or False
         """
-        if self.__dict__['db_column'] in self.model().get_unique_key_list():
+        if self.__dict__["db_column"] in self.model().get_unique_key_list():
             return True
         return False
 
@@ -38,6 +39,7 @@ class DocumentCloudMixin(fields.Field):
 
     Allows it to link to documents that explain the contents of the data.
     """
+
     def __init__(self, documentcloud_pages=[], *args, **kwargs):
         """
         Overrides the standard __init__ to add our documentcloud_page_urls option.
@@ -49,13 +51,10 @@ class DocumentCloudMixin(fields.Field):
         """
         Overrides the standard deconstruct method to add our documentcloud_page_urls option.
         """
-        name, path, args, kwargs = super(
-            DocumentCloudMixin,
-            self
-        ).deconstruct()
+        name, path, args, kwargs = super(DocumentCloudMixin, self).deconstruct()
         # Only include kwarg if it's not the default
         if self.documentcloud_pages != []:
-            kwargs['documentcloud_pages'] = self.documentcloud_pages
+            kwargs["documentcloud_pages"] = self.documentcloud_pages
         return name, path, args, kwargs
 
 
@@ -63,6 +62,7 @@ class CharField(fields.CharField, CalAccessFieldMixin, DocumentCloudMixin):
     """
     A custom character field.
     """
+
     copy_type = "text"
     copy_template = """
     CASE
@@ -75,15 +75,14 @@ class CharField(fields.CharField, CalAccessFieldMixin, DocumentCloudMixin):
         """
         Returns a custom description for documentation that includes the max length.
         """
-        return super(CharField, self).description % dict(
-            max_length=self.max_length
-        )
+        return super(CharField, self).description % dict(max_length=self.max_length)
 
 
 class DateField(fields.DateField, CalAccessFieldMixin):
     """
     A custom date field.
     """
+
     copy_type = "text"
     copy_template = """
     CASE
@@ -97,6 +96,7 @@ class DateTimeField(fields.DateTimeField, CalAccessFieldMixin):
     """
     A custom datetime field.
     """
+
     copy_type = "text"
     copy_template = """
     CASE
@@ -110,6 +110,7 @@ class DecimalField(fields.DecimalField, CalAccessFieldMixin):
     """
     A custom decimal field.
     """
+
     copy_type = "text"
     copy_template = """
     CASE
@@ -126,6 +127,7 @@ class FloatField(fields.FloatField, CalAccessFieldMixin):
     """
     A custom float field.
     """
+
     copy_type = "text"
     copy_template = """
     CASE
@@ -142,6 +144,7 @@ class IntegerField(fields.IntegerField, CalAccessFieldMixin, DocumentCloudMixin)
     """
     A custom integer field.
     """
+
     copy_type = "text"
     copy_template = """
     CASE
@@ -173,6 +176,7 @@ class ForeignKeyField(ForeignKey, CalAccessFieldMixin, DocumentCloudMixin):
     """
     A custom foreign key field.
     """
+
     @property
     def copy_type(self):
         """

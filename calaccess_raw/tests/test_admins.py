@@ -11,6 +11,7 @@ from calaccess_raw import get_model_list
 
 # Logging
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -18,6 +19,7 @@ class AdminTestCase(TestCase):
     """
     Tests the adminstration panel configuration.
     """
+
     def test_models(self):
         """
         Make sure all the models have admins.

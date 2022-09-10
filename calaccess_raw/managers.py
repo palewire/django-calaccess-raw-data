@@ -10,6 +10,7 @@ class CalAccessManager(CopyManager):
     """
     Utilities for accessing the raw data associated with a model.
     """
+
     def get_csv_name(self):
         """
         Returns the name of the model's CSV data file.
@@ -21,9 +22,7 @@ class CalAccessManager(CopyManager):
         Returns the path to the model's CSV data file.
         """
         return os.path.join(
-            calaccess_raw.get_data_directory(),
-            'csv',
-            self.get_csv_name()
+            calaccess_raw.get_data_directory(), "csv", self.get_csv_name()
         )
 
     def get_tsv_name(self):
@@ -37,7 +36,5 @@ class CalAccessManager(CopyManager):
         Returns the path to the model's raw TSV data file.
         """
         return os.path.join(
-            calaccess_raw.get_data_directory(),
-            'tsv',
-            self.get_tsv_name()
+            calaccess_raw.get_data_directory(), "tsv", self.get_tsv_name()
         )
