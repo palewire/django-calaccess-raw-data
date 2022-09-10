@@ -13,6 +13,7 @@ class CvrRegistrationCdAdmin(BaseAdmin):
     """
     Custom admin for the CvrRegistrationCd model.
     """
+
     list_display = (
         "filing_id",
         "rpt_date",
@@ -28,6 +29,7 @@ class Cvr2RegistrationCdAdmin(BaseAdmin):
     """
     Custom admin for the Cvr2RegistrationCd model.
     """
+
     list_display = (
         "filing_id",
         "form_type",
@@ -40,6 +42,7 @@ class LobbyAmendmentsCdAdmin(BaseAdmin):
     """
     Custom admin for the LobbyAmendmentsCd model.
     """
+
     list_display = (
         "filing_id",
         "exec_date",
@@ -53,6 +56,7 @@ class LobbyingChgLogCdAdmin(BaseAdmin):
     """
     Custom admin for the LobbyingChgLogCd model.
     """
+
     list_display = (
         "filer_id",
         "entity_type",
@@ -67,6 +71,7 @@ class LempCdAdmin(BaseAdmin):
     """
     Custom admin for the LempCd model.
     """
+
     list_display = (
         "filing_id",
         "eff_date",
@@ -80,6 +85,7 @@ class F690P2CdAdmin(BaseAdmin):
     """
     Custom admin for the F690P2Cd model.
     """
+
     list_display = (
         "filing_id",
         "exec_date",
@@ -93,6 +99,7 @@ class CvrLobbyDisclosureCdAdmin(BaseAdmin):
     """
     Custom admin for the CvrLobbyDisclosureCd model.
     """
+
     list_display = (
         "filing_id",
         "rpt_date",
@@ -108,6 +115,7 @@ class Cvr2LobbyDisclosureCdAdmin(BaseAdmin):
     """
     Custom admin for the Cvr2LobbyDisclosureCd model.
     """
+
     list_display = (
         "filing_id",
         "form_type",
@@ -121,13 +129,8 @@ class LattCdAdmin(BaseAdmin):
     """
     Custom admin for the LattCd model.
     """
-    list_display = (
-        "filing_id",
-        "form_type",
-        "pmt_date",
-        "recip_naml",
-        "amount"
-    )
+
+    list_display = ("filing_id", "form_type", "pmt_date", "recip_naml", "amount")
     date_hierarchy = "pmt_date"
 
 
@@ -136,13 +139,8 @@ class LexpCdAdmin(BaseAdmin):
     """
     Custom admin for the LexpCd model.
     """
-    list_display = (
-        "filing_id",
-        "expn_date",
-        "form_type",
-        "payee_naml",
-        "amount"
-    )
+
+    list_display = ("filing_id", "expn_date", "form_type", "payee_naml", "amount")
     date_hierarchy = "expn_date"
 
 
@@ -151,6 +149,7 @@ class LccmCdAdmin(BaseAdmin):
     """
     Custom admin for the LccmCd model.
     """
+
     list_display = (
         "filing_id",
         "form_type",
@@ -166,12 +165,8 @@ class LpayCdAdmin(BaseAdmin):
     """
     Custom admin for the LpayCd model.
     """
-    list_display = (
-        "filing_id",
-        "form_type",
-        "emplr_naml",
-        "per_total"
-    )
+
+    list_display = ("filing_id", "form_type", "emplr_naml", "per_total")
 
 
 @admin.register(models.LothCd)
@@ -179,11 +174,6 @@ class LothCdAdmin(BaseAdmin):
     """
     Custom admin for the LothCd model.
     """
-    list_display = (
-        "filing_id",
-        "pmt_date",
-        "form_type",
-        "firm_name",
-        "amount"
-    )
+
+    list_display = ("filing_id", "pmt_date", "form_type", "firm_name", "amount")
     date_hierarchy = "pmt_date"

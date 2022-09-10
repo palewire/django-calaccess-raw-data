@@ -6,24 +6,24 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0023_alter_rawdataversion_clean_zip_archive'),
+        ("calaccess_raw", "0023_alter_rawdataversion_clean_zip_archive"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='rawdatafile',
-            name='download_columns_count',
+            model_name="rawdatafile",
+            name="download_columns_count",
         ),
         migrations.RemoveField(
-            model_name='rawdatafile',
-            name='download_records_count',
+            model_name="rawdatafile",
+            name="download_records_count",
         ),
         migrations.RemoveField(
-            model_name='rawdatafile',
-            name='error_count',
+            model_name="rawdatafile",
+            name="error_count",
         ),
         migrations.RemoveField(
-            model_name='rawdatafile',
-            name='error_log_archive',
+            model_name="rawdatafile",
+            name="error_log_archive",
         ),
     ]

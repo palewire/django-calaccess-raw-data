@@ -10,6 +10,7 @@ class BaseAdmin(admin.ModelAdmin):
     """
     Parent class with attributes common to all CAL-ACCESS data models.
     """
+
     save_on_top = True
 
     def get_readonly_fields(self, *args, **kwargs):

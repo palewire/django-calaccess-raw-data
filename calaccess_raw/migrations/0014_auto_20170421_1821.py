@@ -10,21 +10,55 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0013_auto_20161123_2219'),
+        ("calaccess_raw", "0013_auto_20161123_2219"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='rawdatafile',
-            options={'ordering': ('-version_id', 'file_name'), 'verbose_name': 'TRACKING: CAL-ACCESS raw data file'},
+            name="rawdatafile",
+            options={
+                "ordering": ("-version_id", "file_name"),
+                "verbose_name": "TRACKING: CAL-ACCESS raw data file",
+            },
         ),
         migrations.AlterModelOptions(
-            name='rawdataversion',
-            options={'get_latest_by': 'release_datetime', 'ordering': ('-release_datetime',), 'verbose_name': 'TRACKING: CAL-ACCESS raw data version'},
+            name="rawdataversion",
+            options={
+                "get_latest_by": "release_datetime",
+                "ordering": ("-release_datetime",),
+                "verbose_name": "TRACKING: CAL-ACCESS raw data version",
+            },
         ),
         migrations.AlterField(
-            model_name='rcptcd',
-            name='tran_type',
-            field=calaccess_raw.fields.CharField(blank=True, choices=[('F', 'Forgiven Loan'), ('I', 'Intermediary'), ('R', 'Returned'), ('T', 'Third Party Repayment'), ('X', 'Transfer'), ('0', 'Unknown'), ('M', 'Unknown'), ('N', 'Unknown')], db_column='TRAN_TYPE', documentcloud_pages=[calaccess_raw.annotations.DocumentCloud(id='2711616-MapCalFormat2Fields', start_page=72), calaccess_raw.annotations.DocumentCloud(id='2712033-Cal-Format-1-05-02', start_page=29), calaccess_raw.annotations.DocumentCloud(id='2712034-Cal-Format-201', start_page=38)], help_text='Transaction Type', max_length=1, verbose_name='transaction type'),
+            model_name="rcptcd",
+            name="tran_type",
+            field=calaccess_raw.fields.CharField(
+                blank=True,
+                choices=[
+                    ("F", "Forgiven Loan"),
+                    ("I", "Intermediary"),
+                    ("R", "Returned"),
+                    ("T", "Third Party Repayment"),
+                    ("X", "Transfer"),
+                    ("0", "Unknown"),
+                    ("M", "Unknown"),
+                    ("N", "Unknown"),
+                ],
+                db_column="TRAN_TYPE",
+                documentcloud_pages=[
+                    calaccess_raw.annotations.DocumentCloud(
+                        id="2711616-MapCalFormat2Fields", start_page=72
+                    ),
+                    calaccess_raw.annotations.DocumentCloud(
+                        id="2712033-Cal-Format-1-05-02", start_page=29
+                    ),
+                    calaccess_raw.annotations.DocumentCloud(
+                        id="2712034-Cal-Format-201", start_page=38
+                    ),
+                ],
+                help_text="Transaction Type",
+                max_length=1,
+                verbose_name="transaction type",
+            ),
         ),
     ]

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for the utilities storied in app's __init__.py file.
 """
@@ -9,13 +7,10 @@ from django.test.utils import override_settings
 
 # Stuff to test
 import calaccess_raw
-from calaccess_raw import models
-
-# Python misc.
-from datetime import datetime
 
 # Logging
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -23,6 +18,7 @@ class UtilityTestCase(TestCase):
     """
     Tests related to our hodgepodge of utilities.
     """
+
     multi_db = True
 
     @override_settings(CALACCESS_DATA_DIR=None)
@@ -53,13 +49,4 @@ class UtilityTestCase(TestCase):
         """
         Test the methods that hook up with our models.
         """
-        version = models.RawDataVersion(release_datetime=datetime.now())
-        calaccess_raw.archive_directory_path(version, 'foobar.csv')
-        datafile = models.RawDataFile(version=version)
-        calaccess_raw.archive_directory_path(datafile, 'foobar.csv')
-        with self.assertRaises(TypeError):
-            calaccess_raw.archive_directory_path(
-                models.RcptCd(),
-                'foobar.csv'
-            )
         calaccess_raw.get_model_list()

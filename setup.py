@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import os
 from setuptools import setup
 
@@ -41,7 +39,7 @@ def local_version(version):
 
 setup(
     name='django-calaccess-raw-data',
-    author='California Civic Data Coalition',
+    author='Ben Welsh',
     author_email='b@palewi.re',
     url='http://django-calaccess.californiacivicdata.org/',
     description=("A Django app to download, extract and load campaign "
@@ -62,15 +60,11 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=(
-        'django>=3.2.*',
+        'django>=4.0.*',
         'django-postgres-copy>=2.6.*',
         'requests',
-        'clint',
-        'hurry.filesize',
-        'pytz',
-        'pandas',
-        'django-internetarchive-storage',
         'csvkit',
+        'django-internetarchive-storage',
     ),
     classifiers=(
         'Development Status :: 5 - Production/Stable',
@@ -82,7 +76,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Framework :: Django',
-        'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4',
         'License :: OSI Approved :: MIT License'
     ),
     project_urls={
@@ -93,6 +87,6 @@ setup(
         'Testing': 'https://github.com/palewire/django-calaccess-raw-data/actions/workflows/tests.yaml',
         'Tracker': 'https://github.com/palewire/django-calaccess-raw-data/issues'
     },
-    setup_requires=["pytest-runner", "setuptools_scm"],
+    setup_requires=["setuptools_scm"],
     use_scm_version={"version_scheme": version_scheme, "local_scheme": local_version},
 )

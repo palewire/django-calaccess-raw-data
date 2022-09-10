@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for custom database fields.
 """
@@ -12,6 +10,7 @@ from calaccess_raw import models
 
 # Logging
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -19,6 +18,7 @@ class FieldTestCase(TestCase):
     """
     Tests related to our custom database fields.
     """
+
     multi_db = True
 
     def test_fields(self):

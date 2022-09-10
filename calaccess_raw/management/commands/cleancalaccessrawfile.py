@@ -1,27 +1,19 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
 """
-# Files
 import os
 import csv
+
 import csvkit
-
-# Django
-from django.utils.timezone import now
-
-# Commands
-from django.core.management.base import CommandError
 from calaccess_raw.management.commands import CalAccessCommand
-from calaccess_raw.models.tracking import RawDataVersion, RawDataFile
 
 
 class Command(CalAccessCommand):
     """
     Clean a source CAL-ACCESS TSV file and reformat it as a CSV.
     """
-    help = 'Clean a source CAL-ACCESS TSV file and reformat it as a CSV'
+
+    help = "Clean a source CAL-ACCESS TSV file and reformat it as a CSV"
 
     def add_arguments(self, parser):
         """
@@ -29,15 +21,15 @@ class Command(CalAccessCommand):
         """
         super(Command, self).add_arguments(parser)
         parser.add_argument(
-            'file_name',
-            help="Name of the TSV file to be cleaned and discarded for a CSV"
+            "file_name",
+            help="Name of the TSV file to be cleaned and discarded for a CSV",
         )
         parser.add_argument(
             "--keep-file",
             action="store_true",
             dest="keep_file",
             default=False,
-            help="Keep original TSV file"
+            help="Keep original TSV file",
         )
 
     def handle(self, *args, **options):
@@ -49,9 +41,6 @@ class Command(CalAccessCommand):
         # Set all the config options
         self.set_options(options)
 
-        # Get the tracking object from the database
-        self.raw_file = self.get_file_obj()
-
         # If the file has data ...
         if self.row_count:
             # Walk through the raw TSV file and create a clean CSV file
@@ -60,21 +49,15 @@ class Command(CalAccessCommand):
             self.clean()
 
         # Unless keeping files, remove the raw TSV file
-        if not options['keep_file']:
+        if not options["keep_file"]:
             os.remove(self.tsv_path)
-
-        # Store the finish time in the database
-        self.raw_file.clean_finish_datetime = now()
-
-        # Save the tracking record in the database one last time
-        self.raw_file.save()
 
     def set_options(self, options):
         """
         Set options for use in other methods.
         """
         # Set options
-        self.file_name = options['file_name']
+        self.file_name = options["file_name"]
 
         # Set log variables
         self.log_dir = os.path.join(self.data_dir, "log/")
@@ -109,47 +92,11 @@ class Command(CalAccessCommand):
             except StopIteration:
                 return []
 
-    def get_file_obj(self):
-        """
-        Get the file object from our tracking database table.
-        """
-        # Get most recently extracted RawDataVersion
-        try:
-            version = RawDataVersion.objects.latest_extract()
-        except RawDataVersion.DoesNotExist:
-            raise CommandError('No record of extracting zip (run `python manage.py extractcalaccessrawfiles`)')
-
-        # Raise exception if extract step did not finish
-        if not version.extract_completed:
-            raise CommandError('Previous extraction did not finish (run `python manage.py extractcalaccessrawfiles`)')
-
-        # Get the raw file record
-        raw_file = RawDataFile.objects.get(
-            file_name=self.file_name.replace('.TSV', ''),
-            version=version
-        )
-
-        # store the start time for the clean
-        raw_file.clean_start_datetime = now()
-
-        # reset the finish time for the clean
-        raw_file.clean_finish_datetime = None
-
-        # Set the count fields
-        raw_file.download_columns_count = self.headers_count
-        raw_file.download_records_count = self.row_count - 1
-
-        # Save here in case command doesn't finish
-        raw_file.save()
-
-        # Pass it back
-        return raw_file
-
     def _convert_tsv(self):
         """
         Given it a raw list of rows from a TSV, yields cleaned rows for a CSV.
         """
-        with open(self.tsv_path, 'rb') as tsv_file:
+        with open(self.tsv_path, "rb") as tsv_file:
             # Pop the headers out of the TSV file
             next(tsv_file)
 
@@ -163,15 +110,17 @@ class Command(CalAccessCommand):
                     continue
 
                 # Nuke any null bytes
-                if tsv_line.count('\x00'):
-                    tsv_line = tsv_line.replace('\x00', ' ')
+                if tsv_line.count("\x00"):
+                    tsv_line = tsv_line.replace("\x00", " ")
 
                 # Nuke the ASCII "substitute character." chr(26) in Python
-                if tsv_line.count('\x1a'):
-                    tsv_line = tsv_line.replace('\x1a', '')
+                if tsv_line.count("\x1a"):
+                    tsv_line = tsv_line.replace("\x1a", "")
 
                 # Remove any extra newline chars
-                tsv_line = tsv_line.replace("\r\n", "").replace("\r", "").replace("\n", "")
+                tsv_line = (
+                    tsv_line.replace("\r\n", "").replace("\r", "").replace("\n", "")
+                )
 
                 # Split on tabs so we can later spit it back out as a CSV row
                 csv_line = tsv_line.split("\t")
@@ -182,14 +131,16 @@ class Command(CalAccessCommand):
                     yield csv_line
                 else:
                     # Otherwise log it
-                    self.log_rows.append([self.headers_count, csv_field_count, ','.join(csv_line)])
+                    self.log_rows.append(
+                        [self.headers_count, csv_field_count, ",".join(csv_line)]
+                    )
 
     def clean(self):
         """
         Cleans the provided source TSV file and writes it out in CSV format.
         """
         # Create the output object
-        with open(self.csv_path, 'w') as csv_file:
+        with open(self.csv_path, "w") as csv_file:
             # Create the CSV writer
             csv_writer = csvkit.writer(csv_file)
             # Write the headers
@@ -201,23 +152,11 @@ class Command(CalAccessCommand):
         if self.log_rows:
             # Log to the terminal
             if self.verbosity > 2:
-                msg = '  {} errors logged (not including empty lines)'
+                msg = "  {} errors logged (not including empty lines)"
                 self.failure(msg.format(len(self.log_rows)))
 
             # Log to the file
-            with open(self.error_log_path, 'w') as log_file:
+            with open(self.error_log_path, "w") as log_file:
                 log_writer = csvkit.writer(log_file, quoting=csv.QUOTE_ALL)
-                log_writer.writerow(['headers', 'fields', 'value'])
+                log_writer.writerow(["headers", "fields", "value"])
                 log_writer.writerows(self.log_rows)
-
-        # Add counts to raw_file_record
-        self.raw_file.clean_columns_count = self.headers_count
-        self.raw_file.error_count = len(self.log_rows)
-        self.raw_file.clean_records_count = self.raw_file.download_records_count - self.raw_file.error_count
-
-        # Add file size to the raw_file_record
-        self.raw_file.download_file_size = os.path.getsize(self.tsv_path) or 0
-        self.raw_file.clean_file_size = os.path.getsize(self.csv_path) or 0
-
-        # Save it in case it crashes in the next step
-        self.raw_file.save()

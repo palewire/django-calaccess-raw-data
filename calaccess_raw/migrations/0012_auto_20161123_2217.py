@@ -9,18 +9,27 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0011_auto_20161028_0129'),
+        ("calaccess_raw", "0011_auto_20161028_0129"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='expncd',
-            name='memo_code',
-            field=calaccess_raw.fields.CharField(blank=True, db_column='MEMO_CODE', help_text='Memo Amount? (Date/Amount are informational only). For Form 460 filings, this indicates the record is a sub-item and its amount is included in another item reported on the filing.', max_length=1),
+            model_name="expncd",
+            name="memo_code",
+            field=calaccess_raw.fields.CharField(
+                blank=True,
+                db_column="MEMO_CODE",
+                help_text="Memo Amount? (Date/Amount are informational only). For Form 460 filings, this indicates the record is a sub-item and its amount is included in another item reported on the filing.",
+                max_length=1,
+            ),
         ),
         migrations.AlterField(
-            model_name='loancd',
-            name='loan_date1',
-            field=calaccess_raw.fields.DateField(db_column='LOAN_DATE1', help_text='Date the loan was made or received. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value.', null=True),
+            model_name="loancd",
+            name="loan_date1",
+            field=calaccess_raw.fields.DateField(
+                db_column="LOAN_DATE1",
+                help_text="Date the loan was made or received. The content of this column varies based on the schedule/part that the record applies to. See the CAL document for a description of the value.",
+                null=True,
+            ),
         ),
     ]

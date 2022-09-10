@@ -8,12 +8,16 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0001_squashed_0014_auto_20160801_2039'),
+        ("calaccess_raw", "0001_squashed_0014_auto_20160801_2039"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='rawdataversion',
-            options={'get_latest_by': 'release_datetime', 'ordering': ('-release_datetime',), 'verbose_name': 'CAL-ACCESS raw data version'},
+            name="rawdataversion",
+            options={
+                "get_latest_by": "release_datetime",
+                "ordering": ("-release_datetime",),
+                "verbose_name": "CAL-ACCESS raw data version",
+            },
         ),
     ]

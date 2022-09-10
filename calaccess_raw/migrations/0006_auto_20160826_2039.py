@@ -9,13 +9,18 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calaccess_raw', '0005_auto_20160826_1449'),
+        ("calaccess_raw", "0005_auto_20160826_1449"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='rcptcd',
-            name='amount',
-            field=calaccess_raw.fields.DecimalField(db_column='AMOUNT', decimal_places=2, help_text='Amount Received (Monetary, In-kind, Promise)', max_digits=14),
+            model_name="rcptcd",
+            name="amount",
+            field=calaccess_raw.fields.DecimalField(
+                db_column="AMOUNT",
+                decimal_places=2,
+                help_text="Amount Received (Monetary, In-kind, Promise)",
+                max_digits=14,
+            ),
         ),
     ]
