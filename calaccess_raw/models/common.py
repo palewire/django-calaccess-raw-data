@@ -1165,7 +1165,7 @@ original filing and 1 to 999 amendments.",
         db_column="TYPE_OTHER", help_text="This field is undocumented"
     )
     other_desc = fields.CharField(
-        db_column="OTHER_DESC", max_length=49, help_text="This field is undocumented"
+        db_column="OTHER_DESC", max_length=500, help_text="This field is undocumented"
     )
 
     class Meta(CalAccessBaseModel.Meta):
