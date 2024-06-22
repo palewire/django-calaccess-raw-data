@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Django = "==4.0.*"
+Django = "==4.1.*"
 django-postgres-copy = ">=2.6.*"
 "psycopg2-binary" = "*"
 pytz = "*"
