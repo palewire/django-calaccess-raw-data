@@ -138,6 +138,8 @@ class CvrF470Cd(CalAccessBaseModel):
     )
     date_1000 = fields.DateField(
         db_column="DATE_1000",
+        blank=True,
+        null=True,
         help_text="Date contributions totaling $1,000 or more. (For the 470-S)",
     )
     dist_no = fields.CharField(
