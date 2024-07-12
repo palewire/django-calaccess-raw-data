@@ -14,4 +14,8 @@ class Migration(migrations.Migration):
             model_name="cvrf470cd",
             name="cand_adr1",
         ),
+        migrations.RemoveField(
+            model_name="cvrf470cd",
+            name="cand_adr2",
+        ),
     ]
