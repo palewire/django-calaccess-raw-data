@@ -61,7 +61,7 @@ setup(
     zip_safe=False,
     install_requires=(
         'django==4.0.*',
-        'django-postgres-copy>=2.6.*',
+        'django-postgres-copy',
         'requests',
         'csvkit',
         'django-internetarchive-storage',
