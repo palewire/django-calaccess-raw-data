@@ -60,7 +60,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=(
-        'django>=4.0.*',
+        'django==4.0.*',
         'django-postgres-copy>=2.6.*',
         'requests',
         'csvkit',
