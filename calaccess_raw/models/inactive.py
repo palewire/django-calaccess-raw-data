@@ -93,12 +93,13 @@ class CvrF470Cd(CalAccessBaseModel):
         help_text="Amendment Identification number. A number of 0 is an original filing and 1 "
         "to 999 amendments.",
     )
-    cand_adr1 = fields.CharField(
-        db_column="CAND_ADR1",
-        blank=True,
-        max_length=55,
-        help_text="First line of the filer's street address.",
-    )
+    # This field was removed from the extract in 2024
+    # cand_adr1 = fields.CharField(
+    #     db_column="CAND_ADR1",
+    #     blank=True,
+    #     max_length=55,
+    #     help_text="First line of the filer's street address.",
+    # )
     cand_adr2 = fields.CharField(
         db_column="CAND_ADR2",
         blank=True,
